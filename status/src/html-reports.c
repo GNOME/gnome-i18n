@@ -247,6 +247,8 @@ generate_locale_html (release *prelease)
 	gchar *pdate;
 	time_t date;
 	GList *llocale;
+	GList *lcomponent;
+	component *cmp;
 	
 	GList *lcmp;
 	translation *ptrns;
@@ -409,6 +411,22 @@ generate_locale_html (release *prelease)
 		g_free (temp);
 
 		html = g_string_append (html, "</tr></table>\n");
+
+		temp = g_strdup_printf ("<p>Total number of translatable strings in above modules: %d\n", total[0]);
+		html = g_string_append (html, temp);
+		html = g_string_append (html, "<p>Stable branches with tags: <br><br>\n");
+
+		g_free (temp);
+
+		lcomponent = g_list_first (prelease->components);
+		for (; lcomponent != NULL; lcomponent = g_list_next (lcomponent)) {
+			cmp = (component *) lcomponent->data;
+			if (strcmp (cmp->branch, "HEAD")) {
+				temp = g_strdup_printf ("%s: %s<br>\n", cmp->name, cmp->branch);
+				html = g_string_append (html, temp);
+				g_free (temp);
+			}
+		}
 
 		html = g_string_append (html, "</body></html>\n");
 
