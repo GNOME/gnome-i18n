@@ -35,6 +35,7 @@
      "libgtop/po",
      "magicdev/po",
      "mc/po",
+     "nautilus",
      "rp3/po",
      "sawfish/po",
      "gnome-i18n/extra-po/xchat"
