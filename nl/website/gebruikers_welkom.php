@@ -29,6 +29,12 @@ voor de besturingssystemen die tot de Unix-familie behoren, zoals Linux en BSD.
 als een ontwikkelplatform (developer platform).
 Een vergelijkbaar project is <strong>KDE</strong>.</p>
 
+<h2>Het doel van GNOME</h2>
+<p>GNOME heeft de begrippen gebruiksvriendelijkheid, eenvoud en toegankelijkheid hoog in het vaandel staan. 
+Regelmatig worden verbeterde versies uitgebracht. GNOME krijgt krachtige ondersteuning vanuit het bedrijfsleven, 
+onder meer van Sun Microsystems, Red Hat en Novell.
+</p>
+
 <h2>Werkomgeving</h2>
 <p>Een werkomgeving is hetgeen waarmee u werkt en wat op uw computer zichtbaar is, 
 waaronder het bestandsbeheer, de menu's, en diverse toepassingen zoals een web-browser. 
@@ -39,12 +45,6 @@ Zie ook de onderwerpen over de grafische gebruikersinterface en de desktop.</p>
 ("Lego-blokjes") in software. De meerwaarde hiervan zit hem in het feit dat niet iedere 
 programmeur het wiel opnieuw uit hoeft te vinden, maar dat veel voorwerk al verricht is.
 Een belangrijk onderdeel van het GNOME-ontwikkelplatform is de toolkit GTK.
-</p>
-
-<h2>Het doel van GNOME</h2>
-<p>GNOME heeft de begrippen gebruiksvriendelijkheid, eenvoud en toegankelijkheid hoog in het vaandel staan. 
-Regelmatig worden verbeterde versies uitgebracht. GNOME krijgt krachtige ondersteuning vanuit het bedrijfsleven, 
-onder meer van Sun Microsystems, Red Hat en Novell.
 </p>
 
 <h2>Meedoen</h2>
