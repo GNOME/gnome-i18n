@@ -1,13 +1,13 @@
 # GNOME Transfer Manager
-# Copyright (C) 1999-2001 Free Software Foundation, Inc.
+# Copyright (C) 1999-2002 Free Software Foundation, Inc.
 # João Neves <jneves@rnl.ist.utl.pt>, 1999.
-# Bruno Pires Marinho <bapm@netcabo.pt>, 1999-2001.
+# Bruno Pires Marinho <bapm@netcabo.pt>, 1999-2002.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gtm 0.4.9\n"
-"POT-Creation-Date: 2001-09-30 17:52+0100\n"
-"PO-Revision-Date: 2001-10-03 01:36+01:00\n"
+"Project-Id-Version: gtm 0.4.11\n"
+"POT-Creation-Date: 2002-07-25 23:16+0100\n"
+"PO-Revision-Date: 2002-07-26 00:26+0100\n"
 "Last-Translator: Bruno Pires Marinho <bapm@netcabo.pt>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,34 +18,34 @@ msgstr ""
 msgid "Refusing request from CORBA client, URL already in the list:"
 msgstr "Recusei o pedido de um cliente CORBA, pois o URL já existia na lista"
 
-#: src/main.c:390
+#: src/main.c:391
 msgid "url to fetch"
 msgstr "url para puxar"
 
-#: src/main.c:390
+#: src/main.c:391
 msgid "URL"
 msgstr "URL"
 
 #. If there were errors give them to the user
-#: applet/dialog-add.c:85 applet/dialog-add.c:108 applet/dialog-add.c:325
-#: applet/dialog-add.c:347 applet/dialog-new.c:128 src/dialog-add.c:63
-#: src/dialog-add.c:82 src/dialog-add.c:265 src/dialog-add.c:286
-#: src/dialog-new.c:129 src/main.c:429
+#: src/main.c:430 src/dialog-new.c:129 src/dialog-add.c:63 src/dialog-add.c:82
+#: src/dialog-add.c:265 src/dialog-add.c:286 applet/dialog-add.c:85
+#: applet/dialog-add.c:108 applet/dialog-add.c:325 applet/dialog-add.c:347
+#: applet/dialog-new.c:128
 msgid "URL:\n"
 msgstr "URL:\n"
 
-#: src/dialog-add.c:85 src/dialog-add.c:289 src/dialog-new.c:130
-#: src/main.c:431
+#: src/main.c:432 src/dialog-new.c:130 src/dialog-add.c:85
+#: src/dialog-add.c:289
 msgid "already in the list"
 msgstr "já existe na lista"
 
 #. GTM Server couldn't be started
-#: applet/dialog-add.c:94 applet/dialog-add.c:333 applet/dialog-new.c:122
-#: applet/gtm_applet.c:193 src/main.c:436
+#: src/main.c:437 applet/gtm_applet.c:259 applet/dialog-add.c:94
+#: applet/dialog-add.c:333 applet/dialog-new.c:122
 msgid "Couldn't start GTM"
 msgstr "Não consigo lançar o GTM"
 
-#: src/main.c:477
+#: src/main.c:478
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -53,7 +53,35 @@ msgstr ""
 "Está a correr outro GNOME Transfer Manager.\n"
 "Só pode estar um GNOME Transfer Manager a correr."
 
-#: src/main-window.c:104
+#: src/main-window.c:76
+msgid "Opening multiple files is not implemented yet.\n"
+msgstr "Abrir multiplos ficheiros não está implementado ainda.\n"
+
+#: src/main-window.c:85
+msgid "Could not determine MIME type...\n"
+msgstr "Não consigo determinar o tipo MIME...\n"
+
+#: src/main-window.c:106
+msgid ""
+" has a MIME type of:\n"
+"\n"
+" '"
+msgstr ""
+" tem um tipo MIME de:\n"
+"\n"
+" '"
+
+#: src/main-window.c:108
+msgid ""
+"'\n"
+"\n"
+"Press OK to configure a handler"
+msgstr ""
+"'\n"
+"\n"
+"Carregue em OK para configurar um handler"
+
+#: src/main-window.c:182
 msgid ""
 "Some files being downloaded now.\n"
 "Do you really want to quit?"
@@ -61,151 +89,159 @@ msgstr ""
 "Estou a puxar alguns ficheiros.\n"
 "Tem a certeza que quer sair?"
 
-#: src/main-window.c:220
+#: src/main-window.c:298
 msgid "_New..."
 msgstr "_Novo..."
 
-#: applet/dialog-new.c:209 src/dialog-new.c:221 src/main-window.c:220
+#: src/main-window.c:298 src/dialog-new.c:221 applet/dialog-new.c:209
 msgid "New file to download"
 msgstr "Novo ficheiro para puxar"
 
-#: src/main-window.c:224
+#: src/main-window.c:302
 msgid "_Remove from list..."
 msgstr "_Remover da lista..."
 
-#: src/main-window.c:225 src/main-window.c:314
+#: src/main-window.c:303 src/main-window.c:397
 msgid "Remove selected files from the list"
 msgstr "Remover ficheiros selecionados da lista"
 
-#: src/main-window.c:234
+#: src/main-window.c:312
 msgid "Select _All"
 msgstr "Escolhe _Todos"
 
-#: src/main-window.c:235
+#: src/main-window.c:313
 msgid "Select all files from the list"
 msgstr "Escolhe todos os ficheiros da lista"
 
-#: src/main-window.c:237
+#: src/main-window.c:315
 msgid "Unselect All"
 msgstr "Aborta Selecção"
 
-#: src/main-window.c:238
+#: src/main-window.c:316
 msgid "Unselect all files from the list"
 msgstr "Desseleciona todos os ficheiros da lista"
 
-#: src/main-window.c:241
+#: src/main-window.c:319
 msgid "Toggles auto download"
 msgstr "Mudar puxar automático"
 
-#: src/main-window.c:242
+#: src/main-window.c:320
 msgid "Toggles auto download of selected files"
 msgstr "Mudar o puxar automático nos ficheiros seleccionados"
 
-#: src/file-list.c:70 src/main-window.c:251 src/main-window.c:318
+#: src/main-window.c:329 src/main-window.c:401 src/file-list.c:75
 msgid "Start"
 msgstr "Começar"
 
-#: src/main-window.c:252
+#: src/main-window.c:330
 msgid "Start/Resume the download of the selected files"
 msgstr "Começar/Recomeçar a puxar os ficheiros seleccionados"
 
-#: src/file-list.c:73 src/main-window.c:256 src/main-window.c:323
+#: src/main-window.c:334 src/main-window.c:406 src/file-list.c:78
 msgid "Stop"
 msgstr "Parar"
 
-#: src/main-window.c:257
+#: src/main-window.c:335
 msgid "Stop the download of the selected files"
 msgstr "Parar de puxar os ficheiros seleccionados"
 
-#: src/file-list.c:76 src/main-window.c:260 src/main-window.c:327
+#: src/main-window.c:338 src/main-window.c:410 src/file-list.c:81
 msgid "Restart"
 msgstr "Recomeçar"
 
-#: src/main-window.c:261 src/main-window.c:328
+#: src/main-window.c:339 src/main-window.c:411
 msgid "Restart the download of selected files from the beginning"
 msgstr "Recomeçar a puxar os ficheiros seleccionados do principio"
 
-#: src/main-window.c:266 src/main-window.c:333
+#: src/main-window.c:343
+msgid "D_rop wget process"
+msgstr "Abandonar o processo wget"
+
+#: src/main-window.c:344
+msgid "Dettach from wget process and leave it in background"
+msgstr "Dissociar do processo do wget e deixa-lo a correr sozinho"
+
+#: src/main-window.c:349 src/main-window.c:416
 msgid "Pause Auto Dl"
 msgstr "Suspender Puxar Auto"
 
-#: src/main-window.c:267 src/main-window.c:334
+#: src/main-window.c:350 src/main-window.c:417
 msgid "Pause all auto downloads"
 msgstr "Parar todos os puxar automáticos"
 
-#: src/main-window.c:278
+#: src/main-window.c:361
 msgid "_Statistics..."
 msgstr "_Estatísticas..."
 
-#: src/main-window.c:279
+#: src/main-window.c:362
 msgid "Show file list summary"
 msgstr "Mostar o sumário da lista de ficheiros"
 
-#: src/main-window.c:282
+#: src/main-window.c:365
 msgid "_Numeric Download..."
 msgstr "_Download Numérico..."
 
-#: src/main-window.c:283
+#: src/main-window.c:366
 msgid "Download a group of URLs differing by number"
 msgstr "Puxar um group the URLs com números diferentes"
 
-#: src/main-window.c:299
+#: src/main-window.c:382
 msgid "_Download"
 msgstr "_Puxar"
 
-#: src/main-window.c:300
+#: src/main-window.c:383
 msgid "_Tools"
 msgstr "_Ferramentas"
 
-#: src/main-window.c:309
+#: src/main-window.c:392
 msgid "New"
 msgstr "Novo"
 
-#: src/main-window.c:309
+#: src/main-window.c:392
 msgid "Add new file to download"
 msgstr "Adicionar um ficheiro para puxar"
 
-#: src/main-window.c:313
+#: src/main-window.c:396
 msgid "Remove"
 msgstr "Remove"
 
-#: src/main-window.c:319
+#: src/main-window.c:402
 msgid "Start/Resume the download of selected files"
 msgstr "Começar/Recomeçar a puxar os ficheiros seleccionados"
 
-#: src/main-window.c:324
+#: src/main-window.c:407
 msgid "Stop the download of selected files"
 msgstr "Parar de puxar os ficheiros seleccionados"
 
-#: src/main-window.c:337
+#: src/main-window.c:420
 msgid "Toggle Auto Dl"
 msgstr "Mudar Puxar Auto"
 
-#: src/main-window.c:338
+#: src/main-window.c:421
 msgid "Toggle auto download of selected files"
 msgstr "Mudar o puxar automático nos ficheiros seleccionados"
 
-#: src/main-window.c:342
+#: src/main-window.c:425
 msgid "Dl Info Page"
 msgstr "Página Info Puxar"
 
-#: src/main-window.c:343
+#: src/main-window.c:426
 msgid "Toggle download info page"
 msgstr "Alterna página com informação do download"
 
-#: applet/dialog-prop.c:291 src/dialog-prop.c:234 src/main-window.c:346
+#: src/main-window.c:429 src/dialog-prop.c:234 applet/dialog-prop.c:384
 msgid "Properties"
 msgstr "Propriedades"
 
-#: src/main-window.c:347
+#: src/main-window.c:430
 msgid "Open properties for selected file"
 msgstr "Mostra as propriedades do ficheiro seleccionado"
 
-#: src/main-window.c:350
+#: src/main-window.c:433
 msgid "Quit"
 msgstr "Sair"
 
-#: src/main-window.c:350
+#: src/main-window.c:433
 msgid "Quit gtm"
 msgstr "Sair do gtm"
 
@@ -233,48 +269,55 @@ msgstr "Puxando"
 msgid "Completed"
 msgstr "Acabado"
 
-#: src/file-list.c:66
+#: src/file-list.c:67
+msgid "Open"
+msgstr "Abrir"
+
+#: src/file-list.c:71
 msgid "Remove from list"
 msgstr "Remover da lista"
 
-#: src/file-list.c:388
+#: src/file-list.c:85
+msgid "Drop wget process"
+msgstr "Abandonar o processo wget"
+
+#: src/file-list.c:417
 msgid "S"
 msgstr "E"
 
-#: src/file-list.c:389
-#, c-format
+#: src/file-list.c:418
 msgid "%"
 msgstr "%"
 
-#: src/file-list.c:390
+#: src/file-list.c:419
 msgid "Remain"
 msgstr "Restante"
 
-#: src/file-list.c:391
+#: src/file-list.c:420
 msgid "Filename"
 msgstr "Ficheiro"
 
-#: src/file-list.c:646
+#: src/file-list.c:675
 msgid "File:\n"
 msgstr "Ficheiro:\n"
 
-#: src/file-list.c:647
+#: src/file-list.c:676
 msgid "already exists."
 msgstr "já existe."
 
-#: src/file-list.c:649
+#: src/file-list.c:678
 msgid "File already exists"
 msgstr "ficheiro já existe"
 
-#: src/file-list.c:650
+#: src/file-list.c:679
 msgid "Delete Existing File"
 msgstr "Apagar o ficheiro existente"
 
-#: src/file-list.c:651
+#: src/file-list.c:680
 msgid "Attempt to Resume"
 msgstr "Tentar continuar o download"
 
-#: src/file-list.c:654
+#: src/file-list.c:683
 msgid "A file of the same name already exists in the target directory."
 msgstr "Um ficheiro com o mesmo nome existe no directório de destino."
 
@@ -327,15 +370,14 @@ msgid "Options"
 msgstr "Opções"
 
 #. Use proxy
-#: applet/dialog-add.c:287 applet/dialog-new.c:242
-#: src/dialog-common-elements.c:78 src/dialog-prefs.c:435
-#: src/dialog-prop.c:154 src/download-info.c:241
+#: src/download-info.c:241 src/dialog-common-elements.c:78
+#: src/dialog-prefs.c:464 src/dialog-prop.c:154 applet/dialog-add.c:287
+#: applet/dialog-new.c:242
 msgid "Use proxy"
 msgstr "Usar proxy"
 
-#: applet/dialog-add.c:293 applet/dialog-new.c:248
-#: src/dialog-common-elements.c:85 src/dialog-prop.c:186
-#: src/download-info.c:248
+#: src/download-info.c:248 src/dialog-common-elements.c:85
+#: src/dialog-prop.c:186 applet/dialog-add.c:293 applet/dialog-new.c:248
 msgid "Use auto download"
 msgstr "Usar puxar automático"
 
@@ -359,7 +401,7 @@ msgstr "Padrão:"
 msgid "Download matching URLs to directory:"
 msgstr "Puxar URLs coincidentes para o directório:"
 
-#: applet/dialog-add.c:273 src/download-dirs.c:127
+#: src/download-dirs.c:127 applet/dialog-add.c:273
 msgid "Add Download Dir"
 msgstr "Directoria para puxar acrescenta"
 
@@ -384,12 +426,12 @@ msgstr "Editar..."
 msgid "Delete"
 msgstr "Apagar..."
 
-#: applet/dialog-add.c:269 applet/dialog-new.c:225
-#: src/dialog-common-elements.c:58
+#: src/dialog-common-elements.c:58 applet/dialog-add.c:269
+#: applet/dialog-new.c:225
 msgid "Override Download dir"
 msgstr "Sobrepor directoria para puxar"
 
-#: applet/dialog-new.c:229 src/dialog-common-elements.c:64
+#: src/dialog-common-elements.c:64 applet/dialog-new.c:229
 msgid "New Download Dir"
 msgstr "Novo Directório de Download"
 
@@ -397,7 +439,7 @@ msgstr "Novo Directório de Download"
 msgid "No override download directory entered."
 msgstr "Directoria de puxar não foi sobreposta."
 
-#: applet/dialog-new.c:91 src/dialog-common-elements.c:244
+#: src/dialog-common-elements.c:244 applet/dialog-new.c:91
 msgid "Multiple download not implemented yet"
 msgstr "Puxar multiplo não está implementado ainda"
 
@@ -422,7 +464,7 @@ msgid "Can't write to selected download directory."
 msgstr "Não consigo gravar no directorio de download seleccionado."
 
 #. URL
-#: applet/dialog-new.c:214 src/dialog-new.c:199
+#: src/dialog-new.c:199 applet/dialog-new.c:214
 msgid "Please enter URL of the file to download:"
 msgstr "Indique o URL do ficheiro a puxar:"
 
@@ -501,201 +543,207 @@ msgstr "Imagens"
 msgid "Both"
 msgstr "Ambos"
 
-#: applet/dialog-prop.c:42 src/dialog-prefs.c:60
+#: src/dialog-prefs.c:60 applet/dialog-prop.c:42
 msgid "None"
 msgstr "Nenhuma"
 
-#: applet/dialog-prop.c:43 src/dialog-prefs.c:61
+#: src/dialog-prefs.c:61 applet/dialog-prop.c:43
 msgid "HTTP"
 msgstr "HTTP"
 
-#: applet/dialog-prop.c:44 src/dialog-prefs.c:62
+#: src/dialog-prefs.c:62 applet/dialog-prop.c:44
 msgid "FTP"
 msgstr "FTP"
 
-#: applet/dialog-prop.c:46 src/dialog-prefs.c:64
+#: src/dialog-prefs.c:64 applet/dialog-prop.c:46
 msgid "HTTPS"
 msgstr "HTTPS"
 
+#: src/dialog-prefs.c:470
+msgid "Same proxy for all protocols"
+msgstr "O mesmo proxy para todos os protocolos"
+
 #. Proxy username
-#: src/dialog-prefs.c:444
+#: src/dialog-prefs.c:479
 msgid "Username:"
 msgstr "Utilizador:"
 
 #. Proxy password
-#: src/dialog-prefs.c:453
+#: src/dialog-prefs.c:488
 msgid "Password:"
 msgstr "Palavra-chave:"
 
 #. Proxy for HTTP
-#: src/dialog-prefs.c:463
+#: src/dialog-prefs.c:498
 msgid "HTTP:"
 msgstr "HTTP:"
 
 #. Proxy for FTP
-#: src/dialog-prefs.c:472
+#: src/dialog-prefs.c:507
 msgid "FTP:"
 msgstr "FTP:"
 
 #. Proxy for HTTPS
-#: src/dialog-prefs.c:482
+#: src/dialog-prefs.c:517
 msgid "HTTPS:"
 msgstr "HTTPS:"
 
-#: src/dialog-prefs.c:559
+#: src/dialog-prefs.c:607 applet/dialog-prop.c:318
 msgid "Interface to connect:"
 msgstr "Interface para ligar:"
 
-#: src/dialog-prefs.c:567
+#: src/dialog-prefs.c:615 applet/dialog-prop.c:326
 msgid "Check interface time (ms):"
 msgstr "Tempo de verificação da interface (ms):"
 
-#: src/dialog-prefs.c:580
+#: src/dialog-prefs.c:628
 msgid "Simultaneous:"
 msgstr "Simultaneous:"
 
-#: src/dialog-prefs.c:590
+#: src/dialog-prefs.c:638
 msgid "Manual stop disables auto download"
 msgstr "Paragem manual desliga o puxar automático"
 
-#: src/dialog-prefs.c:596
+#: src/dialog-prefs.c:644
 msgid "Stop download on link loss"
 msgstr "Parar de puxar no case de perder a ligação"
 
-#: src/dialog-prefs.c:602
+#: src/dialog-prefs.c:650
 msgid "Remember whether auto download is paused"
 msgstr "Guardar se o download automático esta parado"
 
-#: src/dialog-prefs.c:663
+#: src/dialog-prefs.c:711
 msgid "Default download dir:"
 msgstr "Directoria para puxar por omissão:"
 
-#: src/dialog-prefs.c:666
+#: src/dialog-prefs.c:714
 msgid "Def Download Dir"
 msgstr "Directoria para puxar por omissão"
 
-#: src/dialog-prefs.c:675
+#: src/dialog-prefs.c:723
 msgid "Timeout (seconds):"
 msgstr "Desistir (segundos):"
 
-#: src/dialog-prefs.c:686
+#: src/dialog-prefs.c:734
 msgid "Number retries:"
 msgstr "Número de tentativas:"
 
-#: src/dialog-prefs.c:690
+#: src/dialog-prefs.c:738
 msgid "Unlimited"
 msgstr "Ilimitadas"
 
-#: src/dialog-prefs.c:693
+#: src/dialog-prefs.c:741
 msgid "Limited"
 msgstr "Limitadas"
 
-#: src/dialog-prefs.c:704
+#: src/dialog-prefs.c:752
 msgid "Use passive FTP"
 msgstr "Usar FTP passivo"
 
-#: applet/dialog-prop.c:163 src/dialog-prefs.c:711
+#: src/dialog-prefs.c:759 applet/dialog-prop.c:194
 msgid "Presume Protocol:"
 msgstr "Assumir Protocolo:"
 
 #. Shell command on completion
-#: src/dialog-prefs.c:726
+#: src/dialog-prefs.c:774
 msgid "Run command when all downloads completed:"
 msgstr "Correr o comando quando todos os downloads estiverem completados:"
 
-#: src/dialog-prefs.c:735
+#: src/dialog-prefs.c:783
 msgid "Run Now"
 msgstr "Correr agora"
 
-#: src/dialog-prefs.c:828
+#: src/dialog-prefs.c:876
 msgid ""
 "Overriding download dir on URL addition dialogs changes default download dir"
-msgstr "Sobrepor o directorio de puxar nas caixas de adicionar URL muda o directoria por omissão para os downloads"
+msgstr ""
+"Sobrepor o directorio de puxar nas caixas de adicionar URL muda o directoria "
+"por omissão para os downloads"
 
-#: src/dialog-prefs.c:836
+#: src/dialog-prefs.c:884
 msgid "Confirm remove when transfer incomplete"
 msgstr "Confirmar a remoção quando a transferência esta imcompleta"
 
-#: src/dialog-prefs.c:843
+#: src/dialog-prefs.c:891
 msgid "Confirm remove completed transfers"
 msgstr "Confirmar a remoção quando a transferência esta completa"
 
-#: src/dialog-prefs.c:850
+#: src/dialog-prefs.c:898
 msgid "Confirm restart"
 msgstr "Confirmar recomeçar"
 
-#: applet/dialog-prop.c:210 src/dialog-prefs.c:857
+#: src/dialog-prefs.c:905 applet/dialog-prop.c:241
 msgid "Confirm drag and drop URL"
 msgstr "Confirmar o drag and drop da URL"
 
-#: src/dialog-prefs.c:910
+#: src/dialog-prefs.c:958
 msgid "Toolbar style:"
 msgstr "Barras de ferramentas:"
 
-#: src/dialog-prefs.c:925
+#: src/dialog-prefs.c:973
 msgid "File list refresh rate (ms):"
 msgstr "Rácio de actualização da lista de ficheiros (ms):"
 
-#: src/dialog-prefs.c:937
+#: src/dialog-prefs.c:985
 msgid "Show list statistics"
 msgstr "Mostra estatísticas na lista"
 
-#: src/dialog-prefs.c:942
+#: src/dialog-prefs.c:990
 msgid "Show page statistics"
 msgstr "Mostra estatísticas na página"
 
-#: src/dialog-prefs.c:947
+#: src/dialog-prefs.c:995
 msgid "Auto hide download info page"
 msgstr "Esconder automáricamente a página com informação do download"
 
-#: src/dialog-prefs.c:952
+#: src/dialog-prefs.c:1000
 msgid "Auto hide download info page timeout (ms):"
 msgstr ""
 "Tempo para esconder automáticamente a página com informação do download"
 
-#: src/dialog-prefs.c:1019
+#: src/dialog-prefs.c:1067
 msgid "Use sound"
 msgstr "Usar som"
 
-#: src/dialog-prefs.c:1024
+#: src/dialog-prefs.c:1072
 msgid "Use beep"
 msgstr "Usar beep"
 
-#: src/dialog-prefs.c:1065
+#: src/dialog-prefs.c:1113
 msgid "Preferences"
 msgstr "Preferências"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:1078 src/dialog-prop.c:251
+#: src/dialog-prefs.c:1126 src/dialog-prop.c:251
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/dialog-prefs.c:1082
+#: src/dialog-prefs.c:1130 applet/dialog-prop.c:405
 msgid "Auto"
 msgstr "Automático"
 
 #. Create the notebook pages
-#: applet/dialog-prop.c:300 src/dialog-prefs.c:1086 src/dialog-prop.c:247
+#: src/dialog-prefs.c:1134 src/dialog-prop.c:247 applet/dialog-prop.c:393
 msgid "Download"
 msgstr "Puxar"
 
-#: src/dialog-prefs.c:1090
+#: src/dialog-prefs.c:1138
 msgid "Directories"
 msgstr "Directórios"
 
-#: applet/dialog-prop.c:304 src/dialog-prefs.c:1094
+#: src/dialog-prefs.c:1142 applet/dialog-prop.c:397
 msgid "Confirmations"
 msgstr "Confirmações"
 
-#: src/dialog-prefs.c:1098
+#: src/dialog-prefs.c:1146
 msgid "Display"
 msgstr "Aspecto"
 
-#: src/dialog-prefs.c:1102
+#: src/dialog-prefs.c:1150
 msgid "Sound"
 msgstr "Som"
 
-#: applet/dialog-new.c:72 src/dialog-prop.c:66
+#: src/dialog-prop.c:66 applet/dialog-new.c:72
 msgid "Invalid URL"
 msgstr "URL Inválido"
 
@@ -708,11 +756,11 @@ msgid "URL:"
 msgstr "URL:"
 
 #. URLs
-#: applet/dialog-add.c:255 src/dialog-add.c:212
+#: src/dialog-add.c:212 applet/dialog-add.c:255
 msgid "URLs to be added"
 msgstr "URLs para acrescentar"
 
-#: applet/dialog-add.c:250 src/dialog-add.c:241
+#: src/dialog-add.c:241 applet/dialog-add.c:250
 msgid "Add files to download"
 msgstr "Adicionar ficheiros para puxar"
 
@@ -745,60 +793,62 @@ msgstr "Restante (kB)"
 msgid "Progress"
 msgstr "Evolução"
 
-#: src/wget-log.c:85
+#: src/wget-log.c:92
 msgid "Socket error when downloading URL:\n"
 msgstr "Erro no socket quando puxava o URL:\n"
 
-#: src/wget-log.c:88 src/wget-log.c:94
+#: src/wget-log.c:95 src/wget-log.c:101
 msgid "Connection refused when downloading URL:\n"
 msgstr "Ligação recusada quando puxava o URL:\n"
 
-#: src/wget-log.c:91
+#: src/wget-log.c:98
 msgid "No route to host:\n"
 msgstr "Nenhum caminho para o servidor:\n"
 
-#: src/wget-log.c:97
+#: src/wget-log.c:104
 msgid "Host not found when downloading URL:\n"
 msgstr "Máquina não encontrada quando puxava o URL:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:107
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Protocolo não suportado - precisa do wget >= 1.4 para usar https:\n"
 
-#: src/wget-log.c:104
+#: src/wget-log.c:111
 msgid "Unknown error when downloading URL:\n"
 msgstr "Erro não conhecido quando puxava o URL:\n"
 
-#: src/wget-log.c:114 src/wget-log.c:121
+#: src/wget-log.c:121 src/wget-log.c:128
 msgid "File not found when downloading URL:\n"
 msgstr "Ficheiro não encontrada quando puxava o URL:\n"
 
-#: src/wget-log.c:128
+#: src/wget-log.c:135
 msgid ""
 "Can't continue download, existing local file conflicts with remote file:\n"
-msgstr "Não consigo continuar o download o ficheiro local entra em conflito com o ficheiro remoto:\n"
+msgstr ""
+"Não consigo continuar o download o ficheiro local entra em conflito com o "
+"ficheiro remoto:\n"
 
-#: src/wget-log.c:175
+#: src/wget-log.c:182
 msgid "Can't write to target directory:\n"
 msgstr "Não consigo gravar no directório de destino:\n"
 
-#: applet/gtm_applet.c:495
+#: applet/gtm_applet.c:580
 msgid "Drop URL from netscape, gmc, gftp..."
 msgstr "Largar URL do netscape, gmc, gftp..."
 
-#: applet/gtm_applet.c:538
+#: applet/gtm_applet.c:623
 msgid "Properties..."
 msgstr "Propriedades..."
 
-#: applet/gtm_applet.c:544
+#: applet/gtm_applet.c:629
 msgid "About..."
 msgstr "Acerca..."
 
-#: applet/dialog-prop.c:239 applet/gtm_applet.c:550
+#: applet/gtm_applet.c:635 applet/dialog-prop.c:270
 msgid "New URL"
 msgstr "Nova URL"
 
-#: applet/dialog-prop.c:240 applet/gtm_applet.c:556
+#: applet/gtm_applet.c:641 applet/dialog-prop.c:271
 msgid "Open GTM"
 msgstr "Abrir GTM"
 
@@ -823,15 +873,19 @@ msgstr "Error CORBA"
 msgid "not accepted by GTM"
 msgstr "não aceite pelo GTM"
 
-#: applet/dialog-prop.c:238
+#: applet/dialog-prop.c:269
 msgid "(none)"
 msgstr "(nenhuma)"
 
-#: applet/dialog-prop.c:250
+#: applet/dialog-prop.c:281
 msgid "Button1 click:"
 msgstr "Pressionar button1:"
 
-#: applet/dialog-prop.c:308
+#: applet/dialog-prop.c:339
+msgid "Open GTM on network"
+msgstr "Abrir o GTM quando existir rede"
+
+#: applet/dialog-prop.c:401
 msgid "Bindings"
 msgstr "Eventos"
 
