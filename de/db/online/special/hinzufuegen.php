@@ -133,34 +133,34 @@
                         // insert in words table
                         $query = "INSERT INTO $wordstable VALUES(NULL, '$word', 'english')";
                         $result1 = mysql_query($query);
-			$error1 = "<p>Fehler 1: ".mysql_error()."</p>";
+                        $error1 = "<p>Fehler 1: ".mysql_error()."</p>";
 
-                        // get the wid, which has been chosen by mysql
+                        // get the wid and tid, which have been chosen by mysql
                         $wid = mysql_insert_id();
-			$tid = mysql_insert_id();
+                        $tid = mysql_insert_id();
 
                         // insert in types table
                         $query = "INSERT INTO $typestable VALUES('$tid', '$wid', '$type')";
                         $result2 = mysql_query($query);
-			$error2 = "<p>Fehler 2: ".mysql_error()."</p>";
-
-                        // get tid, which has been chosen by mysql
-                        #$tid = mysql_insert_id();
+                        $error2 = "<p>Fehler 2: ".mysql_error()."</p>";
 
                         // insert in translations table
                         $query = "INSERT INTO $transtable VALUES('$tid', '$translation', '$comment')";
                         $result3 = mysql_query($query);
-			$error1 = "<p>Fehler 3: ".mysql_error()."</p>";
+                        $error1 = "<p>Fehler 3: ".mysql_error()."</p>";
 
                         if ((!$result1) || (!$result2) || (!$result3)) {
                                 // an error occured...
-				$error = "";
-				if (!$result1)
-					$error .= $error1;
-				if (!$result2)
-					$error .= $error2;
-				if (!$result3)
-					$error .= $error3;
+                                $error = "";
+                                if (!$result1) {
+                                        $error .= $error1;
+                                }
+                                if (!$result2) {
+                                        $error .= $error2;
+                                }
+                                if (!$result3) {
+                                        $error .= $error3;
+                                }
                                 $smarty->assign ('content', "$error<p>Beim Eintragen ist ein Fehler aufgetreten. Bitte kontaktieren sie den <a href='mailto:webmaster@gnome-de.org'>Webmaster</a>!</p>");
                         } else {
                                 $smarty->assign ('content', "

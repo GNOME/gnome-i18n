@@ -5,10 +5,11 @@
     function get_result($wid, $tid, $word, $trans, $type, $comment, $count) {
         $retval = "<tr>";
 
-        if ($count > 1)
+        if ($count > 1) {
             $retval .= "<td></td>";
-        else
+        } else {
             $retval .= "<td valign=\"top\">$word</td>";
+        }
 
         $comment = wordwrap($comment, 25, "\n", 1);
 //      $comment = str_replace("\n", "<br>", $comment);
@@ -41,15 +42,22 @@
 
     if ($show) {
 
-        $content .= "
-            <table cellpadding=\"3\"><tr>
-                <th>Wort</th>
-                <th></th>
-                <th>Wortart</th>
-                <th>&Uuml;bersetzung</th>
-                <th>Kommentar</th>
-                <th>Aktionen</th>
-            </tr>";
+        if ($count == 0) {
+
+            $content .= "Suche erfolglos! Der Suchstring konnte in der Datenbank
+                         nicht gefunden werden!"
+        } else {
+
+            $content .= "
+                        <table cellpadding=\"3\"><tr>
+                            <th>Wort</th>
+                            <th></th>
+                            <th>Wortart</th>
+                            <th>&Uuml;bersetzung</th>
+                            <th>Kommentar</th>
+                            <th>Aktionen</th>
+                        </tr>";
+        }
 
         if (($show == "results") && (($in == "e") || ($in == "g"))) {
 
@@ -64,6 +72,7 @@
             }
 
             if ($in == "g") {
+
                 $query = "SELECT *
                           FROM $wordstable w, $transtable tr, $typestable typ
                               WHERE typ.tid = tr.tid
@@ -87,30 +96,34 @@
                 $i = 0;
 
                 while ($res = mysql_fetch_array($result)) {
+
                     $content .= mysql_error();
 
                     if ($word_old != $res[word]) {
+
                         if (($word_old != '') && ($i > 1)) {
-                                $content .= "
-                                    <tr>
-                                        <td colspan='6' align='right'>
-                                            <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a> - <a href=\"special/loeschen.php?wid=$wid_old&all=1\">Alle l&ouml;schen</a>
-                                        </td>
-                                    </tr><tr>
-                                        <td>&nbsp</td>
-                                    </tr>";
-                        }
-                        else if ($word_old != '') {
-                        // $i is automatically smaller than 2
-                                $content .= "
+
+                            $content .= "
                                         <tr>
-                                                <td colspan='6' align='right'>
-                                                        <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a>
-                                                </td>
+                                            <td colspan='6' align='right'>
+                                            <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a> - <a href=\"special/loeschen.php?wid=$wid_old&all=1\">Alle l&ouml;schen</a>
+                                            </td>
                                         </tr><tr>
-                                                <td colspan='6'>&nbsp;</td>
+                                            <td>&nbsp</td>
+                                        </tr>";
+                        }
+
+                        else if ($word_old != '') {
+
+                            $content .= "
+                                        <tr>
+                                            <td colspan='6' align='right'>
+                                            <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a>
+                                            </td>
+                                        </tr><tr>
+                                            <td colspan='6'>&nbsp;</td>
                                         </tr>
-                                ";
+                                        ";
                         }
 
                         $word_old = $res[word];
@@ -124,60 +137,62 @@
                 }
 
                 if ($i > 1) {
-                    $content .= "
-                        <tr>
-                                <td colspan='6' align='right'>
-                                        <a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>&nbsp;-
-                                        <a href=\"loeschen.php?wid=$wid_old&all=1\">Alle&nbsp;l&ouml;schen</a>
-                                </td>
-                        </tr>";
-                } else {
-                    $content .= "
-                        <tr>
-                                <td colspan='6' align='right'>
-                                        <a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>
-                                </td>
-                        </tr>";
-                }
 
+                    $content .= "
+                                <tr>
+                                    <td colspan='6' align='right'>
+                                    <a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>&nbsp;-
+                                    <a href=\"loeschen.php?wid=$wid_old&all=1\">Alle&nbsp;l&ouml;schen</a>
+                                    </td>
+                                </tr>";
+                } else {
+
+                    $content .= "
+                                <tr>
+                                    <td colspan='6' align='right'>
+                                    <a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>
+                                    </td>
+                                </tr>";
+                }
             }
         }
 
         $content .= "</table>";
+
     } else {
 
         // $show is not set, so give us the interface
         $content .=
-           "<form action=\"\" method=\"POST\">
-                <input type=\"hidden\" name=\"show\" value=\"results\">
-                <table><tr>
-                    <td>Suchbegriff</td>
-                    <td><input name=\"query\"></td>
-                </tr><tr>
-                    <td valign=\"top\">Suche in</td>
-                    <td>
+                  "<form action=\"\" method=\"POST\">
+                   <input type=\"hidden\" name=\"show\" value=\"results\">
+                   <table><tr>
+                       <td>Suchbegriff</td>
+                       <td><input name=\"query\"></td>
+                    </tr><tr>
+                        <td valign=\"top\">Suche in</td>
+                        <td>
                         <input type=\"radio\" name=\"in\" value=\"e\" checked=\"checked\">Englisch<br>
                         <input type=\"radio\" name=\"in\" value=\"g\">Deutsch
-                    </td>
-                </tr><tr>
-                    <td colspan=\"2\" align=\"right\">
+                        </td>
+                    </tr><tr>
+                        <td colspan=\"2\" align=\"right\">
                         <input type=\"submit\" value=\"Suchen!\">
-                    </td>
-                </tr></table>
+                        </td>
+                    </tr></table>
 
-                <p>
-                    <b>Hinweise:</b>
-                </p>
-                <ol>
-                    <li>
-                        Es wird nach &raquo;&auml;hnlichen&laquo; Begriffen gesucht, d.h.
-                        &raquo;at&laquo; findet auch &raquo;attach&laquo, etc.
-                    </li>
-                    <li>
-                        Wenn nichts im Suchfeld eingetragen wird, wird die komplette Datenbank
-                        ausgegeben!
-                    </li>
-                </ol>";
+                    <p>
+                        <b>Hinweise:</b>
+                    </p>
+                        <ol>
+                            <li>
+                                Es wird nach &raquo;&auml;hnlichen&laquo; Begriffen gesucht, d.h.
+                                &raquo;at&laquo; findet auch &raquo;attach&laquo, etc.
+                            </li>
+                            <li>
+                                Wenn nichts im Suchfeld eingetragen wird, wird die komplette Datenbank
+                                ausgegeben!
+                            </li>
+                        </ol>";
     }
 
     $smarty->assign ('caption', 'suchen');
