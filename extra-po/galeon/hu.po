@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galeon VERSION\n"
-"POT-Creation-Date: 2000-09-30 21:58+0200\n"
-"PO-Revision-Date: 2000-10-04 14:54+0001\n"
+"POT-Creation-Date: 2000-10-13 21:35+0200\n"
+"PO-Revision-Date: 2000-10-24 21:54GMT+1\n"
 "Last-Translator: Andras TIMAR <timar_a@freemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 # src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:388 src/trans.h:76
 # src/trans.h:81
-#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:388 src/trans.h:76
+#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:409 src/trans.h:76
 #: src/trans.h:81
 msgid "Bookmarks"
 msgstr "Könyvjelzõk"
@@ -23,12 +23,12 @@ msgstr "Könyvjelzõk"
 # src/bookmarks.c:827 src/bookmarks_callbacks.c:181
 # src/browser_callbacks.c:803 src/history.c:182 src/mozcallbacks.c:139
 #: src/bookmarks.c:827 src/bookmarks_callbacks.c:181
-#: src/browser_callbacks.c:803 src/history.c:182 src/mozcallbacks.c:139
+#: src/browser_callbacks.c:804 src/history.c:182 src/mozcallbacks.c:140
 msgid "Untitled"
 msgstr "Névtelen"
 
 # src/bookmarks.c:996
-#: src/bookmarks.c:996
+#: src/bookmarks.c:996 src/trans.h:383
 msgid "Temporary bookmarks"
 msgstr "Ideiglenes könyvjelzõk"
 
@@ -67,31 +67,112 @@ msgstr "Új könyvjelzõ-kategória"
 msgid "Separator"
 msgstr "Elválasztó"
 
-# src/browser.c:118
-#: src/browser.c:118
-msgid "Galeon cannot handle this protocol"
-msgstr "A Galeon nem tudja ezt a protokollt kezelni"
-
 # src/browser.c:435
 #. fill the status bar text with progress info: percentual and kb
-#: src/browser.c:435
+#: src/browser.c:419
 msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
 msgstr "%s (%d%% kész, %d Kb van letöltve a %d Kb-ból)"
 
 # src/browser.c:443
 #. fill the status bar text with progress info: only kb
-#: src/browser.c:443
+#: src/browser.c:427
 #, c-format
 msgid "%s (%d Kb loaded)"
 msgstr "%s (%d Kb letöltve)"
 
+# src/misc_callbacks.c:260
+#: src/browser.c:695
+msgid ""
+"Can't get the url for current page.\n"
+"No source avaible."
+msgstr ""
+"Nem lehet visszanyerni az aktuális lap url-jét.\n"
+"A forrás nem elérhetõ."
+
+# src/misc_callbacks.c:211
+#: src/browser.c:711
+msgid "Could not create a temporary file"
+msgstr "Nem lehet ideiglenes fájlt létrehozni"
+
+# src/misc_callbacks.c:218
+#: src/browser.c:718
+msgid "Something went wrong while saving the file to a temporary location"
+msgstr "A fájl ideiglenes helyre való mentése közben valami elromlott"
+
+# src/misc_callbacks.c:232
+#: src/browser.c:732
+msgid "Error executing external program"
+msgstr "Hiba történt a külsõ program végrehajtásánál"
+
 # src/browser_callbacks.c:289
-#: src/browser_callbacks.c:289
+#: src/browser_callbacks.c:290
 msgid "You must specify a Start Page in the Preferences dialog!"
 msgstr "Meg kell adni a Kezdõlapot a Beállítások párbeszédablakban."
 
+# src/misc.c:528
+#: src/context.c:27 src/context.c:60
+msgid "Open"
+msgstr "Megnyitás"
+
+# src/misc.c:529
+#: src/context.c:28 src/context.c:61
+msgid "Open in a new window"
+msgstr "Megnyitás új ablakban"
+
+# src/misc.c:530
+#: src/context.c:29 src/context.c:62
+msgid "Download file"
+msgstr "Fájl letöltése"
+
+# src/misc.c:531
+#: src/context.c:30 src/context.c:63
+msgid "Copy link location"
+msgstr "Link másolása"
+
+# src/misc.c:532 src/trans.h:24
+#: src/context.c:31 src/context.c:64 src/trans.h:24
+msgid "Add temporary bookmark"
+msgstr "Ideiglenes könyvjelzõ hozzáadása"
+
+#: src/context.c:37 src/context.c:56
+msgid "Open image"
+msgstr "Kép megnyitása"
+
+# src/misc.c:529
+#: src/context.c:38 src/context.c:57
+msgid "Open image in a new window"
+msgstr "Kép megnyitása új ablakban"
+
+# src/prefs.c:407 src/trans.h:150 src/trans.h:164
+#: src/context.c:39 src/context.c:58
+msgid "Download image"
+msgstr "Kép letöltése"
+
+# src/prefs.c:408 src/trans.h:176
+#: src/context.c:45 src/prefs.c:429 src/trans.h:176
+msgid "View Source"
+msgstr "Forrás megtekintése"
+
+#: src/context.c:46
+msgid "Save"
+msgstr "Mentés"
+
+#: src/context.c:47
+msgid "Find"
+msgstr "Keresés"
+
+# src/trans.h:35 src/trans.h:357
+#: src/context.c:49 src/trans.h:35 src/trans.h:385
+msgid "Back"
+msgstr "Vissza"
+
+# src/trans.h:38 src/trans.h:359
+#: src/context.c:50 src/trans.h:38 src/trans.h:387
+msgid "Forward"
+msgstr "Elõre"
+
 # src/find_callbacks.c:56 src/find_callbacks.c:82 src/find_callbacks.c:121
-#: src/find_callbacks.c:56 src/find_callbacks.c:82 src/find_callbacks.c:121
+#: src/find_callbacks.c:60 src/find_callbacks.c:86 src/find_callbacks.c:125
 msgid "Not found"
 msgstr "Nem található"
 
@@ -106,7 +187,7 @@ msgid "Add a temp bookmark (don't open any window)"
 msgstr "Ideiglenes könyvjelzõ hozzáadása (nem nyit új ablakot)"
 
 # src/main.c:55 src/trans.h:343
-#: src/main.c:55 src/trans.h:343
+#: src/main.c:55 src/trans.h:371
 msgid "URL"
 msgstr "URL"
 
@@ -123,35 +204,30 @@ msgstr ""
 "Szeretnéd a meglévõ Netscape könyvjelzõidet importálni?"
 
 # src/misc.c:120
-#: src/misc.c:120
+#: src/misc.c:155
 #, c-format
 msgid "%s not found"
 msgstr "%s nem található"
 
-# src/misc.c:528
-#: src/misc.c:528
-msgid "Open"
-msgstr "Megnyitás"
+# src/browser.c:118
+#. throw the error
+#: src/misc.c:344
+msgid ""
+"Galeon cannot handle this protocol,\n"
+"and no GNOME default handler is set"
+msgstr ""
+"A Galeon nem tudja ezt a protokollt kezelni,\n"
+"és a GNOME-ban sincs beállítva alapértelmezett kezelõ."
 
-# src/misc.c:529
-#: src/misc.c:529
-msgid "Open in a new window"
-msgstr "Megnyitás új ablakban"
-
-# src/misc.c:530
-#: src/misc.c:530
-msgid "Download"
-msgstr "Letöltés"
-
-# src/misc.c:531
-#: src/misc.c:531
-msgid "Copy link location"
-msgstr "Link másolása"
-
-# src/misc.c:532 src/trans.h:24
-#: src/misc.c:532 src/trans.h:24
-msgid "Add temporary bookmark"
-msgstr "Ideiglenes könyvjelzõ hozzáadása"
+#: src/misc.c:359
+msgid ""
+"The protocol specified is not recognised.\n"
+"\n"
+"Would you like to try the GNOME default?"
+msgstr ""
+"A megadott protokoll nem ismerõs.\n"
+"\n"
+"Próbáljuk meg az GNOME alapértelmezést?"
 
 # src/misc_callbacks.c:58
 #: src/misc_callbacks.c:58
@@ -164,76 +240,52 @@ msgid "A GNOME browser based on mozilla"
 msgstr "Mozilla alapú GNOME böngészõ"
 
 # src/misc_callbacks.c:179
-#: src/misc_callbacks.c:179
+#: src/misc_callbacks.c:182
 msgid "Cannot save the file"
 msgstr "Nem lehet menteni a fájlt"
 
-# src/misc_callbacks.c:211
-#: src/misc_callbacks.c:211
-msgid "Could not create a temporary file"
-msgstr "Nem lehet ideiglenes fájlt létrehozni"
-
-# src/misc_callbacks.c:218
-#: src/misc_callbacks.c:218
-msgid "Something went wrong while saving the file to a temporary location"
-msgstr "A fájl ideiglenes helyre való mentése közben valami elromlott"
-
-# src/misc_callbacks.c:232
-#: src/misc_callbacks.c:232
-msgid "Error executing external program"
-msgstr "Hiba történt a külsõ program végrehajtásánál"
-
-# src/misc_callbacks.c:260
-#: src/misc_callbacks.c:260
-msgid ""
-"Can't get the url for current page.\n"
-"No source avaible."
-msgstr ""
-"Nem lehet visszanyerni az aktuális lap url-jét.\n"
-"A forrás nem elérhetõ."
-
 # src/mozcallbacks.c:253
-#: src/mozcallbacks.c:253
+#: src/mozcallbacks.c:254
 msgid "Redirecting to site..."
 msgstr "Átirányítás egy másik helyre..."
 
 # src/mozcallbacks.c:255
-#: src/mozcallbacks.c:255
+#: src/mozcallbacks.c:256
 msgid "Transferring data from site..."
 msgstr "Adatátvitel folyamatban..."
 
 # src/mozcallbacks.c:257
-#: src/mozcallbacks.c:257
+#: src/mozcallbacks.c:258
 msgid "Waiting for authorization..."
 msgstr "Várakozás az engedélyezésre..."
 
 # src/mozcallbacks.c:259
-#: src/mozcallbacks.c:259
+#: src/mozcallbacks.c:260
 msgid "Loading site..."
 msgstr "Letöltés..."
 
 # src/mozcallbacks.c:261
-#: src/mozcallbacks.c:261
+#: src/mozcallbacks.c:262
 msgid "Done."
 msgstr "Kész."
 
 # src/mozcallbacks.c:265
-#: src/mozcallbacks.c:265
+#: src/mozcallbacks.c:266
 msgid "Site not found."
 msgstr "A hely nem található."
 
 # src/mozcallbacks.c:267
-#: src/mozcallbacks.c:267
+#: src/mozcallbacks.c:268
 msgid "Failed to connect to site."
 msgstr "Nem lehet kapcsolatot teremteni a hellyel."
 
 # src/mozcallbacks.c:269
-#: src/mozcallbacks.c:269
+#: src/mozcallbacks.c:270
 msgid "Failed due to connection timeout."
 msgstr "Idõtúllépés miatt nem sikerült a kapcsolat."
 
 # src/mozcallbacks.c:271
-#: src/mozcallbacks.c:271
+#: src/mozcallbacks.c:272
 msgid "User canceled connecting to site."
 msgstr "A felhasználó megszakította a kapcsolatot."
 
@@ -243,109 +295,108 @@ msgid "Personal Toolbar Folder"
 msgstr "Saját eszköztárak könyvtára"
 
 # src/prefs.c:377
-#: src/prefs.c:377
+#: src/prefs.c:398
 msgid "Browsing"
 msgstr "Böngészés"
 
 # src/prefs.c:378
-#: src/prefs.c:378
+#: src/prefs.c:399
 msgid "User Interface"
 msgstr "Felhasználói felület"
 
 # src/prefs.c:379
-#: src/prefs.c:379
+#: src/prefs.c:400
 msgid "Handlers"
 msgstr "Kezelõk"
 
 # src/prefs.c:380
-#: src/prefs.c:380
+#: src/prefs.c:401
 msgid "Rendering"
 msgstr "Feldolgozás"
 
 # src/prefs.c:381
-#: src/prefs.c:381
+#: src/prefs.c:402
 msgid "Advanced"
 msgstr "Haladó"
 
 # src/prefs.c:387 src/trans.h:75
-#: src/prefs.c:387 src/trans.h:75
+#: src/prefs.c:408 src/trans.h:75
 msgid "Homepage"
 msgstr "Honlap"
 
 # src/prefs.c:389 src/trans.h:82 src/trans.h:84 src/trans.h:324
-#: src/prefs.c:389 src/trans.h:82 src/trans.h:84 src/trans.h:324
+#: src/prefs.c:410 src/trans.h:82 src/trans.h:84 src/trans.h:352
 msgid "History"
 msgstr "Történet"
 
 # src/prefs.c:390 src/trans.h:85 src/trans.h:92
-#: src/prefs.c:390 src/trans.h:85 src/trans.h:92
+#: src/prefs.c:411 src/trans.h:85 src/trans.h:92
 msgid "Java"
 msgstr "Java"
 
 # src/prefs.c:391 src/trans.h:102
-#: src/prefs.c:391 src/trans.h:102
+#: src/prefs.c:412 src/trans.h:102
 msgid "Filtering"
 msgstr "Szûrés"
 
 # src/prefs.c:397 src/trans.h:125
-#: src/prefs.c:397 src/trans.h:125
+#: src/prefs.c:418 src/trans.h:125
 msgid "Layout"
 msgstr "Elrendezés"
 
 # src/prefs.c:398 src/trans.h:126 src/trans.h:130
-#: src/prefs.c:398 src/trans.h:126 src/trans.h:130
+#: src/prefs.c:419 src/trans.h:126 src/trans.h:130
 msgid "Spinner"
 msgstr "Pörgettyû"
 
 # src/prefs.c:399 src/trans.h:131 src/trans.h:137
-#: src/prefs.c:399 src/trans.h:131 src/trans.h:137
+#: src/prefs.c:420 src/trans.h:131 src/trans.h:137
 msgid "Links Menu"
 msgstr "Linkek menü"
 
 # src/prefs.c:400 src/trans.h:138 src/trans.h:143
-#: src/prefs.c:400 src/trans.h:138 src/trans.h:143
+#: src/prefs.c:421 src/trans.h:138 src/trans.h:143
 msgid "Completions"
 msgstr "Kiegészítés"
 
 # src/prefs.c:401 src/trans.h:144 src/trans.h:149
-#: src/prefs.c:401 src/trans.h:144 src/trans.h:149
+#: src/prefs.c:422 src/trans.h:144 src/trans.h:149
 msgid "Crash Recovery"
 msgstr "Helyreállítás"
 
 # src/prefs.c:407 src/trans.h:150 src/trans.h:164
-#: src/prefs.c:407 src/trans.h:150 src/trans.h:164
+#: src/prefs.c:428 src/trans.h:150 src/trans.h:164
 msgid "Downloading"
 msgstr "Letöltés"
 
-# src/prefs.c:408 src/trans.h:176
-#: src/prefs.c:408 src/trans.h:176
-msgid "View Source"
-msgstr "Forrás megtekintése"
-
-# src/prefs.c:409 src/trans.h:177 src/trans.h:190
-#: src/prefs.c:409 src/trans.h:177 src/trans.h:190
-msgid "MIME Types"
-msgstr "MIME-típusok"
-
 # src/prefs.c:415 src/trans.h:191 src/trans.h:202
-#: src/prefs.c:415 src/trans.h:191 src/trans.h:202
+#: src/prefs.c:439 src/trans.h:191 src/trans.h:202
 msgid "Fonts"
 msgstr "Betûtípusok"
 
+# src/trans.h:363
+#: src/prefs.c:440 src/trans.h:203 src/trans.h:222
+msgid "Colors"
+msgstr "Színek"
+
 # src/prefs.c:416 src/trans.h:280
-#: src/prefs.c:416 src/trans.h:280
+#: src/prefs.c:441 src/trans.h:302
 msgid "Languages"
 msgstr "Nyelvek"
 
 # src/prefs.c:422
-#: src/prefs.c:422
+#: src/prefs.c:447
 msgid "Proxy"
 msgstr "Proxy"
 
 # src/prefs.c:423 src/trans.h:210 src/trans.h:215
-#: src/prefs.c:423 src/trans.h:210 src/trans.h:215
+#: src/prefs.c:448 src/trans.h:232 src/trans.h:237
 msgid "Cache"
 msgstr "Cache"
+
+#: src/prefs.c:449 src/trans.h:351
+msgid "Network"
+msgstr "Hálózat"
 
 # src/session.c:126
 #: src/session.c:126
@@ -360,9 +411,9 @@ msgstr ""
 
 # src/trans.h:7 src/trans.h:123
 #.
-#. * Archivo de cadenas traducibles generado por Glade.
-#. * Añada este archivo a su POTFILES.in de su proyecto.
-#. * NO lo compile como parte de su aplicación.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
 #.
 #: src/trans.h:7 src/trans.h:123
 msgid "Galeon"
@@ -421,7 +472,7 @@ msgid "B_ookmarks"
 msgstr "_Könyvjelzõk"
 
 # src/trans.h:18 src/trans.h:189 src/trans.h:369
-#: src/trans.h:18 src/trans.h:189 src/trans.h:369
+#: src/trans.h:18 src/trans.h:189 src/trans.h:397
 msgid "Edit"
 msgstr "Szerkesztés"
 
@@ -500,20 +551,10 @@ msgstr "_Történet..."
 msgid "Go Back - Right button: History"
 msgstr "Vissza - Jobb gomb: Történet"
 
-# src/trans.h:35 src/trans.h:357
-#: src/trans.h:35 src/trans.h:357
-msgid "Back"
-msgstr "Vissza"
-
 # src/trans.h:36
 #: src/trans.h:36
 msgid "Go Forward - Right button: History\n"
 msgstr "Elõre - Jobb gomb: Történet\n"
-
-# src/trans.h:38 src/trans.h:359
-#: src/trans.h:38 src/trans.h:359
-msgid "Forward"
-msgstr "Elõre"
 
 # src/trans.h:39
 #: src/trans.h:39
@@ -561,24 +602,24 @@ msgid "   Location: "
 msgstr "   Hely: "
 
 # src/trans.h:48 src/trans.h:51 src/trans.h:361
-#: src/trans.h:48 src/trans.h:51 src/trans.h:361
+#: src/trans.h:48 src/trans.h:51 src/trans.h:389
 msgid "Go"
 msgstr "Ugorj!"
 
 # src/trans.h:52 src/trans.h:336
-#: src/trans.h:52 src/trans.h:336
+#: src/trans.h:52 src/trans.h:364
 msgid "Select File"
 msgstr "Fájl választása"
 
 # src/trans.h:53 src/trans.h:331 src/trans.h:334 src/trans.h:337
-#: src/trans.h:53 src/trans.h:331 src/trans.h:334 src/trans.h:337
+#: src/trans.h:53 src/trans.h:359 src/trans.h:362 src/trans.h:365
 msgid "OK"
 msgstr "OK"
 
 # src/trans.h:54 src/trans.h:332 src/trans.h:335 src/trans.h:338
 # src/trans.h:384
-#: src/trans.h:54 src/trans.h:332 src/trans.h:335 src/trans.h:338
-#: src/trans.h:384
+#: src/trans.h:54 src/trans.h:360 src/trans.h:363 src/trans.h:366
+#: src/trans.h:412
 msgid "Cancel"
 msgstr "Mégsem"
 
@@ -603,7 +644,7 @@ msgid "Home Page"
 msgstr "Kezdõlap"
 
 # src/trans.h:59 src/trans.h:344 src/trans.h:380
-#: src/trans.h:59 src/trans.h:344 src/trans.h:380
+#: src/trans.h:59 src/trans.h:372 src/trans.h:408
 msgid "URL:"
 msgstr "URL:"
 
@@ -786,7 +827,7 @@ msgid "Icons"
 msgstr "Ikonok"
 
 # src/trans.h:109
-#: src/trans.h:109
+#: src/trans.h:109 src/trans.h:205
 msgid "Text"
 msgstr "Szöveg"
 
@@ -1018,6 +1059,11 @@ msgstr "gless"
 msgid "gnp"
 msgstr "gnp"
 
+# src/prefs.c:409 src/trans.h:177 src/trans.h:190
+#: src/trans.h:177 src/trans.h:190
+msgid "MIME Types"
+msgstr "MIME-típusok"
+
 # src/trans.h:178
 #: src/trans.h:178
 msgid "Mime Types"
@@ -1039,7 +1085,7 @@ msgid "Open with program"
 msgstr "Megnyitás programmal"
 
 # src/trans.h:183 src/trans.h:342 src/trans.h:348 src/trans.h:378
-#: src/trans.h:183 src/trans.h:342 src/trans.h:348 src/trans.h:378
+#: src/trans.h:183 src/trans.h:370 src/trans.h:376 src/trans.h:406
 msgid "Name"
 msgstr "Név"
 
@@ -1059,7 +1105,7 @@ msgid "Program"
 msgstr "Program"
 
 # src/trans.h:187 src/trans.h:319
-#: src/trans.h:187 src/trans.h:319
+#: src/trans.h:187 src/trans.h:342
 msgid "Add"
 msgstr "Hozzáadás"
 
@@ -1098,643 +1144,728 @@ msgstr "AaÁáBbCcDdEeÉéFfGgHhIiÍiJjKkLlMmNnOoÓóÖöÕõPpQqRrSsTtUuÚúÜüÛûVvWwXxYyZz"
 msgid "Monospace"
 msgstr "Monospace"
 
+#: src/trans.h:204
+msgid "Background"
+msgstr "Háttér"
+
+#: src/trans.h:206
+msgid "Unvisited link"
+msgstr "Nem látogatott link"
+
+#: src/trans.h:207
+msgid "Visited link"
+msgstr "Látogatott link"
+
+#: src/trans.h:208
+msgid "Pick the background color"
+msgstr "Háttérszín választása"
+
+#: src/trans.h:209
+msgid "Pick the text color"
+msgstr "Szöveg színének választása"
+
+#: src/trans.h:210
+msgid "Pick the color unvisited links"
+msgstr "Nem látogatott link színének választása"
+
+#: src/trans.h:211
+msgid "Pick the color for visited links"
+msgstr "Látogatott link színének választása"
+
+#: src/trans.h:212
+msgid ""
+"When a page \n"
+"provides its own colors"
+msgstr ""
+"Ha az oldal megadja\n"
+"a használandó színeket"
+
+#: src/trans.h:214
+msgid "Use provided colors"
+msgstr "Megadott színek használata"
+
+#: src/trans.h:215
+msgid "Use my chosen colors"
+msgstr "Választott színek használata"
+
+#: src/trans.h:216
+msgid "Underline links"
+msgstr "Linkek aláhúzása"
+
+#: src/trans.h:217 src/trans.h:219 src/trans.h:220 src/trans.h:221
+msgid "[*]"
+msgstr "[*]"
+
+#: src/trans.h:218
+msgid ""
+"[*] Note: due to limitations in Mozilla, these options are not guaranteed to "
+"work."
+msgstr ""
+"[*] A Mozilla hiányosságai miatt ezek a beállítások nem feltétlen mûködnek."
+
 # src/trans.h:203 src/trans.h:209
-#: src/trans.h:203 src/trans.h:209
+#: src/trans.h:223 src/trans.h:231
 msgid "Proxies"
 msgstr "Proxy"
 
 # src/trans.h:204
-#: src/trans.h:204
+#: src/trans.h:224
 msgid "HTTP proxy"
 msgstr "HTTP proxy"
 
 # src/trans.h:205
-#: src/trans.h:205
+#: src/trans.h:225
 msgid "FTP proxy"
 msgstr "FTP proxy"
 
 # src/trans.h:206 src/trans.h:207
-#: src/trans.h:206 src/trans.h:207
+#: src/trans.h:226 src/trans.h:227
 msgid "Port"
 msgstr "Port"
 
 # src/trans.h:208
-#: src/trans.h:208
+#: src/trans.h:228
 msgid "No proxy for"
 msgstr "Ne használja a proxy-t a következõkre"
 
+# src/prefs.c:400 src/trans.h:138 src/trans.h:143
+#: src/trans.h:229
+msgid "Options"
+msgstr "Beállítások"
+
+#: src/trans.h:230
+msgid "Proxy keep-alive?"
+msgstr "Proxy-kapcsolat folyamatos fenntartása"
+
 # src/trans.h:211
-#: src/trans.h:211
+#: src/trans.h:233
 msgid "Disk cache"
 msgstr "Lemez cache"
 
 # src/trans.h:212
-#: src/trans.h:212
+#: src/trans.h:234
 msgid "Memory cache"
 msgstr "Memória cache"
 
 # src/trans.h:213 src/trans.h:214
-#: src/trans.h:213 src/trans.h:214
+#: src/trans.h:235 src/trans.h:236
 msgid "Kb"
 msgstr "Kb"
 
 # src/trans.h:216
-#: src/trans.h:216
+#: src/trans.h:238
 msgid "Charsets"
 msgstr "Karakterkészletek"
 
 # src/trans.h:217
-#: src/trans.h:217
+#: src/trans.h:239
 msgid "Autodetect"
 msgstr "Automatikus felismerés"
 
 # src/trans.h:218
-#: src/trans.h:218
+#: src/trans.h:240
 msgid "Default charset"
 msgstr "Alapértelmezett karakterkészlet"
 
 # src/trans.h:219
-#: src/trans.h:219
+#: src/trans.h:241
 msgid "Off"
 msgstr "Kikapcsolva"
 
 # src/trans.h:220
-#: src/trans.h:220
+#: src/trans.h:242
 msgid "Chinese"
 msgstr "Kínai"
 
 # src/trans.h:221
-#: src/trans.h:221
+#: src/trans.h:243
 msgid "East asian"
 msgstr "Kelet-ázsiai"
 
 # src/trans.h:222
-#: src/trans.h:222
+#: src/trans.h:244
 msgid "Japanese"
 msgstr "Japán"
 
 # src/trans.h:223
-#: src/trans.h:223
+#: src/trans.h:245
 msgid "Korean"
 msgstr "Koreai"
 
 # src/trans.h:224
-#: src/trans.h:224
+#: src/trans.h:246
 msgid "Russian"
 msgstr "Orosz"
 
 # src/trans.h:225
-#: src/trans.h:225
+#: src/trans.h:247
 msgid "Simplified Chinese"
 msgstr "Egyszerûsített kínai"
 
 # src/trans.h:226
-#: src/trans.h:226
+#: src/trans.h:248
 msgid "Traditional Chinese"
 msgstr "Hagyományos kínai"
 
 # src/trans.h:227
-#: src/trans.h:227
+#: src/trans.h:249
 msgid "Ukrainian"
 msgstr "Ukrán"
 
 # src/trans.h:228 src/trans.h:279
-#: src/trans.h:228 src/trans.h:279
+#: src/trans.h:250 src/trans.h:301
 msgid "Armenian (ARMSCII-8)"
 msgstr "Örmény (ARMSCII-8)"
 
 # src/trans.h:229
-#: src/trans.h:229
+#: src/trans.h:251
 msgid "Baltic (ISO-8859-13)"
 msgstr "Balti (ISO-8859-13)"
 
 # src/trans.h:230
-#: src/trans.h:230
+#: src/trans.h:252
 msgid "Baltic (ISO-8859-4)"
 msgstr "Balti (ISO-8859-4)"
 
 # src/trans.h:231
-#: src/trans.h:231
+#: src/trans.h:253
 msgid "Baltic (Windows-1257)"
 msgstr "Balti (Windows-1257)"
 
 # src/trans.h:232
-#: src/trans.h:232
+#: src/trans.h:254
 msgid "Celtic (ISO-8859-14)"
 msgstr "Kelta (ISO-8859-14)"
 
 # src/trans.h:233
-#: src/trans.h:233
+#: src/trans.h:255
 msgid "Central European (IBM-852)"
 msgstr "Közép-európai (IBM-852)"
 
 # src/trans.h:234
-#: src/trans.h:234
+#: src/trans.h:256
 msgid "Central European (ISO-8859-2)"
 msgstr "Közép-európai (ISO-8859-2)"
 
 # src/trans.h:235
-#: src/trans.h:235
+#: src/trans.h:257
 msgid "Central European (MacCE)"
 msgstr "Közép-európai (MacCE)"
 
 # src/trans.h:236
-#: src/trans.h:236
+#: src/trans.h:258
 msgid "Central European (Windows-1250)"
 msgstr "Közép-európai (Windows-1250)"
 
 # src/trans.h:237
-#: src/trans.h:237
+#: src/trans.h:259
 msgid "Chinese Simplified (GB2312)"
 msgstr "Egyszerûsített kínai (GB2312)"
 
 # src/trans.h:238
-#: src/trans.h:238
+#: src/trans.h:260
 msgid "Chinese Simplified (GBK)"
 msgstr "Egyszerûsített kínai (GBK)"
 
 # src/trans.h:239
-#: src/trans.h:239
+#: src/trans.h:261
 msgid "Central European (HZ)"
 msgstr "Közép-európai (HZ)"
 
 # src/trans.h:240
-#: src/trans.h:240
+#: src/trans.h:262
 msgid "Chinese Traditional (Big5)"
 msgstr "Hagyományos kínai (Big5)"
 
 # src/trans.h:241
-#: src/trans.h:241
+#: src/trans.h:263
 msgid "Chinese Traditional (EUC-TW)"
 msgstr "Hagyományos kínai (EUC-TW)"
 
 # src/trans.h:242
-#: src/trans.h:242
+#: src/trans.h:264
 msgid "Croatian (MacCroatian)"
 msgstr "Horvát (MacCroatian)"
 
 # src/trans.h:243
-#: src/trans.h:243
+#: src/trans.h:265
 msgid "Cyrillic (IBM-855)"
 msgstr "Cirill (IBM-855)"
 
 # src/trans.h:244
-#: src/trans.h:244
+#: src/trans.h:266
 msgid "Cyrillic (ISO-8859-5)"
 msgstr "Cirill (ISO-8859-5)"
 
 # src/trans.h:245
-#: src/trans.h:245
+#: src/trans.h:267
 msgid "Cyrillic (ISO-IR-111)"
 msgstr "Cirill  (ISO-IR-111)"
 
 # src/trans.h:246
-#: src/trans.h:246
+#: src/trans.h:268
 msgid "Cyrillic (Windows-1251)"
 msgstr "Cirill (Windows-1251)"
 
 # src/trans.h:247
-#: src/trans.h:247
+#: src/trans.h:269
 msgid "Cyrillic/Russian (IBM-866)"
 msgstr "Cirill/Orosz (IBM-866)"
 
 # src/trans.h:248
-#: src/trans.h:248
+#: src/trans.h:270
 msgid "Cyrillic/Ukrainian (KOI8-U)"
 msgstr "Cirill/Ukrán (KOI8-U)"
 
 # src/trans.h:249
-#: src/trans.h:249
+#: src/trans.h:271
 msgid "Cyrillic/Ukrainian (MacUkrainian)"
 msgstr "Cirill/Ukrán (MacUkrainian)"
 
 # src/trans.h:250
-#: src/trans.h:250
+#: src/trans.h:272
 msgid "Greek (ISO-8859-7)"
 msgstr "Görög (ISO-8859-7)"
 
 # src/trans.h:251
-#: src/trans.h:251
+#: src/trans.h:273
 msgid "Greek (MacGreek)"
 msgstr "Görög (MacGreek)"
 
 # src/trans.h:252
-#: src/trans.h:252
+#: src/trans.h:274
 msgid "Greek (Windows-1253)"
 msgstr "Görög (Windows-1253)"
 
 # src/trans.h:253
-#: src/trans.h:253
+#: src/trans.h:275
 msgid "Icelandic (MacIcelandic)"
 msgstr "Izlandi (MacIcelandic)"
 
 # src/trans.h:254
-#: src/trans.h:254
+#: src/trans.h:276
 msgid "Japanese (EUC-JP)"
 msgstr "Japán (EUC-JP)"
 
 # src/trans.h:255
-#: src/trans.h:255
+#: src/trans.h:277
 msgid "Japanese (ISO-2022-JP)"
 msgstr "Japán (ISO-2022-JP)"
 
 # src/trans.h:256
-#: src/trans.h:256
+#: src/trans.h:278
 msgid "Japanese (Shift_JIS)"
 msgstr "Japán (Shift_JIS)"
 
 # src/trans.h:257
-#: src/trans.h:257
+#: src/trans.h:279
 msgid "Korean (EUC_KR)"
 msgstr "Koreai (EUC_KR)"
 
 # src/trans.h:258
-#: src/trans.h:258
+#: src/trans.h:280
 msgid "Nordic (ISO-8859-10)"
 msgstr "Északi (ISO-8859-10)"
 
 # src/trans.h:259
-#: src/trans.h:259
+#: src/trans.h:281
 msgid "Romanian (MacRomanian)"
 msgstr "Román (MacRomanian)"
 
 # src/trans.h:260
-#: src/trans.h:260
+#: src/trans.h:282
 msgid "South European (ISO-8859-3)"
 msgstr "Dél-európai (ISO-8859-3)"
 
 # src/trans.h:261
-#: src/trans.h:261
+#: src/trans.h:283
 msgid "Thai (TIS-620)"
 msgstr "Thai (TIS-620)"
 
 # src/trans.h:262
-#: src/trans.h:262
+#: src/trans.h:284
 msgid "Turkish (IBM-857)"
 msgstr "Török (IBM-857)"
 
 # src/trans.h:263
-#: src/trans.h:263
+#: src/trans.h:285
 msgid "Turkish (ISO-8859-9)"
 msgstr "Török (ISO-8859-9)"
 
 # src/trans.h:264
-#: src/trans.h:264
+#: src/trans.h:286
 msgid "Turkish (MacTurkish)"
 msgstr "Török (MacTurkish)"
 
 # src/trans.h:265
-#: src/trans.h:265
+#: src/trans.h:287
 msgid "Turkish (Windows-1254)"
 msgstr "Török (Windows-1254)"
 
 # src/trans.h:266
-#: src/trans.h:266
+#: src/trans.h:288
 msgid "Unicode (UTF-7)"
 msgstr "Unicode (UTF-7)"
 
 # src/trans.h:267
-#: src/trans.h:267
+#: src/trans.h:289
 msgid "Unicode (UTF-8)"
 msgstr "Unicode (UTF-8)"
 
 # src/trans.h:268
-#: src/trans.h:268
+#: src/trans.h:290
 msgid "Vietnamese (TCVN)"
 msgstr "Vietnami (TCVN)"
 
 # src/trans.h:269
-#: src/trans.h:269
+#: src/trans.h:291
 msgid "Vietnamese (VISCII)"
 msgstr "Vietnami (VISCII)"
 
 # src/trans.h:270
-#: src/trans.h:270
+#: src/trans.h:292
 msgid "Vietnamese (VPS)"
 msgstr "Vietnami (VPS)"
 
 # src/trans.h:271
-#: src/trans.h:271
+#: src/trans.h:293
 msgid "Vietnamese (Windows-1258)"
 msgstr "Vietnami (Windows-1258)"
 
 # src/trans.h:272
-#: src/trans.h:272
+#: src/trans.h:294
 msgid "Visual Hebrew (ISO-8859-8)"
 msgstr "Héber (ISO-8859-8)"
 
-# src/trans.h:273
-#: src/trans.h:273
-msgid "Western (ISO-8859-8)"
-msgstr "Nyugati (ISO-8859-8)"
-
-# src/trans.h:274
-#: src/trans.h:274
-msgid "Western (IBM-850)"
-msgstr "Nyugati (IBM-850)"
-
 # src/trans.h:275
-#: src/trans.h:275
+#: src/trans.h:295 src/trans.h:297
 msgid "Western (ISO-8859-1)"
 msgstr "Nyugati (ISO-8859-1)"
 
+# src/trans.h:274
+#: src/trans.h:296
+msgid "Western (IBM-850)"
+msgstr "Nyugati (IBM-850)"
+
 # src/trans.h:276
-#: src/trans.h:276
+#: src/trans.h:298
 msgid "Western (ISO-8859-15)"
 msgstr "Nyugati (ISO-8859-15)"
 
 # src/trans.h:277
-#: src/trans.h:277
+#: src/trans.h:299
 msgid "Western (MacRoman)"
 msgstr "Nyugati (MacRoman)"
 
 # src/trans.h:278
-#: src/trans.h:278
+#: src/trans.h:300
 msgid "Western (Windows-1252)"
 msgstr "Nyugati (Windows-1252)"
 
 # src/trans.h:281 src/trans.h:318
-#: src/trans.h:281 src/trans.h:318
+#: src/trans.h:303 src/trans.h:341
 msgid "Afrikaans (af)"
 msgstr "Afrikaans (af)"
 
 # src/trans.h:282
-#: src/trans.h:282
+#: src/trans.h:304
 msgid "Albanian (sq)"
 msgstr "Albán (sq)"
 
 # src/trans.h:283
-#: src/trans.h:283
+#: src/trans.h:305
 msgid "Arabic (ar)"
 msgstr "Arab (ar)"
 
 # src/trans.h:284
-#: src/trans.h:284
+#: src/trans.h:306
 msgid "Basque (eu)"
 msgstr "Baszk (eu)"
 
 # src/trans.h:285
-#: src/trans.h:285
+#: src/trans.h:307
 msgid "Bulgarian (bg)"
 msgstr "Bolgár (bg)"
 
 # src/trans.h:286
-#: src/trans.h:286
+#: src/trans.h:308
 msgid "Byelorussian (be)"
 msgstr "Belorusz (be)"
 
 # src/trans.h:287
-#: src/trans.h:287
+#: src/trans.h:309
 msgid "Catalan (ca)"
 msgstr "Katalán (ca)"
 
 # src/trans.h:288
-#: src/trans.h:288
+#: src/trans.h:310
 msgid "Chinese (zh)"
 msgstr "Kínai (zh)"
 
 # src/trans.h:289
-#: src/trans.h:289
+#: src/trans.h:311
 msgid "Croatian (hr)"
 msgstr "Horvát (hr)"
 
 # src/trans.h:290
-#: src/trans.h:290
+#: src/trans.h:312
 msgid "Czech (cs)"
 msgstr "Cseh (cs)"
 
 # src/trans.h:291
-#: src/trans.h:291
+#: src/trans.h:313
 msgid "Danish (da)"
 msgstr "Dán (da)"
 
 # src/trans.h:292
-#: src/trans.h:292
+#: src/trans.h:314
 msgid "Dutch (nl)"
 msgstr "Holland (nl)"
 
 # src/trans.h:293
-#: src/trans.h:293
+#: src/trans.h:315
 msgid "English (en)"
 msgstr "Angol (en)"
 
+# src/trans.h:309
+#: src/trans.h:316
+msgid "Estonian (et)"
+msgstr "Észt (et)"
+
 # src/trans.h:294
-#: src/trans.h:294
+#: src/trans.h:317
 msgid "Faeroese (fo)"
 msgstr "Färöi (fo)"
 
 # src/trans.h:295
-#: src/trans.h:295
+#: src/trans.h:318
 msgid "Finnish (fi)"
 msgstr "Finn (fi)"
 
 # src/trans.h:296
-#: src/trans.h:296
+#: src/trans.h:319
 msgid "French (fr)"
 msgstr "Francia (fr)"
 
 # src/trans.h:297
-#: src/trans.h:297
+#: src/trans.h:320
 msgid "Galician (gl)"
 msgstr "Galíciai (gl)"
 
 # src/trans.h:298
-#: src/trans.h:298
+#: src/trans.h:321
 msgid "German (de)"
 msgstr "Német (de)"
 
 # src/trans.h:299
-#: src/trans.h:299
+#: src/trans.h:322
 msgid "Greek (el)"
 msgstr "Görög (el)"
 
 # src/trans.h:300
-#: src/trans.h:300
+#: src/trans.h:323
 msgid "Hungarian (hu)"
 msgstr "Magyar (hu)"
 
 # src/trans.h:301
-#: src/trans.h:301
+#: src/trans.h:324
 msgid "Icelandic (is)"
 msgstr "Izlandi (is)"
 
 # src/trans.h:302
-#: src/trans.h:302
+#: src/trans.h:325
 msgid "Indonesian (id)"
 msgstr "Indonéz (id)"
 
 # src/trans.h:303
-#: src/trans.h:303
+#: src/trans.h:326
 msgid "Irish (ga)"
 msgstr "Ír (ga)"
 
 # src/trans.h:304
-#: src/trans.h:304
+#: src/trans.h:327
 msgid "Korean (ko)"
 msgstr "Koreai (ko)"
 
 # src/trans.h:305
-#: src/trans.h:305
+#: src/trans.h:328
 msgid "Macedonian (mk)"
 msgstr "Macedón (mk)"
 
 # src/trans.h:306
-#: src/trans.h:306
+#: src/trans.h:329
 msgid "Norwegian (no)"
 msgstr "Norvég (no)"
 
 # src/trans.h:307
-#: src/trans.h:307
+#: src/trans.h:330
 msgid "Polish (pl)"
 msgstr "Lengyel (pl)"
 
 # src/trans.h:308
-#: src/trans.h:308
+#: src/trans.h:331
 msgid "Portoguese (pt)"
 msgstr "Portugál (pt)"
 
 # src/trans.h:309
-#: src/trans.h:309
+#: src/trans.h:332
 msgid "Romanian (ro)"
 msgstr "Román (ro)"
 
 # src/trans.h:310
-#: src/trans.h:310
+#: src/trans.h:333
 msgid "Russian (ru)"
 msgstr "Orosz (ru)"
 
 # src/trans.h:311
-#: src/trans.h:311
+#: src/trans.h:334
 msgid "Serbian (gd)"
 msgstr "Szerb (gd)"
 
 # src/trans.h:312
-#: src/trans.h:312
+#: src/trans.h:335
 msgid "Slovak (sk)"
 msgstr "Szlovák (sk)"
 
 # src/trans.h:313
-#: src/trans.h:313
+#: src/trans.h:336
 msgid "Slovenian (sl)"
 msgstr "Szlovén (sk)"
 
 # src/trans.h:314
-#: src/trans.h:314
+#: src/trans.h:337
 msgid "Spanish (es)"
 msgstr "Spanyol (es)"
 
 # src/trans.h:315
-#: src/trans.h:315
+#: src/trans.h:338
 msgid "Swedish (sv)"
 msgstr "Svéd (sv)"
 
 # src/trans.h:316
-#: src/trans.h:316
+#: src/trans.h:339
 msgid "Turkish (tr)"
 msgstr "Török (tr)"
 
 # src/trans.h:317
-#: src/trans.h:317
+#: src/trans.h:340
 msgid "Ukrainian (uk)"
 msgstr "Ukrán (uk)"
 
 # src/trans.h:320 src/trans.h:352
-#: src/trans.h:320 src/trans.h:352
+#: src/trans.h:343 src/trans.h:380
 msgid "Remove"
 msgstr "Eltávolítás"
 
 # src/trans.h:321 src/trans.h:365
-#: src/trans.h:321 src/trans.h:365
+#: src/trans.h:344 src/trans.h:393
 msgid "Up"
 msgstr "Fel"
 
 # src/trans.h:322 src/trans.h:367
-#: src/trans.h:322 src/trans.h:367
+#: src/trans.h:345 src/trans.h:395
 msgid "Down"
 msgstr "Le"
 
-# src/trans.h:323
-#: src/trans.h:323
-msgid "label142"
-msgstr "label142"
+# src/prefs.c:416 src/trans.h:280
+#: src/trans.h:346
+msgid "Languajes"
+msgstr "Nyelvek"
+
+#: src/trans.h:347
+msgid "Protocol"
+msgstr "Protokoll"
+
+# src/trans.h:204
+#: src/trans.h:348
+msgid "HTTP Version"
+msgstr "HTTP verzió"
+
+#: src/trans.h:349
+msgid "1.0"
+msgstr "1.0"
+
+#: src/trans.h:350
+msgid "1.1"
+msgstr "1.1"
 
 # src/trans.h:325
-#: src/trans.h:325
+#: src/trans.h:353
 msgid "Title"
 msgstr "Cím"
 
 # src/trans.h:326
-#: src/trans.h:326
+#: src/trans.h:354
 msgid "Url"
 msgstr "Url"
 
 # src/trans.h:327
-#: src/trans.h:327
+#: src/trans.h:355
 msgid "Last time visited"
 msgstr "Utoljára látogatva"
 
 # src/trans.h:328
-#: src/trans.h:328
+#: src/trans.h:356
 msgid "First time visited"
 msgstr "Elõször látogatva"
 
 # src/trans.h:329
-#: src/trans.h:329
+#: src/trans.h:357
 msgid "Times visited"
 msgstr "Látogatások száma"
 
 # src/trans.h:330 src/trans.h:333
-#: src/trans.h:330 src/trans.h:333
+#: src/trans.h:358 src/trans.h:361
 msgid "Select Directory"
 msgstr "Könyvtár választása"
 
 # src/trans.h:339
-#: src/trans.h:339
+#: src/trans.h:367
 msgid "Find text..."
 msgstr "Szöveg keresése..."
 
 # src/trans.h:340
-#: src/trans.h:340
+#: src/trans.h:368
 msgid "Find text or regular expression:"
 msgstr "Szöveg vagy reguláris kifejezés keresése:"
 
 # src/trans.h:341
-#: src/trans.h:341
+#: src/trans.h:369
 msgid "Match upper/lower case"
 msgstr "Kis- és nagybetû számít"
 
 # src/trans.h:345
-#: src/trans.h:345
+#: src/trans.h:373
 msgid "Nick:"
 msgstr "Név:"
 
 # src/trans.h:346 src/trans.h:381
-#: src/trans.h:346 src/trans.h:381
+#: src/trans.h:374 src/trans.h:409
 msgid "Notes:"
 msgstr "Megjegyzés:"
 
 # src/trans.h:347
-#: src/trans.h:347
+#: src/trans.h:375
 msgid "Create toolbar"
 msgstr "Eszköztár létrehozása"
 
 # src/trans.h:349 src/trans.h:371
-#: src/trans.h:349 src/trans.h:371
+#: src/trans.h:377 src/trans.h:399
 msgid "New item"
 msgstr "Új elem"
 
 # src/trans.h:350
-#: src/trans.h:350
+#: src/trans.h:378
 msgid "New Separator"
 msgstr "Új elválasztó"
 
 # src/trans.h:351
-#: src/trans.h:351
+#: src/trans.h:379
 msgid "New Category"
 msgstr "Új kategória"
 
 # src/trans.h:353
-#: src/trans.h:353
+#: src/trans.h:381
 msgid ""
 "Multiple\n"
 "selections"
@@ -1742,200 +1873,92 @@ msgstr ""
 "Többszörös\n"
 "kijelölés"
 
-# src/trans.h:355
-#: src/trans.h:355
-msgid "Temporary bookmaks"
-msgstr "Ideiglenes könyvjelzõk"
-
 # src/trans.h:356
-#: src/trans.h:356
+#: src/trans.h:384
 msgid "Go to the previous bookmark"
 msgstr "Ugrás az elõzõ könyvjelzõre"
 
 # src/trans.h:358
-#: src/trans.h:358
+#: src/trans.h:386
 msgid "Go to the next bookmark"
 msgstr "Ugrás a következõ könyvjelzõre"
 
 # src/trans.h:360
-#: src/trans.h:360
+#: src/trans.h:388
 msgid "Load selected bookmark in the browser"
 msgstr "A kiválasztott könyvjelzõ megjelenítése a böngészõben"
 
 # src/trans.h:362
-#: src/trans.h:362
+#: src/trans.h:390
 msgid "Close this window"
 msgstr "Ablak bezárása"
 
 # src/trans.h:363
-#: src/trans.h:363
+#: src/trans.h:391
 msgid "Close"
 msgstr "Bezárás"
 
 # src/trans.h:364
-#: src/trans.h:364
+#: src/trans.h:392
 msgid "Move bookmark up"
 msgstr "Felfelé mozgatja a könyvjelzõt"
 
 # src/trans.h:366
-#: src/trans.h:366
+#: src/trans.h:394
 msgid "Move bookmark down"
 msgstr "Lefelé mozgatja a könyvjelzõt"
 
 # src/trans.h:368
-#: src/trans.h:368
+#: src/trans.h:396
 msgid "Show edit bookmarks controls"
 msgstr "Mutatja a könyvjelzõ-szerkesztõ eszközöket"
 
 # src/trans.h:370
-#: src/trans.h:370
+#: src/trans.h:398
 msgid "Add a new bookmark"
 msgstr "Új könyvjelzõ hozzáadása"
 
 # src/trans.h:372
-#: src/trans.h:372
+#: src/trans.h:400
 msgid "Add a new bookmark category"
 msgstr "Új könyvjelzõ-kategória hozzáadása"
 
 # src/trans.h:373
-#: src/trans.h:373
+#: src/trans.h:401
 msgid "New category"
 msgstr "Új kategória"
 
 # src/trans.h:374
-#: src/trans.h:374
+#: src/trans.h:402
 msgid "Erase selected bookmark"
 msgstr "A kijelölt könyvjelzõ törlése"
 
 # src/trans.h:375
-#: src/trans.h:375
+#: src/trans.h:403
 msgid "Erase"
 msgstr "Törlés"
 
 # src/trans.h:376
-#: src/trans.h:376
+#: src/trans.h:404
 msgid "Convert this bookmark into a permanent bookmark"
 msgstr "A könyvjelzõ állandó könyvjelzõvé alakítása"
 
 # src/trans.h:377
-#: src/trans.h:377
+#: src/trans.h:405
 msgid "File"
 msgstr "Fájl"
 
 # src/trans.h:379
-#: src/trans.h:379
+#: src/trans.h:407
 msgid "Name:"
 msgstr "Név:"
 
 # src/trans.h:382
-#: src/trans.h:382
+#: src/trans.h:410
 msgid "Select Bookmark File"
 msgstr "Könyvjelzõfájl kiválasztása"
 
 # src/trans.h:383
-#: src/trans.h:383
+#: src/trans.h:411
 msgid "Import Bookmark"
 msgstr "Könyvjelzõ importálása"
-
-#~ msgid ""
-#~ "Home page\n"
-#~ "Last page\n"
-#~ "Blank page\n"
-#~ msgstr ""
-#~ "A kezdõlap\n"
-#~ "A legutolsó lap\n"
-#~ "Üres lap\n"
-
-#~ msgid ""
-#~ "Allow opening in new windows\n"
-#~ "Never open in new window\n"
-#~ msgstr ""
-#~ "Megnyitás új ablakban engedélyezve\n"
-#~ "Megnyitás új ablakban tiltva\n"
-
-#~ msgid ""
-#~ "Separate toolbar\n"
-#~ "Button toolbar\n"
-#~ msgstr ""
-#~ "Külön eszköztáron\n"
-#~ "Gombok eszköztárán\n"
-
-#~ msgid ""
-#~ "Icons\n"
-#~ "Text\n"
-#~ "Both\n"
-#~ msgstr ""
-#~ "Ikonok\n"
-#~ "Szöveg\n"
-#~ "Mindkettõ\n"
-
-#~ msgid ""
-#~ "Status bar\n"
-#~ "Dialog\n"
-#~ msgstr ""
-#~ "Státuszsor\n"
-#~ "Párbeszédablak\n"
-
-#~ msgid ""
-#~ "Galeon - %s\n"
-#~ "%s - Galeon\n"
-#~ "Galeon: %s\n"
-#~ "%s\n"
-#~ "Galeon\n"
-#~ msgstr ""
-#~ "Galeon - %s\n"
-#~ "%s - Galeon\n"
-#~ "Galeon: %s\n"
-#~ "%s\n"
-#~ "Galeon\n"
-
-#~ msgid ""
-#~ "Auto completion\n"
-#~ "Tab Completion\n"
-#~ "None\n"
-#~ msgstr ""
-#~ "Automatikus kiegészítés\n"
-#~ "TAB-ra kiegészítés\n"
-#~ "Nincs\n"
-
-#~ msgid ""
-#~ "Never\n"
-#~ "Ask User\n"
-#~ "Always\n"
-#~ msgstr ""
-#~ "Soha\n"
-#~ "Kérdez\n"
-#~ "Mindig\n"
-
-#~ msgid ""
-#~ "Mozilla FTP\n"
-#~ "Gnome FTP Handler\n"
-#~ msgstr ""
-#~ "Mozilla FTP\n"
-#~ "A Gnome FTP-kezelõje\n"
-
-#~ msgid ""
-#~ "gnome-edit\n"
-#~ "emacs\n"
-#~ "gedit\n"
-#~ "xemacs\n"
-#~ "gvim\n"
-#~ "gless\n"
-#~ "gnp\n"
-#~ msgstr ""
-#~ "gnome-edit\n"
-#~ "emacs\n"
-#~ "gedit\n"
-#~ "xemacs\n"
-#~ "gvim\n"
-#~ "gless\n"
-#~ "gnp\n"
-
-#~ msgid ""
-#~ "Save to disk\n"
-#~ "Open with program\n"
-#~ "Ask user\n"
-#~ msgstr ""
-#~ "Mentés lemezre\n"
-#~ "Megnyitás programmal\n"
-#~ "Felhasználó megkérdezése\n"
