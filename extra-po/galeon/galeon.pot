@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2000-10-13 21:35+0200\n"
+"POT-Creation-Date: 2000-10-27 19:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,114 +14,131 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:409 src/trans.h:76
-#: src/trans.h:81
+#: src/bookmarks.c:143 src/bookmarks.c:454 src/prefs.c:409 src/trans.h:79
+#: src/trans.h:84
 msgid "Bookmarks"
 msgstr ""
 
-#: src/bookmarks.c:827 src/bookmarks_callbacks.c:181
-#: src/browser_callbacks.c:804 src/history.c:182 src/mozcallbacks.c:140
+#: src/bookmarks.c:834 src/bookmarks_callbacks.c:190
+#: src/browser_callbacks.c:815 src/history.c:182 src/mozcallbacks.c:159
 msgid "Untitled"
 msgstr ""
 
-#: src/bookmarks.c:996 src/trans.h:383
+#: src/bookmarks.c:1003 src/trans.h:387
 msgid "Temporary bookmarks"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:89
+#: src/bookmarks_callbacks.c:98
 msgid "Importing bookmarks failed"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:93
+#: src/bookmarks_callbacks.c:102
 msgid "Bookmarks successfully imported/merged"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:196
+#: src/bookmarks_callbacks.c:205
 msgid "Please enter the name of the bookmark"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:517
+#: src/bookmarks_callbacks.c:275
+#, c-format
+msgid ""
+"File %s will be overwritten.\n"
+"If you have any bookmark in that file, it will be lost.\n"
+"\n"
+"Do you want to continue?"
+msgstr ""
+
+#: src/bookmarks_callbacks.c:290
+msgid "Exporting bookmarks failed"
+msgstr ""
+
+#: src/bookmarks_callbacks.c:292
+msgid "Bookmarks successfully exported"
+msgstr ""
+
+#: src/bookmarks_callbacks.c:612
 msgid "New bookmark item"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:517
+#: src/bookmarks_callbacks.c:612
 msgid "where://do.you.want.to.go"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:530
+#: src/bookmarks_callbacks.c:625
 msgid "New bookmark category"
 msgstr ""
 
-#: src/bookmarks_callbacks.c:543
+#: src/bookmarks_callbacks.c:638
 msgid "Separator"
 msgstr ""
 
 #. fill the status bar text with progress info: percentual and kb
-#: src/browser.c:419
+#: src/browser.c:427
 msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
 msgstr ""
 
 #. fill the status bar text with progress info: only kb
-#: src/browser.c:427
+#: src/browser.c:435
 #, c-format
 msgid "%s (%d Kb loaded)"
 msgstr ""
 
-#: src/browser.c:695
+#: src/browser.c:703
 msgid ""
 "Can't get the url for current page.\n"
 "No source avaible."
 msgstr ""
 
-#: src/browser.c:711
+#: src/browser.c:719
 msgid "Could not create a temporary file"
 msgstr ""
 
-#: src/browser.c:718
+#: src/browser.c:726
 msgid "Something went wrong while saving the file to a temporary location"
 msgstr ""
 
-#: src/browser.c:732
+#: src/browser.c:740
 msgid "Error executing external program"
 msgstr ""
 
-#: src/browser_callbacks.c:290
+#: src/browser_callbacks.c:301
 msgid "You must specify a Start Page in the Preferences dialog!"
 msgstr ""
 
-#: src/context.c:27 src/context.c:60
+#: src/context.c:27 src/context.c:67
 msgid "Open"
 msgstr ""
 
-#: src/context.c:28 src/context.c:61
+#: src/context.c:28 src/context.c:68
 msgid "Open in a new window"
 msgstr ""
 
-#: src/context.c:29 src/context.c:62
+#: src/context.c:29 src/context.c:69
 msgid "Download file"
 msgstr ""
 
-#: src/context.c:30 src/context.c:63
+#: src/context.c:30 src/context.c:70
 msgid "Copy link location"
 msgstr ""
 
-#: src/context.c:31 src/context.c:64 src/trans.h:24
+#: src/context.c:31 src/context.c:48 src/context.c:71 src/trans.h:27
 msgid "Add temporary bookmark"
 msgstr ""
 
-#: src/context.c:37 src/context.c:56
+#: src/context.c:37 src/context.c:63
 msgid "Open image"
 msgstr ""
 
-#: src/context.c:38 src/context.c:57
+#: src/context.c:38 src/context.c:64
 msgid "Open image in a new window"
 msgstr ""
 
-#: src/context.c:39 src/context.c:58
+#: src/context.c:39 src/context.c:65
 msgid "Download image"
 msgstr ""
 
-#: src/context.c:45 src/prefs.c:429 src/trans.h:176
+#: src/context.c:45 src/prefs.c:429 src/trans.h:179
 msgid "View Source"
 msgstr ""
 
@@ -133,12 +150,32 @@ msgstr ""
 msgid "Find"
 msgstr ""
 
-#: src/context.c:49 src/trans.h:35 src/trans.h:385
+#: src/context.c:50 src/trans.h:38 src/trans.h:389
 msgid "Back"
 msgstr ""
 
-#: src/context.c:50 src/trans.h:38 src/trans.h:387
+#: src/context.c:51 src/trans.h:41 src/trans.h:391
 msgid "Forward"
+msgstr ""
+
+#: src/context.c:52 src/trans.h:43
+msgid "Reload"
+msgstr ""
+
+#: src/context.c:54
+msgid "Open frame in window"
+msgstr ""
+
+#: src/context.c:55
+msgid "Open frame in new window"
+msgstr ""
+
+#: src/context.c:56
+msgid "Reload frame"
+msgstr ""
+
+#: src/context.c:57
+msgid "Add temporary bookmark for frame"
 msgstr ""
 
 #: src/find_callbacks.c:60 src/find_callbacks.c:86 src/find_callbacks.c:125
@@ -153,7 +190,7 @@ msgstr ""
 msgid "Add a temp bookmark (don't open any window)"
 msgstr ""
 
-#: src/main.c:55 src/trans.h:371
+#: src/main.c:55 src/trans.h:375
 msgid "URL"
 msgstr ""
 
@@ -165,19 +202,19 @@ msgid ""
 "Would you like to import your existing Netscape bookmarks?"
 msgstr ""
 
-#: src/misc.c:155
+#: src/misc.c:157
 #, c-format
 msgid "%s not found"
 msgstr ""
 
 #. throw the error
-#: src/misc.c:344
+#: src/misc.c:339
 msgid ""
 "Galeon cannot handle this protocol,\n"
 "and no GNOME default handler is set"
 msgstr ""
 
-#: src/misc.c:359
+#: src/misc.c:354
 msgid ""
 "The protocol specified is not recognised.\n"
 "\n"
@@ -196,44 +233,49 @@ msgstr ""
 msgid "Cannot save the file"
 msgstr ""
 
-#: src/mozcallbacks.c:254
+#: src/mozcallbacks.c:273
 msgid "Redirecting to site..."
 msgstr ""
 
-#: src/mozcallbacks.c:256
+#: src/mozcallbacks.c:275
 msgid "Transferring data from site..."
 msgstr ""
 
-#: src/mozcallbacks.c:258
+#: src/mozcallbacks.c:277
 msgid "Waiting for authorization..."
 msgstr ""
 
-#: src/mozcallbacks.c:260
+#: src/mozcallbacks.c:279
 msgid "Loading site..."
 msgstr ""
 
-#: src/mozcallbacks.c:262
+#: src/mozcallbacks.c:281
 msgid "Done."
 msgstr ""
 
-#: src/mozcallbacks.c:266
+#: src/mozcallbacks.c:285
 msgid "Site not found."
 msgstr ""
 
-#: src/mozcallbacks.c:268
+#: src/mozcallbacks.c:287
 msgid "Failed to connect to site."
 msgstr ""
 
-#: src/mozcallbacks.c:270
+#: src/mozcallbacks.c:289
 msgid "Failed due to connection timeout."
 msgstr ""
 
-#: src/mozcallbacks.c:272
+#: src/mozcallbacks.c:291
 msgid "User canceled connecting to site."
 msgstr ""
 
-#: src/netscape.c:101
+#: src/netscape.c:99
 msgid "Personal Toolbar Folder"
+msgstr ""
+
+#: src/netscape.c:285
+#, c-format
+msgid "Could not open file: %s"
 msgstr ""
 
 #: src/prefs.c:398
@@ -256,55 +298,55 @@ msgstr ""
 msgid "Advanced"
 msgstr ""
 
-#: src/prefs.c:408 src/trans.h:75
+#: src/prefs.c:408 src/trans.h:78
 msgid "Homepage"
 msgstr ""
 
-#: src/prefs.c:410 src/trans.h:82 src/trans.h:84 src/trans.h:352
+#: src/prefs.c:410 src/trans.h:85 src/trans.h:87 src/trans.h:356
 msgid "History"
 msgstr ""
 
-#: src/prefs.c:411 src/trans.h:85 src/trans.h:92
+#: src/prefs.c:411 src/trans.h:88 src/trans.h:95
 msgid "Java"
 msgstr ""
 
-#: src/prefs.c:412 src/trans.h:102
+#: src/prefs.c:412 src/trans.h:105
 msgid "Filtering"
 msgstr ""
 
-#: src/prefs.c:418 src/trans.h:125
+#: src/prefs.c:418 src/trans.h:128
 msgid "Layout"
 msgstr ""
 
-#: src/prefs.c:419 src/trans.h:126 src/trans.h:130
+#: src/prefs.c:419 src/trans.h:129 src/trans.h:133
 msgid "Spinner"
 msgstr ""
 
-#: src/prefs.c:420 src/trans.h:131 src/trans.h:137
+#: src/prefs.c:420 src/trans.h:134 src/trans.h:140
 msgid "Links Menu"
 msgstr ""
 
-#: src/prefs.c:421 src/trans.h:138 src/trans.h:143
+#: src/prefs.c:421 src/trans.h:141 src/trans.h:146
 msgid "Completions"
 msgstr ""
 
-#: src/prefs.c:422 src/trans.h:144 src/trans.h:149
+#: src/prefs.c:422 src/trans.h:147 src/trans.h:152
 msgid "Crash Recovery"
 msgstr ""
 
-#: src/prefs.c:428 src/trans.h:150 src/trans.h:164
+#: src/prefs.c:428 src/trans.h:153 src/trans.h:167
 msgid "Downloading"
 msgstr ""
 
-#: src/prefs.c:439 src/trans.h:191 src/trans.h:202
+#: src/prefs.c:439 src/trans.h:194 src/trans.h:205
 msgid "Fonts"
 msgstr ""
 
-#: src/prefs.c:440 src/trans.h:203 src/trans.h:222
+#: src/prefs.c:440 src/trans.h:206 src/trans.h:225
 msgid "Colors"
 msgstr ""
 
-#: src/prefs.c:441 src/trans.h:302
+#: src/prefs.c:441 src/trans.h:306
 msgid "Languages"
 msgstr ""
 
@@ -312,11 +354,11 @@ msgstr ""
 msgid "Proxy"
 msgstr ""
 
-#: src/prefs.c:448 src/trans.h:232 src/trans.h:237
+#: src/prefs.c:448 src/trans.h:235 src/trans.h:241
 msgid "Cache"
 msgstr ""
 
-#: src/prefs.c:449 src/trans.h:351
+#: src/prefs.c:449 src/trans.h:355
 msgid "Network"
 msgstr ""
 
@@ -328,11 +370,11 @@ msgid ""
 msgstr ""
 
 #.
-#. * Translatable strings file generated by Glade.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
+#. * Archivo de cadenas traducibles generado por Glade.
+#. * Añada este archivo a su POTFILES.in de su proyecto.
+#. * NO lo compile como parte de su aplicación.
 #.
-#: src/trans.h:7 src/trans.h:123
+#: src/trans.h:7 src/trans.h:126
 msgid "Galeon"
 msgstr ""
 
@@ -376,1203 +418,1219 @@ msgstr ""
 msgid "B_ookmarks"
 msgstr ""
 
-#: src/trans.h:18 src/trans.h:189 src/trans.h:397
+#: src/trans.h:18 src/trans.h:192 src/trans.h:401
 msgid "Edit"
 msgstr ""
 
 #: src/trans.h:19
-msgid "Import"
+msgid "Import / Export"
 msgstr ""
 
 #: src/trans.h:20
-msgid "Netscape bookmarks"
+msgid "Import from Netscape bookmarks"
 msgstr ""
 
 #: src/trans.h:21
-msgid "Mozilla bookmarks"
+msgid "Import from Mozilla bookmarks"
 msgstr ""
 
 #: src/trans.h:22
-msgid "From other location"
+msgid "Import from other location"
 msgstr ""
 
 #: src/trans.h:23
-msgid "File bookmark"
+msgid "Export to Netscape bookmarks"
+msgstr ""
+
+#: src/trans.h:24
+msgid "Export to Mozilla bookmarks"
 msgstr ""
 
 #: src/trans.h:25
-msgid "Show temporary bookmarks"
+msgid "Export to other location"
 msgstr ""
 
 #: src/trans.h:26
-msgid "_Go"
-msgstr ""
-
-#: src/trans.h:27
-msgid "_Previous page"
+msgid "File bookmark"
 msgstr ""
 
 #: src/trans.h:28
-msgid "_Next Page"
+msgid "Show temporary bookmarks"
 msgstr ""
 
 #: src/trans.h:29
-msgid "_Reload"
+msgid "_Go"
 msgstr ""
 
 #: src/trans.h:30
-msgid "H_ome Page"
+msgid "_Previous page"
 msgstr ""
 
 #: src/trans.h:31
-msgid "_Stop"
+msgid "_Next Page"
 msgstr ""
 
 #: src/trans.h:32
-msgid "Log of visited pages"
+msgid "_Reload"
 msgstr ""
 
 #: src/trans.h:33
-msgid "_History..."
+msgid "H_ome Page"
 msgstr ""
 
 #: src/trans.h:34
-msgid "Go Back - Right button: History"
+msgid "_Stop"
+msgstr ""
+
+#: src/trans.h:35
+msgid "Log of visited pages"
 msgstr ""
 
 #: src/trans.h:36
-msgid "Go Forward - Right button: History\n"
+msgid "_History..."
+msgstr ""
+
+#: src/trans.h:37
+msgid "Go Back - Right button: History"
 msgstr ""
 
 #: src/trans.h:39
-msgid "Reload Current Page"
-msgstr ""
-
-#: src/trans.h:40
-msgid "Reload"
-msgstr ""
-
-#: src/trans.h:41
-msgid "Go to your Home Page"
+msgid "Go Forward - Right button: History\n"
 msgstr ""
 
 #: src/trans.h:42
-msgid "Home"
-msgstr ""
-
-#: src/trans.h:43
-msgid "Stop current data transfer"
+msgid "Reload Current Page"
 msgstr ""
 
 #: src/trans.h:44
-msgid "Stop"
+msgid "Go to your Home Page"
 msgstr ""
 
 #: src/trans.h:45
+msgid "Home"
+msgstr ""
+
+#: src/trans.h:46
+msgid "Stop current data transfer"
+msgstr ""
+
+#: src/trans.h:47
+msgid "Stop"
+msgstr ""
+
+#: src/trans.h:48
 msgid "Zoom"
 msgstr ""
 
-#: src/trans.h:46 src/trans.h:49
+#: src/trans.h:49 src/trans.h:52
 msgid "Drag me!"
 msgstr ""
 
-#: src/trans.h:47 src/trans.h:50
+#: src/trans.h:50 src/trans.h:53
 msgid "   Location: "
 msgstr ""
 
-#: src/trans.h:48 src/trans.h:51 src/trans.h:389
+#: src/trans.h:51 src/trans.h:54 src/trans.h:393
 msgid "Go"
 msgstr ""
 
-#: src/trans.h:52 src/trans.h:364
+#: src/trans.h:55 src/trans.h:368
 msgid "Select File"
 msgstr ""
 
-#: src/trans.h:53 src/trans.h:359 src/trans.h:362 src/trans.h:365
+#: src/trans.h:56 src/trans.h:363 src/trans.h:366 src/trans.h:369
 msgid "OK"
 msgstr ""
 
-#: src/trans.h:54 src/trans.h:360 src/trans.h:363 src/trans.h:366
-#: src/trans.h:412
+#: src/trans.h:57 src/trans.h:364 src/trans.h:367 src/trans.h:370
+#: src/trans.h:416 src/trans.h:419
 msgid "Cancel"
 msgstr ""
 
-#: src/trans.h:55
+#: src/trans.h:58
 msgid "Preferences"
 msgstr ""
 
-#: src/trans.h:56
+#: src/trans.h:59
 msgid "label55"
 msgstr ""
 
-#: src/trans.h:57
+#: src/trans.h:60
 msgid "Logo"
 msgstr ""
 
-#: src/trans.h:58
+#: src/trans.h:61
 msgid "Home Page"
 msgstr ""
 
-#: src/trans.h:59 src/trans.h:372 src/trans.h:408
+#: src/trans.h:62 src/trans.h:376 src/trans.h:412
 msgid "URL:"
 msgstr ""
 
-#: src/trans.h:60
+#: src/trans.h:63
 msgid "Set to Current"
 msgstr ""
 
-#: src/trans.h:61
+#: src/trans.h:64
 msgid "Set to \"My Portal\""
 msgstr ""
 
-#: src/trans.h:62
+#: src/trans.h:65
 msgid "Startup"
 msgstr ""
 
-#: src/trans.h:63
+#: src/trans.h:66
 msgid "On startup show"
 msgstr ""
 
-#: src/trans.h:64 src/trans.h:69
+#: src/trans.h:67 src/trans.h:72
 msgid "Home page"
 msgstr ""
 
-#: src/trans.h:65 src/trans.h:70
+#: src/trans.h:68 src/trans.h:73
 msgid "Last page"
 msgstr ""
 
-#: src/trans.h:66 src/trans.h:71
+#: src/trans.h:69 src/trans.h:74
 msgid "Blank page"
 msgstr ""
 
-#: src/trans.h:67
+#: src/trans.h:70
 msgid ""
 "When opening a\n"
 " new browser show"
 msgstr ""
 
-#: src/trans.h:72
+#: src/trans.h:75
 msgid "My Portal"
 msgstr ""
 
-#: src/trans.h:73
+#: src/trans.h:76
 msgid "Stylesheet:"
 msgstr ""
 
-#: src/trans.h:74
+#: src/trans.h:77
 msgid "Select \"My Portal\" Stylesheet"
 msgstr ""
 
-#: src/trans.h:77
+#: src/trans.h:80
 msgid ""
 "When adding bookmarks\n"
 "use the following title"
 msgstr ""
 
-#: src/trans.h:79
+#: src/trans.h:82
 msgid "Page title"
 msgstr ""
 
-#: src/trans.h:80 src/trans.h:182
+#: src/trans.h:83 src/trans.h:185
 msgid "Ask user"
 msgstr ""
 
-#: src/trans.h:83
+#: src/trans.h:86
 msgid "Days before expiring history items"
 msgstr ""
 
-#: src/trans.h:86
+#: src/trans.h:89
 msgid "Javascript Enabled"
 msgstr ""
 
-#: src/trans.h:87 src/trans.h:90 src/trans.h:155 src/trans.h:157
+#: src/trans.h:90 src/trans.h:93 src/trans.h:158 src/trans.h:160
 msgid "No"
 msgstr ""
 
-#: src/trans.h:88 src/trans.h:91 src/trans.h:156 src/trans.h:158
+#: src/trans.h:91 src/trans.h:94 src/trans.h:159 src/trans.h:161
 msgid "Yes"
 msgstr ""
 
-#: src/trans.h:89
+#: src/trans.h:92
 msgid "Java Enabled"
 msgstr ""
 
-#: src/trans.h:93
+#: src/trans.h:96
 msgid "Images"
 msgstr ""
 
-#: src/trans.h:94
+#: src/trans.h:97
 msgid "Load Images"
 msgstr ""
 
-#: src/trans.h:95 src/trans.h:148
+#: src/trans.h:98 src/trans.h:151
 msgid "Always"
 msgstr ""
 
-#: src/trans.h:96
+#: src/trans.h:99
 msgid "From current server only"
 msgstr ""
 
-#: src/trans.h:97 src/trans.h:146
+#: src/trans.h:100 src/trans.h:149
 msgid "Never"
 msgstr ""
 
-#: src/trans.h:98 src/trans.h:117
+#: src/trans.h:101 src/trans.h:120
 msgid "Windows"
 msgstr ""
 
-#: src/trans.h:99
+#: src/trans.h:102
 msgid "New windows"
 msgstr ""
 
-#: src/trans.h:100
+#: src/trans.h:103
 msgid "Allow opening in new windows"
 msgstr ""
 
-#: src/trans.h:101
+#: src/trans.h:104
 msgid "Never open in new window"
 msgstr ""
 
-#: src/trans.h:103
+#: src/trans.h:106
 msgid "Toolbars"
 msgstr ""
 
-#: src/trans.h:104
+#: src/trans.h:107
 msgid "Show toolbars as"
 msgstr ""
 
-#: src/trans.h:105
+#: src/trans.h:108
 msgid "Show location entry on"
 msgstr ""
 
-#: src/trans.h:106
+#: src/trans.h:109
 msgid "Separate toolbar"
 msgstr ""
 
-#: src/trans.h:107
+#: src/trans.h:110
 msgid "Button toolbar"
 msgstr ""
 
-#: src/trans.h:108
+#: src/trans.h:111
 msgid "Icons"
 msgstr ""
 
-#: src/trans.h:109 src/trans.h:205
+#: src/trans.h:112 src/trans.h:208
 msgid "Text"
 msgstr ""
 
-#: src/trans.h:110
+#: src/trans.h:113
 msgid "Both"
 msgstr ""
 
-#: src/trans.h:111
+#: src/trans.h:114
 msgid "Show location label"
 msgstr ""
 
-#: src/trans.h:112
+#: src/trans.h:115
 msgid "Show go button"
 msgstr ""
 
-#: src/trans.h:113
+#: src/trans.h:116
 msgid "Errors"
 msgstr ""
 
-#: src/trans.h:114
+#: src/trans.h:117
 msgid "Show error messages on"
 msgstr ""
 
-#: src/trans.h:115
+#: src/trans.h:118
 msgid "Status bar"
 msgstr ""
 
-#: src/trans.h:116
+#: src/trans.h:119
 msgid "Dialog"
 msgstr ""
 
-#: src/trans.h:118
+#: src/trans.h:121
 msgid "Title "
 msgstr ""
 
-#: src/trans.h:119 src/trans.h:124
+#: src/trans.h:122 src/trans.h:127
 #, c-format
 msgid "Galeon - %s"
 msgstr ""
 
-#: src/trans.h:120
+#: src/trans.h:123
 #, c-format
 msgid "%s - Galeon"
 msgstr ""
 
-#: src/trans.h:121
+#: src/trans.h:124
 #, c-format
 msgid "Galeon: %s"
 msgstr ""
 
-#: src/trans.h:122
+#: src/trans.h:125
 #, c-format
 msgid "%s"
 msgstr ""
 
-#: src/trans.h:127
+#: src/trans.h:130
 msgid "Show spinner"
 msgstr ""
 
-#: src/trans.h:128
+#: src/trans.h:131
 msgid "Animation Directory:"
 msgstr ""
 
-#: src/trans.h:129
+#: src/trans.h:132
 msgid "Select Animation Directory"
 msgstr ""
 
-#: src/trans.h:132
+#: src/trans.h:135
 msgid "Show after"
 msgstr ""
 
-#: src/trans.h:133
+#: src/trans.h:136
 msgid "seconds"
 msgstr ""
 
-#: src/trans.h:134
+#: src/trans.h:137
 msgid "Auto show"
 msgstr ""
 
-#: src/trans.h:135
+#: src/trans.h:138
 msgid "Enabled"
 msgstr ""
 
-#: src/trans.h:136
+#: src/trans.h:139
 msgid "Disabled"
 msgstr ""
 
-#: src/trans.h:139
+#: src/trans.h:142
 msgid "Completion Style"
 msgstr ""
 
-#: src/trans.h:140
+#: src/trans.h:143
 msgid "Auto completion"
 msgstr ""
 
-#: src/trans.h:141
+#: src/trans.h:144
 msgid "Tab Completion"
 msgstr ""
 
-#: src/trans.h:142
+#: src/trans.h:145
 msgid "None"
 msgstr ""
 
-#: src/trans.h:145
+#: src/trans.h:148
 msgid "Recover from crashes"
 msgstr ""
 
-#: src/trans.h:147
+#: src/trans.h:150
 msgid "Ask User"
 msgstr ""
 
-#: src/trans.h:151
+#: src/trans.h:154
 msgid "Auto download"
 msgstr ""
 
-#: src/trans.h:152
+#: src/trans.h:155
 msgid ""
 "Ask for directory\n"
 "on each download"
 msgstr ""
 
-#: src/trans.h:154
+#: src/trans.h:157
 msgid "Directory"
 msgstr ""
 
-#: src/trans.h:159
+#: src/trans.h:162
 msgid "Select Download Directory"
 msgstr ""
 
-#: src/trans.h:160
+#: src/trans.h:163
 msgid "FTP Handler"
 msgstr ""
 
-#: src/trans.h:161
+#: src/trans.h:164
 msgid "Handle FTP URLs with"
 msgstr ""
 
-#: src/trans.h:162
+#: src/trans.h:165
 msgid "Mozilla FTP"
 msgstr ""
 
-#: src/trans.h:163
+#: src/trans.h:166
 msgid "Gnome FTP Handler"
 msgstr ""
 
-#: src/trans.h:165
+#: src/trans.h:168
 msgid "View source"
 msgstr ""
 
-#: src/trans.h:166
+#: src/trans.h:169
 msgid "Use external program to view source files"
 msgstr ""
 
-#: src/trans.h:167
+#: src/trans.h:170
 msgid "External program:"
 msgstr ""
 
-#: src/trans.h:168 src/trans.h:175
+#: src/trans.h:171 src/trans.h:178
 msgid "gnome-edit"
 msgstr ""
 
-#: src/trans.h:169
+#: src/trans.h:172
 msgid "emacs"
 msgstr ""
 
-#: src/trans.h:170
+#: src/trans.h:173
 msgid "gedit"
 msgstr ""
 
-#: src/trans.h:171
+#: src/trans.h:174
 msgid "xemacs"
 msgstr ""
 
-#: src/trans.h:172
+#: src/trans.h:175
 msgid "gvim"
 msgstr ""
 
-#: src/trans.h:173
+#: src/trans.h:176
 msgid "gless"
 msgstr ""
 
-#: src/trans.h:174
+#: src/trans.h:177
 msgid "gnp"
 msgstr ""
 
-#: src/trans.h:177 src/trans.h:190
+#: src/trans.h:180 src/trans.h:193
 msgid "MIME Types"
 msgstr ""
 
-#: src/trans.h:178
+#: src/trans.h:181
 msgid "Mime Types"
 msgstr ""
 
-#: src/trans.h:179
+#: src/trans.h:182
 msgid " "
 msgstr ""
 
-#: src/trans.h:180
+#: src/trans.h:183
 msgid "Save to disk"
 msgstr ""
 
-#: src/trans.h:181
+#: src/trans.h:184
 msgid "Open with program"
 msgstr ""
 
-#: src/trans.h:183 src/trans.h:370 src/trans.h:376 src/trans.h:406
+#: src/trans.h:186 src/trans.h:374 src/trans.h:380 src/trans.h:410
 msgid "Name"
 msgstr ""
 
-#: src/trans.h:184
+#: src/trans.h:187
 msgid "Extension"
 msgstr ""
 
-#: src/trans.h:185
+#: src/trans.h:188
 msgid "Action"
 msgstr ""
 
-#: src/trans.h:186
+#: src/trans.h:189
 msgid "Program"
 msgstr ""
 
-#: src/trans.h:187 src/trans.h:342
+#: src/trans.h:190 src/trans.h:346
 msgid "Add"
 msgstr ""
 
-#: src/trans.h:188
+#: src/trans.h:191
 msgid "Delete"
 msgstr ""
 
-#: src/trans.h:192
+#: src/trans.h:195
 msgid "Serif"
 msgstr ""
 
-#: src/trans.h:193
+#: src/trans.h:196
 msgid "Sans Serif"
 msgstr ""
 
-#: src/trans.h:194
+#: src/trans.h:197
 msgid "Size"
 msgstr ""
 
-#: src/trans.h:195 src/trans.h:197 src/trans.h:200
+#: src/trans.h:198 src/trans.h:200 src/trans.h:203
 msgid "Pick a Font"
 msgstr ""
 
-#: src/trans.h:196 src/trans.h:198 src/trans.h:201
+#: src/trans.h:199 src/trans.h:201 src/trans.h:204
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 msgstr ""
 
-#: src/trans.h:199
+#: src/trans.h:202
 msgid "Monospace"
 msgstr ""
 
-#: src/trans.h:204
+#: src/trans.h:207
 msgid "Background"
 msgstr ""
 
-#: src/trans.h:206
+#: src/trans.h:209
 msgid "Unvisited link"
 msgstr ""
 
-#: src/trans.h:207
+#: src/trans.h:210
 msgid "Visited link"
 msgstr ""
 
-#: src/trans.h:208
+#: src/trans.h:211
 msgid "Pick the background color"
 msgstr ""
 
-#: src/trans.h:209
+#: src/trans.h:212
 msgid "Pick the text color"
 msgstr ""
 
-#: src/trans.h:210
+#: src/trans.h:213
 msgid "Pick the color unvisited links"
 msgstr ""
 
-#: src/trans.h:211
+#: src/trans.h:214
 msgid "Pick the color for visited links"
 msgstr ""
 
-#: src/trans.h:212
+#: src/trans.h:215
 msgid ""
 "When a page \n"
 "provides its own colors"
 msgstr ""
 
-#: src/trans.h:214
+#: src/trans.h:217
 msgid "Use provided colors"
 msgstr ""
 
-#: src/trans.h:215
+#: src/trans.h:218
 msgid "Use my chosen colors"
 msgstr ""
 
-#: src/trans.h:216
+#: src/trans.h:219
 msgid "Underline links"
 msgstr ""
 
-#: src/trans.h:217 src/trans.h:219 src/trans.h:220 src/trans.h:221
+#: src/trans.h:220 src/trans.h:222 src/trans.h:223 src/trans.h:224
 msgid "[*]"
 msgstr ""
 
-#: src/trans.h:218
+#: src/trans.h:221
 msgid ""
 "[*] Note: due to limitations in Mozilla, these options are not guaranteed to "
 "work."
 msgstr ""
 
-#: src/trans.h:223 src/trans.h:231
+#: src/trans.h:226 src/trans.h:234
 msgid "Proxies"
 msgstr ""
 
-#: src/trans.h:224
+#: src/trans.h:227
 msgid "HTTP proxy"
 msgstr ""
 
-#: src/trans.h:225
+#: src/trans.h:228
 msgid "FTP proxy"
 msgstr ""
 
-#: src/trans.h:226 src/trans.h:227
+#: src/trans.h:229 src/trans.h:230
 msgid "Port"
 msgstr ""
 
-#: src/trans.h:228
+#: src/trans.h:231
 msgid "No proxy for"
 msgstr ""
 
-#: src/trans.h:229
+#: src/trans.h:232
 msgid "Options"
 msgstr ""
 
-#: src/trans.h:230
+#: src/trans.h:233
 msgid "Proxy keep-alive?"
 msgstr ""
 
-#: src/trans.h:233
+#: src/trans.h:236
 msgid "Disk cache"
 msgstr ""
 
-#: src/trans.h:234
+#: src/trans.h:237
 msgid "Memory cache"
 msgstr ""
 
-#: src/trans.h:235 src/trans.h:236
+#: src/trans.h:238 src/trans.h:239
 msgid "Kb"
 msgstr ""
 
-#: src/trans.h:238
-msgid "Charsets"
-msgstr ""
-
-#: src/trans.h:239
-msgid "Autodetect"
-msgstr ""
-
 #: src/trans.h:240
-msgid "Default charset"
-msgstr ""
-
-#: src/trans.h:241
-msgid "Off"
+msgid "Clear cache"
 msgstr ""
 
 #: src/trans.h:242
-msgid "Chinese"
+msgid "Charsets"
 msgstr ""
 
 #: src/trans.h:243
-msgid "East asian"
+msgid "Autodetect"
 msgstr ""
 
 #: src/trans.h:244
-msgid "Japanese"
+msgid "Default charset"
 msgstr ""
 
 #: src/trans.h:245
-msgid "Korean"
+msgid "Off"
 msgstr ""
 
 #: src/trans.h:246
-msgid "Russian"
+msgid "Chinese"
 msgstr ""
 
 #: src/trans.h:247
-msgid "Simplified Chinese"
+msgid "East asian"
 msgstr ""
 
 #: src/trans.h:248
-msgid "Traditional Chinese"
+msgid "Japanese"
 msgstr ""
 
 #: src/trans.h:249
-msgid "Ukrainian"
+msgid "Korean"
 msgstr ""
 
-#: src/trans.h:250 src/trans.h:301
-msgid "Armenian (ARMSCII-8)"
+#: src/trans.h:250
+msgid "Russian"
 msgstr ""
 
 #: src/trans.h:251
-msgid "Baltic (ISO-8859-13)"
+msgid "Simplified Chinese"
 msgstr ""
 
 #: src/trans.h:252
-msgid "Baltic (ISO-8859-4)"
+msgid "Traditional Chinese"
 msgstr ""
 
 #: src/trans.h:253
-msgid "Baltic (Windows-1257)"
+msgid "Ukrainian"
 msgstr ""
 
-#: src/trans.h:254
-msgid "Celtic (ISO-8859-14)"
+#: src/trans.h:254 src/trans.h:305
+msgid "Armenian (ARMSCII-8)"
 msgstr ""
 
 #: src/trans.h:255
-msgid "Central European (IBM-852)"
+msgid "Baltic (ISO-8859-13)"
 msgstr ""
 
 #: src/trans.h:256
-msgid "Central European (ISO-8859-2)"
+msgid "Baltic (ISO-8859-4)"
 msgstr ""
 
 #: src/trans.h:257
-msgid "Central European (MacCE)"
+msgid "Baltic (Windows-1257)"
 msgstr ""
 
 #: src/trans.h:258
-msgid "Central European (Windows-1250)"
+msgid "Celtic (ISO-8859-14)"
 msgstr ""
 
 #: src/trans.h:259
-msgid "Chinese Simplified (GB2312)"
+msgid "Central European (IBM-852)"
 msgstr ""
 
 #: src/trans.h:260
-msgid "Chinese Simplified (GBK)"
+msgid "Central European (ISO-8859-2)"
 msgstr ""
 
 #: src/trans.h:261
-msgid "Central European (HZ)"
+msgid "Central European (MacCE)"
 msgstr ""
 
 #: src/trans.h:262
-msgid "Chinese Traditional (Big5)"
+msgid "Central European (Windows-1250)"
 msgstr ""
 
 #: src/trans.h:263
-msgid "Chinese Traditional (EUC-TW)"
+msgid "Chinese Simplified (GB2312)"
 msgstr ""
 
 #: src/trans.h:264
-msgid "Croatian (MacCroatian)"
+msgid "Chinese Simplified (GBK)"
 msgstr ""
 
 #: src/trans.h:265
-msgid "Cyrillic (IBM-855)"
+msgid "Central European (HZ)"
 msgstr ""
 
 #: src/trans.h:266
-msgid "Cyrillic (ISO-8859-5)"
+msgid "Chinese Traditional (Big5)"
 msgstr ""
 
 #: src/trans.h:267
-msgid "Cyrillic (ISO-IR-111)"
+msgid "Chinese Traditional (EUC-TW)"
 msgstr ""
 
 #: src/trans.h:268
-msgid "Cyrillic (Windows-1251)"
+msgid "Croatian (MacCroatian)"
 msgstr ""
 
 #: src/trans.h:269
-msgid "Cyrillic/Russian (IBM-866)"
+msgid "Cyrillic (IBM-855)"
 msgstr ""
 
 #: src/trans.h:270
-msgid "Cyrillic/Ukrainian (KOI8-U)"
+msgid "Cyrillic (ISO-8859-5)"
 msgstr ""
 
 #: src/trans.h:271
-msgid "Cyrillic/Ukrainian (MacUkrainian)"
+msgid "Cyrillic (ISO-IR-111)"
 msgstr ""
 
 #: src/trans.h:272
-msgid "Greek (ISO-8859-7)"
+msgid "Cyrillic (Windows-1251)"
 msgstr ""
 
 #: src/trans.h:273
-msgid "Greek (MacGreek)"
+msgid "Cyrillic/Russian (IBM-866)"
 msgstr ""
 
 #: src/trans.h:274
-msgid "Greek (Windows-1253)"
+msgid "Cyrillic/Ukrainian (KOI8-U)"
 msgstr ""
 
 #: src/trans.h:275
-msgid "Icelandic (MacIcelandic)"
+msgid "Cyrillic/Ukrainian (MacUkrainian)"
 msgstr ""
 
 #: src/trans.h:276
-msgid "Japanese (EUC-JP)"
+msgid "Greek (ISO-8859-7)"
 msgstr ""
 
 #: src/trans.h:277
-msgid "Japanese (ISO-2022-JP)"
+msgid "Greek (MacGreek)"
 msgstr ""
 
 #: src/trans.h:278
-msgid "Japanese (Shift_JIS)"
+msgid "Greek (Windows-1253)"
 msgstr ""
 
 #: src/trans.h:279
-msgid "Korean (EUC_KR)"
+msgid "Icelandic (MacIcelandic)"
 msgstr ""
 
 #: src/trans.h:280
-msgid "Nordic (ISO-8859-10)"
+msgid "Japanese (EUC-JP)"
 msgstr ""
 
 #: src/trans.h:281
-msgid "Romanian (MacRomanian)"
+msgid "Japanese (ISO-2022-JP)"
 msgstr ""
 
 #: src/trans.h:282
-msgid "South European (ISO-8859-3)"
+msgid "Japanese (Shift_JIS)"
 msgstr ""
 
 #: src/trans.h:283
-msgid "Thai (TIS-620)"
+msgid "Korean (EUC_KR)"
 msgstr ""
 
 #: src/trans.h:284
-msgid "Turkish (IBM-857)"
+msgid "Nordic (ISO-8859-10)"
 msgstr ""
 
 #: src/trans.h:285
-msgid "Turkish (ISO-8859-9)"
+msgid "Romanian (MacRomanian)"
 msgstr ""
 
 #: src/trans.h:286
-msgid "Turkish (MacTurkish)"
+msgid "South European (ISO-8859-3)"
 msgstr ""
 
 #: src/trans.h:287
-msgid "Turkish (Windows-1254)"
+msgid "Thai (TIS-620)"
 msgstr ""
 
 #: src/trans.h:288
-msgid "Unicode (UTF-7)"
+msgid "Turkish (IBM-857)"
 msgstr ""
 
 #: src/trans.h:289
-msgid "Unicode (UTF-8)"
+msgid "Turkish (ISO-8859-9)"
 msgstr ""
 
 #: src/trans.h:290
-msgid "Vietnamese (TCVN)"
+msgid "Turkish (MacTurkish)"
 msgstr ""
 
 #: src/trans.h:291
-msgid "Vietnamese (VISCII)"
+msgid "Turkish (Windows-1254)"
 msgstr ""
 
 #: src/trans.h:292
-msgid "Vietnamese (VPS)"
+msgid "Unicode (UTF-7)"
 msgstr ""
 
 #: src/trans.h:293
-msgid "Vietnamese (Windows-1258)"
+msgid "Unicode (UTF-8)"
 msgstr ""
 
 #: src/trans.h:294
-msgid "Visual Hebrew (ISO-8859-8)"
+msgid "Vietnamese (TCVN)"
 msgstr ""
 
-#: src/trans.h:295 src/trans.h:297
-msgid "Western (ISO-8859-1)"
+#: src/trans.h:295
+msgid "Vietnamese (VISCII)"
 msgstr ""
 
 #: src/trans.h:296
-msgid "Western (IBM-850)"
+msgid "Vietnamese (VPS)"
+msgstr ""
+
+#: src/trans.h:297
+msgid "Vietnamese (Windows-1258)"
 msgstr ""
 
 #: src/trans.h:298
-msgid "Western (ISO-8859-15)"
+msgid "Visual Hebrew (ISO-8859-8)"
 msgstr ""
 
-#: src/trans.h:299
-msgid "Western (MacRoman)"
+#: src/trans.h:299 src/trans.h:301
+msgid "Western (ISO-8859-1)"
 msgstr ""
 
 #: src/trans.h:300
-msgid "Western (Windows-1252)"
+msgid "Western (IBM-850)"
 msgstr ""
 
-#: src/trans.h:303 src/trans.h:341
-msgid "Afrikaans (af)"
+#: src/trans.h:302
+msgid "Western (ISO-8859-15)"
+msgstr ""
+
+#: src/trans.h:303
+msgid "Western (MacRoman)"
 msgstr ""
 
 #: src/trans.h:304
-msgid "Albanian (sq)"
+msgid "Western (Windows-1252)"
 msgstr ""
 
-#: src/trans.h:305
-msgid "Arabic (ar)"
-msgstr ""
-
-#: src/trans.h:306
-msgid "Basque (eu)"
-msgstr ""
-
-#: src/trans.h:307
-msgid "Bulgarian (bg)"
+#: src/trans.h:307 src/trans.h:345
+msgid "Afrikaans (af)"
 msgstr ""
 
 #: src/trans.h:308
-msgid "Byelorussian (be)"
+msgid "Albanian (sq)"
 msgstr ""
 
 #: src/trans.h:309
-msgid "Catalan (ca)"
+msgid "Arabic (ar)"
 msgstr ""
 
 #: src/trans.h:310
-msgid "Chinese (zh)"
+msgid "Basque (eu)"
 msgstr ""
 
 #: src/trans.h:311
-msgid "Croatian (hr)"
+msgid "Bulgarian (bg)"
 msgstr ""
 
 #: src/trans.h:312
-msgid "Czech (cs)"
+msgid "Byelorussian (be)"
 msgstr ""
 
 #: src/trans.h:313
-msgid "Danish (da)"
+msgid "Catalan (ca)"
 msgstr ""
 
 #: src/trans.h:314
-msgid "Dutch (nl)"
+msgid "Chinese (zh)"
 msgstr ""
 
 #: src/trans.h:315
-msgid "English (en)"
+msgid "Croatian (hr)"
 msgstr ""
 
 #: src/trans.h:316
-msgid "Estonian (et)"
+msgid "Czech (cs)"
 msgstr ""
 
 #: src/trans.h:317
-msgid "Faeroese (fo)"
+msgid "Danish (da)"
 msgstr ""
 
 #: src/trans.h:318
-msgid "Finnish (fi)"
+msgid "Dutch (nl)"
 msgstr ""
 
 #: src/trans.h:319
-msgid "French (fr)"
+msgid "English (en)"
 msgstr ""
 
 #: src/trans.h:320
-msgid "Galician (gl)"
+msgid "Estonian (et)"
 msgstr ""
 
 #: src/trans.h:321
-msgid "German (de)"
+msgid "Faeroese (fo)"
 msgstr ""
 
 #: src/trans.h:322
-msgid "Greek (el)"
+msgid "Finnish (fi)"
 msgstr ""
 
 #: src/trans.h:323
-msgid "Hungarian (hu)"
+msgid "French (fr)"
 msgstr ""
 
 #: src/trans.h:324
-msgid "Icelandic (is)"
+msgid "Galician (gl)"
 msgstr ""
 
 #: src/trans.h:325
-msgid "Indonesian (id)"
+msgid "German (de)"
 msgstr ""
 
 #: src/trans.h:326
-msgid "Irish (ga)"
+msgid "Greek (el)"
 msgstr ""
 
 #: src/trans.h:327
-msgid "Korean (ko)"
+msgid "Hungarian (hu)"
 msgstr ""
 
 #: src/trans.h:328
-msgid "Macedonian (mk)"
+msgid "Icelandic (is)"
 msgstr ""
 
 #: src/trans.h:329
-msgid "Norwegian (no)"
+msgid "Indonesian (id)"
 msgstr ""
 
 #: src/trans.h:330
-msgid "Polish (pl)"
+msgid "Irish (ga)"
 msgstr ""
 
 #: src/trans.h:331
-msgid "Portoguese (pt)"
+msgid "Korean (ko)"
 msgstr ""
 
 #: src/trans.h:332
-msgid "Romanian (ro)"
+msgid "Macedonian (mk)"
 msgstr ""
 
 #: src/trans.h:333
-msgid "Russian (ru)"
+msgid "Norwegian (no)"
 msgstr ""
 
 #: src/trans.h:334
-msgid "Serbian (gd)"
+msgid "Polish (pl)"
 msgstr ""
 
 #: src/trans.h:335
-msgid "Slovak (sk)"
+msgid "Portoguese (pt)"
 msgstr ""
 
 #: src/trans.h:336
-msgid "Slovenian (sl)"
+msgid "Romanian (ro)"
 msgstr ""
 
 #: src/trans.h:337
-msgid "Spanish (es)"
+msgid "Russian (ru)"
 msgstr ""
 
 #: src/trans.h:338
-msgid "Swedish (sv)"
+msgid "Serbian (gd)"
 msgstr ""
 
 #: src/trans.h:339
-msgid "Turkish (tr)"
+msgid "Slovak (sk)"
 msgstr ""
 
 #: src/trans.h:340
+msgid "Slovenian (sl)"
+msgstr ""
+
+#: src/trans.h:341
+msgid "Spanish (es)"
+msgstr ""
+
+#: src/trans.h:342
+msgid "Swedish (sv)"
+msgstr ""
+
+#: src/trans.h:343
+msgid "Turkish (tr)"
+msgstr ""
+
+#: src/trans.h:344
 msgid "Ukrainian (uk)"
 msgstr ""
 
-#: src/trans.h:343 src/trans.h:380
+#: src/trans.h:347 src/trans.h:384
 msgid "Remove"
 msgstr ""
 
-#: src/trans.h:344 src/trans.h:393
+#: src/trans.h:348 src/trans.h:397
 msgid "Up"
 msgstr ""
 
-#: src/trans.h:345 src/trans.h:395
+#: src/trans.h:349 src/trans.h:399
 msgid "Down"
 msgstr ""
 
-#: src/trans.h:346
+#: src/trans.h:350
 msgid "Languajes"
 msgstr ""
 
-#: src/trans.h:347
+#: src/trans.h:351
 msgid "Protocol"
 msgstr ""
 
-#: src/trans.h:348
+#: src/trans.h:352
 msgid "HTTP Version"
 msgstr ""
 
-#: src/trans.h:349
+#: src/trans.h:353
 msgid "1.0"
 msgstr ""
 
-#: src/trans.h:350
+#: src/trans.h:354
 msgid "1.1"
 msgstr ""
 
-#: src/trans.h:353
+#: src/trans.h:357
 msgid "Title"
 msgstr ""
 
-#: src/trans.h:354
+#: src/trans.h:358
 msgid "Url"
 msgstr ""
 
-#: src/trans.h:355
+#: src/trans.h:359
 msgid "Last time visited"
 msgstr ""
 
-#: src/trans.h:356
+#: src/trans.h:360
 msgid "First time visited"
 msgstr ""
 
-#: src/trans.h:357
+#: src/trans.h:361
 msgid "Times visited"
 msgstr ""
 
-#: src/trans.h:358 src/trans.h:361
+#: src/trans.h:362 src/trans.h:365
 msgid "Select Directory"
 msgstr ""
 
-#: src/trans.h:367
+#: src/trans.h:371
 msgid "Find text..."
 msgstr ""
 
-#: src/trans.h:368
+#: src/trans.h:372
 msgid "Find text or regular expression:"
 msgstr ""
 
-#: src/trans.h:369
+#: src/trans.h:373
 msgid "Match upper/lower case"
 msgstr ""
 
-#: src/trans.h:373
+#: src/trans.h:377
 msgid "Nick:"
 msgstr ""
 
-#: src/trans.h:374 src/trans.h:409
+#: src/trans.h:378 src/trans.h:413
 msgid "Notes:"
 msgstr ""
 
-#: src/trans.h:375
+#: src/trans.h:379
 msgid "Create toolbar"
 msgstr ""
 
-#: src/trans.h:377 src/trans.h:399
+#: src/trans.h:381 src/trans.h:403
 msgid "New item"
 msgstr ""
 
-#: src/trans.h:378
+#: src/trans.h:382
 msgid "New Separator"
 msgstr ""
 
-#: src/trans.h:379
+#: src/trans.h:383
 msgid "New Category"
 msgstr ""
 
-#: src/trans.h:381
+#: src/trans.h:385
 msgid ""
 "Multiple\n"
 "selections"
 msgstr ""
 
-#: src/trans.h:384
+#: src/trans.h:388
 msgid "Go to the previous bookmark"
 msgstr ""
 
-#: src/trans.h:386
+#: src/trans.h:390
 msgid "Go to the next bookmark"
 msgstr ""
 
-#: src/trans.h:388
+#: src/trans.h:392
 msgid "Load selected bookmark in the browser"
 msgstr ""
 
-#: src/trans.h:390
+#: src/trans.h:394
 msgid "Close this window"
 msgstr ""
 
-#: src/trans.h:391
+#: src/trans.h:395
 msgid "Close"
 msgstr ""
 
-#: src/trans.h:392
+#: src/trans.h:396
 msgid "Move bookmark up"
 msgstr ""
 
-#: src/trans.h:394
+#: src/trans.h:398
 msgid "Move bookmark down"
 msgstr ""
 
-#: src/trans.h:396
+#: src/trans.h:400
 msgid "Show edit bookmarks controls"
 msgstr ""
 
-#: src/trans.h:398
+#: src/trans.h:402
 msgid "Add a new bookmark"
 msgstr ""
 
-#: src/trans.h:400
+#: src/trans.h:404
 msgid "Add a new bookmark category"
 msgstr ""
 
-#: src/trans.h:401
+#: src/trans.h:405
 msgid "New category"
 msgstr ""
 
-#: src/trans.h:402
+#: src/trans.h:406
 msgid "Erase selected bookmark"
 msgstr ""
 
-#: src/trans.h:403
+#: src/trans.h:407
 msgid "Erase"
 msgstr ""
 
-#: src/trans.h:404
+#: src/trans.h:408
 msgid "Convert this bookmark into a permanent bookmark"
 msgstr ""
 
-#: src/trans.h:405
+#: src/trans.h:409
 msgid "File"
 msgstr ""
 
-#: src/trans.h:407
+#: src/trans.h:411
 msgid "Name:"
 msgstr ""
 
-#: src/trans.h:410
+#: src/trans.h:414 src/trans.h:417
 msgid "Select Bookmark File"
 msgstr ""
 
-#: src/trans.h:411
-msgid "Import Bookmark"
+#: src/trans.h:415
+msgid "Import Bookmarks"
+msgstr ""
+
+#: src/trans.h:418
+msgid "Export Bookmarks"
 msgstr ""
