@@ -34,7 +34,7 @@
 #include "status.h"
 
 /* FIXME: We should let change those values at runtime */
-#define CVS_CO_OPTIONS "cvs -d \":pserver:carlos@cvs.gnome.org:/cvs/gnome\" co -P"
+#define CVS_CO_OPTIONS "cvs -q -d \":pserver:carlos@cvs.gnome.org:/cvs/gnome\" co -P"
 #define CVSROOTDIR "/home/carlos/cvs/"
 #define HTMLROOTDIR "/home/carlos/html/"
 
@@ -117,11 +117,11 @@ download_component (component *cmp)
 
 	if (!chdir (CVSROOTDIR)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			list = g_strdup_printf ("ls -d %s-%s > /dev/null 2>&1", cmp->dir, cmp->branch);
+			list = g_strdup_printf ("ls -d %s.%s > /dev/null 2>&1", cmp->dir, cmp->branch);
 			if (!system (list)) {
 				g_free (list);
-				remove = g_strdup_printf ("rm -Rf %s-%s", cmp->dir, cmp->branch);
-				g_print ("Deleting %s-%s directory...\n", cmp->dir, cmp->branch);
+				remove = g_strdup_printf ("rm -Rf %s.%s", cmp->dir, cmp->branch);
+				g_print ("Deleting %s.%s directory...\n", cmp->dir, cmp->branch);
 				if ( system (remove)) {
 					g_free (remove);
 					g_warning ("Unable to remove the dir %s at %s", cmp->dir, CVSROOTDIR);
@@ -131,12 +131,12 @@ download_component (component *cmp)
 			} else {
 				g_free (list);
 			}
-			checkout = g_strdup_printf (CVS_CO_OPTIONS " -d %s-%s %s > /dev/null", cmp->dir,
+			checkout = g_strdup_printf (CVS_CO_OPTIONS " -d %s.%s %s > /dev/null", cmp->dir,
 						    cmp->branch, cmp->dir);
-			g_print ("Downloading %s-%s...\n", cmp->dir, cmp->branch);
+			g_print ("=== Checking out %s module to %s.%s  ===\n", cmp->dir, cmp->dir, cmp->branch);
 		} else {
 			checkout = g_strdup_printf (CVS_CO_OPTIONS " %s > /dev/null", cmp->dir);
-			g_print ("Downloading %s...\n", cmp->dir);
+			g_print ("=== Checking out %s module ===\n", cmp->dir);
 		}
 		if (system (checkout)) {
 			g_free (checkout);
@@ -158,7 +158,7 @@ regenerate_component_pot (component *cmp)
 	
 	if (!chdir (CVSROOTDIR)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			dir = g_strdup_printf ("%s-%s/%s", cmp->dir, cmp->branch, cmp->podir);
+			dir = g_strdup_printf ("%s.%s/%s", cmp->dir, cmp->branch, cmp->podir);
 		} else {
 			dir = g_strdup_printf ("%s/%s", cmp->dir, cmp->podir);
 		}
@@ -199,13 +199,13 @@ copy_component_pot (component *cmp)
 
 	if (! chdir (CVSROOTDIR)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			dir = g_strdup_printf ("%s-%s/%s", cmp->dir, cmp->branch, cmp->podir);
+			dir = g_strdup_printf ("%s.%s/%s", cmp->dir, cmp->branch, cmp->podir);
 		} else {
 			dir = g_strdup_printf ("%s/%s", cmp->dir, cmp->podir);
 		}
 		if (!chdir (dir)) {
-			g_print ("Copying %s as %s-%s.pot...\n", cmp->potname, cmp->name, cmp->branch);
-			copy_pot = g_strdup_printf ("cp -a %s %s/po/%s-%s.pot > /dev/null", cmp->potname,
+			g_print ("Copying %s as %s.%s.pot...\n", cmp->potname, cmp->name, cmp->branch);
+			copy_pot = g_strdup_printf ("cp -a %s %s/po/%s.%s.pot > /dev/null", cmp->potname,
 						    HTMLROOTDIR, cmp->name, cmp->branch);
 			if (system (copy_pot)) {
 				g_warning ("Unable to copy the file %s to %s/po",
@@ -224,7 +224,7 @@ copy_component_pot (component *cmp)
 					dup (pipefd[1]);
 					close (pipefd[1]);
 					close (pipefd[0]);
-					path = g_strdup_printf ("%s/po/%s-%s.pot", HTMLROOTDIR,
+					path = g_strdup_printf ("%s/po/%s.%s.pot", HTMLROOTDIR,
 								cmp->name, cmp->branch);
 					/* We get the file stats */
 					execlp("msgfmt", "msgfmt", "--statistics", path, NULL);
@@ -329,7 +329,7 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 			dup (pipefd[1]);
 			close (pipefd[1]);
 			close (pipefd[0]);
-			path = g_strdup_printf ("%s/po/%s-%s-%s.po", HTMLROOTDIR,
+			path = g_strdup_printf ("%s/po/%s-%s.%s.po", HTMLROOTDIR,
 						cmp->name, cmp->branch,	locale);
 			/* We get the file stats */
 			execlp("msgfmt", "msgfmt", "--statistics", path, NULL);
@@ -396,7 +396,7 @@ update_component_po (component *cmp)
 	
 	if (!chdir (CVSROOTDIR)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			dir = g_strdup_printf ("%s-%s/%s", cmp->dir, cmp->branch, cmp->podir);
+			dir = g_strdup_printf ("%s.%s/%s", cmp->dir, cmp->branch, cmp->podir);
 		} else {
 			dir = g_strdup_printf ("%s/%s", cmp->dir, cmp->podir);
 		}
@@ -408,22 +408,20 @@ update_component_po (component *cmp)
 					filesplit = g_strsplit (direntry->d_name, ".", 2);
 					if (filesplit[1] != NULL && filesplit[2] == NULL &&
 					   !strcmp (filesplit[1], "po")) {
-						g_print ("Updating %s-%s-%s.po:\n", cmp->name, cmp->branch,
+						g_print ("Updating %s.%s.%s.po:\n", cmp->name, cmp->branch,
 							 filesplit[0]);
-						merge = g_strdup_printf ("msgmerge %s %s -o %s/po/%s-%s-%s.po > /dev/null",
+						merge = g_strdup_printf ("msgmerge %s %s -o %s/po/%s.%s.%s.po > /dev/null",
 									 direntry->d_name, cmp->potname,
 									 HTMLROOTDIR, cmp->name, cmp->branch,
 									 filesplit[0]);
 						if (system (merge)) {
 							g_warning ("Unable to update the file %s at %s",
 								 direntry->d_name, dir);
-							g_free (merge);
-							g_free (dir);
-							return FALSE;
 						} else {
 							currtrans = (translation *) g_new0 (translation, 1);
 							fill_translation (currtrans, cmp, filesplit[0]);
-						}	
+						}
+						g_free (merge);
 					}
 					g_strfreev (filesplit);
 					direntry = readdir (podir);
@@ -454,7 +452,7 @@ process_component (gpointer data, gpointer user_data)
 	/* Download the component */
 	if (cmp->download && !download_component (cmp)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			g_warning ("Downloading: We have problems with %s-%s (module %s), skiped...",
+			g_warning ("Downloading: We have problems with %s.%s (module %s), skiped...",
 				   cmp->dir, cmp->branch, cmp->name);
 		} else {
 			g_warning ("Downloading: We have problems with %s (module %s), skiped...",
@@ -465,7 +463,7 @@ process_component (gpointer data, gpointer user_data)
 	/* Regenerate the .pot file */
 	if (cmp->regenerate && !regenerate_component_pot (cmp)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			g_warning ("Regenerating: We have problems with %s at %s-%s (module %s), skiped...",
+			g_warning ("Regenerating: We have problems with %s at %s.%s (module %s), skiped...",
 				   cmp->potname, cmp->dir, cmp->branch, cmp->name);
 		} else {
 			g_warning ("Regenerating: We have problems with %s at %s (module %s), skiped...",
@@ -476,7 +474,7 @@ process_component (gpointer data, gpointer user_data)
 	/* Copy the .pot file to web dir */
 	if (!copy_component_pot (cmp)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			g_warning ("Copying: We have problems with %s at %s-%s (module %s), skiped...",
+			g_warning ("Copying: We have problems with %s at %s.%s (module %s), skiped...",
 				   cmp->potname, cmp->dir, cmp->branch, cmp->name);
 		} else {
 			g_warning ("Copying: We have problems with %s at %s (module %s), skiped...",
@@ -487,7 +485,7 @@ process_component (gpointer data, gpointer user_data)
 	/* Update *.po files */
 	if (!update_component_po (cmp)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
-			g_warning ("Updating: We have problems updating %s's po files at %s-%s, skiped...",
+			g_warning ("Updating: We have problems updating %s's po files at %s.%s, skiped...",
 				   cmp->name, cmp->dir, cmp->branch);
 		} else {
 			g_warning ("Updating: We have problems with %s's po files at %s, skiped...",
@@ -527,7 +525,7 @@ generate_release_components_html (gpointer data, gpointer user_data)
 	prelease = pcmp->release;
 	html = (gchar **) user_data;
 
-	modulelnk = g_strdup_printf ("<td align=right><a href=\"po/%s-%s.pot\">%s</a></td>", pcmp->name,
+	modulelnk = g_strdup_printf ("<td align=right><a href=\"po/%s.%s.pot\">%s</a></td>", pcmp->name,
 				     pcmp->branch, pcmp->name);
 	
 	*html = g_strconcat (*html, "<tr bgcolor='#c5c2c5'  align=center>", modulelnk, NULL);
@@ -536,14 +534,14 @@ generate_release_components_html (gpointer data, gpointer user_data)
 	for (; llocale != NULL; llocale = g_list_next (llocale)) {
 		ptrns = g_hash_table_lookup (pcmp->translations, llocale->data);
 		if ( ptrns == NULL) { /* We don't have a translation */
-			temp = g_strdup_printf ("<td align=right><a href=\"po/%s-%s.pot\">0</a></td>",
+			temp = g_strdup_printf ("<td align=right><a href=\"po/%s.%s.pot\">0</a></td>",
 						pcmp->name, pcmp->branch);
 			total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
 		} else { /* We have a translation for this locale */
 			gfloat stats;
 
 			stats = ((gfloat) ptrns->translated / (gfloat) pcmp->nstrings)*100;
-			temp = g_strdup_printf ("<td align=right><a href=\"po/%s-%s-%s.po\">%.2f</a></td>",
+			temp = g_strdup_printf ("<td align=right><a href=\"po/%s.%s.%s.po\">%.2f</a></td>",
 						pcmp->name, pcmp->branch, ptrns->locale, stats);
 			translated[g_list_position (prelease->locales, llocale)] += ptrns->translated;
 			total[g_list_position (prelease->locales, llocale)] += ptrns->translated + ptrns->fuzzy + ptrns->untranslated;
@@ -593,7 +591,6 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 				"<pre>"\
 				"%s"\
 				"</pre>"\
-				"</p>"\
 				"<table cellpadding=1 cellspacing=1 border=1 width=\"90%%\">"\
 				"<tr align=center>"\
 				"<td></td>", prelease->maintitle, pdate, prelease->maintitle, pdate,
