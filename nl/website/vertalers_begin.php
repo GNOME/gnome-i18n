@@ -81,7 +81,7 @@ site live kan aanpassen in zijn webbrowser. De oude discussiepagina is
 <a href="http://www.o2w.nl/~ivo/wiki.pl?HomePage">hier</a> te vinden.
 De nieuwe wordt op dit moment nog opgezet en kun je
 <a href="http://wiki.vrijschrift.nl/SoftwareVertalers">hier</a> vinden.</li>
-<li><a href="irc://irc.gnome.org">IRC op Gimpnet</a>
+<li><a href="irc://irc.gnome.org/gnome-nl">IRC op Gimpnet</a>
 : In het kanaal #gnome-nl zitten altijd wel een paar vertalers die je
 kunnen helpen met eventuele problemen bij het vertalen. Ook kun je op
 terecht in het kanaal #i18n (dit is wel een engelstalig kanaal) voor hulp.</li>

@@ -33,7 +33,7 @@ vertalen. Dit omdat een werkomgeving pas echt goed is als je er gebruik van kan 
 in je eigen taal.</p>
 <p>GNOME-NL is ondertussen uitgegroeid tot een heuse community. Klik op de diverse opties
 in het menu om eens te kijken waar we ons mee bezig houden, of kom eens langs op de discussielijst
-of op <a href="irc://irc.gnome.org/">IRC</a> en maak kennis met GNOME-NL.</p>
+of op <a href="irc://irc.gnome.org/gnome-nl">IRC</a> en maak kennis met GNOME-NL.</p>
 <p>Op deze website is ook informatie te vinden over de voortgang van het project,
 alsmede informatie voor nieuwe vertalers. Kijk daarvoor in het menu onder het kopje "Vertalers".</p>
 <p>Heb je een vertaalfout gevonden? Laat dat dan direct weten
