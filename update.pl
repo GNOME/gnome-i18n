@@ -72,6 +72,17 @@ if ($LANG=~/^-(.)*/){
         @buf2 = <BUF2>;
         @buf1 = <BUF1>;
 
+        if (-s "POTFILES.ignore"){
+            open FILE, "POTFILES.ignore";
+            while (<FILE>) {
+                if ($_=~/^[^#]/o){
+                    push @bup, $_;
+                }
+            }
+            print "POTFILES.ignore found! Ignoring files...\n";
+	    @buf2 = (@bup, @buf2);
+        }
+
         foreach my $file (@buf1){
             open FILE, "<$file";
             while (<FILE>) {
