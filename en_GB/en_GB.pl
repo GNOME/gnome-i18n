@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 # (c) 2000 Robert Brady
+#     2002 Bastien Nocera
 
 # Released under the GNU General Public Licence, either version 2
 # or at your option, any later version
@@ -96,6 +97,8 @@ sub translate() {
   do_trans("center", "centre");
   # CHECK -> CHEQUE (sometimes)
   do_trans("color", "colour");
+  do_trans("customize", "customise");
+  do_trans("customized", "customised");
   do_trans("defense", "defence");
   do_trans("dialer", "dialler");
   do_trans("dialing", "dialling");
@@ -111,6 +114,7 @@ sub translate() {
   do_trans("harbor", "harbour");
   do_trans("honor", "honour");
   do_trans("humor", "humour");
+  do_trans("initialize", "initialise");
   do_trans("jeweled", "jewelled");
   do_trans("judgment", "judgement");
   do_trans("kilometer", "kilometre");
@@ -125,6 +129,7 @@ sub translate() {
   do_trans("modeling", "modelling");
   do_trans("neighbor", "neighbour");
   do_trans("offense", "offence");
+  do_trans("organize", "organise");
   do_trans("paneled", "panelled");
   do_trans("paneling", "panelling");
   do_trans("rumor", "rumour");
@@ -136,8 +141,10 @@ sub translate() {
   do_trans("totaled", "totalled");
   do_trans("totaler", "totaller");
   do_trans("totaling", "totalling");
+  do_trans("trash", "wastebasket");
   # TIRE -> TYRE (sometimes)
   do_trans("vapor", "vapour");
+  do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\"\n\"Bastien Nocera <hadess\@hadess.net>");
 
   if ($msg_str eq $msg_id) {
     $msg_str = "\"\"\n";
@@ -149,7 +156,7 @@ while (<>) {
      s/SOME DESCRIPTIVE TITLE/English (British) translation/;
      $year = gmtime()->year+1900;
      s/YEAR/$year/;
-     s/FIRST AUTHOR <EMAIL\@ADDRESS>/Robert Brady <rwb197\@ecs.soton.ac.uk>/;
+     s/FIRST AUTHOR <EMAIL\@ADDRESS>/Robert Brady <rwb197\@ecs.soton.ac.uk>, Bastien Nocera <hadess\@hadess.net>/;
      print;
    } elsif (/^msgid /) {
      $msg_id .= substr($_, 6);
