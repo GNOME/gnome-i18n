@@ -215,7 +215,11 @@ foreach my $lang (sort (@langs)){
 	    } else {
 		${$langmod{$lang}->{$mod}->[3]} = 1;
 	    }
-	    ${$langmod{$lang}->{$mod}->[4]} = $info[1];
+	    if ($info[1]) {
+	        ${$langmod{$lang}->{$mod}->[4]} = $info[1];
+	    } else {
+	        ${$langmod{$lang}->{$mod}->[4]} = " ";
+	    }
 	} else {
 	    ${$langmod{$lang}->{$mod}->[0]} = 0;
 	    ${$langmod{$lang}->{$mod}->[1]} = 0;

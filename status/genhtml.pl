@@ -349,7 +349,7 @@ my ($lang,$langs_red,$link,$gray,$mod,$trbg,$tot,$trns,$detail,$strings);
 open  TABLE, ">$htmldir/status.shtml" or die "can't open $htmldir/status.shtml";
 print TABLE "<html><head><title>GNOME translation status - $title ($date)</title></head>\n";
 print TABLE "<body><center><h1>GNOME translation status<br>$title ($date)</h1></center>\n";
-print TABLE "<p>This table shows the GNOME translation status for $title</p>";
+print TABLE "<p>This table shows the GNOME translation status for the $title</p>";
 print TABLE "<p>All data is showed as percent of translated messages and you";
 print TABLE "could download the latest .po && .pot files from this pages</p>";
 print TABLE "<p>You could see more detailed information at locale links</p>";
