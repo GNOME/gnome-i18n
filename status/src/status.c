@@ -406,7 +406,8 @@ update_component_po (component *cmp)
 				direntry = readdir (podir);
 				while (direntry != NULL) {
 					filesplit = g_strsplit (direntry->d_name, ".", 2);
-					if (filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
+					if (filesplit[1] != NULL && filesplit[2] == NULL &&
+					   !strcmp (filesplit[1], "po")) {
 						g_print ("Updating %s-%s-%s.po:\n", cmp->name, cmp->branch,
 							 filesplit[0]);
 						merge = g_strdup_printf ("msgmerge %s %s -o %s/po/%s-%s-%s.po > /dev/null",
