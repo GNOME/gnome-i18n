@@ -1,8 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
 <?
 include "functions.php";
+is_logged_in();
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 
 <head>
   <title>Gnome-nl -- Nieuws</title>
@@ -20,6 +21,10 @@ gnome_menu();
 <h1>Gnome-nl Nieuws</h1>
 <?
 $news_per_page = 10;
+if (is_logged_in()) {
+	echo "<a href=\"nieuws_edit.php?item=0";
+	echo "\"><img src=\"images/button_edit.png\" alt=\"nieuw\">Nieuws toevoegen</a> ";
+	}
 
 if ( ! empty( $_GET["alles"] ) )	
 	$max_news = 1000; //arbitrary value, increase if you need more
@@ -27,7 +32,7 @@ else
 	$max_news = $news_per_page ;
 
 // connect to mysql and select database
-$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl","$password");
+$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
 mysql_select_db("gnome_nl",$db);
 
 // build the query, order by newest ID and limit it to 10
@@ -43,11 +48,16 @@ $res = mysql_query($sql);
 while ( $aantal < $max_news && $newsitem = mysql_fetch_assoc($res) ) {
   // this sticks the results row by row into an array called $newsitem. rows are called via $array["COLUMN"]
   $aantal++;
-?><table class="nieuws"><tr><th align=LEFT class="news"><?
+?><table class="nieuws"><tr><th align="LEFT" class="news"><?
+if (is_logged_in()) {
+	echo "<a href=\"nieuws_edit.php?item=".$newsitem["id"];
+	echo "\"><img src=\"images/button_edit.png\" alt=\"[edit]\"></a> ";
+	}
 echo $newsitem["posted"];
 ?>: <?
 echo $newsitem["title"];
-?></th></tr>
+?>
+</th></tr>
 <tr><td class="news">
 <?
 if ( ! empty( $_GET["item"] ) )	

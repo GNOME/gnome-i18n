@@ -1,9 +1,9 @@
+<?php
+include "functions.php";
+is_logged_in();
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<?
-include "functions.php";
-?>
-
 <head>
   <title>Gnome-nl -- Gnome in het Nederlands</title>
 <? html_head() ?>

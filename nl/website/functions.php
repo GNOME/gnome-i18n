@@ -9,6 +9,7 @@
 //	check_html()
 //      html_head()
 //
+include "func_login.php";
 include "mysql_password.php";
 $GLOBALS['mysql_password'] = $password;
 $important_branch = "gnome-2.10";
@@ -58,8 +59,8 @@ $logos = array('gnome-nl-logo.png', 'gnome-nl-logo.png', 'gnome-be-logo.png');
 
 function gnome_foot() { ?>
 <div class="copyright">
-<a href="http://mozillanl.mozdev.org/"><img src="images/getfirefox.gif"
-	border="0" alt="Best bekeken met Mozilla Firefox"></a>
+<a href="http://www.gnome.org/projects/epiphany/"><img src="images/epiphany-88x31.png"
+	border="0" alt="Epiphany, de webbrowser voor GNOME"></a>
 <a href="http://www.kovoks.nl/"><img src="images/kovoks.banner.gif"
 	border="0" alt="Hosted by KovoKs.nl"></a>
 <a href="http://validator.w3.org/check/referer"><img border="0"
@@ -129,7 +130,14 @@ function gnome_menu() { ?>
 <div class="section">
 	<div class="sectiontitle">Diversen</div>
 	<div class="sectioncontent">
-		<ul class="nobullet">
+		<ul class="nobullet"><?
+
+if (is_logged_in()) {
+	echo "";
+	} else {
+	echo "<li><a href=\"login.php\">Aanmelden</a></li>";
+	}
+?>
 		<li><a href="woordenboeken.php">Woordenboeken</a></li>
 		<li><a href="verwijzingen.php">Andere websites</a></li>
 		</ul>

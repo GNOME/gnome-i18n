@@ -1,9 +1,9 @@
+<?php
+include "functions.php";
+is_logged_in();
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<?
-include "functions.php";
-?>
-
 <head>
   <title>Gnome-nl -- e-mail de webmaster</title>
 <? html_head() ?>

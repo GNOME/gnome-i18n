@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
 <?
 include "functions.php";
+is_logged_in();
 ?>
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
   <title>Gnome-nl -- Technische tips bij het vertalen</title>
 <? html_head() ?>
