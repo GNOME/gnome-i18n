@@ -53,6 +53,26 @@ gnome_menu();
 
 
 
+<h2>April 06, 2005</h2>
+
+
+
+
+<h3><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></h3>
+
+
+<h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></h4>
+<p>
+<p>Last saturday we thought about setting up some kind of planet GNOME-NL. And now, (drumroll please), here it is:<p>
+http://nl.gnome.org/planet.php</p>
+<p>
+<em><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">April 06, 2005 03:59 PM</a></em>
+</p>
+
+
+
+
+
 <h2>April 05, 2005</h2>
 
 
@@ -478,30 +498,6 @@ Now, on to the Gnumeric exclusion problem. I noticed desktop-backgrounds-extra i
 Jakub, we went to 'Dolni Dvur' and went skiing in 'Spindleruv Mlyn' (if I spelled it correctly). If I'm right, those places are not far from Liberec. Anyway, what makes .cz attractive is that it's cheap. The beer is cheap (and good), restaurants are cheap (~EUR 60 for a good dinner for 5 persons, in the Netherlands that would cost about ~EUR 200), public transit is cheap and skiing too (equipment rent and ski passes). Also, we were told that .cz had good slopes for beginners. For us (5 students), it was a perfect place to go on holiday for a week.<br><br>[oh, i do have comments switched on and they work fine ...]</p>
 <p>
 <em><a href="http://www.livejournal.com/users/inverted_tree/38997.html">March 04, 2005 11:30 PM</a></em>
-</p>
-
-
-
-
-
-
-
-
-
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=91">4 Mar 2005</a></h4>
-<p>
-<b>iTunes Music Store #2</b><br>
-So, apparently, if you use iTMS on your Linux/GNOME machine, you can <a href="http://ronald.bitfreak.net/priv/bugsong.png">buy</a> songs and <a href="http://ronald.bitfreak.net/priv/playsong.png">play</a> them back. Against all expectations, these songs are:<br>
-<ul>
-<li>not tagged (shame on you, Apple!)
-<li>not encrypted (woohoo! love ya)
-</ul>
-Hey, it's only $0.99/song, what are we waiting for? :-). Longe live Apple!</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=91">March 04, 2005 07:26 PM</a></em>
 </p>
 </div>
 
