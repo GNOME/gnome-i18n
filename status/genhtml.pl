@@ -465,18 +465,8 @@ print TABLE "<td></td></tr></table>";
 
 print TABLE "<p>Total number of translatable strings in above modules: $totals<p>\n";
 
-my $string = "Stable branches with tags: <br>\n<br>\n" ;
-my $branches = "0";
-
-foreach $mod (sort keys %modules) {
-    if ("${$modules{$mod}->[2]}" && "${$modules{$mod}->[2]}" ne "HEAD") {
-        $string = "$string" . "$mod: ${$modules{$mod}->[2]} <br>\n";
-        $branches = "1";
-    }
-}
-if ($branches == 1) {
-    print TABLE $string;
-}
+# Print the branches.
+print_branches(*TABLE);
 
 print TABLE "</body></html>\n" ;
 
@@ -494,9 +484,11 @@ foreach $lang (sort keys %langinfo){
     $link = "$details_" . substr($lang, 0, 5) . ".shtml";
     open  TABLE2, ">$htmldir/$link" or die "can't open $htmldir/$link";
     $detail = $details{$lang} || $details{"C"} . $lang;
-    print TABLE2 "<html><head><title>$detail</title></head><body>\n";
-    print TABLE2 "<a name=\"$lang\"><b>$detail</b></a><br>";
-    print TABLE2 "<table cellpadding=1 cellspacing=1 border=1 >";
+    print TABLE2 <<"EOF";
+<html><head><title>$detail</title></head><body>
+<a name=\"$lang\"><b>$detail</b></a><br>
+<table cellpadding=1 cellspacing=1 border=1 >
+EOF
 
     my $modulename = $modulenames{$lang}	|| "Module";
     my $translated = $translated{$lang}		|| "Translated";
@@ -583,6 +575,8 @@ foreach $lang (sort keys %langinfo){
     <th align=right>$percent</th>
     <th><br></th><th><br></th>\n";
     print TABLE2 "</table></center>";
+    # Print the branches.  
+    print_branches(*TABLE2);
     close TABLE2;
 }
 
@@ -651,6 +645,24 @@ sub printlang{
         <font color='$color'>$percent_int</font></a></td>\n";
     }
 }
+
+sub print_branches
+{
+    my $FH = shift;
+    my $string = "Stable branches with tags: <br>\n<br>\n" ;
+    my $branches = 0;
+
+    foreach $mod (sort keys %modules) {
+        if ("${$modules{$mod}->[2]}" && "${$modules{$mod}->[2]}" ne "HEAD") {
+            $string = "$string" . "$mod: ${$modules{$mod}->[2]} <br>\n";
+            $branches = 1;
+        }
+    }
+    if ($branches == 1) {
+        print $FH $string;
+    }
+}
+
 
 sub Usage 
 {
