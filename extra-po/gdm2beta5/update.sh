@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PACKAGE="gdm2beta5-non_in_cvs"
+PACKAGE="gdm2beta5"
 
 if [ "x$1" = "x--help" ]; then
 
