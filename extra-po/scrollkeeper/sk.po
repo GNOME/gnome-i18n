@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: scrollkeeper\n"
-"POT-Creation-Date: 2001-02-14 13:32-0800\n"
-"PO-Revision-Date: 2001-02-15 11:07CET\n"
+"POT-Creation-Date: 2001-02-19 17:29+0000\n"
+"PO-Revision-Date: 2001-02-20 16:04CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
 "MIME-Version: 1.0\n"
@@ -14,21 +14,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.8\n"
 
-#: cl/src/install.c:110 cl/src/uninstall.c:94
+#: cl/src/install.c:53
+#, c-format
+msgid "scrollkeeper-install: out of memory: %s\n"
+msgstr "scrollkeeper-install: nedostatok pamäte: %s\n"
+
+#: cl/src/install.c:177 cl/src/uninstall.c:94
 #, c-format
 msgid "wrong content list file %s\n"
 msgstr "nesprávny súbor obsahu %s\n"
 
-#: cl/src/install.c:117 cl/src/uninstall.c:101
+#: cl/src/install.c:184 cl/src/uninstall.c:101
 #, c-format
 msgid "wrong extended content list file %s\n"
 msgstr "nesprávny roz¹írený súbor obsahu %s\n"
 
-#: cl/src/install.c:469
+#: cl/src/install.c:550
 msgid "Usage: scrollkeeper_install [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
 msgstr "Pou¾itie: scrollkeeper_install [-p <SCROLLKEEPER_DB_PRIEÈ>] <OMF SÚBOR>\n"
 
-#: cl/src/install.c:505 cl/src/preinstall.c:77
+#: cl/src/install.c:586 cl/src/preinstall.c:77
 #, c-format
 msgid "wrong omf file %s\n"
 msgstr "nesprávny súbor OMF %s\n"
@@ -46,14 +51,39 @@ msgstr "%s chýba\n"
 msgid "Usage: scrollkeeper_uninstall [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
 msgstr "Pou¾itie: scrollkeeper_uninstall [-p <SCROLLKEEPER_DB_PRIEÈ>] <OMF SÚBOR>\n"
 
-#: cl/src/update.c:73
-msgid "Usage: scrollkeeper_update [-p <SCROLLKEEPER_DB_DIR>]\n"
-msgstr "Pou¾itie: scrollkeeper_update [-p <SCROLLKEEPER_DB_PRIEÈ>]\n"
-
-#: cl/src/update.c:164
+#: cl/src/get-cl.c:44 cl/src/update.c:44
 #, c-format
-msgid "could not read %s directory!!!\n"
-msgstr "nie je mo¾né preèíta» prieèinok %s!!!\n"
+msgid "%s: out of memory: %s\n"
+msgstr "%s: nedostatok pamäte: %s\n"
+
+#: cl/src/update.c:122
+#, c-format
+msgid "Usage: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
+msgstr "Pou¾itie: %s [-p <SCROLLKEEPER_DB_PRIEÈ>] [-o <OMF_SÚBOR>]\n"
+
+#: cl/src/update.c:209
+#, c-format
+msgid "%s: warning: replacing %s with %s\n"
+msgstr "%s: varovanie: %s nahradzované %s\n"
+
+#: cl/src/update.c:237
+#, c-format
+msgid "%s: warning: %s overrides %s\n"
+msgstr "%s: varovanie: %s predefinováva %s\n"
+
+#: cl/src/update.c:382
+#, c-format
+msgid "%s: %s: is not a directory\n"
+msgstr "%s: %s: nie je prieèinok\n"
+
+#: cl/src/get-cl.c:129
+#, c-format
+msgid "Usage: %s <LOCALE> <CATEGORY TREE FILE NAME>\n"
+msgstr "Pou¾itie: %s <LOKALIZÁCIA> <MENO SÚBORU SO STROMOM KATEGÓRIÍ>\n"
+
+#: cl/src/get-cl.c:163 cl/src/get-cl.c:172
+msgid "No Content List for this locale!!!\n"
+msgstr "Pre túto lokalizáciu nie je Obsah!!!\n"
 
 #: toc/src/toc.c:489
 #, c-format
