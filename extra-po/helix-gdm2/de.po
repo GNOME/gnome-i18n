@@ -1,14 +1,15 @@
 # gdm 2.0 German translation.
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Karsten Weiss <karsten@addx.au.s.shuttle.de>, 1999.
+# Benedikt Roth <Benedikt.Roth@gmx.net>, 2000
 # (Feel free to modify without asking!)
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gdm2 \n"
+"Project-Id-Version: helix-gdm2\n"
 "POT-Creation-Date: 1999-09-30 00:57+0200\n"
-"PO-Revision-Date: 1999-08-25 19:33+02:00\n"
-"Last-Translator: Karsten Weiss <karsten@addx.au.s.shuttle.de>\n"
+"PO-Revision-Date: 2000-07-13 23:45+02:00\n"
+"Last-Translator: Benedikt Roth <Benedikt.Roth@gmx.net>\n"
 "Language-Team: de <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -34,9 +35,7 @@ msgstr ""
 #: daemon/gdm.c:247
 msgid ""
 "gdm_config_parse: No sessions directory specified and default not found."
-msgstr ""
-"gdm_config_parse: Kein Sitzungsverzeichnis angegeben und die Voreinstellung "
-"nicht gefunden."
+msgstr "gdm_config_parse: Kein Verzeichnis für die Sitzung angegeben und kein Standard gefunden."
 
 #: daemon/gdm.c:259
 msgid "gdm_config_parse: Invalid server line in config file. Ignoring!"
@@ -203,9 +202,9 @@ msgid "%s: %s is writable by other."
 msgstr "%s: %s ist beschreibbar durch Andere."
 
 #: daemon/filecheck.c:90
-#, fuzzy, c-format
+#, c-format
 msgid "%s: does not exist and must."
-msgstr "%s: Verzeichnis %s existiert nicht."
+msgstr "Verzeichnis %s wird benötigt, existiert aber nicht."
 
 #: daemon/filecheck.c:98
 #, c-format
@@ -301,6 +300,8 @@ msgid ""
 "gdm_slave_session_start: User passed authentication but getpwnam(%s) failed. "
 "Spooky!"
 msgstr ""
+"gdm_slave_session_start: Der Benutzer hat sich erfolgreich angemeldet, aber getpwnam(%s) schlug fehl.\n"
+"Seltsam!"
 
 #: daemon/slave.c:354
 msgid ""
@@ -402,7 +403,7 @@ msgstr "Falsches Passwort"
 
 #: daemon/verify.c:256
 msgid "gdm_verify_check: Can't find PAM configuration file for gdm"
-msgstr ""
+msgstr "gdm_verify_check: Konnte die PAM Konfigurationsdatei für gdm nicht finden"
 
 #: daemon/xdmcp.c:184
 #, c-format
@@ -418,19 +419,16 @@ msgid "gdm_xdmcp_init: Could not bind to XDMCP socket!"
 msgstr "gdm_xdmcp_init: Konnte nicht an XDMCP-Socket binden!"
 
 #: daemon/xdmcp.c:214
-#, fuzzy
 msgid "gdm_xdmcp_init: Can't alloc fifopath"
-msgstr "gdm_xdmcp_init: Konnte keinen Socket erzeugen!"
+msgstr "gdm_xdmcp_init: Konnte Fifopath nicht zuteilen!"
 
 #: daemon/xdmcp.c:219
-#, fuzzy
 msgid "gdm_xdmcp_init: Could not make FIFO for chooser"
-msgstr "gdm_xdmcp_init: Konnte keinen Socket erzeugen!"
+msgstr "gdm_xdmcp_init: Konnte FIFO nicht erzeugen!"
 
 #: daemon/xdmcp.c:224
-#, fuzzy
 msgid "gdm_xdmcp_init: Could not open FIFO for chooser"
-msgstr "gdm_xdmcp_init: Konnte keinen Socket erzeugen!"
+msgstr "gdm_xdmcp_init: Konnte FIFO nicht öffnen!"
 
 #: daemon/xdmcp.c:284
 msgid "gdm_xdmcp_decode: Could not create XDMCP buffer!"
@@ -600,9 +598,9 @@ msgid "gdm_parse_enriched_string: String too long!"
 msgstr "gdm_parse_enriched_string: String ist zu lang!"
 
 #: gui/gdmlogin.c:272
-#, fuzzy, c-format
+#, c-format
 msgid "Welcome to %s"
-msgstr "Willkommen auf "
+msgstr "Willkommen auf %s"
 
 #: gui/gdmlogin.c:276
 msgid "gdm_parse_enriched_string: Could not malloc temporary buffer!"
