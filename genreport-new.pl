@@ -214,7 +214,7 @@ foreach $mod (@modules) {
       $translated{$lang} += $mod_tr{$lang};
       fill_stats ($num);
     }
-    print TABLE "<td><nobr><font face=\"arial, helvetica\" size=2>$module</nobr></td>\n";
+    print TABLE "<td align=left><nobr><font face=\"arial, helvetica\" size=2>$module</nobr></td>\n";
     $totals += $mod_total;
   }
 }
