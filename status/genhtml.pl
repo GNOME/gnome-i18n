@@ -170,7 +170,7 @@ my %status = (
     "C"  => "Status",
     "de" => "Status",
     "es" => "Estado",
-    "es" => "État",
+    "fr" => "État",
     "ja" => "¥¹¥Æ¡¼¥¿¥¹",
     "sv" => "Status"
 );
