@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gabber\n"
-"POT-Creation-Date: 2002-01-16 18:12-0500\n"
-"PO-Revision-Date: 2002-01-22 10:08+0100\n"
+"POT-Creation-Date: 2002-01-27 18:55-0500\n"
+"PO-Revision-Date: 2002-01-29 08:29+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Chyba pri prijímaní XML pre prehliadaè agentov. Pozrite ¹tandardný výstup."
 
 #: src/AddContactDruid.cc:389 src/AddContactDruid.cc:531
-#: src/AgentInterface.cc:236 src/AgentInterface.cc:400
+#: src/AgentInterface.cc:236
 msgid "Error, this server does not support agents."
 msgstr "Chyba, tento server nepodporuje agentov."
 
@@ -50,7 +50,6 @@ msgid "You must register with this agent first."
 msgstr "Musíte si najskôr zaregistrova» tohoto agenta."
 
 #: src/AddContactDruid.cc:560 ui/AUDruid_win.glade.h:32
-#: ui/RegDruid_win.glade.h:7
 msgid "Loading..."
 msgstr "Nahrávam..."
 
@@ -58,23 +57,23 @@ msgstr "Nahrávam..."
 msgid "Loading information from agent..."
 msgstr "Nahrávam informáciu z agenta..."
 
-#: src/AddContactDruid.cc:647
+#: src/AddContactDruid.cc:649
 msgid "Information loaded."
 msgstr "Informácia nahraná."
 
-#: src/AddContactDruid.cc:654
+#: src/AddContactDruid.cc:656
 msgid "Error attempting to search agent."
 msgstr "Chyba pri pokuse vyhµada» agenta."
 
-#: src/AddContactDruid.cc:696
+#: src/AddContactDruid.cc:698
 msgid "Searching..."
 msgstr "Hµadám..."
 
-#: src/AddContactDruid.cc:749
+#: src/AddContactDruid.cc:755
 msgid "Error "
 msgstr "Chyba "
 
-#: src/AddContactDruid.cc:761
+#: src/AddContactDruid.cc:767
 msgid "Search completed."
 msgstr "Hµadanie ukonèené."
 
@@ -85,49 +84,67 @@ msgstr ""
 "Vyskytla sa chyba pri získavaní informácií od tohto agenta. Skúste, prosím, "
 "neskôr."
 
-#: src/AgentInterface.cc:455
+#: src/AgentInterface.cc:400
+#, c-format
+msgid "Error, %s does not support agents."
+msgstr "Chyba, %s nepodporuje agentov."
+
+#: src/AgentInterface.cc:454
 msgid "Loading registration information..."
 msgstr "Nahrávam registraèné informácie..."
 
-#: src/AgentInterface.cc:534
+#: src/AgentInterface.cc:579
+#, c-format
 msgid ""
-"Error attempting to register with agent.\n"
+"Error attempting to register with %s.\n"
 "\n"
-"The agent is either down or unreachable."
-msgstr "Chyba pri pokuse o registráciu agenta.\n\nAgent je buï vypnutý alebo nedosiahnuteµný."
+"The agent is either down, unreachable, or misconfigured."
+msgstr ""
+"Chyba pri pokuse o registráciu na %s.\n"
+"\n"
+"Agent je buï vypnutý, nedosiahnuteµný alebo zle nakonfigurovaný."
 
-#: src/AgentInterface.cc:595
+#: src/AgentInterface.cc:639
 msgid "Sending registration information..."
 msgstr "Posielam registraèné informácie..."
 
-#: src/AgentInterface.cc:608
+#: src/AgentInterface.cc:652 src/AgentInterface.cc:657
 msgid "Registration Failed"
 msgstr "Registrácia zlyhala"
 
+#: src/AgentInterface.cc:655
+#, c-format
+msgid ""
+"Registration Failed:\n"
+"%s"
+msgstr ""
+"Registrácia zlyhala:\n"
+"%s"
+
 #. Subscribe to this new user
-#: src/AgentInterface.cc:669
+#: src/AgentInterface.cc:716
 msgid "Automatic subscription request."
 msgstr "Po¾iadavka na automatické prihlásenie."
 
-#: src/AutoAway.cc:85
+#: src/AutoAway.cc:87
 msgid "Moving to extended away"
 msgstr "Mením na 'dlho preè'"
 
-#: src/AutoAway.cc:98
+#: src/AutoAway.cc:100
 msgid "Starting auto-away"
 msgstr "Nastavujem automaticky 'preè'"
 
 #. Update the status bar
-#: src/AutoAway.cc:109
+#: src/AutoAway.cc:111
 msgid "Returning from auto-away"
 msgstr "Návrat z automatického 'preè'"
 
 #. Format the string to be displayed
-#: src/AutoAway.cc:130
+#: src/AutoAway.cc:132
 msgid "Auto away for "
 msgstr "Automaticky preè "
 
-#: src/AutoAway.cc:132
+#: src/AutoAway.cc:134
 msgid "day"
 msgstr "deò"
 
@@ -175,8 +192,8 @@ msgstr "Podpis prítomnosti je platný"
 
 #. Set the tooltip as well
 #: src/ContactInfoInterface.cc:573 src/ContactInfoInterface.cc:574
-#: src/StatusInterface.cc:401 ui/ContactInfo_dlg.glade.h:29
-#: ui/Gabber_win.glade.h:37
+#: src/StatusInterface.cc:409 ui/ContactInfo_dlg.glade.h:29
+#: ui/Gabber_win.glade.h:38
 msgid "Presence is not signed"
 msgstr "Prítomnos» je nepodpísaná"
 
@@ -197,10 +214,10 @@ msgid "%s's Contact Information"
 msgstr "%s - Informácie o kontakte"
 
 #: src/ContactInfoInterface.cc:628 src/ContactInterface.cc:88
-#: src/ContactInterface.cc:203 src/FTInterface.cc:95 src/FTInterface.cc:182
-#: src/FTInterface.cc:277 src/FTInterface.cc:413 src/GCInterface.cc:193
+#: src/ContactInterface.cc:208 src/FTInterface.cc:96 src/FTInterface.cc:185
+#: src/FTInterface.cc:300 src/FTInterface.cc:436 src/GCInterface.cc:192
 #: src/GroupsInterface.cc:159 src/MessageViews.cc:409 src/MessageViews.cc:579
-#: src/MessageViews.cc:1068 src/MessageViews.cc:1690 src/URLInterface.cc:86
+#: src/MessageViews.cc:1071 src/MessageViews.cc:1693
 msgid " - Gabber"
 msgstr " - Gabber"
 
@@ -209,8 +226,8 @@ msgstr " - Gabber"
 msgid "%s's Computer"
 msgstr "%s - Poèítaè pou¾ívateµa"
 
-#: src/ContactInfoInterface.cc:1119 src/ContactInfoInterface.cc:1126
-#: src/ContactInfoInterface.cc:1130
+#: src/ContactInfoInterface.cc:1123 src/ContactInfoInterface.cc:1130
+#: src/ContactInfoInterface.cc:1134
 msgid "yes"
 msgstr "áno"
 
@@ -218,12 +235,12 @@ msgstr "áno"
 msgid "Received Contacts(s) from "
 msgstr "Prijaté kontakty od"
 
-#: src/ContactInterface.cc:203
+#: src/ContactInterface.cc:208
 #, c-format
 msgid "Send Contacts(s) to %s"
 msgstr "Posla» kontakty pre %s"
 
-#: src/ContactInterface.cc:251
+#: src/ContactInterface.cc:256
 msgid "Jabber Contacts attached:"
 msgstr "Prilo¾ené kontakty jabbera:"
 
@@ -373,60 +390,56 @@ msgstr "Nové pravidlo"
 msgid "Sorry, your server does not support Jabber filters."
 msgstr "Prepáète, ale vá¹ server nepodporuje Jabber filtre."
 
-#: src/FTInterface.cc:95
+#: src/FTInterface.cc:96
 #, c-format
 msgid "Receive File(s) from %s"
 msgstr "Prija» súbory od: %s"
 
-#: src/FTInterface.cc:143
+#: src/FTInterface.cc:144
 msgid "Error, a file save path must be specified."
 msgstr "Chyba. Musí by» zadaná cesta na ulo¾enie súboru."
 
-#: src/FTInterface.cc:182
+#: src/FTInterface.cc:185
 #, c-format
 msgid "Send File to %s"
 msgstr "Posla» súbor pre %s"
 
-#: src/FTInterface.cc:208
-msgid "Error, a file must be specified."
-msgstr "Chyba. Musí by» zadaný súbor."
-
-#: src/FTInterface.cc:257
+#: src/FTInterface.cc:280
 msgid "Waiting for connection..."
 msgstr "Èakám na spojenie..."
 
-#: src/FTInterface.cc:277
+#: src/FTInterface.cc:300
 #, c-format
 msgid "Sending File to %s"
 msgstr "Posielam súbor pre: %s"
 
-#: src/FTInterface.cc:394
+#: src/FTInterface.cc:417
 msgid "Receiving from"
 msgstr "Prijímanie od"
 
 #. Show how big the file is
-#: src/FTInterface.cc:402 src/FTInterface.cc:405
+#: src/FTInterface.cc:425 src/FTInterface.cc:428
 msgid "Pending..."
 msgstr "Nerozhodnuté..."
 
-#: src/FTInterface.cc:413
+#: src/FTInterface.cc:436
 #, c-format
 msgid "Receiving File from %s"
 msgstr "Prijímam súbor od: %s"
 
-#: src/FTInterface.cc:439
+#: src/FTInterface.cc:462
 msgid "Connected, requesting file..."
 msgstr "Pripojený, ¾iadam o súbor..."
 
-#: src/FTInterface.cc:446
+#: src/FTInterface.cc:469
 msgid "Accepting connection..."
 msgstr "Akceptujem pripojenie..."
 
-#: src/FTInterface.cc:465
+#: src/FTInterface.cc:488
 msgid "Error, transfer unexpectedly ended."
 msgstr "Chyba, prenos neoèakávane skonèil."
 
-#: src/FTInterface.cc:466
+#: src/FTInterface.cc:489
 msgid ""
 "The file transfer has ended unexpectedly.\n"
 "The received portion of the file has been saved."
@@ -434,51 +447,51 @@ msgstr ""
 "Prenos súboru bol ukonèený neoèakávane.\n"
 "Prijatá èas» súbru bola ulo¾ená."
 
-#: src/FTInterface.cc:517
+#: src/FTInterface.cc:540
 msgid "Hide details"
 msgstr "Skry» podrobnosti"
 
-#: src/FTInterface.cc:524
+#: src/FTInterface.cc:547
 msgid "Show details"
 msgstr "Zobrazi» podrobnosti"
 
-#: src/FTInterface.cc:537
+#: src/FTInterface.cc:560
 msgid "Sending..."
 msgstr "Posielam..."
 
-#: src/FTInterface.cc:566
+#: src/FTInterface.cc:589
 msgid "Receiving data..."
 msgstr "Prijímam dáta..."
 
-#: src/FTInterface.cc:654
+#: src/FTInterface.cc:677
 msgid "Complete."
 msgstr "Ukonèené."
 
-#: src/FTInterface.cc:659
+#: src/FTInterface.cc:682
 msgid "Error, received more data than expected."
 msgstr "Chyba. Prijatých viac dát, ako som oèakával."
 
 #. Update the speed
-#: src/FTInterface.cc:684
+#: src/FTInterface.cc:707
 #, c-format
 msgid "%s/second"
 msgstr "%s/s"
 
-#: src/FTInterface.cc:691
+#: src/FTInterface.cc:714
 msgid "Under one minute remaining."
 msgstr "Zostáva menej ako jedna minúta."
 
-#: src/FTInterface.cc:697
+#: src/FTInterface.cc:720
 #, c-format
 msgid "%s hours, %s minutes remaining."
 msgstr "zostáva %s hodín a %s minút."
 
-#: src/FTInterface.cc:701
+#: src/FTInterface.cc:724
 #, c-format
 msgid "%s minutes remaining."
 msgstr "zostáva %s minút."
 
-#: src/GCInterface.cc:66 src/GCInterface.cc:217
+#: src/GCInterface.cc:66 src/GCInterface.cc:216
 #, c-format
 msgid "%s on IRC Server %s"
 msgstr "%s na IRC serveri %s"
@@ -488,11 +501,11 @@ msgstr "%s na IRC serveri %s"
 msgid "You have been invited to %s"
 msgstr "Boli ste pozvaný do %s"
 
-#: src/GCInterface.cc:193
+#: src/GCInterface.cc:192
 msgid "Group Chat Invitation from "
 msgstr "Pozvanie na skupinový rozhovor od "
 
-#: src/GabberApp.cc:448 src/GabberApp.cc:604
+#: src/GabberApp.cc:447 src/GabberApp.cc:605
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -500,7 +513,7 @@ msgstr ""
 "Chyba: Nemô¾em naèíta» heslo.\n"
 "Skúste sa, prosím, prihlási» znova."
 
-#: src/GabberApp.cc:459
+#: src/GabberApp.cc:458
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -508,11 +521,11 @@ msgstr ""
 "Ste si istý, ¾e chcete, aby sa Gabber\n"
 "pokúsil zaregistrova» "
 
-#: src/GabberApp.cc:462
+#: src/GabberApp.cc:461
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:467
+#: src/GabberApp.cc:466
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -522,11 +535,11 @@ msgstr ""
 "Chcete aby sa Gabber pokúsil vytvori» nový\n"
 "úèet na zvolenom Jabber serveri?"
 
-#: src/GabberApp.cc:475
+#: src/GabberApp.cc:474
 msgid "Attempt to create a new user failed: \n"
 msgstr "Pokus o vytvorenie nového pou¾ívateµa zlyhal: \n"
 
-#: src/GabberApp.cc:477
+#: src/GabberApp.cc:476
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -536,7 +549,7 @@ msgstr ""
 ". Prosím zadajte iné prihlasovacie meno, alebo skontrolujte \n"
 "va¹e prihlasovacie údaje."
 
-#: src/GabberApp.cc:484
+#: src/GabberApp.cc:483
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -546,7 +559,7 @@ msgstr ""
 "nepodporuje overenie toto¾nosti digestom.\n"
 "Skúste sa pripoji» znova bez pou¾itia digestu."
 
-#: src/GabberApp.cc:643
+#: src/GabberApp.cc:644
 msgid "Transmitter error. Disconnected: "
 msgstr "Chyba vysielaèa. Odpojený: "
 
@@ -574,7 +587,7 @@ msgstr "Záznamy pre "
 msgid "Invalid"
 msgstr "Neplatná"
 
-#: src/GabberUtility.cc:166 ui/Gabber_win.glade.h:33
+#: src/GabberUtility.cc:166 ui/Gabber_win.glade.h:34
 msgid "Offline"
 msgstr "Nepripojený"
 
@@ -641,101 +654,110 @@ msgstr "Nemô¾em ulo¾i» súbor. Prosím skúste iný názov alebo umiestnenie."
 msgid "%s from groupchat %s"
 msgstr "%s zo skupinového rozhovoru %s"
 
-#: src/GabberWidgets.cc:280 src/MessageViews.cc:762
+#: src/GabberWidgets.cc:280 src/MessageViews.cc:765
 #, c-format
 msgid "%s..."
 msgstr "%s..."
 
-#: src/GabberWidgets.cc:373 src/StatusInterface.cc:421
+#: src/GabberWidgets.cc:373 src/StatusInterface.cc:429
 msgid " [stopped]"
 msgstr " [zastavené]"
 
-#: src/GabberWidgets.cc:375 src/StatusInterface.cc:423
+#: src/GabberWidgets.cc:375 src/StatusInterface.cc:431
 msgid " [paused]"
 msgstr " [pozastavené]"
 
 #. Status Indicator(s)
-#: src/GabberWin.cc:139 src/GabberWin.cc:839 src/StatusInterface.cc:378
-#: ui/Gabber_win.glade.h:11
+#: src/GabberWin.cc:139 src/GabberWin.cc:454 src/GabberWin.cc:855
+#: src/StatusInterface.cc:386 ui/Gabber_win.glade.h:11
 msgid "Disconnected"
 msgstr "Odpojený"
 
-#. Update status bar
-#: src/GabberWin.cc:383
-msgid "Logged in"
-msgstr "Prihlásený"
-
-#. Update status bar
-#: src/GabberWin.cc:464
+#. This was annoying anyway
+#. *     Gnome::Dialog* d;
+#. *     string question = _("Are you sure you want to disconnect from Jabber?");
+#. *     d = manage(Gnome::Dialogs::question_modal(question,
+#. *						     slot(this, &GabberWin::handle_disconnect_qry)));
+#.
+#: src/GabberWin.cc:354 src/GabberWin.cc:480
 msgid "Logged out"
 msgstr "Odhlásený"
 
-#: src/GabberWin.cc:502
+#. Update status bar
+#: src/GabberWin.cc:396
+msgid "Logged in"
+msgstr "Prihlásený"
+
+#: src/GabberWin.cc:516
 msgid "Please enter name of the group:"
 msgstr "Zadajte, prosím, názov skupiny:"
 
-#: src/GabberWin.cc:523
+#: src/GabberWin.cc:537
 msgid "Gabber: The GNOME Jabber Client."
 msgstr "Gabber: GNOME Jabber klient."
 
-#: src/GabberWin.cc:527
+#: src/GabberWin.cc:541
 msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
 msgstr "Dave \"DizzyD\" Smith <dave@jabber.org>"
 
-#: src/GabberWin.cc:528
+#: src/GabberWin.cc:542
 msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
 msgstr "Julian \"x-virge\" Missig <julian@jabber.org>"
 
-#: src/GabberWin.cc:529
+#: src/GabberWin.cc:543
 msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 msgstr "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 
-#: src/GabberWin.cc:530
+#: src/GabberWin.cc:544
 msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 msgstr "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 
-#: src/GabberWin.cc:531
+#: src/GabberWin.cc:545
 msgid "Konrad Podloucky <konrad@crunchy-frog.org>"
 msgstr "Konrad Podloucky <konrad@crunchy-frog.org>"
 
-#: src/GabberWin.cc:532
+#: src/GabberWin.cc:546
 msgid "Dave \"bigdave\" Lee"
 msgstr "Dave \"bigdave\" Lee"
 
-#: src/GabberWin.cc:533
+#: src/GabberWin.cc:547
 msgid "Thomas \"temas\" Muldowney <temas@box5.net>"
 msgstr "Thomas \"temas\" Muldowney <temas@box5.net>"
 
-#: src/GabberWin.cc:539
+#: src/GabberWin.cc:553
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr "Autorské práva (c) 1999-2001 Julian Missig a Dave Smith"
 
-#: src/GabberWin.cc:555 src/GabberWin.cc:560 src/StatusInterface.cc:69
+#: src/GabberWin.cc:569 src/GabberWin.cc:577 src/StatusInterface.cc:69
 msgid "Online"
 msgstr "Pripojený"
 
-#: src/GabberWin.cc:563
+#: src/GabberWin.cc:574
+msgid "Done for the day. I'll get back to you tomorrow."
+msgstr "Na dnes staèí. Vrátim sa k vám zajtra."
+
+#: src/GabberWin.cc:580
 msgid "Chat with me!"
 msgstr "Porozprávaj sa so mnou!"
 
-#: src/GabberWin.cc:566 src/MessageViews.cc:2203
+#: src/GabberWin.cc:583 src/MessageViews.cc:2206
 msgid "I'm away."
 msgstr "Som preè."
 
-#: src/GabberWin.cc:569
+#: src/GabberWin.cc:586
 msgid "I'll be away for a while."
 msgstr "Budem chvíµu preè."
 
-#: src/GabberWin.cc:572
+#: src/GabberWin.cc:589
 msgid "Sorry, I'm busy right now."
 msgstr "Prepáète, momentálne som zaneprázdnený."
 
 #. Update the status bar   
-#: src/GabberWin.cc:944
+#: src/GabberWin.cc:961
 msgid "Logging in..."
 msgstr "Prihlasujem sa..."
 
-#: src/GabberWin.cc:990 src/RosterView.cc:914
+#: src/GabberWin.cc:1007 src/RosterView.cc:914
 msgid "Not in Roster"
 msgstr "Nie je v zozname kontaktov"
 
@@ -780,77 +802,77 @@ msgid "Message from %s"
 msgstr "Správa od %s"
 
 #. Set the tooltip
-#: src/MessageViews.cc:628 src/MessageViews.cc:1124 src/MessageViews.cc:1309
+#: src/MessageViews.cc:628 src/MessageViews.cc:1127 src/MessageViews.cc:1312
 #: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:13
 msgid "This message is not encrypted"
 msgstr "Táto správa nie je ¹ifrovaná"
 
 #. Set the tooltip
-#: src/MessageViews.cc:648 src/MessageViews.cc:1158
+#: src/MessageViews.cc:648 src/MessageViews.cc:1161
 msgid "Signature on message is invalid"
 msgstr "Podpis na správe ne neplatný"
 
 #. Set the tooltip
-#: src/MessageViews.cc:658 src/MessageViews.cc:1149 src/MessageViews.cc:1315
+#: src/MessageViews.cc:658 src/MessageViews.cc:1152 src/MessageViews.cc:1318
 msgid "Signature on message is valid"
 msgstr "Podpis na správe je platný"
 
 #. Set the tooltip
-#: src/MessageViews.cc:705 src/MessageViews.cc:1199 src/MessageViews.cc:1321
+#: src/MessageViews.cc:705 src/MessageViews.cc:1202 src/MessageViews.cc:1324
 msgid "This message is encrypted"
 msgstr "Táto správa je ¹ifrovaná"
 
 #. Create label
-#: src/MessageViews.cc:726
+#: src/MessageViews.cc:729
 msgid "Attached URL:"
 msgstr "Pripojené URL:"
 
-#: src/MessageViews.cc:1029 ui/OOOChat_win.glade.h:16
+#: src/MessageViews.cc:1032 ui/OOOChat_win.glade.h:16
 #, no-c-format
 msgid "You just received a message from %s."
 msgstr "Práve ste dostali správu od: %s."
 
 #. Set the window title
-#: src/MessageViews.cc:1068
+#: src/MessageViews.cc:1071
 #, c-format
 msgid "Chat with %s"
 msgstr "Rozhvor s %s"
 
 #. Display the error
-#: src/MessageViews.cc:1500 src/MessageViews.cc:2113
+#: src/MessageViews.cc:1503 src/MessageViews.cc:2116
 msgid "Error"
 msgstr "Chyba"
 
-#: src/MessageViews.cc:1690
+#: src/MessageViews.cc:1693
 #, c-format
 msgid "Group Chat in %s"
 msgstr "Skupinový rozhovor v %s"
 
 #. Setup a message object
-#: src/MessageViews.cc:1800
+#: src/MessageViews.cc:1803
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "%s zmenil predmet na: %s"
 
-#: src/MessageViews.cc:1984
+#: src/MessageViews.cc:1987
 msgid "Session Disconnected"
 msgstr "Sedenie rozpojené"
 
-#: src/MessageViews.cc:2066
+#: src/MessageViews.cc:2069
 #, c-format
 msgid "%d members"
 msgstr "%d èlenov"
 
 #. Setup a message object
-#: src/MessageViews.cc:2164
+#: src/MessageViews.cc:2167
 msgid "/me has changed the subject to: "
 msgstr "/me zmenil predmet na: "
 
-#: src/MessageViews.cc:2320 ui/GCJoin_dlg.glade.h:2
+#: src/MessageViews.cc:2323 ui/GCJoin_dlg.glade.h:2
 msgid "Jabber Group Chat 1.0"
 msgstr "Skupinový rozhovor Jabber 1.0"
 
-#: src/MessageViews.cc:2321
+#: src/MessageViews.cc:2324
 msgid "IRC (Group Chat 1.0)"
 msgstr "IRC (Skupinový rozhovor 1.0)"
 
@@ -858,11 +880,11 @@ msgstr "IRC (Skupinový rozhovor 1.0)"
 msgid "Connection Settings - Gabber"
 msgstr "Nastavenia spojenia - Gabber"
 
-#: src/PrefsInterface.cc:74 ui/Login_dlg.glade.h:16
+#: src/PrefsInterface.cc:74
 msgid "Login - Gabber"
 msgstr "Prihlásenie - Gabber"
 
-#: src/PrefsInterface.cc:645
+#: src/PrefsInterface.cc:648
 msgid "Automatically away due to being idle"
 msgstr "Automaticky preè pri neèinnnosti"
 
@@ -908,41 +930,36 @@ msgstr ""
 "Tento pou¾ívateµ by si vás chcel prida» do svojho zoznamu kontaktov. Chcete "
 "mu to povoli»?"
 
-#: src/StatusInterface.cc:382
+#: src/StatusInterface.cc:390
 msgid "Connected"
 msgstr "Pripojený"
 
-#: src/StatusInterface.cc:386
+#: src/StatusInterface.cc:394
 msgid "Connected using SSL"
 msgstr "Pripojený pomocou SSL"
 
-#: src/StatusInterface.cc:396
+#: src/StatusInterface.cc:404
 msgid "Presence is signed"
 msgstr "Prítomnos» je podpísaná"
 
-#: src/URLInterface.cc:86
-#, c-format
-msgid "Received Web Link from %s"
-msgstr "Prijatý www odkaz od %s"
-
-#: src/WelcomeDruid.cc:257
+#: src/WelcomeDruid.cc:267
 msgid "Attempting to log in..."
 msgstr "Skú¹am sa prihlási»..."
 
-#: src/WelcomeDruid.cc:274
+#: src/WelcomeDruid.cc:284
 msgid "Login successful. Contacting the Jabber Users Directory...."
 msgstr "Prihlásenie úspe¹né. Pripájam sa na adresár pou¾ívateµov jabbera...."
 
-#: src/WelcomeDruid.cc:279
+#: src/WelcomeDruid.cc:289
 msgid "Login successful."
 msgstr "Prihlásenie úspe¹né."
 
 #. Inform the user
-#: src/WelcomeDruid.cc:336
+#: src/WelcomeDruid.cc:346
 msgid "Jabber Users Directory contacted, sending information..."
 msgstr "Adresár pou¾ívateµov jabbera skontaktovaný. Posielam informácie..."
 
-#: src/WelcomeDruid.cc:343
+#: src/WelcomeDruid.cc:353
 msgid "Information sent."
 msgstr "Informácia poslaná."
 
@@ -1741,7 +1758,7 @@ msgstr "Pozva» kontakty..."
 msgid "Message History..."
 msgstr "História správ..."
 
-#: ui/GC_win.glade.h:11 ui/Gabber_win.glade.h:30
+#: ui/GC_win.glade.h:11 ui/Gabber_win.glade.h:31
 msgid "Message..."
 msgstr "Správa..."
 
@@ -1749,11 +1766,11 @@ msgstr "Správa..."
 msgid "Not Available"
 msgstr "Nedostupný"
 
-#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:34
+#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:35
 msgid "One-on-One Chat..."
 msgstr "Osobný rozhovor..."
 
-#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:42
+#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:43
 msgid "Send Contacts..."
 msgstr "Posla» kontakty..."
 
@@ -1911,148 +1928,152 @@ msgid "Join a Group Chat..."
 msgstr "Pripoji» sa k skupinovému rozhovoru..."
 
 #: ui/Gabber_win.glade.h:24
+msgid "Log _out"
+msgstr "_Odhlási»"
+
+#: ui/Gabber_win.glade.h:25
 msgid "Log into Agent"
 msgstr "Prihlási» sa k agentovi"
 
-#: ui/Gabber_win.glade.h:25
+#: ui/Gabber_win.glade.h:26
+msgid "Log out _with Reason..."
+msgstr "Odhlási» s dôvodom..."
+
+#: ui/Gabber_win.glade.h:27
 msgid "Log out of Agent"
 msgstr "Odhlási» sa od agenta"
 
-#: ui/Gabber_win.glade.h:26
-msgid "Log_out"
-msgstr "_Odhlási»"
-
-#: ui/Gabber_win.glade.h:27
+#: ui/Gabber_win.glade.h:28
 msgid "Login..."
 msgstr "Prihlási»..."
 
-#: ui/Gabber_win.glade.h:28
+#: ui/Gabber_win.glade.h:29
 msgid "Logout"
 msgstr "Odhlási»"
 
-#: ui/Gabber_win.glade.h:29
+#: ui/Gabber_win.glade.h:30
 msgid "Manage Groups..."
 msgstr "Spravova» skupiny..."
 
-#: ui/Gabber_win.glade.h:31
+#: ui/Gabber_win.glade.h:32
 msgid "New Blank _Message..."
 msgstr "Nová èistá sprá_va..."
 
-#: ui/Gabber_win.glade.h:32
+#: ui/Gabber_win.glade.h:33
 msgid "Number of online contacts"
 msgstr "Poèet pripojených kontaktov"
 
-#: ui/Gabber_win.glade.h:35
+#: ui/Gabber_win.glade.h:36
 msgid "Preferences..."
 msgstr "Predvoµby..."
 
-#: ui/Gabber_win.glade.h:36
+#: ui/Gabber_win.glade.h:37
 msgid "Presence"
 msgstr "Prítomnos»"
 
-#: ui/Gabber_win.glade.h:38
+#: ui/Gabber_win.glade.h:39
 msgid "Queued messages"
 msgstr "Správy v rade"
 
-#: ui/Gabber_win.glade.h:39
+#: ui/Gabber_win.glade.h:40
 msgid "Remove Agent"
 msgstr "Odstráni» agenta"
 
-#: ui/Gabber_win.glade.h:40
+#: ui/Gabber_win.glade.h:41
 msgid "Remove Contact"
 msgstr "Odstráni» kontakt"
 
-#: ui/Gabber_win.glade.h:41
+#: ui/Gabber_win.glade.h:42
 msgid "Resubscribe"
 msgstr "Opätovne prihlási»"
 
-#: ui/Gabber_win.glade.h:43
+#: ui/Gabber_win.glade.h:44
 msgid "Send File..."
 msgstr "Posla» súbor..."
 
-#: ui/Gabber_win.glade.h:44
+#: ui/Gabber_win.glade.h:45
 msgid "Show Main Window"
 msgstr "Zobrazi» hlavné okno"
 
-#: ui/Gabber_win.glade.h:45
+#: ui/Gabber_win.glade.h:46
 msgid "Show _Headlines"
 msgstr "Zobrazi» _hlavné správy"
 
-#: ui/Gabber_win.glade.h:46 ui/Prefs_win.glade.h:79
+#: ui/Gabber_win.glade.h:47 ui/Prefs_win.glade.h:79
 msgid "Show common actions toolbar"
 msgstr "Zobrazi» nástrojovú li¹tu so zvyèajnými akciami"
 
-#: ui/Gabber_win.glade.h:47 ui/Prefs_win.glade.h:80
+#: ui/Gabber_win.glade.h:48 ui/Prefs_win.glade.h:80
 msgid "Show extra information"
 msgstr "Zobrazi» ïal¹ie informácie"
 
-#: ui/Gabber_win.glade.h:48 ui/Prefs_win.glade.h:81
+#: ui/Gabber_win.glade.h:49 ui/Prefs_win.glade.h:81
 msgid "Show menubar"
 msgstr "Zobrazi» li¹tu menu"
 
-#: ui/Gabber_win.glade.h:49 ui/Prefs_win.glade.h:82
+#: ui/Gabber_win.glade.h:50 ui/Prefs_win.glade.h:82
 msgid "Show presence indicator"
 msgstr "Zobrazi» indikátor prítomnosti"
 
-#: ui/Gabber_win.glade.h:50 ui/MessageRecv_win.glade.h:15
+#: ui/Gabber_win.glade.h:51 ui/MessageRecv_win.glade.h:15
 #: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:14
 #: ui/SubscriptionRequest_dlg.glade.h:10
 msgid "View Contact Info..."
 msgstr "Zobrazi» informácie o kontakte..."
 
-#: ui/Gabber_win.glade.h:51
+#: ui/Gabber_win.glade.h:52
 msgid "View History..."
 msgstr "Zobrazi» históriu..."
 
-#: ui/Gabber_win.glade.h:52
+#: ui/Gabber_win.glade.h:53
 msgid "_Add Contact..."
 msgstr "Prid_a» kontakt..."
 
-#: ui/Gabber_win.glade.h:53
+#: ui/Gabber_win.glade.h:54
 msgid "_Browse Agents/IM Systems..."
 msgstr "_Prezera» agentov/IM systémy..."
 
-#: ui/Gabber_win.glade.h:54
+#: ui/Gabber_win.glade.h:55
 msgid "_Connection Settings..."
 msgstr "_Nastavenia spojenia..."
 
-#: ui/Gabber_win.glade.h:55
+#: ui/Gabber_win.glade.h:56
 msgid "_Debug"
 msgstr "La_denie"
 
-#: ui/Gabber_win.glade.h:56
+#: ui/Gabber_win.glade.h:57
 msgid "_Export Roster..."
 msgstr "_Exportova» zoznam kontaktov..."
 
-#: ui/Gabber_win.glade.h:57
+#: ui/Gabber_win.glade.h:58
 msgid "_Gabber"
 msgstr "_Gabber"
 
-#: ui/Gabber_win.glade.h:58
+#: ui/Gabber_win.glade.h:59
 msgid "_Ignore List..."
 msgstr "Zoznam _ignorovaných..."
 
-#: ui/Gabber_win.glade.h:59
+#: ui/Gabber_win.glade.h:60
 msgid "_Import Roster..."
 msgstr "_Importova» zoznam kontaktov..."
 
-#: ui/Gabber_win.glade.h:60
-msgid "_Login..."
+#: ui/Gabber_win.glade.h:61
+msgid "_Log in..."
 msgstr "Prih_lási»..."
 
-#: ui/Gabber_win.glade.h:61
+#: ui/Gabber_win.glade.h:62
 msgid "_My Information..."
 msgstr "_Moje informácie..."
 
-#: ui/Gabber_win.glade.h:62
+#: ui/Gabber_win.glade.h:63
 msgid "_Raw XML Input..."
 msgstr "P_riamy vstup XML..."
 
-#: ui/Gabber_win.glade.h:63
+#: ui/Gabber_win.glade.h:64
 msgid "_Roster"
 msgstr "Zoznam _kontaktov"
 
-#: ui/Gabber_win.glade.h:64
+#: ui/Gabber_win.glade.h:65
 msgid "_Services"
 msgstr "_Slu¾by"
 
@@ -2150,8 +2171,12 @@ msgid "Jabber client priority. 0 is default"
 msgstr "Priorita Jabber klienta. Predvolená je 0"
 
 #: ui/Login_dlg.glade.h:15
-msgid "Login"
+msgid "Log in"
 msgstr "Prihlási»"
+
+#: ui/Login_dlg.glade.h:16
+msgid "Log in - Gabber"
+msgstr "Prihlásenie - Gabber"
 
 #: ui/Login_dlg.glade.h:17
 msgid "P_ort:"
@@ -2748,8 +2773,7 @@ msgstr "Posielam"
 
 #: ui/Prefs_win.glade.h:78
 msgid "Set the presence priority to 0"
-msgstr ""
-"Nastavi» prioritu prítomnosti na 0"
+msgstr "Nastavi» prioritu prítomnosti na 0"
 
 #: ui/Prefs_win.glade.h:83
 msgid "Spelling"
@@ -2844,60 +2868,60 @@ msgid "Raw XML Input - Gabber"
 msgstr "Priamy vstup XML - Gabber"
 
 #: ui/RegDruid_win.glade.h:1
+msgid "Agent JID:"
+msgstr "JID agenta:"
+
+#: ui/RegDruid_win.glade.h:2
 msgid "Agent Registration - Gabber"
 msgstr "Registrácia agenta - Gabber"
 
-#: ui/RegDruid_win.glade.h:2
+#: ui/RegDruid_win.glade.h:3
 msgid "Agent Replacement"
 msgstr "Náhrada agenta"
-
-#: ui/RegDruid_win.glade.h:3
-msgid "Agent:"
-msgstr "Agent:"
 
 #: ui/RegDruid_win.glade.h:4
 msgid "Attempting to Register"
 msgstr "Skú¹am sa zaregistrova»"
 
 #: ui/RegDruid_win.glade.h:6
+msgid ""
+"Gabber is now trying to load the information needed to register with this "
+"agent."
+msgstr ""
+"Gabber sa teraz pokú¹a stiahnu» informácie potrebné na zaregistrovanie tohto "
+"agenta."
+
+#: ui/RegDruid_win.glade.h:7
 msgid "Loading Registration Information"
 msgstr "Získavam registraèné informácie"
 
 #: ui/RegDruid_win.glade.h:8
-msgid ""
-"Please wait while Gabber attempts to register with the information you "
-"entered."
-msgstr ""
-"Prosím poèkajte, kým sa Gabber pokúsi zaregistrova» s informáciami, ktoré "
-"ste zadali."
+msgid "Loading list of fields..."
+msgstr "Nahrávam zoznam polí..."
 
 #: ui/RegDruid_win.glade.h:9
-msgid ""
-"Please wait while Gabber tries to load the information needed to register "
-"with this agent."
-msgstr ""
-"Prosím poèkajte, kým Gabber skúsi stiahnu» informácie potrebné na "
-"zaregistrovanie tohto agenta."
-
-#: ui/RegDruid_win.glade.h:10
 msgid "Register with an Agent"
 msgstr "Zaregistrova» agenta"
 
-#: ui/RegDruid_win.glade.h:11
+#: ui/RegDruid_win.glade.h:10
 msgid "Registration Successful"
 msgstr "Registrácia úspe¹ná"
 
-#: ui/RegDruid_win.glade.h:12
-msgid "Registration with this agent has been successful."
+#: ui/RegDruid_win.glade.h:11
+msgid "Registration with this agent was successful."
 msgstr "Registrácia tohoto agenta bola úspe¹ná."
 
-#: ui/RegDruid_win.glade.h:13
+#: ui/RegDruid_win.glade.h:12
 msgid "Replace the agent with JID:"
 msgstr "Nahradi» agenta novým JID:"
 
-#: ui/RegDruid_win.glade.h:14 ui/TransInfo_dlg.glade.h:14
+#: ui/RegDruid_win.glade.h:13 ui/TransInfo_dlg.glade.h:14
 msgid "Service Provided:"
 msgstr "Poskytovaná slu¾ba:"
+
+#: ui/RegDruid_win.glade.h:14
+msgid "Successful!"
+msgstr "Úspe¹né!"
 
 #: ui/RegDruid_win.glade.h:15
 msgid ""
@@ -2908,12 +2932,17 @@ msgstr ""
 "a bol pridaný do vá¹ho zoznamu kontaktov."
 
 #: ui/RegDruid_win.glade.h:17
-msgid "This agent requires the fields you see to the right to be filled out."
-msgstr "Agent vy¾aduje, aby ste vyplnili polia, ktoré vidíte vpravo."
+msgid "The agent is now processing your registration information."
+msgstr "Agent teraz spracováva va¹e registraèné informácie."
 
 #: ui/RegDruid_win.glade.h:18
 msgid "This druid will step you through registering with an agent."
 msgstr "Tento pomocník vás bude sprevádza» procesom registrácie agenta."
+
+#: ui/RegDruid_win.glade.h:19
+msgid "Unregister this agent (must be checked for replacement to work)"
+msgstr ""
+"Odregistrova» tohoto agenta (musí by» oznaèený na výmenu, aby to fungovalo)"
 
 #: ui/Status_dlg.glade.h:2
 msgid "My Status - Gabber"
