@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.1\n"
-"POT-Creation-Date: 2002-01-09 18:58-0500\n"
-"PO-Revision-Date: 2002-02-19 11:08+0100\n"
+"POT-Creation-Date: 2002-02-15 13:15-0500\n"
+"PO-Revision-Date: 2002-02-26 16:46+0100\n"
 "Last-Translator: Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -208,20 +208,20 @@ msgid "Path:"
 msgstr "Cesta:"
 
 #: redcarpet.glade.h:56
-msgid "Allowed cache difference:"
-msgstr "Povolený rozdiel:"
-
-#: redcarpet.glade.h:57
-msgid "seconds"
-msgstr "sekúnd"
-
-#: redcarpet.glade.h:58
 msgid "Clear cached packages on startup"
 msgstr "Vymazať balíky vo vyrovnávacej pamäti pri štarte"
 
-#: redcarpet.glade.h:59
+#: redcarpet.glade.h:57
 msgid "Clear cached packages on exit"
 msgstr "Vymazať balíky vo vyrovnávacej pamäti pri ukončení"
+
+#: redcarpet.glade.h:58
+msgid "Clear cached packages after a period of time"
+msgstr "Vymazať balíky vo vyrovnávacej pamäti po danej dobe"
+
+#: redcarpet.glade.h:59
+msgid "Days:"
+msgstr "Počet dní:"
 
 #: redcarpet.glade.h:60
 msgid "Cache"
@@ -436,18 +436,17 @@ msgstr ""
 msgid "Password:"
 msgstr "Heslo:"
 
-#: redcarpet/gui-channel.c:178
-#, c-format
+#: redcarpet/gui-channel.c:177
 msgid ""
-"<p>Transfer of %s did not complete: %s</p><p>If you select cancel, Red "
-"Carpet will skip this channel and it will be unavailable for the rest of "
-"this session (or until you refresh the channel list)."
+"<p>If you select cancel, Red Carpet will skip this channel and it will be "
+"unavailable for the rest of this session (or until you refresh the channel "
+"list)."
 msgstr ""
-"<p>Prenos %s nedokončený: %s</p><p>Ak použijete Zrušiť, Red Carpet preskočí "
+"<p>Ak použijete Zrušiť, Red Carpet preskočí "
 "tento kanál a do konca sedenia už nebude k dispozícii (alebo kým "
 "neaktualizujete zoznam kanálov)."
 
-#: redcarpet/gui-channel.c:209
+#: redcarpet/gui-channel.c:204
 msgid ""
 "<p>An error occured trying to parse channel information.</p><p>This may be "
 "caused either by an old version of Red Carpet that is unable to read newer "
@@ -465,12 +464,12 @@ msgstr ""
 "s informáciou o distribúcii na adresu <a href=\"mailto:red-carpet@ximian.com"
 "\">red-carpet@ximian.com</a>.<br>"
 
-#: redcarpet/gui-channel.c:283
+#: redcarpet/gui-channel.c:278
 #, c-format
 msgid "Downloading channel data (%s)"
 msgstr "Sťahujem dáta kanálu (%s)"
 
-#: redcarpet/gui-channel.c:298
+#: redcarpet/gui-channel.c:293
 #, c-format
 msgid ""
 "<p>An error has occurred while downloading channel data.</p><p>Red Carpet "
@@ -489,8 +488,8 @@ msgstr ""
 "adresu <a href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</a>."
 "<br>"
 
-#: redcarpet/gui-channel.c:744 redcarpet/gui-init.c:302
-#: redcarpet/gui-init.c:1117 redcarpet/gui-init.c:1123
+#: redcarpet/gui-channel.c:739 redcarpet/gui-init.c:306
+#: redcarpet/gui-init.c:1126 redcarpet/gui-init.c:1132
 msgid "Downloading channel data..."
 msgstr "Sťahujem dáta kanálu..."
 
@@ -553,7 +552,7 @@ msgstr "Sťahujem balíky"
 msgid "Total"
 msgstr "Celkom"
 
-#: redcarpet/gui-download.c:367 redcarpet/gui-install.c:391
+#: redcarpet/gui-download.c:367 redcarpet/gui-install.c:390
 msgid "Removing"
 msgstr "Odstraňujem"
 
@@ -581,16 +580,16 @@ msgstr "Inštalácie balíkov"
 msgid "Package Removal"
 msgstr "Odstránenie balíkov"
 
-#: redcarpet/gui-glade.c:297
+#: redcarpet/gui-glade.c:296
 msgid "Keyword not found"
 msgstr "Kľúčové slovo nenájdené"
 
 #. "Failed Dependencies"
-#: redcarpet/gui-html.c:156
+#: redcarpet/gui-html.c:162
 msgid "<!--html-->Failed Dependencies"
 msgstr "<!--html-->Nesplnené závislosti"
 
-#: redcarpet/gui-html.c:171
+#: redcarpet/gui-html.c:177
 msgid ""
 "<!--html-->Red Carpet was unable to successfully locate all the necessary "
 "files to complete this request. The errors and conflicts that occured are "
@@ -600,35 +599,35 @@ msgstr ""
 "dokončenie vašej požiadavky. Toto je zoznam chýb a konfliktov, ktoré sa "
 "vyskytli, spolu s doporučením, ako pokračovať."
 
-#: redcarpet/gui-html.c:181
+#: redcarpet/gui-html.c:187
 msgid "Failed Dependencies"
 msgstr "Nesplnené závislosti"
 
-#: redcarpet/gui-html.c:325
+#: redcarpet/gui-html.c:331
 msgid "needed by"
 msgstr "vyžadované"
 
-#: redcarpet/gui-html.c:372 redcarpet/gui-html.c:402
+#: redcarpet/gui-html.c:378 redcarpet/gui-html.c:408
 #, c-format
 msgid "needs %s %s %s, which is being removed"
 msgstr "vyžaduje %s %s %s, ktorý je odstraňovaný"
 
-#: redcarpet/gui-html.c:410
+#: redcarpet/gui-html.c:416
 #, c-format
 msgid "needs %s %s %s, which cannot be found"
 msgstr "vyžaduje %s %s %s, ktorý sa nepodarilo nájsť"
 
-#: redcarpet/gui-html.c:440
+#: redcarpet/gui-html.c:446
 #, c-format
 msgid "conflicts with %s %s %s"
 msgstr "je v konflikte s %s %s %s"
 
-#: redcarpet/gui-html.c:486
+#: redcarpet/gui-html.c:492
 #, c-format
 msgid "<!--html-->This package will be pulled in from the %s channel."
 msgstr "<!--html-->Tento balík bude získaný z kanálu %s."
 
-#: redcarpet/gui-html.c:492
+#: redcarpet/gui-html.c:498
 #, c-format
 msgid ""
 "<!--html-->This package will be pulled in from the <b>unsubscribed</b> %s "
@@ -636,11 +635,11 @@ msgid ""
 msgstr "<!--html-->Tento balík bude získaný z <b>neprihláseného</b> kanálu %s."
 
 #. "Package Dependencies"
-#: redcarpet/gui-html.c:546
+#: redcarpet/gui-html.c:552
 msgid "<!--html-->Package Dependencies"
 msgstr "<!--html-->Závislosti balíka"
 
-#: redcarpet/gui-html.c:566
+#: redcarpet/gui-html.c:572
 msgid ""
 "<!--html-->Your system's package database is valid!<br><br>Click the "
 "Previous button to go back."
@@ -648,55 +647,53 @@ msgstr ""
 "<!--html-->Vaša systémová databáza balíkov je v poriadku!<br><br>Stlačením "
 "tlačidla Predchádzajúci sa vrátite späť."
 
-#: redcarpet/gui-html.c:597
+#: redcarpet/gui-html.c:603
 msgid "<b>1</b> Requested Package"
 msgstr "<b>1</b> Vyžadovaný balík"
 
-#: redcarpet/gui-html.c:600 redcarpet/gui-html.c:620 redcarpet/gui-html.c:640
+#: redcarpet/gui-html.c:606
 #, c-format
-msgid "<b>%d</b> %s"
-msgstr "<b>%d</b> %s"
+msgid "<b>%d</b> Requested Packages"
+msgstr "<b>%d</b> Vyžadované balíky"
 
-#: redcarpet/gui-html.c:602
-msgid "Requested Packages"
-msgstr "Požadované balíky"
-
-#: redcarpet/gui-html.c:617
+#: redcarpet/gui-html.c:621
 msgid "<b>1</b> Necessary Removal"
 msgstr "<b>1</b> Nutné odstránenia"
 
-#: redcarpet/gui-html.c:622 redcarpet/gui-html.c:905
-msgid "Necessary Removals"
-msgstr "Nutné odstránenia"
+#: redcarpet/gui-html.c:624
+#, c-format
+msgid "<b>%d</b> Necessary Removals"
+msgstr "<b>%d</b> Nutné odstránenia"
 
-#: redcarpet/gui-html.c:637
+#: redcarpet/gui-html.c:639
 msgid "<b>1</b> Necessary Installation"
 msgstr "<b>1</b> Nutná inštalácia"
 
-#: redcarpet/gui-html.c:642 redcarpet/gui-html.c:951
-msgid "Necessary Installations"
-msgstr "Potrebné inštalácie"
+#: redcarpet/gui-html.c:642
+#, c-format
+msgid "<b>%d</b> Necessary Installations"
+msgstr "<b>%d</b> Nutné inštalácie"
 
-#: redcarpet/gui-html.c:724
+#: redcarpet/gui-html.c:725
 #, c-format
 msgid "<!--html--><b>%s</b> will need to be downloaded. "
 msgstr "<!--html--><b>%s</b> bude musieť byť stiahnutý."
 
-#: redcarpet/gui-html.c:733
+#: redcarpet/gui-html.c:734
 #, c-format
 msgid "<!--html-->After operations, <b>%s</b> of disk space will be used."
 msgstr "<!--html-->Po vykonaní bude použitého <b>%s</b> miesta na disku."
 
-#: redcarpet/gui-html.c:739
+#: redcarpet/gui-html.c:740
 #, c-format
 msgid "<!--html-->After operations, <b>%s</b> of disk space will be freed."
 msgstr "<!--html-->Po vykonaní bude uvoľneného <b>%s</b> miesta na disku."
 
-#: redcarpet/gui-html.c:743
+#: redcarpet/gui-html.c:744
 msgid "<!--html-->After operations, no additional space will be freed or used."
 msgstr "<!--html-->Po vykonaní nebude použité ani uvoľnené žiadne miesto na disku."
 
-#: redcarpet/gui-html.c:780
+#: redcarpet/gui-html.c:781
 msgid ""
 "<!--html-->You have insufficient disk space to download the requested "
 "packages. You must free up some disk space before you can continue. Some "
@@ -705,19 +702,19 @@ msgstr ""
 "<!--html-->Pre stiahnutie požadovaných balíkov nemáte dosť miesta na disku. "
 "Pred pokračovaním musíte nejaké miesto uvoľniť. Niektoré z možností sú:"
 
-#: redcarpet/gui-html.c:784
+#: redcarpet/gui-html.c:785
 msgid "<!--html-->Removing some packages from your system"
 msgstr "<!--html-->Odstránenie niektorých balíkov z vášho systému"
 
-#: redcarpet/gui-html.c:785
+#: redcarpet/gui-html.c:786
 msgid "Changing your <a href=\"updater:prefs_cache\">cache settings</a>."
 msgstr "Zmena <a href=\"updater:prefs_cache\">nastavenia vyrovnávacej pamäte</a>."
 
-#: redcarpet/gui-html.c:787
+#: redcarpet/gui-html.c:788
 msgid "<a href=\"updater:cache_clear\">Clearing your cache</a>."
 msgstr "<a href=\"updater:cache_clear\">Vyčistenie vyrovnávacej pamäte</a>."
 
-#: redcarpet/gui-html.c:823
+#: redcarpet/gui-html.c:824
 msgid ""
 "<font color=#ff0000>Warning!</font> There may not be sufficient disk space "
 "to install this package, and installation of this package may fail. You "
@@ -727,54 +724,62 @@ msgstr ""
 "dostatok miesta. Preto je možné, že inštalácia zlyhá. Pred pokračovaním by "
 "ste mali uvoľniť nejaké miesto na disku."
 
-#: redcarpet/gui-html.c:840 redcarpet/gui-html.c:897 redcarpet/gui-html.c:943
+#: redcarpet/gui-html.c:841 redcarpet/gui-html.c:898 redcarpet/gui-html.c:944
 msgid "1&nbsp;Package"
 msgstr "1&nbsp;balík"
 
-#: redcarpet/gui-html.c:842 redcarpet/gui-html.c:899 redcarpet/gui-html.c:945
+#: redcarpet/gui-html.c:843 redcarpet/gui-html.c:900 redcarpet/gui-html.c:946
 #, c-format
 msgid "%d&nbsp;Packages"
 msgstr "%d&nbsp;balíkov"
 
-#: redcarpet/gui-html.c:853
+#: redcarpet/gui-html.c:854
 msgid "Requested Removals"
 msgstr "Vyžiadané odstránenia"
 
-#: redcarpet/gui-html.c:853
+#: redcarpet/gui-html.c:854
 msgid "Requested Installations"
 msgstr "Vyžiadané inštalácie"
 
 #. "Package"
 #. "Version"
-#: redcarpet/gui-html.c:873 redcarpet/gui-html.c:924 redcarpet/gui-html.c:970
-#: redcarpet/gui-html.c:1374 redcarpet/gui-html.c:1579
-#: redcarpet/gui-html.c:1748 redcarpet/gui-html.c:2990
-#: redcarpet/gui-html.c:3238
+#: redcarpet/gui-html.c:874 redcarpet/gui-html.c:925 redcarpet/gui-html.c:971
+#: redcarpet/gui-html.c:1379 redcarpet/gui-html.c:1603
+#: redcarpet/gui-html.c:1772 redcarpet/gui-html.c:3015
+#: redcarpet/gui-html.c:3278
 msgid "Package"
 msgstr "Balík"
 
-#: redcarpet/gui-html.c:874 redcarpet/gui-html.c:925 redcarpet/gui-html.c:971
-#: redcarpet/gui-html.c:1375 redcarpet/gui-html.c:1580
-#: redcarpet/gui-html.c:1749 redcarpet/gui-html.c:2991
-#: redcarpet/gui-html.c:3239
+#: redcarpet/gui-html.c:875 redcarpet/gui-html.c:926 redcarpet/gui-html.c:972
+#: redcarpet/gui-html.c:1380 redcarpet/gui-html.c:1604
+#: redcarpet/gui-html.c:1773 redcarpet/gui-html.c:3016
+#: redcarpet/gui-html.c:3279
 msgid "Version"
 msgstr "Verzia"
 
-#: redcarpet/gui-html.c:877
+#: redcarpet/gui-html.c:878
 msgid "<td width=25%>Old Version</td>"
 msgstr "<td width=25%>Stará verzia</td>"
 
-#: redcarpet/gui-html.c:926 redcarpet/gui-html.c:972 redcarpet/gui-html.c:1376
-#: redcarpet/gui-html.c:1581 redcarpet/gui-html.c:1750
-#: redcarpet/gui-html.c:2992 redcarpet/gui-html.c:3240
+#: redcarpet/gui-html.c:906
+msgid "Necessary Removals"
+msgstr "Nutné odstránenia"
+
+#: redcarpet/gui-html.c:927 redcarpet/gui-html.c:973 redcarpet/gui-html.c:1381
+#: redcarpet/gui-html.c:1605 redcarpet/gui-html.c:1774
+#: redcarpet/gui-html.c:3017 redcarpet/gui-html.c:3280
 msgid "Size"
 msgstr "Veľkosť"
 
-#: redcarpet/gui-html.c:973
+#: redcarpet/gui-html.c:952
+msgid "Necessary Installations"
+msgstr "Potrebné inštalácie"
+
+#: redcarpet/gui-html.c:974
 msgid "Old Version"
 msgstr "Stará verzia"
 
-#: redcarpet/gui-html.c:1111
+#: redcarpet/gui-html.c:1112
 msgid "<html><body><b>Please wait, loading page...</b></body></html>"
 msgstr "<html><body><b>Načítavam stránku, prosím, čakajte...</b></body></html>"
 
@@ -783,11 +788,11 @@ msgstr "<html><body><b>Načítavam stránku, prosím, čakajte...</b></body></ht
 #. View the about page
 #. View the install page
 #. go back to summary
-#: redcarpet/gui-html.c:1160 redcarpet/gui-html.c:1513
+#: redcarpet/gui-html.c:1161 redcarpet/gui-html.c:1535
 msgid "You have no packages from this channel currently installed on your system."
 msgstr "Z tohto kanálu momentálne nemáte nainštalovaný žiadny balík."
 
-#: redcarpet/gui-html.c:1162 redcarpet/gui-html.c:1515
+#: redcarpet/gui-html.c:1163 redcarpet/gui-html.c:1537
 msgid ""
 "You can visit the channel's <a href=\"updater:info_page\">about page</a> to "
 "get more information about what software is available, or you can go "
@@ -798,20 +803,20 @@ msgstr ""
 "href=\"updater:info_page\">stránku O kanáli</a>, alebo automaticky prejsť na "
 "<a href=\"updater:available_page\">stránku Inštalácia</a>."
 
-#: redcarpet/gui-html.c:1167 redcarpet/gui-html.c:1521
+#: redcarpet/gui-html.c:1168 redcarpet/gui-html.c:1543
 msgid "View the <a href=\"updater:info_page\">about page</a>."
 msgstr "Zobraziť <a href=\"updater:info_page\">stránku O kanáli</a>."
 
-#: redcarpet/gui-html.c:1168 redcarpet/gui-html.c:1522
+#: redcarpet/gui-html.c:1169 redcarpet/gui-html.c:1544
 msgid "View the <a href=\"updater:available_page\">install page</a>."
 msgstr "Zobraziť <a href=\"updater:available_page\">stránku Inštalácia</a>."
 
-#: redcarpet/gui-html.c:1170 redcarpet/gui-html.c:1268
-#: redcarpet/gui-html.c:1524 redcarpet/gui-html.c:2752
+#: redcarpet/gui-html.c:1171 redcarpet/gui-html.c:1273
+#: redcarpet/gui-html.c:1548 redcarpet/gui-html.c:2776
 msgid "Return to the <a href=\"updater:summary\">Summary</a>."
 msgstr "Návrat do <a href=\"updater:summary\">Súhrnu</a>."
 
-#: redcarpet/gui-html.c:1180
+#: redcarpet/gui-html.c:1181
 msgid ""
 "You don't have any packages installed from this channel. The following pre-"
 "defined sets of packages are available, or you may select individual "
@@ -824,12 +829,13 @@ msgstr ""
 #. "All of the software .. is up to date"
 #. "To install new software..."
 #. "To remove already installed..."
+#. "Unsubscribe from this channel."
 #. "Return to the summary"
-#: redcarpet/gui-html.c:1262
+#: redcarpet/gui-html.c:1265
 msgid "All of the software from this channel is up-to-date."
 msgstr "Softvér z tohto kanála nie je potrebné aktualizovať."
 
-#: redcarpet/gui-html.c:1263
+#: redcarpet/gui-html.c:1266
 msgid ""
 "To install new software from this channel, visit the <a href=\"updater:"
 "available_page\">install page</a>."
@@ -837,7 +843,7 @@ msgstr ""
 "Pre inštaláciu nového softvéru z tohto kanálu použite <a href=\"updater:"
 "available_page\">stránku Inštalácia</a>."
 
-#: redcarpet/gui-html.c:1265
+#: redcarpet/gui-html.c:1268
 msgid ""
 "To remove already installed software from this channel, visit the <a href="
 "\"updater:installed_page\">remove page</a>."
@@ -845,7 +851,11 @@ msgstr ""
 "Pre odstránenie už nainštalovaného softvéru z tohto kanálu použite <a href="
 "\"updater:installed_page\">stránku Odstránenie</a>."
 
-#: redcarpet/gui-html.c:1296
+#: redcarpet/gui-html.c:1271 redcarpet/gui-html.c:1546
+msgid "<a href=\"updater:unsubscribe\">Unsubscribe</a> from this channel."
+msgstr "<a href=\"updater:unsubscribe\">Odhlásiť</a> tento kanál."
+
+#: redcarpet/gui-html.c:1300
 #, c-format
 msgid ""
 "There is <b>1 update</b> available in this channel, totalling <b>%s</b> of "
@@ -854,7 +864,7 @@ msgstr ""
 "V tomto kanáli je k dispozícii <b>jedna aktualizácia</b>, celkovo na "
 "stiahnutie <b>%s</b> dát."
 
-#: redcarpet/gui-html.c:1301
+#: redcarpet/gui-html.c:1305
 #, c-format
 msgid ""
 "There are <b>%s updates</b> available in this channel, totalling <b>%s</b> "
@@ -863,55 +873,55 @@ msgstr ""
 "V tomto kanáli je k dispozícii <b>%s aktualizácií</b>, celkovo na stiahnutie "
 "<b>%s</b> dát."
 
-#: redcarpet/gui-html.c:1311
+#: redcarpet/gui-html.c:1315
 msgid ""
 "  You will not be able to update your system unless you run Red Carpet as "
 "root."
 msgstr "   Ak chcete aktualizovať váš systém, musíte spustiť Red Carpet ako root."
 
-#: redcarpet/gui-html.c:1341 redcarpet/gui-html.c:2978
-#: redcarpet/gui-html.c:3205
+#: redcarpet/gui-html.c:1345 redcarpet/gui-html.c:3003
+#: redcarpet/gui-html.c:3244
 msgid "Essential Updates"
 msgstr "Potrebné aktualizácie"
 
-#: redcarpet/gui-html.c:1342 redcarpet/gui-html.c:3206
+#: redcarpet/gui-html.c:1346 redcarpet/gui-html.c:3245
 msgid "Urgent Updates"
 msgstr "Neodkladné aktualizácie"
 
-#: redcarpet/gui-html.c:1343 redcarpet/gui-html.c:3207
+#: redcarpet/gui-html.c:1347 redcarpet/gui-html.c:3246
 msgid "Suggested Updates"
 msgstr "Doporučené aktualizácie"
 
-#: redcarpet/gui-html.c:1344 redcarpet/gui-html.c:3208
+#: redcarpet/gui-html.c:1348 redcarpet/gui-html.c:3247
 msgid "Feature Enhancements"
 msgstr "Rozšírenia a vylepšenia"
 
-#: redcarpet/gui-html.c:1345 redcarpet/gui-html.c:3209
+#: redcarpet/gui-html.c:1349 redcarpet/gui-html.c:3248
 msgid "Minor Fixes/Updates"
 msgstr "Menej významné opravy/aktualizácie"
 
-#: redcarpet/gui-html.c:1353 redcarpet/gui-html.c:2959
-#: redcarpet/gui-html.c:3217
+#: redcarpet/gui-html.c:1358 redcarpet/gui-html.c:2984
+#: redcarpet/gui-html.c:3257
 msgid "1 update"
 msgstr "1 aktualizácia"
 
-#: redcarpet/gui-html.c:1356 redcarpet/gui-html.c:2966
-#: redcarpet/gui-html.c:3219
+#: redcarpet/gui-html.c:1361 redcarpet/gui-html.c:2991
+#: redcarpet/gui-html.c:3259
 #, c-format
 msgid "%d updates"
 msgstr "%d aktualizácií"
 
-#: redcarpet/gui-html.c:1540
+#: redcarpet/gui-html.c:1564
 msgid ""
 "The following packages from this channel are currently installed on your "
 "system."
 msgstr "Tieto balíky z tohto kanálu sú momentálne nainštalované na vašom počítači."
 
-#: redcarpet/gui-html.c:1546
+#: redcarpet/gui-html.c:1570
 msgid "<!--html-->  To remove packages, you will have to run Red Carpet as root."
 msgstr "<!--html-->  Pre odstránenie balíkov musíte spustiť Red Carpet ako root."
 
-#: redcarpet/gui-html.c:1668
+#: redcarpet/gui-html.c:1692
 msgid ""
 "<p>All packages available in this channel are already installed on your "
 "system.</p>"
@@ -919,7 +929,7 @@ msgstr ""
 "<p>Všetky dostupné balíky z tohto kanálu sú už na vašom systéme "
 "nainštalované.</p>"
 
-#: redcarpet/gui-html.c:1674
+#: redcarpet/gui-html.c:1698
 msgid ""
 "<p>You can go to the <a href=\"updater:update_page\">Update page</a> to view "
 "available updates for your software in this channel, or return to the <a "
@@ -930,7 +940,7 @@ msgstr ""
 "<a href=\"updater:summary\">Súhrnu</a> pre zobrazenie všetkých dostupných "
 "aktualizácií.</p>"
 
-#: redcarpet/gui-html.c:1681
+#: redcarpet/gui-html.c:1705
 msgid ""
 "<p>You can go to the <a href=\"updater:summary\">Summary</a> to view all "
 "available updates for your system.</p>"
@@ -938,13 +948,13 @@ msgstr ""
 "<p>Pre zobrazenie všetkých dostupných aktualizácií pre váš systém môžete "
 "použiť <a href=\"updater:summary\">Súhrn</a>.</p>"
 
-#: redcarpet/gui-html.c:1702
+#: redcarpet/gui-html.c:1726
 msgid ""
 "<!--html-->The following packages from this channel are available for "
 "installation."
 msgstr "<!--html-->Tieto balíky z tohto kanálu sú k dispozícii pre inštaláciu."
 
-#: redcarpet/gui-html.c:1709
+#: redcarpet/gui-html.c:1733
 msgid ""
 " Package names that are in <font color=\"#777777\">gray</font> indicate that "
 "a newer version of this package is already installed."
@@ -952,7 +962,7 @@ msgstr ""
 " Mená balíkov, ktoré sú <font color=\"#777777\">šedé</font>, znamenajú, že "
 "už je nainštalovaná novšia verzia balíka."
 
-#: redcarpet/gui-html.c:1715
+#: redcarpet/gui-html.c:1739
 msgid "<!--html-->  To install packages, you will have to run Red Carpet as root."
 msgstr "<!--html-->  Pre inštaláciu balíkov musíte spustiť Red Carpet ako root."
 
@@ -963,134 +973,134 @@ msgstr "<!--html-->  Pre inštaláciu balíkov musíte spustiť Red Carpet ako r
 #. "Requested Version:"
 #. "Summary:"
 #. "Description:"
-#: redcarpet/gui-html.c:1874
+#: redcarpet/gui-html.c:1898
 msgid "Name:"
 msgstr "Meno:"
 
-#: redcarpet/gui-html.c:1876
+#: redcarpet/gui-html.c:1900
 msgid "Installed Version:"
 msgstr "Nainštalovaná verzia:"
 
-#: redcarpet/gui-html.c:1878
+#: redcarpet/gui-html.c:1902
 msgid "Size:"
 msgstr "Veľkosť:"
 
-#: redcarpet/gui-html.c:1880
+#: redcarpet/gui-html.c:1904
 msgid "bytes"
 msgstr "bajtov"
 
-#: redcarpet/gui-html.c:1881
+#: redcarpet/gui-html.c:1905
 msgid "Requested Version:"
 msgstr "Vyžadovaná verzia:"
 
-#: redcarpet/gui-html.c:1883
+#: redcarpet/gui-html.c:1907
 msgid "Summary:"
 msgstr "Súhrn:"
 
-#: redcarpet/gui-html.c:1885
+#: redcarpet/gui-html.c:1909
 msgid "Description:"
 msgstr "Popis:"
 
-#: redcarpet/gui-html.c:1901
+#: redcarpet/gui-html.c:1925
 msgid "Requires:"
 msgstr "Vyžaduje:"
 
-#: redcarpet/gui-html.c:1925 redcarpet/gui-html.c:1970
-#: redcarpet/gui-html.c:2015
+#: redcarpet/gui-html.c:1949 redcarpet/gui-html.c:1994
+#: redcarpet/gui-html.c:2039
 msgid "or"
 msgstr "alebo"
 
-#: redcarpet/gui-html.c:1946
+#: redcarpet/gui-html.c:1970
 msgid "Provides:"
 msgstr "Poskytuje:"
 
-#: redcarpet/gui-html.c:1991
+#: redcarpet/gui-html.c:2015
 msgid "Conflicts:"
 msgstr "Konflikty:"
 
-#: redcarpet/gui-html.c:2073
+#: redcarpet/gui-html.c:2097
 msgid " Update Now! "
 msgstr " Aktualizovať! "
 
-#: redcarpet/gui-html.c:2094
+#: redcarpet/gui-html.c:2118
 msgid " Update Packages "
 msgstr " Aktualizovať balíky "
 
-#: redcarpet/gui-html.c:2107
+#: redcarpet/gui-html.c:2131
 msgid " Install Packages "
 msgstr "Inštalovať balíky"
 
-#: redcarpet/gui-html.c:2116
+#: redcarpet/gui-html.c:2140
 msgid " Remove Packages "
 msgstr " Odstrániť balíky "
 
-#: redcarpet/gui-html.c:2131
+#: redcarpet/gui-html.c:2155
 msgid " Unsubscribe "
 msgstr " Odhlásiť "
 
-#: redcarpet/gui-html.c:2140
+#: redcarpet/gui-html.c:2164
 msgid " Subscribe "
 msgstr " Prihlásiť "
 
 #. "Keyword search"
-#: redcarpet/gui-html.c:2160
+#: redcarpet/gui-html.c:2184
 msgid "Keyword&nbsp;Search:"
 msgstr "Hľadanie&nbsp;kľúčových&nbsp;slov:"
 
-#: redcarpet/gui-html.c:2204 redcarpet/gui-init.c:1028
+#: redcarpet/gui-html.c:2228 redcarpet/gui-init.c:1037
 msgid "Summary"
 msgstr "Súhrn"
 
-#: redcarpet/gui-html.c:2214
+#: redcarpet/gui-html.c:2238
 msgid "Red Carpet News"
 msgstr "Novinky Red Carpet"
 
-#: redcarpet/gui-html.c:2224 redcarpet/gui-init.c:1042
+#: redcarpet/gui-html.c:2248 redcarpet/gui-init.c:1051
 msgid "Featured Channels"
 msgstr "Vybrané kanále"
 
-#: redcarpet/gui-html.c:2235 redcarpet/gui-init.c:1049
+#: redcarpet/gui-html.c:2259 redcarpet/gui-init.c:1058
 msgid "Subscribed Channels"
 msgstr "Prihlásené kanály"
 
-#: redcarpet/gui-html.c:2246 redcarpet/gui-init.c:1055
+#: redcarpet/gui-html.c:2270 redcarpet/gui-init.c:1064
 msgid "Unsubscribed Channels"
 msgstr "Neprihlásené kanály"
 
-#: redcarpet/gui-html.c:2256 redcarpet/gui-html.c:2335
-#: redcarpet/gui-html.c:2351
+#: redcarpet/gui-html.c:2280 redcarpet/gui-html.c:2359
+#: redcarpet/gui-html.c:2375
 msgid "About"
 msgstr "O kanáli"
 
-#: redcarpet/gui-html.c:2318
+#: redcarpet/gui-html.c:2342
 msgid "Update"
 msgstr "Aktualizácia"
 
-#: redcarpet/gui-html.c:2321
+#: redcarpet/gui-html.c:2345
 msgid "Install"
 msgstr "Inštalácia"
 
-#: redcarpet/gui-html.c:2324
+#: redcarpet/gui-html.c:2348
 msgid "Remove"
 msgstr "Odstránenie"
 
-#: redcarpet/gui-html.c:2330
+#: redcarpet/gui-html.c:2354
 msgid "Prefs"
 msgstr "Nastavenie"
 
-#: redcarpet/gui-html.c:2423
+#: redcarpet/gui-html.c:2447
 msgid "Developers"
 msgstr "Vývojári"
 
-#: redcarpet/gui-html.c:2443
+#: redcarpet/gui-html.c:2467
 msgid "User Interface Design"
 msgstr "Návrh používateľského rozhrania"
 
-#: redcarpet/gui-html.c:2452
+#: redcarpet/gui-html.c:2476
 msgid "Artwork"
 msgstr "Grafika"
 
-#: redcarpet/gui-html.c:2460
+#: redcarpet/gui-html.c:2484
 msgid ""
 "<p>Red Carpet is the Ximian package management system and software portal, "
 "allowing you to install, upgrade, and remove packages on your system. For "
@@ -1109,11 +1119,11 @@ msgstr ""
 "href=\"http://lists.ximian.com/mailman/listinfo/red-carpet\">ed-"
 "carpet@ximian.com</a>.  Ďakujeme!"
 
-#: redcarpet/gui-html.c:2509
+#: redcarpet/gui-html.c:2533
 msgid "All links will open in an external browser window."
 msgstr "Všetky odkazy budú otvorené v externom okne prehliadača."
 
-#: redcarpet/gui-html.c:2604
+#: redcarpet/gui-html.c:2628
 msgid "The following channels are our featured channels!"
 msgstr "Tieto kanály sú naše vybrané kanále!"
 
@@ -1122,11 +1132,11 @@ msgstr "Tieto kanály sú naše vybrané kanále!"
 #. view my sub channels
 #. view the news page
 #. return to the summary
-#: redcarpet/gui-html.c:2744
+#: redcarpet/gui-html.c:2768
 msgid "You are currently subscribed to all available channels!"
 msgstr "Momentálne máte prihlásené všetky dostupné kanály!"
 
-#: redcarpet/gui-html.c:2745
+#: redcarpet/gui-html.c:2769
 msgid ""
 "We are constantly working on making more software available through Red "
 "Carpet, so watch the <a href=\"updater:news_page\">News Page</a> and this "
@@ -1136,15 +1146,15 @@ msgstr ""
 "takže sledujte <a href=\"updater:news_page\">stránku Novinky</a> a túto "
 "stránku pre ďalšie kanále pridané v budúcnosti!"
 
-#: redcarpet/gui-html.c:2749
+#: redcarpet/gui-html.c:2773
 msgid "View my <a href=\"updater:subscribed_page\">subscribed channels</a>."
 msgstr "Zobraziť moje <a href=\"updater:subscribed_page\">prihlásené kanály</a>."
 
-#: redcarpet/gui-html.c:2751 redcarpet/gui-html.c:2774
+#: redcarpet/gui-html.c:2775 redcarpet/gui-html.c:2798
 msgid "View the <a href=\"updater:news_page\">News Page</a>."
 msgstr "Zobraziť <a href=\"updater:news_page\">Novinky</a>."
 
-#: redcarpet/gui-html.c:2763
+#: redcarpet/gui-html.c:2787
 msgid ""
 "You are currently not subscribed to any channels!<p>We suggest that you "
 "subscribe to the <a href=\"updater:channel_name?Ximian GNOME Desktop#updater:"
@@ -1159,15 +1169,15 @@ msgstr ""
 "Ximian GNOME. Ostatné neprihlásené kanály od firmy Ximian a jej Red Carpet "
 "partnerov na <a href=\"updater:unsubscribed_page\">stránke Neprihlásené</a>."
 
-#: redcarpet/gui-html.c:2772
+#: redcarpet/gui-html.c:2796
 msgid "View <a href=\"updater:unsubscribed_page\">unsubscribed channels</a>."
 msgstr "Zobraziť <a href=\"updater:unsubscribed_page\">neprihlásené kanály</a>."
 
-#: redcarpet/gui-html.c:2775
+#: redcarpet/gui-html.c:2799
 msgid "Return to the <a href=\"updater:summary\">introduction to Red Carpet</a>."
 msgstr "Návrat k <a href=\"updater:summary\">úvodu do Red Carpetu</a>."
 
-#: redcarpet/gui-html.c:2843
+#: redcarpet/gui-html.c:2868
 msgid ""
 "<font size=6><b>Welcome to Red Carpet!</b></font><p>Thank you for using Red "
 "Carpet. From resolving package dependencies to ensuring cryptographic "
@@ -1207,7 +1217,7 @@ msgstr ""
 "Bugzilla</a>, alebo konferenciu Red Carpetu <a href=\"http://lists.ximian."
 "com/mailman/listinfo/red-carpet\">red-carpet@ximian.com</a>. Ďakujeme!</p>"
 
-#: redcarpet/gui-html.c:2955
+#: redcarpet/gui-html.c:2980
 msgid ""
 "There is one <b>Essential Update</b> available for your system.  To ensure "
 "that Ximian Red Carpet continues to function properly, you must install this "
@@ -1219,7 +1229,7 @@ msgstr ""
 "nainštalovať túto aktualizáciu. Po jej inštalácii sa Ximian Red Carpet "
 "automaticky reštartuje."
 
-#: redcarpet/gui-html.c:2962
+#: redcarpet/gui-html.c:2987
 #, c-format
 msgid ""
 "There are %s <b>Essential Updates</b> available for your system.  To ensure "
@@ -1231,7 +1241,7 @@ msgstr ""
 "b>. Aby Ximian Red Carpet fungoval správne, musíte najprv nainštalovať túto "
 "aktualizáciu. Po jej inštalácii sa Ximian Red Carpet automaticky reštartuje."
 
-#: redcarpet/gui-html.c:3107
+#: redcarpet/gui-html.c:3146
 #, c-format
 msgid ""
 "There is <b>one update</b> available for your system, totalling <b>%s</b> of "
@@ -1240,7 +1250,7 @@ msgstr ""
 "V tomto kanáli je k dispozícii <b>jedna aktualizácia</b>, celkom na "
 "stiahnutie <b>%s</b> dát."
 
-#: redcarpet/gui-html.c:3112
+#: redcarpet/gui-html.c:3151
 #, c-format
 msgid ""
 "There are <b>%s updates</b> available for your system, totalling <b>%s</b> "
@@ -1249,50 +1259,50 @@ msgstr ""
 "V tomto kanáli je k dispozícii <b>%s aktualizácií</b>, celkom na stiahnutie "
 "<b>%s</b> dát."
 
-#: redcarpet/gui-html.c:3123
+#: redcarpet/gui-html.c:3162
 msgid "<!--html-->  To update your system, you will have to run Red Carpet as root."
 msgstr "<!--html-->  Pre aktualizáciu systému musíte spustiť Red Carpet ako root."
 
-#: redcarpet/gui-html.c:3132 redcarpet/gui-html.c:3188
+#: redcarpet/gui-html.c:3171 redcarpet/gui-html.c:3227
 msgid " Of these updates, <b>one</b> is <b>urgent</b>."
 msgstr " Z týchto aktualizácií je <b>jedna</b> <b>nutná</b>."
 
-#: redcarpet/gui-html.c:3136 redcarpet/gui-html.c:3192
+#: redcarpet/gui-html.c:3175 redcarpet/gui-html.c:3231
 #, c-format
 msgid " Of these updates, <b>%s</b> are <b>urgent</b>."
 msgstr " Z týchto aktualizácií je <b>%s</b> <b>nutných</b>."
 
-#: redcarpet/gui-html.c:3374
+#: redcarpet/gui-html.c:3429
 #, c-format
 msgid "1 other in the %s channel..."
 msgstr "Další v %s..."
 
-#: redcarpet/gui-html.c:3378
+#: redcarpet/gui-html.c:3433
 #, c-format
 msgid "%d others in the %s channel..."
 msgstr "%d ďalších v %s..."
 
-#: redcarpet/gui-init.c:79
+#: redcarpet/gui-init.c:80
 msgid "Visible debugging level, ranges from 0 (nothing) to 6 (everything)"
 msgstr "Zobrazované ladiace úrovne, od 0 (nič) až po 6 (všetko)"
 
-#: redcarpet/gui-init.c:82
+#: redcarpet/gui-init.c:83
 msgid "Log file debugging level, ranges from 0 (nothing) to 6 (everything)"
 msgstr "Ladiace úrovne pre súbor so záznamom, od 0 (nič) až po 6 (všetko)"
 
-#: redcarpet/gui-init.c:85
+#: redcarpet/gui-init.c:86
 msgid "The XAuthority file (usually from GDM)"
 msgstr "Súbor XAuthority (obvykle od GDM)"
 
-#: redcarpet/gui-init.c:87
+#: redcarpet/gui-init.c:88
 msgid "Start up the Red Carpet client without premium services"
 msgstr "Spustiť klienta Red Carpet bez služieb Premium Services"
 
-#: redcarpet/gui-init.c:90
+#: redcarpet/gui-init.c:91
 msgid "(Re)configure proxy settings before starting"
 msgstr "(Re)konfiguračovať nastavenie proxy pred štartom"
 
-#: redcarpet/gui-init.c:130
+#: redcarpet/gui-init.c:131
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -1301,7 +1311,7 @@ msgstr ""
 "Nie je možné nájsť '%s'.\n"
 "Prosím, overte, že máte Red Carpet správne nainštalovaný."
 
-#: redcarpet/gui-init.c:177
+#: redcarpet/gui-init.c:178
 msgid ""
 "Ximian Red Carpet was unable to determine what distribution you are on or "
 "you are running an unsupported distribution. If you are running a supported "
@@ -1315,28 +1325,32 @@ msgstr ""
 "prípad, prosím vyriešte tento problém alebo kontaktujte <a href=\"red-"
 "carpet@ximian.com\">red-carpet@ximian.com</a> pre získanie pomoci."
 
-#: redcarpet/gui-init.c:212
+#: redcarpet/gui-init.c:213
 #, c-format
-msgid "Unable to access packaging subsystem:<br>%s"
-msgstr "Nepodaril sa prístup k subsystému pre balíky:<br>%s"
+msgid ""
+"Unable to access packaging subsystem:<br>%s<p>Please ensure that no other "
+"package management programs are running, and try again."
+msgstr ""
+"Nepodarilo sa použiť subsystém balíkov: <br>%s<p>Prosím, overte, že "
+"iný program pre správu balíkov nebeží a skúste to znovu."
 
-#: redcarpet/gui-init.c:285 redcarpet/gui-init.c:1093
-msgid "Downloading channel list..."
-msgstr "Sťahujem zoznam kanálov..."
-
-#: redcarpet/gui-init.c:290
+#: redcarpet/gui-init.c:289
 msgid "Downloading mirror list..."
 msgstr "Sťahujem zoznam mirrorov..."
 
-#: redcarpet/gui-init.c:296 redcarpet/gui-init.c:1110
+#: redcarpet/gui-init.c:294 redcarpet/gui-init.c:1109
+msgid "Downloading channel list..."
+msgstr "Sťahujem zoznam kanálov..."
+
+#: redcarpet/gui-init.c:300 redcarpet/gui-init.c:1119
 msgid "Downloading news..."
 msgstr "Sťahujem novinky..."
 
-#: redcarpet/gui-init.c:308
+#: redcarpet/gui-init.c:312
 msgid "Downloading channel artwork..."
 msgstr "Sťahujem grafiku pre kanál..."
 
-#: redcarpet/gui-init.c:380
+#: redcarpet/gui-init.c:364
 msgid ""
 "You are not running Red Carpet as root.\n"
 "\n"
@@ -1351,34 +1365,28 @@ msgstr ""
 "balíky a informácie o prihlásených kanáloch\n"
 "sa nebude ukladať."
 
-#: redcarpet/gui-init.c:472 redcarpet/gui-init.c:562 redcarpet/gui-init.c:1220
-#: redcarpet/gui-install.c:557
-#, c-format
-msgid "Transfer of %s did not complete: %s"
-msgstr "Prenos %s nedokončený: %s"
-
-#: redcarpet/gui-init.c:1003
+#: redcarpet/gui-init.c:1012
 msgid "Navigation"
 msgstr "Navigácia"
 
-#: redcarpet/gui-init.c:1034
+#: redcarpet/gui-init.c:1043
 msgid "News"
 msgstr "Novinky"
 
-#: redcarpet/gui-init.c:1062
+#: redcarpet/gui-init.c:1071
 msgid "Premium Services"
 msgstr "Premium Services"
 
-#: redcarpet/gui-init.c:1103
+#: redcarpet/gui-init.c:1102
 msgid "Downloading mirrors..."
 msgstr "Sťahujem mirrory..."
 
-#: redcarpet/gui-install.c:80
+#: redcarpet/gui-install.c:79
 #, c-format
 msgid "Unable to create directory %s for local package storage"
 msgstr "Nepodarilo sa vytvoriť priečinok %s pre lokálne uloženie balíkov"
 
-#: redcarpet/gui-install.c:177
+#: redcarpet/gui-install.c:176
 #, c-format
 msgid ""
 "<p>An error has occurred while Red Carpet was processing the dependencies "
@@ -1396,59 +1404,59 @@ msgstr ""
 "adrese <a href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</a>.</"
 "p><p>Informácia o závislostiach:<br>%s</p>"
 
-#: redcarpet/gui-install.c:364
+#: redcarpet/gui-install.c:363
 msgid "Beginning transaction..."
 msgstr "Začítam transakciu..."
 
-#: redcarpet/gui-install.c:385
+#: redcarpet/gui-install.c:384
 msgid "Configuring"
 msgstr "Konfigurujem"
 
-#: redcarpet/gui-install.c:388
+#: redcarpet/gui-install.c:387
 msgid "Installing"
 msgstr "Inštalujem"
 
-#: redcarpet/gui-install.c:398
+#: redcarpet/gui-install.c:397
 msgid "packages"
 msgstr "balíky"
 
-#: redcarpet/gui-install.c:436 redcarpet/gui-install.c:596
-#: redcarpet/gui-transfer.c:329
+#: redcarpet/gui-install.c:435 redcarpet/gui-install.c:565
+#: redcarpet/gui-transfer.c:323
 #, c-format
 msgid "%%p%%%% (%s of %s)"
 msgstr "%%p%%%% (%s z %s)"
 
-#: redcarpet/gui-install.c:508
+#: redcarpet/gui-install.c:497
 #, c-format
 msgid "Downloading %s"
 msgstr "Sťahujem %s"
 
 #. Cache hit
-#: redcarpet/gui-install.c:576
+#: redcarpet/gui-install.c:545
 #, c-format
 msgid "%s pulled from cache"
 msgstr "%s získaný z vyrovnávacej pamäte"
 
-#: redcarpet/gui-install.c:582
+#: redcarpet/gui-install.c:551
 #, c-format
 msgid "%s downloaded %d bytes in %d seconds (%s/s)"
 msgstr "%s stiahnutý %d bajtov za %d sekúnd (%s/s)"
 
-#: redcarpet/gui-install.c:646 redcarpet/gui-install.c:818
+#: redcarpet/gui-install.c:615 redcarpet/gui-install.c:818
 msgid "%p%% (%v of %u)"
 msgstr "%p%% (%v z %u)"
 
-#: redcarpet/gui-install.c:659
+#: redcarpet/gui-install.c:628
 #, c-format
 msgid "Verifying %s"
 msgstr "Overujem %s"
 
-#: redcarpet/gui-install.c:685
+#: redcarpet/gui-install.c:655
 #, c-format
 msgid "Cryptographic verification of %s (%s) has FAILED."
 msgstr "Overenie %s (%s) pomocou šifrovania ZLYHALO."
 
-#: redcarpet/gui-install.c:692
+#: redcarpet/gui-install.c:662
 #, c-format
 msgid ""
 "Red Carpet's cryptographic verification of %s (%s) has <b><font color="
@@ -1466,7 +1474,7 @@ msgstr ""
 "správu na adresu <a href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian."
 "com</a> spolu s informáciou o distribúcii a meno balíka, ktorý zlyhal."
 
-#: redcarpet/gui-install.c:716
+#: redcarpet/gui-install.c:709
 #, c-format
 msgid ""
 "INFO:\n"
@@ -1474,14 +1482,14 @@ msgid ""
 "Version: %s\n"
 "Release: %s\n"
 "Package Filename:\n"
-"        %s\n"
+"%s"
 msgstr ""
 "INFO:\n"
 "Meno: %s (%s)\n"
 "Verzia: %s\n"
 "Release: %s\n"
 "Meno súboru balíku:\n"
-"        %s\n"
+"%s"
 
 #: redcarpet/gui-install.c:737
 #, c-format
@@ -1573,20 +1581,31 @@ msgstr "Záznam o transakciách"
 msgid "Removal Log"
 msgstr "Záznam o odstránení"
 
-#: redcarpet/gui-priority.c:64
+#: redcarpet/gui-priority.c:76
 msgid "Premium services enabled"
 msgstr "Povolené služby Premium services"
 
-#: redcarpet/gui-priority.c:488
+#: redcarpet/gui-priority.c:501
+#, c-format
+msgid ""
+"<p>Red Carpet encountered a network error while trying to submit your "
+"activation information.  Please contact Ximian support for assistance.</"
+"p><p>Details:<br>URL: %s<br>HTTP Response: %d %s<br>Soup Error: %d</p>"
+msgstr ""
+"<p>Red Carpet narazil na sieťovú chybu počas pokusu o poslanie "
+"aktivačnej informácie. Prosím, kontaktujte podporu Ximian pre pomoc.</"
+"p><p>Detaily:<br>URL:%s<br>HTTP Response: %d %s<br>Soup Error: %d</p>"
+
+#: redcarpet/gui-priority.c:542
 msgid "Activate Premium Services"
 msgstr "Aktivovať služby Premium Services"
 
-#: redcarpet/gui-priority.c:535 redcarpet/gui-uri.c:672
-#: redcarpet/gui-uri.c:946
+#: redcarpet/gui-priority.c:593 redcarpet/gui-uri.c:675
+#: redcarpet/gui-uri.c:955
 msgid "Please wait, loading page..."
 msgstr "Načítavam stránku, prosím, čakajte..."
 
-#: redcarpet/gui-priority.c:597
+#: redcarpet/gui-priority.c:669
 msgid ""
 "Red Carpet is unable to create a necessary cookie for your machine used in "
 "authenticating you when using the Red Carpet Premium Services because a "
@@ -1598,196 +1617,196 @@ msgstr ""
 "cookie\". Musíte tento súbor odstrániť, aby ste aktivovali túto službu. "
 "Súbor je /etc/ximian/no-cookie."
 
-#: redcarpet/gui-transfer.c:230
-msgid "(no error)"
-msgstr "(žiadna chyba)"
-
-#: redcarpet/gui-transfer.c:233
-msgid "Cancelled"
-msgstr "Zrušené"
-
-#: redcarpet/gui-transfer.c:236
-msgid "Can't connect"
-msgstr "Nepodarilo sa spojenie"
-
-#: redcarpet/gui-transfer.c:239
-msgid "File not found"
-msgstr "Súbor nenájdený"
-
-#: redcarpet/gui-transfer.c:242
-msgid "IO error"
-msgstr "Chyba V/V"
-
-#: redcarpet/gui-transfer.c:247
-msgid ""
-"Red Carpet Express was unable to verify your identity.<p>Please make sure "
-"that your premium services account is enabled.<p>To continue using Red "
-"Carpet without premium services, <a href=\"updater:disable_priority\">click "
-"here</a>. You can reenable it later by choosing Settings->Preferences-"
-">General and checking the box labelled \"Enable RC Premium Services\""
-msgstr ""
-"Red Carpet Express nedokázal overiť vašu identitu.<p>Prosím, overte, "
-"že máte vaše konto premium services povolené.<p>Ak chcete Red "
-"Carpet používať bez premium services, <a href=\"updater:disable_priority\">kliknite "
-"sem</a>. Neskôr ich môžete znovu povoliť pomocou Nastavenia->Nastavenia-"
-">Všeobecné a zapnutím voľby \"Povoliť RC Premium Services\"."
-
-#: redcarpet/gui-transfer.c:259
-msgid "Unable to authenticate"
-msgstr "Nepodarilo sa prihlásenie"
-
-#: redcarpet/gui-transfer.c:277
+#: redcarpet/gui-transfer.c:281
 #, c-format
 msgid "%.2f MB"
 msgstr "%.2f MB"
 
-#: redcarpet/gui-transfer.c:280
+#: redcarpet/gui-transfer.c:284
 #, c-format
 msgid "%d KB"
 msgstr "%d KB"
 
-#: redcarpet/gui-transfer.c:282
+#: redcarpet/gui-transfer.c:286
 #, c-format
 msgid "%d bytes"
 msgstr "%d bajtov"
 
-#: redcarpet/gui-transfer.c:325
+#: redcarpet/gui-transfer.c:319
 #, c-format
 msgid "%%p%%%% (%s of %s) - %s/s"
 msgstr "%%p%%%% (%s z %s) - %s/s"
 
-#: redcarpet/gui-transfer.c:337
+#: redcarpet/gui-transfer.c:331
 #, c-format
 msgid "%s - %s/s"
 msgstr "%s - %s/s"
 
-#: redcarpet/gui-transfer.c:391
+#: redcarpet/gui-transfer.c:384
 msgid "Downloading data..."
 msgstr "Sťahujem dáta..."
 
-#: redcarpet/gui-transfer.c:1141
+#: redcarpet/gui-transfer.c:622
+msgid "Couldn't open file for writing"
+msgstr "Nepodarilo sa otvoriť súbor pre zápis"
+
+#: redcarpet/gui-transfer.c:1207
 #, c-format
 msgid "%%p%%%% (%s of %s) - Paused"
 msgstr "%%p%%%% (%s z %s) - pozastavené"
 
-#: redcarpet/gui-transfer.c:1150
+#: redcarpet/gui-transfer.c:1216
 #, c-format
 msgid "%s - Paused"
 msgstr "%s - pozastavené"
 
-#: redcarpet/gui-util.c:99
+#: redcarpet/gui-transfer.c:1263
+msgid ""
+"<p>Your account for Red Carpet Premium Services could not be verfified.</"
+"p><p>Please make sure that your premium services account is enabled.</"
+"p><p>To continue using Red Carpet without premium services, <a href="
+"\"updater:disable_priority\">click here</a>. You can reenable it later by "
+"choosing Settings->Preferences->General and checking the box labelled "
+"\"Enable RC Premium Services\"</p>"
+msgstr ""
+"<p>Red Carpet Premium Services nedokázal overiť vašu identitu.<p>Prosím, overte, že máte "
+"vaše konto premium services povolené.<p>Ak chcete Red Carpet používať bez "
+"premium services, <a href=\"updater:disable_priority\">kliknite sem</a>. "
+"Neskôr ich môžete znovu povoliť pomocou Nastavenia->Nastavenia->Všeobecné a "
+"zapnutím voľby \"Povoliť RC Premium Services\".</p>"
+
+#: redcarpet/gui-transfer.c:1276
+#, c-format
+msgid ""
+"<p>Red Carpet was unable to complete a file transfer.</p>%s%s<p>Details:"
+"<br>URL: %s<br>Error: %s</p>"
+msgstr ""
+"<p>Red Carpet nedokázal dokončiť prenos súboru.</p>%s%s<p>Detaily: "
+"<br>URL: %s<br>Chyba: %s</p>"
+
+#: redcarpet/gui-util.c:100
 #, c-format
 msgid "Red Carpet encountered an error querying your system:<br>%s"
 msgstr ""
 "Red Carpet narazil na chybu počas zisťovania informácií od vášho systému:<br>"
 "%s"
 
-#: redcarpet/gui-util.c:145
+#: redcarpet/gui-util.c:146
 #, c-format
 msgid "%.2f%sMB"
 msgstr "%.2f%sMB"
 
-#: redcarpet/gui-util.c:150
+#: redcarpet/gui-util.c:151
 #, c-format
 msgid "%d%sKB"
 msgstr "%d%sKB"
 
-#: redcarpet/gui-util.c:153
+#: redcarpet/gui-util.c:154
 #, c-format
 msgid "%d%sbytes"
 msgstr "%d%sbajtov"
 
-#: redcarpet/gui-util.c:182
+#: redcarpet/gui-util.c:183
 msgid "zero"
 msgstr "nula"
 
-#: redcarpet/gui-util.c:183
+#: redcarpet/gui-util.c:184
 msgid "one"
 msgstr "1"
 
-#: redcarpet/gui-util.c:184
+#: redcarpet/gui-util.c:185
 msgid "two"
 msgstr "2"
 
-#: redcarpet/gui-util.c:185
+#: redcarpet/gui-util.c:186
 msgid "three"
 msgstr "3"
 
-#: redcarpet/gui-util.c:186
+#: redcarpet/gui-util.c:187
 msgid "four"
 msgstr "4"
 
-#: redcarpet/gui-util.c:187
+#: redcarpet/gui-util.c:188
 msgid "five"
 msgstr "5"
 
-#: redcarpet/gui-util.c:188
+#: redcarpet/gui-util.c:189
 msgid "six"
 msgstr "6"
 
-#: redcarpet/gui-util.c:189
+#: redcarpet/gui-util.c:190
 msgid "seven"
 msgstr "7"
 
-#: redcarpet/gui-util.c:190
+#: redcarpet/gui-util.c:191
 msgid "eight"
 msgstr "8"
 
-#: redcarpet/gui-util.c:191
+#: redcarpet/gui-util.c:192
 msgid "nine"
 msgstr "9"
 
 #. "Red Carpet has encountered ..."
 #. Possible actions...
-#: redcarpet/gui-util.c:344
+#: redcarpet/gui-util.c:345
 msgid "Fatal Error"
 msgstr "Kritická chyba"
 
-#: redcarpet/gui-util.c:344
+#: redcarpet/gui-util.c:345
 msgid "Error"
 msgstr "Chyba"
 
-#: redcarpet/gui-util.c:345
+#: redcarpet/gui-util.c:346
 msgid "Red Carpet has encountered an error while trying to process your request:"
 msgstr "Red Carpet narazil na chybu počas pokusu o vykonanie vašej požiadavky:"
 
-#: redcarpet/gui-util.c:348
+#: redcarpet/gui-util.c:349
 msgid "Possible actions:"
 msgstr "Možné akcie:"
 
-#: redcarpet/gui-util.c:353
+#: redcarpet/gui-util.c:354
 msgid "<li>Click <b>Quit</b> to quit."
 msgstr "<li>Pre skončenie stlačte <b>Koniec</b>."
 
-#: redcarpet/gui-util.c:356
+#: redcarpet/gui-util.c:357
 msgid "Quit"
 msgstr "Koniec"
 
-#: redcarpet/gui-util.c:360
+#: redcarpet/gui-util.c:361
 msgid "<li>Click <b>Retry</b> to retry."
 msgstr "<li>Pre ďalší pokus stlačte <b>Opakovať</b>."
 
-#: redcarpet/gui-util.c:361 redcarpet/gui-util.c:368
+#: redcarpet/gui-util.c:362 redcarpet/gui-util.c:369
 msgid "<li>Click <b>Cancel</b> to cancel."
 msgstr "<li>Pre zrušenie stlačte <b>Zrušiť</b>."
 
-#: redcarpet/gui-util.c:365
+#: redcarpet/gui-util.c:366
 msgid "Retry"
 msgstr "Znovu"
 
-#: redcarpet/gui-util.c:371
+#: redcarpet/gui-util.c:372
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: redcarpet/gui-util.c:799
+#: redcarpet/gui-util.c:661
+msgid ""
+"Red Carpet was unable to install the following packages.\n"
+"Please ensure that they exist and are valid package files.\n"
+"\n"
+msgstr ""
+"Red Carpet nedokázal nainštalovať tieto balíky.\n"
+"Prosím, overte, že existujú a že sú to platné súbory balíkov.\n"
+"\n"
+
+#: redcarpet/gui-util.c:834
 msgid "Load file(s)"
 msgstr "Načítať súbor(y)"
 
-#: redcarpet/gui-util.c:814
+#: redcarpet/gui-util.c:849
 msgid "Install selected packages"
 msgstr "Inštalovať vybrané balíky"
 
-#: redcarpet/gui-util.c:818
+#: redcarpet/gui-util.c:853
 msgid "Install all packages in directory"
 msgstr "Inštalovať všetky balíky"
 
@@ -1795,11 +1814,11 @@ msgstr "Inštalovať všetky balíky"
 #. * This is ugly.
 #. * Change the Cancel buttons caption to Close.
 #.
-#: redcarpet/gui-util.c:829
+#: redcarpet/gui-util.c:864
 msgid "Close"
 msgstr "Zavrieť"
 
-#: redcarpet/gui-util.c:890
+#: redcarpet/gui-util.c:925
 msgid "Ximian Red Carpet will now restart."
 msgstr "Ximian Red Carpet sa teraz reštartuje."
 
@@ -1821,11 +1840,42 @@ msgid "Unable to save mirror list (%s)."
 msgstr "Nepodarilo sa uložiť zoznam mirrorov (%s)."
 
 #: redcarpet/mirror.c:252
-#, c-format
-msgid ""
-"Transfer of %s did not complete: %s<p>You can continue without any mirrors "
-"by pressing \"Cancel\""
-msgstr ""
-"Prenos %s nedokončený: %s<p>Stlačnením \"Zrušiť\" môžete pokračovať bez "
-"použitia mirrorov."
+msgid "<p>You can continue without any mirrors by pressing \"Cancel\""
+msgstr "<p>Stlačením \"Zrušiť\" môžete pokračovať bez použitia mirrorov."
+
+#~ msgid "Allowed cache difference:"
+#~ msgstr "Povolený rozdiel:"
+
+#~ msgid "seconds"
+#~ msgstr "sekúnd"
+
+#~ msgid "<b>%d</b> %s"
+#~ msgstr "<b>%d</b> %s"
+
+#~ msgid "Requested Packages"
+#~ msgstr "Požadované balíky"
+
+#~ msgid "Unable to access packaging subsystem:<br>%s"
+#~ msgstr "Nepodaril sa prístup k subsystému pre balíky:<br>%s"
+
+#~ msgid "Transfer of %s did not complete: %s"
+#~ msgstr "Prenos %s nedokončený: %s"
+
+#~ msgid "(no error)"
+#~ msgstr "(žiadna chyba)"
+
+#~ msgid "Cancelled"
+#~ msgstr "Zrušené"
+
+#~ msgid "Can't connect"
+#~ msgstr "Nepodarilo sa spojenie"
+
+#~ msgid "File not found"
+#~ msgstr "Súbor nenájdený"
+
+#~ msgid "IO error"
+#~ msgstr "Chyba V/V"
+
+#~ msgid "Unable to authenticate"
+#~ msgstr "Nepodarilo sa prihlásenie"
 
