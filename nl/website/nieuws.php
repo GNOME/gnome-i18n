@@ -69,7 +69,7 @@ if ( ! empty( $_GET["item"] ) )
 <?
 	if ( ! empty( $newsitem["content"] ) ) {
 		if ( ! empty( $_GET["item"] ) )	
-			echo '<tr><td class="news">'.$newsitem["content"].'</a></td></tr>';
+			echo '<tr><td class="news">'.iconv("ISO-8859-1", "UTF-8",$newsitem["content"]).'</a></td></tr>';
 		else
 			echo '<tr><td class="news"><a href="'.$PHP_SELF.'?item='.$newsitem["id"].'">Lees verder...</a></td></tr>';
 	};
