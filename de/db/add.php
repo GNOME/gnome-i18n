@@ -53,7 +53,7 @@ END;
 // first check if the word is already in the database
 
 $already_in_db = false;
-$query = "SELECT * FROM words WHERE word = '$word'";
+$query = "SELECT * FROM $wordstable WHERE word = '$word'";
 $result_main = mysql_db_query($dbName,$query);
 
 if ($result_main && mysql_num_rows($result_main) > 0) {
@@ -98,24 +98,24 @@ if ($result_main && mysql_num_rows($result_main) > 0) {
   echo "<h1>Hinzufügen</h1>";
 
   // insert in words table
-  $query = "INSERT INTO words VALUES(NULL, '$word', 'english')";
-  //echo "<p>INSERT INTO words VALUES(NULL, '$word', 'english')<br>";
+  $query = "INSERT INTO $wordstable VALUES(NULL, '$word', 'english')";
+  //echo "<p>INSERT INTO $wordstable VALUES(NULL, '$word', 'english')<br>";
   $result1 = mysql_query($query);
 
   // get the wid, which has been chosen by mysql
   $wid = mysql_insert_id();
 
   // insert in types table
-  $query = "INSERT INTO types VALUES(NULL, '$wid', '$type')";
-  //echo "INSERT INTO types VALUES(NULL, '$wid', '$type')<br>";
+  $query = "INSERT INTO $typestable VALUES(NULL, '$wid', '$type')";
+  //echo "INSERT INTO $typestable VALUES(NULL, '$wid', '$type')<br>";
   $result2 = mysql_query($query);
 
   // get tid, which has been chosen by mysql
   $tid = mysql_insert_id();
 
   // insert in translations table
-  $query = "INSERT INTO translations VALUES('$tid', '$translation', '$comment')";
-  //echo "INSERT INTO translations VALUES('$tid', '$translation', '$comment')</p>";
+  $query = "INSERT INTO $transtable VALUES('$tid', '$translation', '$comment')";
+  //echo "INSERT INTO $transtable VALUES('$tid', '$translation', '$comment')</p>";
   $result3 = mysql_query($query);
 
   if ((!$result1) || (!$result2) || (!$result3)) {
