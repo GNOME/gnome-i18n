@@ -1,105 +1,828 @@
 # scrollkeeper fr.po.
 # Copyright (C) 2001 Free Software Foundation, Inc.
-# maintainer: Christophe Merlet (RedFox) <redfox@eikonex.org>, 2001.
+# Christophe Merlet (RedFox) <redfox@eikonex.org>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ScrollKeeper  \n"
-"POT-Creation-Date: 2001-02-19 17:29+0000\n"
-"PO-Revision-Date: 2001-11-09 14:08+0100\n"
+"POT-Creation-Date: 2001-12-03 01:39-0600\n"
+"PO-Revision-Date: 2001-03-25 17:48+0200\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
-"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cl/src/install.c:53
-#, c-format
-msgid "scrollkeeper-install: out of memory: %s\n"
-msgstr "scrollkeeper-install : plus de mémoire : %s\n"
-
-#: cl/src/install.c:177 cl/src/uninstall.c:94
-#, c-format
-msgid "wrong content list file %s\n"
-msgstr "mauvais fichier de contenu de liste %s\n"
-
-#: cl/src/install.c:184 cl/src/uninstall.c:101
-#, c-format
-msgid "wrong extended content list file %s\n"
-msgstr "mauvais fichier de contenu de liste étendu %s\n"
-
-#: cl/src/install.c:550
-msgid "Usage: scrollkeeper_install [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+#: cl/src/scrollkeeper-install.c:34
+#, fuzzy
+msgid ""
+"Usage: scrollkeeper-install [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
 msgstr ""
 "Usage : scrollkepper_install [-p <SCROLLKEEPER_DB_DIR>] <FICHIER OMF>\n"
 
-#: cl/src/install.c:586 cl/src/preinstall.c:77
-#, c-format
-msgid "wrong omf file %s\n"
-msgstr "mauvais fichier omf %s\n"
-
-#: cl/src/preinstall.c:55
-msgid "Usage: scrollkeeper_preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
+#: cl/src/preinstall.c:35
+#, fuzzy
+msgid "Usage: scrollkeeper-preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
 msgstr ""
-"Usage : scrollkeeper_preinstall <ARCHIVE DOC> <FICHIER OMF> <NOUVEAU FICHIER "
-"OMF>\n"
+"Usage : scrollkeeper_preinstall <ARCHIVE DOC> <ARCHIVE OMF> <NOUVELLE "
+"ARCHIVE OMF>\n"
 
-#: cl/src/uninstall.c:167
+#: cl/src/preinstall.c:68
 #, c-format
-msgid "%s missing\n"
-msgstr "%s manquant\n"
-
-#: cl/src/uninstall.c:221
-msgid "Usage: scrollkeeper_uninstall [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+msgid "url update in OMF file %s failed\n"
 msgstr ""
-"Usage : scrollkeeper_uninstall [-p <SCROLLKEEPER_DB_DIR>] <FICHIER OMF>\n"
 
-#: cl/src/get-cl.c:44 cl/src/update.c:44
-#, c-format
-msgid "%s: out of memory: %s\n"
-msgstr "%s : plus de mémoire : %s\n"
+#: cl/src/scrollkeeper-uninstall.c:32
+#, fuzzy
+msgid ""
+"Usage: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+msgstr ""
+"Usage : scrollkeeper_uninstall [-p <SCROLLKEEPER_DB_DIR>] <ARCHIVE OMF>\n"
 
-#: cl/src/update.c:122
-#, c-format
+#: cl/src/update.c:109
+#, fuzzy, c-format
 msgid "Usage: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
-msgstr "Usage : %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <RÉPERTOIRE OMF>]\n"
+msgstr ""
+"Usage : scrollkepper_install [-p <SCROLLKEEPER_DB_DIR>] <FICHIER OMF>\n"
 
-#: cl/src/update.c:209
-#, c-format
-msgid "%s: warning: replacing %s with %s\n"
-msgstr "%s : attention : remplacement de ùs avec %s\n"
-
-#: cl/src/update.c:237
+#: cl/src/update.c:221
 #, c-format
 msgid "%s: warning: %s overrides %s\n"
-msgstr "%s : attention : %s écrase %s\n"
+msgstr ""
 
-#: cl/src/update.c:382
+#: cl/src/update.c:500
 #, c-format
 msgid "%s: %s: is not a directory\n"
-msgstr "%s : %s : n'est pas un répertoire\n"
+msgstr ""
 
-#: cl/src/get-cl.c:129
+#: cl/src/get-cl.c:55
+msgid "Can not open temporary file\n"
+msgstr ""
+
+#: cl/src/get-cl.c:93
 #, c-format
-msgid "Usage: %s <LOCALE> <CATEGORY TREE FILE NAME>\n"
-msgstr "Usage : %s <LOCALE> <NOM DE FICHIER DE CATÉGORIE D'ARBRE>\n"
+msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
+msgstr ""
 
-#: cl/src/get-cl.c:163 cl/src/get-cl.c:172
+#: cl/src/get-cl.c:134
 msgid "No Content List for this locale!!!\n"
-msgstr "Aucune liste de contenu pour cette locale !!!\n"
+msgstr ""
 
-#: toc/src/toc.c:489
+#: toc/src/toc.c:488
 #, c-format
 msgid "error while parsing %s\n"
 msgstr "erreur durand l'analyse de %s\n"
 
-#: toc/src/toc.c:503
+#: toc/src/toc.c:502
 msgid ""
 "Usage:  toc <filename>\n"
 "\n"
 msgstr ""
 "Usage :  toc <nombre d'archives>\n"
 "\n"
+
+#: libs/error.c:80
+#, c-format
+msgid "%s: out of memory: %s\n"
+msgstr ""
+
+#: libs/install.c:163
+#, c-format
+msgid "wrong omf file %s\n"
+msgstr "mauvais fichier omf %s\n"
+
+#: libs/install.c:193 libs/uninstall.c:98
+#, c-format
+msgid "wrong content list file %s\n"
+msgstr "mavais fichier de contenu de liste %s\n"
+
+#: libs/install.c:200 libs/uninstall.c:105
+#, c-format
+msgid "wrong extended content list file %s\n"
+msgstr "mauvais fichier de contenu de liste étendu %s\n"
+
+#: libs/uninstall.c:202
+#, c-format
+msgid "%s missing\n"
+msgstr "%s manquant\n"
+
+#: extract/src/scrollkeeper-extract.c:29
+msgid ""
+"Usage: scrollkeeper-extract <xml file> <stylesheet 1> <output file 1> "
+"<stylesheet 2> <output file 2> ...\n"
+msgstr ""
+
+#: extract/src/scrollkeeper-extract.c:56
+msgid "Unrecognized file type\n"
+msgstr ""
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:1
+msgid "3D Modelling"
+msgstr "Modèle 3D"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:2
+msgid "3D Rendering"
+msgstr "Rendu 3D"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:3
+msgid "ADA"
+msgstr "ADA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:4
+msgid "Administration"
+msgstr "Administration"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:5
+msgid "Amusement"
+msgstr "Divertissements"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:6
+msgid "Analysis"
+msgstr "Analyse"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:7
+msgid "AppleTalk"
+msgstr "AppleTalk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:8
+msgid "Applets"
+msgstr "Applets"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:9
+msgid "Applications"
+msgstr "Applications"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:10
+msgid "Arcade"
+msgstr "Arcade"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:11
+msgid "Archiving"
+msgstr "Archivage"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:12
+msgid "Arts"
+msgstr "Arts"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:13
+msgid "Astronomy"
+msgstr "Astronomie"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:14
+msgid "Astrophysics"
+msgstr "Astrophysique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:15
+msgid "BIND"
+msgstr "BIND"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:16
+msgid "Backups"
+msgstr "Sauvegardes"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:17
+msgid "Biology"
+msgstr "Biologie"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:18
+msgid "Board"
+msgstr "Damier"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:19
+msgid "Build Tools"
+msgstr "Outils de construction"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:20
+msgid "C"
+msgstr "C"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:21
+msgid "C++"
+msgstr "C++"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:22
+msgid "CAD"
+msgstr "DAO"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:23
+msgid "CD Mastering"
+msgstr "Master CD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:24
+msgid "CDE"
+msgstr "CDE"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:25
+msgid "CLI"
+msgstr "CLI"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:26
+msgid "Calculating"
+msgstr "Calculatrices"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:27
+msgid "Caldera"
+msgstr "Caldera"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:28
+msgid "Calendar"
+msgstr "Calendrier"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:29
+msgid "Capture"
+msgstr "Capture"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:30
+msgid "Chat"
+msgstr "Chat"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:31
+msgid "Chemistry"
+msgstr "Chimie"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:32
+msgid "Clock"
+msgstr "Horloge"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:33
+msgid "Clocks"
+msgstr "Horloges"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:34
+msgid "Code Generators"
+msgstr "Générateurs de code"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:35
+msgid "Compression"
+msgstr "Compression"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:36
+msgid "Computer Science"
+msgstr "Informatique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:37
+msgid "Config Files"
+msgstr "Fichiers de configuration"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:38
+msgid "Configuration"
+msgstr "Configuration"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:39
+msgid "Configuration Tools"
+msgstr "Outils de configuration"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:40
+msgid "Conversion"
+msgstr "Conversion"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:41
+msgid "Core Desktop"
+msgstr "Bureau"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:42
+msgid "Cryptography"
+msgstr "Cryptographie"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:43
+msgid "DNS"
+msgstr "DNS"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:44
+msgid "Data Processing"
+msgstr "Traitement de données"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:45
+msgid "Database"
+msgstr "Base de données"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:46
+msgid "Databases"
+msgstr "Bases de données"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:47
+msgid "Debian"
+msgstr "Debian"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:48
+msgid "Debuggers"
+msgstr "Débogueurs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:49
+msgid "Development"
+msgstr "Développement"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:50
+msgid "Development Tools"
+msgstr "Outils de développement"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:51
+msgid "Display"
+msgstr "Affichage"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:52
+msgid "Distributions"
+msgstr "Distributions"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:53
+msgid "Drawing"
+msgstr "Dessin"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:54
+msgid "EDA"
+msgstr "EDA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:55
+msgid "Editing"
+msgstr "Édition"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:56
+msgid "Education"
+msgstr "Éducation"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:57
+msgid "Email"
+msgstr "Courrier électronique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:58
+msgid "English"
+msgstr "Anglais"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:59
+msgid "Environments"
+msgstr "Environements"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:60
+msgid "FTP"
+msgstr "FTP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:61
+msgid "Fax"
+msgstr "Fax"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:62
+msgid "Fighting"
+msgstr "Baston"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:63
+msgid "File Sharing"
+msgstr "Partage de fichiers"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:64
+msgid "File Utilities"
+msgstr "Utilitaires de fichiers"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:65
+msgid "Filesystems"
+msgstr "Systèmes de fichiers"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:66
+msgid "Financial"
+msgstr "Finance"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:67
+msgid "Firewall"
+msgstr "Pare-feu"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:68
+msgid "First Person Shooters"
+msgstr "Tir"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:69
+msgid "Fonts"
+msgstr "Polices"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:70
+msgid "FreeBSD"
+msgstr "FreeBSD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:71
+msgid "GNOME"
+msgstr "GNOME"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:72
+msgid "GTK+"
+msgstr "GTK+"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:73
+msgid "GUI"
+msgstr "GUI"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:74
+msgid "Games"
+msgstr "Jeux"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:75
+msgid "General"
+msgstr "Général"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:76
+msgid "Genetics"
+msgstr "Génétique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:77
+msgid "Graphics"
+msgstr "Graphisme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:78
+msgid "HTTP"
+msgstr "HTTP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:79
+msgid "Hardware"
+msgstr "Matériel"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:80
+msgid "IDEs"
+msgstr "EDIs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:81
+msgid "Input Devices"
+msgstr "Périphériques d'entrée"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:82
+msgid "Internet"
+msgstr "Internet"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:83
+msgid "Internet Phone"
+msgstr "Téléphone Internet"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:84
+msgid "Introductory"
+msgstr "Introduction"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:85
+msgid "Intrusion Detection"
+msgstr "Détection d'intrusion"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:86
+msgid "Java"
+msgstr "Java"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:87
+msgid "KDE"
+msgstr "KDE"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:88
+msgid "Kernels"
+msgstr "Noyaux"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:89
+msgid "Language"
+msgstr "Langue"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:90
+msgid "Libraries"
+msgstr "Bibliothèques"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:91
+msgid "Licenses"
+msgstr "Licences"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:92
+msgid "Linux"
+msgstr "Linux"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:93
+msgid "Local"
+msgstr "Local"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:94
+msgid "Login Managers"
+msgstr "Gestionnaires de connexions"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:95
+msgid "MIDI"
+msgstr "MIDI"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:96
+msgid "Mandrake"
+msgstr "Mandrake"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:97
+msgid "Math"
+msgstr "Math"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:98
+msgid "Maths"
+msgstr "Maths"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:99
+msgid "Messaging"
+msgstr "Message"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:100
+msgid "Mixers"
+msgstr "Mixers"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:101
+msgid "Monitors"
+msgstr "Moniteurs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:102
+msgid "Multimedia"
+msgstr "Multimédia"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:103
+msgid "Music"
+msgstr "Musique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:104
+msgid "NetBSD"
+msgstr "NetBSD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:105
+msgid "Network"
+msgstr "Réseau"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:106
+msgid "Networking"
+msgstr "Réseau"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:107
+msgid "News"
+msgstr "Nouvelles"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:108
+msgid "Office"
+msgstr "Office"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:109
+msgid "Other"
+msgstr "Autres"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:110
+msgid "PCI/ISA/PCMCIA"
+msgstr "PCI/ISA/PCMCIA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:111
+msgid "PIM"
+msgstr "PIM"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:112
+msgid "PPP"
+msgstr "PPP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:113
+msgid "Package Management"
+msgstr "Gestionnaire de paquets"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:114
+msgid "Packaging"
+msgstr "Empaquetage"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:115
+msgid "Perl"
+msgstr "Perl"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:116
+msgid "Physics"
+msgstr "Physique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:117
+msgid "Players"
+msgstr "Lecteurs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:118
+msgid "Plotting"
+msgstr "Graphique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:119
+msgid "Presentation"
+msgstr "Présentation"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:120
+msgid "Printing"
+msgstr "Impression"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:121
+msgid "Processor"
+msgstr "Processeur"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:122
+msgid "Profiling"
+msgstr "Profilage"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:123
+msgid "Programs"
+msgstr "Programmes"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:124
+msgid "Publishing"
+msgstr "Publication"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:125
+msgid "Puzzles"
+msgstr "Puzzles"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:126
+msgid "Python"
+msgstr "Python"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:127
+msgid "Qt"
+msgstr "Qt"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:128
+msgid "RAD"
+msgstr "DRA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:129
+msgid "Recording"
+msgstr "Enregisteurs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:130
+msgid "Red Flag"
+msgstr "Red Flag"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:131
+msgid "Red Hat"
+msgstr "Red Hat"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:132
+msgid "Remote"
+msgstr "Distant"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:133
+msgid "Role-Playing"
+msgstr "Jeux de role"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:134
+msgid "SMB"
+msgstr "SMB"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:135
+msgid "SSH"
+msgstr "SSH"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:136
+msgid "Science"
+msgstr "Science"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:137
+msgid "Scientific"
+msgstr "Scientifique"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:138
+msgid "Screensavers"
+msgstr "Économiseurs d'écrans"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:139
+msgid "Security"
+msgstr "Sécurité"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:140
+msgid "Services"
+msgstr "Services"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:141
+msgid "Settings"
+msgstr "Paramètres"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:142
+msgid "Simulation"
+msgstr "Simulation"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:143
+msgid "Slackware"
+msgstr "Slackware"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:144
+msgid "Sound"
+msgstr "Son"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:145
+msgid "Speech"
+msgstr "Voix"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:146
+msgid "Storage"
+msgstr "Stockage"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:147
+msgid "Strategy"
+msgstr "Stratégie"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:148
+msgid "SuSE"
+msgstr "SuSE"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:149
+msgid "Syslog"
+msgstr "Syslog"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:150
+msgid "System"
+msgstr "Système"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:151
+msgid "System Calls"
+msgstr "Appels système"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:152
+msgid "TCP/IP"
+msgstr "TCP/IP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:153
+msgid "Tcl/Tk"
+msgstr "Tcl/Tk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:154
+msgid "Technology"
+msgstr "Technologie"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:155
+msgid "Telnet"
+msgstr "Telnet"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:156
+msgid "Terminals"
+msgstr "Terminaux"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:157
+msgid "Testing"
+msgstr "Test"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:158
+msgid "Text Editors"
+msgstr "Éditeurs de texte"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:159
+msgid "Text Utilities"
+msgstr "Utilitaires texte"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:160
+msgid "Tutorials"
+msgstr "Tutoriels"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:161
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:162
+msgid "Utilities"
+msgstr "Utilitaires"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:163
+msgid "Utility"
+msgstr "Utilitaire"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:164
+msgid "Version Control"
+msgstr "Controle de version"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:165
+msgid "Video"
+msgstr "Vidéo"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:166
+msgid "Video Conferencing"
+msgstr "Vidéo Conférence"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:167
+msgid "Viewing"
+msgstr "Visualisation"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:168
+msgid "Virus"
+msgstr "Virus"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:169
+msgid "Visualisation"
+msgstr "Visualisation"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:170
+msgid "Web"
+msgstr "Web"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:171
+msgid "Web Publishing"
+msgstr "Publication Web"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:172
+msgid "WebML"
+msgstr "WebML"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:173
+msgid "White Papers"
+msgstr "Papiers blancs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:174
+msgid "Window Managers"
+msgstr "Gestionnaires de fenêtres"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:175
+msgid "Word Processing"
+msgstr "Traitement de texte"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:176
+msgid "X"
+msgstr "X"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:177
+msgid "gtk++"
+msgstr "gtk++"
 
 #~ msgid "Usage: scrollkeeper_update [-p <SCROLLKEEPER_DB_DIR>]\n"
 #~ msgstr "Usage : scrollkeeper_update [-p <SCROLLKEEPER_DB_DIR>]\n"

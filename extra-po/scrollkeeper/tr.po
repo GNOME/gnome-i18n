@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: scrollkeeper 0.2\n"
-"POT-Creation-Date: 2001-04-01 21:56+0200\n"
+"POT-Creation-Date: 2001-12-03 01:39-0600\n"
 "PO-Revision-Date: 2001-04-01 21:57+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gtranslator.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -13,81 +13,68 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-9\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cl/src/install.c:184 cl/src/uninstall.c:97
-#, c-format
-msgid "wrong content list file %s\n"
-msgstr "yanlýþ içerik liste dosyasý: %s\n"
-
-#: cl/src/install.c:191 cl/src/uninstall.c:104
-#, c-format
-msgid "wrong extended content list file %s\n"
-msgstr "yanlýþ geliþmiþ içerik liste dosyasý: %s\n"
-
-#: cl/src/install.c:551
+#: cl/src/scrollkeeper-install.c:34
+#, fuzzy
 msgid ""
-"Usage: scrollkeeper_install [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+"Usage: scrollkeeper-install [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
 msgstr ""
 "Kullaným: scrollkeeper_install [-v] [-p <SCROLLKEEPER_DB_DIZINI>] <OMF "
 "DOSYASI>\n"
 
-#: cl/src/install.c:603 cl/src/preinstall.c:78
-#, c-format
-msgid "wrong omf file %s\n"
-msgstr "yanlýþ omf dosyasý %s\n"
-
-#: cl/src/preinstall.c:56
-msgid "Usage: scrollkeeper_preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
+#: cl/src/preinstall.c:35
+#, fuzzy
+msgid "Usage: scrollkeeper-preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
 msgstr ""
 "Kullaným: scrollkeeper_preinstall <DOC DOSYASI> <OMF DOSYASI> <YENI OMF "
 "DOSYASI>\n"
 
-#: cl/src/uninstall.c:170
+#: cl/src/preinstall.c:68
 #, c-format
-msgid "%s missing\n"
-msgstr "%s eksik\n"
+msgid "url update in OMF file %s failed\n"
+msgstr ""
 
-#: cl/src/uninstall.c:223
+#: cl/src/scrollkeeper-uninstall.c:32
+#, fuzzy
 msgid ""
-"Usage: scrollkeeper_uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+"Usage: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
 msgstr ""
 "Kullaným: scrollkeeper_uninstall [-v] [-p <SCROLLKEEPER_DB_DIZINI>] <OMF "
 "DOSYASI>\n"
 
-#: cl/src/update.c:113
+#: cl/src/update.c:109
 #, c-format
 msgid "Usage: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
 msgstr "Kullaným: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIZINI>]\n"
 
-#: cl/src/update.c:225
+#: cl/src/update.c:221
 #, c-format
 msgid "%s: warning: %s overrides %s\n"
 msgstr "%1$s: ikaz: %3$s %2$s'nin üzerine yazýlýyor\n"
 
-#: cl/src/update.c:342
-#, c-format
-msgid "Unable to create database directory: %s\n"
-msgstr "Bilgi taban dizini %s yaratýlamýyor\n"
-
-#: cl/src/update.c:433
+#: cl/src/update.c:500
 #, c-format
 msgid "%s: %s: is not a directory\n"
 msgstr "%s: %s bir dizin deðildir\n"
 
-#: cl/src/get-cl.c:129
+#: cl/src/get-cl.c:55
+msgid "Can not open temporary file\n"
+msgstr ""
+
+#: cl/src/get-cl.c:93
 #, c-format
 msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 msgstr "Kullaným: %s [-v] <YERELLEÞMEKÜMESI> <TÜRAÐAÇI DOSYAISMI>\n"
 
-#: cl/src/get-cl.c:175 cl/src/get-cl.c:191
+#: cl/src/get-cl.c:134
 msgid "No Content List for this locale!!!\n"
 msgstr "Bu yerelleþme kümesi için bir içerik listesi yoktur!!!\n"
 
-#: toc/src/toc.c:490
+#: toc/src/toc.c:488
 #, c-format
 msgid "error while parsing %s\n"
 msgstr "tararken hata oluþtu: %s\n"
 
-#: toc/src/toc.c:504
+#: toc/src/toc.c:502
 msgid ""
 "Usage:  toc <filename>\n"
 "\n"
@@ -99,3 +86,744 @@ msgstr ""
 #, c-format
 msgid "%s: out of memory: %s\n"
 msgstr "%s: bellek yetmiyor: %s\n"
+
+#: libs/install.c:163
+#, c-format
+msgid "wrong omf file %s\n"
+msgstr "yanlýþ omf dosyasý %s\n"
+
+#: libs/install.c:193 libs/uninstall.c:98
+#, c-format
+msgid "wrong content list file %s\n"
+msgstr "yanlýþ içerik liste dosyasý: %s\n"
+
+#: libs/install.c:200 libs/uninstall.c:105
+#, c-format
+msgid "wrong extended content list file %s\n"
+msgstr "yanlýþ geliþmiþ içerik liste dosyasý: %s\n"
+
+#: libs/uninstall.c:202
+#, c-format
+msgid "%s missing\n"
+msgstr "%s eksik\n"
+
+#: extract/src/scrollkeeper-extract.c:29
+msgid ""
+"Usage: scrollkeeper-extract <xml file> <stylesheet 1> <output file 1> "
+"<stylesheet 2> <output file 2> ...\n"
+msgstr ""
+
+#: extract/src/scrollkeeper-extract.c:56
+msgid "Unrecognized file type\n"
+msgstr ""
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:1
+msgid "3D Modelling"
+msgstr "3D Modelleme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:2
+msgid "3D Rendering"
+msgstr "3D Canlandýrma"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:3
+msgid "ADA"
+msgstr "ADA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:4
+msgid "Administration"
+msgstr "Yönetim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:5
+msgid "Amusement"
+msgstr "Eðlence"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:6
+msgid "Analysis"
+msgstr "Analiz"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:7
+msgid "AppleTalk"
+msgstr "AppleTalk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:8
+msgid "Applets"
+msgstr "Apletler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:9
+msgid "Applications"
+msgstr "Uygulamalar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:10
+msgid "Arcade"
+msgstr "Savaþ"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:11
+msgid "Archiving"
+msgstr "Arþivcilik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:12
+msgid "Arts"
+msgstr "Sanat"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:13
+msgid "Astronomy"
+msgstr "Astronomi"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:14
+msgid "Astrophysics"
+msgstr "Astrofizik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:15
+msgid "BIND"
+msgstr "BIND"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:16
+msgid "Backups"
+msgstr "Yedekler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:17
+msgid "Biology"
+msgstr "Biyoloji"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:18
+msgid "Board"
+msgstr "Tahta"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:19
+msgid "Build Tools"
+msgstr "Kurgulama Araçlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:20
+msgid "C"
+msgstr "C"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:21
+msgid "C++"
+msgstr "C++"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:22
+msgid "CAD"
+msgstr "CAD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:23
+msgid "CD Mastering"
+msgstr "CD Uzmanlýk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:24
+msgid "CDE"
+msgstr "CDE"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:25
+msgid "CLI"
+msgstr "CLI"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:26
+msgid "Calculating"
+msgstr "Hesaplama"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:27
+msgid "Caldera"
+msgstr "Caldera"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:28
+msgid "Calendar"
+msgstr "Takvim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:29
+msgid "Capture"
+msgstr "Resim yakalama"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:30
+msgid "Chat"
+msgstr "Sohbet"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:31
+msgid "Chemistry"
+msgstr "Kimya"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:32
+msgid "Clock"
+msgstr "Saat"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:33
+msgid "Clocks"
+msgstr "Saatler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:34
+msgid "Code Generators"
+msgstr "Kod Üreticiler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:35
+msgid "Compression"
+msgstr "Sýkýþtýrma"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:36
+msgid "Computer Science"
+msgstr "Bilgisayar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:37
+msgid "Config Files"
+msgstr "Yapýlandýrma Dosyalarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:38
+msgid "Configuration"
+msgstr "Yapýlandýrma"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:39
+msgid "Configuration Tools"
+msgstr "Yapýlandýrma Araçlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:40
+msgid "Conversion"
+msgstr "Dönüþüm"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:41
+msgid "Core Desktop"
+msgstr "Masaüstü Çekirdeði"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:42
+msgid "Cryptography"
+msgstr "Þifreleme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:43
+msgid "DNS"
+msgstr "DNS"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:44
+msgid "Data Processing"
+msgstr "Bilgi iþlemleri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:45
+msgid "Database"
+msgstr "Bilgi tabaný"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:46
+msgid "Databases"
+msgstr "Veritabanlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:47
+msgid "Debian"
+msgstr "Debian"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:48
+msgid "Debuggers"
+msgstr "Hata Ayýklayýcýlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:49
+msgid "Development"
+msgstr "Geliþtirme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:50
+msgid "Development Tools"
+msgstr "Geliþtirme Araçlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:51
+msgid "Display"
+msgstr "Gösterme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:52
+msgid "Distributions"
+msgstr "Daðýtýmlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:53
+msgid "Drawing"
+msgstr "Çizim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:54
+msgid "EDA"
+msgstr "EDA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:55
+msgid "Editing"
+msgstr "Düzenleme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:56
+msgid "Education"
+msgstr "Eðitim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:57
+msgid "Email"
+msgstr "Eposta"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:58
+msgid "English"
+msgstr "Ýngilizce"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:59
+msgid "Environments"
+msgstr "Çevre Birimleri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:60
+msgid "FTP"
+msgstr "FTP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:61
+msgid "Fax"
+msgstr "Faks"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:62
+msgid "Fighting"
+msgstr "Döðüþ"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:63
+msgid "File Sharing"
+msgstr "Dosya paylaþýmý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:64
+msgid "File Utilities"
+msgstr "Dosya Araçlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:65
+msgid "Filesystems"
+msgstr "DosyaSistemleri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:66
+msgid "Financial"
+msgstr "Mali"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:67
+msgid "Firewall"
+msgstr "Güvenlik Engeli"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:68
+msgid "First Person Shooters"
+msgstr "First Person Shooters"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:69
+msgid "Fonts"
+msgstr "Yazý Tipleri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:70
+msgid "FreeBSD"
+msgstr "FreeBSD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:71
+msgid "GNOME"
+msgstr "GNOME"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:72
+msgid "GTK+"
+msgstr "GTK+"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:73
+msgid "GUI"
+msgstr "Grafik Kullanýcý Arayüzü"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:74
+msgid "Games"
+msgstr "Oyunlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:75
+msgid "General"
+msgstr "Genel"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:76
+msgid "Genetics"
+msgstr "Genetik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:77
+msgid "Graphics"
+msgstr "Graphics"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:78
+msgid "HTTP"
+msgstr "HTTP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:79
+msgid "Hardware"
+msgstr "Donaným"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:80
+msgid "IDEs"
+msgstr "IDEs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:81
+msgid "Input Devices"
+msgstr "Girdi Aygýtlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:82
+msgid "Internet"
+msgstr "Internet"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:83
+msgid "Internet Phone"
+msgstr "Internet telefonculuðu"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:84
+msgid "Introductory"
+msgstr "Tanýtým"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:85
+msgid "Intrusion Detection"
+msgstr "Tecavüz Saptama"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:86
+msgid "Java"
+msgstr "Java"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:87
+msgid "KDE"
+msgstr "KDE"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:88
+msgid "Kernels"
+msgstr "Çekirdekler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:89
+msgid "Language"
+msgstr "Dil"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:90
+msgid "Libraries"
+msgstr "Kitaplýklar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:91
+msgid "Licenses"
+msgstr "Lisanslar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:92
+msgid "Linux"
+msgstr "Linux"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:93
+msgid "Local"
+msgstr "Yerel"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:94
+msgid "Login Managers"
+msgstr "Giriþ Yöneticileri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:95
+msgid "MIDI"
+msgstr "MIDI"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:96
+msgid "Mandrake"
+msgstr "Mandrake"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:97
+msgid "Math"
+msgstr "Matematik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:98
+msgid "Maths"
+msgstr "Matematik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:99
+msgid "Messaging"
+msgstr "Haberleþme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:100
+msgid "Mixers"
+msgstr "Karýþtýrýcýlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:101
+msgid "Monitors"
+msgstr "Monitörler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:102
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:103
+msgid "Music"
+msgstr "Müzik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:104
+msgid "NetBSD"
+msgstr "NetBSD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:105
+msgid "Network"
+msgstr "Að"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:106
+msgid "Networking"
+msgstr "Að"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:107
+msgid "News"
+msgstr "Haberler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:108
+msgid "Office"
+msgstr "Ofis"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:109
+msgid "Other"
+msgstr "Diðerleri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:110
+msgid "PCI/ISA/PCMCIA"
+msgstr "PCI/ISA/PCMCIA"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:111
+msgid "PIM"
+msgstr "Kiþisel Bilgi"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:112
+msgid "PPP"
+msgstr "PPP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:113
+msgid "Package Management"
+msgstr "Paket Yönetimi"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:114
+msgid "Packaging"
+msgstr "Paketleme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:115
+msgid "Perl"
+msgstr "Perl"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:116
+msgid "Physics"
+msgstr "Fizik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:117
+msgid "Players"
+msgstr "Çalarlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:118
+msgid "Plotting"
+msgstr "Çizdirme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:119
+msgid "Presentation"
+msgstr "Gösterim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:120
+msgid "Printing"
+msgstr "Yazdýrma"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:121
+msgid "Processor"
+msgstr "Ýþlemci"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:122
+msgid "Profiling"
+msgstr "Profiling"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:123
+msgid "Programs"
+msgstr "Programlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:124
+msgid "Publishing"
+msgstr "Yayýncýlýk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:125
+msgid "Puzzles"
+msgstr "Yap-Boz"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:126
+msgid "Python"
+msgstr "Python"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:127
+msgid "Qt"
+msgstr "Qt"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:128
+msgid "RAD"
+msgstr "RAD"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:129
+msgid "Recording"
+msgstr "Kayýt"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:130
+msgid "Red Flag"
+msgstr "Red Flag"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:131
+msgid "Red Hat"
+msgstr "Red Hat"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:132
+msgid "Remote"
+msgstr "Uzak"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:133
+msgid "Role-Playing"
+msgstr "Oyunculuk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:134
+msgid "SMB"
+msgstr "SMB"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:135
+msgid "SSH"
+msgstr "SSH"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:136
+msgid "Science"
+msgstr "Bilim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:137
+msgid "Scientific"
+msgstr "Bilimsel"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:138
+msgid "Screensavers"
+msgstr "Ekran Koruyucularý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:139
+msgid "Security"
+msgstr "Güvenlik"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:140
+msgid "Services"
+msgstr "Servisler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:141
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:142
+msgid "Simulation"
+msgstr "Simülasyon"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:143
+msgid "Slackware"
+msgstr "Slackware"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:144
+msgid "Sound"
+msgstr "Ses"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:145
+msgid "Speech"
+msgstr "Konuþma"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:146
+msgid "Storage"
+msgstr "Bellek Ortamlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:147
+msgid "Strategy"
+msgstr "Strateji"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:148
+msgid "SuSE"
+msgstr "SuSE"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:149
+msgid "Syslog"
+msgstr "Syslog"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:150
+msgid "System"
+msgstr "Sistem"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:151
+msgid "System Calls"
+msgstr "Sistem Çaðrýlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:152
+msgid "TCP/IP"
+msgstr "TCP/IP"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:153
+msgid "Tcl/Tk"
+msgstr "Tcl/Tk"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:154
+msgid "Technology"
+msgstr "Teknoloji"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:155
+msgid "Telnet"
+msgstr "Telnet"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:156
+msgid "Terminals"
+msgstr "Terminaller"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:157
+msgid "Testing"
+msgstr "Deneme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:158
+msgid "Text Editors"
+msgstr "Metin Düzenleyiciler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:159
+msgid "Text Utilities"
+msgstr "Metin Araçlarý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:160
+msgid "Tutorials"
+msgstr "Öðreticiler"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:161
+msgid "Users"
+msgstr "Kullanýcýlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:162
+msgid "Utilities"
+msgstr "Araçlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:163
+msgid "Utility"
+msgstr "Araçlar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:164
+msgid "Version Control"
+msgstr "Sürüm Kontrol"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:165
+msgid "Video"
+msgstr "Video"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:166
+msgid "Video Conferencing"
+msgstr "Video konferans"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:167
+msgid "Viewing"
+msgstr "Gösterim"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:168
+msgid "Virus"
+msgstr "Virüs"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:169
+msgid "Visualisation"
+msgstr "Görselleþtirme"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:170
+msgid "Web"
+msgstr "Web"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:171
+msgid "Web Publishing"
+msgstr "Web Yayýncýlýðý"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:172
+msgid "WebML"
+msgstr "WebML"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:173
+msgid "White Papers"
+msgstr "Beyaz Sayfalar"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:174
+msgid "Window Managers"
+msgstr "Pencere Yöneticileri"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:175
+msgid "Word Processing"
+msgstr "Kelime-iþlem"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:176
+msgid "X"
+msgstr "X"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:177
+msgid "gtk++"
+msgstr "gtk++"
+
+#~ msgid "Unable to create database directory: %s\n"
+#~ msgstr "Bilgi taban dizini %s yaratýlamýyor\n"
