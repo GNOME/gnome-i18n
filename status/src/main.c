@@ -27,8 +27,8 @@
 
 typedef struct {
 	gchar *modules;
-	gchar *downloaddir;
-	gchar *installdir;
+	gchar *download_dir;
+	gchar *install_dir;
 } config_t;
 
 static void
@@ -40,16 +40,13 @@ update_versions (gpointer key, gpointer value, gpointer user_data)
 	version = STATUS_VERSION (value);
 	config = (config_t *) user_data;
 
-	g_message ("Downloading %s", (gchar *) key);
+	if (status_version_download (version, config->download_dir)) {
+		/* TODO: Save a timestamp to remember the last update time */
 
-	if (!status_version_download (version, config->downloaddir)) {
-		g_warning ("We cannot do the download/update");
-		return;
+		if (status_version_generate_pot (version, config->download_dir, config->install_dir)) {
+			status_version_update_po (version, config->download_dir, config->install_dir);
+		}
 	}
-
-	/* TODO: Save a timestamp to remember the last update time */
-
-	status_version_generate_pot (version, config->downloaddir, config->installdir);
 }	
 
 int
@@ -62,16 +59,16 @@ gint rc;
 status_data *sdata;
 struct poptOption options[] = {
 	{ "modules-file", 0, POPT_ARG_STRING, &config.modules, 0, "Set the file where is stored all modules information", "FILE" },
-	{ "download-dir", 0, POPT_ARG_STRING, &config.downloaddir, 0, "Set the directory where we will store the downloaded modules", "PATH" },
-	{ "install-dir", 0, POPT_ARG_STRING, &config.installdir, 0, "Set the directory where we will store the output", "PATH" },
+	{ "download-dir", 0, POPT_ARG_STRING, &config.download_dir, 0, "Set the directory where we will store the downloaded modules", "PATH" },
+	{ "install-dir", 0, POPT_ARG_STRING, &config.install_dir, 0, "Set the directory where we will store the output", "PATH" },
 	{ "ttl", 0, POPT_ARG_INT, &ttl, 0, "Default ttl for translations", "SECONDS" },
 	POPT_AUTOHELP
         { NULL, 0, 0, NULL, 0 }
 };
 
 	config.modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
-	config.downloaddir = "/home/carlos/Desarrollos/gnome/";
-	config.installdir = "/home/carlos/public_html/gnome/l10n/";
+	config.download_dir = "/home/carlos/Desarrollos/gnome/";
+	config.install_dir = "/home/carlos/public_html/gnome/l10n/";
 
 	context = poptGetContext (NULL, argc, argv, options, 0);
 

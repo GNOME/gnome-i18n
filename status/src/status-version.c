@@ -20,6 +20,9 @@
  *
  */
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <dirent.h>
 #include "status-version.h"
 
 struct _StatusVersion {
@@ -151,6 +154,8 @@ gboolean
 status_version_download (StatusVersion *version, gchar *download_dir)
 {
 
+	g_message ("Downloading %s - %s ...", version->module->str, version->id->str);
+
 	return status_server_download (version->server, version->module->str, version->id->str,
 				       version->path->str, download_dir);
 
@@ -179,7 +184,7 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 	if (!chdir (buf)) {
 		/* TODO: Here we should scan for po/ directories and then, generate the .pot files */
 		if (!chdir ("po")) {
-			command = g_strdup_printf ("intltool-update -p -g %s/PO/%s.%s.pot", install_dir,
+			command = g_strdup_printf ("intltool-update -p -g %s/PO/%s.%s", install_dir,
 						   version->module->str, version->id->str);
 			if (system (command)) {
 				g_warning ("Unable to regenerate the %s/PO/%s.%s.pot file", install_dir,
@@ -200,4 +205,68 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 		g_free (buf);
 		return FALSE;
 	}
+}
+
+/**
+ * status_version_update_po
+ * @ version:
+ * @ download_dir:
+ * @ install_dir:
+ *
+ * Updates the .po files and store it at install_dir
+ */
+/* TODO: We should be able to support multiple po/ directories (like GIMP)
+ * We should also check and create the needed directories
+ */
+gboolean
+status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *install_dir)
+{
+	gchar *buf, *command;
+	DIR *podir;
+        struct dirent *direntry;
+        gchar **filesplit;
+
+	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
+
+	if (!chdir (buf)) {
+		/* TODO: Here we should scan for po/ directories and then, generate the .pot files */
+		if (!chdir ("po")) {
+			podir = opendir (".");
+			if (podir != NULL) {
+				direntry = readdir (podir);
+				while (direntry != NULL) {
+					filesplit = g_strsplit (direntry->d_name, ".", 2);
+					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
+						g_message ("Updating %s.%s.%s.po:", version->module->str, version->id->str, filesplit[0]);
+						command = g_strdup_printf (
+							"msgmerge %s %s/PO/%s.%s.pot -o %s/PO/%s.%s.%s.po > /dev/null",
+							direntry->d_name, install_dir, version->module->str,
+							version->id->str, install_dir, version->module->str,
+							version->id->str, filesplit[0]);
+						if (system (command)) {
+							g_warning ("Unable to update the %s/PO/%s.%s.%s.po file",
+								   install_dir, version->module->str,
+								   version->id->str, filesplit[0]);
+						}
+						g_free (command);
+					}
+					g_strfreev (filesplit);
+					direntry = readdir (podir);
+				}
+				closedir (podir);
+			} else {
+				g_warning ("Unable to get po file list");
+				return FALSE;
+			}
+		} else {
+			g_warning ("Unable to chdir into the po dir");
+			return FALSE;
+		}
+	} else {
+		g_warning ("Unable to chdir into the %s dir", buf);
+		g_free (buf);
+		return FALSE;
+	}
+	g_free (buf);
+	return TRUE;
 }
