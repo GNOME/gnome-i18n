@@ -12,8 +12,9 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"fi", "Paketti",
 "fr", "Module",
-"ja", "$B%b%8%e!<%k(B",
+"ja", "$(B%b%8%e!<%k(B",
 "nl", "Module",
 "ro", "Modul",
 "ru", "íÏÄÕÌØ",
@@ -25,8 +26,9 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&uuml;bersetzt",
+"fi", "K.AŽäŽännetty",
 "fr", "Traduites",
-"ja", "$BK]Lu:Q(B",
+"ja", "$(BK]Lu:Q(B",
 "nl", "Vertaald",
 "ro", "traduse",
 "ru", "ðÅÒÅ×ÅÄÅÎÏ",
@@ -38,8 +40,9 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "ungenau",
+"fi", "Sumea",
 "fr", "Floues",
-"ja", "$B%U%!%8!<(B",
+"ja", "$(B%U%!%8!<(B",
 "nl", "Wazig",
 "ro", "neclare",
 "ru", "îÅÞÅÔËÏ",
@@ -51,8 +54,9 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "un&uuml;bersetzt",
+"fi", "KŽäŽäntŽämŽättŽä",
 "fr", "Non traduites",
-"ja", "$BL$Lu(B",
+"ja", "$(BL$Lu(B",
 "nl", "Onvertaald",
 "ro", "netraduse",
 "ru", "îÅÐÅÒÅ×ÅÄÅÎÏ",
@@ -64,8 +68,9 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"fi", "RiviŽä",
 "fr", "chaînes",
-"ja", "$B%3(B",
+"ja", "$(B%3(B",
 "nl", "Meldingen",
 "ro", "stringuri",
 "ru", "ÓÏÏÂÝ.",
@@ -85,7 +90,7 @@ $now = time;
 "es", "Detailed report for Spanish (es) GNOME translations",
 "et", "Detailed report for Estonian (et) GNOME translations",
 "eu", "Detailed report for Basque (eu) GNOME translations",
-"fi", "Detailed report for Finish (fi) GNOME translations",
+"fi", "Yksityiskohtainen raportti Suomen (fi) GNOME kŽäŽännŽöksistŽä",
 "fr", "Rapport détaillé pour les traductions françaises (fr) GNOME",
 "ga", "Detailed report for Irish (ga) GNOME translations",
 "gl", "Detailed report for Galician (gl) GNOME translations",
@@ -93,7 +98,7 @@ $now = time;
 "hu", "Detailed report for Hungarian (hu) GNOME translations",
 "is", "Detailed report for Icelandic (is) GNOME translations",
 "it", "Detailed report for Italian (it) GNOME translations",
-"ja", "GNOME$B$NF|K\8lLu$K4X$9$k>\:Y%l%]!<%H(B",
+"ja", "GNOME$(B$NF|K\8lLu$K4X$9$k>\:Y%l%]!<%H(B",
 "ko", "Detailed report for Korean (ko) GNOME translations",
 "lt", "Detailed report for Lithuanian (lt) GNOME translations",
 "nl", "Gedetailleerde rapportage voor de Nederlandse (nl) GNOME vertalingen",
@@ -331,3 +336,12 @@ sub printlang{
     print TABLE "<td><font color='$color'>$percent%</font></td>";
     }
 }
+
+
+
+
+
+
+
+
+
