@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# (c) 2000 Robert Brady
+# (c) 2000 Abigail Brady
 #     2002 Bastien Nocera
 
 # Released under the GNU General Public Licence, either version 2
@@ -95,7 +95,7 @@ sub translate() {
   
     $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
     $msg_str =~ s/YEAR-MO-DA HO:MI\+DIST/$date/;
-    $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Robert Brady <rwb197\@zepler.org>/;
+    $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>/;
     $msg_str =~ s/CHARSET/UTF-8/;
     $msg_str =~ s/ENCODING/8-bit/;
     $msg_str =~ s/LANGUAGE <LL\@li.org>//;
@@ -162,7 +162,7 @@ sub translate() {
   do_trans("totaling", "totalling");
   do_trans("trash", "wastebasket");
   do_trans("vapor", "vapour");
-  do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
+  do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
@@ -178,7 +178,7 @@ while (<>) {
      s/SOME DESCRIPTIVE TITLE/English (British) translation/;
      $year = gmtime()->year+1900;
      s/YEAR/$year/;
-     s/FIRST AUTHOR <EMAIL\@ADDRESS>/Robert Brady <rwb197\@ecs.soton.ac.uk>, Bastien Nocera <hadess\@hadess.net>/;
+     s/FIRST AUTHOR <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>, Bastien Nocera <hadess\@hadess.net>/;
      print unless ((/^#, fuzzy/) && ($mode eq 0));
    } elsif (/^msgid /) {
      $msg_id .= substr($_, 6);
