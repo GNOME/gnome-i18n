@@ -67,6 +67,6 @@ rm *.tmp
 #mv text/versions.text text/versions.text.old
 #cat text/versions.text.old | sort -r > text/versions.text
 #rm text/versions.text.old
-versie=`cat text/versions.text | head -n 1`
+versie=`cat text/versions.text | tail -n 1`
 lynx -source $sourcelocation$versie/top.html \
 | grep -B 1 Dutch | head -n 1 | sed 's/.*>\([0-9]\)<.*/\1/' > text/top10.text
