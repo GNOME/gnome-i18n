@@ -21,7 +21,8 @@ $now = time;
 "ru", "Модуль",
 "sv", "Modul",
 "tr", "ModЭl",
-"uk", "Модуль"
+"uk", "Модуль",
+"wa", "module"
  );
 
 %translated = (
@@ -38,7 +39,8 @@ $now = time;
 "ru", "Переведено",
 "sv", "&Ouml;versatt",
 "tr", "TercЭme edilmiЧ",
-"uk", "Перекладено"
+"uk", "Перекладено",
+"wa", "rato&ucircu;rn&eacute;s"
 );
 
 %fuzzy = (
@@ -55,7 +57,8 @@ $now = time;
 "ru", "Нечетко",
 "sv", "Luddigt",
 "tr", "Tam tutmayan",
-"uk", "Неч╕тко"
+"uk", "Неч╕тко",
+"wa", "&laquo;fuzzy&raquo;"
 );
 
 %untranslated = (
@@ -72,7 +75,8 @@ $now = time;
 "ru", "Непереведено",
 "sv", "O&ouml;versatt",
 "tr", "TercЭme edilmemiЧ",
-"uk", "Неперекладено"
+"uk", "Неперекладено",
+"wa", "n&eacute;n co rato&ucircu;rn&eacute;s"
 );
 
 %strings = (
@@ -89,7 +93,8 @@ $now = time;
 "ru", "сообщ.",
 "sv", "meddelanden",
 "tr", "metinler",
-"uk", "пов╕дом."
+"uk", "пов╕дом.",
+"wa", "messaedjes"
 );
 
 %totals = (
@@ -103,7 +108,8 @@ $now = time;
 "ru", "Всего",
 "sv", "Totalt",
 "tr", "Toplam",
-"uk", "Всього"
+"uk", "Всього",
+"wa", "tot&aring;"
 );
 
 %details = (
@@ -141,7 +147,7 @@ $now = time;
 "sv", "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME<br>Detailed report for Swedish (sv) GNOME translations",
 "tr", "TЭrkГe GNOME tercЭmeleri iГin geliЧmiЧ durum raporu<br>Detailed report for Turkish (tr) GNOME translations",
 "uk", "Детальний зв╕т про стан перекладу GNOME на укра╖нську<br>Detailed report for Ukrainian (uk) GNOME translations",
-"wa", "Detailed report for Walloon (wa) GNOME translations"
+"wa", "Sipepieus rapoirt po les walons (wa) rato&ucircu;rnaedjes di GNOME"
 );
 
 %percent_colors = (
