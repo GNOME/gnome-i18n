@@ -25,124 +25,27 @@
 #		   Dand
 
 #use strict; #fix the file, so this can be enabled
-my $EXTDIR = "gnome-i18n/extra-po";
 
 ## Constants
 
 $cvsroot = "/home/kanikus/cvs";
 $htmldir = "$cvsroot/web-devel-2/content/projects/gtp/status";
 
-@coreModules = (
-     "nautilus/po",
-     "oaf/po",
-     "pan/po",
-     "pybliographer/po",
-     "rp3/po",
-     "sodipodi/po",
-     "sawfish/po",
-     "$EXTDIR/xchat", 
-     "achtung/po",                      
-     "balsa/po",
-     "bonobo/po",   
-     "bug-buddy/po",
-     "control-center/po",
-     "control-center-HEAD/po",
-     "dia/po",
-     "dr-genius/po",
-     "ee/po", 
-     "eog/po",
-     "evolution/po",
-     "$EXTDIR/firestarter",
-     "$EXTDIR/galeon",
-     "gal/po",
-     "gconf/po",
-     "gdm2/po"
-);
+open STATUS, "STATUSFILES.in" || die "Cannot open file: STATUSFILES.in";
 
-@normalModules = (
-     "$EXTDIR/gdm2beta5",
-     "gedit/po",
-     "gernel/po",
-     "gfax/po",  
-     "gfloppy/po",
-     "ggv/po",
-     "ghex/po",
-     "gimp/po",
-     "gimp/po-libgimp",
-     "gimp/po-script-fu",
-     "gimp/po-plug-ins", 
-     "gimp-freetype/po", 
-     "glade/po",
-     "$EXTDIR/gnapster",
-     "gnome-admin-tools/po",
-     "gnome-applets/po"
-);
-
-@extraModules = (
-     "gnome-chess/po",  
-     "gnome-core/po",   
-     "gnome-applets/po",
-     "gnome-chess/po",
-     "gnome-core/po",
-     "gnome-db/po",
-     "$EXTDIR/gnome-find",
-     "gnome-games/po",
-     "gnome-iconedit/po",
-     "gnome-libs/po",
-     "gnome-libs-HEAD/po",
-     "gnome-lokkit/po",
-     "gnome-media/po",
-     "gnome-pilot/po",    
-     "gnome-pim/po",
-     "gnome-print/po",
-     "gnome-utils/po",    
-     "gnome-vfs/po", 
-     "gnomeicu/po",       
-     "gnop/po",
-     "gnopo/po",  
-     "gnome-utils/po",
-     "gnome-vfs/po",
-     "gnomeicu/po",
-     "gnopo/po",
-     "gnorpm/po",
-     "$EXTDIR/gnucash",
-     "gnumeric/po", 
-     "gphoto/po",
-     "gtkhtml/po",
-     "gtk+/po",
-     "gtk+-HEAD/po",
-     "$EXTDIR/gtm",
-     "gtop/po",
-     "gtranslator/po",
-     "guppi3/po",  
-     "gxsnmp/po",
-     "$EXTDIR/helix-gdm2",
-     "gtkhtml/po",
-     "helix-setup-tools/po",
-     "libgda/po",
-     "libgtop/po",
-     "magicdev/po",
-     "mc/po",
-     "memprof/po",
-     "nautilus/po",
-     "oaf/po",
-     "pan/po",
-     "pong/po",
-     "pybliographer/po",
-     "rp3/po",
-     "sawfish/po",
-     "gnome-i18n/extra-po/screem",
-     "sodipodi/po",
-     "gnome-i18n/extra-po/xchat",
-     "xpdf/po"
-);
-
-push @modules, @coreModules, @normalModules, @extraModules; 
+my @modules;
+while (<STATUS>) {
+    next if /^#/;
+    next if /^\n/;
+    next if /^\s/;
+    chomp $_;
+    push @modules, "$_";
+}
 
 # Uncomment if you just want to do it for yourself
-#@langs = ( "no" );
+@langs = ( "no" );
 
-@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+#@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 sub getmsgfmt;
 sub generatepot;
@@ -291,8 +194,8 @@ sub GetMerge{
     $POFILE  = "$cvsroot/$mod/$lang.po";
     $POTFILE = "$cvsroot/$mod/$file.pot";
 
-    open MERGE, "msgmerge --output-file=$OUTFILE $POFILE $POTFILE |" || die "Unable to merge";
-    close(MERGE);
+    open MERGE, "msgmerge --output-file=$cvsroot/$mod/$lang.new.po $cvsroot/$mod/$lang.po $cvsroot/$mod/$file.pot |" || die "Unable to merge";
+    close MERGE;
 }
 
 sub GetMsgfmt{
@@ -340,12 +243,12 @@ sub GeneratePot{
       if (-x "$cvsroot/$mod/update.pl") {
 	system ("cd $cvsroot/$mod && ./update.pl -P $file" );
 	return;
-      } else {  
-	open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
-	      "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
-	      " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
-	      " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
-      }
+   #   } else {  
+   #	open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
+   #	      "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
+   #	      " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
+   #	      " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
+     }
     }
     link("$cvsroot/$mod/$file.pot", "$posdir/$file.pot");
     close (POTOUT);
