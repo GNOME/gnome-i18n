@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtkdial\n"
-"POT-Creation-Date: 2001-07-03 00:58+0200\n"
-"PO-Revision-Date: 2001-07-04 10:58+0200\n"
+"POT-Creation-Date: 2001-09-18 16:16+0200\n"
+"PO-Revision-Date: 2001-09-18 18:02+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -41,15 +41,15 @@ msgstr "Kör kommando vid lyckad anslutning"
 
 #. if there is more than one service to show, make a list
 #. Set up the widgets and packing containers
-#: src/gtkdial.c:85 src/gtkdial.c:228
+#: src/gtkdial.c:85 src/gtkdial.c:229
 msgid "Dial"
 msgstr "Ring upp"
 
-#: src/gtkdial.c:88 src/gtkdial.c:229
+#: src/gtkdial.c:88 src/gtkdial.c:230
 msgid "Hang Up"
 msgstr "Lägg på"
 
-#: src/gtkdial.c:92 src/gtkdial.c:230
+#: src/gtkdial.c:92 src/gtkdial.c:231
 msgid "Exit"
 msgstr "Avsluta"
 
@@ -89,44 +89,50 @@ msgstr "_Åtgärder"
 msgid "_Timer"
 msgstr "_Klocka"
 
-#: src/gtkdial.c:239
+#: src/gtkdial.c:240
 msgid "Session Time:"
 msgstr "Sessionstid:"
 
-#: src/gtkdial.c:240
+#: src/gtkdial.c:241
 msgid "Total Time:"
 msgstr "Total tid:"
 
 #. Decide what the status bar should initially say
-#: src/gtkdial.c:250 src/gtkdial.c:362
+#: src/gtkdial.c:251
 msgid "Connected"
 msgstr "Ansluten"
 
-#: src/gtkdial.c:251
+#: src/gtkdial.c:252
 msgid "Ready"
 msgstr "Redo"
 
-#: src/gtkdial.c:311
+#: src/gtkdial.c:312
 msgid "Select a service:"
 msgstr "Välj en tjänst:"
 
-#: src/gtkdial.c:337
-msgid "Connecting ..."
-msgstr "Ansluter..."
+#: src/gtkdial.c:338
+#, c-format
+msgid "Connecting to %s ..."
+msgstr "Ansluter till %s..."
 
-#: src/gtkdial.c:384
+#: src/gtkdial.c:365
+#, c-format
+msgid "Connected to %s"
+msgstr "Ansluten till %s"
+
+#: src/gtkdial.c:389
 msgid "Disconnected"
 msgstr "Frånkopplad"
 
-#: src/gtkdial.c:502
+#: src/gtkdial.c:509
 msgid "About Gtkdial"
 msgstr "Om Gtkdial"
 
-#: src/gtkdial.c:575
+#: src/gtkdial.c:582
 msgid "You're Connected - Really close?"
 msgstr "Du är ansluten - vill du verkligen stänga?"
 
-#: src/gtkdial.c:612
+#: src/gtkdial.c:619
 msgid ""
 "No wvdial config file was available in\n"
 "any of the usual places.\n"
@@ -138,7 +144,7 @@ msgstr ""
 "\n"
 "Kör gwvedit för att skapa en."
 
-#: src/gtkdial.c:616
+#: src/gtkdial.c:622
 msgid ""
 "The config file has no valid services.\n"
 "Run gwvedit to set them up"
@@ -146,27 +152,27 @@ msgstr ""
 "Konfigurationsfilen har inga giltiga tjänster.\n"
 "Kör gwvedit för att konfigurera dem"
 
-#: src/gtkdial.c:620
+#: src/gtkdial.c:625
 msgid ""
-"The config file had no information on yourmodem.\n"
+"The config file had no information on your modem.\n"
 "Run gwvedit to autodetect settings."
 msgstr ""
 "Konfigurationsfilen hade ingen information om ditt modem.\n"
-"Kör gwvedit för att automatiskt detektera inställningarna."
+"Kör gwvedit för att automatiskt detektera inställningar."
 
-#: src/gtkdial.c:623
+#: src/gtkdial.c:628
 msgid "Error: wvdial error\n"
 msgstr "Fel: wvdial-fel\n"
 
-#: src/gtkdial.c:625
+#: src/gtkdial.c:630
 msgid "A Gtkdial is already running\n"
 msgstr "En instans av Gtkdial kör redan\n"
 
-#: src/gtkdial.c:628
+#: src/gtkdial.c:633
 msgid "Error: sanity check - what's going on?\n"
 msgstr "Fel: rimlighetskontroll - vad händer?\n"
 
-#: src/gtkdial.c:747
+#: src/gtkdial.c:757
 #, c-format
 msgid ""
 "Your total online time has reached %d hour(s)\n"
@@ -175,76 +181,88 @@ msgstr ""
 "Din totala anslutningstid har nått %d timme/timmar\n"
 "och kommer nu att nollställas"
 
-#: src/gtkdial.c:754
+#: src/gtkdial.c:764
 #, c-format
 msgid "Your total online time has reached %d hour(s)\n"
 msgstr "Din totala anslutningstid har nått %d timme/timmar\n"
 
-#: src/properties.c:112
+#: src/properties.c:113
 msgid "Start Gtkdial in single-service mode"
 msgstr "Starta Gtkdial i entjänstläge"
 
-#: src/properties.c:114
+#: src/properties.c:115
 msgid "Disable audio connection alerts"
 msgstr "Stäng av ljudvarningar för anslutning"
 
-#: src/properties.c:116
-msgid "Close window after connect/kill"
-msgstr "Stäng fönster efter anslutning/dödande"
+#: src/properties.c:117
+msgid "Close window after connect/disconnect"
+msgstr "Stäng fönster efter anslutning/frånkoppling"
 
-#: src/properties.c:118
+#: src/properties.c:119
 msgid "Show connection debugging window"
 msgstr "Visa felsökningsfönster för anslutning"
 
-#: src/properties.c:120
+#: src/properties.c:121
 msgid "Display session timer in main window"
 msgstr "Visa sessionsklocka i huvudfönstret"
 
-#: src/properties.c:122
+#: src/properties.c:123
 msgid "Reset current session timer on each new connection"
 msgstr "Nollställ aktuell sessionsklocka vid varje ny anslutning"
 
-#: src/properties.c:124
+#: src/properties.c:125
 msgid "Save total time of all sessions"
 msgstr "Spara total tid för alla sessioner"
 
-#: src/properties.c:126
+#: src/properties.c:127
 msgid "Display total timer in main window"
 msgstr "Visa totalklocka i huvudfönstret"
 
-#: src/properties.c:127
+#: src/properties.c:128
 msgid "Execute after connection made:"
 msgstr "Kör efter en anslutning gjorts:"
 
-#: src/properties.c:130
+#: src/properties.c:129
+msgid ""
+"The string entered below will be\n"
+"passed to the shell for execution in\n"
+"the background when a connection is\n"
+"successfully made."
+msgstr ""
+"Strängen som anges nedan kommer att\n"
+"skickas till skalet för körning i\n"
+"bakgrunden då en framgångsrik\n"
+"anslutning görs."
+
+#: src/properties.c:135
 msgid "Alert me when total time reaches limit"
 msgstr "Varna mig när totaltiden når gränsen"
 
-#: src/properties.c:131
+#: src/properties.c:136
 msgid " Alert after "
 msgstr " Varna efter "
 
-#: src/properties.c:132
+#: src/properties.c:137
 msgid "hour(s)"
 msgstr "timme/timmar"
 
-#: src/properties.c:135
+#: src/properties.c:140
 msgid "Reset total time when limit reached"
 msgstr "Nollställ totaltiden när gränsen nås"
 
-#: src/properties.c:187
+#: src/properties.c:192
 msgid "General"
 msgstr "Allmänt"
 
-#: src/properties.c:188
+#: src/properties.c:193
 msgid "Timer"
 msgstr "Klocka"
 
-#: src/properties.c:189
+#: src/properties.c:194
 msgid "Execute"
 msgstr "Kör"
 
-#: src/properties.c:220
+#: src/properties.c:226
 msgid "GtkDial Settings"
 msgstr "Inställningar för GtkDial"
 
@@ -255,6 +273,9 @@ msgstr "Gtkdial"
 #: Gtkdial.desktop.in.h:2
 msgid "Gtkdial dialer"
 msgstr "Uppringaren Gtkdial"
+
+#~ msgid "Close window after connect/kill"
+#~ msgstr "Stäng fönster efter anslutning/dödande"
 
 #~ msgid "Error: wvdial conf not present\n"
 #~ msgstr "Fel: wvdial.conf finns inte\n"
