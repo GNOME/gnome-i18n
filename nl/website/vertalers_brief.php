@@ -29,11 +29,11 @@ of soort programma. Sommige mensen hebben een grafische achtergrond en zullen
 dus beter een programma als Gimp of SodiPodi kunnen vertalen. Anderen hebben
 vanwege een Economische achtergrond een goede basiskennis om programma's als
 GnuCash te vertalen.</p>
-<p>Abonneer je ook op de discussielijst <a href="mailto:vertaling@nl.linux.org">
-vertaling@nl.linux.org</a>. Daar worden onder andere discussies gehouden over
-hoe iets vertaald zou moeten worden. Abonneren op de lijst doe je door een
-bericht met "subscribe" als onderwerp naar <a href="mailto:vertaling-request@nl.linux.org">
-vertaling-request@nl.linux.org</a> te sturen.</p>
+<p>Abonneer je ook op de discussielijst <a href="mailto:vertaling@vrijschrift.org">
+vertaling@vrijschrift.org</a>. Daar worden onder andere discussies gehouden over
+hoe iets vertaald zou moeten worden. Abonneren op
+de lijst doe je door te kijken op
+<a href="http://mailman.vrijschrift.nl/listinfo/vertaling">de infopagina</a>.</p>
 <p>Lees ook even de pagina "Korte uitleg" door. Daar staat uitgelegd hoe we
 bepaalde dingen vertalen en hoe de vertaalbestanden (po-files) werken.</p>
 Groetjes,<br>
