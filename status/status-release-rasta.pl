@@ -7,41 +7,69 @@
 # "Constants" #
 ###############
 @modules = (
+     "ammonite/po",
      "balsa/po",
+     "bonobo/po",
      "bug-buddy/po",
      "control-center/po",
      "dia/po",
+     "gnome-i18n/extra-po/firestarter",
+     "galeon/po",
+     "gnome-i18n/extra-po/gabber",
+     "gconf/po",
      "gdm2/po",
      "gedit/po",
+     "gfax/po",
      "gfloppy/po",
      "ggv/po",
      "ghex/po",
+     "gimp/po",
+     "gimp/po-libgimp",
+     "gimp/po-plugins",
+     "gimp/po-script-fu",
      "glade/po",
      "gnome-applets/po",
-     "gnome-core/po",
+     "gnome-core-HEAD/po",
      "gnome-db/po",
      "gnome-games/po",
      "gnome-libs/po",
+     "gnome-lokkit/po",
      "gnome-media/po",
      "gnome-pilot/po",
      "gnome-pim/po",
+     "gnome-print/po",
      "gnome-utils/po",
+     "gnome-vfs/po",
      "gnomeicu/po",
+     "gnomoku/po",
      "gnorpm/po",
      "gnumeric/po",
      "gtk+/po",
      "gnome-i18n/extra-po/gtm",
      "gtop/po",
+     "guppi3/po",
+     "gnome-i18n/extra-po/gnucash",
      "libgtop/po",
      "magicdev/po",
      "mc/po",
-     "nautilus",
+     "medusa/po",
+     "memprof/po",
+     "nautilus/po",
+     "oaf/po",
+     "pan/po",
+     "nautilus/po",
      "rp3/po",
      "sawfish/po",
+     "sodipodi/po",
      "gnome-i18n/extra-po/xchat"
 );
 
 @xml_i18n_tools_compliants = (
+    "ammonite"
+    "evolution"
+    "galeon"
+    "gnome-db"
+    "gnome-vfs"
     "nautilus"
 );
 
