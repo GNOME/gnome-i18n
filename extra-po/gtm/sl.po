@@ -1,11 +1,10 @@
-
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Andraz Tori <andraz.tori1@guest.arnes.si> 2000
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm\n"
-"POT-Creation-Date: 2001-01-22 01:16+0100\n"
+"POT-Creation-Date: 2001-02-20 02:55+0000\n"
 "PO-Revision-Date: 2000-07-07 12:30+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -25,12 +24,12 @@ msgstr "URL"
 #: applet/dialog-add.c:69 applet/dialog-add.c:92 applet/dialog-add.c:313
 #: applet/dialog-add.c:343 applet/dialog-new.c:114 src/dialog-add.c:59
 #: src/dialog-add.c:75 src/dialog-add.c:267 src/dialog-add.c:285
-#: src/dialog-new.c:80 src/dialog-numdown.c:161 src/main.c:334
+#: src/dialog-new.c:96 src/dialog-numdown.c:161 src/main.c:334
 msgid "URL:\n"
 msgstr "URL:\n"
 
 #: applet/dialog-add.c:98 applet/dialog-add.c:350 applet/dialog-new.c:115
-#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:81
+#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:97
 #: src/dialog-numdown.c:162 src/main.c:336
 msgid "already in the list"
 msgstr "¾e v seznamu"
@@ -61,7 +60,7 @@ msgstr ""
 msgid "_New..."
 msgstr "_Nova..."
 
-#: src/main-window.c:204
+#: src/dialog-new.c:186 src/main-window.c:204
 msgid "New file to download"
 msgstr "Nova datoteka za sprejem"
 
@@ -173,7 +172,7 @@ msgstr "Samo. sprejem"
 msgid "Toggle auto download of selected files"
 msgstr "Preklopi samodejni sprejem izbranih datotek"
 
-#: src/main-window.c:318
+#: src/dialog-prop.c:235 src/main-window.c:318
 msgid "Properties"
 msgstr "Lastnosti"
 
@@ -328,8 +327,8 @@ msgid "staled"
 msgstr "zamru"
 
 #: src/download-dirs.c:111
-msgid "GTM - Target directory"
-msgstr "GTM - Ciljni imenik"
+msgid "Target directory"
+msgstr "Ciljni imenik"
 
 #: src/download-dirs.c:116
 msgid "Pattern:"
@@ -339,9 +338,9 @@ msgstr "Shema:"
 msgid "Download matching URLs to directory:"
 msgstr "Prenesi ustrezne URLje v imenik:"
 
-#: applet/dialog-add.c:265 src/download-dirs.c:127
-msgid "GTM - Add Download Dir"
-msgstr "GTM - Dodaj sprejemni imenik"
+#: src/download-dirs.c:127
+msgid "Add Download Dir"
+msgstr "Dodaj sprejemni imenik"
 
 #: src/download-dirs.c:262
 msgid "Pattern"
@@ -371,22 +370,26 @@ msgid "Download dir:"
 msgstr "Sprejemni imenik:"
 
 #: src/dialog-common-elements.c:50
-msgid "GTM - Download Dir"
-msgstr "GTM - sprejemni imenik"
+msgid "Download Dir"
+msgstr "Sprejemni imenik"
 
 #: src/dialog-common-elements.c:63
 msgid "Suggest directory by pattern matching"
 msgstr "Predlagaj imenik po ujemanju z vzorcem"
 
-#: applet/dialog-new.c:75 src/dialog-common-elements.c:198
+#: src/dialog-common-elements.c:192
+msgid "No directory matched."
+msgstr "Noben imenik ni ustrezal."
+
+#: applet/dialog-new.c:75 src/dialog-common-elements.c:212
 msgid "Multiple download not implemented yet"
 msgstr "Veèkratno prena¹anje ni implementirano"
 
-#: src/dialog-about.c:49
+#: src/dialog-about.c:50
 msgid "GNOME Transfer Manager"
 msgstr "Upravljalnik prenosov GNOME"
 
-#: src/dialog-about.c:52
+#: src/dialog-about.c:53
 msgid ""
 "The GNOME transfer manager.\n"
 "http://gtm.sourceforge.net/"
@@ -394,18 +397,14 @@ msgstr ""
 "Upravljalnik prenosov GNOME.\n"
 "http://gtm.sourceforge.net/"
 
-#: applet/dialog-new.c:53 src/dialog-new.c:54 src/dialog-prop.c:62
-msgid "Invalid URL"
-msgstr "Neveljaven URL"
+#: src/dialog-new.c:52
+msgid "Invalid URL."
+msgstr "Neveljaven URL."
 
 #. URL
-#: applet/dialog-new.c:189 src/dialog-new.c:141
+#: applet/dialog-new.c:189 src/dialog-new.c:161
 msgid "Please enter URL of the file to download:"
 msgstr "Prosim vpi¹ite URL datoteke za sprejem:"
-
-#: src/dialog-new.c:168
-msgid "GTM - New file to download"
-msgstr "GTM - Nova datoteka za sprejem"
 
 #: src/dialog-numdown.c:182
 msgid "Invalid URLs."
@@ -419,44 +418,40 @@ msgstr "Najmanj¹e ¹tevilo je veèje od najveèjega."
 msgid "Can't suggest directory as it would not be the same for all URLs."
 msgstr "Ne morem predlagati imenika, ker ne bi bil enak za vse URLje."
 
-#: src/dialog-numdown.c:319
-msgid "No URLs match a directory."
-msgstr "Noben URL ne ustreza imeniku."
-
 #. Pre-URL
-#: src/dialog-numdown.c:352
+#: src/dialog-numdown.c:346
 msgid "Part of URL before number:"
 msgstr "Del URLja pred ¹tevilko:"
 
 #. Numbers From/To
-#: src/dialog-numdown.c:362
+#: src/dialog-numdown.c:356
 msgid "Numbers:"
 msgstr "©tevilke:"
 
-#: src/dialog-numdown.c:369
+#: src/dialog-numdown.c:363
 msgid "From: "
 msgstr "Od: "
 
-#: src/dialog-numdown.c:382
+#: src/dialog-numdown.c:376
 msgid "To: "
 msgstr "Do: "
 
-#: src/dialog-numdown.c:400
+#: src/dialog-numdown.c:394
 msgid "Number of digits to pad leading zeroes to:"
 msgstr "©tevilo cifer za zapolnitev z vodilnimi nulami:"
 
 #. Post-URL
-#: src/dialog-numdown.c:415
+#: src/dialog-numdown.c:409
 msgid "Part of URL after number:"
 msgstr "Del URLja za ¹tevilko:"
 
-#: src/dialog-numdown.c:439
-msgid "GTM - Numeric Download"
-msgstr "GTM - ©tevilèni sprejem"
+#: src/dialog-numdown.c:433
+msgid "Numeric Download"
+msgstr "_©tevilèen sprejem"
 
 #: src/dialog-restart.c:49
-msgid "GTM - Restart selected files"
-msgstr "GTM - Zaèni znova s prenosom izbranih datotek"
+msgid "Restart selected files"
+msgstr "Zaèni znova s prenosom izbranih datotek"
 
 #: src/dialog-restart.c:54
 msgid ""
@@ -467,8 +462,8 @@ msgstr ""
 "Ste preprièani, da ¾elite znova zaèeti prenos izbranih datotek?"
 
 #: src/dialog-remove.c:50
-msgid "GTM - Remove selected files from list"
-msgstr "GTM - Odstrani izbrane datoteke s seznama"
+msgid "Remove selected files from list"
+msgstr "S seznama odstrani izbrane datoteke"
 
 #: src/dialog-remove.c:55
 msgid "Do you really want to remove selected files from the list?"
@@ -527,8 +522,8 @@ msgid "Default download dir:"
 msgstr "Privzet sprejemni imenik:"
 
 #: src/dialog-prefs.c:539
-msgid "GTM - Def Download Dir"
-msgstr "GTM - Sprejemni imenik"
+msgid "Def Download Dir"
+msgstr "Privzet sprejemni imenik"
 
 #: src/dialog-prefs.c:548
 msgid "Number retries:"
@@ -595,8 +590,8 @@ msgid "Use beep"
 msgstr "Uporabi pisk"
 
 #: src/dialog-prefs.c:853
-msgid "GTM - Preferences"
-msgstr "GTM - Nastavitve"
+msgid "Preferences"
+msgstr "Nastavitve"
 
 #. Create the notebook pages
 #: src/dialog-prefs.c:866 src/dialog-prop.c:252
@@ -628,6 +623,10 @@ msgstr "Prikaz"
 msgid "Sound"
 msgstr "Zvok"
 
+#: applet/dialog-new.c:53 src/dialog-prop.c:62
+msgid "Invalid URL"
+msgstr "Neveljaven URL"
+
 #: src/dialog-prop.c:77
 msgid "Old URL filename must be the same on the new URL"
 msgstr "Datoteka s starega URL mora biti enaka tisti na novem"
@@ -636,18 +635,14 @@ msgstr "Datoteka s starega URL mora biti enaka tisti na novem"
 msgid "URL:"
 msgstr "URL:"
 
-#: src/dialog-prop.c:235
-msgid "GTM - Properties"
-msgstr "GTM - Nastavitve"
-
 #. URLs
 #: applet/dialog-add.c:246 src/dialog-add.c:206
 msgid "URLs to be added"
 msgstr "URLji, ki naj se dodajo"
 
 #: src/dialog-add.c:243
-msgid "GTM - Add files to download"
-msgstr "GTM - Dodaj datoteke za sprejem"
+msgid "Add files to download"
+msgstr "Dodaj datoteke za sprejem"
 
 #: src/dialog-stats.c:96
 msgid "List summary"
@@ -674,27 +669,27 @@ msgstr "Preostalo (kB)"
 msgid "Progress"
 msgstr "Napredek"
 
-#: src/wget-log.c:88
+#: src/wget-log.c:89
 msgid "Socket error when downloading URL:\n"
 msgstr "Na vtièu se je zgodila napaka ob sprejemanju URLja:\n"
 
-#: src/wget-log.c:91 src/wget-log.c:97
+#: src/wget-log.c:92 src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Povezava zavrnjena ob prena¹anju URLja:\n"
 
-#: src/wget-log.c:94
+#: src/wget-log.c:95
 msgid "No route to host:\n"
 msgstr "Ni poti do gostitelja:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:101
 msgid "Host not found when downloading URL:\n"
 msgstr "Stre¾nik ni bil najden ob prena¹anju URLja:\n"
 
-#: src/wget-log.c:103
+#: src/wget-log.c:104
 msgid "Unknown error when downloading URL:\n"
 msgstr "Neznana napaka med prena¹anjem URLja:\n"
 
-#: src/wget-log.c:112 src/wget-log.c:119
+#: src/wget-log.c:113 src/wget-log.c:120
 msgid "File not found when downloading URL:\n"
 msgstr "Datoteka ni bila najdena ob prena¹anju URLja:\n"
 
@@ -739,6 +734,10 @@ msgstr "Napaka CORBAe"
 msgid "GTM Applet - Add files to download"
 msgstr "GTM vstavek - Dodaj datoteke za sprejem"
 
+#: applet/dialog-add.c:265
+msgid "GTM - Add Download Dir"
+msgstr "GTM - Dodaj sprejemni imenik"
+
 #: applet/dialog-new.c:184
 msgid "GTM Applet - New file to download"
 msgstr "GTM vstavek - Nova datoteka za sprejem"
@@ -771,13 +770,23 @@ msgstr "GTM vstavek - lastnosti"
 msgid "Bindings"
 msgstr "Povezave"
 
+#~ msgid "GTM - Download Dir"
+#~ msgstr "GTM - sprejemni imenik"
 
-# Smart report:
-# Total untranslated messages in file: 178 
-# Translations made:
-# full: 73
-# smart: 2
-# cond: 44
-# total: 119 ; distinct: 65
+#~ msgid "GTM - New file to download"
+#~ msgstr "GTM - Nova datoteka za sprejem"
 
+#~ msgid "No URLs match a directory."
+#~ msgstr "Noben URL ne ustreza imeniku."
 
+#~ msgid "GTM - Numeric Download"
+#~ msgstr "GTM - ©tevilèni sprejem"
+
+#~ msgid "GTM - Remove selected files from list"
+#~ msgstr "GTM - Odstrani izbrane datoteke s seznama"
+
+#~ msgid "GTM - Properties"
+#~ msgstr "GTM - Nastavitve"
+
+#~ msgid "GTM - Add files to download"
+#~ msgstr "GTM - Dodaj datoteke za sprejem"
