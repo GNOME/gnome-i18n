@@ -1,12 +1,12 @@
 # GTM eesti tõlge.
-# Copyright (C) 2001 Free Software Foundation, Inc.
-# Tõivo Leedjärv <leedjarv@interest.ee>, 2001.
+# Copyright (C) 2001, 2002 Free Software Foundation, Inc.
+# Tõivo Leedjärv <leedjarv@interest.ee>, 2001, 2002.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm 0.4\n"
-"POT-Creation-Date: 2001-10-28 02:03+0200\n"
-"PO-Revision-Date: 2001-10-28 02:05+0200\n"
+"POT-Creation-Date: 2002-02-11 20:02+0200\n"
+"PO-Revision-Date: 2002-02-11 20:05+0200\n"
 "Last-Translator: Tõivo Leedjärv <leedjarv@interest.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "Refusing request from CORBA client, URL already in the list:"
 msgstr "Ei täida CORBA päringut, URL on juba nimekirjas:"
 
-#: src/main.c:390
+#: src/main.c:391
 msgid "url to fetch"
 msgstr "url, mis laadida"
 
-#: src/main.c:390
+#: src/main.c:391
 msgid "URL"
 msgstr "URL"
 
@@ -29,22 +29,22 @@ msgstr "URL"
 #: applet/dialog-add.c:85 applet/dialog-add.c:108 applet/dialog-add.c:325
 #: applet/dialog-add.c:347 applet/dialog-new.c:128 src/dialog-add.c:63
 #: src/dialog-add.c:82 src/dialog-add.c:265 src/dialog-add.c:286
-#: src/dialog-new.c:129 src/main.c:429
+#: src/dialog-new.c:129 src/main.c:430
 msgid "URL:\n"
 msgstr "URL:\n"
 
 #: src/dialog-add.c:85 src/dialog-add.c:289 src/dialog-new.c:130
-#: src/main.c:431
+#: src/main.c:432
 msgid "already in the list"
 msgstr "juba olemas nimekirjas"
 
 #. GTM Server couldn't be started
 #: applet/dialog-add.c:94 applet/dialog-add.c:333 applet/dialog-new.c:122
-#: applet/gtm_applet.c:193 src/main.c:436
+#: applet/gtm_applet.c:253 src/main.c:437
 msgid "Couldn't start GTM"
 msgstr "Ei suuda käivitada GTMi"
 
-#: src/main.c:477
+#: src/main.c:478
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -327,10 +327,10 @@ msgstr "Häälestus"
 
 #. Use proxy
 #: applet/dialog-add.c:287 applet/dialog-new.c:242
-#: src/dialog-common-elements.c:78 src/dialog-prefs.c:435
+#: src/dialog-common-elements.c:78 src/dialog-prefs.c:464
 #: src/dialog-prop.c:154 src/download-info.c:241
 msgid "Use proxy"
-msgstr "Kasuta proxyt"
+msgstr "Kasuta proksit"
 
 #: applet/dialog-add.c:293 applet/dialog-new.c:248
 #: src/dialog-common-elements.c:85 src/dialog-prop.c:186
@@ -516,182 +516,186 @@ msgstr "FTP"
 msgid "HTTPS"
 msgstr "HTTPS"
 
+#: src/dialog-prefs.c:470
+msgid "Same proxy for all protocols"
+msgstr "Sama proksi kõikidele protokollidele"
+
 #. Proxy username
-#: src/dialog-prefs.c:444
+#: src/dialog-prefs.c:479
 msgid "Username:"
 msgstr "Kasutajanimi:"
 
 #. Proxy password
-#: src/dialog-prefs.c:453
+#: src/dialog-prefs.c:488
 msgid "Password:"
 msgstr "Parool:"
 
 #. Proxy for HTTP
-#: src/dialog-prefs.c:463
+#: src/dialog-prefs.c:498
 msgid "HTTP:"
 msgstr "HTTP:"
 
 #. Proxy for FTP
-#: src/dialog-prefs.c:472
+#: src/dialog-prefs.c:507
 msgid "FTP:"
 msgstr "FTP:"
 
 #. Proxy for HTTPS
-#: src/dialog-prefs.c:482
+#: src/dialog-prefs.c:517
 msgid "HTTPS:"
 msgstr "HTTPS:"
 
-#: src/dialog-prefs.c:559
+#: src/dialog-prefs.c:607
 msgid "Interface to connect:"
 msgstr "Liides, millega ühendada:"
 
-#: src/dialog-prefs.c:567
+#: src/dialog-prefs.c:615
 msgid "Check interface time (ms):"
 msgstr "Liidese kontrollimise aeg (ms):"
 
-#: src/dialog-prefs.c:580
+#: src/dialog-prefs.c:628
 msgid "Simultaneous:"
 msgstr "Paralleelne:"
 
-#: src/dialog-prefs.c:590
+#: src/dialog-prefs.c:638
 msgid "Manual stop disables auto download"
 msgstr "Manuaalne lõpetamine tühistab automaatse allalaadimise"
 
-#: src/dialog-prefs.c:596
+#: src/dialog-prefs.c:644
 msgid "Stop download on link loss"
 msgstr "Lõpeta allalaadimine ühenduse katkemisel"
 
-#: src/dialog-prefs.c:602
+#: src/dialog-prefs.c:650
 msgid "Remember whether auto download is paused"
 msgstr "Pea meeles automaatse allalaadimise olek"
 
-#: src/dialog-prefs.c:663
+#: src/dialog-prefs.c:711
 msgid "Default download dir:"
 msgstr "Vaikimisi allalaadimise kataloog:"
 
-#: src/dialog-prefs.c:666
+#: src/dialog-prefs.c:714
 msgid "Def Download Dir"
 msgstr "Vaikimisi allalaadimise kataloog"
 
-#: src/dialog-prefs.c:675
+#: src/dialog-prefs.c:723
 msgid "Timeout (seconds):"
 msgstr "Ajalävi (sekundit):"
 
-#: src/dialog-prefs.c:686
+#: src/dialog-prefs.c:734
 msgid "Number retries:"
 msgstr "Uuesti proovitakse:"
 
-#: src/dialog-prefs.c:690
+#: src/dialog-prefs.c:738
 msgid "Unlimited"
 msgstr "Piiramatult"
 
-#: src/dialog-prefs.c:693
+#: src/dialog-prefs.c:741
 msgid "Limited"
 msgstr "Piiratult"
 
-#: src/dialog-prefs.c:704
+#: src/dialog-prefs.c:752
 msgid "Use passive FTP"
 msgstr "Kasuta passiivset FTPd"
 
-#: applet/dialog-prop.c:163 src/dialog-prefs.c:711
+#: applet/dialog-prop.c:163 src/dialog-prefs.c:759
 msgid "Presume Protocol:"
 msgstr "Eelda protokoll:"
 
 #. Shell command on completion
-#: src/dialog-prefs.c:726
+#: src/dialog-prefs.c:774
 msgid "Run command when all downloads completed:"
 msgstr "Kui allalaadimine on lõpetatud, käivita käsk:"
 
-#: src/dialog-prefs.c:735
+#: src/dialog-prefs.c:783
 msgid "Run Now"
 msgstr "Käivita kohe"
 
-#: src/dialog-prefs.c:828
+#: src/dialog-prefs.c:876
 msgid ""
 "Overriding download dir on URL addition dialogs changes default download dir"
 msgstr ""
 "Allalaadimise kataloogi määramine URLi lisamise dialoogis muudab vaikimisi "
 "allalaadimise kataloogi"
 
-#: src/dialog-prefs.c:836
+#: src/dialog-prefs.c:884
 msgid "Confirm remove when transfer incomplete"
 msgstr "Küsi kinnitust pooliku faili eemaldamisel"
 
-#: src/dialog-prefs.c:843
+#: src/dialog-prefs.c:891
 msgid "Confirm remove completed transfers"
 msgstr "Küsi kinnitust lõpetatud failide eemaldamisel"
 
-#: src/dialog-prefs.c:850
+#: src/dialog-prefs.c:898
 msgid "Confirm restart"
 msgstr "Küsi kinnitust uuesti alustamisel"
 
-#: applet/dialog-prop.c:210 src/dialog-prefs.c:857
+#: applet/dialog-prop.c:210 src/dialog-prefs.c:905
 msgid "Confirm drag and drop URL"
 msgstr "Küsi kinnitust drag'n'drop URLide puhul"
 
-#: src/dialog-prefs.c:910
+#: src/dialog-prefs.c:958
 msgid "Toolbar style:"
 msgstr "Tööriistareal on:"
 
-#: src/dialog-prefs.c:925
+#: src/dialog-prefs.c:973
 msgid "File list refresh rate (ms):"
 msgstr "Failide nimekirja värskendamise aeg (ms):"
 
-#: src/dialog-prefs.c:937
+#: src/dialog-prefs.c:985
 msgid "Show list statistics"
 msgstr "Näita nimekirja statistikat"
 
-#: src/dialog-prefs.c:942
+#: src/dialog-prefs.c:990
 msgid "Show page statistics"
 msgstr "Näita lehekülje statistikat"
 
-#: src/dialog-prefs.c:947
+#: src/dialog-prefs.c:995
 msgid "Auto hide download info page"
 msgstr "Peida allalaadimise info automaatselt"
 
-#: src/dialog-prefs.c:952
+#: src/dialog-prefs.c:1000
 msgid "Auto hide download info page timeout (ms):"
 msgstr "Info automaatselt peitmise ajalävi (ms):"
 
-#: src/dialog-prefs.c:1019
+#: src/dialog-prefs.c:1067
 msgid "Use sound"
 msgstr "Kasuta häält"
 
-#: src/dialog-prefs.c:1024
+#: src/dialog-prefs.c:1072
 msgid "Use beep"
 msgstr "Kasuta piiksu"
 
-#: src/dialog-prefs.c:1065
+#: src/dialog-prefs.c:1113
 msgid "Preferences"
 msgstr "Sätted"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:1078 src/dialog-prop.c:251
+#: src/dialog-prefs.c:1126 src/dialog-prop.c:251
 msgid "Proxy"
-msgstr "Proxy"
+msgstr "Proksi"
 
-#: src/dialog-prefs.c:1082
+#: src/dialog-prefs.c:1130
 msgid "Auto"
 msgstr "Automaatne"
 
 #. Create the notebook pages
-#: applet/dialog-prop.c:300 src/dialog-prefs.c:1086 src/dialog-prop.c:247
+#: applet/dialog-prop.c:300 src/dialog-prefs.c:1134 src/dialog-prop.c:247
 msgid "Download"
 msgstr "Allalaadmine"
 
-#: src/dialog-prefs.c:1090
+#: src/dialog-prefs.c:1138
 msgid "Directories"
 msgstr "Kataloogid"
 
-#: applet/dialog-prop.c:304 src/dialog-prefs.c:1094
+#: applet/dialog-prop.c:304 src/dialog-prefs.c:1142
 msgid "Confirmations"
 msgstr "Kinnitused"
 
-#: src/dialog-prefs.c:1098
+#: src/dialog-prefs.c:1146
 msgid "Display"
 msgstr "Välimus"
 
-#: src/dialog-prefs.c:1102
+#: src/dialog-prefs.c:1150
 msgid "Sound"
 msgstr "Hääl"
 
@@ -784,23 +788,27 @@ msgstr ""
 msgid "Can't write to target directory:\n"
 msgstr "Ei saa sihtkataloogi kirjutada:\n"
 
-#: applet/gtm_applet.c:495
+#: applet/gtm_applet.c:248
+msgid "No network connection"
+msgstr "Võrguühendust ei ole"
+
+#: applet/gtm_applet.c:555
 msgid "Drop URL from netscape, gmc, gftp..."
 msgstr "Tiri URL netscapest, gmc-st, gftp-st..."
 
-#: applet/gtm_applet.c:538
+#: applet/gtm_applet.c:598
 msgid "Properties..."
 msgstr "Häälestus..."
 
-#: applet/gtm_applet.c:544
+#: applet/gtm_applet.c:604
 msgid "About..."
 msgstr "Info..."
 
-#: applet/dialog-prop.c:239 applet/gtm_applet.c:550
+#: applet/dialog-prop.c:239 applet/gtm_applet.c:610
 msgid "New URL"
 msgstr "Uus URL"
 
-#: applet/dialog-prop.c:240 applet/gtm_applet.c:556
+#: applet/dialog-prop.c:240 applet/gtm_applet.c:616
 msgid "Open GTM"
 msgstr "Ava GTM"
 
