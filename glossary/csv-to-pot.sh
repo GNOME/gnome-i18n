@@ -30,7 +30,7 @@ cat <<!
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-02-22 23:47+0000\n"
+"POT-Creation-Date: `date +'%Y-%m-%d %H:%M%z'`\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,4 +41,5 @@ msgstr ""
 !
 
 #Yes this is the most simple awk script you've ever seen :)
-awk -F'|' '{print "#"$2,"\nmsgid "$1,"\nmsgstr \"\"\n"}' $GLOSSARY_CSV
+awk -F'|' '{if ($2 != "") print "#. "$2; print "msgid "$1,"\nmsgstr \"\"\n"}' \
+$GLOSSARY_CSV
