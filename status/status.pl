@@ -179,10 +179,7 @@ if (open (LANGMOD, "$htmldir/langmod.dat")){
 my $modflag = 0; # does we need write modinfo?
 
 foreach $mod (sort (keys %modules)){
-    if (${$modules{$mod}->[0]}=~/extra-po/){ # don't generate in extra-po
-    } else {
-	generatepot($mod);
-    }
+    generatepot($mod);
     if (-d "$cvsroot/${$modules{$mod}->[0]}"){
 	my @result = getmsgfmt("pot",$mod);
 	${ $modinfo { $mod } -> [0] } = ($result[0] - 1);
