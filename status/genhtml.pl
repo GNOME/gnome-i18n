@@ -23,6 +23,8 @@
 #  With help from: Kenneth Christiansen <kenneth@gnu.org>
 #		   Kjartan Maraas 
 #		   Dand
+#		   Keld Simonsen
+#		   Carlos Perelló Marín <carlos@gnome-db.org>
 
 #use strict; #fix the file, so this can be enabled
 
@@ -153,6 +155,7 @@ if (open (MODINFO, "$htmldir/modinfo.dat")){
     ($mod, @info) = split(/,/);                                                     
     $index = 0;
 
+$path= $mod;
 if ($mod=~/\/po$/){
     $tmp = $`;
     $mod = ($mod=~/helix-install/) ? "rpm (helix-install)" : $tmp;
@@ -164,6 +167,7 @@ if ($mod=~/\/po$/){
 	${$modinfo{$mod}->[$index]} =  $info;                  
     $index++;
     }
+    $modpath{$mod} = $path;
     $totals+=${$modinfo{$mod}->[0]}
     }
 }    
@@ -202,7 +206,11 @@ if ($mod=~/\/po$/){
 
 
 open  TABLE, ">$htmldir/status.shtml" || die "can't open $htmldir/status.shtml";
-print TABLE "<table cellpadding=1 cellspacing=1 border=1 width=\"90%\"><tr align=center><td></td>";
+open  DATE, "date '+%a %Y-%m-%d %T %z' |" || die "can't date";
+$date = <DATE> ; close DATE ;
+print TABLE "<html><head><title>Gnome translation status - $date</title></head>\n";
+print TABLE "<body><h1>Gnome translation status<br>$date</h1>\n";
+print TABLE "<table cellpadding=1 cellspacing=1 border=1 width=\"90%\"><tr align=center><td></td>\n";
 
 #First string with langs
 foreach $lang (sort keys %langinfo){
@@ -210,7 +218,7 @@ foreach $lang (sort keys %langinfo){
     $link = "$details_" . $langs_red . ".shtml";
     print TABLE "<td><a href=\"$link\">$langs_red</a></td>\n";
 }
-    print TABLE "<td></td></tr>";
+    print TABLE "<td></td></tr>\n";
 
 foreach $mod (sort keys %modinfo){
     $grey++;
@@ -225,10 +233,10 @@ foreach $mod (sort keys %modinfo){
 }
     
 # Totals
-    print TABLE "<tr align=center bgcolor=\"#ffd700\"><td><b>Totals:</b></td>";
+    print TABLE "<tr align=center bgcolor=\"#ffd700\"><td><b>Totals:</b></td>\n";
 foreach $lang (sort keys %langinfo){
     $tot = int(${$langinfo{$lang}->[0]}*100/$totals);
-    print TABLE "<td><b>$tot%</b></td>\n";
+    print TABLE "<td align=right><b>$tot%</b></td>\n";
 }
     print TABLE "<td></td></tr>";
 
@@ -240,8 +248,15 @@ foreach $lang (sort keys %langinfo){
         print TABLE "<td><a href=\"$link\">$langs_red</a></td>\n";
     }
     print TABLE "<td></td></tr></table>";
-    print TABLE scalar localtime(time);    
 
+    print TABLE "<p>Total number of translatable strings in above modules: $totals<p>\n";
+    print TABLE "$date\n<br><br>\n" ;
+
+    print TABLE "Stable branches with tags: <br>\n" ;
+    print TABLE " <br>\n" ;
+
+    print TABLE "</body></html>\n" ;
+    
 # status printed.
 
 # details.shtml
@@ -262,17 +277,48 @@ foreach $lang (sort keys %langinfo){
 		."<th>$translated</th><th>$fuzzy</th>"
 		."<th>$untranslated</th><th>%</th>";
 
+    $stringstot =0; $trnstot =0; $fuzzytot= 0; $untrnstot=0 ;
+    print TABLE2 "$date<br>\n" ;
     foreach $mod (sort keys %modinfo){
         $grey++;
-        $trbg = (($gray++) % 2) ? '#deded5' : '#c5c2c5';	
-	$percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]}) . "%";
+        $trbg = (($gray++) % 2) ? '#deded5' : '#c5c2c5';
+	$percent = 0;
+	if (${$modinfo{$mod}->[0]}) {
+		$percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
+	}
 	$strings = $strings{$lang} || "strings";
 	$trns = ("${$langmod{$mod}->{$lang}->[0]}") ? "${$langmod{$mod}->{$lang}->[0]} $strings" : "-";
 	$fuzzy = ("${$langmod{$mod}->{$lang}->[1]}") ? "${$langmod{$mod}->{$lang}->[1]} $strings" : "-";
 	$untrns = ("${$langmod{$mod}->{$lang}->[2]}") ? "${$langmod{$mod}->{$lang}->[2]} $strings" : "-";
-	print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>$mod</td><td>$trns</td><td>$fuzzy</td><td>$untrns</td>" .
-		     "<td>$percent</td>";
+	
+	$_ = $mod;
+	s/\//-/;
+	s/-po//;
+	$newname = $_;
+
+	if ($percent eq 0) {
+	    print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
+	    <a href=\"po/$newname.pot\">$mod</a></td><td align=right>$trns</td>
+	    <td align=right>$fuzzy</td><td align=right>$untrns</td>" .
+	    "<td align=right>$percent%</td>";
+	}else{
+	    print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
+	    <a href=\"po/$newname-$lang.po\">$mod</a></td><td align=right>
+	    $trns</td><td align=right>$fuzzy</td><td align=right>$untrns</td>" .
+	    "<td align=right>$percent%</td>";
+	}
+	$stringstot += ${$modinfo{$mod}->[0]};
+	$trnstot += $trns; 
+	$fuzzytot += $fuzzy; 
+	$untrnstot += $untrns; 
+	
     }
+    $percent = sprintf("%.2f",$trnstot*100/$stringstot);
+    print TABLE2 "<tr bgcolor=\"#ffd700\" align=center><td align=left>Total</td>
+    	<td align=right>$trnstot $strings</td>
+	<td align=right>$fuzzytot $strings</td>
+	<td align=right>$untrnstot $strings</td>\n" .
+	"<td align=right>$percent%</td>\n";
     print TABLE2 "</table></center>";
 }
 
@@ -297,7 +343,7 @@ sub printmodule{
 	$string.= ($release gt 0) ? " [$release]" : "";
     }
     
-    print TABLE "$string</td>";	
+    print TABLE "$string</td>\n";	
     }
     
     
@@ -305,9 +351,18 @@ sub printlang{
     my ($mod, $lang) = @_;
     my ($percent, $color);
     
-    $percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
+    $percent = 0;
+    if (${$modinfo{$mod}->[0]}) {
+    	$percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
+    }
+
+    $_ = $mod;
+    s/\//-/;
+    s/-po//;
+    $newname = $_;
+
     if ($percent eq 0){
-    print TABLE "<td>-</td>";
+        print TABLE "<td align=right><a href=\"po/$newname.pot\">-</a></td>\n";
     }else{
     if ($percent == 100){		$color = $percent_colors{"100%"};	
 	} elsif ($percent > 95){	$color = $percent_colors{">95%"};	
@@ -321,6 +376,9 @@ sub printlang{
 	} else {			$per =  sprintf("%x",$percent*5);
 					$color = "#ff000" . "$per"; }
 
-    	print TABLE "<td><font color='$color'>$percent%</font></td>";
+	print TABLE "<td align=right>
+		<a href=\"po/$newname-$lang.po\">
+		<font color='$color'>
+		$percent%</font></a></td>\n";
     }
 }
