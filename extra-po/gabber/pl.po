@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gabber\n"
-"POT-Creation-Date: 2002-02-13 02:04+0100\n"
-"PO-Revision-Date: 2002-02-13 11:59+0100\n"
+"POT-Creation-Date: 2002-05-07 01:44+0200\n"
+"PO-Revision-Date: 2002-05-07 01:50+0200\n"
 "Last-Translator: GNOME PL Team <translators@gnome.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -152,14 +152,6 @@ msgid "day"
 msgstr "dzieñ"
 
 #: src/ContactInfoInterface.cc:1
-msgid "(last logged out"
-msgstr "(ostatnie wylogowanie"
-
-#: src/ContactInfoInterface.cc:1
-msgid "(idle"
-msgstr "(bezczynno¶æ od"
-
-#: src/ContactInfoInterface.cc:1
 msgid " day"
 msgstr " dzieñ"
 
@@ -190,10 +182,6 @@ msgstr " s."
 #: src/ContactInfoInterface.cc:1
 msgid " secs"
 msgstr " s."
-
-#: src/ContactInfoInterface.cc:1
-msgid " ago"
-msgstr " temu"
 
 #. Set the tooltip as well
 #: src/ContactInfoInterface.cc:1 src/ContactInfoInterface.cc:1
@@ -417,6 +405,12 @@ msgid "Receive File(s) from %s"
 msgstr "Odbiór plików od u¿ytkownika %s"
 
 #: src/FTInterface.cc:1
+#, c-format
+msgid "%s tried to offer files, but all the URLs sent are invalid."
+msgstr ""
+"U¿ytkownik %s zaoferowa³ pliki, lecz wszystkie wys³ane URL-e s± niepoprawne."
+
+#: src/FTInterface.cc:1
 msgid "Error, a file save path must be specified."
 msgstr "B³±d, nale¿y podaæ ¶cie¿kê do zapisu."
 
@@ -472,7 +466,7 @@ msgstr ""
 msgid "Hide details"
 msgstr "Ukryj szczegó³y"
 
-#: src/FTInterface.cc:1 ui/FTTransfer_dlg.glade.h:1
+#: src/FTInterface.cc:1
 msgid "Show details"
 msgstr "Wy¶wietl szczegó³y"
 
@@ -525,6 +519,33 @@ msgstr "Otrzymano zaproszenie do pokoju %s"
 #: src/GCInterface.cc:1
 msgid "Group Chat Invitation from "
 msgstr "Zaproszenie do rozmowy grupowej od "
+
+#: src/GabberApp.cc:1
+msgid ""
+"An error occurred while trying to parse the received XML.\n"
+"You have been disconnected."
+msgstr ""
+"Przy analizie sk³adniowej otrzymanego XML-a wyst±pi³ b³±d.\n"
+"Po³±czenie zosta³o przerwane."
+
+#: src/GabberApp.cc:1
+msgid ""
+"\n"
+"Attempting to reconnect..."
+msgstr ""
+"\n"
+"Próba ponownego nawi±zania po³±czenia..."
+
+#. This was annoying anyway
+#. *     Gnome::Dialog* d;
+#. *     string question = _("Are you sure you want to disconnect from Jabber?");
+#. *     d = manage(Gnome::Dialogs::question_modal(question,
+#. *						     slot(this, &GabberWin::handle_disconnect_qry)));
+#.
+#: src/GabberApp.cc:1 src/GabberWin.cc:1 src/GabberWin.cc:1
+#: src/GabberWin.cc:1
+msgid "Logged out"
+msgstr "Wylogowany"
 
 #: src/GabberApp.cc:1 src/GabberApp.cc:1
 msgid ""
@@ -583,6 +604,15 @@ msgstr ""
 #: src/GabberApp.cc:1
 msgid "Transmitter error. Disconnected: "
 msgstr "B³±d przy transmisji. Roz³±czony: "
+
+#: src/GabberApp.cc:1
+#, c-format
+msgid ""
+"Unfortunately, %s does not support Invisible.\n"
+"Setting to Available."
+msgstr ""
+"Niestety, serwer %s nie obs³uguje stanu Niewidoczny.\n"
+"Stan zostanie ustawiony na Dostêpny."
 
 #: src/GabberGPG.cc:1
 msgid "The signature was valid"
@@ -698,16 +728,6 @@ msgstr " [wstrzymany]"
 msgid "Disconnected"
 msgstr "Roz³±czony"
 
-#. This was annoying anyway
-#. *     Gnome::Dialog* d;
-#. *     string question = _("Are you sure you want to disconnect from Jabber?");
-#. *     d = manage(Gnome::Dialogs::question_modal(question,
-#. *						     slot(this, &GabberWin::handle_disconnect_qry)));
-#.
-#: src/GabberWin.cc:1 src/GabberWin.cc:1 src/GabberWin.cc:1
-msgid "Logged out"
-msgstr "Wylogowany"
-
 #. Update status bar
 #: src/GabberWin.cc:1
 msgid "Logged in"
@@ -753,13 +773,13 @@ msgstr "Thomas \"temas\" Muldowney <temas@box5.net>"
 msgid "Copyright (c) 1999-2002 Julian Missig and Dave Smith"
 msgstr "Copyright (c) 1999-2002 Julian Missig and Dave Smith"
 
-#: src/GabberWin.cc:1 src/GabberWin.cc:1 src/StatusInterface.cc:1
-msgid "Online"
-msgstr "Na linii"
-
 #: src/GabberWin.cc:1
 msgid "Done for the day. I'll get back to you tomorrow."
 msgstr "Koniec na dzisiaj. Wrócê jutro."
+
+#: src/GabberWin.cc:1
+msgid "Online"
+msgstr "Na linii"
 
 #: src/GabberWin.cc:1
 msgid "Chat with me!"
@@ -776,6 +796,11 @@ msgstr "Przez jaki¶ czas bêdê nieobecny."
 #: src/GabberWin.cc:1
 msgid "Sorry, I'm busy right now."
 msgstr "Niestety, teraz jestem zajêty."
+
+#. Update the status bar   
+#: src/GabberWin.cc:1
+msgid "Reconnecting..."
+msgstr "Ponowne nawi±zywanie po³±czenia..."
 
 #. Update the status bar   
 #: src/GabberWin.cc:1
@@ -874,7 +899,7 @@ msgid "Group Chat in %s"
 msgstr "Grupowa rozmowa w pokoju %s"
 
 #. Setup a message object
-#: src/MessageViews.cc:1
+#: src/MessageViews.cc:1 src/MessageViews.cc:1
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "u¿ytkownik %s zmieni³ temat na: %s"
@@ -887,11 +912,6 @@ msgstr "Sesja roz³±czona"
 #, c-format
 msgid "%d members"
 msgstr "%d cz³onków"
-
-#. Setup a message object
-#: src/MessageViews.cc:1
-msgid "/me has changed the subject to: "
-msgstr "/me zmieni³ temat na: "
 
 #: src/MessageViews.cc:1 ui/GCJoin_dlg.glade.h:1
 msgid "Jabber Group Chat 1.0"
@@ -935,6 +955,8 @@ msgstr " jest teraz na linii"
 msgid " is now offline"
 msgstr " jest teraz roz³±czony"
 
+#. The jid is stored in the Gtk:: CTree in UTF-8,
+#. while the nickname is in the local encoding.
 #: src/RosterView.cc:1
 #, c-format
 msgid "Are you sure you want to remove %s from your roster?"
@@ -992,12 +1014,12 @@ msgid "Information sent."
 msgstr "Informacje zosta³y wys³ane."
 
 #: ui/AUDruid_win.glade.h:1 ui/EditGroups_dlg.glade.h:1
-msgid "<- Remove"
-msgstr "<- Usuñ"
+msgid "&lt;- Remove"
+msgstr "&lt;- Usuñ"
 
 #: ui/AUDruid_win.glade.h:1 ui/EditGroups_dlg.glade.h:1
-msgid "Add ->"
-msgstr "Dodaj ->"
+msgid "Add -&gt;"
+msgstr "Dodaj -&gt;"
 
 #: ui/AUDruid_win.glade.h:1
 msgid "Add Method"
@@ -1650,51 +1672,6 @@ msgstr "Wys³anie pliku - Gabber"
 msgid "Send this file to:"
 msgstr "Wys³anie pliku do u¿ytkownika:"
 
-#: ui/FTTransfer_dlg.glade.h:1
-#, no-c-format
-msgid "%P %%"
-msgstr "%P %%"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "0.0 kB"
-msgstr "0.00 KB"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "0.0 kB/sec"
-msgstr "0.0 KB/s."
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "Connecting..."
-msgstr "Nawi±zywanie po³±czenia..."
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "File Location:"
-msgstr "Po³o¿enie pliku:"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "File Size:"
-msgstr "Rozmiar pliku:"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "Sending - Gabber"
-msgstr "Wys³anie - Gabber"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "Sending to"
-msgstr "Wysy³anie do"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "Size Remaining:"
-msgstr "Pozosta³y rozmiar:"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "Stop"
-msgstr "Zatrzymaj"
-
-#: ui/FTTransfer_dlg.glade.h:1
-msgid "Transfer Speed:"
-msgstr "Szybko¶æ przesy³u:"
-
 #: ui/GCI_dlg.glade.h:1
 msgid "Contacts to Invite"
 msgstr "Zapraszane kontakty"
@@ -2339,11 +2316,6 @@ msgstr "jabber.com"
 
 #: ui/MessageRecv_win.glade.h:1 ui/MessageSend_win.glade.h:1
 #: ui/OOOChat_win.glade.h:1
-msgid "Encrypt this message"
-msgstr "Zaszyfrowanie tej wiadomo¶ci"
-
-#: ui/MessageRecv_win.glade.h:1 ui/MessageSend_win.glade.h:1
-#: ui/OOOChat_win.glade.h:1
 msgid "Info"
 msgstr "Informacja"
 
@@ -2351,10 +2323,6 @@ msgstr "Informacja"
 #, no-c-format
 msgid "Message from %s - Gabber"
 msgstr "Wiadomo¶æ od %s - Gabber"
-
-#: ui/MessageRecv_win.glade.h:1
-msgid "Read Next"
-msgstr "Przeczytaj nastêpn±"
 
 #: ui/MessageRecv_win.glade.h:1
 msgid "Reply..."
@@ -2367,6 +2335,10 @@ msgstr "Nadawca:"
 #: ui/MessageRecv_win.glade.h:1
 msgid "Time:"
 msgstr "Czas:"
+
+#: ui/MessageSend_win.glade.h:1 ui/OOOChat_win.glade.h:1
+msgid "Encrypt this message"
+msgstr "Zaszyfrowanie tej wiadomo¶ci"
 
 #: ui/MessageSend_win.glade.h:1
 msgid "Send _to:"
@@ -2502,10 +2474,6 @@ msgstr "_Witryna WWW:"
 #: ui/OOOChat_win.glade.h:1
 msgid "Attempting to close chat - Gabber"
 msgstr "Próba zamkniêcia rozmowy - Gabber"
-
-#: ui/OOOChat_win.glade.h:1
-msgid "Composing reply..."
-msgstr "Tworzenie odpowiedzi..."
 
 #: ui/OOOChat_win.glade.h:1
 msgid "Do you want to close the chat window anyway?"
@@ -2789,7 +2757,7 @@ msgid "Receiving"
 msgstr "Odbieranie"
 
 #: ui/Prefs_win.glade.h:1
-msgid "Right-click the panel and Add to Panel -> Status Dock."
+msgid "Right-click the panel and Add to Panel -&gt; Status Dock."
 msgstr "Dodaj do panelu dok stanu."
 
 #: ui/Prefs_win.glade.h:1
@@ -3265,3 +3233,12 @@ msgstr "http://www.jabberview.com/"
 #: ui/Welcome_win.glade.h:1
 msgid "jabber.org"
 msgstr "jabber.org"
+
+msgid "<- Remove"
+msgstr "<- Usuñ"
+
+msgid "Add ->"
+msgstr "Dodaj ->"
+
+msgid "Right-click the panel and Add to Panel -> Status Dock."
+msgstr "Dodaj do panelu dok stanu."
