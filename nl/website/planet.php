@@ -30,7 +30,6 @@ gnome_menu();
 <li><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a> <a href="http://www.livejournal.com/users/inverted_tree/data/rss">(rss)</a></li>
 <li><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a> <a href="http://www.moerman.org/~uwog/blog/wp-rss2.php">(rss)</a></li>
 <li><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a> <a href="http://geeklog.eyesopened.nl/index.rdf">(rss)</a></li>
-<li><a href="None" title="None">Reinout van Schouwen</a> <a href="http://vanschouwen.system-x.org/wp-rss2.php">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a> <a href="http://www.advogato.org/person/rbultje/rss.xml">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a> <a href="http://www.advogato.org/person/adrighem/rss.xml">(rss)</a></li>
 </ul>
