@@ -17,17 +17,21 @@
      "libgnomecanvas/po",
      "libgnomeui/po",
      "oaf/po",
-     "ximian-setup-tools/po");
+     "ximian-setup-tools/po"
+);
 
 @xml_i18n_tools_compliants = (
-    "gtranslator/po"
+    "gtranslator/po",
+    "ximian-setup-tools/po"
 );
 
 # it's for a current developer :-)
 #@langs = ( "uk" );
 
 
-@langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk vi wa zh_TW.Big5 zh_CN.GB2312 );
+@langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu 
+	      is it ja ko lt ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
+	      vi wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome2";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
@@ -120,9 +124,9 @@ foreach $lang (@langs){
 	    if ($result[1]){
 	       $total_msg += $result[1];
 	    }
-	       ${$langmod{$lang}->{$mod}->[0]} = @result[1];
-	       ${$langmod{$lang}->{$mod}->[1]} = @result[2];
-    	       ${$langmod{$lang}->{$mod}->[2]} = @result[3];
+	       ${$langmod{$lang}->{$mod}->[0]} = $result[1];
+	       ${$langmod{$lang}->{$mod}->[1]} = $result[2];
+    	       ${$langmod{$lang}->{$mod}->[2]} = $result[3];
 	}
     }
 	${$langinfo{$lang}->[0]} = $total_msg;
@@ -233,7 +237,7 @@ print "$language  $mod\n";
 }
 
 sub generatepot{
-    $mod = @_[0];
+    $mod = $_[0];
     my ($domain, $file);
     $xgettext_plus = "";
     $mod=~/\//;
