@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gabber\n"
-"POT-Creation-Date: 2002-01-16 18:12-0500\n"
-"PO-Revision-Date: 2002-01-17 17:33+0100\n"
+"POT-Creation-Date: 2002-01-27 18:55-0500\n"
+"PO-Revision-Date: 2002-01-29 02:56+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgid "Error receiving XML for Agent Browser, see standard output."
 msgstr "Fel vid mottagning av XML för agentbläddraren, se standard ut."
 
 #: src/AddContactDruid.cc:389 src/AddContactDruid.cc:531
-#: src/AgentInterface.cc:236 src/AgentInterface.cc:400
+#: src/AgentInterface.cc:236
 msgid "Error, this server does not support agents."
 msgstr "Fel, servern stöder inte agenter."
 
@@ -51,7 +51,6 @@ msgid "You must register with this agent first."
 msgstr "Du måste registrera med denna agent först."
 
 #: src/AddContactDruid.cc:560 ui/AUDruid_win.glade.h:32
-#: ui/RegDruid_win.glade.h:7
 msgid "Loading..."
 msgstr "Läser in..."
 
@@ -59,23 +58,23 @@ msgstr "Läser in..."
 msgid "Loading information from agent..."
 msgstr "Läser in information fråm agent..."
 
-#: src/AddContactDruid.cc:647
+#: src/AddContactDruid.cc:649
 msgid "Information loaded."
 msgstr "Informationen inläst."
 
-#: src/AddContactDruid.cc:654
+#: src/AddContactDruid.cc:656
 msgid "Error attempting to search agent."
 msgstr "Fel vid försök att söka efter agent."
 
-#: src/AddContactDruid.cc:696
+#: src/AddContactDruid.cc:698
 msgid "Searching..."
 msgstr "Söker..."
 
-#: src/AddContactDruid.cc:749
+#: src/AddContactDruid.cc:755
 msgid "Error "
 msgstr "Fel "
 
-#: src/AddContactDruid.cc:761
+#: src/AddContactDruid.cc:767
 msgid "Search completed."
 msgstr "Sökningen färdig."
 
@@ -84,52 +83,67 @@ msgstr "Sökningen färdig."
 msgid "Error occurred querying this agent. Please try again later."
 msgstr "Fel inträffade när agenten tillfrågades. Försök igen senare."
 
-#: src/AgentInterface.cc:455
+#: src/AgentInterface.cc:400
+#, c-format
+msgid "Error, %s does not support agents."
+msgstr "Fel, %s stöder inte agenter."
+
+#: src/AgentInterface.cc:454
 msgid "Loading registration information..."
 msgstr "Läser in registreringsinformation..."
 
-#: src/AgentInterface.cc:534
+#: src/AgentInterface.cc:579
+#, c-format
 msgid ""
-"Error attempting to register with agent.\n"
+"Error attempting to register with %s.\n"
 "\n"
-"The agent is either down or unreachable."
+"The agent is either down, unreachable, or misconfigured."
 msgstr ""
-"Fel vid försök att registrera hos agent.\n"
+"Fel vid försök att registrera hos %s.\n"
 "\n"
-"Agenten är antingen nere eller onåbar."
+"Agenten är antingen nere, onåbar eller felkonfigurerad."
 
-#: src/AgentInterface.cc:595
+#: src/AgentInterface.cc:639
 msgid "Sending registration information..."
 msgstr "Skickar registreringsinformation..."
 
-#: src/AgentInterface.cc:608
+#: src/AgentInterface.cc:652 src/AgentInterface.cc:657
 msgid "Registration Failed"
 msgstr "Registrering misslyckades"
 
+#: src/AgentInterface.cc:655
+#, c-format
+msgid ""
+"Registration Failed:\n"
+"%s"
+msgstr ""
+"Registrering misslyckades:\n"
+"%s"
+
 #. Subscribe to this new user
-#: src/AgentInterface.cc:669
+#: src/AgentInterface.cc:716
 msgid "Automatic subscription request."
 msgstr "Automatisk prenumerationsbegäran."
 
-#: src/AutoAway.cc:85
+#: src/AutoAway.cc:87
 msgid "Moving to extended away"
 msgstr "Går till utökad frånvaro"
 
-#: src/AutoAway.cc:98
+#: src/AutoAway.cc:100
 msgid "Starting auto-away"
 msgstr "Startar automatisk frånvaro"
 
 #. Update the status bar
-#: src/AutoAway.cc:109
+#: src/AutoAway.cc:111
 msgid "Returning from auto-away"
 msgstr "Återvänder från automatisk frånvaro"
 
 #. Format the string to be displayed
-#: src/AutoAway.cc:130
+#: src/AutoAway.cc:132
 msgid "Auto away for "
 msgstr "Automatisk frånvaro under "
 
-#: src/AutoAway.cc:132
+#: src/AutoAway.cc:134
 msgid "day"
 msgstr "dag"
 
@@ -177,8 +191,8 @@ msgstr "Närvarosignaturen är giltig"
 
 #. Set the tooltip as well
 #: src/ContactInfoInterface.cc:573 src/ContactInfoInterface.cc:574
-#: src/StatusInterface.cc:401 ui/ContactInfo_dlg.glade.h:29
-#: ui/Gabber_win.glade.h:37
+#: src/StatusInterface.cc:409 ui/ContactInfo_dlg.glade.h:29
+#: ui/Gabber_win.glade.h:38
 msgid "Presence is not signed"
 msgstr "Närvaron är inte signerad"
 
@@ -199,10 +213,10 @@ msgid "%s's Contact Information"
 msgstr "%ss kontaktinformation"
 
 #: src/ContactInfoInterface.cc:628 src/ContactInterface.cc:88
-#: src/ContactInterface.cc:203 src/FTInterface.cc:95 src/FTInterface.cc:182
-#: src/FTInterface.cc:277 src/FTInterface.cc:413 src/GCInterface.cc:193
+#: src/ContactInterface.cc:208 src/FTInterface.cc:96 src/FTInterface.cc:185
+#: src/FTInterface.cc:300 src/FTInterface.cc:436 src/GCInterface.cc:192
 #: src/GroupsInterface.cc:159 src/MessageViews.cc:409 src/MessageViews.cc:579
-#: src/MessageViews.cc:1068 src/MessageViews.cc:1690 src/URLInterface.cc:86
+#: src/MessageViews.cc:1071 src/MessageViews.cc:1693
 msgid " - Gabber"
 msgstr " - Gabber"
 
@@ -211,8 +225,8 @@ msgstr " - Gabber"
 msgid "%s's Computer"
 msgstr "%ss dator"
 
-#: src/ContactInfoInterface.cc:1119 src/ContactInfoInterface.cc:1126
-#: src/ContactInfoInterface.cc:1130
+#: src/ContactInfoInterface.cc:1123 src/ContactInfoInterface.cc:1130
+#: src/ContactInfoInterface.cc:1134
 msgid "yes"
 msgstr "ja"
 
@@ -220,12 +234,12 @@ msgstr "ja"
 msgid "Received Contacts(s) from "
 msgstr "Mottog kontakt(er) från "
 
-#: src/ContactInterface.cc:203
+#: src/ContactInterface.cc:208
 #, c-format
 msgid "Send Contacts(s) to %s"
 msgstr "Skicka kontakt(er) till %s"
 
-#: src/ContactInterface.cc:251
+#: src/ContactInterface.cc:256
 msgid "Jabber Contacts attached:"
 msgstr "Bifogade Jabber-kontakter:"
 
@@ -375,60 +389,56 @@ msgstr "Ny regel"
 msgid "Sorry, your server does not support Jabber filters."
 msgstr "Ledsen, din server stöder inte Jabber-filter."
 
-#: src/FTInterface.cc:95
+#: src/FTInterface.cc:96
 #, c-format
 msgid "Receive File(s) from %s"
 msgstr "Mottag fil(er) från %s"
 
-#: src/FTInterface.cc:143
+#: src/FTInterface.cc:144
 msgid "Error, a file save path must be specified."
 msgstr "Fel, en filsparningssökväg måste anges."
 
-#: src/FTInterface.cc:182
+#: src/FTInterface.cc:185
 #, c-format
 msgid "Send File to %s"
 msgstr "Skicka fil till %s"
 
-#: src/FTInterface.cc:208
-msgid "Error, a file must be specified."
-msgstr "Fel, en fil måste anges."
-
-#: src/FTInterface.cc:257
+#: src/FTInterface.cc:280
 msgid "Waiting for connection..."
 msgstr "Väntar på anslutning..."
 
-#: src/FTInterface.cc:277
+#: src/FTInterface.cc:300
 #, c-format
 msgid "Sending File to %s"
 msgstr "Skickar fil till %s"
 
-#: src/FTInterface.cc:394
+#: src/FTInterface.cc:417
 msgid "Receiving from"
 msgstr "Tar emot från"
 
 #. Show how big the file is
-#: src/FTInterface.cc:402 src/FTInterface.cc:405
+#: src/FTInterface.cc:425 src/FTInterface.cc:428
 msgid "Pending..."
 msgstr "Väntar..."
 
-#: src/FTInterface.cc:413
+#: src/FTInterface.cc:436
 #, c-format
 msgid "Receiving File from %s"
 msgstr "Mottar fil från %s"
 
-#: src/FTInterface.cc:439
+#: src/FTInterface.cc:462
 msgid "Connected, requesting file..."
 msgstr "Ansluten, begär fil..."
 
-#: src/FTInterface.cc:446
+#: src/FTInterface.cc:469
 msgid "Accepting connection..."
 msgstr "Accepterar anslutning..."
 
-#: src/FTInterface.cc:465
+#: src/FTInterface.cc:488
 msgid "Error, transfer unexpectedly ended."
 msgstr "Fel, överföringen tog oväntat slut."
 
-#: src/FTInterface.cc:466
+#: src/FTInterface.cc:489
 msgid ""
 "The file transfer has ended unexpectedly.\n"
 "The received portion of the file has been saved."
@@ -436,51 +446,51 @@ msgstr ""
 "Filöverföringen tog oväntat slut.\n"
 "Den mottagna delen av filen har sparats."
 
-#: src/FTInterface.cc:517
+#: src/FTInterface.cc:540
 msgid "Hide details"
 msgstr "Dölj detaljer"
 
-#: src/FTInterface.cc:524
+#: src/FTInterface.cc:547
 msgid "Show details"
 msgstr "Visa detaljer"
 
-#: src/FTInterface.cc:537
+#: src/FTInterface.cc:560
 msgid "Sending..."
 msgstr "Skickar..."
 
-#: src/FTInterface.cc:566
+#: src/FTInterface.cc:589
 msgid "Receiving data..."
 msgstr "Tar emot data..."
 
-#: src/FTInterface.cc:654
+#: src/FTInterface.cc:677
 msgid "Complete."
 msgstr "Färdig."
 
-#: src/FTInterface.cc:659
+#: src/FTInterface.cc:682
 msgid "Error, received more data than expected."
 msgstr "Fel, mottog mer data än väntat."
 
 #. Update the speed
-#: src/FTInterface.cc:684
+#: src/FTInterface.cc:707
 #, c-format
 msgid "%s/second"
 msgstr "%s/sekund"
 
-#: src/FTInterface.cc:691
+#: src/FTInterface.cc:714
 msgid "Under one minute remaining."
 msgstr "Mindre än en minut återstår."
 
-#: src/FTInterface.cc:697
+#: src/FTInterface.cc:720
 #, c-format
 msgid "%s hours, %s minutes remaining."
 msgstr "%s timmar, %s minuter återstår."
 
-#: src/FTInterface.cc:701
+#: src/FTInterface.cc:724
 #, c-format
 msgid "%s minutes remaining."
 msgstr "%s minuter återstår."
 
-#: src/GCInterface.cc:66 src/GCInterface.cc:217
+#: src/GCInterface.cc:66 src/GCInterface.cc:216
 #, c-format
 msgid "%s on IRC Server %s"
 msgstr "%s på IRC-servern %s"
@@ -490,11 +500,11 @@ msgstr "%s på IRC-servern %s"
 msgid "You have been invited to %s"
 msgstr "Du har blivit inbjuden till %s"
 
-#: src/GCInterface.cc:193
+#: src/GCInterface.cc:192
 msgid "Group Chat Invitation from "
 msgstr "Inbjudan till gruppchatt från "
 
-#: src/GabberApp.cc:448 src/GabberApp.cc:604
+#: src/GabberApp.cc:447 src/GabberApp.cc:605
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -502,7 +512,7 @@ msgstr ""
 "Fel, kan inte läsa in lösenordet.\n"
 "Försök att logga in igen."
 
-#: src/GabberApp.cc:459
+#: src/GabberApp.cc:458
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -510,11 +520,11 @@ msgstr ""
 "Är du säker på att du vill att Gabber ska\n"
 "försöka registrera "
 
-#: src/GabberApp.cc:462
+#: src/GabberApp.cc:461
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:467
+#: src/GabberApp.cc:466
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -524,11 +534,11 @@ msgstr ""
 "Vill du att Gabber ska försöka skapa ett nytt\n"
 "konto på den valda Jabber-servern?"
 
-#: src/GabberApp.cc:475
+#: src/GabberApp.cc:474
 msgid "Attempt to create a new user failed: \n"
 msgstr "Försöket att skapa en ny användare misslyckades: \n"
 
-#: src/GabberApp.cc:477
+#: src/GabberApp.cc:476
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -538,7 +548,7 @@ msgstr ""
 ". Välj ett annat användarnamn eller verifiera din \n"
 "inloggningsinformation."
 
-#: src/GabberApp.cc:484
+#: src/GabberApp.cc:483
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -548,7 +558,7 @@ msgstr ""
 "server inte stöder digest-autentisering.\n"
 "Försök att ansluta igen med digest avstängt."
 
-#: src/GabberApp.cc:643
+#: src/GabberApp.cc:644
 msgid "Transmitter error. Disconnected: "
 msgstr "Sändarfel. Frånkopplad: "
 
@@ -576,7 +586,7 @@ msgstr "Loggar för "
 msgid "Invalid"
 msgstr "Ogiltig"
 
-#: src/GabberUtility.cc:166 ui/Gabber_win.glade.h:33
+#: src/GabberUtility.cc:166 ui/Gabber_win.glade.h:34
 msgid "Offline"
 msgstr "Frånkopplad"
 
@@ -643,101 +653,110 @@ msgstr "Kan inte spara filen. Försök med ett annat namn eller en annan plats."
 msgid "%s from groupchat %s"
 msgstr "%s från gruppchatten %s"
 
-#: src/GabberWidgets.cc:280 src/MessageViews.cc:762
+#: src/GabberWidgets.cc:280 src/MessageViews.cc:765
 #, c-format
 msgid "%s..."
 msgstr "%s..."
 
-#: src/GabberWidgets.cc:373 src/StatusInterface.cc:421
+#: src/GabberWidgets.cc:373 src/StatusInterface.cc:429
 msgid " [stopped]"
 msgstr " [stoppad]"
 
-#: src/GabberWidgets.cc:375 src/StatusInterface.cc:423
+#: src/GabberWidgets.cc:375 src/StatusInterface.cc:431
 msgid " [paused]"
 msgstr " [gör paus]"
 
 #. Status Indicator(s)
-#: src/GabberWin.cc:139 src/GabberWin.cc:839 src/StatusInterface.cc:378
-#: ui/Gabber_win.glade.h:11
+#: src/GabberWin.cc:139 src/GabberWin.cc:454 src/GabberWin.cc:855
+#: src/StatusInterface.cc:386 ui/Gabber_win.glade.h:11
 msgid "Disconnected"
 msgstr "Frånkopplad"
 
-#. Update status bar
-#: src/GabberWin.cc:383
-msgid "Logged in"
-msgstr "Inloggad"
-
-#. Update status bar
-#: src/GabberWin.cc:464
+#. This was annoying anyway
+#. *     Gnome::Dialog* d;
+#. *     string question = _("Are you sure you want to disconnect from Jabber?");
+#. *     d = manage(Gnome::Dialogs::question_modal(question,
+#. *						     slot(this, &GabberWin::handle_disconnect_qry)));
+#.
+#: src/GabberWin.cc:354 src/GabberWin.cc:480
 msgid "Logged out"
 msgstr "Utloggad"
 
-#: src/GabberWin.cc:502
+#. Update status bar
+#: src/GabberWin.cc:396
+msgid "Logged in"
+msgstr "Inloggad"
+
+#: src/GabberWin.cc:516
 msgid "Please enter name of the group:"
 msgstr "Ange namnet på gruppen:"
 
-#: src/GabberWin.cc:523
+#: src/GabberWin.cc:537
 msgid "Gabber: The GNOME Jabber Client."
 msgstr "Gabber: Jabber-klienten för GNOME."
 
-#: src/GabberWin.cc:527
+#: src/GabberWin.cc:541
 msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
 msgstr "Dave \"DizzyD\" Smith <dave@jabber.org>"
 
-#: src/GabberWin.cc:528
+#: src/GabberWin.cc:542
 msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
 msgstr "Julian \"x-virge\" Missig <julian@jabber.org>"
 
-#: src/GabberWin.cc:529
+#: src/GabberWin.cc:543
 msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 msgstr "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 
-#: src/GabberWin.cc:530
+#: src/GabberWin.cc:544
 msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 msgstr "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 
-#: src/GabberWin.cc:531
+#: src/GabberWin.cc:545
 msgid "Konrad Podloucky <konrad@crunchy-frog.org>"
 msgstr "Konrad Podloucky <konrad@crunchy-frog.org>"
 
-#: src/GabberWin.cc:532
+#: src/GabberWin.cc:546
 msgid "Dave \"bigdave\" Lee"
 msgstr "Dave \"bigdave\" Lee"
 
-#: src/GabberWin.cc:533
+#: src/GabberWin.cc:547
 msgid "Thomas \"temas\" Muldowney <temas@box5.net>"
 msgstr "Thomas \"temas\" Muldowney <temas@box5.net>"
 
-#: src/GabberWin.cc:539
+#: src/GabberWin.cc:553
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr "Copyright © 1999-2001 Julian Missig och Dave Smith"
 
-#: src/GabberWin.cc:555 src/GabberWin.cc:560 src/StatusInterface.cc:69
+#: src/GabberWin.cc:569 src/GabberWin.cc:577 src/StatusInterface.cc:69
 msgid "Online"
 msgstr "Ansluten"
 
-#: src/GabberWin.cc:563
+#: src/GabberWin.cc:574
+msgid "Done for the day. I'll get back to you tomorrow."
+msgstr "Färdig för dagen. Återkommer till dig imorgon."
+
+#: src/GabberWin.cc:580
 msgid "Chat with me!"
 msgstr "Chatta med mig!"
 
-#: src/GabberWin.cc:566 src/MessageViews.cc:2203
+#: src/GabberWin.cc:583 src/MessageViews.cc:2206
 msgid "I'm away."
 msgstr "Jag är borta."
 
-#: src/GabberWin.cc:569
+#: src/GabberWin.cc:586
 msgid "I'll be away for a while."
 msgstr "Jag kommer att vara borta ett tag."
 
-#: src/GabberWin.cc:572
+#: src/GabberWin.cc:589
 msgid "Sorry, I'm busy right now."
 msgstr "Tyvärr, jag är upptagen just nu."
 
 #. Update the status bar   
-#: src/GabberWin.cc:944
+#: src/GabberWin.cc:961
 msgid "Logging in..."
 msgstr "Loggar in..."
 
-#: src/GabberWin.cc:990 src/RosterView.cc:914
+#: src/GabberWin.cc:1007 src/RosterView.cc:914
 msgid "Not in Roster"
 msgstr "Inte i registret"
 
@@ -782,77 +801,77 @@ msgid "Message from %s"
 msgstr "Meddelande från %s"
 
 #. Set the tooltip
-#: src/MessageViews.cc:628 src/MessageViews.cc:1124 src/MessageViews.cc:1309
+#: src/MessageViews.cc:628 src/MessageViews.cc:1127 src/MessageViews.cc:1312
 #: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:13
 msgid "This message is not encrypted"
 msgstr "Detta meddelande är inte krypterat"
 
 #. Set the tooltip
-#: src/MessageViews.cc:648 src/MessageViews.cc:1158
+#: src/MessageViews.cc:648 src/MessageViews.cc:1161
 msgid "Signature on message is invalid"
 msgstr "Signaturen på meddelandet är ogiltig"
 
 #. Set the tooltip
-#: src/MessageViews.cc:658 src/MessageViews.cc:1149 src/MessageViews.cc:1315
+#: src/MessageViews.cc:658 src/MessageViews.cc:1152 src/MessageViews.cc:1318
 msgid "Signature on message is valid"
 msgstr "Signaturen på meddelandet är giltig"
 
 #. Set the tooltip
-#: src/MessageViews.cc:705 src/MessageViews.cc:1199 src/MessageViews.cc:1321
+#: src/MessageViews.cc:705 src/MessageViews.cc:1202 src/MessageViews.cc:1324
 msgid "This message is encrypted"
 msgstr "Detta meddelande är krypterat"
 
 #. Create label
-#: src/MessageViews.cc:726
+#: src/MessageViews.cc:729
 msgid "Attached URL:"
 msgstr "Bifogad URL:"
 
-#: src/MessageViews.cc:1029 ui/OOOChat_win.glade.h:16
+#: src/MessageViews.cc:1032 ui/OOOChat_win.glade.h:16
 #, no-c-format
 msgid "You just received a message from %s."
 msgstr "Du fick precis ett meddelande från %s."
 
 #. Set the window title
-#: src/MessageViews.cc:1068
+#: src/MessageViews.cc:1071
 #, c-format
 msgid "Chat with %s"
 msgstr "Chatta med %s"
 
 #. Display the error
-#: src/MessageViews.cc:1500 src/MessageViews.cc:2113
+#: src/MessageViews.cc:1503 src/MessageViews.cc:2116
 msgid "Error"
 msgstr "Fel"
 
-#: src/MessageViews.cc:1690
+#: src/MessageViews.cc:1693
 #, c-format
 msgid "Group Chat in %s"
 msgstr "Gruppchat i %s"
 
 #. Setup a message object
-#: src/MessageViews.cc:1800
+#: src/MessageViews.cc:1803
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "%s har ändrat ämnet till: %s"
 
-#: src/MessageViews.cc:1984
+#: src/MessageViews.cc:1987
 msgid "Session Disconnected"
 msgstr "Sessionen är frånkopplad"
 
-#: src/MessageViews.cc:2066
+#: src/MessageViews.cc:2069
 #, c-format
 msgid "%d members"
 msgstr "%d deltagare"
 
 #. Setup a message object
-#: src/MessageViews.cc:2164
+#: src/MessageViews.cc:2167
 msgid "/me has changed the subject to: "
 msgstr "/me har ändrat ämnet till: "
 
-#: src/MessageViews.cc:2320 ui/GCJoin_dlg.glade.h:2
+#: src/MessageViews.cc:2323 ui/GCJoin_dlg.glade.h:2
 msgid "Jabber Group Chat 1.0"
 msgstr "Jabber-gruppchatt 1.0"
 
-#: src/MessageViews.cc:2321
+#: src/MessageViews.cc:2324
 msgid "IRC (Group Chat 1.0)"
 msgstr "IRC (Gruppchatt 1.0)"
 
@@ -860,11 +879,11 @@ msgstr "IRC (Gruppchatt 1.0)"
 msgid "Connection Settings - Gabber"
 msgstr "Anslutningsinställningar - Gabber"
 
-#: src/PrefsInterface.cc:74 ui/Login_dlg.glade.h:16
+#: src/PrefsInterface.cc:74
 msgid "Login - Gabber"
 msgstr "Inloggning - Gabber"
 
-#: src/PrefsInterface.cc:645
+#: src/PrefsInterface.cc:648
 msgid "Automatically away due to being idle"
 msgstr "Bli frånvarande automatiskt när du inte använder datorn"
 
@@ -909,41 +928,36 @@ msgstr ""
 "Följande användare vill lägga till dig till sin kontaktlista. Vill du "
 "tillåta detta?"
 
-#: src/StatusInterface.cc:382
+#: src/StatusInterface.cc:390
 msgid "Connected"
 msgstr "Ansluten"
 
-#: src/StatusInterface.cc:386
+#: src/StatusInterface.cc:394
 msgid "Connected using SSL"
 msgstr "Ansluten med SSL"
 
-#: src/StatusInterface.cc:396
+#: src/StatusInterface.cc:404
 msgid "Presence is signed"
 msgstr "Närvaron är signerad"
 
-#: src/URLInterface.cc:86
-#, c-format
-msgid "Received Web Link from %s"
-msgstr "Mottog webblänk från %s"
-
-#: src/WelcomeDruid.cc:257
+#: src/WelcomeDruid.cc:267
 msgid "Attempting to log in..."
 msgstr "Försöker att logga in..."
 
-#: src/WelcomeDruid.cc:274
+#: src/WelcomeDruid.cc:284
 msgid "Login successful. Contacting the Jabber Users Directory...."
 msgstr "Inloggningen lyckades. Kontaktar Jabber-användarkatalogen..."
 
-#: src/WelcomeDruid.cc:279
+#: src/WelcomeDruid.cc:289
 msgid "Login successful."
 msgstr "Inloggningen lyckades."
 
 #. Inform the user
-#: src/WelcomeDruid.cc:336
+#: src/WelcomeDruid.cc:346
 msgid "Jabber Users Directory contacted, sending information..."
 msgstr "Jabber-användarkatalogen kontaktad, skickar information..."
 
-#: src/WelcomeDruid.cc:343
+#: src/WelcomeDruid.cc:353
 msgid "Information sent."
 msgstr "Informationen skickad."
 
@@ -1735,7 +1749,7 @@ msgstr "Bjud in kontakter..."
 msgid "Message History..."
 msgstr "Meddelandehistorik..."
 
-#: ui/GC_win.glade.h:11 ui/Gabber_win.glade.h:30
+#: ui/GC_win.glade.h:11 ui/Gabber_win.glade.h:31
 msgid "Message..."
 msgstr "Meddelande..."
 
@@ -1743,11 +1757,11 @@ msgstr "Meddelande..."
 msgid "Not Available"
 msgstr "Inte anträffbar"
 
-#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:34
+#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:35
 msgid "One-on-One Chat..."
 msgstr "En-till-en-chatt..."
 
-#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:42
+#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:43
 msgid "Send Contacts..."
 msgstr "Skicka kontakter..."
 
@@ -1905,148 +1919,152 @@ msgid "Join a Group Chat..."
 msgstr "Anslut till en gruppchatt..."
 
 #: ui/Gabber_win.glade.h:24
+msgid "Log _out"
+msgstr "Logga _ut"
+
+#: ui/Gabber_win.glade.h:25
 msgid "Log into Agent"
 msgstr "Logga in i agent"
 
-#: ui/Gabber_win.glade.h:25
+#: ui/Gabber_win.glade.h:26
+msgid "Log out _with Reason..."
+msgstr "Logga ut _med anledning..."
+
+#: ui/Gabber_win.glade.h:27
 msgid "Log out of Agent"
 msgstr "Logga ut ur agent"
 
-#: ui/Gabber_win.glade.h:26
-msgid "Log_out"
-msgstr "Logga _ut"
-
-#: ui/Gabber_win.glade.h:27
+#: ui/Gabber_win.glade.h:28
 msgid "Login..."
 msgstr "Logga in..."
 
-#: ui/Gabber_win.glade.h:28
+#: ui/Gabber_win.glade.h:29
 msgid "Logout"
 msgstr "Logga ut"
 
-#: ui/Gabber_win.glade.h:29
+#: ui/Gabber_win.glade.h:30
 msgid "Manage Groups..."
 msgstr "Hantera grupper..."
 
-#: ui/Gabber_win.glade.h:31
+#: ui/Gabber_win.glade.h:32
 msgid "New Blank _Message..."
 msgstr "Nytt tomt _meddelande..."
 
-#: ui/Gabber_win.glade.h:32
+#: ui/Gabber_win.glade.h:33
 msgid "Number of online contacts"
 msgstr "Antal anslutna kontakter"
 
-#: ui/Gabber_win.glade.h:35
+#: ui/Gabber_win.glade.h:36
 msgid "Preferences..."
 msgstr "Inställningar..."
 
-#: ui/Gabber_win.glade.h:36
+#: ui/Gabber_win.glade.h:37
 msgid "Presence"
 msgstr "Närvaro"
 
-#: ui/Gabber_win.glade.h:38
+#: ui/Gabber_win.glade.h:39
 msgid "Queued messages"
 msgstr "Kölagda meddelanden"
 
-#: ui/Gabber_win.glade.h:39
+#: ui/Gabber_win.glade.h:40
 msgid "Remove Agent"
 msgstr "Ta bort agent"
 
-#: ui/Gabber_win.glade.h:40
+#: ui/Gabber_win.glade.h:41
 msgid "Remove Contact"
 msgstr "Ta bort kontakt"
 
-#: ui/Gabber_win.glade.h:41
+#: ui/Gabber_win.glade.h:42
 msgid "Resubscribe"
 msgstr "Återuppta prenumeration"
 
-#: ui/Gabber_win.glade.h:43
+#: ui/Gabber_win.glade.h:44
 msgid "Send File..."
 msgstr "Skicka fil..."
 
-#: ui/Gabber_win.glade.h:44
+#: ui/Gabber_win.glade.h:45
 msgid "Show Main Window"
 msgstr "Visa huvudfönstret"
 
-#: ui/Gabber_win.glade.h:45
+#: ui/Gabber_win.glade.h:46
 msgid "Show _Headlines"
 msgstr "Visa _rubriker"
 
-#: ui/Gabber_win.glade.h:46 ui/Prefs_win.glade.h:79
+#: ui/Gabber_win.glade.h:47 ui/Prefs_win.glade.h:79
 msgid "Show common actions toolbar"
 msgstr "Visa verktygsraden med vanliga åtgärder"
 
-#: ui/Gabber_win.glade.h:47 ui/Prefs_win.glade.h:80
+#: ui/Gabber_win.glade.h:48 ui/Prefs_win.glade.h:80
 msgid "Show extra information"
 msgstr "Visa extra information"
 
-#: ui/Gabber_win.glade.h:48 ui/Prefs_win.glade.h:81
+#: ui/Gabber_win.glade.h:49 ui/Prefs_win.glade.h:81
 msgid "Show menubar"
 msgstr "Visa menyrad"
 
-#: ui/Gabber_win.glade.h:49 ui/Prefs_win.glade.h:82
+#: ui/Gabber_win.glade.h:50 ui/Prefs_win.glade.h:82
 msgid "Show presence indicator"
 msgstr "Visa närvaroindikator"
 
-#: ui/Gabber_win.glade.h:50 ui/MessageRecv_win.glade.h:15
+#: ui/Gabber_win.glade.h:51 ui/MessageRecv_win.glade.h:15
 #: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:14
 #: ui/SubscriptionRequest_dlg.glade.h:10
 msgid "View Contact Info..."
 msgstr "Visa kontaktinformation..."
 
-#: ui/Gabber_win.glade.h:51
+#: ui/Gabber_win.glade.h:52
 msgid "View History..."
 msgstr "Visa historik..."
 
-#: ui/Gabber_win.glade.h:52
+#: ui/Gabber_win.glade.h:53
 msgid "_Add Contact..."
 msgstr "_Lägg till kontakt..."
 
-#: ui/Gabber_win.glade.h:53
+#: ui/Gabber_win.glade.h:54
 msgid "_Browse Agents/IM Systems..."
 msgstr "_Bläddra i agenter/IM-system..."
 
-#: ui/Gabber_win.glade.h:54
+#: ui/Gabber_win.glade.h:55
 msgid "_Connection Settings..."
 msgstr "_Anslutningsinställningar..."
 
-#: ui/Gabber_win.glade.h:55
+#: ui/Gabber_win.glade.h:56
 msgid "_Debug"
 msgstr "Fels_ök"
 
-#: ui/Gabber_win.glade.h:56
+#: ui/Gabber_win.glade.h:57
 msgid "_Export Roster..."
 msgstr "_Exportera register..."
 
-#: ui/Gabber_win.glade.h:57
+#: ui/Gabber_win.glade.h:58
 msgid "_Gabber"
 msgstr "_Gabber"
 
-#: ui/Gabber_win.glade.h:58
+#: ui/Gabber_win.glade.h:59
 msgid "_Ignore List..."
 msgstr "_Ignoreringslista..."
 
-#: ui/Gabber_win.glade.h:59
+#: ui/Gabber_win.glade.h:60
 msgid "_Import Roster..."
 msgstr "_Importera register..."
 
-#: ui/Gabber_win.glade.h:60
-msgid "_Login..."
+#: ui/Gabber_win.glade.h:61
+msgid "_Log in..."
 msgstr "_Logga in..."
 
-#: ui/Gabber_win.glade.h:61
+#: ui/Gabber_win.glade.h:62
 msgid "_My Information..."
 msgstr "_Min information..."
 
-#: ui/Gabber_win.glade.h:62
+#: ui/Gabber_win.glade.h:63
 msgid "_Raw XML Input..."
 msgstr "_Rå XML-indata..."
 
-#: ui/Gabber_win.glade.h:63
+#: ui/Gabber_win.glade.h:64
 msgid "_Roster"
 msgstr "_Register"
 
-#: ui/Gabber_win.glade.h:64
+#: ui/Gabber_win.glade.h:65
 msgid "_Services"
 msgstr "_Tjänster"
 
@@ -2143,8 +2161,12 @@ msgid "Jabber client priority. 0 is default"
 msgstr "Prioritet för Jabber-klienten. 0 är standard"
 
 #: ui/Login_dlg.glade.h:15
-msgid "Login"
+msgid "Log in"
 msgstr "Inloggning"
+
+#: ui/Login_dlg.glade.h:16
+msgid "Log in - Gabber"
+msgstr "Inloggning - Gabber"
 
 #: ui/Login_dlg.glade.h:17
 msgid "P_ort:"
@@ -2832,60 +2854,60 @@ msgid "Raw XML Input - Gabber"
 msgstr "Rå XML-indata - Gabber"
 
 #: ui/RegDruid_win.glade.h:1
+msgid "Agent JID:"
+msgstr "Agent-JID:"
+
+#: ui/RegDruid_win.glade.h:2
 msgid "Agent Registration - Gabber"
 msgstr "Agentregistrering - Gabber"
 
-#: ui/RegDruid_win.glade.h:2
+#: ui/RegDruid_win.glade.h:3
 msgid "Agent Replacement"
 msgstr "Agentersättning"
-
-#: ui/RegDruid_win.glade.h:3
-msgid "Agent:"
-msgstr "Agent:"
 
 #: ui/RegDruid_win.glade.h:4
 msgid "Attempting to Register"
 msgstr "Försöker att registrera"
 
 #: ui/RegDruid_win.glade.h:6
+msgid ""
+"Gabber is now trying to load the information needed to register with this "
+"agent."
+msgstr ""
+"Gabber försöker nu att läsa in informationen som behövs för att registrera "
+"hos denna agent."
+
+#: ui/RegDruid_win.glade.h:7
 msgid "Loading Registration Information"
 msgstr "Läser in registreringsinformationen"
 
 #: ui/RegDruid_win.glade.h:8
-msgid ""
-"Please wait while Gabber attempts to register with the information you "
-"entered."
-msgstr ""
-"Var vänlig och vänta medan Gabber försöker registrera med den information "
-"som du angav."
+msgid "Loading list of fields..."
+msgstr "Läser in lista med fält..."
 
 #: ui/RegDruid_win.glade.h:9
-msgid ""
-"Please wait while Gabber tries to load the information needed to register "
-"with this agent."
-msgstr ""
-"Var vänlig och vänta medan Gabber försöker att läsa in informationen som "
-"behövs för att registrera hos denna agent."
-
-#: ui/RegDruid_win.glade.h:10
 msgid "Register with an Agent"
 msgstr "Registrera hos en agent"
 
-#: ui/RegDruid_win.glade.h:11
+#: ui/RegDruid_win.glade.h:10
 msgid "Registration Successful"
 msgstr "Registreringen lyckades"
 
-#: ui/RegDruid_win.glade.h:12
-msgid "Registration with this agent has been successful."
+#: ui/RegDruid_win.glade.h:11
+msgid "Registration with this agent was successful."
 msgstr "Registreringen hos denna agent lyckades."
 
-#: ui/RegDruid_win.glade.h:13
+#: ui/RegDruid_win.glade.h:12
 msgid "Replace the agent with JID:"
 msgstr "Ersätt agenten med JID:"
 
-#: ui/RegDruid_win.glade.h:14 ui/TransInfo_dlg.glade.h:14
+#: ui/RegDruid_win.glade.h:13 ui/TransInfo_dlg.glade.h:14
 msgid "Service Provided:"
 msgstr "Tillhandahållen tjänst:"
+
+#: ui/RegDruid_win.glade.h:14
+msgid "Successful!"
+msgstr "Lyckades!"
 
 #: ui/RegDruid_win.glade.h:15
 msgid ""
@@ -2896,12 +2918,17 @@ msgstr ""
 "och har lagts till i ditt register."
 
 #: ui/RegDruid_win.glade.h:17
-msgid "This agent requires the fields you see to the right to be filled out."
-msgstr "Denna agent kräver att fälten du ser till höger fylls i."
+msgid "The agent is now processing your registration information."
+msgstr "Agenten behandlar nu din registreringsinformation."
 
 #: ui/RegDruid_win.glade.h:18
 msgid "This druid will step you through registering with an agent."
 msgstr "Denna guide kommer att hjälpa dig med att registrera hos en agent."
+
+#: ui/RegDruid_win.glade.h:19
+msgid "Unregister this agent (must be checked for replacement to work)"
+msgstr ""
+"Avregistrera denna agent (måste vara ikryssat för att ersättning ska fungera)"
 
 #: ui/Status_dlg.glade.h:2
 msgid "My Status - Gabber"
@@ -3165,6 +3192,23 @@ msgstr "http://www.jabberview.com/"
 msgid "jabber.org"
 msgstr "jabber.org"
 
+#~ msgid "Error, a file must be specified."
+#~ msgstr "Fel, en fil måste anges."
+
+#~ msgid "Received Web Link from %s"
+#~ msgstr "Mottog webblänk från %s"
+
+#~ msgid ""
+#~ "Please wait while Gabber attempts to register with the information you "
+#~ "entered."
+#~ msgstr ""
+#~ "Var vänlig och vänta medan Gabber försöker registrera med den information "
+#~ "som du angav."
+
+#~ msgid ""
+#~ "This agent requires the fields you see to the right to be filled out."
+#~ msgstr "Denna agent kräver att fälten du ser till höger fylls i."
+
 #~ msgid "Send From:"
 #~ msgstr "Skicka från:"
 
@@ -3290,9 +3334,6 @@ msgstr "jabber.org"
 #~ "chattfönster du försökte stänga.\n"
 #~ "\n"
 #~ "Vill du ändå stänga chattfönstret?"
-
-#~ msgid "Loading list of agents..."
-#~ msgstr "Läser in lista med agenter..."
 
 #~ msgid "Error loading list of agents."
 #~ msgstr "Fel vid inläsning av agentlistan."
