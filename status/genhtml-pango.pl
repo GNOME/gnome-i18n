@@ -24,7 +24,7 @@ $now = time;
 "de", "&uuml;bersetzt",
 "ro", "traduse",
 "ru", "Переведено",
-"sv", "&oslash;versatt",
+"sv", "&Ouml;versatt",
 "tr", "TercЭme edilmiЧ",
 "uk", "Перекладено"
 );
@@ -34,7 +34,7 @@ $now = time;
 "de", "ungenau",
 "ro", "neclare",
 "ru", "Нечетко",
-"sv", "oklart",
+"sv", "Luddigt",
 "tr", "Tam tutmayan",
 "uk", "Неч╕тко"
 );
@@ -44,7 +44,7 @@ $now = time;
 "de", "Un&uuml;bersetzt",
 "ro", "netraduse",
 "ru", "Непереведено",
-"sv", "o&oslash;versatt",
+"sv", "O&oslash;versatt",
 "tr", "TercЭme edilmemiЧ",
 "uk", "Неперекладено"
 );
@@ -54,7 +54,7 @@ $now = time;
 "de", "Meldung",
 "ro", "stringuri",
 "ru", "сообщ.",
-"sv", "str&auml;ngar",
+"sv", "meddelanden",
 "tr", "metinler",
 "uk", "пов╕дом."
 );
@@ -65,7 +65,7 @@ $now = time;
 "de", "Detaillierte Statistik f&uuml;r deutsch &Uuml;bersetzung in GNOME",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "Подробный отчет о состоянии перевода Gnome на русский",
-"sv", "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
+"sv", "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME",
 "tr", "GeliЧmiЧ durum raporu : ",
 "uk", "Детальний зв╕т про стан перекладу GNOME на укра╖нську"
 );
