@@ -11,6 +11,7 @@
      "bonobo/po",
      "bug-buddy/po",
      "control-center/po",
+     "eel/po",
      "gconf/po",
      "gdm2/po",
      "ggv/po",
@@ -28,6 +29,7 @@
      "gtk+/po",
      "gtop/po",
      "libgtop/po",
+     "trilobite/po",
      "nautilus/po",
      "oaf/po",
      "sawfish/po"
@@ -37,11 +39,13 @@
     "ammonite/po",
     "bonobo/po",
     "control-center/po",
+    "eel/po",
     "evolution/po",
     "galeon/po",
     "gnome-applets/po",
     "gnome-db/po",
     "gnome-vfs/po",
+    "trilobite/po",
     "nautilus/po",
     "oaf/po"
 );
@@ -54,7 +58,7 @@
               is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk vi 
 	      wa zh_TW.Big5 zh_CN.GB2312 );
 
-$cvsroot = "/home/kmaraas/cvs/gnome/1";
+$cvsroot = "/home/kmaraas/cvs/gnome";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/release";
 
 #############################

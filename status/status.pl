@@ -7,34 +7,16 @@
 # "Constants" #
 ###############
 @modules = (
-     "achtung/po",
-     "control-center-HEAD/po",
-     "dr-genius/po",
-     "ee/po",
-     "encompass/po",
-     "gb/po",
-     "gdm3/po",
-     "gedit-HEAD/po",
-     "gernel/po",
-     "glib-HEAD/po",
-     "gimp-freetype/po",
-     "gnome-i18n/extra-po/glimmer",
-     "gnome-i18n/extra-po/gnapster",
-     "gnomba/po",
-     "gnome-i18n/extra-po/gnome-find",
-     "gnome-iconedit/po",
-     "gnome-libs-HEAD/po",
-     "gnome-linuxconf/po",
-     "gnome-pilot/po",
-     "gnopo/po",
-     "gphoto/po",
-     "gtk+-HEAD/po",
-     "gtranslator/po",
-     "magicdev/po",
-     "pong/po",
-     "pybliographer/po",
-     "rp3/po",
-     "gnome-i18n/extra-po/screem",
+     "control-center/po",
+     "glib/po",
+     "gtk+/po",
+     "libbonobo/po",
+     "libbonoboui/po",
+     "libgnome/po",
+     "libgnomebase/po",
+     "libgnomecanvas/po",
+     "libgnomeui/po",
+     "oaf/po",
      "ximian-setup-tools/po");
 
 @xml_i18n_tools_compliants = (
@@ -47,7 +29,7 @@
 
 @langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk vi wa zh_TW.Big5 zh_CN.GB2312 );
 
-$cvsroot = "/home/kmaraas/cvs/gnome/1";
+$cvsroot = "/home/kmaraas/cvs/gnome2";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
 
 #############################
