@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gabber 0.8.5.6 cvs\n"
-"POT-Creation-Date: 2001-12-28 22:48+0900\n"
-"PO-Revision-Date: 2001-12-28 22:51+0900\n"
+"Project-Id-Version: Gabber 0.8.6.1 cvs\n"
+"POT-Creation-Date: 2001-12-29 18:48-0500\n"
+"PO-Revision-Date: 2002-01-14 11:14+0900\n"
 "Last-Translator: Katsumi Saito <katsumi@jo1upk.ymt.prug.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +151,7 @@ msgstr "有効な署名の存在"
 
 #. Set the tooltip as well
 #: src/ContactInfoInterface.cc:661 src/ContactInfoInterface.cc:662
-#: src/StatusInterface.cc:387 ui/ContactInfo_dlg.glade.h:29
+#: src/StatusInterface.cc:398 ui/ContactInfo_dlg.glade.h:29
 #: ui/Gabber_win.glade.h:41
 msgid "Presence is not signed"
 msgstr "署名されていません"
@@ -174,9 +174,9 @@ msgstr "%s のコンタクト先情報"
 
 #: src/ContactInfoInterface.cc:715 src/ContactInterface.cc:86
 #: src/ContactInterface.cc:201 src/FTInterface.cc:93 src/FTInterface.cc:180
-#: src/FTInterface.cc:279 src/FTInterface.cc:385 src/GCInterface.cc:191
-#: src/GroupsInterface.cc:157 src/MessageViews.cc:389 src/MessageViews.cc:536
-#: src/MessageViews.cc:953 src/MessageViews.cc:1575 src/URLInterface.cc:84
+#: src/FTInterface.cc:280 src/FTInterface.cc:386 src/GCInterface.cc:191
+#: src/GroupsInterface.cc:157 src/MessageViews.cc:396 src/MessageViews.cc:544
+#: src/MessageViews.cc:961 src/MessageViews.cc:1583 src/URLInterface.cc:84
 msgid " - Gabber"
 msgstr " - Gabber"
 
@@ -348,8 +348,8 @@ msgstr "新規ルール"
 #: src/FilterInterface.cc:425
 msgid "Sorry, your server does not support Jabber filters."
 msgstr ""
-"申し訳ありませんが、あなたのサーバは jabber フィルターをサポートしていませ"
-"ん。"
+"申し訳ありませんが、あなたのサーバは\n"
+"jabber フィルターをサポートしていません。"
 
 #: src/FTInterface.cc:93
 #, c-format
@@ -369,81 +369,89 @@ msgstr "%s ファイルの送信"
 msgid "Error, a file must be specified."
 msgstr "エラー、ファイルを指定して下さい。"
 
-#: src/FTInterface.cc:259
+#: src/FTInterface.cc:260
 msgid "Waiting for connection..."
 msgstr "接続待ち..."
 
-#: src/FTInterface.cc:279
+#: src/FTInterface.cc:280
 #, c-format
 msgid "Sending File to %s"
 msgstr "%s へファイルの送信中"
 
-#: src/FTInterface.cc:366
+#: src/FTInterface.cc:367
 msgid "Receiving from"
 msgstr "受信中 - "
 
 #. Show how big the file is
-#: src/FTInterface.cc:374 src/FTInterface.cc:377
+#: src/FTInterface.cc:375 src/FTInterface.cc:378
 msgid "Pending..."
 msgstr "未定..."
 
-#: src/FTInterface.cc:385
+#: src/FTInterface.cc:386
 #, c-format
 msgid "Receiving File from %s"
 msgstr "%s からファイルを受信中"
 
-#: src/FTInterface.cc:411
+#: src/FTInterface.cc:412
 msgid "Connected, requesting file..."
 msgstr "接続、ファイル要求中..."
 
-#: src/FTInterface.cc:418
+#: src/FTInterface.cc:419
 msgid "Accepting connection..."
 msgstr "接続受理..."
 
-#: src/FTInterface.cc:437
+#: src/FTInterface.cc:438
 msgid "Error, transfer unexpectedly ended."
 msgstr "エラー、転送は不意に終了した。"
 
-#: src/FTInterface.cc:438
+#: src/FTInterface.cc:439
 msgid ""
 "The file transfer has ended unexpectedly.\n"
 "The received portion of the file has been saved."
 msgstr ""
 "ファイル転送は、不意に終了しました。\n"
-"受信した一部のファイルを保存しました。"
+"受信した不完全なファイルを保存しました。"
 
-#: src/FTInterface.cc:506
+#: src/FTInterface.cc:489
+msgid "Hide details"
+msgstr "詳細を隠す"
+
+#: src/FTInterface.cc:496
+msgid "Show details"
+msgstr "詳細を表示"
+
+#: src/FTInterface.cc:507
 msgid "Sending..."
 msgstr "送信中..."
 
-#: src/FTInterface.cc:535
+#: src/FTInterface.cc:536
 msgid "Receiving data..."
 msgstr "データ受信中..."
 
-#: src/FTInterface.cc:623
+#: src/FTInterface.cc:624
 msgid "Complete."
 msgstr "完了。"
 
-#: src/FTInterface.cc:628
+#: src/FTInterface.cc:629
 msgid "Error, received more data than expected."
 msgstr "エラー、期待したより多くのデータを受信しました。"
 
 #. Update the speed
-#: src/FTInterface.cc:653
+#: src/FTInterface.cc:654
 #, c-format
 msgid "%s/second"
 msgstr "%s/秒"
 
-#: src/FTInterface.cc:660
+#: src/FTInterface.cc:661
 msgid "Under one minute remaining."
 msgstr "残り１分未満。"
 
-#: src/FTInterface.cc:666
+#: src/FTInterface.cc:667
 #, c-format
 msgid "%s hours, %s minutes remaining."
 msgstr "残り %s 時間 %s 分。"
 
-#: src/FTInterface.cc:670
+#: src/FTInterface.cc:671
 #, c-format
 msgid "%s minutes remaining."
 msgstr "残り %s 秒。"
@@ -599,23 +607,23 @@ msgstr "お互い、所在を確認することはできません。"
 
 #: src/GabberUtility.cc:500 src/RosterInterface.cc:60
 msgid "Unable to save file. Please try another name or location."
-msgstr "ファイルに保存できません。別のファイル名または場所で再度行って下さい。"
+msgstr "ファイルが保存できません。別のファイル名または場所で再度行って下さい。"
 
 #: src/GabberWidgets.cc:235
 #, c-format
 msgid "%s from groupchat %s"
 msgstr "グループチャット %s から %s"
 
-#: src/GabberWidgets.cc:371
+#: src/GabberWidgets.cc:371 src/StatusInterface.cc:418
 msgid " [stopped]"
 msgstr " [停止]"
 
-#: src/GabberWidgets.cc:373
+#: src/GabberWidgets.cc:373 src/StatusInterface.cc:420
 msgid " [paused]"
 msgstr " [一時停止]"
 
 #. Status Indicator(s)
-#: src/GabberWin.cc:138 src/GabberWin.cc:822 src/StatusInterface.cc:364
+#: src/GabberWin.cc:138 src/GabberWin.cc:823 src/StatusInterface.cc:375
 #: ui/Gabber_win.glade.h:11
 msgid "Disconnected"
 msgstr "切断"
@@ -678,7 +686,7 @@ msgstr "オンライン"
 msgid "Chat with me!"
 msgstr "チャットして下さい!"
 
-#: src/GabberWin.cc:565 src/MessageViews.cc:2087
+#: src/GabberWin.cc:565 src/MessageViews.cc:2095
 msgid "I'm away."
 msgstr "私は退席です。"
 
@@ -690,12 +698,12 @@ msgstr "暫く離席します。"
 msgid "Sorry, I'm busy right now."
 msgstr "現在、すみませんが多忙です。"
 
-#. Update the status bar
-#: src/GabberWin.cc:927
+#. Update the status bar   
+#: src/GabberWin.cc:928
 msgid "Logging in..."
 msgstr "ログイン中..."
 
-#: src/GabberWin.cc:973 src/RosterView.cc:912
+#: src/GabberWin.cc:974 src/RosterView.cc:912
 msgid "Not in Roster"
 msgstr "登録簿にない"
 
@@ -723,88 +731,88 @@ msgstr ""
 #. FIXME: implement grab_focus() in PrettyJID - focus goes to either _entJID or _cboResource->get_entry()
 #. 	  _entSendTo->grab_focus();
 #. Set the title
-#: src/MessageViews.cc:199 ui/MessageSend_win.glade.h:7
+#: src/MessageViews.cc:199 src/MessageViews.cc:392
+#: ui/MessageSend_win.glade.h:7
 msgid "New Blank Message - Gabber"
 msgstr "新規ブランクメッセージ - Gabber"
 
-#. Set the title
-#: src/MessageViews.cc:389
+#: src/MessageViews.cc:396
 #, c-format
 msgid "Message to %s"
 msgstr "%s へのメッセージ"
 
-#: src/MessageViews.cc:536
+#: src/MessageViews.cc:544
 #, c-format
 msgid "Message from %s"
 msgstr "%s からのメッセージ"
 
 #. Set the tooltip
-#: src/MessageViews.cc:585 src/MessageViews.cc:1009 src/MessageViews.cc:1194
+#: src/MessageViews.cc:593 src/MessageViews.cc:1017 src/MessageViews.cc:1202
 #: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:13
 msgid "This message is not encrypted"
 msgstr "このメッセージは暗号化されていません"
 
 #. Set the tooltip
-#: src/MessageViews.cc:605 src/MessageViews.cc:1043
+#: src/MessageViews.cc:613 src/MessageViews.cc:1051
 msgid "Signature on message is invalid"
 msgstr "メッセージの署名は無効"
 
 #. Set the tooltip
-#: src/MessageViews.cc:615 src/MessageViews.cc:1034 src/MessageViews.cc:1200
+#: src/MessageViews.cc:623 src/MessageViews.cc:1042 src/MessageViews.cc:1208
 msgid "Signature on message is valid"
 msgstr "メッセージの署名は有効"
 
 #. Set the tooltip
-#: src/MessageViews.cc:662 src/MessageViews.cc:1084 src/MessageViews.cc:1206
+#: src/MessageViews.cc:670 src/MessageViews.cc:1092 src/MessageViews.cc:1214
 msgid "This message is encrypted"
 msgstr "このメッセージは暗号化"
 
-#: src/MessageViews.cc:914 ui/OOOChat_win.glade.h:16
+#: src/MessageViews.cc:922 ui/OOOChat_win.glade.h:16
 #, no-c-format
 msgid "You just received a message from %s."
 msgstr "%s からメッセージを受信。"
 
 #. Set the window title
-#: src/MessageViews.cc:953
+#: src/MessageViews.cc:961
 #, c-format
 msgid "Chat with %s"
 msgstr "%s とチャット"
 
 #. Display the error
-#: src/MessageViews.cc:1385 src/MessageViews.cc:1997
+#: src/MessageViews.cc:1393 src/MessageViews.cc:2005
 msgid "Error"
 msgstr "エラー"
 
-#: src/MessageViews.cc:1575
+#: src/MessageViews.cc:1583
 #, c-format
 msgid "Group Chat in %s"
 msgstr "%s グループチャット"
 
 #. Setup a message object
-#: src/MessageViews.cc:1685
+#: src/MessageViews.cc:1693
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "%s は、題名を %s に変更しました"
 
-#: src/MessageViews.cc:1869
+#: src/MessageViews.cc:1877
 msgid "Session Disconnected"
 msgstr "セッション切断"
 
-#: src/MessageViews.cc:1951
+#: src/MessageViews.cc:1959
 #, c-format
 msgid "%d members"
 msgstr "%d メンバー"
 
 #. Setup a message object
-#: src/MessageViews.cc:2048
+#: src/MessageViews.cc:2056
 msgid "/me has changed the subject to: "
 msgstr "/me は、次のように題名を変更しました: "
 
-#: src/MessageViews.cc:2188 ui/GCJoin_dlg.glade.h:2
+#: src/MessageViews.cc:2196 ui/GCJoin_dlg.glade.h:2
 msgid "Jabber Group Chat 1.0"
 msgstr "Jabber グループチャット 1.0"
 
-#: src/MessageViews.cc:2189
+#: src/MessageViews.cc:2197
 msgid "IRC (Group Chat 1.0)"
 msgstr "IRC (グループチャット 1.0)"
 
@@ -840,17 +848,17 @@ msgstr " はオンラインです"
 #. Update the statusbar and clear in 30 seconds
 #: src/RosterView.cc:424
 msgid " is now offline"
-msgstr " はオンラインです"
+msgstr " はオフラインです"
 
 #: src/RosterView.cc:660
 #, c-format
 msgid "Are you sure you want to remove %s from your roster?"
-msgstr "登録簿から %s を削除したいですか?"
+msgstr "登録簿から %s を削除してもよろしいですか?"
 
 #: src/RosterView.cc:715
 #, c-format
 msgid "Would you also like to remove all contacts associated with %s?"
-msgstr "%s と関連する全てのコンタクト先を削除したいですか？"
+msgstr "%s と関連する全てのコンタクト先を削除してもよろしいですか？"
 
 #. Initialize instructions
 #: src/S10nInterface.cc:72
@@ -858,17 +866,17 @@ msgid ""
 "The following user would like to add you to their contact list. Do you wish "
 "to allow this?"
 msgstr ""
-"次のユーザは、あなたをコンタクト先として登録を希望しています。許可しますか?"
+"次のユーザは、あなたをコンタクト先への登録を希望しています。許可しますか?"
 
-#: src/StatusInterface.cc:368
+#: src/StatusInterface.cc:379
 msgid "Connected"
 msgstr "接続"
 
-#: src/StatusInterface.cc:372
+#: src/StatusInterface.cc:383
 msgid "Connected using SSL"
 msgstr "SSL を使用して接続"
 
-#: src/StatusInterface.cc:382
+#: src/StatusInterface.cc:393
 msgid "Presence is signed"
 msgstr "所在は署名されました"
 
@@ -883,7 +891,7 @@ msgstr "ログイン中..."
 
 #: src/WelcomeDruid.cc:272
 msgid "Login successful. Contacting the Jabber Users Directory...."
-msgstr "ログイン成功。Jabberユーザディレクトリに接続..."
+msgstr "ログイン成功。Jabberユーザディレクトリに接続中..."
 
 #: src/WelcomeDruid.cc:277
 msgid "Login successful."
@@ -1086,7 +1094,7 @@ msgid ""
 "To add a contact, you need to know which instant messaging system they use."
 msgstr ""
 "コンタクト先を追加するには、どのインスタントメッセージングシステムを\n"
-"使用しているのかを知っている必要があります。"
+"使用しているのか把握している必要があります。"
 
 #: ui/AUDruid_win.glade.h:44
 msgid ""
@@ -1112,7 +1120,7 @@ msgstr "Webサイト:"
 
 #: ui/AUDruid_win.glade.h:47
 msgid "What do you want this contact to be listed as?"
-msgstr "あなたが、このコンタクト先に表示されることを望みますか?"
+msgstr "あなたが、このコンタクト先に表示されてもよろしいですか?"
 
 #: ui/AUDruid_win.glade.h:48
 msgid "What is the contact's username or screen name?"
@@ -1501,7 +1509,7 @@ msgstr "条件"
 
 #: ui/Filter_dlg.glade.h:4
 msgid "Edit Jabber Message Rule - Gabber"
-msgstr "Jabber メッセージルール編集 = Gabber"
+msgstr "Jabber メッセージルール編集 - Gabber"
 
 #: ui/Filter_dlg.glade.h:5
 msgid "Rule Name:"
@@ -1557,7 +1565,7 @@ msgstr "ファイル送信:"
 
 #: ui/FTSend_dlg.glade.h:5
 msgid "Send From:"
-msgstr "送信先:"
+msgstr "送信元:"
 
 #: ui/FTSend_dlg.glade.h:6
 msgid "Send a File"
@@ -1820,11 +1828,11 @@ msgstr "エージェント/IM システム参照..."
 
 #: ui/Gabber_win.glade.h:12 ui/Prefs_win.glade.h:21
 msgid "Display common actions"
-msgstr "共通アクションを表示"
+msgstr "共通アクションツールバーを表示"
 
 #: ui/Gabber_win.glade.h:13 ui/Prefs_win.glade.h:23
 msgid "Display menubar"
-msgstr "メンバー表示"
+msgstr "メニューバーを表示"
 
 #: ui/Gabber_win.glade.h:14 ui/Prefs_win.glade.h:24
 msgid "Display presence indicator"
@@ -1832,7 +1840,7 @@ msgstr "所在インジケータを表示"
 
 #: ui/Gabber_win.glade.h:15 ui/Prefs_win.glade.h:25
 msgid "Display status bar"
-msgstr "ステータスバー表示"
+msgstr "ステータスバーを表示"
 
 #: ui/Gabber_win.glade.h:16
 msgid "Edit Groups..."
@@ -2150,7 +2158,7 @@ msgstr "サーバとの通信にSSL暗号化を使用"
 
 #: ui/Login_dlg.glade.h:28
 msgid "Use digest authentication, do not send plaintext password"
-msgstr "ダイジェスト認証を使用、パスワードをプレーンテキストでは送信しない"
+msgstr "ダイジェスト認証を使う (プレーンテキストによるパスワードは送信しません)"
 
 #: ui/Login_dlg.glade.h:29 ui/TransInfo_dlg.glade.h:19
 msgid "Username:"
@@ -2380,11 +2388,11 @@ msgstr "    "
 
 #: ui/Prefs_win.glade.h:2
 msgid "Automatic Presence Changing"
-msgstr "所在を自動的に変更"
+msgstr "所在の自動変更"
 
 #: ui/Prefs_win.glade.h:3
 msgid "Automatic Presence Status"
-msgstr "所在のステータス自動"
+msgstr "所在の自動ステータス"
 
 #: ui/Prefs_win.glade.h:4
 msgid "Automatically change presence when idle"
@@ -2408,7 +2416,7 @@ msgstr "チャット:"
 
 #: ui/Prefs_win.glade.h:9
 msgid "Check spelling using ispell or aspell if possible"
-msgstr "利用可能な場合、スぺールチェックに ispell を使用"
+msgstr "利用可能な場合、スぺルチェックに ispell または aspell を使用"
 
 #: ui/Prefs_win.glade.h:10
 msgid "Color for available users"
@@ -2564,15 +2572,15 @@ msgstr "メッセージタイプを完全に許可"
 
 #: ui/Prefs_win.glade.h:52
 msgid "Log Format"
-msgstr "ログの形式"
+msgstr "ログの保存形式"
 
 #: ui/Prefs_win.glade.h:53
 msgid "Log Location"
-msgstr "ログの場所"
+msgstr "ログの保存場所"
 
 #: ui/Prefs_win.glade.h:54
 msgid "Log Purging Frequency"
-msgstr "ログ除去間隔"
+msgstr "ログの消去間隔"
 
 #: ui/Prefs_win.glade.h:55
 msgid "Log messages and chats as XHTML"
@@ -2584,7 +2592,7 @@ msgstr "メッセージとチャットのログをXML形式で保存"
 
 #: ui/Prefs_win.glade.h:57
 msgid "Logging"
-msgstr "ログイン中"
+msgstr "ログ取得"
 
 #: ui/Prefs_win.glade.h:58
 msgid "Logs Saved in:"
@@ -2648,15 +2656,15 @@ msgstr "登録簿のアイコン"
 
 #: ui/Prefs_win.glade.h:73
 msgid "Save logs of encrypted messages"
-msgstr "暗号化メッセージのログ保存"
+msgstr "暗号化メッセージのログを保存する"
 
 #: ui/Prefs_win.glade.h:74
 msgid "Save logs of group chats"
-msgstr "メッセージとチャットのログ保存"
+msgstr "グループチャットのログを保存する"
 
 #: ui/Prefs_win.glade.h:75
 msgid "Save logs of messages and chats"
-msgstr "メッセージとチャットのログ保存"
+msgstr "メッセージとチャットのログを保存する"
 
 #: ui/Prefs_win.glade.h:76
 msgid "Save main window position"
@@ -2672,7 +2680,7 @@ msgstr "秘密鍵"
 
 #: ui/Prefs_win.glade.h:79
 msgid "Send normal messages by default"
-msgstr "省略時として通常メッセージを送信"
+msgstr "省略時として通常メッセージで送信"
 
 #: ui/Prefs_win.glade.h:80
 msgid "Send one-on-one chats by default"
@@ -2708,7 +2716,7 @@ msgstr "ユーザ ID"
 
 #: ui/Prefs_win.glade.h:88
 msgid "When automatically away, set the presence priority to 0"
-msgstr "所在の自動退席時は、優先順位を 0 として設定"
+msgstr "自動的に退席する時に、所在の優先順位を 0 に設定"
 
 #: ui/Prefs_win.glade.h:89
 msgid "_Auto-away"
@@ -2802,14 +2810,19 @@ msgstr "レジストレーション情報読み込み中"
 msgid ""
 "Please wait while Gabber attempts to register with the information you "
 "entered."
-msgstr "入力した情報で登録中ですので、暫くお待ち下さい。"
+msgstr ""
+"入力した情報で登録中\n"
+"ですので、暫くお待ち\n"
+"下さい。"
 
 #: ui/RegDruid_win.glade.h:9
 msgid ""
 "Please wait while Gabber tries to load the information needed to register "
 "with this agent."
 msgstr ""
-"このエージェントに登録するために必要とされる情報をロード中ですので、\n"
+"このエージェントに登録する\n"
+"ために必要とされる情報を\n"
+"ロード中ですので、\n"
 "暫くお待ち下さい。"
 
 #: ui/RegDruid_win.glade.h:10
@@ -2842,11 +2855,16 @@ msgstr ""
 
 #: ui/RegDruid_win.glade.h:17
 msgid "This agent requires the fields you see to the right to be filled out."
-msgstr "このエージェントは、右の項目内にあるを項目を要求します。"
+msgstr ""
+"このエージェントは、右の項目\n"
+"内にあるを項目を要求します。"
 
 #: ui/RegDruid_win.glade.h:18
 msgid "This druid will step you through registering with an agent."
-msgstr "このドルイドは、エージェントとして登録することであなたを踏むでしょう。"
+msgstr ""
+"このドルイドは、エージェント\n"
+"として登録することであなたを\n"
+"踏むでしょう。"
 
 #: ui/Status_dlg.glade.h:2
 msgid "My Status - Gabber"
@@ -3115,3 +3133,4 @@ msgstr "http://www.jabberview.com/"
 #: ui/Welcome_win.glade.h:46
 msgid "jabber.org"
 msgstr "jabber.org"
+
