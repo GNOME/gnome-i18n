@@ -23,7 +23,7 @@ gnome_menu();
 <a href="#anatomie">hoe een .po bestand in elkaar zit</a> en hoe je <a href="#cvs">via CVS de broncode
 kan downloaden</a>.</p>
 
-<h1>Programma's voor vertalers</h1>
+<a name="software"></a><h1>Programma's voor vertalers</h1>
 <p>Je kunt de po bestanden vertalen met je favoriete editor. Dit werkt altijd
 en sommigen zweren erbij. Er zijn echter ook programma's verkrijgbaar die ervoor
 gemaakt zijn om het vertalen makkelijker en sneller te maken. Je kunt ze zoals
