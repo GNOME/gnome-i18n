@@ -1,0 +1,26 @@
+What is it?
+------------
+It my attempt to implement ke proposals about desktop-like files.
+
+
+How it work?
+------------
+1. we create *.desktop-like.in files with strings marked for gettext as _().
+2. all these files we list in DESKTOP
+3. run modified update.sh, which create <module>.desktop.pot
+4. run extractor.pl. and remove some dirty files :)
+    yes i know this script is the best example of worst programming style...
+5. run update.sh <LL>
+6. translate LL.desktop.po
+7. run desktop.pl
+
+Files:
+-------
+extractor.pl	-  one-time script for extracting translated strings from 'old-style'
+		   desktop-like files.
+update.sh       -  modified for work with DESKTOP version of kanikus script.
+		   (2kanikus: it must be brushed)
+desktop.pl      -  convert all LL.desktop.po and <module>.desktop.in to
+		    *.desktop, *.directory etc files.
+		    
+Valek frob@df.ru
