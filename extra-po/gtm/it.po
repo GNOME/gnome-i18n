@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm 0.4.2\n"
-"POT-Creation-Date: 2000-05-24 20:30+0100\n"
+"POT-Creation-Date: 2000-06-11 16:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gianluca Montecchi <gianluca@pluto.linux.it>\n"
 "Language-Team: Italiano <it@li.org>\n"
@@ -13,28 +13,31 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8 bit\n"
 
-#: src/main.c:333
+#: src/main.c:298
 msgid "url to fetch"
 msgstr ""
 
-#: src/main.c:333
+#: src/main.c:298
 #, fuzzy
 msgid "URL"
 msgstr "URL:"
 
 #. If there where errors give them to the user
-#: src/dialog-add.c:69 src/dialog-add.c:86 src/dialog-add.c:302
-#: src/dialog-add.c:320 src/dialog-new.c:109 src/main.c:369
+#: applet/dialog-add.c:68 applet/dialog-add.c:78 applet/dialog-add.c:291
+#: applet/dialog-add.c:309 applet/dialog-new.c:105 src/dialog-add.c:69
+#: src/dialog-add.c:86 src/dialog-add.c:302 src/dialog-add.c:320
+#: src/dialog-new.c:110 src/main.c:334
 #, fuzzy
 msgid "URL:\n"
 msgstr "URL:"
 
-#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:110
-#: src/main.c:371
+#: applet/dialog-add.c:81 applet/dialog-add.c:312 applet/dialog-new.c:106
+#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:111
+#: src/main.c:336
 msgid "already in the list"
 msgstr ""
 
-#: src/main.c:403
+#: src/main.c:368
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -284,13 +287,13 @@ msgstr "Opzioni"
 msgid "Local dir:"
 msgstr "Directory locale:"
 
-#: src/dialog-add.c:270 src/dialog-new.c:186 src/dialog-prop.c:159
-#: src/download-info.c:285
+#: applet/dialog-add.c:260 applet/dialog-new.c:182 src/dialog-add.c:270
+#: src/dialog-new.c:215 src/dialog-prop.c:159 src/download-info.c:285
 msgid "Disable proxy"
 msgstr "Disabilita il proxy"
 
-#: src/dialog-add.c:274 src/dialog-new.c:190 src/dialog-prop.c:191
-#: src/download-info.c:292
+#: applet/dialog-add.c:264 applet/dialog-new.c:186 src/dialog-add.c:274
+#: src/dialog-new.c:219 src/dialog-prop.c:191 src/download-info.c:292
 msgid "Disable auto download"
 msgstr "Disabilita il download automatico"
 
@@ -315,31 +318,36 @@ msgstr ""
 "The GNOME transfer manager.\n"
 "http://camoes.rnl.ist.utl.pt/~bapm/gtm/"
 
-#: src/dialog-new.c:55 src/dialog-prop.c:62
+#: applet/dialog-new.c:52 src/dialog-new.c:56 src/dialog-prop.c:62
 msgid "Invalid URL"
 msgstr "URL non valido"
 
-#: src/dialog-new.c:77
+#: applet/dialog-new.c:74 src/dialog-new.c:78
 msgid "Multiple download not implemented yet"
 msgstr "Download multiplo non ancora implementato"
 
-#: src/dialog-new.c:155
+#: src/dialog-new.c:168
 msgid "GTM - New file to download"
 msgstr "GTM - Nuovo file da scaricare"
 
-#. Set it's contents
-#: src/dialog-new.c:162
+#. Set its contents
+#: applet/dialog-new.c:156 src/dialog-new.c:175
 msgid "Please enter URL of the file to download:"
 msgstr "Inserisci l'URL del file da scaricare:"
 
-#: src/dialog-add.c:251 src/dialog-new.c:171
+#: applet/dialog-add.c:242 applet/dialog-new.c:166 src/dialog-add.c:251
+#: src/dialog-new.c:184
 msgid "Download dir:"
 msgstr "Directory di destinazione"
 
-#: src/dialog-new.c:175
+#: applet/dialog-new.c:170 src/dialog-new.c:188
 #, fuzzy
 msgid "GTM - New Download Dir"
 msgstr "GTM - Directory di destinazione predefinita"
+
+#: src/dialog-new.c:200
+msgid "Suggest directory by pattern matching"
+msgstr ""
 
 #: src/dialog-restart.c:49
 msgid "GTM - Restart selected files"
@@ -374,152 +382,157 @@ msgid "Both"
 msgstr "Entrambi"
 
 #. Use proxy
-#: src/dialog-prefs.c:347
+#: src/dialog-prefs.c:355
 msgid "Use proxy"
 msgstr "Usa il proxy"
 
-#: src/dialog-prefs.c:354
+#: src/dialog-prefs.c:362
 msgid "Username:"
 msgstr "Username:"
 
-#: src/dialog-prefs.c:362
+#: src/dialog-prefs.c:370
 msgid "Password:"
 msgstr "Password:"
 
-#: src/dialog-prefs.c:371
+#: src/dialog-prefs.c:379
 msgid "HTTP:"
 msgstr "HTTP:"
 
-#: src/dialog-prefs.c:379
+#: src/dialog-prefs.c:387
 msgid "FTP:"
 msgstr "FTP:"
 
-#: src/dialog-prefs.c:436
+#: src/dialog-prefs.c:444
 msgid "Interface to connect:"
 msgstr "Interfaccia di connessione:"
 
-#: src/dialog-prefs.c:444
+#: src/dialog-prefs.c:452
 #, fuzzy
 msgid "Check interface time:"
 msgstr "Tempo di controllo dell'interfaccia"
 
-#: src/dialog-prefs.c:459
+#: src/dialog-prefs.c:467
 msgid "Simultaneous:"
 msgstr "Simultanei:"
 
-#: src/dialog-prefs.c:469
+#: src/dialog-prefs.c:477
 #, fuzzy
 msgid "Manual stop disables auto download"
 msgstr "Disabilita il download automatico"
 
-#: src/dialog-prefs.c:516
+#: src/dialog-prefs.c:483
+#, fuzzy
+msgid "Stop download on link loss"
+msgstr "Interrompi lo scaricamento del file"
+
+#: applet/dialog-prop.c:159 src/dialog-prefs.c:536
 msgid "Default download dir:"
 msgstr "Directory di destinazione predefinita:"
 
-#: src/dialog-prefs.c:519
+#: src/dialog-prefs.c:539
 msgid "GTM - Def Download Dir"
 msgstr "GTM - Directory di destinazione predefinita"
 
-#: src/dialog-prefs.c:528
+#: src/dialog-prefs.c:548
 #, fuzzy
 msgid "Number retries:"
 msgstr "Numero di tentativi"
 
-#: src/dialog-prefs.c:532
+#: src/dialog-prefs.c:552
 msgid "Unlimited"
 msgstr "Illimitati"
 
-#: src/dialog-prefs.c:535
+#: src/dialog-prefs.c:555
 msgid "Limited"
 msgstr "Limitati"
 
-#: src/dialog-prefs.c:546
+#: src/dialog-prefs.c:566
 msgid "Use passive FTP"
 msgstr "Usa FTP passivo"
 
-#: src/dialog-prefs.c:613
+#: applet/dialog-prop.c:202 src/dialog-prefs.c:633
 #, fuzzy
 msgid "Dialog new or dialog add changes default download dir"
 msgstr "Dialogo nuovo cambio della directory di download di default"
 
-#: src/dialog-prefs.c:620
+#: src/dialog-prefs.c:640
 msgid "Confirm remove when transfer incomplete"
 msgstr ""
 
-#: src/dialog-prefs.c:627
+#: src/dialog-prefs.c:647
 msgid "Confirm remove completed transfers"
 msgstr ""
 
-#: src/dialog-prefs.c:634
+#: src/dialog-prefs.c:654
 msgid "Confirm restart"
 msgstr ""
 
-#: src/dialog-prefs.c:641
+#: applet/dialog-prop.c:209 src/dialog-prefs.c:661
 msgid "Confirm drag and drop URL"
 msgstr ""
 
-#: src/dialog-prefs.c:694
+#: src/dialog-prefs.c:714
 #, fuzzy
 msgid "Toolbar style:"
 msgstr "Toolbars"
 
-#: src/dialog-prefs.c:709
+#: src/dialog-prefs.c:729
 #, fuzzy
 msgid "File list refresh rate:"
 msgstr "Frequenza di aggiornamento della lista"
 
-#: src/dialog-prefs.c:723
+#: src/dialog-prefs.c:743
 msgid "Show list statistics"
 msgstr "Mostra lista statistiche"
 
-#: src/dialog-prefs.c:728
+#: src/dialog-prefs.c:748
 msgid "Show page statistics"
 msgstr "Mostra pagine delle statistiche"
 
-#: src/dialog-prefs.c:733
+#: src/dialog-prefs.c:753
 #, fuzzy
 msgid "Show download info page"
 msgstr "Imposta le proprieta' di scaricamento"
 
-#: src/dialog-prefs.c:787
+#: src/dialog-prefs.c:807
 msgid "Use sound"
 msgstr ""
 
-#: src/dialog-prefs.c:792
+#: src/dialog-prefs.c:812
 msgid "Use beep"
 msgstr ""
 
-#: src/dialog-prefs.c:833
+#: src/dialog-prefs.c:853
 msgid "GTM - Preferences"
 msgstr "GTM - Preferenze"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:846 src/dialog-prop.c:252
+#: src/dialog-prefs.c:866 src/dialog-prop.c:252
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/dialog-prefs.c:850
+#: src/dialog-prefs.c:870
 msgid "Auto"
 msgstr "Auto"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:854 src/dialog-prop.c:248
+#: applet/dialog-prop.c:305 src/dialog-prefs.c:874 src/dialog-prop.c:248
 msgid "Download"
 msgstr "Scarica"
 
-#: src/dialog-prefs.c:858
+#: src/dialog-prefs.c:878
 msgid "Directories"
 msgstr ""
 
-#: src/dialog-prefs.c:862
+#: applet/dialog-prop.c:309 src/dialog-prefs.c:882
 msgid "Confirmations"
 msgstr ""
 
-#: src/dialog-prefs.c:866
+#: src/dialog-prefs.c:886
 msgid "Display"
 msgstr "Display"
 
-#: src/dialog-prefs.c:870
+#: src/dialog-prefs.c:890
 msgid "Sound"
 msgstr ""
 
@@ -541,11 +554,11 @@ msgid "GTM - Add files to download"
 msgstr "GTM - Nuovo file da scaricare"
 
 #. Set it's contents
-#: src/dialog-add.c:238
+#: applet/dialog-add.c:228 src/dialog-add.c:238
 msgid "URLs to be added"
 msgstr ""
 
-#: src/dialog-add.c:255
+#: applet/dialog-add.c:247 src/dialog-add.c:255
 #, fuzzy
 msgid "GTM - Add Download Dir"
 msgstr "GTM - Directory di destinazione"
@@ -583,13 +596,63 @@ msgstr "GTM - Proprieta'"
 msgid "About..."
 msgstr "About..."
 
-#: applet/gtm_applet.c:453
+#: applet/dialog-prop.c:244 applet/gtm_applet.c:453
 #, fuzzy
 msgid "New URL"
 msgstr "NuovoURL"
 
-#: applet/gtm_applet.c:459
+#: applet/dialog-prop.c:245 applet/gtm_applet.c:459
 msgid "Open GTM"
+msgstr ""
+
+#: applet/dialog-about.c:45
+msgid "GNOME Transfer Manager Applet"
+msgstr "GNOME Transfer Manager Applet"
+
+#: applet/dialog-about.c:48
+#, fuzzy
+msgid ""
+"The GNOME transfer manager applet.\n"
+"http://gtm.sourceforge.net/"
+msgstr ""
+"The GNOME transfer manager.\n"
+"http://camoes.rnl.ist.utl.pt/~bapm/gtm/"
+
+#: applet/dialog-add.c:223
+#, fuzzy
+msgid "GTM Applet - Add files to download"
+msgstr "GTM - Nuovo file da scaricare"
+
+#: applet/dialog-new.c:151
+#, fuzzy
+msgid "GTM Applet - New file to download"
+msgstr "GTM - Nuovo file da scaricare"
+
+#: applet/dialog-prop.c:152
+#, fuzzy
+msgid "Disable the download dir"
+msgstr "Disabilita il download automatico"
+
+#: applet/dialog-prop.c:163
+#, fuzzy
+msgid "GTM Applet - Def Download Dir"
+msgstr "GTM - Directory di destinazione predefinita"
+
+#: applet/dialog-prop.c:243
+msgid "(none)"
+msgstr ""
+
+#: applet/dialog-prop.c:255
+msgid "Button1 click:"
+msgstr ""
+
+#: applet/dialog-prop.c:296
+#, fuzzy
+msgid "GTM Applet - Properties"
+msgstr "GTM - Proprieta'"
+
+#: applet/dialog-prop.c:313
+msgid "Bindings"
 msgstr ""
 
 #~ msgid "Disable proxy:"
@@ -603,9 +666,6 @@ msgstr ""
 
 #~ msgid "yes"
 #~ msgstr "si"
-
-#~ msgid "GNOME Transfer Manager Applet"
-#~ msgstr "GNOME Transfer Manager Applet"
 
 #~ msgid ""
 #~ "The GNOME transfer manager applet.\n"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Transfer Manager 0.4.4\n"
-"POT-Creation-Date: 2000-05-24 20:30+0100\n"
+"POT-Creation-Date: 2000-06-11 16:10+0100\n"
 "PO-Revision-Date: 1999-12-07 16:09+0900\n"
 "Last-Translator: Kang JeongHee <Keizi@mecom.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -13,26 +13,29 @@ msgstr ""
 "Content-Type: text/plain; charset=euc-kr\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:333
+#: src/main.c:298
 msgid "url to fetch"
 msgstr "받을 URL"
 
-#: src/main.c:333
+#: src/main.c:298
 msgid "URL"
 msgstr "URL"
 
 #. If there where errors give them to the user
-#: src/dialog-add.c:69 src/dialog-add.c:86 src/dialog-add.c:302
-#: src/dialog-add.c:320 src/dialog-new.c:109 src/main.c:369
+#: applet/dialog-add.c:68 applet/dialog-add.c:78 applet/dialog-add.c:291
+#: applet/dialog-add.c:309 applet/dialog-new.c:105 src/dialog-add.c:69
+#: src/dialog-add.c:86 src/dialog-add.c:302 src/dialog-add.c:320
+#: src/dialog-new.c:110 src/main.c:334
 msgid "URL:\n"
 msgstr "URL:\n"
 
-#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:110
-#: src/main.c:371
+#: applet/dialog-add.c:81 applet/dialog-add.c:312 applet/dialog-new.c:106
+#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:111
+#: src/main.c:336
 msgid "already in the list"
 msgstr "이미 목록에 있습니다"
 
-#: src/main.c:403
+#: src/main.c:368
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -277,13 +280,13 @@ msgstr "선택사항"
 msgid "Local dir:"
 msgstr "받을 디렉토리:"
 
-#: src/dialog-add.c:270 src/dialog-new.c:186 src/dialog-prop.c:159
-#: src/download-info.c:285
+#: applet/dialog-add.c:260 applet/dialog-new.c:182 src/dialog-add.c:270
+#: src/dialog-new.c:215 src/dialog-prop.c:159 src/download-info.c:285
 msgid "Disable proxy"
 msgstr "프록시 끄기"
 
-#: src/dialog-add.c:274 src/dialog-new.c:190 src/dialog-prop.c:191
-#: src/download-info.c:292
+#: applet/dialog-add.c:264 applet/dialog-new.c:186 src/dialog-add.c:274
+#: src/dialog-new.c:219 src/dialog-prop.c:191 src/download-info.c:292
 msgid "Disable auto download"
 msgstr "알아서 내려받음 끄기"
 
@@ -308,30 +311,35 @@ msgstr ""
 "그놈 전송 관리자.\n"
 "http://camoes.rnl.ist.utl.pt/~bapm/gtm/"
 
-#: src/dialog-new.c:55 src/dialog-prop.c:62
+#: applet/dialog-new.c:52 src/dialog-new.c:56 src/dialog-prop.c:62
 msgid "Invalid URL"
 msgstr "틀린 URL"
 
-#: src/dialog-new.c:77
+#: applet/dialog-new.c:74 src/dialog-new.c:78
 msgid "Multiple download not implemented yet"
 msgstr "여러개 내려받기는 아직 안됩니다"
 
-#: src/dialog-new.c:155
+#: src/dialog-new.c:168
 msgid "GTM - New file to download"
 msgstr "GTM - 새로 내려받을 파일"
 
-#. Set it's contents
-#: src/dialog-new.c:162
+#. Set its contents
+#: applet/dialog-new.c:156 src/dialog-new.c:175
 msgid "Please enter URL of the file to download:"
 msgstr "내려받을 파일의 URL을 적어주세요:"
 
-#: src/dialog-add.c:251 src/dialog-new.c:171
+#: applet/dialog-add.c:242 applet/dialog-new.c:166 src/dialog-add.c:251
+#: src/dialog-new.c:184
 msgid "Download dir:"
 msgstr "내려받을 디렉토리:"
 
-#: src/dialog-new.c:175
+#: applet/dialog-new.c:170 src/dialog-new.c:188
 msgid "GTM - New Download Dir"
 msgstr "GTM - 새 내려받을 디렉토리"
+
+#: src/dialog-new.c:200
+msgid "Suggest directory by pattern matching"
+msgstr ""
 
 #: src/dialog-restart.c:49
 msgid "GTM - Restart selected files"
@@ -366,146 +374,151 @@ msgid "Both"
 msgstr "모두"
 
 #. Use proxy
-#: src/dialog-prefs.c:347
+#: src/dialog-prefs.c:355
 msgid "Use proxy"
 msgstr "프록시 쓰기"
 
-#: src/dialog-prefs.c:354
+#: src/dialog-prefs.c:362
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: src/dialog-prefs.c:362
+#: src/dialog-prefs.c:370
 msgid "Password:"
 msgstr "비밀 번호:"
 
-#: src/dialog-prefs.c:371
+#: src/dialog-prefs.c:379
 msgid "HTTP:"
 msgstr "HTTP:"
 
-#: src/dialog-prefs.c:379
+#: src/dialog-prefs.c:387
 msgid "FTP:"
 msgstr "FTP:"
 
-#: src/dialog-prefs.c:436
+#: src/dialog-prefs.c:444
 msgid "Interface to connect:"
 msgstr "연결할 장치:"
 
-#: src/dialog-prefs.c:444
+#: src/dialog-prefs.c:452
 msgid "Check interface time:"
 msgstr "장치 확인 시간:"
 
-#: src/dialog-prefs.c:459
+#: src/dialog-prefs.c:467
 #, fuzzy
 msgid "Simultaneous:"
 msgstr "동시:"
 
-#: src/dialog-prefs.c:469
+#: src/dialog-prefs.c:477
 msgid "Manual stop disables auto download"
 msgstr "그만을 누르면 알아서 내려받음 끄기"
 
-#: src/dialog-prefs.c:516
+#: src/dialog-prefs.c:483
+#, fuzzy
+msgid "Stop download on link loss"
+msgstr "고른 파일을 그만 내려받습니다"
+
+#: applet/dialog-prop.c:159 src/dialog-prefs.c:536
 msgid "Default download dir:"
 msgstr "기본 내려받기디렉토리:"
 
-#: src/dialog-prefs.c:519
+#: src/dialog-prefs.c:539
 msgid "GTM - Def Download Dir"
 msgstr "GTM - 기본 내려받기 디렉토리"
 
-#: src/dialog-prefs.c:528
+#: src/dialog-prefs.c:548
 msgid "Number retries:"
 msgstr "다시 해볼 횟수:"
 
-#: src/dialog-prefs.c:532
+#: src/dialog-prefs.c:552
 msgid "Unlimited"
 msgstr "끝없이"
 
-#: src/dialog-prefs.c:535
+#: src/dialog-prefs.c:555
 msgid "Limited"
 msgstr "몇번만"
 
-#: src/dialog-prefs.c:546
+#: src/dialog-prefs.c:566
 msgid "Use passive FTP"
 msgstr "수동적 FTP 쓰기"
 
-#: src/dialog-prefs.c:613
+#: applet/dialog-prop.c:202 src/dialog-prefs.c:633
 msgid "Dialog new or dialog add changes default download dir"
 msgstr "새로 또는 더하기 대화상자에서 기본 내려받기 디렉토리 바꾸기"
 
-#: src/dialog-prefs.c:620
+#: src/dialog-prefs.c:640
 msgid "Confirm remove when transfer incomplete"
 msgstr ""
 
-#: src/dialog-prefs.c:627
+#: src/dialog-prefs.c:647
 msgid "Confirm remove completed transfers"
 msgstr ""
 
-#: src/dialog-prefs.c:634
+#: src/dialog-prefs.c:654
 msgid "Confirm restart"
 msgstr "다시 받기 확인"
 
-#: src/dialog-prefs.c:641
+#: applet/dialog-prop.c:209 src/dialog-prefs.c:661
 msgid "Confirm drag and drop URL"
 msgstr "URL 끌어놓기 확인"
 
-#: src/dialog-prefs.c:694
+#: src/dialog-prefs.c:714
 msgid "Toolbar style:"
 msgstr "툴바 형식:"
 
-#: src/dialog-prefs.c:709
+#: src/dialog-prefs.c:729
 msgid "File list refresh rate:"
 msgstr "파일 목록 새로고칠 간격:"
 
-#: src/dialog-prefs.c:723
+#: src/dialog-prefs.c:743
 msgid "Show list statistics"
 msgstr "목록 상태창 보임"
 
-#: src/dialog-prefs.c:728
+#: src/dialog-prefs.c:748
 msgid "Show page statistics"
 msgstr "쪽 상태창 보임"
 
-#: src/dialog-prefs.c:733
+#: src/dialog-prefs.c:753
 msgid "Show download info page"
 msgstr "내려받기 정보 쪽 보임"
 
-#: src/dialog-prefs.c:787
+#: src/dialog-prefs.c:807
 msgid "Use sound"
 msgstr "소리 쓰기"
 
-#: src/dialog-prefs.c:792
+#: src/dialog-prefs.c:812
 msgid "Use beep"
 msgstr "삑소리 쓰기"
 
-#: src/dialog-prefs.c:833
+#: src/dialog-prefs.c:853
 msgid "GTM - Preferences"
 msgstr "GTM - 환경설정"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:846 src/dialog-prop.c:252
+#: src/dialog-prefs.c:866 src/dialog-prop.c:252
 msgid "Proxy"
 msgstr "프록시"
 
-#: src/dialog-prefs.c:850
+#: src/dialog-prefs.c:870
 msgid "Auto"
 msgstr "알아서"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:854 src/dialog-prop.c:248
+#: applet/dialog-prop.c:305 src/dialog-prefs.c:874 src/dialog-prop.c:248
 msgid "Download"
 msgstr "내려받기"
 
-#: src/dialog-prefs.c:858
+#: src/dialog-prefs.c:878
 msgid "Directories"
 msgstr ""
 
-#: src/dialog-prefs.c:862
+#: applet/dialog-prop.c:309 src/dialog-prefs.c:882
 msgid "Confirmations"
 msgstr "확인"
 
-#: src/dialog-prefs.c:866
+#: src/dialog-prefs.c:886
 msgid "Display"
 msgstr "화면"
 
-#: src/dialog-prefs.c:870
+#: src/dialog-prefs.c:890
 msgid "Sound"
 msgstr "소리"
 
@@ -526,11 +539,11 @@ msgid "GTM - Add files to download"
 msgstr "GTM - 새로 내려받을 파일 더하기"
 
 #. Set it's contents
-#: src/dialog-add.c:238
+#: applet/dialog-add.c:228 src/dialog-add.c:238
 msgid "URLs to be added"
 msgstr "더할 URL"
 
-#: src/dialog-add.c:255
+#: applet/dialog-add.c:247 src/dialog-add.c:255
 msgid "GTM - Add Download Dir"
 msgstr "GTM - 내려받을 디렉토리 더하기"
 
@@ -567,13 +580,64 @@ msgstr "속성..."
 msgid "About..."
 msgstr "이 프로그램은..."
 
-#: applet/gtm_applet.c:453
+#: applet/dialog-prop.c:244 applet/gtm_applet.c:453
 msgid "New URL"
 msgstr "새 URL"
 
-#: applet/gtm_applet.c:459
+#: applet/dialog-prop.c:245 applet/gtm_applet.c:459
 msgid "Open GTM"
 msgstr "GTM 열기"
+
+#: applet/dialog-about.c:45
+#, fuzzy
+msgid "GNOME Transfer Manager Applet"
+msgstr "그놈 전송 관리자"
+
+#: applet/dialog-about.c:48
+#, fuzzy
+msgid ""
+"The GNOME transfer manager applet.\n"
+"http://gtm.sourceforge.net/"
+msgstr ""
+"그놈 전송 관리자.\n"
+"http://camoes.rnl.ist.utl.pt/~bapm/gtm/"
+
+#: applet/dialog-add.c:223
+#, fuzzy
+msgid "GTM Applet - Add files to download"
+msgstr "GTM - 새로 내려받을 파일 더하기"
+
+#: applet/dialog-new.c:151
+#, fuzzy
+msgid "GTM Applet - New file to download"
+msgstr "GTM - 새로 내려받을 파일"
+
+#: applet/dialog-prop.c:152
+#, fuzzy
+msgid "Disable the download dir"
+msgstr "알아서 내려받음 끄기"
+
+#: applet/dialog-prop.c:163
+#, fuzzy
+msgid "GTM Applet - Def Download Dir"
+msgstr "GTM - 기본 내려받기 디렉토리"
+
+#: applet/dialog-prop.c:243
+msgid "(none)"
+msgstr ""
+
+#: applet/dialog-prop.c:255
+msgid "Button1 click:"
+msgstr ""
+
+#: applet/dialog-prop.c:296
+#, fuzzy
+msgid "GTM Applet - Properties"
+msgstr "GTM - 속성"
+
+#: applet/dialog-prop.c:313
+msgid "Bindings"
+msgstr ""
 
 #~ msgid "Disable proxy:"
 #~ msgstr "프록시 끄기:"

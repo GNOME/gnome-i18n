@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm 0.4.4\n"
-"POT-Creation-Date: 2000-05-29 13:34+0200\n"
+"POT-Creation-Date: 2000-06-11 16:10+0100\n"
 "PO-Revision-Date: 2000-05-29 13:34+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <linux@linux.org.ua>\n"
@@ -13,26 +13,29 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-u\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:333
+#: src/main.c:298
 msgid "url to fetch"
 msgstr "URL для отримання"
 
-#: src/main.c:333
+#: src/main.c:298
 msgid "URL"
 msgstr "URL"
 
 #. If there where errors give them to the user
-#: src/dialog-add.c:69 src/dialog-add.c:86 src/dialog-add.c:302
-#: src/dialog-add.c:320 src/dialog-new.c:109 src/main.c:369
+#: applet/dialog-add.c:68 applet/dialog-add.c:78 applet/dialog-add.c:291
+#: applet/dialog-add.c:309 applet/dialog-new.c:105 src/dialog-add.c:69
+#: src/dialog-add.c:86 src/dialog-add.c:302 src/dialog-add.c:320
+#: src/dialog-new.c:110 src/main.c:334
 msgid "URL:\n"
 msgstr "URL:\n"
 
-#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:110
-#: src/main.c:371
+#: applet/dialog-add.c:81 applet/dialog-add.c:312 applet/dialog-new.c:106
+#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:111
+#: src/main.c:336
 msgid "already in the list"
 msgstr "вже знаходиться в списку"
 
-#: src/main.c:403
+#: src/main.c:368
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -273,13 +276,13 @@ msgstr "Параметри"
 msgid "Local dir:"
 msgstr "Локальний каталог:"
 
-#: src/dialog-add.c:270 src/dialog-new.c:186 src/dialog-prop.c:159
-#: src/download-info.c:285
+#: applet/dialog-add.c:260 applet/dialog-new.c:182 src/dialog-add.c:270
+#: src/dialog-new.c:215 src/dialog-prop.c:159 src/download-info.c:285
 msgid "Disable proxy"
 msgstr "Заборонити прокс╕"
 
-#: src/dialog-add.c:274 src/dialog-new.c:190 src/dialog-prop.c:191
-#: src/download-info.c:292
+#: applet/dialog-add.c:264 applet/dialog-new.c:186 src/dialog-add.c:274
+#: src/dialog-new.c:219 src/dialog-prop.c:191 src/download-info.c:292
 msgid "Disable auto download"
 msgstr "Заборонити автоприйом"
 
@@ -303,30 +306,35 @@ msgstr ""
 "GNOME Менеджер прийому.\n"
 "http://gtm.sourceforge.net/"
 
-#: src/dialog-new.c:55 src/dialog-prop.c:62
+#: applet/dialog-new.c:52 src/dialog-new.c:56 src/dialog-prop.c:62
 msgid "Invalid URL"
 msgstr "Нев╕рний URL"
 
-#: src/dialog-new.c:77
+#: applet/dialog-new.c:74 src/dialog-new.c:78
 msgid "Multiple download not implemented yet"
 msgstr "Множинний прийом ще не реал╕зовано"
 
-#: src/dialog-new.c:155
+#: src/dialog-new.c:168
 msgid "GTM - New file to download"
 msgstr "GTM - Новий файл для прийому"
 
-#. Set it's contents
-#: src/dialog-new.c:162
+#. Set its contents
+#: applet/dialog-new.c:156 src/dialog-new.c:175
 msgid "Please enter URL of the file to download:"
 msgstr "Введ╕ть URL файлу для прийому:"
 
-#: src/dialog-add.c:251 src/dialog-new.c:171
+#: applet/dialog-add.c:242 applet/dialog-new.c:166 src/dialog-add.c:251
+#: src/dialog-new.c:184
 msgid "Download dir:"
 msgstr "Каталог прийому:"
 
-#: src/dialog-new.c:175
+#: applet/dialog-new.c:170 src/dialog-new.c:188
 msgid "GTM - New Download Dir"
 msgstr "GTM - Новий каталог прийому"
+
+#: src/dialog-new.c:200
+msgid "Suggest directory by pattern matching"
+msgstr ""
 
 #: src/dialog-restart.c:49
 msgid "GTM - Restart selected files"
@@ -361,145 +369,151 @@ msgid "Both"
 msgstr "Все"
 
 #. Use proxy
-#: src/dialog-prefs.c:347
+#: src/dialog-prefs.c:355
 msgid "Use proxy"
 msgstr "Використовувати прокс╕"
 
-#: src/dialog-prefs.c:354
+#: src/dialog-prefs.c:362
 msgid "Username:"
 msgstr "Користувач:"
 
-#: src/dialog-prefs.c:362
+#: src/dialog-prefs.c:370
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/dialog-prefs.c:371
+#: src/dialog-prefs.c:379
 msgid "HTTP:"
 msgstr "HTTP:"
 
-#: src/dialog-prefs.c:379
+#: src/dialog-prefs.c:387
 msgid "FTP:"
 msgstr "FTP:"
 
-#: src/dialog-prefs.c:436
+#: src/dialog-prefs.c:444
 msgid "Interface to connect:"
 msgstr "╤нтерфейс з'╓днання:"
 
-#: src/dialog-prefs.c:444
+#: src/dialog-prefs.c:452
 msgid "Check interface time:"
 msgstr ""
 
-#: src/dialog-prefs.c:459
+#: src/dialog-prefs.c:467
 msgid "Simultaneous:"
 msgstr ""
 
-#: src/dialog-prefs.c:469
+#: src/dialog-prefs.c:477
 msgid "Manual stop disables auto download"
 msgstr "Ручна зупинка забороня╓ автоприйом"
 
-#: src/dialog-prefs.c:516
+#: src/dialog-prefs.c:483
+#, fuzzy
+msgid "Stop download on link loss"
+msgstr "Зупинити прийом вибраних файл╕в"
+
+#: applet/dialog-prop.c:159 src/dialog-prefs.c:536
 msgid "Default download dir:"
 msgstr "Типовий каталог прийому:"
 
-#: src/dialog-prefs.c:519
+#: src/dialog-prefs.c:539
 msgid "GTM - Def Download Dir"
 msgstr "GTM - Визначення каталогу прийому"
 
-#: src/dialog-prefs.c:528
+#: src/dialog-prefs.c:548
 msgid "Number retries:"
 msgstr "К╕льк╕сть спроб:"
 
-#: src/dialog-prefs.c:532
+#: src/dialog-prefs.c:552
 msgid "Unlimited"
 msgstr "Необмежено"
 
-#: src/dialog-prefs.c:535
+#: src/dialog-prefs.c:555
 msgid "Limited"
 msgstr "Обмежено"
 
-#: src/dialog-prefs.c:546
+#: src/dialog-prefs.c:566
 msgid "Use passive FTP"
 msgstr "Використовувати пасивний FTP"
 
-#: src/dialog-prefs.c:613
+#: applet/dialog-prop.c:202 src/dialog-prefs.c:633
 msgid "Dialog new or dialog add changes default download dir"
-msgstr "Д╕алог додавання нового файлу для прийому зм╕ню╓ типовий каталог прийому"
+msgstr ""
+"Д╕алог додавання нового файлу для прийому зм╕ню╓ типовий каталог прийому"
 
-#: src/dialog-prefs.c:620
+#: src/dialog-prefs.c:640
 msgid "Confirm remove when transfer incomplete"
 msgstr "Перепитувати про вилучення незавершених прийом╕в"
 
-#: src/dialog-prefs.c:627
+#: src/dialog-prefs.c:647
 msgid "Confirm remove completed transfers"
 msgstr "Перепитувати про вилучення завершених прийом╕в"
 
-#: src/dialog-prefs.c:634
+#: src/dialog-prefs.c:654
 msgid "Confirm restart"
 msgstr "Перепитувати про прийом заново"
 
-#: src/dialog-prefs.c:641
+#: applet/dialog-prop.c:209 src/dialog-prefs.c:661
 msgid "Confirm drag and drop URL"
 msgstr "Перепитувати про додавання перетягнутого URL"
 
-#: src/dialog-prefs.c:694
+#: src/dialog-prefs.c:714
 msgid "Toolbar style:"
 msgstr "Стиль панел╕ ╕нструмент╕в:"
 
-#: src/dialog-prefs.c:709
+#: src/dialog-prefs.c:729
 msgid "File list refresh rate:"
 msgstr "Частота оновлення списку:"
 
-#: src/dialog-prefs.c:723
+#: src/dialog-prefs.c:743
 msgid "Show list statistics"
 msgstr "Показувати статистику в списку"
 
-#: src/dialog-prefs.c:728
+#: src/dialog-prefs.c:748
 msgid "Show page statistics"
 msgstr "Показувати статистику в стор╕нц╕"
 
-#: src/dialog-prefs.c:733
+#: src/dialog-prefs.c:753
 msgid "Show download info page"
 msgstr "Показувати ╕нформац╕йну стор╕нку"
 
-#: src/dialog-prefs.c:787
+#: src/dialog-prefs.c:807
 msgid "Use sound"
 msgstr "В╕користовувати звуки"
 
-#: src/dialog-prefs.c:792
+#: src/dialog-prefs.c:812
 msgid "Use beep"
 msgstr "Використовувати пищання"
 
-#: src/dialog-prefs.c:833
+#: src/dialog-prefs.c:853
 msgid "GTM - Preferences"
 msgstr "GTM - Налаштування"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:846 src/dialog-prop.c:252
+#: src/dialog-prefs.c:866 src/dialog-prop.c:252
 msgid "Proxy"
 msgstr "Прокс╕"
 
-#: src/dialog-prefs.c:850
+#: src/dialog-prefs.c:870
 msgid "Auto"
 msgstr "Авто"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:854 src/dialog-prop.c:248
+#: applet/dialog-prop.c:305 src/dialog-prefs.c:874 src/dialog-prop.c:248
 msgid "Download"
 msgstr "Прийом"
 
-#: src/dialog-prefs.c:858
+#: src/dialog-prefs.c:878
 msgid "Directories"
 msgstr "Каталоги"
 
-#: src/dialog-prefs.c:862
+#: applet/dialog-prop.c:309 src/dialog-prefs.c:882
 msgid "Confirmations"
 msgstr "Перепитування"
 
-#: src/dialog-prefs.c:866
+#: src/dialog-prefs.c:886
 msgid "Display"
 msgstr "В╕дображення"
 
-#: src/dialog-prefs.c:870
+#: src/dialog-prefs.c:890
 msgid "Sound"
 msgstr "Звук"
 
@@ -520,11 +534,11 @@ msgid "GTM - Add files to download"
 msgstr "GTM - Додавання файли для прийому"
 
 #. Set it's contents
-#: src/dialog-add.c:238
+#: applet/dialog-add.c:228 src/dialog-add.c:238
 msgid "URLs to be added"
 msgstr ""
 
-#: src/dialog-add.c:255
+#: applet/dialog-add.c:247 src/dialog-add.c:255
 msgid "GTM - Add Download Dir"
 msgstr "GTM - Додавання каталогу прийому"
 
@@ -560,10 +574,61 @@ msgstr "Властивост╕..."
 msgid "About..."
 msgstr "Про..."
 
-#: applet/gtm_applet.c:453
+#: applet/dialog-prop.c:244 applet/gtm_applet.c:453
 msgid "New URL"
 msgstr "Новий URL"
 
-#: applet/gtm_applet.c:459
+#: applet/dialog-prop.c:245 applet/gtm_applet.c:459
 msgid "Open GTM"
 msgstr "В╕дкрити GTM"
+
+#: applet/dialog-about.c:45
+#, fuzzy
+msgid "GNOME Transfer Manager Applet"
+msgstr "GNOME Менеджер прийому"
+
+#: applet/dialog-about.c:48
+#, fuzzy
+msgid ""
+"The GNOME transfer manager applet.\n"
+"http://gtm.sourceforge.net/"
+msgstr ""
+"GNOME Менеджер прийому.\n"
+"http://gtm.sourceforge.net/"
+
+#: applet/dialog-add.c:223
+#, fuzzy
+msgid "GTM Applet - Add files to download"
+msgstr "GTM - Додавання файли для прийому"
+
+#: applet/dialog-new.c:151
+#, fuzzy
+msgid "GTM Applet - New file to download"
+msgstr "GTM - Новий файл для прийому"
+
+#: applet/dialog-prop.c:152
+#, fuzzy
+msgid "Disable the download dir"
+msgstr "Заборонити автоприйом"
+
+#: applet/dialog-prop.c:163
+#, fuzzy
+msgid "GTM Applet - Def Download Dir"
+msgstr "GTM - Визначення каталогу прийому"
+
+#: applet/dialog-prop.c:243
+msgid "(none)"
+msgstr ""
+
+#: applet/dialog-prop.c:255
+msgid "Button1 click:"
+msgstr ""
+
+#: applet/dialog-prop.c:296
+#, fuzzy
+msgid "GTM Applet - Properties"
+msgstr "GTM - Властивост╕"
+
+#: applet/dialog-prop.c:313
+msgid "Bindings"
+msgstr ""
