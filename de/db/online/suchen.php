@@ -3,6 +3,7 @@
     require ("config.php");
 
     function get_result($wid, $tid, $word, $trans, $type, $comment, $count) {
+
         $retval = "<tr>";
 
         if ($count > 1) {
@@ -12,8 +13,6 @@
         }
 
         $comment = wordwrap($comment, 25, "\n", 1);
-//      $comment = str_replace("\n", "<br>", $comment);
-
         $html_trans = htmlentities ($trans);
         $html_comment = htmlentities ($comment);
 
@@ -73,16 +72,16 @@
             $result = mysql_db_query($dbName, $query);
             $content .= mysql_error();
 
-            if ($result && mysql_num_rows($result) > 0) {
+            if ($result && (mysql_num_rows($result) > 0)) {
 
-	        $content .= "<table cellpadding=\"3\"><tr>
-		                 <th>Wort</th>
-				 <th></th>
-				 <th>Wortart</th>
-				 <th>&Uuml;bersetzung</th>
-				 <th>Kommentar</th>
-				 <th>Aktionen</th>
-				 </tr>";
+                $content .= "<table cellpadding=\"3\"><tr>
+                                 <th>Wort</th>
+                                 <th></th>
+                                 <th>Wortart</th>
+                                 <th>&Uuml;bersetzung</th>
+                                 <th>Kommentar</th>
+                                 <th>Aktionen</th>
+                                 </tr>";
 
                 $word_old = '';
                 $i = 0;
@@ -146,10 +145,12 @@
                                     </td>
                                 </tr>";
                 }
+
             } else {
-                $content = "Suche erfolglos! Der Suchstring konnte in der Datenbank
-		            nicht gefunden werden!";
-	    }
+
+                $content = "Suche erfolglos! Der Suchstring konnte in der Datenbank nicht gefunden werden!";
+                $content .= "<a href='/l10n/glossar/suchen.php' style='display:block; float: right'>Zur Suche</a>\n"
+            }
         }
 
         $content .= "</table>";
