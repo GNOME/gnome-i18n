@@ -10,11 +10,10 @@
 //      html_head()
 //
 
-$important_branch = "gnome-2.8";
-function meter() { ?>
-<div class="meter">
-<?
-$url = sprintf("%s%s%s","http://",$GLOBALS["HTTP_HOST"],$GLOBALS["REQUEST_URI"]);
+$important_branch = "gnome-2.10";
+function translate() { ?>
+<div class="translate">
+<? $url = sprintf("%s%s%s","http://",$GLOBALS["HTTP_HOST"],$GLOBALS["REQUEST_URI"]);
  ?>
 <form name="TRANS" action="http://www.systranbox.com/systran/box" method="post">
 <input name="systran_id" type="hidden" value="SystranSoft-en">
@@ -29,9 +28,9 @@ echo "</div>";
 }
 
 function html_head() {
-$backgroundnumber = rand (1, 5);
+$backgrounds = array('background01.png', 'background02.png', 'background03.png', 'background04.png', 'background05.png');
 ?>
-  <link rel="icon" href="images/gnome-16.png" type="image/png">
+  <link rel="icon" href="images/gnome-nl-logo.png" type="image/png">
   <link rel="stylesheet" href="css/default.css" type="text/css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="author" content="Vincent van Adrighem">
@@ -39,30 +38,31 @@ $backgroundnumber = rand (1, 5);
   <style type="text/css">
     .hdr {
       background: url("images/<? 
-	echo "background0";
-	echo $backgroundnumber;
-	echo ".png\") no-repeat;";
-?>
+	echo $backgrounds[rand (0, count ($backgrounds) - 1)];
+?>") no-repeat;
     }
   </style>
 <?
 }
 
-function gnome_head() { ?>
-<div class="hdr">
-	<a href="index.php"><img class="logo" src="images/gnome-64.png" alt="Thuis" title="Terug naar de beginpagina"></a>
+function gnome_head() {
+$logos = array('gnome-nl-logo.png', 'gnome-nl-logo.png', 'gnome-be-logo.png');
+?><div class="hdr">
+	<a href="index.php"><img class="logoleft" src="images/<?
+        echo $logos[rand (0, count ($logos) - 1)];
+?>" alt="Thuis" title="Terug naar de beginpagina"></a>
 </div>
 <?
 }
 
 function gnome_foot() { ?>
 <div class="copyright">
-<a href="http://www.sourceforge.net/"><img src="images/sflogo.png"
-	border="0" alt="Hosted by Sourceforge"></a>
+<a href="http://www.kovoks.nl/"><img src="images/kovoks.banner.gif"
+	border="0" alt="Hosted by KovoKs.nl"></a>
 <a href="http://validator.w3.org/check/referer"><img border="0"
         src="http://www.w3.org/Icons/valid-html401"
         alt="Valid HTML 4.01!" height="31" width="88"></a>
-<a href="http://jigsaw.w3.org/css-validator/validator?uri=http://gnome-nl.sourceforge.net/">
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=http://nl.gnome.org/">
 	<img border="0" src="http://jigsaw.w3.org/css-validator/images/vcss"
 	 alt="Correct CSS!" height="31" width="88"></a>
 <a href="mailto:adrighem&#064;gnome.org">Webmaster</a>
@@ -124,6 +124,7 @@ function gnome_menu() { ?>
 	<div class="sectioncontent">
 		<ul class="nobullet">
 		<li><a href="gebruikers_omgeving.php">Gnome Nederlands</a></li>
+		<li><a href="foutrapport.php">Vertaalfouten</a></li>
 		</ul>
 	</div>
 </div>

@@ -48,7 +48,7 @@ if (isset($gnomeversion)) {
 <div class="body">
 
 <?
-meter();
+translate();
 gnome_head();
 gnome_menu();
 ?>

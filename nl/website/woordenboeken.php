@@ -12,22 +12,23 @@ include "functions.php";
 <div class="body">
 
 <?
-meter();
+translate();
 gnome_head();
 gnome_menu();
 ?>
 <div class="content">
 <h1>Beschikbare woordenboeken.</h1>
-<p><b><a href="http://vertaling.nl.linux.org/woord.php">Woordenboek
-van vertaling.nl.linux.org:</a></b> Op deze pagina kun je zoeken in de
-database van nl.linux.org. Dit is de aanbevolen database voor zover
-deze toereikend is.</p>
-<p>Er is op internet een aantal woordenboeken beschikbaar
+<? 
+//<p><b><a href="http://vertaling.nl.linux.org/woord.php">Woordenboek
+//van vertaling.nl.linux.org:</a></b> Op deze pagina kun je zoeken in de
+//database van nl.linux.org. Dit is de aanbevolen database voor zover
+//deze toereikend is.</p>
+?><p>Er is op internet een aantal woordenboeken beschikbaar
 die je zouden kunnen helpen bij het vertalen van Programma's
 naar het Nederlands. Hier staan ze allemaal op een rijtje.</p>
 <p>Het eerste rijtje bevat zogenaamde slimme bladwijzers. Gebruik de rechter 
 muisknop om ze aan je bladwijzers toe te voegen en je kunt ze op een 
-eenzoudige manier gebruiken om snel te zoeken.</p>
+eenvoudige manier gebruiken om snel te zoeken.</p>
 <ul>
 <li><a type="text/smartbookmark" href="http://www.interglot.com/" rel="http://www.interglot.com/interglotresult.php?SrcLang=2&DstLang=1&word=%s" title="Interglot">Interglot</a></li>
 <li><a type="text/smartbookmark" href="http://www.euroglotonline.nl/" rel="http://www.euroglotonline.nl/display.php?srcLang=Engels&dstLang=Nederlands&srcInput=%s&MorphReg=true&ScreenLanguage=Dutch" title="Euroglot">Euroglot Online!</a></li>
