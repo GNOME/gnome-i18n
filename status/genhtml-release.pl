@@ -10,6 +10,7 @@ $totals = 0;  #total strings in all modules from modinfo.
 $now = time;
 
 %modulenames = (
+"de", "Paket",
 "da", "Modul",
 "no", "Modul",
 "ro", "Modul",
@@ -21,6 +22,7 @@ $now = time;
 
 %translated = (
 "da", "Oversat",
+"de", "&uuml;bersetzt",
 "no", "Oversatt",
 "ro", "traduse",
 "ru", "Переведено",
@@ -31,6 +33,7 @@ $now = time;
 
 %fuzzy = (
 "da", "Uklart",
+"de", "ungenau",
 "no", "Usikker",
 "ro", "neclare",
 "ru", "Нечетко",
@@ -41,6 +44,7 @@ $now = time;
 
 %untranslated = (
 "da", "Uoversat",
+"de", "un&uuml;bersetzt",
 "no", "Ikke oversatt",
 "ro", "netraduse",
 "ru", "Непереведено",
@@ -51,6 +55,7 @@ $now = time;
 
 %strings = (
 "da", "strenge",
+"de", "Meldung",
 "no", "strenger",
 "ro", "stringuri",
 "ru", "сообщ.",
@@ -62,6 +67,7 @@ $now = time;
 %details = ( 
 "C", "Detail report for ",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
+"de", "Detaillierte Statistik f&uuml;r deutsche &Uuml;bersetzung in GNOME",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "Подробный отчет о состоянии перевода Gnome на русский",
 "sv", "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
