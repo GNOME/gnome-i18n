@@ -93,7 +93,7 @@
 #@langs = ( "no" );
 
 
-@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+@langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome/1";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
