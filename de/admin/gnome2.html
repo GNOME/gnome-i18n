@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+  <head>
+    <title>Informationen zu GNOME 2.0</title>
+  </head>
+
+  <body>
+
+    <h1>Was wird alles benötigt?</h1>
+    <p>Um GNOME 2.0 erfolgreich zu compilieren braucht man einerseits viel Geduld, andererseits eine stattliche Anzahl von Bibliotheken. Bevor man überhaupt anfängt, sollte man sich vergewissern, ob folgende Pakete auf dem System installliert sind:</p>
+    <li>autoconf 2.52</li>
+    <li>automake 1.5</li>
+    <li>gettext 0.10.40</li>
+    <li>intltool 0.17 <em>(GNOME CVS)</em></li>
+    <li>pkgconfig 0.11</li>
+    <li>popt 1.6.3</li>
+    <li>zlib 1.1.3 (besser ist 1.1.4 wegen der Sicherheitslücke in Version 1.1.3)</li>
+    <li>libungif 4.1.0b1</li>
+    <li>libpng 1.0.12 (1.2.x funktionniert meines Wissens nicht)</li>
+    <li>libjpeg 6b</li>
+    <li>audiofile 0.2.3</li>
+    <li>esound 0.2.24 <em>(CVS GNOME)</em></li>
+    <p>Als erstes müssen ein paar Variablen exportiert werden. Für die bash als Standardshell gibt man folgendes ein:</p>
+    <li>export GNOME2_PATH=/Pfad/zu/GNOME2</li>
+    <li>export LD_LIBRARY_PATH=$GNOME2_PATH/lib</li>
+    <li>export PATH=$GNOME2_PATH/bin</li>
+    <li>export PKG_CONFIG_PATH=$LD_LIBRARY_PATH/pkgconfig</li>
+    <li>export ACLOCAL_FLAGS="-I $GNOME2_PATH/share/aclocal"</li>
+    Wenn der letzte export-Befehl nicht funktionniert dann den ganzen Pfad angeben, anstatt $GNOME2_PATH.
+    <p>Nun kommt es auf die exakte Reihenfolge an; gtk-doc muss nicht unbedingt compiliert werden. Dies spart sehr viel Zeit!</p>
+    <em>gtk-doc, glib, atk, pango, gtk+, linc, libIDL, ORBit2, gnome-xml, libxslt, gnome-common, gnome-mime-data, gconf, bonobo-activation, libbonobo, gnome-vfs, libgnome, libart_lgpl, libglade, libgnomecanvas, libbonoboui, libgnomeui, libgnomeprint, libgnomeprintui, libwnck, libzvt, gnome-desktop, gnome-panel, gnome-session, profterm, gnome-utils, gail, libgtkhtml2, gnome-applets, gnome-control-center, gnome-games, gnome-media, librsvg, eel, nautilus, gconf-editor, yelp, bug-buddy, metacity</em>
+    <p>Sawfish ist meiner Meinung nach noch nicht sonderlich gut, deshalb habe ich hier metacity aufgeführt.</p>
+    <p>Man kann alle Pakete ohne besondere Optionen compilieren. Bei glib und gtk+ gibt es allerdings ein paar Dinge, die interessant sind (z.B. --enable-threads)</p>
+    <p>Wenn alles fehlerfrei compiliert ist, ist nur noch das Anpassen der .xinitrc-Datei notwendig, danach sollte GNOME 2.0 auf dem Bildschirm erscheinen.</p>
+    <hr align="center" size="2">
+    <p>Falls sich ein Fehler eingeschlichen haben sollte, oder es sonst noch Fragen gibt, bitte ich Euch mir eine <a href="mailto:chrisime@gnome.org">Mail</a> zu schreiben. Viel Spaß beim Paketebasteln. :-)</p>
+
+  </body>
+
+</html>
+
