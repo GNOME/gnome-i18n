@@ -84,6 +84,7 @@ $now = time;
 
 %totals = (
 "de", "Gesamt",
+"fi", "Yhteens&auml;",
 "ja", "╧Г╥в",
 "nl", "Totaal",
 "ru", "Всего",
