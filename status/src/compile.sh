@@ -2,9 +2,11 @@
 
 CC=gcc
 EXTRA_CFLAGS="-Werror -g3 -fno-omit-frame-pointer"
+EXTRA_LDFLAGS="-lpopt"
 PKGCONFIG=pkg-config
 XMLCONFIG=xml-config
 GLIBCONFIG=glib-config
+FILELIST="html-reports.c main.c po-management.c xml-parser.c"
 
 
 # Check whether various devel files are present
@@ -15,16 +17,12 @@ else
 	exit 1
 fi
 
-if test ! -f status.c -a ! -f ./status.c; then
-	echo "status.c must be present in the same directory along with this script!" >&2
-	exit 1
-fi
-
-if test ! -f status.h -a ! -f ./status.h; then
-	echo "status.h must be present in the same directory along with this script!" >&2
-	exit 1
-fi
-
+for i in $FILELIST status.h; do
+	if test ! -f $i -a ! -f ./$i; then
+		echo "$i must be present in the same directory along with this script!" >&2
+		exit 1
+	fi
+done
 
 HAS_GLIB1=false
 HAS_GLIB2=false
@@ -75,7 +73,7 @@ fi
 
 
 # Really do the work now
-COMPILE="$CC $EXTRA_CFLAGS -o status status.c $GLIB_CFLAGS $XML_CFLAGS $GLIB_LDFLAGS $XML_LDFLAGS"
+COMPILE="$CC $GLIB_CFLAGS $XML_CFLAGS $EXTRA_CFLAGS -o status $FILELIST $GLIB_LDFLAGS $XML_LDFLAGS $EXTRA_LDFLAGS"
 
 if `eval $COMPILE`; then
 	cat << _EOF_
