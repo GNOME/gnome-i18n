@@ -27,6 +27,7 @@
 #include "status.h"
 #include "status-version.h"
 #include "status-translation.h"
+#include "status-team.h"
 
 struct _StatusVersion {
 	GObject object;
@@ -414,6 +415,7 @@ gchar *
 status_version_get_html_table (StatusVersion *version, const gchar *html_path)
 {
 	StatusTranslation *translation;
+	StatusTeam *team;
 	gint translated, fuzzy, untranslated;
 	gfloat ptranslated, pfuzzy, puntranslated;
 	GString *table_str;
@@ -453,6 +455,7 @@ status_version_get_html_table (StatusVersion *version, const gchar *html_path)
 		ptranslated = (float) translated / (float) version->nstrings;
 		pfuzzy = (float) fuzzy / (float) version->nstrings;
 		puntranslated = (float) untranslated / (float) version->nstrings;
+		team = status_translation_get_team (translation);
 
 		if (version->nstrings != translated + fuzzy + untranslated) {
 			/* TODO: We should implement a way to show a warning */
@@ -460,9 +463,11 @@ status_version_get_html_table (StatusVersion *version, const gchar *html_path)
 		
 		g_string_append_printf (table_str, "        <tr class=\"moduleVersionRow%s\">\n", (i % 2 == 0) ? "Even" : "Odd");
 		if (html_path != NULL) {
-			g_string_append_printf (table_str, "          <td><a href=\"%s/%s.html\">%s</a></td>\n", html_path, lang->data, lang->data);
+			g_string_append_printf (table_str, "          <td><a href=\"../../teams/%s.html\">%s</a></td>\n",
+					(team != NULL) ? status_team_get_email (team) : "unknown", lang->data);
 		} else {
-			g_string_append_printf (table_str, "          <td><a href=\"%s.html\">%s</a></td>\n", lang->data, lang->data);
+			g_string_append_printf (table_str, "          <td><a href=\"../../../teams/%s.html\">%s</a></td>\n",
+					(team != NULL) ? status_team_get_email (team) : "unknown", lang->data);
 		}
 		g_string_append_printf (table_str, "          <td>%d</td>\n", translated);
 		if (ptranslated == 1) {

@@ -2,7 +2,7 @@ AC_INIT(src/status.h)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(translation-status, 1.99.0)
+AM_INIT_AUTOMAKE(translation-status, 1.99.9)
 
 AM_MAINTAINER_MODE
 

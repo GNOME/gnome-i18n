@@ -31,6 +31,7 @@ typedef struct {
 	GHashTable *modules;
 	GHashTable *versions;
 	GHashTable *views;
+	GHashTable *teams;
 } status_data;
 
 typedef struct {
@@ -41,10 +42,20 @@ typedef struct {
 	gchar *default_title;
 } config_t;
 
+typedef struct {
+	gchar *uri;
+	gchar *description;
+} url_t;
+
 extern config_t config;
+extern status_data *sdata;
 extern GList *langs;
+extern GHashTable *translators;
 
 status_data *status_xml_get_main_data (const gchar *views_file);
 FILE        *status_web_new_file (gchar *file_name, gchar *title, gchar *lang);
 void         status_web_end_file (FILE *file);
+gchar       *status_obfuscate_email (const gchar *email);
+
+
 #endif

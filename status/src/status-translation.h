@@ -37,14 +37,18 @@ G_BEGIN_DECLS
 typedef struct _StatusTranslation StatusTranslation;
 typedef struct _StatusTranslationClass StatusTranslationClass;
 
+#include "status-team.h"
+
 GType          status_translation_get_type (void);
 
 StatusTranslation *status_translation_new (StatusVersion *version, const gchar *locale, const gchar *path);
 
 StatusVersion *status_translation_get_version (StatusTranslation *translation);
+const gchar *status_translation_get_lang (StatusTranslation *translation);
 gint status_translation_get_ntranslated (StatusTranslation *translation);
 gint status_translation_get_nfuzzy (StatusTranslation *translation);
 gint status_translation_get_nuntranslated (StatusTranslation *translation);
+StatusTeam *status_translation_get_team (StatusTranslation *translation);
 void status_translation_report (StatusTranslation *translation);
 
 

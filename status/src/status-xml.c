@@ -27,6 +27,7 @@
 #include "status-module.h"
 #include "status-version.h"
 #include "status-view.h"
+#include "status-team.h"
 
 status_data *
 status_xml_get_main_data (const gchar *views_file)
@@ -87,6 +88,7 @@ status_xml_get_main_data (const gchar *views_file)
 	ret->modules = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 	ret->versions = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 	ret->views = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
+	ret->teams = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 
 	/* We load first the servers */
 	for (cur = root->children; cur != NULL; cur = cur->next) {
@@ -269,6 +271,59 @@ status_xml_get_main_data (const gchar *views_file)
 
 		xmlFree (view_name);
 	}
+
+	for (cur = root->children; cur != NULL; cur = cur->next) {
+		gchar *team_name, *team_mail, *buf;
+		StatusTeam *team;
+		GList *coordinators = NULL, *urls=NULL;
+		xmlNodePtr cur_group;
+
+		team_name = NULL;
+		
+		if (strcmp(cur->name, "team")) {
+			continue;
+		}
+
+		team_name = xmlGetProp (cur, "name");
+		buf = xmlGetProp (cur, "mail");
+		team_mail = status_obfuscate_email (buf);
+		
+		for (cur_group = cur->children; cur_group != NULL; cur_group = cur_group->next) {
+			url_t *url;
+
+			if (strcmp (cur_group->name, "coordinator") && strcmp (cur_group->name, "url")) {
+				if (strcmp(cur_group->name, "text")) {
+					g_warning ("Bad .xml file, please fix it!! (%s)",cur_group->name);
+				}
+				continue;
+			}
+
+			if (!strcmp (cur_group->name, "coordinator")) {
+				gchar *coordinator_mail;
+
+				coordinator_mail = xmlGetProp (cur_group, "mail");
+				coordinators = g_list_append (coordinators, status_obfuscate_email (coordinator_mail));
+				xmlFree (coordinator_mail);
+			} else { /* It's an URL */
+				url = g_new0 (url_t, 1);
+				url->uri = xmlGetProp (cur_group, "uri");
+				url->description = xmlGetProp (cur_group, "description");
+				urls = g_list_append (urls, url);
+			}	
+		}
+
+		team = status_team_new (team_name, team_mail, coordinators, urls);
+
+		/* We don't check if it already exists because we get a valid XML and the DTD
+		 * file does not allow two modules with the same name
+		 */
+		g_hash_table_insert (ret->teams, g_strdup (team_mail), team);
+
+		xmlFree (team_name);
+		xmlFree (buf);
+		g_free (team_mail);
+	}
+
 
 	xmlFreeDoc (doc);
 	xmlMemSetup (old_free,

@@ -27,9 +27,45 @@
 #include "status.h"
 #include "status-version.h"
 #include "status-module.h"
+#include "status-team.h"
+#include "status-translator.h"
 
 config_t config;
 GList *langs;
+status_data *sdata;
+GHashTable *translators;
+
+gchar *
+status_obfuscate_email (const gchar *email)
+{
+	gchar **str;
+	GString *buf = NULL;
+	gchar *ret;
+	gint i;
+
+	str = g_strsplit (email, "@", 0);
+
+	buf = g_string_new (str[0]);
+
+	for (i = 1; str[i] != NULL; i++) {
+		g_string_append_printf (buf, "_at_%s", str[i]);
+	}
+	
+	g_strfreev (str);
+
+	str = g_strsplit (buf->str, ".", 0);
+
+	buf = g_string_assign (buf, str[0]);
+
+	for (i = 1; str[i] != NULL; i++) {
+		g_string_append_printf (buf, "_dot_%s", str[i]);
+	}
+		
+	ret = buf->str;
+	g_string_free (buf, FALSE);
+
+	return ret;
+}
 
 static void
 update_versions (gpointer key, gpointer value, gpointer user_data)
@@ -59,13 +95,76 @@ generate_module_report (gpointer key, gpointer value, gpointer user_data)
 	status_module_report (module);
 }
 
+static void
+generate_team_report (gpointer key, gpointer value, gpointer user_data)
+{
+	StatusTeam *team;
+	FILE *index;
+	gint nstrings, translated, fuzzy, untranslated;
+	gfloat ptranslated, pfuzzy, puntranslated;
+	gint i;
+
+
+	team = STATUS_TEAM (value);
+	index = (FILE *) user_data;
+
+	status_team_report (team);
+
+	translated = status_team_get_ntranslated (team);
+	fuzzy = status_team_get_nfuzzy (team);
+	untranslated = status_team_get_nuntranslated (team);
+	nstrings = status_team_get_nstrings (team);
+	ptranslated = (float) translated / (float) nstrings;
+	pfuzzy = (float) fuzzy / (float) nstrings;
+	puntranslated = (float) untranslated / (float) nstrings;
+
+	fprintf (index, "        <tr class=\"moduleVersionRow%s\">\n", (i % 2 == 0) ? "Even" : "Odd");
+	fprintf (index, "          <td><a href=\"%s.html\">%s</a></td>\n",
+			status_team_get_email (team), status_team_get_name (team));
+	fprintf (index, "          <td>%d</td>\n", translated);
+	if (ptranslated == 1) {
+		fprintf (index, "          <td>100</td>\n");
+	} else {
+		fprintf (index, "          <td>%.2f</td>\n", ptranslated*100);
+	}
+	fprintf (index, "          <td>%d</td>\n", fuzzy);
+	if (pfuzzy == 1) {
+		fprintf (index, "          <td>100</td>\n");
+	} else {
+		fprintf (index, "          <td>%.2f</td>\n", pfuzzy*100);
+	}
+	fprintf (index, "          <td>%d</td>\n", untranslated);
+	if (puntranslated == 1) {
+		fprintf (index, "          <td>100</td>\n");
+	} else {
+		fprintf (index, "          <td>%.2f</td>\n", puntranslated*100);
+	}
+	fprintf (index, "          <td>\n");
+	fprintf (index, "            <img class=\"moduleVersionGraph\" src=\"/images/bar0.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*ptranslated), "translated bar");
+	fprintf (index, "<img class=\"moduleVersionGraph\" src=\"/images/bar4.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*pfuzzy), "fuzzy bar");
+	fprintf (index, "<img class=\"moduleVersionGraph\" src=\"/images/bar1.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*puntranslated), "untranslated bar");
+	fprintf (index, "          </td>\n");		
+	fprintf (index, "        </tr>\n");
+}
+
+static void
+generate_translator_report (gpointer key, gpointer value, gpointer user_data)
+{
+	StatusTranslator *translator;
+
+	translator = STATUS_TRANSLATOR (value);
+
+	status_translator_report (translator);
+}
+
 int
 main (int argc, const char *argv[])
 {
 	int ttl;
 	poptContext context;
 	gint rc;
-	status_data *sdata;
+	FILE *index;
+	gchar *index_name, *title;
 	struct poptOption options[] = {
 		{ "modules-file", 0, POPT_ARG_STRING, &config.modules, 0,
 		"Set the file where is stored all modules information", "FILE" },
@@ -105,6 +204,7 @@ main (int argc, const char *argv[])
 	/* 1.- Parse the .xml file */
 	sdata = status_xml_get_main_data (config.modules);
 	langs = NULL;
+	translators = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 
 	/* 2.- Download/Update
 	 * 2a.- The version files
@@ -119,12 +219,42 @@ main (int argc, const char *argv[])
 
 	g_hash_table_foreach (sdata->modules, generate_module_report, NULL);
 
+
+	index_name = g_strdup_printf ("%s/teams/index.html", config.install_dir);
+	title = g_strdup_printf ("%s - %s", config.default_title, "Teams");
+	
+	index = status_web_new_file (index_name, title, NULL);
+	fprintf (index, "      <table class=\"moduleVersionTable\">\n");
+	fprintf (index, "        <tr class=\"moduleVersionRow\">\n");
+	fprintf (index, "          <th class=\"moduleVersionField\">%s</th>\n", "Team");
+	fprintf (index, "          <th class=\"moduleVersionFieldTrans\">%s</th>\n", "Trans.");
+	fprintf (index, "          <th class=\"moduleVersionFieldTrans\">%%</th>\n");
+	fprintf (index, "          <th class=\"moduleVersionFieldFuzzy\">%s</th>\n", "Fuzzy");
+	fprintf (index, "          <th class=\"moduleVersionFieldFuzzy\">%%</th>\n");
+	fprintf (index, "          <th class=\"moduleVersionFieldUntra\">%s</th>\n", "Untrans.");
+	fprintf (index, "          <th class=\"moduleVersionFieldUntra\">%%</th>\n");
+	fprintf (index, "          <th class=\"moduleVersionField\">%s</th>\n", "Graph");
+	fprintf (index, "        </tr>\n");
+	
+	g_hash_table_foreach (sdata->teams, generate_team_report, index);
+
+	fprintf (index, "      </table>\n");
+	status_web_end_file (index);
+	fclose (index);
+	g_free (index_name);
+	g_free (title);
+
+	
+	g_hash_table_foreach (translators, generate_translator_report, NULL);
+
 	/* We should free now the dinamic memory */
 	g_hash_table_destroy (sdata->servers);
 	g_hash_table_destroy (sdata->modules);
 	g_hash_table_destroy (sdata->versions);
 	g_hash_table_destroy (sdata->views);
 	g_free (sdata);
+
+	g_hash_table_destroy (translators);
 
 	return 0;
 }

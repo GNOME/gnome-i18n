@@ -32,14 +32,14 @@ struct _StatusTranslation {
 	GObject object;
 
 	StatusVersion *version;
-/*	StatusLocale *locale;*/
+	StatusTeam *team;
 	GString *locale;
-/*	StatusTranslator *translator; */
+	StatusTranslator *translator;
 	GString *path;
 	gint translated;
 	gint fuzzy;
 	gint untranslated;
-	gint last_update;
+	GString *last_update;
 };
 
 struct _StatusTranslationClass {
@@ -70,13 +70,14 @@ status_translation_init (StatusTranslation *translation, StatusTranslationClass 
 	g_return_if_fail (STATUS_IS_TRANSLATION (translation));
 
 	translation->version = NULL;
+	translation->team = NULL;
 	translation->locale = NULL;
-/*	translation->translator = NULL;*/
+	translation->translator = NULL;
 	translation->path = NULL;
 	translation->translated = 0;
 	translation->fuzzy = 0;
 	translation->untranslated = 0;
-	translation->last_update = 0;
+	translation->last_update = NULL;
 }
 
 static void
@@ -89,15 +90,22 @@ status_translation_finalize (GObject *object)
 	if (translation->version != NULL) {
 		g_object_unref (translation->version);
 	}
+	if (translation->team != NULL) {
+		g_object_unref (translation->team);
+	}
 	if (translation->locale != NULL) {
 		g_string_free (translation->locale, TRUE);
 	}
-/*	if (translation->translator != NULL) {
+	if (translation->translator != NULL) {
 		g_object_unref (translation->translator);
-	}*/
+	}
 	if (translation->path != NULL) {
 		g_string_free (translation->path, TRUE);
 		translation->path = NULL;
+	}
+	if (translation->last_update != NULL) {
+		g_string_free (translation->last_update, TRUE);
+		translation->last_update = NULL;
 	}
 
 	parent_class->finalize (object);
@@ -146,6 +154,7 @@ status_translation_new (StatusVersion *version, const gchar *locale, const gchar
 	gchar **tfu;
 	gchar **tfu_temp;
 	gint ntoken;
+	gchar *encoding;
 
 	g_return_val_if_fail (STATUS_IS_VERSION (version), NULL);
 
@@ -191,9 +200,221 @@ status_translation_new (StatusVersion *version, const gchar *locale, const gchar
 		g_strfreev (tfu_temp);
 	}
 	g_free (command);
-	/* FIXME: Is it correct if we free the output and error strings? */
 	g_free (output);
 	g_free (error);
+	output = NULL;
+	error = NULL;
+
+	/* We get the .po encoding */
+
+	command = g_strdup_printf ("grep \"\\\"Content-Type: text/plain;\" %s", translation->path->str);
+	if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
+			WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
+		gchar **str, **str2;
+		gint i = 0;
+		gint len;
+		
+		str = g_strsplit (output, "charset=", 0);
+
+		while (str[i] != NULL) {
+			i++;
+		}
+
+		if (i > 2) {
+			g_message ("Wrong Content-Type header (%s)", translation->path->str);
+			g_free (command);
+			g_free (output);
+			g_free (error);
+			output = NULL;
+			error = NULL;
+			g_strfreev (str);
+			str = NULL;
+			return translation;
+		} else {
+			str2 = g_strsplit (str[1], "\\n", 0);
+			encoding = g_strdup (str2[0]);
+			g_strfreev (str2);
+			str2 = NULL;
+		}
+		g_strfreev (str);
+		str = NULL;
+	}
+	g_free (command);
+	g_free (output);
+	g_free (error);
+	output = NULL;
+	error = NULL;
+
+	/* We get the Revision-Date field */
+	command = g_strdup_printf ("grep \"\\\"PO-Revision-Date:\" %s", translation->path->str);
+	if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
+			WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
+		gchar **str, **str2;
+		gint i = 0;
+		gint len;
+		
+		str = g_strsplit (output, "PO-Revision-Date:", 0);
+
+		while (str[i] != NULL) {
+			i++;
+		}
+
+		if (i > 2) {
+			g_message ("Wrong PO-Revision-Date header (%s)", translation->path->str);
+			g_free (command);
+			g_free (output);
+			g_free (error);
+			output = NULL;
+			error = NULL;
+			g_strfreev (str);
+			str = NULL;
+			return translation;
+		} else {
+			str2 = g_strsplit (str[1], "\\n", 0);
+			translation->last_update = g_string_new (str2[0]);
+			g_strfreev (str2);
+			str2 = NULL;
+		}
+		g_strfreev (str);
+		str = NULL;
+	}
+	g_free (command);
+	g_free (output);
+	g_free (error);
+	output = NULL;
+	error = NULL;
+
+	/* We get the team info */
+	command = g_strdup_printf ("grep \\\"Language-Team\\: %s", translation->path->str);
+	if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
+			WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
+		StatusTeam *team;
+		gchar *team_mail;
+		gchar **str;
+		gint i = 0;
+		gchar **str2;
+
+		str = g_strsplit (output, "<", 0);
+
+		while (str[i] != NULL) {
+			i++;
+		}
+
+		str2 = g_strsplit (str[i-1], ">", 0);
+		g_strfreev (str);
+		str = NULL;
+
+		i = 0;
+		while (str2[i] != NULL) {
+			i++;
+		}
+
+		if (i > 2) {
+			g_message ("Wrong Language-Team header (%s)", translation->path->str);
+		} else {
+
+			if (sdata->teams == NULL) {
+				g_message ("Team database empty!!");
+			}
+
+			team_mail = status_obfuscate_email (str2[0]);
+
+			team = (StatusTeam *) g_hash_table_lookup (sdata->teams, team_mail);
+
+			if (team != NULL) {
+				translation->team = g_object_ref (team);
+			} else {
+				translation->team = g_object_ref (STATUS_TEAM (g_hash_table_lookup (sdata->teams, "unknown")));
+			}
+			g_free (team_mail);
+		}
+
+		g_strfreev (str2);
+		str2 = NULL;
+	}
+	g_free (command);
+	g_free (output);
+	g_free (error);
+	output = NULL;
+	error = NULL;
+
+	/* We get the translator info */
+	command = g_strdup_printf ("grep \\\"Last-Translator\\: %s", translation->path->str);
+	if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
+			WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
+		StatusTranslator *translator;
+		gchar *translator_name_utf8;
+		gchar *translator_mail;
+		gchar **str, **str2, **str3;
+		gint i = 0, j = 0;
+
+		str = g_strsplit (output, "<", 0);
+
+		while (str[i] != NULL) {
+			i++;
+		}
+
+		str2 = g_strsplit (str[i-1], ">", 0);
+		
+		while (str2[j] != NULL) {
+			j++;
+		}
+
+		if (j > 2) {
+			g_message ("Wrong Last-Translator header (%s)", translation->path->str);
+		} else {
+
+			if (translators == NULL) {
+				g_message ("Translators database broken!!");
+			}
+
+			translator_mail = status_obfuscate_email (str2[0]);
+
+			translator = (StatusTranslator *) g_hash_table_lookup (translators, translator_mail);
+
+			if (translator != NULL) {
+				translation->translator = g_object_ref (translator);
+			} else {
+				if (i > 2) {
+					g_message ("FIXME: We should handle this header %s from %s", output, translation->path->str);
+				} else {
+					str3 = g_strsplit (str[0], ":", 2);
+
+					if (strcmp (encoding, "UTF-8")) {
+						translator_name_utf8 = g_convert (str3[1], strlen (str3[1]), "UTF-8", encoding, NULL, NULL, NULL);
+						if (translator_name_utf8 == NULL) {
+							translator = status_translator_new (str3[1], translator_mail);
+						} else {
+							translator = status_translator_new (translator_name_utf8, translator_mail);
+							g_free (translator_name_utf8);
+						}
+					} else {
+						translator = status_translator_new (str3[1], translator_mail);
+					}
+										
+					g_hash_table_insert (translators, g_strdup (translator_mail), translator);
+					translation->translator = g_object_ref (translator);
+					g_strfreev (str3);
+					str3 = NULL;
+				}
+			g_free (translator_mail);
+			}
+			if (translation->team != NULL) {
+				status_translator_add_team (translator, translation->team);
+				status_team_add_translator (translation->team, translator);
+			}
+			status_translator_add_translation (translator, translation);
+		}
+		g_strfreev (str);
+		str = NULL;
+		g_strfreev (str2);
+		str2 = NULL;
+	}
+	g_free (command);
+	g_free (output);
+	g_free (error);
+	output = NULL;
+	error = NULL;
 
 	return translation;
 }
@@ -206,6 +427,21 @@ status_translation_get_version (StatusTranslation *translation)
 	return translation->version;
 }
 
+StatusTeam *
+status_translation_get_team (StatusTranslation *translation)
+{
+	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), NULL);
+
+	return translation->team;
+}
+
+const gchar *
+status_translation_get_lang (StatusTranslation *translation)
+{
+	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), NULL);
+
+	return translation->locale->str;
+}
 
 gint
 status_translation_get_ntranslated (StatusTranslation *translation)
@@ -257,28 +493,48 @@ status_translation_report (StatusTranslation *translation)
 
 	
 	index = status_web_new_file (index_name, title, NULL);
-	fprintf (index, "      <table class=\"moduleVersionTable\">\n");
+	fprintf (index, "      <div id=\"TableAlign\">\n");
+	fprintf (index, "      <table class=\"GTPTranslationTable\">\n");
 	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
-	fprintf (index, "          <th>%s</th>\n", "Last Translator");
-	fprintf (index, "          <td>%s</td>\n", "Foo Man");
+	fprintf (index, "          <th>%s</th>\n", "Module");
+	fprintf (index, "          <td><a href=\"../\">%s</a></td>\n",
+			status_version_get_module_name (translation->version),
+			status_version_get_module_name (translation->version));
 	fprintf (index, "        </tr>\n");
 	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
-	fprintf (index, "          <th>%s</th>\n", "Last Update");
-	fprintf (index, "          <td>%s</td>\n", "Someday");
+	fprintf (index, "          <th>%s</th>\n", "Version");
+	fprintf (index, "          <td><a href=\"./\">%s</a></td>\n",
+			status_version_get_id (translation->version));
 	fprintf (index, "        </tr>\n");
 	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
+	fprintf (index, "          <th>%s</th>\n", "Translation Team");
+	fprintf (index, "          <td><a href=\"../../../teams/%s.html\">%s</a></td>\n",
+			status_team_get_email (translation->team),
+			status_team_get_name (translation->team));
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
+	fprintf (index, "          <th>%s</th>\n", "Last Translator");
+	fprintf (index, "          <td><a href=\"../../../translators/%s.html\">%s</a> <a href=\"mailto:%s\"><img src=\"/images/mail.png\" alt=\"%s\" /></a></td>\n",
+			status_translator_get_email (translation->translator), status_translator_get_name (translation->translator),
+			status_translator_get_email (translation->translator), "Mail image");
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
+	fprintf (index, "          <th>%s</th>\n", "Last Update");
+	fprintf (index, "          <td>%s</td>\n", translation->last_update ? translation->last_update->str : "Unknown");
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
 	fprintf (index, "          <th class=\"moduleVersionFieldTrans\">%s</th>\n", "Strings Translated");
 	fprintf (index, "          <td>%d</td>\n", translation->translated);
 	fprintf (index, "        </tr>\n");
-	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
 	fprintf (index, "          <th class=\"moduleVersionFieldFuzzy\">%s</th>\n", "Strings Fuzzy");
 	fprintf (index, "          <td>%d</td>\n", translation->fuzzy);
 	fprintf (index, "        </tr>\n");
-	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
 	fprintf (index, "          <th class=\"moduleVersionFieldUntra\">%s</th>\n", "Strings Untranslated");
 	fprintf (index, "          <td>%d</td>\n", translation->untranslated);
 	fprintf (index, "        </tr>\n");
-	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
 	fprintf (index, "          <th>%s</th>\n", "Graph");
 	fprintf (index, "          <td>");
 	fprintf (index, "<img class=\"moduleVersionGraph\" src=\"/images/bar0.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*ptranslated), "translated bar");
@@ -287,6 +543,7 @@ status_translation_report (StatusTranslation *translation)
 	fprintf (index, "</td>\n");
 	fprintf (index, "        </tr>\n");
 	fprintf (index, "      </table>\n");
+	fprintf (index, "      </div>\n");
 	status_web_end_file (index);
 	fclose (index);
 
