@@ -1,14 +1,14 @@
 # Swedish messages for scrollkeeper.
-# Copyright (C) 2001, 2002 Free Software Foundation, Inc.
-# Christian Rose <menthos@menthos.com>, 2001, 2002.
+# Copyright (C) 2001, 2002, 2003 Free Software Foundation, Inc.
+# Christian Rose <menthos@menthos.com>, 2001, 2002, 2003.
 #
 # $Id$
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: scrollkeeper\n"
-"POT-Creation-Date: 2002-07-24 21:27-0500\n"
-"PO-Revision-Date: 2002-12-05 20:45+0100\n"
+"POT-Creation-Date: 2003-01-23 00:13-0600\n"
+"PO-Revision-Date: 2003-01-23 11:30+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -90,16 +90,21 @@ msgstr "Uppdaterar %s\n"
 msgid "Unable to complete update.  Could not register %s\n"
 msgstr "Kan inte färdigställa uppdatering. Kunde inte registrera %s\n"
 
-#: cl/src/get-cl.c:55
+#: cl/src/get-cl.c:56
 msgid "Cannot open temporary file.\n"
 msgstr "Kan inte öppna temporär fil.\n"
 
-#: cl/src/get-cl.c:93
+#: cl/src/get-cl.c:92
+#, c-format
+msgid "scrollkeeper-get-cl: Cannot open temp file: %s\n"
+msgstr "scrollkeeper-get-cl: Kan inte öppna temporär fil: %s\n"
+
+#: cl/src/get-cl.c:105
 #, c-format
 msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 msgstr "Användning: %s [-v] <LOKAL> <KATEGORITRÄDETS FILNAMN>\n"
 
-#: cl/src/get-cl.c:133
+#: cl/src/get-cl.c:145
 msgid "No Content List for this locale!!!\n"
 msgstr "Ingen innehållslista för denna lokal!!!\n"
 
@@ -959,6 +964,89 @@ msgstr "X"
 msgid "gtk++"
 msgstr "gtk++"
 
+#: buildtools/separate.c:63 buildtools/separate.c:75 buildtools/separate.c:88
+msgid "Invalid category file.\n"
+msgstr "Ogiltig kategorifil.\n"
+
+#: buildtools/separate.c:298
+msgid "Usage: scrollkeeper-tree-separate <tree file> <output directory>\n"
+msgstr "Användning: scrollkeeper-tree-separate <trädfil> <utdatakatalog>\n"
+
+#: buildtools/separate.c:320
+msgid "File does not contain well-formed XML\n"
+msgstr "Filen verkar inte vara välformad XML\n"
+
+#: buildtools/separate.c:325
+msgid "tree separation failed\n"
+msgstr "trädåtskiljande misslyckades\n"
+
+#: buildtools/separate.c:333
+#, c-format
+msgid "Unable to create localized category file: %s\n"
+msgstr "Kan inte skapa lokaliserad kategorifil: %s\n"
+
+#: buildtools/separate.c:337
+#, c-format
+msgid "Creating localized category file: %s\n"
+msgstr "Skapar lokaliserad kategorifil: %s\n"
+
+#: buildtools/separate.c:348
+msgid "Unable to create all localized category files.\n"
+msgstr "Kan inte skapa alla lokaliserade kategorifiler.\n"
+
+#: libs/extract.c:79 libs/extract.c:85 libs/extract.c:131
+#, c-format
+msgid "Cannot create temporary file: %s : %s\n"
+msgstr "Kan inte skapa temporär fil: %s : %s\n"
+
+#: libs/extract.c:97
+#, c-format
+msgid "Cannot read file: %s : %s\n"
+msgstr "Kan inte läsa fil: %s : %s\n"
+
+#: libs/extract.c:160 libs/extract.c:174
+#, c-format
+msgid "Document is not well-formed XML: %s\n"
+msgstr "Dokumentet är inte välformad XML: %s\n"
+
+#: libs/extract.c:168
+#, c-format
+msgid "Cannot stat file: %s : %s\n"
+msgstr "Kan inte ta status på fil: %s : %s\n"
+
+#: libs/extract.c:178
+#, c-format
+msgid "Cannot apply stylesheet to document of type: %s\n"
+msgstr "Kan inte tillämpa stilmallen på dokument av typen: %s\n"
+
+#: libs/extract.c:190
+#, c-format
+msgid "Cannot open output file: %s : %s \n"
+msgstr "Kan inte öppna utdatafil: %s : %s \n"
+
+#: libs/extract.c:196
+#, c-format
+msgid "Cannot stat stylesheet file: %s : %s\n"
+msgstr "Kan inte ta status på stilmallsfil: %s : %s\n"
+
+#~ msgid "Cannot create temporary file: %s: %s\n"
+#~ msgstr "Kan inte skapa temporär fil: %s: %s\n"
+
+#~ msgid "Cannot read file: %s: %s\n"
+#~ msgstr "Kan inte läsa fil: %s: %s\n"
+
+#~ msgid "Cannot stat file: %s: %s\n"
+#~ msgstr "Kan inte ta status på fil: %s: %s\n"
+
+#~ msgid "Cannot open output file: %s: %s \n"
+#~ msgstr "Kan inte öppna utdatafil: %s: %s \n"
+
+#~ msgid "Cannot open output file: %s: %s\n"
+#~ msgstr "Kan inte öppna utdatafil: %s: %s\n"
+
+#~ msgid "Cannot stat stylesheet file: %s: %s\n"
+#~ msgstr "Kan inte ta status på stilmallsfil: %s: %s\n"
+
 #~ msgid "Could not create directory %s: %s\n"
 #~ msgstr "Kunde inte skapa katalogen %s: %s\n"
 
@@ -974,9 +1062,6 @@ msgstr "gtk++"
 
 #~ msgid "wrong omf file %s\n"
 #~ msgstr "felaktig omf-fil %s\n"
-
-#~ msgid "scrollkeeper-install: out of memory: %s\n"
-#~ msgstr "scrollkeeper-install: slut på minne: %s\n"
 
 #~ msgid "%s: warning: replacing %s with %s\n"
 #~ msgstr "%s: varning: ersätter %s med %s\n"
