@@ -20,7 +20,7 @@
      "evolution/po",
      "gnome-i18n/extra-po/firestarter",
      "gal/po",
-     "gnome-i18n/extra-po/galeon",
+     "galeon/po",
      "gconf/po",
      "gdm2/po",
      "gnome-i18n/extra-po/gdm2beta5",
