@@ -1,0 +1,270 @@
+<!DOCTYPE ARTICLE PUBLIC "-//Davenport//DTD DocBook V3.0//EN" [
+<!ENTITY % xml-code "CDATA">
+]>
+<article id="index">
+  <artheader>
+    <authorgroup>
+      <author>
+	<firstname>Kjartan</firstname> 
+	<surname>Maraas</surname> 
+	<affiliation>
+	  <orgname>GNOME</orgname>
+	  <address>
+          <email>kmaraas@online.no</email>
+          </address>
+	</affiliation>
+      </author>
+    </authorgroup>
+    <copyright>
+      <year>2000</year>
+      <holder>Kjartan Maraas</holder>
+    </copyright>
+    <abstract>
+      <para>
+      How do I translate the GNOME desktop to other languages than english?
+      This is a question that pops up quite frequently on the various GNOME
+      mailing-lists and IRC channels. Well, this is a feeble attempt 
+      at writing a guide to translating all the different parts of
+      the GNOME desktop environment, and believe me there are a few
+      well hidden files containing translatable strings.
+      </para>
+    </abstract>
+    <title>Translation of the GNOME desktop environment</title>
+  </artheader>
+  
+  <sect1 id="introduction">
+    <title>Introduction</title>
+    <para>
+      There are different opinons on what is most important
+      when translating. Some think that docs are more important
+      and others think that the interface, menus and dialogs
+      are more important. This is something that the translator
+      must decide for him/herself. I'll try to cover both here.
+      My opinion is that they are both of equal importance,
+      but that the menus and dialogs are the ones the user first
+      meet and so these are what makes the users realize that
+      the apps are really available in their own language.
+      Of course there is nothing stopping you from doing both
+      at once, except time and resources.
+    </para>
+    <para>
+      There are a few other docs that contain valuable information
+      for a translator such as the gettext documentation and 
+      a few guides on the web. Look at <ulink
+      url="http://www.gnome.org/gdp/doctable/doctable_list.php3?CategoryID=4"
+      type="http">GNOME documentation project's  doctable</ulink>
+      for a few pointers to other resources. Also the gettext
+      documentation describes how to set up emacs to work with
+      .po files in what is called po-mode. I recommend that you try
+      this out. I have found it to speed up my own work considerably.
+    </para>
+  </sect1>
+  <sect1>
+    <title>po-files</title>
+    <para>
+      When the programmers insert user-visible text strings into
+      the programs, they enclose them in _() or N_(). These are
+      macros that gettext use to extract the strings from the source
+      code and put them into a message catalog. This is placed in
+      a subdirectory called po/ in the top directory of the programs'
+      source code and is called for example <filename>gnome-libs.pot</filename>.
+      The first thing you do when starting a new translation is to copy
+      this file to XX.po where XX is your language code (specified in 
+      ISO 634, which is a standard containing language codes). After
+      doing this you can start translating the actual content of the file.
+    </para>
+    <para>
+      The file contains a number of strings of the form:
+        <programlisting>
+          #: panel/panel_config.c:1050
+          msgid "Color to use:"
+          msgstr "Farge som skal brukes:"
+        </programlisting>    
+    </para>
+    <para>
+      The first line tells you which source file the string comes
+      from. panel/panel_config.c at line 1050. The next is the
+      original string from the .c file, and the last is the translation.
+      The last line will be empty when you first copy the .pot file to
+      XX.po.
+    </para>
+    <para>
+      Now to have your translation included in the build process
+      you must add the language code to <filename>configure.in</filename>
+      in the ALL_LINGUAS environment variable. For readability i recommend
+      you add it in alphabetical order.
+    </para>
+  </sect1>
+  <sect1 id="menus">
+    <title>Menus and .desktop files</title>
+    <para>
+      The name for an application in the menu is defined in a file
+      with a .desktop extension. The format of the file is as follows:
+        <programlisting>
+	  [Desktop Entry]
+	  Name=Dia
+	  Name[ja]=Dia
+	  Name[no]=Dia
+	  Name[pl]=Dia
+	  Name[fr]=Dia
+	  Comment=A Diagram Editor
+	  Comment[ja]=¥À¥¤¥ä¥°¥é¥à¥¨¥Ç¥£¥¿
+	  Comment[no]=Diagramredigering
+	  Comment[pl]=Edytor diagramów w Gtk+ 
+	  Comment[fr]=Un éditeur de diagrammes
+	  Exec=dia
+	  Icon=dia_gnome_icon.png
+	  Terminal=0
+	  Type=Application
+	</programlisting>
+      The first line is the name of the application in english and
+      the following lines have the different translations, where the
+      language is specified by [XX] where XX is the language code.
+      The comment line is similar, and the text in this line shows
+      up if you add a launcher for the program on the panel and position
+      the pointer over the icon. Just like a tooltip for a button in a
+      program.
+      </para>
+      <para>
+        The names for the menus themselves are defined in files with a
+	.directory extension. These are found in the gnome-core module
+	in the directory desktop-links. Here you will also find .desktop
+	files for some standard applications on a Unix machine, such as
+	emacs, netscape, rxvt etc. The format is the same for the .directory
+	files as for the .desktop ones.
+      </para>
+  </sect1>
+  <sect1 id="sound">
+    <title>soundlists</title>
+    <para>
+      In every application that has sounds for events there is a file
+      with .soundlist as the extension. This file contains descriptions
+      of sounds and their corresponding events. The file looks like this:
+        <programlisting>
+          [__section_info__]
+          description=Panel
+          description[ca]=Plafó
+          description[es]=Panel
+          description[et]=Paneel
+          description[fr]=Panneau de GNOME
+          description[gl]=Panel
+          description[ko]=ÆÐ³Î
+          description[no]=Panel
+          description[pl]=Panel
+          description[pt]=Painel
+          description[wa]=Scriftôr
+
+          [open]
+          file=panel/slide.wav
+          description=Expand
+          description[ca]=Expandir
+          description[es]=Expandir
+          description[et]=Ilmumine
+          description[fr]=Expansion
+          description[gl]=Expandir
+          description[ko]=³ÐÈ÷±â
+          description[no]=Utvid
+        </programlisting>
+      The format is very similar to the .desktop and .directory files.
+      The descriptions are found in the control-center (gnomecc). The section: 
+      [__section_info__] tells us that the name of the program for which the
+      sound events are used is next. The [open] section has the sound event for
+      the [open] action on the panel (clicking the foot-menu), and the rest is
+      just like the .desktop files.
+    </para>
+  </sect1>
+  <sect1 id="mime">
+    <title>Mime-types</title>
+      <para>
+        The descriptions of mime-type actions are kept in files with the
+        extension .mime. These files are found in some applications and
+        also in the gnome-libs/gnome-data directory. The format is:
+            <example>
+	      <title>Sample keys with localization support</title>
+	        <programlisting>
+                  text/plain:
+	                  open=command %f
+	                  open.tag1.Do this and that=this-and-that %f
+	                  [es]open.tag1.Hacer esto y aquello=this and that %f
+	                  open.tag2.Gzip it=gzip %f
+	                  [es]open.tag2.Comprimir con gzip=gzip %f
+	                  open.tag3.Mail it=mail %{Recipient} < %f
+	                  [es]open.tag3.Enviarlo por correo=mail %{Recipient} < %f
+	                  open.tag4.Example=example %f
+	        </programlisting>
+	    </example>
+      </para>
+  </sect1>
+  <sect1 id="other">
+    <title>Other application specific files of interest</title>
+      <para>
+        There are a few applications that have translatable strings
+        hidden in other files as well. Dia the diagram editor is one of them.
+        It has strings containing descriptions of diagram objects in files
+        with .sheet extensions. The format is XML and looks like this:
+    </para>
+    <example>
+      <title>Translatable Strings</title>
+      <programlisting>
+<![%xml-code;[
+            <sheet xmlns="http://www.lysator.liu.se/~alla/dia/dia-sheet-ns">
+              <name>Chronogram</name>
+              <description xml:lang="fr">Objets pour l'écriture de chronogrammes.
+              </description>
+              <description>Objects to design chronogram charts</description>
+              <contents>
+                <object name="chronogram - reference">
+                  <description xml:lang="fr">Une échelle de temps</description>
+                  <description>A time scale</description>
+                </object>
+                <object name="chronogram - line">
+                  <description xml:lang="fr">Une ligne de données</description>
+                  <description>A data line</description>
+                </object>
+              </contents>
+            </sheet>
+]]>
+          </programlisting>
+	</example>
+      <para>
+        There is no big difference here, just follow the lead of the existing
+        translation as in this example, using your language code in xml:lang="".
+      </para>
+      <para>
+        Another recent find used in the 1.2 version of the panel is panel.hints.
+        This file contains useful hints that pop up when the panel starts up.
+        It is also in XML format. Example follows:
+          <programlisting>
+<![%xml-code;[
+             <GnomeHints>
+              <Hint>
+                <Content>Right click on the panel to get a menu</Content>
+              </Hint>
+              <Hint>
+                <Content>To add an applet, right click on a panel
+            then choose 'Applets', then pick an applet
+            from the list</Content>
+              </Hint>
+              <Hint>
+                <Content>To manipulate a panel applet, right click
+            anywhere over the applet</Content>
+                <Content xml:lang="cs">Manipulaci s aplety je mo¾no dosáhnout
+            pravým tlaèítkem my¹i</Content>
+               </Hint>
+]]>
+          </programlisting>
+      </para>
+      <para>
+        Here the first hint is not translated, and second one is.
+        This is all very similar to the previous example and thus I
+        leave the rest as an excercise for the reader. :)
+      </para>
+      <para>
+        This is it for now. I hope someone will find this document useful
+        and I can promise that it will be revised shortly and hopefully I
+        will manage to keep it up-to-date as things move on.
+        Cheers and thanks for your time. Let's make GNOME the most available
+        desktop out there, language-wise at least.
+      </para>
+    </sect1>
+</article>
