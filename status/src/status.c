@@ -227,7 +227,7 @@ copy_component_pot (component *cmp)
 					path = g_strdup_printf ("%s/po/%s.%s.pot", HTMLROOTDIR,
 								cmp->name, cmp->branch);
 					/* We get the file stats */
-					execlp("msgfmt", "msgfmt", "--statistics", path, NULL);
+					execlp("msgfmt", "msgfmt", "--statistics", path, "-o", "/dev/null", NULL);
 					g_error ("Fork error!!");
 					break;
 				case -1:
@@ -332,7 +332,7 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 			path = g_strdup_printf ("%s/po/%s-%s.%s.po", HTMLROOTDIR,
 						cmp->name, cmp->branch,	locale);
 			/* We get the file stats */
-			execlp("msgfmt", "msgfmt", "--statistics", path, NULL);
+			execlp("msgfmt", "msgfmt", "--statistics", path, "-o", "/dev/null", NULL);
 			g_error ("Fork error!!");
 			break;
 		case -1:
