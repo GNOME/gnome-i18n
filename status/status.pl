@@ -7,9 +7,10 @@
 # "Constants" #
 ###############
 @modules = (
-     "control-center/po",
      "glib/po",
      "gtk+/po",
+     "gnome-applets/po",
+     "gnome-core/po",
      "libbonobo/po",
      "libbonoboui/po",
      "libgnome/po",
@@ -21,7 +22,10 @@
 );
 
 @xml_i18n_tools_compliants = (
+    "gnome-applets/po",
+    "gnome-core/po",
     "gtranslator/po",
+    "oaf/po",
     "ximian-setup-tools/po"
 );
 
