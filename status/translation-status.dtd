@@ -1,0 +1,36 @@
+<!ELEMENT translation-status (release*, module*) >
+<!ATTLIST translation-status
+  xmlns CDATA #FIXED 'http://developer.gnome.org/projects/gtp/status/translation-status.dtd' >
+
+<!ELEMENT release (maintitle, mainhead, mainfoot) >
+<!ATTLIST release name ID #REQUIRED >
+
+<!ELEMENT maintitle (#PCDATA) >
+<!ELEMENT mainhead (#PCDATA) >
+<!ELEMENT mainfoot (#PCDATA) >
+
+<!ELEMENT module (version*) >
+<!ATTLIST module name CDATA #REQUIRED >
+
+<!ELEMENT version (component*) > 
+<!ATTLIST version release IDREF #REQUIRED >
+
+<!ELEMENT component (podir, potname, branch, regenerate?, download?, nextrelease?) >
+<!ATTLIST component name CDATA #REQUIRED >
+<!ATTLIST component dir CDATA #REQUIRED >
+
+<!ELEMENT podir EMPTY >
+<!ATTLIST podir dir CDATA #REQUIRED >
+
+<!ELEMENT potname EMPTY >
+<!ATTLIST potname name NMTOKEN #REQUIRED >
+
+<!ELEMENT branch EMPTY >
+<!ATTLIST branch name NMTOKEN #REQUIRED >
+
+<!ELEMENT regenerate EMPTY >
+
+<!ELEMENT download EMPTY >
+
+<!ELEMENT nextrelease EMPTY >
+<!ATTLIST nextrelease date CDATA #REQUIRED >
