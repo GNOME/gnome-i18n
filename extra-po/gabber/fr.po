@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gabber 0.8.4.10\n"
-"POT-Creation-Date: 2001-11-25 02:16-0500\n"
-"PO-Revision-Date: 2001-11-28 22:45+0100\n"
+"POT-Creation-Date: 2001-12-29 18:48-0500\n"
+"PO-Revision-Date: 2001-12-30 20:38+0100\n"
 "Last-Translator: Frederic Crozat <fred@crozat.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,52 +30,52 @@ msgid "Open with Netscape (Run New)"
 msgstr "Ouvrir avec Netscape (lance une nouvelle session)"
 
 #. Loading...
-#: src/AddContactDruid.cc:322 src/AddContactDruid.cc:464
+#: src/AddContactDruid.cc:341 src/AddContactDruid.cc:483
 msgid "Loading the list of agents..."
 msgstr "Chargement en cours de la liste des agents..."
 
-#: src/AddContactDruid.cc:361 src/AddContactDruid.cc:503
+#: src/AddContactDruid.cc:380 src/AddContactDruid.cc:522
 #: src/AgentInterface.cc:228 src/AgentInterface.cc:392
 msgid "Error receiving XML for Agent Browser, see standard output."
 msgstr ""
 "Erreur lors de la réception XML pour la Consultation des Agents, reportez-"
 "vous à la sortie standard."
 
-#: src/AddContactDruid.cc:368 src/AddContactDruid.cc:510
+#: src/AddContactDruid.cc:387 src/AddContactDruid.cc:529
 #: src/AgentInterface.cc:235 src/AgentInterface.cc:399
 msgid "Error, this server does not support agents."
 msgstr "Erreur, ce serveur ne supporte pas les agents."
 
-#: src/AddContactDruid.cc:390
+#: src/AddContactDruid.cc:409
 msgid "You must register with this agent first."
 msgstr "Vous devez vous enregistrer auprès de cet agent d'abord."
 
-#: src/AddContactDruid.cc:539 ui/AUDruid_win.glade.h:32
+#: src/AddContactDruid.cc:558 ui/AUDruid_win.glade.h:32
 #: ui/RegDruid_win.glade.h:7
 msgid "Loading..."
 msgstr "Chargement..."
 
-#: src/AddContactDruid.cc:541
+#: src/AddContactDruid.cc:560
 msgid "Loading information from agent..."
 msgstr "Chargement des Informations depuis l'agent..."
 
-#: src/AddContactDruid.cc:626
+#: src/AddContactDruid.cc:645
 msgid "Information loaded."
 msgstr "Informations chargées."
 
-#: src/AddContactDruid.cc:633
+#: src/AddContactDruid.cc:652
 msgid "Error attempting to search agent."
 msgstr "Erreur lors de la recherche d'agent."
 
-#: src/AddContactDruid.cc:675
+#: src/AddContactDruid.cc:694
 msgid "Searching..."
 msgstr "Recherche en cours..."
 
-#: src/AddContactDruid.cc:728
+#: src/AddContactDruid.cc:747
 msgid "Error "
 msgstr "Erreur "
 
-#: src/AddContactDruid.cc:740
+#: src/AddContactDruid.cc:759
 msgid "Search completed."
 msgstr "Recherche terminée."
 
@@ -149,7 +149,7 @@ msgstr "La signature de la présence est valide"
 
 #. Set the tooltip as well
 #: src/ContactInfoInterface.cc:661 src/ContactInfoInterface.cc:662
-#: src/StatusInterface.cc:387 ui/ContactInfo_dlg.glade.h:29
+#: src/StatusInterface.cc:398 ui/ContactInfo_dlg.glade.h:29
 #: ui/Gabber_win.glade.h:41
 msgid "Presence is not signed"
 msgstr "La présence n'est pas signée"
@@ -159,7 +159,9 @@ msgstr "La présence n'est pas signée"
 msgid "offline:"
 msgstr "déconnecté:"
 
-#: src/ContactInfoInterface.cc:670
+#. Construct an offline presence
+#: src/ContactInfoInterface.cc:670 src/GabberWidgets.cc:409
+#: src/GabberWidgets.cc:463
 msgid "No presence has been received."
 msgstr "Pas information de présence reçue."
 
@@ -169,10 +171,10 @@ msgid "%s's Contact Information"
 msgstr "Information de Contact de %s"
 
 #: src/ContactInfoInterface.cc:715 src/ContactInterface.cc:86
-#: src/ContactInterface.cc:203 src/FTInterface.cc:93 src/FTInterface.cc:181
-#: src/FTInterface.cc:310 src/FTInterface.cc:416 src/GCInterface.cc:191
-#: src/GroupsInterface.cc:157 src/MessageViews.cc:435 src/MessageViews.cc:584
-#: src/MessageViews.cc:1037 src/MessageViews.cc:1653 src/URLInterface.cc:84
+#: src/ContactInterface.cc:201 src/FTInterface.cc:93 src/FTInterface.cc:180
+#: src/FTInterface.cc:280 src/FTInterface.cc:386 src/GCInterface.cc:191
+#: src/GroupsInterface.cc:157 src/MessageViews.cc:396 src/MessageViews.cc:544
+#: src/MessageViews.cc:961 src/MessageViews.cc:1583 src/URLInterface.cc:84
 msgid " - Gabber"
 msgstr " - Gabber"
 
@@ -190,11 +192,12 @@ msgstr "oui"
 msgid "Received Contacts(s) from "
 msgstr "Contact(s) Reçu(s) de "
 
-#: src/ContactInterface.cc:203
-msgid "Send Contacts(s) to "
-msgstr "Envoyer un (des) contact(s) à "
+#: src/ContactInterface.cc:201
+#, c-format
+msgid "Send Contacts(s) to %s"
+msgstr "Envoyer un (des) contact(s) à %s"
 
-#: src/ContactInterface.cc:281
+#: src/ContactInterface.cc:249
 msgid "Jabber Contacts attached:"
 msgstr "Contacts Jabber attachés :"
 
@@ -295,7 +298,7 @@ msgstr "continue le traitement des règles."
 
 #. Create remove button
 #: src/FilterInterface.cc:107 src/FilterInterface.cc:221
-#: ui/ContactRecv_dlg.glade.h:6 ui/ContactSend_dlg.glade.h:5
+#: ui/ContactRecv_dlg.glade.h:6 ui/ContactSend_dlg.glade.h:4
 #: ui/FTRecv_dlg.glade.h:7 ui/FilterList_dlg.glade.h:5 ui/GCI_dlg.glade.h:8
 #: ui/Ignore_dlg.glade.h:9
 msgid "Remove"
@@ -340,7 +343,7 @@ msgstr "le type de message est..."
 msgid "New Rule"
 msgstr "Nouvelle Règle"
 
-#: src/FilterInterface.cc:435
+#: src/FilterInterface.cc:425
 msgid "Sorry, your server does not support Jabber filters."
 msgstr "Désolé, votre serveur ne supporte pas les filtres Jabber."
 
@@ -353,51 +356,51 @@ msgstr "Recoit un(des) Fichier(s) de %s"
 msgid "Error, a file save path must be specified."
 msgstr "Erreur, un chemin pour sauvegarder le fichier doit être spécifié."
 
-#: src/FTInterface.cc:181
+#: src/FTInterface.cc:180
 #, c-format
 msgid "Send File to %s"
 msgstr "Envoyer un fichier à %s"
 
-#: src/FTInterface.cc:241
+#: src/FTInterface.cc:210
 msgid "Error, a file must be specified."
 msgstr "Erreur, un fichier doit être spécifié."
 
-#: src/FTInterface.cc:290
+#: src/FTInterface.cc:260
 msgid "Waiting for connection..."
 msgstr "Attente de connexion..."
 
-#: src/FTInterface.cc:310
+#: src/FTInterface.cc:280
 #, c-format
 msgid "Sending File to %s"
 msgstr "Envoie un fichier à %s"
 
-#: src/FTInterface.cc:397
+#: src/FTInterface.cc:367
 msgid "Receiving from"
 msgstr "Réception de"
 
 #. Show how big the file is
-#: src/FTInterface.cc:405 src/FTInterface.cc:408
+#: src/FTInterface.cc:375 src/FTInterface.cc:378
 msgid "Pending..."
 msgstr "En attente..."
 
-#: src/FTInterface.cc:416
+#: src/FTInterface.cc:386
 #, c-format
 msgid "Receiving File from %s"
 msgstr "Reçois un(des) Fichier(s) de %s"
 
-#: src/FTInterface.cc:442
+#: src/FTInterface.cc:412
 msgid "Connected, requesting file..."
 msgstr "Connecté, demande de fichier..."
 
-#: src/FTInterface.cc:449
+#: src/FTInterface.cc:419
 msgid "Accepting connection..."
 msgstr "Accepte la connexion..."
 
-#: src/FTInterface.cc:468
+#: src/FTInterface.cc:438
 msgid "Error, transfer unexpectedly ended."
 msgstr "Erreur, fin non attendue du transfert."
 
-#: src/FTInterface.cc:469
+#: src/FTInterface.cc:439
 msgid ""
 "The file transfer has ended unexpectedly.\n"
 "The received portion of the file has been saved."
@@ -405,55 +408,65 @@ msgstr ""
 "Le transfert de fichier s'est arrêté de façon inattendue.\n"
 "La partie reçue du fichier a été sauvegardée."
 
-#: src/FTInterface.cc:537
+#: src/FTInterface.cc:489
+msgid "Hide details"
+msgstr "Cacher les détails"
+
+#: src/FTInterface.cc:496
+msgid "Show details"
+msgstr "Montrer les détails"
+
+#: src/FTInterface.cc:507
 msgid "Sending..."
 msgstr "Envoi..."
 
-#: src/FTInterface.cc:566
+#: src/FTInterface.cc:536
 msgid "Receiving data..."
 msgstr "Réception de données..."
 
-#: src/FTInterface.cc:654
+#: src/FTInterface.cc:624
 msgid "Complete."
 msgstr "Terminé."
 
-#: src/FTInterface.cc:659
+#: src/FTInterface.cc:629
 msgid "Error, received more data than expected."
 msgstr "Erreur, reçu plus de données que prévu."
 
 #. Update the speed
-#: src/FTInterface.cc:684
+#: src/FTInterface.cc:654
 #, c-format
 msgid "%s/second"
 msgstr "%s/seconde"
 
-#: src/FTInterface.cc:691
+#: src/FTInterface.cc:661
 msgid "Under one minute remaining."
 msgstr "Moins d'une minute restante."
 
-#: src/FTInterface.cc:697
+#: src/FTInterface.cc:667
 #, c-format
 msgid "%s hours, %s minutes remaining."
 msgstr "%s heures, %s minutes restantes."
 
-#: src/FTInterface.cc:701
+#: src/FTInterface.cc:671
 #, c-format
 msgid "%s minutes remaining."
 msgstr "%s minutes restantes."
 
-#: src/GCInterface.cc:65 src/GCInterface.cc:216
-msgid " on IRC Server "
-msgstr " sur le Serveur IRC "
+#: src/GCInterface.cc:64 src/GCInterface.cc:215
+#, c-format
+msgid "%s on IRC Server %s"
+msgstr "%s sur le Serveur IRC %s"
 
 #: src/GCInterface.cc:114
-msgid "You have been invited to "
-msgstr "Vous avez été invité à "
+#, c-format
+msgid "You have been invited to %s"
+msgstr "Vous avez été invité à %s"
 
 #: src/GCInterface.cc:191
 msgid "Group Chat Invitation from "
 msgstr "Invitation à une Discussion de Groupe venant de "
 
-#: src/GabberApp.cc:394 src/GabberApp.cc:550
+#: src/GabberApp.cc:408 src/GabberApp.cc:564
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -461,7 +474,7 @@ msgstr ""
 "Erreur, impossible de charger le mot de passe.\n"
 "Merci d'essayer de vous connecter encore."
 
-#: src/GabberApp.cc:405
+#: src/GabberApp.cc:419
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -469,11 +482,11 @@ msgstr ""
 "Etes-vous sûr de vouloir que Gabber essaie\n"
 "de s'enregistrer "
 
-#: src/GabberApp.cc:408
+#: src/GabberApp.cc:422
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:413
+#: src/GabberApp.cc:427
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -483,11 +496,11 @@ msgstr ""
 "Voulez-vous que Gabber essaie de créer un\n"
 "nouveau compte sur le serveur Jabber selectionné ?"
 
-#: src/GabberApp.cc:421
+#: src/GabberApp.cc:435
 msgid "Attempt to create a new user failed: \n"
 msgstr "La tentative de création d'un nouvel utilisateur a échouée: \n"
 
-#: src/GabberApp.cc:423
+#: src/GabberApp.cc:437
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -497,7 +510,7 @@ msgstr ""
 ". Merci de sélectionner un nom d'utilisateur différent ou \n"
 "vérifier vos informations de connection."
 
-#: src/GabberApp.cc:430
+#: src/GabberApp.cc:444
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -507,23 +520,23 @@ msgstr ""
 "supporte pas l'authentification masquée.\n"
 "Essayez de vous connecter à nouvezau en désactivé l'authentification masquée."
 
-#: src/GabberApp.cc:589
+#: src/GabberApp.cc:603
 msgid "Transmitter error. Disconnected: "
 msgstr "Erreur de transmission. Déconnecté : "
 
-#: src/GabberGPG.cc:433
+#: src/GabberGPG.cc:428
 msgid "The signature was valid"
 msgstr "La signature est valide"
 
-#: src/GabberGPG.cc:439
+#: src/GabberGPG.cc:434
 msgid "The signature was not valid"
 msgstr "La signature est invalide"
 
-#: src/GabberGPG.cc:443
+#: src/GabberGPG.cc:438
 msgid "Could not determine key information"
 msgstr "Ne peut pas confirmer les informations de clé"
 
-#: src/GabberGPG.cc:446
+#: src/GabberGPG.cc:441
 msgid "This message was signed"
 msgstr "Ce message était signé"
 
@@ -578,7 +591,7 @@ msgstr "aucune"
 
 #: src/GabberUtility.cc:223
 msgid "Both of you can see each other's presence."
-msgstr "Acun de vous ne peut voir la présence de l'autre."
+msgstr "Aucun de vous ne peut voir la présence de l'autre."
 
 #: src/GabberUtility.cc:225
 msgid "You cannot see their presence, but they can see yours."
@@ -599,101 +612,101 @@ msgstr ""
 "Impossible de sauver le fichier. Essayer un autre nom ou un autre "
 "emplacement."
 
-#: src/GabberWidgets.cc:149
+#: src/GabberWidgets.cc:235
 #, c-format
 msgid "%s from groupchat %s"
 msgstr "%s de la discussion de groupe %s"
 
-#: src/GabberWidgets.cc:271
+#: src/GabberWidgets.cc:371 src/StatusInterface.cc:418
 msgid " [stopped]"
 msgstr " [arrêté]"
 
-#: src/GabberWidgets.cc:273
+#: src/GabberWidgets.cc:373 src/StatusInterface.cc:420
 msgid " [paused]"
 msgstr " [pause]"
 
 #. Status Indicator(s)
-#: src/GabberWin.cc:138 src/GabberWin.cc:819 src/StatusInterface.cc:364
+#: src/GabberWin.cc:138 src/GabberWin.cc:823 src/StatusInterface.cc:375
 #: ui/Gabber_win.glade.h:11
 msgid "Disconnected"
 msgstr "Déconnecté"
 
 #. Update status bar
-#: src/GabberWin.cc:379
+#: src/GabberWin.cc:382
 msgid "Logged in"
 msgstr "Connexion"
 
 #. Update status bar
-#: src/GabberWin.cc:460
+#: src/GabberWin.cc:463
 msgid "Logged out"
 msgstr "Déconnexion"
 
-#: src/GabberWin.cc:498
+#: src/GabberWin.cc:501
 msgid "Please enter name of the group:"
 msgstr "Merci d'entrer le nom du groupe :"
 
-#: src/GabberWin.cc:519
+#: src/GabberWin.cc:522
 msgid "Gabber: The GNOME Jabber Client."
 msgstr "Gabber: le Client Jabber pour GNOME."
 
-#: src/GabberWin.cc:523
+#: src/GabberWin.cc:526
 msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
 msgstr "Dave \"Dizzy\" Smith <dave@jabber.org>"
 
-#: src/GabberWin.cc:524
+#: src/GabberWin.cc:527
 msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
 msgstr "Julian \"x-virge\" Missig <julian@jabber.org>"
 
-#: src/GabberWin.cc:525
+#: src/GabberWin.cc:528
 msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 msgstr "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 
-#: src/GabberWin.cc:526
+#: src/GabberWin.cc:529
 msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 msgstr "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 
-#: src/GabberWin.cc:527
+#: src/GabberWin.cc:530
 msgid "Konrad Podloucky <konrad@crunchy-frog.org>"
 msgstr "Konrad Podloucky <konrad@crunchy-frog.org>"
 
-#: src/GabberWin.cc:528
+#: src/GabberWin.cc:531
 msgid "Dave \"bigdave\" Lee"
 msgstr "Dave \"bigdave\" Lee"
 
-#: src/GabberWin.cc:529
+#: src/GabberWin.cc:532
 msgid "Thomas \"temas\" Muldowney <temas@box5.net>"
 msgstr "Thomas \"temas\" Muldowney <temas@box5.net>"
 
-#: src/GabberWin.cc:535
+#: src/GabberWin.cc:538
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr "Copyright (c) 1999-2001 Julian Missig et Dave Smith"
 
-#: src/GabberWin.cc:551 src/GabberWin.cc:556 src/StatusInterface.cc:66
+#: src/GabberWin.cc:554 src/GabberWin.cc:559 src/StatusInterface.cc:66
 msgid "Online"
 msgstr "Connecté"
 
-#: src/GabberWin.cc:559
+#: src/GabberWin.cc:562
 msgid "Chat with me!"
 msgstr "Discute avec moi !"
 
-#: src/GabberWin.cc:562 src/MessageViews.cc:2160
+#: src/GabberWin.cc:565 src/MessageViews.cc:2095
 msgid "I'm away."
 msgstr "Je suis absent."
 
-#: src/GabberWin.cc:565
+#: src/GabberWin.cc:568
 msgid "I'll be away for a while."
 msgstr "Je serais absent pour un moment."
 
-#: src/GabberWin.cc:568
+#: src/GabberWin.cc:571
 msgid "Sorry, I'm busy right now."
 msgstr "Désolé, je suis occupé maintenant."
 
 #. Update the status bar   
-#: src/GabberWin.cc:921
+#: src/GabberWin.cc:928
 msgid "Logging in..."
 msgstr "Connexion..."
 
-#: src/GabberWin.cc:967 src/RosterView.cc:912
+#: src/GabberWin.cc:974 src/RosterView.cc:912
 msgid "Not in Roster"
 msgstr "Pas dans la Liste"
 
@@ -702,7 +715,7 @@ msgstr "Pas dans la Liste"
 msgid "Edit Groups for %s"
 msgstr "Editer les Groupes pour %s"
 
-#: src/MessageManager.cc:482
+#: src/MessageManager.cc:487
 msgid ""
 "An error occurred trying to sign your message.\n"
 "Send the message unsigned?"
@@ -710,7 +723,7 @@ msgstr ""
 "Une erreur est apparue pendant la signature de votre message.\n"
 "Envoyer le message non signé ?"
 
-#: src/MessageManager.cc:515 src/MessageManager.cc:537
+#: src/MessageManager.cc:520 src/MessageManager.cc:542
 msgid ""
 "An error occurred trying to encrypt your message.\n"
 "Send the message unencrypted?"
@@ -718,89 +731,91 @@ msgstr ""
 "Une erreur est apparue pendant le chiffrage de votre message.\n"
 "Envoyer le message non chiffré ?"
 
+#. FIXME: implement grab_focus() in PrettyJID - focus goes to either _entJID or _cboResource->get_entry()
+#. 	  _entSendTo->grab_focus();
 #. Set the title
-#: src/MessageViews.cc:201 ui/MessageSend_win.glade.h:8
+#: src/MessageViews.cc:199 src/MessageViews.cc:392
+#: ui/MessageSend_win.glade.h:7
 msgid "New Blank Message - Gabber"
 msgstr "Nouveau Message Vide - Gabber"
 
-#. Set the title
-#: src/MessageViews.cc:435
+#: src/MessageViews.cc:396
 #, c-format
 msgid "Message to %s"
 msgstr "Message pour %s"
 
-#: src/MessageViews.cc:584
+#: src/MessageViews.cc:544
 #, c-format
 msgid "Message from %s"
 msgstr "Message de %s"
 
 #. Set the tooltip
-#: src/MessageViews.cc:630 src/MessageViews.cc:1095 src/MessageViews.cc:1280
-#: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:14
+#: src/MessageViews.cc:593 src/MessageViews.cc:1017 src/MessageViews.cc:1202
+#: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:13
 msgid "This message is not encrypted"
 msgstr "Ce message n'est pas encrypté"
 
 #. Set the tooltip
-#: src/MessageViews.cc:650 src/MessageViews.cc:1129
+#: src/MessageViews.cc:613 src/MessageViews.cc:1051
 msgid "Signature on message is invalid"
 msgstr "La signature du message est invalide"
 
 #. Set the tooltip
-#: src/MessageViews.cc:660 src/MessageViews.cc:1120 src/MessageViews.cc:1286
+#: src/MessageViews.cc:623 src/MessageViews.cc:1042 src/MessageViews.cc:1208
 msgid "Signature on message is valid"
 msgstr "La signature du message est valide"
 
 #. Set the tooltip
-#: src/MessageViews.cc:707 src/MessageViews.cc:1170 src/MessageViews.cc:1292
+#: src/MessageViews.cc:670 src/MessageViews.cc:1092 src/MessageViews.cc:1214
 msgid "This message is encrypted"
 msgstr "Ce message est crypté"
 
-#: src/MessageViews.cc:998 ui/OOOChat_win.glade.h:17
+#: src/MessageViews.cc:922 ui/OOOChat_win.glade.h:16
 #, no-c-format
 msgid "You just received a message from %s."
 msgstr "Vous avez juste reçu un message de %s."
 
 #. Set the window title
-#: src/MessageViews.cc:1037
+#: src/MessageViews.cc:961
 #, c-format
 msgid "Chat with %s"
 msgstr "Discuter avec %s"
 
 #. Display the error
-#: src/MessageViews.cc:1463 src/MessageViews.cc:2070
+#: src/MessageViews.cc:1393 src/MessageViews.cc:2005
 msgid "Error"
 msgstr "Erreur"
 
-#: src/MessageViews.cc:1653
+#: src/MessageViews.cc:1583
 #, c-format
 msgid "Group Chat in %s"
 msgstr "Discussion de groupe avec %s"
 
 #. Setup a message object
-#: src/MessageViews.cc:1763
+#: src/MessageViews.cc:1693
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "%1$s a changé le sujet pour : %2$s"
 
-#: src/MessageViews.cc:1942
+#: src/MessageViews.cc:1877
 msgid "Session Disconnected"
 msgstr "Session déconnectée"
 
-#: src/MessageViews.cc:2024
+#: src/MessageViews.cc:1959
 #, c-format
 msgid "%d members"
 msgstr "%d membres"
 
 #. Setup a message object
-#: src/MessageViews.cc:2121
+#: src/MessageViews.cc:2056
 msgid "/me has changed the subject to: "
 msgstr "/moi has change de sujet pour : "
 
-#: src/MessageViews.cc:2260 ui/GCJoin_dlg.glade.h:2
+#: src/MessageViews.cc:2196 ui/GCJoin_dlg.glade.h:2
 msgid "Jabber Group Chat 1.0"
 msgstr "Discussion de Groupe Jabber 1.0"
 
-#: src/MessageViews.cc:2261
+#: src/MessageViews.cc:2197
 msgid "IRC (Group Chat 1.0)"
 msgstr "IRC (Discussion de Groupe Jabber 1.0)"
 
@@ -812,7 +827,7 @@ msgstr "Paramètres de Connexion - Gabber"
 msgid "Login - Gabber"
 msgstr "Connexion - Gabber"
 
-#: src/PrefsInterface.cc:593
+#: src/PrefsInterface.cc:606
 msgid "Automatically away due to being idle"
 msgstr "Passer automatiquement Absent en cas d'inactivité"
 
@@ -858,21 +873,22 @@ msgstr ""
 "L'utilisateur suivant désire vous ajouter dans sa liste de contacts. Voulez-"
 "vous l'autoriser ?"
 
-#: src/StatusInterface.cc:368
+#: src/StatusInterface.cc:379
 msgid "Connected"
 msgstr "Connecté"
 
-#: src/StatusInterface.cc:372
+#: src/StatusInterface.cc:383
 msgid "Connected using SSL"
 msgstr "Connecté via SSL"
 
-#: src/StatusInterface.cc:382
+#: src/StatusInterface.cc:393
 msgid "Presence is signed"
 msgstr "La présence est signée"
 
 #: src/URLInterface.cc:84
-msgid "Received Web Link from "
-msgstr "Réception d'un lien Web de "
+#, c-format
+msgid "Received Web Link from %s"
+msgstr "Réception d'un lien Web de %s"
 
 #: src/WelcomeDruid.cc:255
 msgid "Attempting to log in..."
@@ -917,18 +933,18 @@ msgid "Add a Contact to Your Roster - Gabber"
 msgstr "Ajouter un Contact à votre Liste - Gabber"
 
 #: ui/AUDruid_win.glade.h:6
-msgid "Add a contact by JabberID"
-msgstr "Ajouter un contact par JabberID"
-
-#: ui/AUDruid_win.glade.h:7
 msgid "Add a contact who uses another instant messaging system by screen name"
 msgstr ""
 "Ajouter un contact qui utilise un autre système de messagerie instantanée "
 "par nom d'utilisateur"
 
-#: ui/AUDruid_win.glade.h:8
+#: ui/AUDruid_win.glade.h:7
 msgid "Add another contact when this is finished"
 msgstr "Ajouter un autre contact when cet ajout est terminé"
+
+#: ui/AUDruid_win.glade.h:8
+msgid "Add this JabberID:"
+msgstr "Ajouter ce JabberID :"
 
 #: ui/AUDruid_win.glade.h:9
 msgid "Available Agents"
@@ -1194,7 +1210,7 @@ msgid "Search..."
 msgstr "Chercher..."
 
 #: ui/AgentBrowser_dlg.glade.h:9 ui/ContactRecv_dlg.glade.h:9
-#: ui/ContactSend_dlg.glade.h:10
+#: ui/ContactSend_dlg.glade.h:9
 msgid "View Info..."
 msgstr "Voir les Informations..."
 
@@ -1211,7 +1227,7 @@ msgid "According to update.jabber.org, a new version of Gabber is available."
 msgstr ""
 "D'après update.jabber.org, une nouvelle version de Gabber est disponible."
 
-#: ui/Autoupdate_dlg.glade.h:2 ui/FTRecv_dlg.glade.h:3 ui/FTSend_dlg.glade.h:2
+#: ui/Autoupdate_dlg.glade.h:2 ui/FTRecv_dlg.glade.h:3 ui/FTSend_dlg.glade.h:1
 #: ui/RegDruid_win.glade.h:5 ui/TransInfo_dlg.glade.h:3
 msgid "Description:"
 msgstr "Description:"
@@ -1395,11 +1411,10 @@ msgid "_Organization"
 msgstr "_Organisation"
 
 #: ui/ContactInfo_dlg.glade.h:47 ui/Login_dlg.glade.h:36
-#: ui/MessageSend_win.glade.h:16
 msgid "_Resource:"
 msgstr "_Ressource:"
 
-#: ui/ContactInfo_dlg.glade.h:49 ui/OOOChat_win.glade.h:18
+#: ui/ContactInfo_dlg.glade.h:49 ui/OOOChat_win.glade.h:17
 msgid "online:"
 msgstr "connecté:"
 
@@ -1420,12 +1435,12 @@ msgstr "Ajouter les Contacts à la liste"
 msgid "Add to Roster"
 msgstr "Ajout à la liste"
 
-#: ui/ContactRecv_dlg.glade.h:3 ui/ContactSend_dlg.glade.h:3
+#: ui/ContactRecv_dlg.glade.h:3 ui/ContactSend_dlg.glade.h:2
 #: ui/GCI_dlg.glade.h:6
 msgid "JabberID"
 msgstr "JabberID"
 
-#: ui/ContactRecv_dlg.glade.h:4 ui/ContactSend_dlg.glade.h:4
+#: ui/ContactRecv_dlg.glade.h:4 ui/ContactSend_dlg.glade.h:3
 #: ui/GCIRecv_dlg.glade.h:4 ui/GCI_dlg.glade.h:7 ui/GCJoin_dlg.glade.h:5
 msgid "Nickname"
 msgstr "Pseudo"
@@ -1442,28 +1457,24 @@ msgstr "Les contacts suivants vont être ajoutés à votre liste :"
 msgid "These contacts were received from:"
 msgstr "Ces contacts ont été reçus de :"
 
-#: ui/ContactSend_dlg.glade.h:1 ui/FTSend_dlg.glade.h:1
-msgid "/"
-msgstr "/"
-
-#: ui/ContactSend_dlg.glade.h:2
+#: ui/ContactSend_dlg.glade.h:1
 msgid "Drag contacts you would like to send below:"
 msgstr "Déposer les contacts que vous voulez envoyer ci-dessous:"
 
-#: ui/ContactSend_dlg.glade.h:6 ui/FTSend_dlg.glade.h:5
-#: ui/MessageSend_win.glade.h:9 ui/RawXML_dlg.glade.h:8
+#: ui/ContactSend_dlg.glade.h:5 ui/FTSend_dlg.glade.h:4
+#: ui/MessageSend_win.glade.h:8 ui/RawXML_dlg.glade.h:8
 msgid "Send"
 msgstr "Envoyer"
 
-#: ui/ContactSend_dlg.glade.h:7
+#: ui/ContactSend_dlg.glade.h:6
 msgid "Send Contact(s) - Gabber"
 msgstr "Envoyer un (des) Contact(s) - Gabber"
 
-#: ui/ContactSend_dlg.glade.h:8
+#: ui/ContactSend_dlg.glade.h:7
 msgid "Send Contacts"
 msgstr "Envoyer des contacts"
 
-#: ui/ContactSend_dlg.glade.h:9
+#: ui/ContactSend_dlg.glade.h:8
 msgid "Send these contacts to:"
 msgstr "Envoyer ces contacts à:"
 
@@ -1551,27 +1562,27 @@ msgstr "Les fichiers suivants ont été offerts :"
 msgid "URI"
 msgstr "URI"
 
-#: ui/FTSend_dlg.glade.h:3
+#: ui/FTSend_dlg.glade.h:2
 msgid "File to Send - Gabber"
 msgstr "Fichier à Envoyer - Gabber"
 
-#: ui/FTSend_dlg.glade.h:4
+#: ui/FTSend_dlg.glade.h:3
 msgid "File to Send:"
 msgstr "Fichier à Envoyer :"
 
-#: ui/FTSend_dlg.glade.h:6
+#: ui/FTSend_dlg.glade.h:5
 msgid "Send From:"
 msgstr "Envoyer de :"
 
-#: ui/FTSend_dlg.glade.h:7
+#: ui/FTSend_dlg.glade.h:6
 msgid "Send a File"
 msgstr "Envoyer un Fichier"
 
-#: ui/FTSend_dlg.glade.h:8
+#: ui/FTSend_dlg.glade.h:7
 msgid "Send a File - Gabber"
 msgstr "Envoyer un Fichier - Gabber"
 
-#: ui/FTSend_dlg.glade.h:9
+#: ui/FTSend_dlg.glade.h:8
 msgid "Send this file to:"
 msgstr "Envoyer ce fichier à :"
 
@@ -1603,7 +1614,7 @@ msgstr "Pièce:"
 msgid "Server:"
 msgstr "Serveur:"
 
-#: ui/GCI_dlg.glade.h:11 ui/GC_win.glade.h:18 ui/MessageSend_win.glade.h:17
+#: ui/GCI_dlg.glade.h:11 ui/GC_win.glade.h:18 ui/MessageSend_win.glade.h:14
 msgid "_Subject:"
 msgstr "_Sujet:"
 
@@ -1699,7 +1710,7 @@ msgid "Invite Contacts..."
 msgstr "Inviter un contact..."
 
 #: ui/GC_win.glade.h:10 ui/MessageRecv_win.glade.h:6
-#: ui/MessageSend_win.glade.h:7 ui/OOOChat_win.glade.h:10
+#: ui/MessageSend_win.glade.h:6 ui/OOOChat_win.glade.h:10
 msgid "Message History..."
 msgstr "Historique des messages..."
 
@@ -1957,7 +1968,7 @@ msgid "Show _Headlines"
 msgstr "Montrer les _Titres"
 
 #: ui/Gabber_win.glade.h:50 ui/MessageRecv_win.glade.h:15
-#: ui/MessageSend_win.glade.h:15 ui/OOOChat_win.glade.h:15
+#: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:14
 #: ui/SubscriptionRequest_dlg.glade.h:10
 msgid "View Contact Info..."
 msgstr "Voir les Informations du Contact..."
@@ -2227,27 +2238,19 @@ msgstr "Expéditeur:"
 msgid "Time:"
 msgstr "Heure:"
 
-#: ui/MessageSend_win.glade.h:6
-msgid "JabberID to which this message should be sent"
-msgstr "JabberID à qui le message doit être envoyé"
-
-#: ui/MessageSend_win.glade.h:10
+#: ui/MessageSend_win.glade.h:9
 msgid "Send _to:"
 msgstr "_Envoyer à:"
 
-#: ui/MessageSend_win.glade.h:11
+#: ui/MessageSend_win.glade.h:10
 msgid "Send as OOOChat"
 msgstr "Envoyer comme Discussion privée"
 
-#: ui/MessageSend_win.glade.h:12
+#: ui/MessageSend_win.glade.h:11
 msgid "Send as One-on-One Chat"
 msgstr "Envoyer comme Discussion privée"
 
-#: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:13
-msgid "Specific resource to which this message should be sent"
-msgstr "Ressource Spécifique a qui le message devrait être envoyé"
-
-#: ui/MessageSend_win.glade.h:14
+#: ui/MessageSend_win.glade.h:12
 msgid "Subject of this message"
 msgstr "Sujet du message"
 
