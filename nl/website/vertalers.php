@@ -114,7 +114,7 @@ if (!isset($maint_num)) {
 					    list ($pline_num, $untransl) = each ($fhpackages);
 					    list ($pline_num, $pline) = each ($fhpackages);
 					    list ($pline_num, $pline) = each ($fhpackages);
-					    $url = "$url_prefix$gnomeversion/$url";
+					    $url = "$url_prefix" . "HEAD" . "/$url";
 						echo "  <tr><td>$packagename</td>";
 						$kleur=percentagekleur($percentage);
 						echo "    <td class=\"percentage\" bgcolor=\"$kleur\">$percentage</td>\n";
