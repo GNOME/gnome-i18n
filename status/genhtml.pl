@@ -71,7 +71,8 @@ my %charsets = (
     "sv" => "iso-8859-1",
     "tr" => "iso-8859-9",
     "uk" => "koi8-u",
-    "wa" => "iso-8859-1"
+    "wa" => "iso-8859-1",
+    "zh_TW" => "UTF-8"
 );
 
 my %modulenames = (
@@ -91,7 +92,8 @@ my %modulenames = (
     "sv" => "Modul",
     "tr" => "ModЭl",
     "uk" => "Модуль",
-    "wa" => "module"
+    "wa" => "module",
+    "zh_TW" => "Ф╗║Г╣└"
 ); 
 
 my %translated = (
@@ -111,7 +113,8 @@ my %translated = (
     "sv" => "&Ouml;versatt",
     "tr" => "TercЭme edilmiЧ",
     "uk" => "Перекладено",
-    "wa" => "rato&ucirc;rn&eacute;s"
+    "wa" => "rato&ucirc;rn&eacute;s",
+    "zh_TW" => "Е╥╡Г©╩Х╜╞"
 );
 
 my %fuzzy = (
@@ -131,7 +134,8 @@ my %fuzzy = (
     "sv" => "Luddigt",
     "tr" => "Tam tutmayan",
     "uk" => "Неч╕тко",
-    "wa" => "&laquo;fuzzy&raquo;"
+    "wa" => "&laquo;fuzzy&raquo;",
+    "zh_TW" => "Ф╗║ГЁ┼"
 );
 
 my %untranslated = (
@@ -151,7 +155,8 @@ my %untranslated = (
     "sv" => "O&ouml;versatt",
     "tr" => "TercЭme edilmemiЧ",
     "uk" => "Неперекладено",
-    "wa" => "n&eacute;n co rato&ucirc;rn&eacute;s"
+    "wa" => "n&eacute;n co rato&ucirc;rn&eacute;s",
+    "zh_TW" => "Ф°╙Г©╩Х╜╞"
 );
 
 my %strings = (
@@ -171,7 +176,8 @@ my %strings = (
     "sv" => "meddelanden",
     "tr" => "metinler",
     "uk" => "пов╕дом.",
-    "wa" => "messaedjes"
+    "wa" => "messaedjes",
+    "zh_TW" => "Е╜≈Д╦╡"
 );
 
 my %total = (
@@ -191,7 +197,8 @@ my %total = (
     "sv" => "Totalt",
     "tr" => "Toplam",
     "uk" => "Всього",
-    "wa" => "tot&aring;"
+    "wa" => "tot&aring;",
+    "zh_TW" => "Г╦╫Ф∙╦"
 );
 
 my %lasttranslator = (
@@ -205,7 +212,8 @@ my %lasttranslator = (
     "nn" => "Siste omsetjar",
     "pt" => "зltimo tradutor",
     "sv" => "Senaste &ouml;vers&auml;ttare",
-    "wa" => "Dierin rato&ucirc;rneu"
+    "wa" => "Dierin rato&ucirc;rneu",
+    "zh_TW" => "Ф°─Е╬▄Г©╩Х╜╞Х─┘"
 );
 
 my %status = (
@@ -219,7 +227,8 @@ my %status = (
     "nn" => "Status",
     "pt" => "Estado",
     "sv" => "Status",
-    "wa" => "Sitatus"
+    "wa" => "Sitatus",
+    "zh_TW" => "Г▀─Ф┘▀"
 );
 
 my %outdated = (
@@ -232,7 +241,8 @@ my %outdated = (
     "nn" => "Utdatert",
     "pt" => "Abandonada",
     "sv" => "F&ouml;r&aring;ldrad",
-    "wa" => "Trop v&icirc;"
+    "wa" => "Trop v&icirc;",
+    "zh_TW" => "И│▌Ф≥┌"
 );
 
 my %wip = (
@@ -245,7 +255,8 @@ my %wip = (
     "nn" => "P&aring;g&aring;ande arbeid",
     "pt" => "Em curso",
     "sv" => "P&aring;g&aring;ende arbete",
-    "wa" => "On overe dissu"
+    "wa" => "On overe dissu",
+    "zh_TW" => "И─╡Х║▄Д╦╜"
 );
 
 my %finished = (
@@ -257,7 +268,8 @@ my %finished = (
     "nn" => "Ferdig",
     "pt" => "Terminada",
     "sv" => "Slutf&ouml;rd",
-    "wa" => "Fini"
+    "wa" => "Fini",
+    "zh_TW" => "Е╝▄Ф┬░"
 );
 
 my %unknown = (
@@ -270,7 +282,8 @@ my %unknown = (
     "nn" => "Ukjend",
     "pt" => "Desconhecido",
     "sv" => "Ok&auml;nd",
-    "wa" => "N&eacute;n cnoxhou"
+    "wa" => "N&eacute;n cnoxhou",
+    "zh_TW" => "Д╦█Х╘Ё"
 );
 
 my %details = ( 
@@ -290,7 +303,8 @@ my %details = (
     "sv" => "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME",
     "tr" => "GeliЧmiЧ durum raporu : ",
     "uk" => "Детальний зв╕т про стан перекладу GNOME на укра╖нську",
-    "wa" => "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
+    "wa" => "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME",
+    "zh_TW" => "Г╧│И╚■Д╦╜Ф√┤Г©╩Х╜╞Г▀─ФЁ│Х╘ЁГ╢╟Е═╠Е▒┼"
 );
 
 my %percent_colors = (
