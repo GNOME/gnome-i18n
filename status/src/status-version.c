@@ -338,7 +338,7 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 						} else {
 							StatusTranslation *translation;
 
-							translation = status_translation_new (version, po_file);
+							translation = status_translation_new (version, filesplit[0], po_file);
 							if (translation != NULL) {
 								g_hash_table_insert (version->translations,
 										g_strdup(filesplit[0]),
@@ -400,4 +400,141 @@ status_version_get_id (StatusVersion *version)
 	g_return_val_if_fail (STATUS_IS_VERSION (version), NULL);
 
 	return version->id->str;
+}
+
+const gchar *
+status_version_get_module_name (StatusVersion *version)
+{
+	g_return_val_if_fail (STATUS_IS_VERSION (version), NULL);
+
+	return version->module->str;
+}
+
+gchar *
+status_version_get_html_table (StatusVersion *version, const gchar *html_path)
+{
+	StatusTranslation *translation;
+	gint translated, fuzzy, untranslated;
+	gfloat ptranslated, pfuzzy, puntranslated;
+	GString *table_str;
+	gchar *ret;
+	GList *lang;
+	gint i;
+
+	table_str = g_string_new ("      <table class=\"moduleVersionTable\">\n");
+	table_str = g_string_append (table_str, "        <tr class=\"moduleVersionRow\">\n");
+	g_string_append_printf (table_str, "          <th class=\"moduleVersionField\">%s</th>\n", "language");
+	g_string_append_printf (table_str, "          <th class=\"moduleVersionFieldTrans\">%s</th>\n", "trans.");
+	table_str = g_string_append (table_str, "          <th class=\"moduleVersionFieldTrans\">%</th>\n");
+	g_string_append_printf (table_str, "          <th class=\"moduleVersionFieldFuzzy\">%s</th>\n", "fuzzy");
+	table_str = g_string_append (table_str, "          <th class=\"moduleVersionFieldFuzzy\">%</th>\n");
+	g_string_append_printf (table_str, "          <th class=\"moduleVersionFieldUntra\">%s</th>\n", "untrans.");
+	table_str = g_string_append (table_str, "          <th class=\"moduleVersionFieldUntra\">%</th>\n");
+	g_string_append_printf (table_str, "          <th class=\"moduleVersionField\">%s</th>\n", "graph");
+	table_str = g_string_append (table_str, "          <th class=\"moduleVersionField\">po</th>\n");
+	table_str = g_string_append (table_str, "          <th class=\"moduleVersionField\">Details</th>\n");
+	table_str = g_string_append (table_str, "        </tr>\n");
+	
+	for (lang = g_list_first (langs), i = 1; lang != NULL; lang = g_list_next (lang)) {
+		translation = g_hash_table_lookup (version->translations, lang->data);
+		if (translation == NULL) {
+			continue;
+		}
+
+		if (html_path == NULL) {
+			status_translation_report (translation);
+		}
+		
+		i++;
+		translated = status_translation_get_ntranslated (translation);
+		fuzzy = status_translation_get_nfuzzy (translation);
+		untranslated = status_translation_get_nuntranslated (translation);
+		version = status_translation_get_version (translation);
+		ptranslated = (float) translated / (float) version->nstrings;
+		pfuzzy = (float) fuzzy / (float) version->nstrings;
+		puntranslated = (float) untranslated / (float) version->nstrings;
+
+		if (version->nstrings != translated + fuzzy + untranslated) {
+			/* TODO: We should implement a way to show a warning */
+		}
+		
+		g_string_append_printf (table_str, "        <tr class=\"moduleVersionRow%s\">\n", (i % 2 == 0) ? "Even" : "Odd");
+		if (html_path != NULL) {
+			g_string_append_printf (table_str, "          <td><a href=\"%s/%s.html\">%s</a></td>\n", html_path, lang->data, lang->data);
+		} else {
+			g_string_append_printf (table_str, "          <td><a href=\"%s.html\">%s</a></td>\n", lang->data, lang->data);
+		}
+		g_string_append_printf (table_str, "          <td>%d</td>\n", translated);
+		if (ptranslated == 1) {
+			table_str = g_string_append (table_str, "          <td>100</td>\n");
+		} else {
+			g_string_append_printf (table_str, "          <td>%.2f</td>\n", ptranslated*100);
+		}
+		g_string_append_printf (table_str, "          <td>%d</td>\n", fuzzy);
+		if (pfuzzy == 1) {
+			table_str = g_string_append (table_str, "          <td>100</td>\n");
+		} else {
+			g_string_append_printf (table_str, "          <td>%.2f</td>\n", pfuzzy*100);
+		}
+		g_string_append_printf (table_str, "          <td>%d</td>\n", untranslated);
+		if (puntranslated == 1) {
+			table_str = g_string_append (table_str, "          <td>100</td>\n");
+		} else {
+			g_string_append_printf (table_str, "          <td>%.2f</td>\n", puntranslated*100);
+		}
+		table_str = g_string_append (table_str, "          <td>\n");
+		g_string_append_printf (table_str, "            <img class=\"moduleVersionGraph\" src=\"/images/bar0.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*ptranslated), "translated bar");
+		g_string_append_printf (table_str, "<img class=\"moduleVersionGraph\" src=\"/images/bar4.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*pfuzzy), "fuzzy bar");
+		g_string_append_printf (table_str, "<img class=\"moduleVersionGraph\" src=\"/images/bar1.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*puntranslated), "untranslated bar");
+		table_str = g_string_append (table_str, "          </td>\n");
+		table_str = g_string_append (table_str, "          <td>\n");
+		if (html_path != NULL) {
+			g_string_append_printf (table_str, "            <a href=\"%s/%s.%s.%s.po\"><img src=\"/images/download.png\" alt=\"%s\"/></a>\n", html_path, version->module->str, version->id->str, lang->data, "PO Download link");
+		} else {
+			g_string_append_printf (table_str, "            <a href=\"%s.%s.%s.po\"><img src=\"/images/download.png\" alt=\"%s\"/></a>\n", version->module->str, version->id->str, lang->data, "PO Download link");
+
+		}
+		table_str = g_string_append (table_str, "          </td>\n");
+		table_str = g_string_append (table_str, "          <td>\n");
+		if (html_path != NULL) {
+			g_string_append_printf (table_str, "            <a href=\"%s/%s.html\"><img src=\"/images/details.png\" alt=\"%s\"/></a>\n", html_path, lang->data, "Details link");
+		} else {
+			g_string_append_printf (table_str, "            <a href=\"%s.html\"><img src=\"/images/details.png\" alt=\"%s\"/></a>\n", lang->data, "Details link");
+
+		}
+		table_str = g_string_append (table_str, "          </td>\n");
+		table_str = g_string_append (table_str, "        </tr>\n");
+	}
+
+	table_str = g_string_append (table_str, "      </table>\n");
+	
+	ret = table_str->str;
+	g_string_free (table_str, FALSE);
+
+	return ret;
+}
+
+/**
+ * status_version_report
+ */
+void
+status_version_report (StatusVersion *version)
+{
+	FILE *module_index;
+	gchar *index_name;
+	gchar *title;
+	gchar *table_str;
+
+	index_name = g_strdup_printf ("%s/modules/%s/%s/index.html", config.install_dir, version->module->str, version->id->str);
+	title = g_strdup_printf ("%s - %s - %s", config.default_title, version->module->str, version->id->str);
+	
+	module_index = status_web_new_file (index_name, title, NULL);
+	table_str = status_version_get_html_table (version, NULL);
+	fprintf (module_index, "%s", table_str);
+	status_web_end_file (module_index);
+	fclose (module_index);
+	
+	g_free (index_name);
+	g_free (title);
+	g_free (table_str);
 }

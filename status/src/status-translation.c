@@ -23,7 +23,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
+#include <stdio.h>
 #include <sys/wait.h>
+#include "status.h"
 #include "status-translation.h"
 
 struct _StatusTranslation {
@@ -31,6 +33,7 @@ struct _StatusTranslation {
 
 	StatusVersion *version;
 /*	StatusLocale *locale;*/
+	GString *locale;
 /*	StatusTranslator *translator; */
 	GString *path;
 	gint translated;
@@ -67,7 +70,7 @@ status_translation_init (StatusTranslation *translation, StatusTranslationClass 
 	g_return_if_fail (STATUS_IS_TRANSLATION (translation));
 
 	translation->version = NULL;
-/*	translation->locale = NULL;*/
+	translation->locale = NULL;
 /*	translation->translator = NULL;*/
 	translation->path = NULL;
 	translation->translated = 0;
@@ -86,9 +89,9 @@ status_translation_finalize (GObject *object)
 	if (translation->version != NULL) {
 		g_object_unref (translation->version);
 	}
-/*	if (translation->locale != NULL) {
-		g_object_unref (translation->locale);
-	}*/
+	if (translation->locale != NULL) {
+		g_string_free (translation->locale, TRUE);
+	}
 /*	if (translation->translator != NULL) {
 		g_object_unref (translation->translator);
 	}*/
@@ -134,7 +137,7 @@ status_translation_get_type (void)
  * TODO: Perhaps we should move all this code to a constructor function?
  */
 StatusTranslation *
-status_translation_new (StatusVersion *version, const gchar *path)
+status_translation_new (StatusVersion *version, const gchar *locale, const gchar *path)
 {
 	StatusTranslation *translation;
 	gchar *command;
@@ -150,6 +153,7 @@ status_translation_new (StatusVersion *version, const gchar *path)
 
 	translation->version = g_object_ref (version);
 	translation->path = g_string_new (path);
+	translation->locale = g_string_new (locale);
 
 	command = g_strdup_printf ("msgfmt --statistics %s -o /dev/null", translation->path->str);
 
@@ -225,4 +229,67 @@ status_translation_get_nuntranslated (StatusTranslation *translation)
 	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), -1);
 
 	return translation->untranslated;
+}
+
+/**
+ * status_translation_report
+ */
+void
+status_translation_report (StatusTranslation *translation)
+{
+	FILE *index;
+	gchar *index_name;
+	gchar *title;
+	gfloat ptranslated, pfuzzy, puntranslated;
+
+	index_name = g_strdup_printf ("%s/modules/%s/%s/%s.html", config.install_dir,
+			status_version_get_module_name (translation->version),
+			status_version_get_id (translation->version),
+			translation->locale->str);
+	title = g_strdup_printf ("%s - %s - %s - %s", config.default_title,
+			status_version_get_module_name (translation->version),
+			status_version_get_id (translation->version),
+			translation->locale->str);
+
+	ptranslated = (float) translation->translated / (float) status_version_get_nstrings (translation->version);
+	pfuzzy = (float) translation->fuzzy / (float) status_version_get_nstrings (translation->version);
+	puntranslated = (float) translation->untranslated / (float) status_version_get_nstrings (translation->version);
+
+	
+	index = status_web_new_file (index_name, title, NULL);
+	fprintf (index, "      <table class=\"moduleVersionTable\">\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
+	fprintf (index, "          <th>%s</th>\n", "Last Translator");
+	fprintf (index, "          <td>%s</td>\n", "Foo Man");
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
+	fprintf (index, "          <th>%s</th>\n", "Last Update");
+	fprintf (index, "          <td>%s</td>\n", "Someday");
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
+	fprintf (index, "          <th class=\"moduleVersionFieldTrans\">%s</th>\n", "Strings Translated");
+	fprintf (index, "          <td>%d</td>\n", translation->translated);
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
+	fprintf (index, "          <th class=\"moduleVersionFieldFuzzy\">%s</th>\n", "Strings Fuzzy");
+	fprintf (index, "          <td>%d</td>\n", translation->fuzzy);
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowEven\">\n");
+	fprintf (index, "          <th class=\"moduleVersionFieldUntra\">%s</th>\n", "Strings Untranslated");
+	fprintf (index, "          <td>%d</td>\n", translation->untranslated);
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "        <tr class=\"moduleVersionRowOdd\">\n");
+	fprintf (index, "          <th>%s</th>\n", "Graph");
+	fprintf (index, "          <td>");
+	fprintf (index, "<img class=\"moduleVersionGraph\" src=\"/images/bar0.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*ptranslated), "translated bar");
+	fprintf (index, "<img class=\"moduleVersionGraph\" src=\"/images/bar4.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*pfuzzy), "fuzzy bar");
+	fprintf (index, "<img class=\"moduleVersionGraph\" src=\"/images/bar1.png\" height=\"15\" width=\"%d\" alt=\"%s\"/>", (gint) (200.0*puntranslated), "untranslated bar");
+	fprintf (index, "</td>\n");
+	fprintf (index, "        </tr>\n");
+	fprintf (index, "      </table>\n");
+	status_web_end_file (index);
+	fclose (index);
+
+	g_free (index_name);
+	g_free (title);
 }

@@ -127,6 +127,33 @@ status_view_get_type (void)
 	return type;
 }
 
+/*
+static void
+generate_version_report (gpointer key, gpointer value, gpointer user_data)
+{
+	StatusVersion *version;
+	FILE *module_index;
+	gchar *table_str;
+	gchar *group;
+
+	version = STATUS_VERSION (value);
+	module_index = (FILE *) user_data;
+
+	table_str = status_version_get_html_table (version, status_version_get_id (version));
+
+	fprintf (module_index, "    <div class=\"moduleVersion\">\n");
+	fprintf (module_index, "      <h3 class=\"moduleVersionTitle\"><a href=\"%s/\">%s</a></h3>\n", status_version_get_id (version), status_version_get_id (version));
+	fprintf (module_index, "      <object>\n");
+	fprintf (module_index, "%s", table_str);
+	fprintf (module_index, "      </object>\n");
+	fprintf (module_index, "    </div>\n");
+
+	g_free (table_str);
+
+	status_version_report (version);
+}
+*/
+
 /**
  * status_view_new
  * @name: The view name
@@ -190,3 +217,27 @@ status_view_add_module (StatusView *view, gchar *group, StatusVersion *module)
 	}
 	return TRUE;
 }
+
+/**
+ * status_view_report
+ *//*
+void
+status_view_report (StatusView *view)
+{
+	FILE *index;
+	gchar *index_name;
+	gchar *title;
+	GList *modules = NULL;
+
+	index_name = g_strdup_printf ("%s/views/%s/index.html", config.install_dir, view->name->str);
+	title = g_strdup_printf ("%s - %s", config.default_title, view->name->str);
+	
+	if (view->modules != NULL) {
+		index = status_web_new_file (index_name, title, NULL);
+		g_hash_table_foreach (view->modules, generate_version_report, &modules);
+		status_web_end_file (index);
+		fclose (index);
+	}
+	g_free (index_name);
+	g_free (title);
+}*/

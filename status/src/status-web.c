@@ -66,6 +66,14 @@ status_web_end_file (FILE *file)
 
 	fprintf (file, "  </div>\n");
 
+	/* The navigation menu */
+	fprintf (file, "  <div id=\"sidebar\">\n");
+	fprintf (file, "    <p class=\"section\">Navigation</p>\n");
+/*	fprintf (file, "    <ul>\n");
+	fprintf (file, "      <li><a href=javascript:history.go(-1)><img src=\"/images/back.png\" alt=\"%s\" />%s</a></li>\n", "Back icon", "Back");
+	fprintf (file, "    </ul>\n");*/
+	fprintf (file, "  </div>\n");
+
 	template = g_strdup_printf ("%s/main-banner.template", config.templates_dir);
 	header_template = fopen (template, "r");
 

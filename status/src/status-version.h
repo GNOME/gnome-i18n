@@ -47,6 +47,10 @@ gboolean       status_version_generate_pot (StatusVersion *version, gchar *downl
 gint           status_version_get_nstrings (StatusVersion *version);
 GHashTable    *status_version_get_translations (StatusVersion *version);
 const gchar   *status_version_get_id (StatusVersion *version);
+const gchar   *status_version_get_module_name (StatusVersion *version);
+gchar         *status_version_get_html_table (StatusVersion *version, const gchar *html_path);
+void           status_version_report (StatusVersion *version);
+
 
 
 G_END_DECLS
