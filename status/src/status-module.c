@@ -128,6 +128,7 @@ generate_version_report (gpointer data, gpointer user_data)
 	gint nstrings, translated, fuzzy, untranslated;
 	gfloat ptranslated, pfuzzy, puntranslated;
 	GList *lang;
+	gint i;
 
 	version = STATUS_VERSION (data);
 	module_index = (FILE *) user_data;
@@ -137,29 +138,31 @@ generate_version_report (gpointer data, gpointer user_data)
 /*	status_version_report (version);*/
 
 	fprintf (module_index, "    <div class=\"moduleVersion\">\n");
-	fprintf (module_index, "      <h1 class=\"moduleVersionTitle\">%s</h1>\n", status_version_get_id (version));
+	fprintf (module_index, "      <h3 class=\"moduleVersionTitle\">%s</h3>\n", status_version_get_id (version));
+	fprintf (module_index, "      <object>\n");
 	fprintf (module_index, "      <table class=\"moduleVersionTable\">\n");
-	fprintf (module_index, "        <tr>\n");
-	fprintf (module_index, "          <td>%s</td>\n", "language");
-	fprintf (module_index, "          <td>%s</td>\n", "trans.");
-	fprintf (module_index, "          <td>%%</td>\n");
-	fprintf (module_index, "          <td>%s</td>\n", "fuzzy");
-	fprintf (module_index, "          <td>%%</td>\n");
-	fprintf (module_index, "          <td>%s</td>\n", "untrans.");
-	fprintf (module_index, "          <td>%%</td>\n");
-	fprintf (module_index, "          <td>%s</td>\n", "graph");
+	fprintf (module_index, "        <tr class=\"moduleVersionRow\">\n");
+	fprintf (module_index, "          <td class=\"moduleVersionField\">%s</td>\n", "language");
+	fprintf (module_index, "          <td class=\"moduleVersionFieldTrans\">%s</td>\n", "trans.");
+	fprintf (module_index, "          <td class=\"moduleVersionFieldTrans\">%%</td>\n");
+	fprintf (module_index, "          <td class=\"moduleVersionFieldFuzzy\">%s</td>\n", "fuzzy");
+	fprintf (module_index, "          <td class=\"moduleVersionFieldFuzzy\">%%</td>\n");
+	fprintf (module_index, "          <td class=\"moduleVersionFieldUntra\">%s</td>\n", "untrans.");
+	fprintf (module_index, "          <td class=\"moduleVersionFieldUntra\">%%</td>\n");
+	fprintf (module_index, "          <td class=\"moduleVersionField\">%s</td>\n", "graph");
 	fprintf (module_index, "        </tr>\n");
 	
 	if (nstrings != translated + fuzzy + untranslated) {
 		/* TODO: We should implement a way to show a warning */
 	}
 	
-	for (lang = g_list_first (langs); lang != NULL; lang = g_list_next (lang)) {
+	for (lang = g_list_first (langs), i = 1; lang != NULL; lang = g_list_next (lang)) {
 		translation = g_hash_table_lookup (translations, lang->data);
 		if (translation == NULL) {
 			continue;
 		}
 		
+		i++;
 		translated = status_translation_get_ntranslated (translation);
 		fuzzy = status_translation_get_nfuzzy (translation);
 		untranslated = status_translation_get_nuntranslated (translation);
@@ -169,7 +172,7 @@ generate_version_report (gpointer data, gpointer user_data)
 		pfuzzy = (float) fuzzy / (float) nstrings;
 		puntranslated = (float) untranslated / (float) nstrings;
 		
-		fprintf (module_index, "        <tr>\n");
+		fprintf (module_index, "        <tr class=\"moduleVersionRow%s\">\n", (i % 2 == 0) ? "Even" : "Odd");
 		fprintf (module_index, "          <td>%s</td>\n", lang->data);
 		fprintf (module_index, "          <td>%d</td>\n", translated);
 		fprintf (module_index, "          <td>%.2f</td>\n", ptranslated*100);
@@ -177,11 +180,12 @@ generate_version_report (gpointer data, gpointer user_data)
 		fprintf (module_index, "          <td>%.2f</td>\n", pfuzzy*100);
 		fprintf (module_index, "          <td>%d</td>\n", untranslated);
 		fprintf (module_index, "          <td>%.2f</td>\n", puntranslated*100);
-		fprintf (module_index, "          <td><img src=\"/images/bar0.png\" height=\"15\" width=\"%d\"><img src=\"/images/bar4.png\" height=\"15\" width=\"%d\"><img src=\"/images/bar1.png\" height=\"15\" width=\"%d\"></td>\n", (gint) (200.0*ptranslated), (gint) (200.0*pfuzzy), (gint) (200.0*puntranslated));
+		fprintf (module_index, "          <td><img src=\"/images/bar0.png\" height=\"15\" width=\"%d\" alt=\"%s\"/><img src=\"/images/bar4.png\" height=\"15\" width=\"%d\" alt=\"%s\" /><img src=\"/images/bar1.png\" height=\"15\" width=\"%d\" alt=\"%s\" /></td>\n", (gint) (200.0*ptranslated), "translated bar", (gint) (200.0*pfuzzy), "fuzzy bar", (gint) (200.0*puntranslated), "untranslated bar");
 		fprintf (module_index, "        </tr>\n");
 	}
 
 	fprintf (module_index, "      </table>\n");
+	fprintf (module_index, "      </object>\n");
 	fprintf (module_index, "    </div>\n");
 }
 

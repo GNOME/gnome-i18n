@@ -52,6 +52,8 @@ status_web_new_file (gchar *file_name, gchar *title, gchar *lang)
 
 	fprintf (file, "  <body>\n");
 
+	fprintf (file, "  <div id=\"body\">\n");
+
 	return file;
 }
 
@@ -62,7 +64,18 @@ status_web_end_file (FILE *file)
 	gchar *template;
 	gchar buf[256];
 
+	fprintf (file, "  </div>\n");
+
 	template = g_strdup_printf ("%s/main-banner.template", config.templates_dir);
+	header_template = fopen (template, "r");
+
+	while (fgets (buf, 256, header_template) != NULL) {
+		fprintf (file, "%s", buf);
+	}
+	fclose (header_template);
+	g_free (template);
+
+	template = g_strdup_printf ("%s/main-footer.template", config.templates_dir);
 	header_template = fopen (template, "r");
 
 	while (fgets (buf, 256, header_template) != NULL) {
