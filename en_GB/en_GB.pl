@@ -72,7 +72,7 @@ sub do_trans {
 # Handle keyboard shortcuts in message strings.  Messy, but it seems to work.
 # Use the same key if possible, otherwise prompt the user.
   my $underscores_tf = $tf;
-  $underscores_tf =~ s/(?<=\w)(.)/_?$1/g;      
+  $underscores_tf =~ s/(?<=\w)(.)/_?$1/g;
   if ( $msg_str =~ m/(_?$underscores_tf)/i and $1 =~ m/_(\w)/ ) {
       my $accel = $1;
       if ( $tt =~ s/(?=$accel)/_/i ) {
@@ -129,7 +129,12 @@ sub translate() {
     return;
   }
 
-  $msg_str = $msg_id;
+  # Epiphany-style contexting
+  if ( $msg_id =~ m/^.*\|(.*)$/ ) {
+    $msg_str = "\"".$1."\n";
+  } else {
+    $msg_str = $msg_id;
+  }
   
   do_trans("aluminum", "aluminium");
   do_trans("analog", "analogue");
