@@ -1,12 +1,14 @@
 # Danish translation of GTM 
-# Copyright (C) 2000 Free Software Foundation, Inc.
+# Copyright (C) 2000, 2001 Free Software Foundation, Inc.
 # Keld Simonsen <keld@dkuug.dk>, 2000.
 # Ole Laursen <olau@hardworking.dk>, 2001.
+#
+# URL -> adresse
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm 0.9\n"
-"POT-Creation-Date: 2001-03-25 02:23+0100\n"
+"POT-Creation-Date: 2001-09-30 17:52+0100\n"
 "PO-Revision-Date: 2001-04-08 11:08+02:00\n"
 "Last-Translator: Ole Laursen <olau@hardworking.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -14,34 +16,38 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:331
+#: src/Gtm-impl.c:101
+msgid "Refusing request from CORBA client, URL already in the list:"
+msgstr "Afslår forespørgsel fra CORBA-klien, adressen er allerede i listen:"
+
+#: src/main.c:390
 msgid "url to fetch"
 msgstr "adresse som skal hentes"
 
-#: src/main.c:331
+#: src/main.c:390
 msgid "URL"
 msgstr "Adresse"
 
-#. If there where errors give them to the user
-#: applet/dialog-add.c:85 applet/dialog-add.c:108 applet/dialog-add.c:321
-#: applet/dialog-add.c:343 applet/dialog-new.c:129 src/dialog-add.c:59
-#: src/dialog-add.c:75 src/dialog-add.c:266 src/dialog-add.c:284
-#: src/dialog-new.c:96 src/main.c:368
+#. If there were errors give them to the user
+#: applet/dialog-add.c:85 applet/dialog-add.c:108 applet/dialog-add.c:325
+#: applet/dialog-add.c:347 applet/dialog-new.c:128 src/dialog-add.c:63
+#: src/dialog-add.c:82 src/dialog-add.c:265 src/dialog-add.c:286
+#: src/dialog-new.c:129 src/main.c:429
 msgid "URL:\n"
 msgstr "Adresse:\n"
 
-#: applet/dialog-add.c:114 applet/dialog-add.c:350 applet/dialog-new.c:130
-#: src/dialog-add.c:78 src/dialog-add.c:287 src/dialog-new.c:97 src/main.c:370
+#: src/dialog-add.c:85 src/dialog-add.c:289 src/dialog-new.c:130
+#: src/main.c:431
 msgid "already in the list"
 msgstr "allerede på listen"
 
 #. GTM Server couldn't be started
-#: applet/dialog-add.c:94 applet/dialog-add.c:329 applet/dialog-new.c:123
-#: applet/gtm_applet.c:172 src/main.c:375
+#: applet/dialog-add.c:94 applet/dialog-add.c:333 applet/dialog-new.c:122
+#: applet/gtm_applet.c:193 src/main.c:436
 msgid "Couldn't start GTM"
 msgstr "Kunne ikke starte filoverførselshåndteringen"
 
-#: src/main.c:432
+#: src/main.c:477
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -49,7 +55,7 @@ msgstr ""
 "En anden filoverførselshåndtering er igang.\n"
 "Der kan kun køre én kopi af dette program ad gangen."
 
-#: src/main-window.c:103
+#: src/main-window.c:104
 msgid ""
 "Some files being downloaded now.\n"
 "Do you really want to quit?"
@@ -57,89 +63,89 @@ msgstr ""
 "Nogle filer er ved at blive hentet.\n"
 "Vil du virkelig afslutte?"
 
-#: src/main-window.c:219
+#: src/main-window.c:220
 msgid "_New..."
 msgstr "_Ny..."
 
-#: applet/dialog-new.c:201 src/dialog-new.c:201 src/main-window.c:219
+#: applet/dialog-new.c:209 src/dialog-new.c:221 src/main-window.c:220
 msgid "New file to download"
 msgstr "Ny fil som skal hentes"
 
-#: src/main-window.c:223
+#: src/main-window.c:224
 msgid "_Remove from list..."
 msgstr "_Slet fra liste..."
 
-#: src/main-window.c:224 src/main-window.c:314
+#: src/main-window.c:225 src/main-window.c:314
 msgid "Remove selected files from the list"
 msgstr "Fjerner de valgte filer fra listen"
 
-#: src/main-window.c:228
-msgid "_List Statistics..."
-msgstr "_Vis statistik..."
-
-#: src/main-window.c:229
-msgid "Show file list summary"
-msgstr "Vis et sammendrag af fillisten"
-
-#: src/main-window.c:238
+#: src/main-window.c:234
 msgid "Select _All"
 msgstr "_Vælg alle"
 
-#: src/main-window.c:239
+#: src/main-window.c:235
 msgid "Select all files from the list"
 msgstr "Vælg alle filer i listen"
 
-#: src/main-window.c:241
+#: src/main-window.c:237
 msgid "Unselect All"
 msgstr "_Fravælg alle"
 
-#: src/main-window.c:242
+#: src/main-window.c:238
 msgid "Unselect all files from the list"
 msgstr "Fravælg alle filer i listen"
 
-#: src/main-window.c:245
+#: src/main-window.c:241
 msgid "Toggles auto download"
 msgstr "_Auto-hentning til/fra"
 
-#: src/main-window.c:246
+#: src/main-window.c:242
 msgid "Toggles auto download of selected files"
 msgstr "Skifter mellem om filer hentes automatisk"
 
-#: src/file-list.c:70 src/main-window.c:255 src/main-window.c:318
+#: src/file-list.c:70 src/main-window.c:251 src/main-window.c:318
 msgid "Start"
 msgstr "St_art"
 
-#: src/main-window.c:256
+#: src/main-window.c:252
 msgid "Start/Resume the download of the selected files"
 msgstr "Start eller genoptag hentning af de valgte filer"
 
-#: src/file-list.c:73 src/main-window.c:260 src/main-window.c:323
+#: src/file-list.c:73 src/main-window.c:256 src/main-window.c:323
 msgid "Stop"
 msgstr "St_op"
 
-#: src/main-window.c:261
+#: src/main-window.c:257
 msgid "Stop the download of the selected files"
 msgstr "Stop hentning af de valgte filer"
 
-#: src/file-list.c:76 src/main-window.c:264 src/main-window.c:327
+#: src/file-list.c:76 src/main-window.c:260 src/main-window.c:327
 msgid "Restart"
 msgstr "Start _igen"
 
-#: src/main-window.c:265 src/main-window.c:328
+#: src/main-window.c:261 src/main-window.c:328
 msgid "Restart the download of selected files from the beginning"
 msgstr "Hent de valgte filer igen forfra"
 
-#: src/main-window.c:270 src/main-window.c:333
+#: src/main-window.c:266 src/main-window.c:333
 msgid "Pause Auto Dl"
 msgstr "Pause auto-hentning"
 
-#: src/main-window.c:271 src/main-window.c:334
-msgid "Pause starting of auto download"
-msgstr "Sæt auto-hentning på pause"
+#: src/main-window.c:267 src/main-window.c:334
+msgid "Pause all auto downloads"
+msgstr "Sæt alle auto-hentninger på pause"
+
+#: src/main-window.c:278
+msgid "_Statistics..."
+msgstr "_Statistik..."
+
+#: src/main-window.c:279
+msgid "Show file list summary"
+msgstr "Vis et sammendrag af fillisten"
 
 #: src/main-window.c:282
-msgid "_Numeric Download"
-msgstr "Hentning efter _nummer"
+msgid "_Numeric Download..."
+msgstr "Hentning efter _nummer..."
 
 #: src/main-window.c:283
 msgid "Download a group of URLs differing by number"
@@ -189,7 +195,7 @@ msgstr "Nedhentningsinfoside"
 msgid "Toggle download info page"
 msgstr "Vis side med hentningsoplysninger"
 
-#: applet/dialog-prop.c:278 src/dialog-prop.c:234 src/main-window.c:346
+#: applet/dialog-prop.c:291 src/dialog-prop.c:234 src/main-window.c:346
 msgid "Properties"
 msgstr "Egenskaber"
 
@@ -251,13 +257,29 @@ msgstr "Tilbage"
 msgid "Filename"
 msgstr "Filnavn"
 
-#: src/file-list.c:641
+#: src/file-list.c:646
 msgid "File:\n"
 msgstr "Fil:\n"
 
-#: src/file-list.c:642
-msgid "already exist"
-msgstr "eksisterer allerede"
+#: src/file-list.c:647
+msgid "already exists."
+msgstr "eksisterer allerede."
+
+#: src/file-list.c:649
+msgid "File already exists"
+msgstr "Fil eksisterer allerede"
+
+#: src/file-list.c:650
+msgid "Delete Existing File"
+msgstr "Slet eksisterende fil"
+
+#: src/file-list.c:651
+msgid "Attempt to Resume"
+msgstr "Forsøg på at genoptage"
+
+#: src/file-list.c:654
+msgid "A file of the same name already exists in the target directory."
+msgstr "En fil med det samme navn eksisterer allerede i destinationsmappen."
 
 #: src/download-info.c:75
 msgid "Url:"
@@ -308,29 +330,29 @@ msgid "Options"
 msgstr "Indstillinger"
 
 #. Use proxy
-#: applet/dialog-add.c:283 applet/dialog-new.c:234
-#: src/dialog-common-elements.c:81 src/dialog-prefs.c:398
+#: applet/dialog-add.c:287 applet/dialog-new.c:242
+#: src/dialog-common-elements.c:78 src/dialog-prefs.c:435
 #: src/dialog-prop.c:154 src/download-info.c:241
 msgid "Use proxy"
 msgstr "Brug mellemvært"
 
-#: applet/dialog-add.c:289 applet/dialog-new.c:240
-#: src/dialog-common-elements.c:88 src/dialog-prop.c:186
+#: applet/dialog-add.c:293 applet/dialog-new.c:248
+#: src/dialog-common-elements.c:85 src/dialog-prop.c:186
 #: src/download-info.c:248
 msgid "Use auto download"
 msgstr "Brug auto-hentning"
 
-#: src/download-info.c:312
+#: src/download-info.c:315
 msgid "Unspecified"
 msgstr "Ikke angivet"
 
-#: src/download-info.c:428
+#: src/download-info.c:431
 msgid "staled"
 msgstr "gået i stå"
 
 #: src/download-dirs.c:111
 msgid "Target directory"
-msgstr "Målmappe"
+msgstr "Destinationsmappe"
 
 #: src/download-dirs.c:116
 msgid "Pattern:"
@@ -340,13 +362,13 @@ msgstr "Mønster:"
 msgid "Download matching URLs to directory:"
 msgstr "Hent matchende adresser til mappe:"
 
-#: applet/dialog-add.c:269 src/download-dirs.c:127
+#: applet/dialog-add.c:273 src/download-dirs.c:127
 msgid "Add Download Dir"
 msgstr "Tilføj hentningsmappe"
 
 #: src/download-dirs.c:262
-msgid "Pattern"
-msgstr "Mønster"
+msgid "URL Pattern"
+msgstr "URL-mønster"
 
 #: src/download-dirs.c:263
 msgid "Download to Directory"
@@ -365,24 +387,20 @@ msgstr "Redigér..."
 msgid "Delete"
 msgstr "Slet"
 
-#. Download directory
-#: src/dialog-common-elements.c:46
-msgid "Download dir:"
-msgstr "Hentningsmappe:"
+#: applet/dialog-add.c:269 applet/dialog-new.c:225
+#: src/dialog-common-elements.c:58
+msgid "Override Download dir"
+msgstr "Overskriv hentningsmappe:"
 
-#: src/dialog-common-elements.c:50
-msgid "Download Dir"
-msgstr "Hentningsmappe"
+#: applet/dialog-new.c:229 src/dialog-common-elements.c:64
+msgid "New Download Dir"
+msgstr "Ny hentningsmappe"
 
-#: src/dialog-common-elements.c:63
-msgid "Suggest directory by pattern matching"
-msgstr "Foreslå mappe ved mønstergenkendelse"
+#: src/dialog-common-elements.c:217
+msgid "No override download directory entered."
+msgstr "Ingen alternativ hentningsmappe indtastet:"
 
-#: src/dialog-common-elements.c:192
-msgid "No directory matched."
-msgstr "Ingen passende mappe fundet."
-
-#: applet/dialog-new.c:89 src/dialog-common-elements.c:212
+#: applet/dialog-new.c:91 src/dialog-common-elements.c:244
 msgid "Multiple download not implemented yet"
 msgstr "Flere samtidige nedhentninger er ikke implementeret endnu"
 
@@ -402,8 +420,12 @@ msgstr ""
 msgid "Invalid URL."
 msgstr "Ugyldig adresse."
 
+#: src/dialog-new.c:71
+msgid "Can't write to selected download directory."
+msgstr "Kan ikke skrive i den valgte hentningsmappe."
+
 #. URL
-#: applet/dialog-new.c:206 src/dialog-new.c:175
+#: applet/dialog-new.c:214 src/dialog-new.c:199
 msgid "Please enter URL of the file to download:"
 msgstr "Indtast venligst adressen på den fil der skal hentes:"
 
@@ -411,47 +433,42 @@ msgstr "Indtast venligst adressen på den fil der skal hentes:"
 msgid "Invalid URLs."
 msgstr "Ugyldige adresser."
 
-#: src/dialog-numdown.c:177
+#: src/dialog-numdown.c:181
 msgid "Minimum number is greater than maximum number."
 msgstr "Starttallet er større end sluttallet."
 
-#: src/dialog-numdown.c:211
+#: src/dialog-numdown.c:215
 msgid "At least one of the URLs is already in the list"
 msgstr "Mindst én af adresserne er allerede i listen"
 
-#: src/dialog-numdown.c:297
-msgid "Can't suggest directory as it would not be the same for all URLs."
-msgstr ""
-"Kan ikke foreslå mappe da det ikke vil være det samme for alle adresser."
-
 #. Pre-URL
-#: src/dialog-numdown.c:349
+#: src/dialog-numdown.c:288
 msgid "Part of URL before number:"
 msgstr "Adressedel før tal:"
 
 #. Numbers From/To
-#: src/dialog-numdown.c:360
+#: src/dialog-numdown.c:299
 msgid "Numbers:"
 msgstr "Numre:"
 
-#: src/dialog-numdown.c:367
+#: src/dialog-numdown.c:306
 msgid "From: "
 msgstr "Fra:"
 
-#: src/dialog-numdown.c:380
+#: src/dialog-numdown.c:319
 msgid "To: "
 msgstr "Til: "
 
-#: src/dialog-numdown.c:398
+#: src/dialog-numdown.c:337
 msgid "Number of digits to pad leading zeroes to:"
 msgstr "Antal cifre der skal udfyldes med indledende nuller:"
 
 #. Post-URL
-#: src/dialog-numdown.c:413
+#: src/dialog-numdown.c:352
 msgid "Part of URL after number:"
 msgstr "Adressedel efter tal:"
 
-#: src/dialog-numdown.c:437
+#: src/dialog-numdown.c:373
 msgid "Numeric Download"
 msgstr "Hentning med løbenummer"
 
@@ -487,174 +504,200 @@ msgstr "Ikoner"
 msgid "Both"
 msgstr "Begge"
 
-#: applet/dialog-prop.c:34 src/dialog-prefs.c:53
+#: applet/dialog-prop.c:42 src/dialog-prefs.c:60
 msgid "None"
 msgstr "Ingen"
 
-#: applet/dialog-prop.c:35 src/dialog-prefs.c:54
+#: applet/dialog-prop.c:43 src/dialog-prefs.c:61
 msgid "HTTP"
 msgstr "http"
 
-#: applet/dialog-prop.c:36 src/dialog-prefs.c:55
+#: applet/dialog-prop.c:44 src/dialog-prefs.c:62
 msgid "FTP"
 msgstr "ftp"
 
-#: src/dialog-prefs.c:405
+#: applet/dialog-prop.c:46 src/dialog-prefs.c:64
+msgid "HTTPS"
+msgstr "https"
+
+#. Proxy username
+#: src/dialog-prefs.c:444
 msgid "Username:"
 msgstr "Brugernavn:"
 
-#: src/dialog-prefs.c:413
+#. Proxy password
+#: src/dialog-prefs.c:453
 msgid "Password:"
 msgstr "Adgangskode:"
 
-#: src/dialog-prefs.c:422
+#. Proxy for HTTP
+#: src/dialog-prefs.c:463
 msgid "HTTP:"
 msgstr "Http:"
 
-#: src/dialog-prefs.c:430
+#. Proxy for FTP
+#: src/dialog-prefs.c:472
 msgid "FTP:"
 msgstr "Ftp:"
 
-#: src/dialog-prefs.c:487
+#. Proxy for HTTPS
+#: src/dialog-prefs.c:482
+msgid "HTTPS:"
+msgstr "Https:"
+
+#: src/dialog-prefs.c:559
 msgid "Interface to connect:"
 msgstr "Forbindelsesgrænseflade:"
 
-#: src/dialog-prefs.c:495
+#: src/dialog-prefs.c:567
 msgid "Check interface time (ms):"
 msgstr "Interval mellem tilkoblingstjek (ms):"
 
-#: src/dialog-prefs.c:508
+#: src/dialog-prefs.c:580
 msgid "Simultaneous:"
 msgstr "Samtidige:"
 
-#: src/dialog-prefs.c:518
+#: src/dialog-prefs.c:590
 msgid "Manual stop disables auto download"
 msgstr "Manuelt stop slår automatisk hentning fra"
 
-#: src/dialog-prefs.c:524
+#: src/dialog-prefs.c:596
 msgid "Stop download on link loss"
 msgstr "Stop nedhentning ved tab af forbindelse"
 
-# RETMIG: tjek dette
-#: src/dialog-prefs.c:530
-msgid "Load pause auto download state"
-msgstr "Startpause ved auto-hentning"
+#: src/dialog-prefs.c:602
+msgid "Remember whether auto download is paused"
+msgstr "Husk om auto-hentning er sat på pause"
 
-#: src/dialog-prefs.c:590
+#: src/dialog-prefs.c:663
 msgid "Default download dir:"
 msgstr "Forvalgt hentningsmappe:"
 
-#: src/dialog-prefs.c:593
+#: src/dialog-prefs.c:666
 msgid "Def Download Dir"
 msgstr "Forvalgt hentningsmappe"
 
-#: src/dialog-prefs.c:602
+#: src/dialog-prefs.c:675
+msgid "Timeout (seconds):"
+msgstr "Tidsudløb (sek.):"
+
+#: src/dialog-prefs.c:686
 msgid "Number retries:"
 msgstr "Antal forsøg:"
 
-#: src/dialog-prefs.c:606
+#: src/dialog-prefs.c:690
 msgid "Unlimited"
 msgstr "Ubegrænset"
 
-#: src/dialog-prefs.c:609
+#: src/dialog-prefs.c:693
 msgid "Limited"
 msgstr "Begrænset"
 
-#: src/dialog-prefs.c:620
+#: src/dialog-prefs.c:704
 msgid "Use passive FTP"
 msgstr "Brug passiv ftp"
 
-#: applet/dialog-prop.c:152 src/dialog-prefs.c:627
+#: applet/dialog-prop.c:163 src/dialog-prefs.c:711
 msgid "Presume Protocol:"
 msgstr "Presume-protokol:"
 
-#: src/dialog-prefs.c:715
-msgid "Dialog new or dialog add changes default download dir"
-msgstr "Dialogerne \"Ny\" og \"Tilføj\" ændrer forvalgt hentningsmappe"
+#. Shell command on completion
+#: src/dialog-prefs.c:726
+msgid "Run command when all downloads completed:"
+msgstr "Kør kommando når alle hentningerne er færdige:"
 
-#: src/dialog-prefs.c:722
+#: src/dialog-prefs.c:735
+msgid "Run Now"
+msgstr "Kør nu"
+
+#: src/dialog-prefs.c:828
+msgid ""
+"Overriding download dir on URL addition dialogs changes default download dir"
+msgstr "Overskriver hentningsmappe når adressetilføjelsesvinduer ændrer forvalgt hentningsmappe"
+
+#: src/dialog-prefs.c:836
 msgid "Confirm remove when transfer incomplete"
 msgstr "Bekræft fjernelse når overførsel ikke er komplet"
 
-#: src/dialog-prefs.c:729
+#: src/dialog-prefs.c:843
 msgid "Confirm remove completed transfers"
 msgstr "Bekræft fjernelse af fuldførte overføringer"
 
-#: src/dialog-prefs.c:736
+#: src/dialog-prefs.c:850
 msgid "Confirm restart"
 msgstr "Bekræft genoptagning"
 
-#: applet/dialog-prop.c:197 src/dialog-prefs.c:743
+#: applet/dialog-prop.c:210 src/dialog-prefs.c:857
 msgid "Confirm drag and drop URL"
 msgstr "Bekræft træk-og-slip af adresse"
 
-#: src/dialog-prefs.c:796
+#: src/dialog-prefs.c:910
 msgid "Toolbar style:"
 msgstr "Værktøjslinjestil:"
 
-#: src/dialog-prefs.c:811
+#: src/dialog-prefs.c:925
 msgid "File list refresh rate (ms):"
 msgstr "Genopfriskningsinterval for filliste (ms):"
 
-#: src/dialog-prefs.c:823
+#: src/dialog-prefs.c:937
 msgid "Show list statistics"
 msgstr "Vis listestatistik"
 
-#: src/dialog-prefs.c:828
+#: src/dialog-prefs.c:942
 msgid "Show page statistics"
 msgstr "Vis sidestatistik"
 
-#: src/dialog-prefs.c:833
+#: src/dialog-prefs.c:947
 msgid "Auto hide download info page"
 msgstr "Skjul automatisk nedhentningsinfoside"
 
-#: src/dialog-prefs.c:838
+#: src/dialog-prefs.c:952
 msgid "Auto hide download info page timeout (ms):"
 msgstr "Tid før automatisk skjulning (ms):"
 
-#: src/dialog-prefs.c:905
+#: src/dialog-prefs.c:1019
 msgid "Use sound"
 msgstr "Benyt lyd"
 
-#: src/dialog-prefs.c:910
+#: src/dialog-prefs.c:1024
 msgid "Use beep"
 msgstr "Bip"
 
-#: src/dialog-prefs.c:951
+#: src/dialog-prefs.c:1065
 msgid "Preferences"
 msgstr "Indstillinger"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:964 src/dialog-prop.c:251
+#: src/dialog-prefs.c:1078 src/dialog-prop.c:251
 msgid "Proxy"
 msgstr "Mellemvært"
 
-#: src/dialog-prefs.c:968
+#: src/dialog-prefs.c:1082
 msgid "Auto"
 msgstr "Automatik"
 
 #. Create the notebook pages
-#: applet/dialog-prop.c:287 src/dialog-prefs.c:972 src/dialog-prop.c:247
+#: applet/dialog-prop.c:300 src/dialog-prefs.c:1086 src/dialog-prop.c:247
 msgid "Download"
 msgstr "Hentning"
 
-#: src/dialog-prefs.c:976
+#: src/dialog-prefs.c:1090
 msgid "Directories"
 msgstr "Mapper"
 
-#: applet/dialog-prop.c:291 src/dialog-prefs.c:980
+#: applet/dialog-prop.c:304 src/dialog-prefs.c:1094
 msgid "Confirmations"
 msgstr "Bekræftelser"
 
-#: src/dialog-prefs.c:984
+#: src/dialog-prefs.c:1098
 msgid "Display"
 msgstr "Udseende"
 
-#: src/dialog-prefs.c:988
+#: src/dialog-prefs.c:1102
 msgid "Sound"
 msgstr "Lyd"
 
-#: applet/dialog-new.c:67 src/dialog-prop.c:66
+#: applet/dialog-new.c:72 src/dialog-prop.c:66
 msgid "Invalid URL"
 msgstr "Ugyldig adresse"
 
@@ -667,11 +710,11 @@ msgid "URL:"
 msgstr "Adresse:"
 
 #. URLs
-#: applet/dialog-add.c:251 src/dialog-add.c:205
+#: applet/dialog-add.c:255 src/dialog-add.c:212
 msgid "URLs to be added"
 msgstr "Adresser som skal tilføjes"
 
-#: applet/dialog-add.c:246 src/dialog-add.c:242
+#: applet/dialog-add.c:250 src/dialog-add.c:241
 msgid "Add files to download"
 msgstr "Tilføj filer til hentning"
 
@@ -721,30 +764,43 @@ msgid "Host not found when downloading URL:\n"
 msgstr "Vært ikke fundet ved hentning af adresse:\n"
 
 #: src/wget-log.c:100
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "Ikke-understøttet protokol - du skal bruge wget >= 1.7 til https:\n"
+
+#: src/wget-log.c:104
 msgid "Unknown error when downloading URL:\n"
 msgstr "Ukendt fejl ved hentning af adresse:\n"
 
-#: src/wget-log.c:109 src/wget-log.c:116
+#: src/wget-log.c:114 src/wget-log.c:121
 msgid "File not found when downloading URL:\n"
 msgstr "Fil ikke fundet ved hentning af adresse:\n"
 
-#: applet/gtm_applet.c:466
+#: src/wget-log.c:128
+msgid ""
+"Can't continue download, existing local file conflicts with remote file:\n"
+msgstr "Kan ikke fortsætte hentning, eksisterende lokal fil er i konflikt med fjernfilen:\n"
+
+#: src/wget-log.c:175
+msgid "Can't write to target directory:\n"
+msgstr "Kan ikke skrive i destinationsmappen:\n"
+
+#: applet/gtm_applet.c:495
 msgid "Drop URL from netscape, gmc, gftp..."
 msgstr "Slip adresse fra Netscape, filhåndteringen, gftp..."
 
-#: applet/gtm_applet.c:509
+#: applet/gtm_applet.c:538
 msgid "Properties..."
 msgstr "Egenskaber..."
 
-#: applet/gtm_applet.c:515
+#: applet/gtm_applet.c:544
 msgid "About..."
 msgstr "Om..."
 
-#: applet/dialog-prop.c:226 applet/gtm_applet.c:521
+#: applet/dialog-prop.c:239 applet/gtm_applet.c:550
 msgid "New URL"
 msgstr "Ny adresse"
 
-#: applet/dialog-prop.c:227 applet/gtm_applet.c:527
+#: applet/dialog-prop.c:240 applet/gtm_applet.c:556
 msgid "Open GTM"
 msgstr "Åbn håndtering"
 
@@ -761,35 +817,40 @@ msgstr ""
 "http://gtm.sourceforge.net/"
 
 #. CORBA error
-#: applet/dialog-add.c:99 applet/dialog-add.c:334 applet/dialog-new.c:126
+#: applet/dialog-add.c:99 applet/dialog-add.c:338 applet/dialog-new.c:125
 msgid "CORBA error"
 msgstr "CORBA-fejl"
 
-#: applet/dialog-add.c:265 applet/dialog-new.c:217
-msgid "Override Download dir"
-msgstr "Overskriv hentningsmappe:"
+#: applet/dialog-add.c:114 applet/dialog-add.c:354 applet/dialog-new.c:129
+msgid "not accepted by GTM"
+msgstr "ikke accepteret af programmet"
 
-#: applet/dialog-new.c:221
-msgid "New Download Dir"
-msgstr "Ny hentningsmappe"
-
-#: applet/dialog-prop.c:225
+#: applet/dialog-prop.c:238
 msgid "(none)"
 msgstr "(ingen)"
 
-#: applet/dialog-prop.c:237
+#: applet/dialog-prop.c:250
 msgid "Button1 click:"
 msgstr "Klik på 1. knap:"
 
-#: applet/dialog-prop.c:295
+#: applet/dialog-prop.c:308
 msgid "Bindings"
 msgstr "Bindinger"
 
+#~ msgid "Download dir:"
+#~ msgstr "Hentningsmappe:"
+
+#~ msgid "Download Dir"
+#~ msgstr "Hentningsmappe"
+
+#~ msgid "Suggest directory by pattern matching"
+#~ msgstr "Foreslå mappe ved mønstergenkendelse"
+
+#~ msgid "No directory matched."
+#~ msgstr "Ingen passende mappe fundet."
+
 #~ msgid "Location"
 #~ msgstr "Placering"
-
-#~ msgid "Remain:"
-#~ msgstr "Manglende:"
 
 #~ msgid "Total speed:"
 #~ msgstr "Total hastighed:"
