@@ -44,7 +44,8 @@
 	<para>
 	This document can be redistributed and/or modified under the terms of
 	the GNU General Public License; either version 2 of the license, or
-	(at your option) any later version.
+	(at your option) any later version. The full text of the license can
+	be found at http://www.gnu.org/copyleft/gpl.html.
 	</para>
 	</legalnotice>
 
@@ -92,7 +93,7 @@
 		</revdescription>
 	</revision>
 
-	 <revision>
+	<revision>
 		<revnumber>0.5</revnumber>
 		<date>17 November 2003</date>
 		<revdescription>
@@ -120,7 +121,21 @@
 		example for the bit about translator_credits.
 		</para>
 		</revdescription>
-	 </revision>
+	</revision>
+
+	<revision>
+		<revnumber>0.7</revnumber>
+		<date>5 January 2004</date>
+		<revdescription>
+		<para>
+		Reorganized the  bit about different methods and web
+		interfaces. Added a link to the Chinese team's system, as
+		suggested by Funda Wang. Added a note about GConf schema
+		descriptions, as suggested by Åsmund Skjæveland. Added a link
+		to the GPL.
+		</para>
+		</revdescription>
+	</revision>
 	</revhistory>
 </articleinfo>
 
@@ -428,12 +443,8 @@ all boil down to translating all those strings.
 There are different ways of translating. Some teams simple parcel out the
 <quote>po file</quote> to different people and the members work through them
 with a text editor and return them to the person who can commit them into
-GNOME. Other teams use web-based systems such as
-<ulink type="http" url="http://prevod.org">Prevod</ulink>
-<!--FIXME: check -->
-or
-<ulink type="http" url="http://www.gyfieithu.co.uk">Gyfieithu</ulink>.
-All have advantages and disadvantages.
+GNOME. Other teams use web-based systems. All have advantages and
+disadvantages.
 </para>
 
 <para>
@@ -459,6 +470,19 @@ realise how other people are translating applications. If your team is trying
 to achieve consistency, this can be a problem. Another is that comments from
 the developer to translators explaing the string are not always shown.
 </para>
+
+<para>
+Existing web interfaces include the following:
+</para>
+
+<simplelist>
+<member><ulink type="http" url="http://prevod.org">Prevod</ulink></member>
+<member><ulink type="http"
+url="http://www.kyfieithu.co.uk">Kyfieithu</ulink></member>
+<member><ulink type="http" url="http://i18n.ricetons.com/">the Chinese team's
+systemm</ulink> &mdash; you can log in with username <quote>i18n</quote> and no
+password</member>
+</simplelist>
 </sect2>
 
 <sect2 id="po-files">
@@ -532,6 +556,36 @@ GNOME application. Then you can use the remaining letters and try to work out
 what combinations work the best. Don't worry if you have two or more menu
 options with the same accelerator. As of 2.4, GNOME will let you cycle between
 them.
+</para>
+
+<para>
+You will often come across descriptions for <application>GConf</application>
+keys. Usually, each key has both a short and a long description. Strings which
+are key descriptions can be identified by the fact that they come from files
+with names resembling <filename>.schemas.in.h</filename>.
+</para>
+
+<para>
+When translating key descriptions, be careful with sample key values,
+which will be enclosed in double quotes. They should not be
+translated. For example:
+</para>
+
+<programlisting>
+#: src/gnome-terminal.schemas.in.h:70
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Rhagosodiad lliw cefndir y terfynell, fel penodid lliw (gall fod mewn hecs-"
+"ddigidau fel yn HTML neu fel enw lliw megis \"red\")."
+</programlisting>
+
+<para>
+In the example, <quote>red</quote> is a sample key value, and must be
+copied verbatim into the translation. Note that because the double
+quote character is significant in <filename>.po</filename> files, it
+is escaped with the backslash.
 </para>
 
 <para>
@@ -822,10 +876,11 @@ should be placed in the
 directory (where <replaceable>XX</replaceable> is the code for your locale)
 and given the name of the program. Examples might be
 <filename>metacity.mo</filename> or <filename>nautilus.mo</filename>.
-Sometimes the program name requires a version number on it. There is
-unfortunately no way to work this out. You will need to look at
-already-existing filenames in a sister directory to see what they use and copy
-those. Have a look around the different locales in <filename
+Sometimes the program name requires a version number on it. Unfortunately,
+there is no easy way to work out what the name of the <filename>.mo</filename>
+should be for a given package. You will need to look at already-existing
+filenames in a sister directory to see what they use and copy those. Have a
+look around the different locales in <filename
 class="directory">/usr/share/locale/</filename> and you should find good
 examples to copy.
 </para>
@@ -1170,7 +1225,6 @@ cause problems.
 	</para>
 	</listitem>
 </varlistentry>
-
 </variablelist>
 
 <para>
