@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: achtung 0.1\n"
 "POT-Creation-Date: 2000-08-18 11:36+0000\n"
-"PO-Revision-Date: 2000-08-30 19:37+02:00\n"
+"PO-Revision-Date: 2000-09-21 15:39+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -120,6 +120,9 @@ msgid ""
 "have an\n"
 "ISDN line or an ethernet connection, choose ippp0 or eth0 respectively."
 msgstr ""
+"Velg enheten du kobler deg til Internett med.\n"
+"\n"
+"Hvis du kobler deg til nettet med modem, vil enhetsnavnet sannsynligvis være ppp0. Hvis du har en ISDN-linje eller en vanlig nettverkstilkobling via ethernet, velg ippp0 eller eth0 respektivt."
 
 #: src/druid.c:194
 msgid "Detected device(s):"
@@ -129,7 +132,7 @@ msgstr "Gjenkjente enhet(er):"
 msgid ""
 "Select your network device from the dropdown list. Go with the default if "
 "unsure."
-msgstr ""
+msgstr "Velg nettverksenheten fra nedtrekksmenyen. Bruk standardvalget hvis du ikke er sikker."
 
 #: src/druid.c:208
 msgid "Start Firestarter on PPP connect"
@@ -139,7 +142,7 @@ msgstr "Start Firestarter ved PPP-tilkobling"
 msgid ""
 "Check this option and the program will start when you dial your Internet "
 "service provider.Only available when using a modem."
-msgstr ""
+msgstr "Kryss av for dette valget for å la programmet starte når du ringer opp din Internett-tjenestetilbyder. Kun tilgjengelig ved bruk av modem."
 
 #: src/druid.c:224
 msgid "IP address is assigned via DHCP"
@@ -149,7 +152,7 @@ msgstr "IP-adressen er tildelt via DHCP"
 msgid ""
 "Check this option if you need to connect to a DHCP server. Cable modem users "
 "should check this."
-msgstr ""
+msgstr "Kryss av for dette valget hvis du bruker en DHCP-tjener. Brukere som har kabelmodem bør krysse av her."
 
 #: src/druid.c:257
 msgid ""
@@ -157,15 +160,17 @@ msgid ""
 "network\n"
 "to communicate with the Internet via a single IP address?"
 msgstr ""
+"Bruker du IP Masquerading på ditt LAN, hvilket lar alle maskinene på ditt nettverk\n"
+"kommunisere på Internett via én enkel IP-adresse?"
 
 #: src/druid.c:266
 msgid "No, I do not use IP Masquerading on my LAN"
-msgstr ""
+msgstr "Nei, jeg bruker ikke IP Masquerading på mitt LAN"
 
 #: src/druid.c:271
 msgid ""
 "Yes, this machine translates the IP addresses of my LAN for the Internet"
-msgstr ""
+msgstr "Ja, denne maskinen oversetter IP-adressene på mitt LAN for Internett-tilgang"
 
 #: src/druid.c:289
 msgid "Select your internal network interface:"
@@ -175,29 +180,27 @@ msgstr "Velg ditt interne nettverksgrensesnitt:"
 msgid ""
 "Select your internal network device from the dropdown list. Go with the "
 "default if unsure."
-msgstr ""
+msgstr "Velg din interne nettverksenhet fra nedtrekksmenyen. Bruk standardverdiene hvis du er usikker."
 
 #: src/druid.c:305
-#, fuzzy
 msgid "Autodetect internal network IP range"
-msgstr "Legg til skriveren som en nettverksskriver"
+msgstr "Automatisk gjenkjenning av internt IP-adresse område"
 
 #: src/druid.c:307
 msgid "Select this and the IP range of your LAN is autodetected."
-msgstr ""
+msgstr "Velg dette hvis du vil gjenkjenne IP-området for ditt LAN automatisk."
 
 #: src/druid.c:312
 msgid "Specify internal network IP range manually"
-msgstr ""
+msgstr "Spesifisér IP-område for ditt interne nettverk manuelt"
 
 #: src/druid.c:314
-#, fuzzy
 msgid "Select this only if the autodetection fails."
-msgstr "Stopp nedlasting av de valgte filene"
+msgstr "Velg dette kun hvis automatisk gjenkjenning ikke fungerer."
 
 #: src/druid.c:326
 msgid "Enter the your internal network address range:"
-msgstr ""
+msgstr "Skriv inn ditt interne nettverksadresseområde:"
 
 #: src/druid.c:338
 msgid ""
@@ -205,6 +208,8 @@ msgid ""
 "most\n"
 "common IP range reserved for internal networks."
 msgstr ""
+"Nettverksområdet oppgis på formen adresse/maske. 192.168.1.0/24 er det vanligste\n"
+"IP-området som er reservert for interne nettverk."
 
 #: src/druid.c:367
 msgid ""
@@ -212,22 +217,24 @@ msgid ""
 "access\n"
 "to the network services you provide?"
 msgstr ""
+"Kjører du tjenerprogramvare på din maskin, og ønsker du at andre skal ha tilgang\n"
+"til nettverkstjenestene du tilbyr?"
 
 #: src/druid.c:375
 msgid "No, I do not run any public network services on my machine"
-msgstr ""
+msgstr "Nei, jeg kjører ikke noen offentlige nettverkstjenester på min maskin"
 
 #: src/druid.c:380
 msgid "Yes, I run the following services on my machine:"
-msgstr ""
+msgstr "Ja, jeg kjører følgende tjenester på min maskin:"
 
 #: src/druid.c:492
 msgid "You must be root to use the Firestarter wizard."
-msgstr ""
+msgstr "Du må være root for å bruker Firestarter wizarden."
 
 #: src/druid.c:497
 msgid "Firestarter Firewall Wizard"
-msgstr ""
+msgstr "Firestarter Firewall Wizard"
 
 #. Create the basic druid pages
 #: src/druid.c:513
@@ -243,6 +250,12 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"Velkommen til Firestarter Firewall Wizard\n"
+"\n"
+"Denne wizarden vil hjelpe deg med oppsett av en pakkefiltrerende brannvegg\n"
+"for din Linux maskin gjennom noen enkle steg.\n"
+"\n"
+"\n"
 
 #: src/druid.c:520
 msgid "Choose your external interface"
@@ -266,6 +279,9 @@ msgid ""
 "Click the finish button to start the firewall.\n"
 "\n"
 msgstr ""
+"Firestarter wizarden er ferdig med å samle inn nødvendige data.\n"
+"Klikk fullfør-knappen for å starte brannveggen.\n"
+"\n"
 
 #: src/preferences.c:91
 msgid "General"
@@ -279,7 +295,7 @@ msgstr "Syslog fil for brannvegg:"
 msgid ""
 "Enter the path to the file the syslog daemon logs to. This is almost always "
 "/var/log/messages."
-msgstr ""
+msgstr "Skriv inn stien til filen som syslog daemonen logger til. Dette er nesten alltid /var/log/messages."
 
 #.
 #. label = gtk_label_new _("Firewall script file:");
@@ -297,36 +313,34 @@ msgstr ""
 #. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
 #.
 #: src/preferences.c:129
-#, fuzzy
 msgid "Start firewall on program startup"
-msgstr "Start med forvalgte programmer"
+msgstr "Start brannvegg ved oppstart av program"
 
 #: src/preferences.c:131
 msgid ""
 "Check this and the firewall will be restarted each time the program starts. "
 "Enabled by default."
-msgstr ""
+msgstr "Kryss av her for å la brannveggen startes på nytt hver gang programmet starter. Slått på som standard."
 
 #: src/preferences.c:136
-#, fuzzy
 msgid "Stop firewall on program exit"
-msgstr "Skript eller program som skal startes:"
+msgstr "Stopp brannveggen ved avslutting av programmet"
 
 #: src/preferences.c:138
 msgid ""
 "Check this and the firewall will be stopped when you exit Firestarter. "
 "Enabled by default."
-msgstr ""
+msgstr "Kryss av her for å la brannveggen stoppes når du avslutter Firestarter. Slått på som standard."
 
 #: src/preferences.c:143
 msgid "Exit program when window is closed (otherwise hide)"
-msgstr ""
+msgstr "Avslutt programmet når vinduet lukkes (skjul ellers)"
 
 #: src/preferences.c:145
 msgid ""
 "By default when you close the program window the program is merely hidden, "
 "you can then make it visible again by clicking on the status button."
-msgstr ""
+msgstr "Når du lukker programvinduet er standard oppførsel å skjule programmet. Du kan synliggjøre det igjen ved å klikke på status-knappen."
 
 #: src/preferences.c:150
 msgid "Start hidden"
@@ -334,23 +348,22 @@ msgstr "Start skjult"
 
 #: src/preferences.c:152
 msgid "Check this and the firewall will start hidden. Disabled by default."
-msgstr ""
+msgstr "Kryss av her for å la brannveggen starte i skjul. Slått av som standard."
 
 #: src/preferences.c:156
-#, fuzzy
 msgid "Remove identical firewall hit lines"
-msgstr "Fjern filnavn fra listen"
+msgstr "Fjern identiske linjer med brannvegg-treff"
 
 #: src/preferences.c:158
 msgid ""
 "Check this and the firewall hit log will filter out identical lines. Enabled "
 "by deault."
-msgstr ""
+msgstr "Kryss av her for å la brannveggens treff-logg filtrere ut identiske linjer. Slått på som standard."
 
 #: src/scriptwriter.c:318
 #, c-format
 msgid "Firewall started, firewall script saves as %s\n"
-msgstr ""
+msgstr "Brannveggen startet, brannveggskriptet lagret som %s\n"
 
 #: src/service.c:40
 msgid "unknown"
@@ -374,12 +387,11 @@ msgstr "T_øm brannveggens treffliste"
 
 #: src/menus.c:44
 msgid "R_eload entire firewall hit list"
-msgstr ""
+msgstr "Gj_enles hele trefflisten"
 
 #: src/menus.c:45
-#, fuzzy
 msgid "_Save firewall hit list to file"
-msgstr "Lagre kurvepunkter til fil"
+msgstr "_Lagre brannveggens treffliste til fil"
 
 #: src/menus.c:55
 msgid "_Firewall"
@@ -391,21 +403,19 @@ msgstr "Tre_ffliste"
 
 #: src/menus.c:62
 msgid "Run firewall wizard"
-msgstr ""
+msgstr "Kjør brannvegg-wizard"
 
 #: src/menus.c:64
-#, fuzzy
 msgid "Clear firewall hit list"
-msgstr "Tøm alle felt"
+msgstr "Tøm trefflisten"
 
 #: src/menus.c:65
 msgid "Reload entire firewall hit list"
-msgstr ""
+msgstr "Les hele trefflisten på nytt"
 
 #: src/menus.c:66
-#, fuzzy
 msgid "Save firewall hit list to file"
-msgstr "Lagre kurvepunkter til fil"
+msgstr "Lagre trefflisten til fil"
 
 #: src/menus.c:68
 msgid "Restart firewall"
