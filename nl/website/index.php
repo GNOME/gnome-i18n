@@ -26,7 +26,7 @@ include "reclame.php";
 <div class="content">
 <h1>Welkom bij GNOME Nederlands</h1>
 
-<p>GNOME is een vrije (Libre), gebruikersvriendelijke, krachtige
+<p>GNOME is een vrije, gebruikersvriendelijke, krachtige
 en toegankelijke grafische werkomgeving voor de besturingssystemen die
 tot de Unix-familie behoren, zoals Linux en BSD. GNOME is een acroniem
 dat staat voor GNU Network Object Model Environment. GNOME omvat zowel
