@@ -23,12 +23,16 @@ gnome_menu();
 <p>Gnome-nl wil deze website graag uitbreiden en verbeteren. Daarvoor zijn de volgende idee&euml;n:</p>
 
 <p>Kleine aanpassingen voor de website? Kijk <a href="http://cvs.gnome.org/viewcvs/gnome-i18n/nl/website/">
-hier</a> naar de website en pas gerust wat aan.</p>
+hier</a> naar de website en pas gerust wat aan. (enige CVS-kennis vereist)</p>
 
 <table border="1" cellpadding="10" cellspacing="0">
 <tr>
 <th valign="top">ToDo item
 <th valign="top">Geschatte tijd/moeite
+
+<tr style="background-color: red;">
+<td valign="top"><strong>Flyer / folder</strong> nodig voor op beurzen en dergelijke
+<td valign="top">Is er ergens een voorbeeld flyer?
 
 <tr style="background-color: orange;">
 <td valign="top"><strong>Website veranderen</strong> om vertalen en 

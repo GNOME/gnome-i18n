@@ -16,8 +16,12 @@ translate();
 gnome_head();
 gnome_menu();
 ?>
-<div class="rightbox">
-<?transstatus($important_branch); ?>
+<div class="rightbox"><center><h3>Even uw aandacht...</h3></center>
+
+<?
+//transstatus($important_branch); 
+include "reclame.php";
+?>
 </div>
 <div class="content">
 <h1>Welkom bij GNOME Nederlands</h1>
@@ -38,8 +42,6 @@ in het menu om eens te kijken waar we ons mee bezig houden, of kom eens langs op
 of op <a href="irc://irc.gnome.org/gnome-nl">IRC</a> en maak kennis met GNOME-NL.</p>
 <p>Op deze website is ook informatie te vinden over de voortgang van het project,
 alsmede informatie voor nieuwe vertalers. Kijk daarvoor in het menu onder het kopje "Vertalers".</p>
-<p>Heb je een vertaalfout gevonden? Laat dat dan direct weten
-<a href="foutrapport.php">via dit formulier.</a></p>
 </div>
 <? gnome_foot() ?>
 

@@ -90,11 +90,13 @@ function gnome_menu() { ?>
 	</div>
 </div>
 <div class="section">
-	<div class="sectiontitle">Vertaalstatus</div>
+	<div class="sectiontitle">Vertalers</div>
 	<div class="sectioncontent">
 		<ul class="nobullet">
-		<li><a href="status.php">Overzicht</a>
-			<ul><li><a href="status_details.php">Details</a></li></ul>
+		<li><a href="vertalers_begin.php">Beginnen met vertalen</a></li>
+		<li><a href="vertalers_technisch.php">Technische tips</a></li>
+		<li><a href="status.php">Statusoverzicht</a>
+			<ul><li><a href="status_details.php">Details</a></li>
 		</li>
 <?
 //Dit stukje zoekt uit welke projecten nu eigenlijk actief vertaald worden.
@@ -105,22 +107,6 @@ function gnome_menu() { ?>
 		echo "      <li><a href=\"status.php?gnomeversion=$line\">$line</a></li>\n";
 	} ?>
 		</ul>
-	</div>
-</div>
-<div class="section">
-	<div class="sectiontitle">Vertalers</div>
-	<div class="sectioncontent">
-		<ul class="nobullet">
-<?//		<li><a href="vertalers_brief.php">Brief aan nieuwe vertalers.</a></li>
-//		<li><a href="vertalers_info.php">Korte uitleg</a></li>
-//		<li><a href="vertalers_anatomie.php">Anatomie van een po</a></li>
-//		<li><a href="vertalers_programmas.php">Programma's</a></li>
-//		<li><a href="vertalers_lijsten.php">Discussielijsten</a></li>
-//		<li><a href="vertalers_hulp.php">E.H.B.V.</a></li>
-//		<li><a href="vertalers_cvs.php">CVS-toegang</a></li>
-?>
-		<li><a href="vertalers_begin.php">Beginnen met vertalen</a></li>
-		<li><a href="vertalers_technisch.php">Technische tips</a></li>
 		</ul>
 	</div>
 </div>
