@@ -25,7 +25,7 @@ $now = time;
 
 %translated = (
 "da", "Oversat",
-"de", "&uuml;bersetzt",
+"de", "&Uuml;bersetzt",
 "fi", "K&auml;&auml;nnetty",
 "fr", "Traduites",
 "hu", "Lefordított",
@@ -41,7 +41,7 @@ $now = time;
 
 %fuzzy = (
 "da", "Uklart",
-"de", "ungenau",
+"de", "Ungenau",
 "fi", "Ep&auml;selvi&auml;",
 "fr", "Floues",
 "hu", "Pontatlan",
@@ -57,7 +57,7 @@ $now = time;
 
 %untranslated = (
 "da", "Uoversat",
-"de", "un&uuml;bersetzt",
+"de", "Un&uuml;bersetzt",
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "fr", "Non traduites",
 "hu", "Fordítatlan",
@@ -104,7 +104,7 @@ $now = time;
 "ca", "Detailed report for Catalan (ca) GNOME translations",
 "cs", "Detailed report for Czech (cs) GNOME translations",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i GNOME<br>Detailed report for Danish (da) GNOME translations",
-"de", "Detaillierte Statistik f&uuml;r deutsche &Uuml;bersetzung in GNOME<br> Detailed report for German (de) GNOME translations",
+"de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung<br>Detailed report for German (de) GNOME translations",
 "el", "Detailed report for Greek (el) GNOME translations",
 "en_GB", "Detailed report for English, British (en_GB) GNOME translations",
 "es", "Detailed report for Spanish (es) GNOME translations",
