@@ -3,8 +3,9 @@
 # kax_db.sh - wanted ever know what a person without a docbook implementation
 #  does in GNOME ? -- Here you can see it ..
 #############################################################################
-# By Fatih Demir <kabalak@gmx.net> , R 0.0.0.1.1
+# By Fatih Demir <kabalak@gmx.net> , R 0.0.0.1.2
 #############################################################################
+export TITLE="Fatih Demir'in GNOME tercümelerinde kullandýðý acaip kelimeler"
 export BAS="<html><head><title>$TITLE</title></head><body bgcolor=\"grey\" text=\"navy\">"
 export METIN='<p align="center">Burada benim çok sevdidim ve GNOME tercümelerimde
 kullandýðým bazý standard-dýþý kelimelerin çizgiyesi ( tablosu ) var .
@@ -15,7 +16,6 @@ export DOSYA="kelimeler"
 export SONUC_DOSYA="index.html"
 #############################################################################
 yap  ()  {
-export TITLE="Fatih Demir'in GNOME tercümelerinde kullandýðý acaip kelimeler"
 echo $BAS > $SONUC_DOSYA
 echo $METIN >> $SONUC_DOSYA
 echo "<br><br>" >> $SONUC_DOSYA
