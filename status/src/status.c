@@ -329,7 +329,7 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 			dup (pipefd[1]);
 			close (pipefd[1]);
 			close (pipefd[0]);
-			path = g_strdup_printf ("%s/po/%s-%s.%s.po", HTMLROOTDIR,
+			path = g_strdup_printf ("%s/po/%s.%s.%s.po", HTMLROOTDIR,
 						cmp->name, cmp->branch,	locale);
 			/* We get the file stats */
 			execlp("msgfmt", "msgfmt", "--statistics", path, "-o", "/dev/null", NULL);
