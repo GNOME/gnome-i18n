@@ -20,9 +20,8 @@ $| = 1;
 my (%modules,%langinfo,%modinfo,%modinfoold,$line,%langinfoold,
     $mod,%langmodold,%langmod); 
 my @langs = qw ( az bg br ca cs da de el en en_GB es et eu fi fr fr_BE fr_FR
-		 ga gl hr hu id is it ja ko lt lv ms nb nl nn no pl pt pt_BR
-		 pt_PT ro ru sk sl sp sr sr_YU sv ta tr uk vi wa zh_CN.GB2312
-		 zh_CN zh_TW.Big5 zh_TW );
+		 ga gl hr hu id is it ja ko lt lv ms nl nn no pl pt pt_BR
+		 pt_PT ro ru sk sl sp sr sr_YU sv ta tr uk vi wa zh_CN zh_TW );
 
 my @Usage = ("Usage: status.pl [OPTION]...\n".
           "Generate stats with the status of .po files translations.\n".
