@@ -385,7 +385,7 @@ my $totalname = $total{$lang} || "Total";
 print TABLE "<tr align=center bgcolor=\"#ffd700\"><th>$totalname</th>\n";
 foreach $lang (sort keys %langinfo){
     $tot = sprintf("%.2f",${$langinfo{$lang}->[0]}*100/$totals);
-    print TABLE "<th align=right>$tot%</th>\n";
+    print TABLE "<th align=right>$tot</th>\n";
 }
 print TABLE "<th>$totalname</th></tr>";
 
@@ -485,7 +485,7 @@ foreach $lang (sort keys %langinfo){
             $transtatus = ("$unknown{$lang}") ? "$unknown{$lang}" : "$unknown{$defaultlang}";
         }
 
-	$percent_int = sprintf ("%d%%", $percent);
+	$percent_int = sprintf ("%d", $percent);
         if ($use_pot == 1) {
             print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
             <a href=\"$htmlpourl${$modules{$mod}->[1]}\">$mod</a></td>
@@ -511,7 +511,7 @@ foreach $lang (sort keys %langinfo){
     <th align=right>$trnstot $strings</th>
     <th align=right>$fuzzytot $strings</th>
     <th align=right>$untrnstot $strings</th>
-    <th align=right>$percent%</th>
+    <th align=right>$percent</th>
     <th><br></th><th><br></th>\n";
     print TABLE2 "</table></center>";
     close TABLE2;
@@ -554,7 +554,7 @@ sub printlang{
     }
 
     if ($percent == 0){
-        print TABLE "<td align=right><a href=\"$htmlpourl${$modules{$mod}->[1]}\">0%</a></td>\n";
+        print TABLE "<td align=right><a href=\"$htmlpourl${$modules{$mod}->[1]}\">0</a></td>\n";
     }else{
         if ($percent == 100) {
             $color = $percent_colors{"100%"};
@@ -577,7 +577,7 @@ sub printlang{
             $per =  sprintf("%x",$percent*5);
             $color = "#ff000" . "$per";
         }
-	$percent_int = sprintf("%d%%",$percent);
+	$percent_int = sprintf("%d",$percent);
         print TABLE "<td align=right><a href=\"$htmlpourl$mod-$lang.po\">
         <font color='$color'>$percent_int</font></a></td>\n";
     }
