@@ -67,9 +67,36 @@ use Term::ReadLine;
 
 sub do_trans {
   my ($tf, $tt) = @_;
-  $msg_str =~ s/\b$tf/$tt/g;
-  $msg_str =~ s/\b\u$tf/\u$tt/g;
-  $msg_str =~ s/\b\U$tf/\U$tt/g;
+  my ($accel, $upper_tt );
+
+# Handle keyboard shortcuts in message strings.  Messy, but it seems to work.
+# Use the same key if possible, otherwise prompt the user.
+  my $underscores_tf = $tf;
+  $underscores_tf =~ s/(?<=\w)(.)/_?$1/g;      
+  if ( $msg_str =~ m/(_?$underscores_tf)/i and $1 =~ m/_(\w)/ ) {
+      my $accel = $1;
+      if ( $tt =~ s/(?=$accel)/_/i ) {
+	  if ( $tt =~ m/^_$accel/i ) {
+	      $upper_tt = $tt;
+	      $upper_tt =~ s/^_(.)/_\u$1/;
+	  }
+      }
+      else {
+	  my $nonl = $msg_str;
+	  chomp $nonl;
+	  print STDERR "\nI want to change '$tf' to '$tt' in the message $nonl, but don't know where to put the accelerator.\n";
+	  $rl->addhistory( $nonl );
+	  $msg_str = $rl->readline( 'New msg_str? ' ). "\n";
+	  print STDERR "Replaced.\n";
+	  return;
+      }
+  }
+
+  $msg_str =~ s/(\b|_)\u$underscores_tf/$upper_tt/g and return
+      if defined $upper_tt;
+  $msg_str =~ s/(\b|_)$underscores_tf/$tt/g;
+  $msg_str =~ s/(\b|_)\u$underscores_tf/\u$tt/g;
+  $msg_str =~ s/(\b|_)\U$underscores_tf/\U$tt/g;
 }
 
 sub query_trans {
@@ -113,6 +140,7 @@ sub translate() {
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
   do_trans("center", "centre");
+  query_trans("checked", "chequered");
   query_trans("check", "cheque");
   do_trans("color", "colour");
   do_trans("customize", "customise");
