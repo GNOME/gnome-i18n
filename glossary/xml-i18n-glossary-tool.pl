@@ -16,11 +16,7 @@ use XML::Twig;
 use Getopt::Long;
 use FileHandle;
 
-# Change the following to the GnomeGlossary.gnumeric file by Sun.
-# To the latest version from gnome-i18n/glossary/
-my $gnumericFile = "gl2.gnumeric";
-
-my $VERSION = "0.3";
+my $VERSION = "0.4";
 
 my %languages;
 my %definitions; 
@@ -87,7 +83,7 @@ my $twig= new XML::Twig(
 			);
 
 
-$twig->parsefile($gnumericFile) || die 'Could not parse file: $!\n';    # build the twig
+$twig->parsefile($glossary) || die 'Could not parse file: $!\n';    # build the twig
 
 
 print "Finished.\n";
@@ -188,14 +184,14 @@ sub print_header
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-02-22 23:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL\@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL\@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Project-Id-Version: PACKAGE VERSION\\n"
+"POT-Creation-Date: 2001-02-22 23:47+0000\\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
+"Last-Translator: FULL NAME <EMAIL\@ADDRESS>\\n"
+"Language-Team: LANGUAGE <LL\@li.org>\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=CHARSET\\n"
+"Content-Transfer-Encoding: ENCODING\\n"
 
 EOF
 }
