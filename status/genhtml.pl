@@ -1,4 +1,4 @@
-#!/usr/bin/perl  
+#!/usr/bin/perl -w
 #
 #  The GNOME Statustable Generator - HTML part
 #
@@ -28,166 +28,183 @@
 #use strict; #fix the file, so this can be enabled
 use POSIX qw(locale_h);
 
+# Ugly, ugly,damn ugly, but it works for now.
+
+my ($now,%modulenames,%translated,%fuzzy,%untranslated);
+my (%strings,%details,%percent_colors,%changed_color,$totals); 
+my ($path,$mod,@info,$info,$index,$htmldir,$tmp,$lang,$grey);
+my (%langinfo,$langs_red,$link,%modinfo,$langmod,%langmod);
+my ($date,$fuzzy,$detail,$modulename,$translated,$untranslated);
+my ($stringstot,$trnstot,$fuzzytot,$untrnstot,$trbg,$percent);
+my ($strings,$newname,$trns,$untrns,$align,$changed,$release);
+my ($color,$per,%modpath,$gray,$tot,$details_,$string);
+
+# no need to call the shell.
+
+$date   = strftime "%a %Y-%m-%d %T %z",localtime;
+
 ###############
 # "Constants" #
 ###############
 
-$grey = 0;    #odd/even strings
+$grey   = 0;    #odd/even strings
 $totals = 0;  #total strings in all modules from modinfo.
-$now = time;
+$now    = time;
 
-$htmldir="/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
-$htmlpodir="po/";
+$htmldir   ="/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
+$htmlpodir ="po/";
+
+# used => for readability.
 
 %modulenames = (
-"da", "Modul",
-"de", "Paket",
-"el", "ÐáêÝôï",
-"es", "M&oacute;dulo",
-"hu", "Modul",
-"no", "Modul",
-"ro", "Modul",
-"ru", "íÏÄÕÌØ",
-"sv", "Modul",
-"tr", "Modül",
-"uk", "íÏÄÕÌØ",
-"wa", "module"
+"da" => "Modul",
+"de" => "Paket",
+"el" => "ÐáêÝôï",
+"es" => "M&oacute;dulo",
+"hu" => "Modul",
+"no" => "Modul",
+"ro" => "Modul",
+"ru" => "íÏÄÕÌØ",
+"sv" => "Modul",
+"tr" => "Modül",
+"uk" => "íÏÄÕÌØ",
+"wa" => "module"
  ); 
 
 %translated = (
-"da", "Oversat",
-"de", "&Uuml;bersetzt",
-"el", "ÌåôáöñáóìÝíá",
-"es", "Traducidos",
-"hu", "Lefordított",
-"no", "Oversatt",
-"ro", "traduse",
-"ru", "ðÅÒÅ×ÅÄÅÎÏ",
-"sv", "&oslash;versatt",
-"tr", "Tercüme edilmiþ",
-"uk", "ðÅÒÅËÌÁÄÅÎÏ",
-"wa", "rato&ucirc;rn&eacute;s"
+"da" => "Oversat",
+"de" => "&Uuml;bersetzt",
+"el" => "ÌåôáöñáóìÝíá",
+"es" => "Traducidos",
+"hu" => "Lefordított",
+"no" => "Oversatt",
+"ro" => "traduse",
+"ru" => "ðÅÒÅ×ÅÄÅÎÏ",
+"sv" => "&oslash;versatt",
+"tr" => "Tercüme edilmiþ",
+"uk" => "ðÅÒÅËÌÁÄÅÎÏ",
+"wa" => "rato&ucirc;rn&eacute;s"
 );
 
 %fuzzy = (
-"da", "Uklart",
-"de", "Ungenau",
-"el", "ÁóáöÞ",
-"es", "Difusos",
-"hu", "Pontatlan",
-"no", "Uferdig",
-"ro", "neclare",
-"ru", "îÅÞÅÔËÏ",
-"sv", "oklart",
-"tr", "Tam tutmayan",
-"uk", "îÅÞ¦ÔËÏ",
-"wa", "&laquo;fuzzy&raquo;"
+"da" => "Uklart",
+"de" => "Ungenau",
+"el" => "ÁóáöÞ",
+"es" => "Difusos",
+"hu" => "Pontatlan",
+"no" => "Uferdig",
+"ro" => "neclare",
+"ru" => "îÅÞÅÔËÏ",
+"sv" => "oklart",
+"tr" => "Tam tutmayan",
+"uk" => "îÅÞ¦ÔËÏ",
+"wa" => "&laquo;fuzzy&raquo;"
 );
 
 %untranslated = (
-"da", "Uoversat",
-"de", "Un&uuml;bersetzt",
-"el", "AìåôÜöñáóôá",
-"es", "Sin traducir",
-"hu", "Fordítatlan",
-"no", "Uoversatt",
-"ro", "netraduse",
-"ru", "îÅÐÅÒÅ×ÅÄÅÎÏ",
-"sv", "o&oslash;versatt",
-"tr", "Tercüme edilmemiþ",
-"uk", "îÅÐÅÒÅËÌÁÄÅÎÏ",
-"wa", "n&eacute;n co rato&ucirc;rn&eacute;s"
+"da" => "Uoversat",
+"de" => "Un&uuml;bersetzt",
+"el" => "AìåôÜöñáóôá",
+"es" => "Sin traducir",
+"hu" => "Fordítatlan",
+"no" => "Uoversatt",
+"ro" => "netraduse",
+"ru" => "îÅÐÅÒÅ×ÅÄÅÎÏ",
+"sv" => "o&oslash;versatt",
+"tr" => "Tercüme edilmemiþ",
+"uk" => "îÅÐÅÒÅËÌÁÄÅÎÏ",
+"wa" => "n&eacute;n co rato&ucirc;rn&eacute;s"
 );
 
 %strings = (
-"da", "strenge",
-"de", "Meldungen",
-"el", "AëöáñéèìçôéêÜ",
-"es", "Mensajes",
-"hu", "karakterlánc",
-"no", "strenger",
-"ro", "stringuri",
-"ru", "ÓÏÏÂÝ.",
-"sv", "str&auml;ngar",
-"tr", "metinler",
-"uk", "ÐÏ×¦ÄÏÍ.",
-"wa", "messaedjes"
+"da" => "strenge",
+"de" => "Meldungen",
+"el" => "AëöáñéèìçôéêÜ",
+"es" => "Mensajes",
+"hu" => "karakterlánc",
+"no" => "strenger",
+"ro" => "stringuri",
+"ru" => "ÓÏÏÂÝ.",
+"sv" => "str&auml;ngar",
+"tr" => "metinler",
+"uk" => "ÐÏ×¦ÄÏÍ.",
+"wa" => "messaedjes"
 );
 
 %total = (
-"de", "Gesamt",
-"el", "ÓõíïëéêÜ",
-"es", "Totales",
-"fi", "Yhteens&auml;",
-"hu", "Összes",
-"ja", "¹ç·×",
-"nl", "Totaal",
-"no", "Total",
-"ru", "÷ÓÅÇÏ",
-"sv", "Totalt",
-"tr", "Toplam",
-"uk", "÷ÓØÏÇÏ",
-"wa", "tot&aring;"
+"de" => "Gesamt",
+"el" => "ÓõíïëéêÜ",
+"es" => "Totales",
+"fi" => "Yhteens&auml;",
+"hu" => "Összes",
+"ja" => "¹ç·×",
+"nl" => "Totaal",
+"no" => "Total",
+"ru" => "÷ÓÅÇÏ",
+"sv" => "Totalt",
+"tr" => "Toplam",
+"uk" => "÷ÓØÏÇÏ",
+"wa" => "tot&aring;"
 );
 
 %lasttranslator = (
-"C", "Last Translator",
-"es", "Último traductor"
+"C"  => "Last Translator",
+"es" => "Último traductor"
 );
 
 %status = (
-"C", "Status",
-"es", "Estado"
+"C"  => "Status",
+"es" => "Estado"
 );
 
 %available = (
-"C", "Available",
-"es", "Disponible"
+"C"  => "Available",
+"es" => "Disponible"
 );
 
 %assigned = (
-"C", "Assigned",
-"es", "Asignado"
+"C"  => "Assigned",
+"es" => "Asignado"
 );
 
 %unknown = (
-"C", "Unknown",
-"es", "Desconocido"
+"C"  => "Unknown",
+"es" => "Desconocido"
 );
 
 %details = ( 
-"C", "Detail report for ",
-"da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
-"de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
-"el", "ËåðôïìåñÞò áíáöïñÜ ãéá ",
-"es", "Informe detallado de la traducci&oacute;n de GNOME al español (es)",
-"hu", "Részletes jelentés a Magyar (hu) GNOME fordításokról",
-"no", "Detaljert rapport for oversettelse av GNOME til norsk",
-"ru", "ðÏÄÒÏÂÎÙÊ ÏÔÞÅÔ Ï ÓÏÓÔÏÑÎÉÉ ÐÅÒÅ×ÏÄÁ Gnome ÎÁ ÒÕÓÓËÉÊ",
-"sv", "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
-"tr", "Geliþmiþ durum raporu : ",
-"uk", "äÅÔÁÌØÎÉÊ Ú×¦Ô ÐÒÏ ÓÔÁÎ ÐÅÒÅËÌÁÄÕ GNOME ÎÁ ÕËÒÁ§ÎÓØËÕ",
-"wa", "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
+"C"  => "Detail report for ",
+"da" => "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
+"de" => "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
+"el" => "ËåðôïìåñÞò áíáöïñÜ ãéá ",
+"es" => "Informe detallado de la traducci&oacute;n de GNOME al español (es)",
+"hu" => "Részletes jelentés a Magyar (hu) GNOME fordításokról",
+"no" => "Detaljert rapport for oversettelse av GNOME til norsk",
+"ru" => "ðÏÄÒÏÂÎÙÊ ÏÔÞÅÔ Ï ÓÏÓÔÏÑÎÉÉ ÐÅÒÅ×ÏÄÁ Gnome ÎÁ ÒÕÓÓËÉÊ",
+"sv" => "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
+"tr" => "Geliþmiþ durum raporu : ",
+"uk" => "äÅÔÁÌØÎÉÊ Ú×¦Ô ÐÒÏ ÓÔÁÎ ÐÅÒÅËÌÁÄÕ GNOME ÎÁ ÕËÒÁ§ÎÓØËÕ",
+"wa" => "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
 );
 
 %percent_colors = (
-"100%", "#00bb00",          
-">95%", "#8470ff",  
-">90%", "#8a2be2",
-">80%", "#1e90ff",          
-">70%", "#9400d3",
-">60%", "#9932cc",
-">50%", "#da70d6",
-"other", ""
+"100%"  => "#00bb00",          
+">95%"  => "#8470ff",  
+">90%"  => "#8a2be2",
+">80%"  => "#1e90ff",          
+">70%"  => "#9400d3",
+">60%"  => "#9932cc",
+">50%"  => "#da70d6",
+"other" => ""
 );
 
 %changed_color = (
-"0", "black",
-"1", "red",
-"2", "green",
-"3", "blue",
-"4", "yellow",
-"5", "grey"
+"0" => "black",
+"1" => "red",
+"2" => "green",
+"3" => "blue",
+"4" => "yellow",
+"5" => "grey"
 );
 
 #############################
@@ -264,9 +281,9 @@ if (open (LANGMOD, "$htmldir/langmod.dat")){
 # "Main loops" #
 ################
 
-open  TABLE, ">$htmldir/status.shtml" || die "can't open $htmldir/status.shtml";
-open  DATE, "date '+%a %Y-%m-%d %T %z' |" || die "can't date";
-$date = <DATE> ; close DATE ;
+# || has a higher precedence so this doesn't work use "or" or parentheses.
+
+open  TABLE, ">$htmldir/status.shtml" or die "can't open $htmldir/status.shtml";
 print TABLE "<html><head><title>Gnome translation status - $date</title></head>\n";
 print TABLE "<body><h1>Gnome translation status<br>$date</h1>\n";
 print TABLE "<table cellpadding=1 cellspacing=1 border=1 width=\"90%\"><tr align=center><td></td>\n";
@@ -404,8 +421,8 @@ foreach $lang (sort keys %langinfo){
 
 ## Subroutines code
 sub printmodule{
-    my ($mod, $align) = @_;
-    my ($changed, $release, $string, $trbg);
+    my($mod, $align) = @_;
+    my($changed, $release, $string, $trbg);
     
     $changed = "";
     $changed = $changed_color{int(($now - ${$modinfo{$mod}->[1]})/86400)};
@@ -428,8 +445,8 @@ sub printmodule{
     
     
 sub printlang{
-    my ($mod, $lang) = @_;
-    my ($percent, $color);
+    ($mod, $lang) = @_;
+    my($percent, $color);
     
     $percent = 0;
     if (${$modinfo{$mod}->[0]}) {
