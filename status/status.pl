@@ -6,18 +6,22 @@
 # Rewrited by Carlos Perelló Marín <carlos@gnome-db.org>
 
 use POSIX qw(locale_h);
+#use strict; We should fix some checks to enable it :-(
 ###############
 # "Constants" #
 ###############
 
 # it's for a current developer :-)
-#@langs = ( "es" );
+#my @langs = ( "es" );
 
-@langs = qw ( az ca cs da de el en_GB es et eu fi fr ga gl hr hu is it
-	      ja ko lt lv ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
-	      vi wa zh_TW zh_CN.GB2312 );
+my (%modules,%langinfo,%modinfo,%modinfoold,$line,%langinfoold,
+    $mod,%langmodold,%langmod); 
+my @langs = qw ( az bg br ca cs da de el en en_GB es et eu fi fr fr_BE fr_FR
+		 ga gl hr hu id is it ja ko lt lv ms nb nl nn no pl pt pt_BR
+		 pt_PT ro ru sk sl sp sr sr_YU sv ta tr uk vi wa zh_CN.GB2312
+		 zh_CN zh_TW.Big5 zh_TW );
 
-@Usage = ("Usage: status.pl [OPTION]...\n".
+my @Usage = ("Usage: status.pl [OPTION]...\n".
           "Generate stats with the status of .po files translations.\n".
 	  "\n".
 	  "  --cvsroot-dir <location>    Specifies the directory where are\n".
@@ -28,7 +32,7 @@ use POSIX qw(locale_h);
 	  "  --html-dir <location>       Specifies the directory where will\n".
 	  "                              be stored the stats files.\n".
 	  "\n".
-	  "  --modulesdat <location>     Specifies the file name that has\n".
+	  "  --modules-file <location>   Specifies the file name that has\n".
 	  "                              the modules info.\n".
 	  "\n".
 	  "  --pos-dir <location>        Specifies the directory where will\n".
@@ -50,8 +54,9 @@ sub gettrnsinfo;
 # "Initialization" #
 ####################
 
-setlocale (LC_LANG, "C");
 setlocale (LC_ALL, "C");
+
+my ($cvsroot,$htmldir,$posdir,$ttl,$modulesfile);
 
 while (@ARGV) {
     if ($ARGV[0] eq "--cvsroot-dir") {
@@ -96,7 +101,7 @@ if ($posdir eq "") {
 }
 
 if ($ttl eq "") {
-    $ttl = 7776000; # This is when a module is marked as unmantained ( 3 months )
+    $ttl = 15552000; # This is when a module is marked as unmantained ( 6 months )
 }
 
 if ($modulesfile eq "") {
@@ -113,8 +118,8 @@ close (POSDIR);
 if (open (MODULES, $modulesfile)){
     while (<MODULES>) {
         chomp;
-	@info = split (/,/);
-	$index = 1;
+	my @info = split (/,/);
+	my $index = 1;
 	while ($info[$index]){
 	    ${$modules{$info[0]}->[$index-1]} = $info[$index];
 	    $index++;
@@ -134,8 +139,8 @@ if (open (MODULES, $modulesfile)){
 if (open (MODINFO, "$htmldir/modinfo.dat")){
     while (<MODINFO>) {
 	chomp;
-	@info = split (/,/);
-	$index = 1;
+	my @info = split (/,/);
+	my $index = 1;
 	while ($info[$index]){
 	    ${$modinfoold{$info[0]}->[$index-1]} = $info[$index];
 	    $index++;
@@ -147,8 +152,8 @@ if (open (MODINFO, "$htmldir/modinfo.dat")){
 if (open (LANGINFO, "$htmldir/langinfo.dat")){
     while (<LANGINFO>) {
 	chomp;
-	@info = split (/,/);
-	$index = 1;
+	my @info = split (/,/);
+	my $index = 1;
 	while ($info[$index]){
 	    ${$langinfoold{$info[0]}->[$index-1]} = $info[$index];
 	    $index++;
@@ -160,7 +165,8 @@ if (open (LANGINFO, "$htmldir/langinfo.dat")){
 if (open (LANGMOD, "$htmldir/langmod.dat")){
     while (<LANGMOD>) {
 	chomp;
-	@info = split(/,/);
+	my @info = split(/,/);
+    my $stupid;
 	($stupid, $stupid, @{$langmodold{$info[0]}->{$info[1]}}) = @info;
     }
 }
@@ -170,49 +176,49 @@ if (open (LANGMOD, "$htmldir/langmod.dat")){
 ################
 my $modflag = 0; # does we need write modinfo?
 
-foreach $mod (keys %modules){
+foreach $mod (sort (keys %modules)){
     if (${$modules{$mod}->[0]}=~/extra-po/){ # don't generate in extra-po
     } else {
 	generatepot($mod);
     }
     if (-d "$cvsroot/${$modules{$mod}->[0]}"){
-	@result = getmsgfmt("pot",$mod);
+	my @result = getmsgfmt("pot",$mod);
 	${ $modinfo { $mod } -> [0] } = ($result[0] - 1);
-        if ( ${$modinfoold{$mod}->[0]} ne ($result[0] - 1)){
+        if ( $modinfoold{$mod} && (${$modinfoold{$mod}->[0]} eq ($result[0] - 1))){
+	    ${ $modinfo { $mod } -> [1] } = ${ $modinfoold { $mod } -> [1] };
+	} else {
 	    ${ $modinfo { $mod } -> [1] } = time;
 	    $modflag = 1;
-	} else {
-	    ${ $modinfo { $mod } -> [1] } = ${ $modinfoold { $mod } -> [1] };
 	}
    }
 }
 
-foreach $lang (@langs){
-    $total_msg = 0;
-    foreach $mod (keys %modules){
+foreach my $lang (sort (@langs)){
+    my $total_msg = 0;
+    foreach my $mod (sort (keys %modules)){
 	if (-f "$cvsroot/${$modules{$mod}->[0]}/$lang.po" ) {
 	    getmerge($lang,$mod);
-	    @result = getmsgfmt ("$lang.new", $mod);
-	    @info = gettrnsinfo ("$lang.new", $mod);
+	    my @result = getmsgfmt ("$lang.new", $mod);
+	    my @info = gettrnsinfo ("$lang.new", $mod);
 	    unlink("$cvsroot/${$modules{$mod}->[0]}/$lang.new.po");
 	    if ($result[1]){
 		$total_msg += $result[1];
 	    }
-	    ${$langmod{$lang}->{$mod}->[0]} = @result[1];
-	    ${$langmod{$lang}->{$mod}->[1]} = @result[2];
-	    ${$langmod{$lang}->{$mod}->[2]} = @result[3];
-	    if (@result[2] != 0 || @result[3] != 0) {
-		${$langmod{$lang}->{$mod}->[3]} = @info[0];
+	    ${$langmod{$lang}->{$mod}->[0]} = $result[1];
+	    ${$langmod{$lang}->{$mod}->[1]} = $result[2];
+	    ${$langmod{$lang}->{$mod}->[2]} = $result[3];
+	    if ($result[2] != 0 || $result[3] != 0) {
+		${$langmod{$lang}->{$mod}->[3]} = $info[0];
 	    } else {
 		${$langmod{$lang}->{$mod}->[3]} = 1;
 	    }
-	    ${$langmod{$lang}->{$mod}->[4]} = @info[1];
+	    ${$langmod{$lang}->{$mod}->[4]} = $info[1];
 	} else {
 	    ${$langmod{$lang}->{$mod}->[0]} = 0;
 	    ${$langmod{$lang}->{$mod}->[1]} = 0;
 	    ${$langmod{$lang}->{$mod}->[2]} = 0;
 	    ${$langmod{$lang}->{$mod}->[3]} = 0;
-	    ${$langmod{$lang}->{$mod}->[4]} = "";
+	    ${$langmod{$lang}->{$mod}->[4]} = " ";
 	}
     }
     ${$langinfo{$lang}->[0]} = $total_msg;
@@ -224,12 +230,14 @@ foreach $lang (@langs){
 if ($modflag) {               # Change modinfo if need.
     open (MODINFO, ">$htmldir/modinfo.dat") || die ("can't open $htmldir/modinfo.dat");
 
-    foreach $mod (keys %modules){
-	$string = "${$modinfo{$mod}->[0]}" . "," . "${$modinfo{$mod}->[1]}";
-	$index = 2;
-	while (${$modinfoold{$mod}->[$index]}){
-	    $string = $string . "," . ${$modinfoold{$mod}->[$index]};
-	    $index++;
+    foreach my $mod (sort (keys %modules)){
+	my $string = "${$modinfo{$mod}->[0]}" . "," . "${$modinfo{$mod}->[1]}";
+	my $index = 2;
+	if ($modinfoold{$mod}) {
+	    while (${$modinfoold{$mod}->[$index]}){
+	        $string = $string . "," . ${$modinfoold{$mod}->[$index]};
+	        $index++;
+	    }
 	}
 	print MODINFO "$mod,$string\n";
     }
@@ -239,13 +247,15 @@ if ($modflag) {               # Change modinfo if need.
 ######################
 open (LANGINFO, ">$htmldir/langinfo.dat") || die ("can't open $htmldir/langinfo.dat");
 
-foreach $lang (@langs){
-    $string = "${$langinfo{$lang}->[0]}"; # in the future we add [1] and [2]
-    $index = 1;
-    while (${$langinfoold{$lang}->[$index]}){
-	$string = $string . "," . ${$langinfoold{$lang}->[$index]};
-	$index++;
-	print $string . "\n";
+foreach my $lang (sort (@langs)){
+    my $string = "${$langinfo{$lang}->[0]}"; # in the future we add [1] and [2]
+    my $index = 1;
+    if ($langinfoold{$lang}) {
+        while (${$langinfoold{$lang}->[$index]}){
+	    $string = $string . "," . ${$langinfoold{$lang}->[$index]};
+	    $index++;
+	    print $string . "\n";
+        }
     }
     print LANGINFO "$lang,$string\n";
 }
@@ -254,10 +264,10 @@ close (LANGINFO);
 ######################
 open (LANGMOD, ">$htmldir/langmod.dat") || die ("can't open $htmldir/langmod.dat");
 
-foreach $lang (@langs){
-    foreach $mod (keys %modules){
-	$string = "${$langmod{$lang}->{$mod}->[0]}" . "," . "${$langmod{$lang}->{$mod}->[1]}" . "," . "${$langmod{$lang}->{$mod}->[2]}" . "," . "${$langmod{$lang}->{$mod}->[3]}" . "," . "${$langmod{$lang}->{$mod}->[4]}";
-	$index = 5;
+foreach my $lang (sort (@langs)){
+    foreach my $mod (sort (keys %modules)){
+	my $string = "${$langmod{$lang}->{$mod}->[0]}" . "," . "${$langmod{$lang}->{$mod}->[1]}" . "," . "${$langmod{$lang}->{$mod}->[2]}" . "," . "${$langmod{$lang}->{$mod}->[3]}" . "," . "${$langmod{$lang}->{$mod}->[4]}";
+	my $index = 5;
 	
 	#
 	# I don't see the utility for this code :-?
@@ -281,7 +291,7 @@ close (LANGMOD);
 ########################
 
 sub getmerge{
-    ($lang,$mod) = @_;
+    my ($lang,$mod) = @_;
    
    print "getmerge: $mod $lang\n";
    
@@ -294,7 +304,7 @@ sub getmerge{
 }
 
 sub getmsgfmt{
-    ($language,$mod) = @_;
+    my ($language,$mod) = @_;
     my ($file, $total, $trns, $fuzz, $untr);
     if ($language eq "pot"){
         $file = ${$modules{$mod}->[1]};
@@ -323,12 +333,12 @@ sub getmsgfmt{
 }
 
 sub gettrnsinfo {
-    ($language,$mod) = @_;
+    my ($language,$mod) = @_;
    
     if (-f "$cvsroot/${$modules{$mod}->[0]}/$language.po") {
 	open (AUTHOR, "LANGUAGE=C grep ^\\\"Last-Translator $cvsroot/${$modules{$mod}->[0]}/$language.po |")
 	|| die ("unable to get the Last-Translator field");
-	$author = <AUTHOR>;
+	my $author = <AUTHOR>;
 	close (AUTHOR);
 	$author =~ s/.*:\ //g;
 	$author =~ s/\\n.*$//g;
@@ -337,19 +347,19 @@ sub gettrnsinfo {
 
 	open (DATEPOT, "LANGUAGE=C grep ^\\\"POT-Creation-Date $cvsroot/${$modules{$mod}->[0]}/$language.po |")
 	|| die ("unable to get the POT-Creation-Date field");
-	$date_pot = <DATEPOT>;
+	my $date_pot = <DATEPOT>;
 	close (DATEPOT);
 	$date_pot =~ s/.*:\ //g;
 	$date_pot =~ s/\\n.*$//g;
 
 	open (DATEPO, "LANGUAGE=C grep ^\\\"PO-Revision-Date $cvsroot/${$modules{$mod}->[0]}/$language.po |")
 	|| die ("unable to get the PO-Revision-Date field");
-	$date_po = <DATEPO>;
+	my $date_po = <DATEPO>;
 	close (DATEPO);
 	$date_po =~ s/.*:\ //g;
 	$date_po =~ s/\\n.*$//g;	
 
-	$status = getstatusfromdate ($date_pot, $date_po, $ttl);
+	my $status = getstatusfromdate ($date_pot, $date_po, $ttl);
 	return ($status, $author);
     } else {
         return (0, "");
@@ -357,46 +367,44 @@ sub gettrnsinfo {
 }
 
 sub getstatusfromdate {
-    ($date_pot, $date_po, $ttl) = @_;
+    my ($date_pot, $date_po, $ttl) = @_;
 
     open (POTTIME, "LANGUAGE=C date -d \"$date_pot\" +%s |")
     || die ("unable to execute date");
-    $potseconds = <POTTIME>;
+    my $potseconds = <POTTIME>;
     close (POTTIME);
 
     open (POTIME, "LANGUAGE=C date -d \"$date_po\" +%s |")
     || die ("unable to execute date");
-    $poseconds = <POTIME>;
+    my $poseconds = <POTIME>;
     close (POTIME);
    
-    $time = $potseconds - $poseconds;
+    my $time = $potseconds - $poseconds;
     if ($time > $ttl) {
         return 0;
     } else {
         return 1;
     }
 }
+
 sub generatepot{
-    $mod = @_[0];
+    my $mod = $_[0];
 
     print "generatepot: $mod\n";
 
-    if (${$modules{$mod}->[3]} ne ""){
-      open (POTOUT,  "${$modules{$mod}->[3]} && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |" ) || die ("could not generate ${$modules{$mod}->[1]}");
-    } else {
+    if (${$modules{$mod}->[3]} eq "TRUE"){
       open (POTOUT,  "cd $cvsroot/${$modules{$mod}->[0]} && xml-i18n-update -P 1>&2 && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |") || die ("could not generate ${$modules{$mod}->[1]}");
     }
     close (POTOUT);
 }
 
 # Array structures:
-# modules  $mod:$moddir:$modpot:$modpotcreate:$modpomerge:$brahch_name:$next_release_date
+# modules  $mod:$moddir:$modpot:$brahch_name:$modpotregenerate:$next_release_date
 # ${$modules{$mod}->[0]} = "Directory where its .po/.pot files are"
 # ${$modules{$mod}->[1]} = "Its .pot file name"
-# ${$modules{$mod}->[2]} = "Command to generate the .pot file"
-# ${$modules{$mod}->[3]} = "Command to update the .po files"
-# ${$modules{$mod}->[4]} = "branch of module name"
-# ${$modules{$mod}->[5]} = "date of next release (in seconds)"
+# ${$modules{$mod}->[2]} = "branch of module name"
+# ${$modules{$mod}->[3]} = "Regenerate .pot file (TRUE/FALSE)"
+# ${$modules{$mod}->[4]} = "date of next release (in seconds)"
 #
 # langmod  $mod:$lang:$trns:$fuzz:$untr:$trns_status:$last_trns
 # ${$langmod{$lang}->{$mod}->[0]} = "trns";
