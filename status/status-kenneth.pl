@@ -32,7 +32,18 @@ $cvsroot = "/home/robert/cvs";
 $htmldir = "$cvsroot/web-devel-2/content/projects/gtp/status";
 $posdir = "$htmldir/pos";
 
-open STATUS, "STATUSFILES.in" || die "Cannot open file: STATUSFILES.in";
+## Use the supplied arguments
+
+if ($ARGV[0]=~/^-(.)*/){
+   if ("$ARGV[0]" eq "--module-file"
+    || "$ARGV[0]" eq "-M"){ $ARG1=$ARGV[1];         &Main; }
+}  else { 		    $ARG1="STATUSFILES.in"; &Main; } 
+
+sub Main{
+
+if (! -s $ARG1) { print "File $ARG1 does not exist\n"; exit; }
+
+open STATUS, "$ARG1" || die "Cannot open file: $ARG1";
 
 my @modules;
 while (<STATUS>) {
@@ -180,6 +191,7 @@ foreach $lang (@langs){
 }
 }
 close LANGMOD;
+}
 
 ## Subroutines
 
