@@ -71,6 +71,7 @@ function gnome_foot() { ?>
 	 alt="Correct CSS!" height="31" width="88"></a>
 <a href="email-webmaster.php">Vincent van Adrighem (webmaster)</a>
 </div>
+<div class="invisible">Unwated mail catch address: <a href="mailto:laatze.maarkomen@dirck.mine.nu">laatze.maarkomen@dirck.mine.nu</a></div>
 <? }
 
 function gnome_menu() { ?>
