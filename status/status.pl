@@ -13,8 +13,8 @@ use POSIX qw(locale_h);
 # it's for a current developer :-)
 @langs = ( "es" );
 
-@langs = qw ( az bg ca cs da de el en_GB es et eu fi fr ga gl hr hu 
-	      is it ja ko lt ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
+@langs = qw ( az bg ca cs da de el en_GB es et eu fi fr ga gl hr hu is it
+	      ja ko lt lv ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
 	      vi wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/carlos/cvs/gnome2";
