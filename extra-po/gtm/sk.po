@@ -1,18 +1,18 @@
 # GNOME transfer manager
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000.
+# Copyright (C) 2000-2001 Free Software Foundation, Inc.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000-2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-01-21 23:40+0000\n"
-"PO-Revision-Date: 2001-01-24 13:02CET\n"
+"Project-Id-Version: 0.1\n"
+"POT-Creation-Date: 2001-02-20 02:55+0000\n"
+"PO-Revision-Date: 2001-03-02 17:25CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.8pre\n"
+"X-Generator: KBabel 0.8\n"
 
 #: src/main.c:297
 msgid "url to fetch"
@@ -26,12 +26,12 @@ msgstr "URL"
 #: applet/dialog-add.c:69 applet/dialog-add.c:92 applet/dialog-add.c:313
 #: applet/dialog-add.c:343 applet/dialog-new.c:114 src/dialog-add.c:59
 #: src/dialog-add.c:75 src/dialog-add.c:267 src/dialog-add.c:285
-#: src/dialog-new.c:80 src/dialog-numdown.c:161 src/main.c:334
+#: src/dialog-new.c:96 src/dialog-numdown.c:161 src/main.c:334
 msgid "URL:\n"
 msgstr "URL:\n"
 
 #: applet/dialog-add.c:98 applet/dialog-add.c:350 applet/dialog-new.c:115
-#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:81
+#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:97
 #: src/dialog-numdown.c:162 src/main.c:336
 msgid "already in the list"
 msgstr "u¾ v zozname"
@@ -62,7 +62,7 @@ msgstr ""
 msgid "_New..."
 msgstr "_Nový..."
 
-#: src/main-window.c:204
+#: src/dialog-new.c:186 src/main-window.c:204
 msgid "New file to download"
 msgstr "Nový s»ahovaný súbor"
 
@@ -174,7 +174,7 @@ msgstr "Auto"
 msgid "Toggle auto download of selected files"
 msgstr "Prepína automatické s»ahovanie vybraných súborov"
 
-#: src/main-window.c:318
+#: src/dialog-prop.c:235 src/main-window.c:318
 msgid "Properties"
 msgstr "Vlastnosti"
 
@@ -329,8 +329,8 @@ msgid "staled"
 msgstr "zamrznutý"
 
 #: src/download-dirs.c:111
-msgid "GTM - Target directory"
-msgstr "GTM - Cieµový prieèinok"
+msgid "Target directory"
+msgstr "Cieµový prieèinok"
 
 #: src/download-dirs.c:116
 msgid "Pattern:"
@@ -340,9 +340,9 @@ msgstr "Vzorka:"
 msgid "Download matching URLs to directory:"
 msgstr "S»ahova» odpovedajúce URL do prieèinku:"
 
-#: applet/dialog-add.c:265 src/download-dirs.c:127
-msgid "GTM - Add Download Dir"
-msgstr "GTM - Prida» prieèinok pre s»ahovanie"
+#: src/download-dirs.c:127
+msgid "Add Download Dir"
+msgstr "Prida» prieèinok pre s»ahovanie"
 
 #: src/download-dirs.c:262
 msgid "Pattern"
@@ -372,22 +372,26 @@ msgid "Download dir:"
 msgstr "Do prieèinku:"
 
 #: src/dialog-common-elements.c:50
-msgid "GTM - Download Dir"
-msgstr "GTM - Prieèinok pre s»ahovanie"
+msgid "Download Dir"
+msgstr "Prieèinok pre s»ahovanie"
 
 #: src/dialog-common-elements.c:63
 msgid "Suggest directory by pattern matching"
 msgstr "Poraïte prieèinok pomocou vzorky"
 
-#: applet/dialog-new.c:75 src/dialog-common-elements.c:198
+#: src/dialog-common-elements.c:192
+msgid "No directory matched."
+msgstr "Neodpovedá ¾iadny prieèinok."
+
+#: applet/dialog-new.c:75 src/dialog-common-elements.c:212
 msgid "Multiple download not implemented yet"
 msgstr "Viacnásobné s»ahovanie nie je zatiaµ implementované"
 
-#: src/dialog-about.c:49
+#: src/dialog-about.c:50
 msgid "GNOME Transfer Manager"
 msgstr "GNOME Správca prenosu"
 
-#: src/dialog-about.c:52
+#: src/dialog-about.c:53
 msgid ""
 "The GNOME transfer manager.\n"
 "http://gtm.sourceforge.net/"
@@ -395,18 +399,14 @@ msgstr ""
 "GNOME správca prenosu.\n"
 "http://gtm.sourceforge.net/"
 
-#: applet/dialog-new.c:53 src/dialog-new.c:54 src/dialog-prop.c:62
-msgid "Invalid URL"
-msgstr "Neplatné URL"
+#: src/dialog-new.c:52
+msgid "Invalid URL."
+msgstr "Neplatné URL."
 
 #. URL
-#: applet/dialog-new.c:189 src/dialog-new.c:141
+#: applet/dialog-new.c:189 src/dialog-new.c:161
 msgid "Please enter URL of the file to download:"
 msgstr "Prosím, zadajte URL s»ahovaného súboru:"
-
-#: src/dialog-new.c:168
-msgid "GTM - New file to download"
-msgstr "GTM - Nový súbor pre s»ahovanie"
 
 #: src/dialog-numdown.c:182
 msgid "Invalid URLs."
@@ -420,44 +420,40 @@ msgstr "Minimálny poèet je väè¹í ako maximálny."
 msgid "Can't suggest directory as it would not be the same for all URLs."
 msgstr "Neviem navrhnú» prieèinok, preto¾e by nebol rovnaký pre v¹etky URL."
 
-#: src/dialog-numdown.c:319
-msgid "No URLs match a directory."
-msgstr "®iadne URL neodpovedá prieèinku."
-
 #. Pre-URL
-#: src/dialog-numdown.c:352
+#: src/dialog-numdown.c:346
 msgid "Part of URL before number:"
 msgstr "Èas» URL pred èíslom:"
 
 #. Numbers From/To
-#: src/dialog-numdown.c:362
+#: src/dialog-numdown.c:356
 msgid "Numbers:"
 msgstr "Èísla:"
 
-#: src/dialog-numdown.c:369
+#: src/dialog-numdown.c:363
 msgid "From: "
 msgstr "Z: "
 
-#: src/dialog-numdown.c:382
+#: src/dialog-numdown.c:376
 msgid "To: "
 msgstr "Do: "
 
-#: src/dialog-numdown.c:400
+#: src/dialog-numdown.c:394
 msgid "Number of digits to pad leading zeroes to:"
 msgstr "Poèet èíslic, na ktoré doplni» nulami:"
 
 #. Post-URL
-#: src/dialog-numdown.c:415
+#: src/dialog-numdown.c:409
 msgid "Part of URL after number:"
 msgstr "Èas» URL za èíslom:"
 
-#: src/dialog-numdown.c:439
-msgid "GTM - Numeric Download"
-msgstr "GTM - Èíselné s»ahovanie"
+#: src/dialog-numdown.c:433
+msgid "Numeric Download"
+msgstr "Èíselné s»ahovanie"
 
 #: src/dialog-restart.c:49
-msgid "GTM - Restart selected files"
-msgstr "GTM - Re¹tart vybraných súborov"
+msgid "Restart selected files"
+msgstr "Re¹tart vybraných súborov"
 
 #: src/dialog-restart.c:54
 msgid ""
@@ -468,8 +464,8 @@ msgstr ""
 "Naozaj chcete re¹tartova» vybrané súbory?"
 
 #: src/dialog-remove.c:50
-msgid "GTM - Remove selected files from list"
-msgstr "GMT - Odstráni» vybrané súbory zo zoznamu"
+msgid "Remove selected files from list"
+msgstr "Odstráni vybrané súbory zo zoznamu"
 
 #: src/dialog-remove.c:55
 msgid "Do you really want to remove selected files from the list?"
@@ -528,8 +524,8 @@ msgid "Default download dir:"
 msgstr "©tandardný prieèinok pre s»ahovanie:"
 
 #: src/dialog-prefs.c:539
-msgid "GTM - Def Download Dir"
-msgstr "GTM -©tandardný prieèinok pre s»ahovanie"
+msgid "Def Download Dir"
+msgstr "©tandardný prieèinok pre s»ahovanie"
 
 #: src/dialog-prefs.c:548
 msgid "Number retries:"
@@ -596,8 +592,8 @@ msgid "Use beep"
 msgstr "Pou¾i» pípanie"
 
 #: src/dialog-prefs.c:853
-msgid "GTM - Preferences"
-msgstr "GTM - Nastavenie"
+msgid "Preferences"
+msgstr "Nastavenie"
 
 #. Create the notebook pages
 #: src/dialog-prefs.c:866 src/dialog-prop.c:252
@@ -629,6 +625,10 @@ msgstr "Zobrazenie"
 msgid "Sound"
 msgstr "Zvuk"
 
+#: applet/dialog-new.c:53 src/dialog-prop.c:62
+msgid "Invalid URL"
+msgstr "Neplatné URL"
+
 #: src/dialog-prop.c:77
 msgid "Old URL filename must be the same on the new URL"
 msgstr "Staré meno súboru URL musí by» rovnaké ako nové URL"
@@ -637,18 +637,14 @@ msgstr "Staré meno súboru URL musí by» rovnaké ako nové URL"
 msgid "URL:"
 msgstr "URL:"
 
-#: src/dialog-prop.c:235
-msgid "GTM - Properties"
-msgstr "GTM - Vlastnosti"
-
 #. URLs
 #: applet/dialog-add.c:246 src/dialog-add.c:206
 msgid "URLs to be added"
 msgstr "Pridávané URL"
 
 #: src/dialog-add.c:243
-msgid "GTM - Add files to download"
-msgstr "GTM - Prida» s»ahované súbory"
+msgid "Add files to download"
+msgstr "Prida» súbory pre s»ahovanie"
 
 #: src/dialog-stats.c:96
 msgid "List summary"
@@ -675,27 +671,27 @@ msgstr "Ostáva (kB)"
 msgid "Progress"
 msgstr "Priebeh"
 
-#: src/wget-log.c:88
+#: src/wget-log.c:89
 msgid "Socket error when downloading URL:\n"
 msgstr "Chyba soketu pri s»ahovaní URL:\n"
 
-#: src/wget-log.c:91 src/wget-log.c:97
+#: src/wget-log.c:92 src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Spojenie odmietnuté pri s»ahovaní URL:\n"
 
-#: src/wget-log.c:94
+#: src/wget-log.c:95
 msgid "No route to host:\n"
 msgstr "K hostiteµovi neexistuje cesta:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:101
 msgid "Host not found when downloading URL:\n"
 msgstr "Hostiteµ nebol nájdený pri s»ahovaní URL:\n"
 
-#: src/wget-log.c:103
+#: src/wget-log.c:104
 msgid "Unknown error when downloading URL:\n"
 msgstr "Neznáma chyba pri s»ahovaní URL:\n"
 
-#: src/wget-log.c:112 src/wget-log.c:119
+#: src/wget-log.c:113 src/wget-log.c:120
 msgid "File not found when downloading URL:\n"
 msgstr "Súbor nenájdený pri s»ahovaní URL:\n"
 
@@ -739,6 +735,10 @@ msgstr "Chyba CORBA"
 #: applet/dialog-add.c:241
 msgid "GTM Applet - Add files to download"
 msgstr "GTM Aplet - Prida» súbory pre s»ahovanie"
+
+#: applet/dialog-add.c:265
+msgid "GTM - Add Download Dir"
+msgstr "GTM - Prida» prieèinok pre s»ahovanie"
 
 #: applet/dialog-new.c:184
 msgid "GTM Applet - New file to download"
