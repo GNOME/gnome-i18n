@@ -35,7 +35,7 @@
 
 /* FIXME: We should let change those values at runtime */
 #define CVS_CO_OPTIONS "cvs -d \":pserver:carlos@cvs.gnome.org:/cvs/gnome\" co -P"
-#define CVSROOTDIR "/home/carlos/cvs2/"
+#define CVSROOTDIR "/home/carlos/cvs/"
 #define HTMLROOTDIR "/home/carlos/html/"
 
 /* Event map */
@@ -124,7 +124,7 @@ download_component (component *cmp)
 				g_print ("Deleting %s-%s directory...\n", cmp->dir, cmp->branch);
 				if ( system (remove)) {
 					g_free (remove);
-					g_error ("Unable to remove the dir %s at %s", cmp->dir, CVSROOTDIR);
+					g_warning ("Unable to remove the dir %s at %s", cmp->dir, CVSROOTDIR);
 					return FALSE;
 				}
 				g_free (remove);
@@ -140,12 +140,12 @@ download_component (component *cmp)
 		}
 		if (system (checkout)) {
 			g_free (checkout);
-			g_error ("Unable to checkout the module %s at %s", cmp->dir, CVSROOTDIR);
+			g_warning ("Unable to checkout the module %s at %s", cmp->dir, CVSROOTDIR);
 			return FALSE;
 		}
 		g_free (checkout);
 	} else {
-		g_error ("Unable to chdir into %s", CVSROOTDIR);
+		g_warning ("Unable to chdir into %s", CVSROOTDIR);
 		return FALSE;
 	}
 	return TRUE;
@@ -165,18 +165,18 @@ regenerate_component_pot (component *cmp)
 		if (!chdir (dir)) {
 			g_print ("Regenerating %s...\n", cmp->potname);
 			if (system ("intltool-update -P > /dev/null")) {
-				g_error ("Unable to regenerate the file %s at %s",
+				g_warning ("Unable to regenerate the file %s at %s",
 					 cmp->potname, dir);
 				g_free (dir);
 				return FALSE;
 			}
 		} else {
-			g_error ("Unable to chdir into %s", dir);
+			g_warning ("Unable to chdir into %s", dir);
 			g_free (dir);
 			return FALSE;
 		}
 	} else {
-		g_error ("Unable to chdir into %s", CVSROOTDIR);
+		g_warning ("Unable to chdir into %s", CVSROOTDIR);
 		return FALSE;
 	}
 	return TRUE;
@@ -208,7 +208,7 @@ copy_component_pot (component *cmp)
 			copy_pot = g_strdup_printf ("cp -a %s %s/po/%s-%s.pot > /dev/null", cmp->potname,
 						    HTMLROOTDIR, cmp->name, cmp->branch);
 			if (system (copy_pot)) {
-				g_error ("Unable to copy the file %s to %s/po",
+				g_warning ("Unable to copy the file %s to %s/po",
 					 cmp->potname, HTMLROOTDIR);
 				g_free (copy_pot);
 				g_free (dir);
@@ -269,17 +269,17 @@ copy_component_pot (component *cmp)
 						}
 						g_strfreev (tfu);
 					} else {
-						g_error ("Implement me!!");
+						g_warning ("Implement me!!");
 					}
 						break;
 			}
 		} else {
-			g_error ("Unable to chdir into %s", dir);
+			g_warning ("Unable to chdir into %s", dir);
 			g_free (dir);
 			return FALSE;
 		}
 	} else {
-		g_error ("Unable to chdir into %s", CVSROOTDIR);
+		g_warning ("Unable to chdir into %s", CVSROOTDIR);
 		return FALSE;
 	}
 	return TRUE;
@@ -378,7 +378,7 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 				}
 				g_strfreev (tfu);
 			} else {
-				g_error ("Implement me!!");
+				g_warning ("Implement me!!");
 			}
 	}
 }
@@ -415,7 +415,7 @@ update_component_po (component *cmp)
 									 HTMLROOTDIR, cmp->name, cmp->branch,
 									 filesplit[0]);
 						if (system (merge)) {
-							g_error ("Unable to update the file %s at %s",
+							g_warning ("Unable to update the file %s at %s",
 								 direntry->d_name, dir);
 							g_free (merge);
 							g_free (dir);
