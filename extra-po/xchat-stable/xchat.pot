@@ -6,13 +6,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-06-22 14:34+0200\n"
+"POT-Creation-Date: 2001-06-23 13:48+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: ENCODING\n"
 
 #: src/common/cfgfiles.c:259
 msgid "Cannot create ~/.xchat"
@@ -385,8 +385,8 @@ msgstr ""
 #: src/common/outbound.c:604
 msgid ""
 "/RECONNECT [<host>] [<port>] [<password>] [<ssl>] [<accept_invalid_cert>], "
-"Can be called just as /RECONNECT to reconnect to the current server or with /"
-"RECONNECT ALL to reconnect to all the open servers\n"
+"Can be called just as /RECONNECT to reconnect to the current server or with "
+"/RECONNECT ALL to reconnect to all the open servers\n"
 msgstr ""
 
 #: src/common/outbound.c:607
@@ -538,19 +538,19 @@ msgstr ""
 msgid "Unknown Command. Try /help\n"
 msgstr ""
 
-#: src/common/perl.c:189
+#: src/common/perl.c:188
 msgid "Registered Scripts:\n"
 msgstr ""
 
-#: src/common/perl.c:199
+#: src/common/perl.c:198
 msgid "Inbound Handlers:\n"
 msgstr ""
 
-#: src/common/perl.c:208
+#: src/common/perl.c:207
 msgid "Command Handlers:\n"
 msgstr ""
 
-#: src/common/perl.c:217
+#: src/common/perl.c:216
 msgid "Print Handlers:\n"
 msgstr ""
 
@@ -1344,8 +1344,8 @@ msgstr ""
 
 #: src/common/text.c:1054
 msgid ""
-"-%C10-%C11-%O$tDCC RECV %C11$1%O from %C11$3%O complete %C14[%C11$4%O cps%"
-"C14]%O."
+"-%C10-%C11-%O$tDCC RECV %C11$1%O from %C11$3%O complete %C14[%C11$4%O "
+"cps%C14]%O."
 msgstr ""
 
 #: src/common/text.c:1057
@@ -1362,8 +1362,8 @@ msgstr ""
 
 #: src/common/text.c:1066
 msgid ""
-"-%C10-%C11-%O$tDCC SEND %C11$1%O to %C11$2%O complete %C14[%C11$3%O cps%C14]%"
-"O."
+"-%C10-%C11-%O$tDCC SEND %C11$1%O to %C11$2%O complete %C14[%C11$3%O "
+"cps%C14]%O."
 msgstr ""
 
 #: src/common/text.c:1069
@@ -1530,8 +1530,8 @@ msgstr ""
 
 #: src/common/text.c:1156
 msgid ""
-"%C8,2 Type  To/From    Status  Size    Pos     File    %O%010%B%"
-"C9--------------------------------------------------%O"
+"%C8,2 Type  To/From    Status  Size    Pos     File    "
+"%O%010%B%C9--------------------------------------------------%O"
 msgstr ""
 
 #: src/common/text.c:1203
@@ -2592,14 +2592,6 @@ msgid ""
 "This binary was compiled on "
 msgstr ""
 
-#: src/fe-gtk/about.c:43
-#, c-format
-msgid ""
-"\n"
-"Using GTK %d.%d.%d X %d\n"
-"Running on a %s"
-msgstr ""
-
 #: src/fe-gtk/about.c:96
 msgid "About X-Chat"
 msgstr ""
@@ -2611,14 +2603,6 @@ msgid ""
 "An IRC Client for UNIX.\n"
 "\n"
 "This binary was compiled on "
-msgstr ""
-
-#: src/fe-gtk/about.c:116
-#, c-format
-msgid ""
-"\n"
-"Using GTK %d.%d.%d X %d\n"
-"Running on a %s\n"
 msgstr ""
 
 #: src/fe-gtk/ascii.c:69
@@ -2634,7 +2618,7 @@ msgstr ""
 msgid "I can't save an empty list!"
 msgstr ""
 
-#: src/fe-gtk/chanlist.c:513 src/fe-gtk/menu.c:881
+#: src/fe-gtk/chanlist.c:513 src/fe-gtk/menu.c:887
 msgid "Select an output filename"
 msgstr ""
 
@@ -2671,7 +2655,7 @@ msgstr ""
 msgid "Save the list"
 msgstr ""
 
-#: src/fe-gtk/chanlist.c:748 src/fe-gtk/menu.c:590
+#: src/fe-gtk/chanlist.c:748 src/fe-gtk/menu.c:597
 msgid "Join Channel"
 msgstr ""
 
@@ -2728,7 +2712,7 @@ msgstr ""
 msgid "Abort"
 msgstr ""
 
-#: src/fe-gtk/dccgui.c:453 src/fe-gtk/dccgui.c:623 src/fe-gtk/menu.c:1610
+#: src/fe-gtk/dccgui.c:453 src/fe-gtk/dccgui.c:623 src/fe-gtk/menu.c:1616
 msgid "Info"
 msgstr ""
 
@@ -2835,7 +2819,7 @@ msgstr ""
 msgid "Sort"
 msgstr ""
 
-#: src/fe-gtk/editlist.c:352 src/fe-gtk/menu.c:1800
+#: src/fe-gtk/editlist.c:352 src/fe-gtk/menu.c:1806
 msgid "Help"
 msgstr ""
 
@@ -2879,31 +2863,50 @@ msgid "Topic for %s is: %s"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:136
-msgid "The Run Command action runs the data in Data 1 as if it has been typed into the entry box where you pressed the key sequence. Thus it can contain text (which will be sent to the channel/person), commands or user commands. When run all \\n charactors in Data 1 are used to deliminate seperate commands so it is possible to run more than one command. If you want a \\ in the actual text run then enter \\\\"
+msgid ""
+"The Run Command action runs the data in Data 1 as if it has been typed "
+"into the entry box where you pressed the key sequence. Thus it can contain "
+"text (which will be sent to the channel/person), commands or user commands. "
+"When run all \\n characters in Data 1 are used to deliminate seperate "
+"commands so it is possible to run more than one command. If you want a \\ "
+"in the actual text run then enter \\\\"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:138
-msgid "The Change Page command switchs between pages in the notebook. Set Data 1 to the page you want to switch to. If Data 2 is set to anything then the switch will be relative to the current position"
+msgid ""
+"The Change Page command switches between pages in the notebook. Set Data 1 "
+"to the page you want to switch to. If Data 2 is set to anything then the "
+"switch will be relative to the current position"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:140
-msgid "The Insert in Buffer command will insert the contents of Data 1 into the entry where the key sequence was pressed at the current cursor position"
+msgid ""
+"The Insert in Buffer command will insert the contents of Data 1 into the "
+"entry where the key sequence was pressed at the current cursor position"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:142
-msgid "The Scroll Page command scrolls the text widget up or down one page. If Data 1 is set to anything the page scrolls up, else it scrolls down"
+msgid ""
+"The Scroll Page command scrolls the text widget up or down one page. If "
+"Data 1 is set to anything the page scrolls up, else it scrolls down"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:144
-msgid "The Set Buffer command sets the entry where the key sequence was entered to the contents of Data 1"
+msgid ""
+"The Set Buffer command sets the entry where the key sequence was entered "
+"to the contents of Data 1"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:146
-msgid "The Last Command command sets the entry to contain the last command entered - the same as pressing up in a shell"
+msgid ""
+"The Last Command command sets the entry to contain the last command "
+"entered - the same as pressing up in a shell"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:148
-msgid "The Next Command command sets the entry to contain the next command entered - the same as pressing down in a shell"
+msgid ""
+"The Next Command command sets the entry to contain the next command "
+"entered - the same as pressing down in a shell"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:150
@@ -2916,7 +2919,7 @@ msgstr ""
 #: src/fe-gtk/fkeys.c:152
 msgid ""
 "This command scrolls up and down through the list of nicks. If Data 1 is set "
-"to anything then if scrolls up else if scrolls down"
+"to anything it will scroll up, else it scrolls down"
 msgstr ""
 
 #: src/fe-gtk/fkeys.c:154
@@ -3237,57 +3240,57 @@ msgstr ""
 msgid "Host unknown"
 msgstr ""
 
-#: src/fe-gtk/menu.c:358
+#: src/fe-gtk/menu.c:365
 #, c-format
 msgid "User: %s"
 msgstr ""
 
-#: src/fe-gtk/menu.c:359 src/fe-gtk/menu.c:363 src/fe-gtk/menu.c:367
-#: src/fe-gtk/menu.c:371 src/fe-gtk/menu.c:375
+#: src/fe-gtk/menu.c:366 src/fe-gtk/menu.c:370 src/fe-gtk/menu.c:374
+#: src/fe-gtk/menu.c:378 src/fe-gtk/menu.c:382
 msgid "Unknown"
 msgstr ""
 
-#: src/fe-gtk/menu.c:362
+#: src/fe-gtk/menu.c:369
 #, c-format
 msgid "Country: %s"
 msgstr ""
 
-#: src/fe-gtk/menu.c:366
+#: src/fe-gtk/menu.c:373
 #, c-format
 msgid "Realname: %s"
 msgstr ""
 
-#: src/fe-gtk/menu.c:370
+#: src/fe-gtk/menu.c:377
 #, c-format
 msgid "Server: %s"
 msgstr ""
 
-#: src/fe-gtk/menu.c:374
+#: src/fe-gtk/menu.c:381
 #, c-format
 msgid "Last Msg: %s"
 msgstr ""
 
-#: src/fe-gtk/menu.c:470
+#: src/fe-gtk/menu.c:477
 msgid "Menu Bar"
 msgstr ""
 
-#: src/fe-gtk/menu.c:471
+#: src/fe-gtk/menu.c:478
 msgid "Topic Bar"
 msgstr ""
 
-#: src/fe-gtk/menu.c:472 src/fe-gtk/settings.c:1025
+#: src/fe-gtk/menu.c:479 src/fe-gtk/settings.c:1025
 msgid "User List"
 msgstr ""
 
-#: src/fe-gtk/menu.c:594
+#: src/fe-gtk/menu.c:601
 msgid "Part Channel"
 msgstr ""
 
-#: src/fe-gtk/menu.c:596
+#: src/fe-gtk/menu.c:603
 msgid "Cycle Channel"
 msgstr ""
 
-#: src/fe-gtk/menu.c:823
+#: src/fe-gtk/menu.c:829
 msgid ""
 "*WARNING*\n"
 "Auto accepting DCC to your home directory\n"
@@ -3295,448 +3298,370 @@ msgid ""
 "Someone could send you a .bash_profile"
 msgstr ""
 
-#: src/fe-gtk/menu.c:941
+#: src/fe-gtk/menu.c:947
 msgid "Settings saved."
 msgstr ""
 
-#: src/fe-gtk/menu.c:976
+#: src/fe-gtk/menu.c:982
 msgid "Select a Perl script to load"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1020
+#: src/fe-gtk/menu.c:1026
 msgid "Select a Plugin to load"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1064
+#: src/fe-gtk/menu.c:1070
 msgid "Select a Python script to load"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1082
-msgid ""
-"User Commands - Special codes:\n"
-"\n"
-"%c  =  current channel\n"
-"%m  =  machine info\n"
-"%n  =  your nick\n"
-"%t  =  time/date\n"
-"%v  =  x-chat version ("
-msgstr ""
-
-#: src/fe-gtk/menu.c:1087
-msgid ""
-")\n"
-"%2  =  word 2\n"
-"%3  =  word 3\n"
-"&2  =  word 2 to the end of line\n"
-"&3  =  word 3 to the end of line\n"
-"\n"
-"eg:\n"
-"/cmd john hello\n"
-"\n"
-"%2 would be \"john\"\n"
-"&2 would be \"john hello\"."
-msgstr ""
-
-#: src/fe-gtk/menu.c:1097
-msgid ""
-"Userlist Popup - Special codes:\n"
-"\n"
-"%c  =  current channel\n"
-"%h  =  selected nick's hostname\n"
-"%m  =  machine info\n"
-"%n  =  your nick\n"
-"%s  =  selected nick\n"
-"%t  =  time/date\n"
-msgstr ""
-
-#: src/fe-gtk/menu.c:1105
-msgid ""
-"Userlist Buttons - Special codes:\n"
-"\n"
-"%a  =  all selected nicks\n"
-"%c  =  current channel\n"
-"%h  =  selected nick's hostname\n"
-"%m  =  machine info\n"
-"%n  =  your nick\n"
-"%s  =  selected nick\n"
-"%t  =  time/date\n"
-msgstr ""
-
-#: src/fe-gtk/menu.c:1114
-msgid ""
-"CTCP Replies - Special codes:\n"
-"\n"
-"%d  =  data (the whole ctcp)\n"
-"%m  =  machine info\n"
-"%s  =  nick who sent the ctcp\n"
-"%t  =  time/date\n"
-"%2  =  word 2\n"
-"%3  =  word 3\n"
-"&2  =  word 2 to the end of line\n"
-"&3  =  word 3 to the end of line\n"
-"\n"
-msgstr ""
-
-#: src/fe-gtk/menu.c:1124
-#, c-format
-msgid ""
-"URL Handlers - Special codes:\n"
-"\n"
-"%s  =  the URL string\n"
-"\n"
-"Putting a ! infront of the command\n"
-"indicates it should be sent to a\n"
-"shell instead of X-Chat"
-msgstr ""
-
-#: src/fe-gtk/menu.c:1133
+#: src/fe-gtk/menu.c:1139
 msgid "X-Chat: User Defined Commands"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1140
+#: src/fe-gtk/menu.c:1146
 msgid "X-Chat: Userlist Popup menu"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1147
+#: src/fe-gtk/menu.c:1153
 msgid "X-Chat: Replace menu"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1154
+#: src/fe-gtk/menu.c:1160
 msgid "X-Chat: User menu"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1161
+#: src/fe-gtk/menu.c:1167
 msgid "X-Chat: URL Handlers"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1180
+#: src/fe-gtk/menu.c:1186
 msgid "X-Chat: Userlist buttons"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1187
+#: src/fe-gtk/menu.c:1193
 msgid "X-Chat: CTCP Replies"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1277 src/fe-gtk/menu.c:1702
+#: src/fe-gtk/menu.c:1283 src/fe-gtk/menu.c:1708
 msgid "Server List.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1284 src/fe-gtk/menu.c:1704
+#: src/fe-gtk/menu.c:1290 src/fe-gtk/menu.c:1710
 msgid "New Server Tab.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1290 src/fe-gtk/menu.c:1706
+#: src/fe-gtk/menu.c:1296 src/fe-gtk/menu.c:1712
 msgid "New Server Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1296 src/fe-gtk/menu.c:1707
+#: src/fe-gtk/menu.c:1302 src/fe-gtk/menu.c:1713
 msgid "New Channel Tab.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1302 src/fe-gtk/menu.c:1708
+#: src/fe-gtk/menu.c:1308 src/fe-gtk/menu.c:1714
 msgid "New Channel Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1310 src/fe-gtk/menu.c:1317 src/fe-gtk/menu.c:1711
+#: src/fe-gtk/menu.c:1316 src/fe-gtk/menu.c:1323 src/fe-gtk/menu.c:1717
 msgid "New Shell Tab.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1325 src/fe-gtk/menu.c:1717 src/fe-gtk/panel.c:175
+#: src/fe-gtk/menu.c:1331 src/fe-gtk/menu.c:1723 src/fe-gtk/panel.c:175
 #: src/fe-gtk/search.c:110
 msgid "Close"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1332 src/fe-gtk/menu.c:1719
+#: src/fe-gtk/menu.c:1338 src/fe-gtk/menu.c:1725
 msgid "Quit"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1342 src/fe-gtk/menu.c:1722
+#: src/fe-gtk/menu.c:1348 src/fe-gtk/menu.c:1728
 msgid "Channel List Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1347 src/fe-gtk/menu.c:1723
+#: src/fe-gtk/menu.c:1353 src/fe-gtk/menu.c:1729
 msgid "File Send Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1352 src/fe-gtk/menu.c:1724
+#: src/fe-gtk/menu.c:1358 src/fe-gtk/menu.c:1730
 msgid "File Receive Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1357 src/fe-gtk/menu.c:1725
+#: src/fe-gtk/menu.c:1363 src/fe-gtk/menu.c:1731
 msgid "DCC Chat Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1362 src/fe-gtk/menu.c:1726
+#: src/fe-gtk/menu.c:1368 src/fe-gtk/menu.c:1732
 msgid "Raw Log Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1367 src/fe-gtk/menu.c:1727
+#: src/fe-gtk/menu.c:1373 src/fe-gtk/menu.c:1733
 msgid "URL Grabber Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1372 src/fe-gtk/menu.c:1728
+#: src/fe-gtk/menu.c:1378 src/fe-gtk/menu.c:1734
 msgid "Notify List Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1377 src/fe-gtk/menu.c:1730
+#: src/fe-gtk/menu.c:1383 src/fe-gtk/menu.c:1736
 msgid "Ban List Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1382 src/fe-gtk/menu.c:1729
+#: src/fe-gtk/menu.c:1388 src/fe-gtk/menu.c:1735
 msgid "Ignore Window.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1388 src/fe-gtk/menu.c:1732
+#: src/fe-gtk/menu.c:1394 src/fe-gtk/menu.c:1738
 msgid "Flush Buffer"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1394 src/fe-gtk/menu.c:1733
+#: src/fe-gtk/menu.c:1400 src/fe-gtk/menu.c:1739
 msgid "Search Buffer.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1400 src/fe-gtk/menu.c:1734
+#: src/fe-gtk/menu.c:1406 src/fe-gtk/menu.c:1740
 msgid "Save Buffer.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1409 src/fe-gtk/menu.c:1737
+#: src/fe-gtk/menu.c:1415 src/fe-gtk/menu.c:1743
 msgid "Invisible"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1413 src/fe-gtk/menu.c:1738
+#: src/fe-gtk/menu.c:1419 src/fe-gtk/menu.c:1744
 msgid "Receive Wallops"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1417 src/fe-gtk/menu.c:1739
+#: src/fe-gtk/menu.c:1423 src/fe-gtk/menu.c:1745
 msgid "Receive Server Notices"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1422 src/fe-gtk/menu.c:1741
+#: src/fe-gtk/menu.c:1428 src/fe-gtk/menu.c:1747
 msgid "Marked Away"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1427
+#: src/fe-gtk/menu.c:1433
 msgid "Auto Rejoin on Kick"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1431 src/fe-gtk/menu.c:1744
+#: src/fe-gtk/menu.c:1437 src/fe-gtk/menu.c:1750
 msgid "Auto ReConnect to Server"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1435 src/fe-gtk/menu.c:1745
+#: src/fe-gtk/menu.c:1441 src/fe-gtk/menu.c:1751
 msgid "Never-give-up ReConnect"
 msgstr ""
 
 #. 37
-#: src/fe-gtk/menu.c:1440 src/fe-gtk/menu.c:1747
+#: src/fe-gtk/menu.c:1446 src/fe-gtk/menu.c:1753
 msgid "Auto Open Dialog Windows"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1444 src/fe-gtk/menu.c:1748
+#: src/fe-gtk/menu.c:1450 src/fe-gtk/menu.c:1754
 msgid "Auto Accept DCC Chat"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1448 src/fe-gtk/menu.c:1749
+#: src/fe-gtk/menu.c:1454 src/fe-gtk/menu.c:1755
 msgid "Auto Accept DCC Send"
 msgstr ""
 
 #. 41
-#: src/fe-gtk/menu.c:1456 src/fe-gtk/menu.c:1752
+#: src/fe-gtk/menu.c:1462 src/fe-gtk/menu.c:1758
 msgid "Setup.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1462 src/fe-gtk/menu.c:1753
+#: src/fe-gtk/menu.c:1468 src/fe-gtk/menu.c:1759
 msgid "Palette.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1468 src/fe-gtk/menu.c:1754
+#: src/fe-gtk/menu.c:1474 src/fe-gtk/menu.c:1760
 msgid "User Commands.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1474 src/fe-gtk/menu.c:1755
+#: src/fe-gtk/menu.c:1480 src/fe-gtk/menu.c:1761
 msgid "CTCP Replies.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1480 src/fe-gtk/menu.c:1756
+#: src/fe-gtk/menu.c:1486 src/fe-gtk/menu.c:1762
 msgid "Userlist Buttons.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1486 src/fe-gtk/menu.c:1757
+#: src/fe-gtk/menu.c:1492 src/fe-gtk/menu.c:1763
 msgid "Userlist Popup.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1492
+#: src/fe-gtk/menu.c:1498
 msgid "Replace Popup.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1498 src/fe-gtk/menu.c:1759
+#: src/fe-gtk/menu.c:1504 src/fe-gtk/menu.c:1765
 msgid "URL Handlers.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1504 src/fe-gtk/menu.c:1760
+#: src/fe-gtk/menu.c:1510 src/fe-gtk/menu.c:1766
 msgid "Edit Event Texts.."
 msgstr ""
 
 #. 50
-#: src/fe-gtk/menu.c:1510 src/fe-gtk/menu.c:1761
+#: src/fe-gtk/menu.c:1516 src/fe-gtk/menu.c:1767
 msgid "Edit Key Bindings.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1517 src/fe-gtk/menu.c:1763
+#: src/fe-gtk/menu.c:1523 src/fe-gtk/menu.c:1769
 msgid "Reload Settings"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1524 src/fe-gtk/menu.c:1765
+#: src/fe-gtk/menu.c:1530 src/fe-gtk/menu.c:1771
 msgid "Save Settings now"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1530 src/fe-gtk/menu.c:1766
+#: src/fe-gtk/menu.c:1536 src/fe-gtk/menu.c:1772
 msgid "Save Settings on exit"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1540 src/fe-gtk/menu.c:1801
+#: src/fe-gtk/menu.c:1546 src/fe-gtk/menu.c:1807
 msgid "X-Chat Homepage.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1546 src/fe-gtk/menu.c:1802
+#: src/fe-gtk/menu.c:1552 src/fe-gtk/menu.c:1808
 msgid "Online Docs.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1553 src/fe-gtk/menu.c:1804
+#: src/fe-gtk/menu.c:1559 src/fe-gtk/menu.c:1810
 msgid "About X-Chat.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1563
+#: src/fe-gtk/menu.c:1569
 msgid "Perl Script.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1567
+#: src/fe-gtk/menu.c:1573
 msgid "Python Script.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1571
+#: src/fe-gtk/menu.c:1577
 msgid "Plugin.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1579 src/fe-gtk/menu.c:1771 src/fe-gtk/menu.c:1775
+#: src/fe-gtk/menu.c:1585 src/fe-gtk/menu.c:1777 src/fe-gtk/menu.c:1781
 msgid "Perl List"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1583 src/fe-gtk/menu.c:1790 src/fe-gtk/menu.c:1793
+#: src/fe-gtk/menu.c:1589 src/fe-gtk/menu.c:1796 src/fe-gtk/menu.c:1799
 msgid "Python List"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1587 src/fe-gtk/menu.c:1781 src/fe-gtk/menu.c:1785
+#: src/fe-gtk/menu.c:1593 src/fe-gtk/menu.c:1787 src/fe-gtk/menu.c:1791
 msgid "Plugin List"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1595
+#: src/fe-gtk/menu.c:1601
 msgid "All Perl Scripts"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1599
+#: src/fe-gtk/menu.c:1605
 msgid "All Python Scripts"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1603
+#: src/fe-gtk/menu.c:1609
 msgid "All Plugins"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1609
+#: src/fe-gtk/menu.c:1615
 msgid "Load"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1611
+#: src/fe-gtk/menu.c:1617
 msgid "Kill"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1618
+#: src/fe-gtk/menu.c:1624
 msgid "Edit User Menu.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1627
+#: src/fe-gtk/menu.c:1633
 msgid "_X-Chat"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1628
+#: src/fe-gtk/menu.c:1634
 msgid "_Windows"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1629
+#: src/fe-gtk/menu.c:1635
 msgid "User _Modes"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1630
+#: src/fe-gtk/menu.c:1636
 msgid "_Settings"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1631
+#: src/fe-gtk/menu.c:1637
 msgid "S_cripts & Plugins"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1632
+#: src/fe-gtk/menu.c:1638
 msgid "Use_r Menu"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1633
+#: src/fe-gtk/menu.c:1639
 msgid "_Help"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1701
+#: src/fe-gtk/menu.c:1707
 msgid "X-Chat"
 msgstr ""
 
 #. 12
-#: src/fe-gtk/menu.c:1721
+#: src/fe-gtk/menu.c:1727
 msgid "Windows"
 msgstr ""
 
 #. 26
-#: src/fe-gtk/menu.c:1736
+#: src/fe-gtk/menu.c:1742
 msgid "User Modes"
 msgstr ""
 
 #. 33
-#: src/fe-gtk/menu.c:1743
+#: src/fe-gtk/menu.c:1749
 msgid "Auto ReJoin on Kick"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1751
+#: src/fe-gtk/menu.c:1757
 msgid "Settings"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1758
+#: src/fe-gtk/menu.c:1764
 msgid "Replace.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1767
+#: src/fe-gtk/menu.c:1773
 msgid "Scripts & Plugins"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1769 src/fe-gtk/menu.c:1773
+#: src/fe-gtk/menu.c:1775 src/fe-gtk/menu.c:1779
 msgid "Load Perl Script.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1770 src/fe-gtk/menu.c:1774
+#: src/fe-gtk/menu.c:1776 src/fe-gtk/menu.c:1780
 msgid "Unload All Scripts"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1779 src/fe-gtk/menu.c:1783
+#: src/fe-gtk/menu.c:1785 src/fe-gtk/menu.c:1789
 msgid "Load Plugin (*.so).."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1780 src/fe-gtk/menu.c:1784
+#: src/fe-gtk/menu.c:1786 src/fe-gtk/menu.c:1790
 msgid "Unload All Plugins"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1789 src/fe-gtk/menu.c:1792
+#: src/fe-gtk/menu.c:1795 src/fe-gtk/menu.c:1798
 msgid "Load Python Script.."
 msgstr ""
 
-#: src/fe-gtk/menu.c:1796
+#: src/fe-gtk/menu.c:1802
 msgid "User Menu"
 msgstr ""
 
-#: src/fe-gtk/menu.c:1797
+#: src/fe-gtk/menu.c:1803
 msgid "Edit User Menu"
 msgstr ""
 
