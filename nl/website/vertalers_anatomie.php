@@ -34,15 +34,15 @@ Voorbeeld: <b>Gnome-vfs</b>
 <pre>
 # Gnome-vfs translation.
 # Copyright (C) 2002 Free Software Foundation, Inc.
-# Dennis Smit &gt;synap&#064;area101.penguin.nl&lt;, 2000.
-# Mendel Mobach &gt;mendel&#064;mobach.nl&lt;, 2000.
+# Dennis Smit &lt;e-mail&gt;, 2000.
+# Mendel Mobach &lt;e-mail&gt;, 2000.
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-vfs\n"
 "POT-Creation-Date: 2002-06-14 13:07+0200\n"
 "PO-Revision-Date: 2002-05-28 20:49+02:00\n"
-"Last-Translator: Mendel Mobach &gt;mendel&#064;mobach.nl&lt;\n"
-"Language-Team: Dutch &gt;nl&#064;li.org&lt;\n"
+"Last-Translator: Mendel Mobach &lt;e-mail&gt;\n"
+"Language-Team: Dutch &lt;e-mail&gt;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
