@@ -15,11 +15,19 @@
 #@langs = ( "no" );
 
 
-@langs = qw ( ar as bn fa gu he hi ja ko ml mr or pa si ta te ur
-              zh_TW zh_CN );
+#@langs = qw ( ar as bn fa gu he hi ja ko kn ks ml mr or pa ps sd si
+#              ta te th ur zh_TW zh_CN );
+
+@langs = qw ( af ar as az bg bn br bs ca cs cy da de el en_GB eo es et eu fa fi fr ga 
+              gl gu he hi hr hu hy id is it ja ko kl kn ko ks lt lv mi ml mk mr nl 
+              no nn or pa pl ps pt pt_BR ro ru sd si sk sl sp sr sv ta te th ur wa 
+              vi zh_CN zh_TW );
+
+@lang = qw ( fa );
 
 $cvsroot = "/home/kmaraas/cvs/gnome/1";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/pango";
+$posdir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/pos";
 
 #############################
 # "Subroutines declaration" # 
@@ -96,6 +104,12 @@ foreach $lang (@langs){
 	    if (-f "$cvsroot/$mod/$lang.po" ) {
 	    getmerge($lang,$mod);
 	    @result = getmsgfmt("$lang.new",$mod);
+	    $_ = $mod;
+	    s/\//-/;
+	    s/-po//;
+	    $newname = $_;
+	    unlink("$posdir/$newname-$lang.po");
+	    link("$cvsroot/$mod/$lang.new.po", "$posdir/$newname-$lang.po");
 	    unlink("$cvsroot/$mod/$lang.new.po");
 	    if ($result[1]){
 	       $total_msg += $result[1];
@@ -236,6 +250,8 @@ print "generatepot: $mod\n";
 	  " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
 	  " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
       }
+
+    link("$cvsroot/$mod/$file.pot", "$posdir/$file.pot");
 close (POTOUT);
 }
 

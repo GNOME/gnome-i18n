@@ -173,6 +173,12 @@ foreach $lang (@langs){
 	    if (-f "$cvsroot/$mod/$lang.po" ) {
 	    getmerge($lang,$mod);
 	    @result = getmsgfmt("$lang.new",$mod);
+            $_ = $mod;
+            s/\//-/;
+            s/-po//;
+            $newname = $_;
+            unlink("$posdir/$newname-$lang.po");
+            link("$cvsroot/$mod/$lang.new.po", "$posdir/$newname-$lang.po");
 	    unlink("$cvsroot/$mod/$lang.new.po");
 	    if ($result[1]){
 	       $total_msg += $result[1];
@@ -313,6 +319,7 @@ print "generatepot: $mod\n";
 	  " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
 	  " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
       }
+    link("$cvsroot/$mod/$file.pot", "$posdir/$file.pot");
 close (POTOUT);
 }
 
