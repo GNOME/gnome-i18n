@@ -42,7 +42,7 @@ GType         status_view_get_type (void);
 StatusView *status_view_new (const gchar *name);
 
 gchar        *status_view_get_name (const StatusView *view);
-gboolean      status_view_add_module (StatusView *view, StatusVersion *module);
+gboolean      status_view_add_module (StatusView *view, gchar *group, StatusVersion *module);
 
 G_END_DECLS
 

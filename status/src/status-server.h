@@ -38,7 +38,7 @@ typedef struct _StatusServerClass StatusServerClass;
 
 GType          status_server_get_type (void);
 
-StatusServer *status_server_new_cvs (StatusServer *server, const gchar *branch, const gchar *module);
+StatusServer *status_server_new (const gchar *hostname, const gchar *username, const gchar *password);
 
 gboolean status_server_download (StatusServer *server, gchar *id, gchar *remote_path, gchar *local_path);
 

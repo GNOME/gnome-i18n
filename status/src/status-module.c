@@ -39,6 +39,16 @@ static void status_module_finalize   (GObject * object);
 
 static GObjectClass *parent_class = NULL;
 
+static void
+module_free_versions (gpointer data, gpointer user_data)
+{
+	StatusVersion *version;
+
+	version = STATUS_VERSION(data);
+
+	g_object_unref (version);
+}
+
 /*
  * StatusModule object implementation
  */
@@ -72,7 +82,7 @@ status_module_finalize (GObject *object)
 		module->name = NULL;
 	}
 	if (module->versions != NULL) {
-		g_list_for_each (module->versions, module_free_versions, NULL);
+		g_list_foreach (module->versions, module_free_versions, NULL);
 		g_list_free (module->versions);
 		module->versions = NULL;
 	}
@@ -115,7 +125,7 @@ status_module_new (const gchar *name)
 {
 	StatusModule *module;
 
-	modulec = status_module (g_object_new (STATUS_TYPE_MODULE, NULL));
+	module = STATUS_MODULE (g_object_new (STATUS_TYPE_MODULE, NULL));
 
 	module->name = g_string_new (name);
 
@@ -129,7 +139,7 @@ status_module_new (const gchar *name)
  * Returns the module name. The returned string should be freed when no longer needed.
  */
 gchar *
-status_module_get_name (StatusModule *module)
+status_module_get_name (const StatusModule *module)
 {
 	g_return_val_if_fail (STATUS_IS_MODULE (module), NULL);
 	

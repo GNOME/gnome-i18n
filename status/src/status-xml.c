@@ -20,10 +20,13 @@
  *
  */
 
-#include <parser.h>
-#include <parserInternals.h>
-
+#include <libxml/parser.h>
+#include <glib-object.h>
 #include "status.h"
+#include "status-server.h"
+#include "status-module.h"
+#include "status-version.h"
+#include "status-view.h"
 
 status_data *
 status_xml_get_main_data (const gchar *views_file)
@@ -86,7 +89,7 @@ status_xml_get_main_data (const gchar *views_file)
 	ret->views = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 
 	/* We load first the servers */
-	for (cur = root->xmlChildrenNode; cur != NULL; cur = cur->next) {
+	for (cur = root->children; cur != NULL; cur = cur->next) {
 		gchar *id, *hostname, *username, *password;
 		StatusServer *server;
 
@@ -115,10 +118,10 @@ status_xml_get_main_data (const gchar *views_file)
 
 	}
 
-	for (cur = root->xmlChildrenNode; cur != NULL; cur = cur->next) {
+	for (cur = root->children; cur != NULL; cur = cur->next) {
 		gchar *module_name;
 		StatusModule *module;
-		xmlNodePtr *cur_version;
+		xmlNodePtr cur_version;
 
 		module_name = NULL;
 		
@@ -135,10 +138,10 @@ status_xml_get_main_data (const gchar *views_file)
 			continue;
 		}
 
-		for (cur_version = cur->xmlChildrenNode; cur_version != NULL; cur_version = cur_version->next) {
+		for (cur_version = cur->children; cur_version != NULL; cur_version = cur_version->next) {
 			gchar *name, *id, *path, *sserver;
 			StatusVersion *version;
-			StatusServer *server
+			StatusServer *server;
 
 			name = id = path = sserver = NULL;
 		
@@ -186,10 +189,10 @@ status_xml_get_main_data (const gchar *views_file)
 		xmlFree (module_name);
 	}
 
-	for (cur = root->xmlChildrenNode; cur != NULL; cur = cur->next) {
+	for (cur = root->children; cur != NULL; cur = cur->next) {
 		gchar *view_name;
 		StatusView *view;
-		xmlNodePtr *cur_group;
+		xmlNodePtr cur_group;
 
 		view_name = NULL;
 		
@@ -206,9 +209,9 @@ status_xml_get_main_data (const gchar *views_file)
 			continue;
 		}
 
-		for (cur_group = cur->xmlChildrenNode; cur_group != NULL; cur_group = cur_group->next) {
+		for (cur_group = cur->children; cur_group != NULL; cur_group = cur_group->next) {
 			gchar *group_name;
-			xmlNodePtr *cur_ver;
+			xmlNodePtr cur_ver;
 
 			group_name = NULL;
 		
@@ -219,7 +222,7 @@ status_xml_get_main_data (const gchar *views_file)
 
 			group_name = xmlGetProp (cur_group, "name");
 
-			for (cur_ver = cur_group->xmlChildrenNode; cur_ver != NULL; cur_ver = cur_ver->next) {
+			for (cur_ver = cur_group->children; cur_ver != NULL; cur_ver = cur_ver->next) {
 				gchar *name;
 				StatusVersion *version;
 

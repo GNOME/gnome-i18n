@@ -26,10 +26,12 @@
 #include <glib.h>
 
 typedef struct {
-	GHash *servers;
-	GHash *modules;
-	GHash *versions;
-	GHash *views;
+	GHashTable *servers;
+	GHashTable *modules;
+	GHashTable *versions;
+	GHashTable *views;
 } status_data;
+
+status_data *status_xml_get_main_data (const gchar *views_file);
 
 #endif

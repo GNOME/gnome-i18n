@@ -19,4 +19,4 @@ translation_status_SOURCES =         \
 	status-xml.c		\
 	main.c
 
-translation_status_LDADD = $(TRANSLATION_STATUS_LIBS) $(INTLLIBS)
+translation_status_LDADD = $(TRANSLATION_STATUS_LIBS) $(INTLLIBS) $(POPT_LIBS)

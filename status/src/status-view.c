@@ -140,7 +140,7 @@ status_view_new (const gchar *name)
 {
 	StatusView *view;
 
-	viewc = status_view (g_object_new (STATUS_TYPE_VIEW, NULL));
+	view = STATUS_VIEW (g_object_new (STATUS_TYPE_VIEW, NULL));
 
 	view->name = g_string_new (name);
 	view->modules = g_hash_table_new (g_str_hash, g_str_equal);
@@ -155,7 +155,7 @@ status_view_new (const gchar *name)
  * Returns the view name. The returned string should be freed when no longer needed.
  */
 gchar *
-status_view_get_name (StatusView *view)
+status_view_get_name (const StatusView *view)
 {
 	g_return_val_if_fail (STATUS_IS_VIEW (view), NULL);
 	
@@ -170,7 +170,7 @@ status_view_get_name (StatusView *view)
  * status_view_add_module
  */
 gboolean
-status_view_add_module (StatusView *view, const gchar *group, StatusVersion *module)
+status_view_add_module (StatusView *view, gchar *group, StatusVersion *module)
 {
 	GList *modules_group, *new;
 	
@@ -178,7 +178,7 @@ status_view_add_module (StatusView *view, const gchar *group, StatusVersion *mod
 	g_return_val_if_fail (group != NULL, FALSE);
 	g_return_val_if_fail (STATUS_IS_VERSION (module), FALSE);
 
-	modules_group = g_hash_table_lookup (view->modules, group);
+	modules_group = (GList *) g_hash_table_lookup (view->modules, group);
 
 	if (modules_group == NULL) {
 		modules_group = g_list_append (modules_group, g_object_ref (module));
