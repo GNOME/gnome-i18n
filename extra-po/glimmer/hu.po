@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Glimmer 1.0\n"
-"POT-Creation-Date: 2000-09-25 18:28+0300\n"
+"POT-Creation-Date: 2001-02-06 12:58+0100\n"
 "PO-Revision-Date: 2001-02-03 19:32+0100\n"
 "Last-Translator: Róbert Ványi <robi@mora.u-szeged.hu>\n"
 "Language-Team: Hungarian GNOME Team <hu@gnome.hu>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=iso8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/dialogs.c:18 src/dialogs.c:266 src/dialogs.c:341
+#: src/dialogs.c:18 src/dialogs.c:308 src/dialogs.c:383
 msgid "Read Error!"
 msgstr "Olvasási hiba!"
 
@@ -37,7 +37,7 @@ msgstr ""
 " már létezik.\n"
 "Felül akarod írni?"
 
-#: src/dialogs.c:106 src/dialogs.c:152 src/dialogs.c:199 src/dialogs.c:303
+#: src/dialogs.c:106 src/dialogs.c:152 src/dialogs.c:199 src/dialogs.c:345
 msgid "Save Error!"
 msgstr "Mentési hiba!"
 
@@ -49,31 +49,44 @@ msgstr ""
 " megváltozott.\n"
 "El akarod most menteni?"
 
-#: src/dialogs.c:236 src/file-io.c:213 src/file-io.c:349
+#: src/dialogs.c:236 src/file-io.c:217 src/file-io.c:362
 msgid "Save file with new name..."
 msgstr "Fájl mentése új néven..."
 
+#: src/dialogs.c:266
+msgid "File Modified!"
+msgstr ""
+
 #: src/dialogs.c:281
+#, fuzzy
+msgid ""
+" has been modified on disk since the last save.\n"
+"Would you like to reload it now?"
+msgstr ""
+" megváltozott.\n"
+"El akarod most menteni?"
+
+#: src/dialogs.c:323
 msgid " could not be read."
 msgstr " nem olvasható."
 
-#: src/dialogs.c:318
+#: src/dialogs.c:360
 msgid " could not be saved!"
 msgstr " nem menthetö el!"
 
-#: src/dialogs.c:356
+#: src/dialogs.c:398
 msgid " opened as read-only!"
 msgstr " csak olvashatóként lett megnyitva!"
 
-#: src/dialogs.c:379
+#: src/dialogs.c:421
 msgid "Create Error!"
 msgstr "Létrehozási hiba!"
 
-#: src/dialogs.c:394
+#: src/dialogs.c:436
 msgid " could not be created!"
 msgstr " nem lehet létrehozni!"
 
-#: src/dialogs.c:415
+#: src/dialogs.c:457
 msgid "Information"
 msgstr "Információ"
 
@@ -113,11 +126,11 @@ msgstr "Egy adott fájl megnyitása."
 msgid "Jump to a line in the file specified by -f."
 msgstr "Sorra ugrás a -f kapcsolóval megadott fájlban."
 
-#: src/main.c:550
+#: src/main.c:556
 msgid "Creating ~/"
 msgstr "Létrehozás ~/"
 
-#: src/main.c:554 src/main.c:558
+#: src/main.c:560 src/main.c:564
 msgid "Creating ~/."
 msgstr "Létrehozás ~/."
 
@@ -850,23 +863,23 @@ msgstr "Alapértelmezések felülbírálása?"
 msgid "Directory:"
 msgstr "Könyvtár:"
 
-#: src/properties.c:93 src/settings.c:608
+#: src/properties.c:93 src/settings.c:630
 msgid "Highlighting"
 msgstr "Színezés"
 
-#: src/properties.c:103 src/settings.c:618
+#: src/properties.c:103 src/settings.c:640
 msgid "Enable bracket highlighting ?"
 msgstr "Lehet a zárójelek színezni?"
 
-#: src/properties.c:104 src/settings.c:620
+#: src/properties.c:104 src/settings.c:642
 msgid "Enable syntax highlighting ?"
 msgstr "Lehet szintatikailag színezni?"
 
-#: src/properties.c:106 src/settings.c:622
+#: src/properties.c:106 src/settings.c:644
 msgid "Indentation"
 msgstr "Behúzás"
 
-#: src/properties.c:118 src/settings.c:633
+#: src/properties.c:118 src/settings.c:655
 msgid "Auto Indent ?"
 msgstr "Automatikus behúzás?"
 
@@ -878,7 +891,7 @@ msgstr "Szóközök tab helyett?"
 msgid "Tab stop:"
 msgstr ""
 
-#: src/properties.c:137 src/settings.c:299
+#: src/properties.c:137 src/settings.c:312
 msgid "Build Information"
 msgstr "Build információ"
 
@@ -894,232 +907,235 @@ msgstr "Hibakeresõ: "
 msgid "Execution: "
 msgstr "Végrehajtás: "
 
-#: src/properties.c:193 src/settings.c:757
+#: src/color-settings.c:159 src/properties.c:193 src/settings.c:780
 msgid "Defaults"
 msgstr "Alapértelmezések"
 
-#: src/properties.c:199 src/settings.c:763
+#: src/color-settings.c:165 src/properties.c:199 src/settings.c:786
 msgid "Undo"
 msgstr "Mégsem"
 
-#: src/settings.c:207
+#: src/settings.c:215
 msgid "Edit "
 msgstr "Szerkeszt  "
 
-#: src/settings.c:223 src/settings.c:226
+#: src/settings.c:233 src/settings.c:237
 msgid "Directory Settings"
 msgstr "Könyvtárak beállításai"
 
-#: src/settings.c:236
+#: src/settings.c:247
 msgid "Default Directory:"
 msgstr "Alapértelmezett könyvtár:"
 
-#: src/settings.c:246
+#: src/settings.c:257
 msgid "Projects Directory:"
 msgstr "Projektkönyvtár:"
 
-#: src/settings.c:256 src/settings.c:259
+#: src/settings.c:267 src/settings.c:271
 msgid "History Settings"
 msgstr "Elõzmények beállításai"
 
-#: src/settings.c:266
+#: src/settings.c:278
 msgid "Save toolbar settings on exit?"
 msgstr "Eszköztár beállításainak mentése kilépéskor?"
 
-#: src/settings.c:267
+#: src/settings.c:279
 msgid "Save session on exit?"
 msgstr "Session mentése kilépéskor?"
 
-#: src/settings.c:268
+#: src/settings.c:280
 msgid "Open last session on startup?"
 msgstr "Utolsó session megnyitása induláskor?"
 
-#: src/settings.c:269
+#: src/settings.c:281
 msgid "Auto-save session when files change?"
 msgstr "Session automatikus mentése ha fájlok változnak?"
 
-#: src/settings.c:274
+#: src/settings.c:286
 msgid "Items to show in history lists:"
 msgstr "Ennyi elem legyen az elõzmények listában:"
 
-#: src/settings.c:285
+#: src/settings.c:297
 msgid "Maximum Undo saves:"
 msgstr ""
 
-#: src/settings.c:297
+#: src/settings.c:310
 msgid "Build Settings"
 msgstr "Build beállítások"
 
-#: src/settings.c:311
+#: src/settings.c:324
 msgid "Terminal Command:"
 msgstr "Terminál parancs:"
 
-#: src/settings.c:321
+#: src/settings.c:334
 msgid "Make Command:"
 msgstr "Make parancs:"
 
-#: src/settings.c:333
+#: src/settings.c:347
 msgid "User Settings"
 msgstr "Felhasználói beállítások"
 
-#: src/settings.c:335
+#: src/settings.c:349
 msgid "User Information"
 msgstr "Felhasználói információ"
 
-#: src/settings.c:347
+#: src/settings.c:361
 msgid "Name of user:"
 msgstr "Felhasználó neve:"
 
-#: src/settings.c:357
+#: src/settings.c:371
 msgid "Email of user:"
 msgstr "Felhasználó email címe:"
 
-#: src/settings.c:370
+#: src/settings.c:385
 msgid "MDI Settings"
 msgstr "MDI beállítások"
 
-#: src/settings.c:372
+#: src/settings.c:387
 msgid "Tab Position"
 msgstr "Tab pozíció"
 
-#. start of colors and fonts stuff
-#: src/settings.c:402
+#: src/settings.c:418
 msgid "Style Settings"
 msgstr "Stílus beállítások"
 
-#: src/settings.c:407
+#: src/settings.c:423
 msgid "Font Settings"
 msgstr "Font beállítások"
 
-#: src/settings.c:410
+#: src/settings.c:427
 msgid "Fonts"
 msgstr "Betûtípusok"
 
-#: src/settings.c:421
+#: src/settings.c:438
 msgid "Default Font:"
 msgstr "Alapértelmezett font:"
 
-#: src/settings.c:438
+#: src/settings.c:455
 msgid "Italic Font:"
 msgstr "Dõlt font:"
 
-#: src/settings.c:455
+#: src/settings.c:472
 msgid "Bold Font:"
 msgstr "Fékövér font:"
 
-#: src/settings.c:472
+#: src/settings.c:489
 msgid "Bold-Italic Font:"
 msgstr "Félkövér dõlt font:"
 
-#: src/settings.c:489 src/settings.c:492
+#: src/settings.c:506 src/settings.c:510
 msgid "Theme Settings"
 msgstr "Téma beállításai"
 
-#: src/settings.c:497
+#: src/settings.c:516
 msgid "Gtk Theme over-rides local settings ?"
 msgstr ""
 
-#: src/settings.c:506
+#: src/settings.c:525
 msgid "Color Settings"
 msgstr "Színbeállítások"
 
-#: src/settings.c:509
+#: src/settings.c:529
 msgid "Standard Colors"
 msgstr "Általános színek"
 
-#: src/settings.c:524
+#: src/settings.c:544
 msgid "Normal Text Color:"
 msgstr "Normál szövegszín:"
 
-#: src/settings.c:537
+#: src/settings.c:557
 msgid "Normal Background Color:"
 msgstr "Normál háttérszín:"
 
-#: src/settings.c:550
+#: src/settings.c:570
 msgid "Selection Background Color:"
 msgstr "Kijelölés háttérszíne:"
 
-#: src/settings.c:563
+#: src/settings.c:583
 msgid "Bracket Background Color:"
 msgstr "Zárójel háttérszíne"
 
-#: src/settings.c:588
+#: src/settings.c:608
 msgid "General/UI"
 msgstr "Általános/UI"
 
-#: src/settings.c:591
+#: src/settings.c:612
 msgid "File Settings"
 msgstr ""
 
-#: src/settings.c:600
+#: src/settings.c:621
+msgid "Full filenames in main window title ?"
+msgstr ""
+
+#: src/settings.c:622
 msgid "Full filenames in notebook tabs ?"
 msgstr ""
 
-#: src/settings.c:601
+#: src/settings.c:623
 msgid "Close all on open session ?"
 msgstr ""
 
-#: src/settings.c:602
+#: src/settings.c:624
 msgid "Persistant 'Untitled' document ?"
 msgstr ""
 
-#: src/settings.c:603
+#: src/settings.c:625
 msgid "Show line numbers ?"
 msgstr "Mutassak sorszámokat?"
 
-#: src/settings.c:604
+#: src/settings.c:626
 msgid "Show line pixmaps ?"
 msgstr ""
 
-#: src/settings.c:605
+#: src/settings.c:627
 msgid "Show blinking cursor ?"
 msgstr "Villogó kurzor legyen?"
 
-#: src/settings.c:606
+#: src/settings.c:628
 msgid "Selection shows full width ?"
 msgstr ""
 
-#: src/settings.c:619
+#: src/settings.c:641
 msgid "Auto line select ?"
 msgstr ""
 
-#: src/settings.c:638
+#: src/settings.c:660
 msgid "Use tab-stop spacing ?"
 msgstr ""
 
-#: src/settings.c:639
+#: src/settings.c:661
 msgid "Insert spaces instead of tabs ?"
 msgstr "Legyenek szóközök tab helyett?"
 
-#: src/settings.c:644
+#: src/settings.c:666
 msgid "Tab-stop width:"
 msgstr "Tab-lépés hossza:"
 
-#: src/settings.c:655 src/settings.c:657
+#: src/settings.c:678 src/settings.c:680
 msgid "Window Geometry"
 msgstr "Ablak elhelyezkedése"
 
-#: src/settings.c:683
+#: src/settings.c:706
 msgid "X:"
 msgstr "X:"
 
-#: src/settings.c:690
+#: src/settings.c:713
 msgid "Y:"
 msgstr "Y:"
 
-#: src/settings.c:701
+#: src/settings.c:724
 msgid "Width:"
 msgstr "Szélesség:"
 
-#: src/settings.c:708
+#: src/settings.c:731
 msgid "Height:"
 msgstr "Magasság:"
 
-#: src/settings.c:723
+#: src/settings.c:746
 msgid "Apply Window Settings"
 msgstr "Ablakbeállítások alkalmazása"
 
-#: src/settings.c:727
+#: src/settings.c:750
 msgid "Get Window Settings"
 msgstr "Ablakbeállítások lekérdezése"
 
@@ -1146,3 +1162,42 @@ msgstr "Sessionfájl mentése..."
 #: src/session.c:135
 msgid "Session save failed."
 msgstr "Session mentés nem sikerült."
+
+#: src/color-settings.c:76
+#, fuzzy
+msgid "Highlighting Colors & Fonts"
+msgstr "Színezés"
+
+#: src/commandbar.c:26
+#, fuzzy
+msgid "Execute string"
+msgstr "Végrehajtás: "
+
+#: src/commandbar.c:33
+msgid "Execute a command"
+msgstr ""
+
+#: src/insert.c:184
+#, fuzzy
+msgid "Insert File..."
+msgstr "_Fájl beszúrása..."
+
+#: src/linebar.c:25
+#, fuzzy
+msgid "Line Number"
+msgstr "Sor eszköztár"
+
+#: src/linebar.c:32
+#, fuzzy
+msgid "Jump to a line."
+msgstr "Ugrás egy megadott sorra"
+
+#: src/mdi-routines.c:116
+#, c-format
+msgid "Line: %d / %d Col: %d Byte: %d / %d Value: %d"
+msgstr ""
+
+#: src/widgets/gdsmanpage.c:265
+#, fuzzy
+msgid "Error!"
+msgstr "Olvasási hiba!"
