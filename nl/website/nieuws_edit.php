@@ -29,7 +29,7 @@ if(isset($_GET["item"]) && $_GET["item"] != "0") {
 	$res = mysql_query($sql);
 	$newsitem = mysql_fetch_assoc($res);
 	}; ?>
-<form class="important" name="form" method="post" action="submit.php">
+<form class="important" name="form" method="post" action="nieuws_submit.php">
 	<input type="hidden" name="object" value="news">
 <?	echo "<input type=\"hidden\" name=\"item\" value=\"".$_GET["item"]."\">"; ?>
 	<h2>Nieuwsbericht:</h2>
@@ -43,7 +43,7 @@ if(isset($_GET["item"]) && $_GET["item"] != "0") {
 	<p style="clear: right;">&nbsp;</p>
 	<div class="row">
 		<span class="label">Samenvatting:</span>
-		<span class="formw"><textarea name="summary" cols="60" rows="16" id="summary"><?
+		<span class="formw"><textarea name="summary" cols="60" rows="10" id="summary"><?
 	if (isset($newsitem['summary']))
 		echo $newsitem['summary'];
 ?></textarea>&nbsp;</span>

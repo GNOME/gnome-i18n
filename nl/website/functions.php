@@ -91,6 +91,7 @@ function gnome_menu() { ?>
 	$res = mysql_query($sql);
 	$newsitem = mysql_fetch_assoc($res);
 	echo "(", $newsitem["posted"], ")</li>\n"; ?>
+		<li><a href="agenda.php">Agenda</a></li>
 		<li><a href="gnome-nl.php">De community</a></li>
 		<li><a href="todo.php">TO DO</a></li>
 		</ul>

@@ -22,7 +22,7 @@ gnome_menu();
 <?
 $events_per_page = 10;
 if (is_logged_in()) {
-	echo "<a href=\"nieuws_edit.php?item=0";
+	echo "<a href=\"agenda_edit.php?item=0";
 	echo "\"><img src=\"images/button_edit.png\" alt=\"nieuw\">Evenement toevoegen</a> ";
 	}
 
@@ -60,19 +60,31 @@ echo $event["title"];
 </th></tr>
 <tr><td class="news">
 <?
-if ( ! empty( $_GET["item"] ) )	
-	echo "<b>";
-echo $event["summary"];
-if ( ! empty( $_GET["item"] ) )	
-	echo "</b>"; ?>
+if ( ! empty( $_GET["item"] ) )	{
+	echo "<b>Samenvatting</b>";
+	echo "<p>";
+	echo $event["summary"];
+	echo "</p>";
+	echo "<b>Locatie</b>";
+	echo "<p>";
+	echo $event["location"];
+	echo "</p>";
+	echo "<b>Wie gaan er?</b>";
+	echo "<p>";
+	echo $event["personen"];
+	echo "</p>";
+	echo "<b>Meer info:</b>";
+	echo "<p>";
+	echo $event["content"];
+	echo "</p>";
+}
+else
+	echo $event["summary"];
+?>
 </td></tr>
 <?
-	if ( ! empty( $newsitem["content"] ) ) {
-		if ( ! empty( $_GET["item"] ) )	
-			echo '<tr><td class="news">'.$event["content"].'</a></td></tr>';
-		else
-			echo '<tr><td class="news"><a href="'.$PHP_SELF.'?item='.$event["id"].'">Lees verder...</a></td></tr>';
-	};
+if ( empty( $_GET["item"] ) )	
+	echo '<tr><td class="news"><a href="'.$PHP_SELF.'?item='.$event["id"].'">Lees verder...</a></td></tr>';
 ?>
 </table>
 <?

@@ -9,7 +9,7 @@ if($_POST["item"] == "0") {
 	.$_POST["summary"]."', '".$_POST["content"]."', NOW( ) )";
 	$res = mysql_query($sql);
 } else {
-$sql = "select * from news where id = '".$_POST["item"]."'";
+$sql = "select * from $_POST['object'] where id = '".$_POST["item"]."'";
 // run the query and set a result identifier to the recordset
 $res = mysql_query($sql);
 $newsitem = mysql_fetch_assoc($res);
