@@ -26,7 +26,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&uuml;bersetzt",
-"fi", "K.Aé‰é‰nnetty",
+"fi", "K&auml;&auml;nnetty",
 "fr", "Traduites",
 "ja", "$(BK]Lu:Q(B",
 "nl", "Vertaald",
@@ -40,7 +40,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "ungenau",
-"fi", "Sumea",
+"fi", "Ep&auml;selvi&auml;",
 "fr", "Floues",
 "ja", "$(B%U%!%8!<(B",
 "nl", "Wazig",
@@ -54,7 +54,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "un&uuml;bersetzt",
-"fi", "Ké‰é‰nté‰mé‰tté‰",
+"fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "fr", "Non traduites",
 "ja", "$(BL$Lu(B",
 "nl", "Onvertaald",
@@ -68,7 +68,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
-"fi", "Rivié‰",
+"fi", "rivi&auml;",
 "fr", "chaÓnes",
 "ja", "$(B%3(B",
 "nl", "Meldingen",
@@ -90,7 +90,7 @@ $now = time;
 "es", "Detailed report for Spanish (es) GNOME translations",
 "et", "Detailed report for Estonian (et) GNOME translations",
 "eu", "Detailed report for Basque (eu) GNOME translations",
-"fi", "Yksityiskohtainen raportti Suomen (fi) GNOME ké‰é‰nnéˆksisté‰",
+"fi", "Yksityiskohtainen raportti Suomen (fi) GNOME k&auml;&auml;nn&ouml;ksist&auml;",
 "fr", "Rapport dÈtaillÈ pour les traductions franÁaises (fr) GNOME",
 "ga", "Detailed report for Irish (ga) GNOME translations",
 "gl", "Detailed report for Galician (gl) GNOME translations",

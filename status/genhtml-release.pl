@@ -25,7 +25,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&uuml;bersetzt",
-"fi", "K‰‰nnetty",
+"fi", "K&auml;&auml;nnetty",
 "nl", "Vertaald",
 "no", "Oversatt",
 "ro", "traduse",
@@ -38,7 +38,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "ungenau",
-"fi", "Sumea",
+"fi", "Ep&auml;selvi&auml;",
 "nl", "Wazig",
 "no", "Usikker",
 "ro", "neclare",
@@ -51,7 +51,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "un&uuml;bersetzt",
-"fi", "K‰‰nt‰m‰tt‰",
+"fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "nl", "Onvertaald",
 "no", "Ikke oversatt",
 "ro", "netraduse",
@@ -64,7 +64,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
-"fi", "Rivi‰",
+"fi", "rivi&auml;",
 "nl", "Meldingen",
 "no", "strenger",
 "ro", "stringuri",
@@ -85,7 +85,7 @@ $now = time;
 "es", "Detailed report for Spanish (es) GNOME translations",
 "et", "Detailed report for Estonian (et) GNOME translations",
 "eu", "Detailed report for Basque (eu) GNOME translations",
-"fi", "Yksityiskohtainen raportti Suomen (fi) GNOME k‰‰nnˆksist‰",
+"fi", "Yksityiskohtainen raportti Suomen (fi) GNOME k&auml;&auml;nn&ouml;ksist&auml;",
 "fr", "Detailed report for French (fr) GNOME translations",
 "ga", "Detailed report for Irish (ga) GNOME translations",
 "gl", "Detailed report for Galician (gl) GNOME translations",
