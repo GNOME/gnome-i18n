@@ -131,10 +131,11 @@ copy_component_pot (component *cmp)
 	gchar **tfu;
 	gchar *path;
 	gint nread;
-	gint i;
+	gint ntoken;
 	gint return_val;
-	gchar buf[50];
-	gchar stats[300];
+	gchar buf[200];
+	GString *stats;
+	gchar **tfu_temp;
 
 	if (! chdir (cvsdir)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
@@ -174,21 +175,26 @@ copy_component_pot (component *cmp)
 					break;
 				default:
 					close (pipefd[1]);
-					i = 0;
 					/* We read the output of msgfmt */
-					nread = read (pipefd[0], stats, 300);
-					while (nread > 0 && i <= 250) {
-						i += nread;
-						nread = read (pipefd[0], buf, 50);
-						strncat (stats, buf, nread);
+					while ((nread = read (pipefd[0], buf, 100)) > 0) {
+						buf[nread] = '\0';
+						if (stats == NULL) {
+							stats = g_string_new (buf);
+						} else {
+							stats = g_string_append (stats, buf);
+						}
 					}
-					i += nread;
 					close (pipefd[0]);
 					if ( pid == wait (&return_val) && WIFEXITED (return_val) &&
 					     WEXITSTATUS (return_val) == 0 && nread == 0 ) {
 						/* We have all our string */
 						/* Now we parse the msgfmt output */
-						tfu = g_strsplit (stats, ",", 3);
+						tfu_temp = g_strsplit (stats->str, "\n",0);
+						ntoken = 0;
+						while (tfu_temp[ntoken] != NULL) {
+							ntoken++;
+						}
+						tfu = g_strsplit (tfu_temp[ntoken - 1 ], ",", 3);
 						if ( tfu[0] != NULL) {
 							if ( strstr (tfu[0], " untranslated")) {
 								sscanf (tfu[0], "%d untranslated",
@@ -207,10 +213,12 @@ copy_component_pot (component *cmp)
 							}
 						}
 						g_strfreev (tfu);
+						g_strfreev (tfu_temp);
 					} else {
-						g_warning ("Implement me!! (copy_component_pot)");
+						cmp->nstrings = -1;
 					}
-						break;
+					g_string_free (stats, TRUE);
+					break;
 			}
 		} else {
 			g_warning ("Unable to chdir into %s", dir);
@@ -231,19 +239,24 @@ g_list_strcmp (gconstpointer a, gconstpointer b)
 }
 
 void
-fill_translation (translation *trans, component *cmp, gchar *locale)
+fill_translation (component *cmp, gchar *locale)
 {
 	pid_t pid;
 	int pipefd [2];
 	gchar **tfu;
+	gchar **tfu_temp;
 	gchar *path;
+	gint ntoken;
 	gint nread;
-	gint i;
 	gint return_val;
-	gchar buf[50];
-	gchar stats[300];
+	gchar buf[200];
+	GString *stats = NULL;
 	release *currrelease;
-	
+	translation *trans;
+
+
+	trans = (translation *) g_new0 (translation, 1);
+
 	trans->locale = g_strdup (locale);
 	trans->pcomponent = cmp;
 
@@ -279,21 +292,26 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 			break;
 		default:
 			close (pipefd[1]);
-			i = 0;
 			/* We read the output of msgfmt */
-			nread = read (pipefd[0], stats, 300);
-			while (nread > 0 && i <= 250) {
-				i += nread;
-				nread = read (pipefd[0], buf, 50);
-				strncat (stats, buf, nread);
+			while ((nread = read (pipefd[0], buf, 100)) > 0) {
+				buf[nread] = '\0';
+				if (stats == NULL) {
+					stats = g_string_new (buf);
+				} else {
+					stats = g_string_append (stats, buf);
+				}
 			}
-			i += nread;
 			close (pipefd[0]);
 			if ( pid == wait (&return_val) && WIFEXITED (return_val) &&
 			     WEXITSTATUS (return_val) == 0 && nread == 0 ) {
 				/* We have all our string */
 				/* Now we parse the msgfmt output */
-				tfu = g_strsplit (stats, ",", 3);
+				tfu_temp = g_strsplit (stats->str, "\n",0);
+				ntoken = 0;
+				while (tfu_temp[ntoken] != NULL) {
+					ntoken++;
+				}
+				tfu = g_strsplit (tfu_temp[ntoken - 1 ], ",", 3);
 				if ( tfu[0] != NULL) {
 					if ( strstr (tfu[0], " translated")) {
 						sscanf (tfu[0], "%d translated", &trans->translated);
@@ -316,11 +334,13 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 					}
 				}
 				g_strfreev (tfu);
+				g_strfreev (tfu_temp);
 			} else {
 				trans->translated = -1;
 				trans->fuzzy = -1;
 				trans->untranslated = -1;
 			}
+			g_string_free (stats, TRUE);
 	}
 }
 
@@ -334,7 +354,6 @@ update_component_po (component *cmp)
 	DIR *podir;
 	struct dirent *direntry;
 	gchar **filesplit;
-	translation *currtrans;
 	
 	if (!chdir (cvsdir)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
@@ -370,13 +389,11 @@ update_component_po (component *cmp)
 								g_warning ("Unable to copy file %s to %s",
 									   direntry->d_name, dir);
 							} else {
-								currtrans = (translation *) g_new0 (translation, 1);
-								fill_translation (currtrans, cmp, filesplit[0]);
+								fill_translation (cmp, filesplit[0]);
 							}
 							g_free (copy);
 						} else {
-							currtrans = (translation *) g_new0 (translation, 1);
-							fill_translation (currtrans, cmp, filesplit[0]);
+							fill_translation (cmp, filesplit[0]);
 						}
 						g_free (merge);
 					}
