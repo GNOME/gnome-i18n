@@ -39,7 +39,6 @@ my (@info,%langmod,%langinfo,%modinfo,%modpath,%modules);
 # no need to call the shell.
 
 my $date   = strftime "%a %Y-%m-%d %T %z",localtime;
-my $prog   = "getnhtml";
 
 ###############
 # "Constants" #
@@ -319,8 +318,8 @@ GetOptions ('html-dir=s'     => \$htmldir,
             'html-po-url=s'  => \$htmlpourl,
             'modules-file=s' => \$modulesfile,
             'help'           => \$help,
-	    'title=s'          => \$title,
-	    'debug'          => \$debug,	
+	        'title=s'        => \$title,
+	        'debug'          => \$debug,	
         ) or Usage();
 
 if ($help) {
@@ -361,7 +360,7 @@ if (open (MODULES, "$modulesfile")){
     close (MODULES);
 } else {
     print STDERR "Error: Unable to open $modulesfile.\n\n";
-    exit(1);
+    exit(-1);
 }
 
 if (open (MODINFO, "$htmldir/modinfo.dat")){
@@ -657,7 +656,7 @@ sub Usage
 {
     print <<"HELP";
 
-Usage: $prog [OPTION]....
+Usage: $0 [OPTION]....
 Generate html stats with the stats from status.pl.
 
     --help                      Prints this page to standard error.

@@ -24,7 +24,7 @@
 #                  Dand
 #                  Carlos Perelló Marín <carlos@gnome-db.org>
 
-#use strict;
+use strict;
 use Getopt::Long;
 use POSIX qw(locale_h);
 
@@ -36,8 +36,6 @@ sub Usage;
 
 setlocale (LC_ALL, "C");
 
-my $prog = "cvs-download.pl";
-
 ## Always print as the first thing
 $| = 1;
 
@@ -45,14 +43,15 @@ $| = 1;
 # It's easier and work for multiple command line options.
 
 # default values for options
-my ($help, $cvsroot, $modfile);
+my ($help, $cvsroot, $modfile, %modules);
+
 $help = '';
 $cvsroot = "/home/carlos/cvs/gnome";
 $modfile = "/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status/stable/modules.dat";
 
 GetOptions ('cvsroot-dir=s'     => \$cvsroot,
-	    'modules-file=s' => \$modfile,
-	    'help'           => \$help,
+    	    'modules-file=s'    => \$modfile,
+	        'help'              => \$help,
 	    ) or Usage();
 
 if ($help) {
@@ -68,19 +67,19 @@ my $i18n = 0;
 #      next if /^#/; next if /^\n/; next if /^\s/;
 #      chomp $_; push @modules, "$_";
       chomp;
-      @info = split (/,/);
-      $index = 1;
+      my @info = split (/,/);
+      my $index = 1;
       while ($info[$index]){
-          ${$modules{$info[0]}->[$index-1]} = $info[$index];
-	  $index++;
+        ${$modules{$info[0]}->[$index-1]} = $info[$index];
+	    $index++;
       }
    }
    close (MODULES);
 
 
-   foreach $mod (sort (keys %modules)){
+   foreach my $mod (sort (keys %modules)){
 
-      $module = "${$modules{$mod}->[0]}";
+      my $module = "${$modules{$mod}->[0]}";
       if (${$modules{$mod}->[4]} eq "TRUE") {
           print "Updating $mod from ${$modules{$mod}->[2]} branch\n";
           if ($module =~ /gnome-i18n/) {
@@ -107,9 +106,9 @@ my $i18n = 0;
 	      }
           }
       } else {
-	  if ($module =~ /gnome-i18n/) {
-	      $i18n = 1;
-	  }
+          if ($module =~ /gnome-i18n/) {
+              $i18n = 1;
+          }
       }
    }
    if ($i18n == 1) {
@@ -126,7 +125,7 @@ sub Usage
 {
     print <<"HELP";
 
-Usage: $prog [OPTION]....
+Usage: $0 [OPTION]....
 Generate html stats with the stats from status.pl.
 
     --help                      Prints this page to standard error.
