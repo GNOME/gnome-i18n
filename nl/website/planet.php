@@ -53,12 +53,12 @@ gnome_menu();
 
 
 
-<h2>April 06, 2005</h2>
+<div class="blosxomDate>April 06, 2005</div>
 
 
 
 
-<h3><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></h4>
@@ -73,12 +73,12 @@ http://nl.gnome.org/planet.php</p>
 
 
 
-<h2>April 05, 2005</h2>
+<div class="blosxomDate>April 05, 2005</div>
 
 
 
 
-<h3><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></h3>
+<p class="blosxomTitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
 
 
 <h4><a href="http://geeklog.eyesopened.nl/archives/2005/04/05/desktop-places-nautilus/">Desktop Places, Nautilus</a></h4>
@@ -103,12 +103,12 @@ http://nl.gnome.org/planet.php</p>
 
 
 
-<h2>April 04, 2005</h2>
+<div class="blosxomDate>April 04, 2005</div>
 
 
 
 
-<h3><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></h3>
+<p class="blosxomTitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
 
 
 <h4><a href="http://www.livejournal.com/users/inverted_tree/39587.html">gnome-nl gnome 2.10 release party photos</a></h4>
@@ -142,7 +142,7 @@ So i finally got my mac mini about 2 weeks ago (after 6 weeks of waiting), but i
 
 
 
-<h3><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></h3>
+<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=41">*Ahum*</a></h4>
@@ -188,12 +188,12 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 
 
 
-<h2>March 26, 2005</h2>
+<div class="blosxomDate>March 26, 2005</div>
 
 
 
 
-<h3><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></h3>
+<p class="blosxomTitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
 
 
 <h4><a href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">Progress dialogs</a></h4>
@@ -222,12 +222,12 @@ The current nautilus progress dialog looks like:</p></p>
 
 
 
-<h2>March 23, 2005</h2>
+<div class="blosxomDate>March 23, 2005</div>
 
 
 
 
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">23 Mar 2005</a></h4>
@@ -244,12 +244,12 @@ The result of that is that the plugin and the child application (which is spawne
 
 
 
-<h2>March 14, 2005</h2>
+<div class="blosxomDate>March 14, 2005</div>
 
 
 
 
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=96">14 Mar 2005</a></h4>
@@ -270,12 +270,12 @@ And so I did. GStreamer can now write full-spec MPEG-4 files. <a href="http://ro
 
 
 
-<h2>March 13, 2005</h2>
+<div class="blosxomDate>March 13, 2005</div>
 
 
 
 
-<h3><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></h3>
+<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=39">Moderation and Helpfulness</a></h4>
@@ -296,12 +296,12 @@ Since we&#8217;re in a cheery mood, and someone on my blog told me to <a href="h
 
 
 
-<h2>March 12, 2005</h2>
+<div class="blosxomDate>March 12, 2005</div>
 
 
 
 
-<h3><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></h3>
+<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=38">How to spend your spare time</a></h4>
@@ -317,12 +317,12 @@ Since we&#8217;re in a cheery mood, and someone on my blog told me to <a href="h
 
 
 
-<h2>March 11, 2005</h2>
+<div class="blosxomDate>March 11, 2005</div>
 
 
 
 
-<h3><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></h3>
+<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=37">How not to organize release note translations</a></h4>
@@ -343,7 +343,7 @@ We&#8217;re very keen on giving a perfect experience to (potential) Dutch GNOME 
 
 
 
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=95">11 Mar 2005</a></h4>
@@ -361,12 +361,12 @@ Also, one of our new GStreamer supporters, Jon Lech Johansen, released <a href="
 
 
 
-<h2>March 10, 2005</h2>
+<div class="blosxomDate>March 10, 2005</div>
 
 
 
 
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=94">10 Mar 2005</a></h4>
@@ -381,12 +381,12 @@ After the release of GNOME 2.10 and the <a href="http://mail.gnome.org/archives/
 
 
 
-<h2>March 08, 2005</h2>
+<div class="blosxomDate>March 08, 2005</div>
 
 
 
 
-<h3><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></h3>
+<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=36">AbiWord Won&#8217;t Fall for Feature Bloat</a></h4>
@@ -406,7 +406,7 @@ As long I&#8217;m involved in AbiWord&#8217;s development, I&#8217;ll battle aga
 
 
 
-<h3><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=3">8 Mar 2005</a></h4>
@@ -421,12 +421,12 @@ This is a first for us, a Dutch press release. I'm very excited about this. It m
 
 
 
-<h2>March 07, 2005</h2>
+<div class="blosxomDate>March 07, 2005</div>
 
 
 
 
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=93">7 Mar 2005</a></h4>
@@ -443,12 +443,12 @@ I just heard multiple such rumours... After the EP (EU parliament) proposed to r
 
 
 
-<h2>March 06, 2005</h2>
+<div class="blosxomDate>March 06, 2005</div>
 
 
 
 
-<h3><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></h3>
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=92">6 Mar 2005</a></h4>
@@ -469,7 +469,7 @@ All dutch GNOME developers, translaters, contributors and enthusiasts are hereby
 
 
 
-<h3><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></h3>
+<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=35">03-06-2005</a></h4>
@@ -486,12 +486,12 @@ Now, on to the Gnumeric exclusion problem. I noticed desktop-backgrounds-extra i
 
 
 
-<h2>March 04, 2005</h2>
+<div class="blosxomDate>March 04, 2005</div>
 
 
 
 
-<h3><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></h3>
+<p class="blosxomTitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
 
 
 <p>
