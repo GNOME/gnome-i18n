@@ -54,7 +54,7 @@ $| = 1;
 
 # used => for readability.
 
-my %charset = (
+my %charsets = (
     "da" => "iso-8859-1",
     "de" => "iso-8859-1",
     "el" => "iso-8859-7",
@@ -72,7 +72,7 @@ my %charset = (
     "tr" => "iso-8859-9",
     "uk" => "koi8-u",
     "wa" => "iso-8859-1"
-)
+);
 
 my %modulenames = (
     "da" => "Modul",
@@ -436,7 +436,7 @@ if (open (LANGMOD, "$htmldir/langmod.dat")){
 # "Main loops" #
 ################
 
-my ($lang,$langs_red,$link,$gray,$mod,$trbg,$tot,$trns,$detail,$strings);
+my ($lang,$langs_red,$link,$gray,$mod,$trbg,$tot,$trns,$detail,$strings,$charset);
 
 # || has a higher precedence so this doesn't work use "or" or parentheses.
 
@@ -510,7 +510,7 @@ foreach $lang (sort keys %langinfo){
     $link = "$details_" . substr($lang, 0, 5) . ".shtml";
     open  TABLE2, ">$htmldir/$link" or die "can't open $htmldir/$link";
     $detail = $details{$lang} || $details{"C"} . $lang;
-    $charset = $charset{$lang} || "US-ASCII";
+    $charset = $charsets{$lang} || "US-ASCII";
     print TABLE2 <<"EOF";
 <html><head>
 <title>$detail</title>
