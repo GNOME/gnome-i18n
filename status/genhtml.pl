@@ -24,15 +24,17 @@
 #		   Dand
 #		   Keld Simonsen
 #		   Carlos Perelló Marín <carlos@gnome-db.org>
+#		   Juan Fuentes <juan.fuentes@codetel.net.do>
 
 #use strict; #fix the file, so this can be enabled
 use POSIX qw(locale_h);
+use POSIX qw(strftime);
 
 # Ugly, ugly,damn ugly, but it works for now.
 
-my ($now,%modulenames,%translated,%fuzzy,%untranslated);
-my (%strings,%details,%percent_colors,%changed_color,$totals); 
-my ($path,$mod,@info,$info,$index,$htmldir,$tmp,$lang,$grey);
+my ($now,%modulenames,%translated,%fuzzy,%untranslated,%total,%status,%available,%assigned,%unknown,%modules,$totalname,$status,$lasttranslator,$translatorname,$transtatus);
+my (%strings,%details,%lasttranslator,%percent_colors,%changed_color,$totals); 
+my ($path,$mod,@info,$info,$index,$htmldir,$htmlpodir,$tmp,$lang,$grey);
 my (%langinfo,$langs_red,$link,%modinfo,$langmod,%langmod);
 my ($date,$fuzzy,$detail,$modulename,$translated,$untranslated);
 my ($stringstot,$trnstot,$fuzzytot,$untrnstot,$trbg,$percent);
@@ -47,9 +49,10 @@ $date   = strftime "%a %Y-%m-%d %T %z",localtime;
 # "Constants" #
 ###############
 
-$grey   = 0;    #odd/even strings
-$totals = 0;  #total strings in all modules from modinfo.
-$now    = time;
+$grey     = 0;    #odd/even strings
+$totals   = 0;  #total strings in all modules from modinfo.
+$now      = time;
+$details_ = "";
 
 $htmldir   ="/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
 $htmlpodir ="po/";
@@ -217,7 +220,7 @@ sub printlang;
 # "Initialization" #
 ####################
 
-setlocale (LC_LANG, "C");
+#setlocale (LC_LANG, "C");
 setlocale (LC_ALL, "C");
 
 #
@@ -308,7 +311,7 @@ foreach $mod (sort keys %modinfo){
     print TABLE "</tr>";
 }
     
-$totalname = $totals{$lang} || "Total";
+$totalname = $total{$lang} || "Total";
 
 # Totals
     print TABLE "<tr align=center bgcolor=\"#ffd700\"><th>$totalname</th>\n";
