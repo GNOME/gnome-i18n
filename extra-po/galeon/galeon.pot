@@ -2,10 +2,11 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: galeon 0.7.1\n"
-"POT-Creation-Date: 2000-07-26 23:17+0200\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2000-08-09 18:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,15 +14,23 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: src/callbacks.c:213
+#. offer to import netscape bookmarks
+#: src/main.c:116
+msgid ""
+"This appears to be the first time you have run Galeon\n"
+"\n"
+"Would you like to import your existing Netscape bookmarks?"
+msgstr ""
+
+#: src/callbacks.c:199
 msgid "Copyright (C) 2000 Marco Pesenti Gritti"
 msgstr ""
 
-#: src/callbacks.c:215
+#: src/callbacks.c:201
 msgid "A GNOME browser based on mozilla"
 msgstr ""
 
-#: src/callbacks.c:402
+#: src/callbacks.c:393
 msgid "You must specify a Start Page in the Preferences dialog!"
 msgstr ""
 
@@ -55,478 +64,574 @@ msgid "_Next Page"
 msgstr ""
 
 #: src/trans.h:13
-msgid "_Stop"
-msgstr ""
-
-#: src/trans.h:14
 msgid "_Reload"
 msgstr ""
 
+#: src/trans.h:14
+msgid "_Start Page"
+msgstr ""
+
 #: src/trans.h:15
-msgid "Log of visited pages"
+msgid "_Stop"
 msgstr ""
 
 #: src/trans.h:16
-msgid "_History..."
+msgid "Log of visited pages"
 msgstr ""
 
 #: src/trans.h:17
-msgid "Go Back"
+msgid "_History..."
 msgstr ""
 
 #: src/trans.h:18
-msgid "Back"
+msgid "Go Back"
 msgstr ""
 
 #: src/trans.h:19
-msgid "Go Forward"
+msgid "Back"
 msgstr ""
 
 #: src/trans.h:20
-msgid "Forward"
+msgid "Go Forward"
 msgstr ""
 
 #: src/trans.h:21
-msgid "Reload Current Page"
+msgid "Forward"
 msgstr ""
 
 #: src/trans.h:22
-msgid "Refresh"
+msgid "Reload Current Page"
 msgstr ""
 
 #: src/trans.h:23
-msgid "Go to your Start Page"
+msgid "Refresh"
 msgstr ""
 
 #: src/trans.h:24
-msgid "Start Page"
+msgid "Go to your Start Page"
 msgstr ""
 
 #: src/trans.h:25
-msgid "Stop current data transfer"
+msgid "Start Page"
 msgstr ""
 
 #: src/trans.h:26
+msgid "Stop current data transfer"
+msgstr ""
+
+#: src/trans.h:27
 msgid "Stop"
 msgstr ""
 
-#: src/trans.h:27 src/trans.h:29
+#: src/trans.h:28
+msgid "Zoom"
+msgstr ""
+
+#: src/trans.h:29 src/trans.h:31
 msgid "   Location: "
 msgstr ""
 
-#: src/trans.h:28
+#: src/trans.h:30
 msgid "Go"
 msgstr ""
 
-#: src/trans.h:30
+#: src/trans.h:32
 msgid "Select File"
 msgstr ""
 
-#: src/trans.h:31 src/trans.h:148 src/trans.h:151 src/trans.h:154
+#: src/trans.h:33 src/trans.h:180 src/trans.h:183 src/trans.h:186
 msgid "OK"
 msgstr ""
 
-#: src/trans.h:32 src/trans.h:149 src/trans.h:152 src/trans.h:155
+#: src/trans.h:34 src/trans.h:181 src/trans.h:184 src/trans.h:187
 msgid "Cancel"
 msgstr ""
 
-#: src/trans.h:33 src/trans.h:34
+#: src/trans.h:35 src/trans.h:36
 msgid "Bookmarks"
 msgstr ""
 
-#: src/trans.h:35 src/trans.h:112
+#: src/trans.h:37 src/trans.h:129
 msgid "Name"
 msgstr ""
 
-#: src/trans.h:36
+#: src/trans.h:38
 msgid "URL"
 msgstr ""
 
-#: src/trans.h:37
+#: src/trans.h:39
 msgid "Type"
 msgstr ""
 
-#: src/trans.h:38
+#: src/trans.h:40
 msgid ""
 "Folder\n"
 "Site\n"
-msgstr ""
-
-#: src/trans.h:41
-msgid "Insert"
-msgstr ""
-
-#: src/trans.h:42
-msgid "Remove"
-msgstr ""
-
-#: src/trans.h:43
-msgid "Update"
+"Separator\n"
 msgstr ""
 
 #: src/trans.h:44
-msgid "Preferences"
+msgid "Create toolbar"
 msgstr ""
 
 #: src/trans.h:45
-msgid "label50"
+msgid "Up"
 msgstr ""
 
 #: src/trans.h:46
-msgid "Logo"
+msgid "Down"
 msgstr ""
 
 #: src/trans.h:47
-msgid ""
-"When adding bookmarks\n"
-"use the following title"
+msgid "Insert"
+msgstr ""
+
+#: src/trans.h:48
+msgid "Remove"
 msgstr ""
 
 #: src/trans.h:49
+msgid "Update"
+msgstr ""
+
+#: src/trans.h:50
+msgid "Preferences"
+msgstr ""
+
+#: src/trans.h:51
+msgid "label55"
+msgstr ""
+
+#: src/trans.h:52
+msgid "Logo"
+msgstr ""
+
+#: src/trans.h:53
+msgid "Startup"
+msgstr ""
+
+#: src/trans.h:54
 msgid "On startup show"
 msgstr ""
 
-#: src/trans.h:50 src/trans.h:60
+#: src/trans.h:55 src/trans.h:62
 msgid ""
 "Start page\n"
 "Last page\n"
 "Blank page\n"
 msgstr ""
 
-#: src/trans.h:54
-msgid ""
-"Page title\n"
-"Ask user\n"
-msgstr ""
-
-#: src/trans.h:57
+#: src/trans.h:59
 msgid "Start page"
 msgstr ""
 
-#: src/trans.h:58
+#: src/trans.h:60
 msgid ""
 "When opening a\n"
 " new browser show"
 msgstr ""
 
-#: src/trans.h:64
+#: src/trans.h:66
+msgid "Misc."
+msgstr ""
+
+#: src/trans.h:67
+msgid ""
+"When adding bookmarks\n"
+"use the following title"
+msgstr ""
+
+#: src/trans.h:69
 msgid "Completion Style"
 msgstr ""
 
-#: src/trans.h:65
+#: src/trans.h:70
+msgid "Show Spinner"
+msgstr ""
+
+#: src/trans.h:71
+msgid ""
+"Page title\n"
+"Ask user\n"
+msgstr ""
+
+#: src/trans.h:74
 msgid ""
 "Auto completion\n"
 "Tab Completion\n"
 "None\n"
 msgstr ""
 
-#: src/trans.h:69
+#: src/trans.h:78
+msgid ""
+"Yes\n"
+"No\n"
+msgstr ""
+
+#: src/prefs.c:319 src/trans.h:81
 msgid "General"
 msgstr ""
 
-#: src/trans.h:70
+#: src/trans.h:82
 msgid "Layout"
 msgstr ""
 
-#: src/trans.h:71
-msgid "Show location entry on"
-msgstr ""
-
-#: src/trans.h:72
-msgid ""
-"Separate toolbar\n"
-"Button toolbar\n"
-msgstr ""
-
-#: src/trans.h:75
+#: src/trans.h:83
 msgid "Show error messages on"
 msgstr ""
 
-#: src/trans.h:76
+#: src/trans.h:84
 msgid ""
 "Status bar\n"
 "Dialog\n"
 msgstr ""
 
-#: src/trans.h:79
+#: src/prefs.c:320 src/trans.h:87
+msgid "Appearance"
+msgstr ""
+
+#: src/prefs.c:330 src/trans.h:88 src/trans.h:99
+msgid "Fonts"
+msgstr ""
+
+#: src/trans.h:89
+msgid "Serif"
+msgstr ""
+
+#: src/trans.h:90
+msgid "Sans Serif"
+msgstr ""
+
+#: src/trans.h:91
+msgid "Size"
+msgstr ""
+
+#: src/trans.h:92 src/trans.h:94 src/trans.h:97
+msgid "Pick a Font"
+msgstr ""
+
+#: src/trans.h:93 src/trans.h:95 src/trans.h:98
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+msgstr ""
+
+#: src/trans.h:96
+msgid "Monospace"
+msgstr ""
+
+#: src/prefs.c:331 src/trans.h:100 src/trans.h:110
+msgid "Toolbars"
+msgstr ""
+
+#: src/trans.h:101
 msgid "Show toolbars as"
 msgstr ""
 
-#: src/trans.h:80
+#: src/trans.h:102
+msgid "Show location entry on"
+msgstr ""
+
+#: src/trans.h:103
+msgid ""
+"Separate toolbar\n"
+"Button toolbar\n"
+msgstr ""
+
+#: src/trans.h:106
 msgid ""
 "Icons\n"
 "Text\n"
 "Both\n"
 msgstr ""
 
-#: src/trans.h:84
-msgid "Fonts"
+#: src/prefs.c:321 src/trans.h:111 src/trans.h:123
+msgid "Downloading"
 msgstr ""
 
-#: src/trans.h:85
-msgid "Serif"
-msgstr ""
-
-#: src/trans.h:86
-msgid "Sans Serif"
-msgstr ""
-
-#: src/trans.h:87
-msgid "Size"
-msgstr ""
-
-#: src/trans.h:88 src/trans.h:90 src/trans.h:93
-msgid "Pick a Font"
-msgstr ""
-
-#: src/trans.h:89 src/trans.h:91 src/trans.h:94
-msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
-msgstr ""
-
-#: src/trans.h:92
-msgid "Monospace"
-msgstr ""
-
-#: src/trans.h:95
-msgid "Appearance"
-msgstr ""
-
-#: src/trans.h:96
+#: src/trans.h:112
 msgid "Auto download"
 msgstr ""
 
-#: src/trans.h:97
+#: src/trans.h:113
 msgid ""
 "Ask for directory\n"
 "on each download"
 msgstr ""
 
-#: src/trans.h:99 src/trans.h:103 src/trans.h:131 src/trans.h:135
+#: src/trans.h:115 src/trans.h:119 src/trans.h:158 src/trans.h:162
 msgid ""
 "No\n"
 "Yes\n"
 msgstr ""
 
-#: src/trans.h:102
+#: src/trans.h:118
 msgid "Directory"
 msgstr ""
 
-#: src/trans.h:106
+#: src/trans.h:122
 msgid "Select Download Directory"
 msgstr ""
 
-#: src/trans.h:107
-msgid "Downloading"
+#: src/trans.h:124
+msgid "label62"
 msgstr ""
 
-#: src/trans.h:108
+#: src/trans.h:125
 msgid "Mime Types"
 msgstr ""
 
-#: src/trans.h:109
+#: src/trans.h:126
 msgid "Extention"
 msgstr ""
 
-#: src/trans.h:110
+#: src/trans.h:127
 msgid "Action"
 msgstr ""
 
-#: src/trans.h:111
+#: src/trans.h:128
 msgid "Program"
 msgstr ""
 
-#: src/trans.h:113
+#: src/trans.h:130
+msgid " "
+msgstr ""
+
+#: src/trans.h:131
 msgid ""
 "Save to disk\n"
 "Open with program\n"
 "Ask user\n"
 msgstr ""
 
-#: src/trans.h:117
+#: src/trans.h:135
 msgid "Add"
 msgstr ""
 
-#: src/trans.h:118
+#: src/trans.h:136
 msgid "Delete"
 msgstr ""
 
-#: src/bookmarks.c:455 src/trans.h:119
+#: src/bookmarks.c:671 src/trans.h:137
 msgid "Edit"
 msgstr ""
 
-#: src/trans.h:120
+#: src/trans.h:138
 msgid "Mime types"
 msgstr ""
 
-#: src/trans.h:121
-msgid "Proxy"
-msgstr ""
-
-#: src/trans.h:122
-msgid "Http proxy"
-msgstr ""
-
-#: src/trans.h:123
-msgid "Ftp proxy"
-msgstr ""
-
-#: src/trans.h:124 src/trans.h:125
-msgid "Port"
-msgstr ""
-
-#: src/trans.h:126
-msgid "Cache"
-msgstr ""
-
-#: src/trans.h:127
-msgid "Disk cache"
-msgstr ""
-
-#: src/trans.h:128
-msgid "Memory cache"
-msgstr ""
-
-#: src/trans.h:129
-msgid "Java"
-msgstr ""
-
-#: src/trans.h:130
-msgid "Javascript enabled"
-msgstr ""
-
-#: src/trans.h:134
-msgid "Java Enabled"
-msgstr ""
-
-#: src/trans.h:138
-msgid "Other options"
-msgstr ""
-
 #: src/trans.h:139
-msgid "Days before expiring history items"
+msgid "Ftp handler"
 msgstr ""
 
 #: src/trans.h:140
-msgid "Advanced"
+msgid "Handle ftp urls with"
 msgstr ""
 
 #: src/trans.h:141
-msgid "History"
-msgstr ""
-
-#: src/trans.h:142
-msgid "Title"
-msgstr ""
-
-#: src/trans.h:143
-msgid "Url"
+msgid ""
+"Mozilla ftp\n"
+"Gnome ftp handler\n"
 msgstr ""
 
 #: src/trans.h:144
-msgid "First time visited"
+msgid "Ftp"
 msgstr ""
 
-#: src/trans.h:145
-msgid "Last time visited"
+#: src/prefs.c:323 src/trans.h:145 src/trans.h:147 src/trans.h:173
+msgid "History"
 msgstr ""
 
 #: src/trans.h:146
-msgid "Times visited"
+msgid "Days before expiring history items"
 msgstr ""
 
-#: src/trans.h:147 src/trans.h:150
-msgid "Select Directory"
+#: src/trans.h:148
+msgid "Proxy"
+msgstr ""
+
+#: src/trans.h:149
+msgid "Http proxy"
+msgstr ""
+
+#: src/trans.h:150
+msgid "Ftp proxy"
+msgstr ""
+
+#: src/trans.h:151 src/trans.h:152
+msgid "Port"
 msgstr ""
 
 #: src/trans.h:153
-msgid "Select Color"
+msgid "Cache"
+msgstr ""
+
+#: src/trans.h:154
+msgid "Disk cache"
+msgstr ""
+
+#: src/trans.h:155
+msgid "Memory cache"
 msgstr ""
 
 #: src/trans.h:156
+msgid "Java"
+msgstr ""
+
+#: src/trans.h:157
+msgid "Javascript enabled"
+msgstr ""
+
+#: src/trans.h:161
+msgid "Java Enabled"
+msgstr ""
+
+#: src/prefs.c:324 src/trans.h:165
+msgid "Advanced"
+msgstr ""
+
+#: src/trans.h:166
+msgid "Images"
+msgstr ""
+
+#: src/trans.h:167
+msgid "Loading Behavior"
+msgstr ""
+
+#: src/trans.h:168
+msgid ""
+"Load all images\n"
+"Load images originating from current server only\n"
+"Do not load images\n"
+msgstr ""
+
+#: src/trans.h:172
+msgid "Browser"
+msgstr ""
+
+#: src/trans.h:174
+msgid "Title"
+msgstr ""
+
+#: src/trans.h:175
+msgid "Url"
+msgstr ""
+
+#: src/trans.h:176
+msgid "First time visited"
+msgstr ""
+
+#: src/trans.h:177
+msgid "Last time visited"
+msgstr ""
+
+#: src/trans.h:178
+msgid "Times visited"
+msgstr ""
+
+#: src/trans.h:179 src/trans.h:182
+msgid "Select Directory"
+msgstr ""
+
+#: src/trans.h:185
+msgid "Select Color"
+msgstr ""
+
+#: src/trans.h:188
 msgid "Help"
 msgstr ""
 
-#: src/bookmarks.c:320
+#: src/bookmarks.c:474
 msgid "_Bookmarks"
 msgstr ""
 
-#: src/bookmarks.c:393
+#: src/bookmarks.c:583
 msgid "_File Bookmark"
 msgstr ""
 
-#: src/bookmarks.c:408
+#: src/bookmarks.c:604
 msgid "B_ookmarks"
 msgstr ""
 
-#: src/bookmarks.c:415
+#: src/bookmarks.c:612
 msgid "_Import"
 msgstr ""
 
-#: src/bookmarks.c:579 src/bookmarks.c:598 src/mozcallbacks.c:71
+#: src/bookmarks.c:841 src/bookmarks.c:863 src/history.c:188
+#: src/mozcallbacks.c:98
 msgid "Untitled"
 msgstr ""
 
-#: src/bookmarks.c:604
+#: src/bookmarks.c:872
 msgid "Please enter the name of the bookmark"
 msgstr ""
 
-#: src/mozcallbacks.c:132
+#: src/bookmarks.c:1021
+msgid "Personal Toolbar Folder"
+msgstr ""
+
+#: src/mozcallbacks.c:194
 msgid "Redirecting to site..."
 msgstr ""
 
-#: src/mozcallbacks.c:134 src/mozcallbacks.c:170
+#: src/mozcallbacks.c:196 src/mozcallbacks.c:233
 msgid "Transferring data from site..."
 msgstr ""
 
-#: src/mozcallbacks.c:136
+#: src/mozcallbacks.c:198
 msgid "Waiting for authorization..."
 msgstr ""
 
-#: src/mozcallbacks.c:141 src/mozcallbacks.c:182
+#: src/mozcallbacks.c:200 src/mozcallbacks.c:245
 msgid "Loading site..."
 msgstr ""
 
-#: src/mozcallbacks.c:143 src/mozcallbacks.c:184
+#: src/mozcallbacks.c:202 src/mozcallbacks.c:247
 msgid "Done."
 msgstr ""
 
-#: src/mozcallbacks.c:147 src/mozcallbacks.c:172
+#: src/mozcallbacks.c:206 src/mozcallbacks.c:235
 msgid "Site not found."
 msgstr ""
 
-#: src/mozcallbacks.c:149 src/mozcallbacks.c:174
+#: src/mozcallbacks.c:208 src/mozcallbacks.c:237
 msgid "Failed to connect to site."
 msgstr ""
 
-#: src/mozcallbacks.c:151
+#: src/mozcallbacks.c:210
 msgid "Failed due to connection timeout."
 msgstr ""
 
-#: src/mozcallbacks.c:153
+#: src/mozcallbacks.c:212
 msgid "User canceled connecting to site."
 msgstr ""
 
-#: src/mozcallbacks.c:164
+#: src/mozcallbacks.c:227
 msgid "Looking up host..."
 msgstr ""
 
-#: src/mozcallbacks.c:166 src/mozcallbacks.c:168
+#: src/mozcallbacks.c:229 src/mozcallbacks.c:231
 msgid "Connecting to site..."
 msgstr ""
 
-#: src/mozcallbacks.c:176
+#: src/mozcallbacks.c:239
 msgid "Failed to transfer any data from site."
 msgstr ""
 
-#: src/mozcallbacks.c:178
+#: src/mozcallbacks.c:241
 msgid "User cancelled connecting to site."
 msgstr ""
 
-#: src/mozcallbacks.c:273
-msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
+#: src/prefs.c:322
+msgid "Handlers"
 msgstr ""
 
-#: src/mozcallbacks.c:278
-#, c-format
-msgid "%s (%d Kb loaded)"
+#: src/prefs.c:337
+msgid "MIME types"
+msgstr ""
+
+#: src/prefs.c:338
+msgid "URLs"
+msgstr ""
+
+#: src/prefs.c:344
+msgid "Browsing"
 msgstr ""
