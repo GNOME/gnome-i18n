@@ -803,6 +803,8 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 				temp = g_strconcat (temp, temp_info, NULL);
 
 				total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
+
+				total_untrans[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
 			} 
 			else 
 			{ /* We have a translation for this locale */
@@ -817,6 +819,8 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 								pcmp->name, pcmp->branch, ptrns->locale);
 					temp = g_strconcat (temp, temp_info, NULL);
 					total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
+
+					total_untrans[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
 
 				} else {
 
