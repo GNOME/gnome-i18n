@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: scrollkeeper VERSION\n"
-"POT-Creation-Date: 2002-07-24 21:27-0500\n"
-"PO-Revision-Date: 2003-01-20 17:04+0700\n"
+"POT-Creation-Date: 2003-01-23 00:13-0600\n"
+"PO-Revision-Date: 2003-01-24 11:47+0700\n"
 "Last-Translator: pclouds <pclouds@gmx.net>\n"
 "Language-Team: GnomeVI <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,9 @@ msgstr ""
 #: cl/src/scrollkeeper-install.c:34
 msgid ""
 "Usage: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Cách dùng: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <TẬP TIN OMF>\n"
+msgstr ""
+"Cách dùng: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <TẬP "
+"TIN OMF>\n"
 
 #: cl/src/scrollkeeper-install.c:95
 msgid "Could not create database.  Aborting install.\n"
@@ -40,13 +42,16 @@ msgstr ""
 #: cl/src/preinstall.c:68
 #, c-format
 msgid "Unable to update URL in OMF file %s.  Copying OMF file unchanged.\n"
-msgstr "Không thể cập nhậtURL trong tập tin OMF %s. Tập tin OMF không thay đổi.\n"
+msgstr ""
+"Không thể cập nhậtURL trong tập tin OMF %s. Tập tin OMF không thay đổi.\n"
 
 #: cl/src/scrollkeeper-uninstall.c:32
 msgid ""
 "Usage: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF "
 "FILE>\n"
-msgstr "Cách dùng: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <TẬP TIN OMF>\n"
+msgstr ""
+"Cách dùng: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <TẬP "
+"TIN OMF>\n"
 
 #: cl/src/scrollkeeper-uninstall.c:86 cl/src/update.c:539
 #, c-format
@@ -56,7 +61,8 @@ msgstr "Đang hủy đăng ký %s\n"
 #: cl/src/update.c:108
 #, c-format
 msgid "Usage: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
-msgstr "Cách dùng: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <THƯ MỤC OMF>]\n"
+msgstr ""
+"Cách dùng: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <THƯ MỤC OMF>]\n"
 
 #: cl/src/update.c:220
 #, c-format
@@ -82,16 +88,21 @@ msgstr "Đang cập nhật %s\n"
 msgid "Unable to complete update.  Could not register %s\n"
 msgstr "Không thể hoàn tất cập nhật. Không thể đăng ký %s\n"
 
-#: cl/src/get-cl.c:55
+#: cl/src/get-cl.c:56
 msgid "Cannot open temporary file.\n"
 msgstr "Không thể mở tập tin tạm.\n"
 
-#: cl/src/get-cl.c:93
+#: cl/src/get-cl.c:92
+#, c-format
+msgid "scrollkeeper-get-cl: Cannot open temp file: %s\n"
+msgstr "scrollkeeper-get-cl: Không thể mở tập tin tạm: %s\n"
+
+#: cl/src/get-cl.c:105
 #, c-format
 msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 msgstr "Cách dùng: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 
-#: cl/src/get-cl.c:133
+#: cl/src/get-cl.c:145
 msgid "No Content List for this locale!!!\n"
 msgstr "Không có Danh sách Nội dung cho locale này!!!\n"
 
@@ -149,7 +160,8 @@ msgstr "Tập tin danh sách nội dung không có, không thể đọc, hoặc 
 msgid ""
 "Extended content list file does not exist, is not readable, or is not well-"
 "formed XML: %s\n"
-msgstr "Tập tin danh sách nội dung mở rộng không có, không thể đọc, hoặc bị hư: %s\n"
+msgstr ""
+"Tập tin danh sách nội dung mở rộng không có, không thể đọc, hoặc bị hư: %s\n"
 
 #: libs/uninstall.c:97
 #, c-format
@@ -947,6 +959,75 @@ msgstr "X"
 #: cl/templates/scrollkeeper_cl.xml.in.h:187
 msgid "gtk++"
 msgstr "gtk++"
+
+#: buildtools/separate.c:63 buildtools/separate.c:75 buildtools/separate.c:88
+msgid "Invalid category file.\n"
+msgstr "Tập tin phân loại không hợp lệ.\n"
+
+#: buildtools/separate.c:298
+msgid "Usage: scrollkeeper-tree-separate <tree file> <output directory>\n"
+msgstr "Cách dùng: scrollkeeper-tree-separate <tree file> <output directory>\n"
+
+#: buildtools/separate.c:320
+msgid "File does not contain well-formed XML\n"
+msgstr "Tập tin XML bị hư.\n"
+
+#: buildtools/separate.c:325
+msgid "tree separation failed\n"
+msgstr "phân cây thất bại\n"
+
+#: buildtools/separate.c:333
+#, c-format
+msgid "Unable to create localized category file: %s\n"
+msgstr "Không thể tạo tập tin phân loại bản địa hóa: %s\n"
+
+#: buildtools/separate.c:337
+#, c-format
+msgid "Creating localized category file: %s\n"
+msgstr "Đang tạo tập tin phân loại bản địa hóa: %s\n"
+
+#: buildtools/separate.c:348
+msgid "Unable to create all localized category files.\n"
+msgstr "Không thể tạo mọi tập tin phân loại bản địa hóa.\n"
+
+#: libs/extract.c:79 libs/extract.c:85 libs/extract.c:131
+#, c-format
+msgid "Cannot create temporary file: %s : %s\n"
+msgstr "Không thể tạo tập tin tạm: %s  : %s\n"
+
+#: libs/extract.c:97
+#, c-format
+msgid "Cannot read file: %s : %s\n"
+msgstr "Không thể đọc tập tin %s: %s\n"
+
+#: libs/extract.c:160 libs/extract.c:174
+#, c-format
+msgid "Document is not well-formed XML: %s\n"
+msgstr ""
+"Tài liệu không đúng dạng XML: %s\n"
+"\n"
+
+#: libs/extract.c:168
+#, c-format
+msgid "Cannot stat file: %s : %s\n"
+msgstr "Không thể stat tập tin: %s : %s\n"
+
+#: libs/extract.c:178
+#, c-format
+msgid "Cannot apply stylesheet to document of type: %s\n"
+msgstr "Không thể áp dụng stylesheet cho tài liệu loại: %s\n"
+
+#: libs/extract.c:190
+#, c-format
+msgid "Cannot open output file: %s : %s \n"
+msgstr ""
+"Không thể mở tập tin xuất: %s : %s \n"
+"\n"
+
+#: libs/extract.c:196
+#, c-format
+msgid "Cannot stat stylesheet file: %s : %s\n"
+msgstr "Không thể stat tập tin stylesheet: %s : %s\n"
 
 #~ msgid "error while parsing %s\n"
 #~ msgstr "lỗi khi phân tích %s\n"
