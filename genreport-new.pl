@@ -1,12 +1,18 @@
 #!/usr/bin/perl
 
+# Authors (in alphabetical order):
+# dand, frob, kanikus, kmaraas
+#
+# Copyright (C) 2000 Free Software Foundation, Inc.
+
 # 1999-09-23 - commented out all stuff not in gnome 1.0.50
 
 #Set the default locale so we know we get english strings
 #from msgfmt.
 
 # Multi-po-dirs module format: ("module_name", "custom_po_dir", ... )
-@gimp = ("gimp", "po-libgimp", "po-plug-ins", "po-script-fu");
+# po-script-fu commented before fixing
+@gimp = ("gimp", "po-libgimp", "po-plug-ins"); #, "po-script-fu");
 
 #Changed by frob (1)
 %branches = (
@@ -250,7 +256,7 @@ foreach $lang (@langs) {
 #  print "$translated{$lang} / $totals = $percent, num: $num ($lang)\n";  
   printf TABLE "<td align=right><font face=\"arial, helvetica\" size=2>%d%%</font></td>\n", $num;
 }
-  print TABLE "<tr><td></td>";                                                                          
+  print TABLE "<tr>";                                                                          
     foreach $lang (@langs_red) {
         print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$lang</font></a></td>\n";
 } 
@@ -262,8 +268,8 @@ print TABLE "<a name=\"branches_name\"><br>
 	     <font color=\"#0000ff\"><b><u>Well, translation monsters, the names of stable branches are:</u></b><br><br></a>
 	     <table cellpadding=1 cellspacing=1 border=0 width=\"40%\">";
 
-    foreach $key (keys (%branches)){
-	print TABLE "<td><font color=\"#00008b\"><b>$key</b></td><td><font color=\"#36648b\"><b>$branches{$key}</b></td><tr>";
+    while (($mod, $branch) = each (%branches)){
+	print TABLE "<td><font color=\"#00008b\"><b>$mod</b></td><td><font color=\"#36648b\"><b>$branch</b></td><tr>";
     }
 print TABLE "</table>";
 
