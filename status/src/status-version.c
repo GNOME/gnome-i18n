@@ -123,7 +123,7 @@ status_version_new (StatusServer *server, const gchar *id, const gchar *path)
 
 	g_return_val_if_fail (STATUS_IS_SERVER (server), NULL);
 
-	version = STATUS_VERSION (g_object_new (STATUS_TYPE_VERSION, NULL));
+	version = g_object_new (STATUS_TYPE_VERSION, NULL);
 
 	version->server = g_object_ref (server);
 	version->id = g_string_new (id);

@@ -128,7 +128,7 @@ status_server_new (const gchar *hostname, const gchar *username, const gchar *pa
 
 	g_return_val_if_fail (hostname != NULL, NULL);
 
-	server = STATUS_SERVER (g_object_new (STATUS_TYPE_SERVER, NULL));
+	server = g_object_new (STATUS_TYPE_SERVER, NULL);
 
 	server->hostname = g_string_new (hostname);
 	server->username = g_string_new (username);

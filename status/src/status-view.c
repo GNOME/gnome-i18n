@@ -140,7 +140,7 @@ status_view_new (const gchar *name)
 {
 	StatusView *view;
 
-	view = STATUS_VIEW (g_object_new (STATUS_TYPE_VIEW, NULL));
+	view = g_object_new (STATUS_TYPE_VIEW, NULL);
 
 	view->name = g_string_new (name);
 	view->modules = g_hash_table_new (g_str_hash, g_str_equal);

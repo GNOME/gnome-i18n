@@ -109,7 +109,7 @@ status_xml_get_main_data (const gchar *views_file)
 		/* We don't check if it already exists because we get a valid XML and the DTD
 		 * file does not allow two servers with the same ID
 		 */
-		g_hash_table_insert (ret->servers, id, server);
+		g_hash_table_insert (ret->servers, g_strdup(id), server);
 
 		xmlFree (id);
 		xmlFree (hostname);
@@ -146,7 +146,9 @@ status_xml_get_main_data (const gchar *views_file)
 			name = id = path = sserver = NULL;
 		
 			if (strcmp(cur_version->name, "version")) {
-				g_warning ("Bad .xml file, please fix it!!");
+				if (strcmp(cur_version->name, "text")) {
+					g_warning ("Bad .xml file, please fix it!! (%s)",cur_version->name );
+				}
 				continue;
 			}
 
@@ -171,7 +173,7 @@ status_xml_get_main_data (const gchar *views_file)
 			/* We don't check if it already exists because we get a valid XML and the DTD
 			 * file does not allow two versions with the same name
 			 */
-			g_hash_table_insert (ret->versions, name, version);
+			g_hash_table_insert (ret->versions, g_strdup (name), version);
 			
 			status_module_add_version (module, g_object_ref (version));
 			
@@ -184,7 +186,7 @@ status_xml_get_main_data (const gchar *views_file)
 		/* We don't check if it already exists because we get a valid XML and the DTD
 		 * file does not allow two modules with the same name
 		 */
-		g_hash_table_insert (ret->modules, module_name, module);
+		g_hash_table_insert (ret->modules, g_strdup (module_name), module);
 
 		xmlFree (module_name);
 	}
@@ -216,7 +218,9 @@ status_xml_get_main_data (const gchar *views_file)
 			group_name = NULL;
 		
 			if (strcmp(cur_group->name, "group")) {
-				g_warning ("Bad .xml file, please fix it!!");
+				if (strcmp(cur_group->name, "text")) {
+					g_warning ("Bad .xml file, please fix it!! (%s)",cur_group->name);
+				}
 				continue;
 			}
 
@@ -229,7 +233,9 @@ status_xml_get_main_data (const gchar *views_file)
 				name = NULL;
 		
 				if (strcmp(cur_ver->name, "versionrefs")) {
-					g_warning ("Bad .xml file, please fix it!!");
+					if (strcmp(cur_ver->name, "text")) {
+						g_warning ("Bad .xml file, please fix it!! (%s)",cur_ver->name);
+					}
 					continue;
 				}
 
@@ -259,7 +265,7 @@ status_xml_get_main_data (const gchar *views_file)
 		/* We don't check if it already exists because we get a valid XML and the DTD
 		 * file does not allow two modules with the same name
 		 */
-		g_hash_table_insert (ret->views, view_name, view);
+		g_hash_table_insert (ret->views, g_strdup (view_name), view);
 
 		xmlFree (view_name);
 	}

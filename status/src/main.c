@@ -54,6 +54,8 @@ status_data *sdata;
 		}
 	}
 
+	g_type_init ();
+
 	/* 1.- Parse the modules .xml file */
 	sdata = status_xml_get_main_data (modules);
 	

@@ -125,7 +125,7 @@ status_module_new (const gchar *name)
 {
 	StatusModule *module;
 
-	module = STATUS_MODULE (g_object_new (STATUS_TYPE_MODULE, NULL));
+	module = g_object_new (STATUS_TYPE_MODULE, NULL);
 
 	module->name = g_string_new (name);
 
