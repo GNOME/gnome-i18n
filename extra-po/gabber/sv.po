@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gabber\n"
-"POT-Creation-Date: 2001-10-21 16:00-0400\n"
-"PO-Revision-Date: 2001-10-29 15:47+0100\n"
+"POT-Creation-Date: 2001-11-04 16:28-0500\n"
+"PO-Revision-Date: 2001-11-05 00:32+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -105,83 +105,89 @@ msgstr "Registrering misslyckades"
 msgid "Automatic subscription request."
 msgstr "Automatisk prenumerationsbegäran."
 
-#: src/ContactInfoInterface.cc:405
+#: src/ContactInfoInterface.cc:446
 msgid " day"
 msgstr " dag"
 
-#: src/ContactInfoInterface.cc:410
+#: src/ContactInfoInterface.cc:451
 msgid " days"
 msgstr " dagar"
 
-#: src/ContactInfoInterface.cc:421
+#: src/ContactInfoInterface.cc:462
 msgid " hr"
 msgstr " timme"
 
-#: src/ContactInfoInterface.cc:428
+#: src/ContactInfoInterface.cc:469
 msgid " hrs"
 msgstr " timmar"
 
-#: src/ContactInfoInterface.cc:439
+#: src/ContactInfoInterface.cc:480
 msgid " min"
 msgstr " minut"
 
-#: src/ContactInfoInterface.cc:446
+#: src/ContactInfoInterface.cc:487
 msgid " mins"
 msgstr " minuter"
 
-#: src/ContactInfoInterface.cc:456
+#: src/ContactInfoInterface.cc:497
 msgid " sec"
 msgstr " sekund"
 
-#: src/ContactInfoInterface.cc:458
+#: src/ContactInfoInterface.cc:499
 msgid " secs"
 msgstr " sekunder"
 
 #. Set the tooltip as well
-#: src/ContactInfoInterface.cc:597 src/ContactInfoInterface.cc:598
+#: src/ContactInfoInterface.cc:642 src/ContactInfoInterface.cc:643
 msgid "Presence signature is invalid"
 msgstr "Närvarosignaturen är ogiltig"
 
 #. Set the tooltip as well
-#: src/ContactInfoInterface.cc:606 src/ContactInfoInterface.cc:607
+#: src/ContactInfoInterface.cc:651 src/ContactInfoInterface.cc:652
 msgid "Presence signature is valid"
 msgstr "Närvarosignaturen är giltig"
 
 #. Set the tooltip as well
-#: src/ContactInfoInterface.cc:616 src/ContactInfoInterface.cc:617
-#: src/StatusInterface.cc:387 ui/ContactInfo_dlg.glade.h:28
+#: src/ContactInfoInterface.cc:661 src/ContactInfoInterface.cc:662
+#: src/StatusInterface.cc:387 ui/ContactInfo_dlg.glade.h:29
 #: ui/Gabber_win.glade.h:42
 msgid "Presence is not signed"
 msgstr "Närvaron är inte signerad"
 
 #. Set the labels appropriately
-#: src/ContactInfoInterface.cc:622
+#: src/ContactInfoInterface.cc:667
 msgid "offline:"
 msgstr "frånkopplad:"
 
-#: src/ContactInfoInterface.cc:625
+#: src/ContactInfoInterface.cc:670
 msgid "No presence has been received."
 msgstr "Ingen närvaro har mottagits."
 
-#: src/ContactInfoInterface.cc:669
-msgid "'s Contact Information - Gabber"
-msgstr "s kontaktinformation - Gabber"
+#: src/ContactInfoInterface.cc:715
+#, c-format
+msgid "%s's Contact Information"
+msgstr "%ss kontaktinformation"
 
-#: src/ContactInfoInterface.cc:1144 src/ContactInfoInterface.cc:1151
-#: src/ContactInfoInterface.cc:1155
+#: src/ContactInfoInterface.cc:715 src/ContactInterface.cc:86
+#: src/ContactInterface.cc:203 src/FTInterface.cc:91 src/FTInterface.cc:178
+#: src/FTInterface.cc:307 src/FTInterface.cc:412 src/GCInterface.cc:191
+#: src/GroupsInterface.cc:157 src/MessageViews.cc:202 src/MessageViews.cc:519
+#: src/MessageViews.cc:524 src/MessageViews.cc:1091 src/MessageViews.cc:1721
+msgid " - Gabber"
+msgstr " - Gabber"
+
+#: src/ContactInfoInterface.cc:717
+msgid "'s Computer"
+msgstr "s dator"
+
+#: src/ContactInfoInterface.cc:1207 src/ContactInfoInterface.cc:1214
+#: src/ContactInfoInterface.cc:1218
 msgid "yes"
 msgstr "ja"
 
 #: src/ContactInterface.cc:86
 msgid "Received Contacts(s) from "
 msgstr "Mottog kontakt(er) från "
-
-#: src/ContactInterface.cc:86 src/ContactInterface.cc:203
-#: src/FTInterface.cc:70 src/FTInterface.cc:155 src/GCInterface.cc:191
-#: src/GroupsInterface.cc:157 src/MessageViews.cc:201 src/MessageViews.cc:518
-#: src/MessageViews.cc:523 src/MessageViews.cc:1088 src/MessageViews.cc:1718
-msgid " - Gabber"
-msgstr " - Gabber"
 
 #: src/ContactInterface.cc:203
 msgid "Send Contacts(s) to "
@@ -337,21 +343,100 @@ msgstr "Ny regel"
 msgid "Sorry, your server does not support Jabber filters."
 msgstr "Ledsen, din server stöder inte Jabber-filter."
 
-#: src/FTInterface.cc:70
-msgid "Received File(s) from "
-msgstr "Mottog fil(er) från "
+#: src/FTInterface.cc:91
+#, c-format
+msgid "Receive File(s) from %s"
+msgstr "Mottag fil(er) från %s"
 
-#: src/FTInterface.cc:117
+#: src/FTInterface.cc:138
 msgid "Error, a file save path must be specified."
 msgstr "Fel, en filsparningssökväg måste anges."
 
-#: src/FTInterface.cc:155
+#: src/FTInterface.cc:178
 msgid "Send File to "
 msgstr "Skicka fil till "
 
-#: src/FTInterface.cc:201
+#: src/FTInterface.cc:238
 msgid "Error, a file must be specified."
 msgstr "Fel, en fil måste anges."
+
+#: src/FTInterface.cc:287
+msgid "Waiting for connection..."
+msgstr "Väntar på anslutning..."
+
+#: src/FTInterface.cc:307
+#, c-format
+msgid "Sending File to %s"
+msgstr "Skickar fil till %s"
+
+#: src/FTInterface.cc:394
+msgid "Receiving from"
+msgstr "Tar emot från"
+
+#. Show how big the file is
+#: src/FTInterface.cc:401 src/FTInterface.cc:404
+msgid "Pending..."
+msgstr "Väntar..."
+
+#: src/FTInterface.cc:412
+#, c-format
+msgid "Receiving File from %s"
+msgstr "Mottar fil från %s"
+
+#: src/FTInterface.cc:438
+msgid "Connected, requesting file..."
+msgstr "Ansluten, begär fil..."
+
+#: src/FTInterface.cc:445
+msgid "Accepting connection..."
+msgstr "Accepterar anslutning..."
+
+#: src/FTInterface.cc:464
+msgid "Error, transfer unexpectedly ended."
+msgstr "Fel, överföringen tog oväntat slut."
+
+#: src/FTInterface.cc:465
+msgid ""
+"The file transfer has ended unexpectedly.\n"
+"The received portion of the file has been saved."
+msgstr ""
+"Filöverföringen tog oväntat slut.\n"
+"Den mottagna delen av filen har sparats."
+
+#: src/FTInterface.cc:533
+msgid "Sending..."
+msgstr "Skickar..."
+
+#: src/FTInterface.cc:562
+msgid "Receiving data..."
+msgstr "Tar emot data..."
+
+#: src/FTInterface.cc:650
+msgid "Complete."
+msgstr "Färdig."
+
+#: src/FTInterface.cc:655
+msgid "Error, received more data than expected."
+msgstr "Fel, mottog mer data än väntat."
+
+#. Update the speed
+#: src/FTInterface.cc:680
+msgid "/second"
+msgstr "/sekund"
+
+#: src/FTInterface.cc:687
+msgid "Under one minute remaining."
+msgstr "Mindre än en minut återstår."
+
+#: src/FTInterface.cc:693
+#, c-format
+msgid "%s hours, %s minutes remaining."
+msgstr "%s timmar, %s minuter återstår."
+
+#: src/FTInterface.cc:697
+#, c-format
+msgid "%s minutes remaining."
+msgstr "%s minuter återstår."
 
 #: src/GCInterface.cc:65 src/GCInterface.cc:216
 msgid " on IRC Server "
@@ -365,7 +450,7 @@ msgstr "Du har blivit inbjuden till "
 msgid "Group Chat Invitation from "
 msgstr "Inbjudan till gruppchatt från "
 
-#: src/GabberApp.cc:383 src/GabberApp.cc:539
+#: src/GabberApp.cc:384 src/GabberApp.cc:540
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -373,7 +458,7 @@ msgstr ""
 "Fel, kan inte läsa in lösenordet.\n"
 "Försök att logga in igen."
 
-#: src/GabberApp.cc:394
+#: src/GabberApp.cc:395
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -381,11 +466,11 @@ msgstr ""
 "Är du säker på att du vill att Gabber ska\n"
 "försöka registrera "
 
-#: src/GabberApp.cc:397
+#: src/GabberApp.cc:398
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:402
+#: src/GabberApp.cc:403
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -395,11 +480,11 @@ msgstr ""
 "Vill du att Gabber ska försöka skapa ett nytt\n"
 "konto på den valda Jabber-servern?"
 
-#: src/GabberApp.cc:410
+#: src/GabberApp.cc:411
 msgid "Attempt to create a new user failed: \n"
 msgstr "Försöket att skapa en ny användare misslyckades: \n"
 
-#: src/GabberApp.cc:412
+#: src/GabberApp.cc:413
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -409,7 +494,7 @@ msgstr ""
 ". Välj ett annat användarnamn eller verifiera din \n"
 "inloggningsinformation."
 
-#: src/GabberApp.cc:419
+#: src/GabberApp.cc:420
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -419,7 +504,7 @@ msgstr ""
 "server inte stöder digest-autentisering.\n"
 "Försök att ansluta igen med digest avstängt."
 
-#: src/GabberApp.cc:578
+#: src/GabberApp.cc:579
 msgid "Transmitter error. Disconnected: "
 msgstr "Sändarfel. Frånkopplad: "
 
@@ -443,176 +528,174 @@ msgstr "Detta meddelande var signerat"
 msgid "Logs for "
 msgstr "Loggar för "
 
-#: src/GabberUtility.cc:146
+#: src/GabberUtility.cc:162
 msgid "Invalid"
 msgstr "Ogiltig"
 
-#: src/GabberUtility.cc:148 ui/Gabber_win.glade.h:38
+#: src/GabberUtility.cc:164 ui/Gabber_win.glade.h:38
 msgid "Offline"
 msgstr "Frånkopplad"
 
-#: src/GabberUtility.cc:150 ui/GC_win.glade.h:2
+#: src/GabberUtility.cc:166 ui/GC_win.glade.h:2
 msgid "Available"
 msgstr "Tillgänglig"
 
-#: src/GabberUtility.cc:152 ui/GC_win.glade.h:4
-msgid "Chatty"
-msgstr "Chattig"
+#: src/GabberUtility.cc:168
+msgid "Free to Chat"
+msgstr "Ledig för chatt"
 
-#: src/GabberUtility.cc:154 ui/GC_win.glade.h:3
+#: src/GabberUtility.cc:170 ui/GC_win.glade.h:3
 msgid "Away"
 msgstr "Borta"
 
-#: src/GabberUtility.cc:156
+#: src/GabberUtility.cc:172
 msgid "Extended Away"
 msgstr "Utökat borta"
 
-#: src/GabberUtility.cc:158 ui/GC_win.glade.h:5
-msgid "Do Not Disturb"
-msgstr "Stör inte"
+#: src/GabberUtility.cc:174
+msgid "Busy"
+msgstr "Upptagen"
 
-#: src/GabberUtility.cc:191
+#: src/GabberUtility.cc:207
 msgid "both"
 msgstr "båda"
 
-#: src/GabberUtility.cc:193
+#: src/GabberUtility.cc:209
 msgid "from"
 msgstr "från"
 
-#: src/GabberUtility.cc:195
+#: src/GabberUtility.cc:211
 msgid "to"
 msgstr "till"
 
-#: src/GabberUtility.cc:198 ui/ContactInfo_dlg.glade.h:48
+#: src/GabberUtility.cc:214 ui/ContactInfo_dlg.glade.h:48
 #: ui/TransInfo_dlg.glade.h:21
 msgid "none"
 msgstr "inget"
 
-#: src/GabberUtility.cc:207
+#: src/GabberUtility.cc:223
 msgid "Both of you can see each other's presence."
 msgstr "Båda två kan se varandras närvaro."
 
-#: src/GabberUtility.cc:209
+#: src/GabberUtility.cc:225
 msgid "You cannot see their presence, but they can see yours."
 msgstr "Du kan inte se deras närvaro, men de kan se din."
 
-#: src/GabberUtility.cc:211
+#: src/GabberUtility.cc:227
 msgid "You can see their presence, but they cannot see yours."
 msgstr "Du kan se deras närvaro, men de kan inte se din."
 
-#: src/GabberUtility.cc:215 ui/ContactInfo_dlg.glade.h:20
+#: src/GabberUtility.cc:231 ui/ContactInfo_dlg.glade.h:21
 #: ui/TransInfo_dlg.glade.h:9
 msgid "Neither of you can see the other's presence."
 msgstr "Ingen av er kan se den andres närvaro."
 
-#: src/GabberUtility.cc:484 src/RosterInterface.cc:60
+#: src/GabberUtility.cc:500 src/RosterInterface.cc:60
 msgid "Unable to save file. Please try another name or location."
 msgstr "Kan inte spara filen. Försök med ett annat namn eller en annan plats."
 
-#: src/GabberWidgets.cc:148 src/MessageViews.cc:214
-msgid " from groupchat "
-msgstr " från gruppchatt "
+#: src/GabberWidgets.cc:148
+#, c-format
+msgid "%s from groupchat %s"
+msgstr "%s från gruppchatten %s"
+
+#: src/GabberWidgets.cc:265
+msgid " [stopped]"
+msgstr " [stoppad]"
+
+#: src/GabberWidgets.cc:267
+msgid " [paused]"
+msgstr " [gör paus]"
 
 #. Status Indicator(s)
-#: src/GabberWin.cc:138 src/GabberWin.cc:797 src/StatusInterface.cc:364
+#: src/GabberWin.cc:138 src/GabberWin.cc:811 src/StatusInterface.cc:364
 #: ui/Gabber_win.glade.h:12
 msgid "Disconnected"
 msgstr "Frånkopplad"
 
-#: src/GabberWin.cc:338
-msgid "Are you sure you want to disconnect from Jabber?"
-msgstr "Är du säker på att du vill koppla från Jabber?"
-
 #. Update status bar
-#: src/GabberWin.cc:371
+#: src/GabberWin.cc:377
 msgid "Logged in"
 msgstr "Inloggad"
 
 #. Update status bar
-#: src/GabberWin.cc:452
+#: src/GabberWin.cc:458
 msgid "Logged out"
 msgstr "Utloggad"
 
-#: src/GabberWin.cc:485
+#: src/GabberWin.cc:491
 msgid "Please enter name of the group:"
 msgstr "Ange namnet på gruppen:"
 
-#: src/GabberWin.cc:505
+#: src/GabberWin.cc:511
 msgid "Gabber: The GNOME Jabber Client."
 msgstr "Gabber: Jabber-klienten för GNOME."
 
-#: src/GabberWin.cc:509
+#: src/GabberWin.cc:515
 msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
 msgstr "Dave \"DizzyD\" Smith <dave@jabber.org>"
 
-#: src/GabberWin.cc:510
+#: src/GabberWin.cc:516
 msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
 msgstr "Julian \"x-virge\" Missig <julian@jabber.org>"
 
-#: src/GabberWin.cc:511
+#: src/GabberWin.cc:517
 msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 msgstr "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 
-#: src/GabberWin.cc:512
+#: src/GabberWin.cc:518
 msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 msgstr "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 
-#: src/GabberWin.cc:513
+#: src/GabberWin.cc:519
 msgid "Konrad Podloucky <konrad@crunchy-frog.org>"
 msgstr "Konrad Podloucky <konrad@crunchy-frog.org>"
 
-#: src/GabberWin.cc:514
+#: src/GabberWin.cc:520
 msgid "Dave \"bigdave\" Lee"
 msgstr "Dave \"bigdave\" Lee"
 
-#: src/GabberWin.cc:515
+#: src/GabberWin.cc:521
 msgid "Thomas \"temas\" Muldowney <temas@box5.net>"
 msgstr "Thomas \"temas\" Muldowney <temas@box5.net>"
 
-#: src/GabberWin.cc:521
+#: src/GabberWin.cc:527
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr "Copyright © 1999-2001 Julian Missig och Dave Smith"
 
-#: src/GabberWin.cc:537 src/GabberWin.cc:542 src/StatusInterface.cc:66
+#: src/GabberWin.cc:543 src/GabberWin.cc:548 src/StatusInterface.cc:66
 msgid "Online"
 msgstr "Ansluten"
 
-#: src/GabberWin.cc:545
+#: src/GabberWin.cc:551
 msgid "Chat with me!"
 msgstr "Chatta med mig!"
 
-#: src/GabberWin.cc:548
+#: src/GabberWin.cc:554 src/MessageViews.cc:2225
 msgid "I'm away."
 msgstr "Jag är borta."
 
-#: src/GabberWin.cc:551
-msgid "I'm not available right now."
-msgstr "Jag är inte tillgänglig just nu."
+#: src/GabberWin.cc:557
+msgid "I'll away for a while."
+msgstr "Jag kommer att vara borta ett tag."
 
-#: src/GabberWin.cc:554
-msgid "Please do not disturb me right now."
-msgstr "Stör mig inte just nu, är du snäll."
-
-#: src/GabberWin.cc:725
-msgid " [paused]"
-msgstr " [gör paus]"
-
-#: src/GabberWin.cc:729
-msgid " [stopped]"
-msgstr " [stoppad]"
+#: src/GabberWin.cc:560
+msgid "Sorry, I'm busy right now."
+msgstr "Tyvärr, jag är upptagen just nu."
 
 #. Update the status bar   
-#: src/GabberWin.cc:899
+#: src/GabberWin.cc:913
 msgid "Logging in..."
 msgstr "Loggar in..."
 
-#: src/GabberWin.cc:945 src/RosterView.cc:839
+#: src/GabberWin.cc:959 src/RosterView.cc:837
 msgid "Not in Roster"
 msgstr "Inte i registret"
 
 #: src/GroupsInterface.cc:157
-msgid "Edit Groups for "
-msgstr "Redigera grupper för "
+#, c-format
+msgid "Edit Groups for %s"
+msgstr "Redigera grupper för %s"
 
 #: src/MessageManager.cc:478
 msgid ""
@@ -631,94 +714,111 @@ msgstr ""
 "ditt meddelande. Skicka meddelandet okrypterat?"
 
 #. Set the label appropriately
-#: src/MessageViews.cc:156 src/MessageViews.cc:226 src/MessageViews.cc:776
+#: src/MessageViews.cc:157 src/MessageViews.cc:227 src/MessageViews.cc:777
 msgid "Message to: "
 msgstr "Meddelande till: "
 
 #. Show the error
-#: src/MessageViews.cc:159 src/MessageViews.cc:654 src/MessageViews.cc:1528
-#: src/MessageViews.cc:2131 ui/Message_win.glade.h:7
+#: src/MessageViews.cc:160 src/MessageViews.cc:655 src/MessageViews.cc:1531
+#: src/MessageViews.cc:2135 ui/Message_win.glade.h:7
 msgid "Error"
 msgstr "Fel"
 
 #. Set the label appropriately
-#: src/MessageViews.cc:166 src/MessageViews.cc:778
+#: src/MessageViews.cc:167 src/MessageViews.cc:779
 msgid "Reply to: "
 msgstr "Svara till: "
 
 #. Set the title
-#: src/MessageViews.cc:201
+#: src/MessageViews.cc:202
 msgid "Message to "
 msgstr "Meddelande till "
 
+#: src/MessageViews.cc:215
+msgid " from groupchat "
+msgstr " från gruppchatt "
+
 #. Set the tooltip
-#: src/MessageViews.cc:392 src/MessageViews.cc:1146 src/MessageViews.cc:1325
+#: src/MessageViews.cc:393 src/MessageViews.cc:1149 src/MessageViews.cc:1328
 #: ui/Message_win.glade.h:32 ui/OOOChat_win.glade.h:14
 msgid "This message is not encrypted"
 msgstr "Detta meddelande är inte krypterat"
 
 #. Set the tooltip
-#: src/MessageViews.cc:415 src/MessageViews.cc:1180
+#: src/MessageViews.cc:416 src/MessageViews.cc:1183
 msgid "Signature on message is invalid"
 msgstr "Signaturen på meddelandet är ogiltig"
 
 #. Set the tooltip
-#: src/MessageViews.cc:425 src/MessageViews.cc:1171 src/MessageViews.cc:1331
+#: src/MessageViews.cc:426 src/MessageViews.cc:1174 src/MessageViews.cc:1334
 msgid "Signature on message is valid"
 msgstr "Signaturen på meddelandet är giltig"
 
 #. Set the tooltip
-#: src/MessageViews.cc:471 src/MessageViews.cc:1220 src/MessageViews.cc:1337
+#: src/MessageViews.cc:472 src/MessageViews.cc:1223 src/MessageViews.cc:1340
 msgid "This message is encrypted"
 msgstr "Detta meddelande är krypterat"
 
-#: src/MessageViews.cc:518
+#: src/MessageViews.cc:519
 msgid "Message from "
 msgstr "Meddelande från "
 
-#: src/MessageViews.cc:523
+#: src/MessageViews.cc:524
 msgid "Message - "
 msgstr "Meddelande - "
 
-#: src/MessageViews.cc:763
+#: src/MessageViews.cc:764
 msgid "from groupchat "
 msgstr "från gruppchatt "
 
 #. Prepare the text
-#: src/MessageViews.cc:826
+#: src/MessageViews.cc:827
 msgid " wrote:\n"
 msgstr " skrev:\n"
 
-#. Set the window title
-#: src/MessageViews.cc:1088
-msgid "Chat with "
-msgstr "Chatta med "
+#: src/MessageViews.cc:1052 ui/OOOChat_win.glade.h:17
+#, no-c-format
+msgid "You just received a message from %s."
+msgstr "Du fick precis ett meddelande från %s."
 
-#: src/MessageViews.cc:1718
-msgid "Group Chat in "
-msgstr "Gruppchat i "
+#. Set the window title
+#: src/MessageViews.cc:1091
+#, c-format
+msgid "Chat with %s"
+msgstr "Chatta med %s"
+
+#: src/MessageViews.cc:1721
+#, c-format
+msgid "Group Chat in %s"
+msgstr "Gruppchat i %s"
 
 #. Setup a message object
-#: src/MessageViews.cc:1828 src/MessageViews.cc:2182
-msgid "/me has changed the subject to: "
-msgstr "/me har ändrat ämnet till: "
+#: src/MessageViews.cc:1831
+#, c-format
+msgid "%s has changed the subject to: %s"
+msgstr "%s har ändrat ämnet till: %s"
 
-#: src/MessageViews.cc:2004
+#: src/MessageViews.cc:2007
 msgid "Session Disconnected"
 msgstr "Sessionen är frånkopplad"
 
-#: src/MessageViews.cc:2086
+#: src/MessageViews.cc:2089
 #, c-format
 msgid "%d members"
 msgstr "%d deltagare"
 
-#: src/MessageViews.cc:2311 ui/GCJoin_dlg.glade.h:2
+#. Setup a message object
+#: src/MessageViews.cc:2186
+msgid "/me has changed the subject to: "
+msgstr "/me har ändrat ämnet till: "
+
+#: src/MessageViews.cc:2325 ui/GCJoin_dlg.glade.h:2
 msgid "Jabber Group Chat 1.0"
 msgstr "Jabber-gruppchatt 1.0"
 
-#: src/MessageViews.cc:2312 ui/GCJoin_dlg.glade.h:1
-msgid "IRC"
-msgstr "IRC"
+#: src/MessageViews.cc:2326
+msgid "IRC (Group Chat 1.0)"
+msgstr "IRC (Gruppchatt 1.0)"
 
 #: src/PrefsInterface.cc:64
 msgid "Connection Settings - Gabber"
@@ -754,13 +854,10 @@ msgstr " är nu ansluten"
 msgid " is now offline"
 msgstr " är nu frånkopplad"
 
-#: src/RosterView.cc:656
-msgid "Are you sure you want to remove "
-msgstr "Är du säker på att du vill ta bort "
-
-#: src/RosterView.cc:662
-msgid " from your roster?"
-msgstr " från ditt register?"
+#: src/RosterView.cc:660
+#, c-format
+msgid "Are you sure you want to remove %s from your roster?"
+msgstr "Är du säker på att du vill ta bort %s från ditt register?"
 
 #. Initialize instructions
 #: src/S10nInterface.cc:72
@@ -858,7 +955,7 @@ msgstr "Färdig"
 msgid "Contact Information and Nickname"
 msgstr "Kontaktinformation och smeknamn"
 
-#: ui/AUDruid_win.glade.h:14 ui/ContactInfo_dlg.glade.h:10
+#: ui/AUDruid_win.glade.h:14 ui/ContactInfo_dlg.glade.h:11
 msgid "Country:"
 msgstr "Land:"
 
@@ -874,7 +971,7 @@ msgstr "Katalog:"
 msgid "Display the group configuration for this contact."
 msgstr "Visa gruppinformationen för denna kontakt."
 
-#: ui/AUDruid_win.glade.h:18 ui/ContactInfo_dlg.glade.h:12
+#: ui/AUDruid_win.glade.h:18 ui/ContactInfo_dlg.glade.h:13
 msgid "E-mail:"
 msgstr "E-post:"
 
@@ -891,7 +988,7 @@ msgid ""
 "From what server do you want to get the list of instant message systems?"
 msgstr "Från vilken server vill du hämta listan med meddelandesystem?"
 
-#: ui/AUDruid_win.glade.h:22 ui/ContactInfo_dlg.glade.h:14
+#: ui/AUDruid_win.glade.h:22 ui/ContactInfo_dlg.glade.h:15
 msgid "Full Name:"
 msgstr "Fullständigt namn:"
 
@@ -915,7 +1012,7 @@ msgstr ""
 msgid "Gabber organizes contacts in the roster by what group they are in."
 msgstr "Gabber organiserar kontakterna i registret efter den grupp de är i."
 
-#: ui/AUDruid_win.glade.h:27 ui/ContactInfo_dlg.glade.h:15
+#: ui/AUDruid_win.glade.h:27 ui/ContactInfo_dlg.glade.h:16
 #: ui/Welcome_win.glade.h:10
 msgid "Go to this web site"
 msgstr "Gå till denna webbplats"
@@ -936,7 +1033,7 @@ msgstr ""
 "Om du inte hittade den kontakt som du letade efter kan du klicka på Bakåt "
 "och söka igen."
 
-#: ui/AUDruid_win.glade.h:31 ui/ContactInfo_dlg.glade.h:17
+#: ui/AUDruid_win.glade.h:31 ui/ContactInfo_dlg.glade.h:18
 #: ui/SubscriptionRequest_dlg.glade.h:5 ui/TransInfo_dlg.glade.h:7
 #: ui/Welcome_win.glade.h:13
 msgid "JabberID:"
@@ -1180,90 +1277,90 @@ msgstr "Klient:"
 msgid "Contact Information - Gabber"
 msgstr "Kontaktinformation - Gabber"
 
-#: ui/ContactInfo_dlg.glade.h:11
+#: ui/ContactInfo_dlg.glade.h:10
+msgid "Contact's Computer"
+msgstr "Kontaktens dator"
+
+#: ui/ContactInfo_dlg.glade.h:12
 msgid "Current Time:"
 msgstr "Tid just nu:"
 
-#: ui/ContactInfo_dlg.glade.h:13 ui/TransInfo_dlg.glade.h:4
+#: ui/ContactInfo_dlg.glade.h:14 ui/TransInfo_dlg.glade.h:4
 msgid "Explanation:"
 msgstr "Förklaring:"
 
-#: ui/ContactInfo_dlg.glade.h:16
+#: ui/ContactInfo_dlg.glade.h:17
 msgid "Jabber Client"
 msgstr "Jabber-klient"
 
-#: ui/ContactInfo_dlg.glade.h:18 ui/MyContactInfo_win.glade.h:13
+#: ui/ContactInfo_dlg.glade.h:19 ui/MyContactInfo_win.glade.h:13
 msgid "Location"
 msgstr "Plats"
 
-#: ui/ContactInfo_dlg.glade.h:19
+#: ui/ContactInfo_dlg.glade.h:20
 msgid "Name:"
 msgstr "Namn:"
 
-#: ui/ContactInfo_dlg.glade.h:21
+#: ui/ContactInfo_dlg.glade.h:22
 msgid "Operating System:"
 msgstr "Operativsystem:"
 
-#: ui/ContactInfo_dlg.glade.h:22 ui/MyContactInfo_win.glade.h:15
+#: ui/ContactInfo_dlg.glade.h:23 ui/MyContactInfo_win.glade.h:15
 msgid "Organization Details"
 msgstr "Organisationsdetaljer"
 
-#: ui/ContactInfo_dlg.glade.h:23
+#: ui/ContactInfo_dlg.glade.h:24
 msgid "Pending:"
 msgstr "Väntande:"
 
-#: ui/ContactInfo_dlg.glade.h:24 ui/MyContactInfo_win.glade.h:16
+#: ui/ContactInfo_dlg.glade.h:25 ui/MyContactInfo_win.glade.h:16
 msgid "Personal Details"
 msgstr "Personliga detaljer"
 
-#: ui/ContactInfo_dlg.glade.h:25 ui/MyContactInfo_win.glade.h:17
+#: ui/ContactInfo_dlg.glade.h:26 ui/MyContactInfo_win.glade.h:17
 #: ui/Welcome_win.glade.h:17
 msgid "Personal Information"
 msgstr "Personlig information"
 
-#: ui/ContactInfo_dlg.glade.h:26
+#: ui/ContactInfo_dlg.glade.h:27
 msgid "Postal Code:"
 msgstr "Postnummer:"
 
-#: ui/ContactInfo_dlg.glade.h:27
+#: ui/ContactInfo_dlg.glade.h:28
 msgid "Presence and Status"
 msgstr "Närvaro och status"
 
-#: ui/ContactInfo_dlg.glade.h:29
+#: ui/ContactInfo_dlg.glade.h:30
 msgid "Revert to the nickname this user specified"
 msgstr "Återgå till smeknamnet som denna användare angav"
 
-#: ui/ContactInfo_dlg.glade.h:30
+#: ui/ContactInfo_dlg.glade.h:31
 msgid "Role:"
 msgstr "Roll:"
 
-#: ui/ContactInfo_dlg.glade.h:31
+#: ui/ContactInfo_dlg.glade.h:32
 msgid "State/Province:"
 msgstr "Delstat/Provins:"
 
-#: ui/ContactInfo_dlg.glade.h:32 ui/TransInfo_dlg.glade.h:15
+#: ui/ContactInfo_dlg.glade.h:33 ui/TransInfo_dlg.glade.h:15
 msgid "Subscription"
 msgstr "Prenumeration"
 
-#: ui/ContactInfo_dlg.glade.h:33 ui/TransInfo_dlg.glade.h:16
+#: ui/ContactInfo_dlg.glade.h:34 ui/TransInfo_dlg.glade.h:16
 msgid "Subscription type:"
 msgstr "Prenumerationstyp:"
 
-#: ui/ContactInfo_dlg.glade.h:34
+#: ui/ContactInfo_dlg.glade.h:35
 msgid "Telephone:"
 msgstr "Telefon:"
 
-#: ui/ContactInfo_dlg.glade.h:35
+#: ui/ContactInfo_dlg.glade.h:36
 msgid "Title:"
 msgstr "Titel:"
 
-#: ui/ContactInfo_dlg.glade.h:36
+#: ui/ContactInfo_dlg.glade.h:37
 msgid "Unit:"
 msgstr "Enhet:"
-
-#: ui/ContactInfo_dlg.glade.h:37
-msgid "User's Computer"
-msgstr "Användarens dator"
 
 #: ui/ContactInfo_dlg.glade.h:40 ui/MyContactInfo_win.glade.h:26
 msgid "_About"
@@ -1299,7 +1396,7 @@ msgstr "_Organisation"
 msgid "_Resource:"
 msgstr "_Resurs:"
 
-#: ui/ContactInfo_dlg.glade.h:49 ui/OOOChat_win.glade.h:20
+#: ui/ContactInfo_dlg.glade.h:49 ui/OOOChat_win.glade.h:18
 msgid "online:"
 msgstr "ansluten:"
 
@@ -1460,6 +1557,10 @@ msgstr "Ämne:"
 msgid "You have been invited to a groupchat by "
 msgstr "Du har blivit inbjuden till en gruppchatt av "
 
+#: ui/GCJoin_dlg.glade.h:1
+msgid "IRC"
+msgstr "IRC"
+
 #: ui/GCJoin_dlg.glade.h:3
 msgid "Join Group Chat - Gabber"
 msgstr "Anslut till gruppchatt - Gabber"
@@ -1507,6 +1608,14 @@ msgstr "_Server:"
 #: ui/GC_win.glade.h:1
 msgid "0 members"
 msgstr "0 deltagare"
+
+#: ui/GC_win.glade.h:4
+msgid "Chatty"
+msgstr "Chattig"
+
+#: ui/GC_win.glade.h:5
+msgid "Do Not Disturb"
+msgstr "Stör inte"
 
 #: ui/GC_win.glade.h:6
 msgid "Group Chat - Gabber"
@@ -2255,16 +2364,16 @@ msgid "Attempting to close chat - Gabber"
 msgstr "Försöker att stänga chatt - Gabber"
 
 #: ui/OOOChat_win.glade.h:4
-msgid "Close the Chat"
-msgstr "Stäng chatten"
-
-#: ui/OOOChat_win.glade.h:5
 msgid "Composing reply..."
 msgstr "Författar svar..."
 
+#: ui/OOOChat_win.glade.h:5
+msgid "Do you want to close the chat window anyway?"
+msgstr "Vill du stänga chattfönstret ändå?"
+
 #: ui/OOOChat_win.glade.h:9
-msgid "Keep the Chat Open"
-msgstr "Behåll chatten öppen"
+msgid "Keep Open"
+msgstr "Behåll öppen"
 
 #: ui/OOOChat_win.glade.h:11
 msgid "One-on-One Chat - Gabber"
@@ -2273,18 +2382,6 @@ msgstr "En-till-en-chatt - Gabber"
 #: ui/OOOChat_win.glade.h:12
 msgid "Send as Normal Message"
 msgstr "Skicka som normalt meddelande"
-
-#: ui/OOOChat_win.glade.h:16
-msgid ""
-"You just received a message in the chat window\n"
-"you attempted to close.\n"
-"\n"
-"Do you want to close the chat window anyway?"
-msgstr ""
-"Du fick precis ett meddelande i det\n"
-"chattfönster du försökte stänga.\n"
-"\n"
-"Vill du ändå stänga chattfönstret?"
 
 #: ui/Prefs_win.glade.h:1
 msgid "    "
@@ -3008,6 +3105,32 @@ msgstr "http://www.jabberview.com/"
 msgid "jabber.org"
 msgstr "jabber.org"
 
+#~ msgid "'s Contact Information - Gabber"
+#~ msgstr "s kontaktinformation - Gabber"
+
+#~ msgid "Are you sure you want to disconnect from Jabber?"
+#~ msgstr "Är du säker på att du vill koppla från Jabber?"
+
+#~ msgid "I'm not available right now."
+#~ msgstr "Jag är inte tillgänglig just nu."
+
+#~ msgid "Please do not disturb me right now."
+#~ msgstr "Stör mig inte just nu, är du snäll."
+
+#~ msgid " from your roster?"
+#~ msgstr " från ditt register?"
+
+#~ msgid ""
+#~ "You just received a message in the chat window\n"
+#~ "you attempted to close.\n"
+#~ "\n"
+#~ "Do you want to close the chat window anyway?"
+#~ msgstr ""
+#~ "Du fick precis ett meddelande i det\n"
+#~ "chattfönster du försökte stänga.\n"
+#~ "\n"
+#~ "Vill du ändå stänga chattfönstret?"
+
 #~ msgid "Loading list of agents..."
 #~ msgstr "Läser in lista med agenter..."
 
@@ -3068,9 +3191,6 @@ msgstr "jabber.org"
 
 #~ msgid "Unknown Error"
 #~ msgstr "Okänt fel"
-
-#~ msgid "Disconnected. Reconnecting..."
-#~ msgstr "Frånkopplad. Ansluter igen..."
 
 #~ msgid "Unknown error"
 #~ msgstr "Okänt fel"
