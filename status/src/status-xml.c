@@ -80,10 +80,10 @@ status_xml_get_main_data (const gchar *views_file)
 	}
 
 	ret = (status_data *) g_new (status_data, 1);
-	ret->servers = g_hash_table_new (g_str_hash, g_str_equal);
-	ret->modules = g_hash_table_new (g_str_hash, g_str_equal);
-	ret->versions = g_hash_table_new (g_str_hash, g_str_equal);
-	ret->views = g_hash_table_new (g_str_hash, g_str_equal);
+	ret->servers = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
+	ret->modules = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
+	ret->versions = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
+	ret->views = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 
 	/* We load first the servers */
 	for (cur = root->xmlChildrenNode; cur != NULL; cur = cur->next) {
@@ -163,7 +163,7 @@ status_xml_get_main_data (const gchar *views_file)
 				continue;
 			}
 		
-			version = status_version_new (server, id, path);
+			version = status_version_new (g_object_ref (server), id, path);
 
 			/* We don't check if it already exists because we get a valid XML and the DTD
 			 * file does not allow two versions with the same name
@@ -181,7 +181,7 @@ status_xml_get_main_data (const gchar *views_file)
 		/* We don't check if it already exists because we get a valid XML and the DTD
 		 * file does not allow two modules with the same name
 		 */
-		g_hash_table_insert (ret->modules, id, server);
+		g_hash_table_insert (ret->modules, module_name, module);
 
 		xmlFree (module_name);
 	}
