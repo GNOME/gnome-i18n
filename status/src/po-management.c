@@ -482,7 +482,5 @@ status_update_po_release (gpointer key, gpointer value, gpointer user_data)
 
 	rls = (release *) value;
 	g_list_foreach (rls->components, process_component, NULL);
-	generate_release_html (rls);
-	generate_locale_html (rls);
 
 }

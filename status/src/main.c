@@ -72,9 +72,6 @@ GHashTable *releases;
 	
 	/* 2b.- Save the data ?? */
 	/* 3.- Create the .html files */
-	/* FIXME: We should generate the html files now instead of inside
-	 * status_update_po_release but it cannot be done now.
 	g_hash_table_foreach (releases, generate_release_html, NULL);
 	g_hash_table_foreach (releases, generate_locale_html, NULL);
-*/
 }
