@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: scrollkeeper 0.6\n"
-"POT-Creation-Date: 2001-12-03 01:39-0600\n"
-"PO-Revision-Date: 2002-02-23 13:32+0100\n"
+"POT-Creation-Date: 2002-06-19 22:48-0500\n"
+"PO-Revision-Date: 2002-08-25 10:41+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,8 +15,22 @@ msgstr ""
 
 #: cl/src/scrollkeeper-install.c:34
 msgid ""
-"Usage: scrollkeeper-install [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Bruk: scrollkeeper_install [-v] [-p <SCROLLKEEPER_DB_KAT>] <OMF_FIL>\n"
+"Usage: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+msgstr "Bruk: scrollkeeper_install [-v] [-q] [-p <SCROLLKEEPER_DB_KAT>] <OMF_FIL>\n"
+
+#: cl/src/scrollkeeper-install.c:95
+msgid "Could not create database.  Aborting install.\n"
+msgstr "Kunne ikke opprette database. Avbryter installasjon.\n"
+
+#: cl/src/scrollkeeper-install.c:99 cl/src/update.c:524
+#, c-format
+msgid "Registering %s\n"
+msgstr "Registrerer %s\n"
+
+#: cl/src/scrollkeeper-install.c:101 cl/src/update.c:521
+#, c-format
+msgid "Unable to register %s\n"
+msgstr "Kan ikke registrere %s\n"
 
 #: cl/src/preinstall.c:35
 msgid "Usage: scrollkeeper-preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
@@ -24,31 +38,51 @@ msgstr "Bruk: scrollkeeper-preinstall <DOK_FIL> <OMF FIL> <NY OMF FIL>\n"
 
 #: cl/src/preinstall.c:68
 #, c-format
-msgid "url update in OMF file %s failed\n"
-msgstr "url-oppdatering i OMF-fil %s feilet\n"
+msgid "Unable to update URL in OMF file %s.  Copying OMF file unchanged.\n"
+msgstr "Kan ikke oppdatere URL i OMF-fil %s. Kopierer OMF-filen uendret.\n"
 
 #: cl/src/scrollkeeper-uninstall.c:32
 msgid ""
-"Usage: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Bruk: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_KAT>] <OMF FIL>\n"
+"Usage: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF "
+"FILE>\n"
+msgstr "Bruk: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_KAT>] <OMF FIL>\n"
 
-#: cl/src/update.c:109
+#: cl/src/scrollkeeper-uninstall.c:86 cl/src/update.c:539
 #, c-format
-msgid "Usage: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
-msgstr "Bruk %s [-v] [-p <SCROLLKEEPER_DB_KAT>] [-o <OMF_KAT>]\n"
+msgid "Unregistering %s\n"
+msgstr "Fjerner registrering av %s\n"
 
-#: cl/src/update.c:221
+#: cl/src/update.c:108
+#, c-format
+msgid "Usage: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
+msgstr "Bruk %s [-v] [-q] [-p <SCROLLKEEPER_DB_KAT>] [-o <OMF_KAT>]\n"
+
+#: cl/src/update.c:220
 #, c-format
 msgid "%s: warning: %s overrides %s\n"
 msgstr "%s: advarsel: %s overstyrer %s\n"
 
-#: cl/src/update.c:500
+#: cl/src/update.c:410
+msgid "Could not create database.  Aborting update.\n"
+msgstr "Kunne ikke opprette databse. Avbryter oppdatering.\n"
+
+#: cl/src/update.c:505
 #, c-format
 msgid "%s: %s: is not a directory\n"
 msgstr "%s: %s: er ikke en katalog\n"
 
+#: cl/src/update.c:530
+#, c-format
+msgid "Updating %s\n"
+msgstr "Oppdaterer %s\n"
+
+#: cl/src/update.c:533
+#, c-format
+msgid "Unable to complete update.  Could not register %s\n"
+msgstr "Kan ikke fullføre oppdatering. Kunne ikke registrere %s\n"
+
 #: cl/src/get-cl.c:55
-msgid "Can not open temporary file\n"
+msgid "Cannot open temporary file.\n"
 msgstr "Kan ikke åpne midlertidig fil\n"
 
 #: cl/src/get-cl.c:93
@@ -56,57 +90,114 @@ msgstr "Kan ikke åpne midlertidig fil\n"
 msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 msgstr "Bruk: %s [-v] <LOCALE> <FILNAVN FOR KATEGORITRE>\n"
 
-#: cl/src/get-cl.c:134
+#: cl/src/get-cl.c:133
 msgid "No Content List for this locale!!!\n"
 msgstr "Ingen innholdsliste for dette localet!!!\n"
 
-#: toc/src/toc.c:488
-#, c-format
-msgid "error while parsing %s\n"
-msgstr "feil under lesing av %s\n"
-
-#: toc/src/toc.c:502
-msgid ""
-"Usage:  toc <filename>\n"
-"\n"
-msgstr ""
-"Bruk: toc <filnavn>\n"
-"\n"
-
-#: libs/error.c:80
+#: libs/error.c:114
 #, c-format
 msgid "%s: out of memory: %s\n"
 msgstr "%s: ikke mer minne: %s\n"
 
-#: libs/install.c:163
+#: libs/error.c:262
 #, c-format
-msgid "wrong omf file %s\n"
-msgstr "feil omf-fil %s\n"
+msgid "OMF validation error: %s"
+msgstr "Feil ved OMF-validering: %s"
 
-#: libs/install.c:193 libs/uninstall.c:98
+#: libs/install.c:132
+#, c-format
+msgid ""
+"TOC file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr "TOC-filen eksisterer ikke, er ikke lesbar, eller er ikke velformet XML: %s\n"
+
+#: libs/install.c:173
+#, c-format
+msgid ""
+"OMF file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr "OMF-filen eksisterer ikke, er ikke lesbar eller er ikke velformet XML: %s\n"
+
+#: libs/install.c:182
+#, c-format
+msgid "Could not parse ScrollKeeper-OMF DTD: %s\n"
+msgstr "Kunne ikke tolke ScrollKeeper-OMF DTD: %s\n"
+
+#: libs/install.c:190
+#, c-format
+msgid "OMF file [%s] does not validate against ScrollKeeper-OMF DTD: %s\n"
+msgstr "OMF-fil [%s] validerer ikke mot ScrollKeeper-OMF DTD: %s\n"
+
+#. This should not happen
+#: libs/install.c:207
+msgid "Failed to locate an <OMF> element.\n"
+msgstr "Feil under søk etter et <OMF>-element.\n"
+
+#. This should not happen
+#: libs/install.c:212
+msgid "<OMF> node has no children.\n"
+msgstr "<OMF>-node har ingen etterkommere.\n"
+
+#: libs/install.c:236
+#, c-format
+msgid ""
+"Content list file does not exist, is not readable, or is not well-formed "
+"XML: %s\n"
+msgstr "Filen med innholdslisten eksisterer ikke, er ikke lesbar, eller er ikke velformet XML: %s\n"
+
+#: libs/install.c:243
+#, c-format
+msgid ""
+"Extended content list file does not exist, is not readable, or is not well-"
+"formed XML: %s\n"
+msgstr "Filen som inneholder utvidet innholdsliste eksisterer ikke, er ikke lesbar eller er ikke velformet XML: %s\n"
+
+#: libs/uninstall.c:97
 #, c-format
 msgid "wrong content list file %s\n"
 msgstr "feil fil for innholdsliste %s\n"
 
-#: libs/install.c:200 libs/uninstall.c:105
+#: libs/uninstall.c:104
 #, c-format
 msgid "wrong extended content list file %s\n"
 msgstr "feil fil for utvidet innholdsliste %s\n"
 
-#: libs/uninstall.c:202
+#: libs/uninstall.c:201
 #, c-format
 msgid "%s missing\n"
 msgstr "%s mangler\n"
 
-#: extract/src/scrollkeeper-extract.c:29
+#: libs/database.c:41
+#, c-format
+msgid "Could not create directory %s : %s\n"
+msgstr "Kunne ikke opprette katalog %s: %s\n"
+
+#: libs/update-url.c:40
+msgid "OMF file was not well-formed.\n"
+msgstr "OMF-filen var ikke velformet.\n"
+
+#: libs/update-url.c:48
+msgid "Could not find root element of OMF file.\n"
+msgstr "Kunne ikke finne rotelement i OMF-filen.\n"
+
+#: libs/update-url.c:52
+msgid "Root element of OMF file is not <omf>.\n"
+msgstr "Rotelement i OMF-filen er ikke <omf>.\n"
+
+#: libs/update-url.c:64
+msgid "OMF file does not have <resource> element.\n"
+msgstr "OMF-filen har ikke et <resource>-element.\n"
+
+#: extract/src/scrollkeeper-extract.c:30
 msgid ""
 "Usage: scrollkeeper-extract <xml file> <stylesheet 1> <output file 1> "
 "<stylesheet 2> <output file 2> ...\n"
-msgstr "Bruk: scrollkeeper-extract <xml fil> <stilark 1> <utfil 1> <stilark 2> <utfil 2> ...\n"
+msgstr ""
+"Bruk: scrollkeeper-extract <xml fil> <stilark 1> <utfil 1> <stilark 2> "
+"<utfil 2> ...\n"
 
-#: extract/src/scrollkeeper-extract.c:56
-msgid "Unrecognized file type\n"
-msgstr "Ikke gjenkjent filtype\n"
+#: extract/src/scrollkeeper-extract.c:61
+#, c-format
+msgid "Unrecognized file type: %s\n"
+msgstr "Ikke gjenkjent filtype: %s\n"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:1
 msgid "3D Modelling"
@@ -815,3 +906,16 @@ msgstr "X"
 #: cl/templates/scrollkeeper_cl.xml.in.h:177
 msgid "gtk++"
 msgstr "gtk++"
+
+#~ msgid "error while parsing %s\n"
+#~ msgstr "feil under lesing av %s\n"
+
+#~ msgid ""
+#~ "Usage:  toc <filename>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Bruk: toc <filnavn>\n"
+#~ "\n"
+
+#~ msgid "wrong omf file %s\n"
+#~ msgstr "feil omf-fil %s\n"
