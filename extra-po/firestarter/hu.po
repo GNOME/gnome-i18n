@@ -7,12 +7,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Firestarter VERSION\n"
 "POT-Creation-Date: 2000-09-11 23:05+0400\n"
-"PO-Revision-Date: 2000-10-09 15:41+0200\n"
-"Last-Translator: Balazs Nemeth <bnemeth@kfki-isys.hu>\n"
+"PO-Revision-Date: 2000-10-16 14:41GMT\n"
+"Last-Translator: NEMETH Balazs <bnemeth@kfki-isys.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.5.5\n"
 
 #: src/firestarter.c:56
 msgid "Firewall running"
@@ -122,10 +123,13 @@ msgstr ""
 "Ha modemmel kapcsolódsz a Nethez, akkor valószínûleg így hívják: ppp0. Ha "
 "ISDN vonalad \n"
 "van, az ippp0, ha Ethernet (kábel) kapcsolatod van, az eth0 eszközt válaszd."
+
 #: src/druid.c:197
-  msgid "Detected device(s):" msgstr "Felismert eszköz(ök):"
+msgid "Detected device(s):"
+msgstr "Felismert eszköz(ök):"
+
 #: src/druid.c:202
-  msgid ""
+msgid ""
 "Select your network device from the dropdown list. Go with the default if "
 "unsure."
 msgstr ""
@@ -215,6 +219,11 @@ msgid ""
 "most\n"
 "common IP range reserved for internal networks."
 msgstr ""
+"A hálózatí tartományt a  cim/mask formában kell megadni. A 192.168.1.0/24 a "
+"leggyakrabban használt IP tartomány, ami a belsõ hálózatok számára van "
+"fenntartva.A / utáni szám (mask) azt határozza meg, hogy az IP cím elsõ "
+"bitjei közül mennyi számít. Az IP cím 4 bájt, vagyis 32 bit, azaz a /24 azt "
+"jelenti, hogy az IP címek elsö 3 bájtját veszi figyelembe a tüzfal."
 
 #: src/druid.c:370
 msgid ""
@@ -256,6 +265,11 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"Üdvözöl a Firestarter Tûzfal Varázsló\n"
+"\n"
+"A Varázsló segít neked beállítani a testreszabott csomagszûrõ tüzfalata "
+"Linux rendszered számára, néhány könnyû lépésben.\n"
+"\n"
 
 #: src/druid.c:523
 msgid "Choose your external interface"
@@ -292,6 +306,8 @@ msgid ""
 "Enther the path to the file the syslog daemon logs to. This is almost always "
 "/var/log/messages."
 msgstr ""
+"Add meg annak a fájlnak a helyét, amelybe a syslog démon naplóz. Ez majdnem "
+"mindig a /var/log/message  fájl."
 
 #: src/preferences.c:130
 msgid "Start firewall on program startup"
@@ -314,7 +330,7 @@ msgid ""
 "Check this and the firewall will be stopped when you exit Firestarter. "
 "Enabled by default."
 msgstr ""
-"Jelöld be ezt, és a tûzfal a Firestarterbõl való kilépéskor leállításra "
+"Jelöld be ezt, és a tûzfal a Firestarterbõl való kilépéskor kikapcsolásra "
 "kerül. Alapértelmezett: engedélyezve."
 
 #: src/preferences.c:150
@@ -326,6 +342,9 @@ msgid ""
 "By default when you close the program window the program is merely hidden, "
 "you can then make it visible again by clicking on the status button."
 msgstr ""
+"Alapesetben, amikor bezárod a programablakot, a program nem lép ki, "
+"csupánrejtett üzemmódban mûködik tovább. Ismét láthatóvá teheted, ha a "
+"státusz gombrakattintasz."
 
 #: src/preferences.c:160
 msgid "Start hidden"
@@ -341,17 +360,19 @@ msgstr ""
 
 #: src/preferences.c:170
 msgid "Remove identical firewall hit lines"
-msgstr ""
+msgstr "Azonos tûzfal ütközési sorok eltávolítása"
 
 #: src/preferences.c:172
 msgid ""
 "Check this and the firewall hit log will filter out identical lines. Enabled "
 "by deault."
 msgstr ""
+"Jelöld be ezt, és a tûzfal ütközési naplózásból kiszûrésre kerülnek az "
+"azonos sorok.Alapértelmezett: engedélyezve."
 
 #: src/preferences.c:219
 msgid "Play current sound file"
-msgstr ""
+msgstr "Aktuális hangfájl lejátszása"
 
 #: src/preferences.c:243
 msgid "Enable sounds"
@@ -360,40 +381,44 @@ msgstr "Hangok engedélyezése"
 #: src/preferences.c:245
 msgid "Check this if you want to hear sounds on certain events"
 msgstr ""
+"Jelöld be ezt, ha hangjelzést szeretnél hallani az egyes események "
+"bekövetkeztekor."
 
 #: src/preferences.c:251
 msgid "File to play on firewall hit:"
-msgstr ""
+msgstr "Tûzfal ütközéskor lejátszandó hangfájl:"
 
 #: src/preferences.c:258
 msgid ""
 "Enter the path to the sound file that should be played when a firewall hit "
 "occurs."
 msgstr ""
+"Add meg annak a hangfájlnak a helyét, ami tûzfal ütközéskor kerül "
+"lejátszásra."
 
 #: src/preferences.c:269
 msgid "File to play on firewall stop:"
-msgstr "A tûzfal kikapcsolásakor lejátszandó fájl:"
+msgstr "A tûzfal kikapcsolásakor lejátszandó hangfájl:"
 
 #: src/preferences.c:276
 msgid ""
 "Enter the path to the sound file that should be played when the firewall is "
 "stopped."
 msgstr ""
-"Add meg annak a hangfájlnak az elérési útját, ami a tûzfal kikapcsolásakor "
-"kerül lejátszásra."
+"Add meg annak a hangfájlnak a helyét, ami a tûzfal kikapcsolásakor kerül "
+"lejátszásra."
 
 #: src/preferences.c:287
 msgid "File to play on firewall restart:"
-msgstr "A tûzfal újraindításakor lejátszandó fájl:"
+msgstr "A tûzfal újraindításakor lejátszandó hangfájl:"
 
 #: src/preferences.c:294
 msgid ""
 "Enter the path to the sound file that should be played when the firewall is "
 "restarted."
 msgstr ""
-"Add meg annak a hangfájlnak az elérési útját, ami a tûzfal újraíndításakor "
-"kerül lejátszásra"
+"Add meg annak a hangfájlnak a helyét, ami a tûzfal újraíndításakor kerül "
+"lejátszásra."
 
 #: src/preferences.c:333 src/preferences.c:406
 msgid "Always show IP Masquerade page in wizard"
@@ -538,12 +563,12 @@ msgstr "Protokoll:"
 
 #: src/addrules.c:126
 msgid "Enter IP range or hostname to deny all connections from:"
-msgstr "IP tartomány vagy gépnév, amelyektõl valamennyi kapcsolatot letiltod:"
+msgstr "IP tartomány vagy gépnév, amelytõl valamennyi kapcsolatot letiltod:"
 
 #: src/addrules.c:128
 msgid "Enter IP range or hostname to allow all connections from:"
 msgstr ""
-"IP tartomány vagy gépnév, amelyektõl valamennyi kapcsolatot engedélyezed:"
+"IP tartomány vagy gépnév, amelytõl valamennyi kapcsolatot engedélyezed:"
 
 #: src/addrules.c:130 src/addrules.c:139
 msgid "Enter the port number of the service to open:"
@@ -551,4 +576,4 @@ msgstr "A megnyitandó szolgáltatás portszáma:"
 
 #: src/addrules.c:132
 msgid "Enter IP range or hostname to open service to:"
-msgstr "IP tartomány vagy gépnév, amelyeknek megnyitod a szolgáltatást:"
+msgstr "IP tartomány vagy gépnév, amelynek megnyitod a szolgáltatást:"
