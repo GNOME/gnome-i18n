@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gabber 0.8.5.5 cvs\n"
-"POT-Creation-Date: 2001-11-25 02:16-0500\n"
-"PO-Revision-Date: 2001-12-18 20:59+0900\n"
+"Project-Id-Version: Gabber 0.8.5.6 cvs\n"
+"POT-Creation-Date: 2001-12-28 22:48+0900\n"
+"PO-Revision-Date: 2001-12-28 22:51+0900\n"
 "Last-Translator: Katsumi Saito <katsumi@jo1upk.ymt.prug.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -30,52 +30,52 @@ msgid "Open with Netscape (Run New)"
 msgstr "Netscape を開く (新規)"
 
 #. Loading...
-#: src/AddContactDruid.cc:322 src/AddContactDruid.cc:464
+#: src/AddContactDruid.cc:341 src/AddContactDruid.cc:483
 msgid "Loading the list of agents..."
-msgstr "エージャントリストを読み込み中..."
+msgstr "エージェントリストを読み込み中..."
 
-#: src/AddContactDruid.cc:361 src/AddContactDruid.cc:503
+#: src/AddContactDruid.cc:380 src/AddContactDruid.cc:522
 #: src/AgentInterface.cc:228 src/AgentInterface.cc:392
 msgid "Error receiving XML for Agent Browser, see standard output."
 msgstr ""
-"エージェントブラウザにおいて XMLの受信でエラーがありました、標準出力を参照下"
-"さい。"
+"エージェントブラウザにおいて XMLの受信でエラーがありました、\n"
+"標準出力を参照下さい。"
 
-#: src/AddContactDruid.cc:368 src/AddContactDruid.cc:510
+#: src/AddContactDruid.cc:387 src/AddContactDruid.cc:529
 #: src/AgentInterface.cc:235 src/AgentInterface.cc:399
 msgid "Error, this server does not support agents."
 msgstr "エラー、このサーバはエージェントをサポートしていません。"
 
-#: src/AddContactDruid.cc:390
+#: src/AddContactDruid.cc:409
 msgid "You must register with this agent first."
 msgstr "まず最初に、このエージェントに登録をしなければなりません。"
 
-#: src/AddContactDruid.cc:539 ui/AUDruid_win.glade.h:32
+#: src/AddContactDruid.cc:558 ui/AUDruid_win.glade.h:32
 #: ui/RegDruid_win.glade.h:7
 msgid "Loading..."
 msgstr "読み込み中..."
 
-#: src/AddContactDruid.cc:541
+#: src/AddContactDruid.cc:560
 msgid "Loading information from agent..."
 msgstr "エージェントから情報を読み込み中..."
 
-#: src/AddContactDruid.cc:626
+#: src/AddContactDruid.cc:645
 msgid "Information loaded."
 msgstr "情報の読み込み完了。"
 
-#: src/AddContactDruid.cc:633
+#: src/AddContactDruid.cc:652
 msgid "Error attempting to search agent."
 msgstr "エージェント検索でエラーが発生しました。"
 
-#: src/AddContactDruid.cc:675
+#: src/AddContactDruid.cc:694
 msgid "Searching..."
 msgstr "検索中..."
 
-#: src/AddContactDruid.cc:728
+#: src/AddContactDruid.cc:747
 msgid "Error "
 msgstr "エラー "
 
-#: src/AddContactDruid.cc:740
+#: src/AddContactDruid.cc:759
 msgid "Search completed."
 msgstr "検索完了。"
 
@@ -83,8 +83,8 @@ msgstr "検索完了。"
 #: src/AgentInterface.cc:197
 msgid "Error occurred querying this agent. Please try again later."
 msgstr ""
-"このエージェントに問い合わせ中、エラーが発生しました。あとで再度、試行して下"
-"さい。"
+"このエージェントに問い合わせ中、エラーが発生しました。\n"
+"あとで再度、試行して下さい。"
 
 #: src/AgentInterface.cc:454
 msgid "Loading registration information..."
@@ -161,7 +161,9 @@ msgstr "署名されていません"
 msgid "offline:"
 msgstr "オフライン:"
 
-#: src/ContactInfoInterface.cc:670
+#. Construct an offline presence
+#: src/ContactInfoInterface.cc:670 src/GabberWidgets.cc:409
+#: src/GabberWidgets.cc:463
 msgid "No presence has been received."
 msgstr "所在は受信されていません。"
 
@@ -171,10 +173,10 @@ msgid "%s's Contact Information"
 msgstr "%s のコンタクト先情報"
 
 #: src/ContactInfoInterface.cc:715 src/ContactInterface.cc:86
-#: src/ContactInterface.cc:203 src/FTInterface.cc:93 src/FTInterface.cc:181
-#: src/FTInterface.cc:310 src/FTInterface.cc:416 src/GCInterface.cc:191
-#: src/GroupsInterface.cc:157 src/MessageViews.cc:435 src/MessageViews.cc:584
-#: src/MessageViews.cc:1037 src/MessageViews.cc:1653 src/URLInterface.cc:84
+#: src/ContactInterface.cc:201 src/FTInterface.cc:93 src/FTInterface.cc:180
+#: src/FTInterface.cc:279 src/FTInterface.cc:385 src/GCInterface.cc:191
+#: src/GroupsInterface.cc:157 src/MessageViews.cc:389 src/MessageViews.cc:536
+#: src/MessageViews.cc:953 src/MessageViews.cc:1575 src/URLInterface.cc:84
 msgid " - Gabber"
 msgstr " - Gabber"
 
@@ -192,11 +194,12 @@ msgstr "はい"
 msgid "Received Contacts(s) from "
 msgstr "コンタクト先受信 - "
 
-#: src/ContactInterface.cc:203
-msgid "Send Contacts(s) to "
-msgstr "コンタクト先送信 - "
+#: src/ContactInterface.cc:201
+#, c-format
+msgid "Send Contacts(s) to %s"
+msgstr "コンタクト先 %s を送信"
 
-#: src/ContactInterface.cc:281
+#: src/ContactInterface.cc:249
 msgid "Jabber Contacts attached:"
 msgstr "Jabber コンタクト先に付与された:"
 
@@ -297,7 +300,7 @@ msgstr "ルール処理の継続。"
 
 #. Create remove button
 #: src/FilterInterface.cc:107 src/FilterInterface.cc:221
-#: ui/ContactRecv_dlg.glade.h:6 ui/ContactSend_dlg.glade.h:5
+#: ui/ContactRecv_dlg.glade.h:6 ui/ContactSend_dlg.glade.h:4
 #: ui/FTRecv_dlg.glade.h:7 ui/FilterList_dlg.glade.h:5 ui/GCI_dlg.glade.h:8
 #: ui/Ignore_dlg.glade.h:9
 msgid "Remove"
@@ -342,7 +345,7 @@ msgstr "のメッセージタイプは..."
 msgid "New Rule"
 msgstr "新規ルール"
 
-#: src/FilterInterface.cc:435
+#: src/FilterInterface.cc:425
 msgid "Sorry, your server does not support Jabber filters."
 msgstr ""
 "申し訳ありませんが、あなたのサーバは jabber フィルターをサポートしていませ"
@@ -357,51 +360,51 @@ msgstr "%s からファイルを受信しました"
 msgid "Error, a file save path must be specified."
 msgstr "エラー、ファイルを保存するパスを指定して下さい。"
 
-#: src/FTInterface.cc:181
+#: src/FTInterface.cc:180
 #, c-format
 msgid "Send File to %s"
 msgstr "%s ファイルの送信"
 
-#: src/FTInterface.cc:241
+#: src/FTInterface.cc:210
 msgid "Error, a file must be specified."
 msgstr "エラー、ファイルを指定して下さい。"
 
-#: src/FTInterface.cc:290
+#: src/FTInterface.cc:259
 msgid "Waiting for connection..."
 msgstr "接続待ち..."
 
-#: src/FTInterface.cc:310
+#: src/FTInterface.cc:279
 #, c-format
 msgid "Sending File to %s"
 msgstr "%s へファイルの送信中"
 
-#: src/FTInterface.cc:397
+#: src/FTInterface.cc:366
 msgid "Receiving from"
 msgstr "受信中 - "
 
 #. Show how big the file is
-#: src/FTInterface.cc:405 src/FTInterface.cc:408
+#: src/FTInterface.cc:374 src/FTInterface.cc:377
 msgid "Pending..."
 msgstr "未定..."
 
-#: src/FTInterface.cc:416
+#: src/FTInterface.cc:385
 #, c-format
 msgid "Receiving File from %s"
 msgstr "%s からファイルを受信中"
 
-#: src/FTInterface.cc:442
+#: src/FTInterface.cc:411
 msgid "Connected, requesting file..."
 msgstr "接続、ファイル要求中..."
 
-#: src/FTInterface.cc:449
+#: src/FTInterface.cc:418
 msgid "Accepting connection..."
 msgstr "接続受理..."
 
-#: src/FTInterface.cc:468
+#: src/FTInterface.cc:437
 msgid "Error, transfer unexpectedly ended."
 msgstr "エラー、転送は不意に終了した。"
 
-#: src/FTInterface.cc:469
+#: src/FTInterface.cc:438
 msgid ""
 "The file transfer has ended unexpectedly.\n"
 "The received portion of the file has been saved."
@@ -409,55 +412,57 @@ msgstr ""
 "ファイル転送は、不意に終了しました。\n"
 "受信した一部のファイルを保存しました。"
 
-#: src/FTInterface.cc:537
+#: src/FTInterface.cc:506
 msgid "Sending..."
 msgstr "送信中..."
 
-#: src/FTInterface.cc:566
+#: src/FTInterface.cc:535
 msgid "Receiving data..."
 msgstr "データ受信中..."
 
-#: src/FTInterface.cc:654
+#: src/FTInterface.cc:623
 msgid "Complete."
 msgstr "完了。"
 
-#: src/FTInterface.cc:659
+#: src/FTInterface.cc:628
 msgid "Error, received more data than expected."
 msgstr "エラー、期待したより多くのデータを受信しました。"
 
 #. Update the speed
-#: src/FTInterface.cc:684
+#: src/FTInterface.cc:653
 #, c-format
 msgid "%s/second"
 msgstr "%s/秒"
 
-#: src/FTInterface.cc:691
+#: src/FTInterface.cc:660
 msgid "Under one minute remaining."
 msgstr "残り１分未満。"
 
-#: src/FTInterface.cc:697
+#: src/FTInterface.cc:666
 #, c-format
 msgid "%s hours, %s minutes remaining."
 msgstr "残り %s 時間 %s 分。"
 
-#: src/FTInterface.cc:701
+#: src/FTInterface.cc:670
 #, c-format
 msgid "%s minutes remaining."
 msgstr "残り %s 秒。"
 
-#: src/GCInterface.cc:65 src/GCInterface.cc:216
-msgid " on IRC Server "
-msgstr " のIRCサーバ"
+#: src/GCInterface.cc:64 src/GCInterface.cc:215
+#, c-format
+msgid "%s on IRC Server %s"
+msgstr "%s の %s IRCサーバ"
 
 #: src/GCInterface.cc:114
-msgid "You have been invited to "
-msgstr "あなたは招待した "
+#, c-format
+msgid "You have been invited to %s"
+msgstr "あなたは %s を招待した"
 
 #: src/GCInterface.cc:191
 msgid "Group Chat Invitation from "
 msgstr "グループチャット招待 - Gabber"
 
-#: src/GabberApp.cc:394 src/GabberApp.cc:550
+#: src/GabberApp.cc:408 src/GabberApp.cc:564
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -465,17 +470,17 @@ msgstr ""
 "エラー、パスワードの読み込みができません。\n"
 "再度、ログオンして下さい。"
 
-#: src/GabberApp.cc:405
+#: src/GabberApp.cc:419
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
 msgstr "Gabberに登録したいと思いますか "
 
-#: src/GabberApp.cc:408
+#: src/GabberApp.cc:422
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:413
+#: src/GabberApp.cc:427
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -484,11 +489,11 @@ msgstr ""
 "Gabberは、記録することができませんでした。\n"
 "選択された Jabberサーバのアカウントを新規に作成してもよろしいですか?"
 
-#: src/GabberApp.cc:421
+#: src/GabberApp.cc:435
 msgid "Attempt to create a new user failed: \n"
 msgstr "新規ユーザは存在しているため作成で失敗: \n"
 
-#: src/GabberApp.cc:423
+#: src/GabberApp.cc:437
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -497,7 +502,7 @@ msgstr ""
 "\n"
 "。別のユーザ名または、ログイン情報を調べて選択して下さい。"
 
-#: src/GabberApp.cc:430
+#: src/GabberApp.cc:444
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -506,23 +511,23 @@ msgstr ""
 "ログインに失敗。このサーバは、ダイジェスト認証をサポートしていません。\n"
 "ダイジェストを無効にして再接続して下さい。"
 
-#: src/GabberApp.cc:589
+#: src/GabberApp.cc:603
 msgid "Transmitter error. Disconnected: "
 msgstr "送信エラー。切断: "
 
-#: src/GabberGPG.cc:433
+#: src/GabberGPG.cc:428
 msgid "The signature was valid"
 msgstr "有効な署名"
 
-#: src/GabberGPG.cc:439
+#: src/GabberGPG.cc:434
 msgid "The signature was not valid"
 msgstr "無効な署名"
 
-#: src/GabberGPG.cc:443
+#: src/GabberGPG.cc:438
 msgid "Could not determine key information"
 msgstr "重要な情報を決定できませんでした"
 
-#: src/GabberGPG.cc:446
+#: src/GabberGPG.cc:441
 msgid "This message was signed"
 msgstr "このメッセージは署名がされています"
 
@@ -596,101 +601,101 @@ msgstr "お互い、所在を確認することはできません。"
 msgid "Unable to save file. Please try another name or location."
 msgstr "ファイルに保存できません。別のファイル名または場所で再度行って下さい。"
 
-#: src/GabberWidgets.cc:149
+#: src/GabberWidgets.cc:235
 #, c-format
 msgid "%s from groupchat %s"
 msgstr "グループチャット %s から %s"
 
-#: src/GabberWidgets.cc:271
+#: src/GabberWidgets.cc:371
 msgid " [stopped]"
 msgstr " [停止]"
 
-#: src/GabberWidgets.cc:273
+#: src/GabberWidgets.cc:373
 msgid " [paused]"
 msgstr " [一時停止]"
 
 #. Status Indicator(s)
-#: src/GabberWin.cc:138 src/GabberWin.cc:819 src/StatusInterface.cc:364
+#: src/GabberWin.cc:138 src/GabberWin.cc:822 src/StatusInterface.cc:364
 #: ui/Gabber_win.glade.h:11
 msgid "Disconnected"
 msgstr "切断"
 
 #. Update status bar
-#: src/GabberWin.cc:379
+#: src/GabberWin.cc:382
 msgid "Logged in"
 msgstr "ログイン"
 
 #. Update status bar
-#: src/GabberWin.cc:460
+#: src/GabberWin.cc:463
 msgid "Logged out"
 msgstr "ログアウト"
 
-#: src/GabberWin.cc:498
+#: src/GabberWin.cc:501
 msgid "Please enter name of the group:"
 msgstr "グループ名を入力して下さい:"
 
-#: src/GabberWin.cc:519
+#: src/GabberWin.cc:522
 msgid "Gabber: The GNOME Jabber Client."
 msgstr "Gabber: GNOME Jabber クライアント。"
 
-#: src/GabberWin.cc:523
+#: src/GabberWin.cc:526
 msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
 msgstr "Dave \"DizzyD\" Smith <dave@jabber.org>"
 
-#: src/GabberWin.cc:524
+#: src/GabberWin.cc:527
 msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
 msgstr "Julian \"x-virge\" Missig <julian@jabber.org>"
 
-#: src/GabberWin.cc:525
+#: src/GabberWin.cc:528
 msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 msgstr "Brandon \"brandon2\" Lees <brandon@aspect.net>"
 
-#: src/GabberWin.cc:526
+#: src/GabberWin.cc:529
 msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 msgstr "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
 
-#: src/GabberWin.cc:527
+#: src/GabberWin.cc:530
 msgid "Konrad Podloucky <konrad@crunchy-frog.org>"
 msgstr "Konrad Podloucky <konrad@crunchy-frog.org>"
 
-#: src/GabberWin.cc:528
+#: src/GabberWin.cc:531
 msgid "Dave \"bigdave\" Lee"
 msgstr "Dave \"bigdave\" Lee"
 
-#: src/GabberWin.cc:529
+#: src/GabberWin.cc:532
 msgid "Thomas \"temas\" Muldowney <temas@box5.net>"
 msgstr "Thomas \"temas\" Muldowney <temas@box5.net>"
 
-#: src/GabberWin.cc:535
+#: src/GabberWin.cc:538
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 
-#: src/GabberWin.cc:551 src/GabberWin.cc:556 src/StatusInterface.cc:66
+#: src/GabberWin.cc:554 src/GabberWin.cc:559 src/StatusInterface.cc:66
 msgid "Online"
 msgstr "オンライン"
 
-#: src/GabberWin.cc:559
+#: src/GabberWin.cc:562
 msgid "Chat with me!"
 msgstr "チャットして下さい!"
 
-#: src/GabberWin.cc:562 src/MessageViews.cc:2160
+#: src/GabberWin.cc:565 src/MessageViews.cc:2087
 msgid "I'm away."
 msgstr "私は退席です。"
 
-#: src/GabberWin.cc:565
+#: src/GabberWin.cc:568
 msgid "I'll be away for a while."
 msgstr "暫く離席します。"
 
-#: src/GabberWin.cc:568
+#: src/GabberWin.cc:571
 msgid "Sorry, I'm busy right now."
 msgstr "現在、すみませんが多忙です。"
 
-#. Update the status bar   
-#: src/GabberWin.cc:921
+#. Update the status bar
+#: src/GabberWin.cc:927
 msgid "Logging in..."
 msgstr "ログイン中..."
 
-#: src/GabberWin.cc:967 src/RosterView.cc:912
+#: src/GabberWin.cc:973 src/RosterView.cc:912
 msgid "Not in Roster"
 msgstr "登録簿にない"
 
@@ -699,7 +704,7 @@ msgstr "登録簿にない"
 msgid "Edit Groups for %s"
 msgstr "%s グループ編集"
 
-#: src/MessageManager.cc:482
+#: src/MessageManager.cc:487
 msgid ""
 "An error occurred trying to sign your message.\n"
 "Send the message unsigned?"
@@ -707,7 +712,7 @@ msgstr ""
 "あなたのメッセージに署名をしようとしてエラーが発生しました。\n"
 "メッセージの署名を外して送信してもよろしいですか?"
 
-#: src/MessageManager.cc:515 src/MessageManager.cc:537
+#: src/MessageManager.cc:520 src/MessageManager.cc:542
 msgid ""
 "An error occurred trying to encrypt your message.\n"
 "Send the message unencrypted?"
@@ -715,89 +720,91 @@ msgstr ""
 "あなたのメッセージを暗号化しよとしてエラーが発生しました。\n"
 "メッセージを平文で送信してもよろしいですか?"
 
+#. FIXME: implement grab_focus() in PrettyJID - focus goes to either _entJID or _cboResource->get_entry()
+#. 	  _entSendTo->grab_focus();
 #. Set the title
-#: src/MessageViews.cc:201 ui/MessageSend_win.glade.h:8
+#: src/MessageViews.cc:199 ui/MessageSend_win.glade.h:7
 msgid "New Blank Message - Gabber"
 msgstr "新規ブランクメッセージ - Gabber"
 
 #. Set the title
-#: src/MessageViews.cc:435
+#: src/MessageViews.cc:389
 #, c-format
 msgid "Message to %s"
 msgstr "%s へのメッセージ"
 
-#: src/MessageViews.cc:584
+#: src/MessageViews.cc:536
 #, c-format
 msgid "Message from %s"
 msgstr "%s からのメッセージ"
 
 #. Set the tooltip
-#: src/MessageViews.cc:630 src/MessageViews.cc:1095 src/MessageViews.cc:1280
-#: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:14
+#: src/MessageViews.cc:585 src/MessageViews.cc:1009 src/MessageViews.cc:1194
+#: ui/MessageRecv_win.glade.h:13 ui/OOOChat_win.glade.h:13
 msgid "This message is not encrypted"
 msgstr "このメッセージは暗号化されていません"
 
 #. Set the tooltip
-#: src/MessageViews.cc:650 src/MessageViews.cc:1129
+#: src/MessageViews.cc:605 src/MessageViews.cc:1043
 msgid "Signature on message is invalid"
 msgstr "メッセージの署名は無効"
 
 #. Set the tooltip
-#: src/MessageViews.cc:660 src/MessageViews.cc:1120 src/MessageViews.cc:1286
+#: src/MessageViews.cc:615 src/MessageViews.cc:1034 src/MessageViews.cc:1200
 msgid "Signature on message is valid"
 msgstr "メッセージの署名は有効"
 
 #. Set the tooltip
-#: src/MessageViews.cc:707 src/MessageViews.cc:1170 src/MessageViews.cc:1292
+#: src/MessageViews.cc:662 src/MessageViews.cc:1084 src/MessageViews.cc:1206
 msgid "This message is encrypted"
 msgstr "このメッセージは暗号化"
 
-#: src/MessageViews.cc:998 ui/OOOChat_win.glade.h:17
+#: src/MessageViews.cc:914 ui/OOOChat_win.glade.h:16
 #, no-c-format
 msgid "You just received a message from %s."
 msgstr "%s からメッセージを受信。"
 
 #. Set the window title
-#: src/MessageViews.cc:1037
+#: src/MessageViews.cc:953
 #, c-format
 msgid "Chat with %s"
 msgstr "%s とチャット"
 
 #. Display the error
-#: src/MessageViews.cc:1463 src/MessageViews.cc:2070
+#: src/MessageViews.cc:1385 src/MessageViews.cc:1997
 msgid "Error"
 msgstr "エラー"
 
-#: src/MessageViews.cc:1653
+#: src/MessageViews.cc:1575
 #, c-format
 msgid "Group Chat in %s"
 msgstr "%s グループチャット"
 
 #. Setup a message object
-#: src/MessageViews.cc:1763
+#: src/MessageViews.cc:1685
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "%s は、題名を %s に変更しました"
 
-#: src/MessageViews.cc:1942
+#: src/MessageViews.cc:1869
 msgid "Session Disconnected"
 msgstr "セッション切断"
 
-#: src/MessageViews.cc:2024
+#: src/MessageViews.cc:1951
 #, c-format
 msgid "%d members"
 msgstr "%d メンバー"
 
 #. Setup a message object
-#: src/MessageViews.cc:2121
+#: src/MessageViews.cc:2048
 msgid "/me has changed the subject to: "
 msgstr "/me は、次のように題名を変更しました: "
 
-#: src/MessageViews.cc:2260 ui/GCJoin_dlg.glade.h:2
+#: src/MessageViews.cc:2188 ui/GCJoin_dlg.glade.h:2
 msgid "Jabber Group Chat 1.0"
 msgstr "Jabber グループチャット 1.0"
 
-#: src/MessageViews.cc:2261
+#: src/MessageViews.cc:2189
 msgid "IRC (Group Chat 1.0)"
 msgstr "IRC (グループチャット 1.0)"
 
@@ -809,7 +816,7 @@ msgstr "接続設定 - Gabber"
 msgid "Login - Gabber"
 msgstr "ログイン - Gabber"
 
-#: src/PrefsInterface.cc:593
+#: src/PrefsInterface.cc:606
 msgid "Automatically away due to being idle"
 msgstr "アイドル時は、自動的に退席にする"
 
@@ -866,8 +873,9 @@ msgid "Presence is signed"
 msgstr "所在は署名されました"
 
 #: src/URLInterface.cc:84
-msgid "Received Web Link from "
-msgstr "Web リンクを受信中 - "
+#, c-format
+msgid "Received Web Link from %s"
+msgstr "%s から Web リンクを受信中"
 
 #: src/WelcomeDruid.cc:255
 msgid "Attempting to log in..."
@@ -911,18 +919,18 @@ msgid "Add a Contact to Your Roster - Gabber"
 msgstr "コンタクト先の登録簿追加 - Gabber"
 
 #: ui/AUDruid_win.glade.h:6
-msgid "Add a contact by JabberID"
-msgstr "JabberIDでコンタクト先を追加"
-
-#: ui/AUDruid_win.glade.h:7
 msgid "Add a contact who uses another instant messaging system by screen name"
 msgstr ""
-"スクリーンネームにより、別のインスタントメッセージングシステムを使用している"
-"コンタクト先を追加"
+"スクリーンネームにより、別のインスタントメッセージングシステムを\n"
+"使用しているコンタクト先を追加"
 
-#: ui/AUDruid_win.glade.h:8
+#: ui/AUDruid_win.glade.h:7
 msgid "Add another contact when this is finished"
 msgstr "これが終了するとき、別のコンタクト先を追加"
+
+#: ui/AUDruid_win.glade.h:8
+msgid "Add this JabberID:"
+msgstr "このJabberIDを追加:"
 
 #: ui/AUDruid_win.glade.h:9
 msgid "Available Agents"
@@ -976,8 +984,8 @@ msgstr "あなたは、どのサーバからディレクトリのリストを取得したいですか?"
 msgid ""
 "From what server do you want to get the list of instant message systems?"
 msgstr ""
-"あなたは、どのサーバからインスタントメッセージングシステムのリストを取得した"
-"いですか?"
+"あなたは、どのサーバからインスタントメッセージングシステムのリストを\n"
+"取得したいですか?"
 
 #: ui/AUDruid_win.glade.h:22 ui/ContactInfo_dlg.glade.h:15
 msgid "Full Name:"
@@ -996,8 +1004,9 @@ msgid ""
 "Gabber needs to ask contacts if you can add them to your roster. You can "
 "attach your own message to this request above."
 msgstr ""
-"登録簿に追加する場合は、コンタクト先を尋ねます。この要求に対して、この要求に"
-"対して、自分なりのメッセージを付記することができます。"
+"登録簿に追加する場合は、コンタクト先を尋ねます。\n"
+"この要求に対して、この要求に対して、自分なりの\n"
+"メッセージを付記することができます。"
 
 #: ui/AUDruid_win.glade.h:26
 msgid "Gabber organizes contacts in the roster by what group they are in."
@@ -1014,15 +1023,15 @@ msgstr "グループ"
 
 #: ui/AUDruid_win.glade.h:29
 msgid "I would like to add you to my roster."
-msgstr "私はあなたを登録簿に加えたい。"
+msgstr "あなたを私の登録簿に登録させて下さい。"
 
 #: ui/AUDruid_win.glade.h:30
 msgid ""
 "If you didn't find the contact you are looking for, you can click Back and "
 "search again."
 msgstr ""
-"もし探しているコンタクト先が見つからなかった場合は、戻るをクリックし、再度検"
-"索することができます。"
+"もし探しているコンタクト先が見つからなかった場合は、戻るをクリックし、\n"
+"再度検索することができます。"
 
 #: ui/AUDruid_win.glade.h:31 ui/ContactInfo_dlg.glade.h:18
 #: ui/SubscriptionRequest_dlg.glade.h:5 ui/TransInfo_dlg.glade.h:7
@@ -1069,15 +1078,15 @@ msgid ""
 "This assistant will help you add a contact to your\n"
 "Roster. Click Next to get started."
 msgstr ""
-"このアシスタントは、あなたの登録簿にコンタクト先を追加するのを助けます。\n"
-"次へをクリックして開始して下さい。"
+"このアシスタントは、あなたの登録簿にコンタクト先を\n"
+"追加するのを助けます。次へをクリックして開始して下さい。"
 
 #: ui/AUDruid_win.glade.h:43
 msgid ""
 "To add a contact, you need to know which instant messaging system they use."
 msgstr ""
-"コンタクト先を追加するには、どのインスタントメッセージングシステムを使用して"
-"いるのかを知っている必要があります。"
+"コンタクト先を追加するには、どのインスタントメッセージングシステムを\n"
+"使用しているのかを知っている必要があります。"
 
 #: ui/AUDruid_win.glade.h:44
 msgid ""
@@ -1085,17 +1094,17 @@ msgid ""
 "user name is, what server they use (if applicable), and be signed up for "
 "that agent."
 msgstr ""
-"手動でコンタクト先を追加するには、どのエージェントを使用しているのか知ってい"
-"る必要があります。これらのユーザ名が(もし適用可能なら)、使用しているサーバ、"
-"またそのエージェントにサインアップする必要があります。"
+"手動でコンタクト先を追加するには、どのエージェントを使用しているのか\n"
+"把握している必要があります。これらのユーザ名が(もし適用可能なら)、\n"
+"使用しているサーバ、またそのエージェントにサインアップする必要があります。"
 
 #: ui/AUDruid_win.glade.h:45
 msgid ""
 "To search for a contact, you need to know which instant messaging system "
 "they use."
 msgstr ""
-"コンタクト先を追加するには、使用しているインスタントメッセージングシステムを"
-"知っている必要があります。"
+"コンタクト先を追加するには、\n"
+"使用しているインスタントメッセージングシステムを把握している必要があります。"
 
 #: ui/AUDruid_win.glade.h:46 ui/ContactInfo_dlg.glade.h:39
 msgid "Web Site:"
@@ -1124,8 +1133,8 @@ msgstr "あなたは、どのディレクトリを検索したいですか?"
 #: ui/AUDruid_win.glade.h:52
 msgid "Which instant messaging system does the contact you want to add use?"
 msgstr ""
-"あなたが追加したいコンタクト先は、どのインスタントメッセージングシステムを使"
-"用していますか?"
+"あなたが追加したいコンタクト先は、\n"
+"どのインスタントメッセージングシステムを使用していますか?"
 
 #: ui/AUDruid_win.glade.h:53
 msgid "You can fill in any number of fields to search for a contact"
@@ -1136,8 +1145,8 @@ msgid ""
 "You can place this contact in one or more groups. Organizing contacts into "
 "groups makes it easier to find people in your roster."
 msgstr ""
-"コンタクト先を１つ以上のグループに属せます。コンタクト先をグループ化すること"
-"で、登録簿から人々を見つけやすくします。"
+"コンタクト先を１つ以上のグループに属せます。\n"
+"コンタクト先をグループ化することで、登録簿から人々を見つけやすくします。"
 
 #: ui/AUDruid_win.glade.h:55
 msgid ""
@@ -1147,11 +1156,12 @@ msgid ""
 "If you know a contact's screen name, UIN, or ID on another instant messaging "
 "system, choose the second option."
 msgstr ""
-"他のインスタントメッセージングシステムのうち幾つかのユーザディレクトリを検索"
-"することができます。\n"
+"他のインスタントメッセージングシステムのうち幾つかの\n"
+"ユーザディレクトリを検索することができます。\n"
 "\n"
-"もし、コンタクト先のスクリーンネーム、UIN、または別のインスタントメッセージン"
-"グシステムを２つ目のオプションで選択します。"
+"もし、コンタクト先のスクリーンネーム、UIN、または別の\n"
+"インスタントメッセージングシステムを２つ目のオプションで\n"
+"選択します。"
 
 #: ui/AUDruid_win.glade.h:58 ui/EditGroups_dlg.glade.h:7
 msgid "_Group:"
@@ -1186,7 +1196,7 @@ msgid "Search..."
 msgstr "検索..."
 
 #: ui/AgentBrowser_dlg.glade.h:9 ui/ContactRecv_dlg.glade.h:9
-#: ui/ContactSend_dlg.glade.h:10
+#: ui/ContactSend_dlg.glade.h:9
 msgid "View Info..."
 msgstr "情報を表示..."
 
@@ -1202,7 +1212,7 @@ msgstr "参照サーバ(_S):"
 msgid "According to update.jabber.org, a new version of Gabber is available."
 msgstr "Gabber の最新版は、update.jabber.org から利用可能です。"
 
-#: ui/Autoupdate_dlg.glade.h:2 ui/FTRecv_dlg.glade.h:3 ui/FTSend_dlg.glade.h:2
+#: ui/Autoupdate_dlg.glade.h:2 ui/FTRecv_dlg.glade.h:3 ui/FTSend_dlg.glade.h:1
 #: ui/RegDruid_win.glade.h:5 ui/TransInfo_dlg.glade.h:3
 msgid "Description:"
 msgstr "詳細:"
@@ -1386,11 +1396,10 @@ msgid "_Organization"
 msgstr "組織(_O)"
 
 #: ui/ContactInfo_dlg.glade.h:47 ui/Login_dlg.glade.h:36
-#: ui/MessageSend_win.glade.h:16
 msgid "_Resource:"
 msgstr "リソース(_R):"
 
-#: ui/ContactInfo_dlg.glade.h:49 ui/OOOChat_win.glade.h:18
+#: ui/ContactInfo_dlg.glade.h:49 ui/OOOChat_win.glade.h:17
 msgid "online:"
 msgstr "オンライン:"
 
@@ -1411,12 +1420,12 @@ msgstr "登録簿にコンタクト先を追加"
 msgid "Add to Roster"
 msgstr "登録簿追加"
 
-#: ui/ContactRecv_dlg.glade.h:3 ui/ContactSend_dlg.glade.h:3
+#: ui/ContactRecv_dlg.glade.h:3 ui/ContactSend_dlg.glade.h:2
 #: ui/GCI_dlg.glade.h:6
 msgid "JabberID"
 msgstr "JabberID"
 
-#: ui/ContactRecv_dlg.glade.h:4 ui/ContactSend_dlg.glade.h:4
+#: ui/ContactRecv_dlg.glade.h:4 ui/ContactSend_dlg.glade.h:3
 #: ui/GCIRecv_dlg.glade.h:4 ui/GCI_dlg.glade.h:7 ui/GCJoin_dlg.glade.h:5
 msgid "Nickname"
 msgstr "ニックネーム"
@@ -1433,28 +1442,24 @@ msgstr "次のコンタクト先を登録簿に追加:"
 msgid "These contacts were received from:"
 msgstr "これらのコンタクト先は受信:"
 
-#: ui/ContactSend_dlg.glade.h:1 ui/FTSend_dlg.glade.h:1
-msgid "/"
-msgstr "/"
-
-#: ui/ContactSend_dlg.glade.h:2
+#: ui/ContactSend_dlg.glade.h:1
 msgid "Drag contacts you would like to send below:"
 msgstr "以下に送信したいコンタクト先をドラッグ:"
 
-#: ui/ContactSend_dlg.glade.h:6 ui/FTSend_dlg.glade.h:5
-#: ui/MessageSend_win.glade.h:9 ui/RawXML_dlg.glade.h:8
+#: ui/ContactSend_dlg.glade.h:5 ui/FTSend_dlg.glade.h:4
+#: ui/MessageSend_win.glade.h:8 ui/RawXML_dlg.glade.h:8
 msgid "Send"
 msgstr "送信"
 
-#: ui/ContactSend_dlg.glade.h:7
+#: ui/ContactSend_dlg.glade.h:6
 msgid "Send Contact(s) - Gabber"
 msgstr "チャント送信 - Gaber"
 
-#: ui/ContactSend_dlg.glade.h:8
+#: ui/ContactSend_dlg.glade.h:7
 msgid "Send Contacts"
 msgstr "コンタクト先送信"
 
-#: ui/ContactSend_dlg.glade.h:9
+#: ui/ContactSend_dlg.glade.h:8
 msgid "Send these contacts to:"
 msgstr "これらのコンタクト先に送信:"
 
@@ -1542,27 +1547,27 @@ msgstr "以下のファイルが提示されました:"
 msgid "URI"
 msgstr "URI"
 
-#: ui/FTSend_dlg.glade.h:3
+#: ui/FTSend_dlg.glade.h:2
 msgid "File to Send - Gabber"
 msgstr "ファイル送信 - Gabber"
 
-#: ui/FTSend_dlg.glade.h:4
+#: ui/FTSend_dlg.glade.h:3
 msgid "File to Send:"
 msgstr "ファイル送信:"
 
-#: ui/FTSend_dlg.glade.h:6
+#: ui/FTSend_dlg.glade.h:5
 msgid "Send From:"
 msgstr "送信先:"
 
-#: ui/FTSend_dlg.glade.h:7
+#: ui/FTSend_dlg.glade.h:6
 msgid "Send a File"
 msgstr "ファイル送信"
 
-#: ui/FTSend_dlg.glade.h:8
+#: ui/FTSend_dlg.glade.h:7
 msgid "Send a File - Gabber"
 msgstr "ファイル送信 - Gaber"
 
-#: ui/FTSend_dlg.glade.h:9
+#: ui/FTSend_dlg.glade.h:8
 msgid "Send this file to:"
 msgstr "このファイルの送信先:"
 
@@ -1594,7 +1599,7 @@ msgstr "部屋:"
 msgid "Server:"
 msgstr "サーバ:"
 
-#: ui/GCI_dlg.glade.h:11 ui/GC_win.glade.h:18 ui/MessageSend_win.glade.h:17
+#: ui/GCI_dlg.glade.h:11 ui/GC_win.glade.h:18 ui/MessageSend_win.glade.h:14
 msgid "_Subject:"
 msgstr "題名(_S):"
 
@@ -1688,7 +1693,7 @@ msgid "Invite Contacts..."
 msgstr "コンタクト先招待..."
 
 #: ui/GC_win.glade.h:10 ui/MessageRecv_win.glade.h:6
-#: ui/MessageSend_win.glade.h:7 ui/OOOChat_win.glade.h:10
+#: ui/MessageSend_win.glade.h:6 ui/OOOChat_win.glade.h:10
 msgid "Message History..."
 msgstr "メッセージ履歴..."
 
@@ -1749,24 +1754,24 @@ msgid ""
 "In order to encrypt and sign messages, Gabber needs your GPG key's "
 "passphrase."
 msgstr ""
-"メッセージを暗号化するために、Gabberは、あなたの GPG キーのパスフェーズを必要"
-"とします。"
+"メッセージを暗号化するために、Gabberは、\n"
+"あなたの GPG キーのパスフェーズを必要とします。"
 
 #: ui/GPGPass_dlg.glade.h:3
 msgid ""
 "There was an error trying to use your passphrase with the GPG key you "
 "selected. Either try again or disable GPG."
 msgstr ""
-"選択した GPGキーのパスフェーズは、エラーでした。再度実行するか、GPG を無効に"
-"して下さい。"
+"選択した GPGキーのパスフェーズは、エラーでした。\n"
+"再度実行するか、GPG を無効にして下さい。"
 
 #: ui/GPGPass_dlg.glade.h:4
 msgid ""
 "This passphrase will not be stored in Gabber's config file, so Gabber has to "
 "ask you every session."
 msgstr ""
-"パスフェーズは、Gabberの構成ファイルには保存されません。したがって、全ての"
-"セッションで尋ねられます。"
+"パスフェーズは、Gabberの構成ファイルには保存されません。\n"
+"したがって、全てのセッションで尋ねられます。"
 
 #: ui/GPGPass_dlg.glade.h:5
 msgid "_Passphrase:"
@@ -1946,7 +1951,7 @@ msgid "Show _Headlines"
 msgstr "ヘッドラインの表示(_H)"
 
 #: ui/Gabber_win.glade.h:50 ui/MessageRecv_win.glade.h:15
-#: ui/MessageSend_win.glade.h:15 ui/OOOChat_win.glade.h:15
+#: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:14
 #: ui/SubscriptionRequest_dlg.glade.h:10
 msgid "View Contact Info..."
 msgstr "コンタクト先情報表示..."
@@ -2036,8 +2041,8 @@ msgid ""
 "People who are ignored cannot see when you are online, and you will not "
 "receive messages from them."
 msgstr ""
-"無視した人々は、あなたがいつオンラインか分かりません。メッセージも受信しませ"
-"ん。"
+"無視した人々は、あなたがいつオンラインか分かりません。\n"
+"メッセージも受信しません。"
 
 #: ui/IgnoreAdd_dlg.glade.h:1
 msgid "Add JabberID to Ignore - Gabber"
@@ -2214,27 +2219,19 @@ msgstr "送信者:"
 msgid "Time:"
 msgstr "時間:"
 
-#: ui/MessageSend_win.glade.h:6
-msgid "JabberID to which this message should be sent"
-msgstr "このメッセージを送信する JabberID"
-
-#: ui/MessageSend_win.glade.h:10
+#: ui/MessageSend_win.glade.h:9
 msgid "Send _to:"
 msgstr "送信先(_t):"
 
-#: ui/MessageSend_win.glade.h:11
+#: ui/MessageSend_win.glade.h:10
 msgid "Send as OOOChat"
 msgstr "OOOChat として送信"
 
-#: ui/MessageSend_win.glade.h:12
+#: ui/MessageSend_win.glade.h:11
 msgid "Send as One-on-One Chat"
 msgstr "１対１チャットとして送信"
 
-#: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:13
-msgid "Specific resource to which this message should be sent"
-msgstr "このメッセージを送信する特定なリソース"
-
-#: ui/MessageSend_win.glade.h:14
+#: ui/MessageSend_win.glade.h:12
 msgid "Subject of this message"
 msgstr "このメッセージの題名"
 
@@ -2278,18 +2275,20 @@ msgid ""
 "All other information is accessible if people ask specifically for your "
 "Contact Information."
 msgstr ""
-"'個人'情報のページは、Jabberユーザディレクトリ(JUD)で多くのJabberユーザを検索"
-"するディレクトリに送ります。\n"
+"'個人'情報のページは、Jabberユーザディレクトリ(JUD)で\n"
+"多くのJabberユーザを検索するディレクトリに送ります。\n"
 "\n"
-"あなたの連絡先情報を人々が求めれば、全ての他の情報はアクセス可能です。"
+"あなたの連絡先情報を人々が求めれば、全ての他の情報は\n"
+"アクセス可能です。"
 
 #: ui/MyContactInfo_win.glade.h:19
 msgid ""
 "This textbox is for free-form information about yourself. Its contents may "
 "be displayed with your user information."
 msgstr ""
-"このテキストボックスは、あなた自身に関する情報を自由に書き込むことが可能で"
-"す。この内容は、貴方のユーザ情報欄に表示されます。"
+"このテキストボックスは、あなた自身に関する情報を自由に\n"
+"書き込むことが可能です。この内容は、貴方のユーザ情報欄に\n"
+"表示されます。"
 
 #: ui/MyContactInfo_win.glade.h:20
 msgid "Users _Directory"
@@ -2768,8 +2767,8 @@ msgid ""
 "If you know what you're doing, enter XML to send to the server below. Output "
 "will be in STDOUT (for now)."
 msgstr ""
-"何を行っているか知っている場合には、サーバに送る XML を入力して下さい。出力"
-"は、標準出力にあります。"
+"何を行っているか知っている場合には、サーバに送る XML を入力して下さい。\n"
+"出力は、標準出力にあります。"
 
 #: ui/RawXML_dlg.glade.h:6
 msgid "Raw XML Input"
@@ -2810,8 +2809,8 @@ msgid ""
 "Please wait while Gabber tries to load the information needed to register "
 "with this agent."
 msgstr ""
-"このエージェントに登録するために必要とされる情報をロード中ですので、暫くお待"
-"ち下さい。"
+"このエージェントに登録するために必要とされる情報をロード中ですので、\n"
+"暫くお待ち下さい。"
 
 #: ui/RegDruid_win.glade.h:10
 msgid "Register with an Agent"
@@ -2896,8 +2895,8 @@ msgstr "承諾要求 - Gabber"
 #: ui/SubscriptionRequest_dlg.glade.h:11
 msgid "Would you like to allow [user@server] to add you to their list?"
 msgstr ""
-"[user@server] に、あなたを加えることを認め、これらのリストにあなたを追加した"
-"いですか?"
+"[user@server] に、あなたを加えることを認め、これらのリストにあなたを\n"
+"追加したいですか?"
 
 #: ui/TransInfo_dlg.glade.h:1
 msgid "Agent Name:"
@@ -3016,9 +3015,9 @@ msgid ""
 "The JabberID is your Jabber screen name and is what other people need to add "
 "you to their contact list. Clicking Next will register your account."
 msgstr ""
-"JabberIDは、あなたのスクリーンネームで、他の人々があなたをコンタクトリストに"
-"追加するために必要なものです。次へをクリックすると、あなたのアカウントを登録"
-"します。"
+"JabberIDは、あなたのスクリーンネームで、他の人々があなたを\n"
+"コンタクトリストに追加するために必要なものです。\n"
+"次へをクリックすると、あなたのアカウントを登録します。"
 
 #: ui/Welcome_win.glade.h:22
 msgid "There is a list of more servers at"
@@ -3029,8 +3028,8 @@ msgid ""
 "This information can be added to the Jabber Users Directory so other people "
 "can search for your JabberID."
 msgstr ""
-"他の人々が、あなたの JabberIDを検索できるように、Jabberユーザディレクトリに追"
-"加することができます。"
+"他の人々が、あなたの JabberIDを検索できるように、\n"
+"Jabberユーザディレクトリに追加することができます。"
 
 #: ui/Welcome_win.glade.h:24
 msgid ""
@@ -3092,17 +3091,18 @@ msgid ""
 "Your password should be unique and easy to remember, but not something "
 "someone else can guess. Enter the same password twice to continue."
 msgstr ""
-"あなたのパスワードは、ユニークで思い出すことが容易であるべきです。しかし、簡"
-"単であると、誰でも推測ができてしまいます。継続するためには、同じパスワードを"
-"２度入力して下さい。"
+"あなたのパスワードは、ユニークで思い出すことが容易であるべきです。\n"
+"しかし、簡単であると、誰でも推測ができてしまいます。\n"
+"継続するためには、同じパスワードを２度入力して下さい。"
 
 #: ui/Welcome_win.glade.h:42
 msgid ""
 "Your resource should be unique so you can log into the same Jabber account "
 "from different computers (or Jabber clients) at the same time."
 msgstr ""
-"あなたのリソースは、同じアカウントで異なったコンピュータ(または Jabber クライ"
-"アント)からログインできるように、ユニークなものにすることができます。"
+"あなたのリソースは、\n"
+"同じアカウントで異なったコンピュータ(または Jabber クライアント)から\n"
+"ログインできるように、ユニークなものにすることができます。"
 
 #: ui/Welcome_win.glade.h:43
 msgid "Your username should be unique and easy to remember."
