@@ -448,8 +448,8 @@ foreach $lang (sort keys %langinfo){
     my $totalname = $total{$lang}		|| "Total";
 
     print TABLE2 "<tr bgcolor=\"#ffd700\"><th>$modulename</th>"
-    ."<th>$translated</th><th>$fuzzy</th>"
-    ."<th>$untranslated</th><th>%</th>"
+    ."<th>$strings<br>$translated</th><th>$strings<br>$fuzzy</th>"
+    ."<th>$strings<br>$untranslated</th><th>%</th>"
     ."<th>$status</th><th>$lasttranslator</th>\n";
 
     my $stringstot =0;
@@ -498,14 +498,14 @@ foreach $lang (sort keys %langinfo){
         if ($use_pot == 1) {
             print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
             <a href=\"$htmlpourl${$modules{$mod}->[1]}\">$mod</a></td>
-            <td align=right>$trns $strings</td><td align=right>$fuzzy $strings</td>
-            <td align=right>$untrns $strings</td><td align=right>$percent_int</td>
+            <td align=right>$trns</td><td align=right>$fuzzy</td>
+            <td align=right>$untrns</td><td align=right>$percent_int</td>
             <td>$transtatus</td><td>$translatorname</td>\n";
         }else{
             print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
             <a href=\"$htmlpourl$mod-$lang.po\">$mod</a></td>
-            <td align=right>$trns $strings</td><td align=right>$fuzzy $strings</td>
-            <td align=right>$untrns $strings</td><td align=right>$percent_int</td>
+            <td align=right>$trns</td><td align=right>$fuzzy</td>
+            <td align=right>$untrns</td><td align=right>$percent_int</td>
             <td>$transtatus</td><td>$translatorname</td>\n";
         }
         $stringstot += ${$modinfo{$mod}->[0]};
@@ -517,9 +517,9 @@ foreach $lang (sort keys %langinfo){
     $percent = sprintf("%.2f",$trnstot*100/$stringstot);
     print TABLE2 "<tr bgcolor=\"#ffd700\" align=center>
     <th align=left>$totalname</th>
-    <th align=right>$trnstot $strings</th>
-    <th align=right>$fuzzytot $strings</th>
-    <th align=right>$untrnstot $strings</th>
+    <th align=right>$trnstot</th>
+    <th align=right>$fuzzytot</th>
+    <th align=right>$untrnstot</th>
     <th align=right>$percent</th>
     <th><br></th><th><br></th>\n";
     print TABLE2 "</table></center>";
