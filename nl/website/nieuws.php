@@ -12,14 +12,14 @@ include "functions.php";
 <div class="body">
 
 <?
-//meter();
+translate();
 gnome_head();
 gnome_menu();
 ?>
 <div class="content">
-<h1>GParted News</h1>
+<h1>Gnome-nl Nieuws</h1>
 <?
-$filename = "text/news.text";
+$filename = "text/nieuws.text";
 $fcontents = file($filename);
 $pos = 0;
 $aantal = 0;
@@ -47,7 +47,7 @@ else
 	}
 
 if ( ! empty( $line ) )	
-	echo "<table><tr><td><a href=\"news.php?alles=alles\">Older news...</a></td></tr></table>\n";
+	echo "<table><tr><td><a href=\"nieuws.php?alles=alles\">Ouder nieuws...</a></td></tr></table>\n";
 	
 ?>
 
