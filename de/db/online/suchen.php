@@ -51,98 +51,95 @@
                 <th>Aktionen</th>
             </tr>";
 
-        if ($show == "results" && (($in == "e") || ($in == "g"))) {
+        if (($show == "results") && (($in == "e") || ($in == "g"))) {
 
             if ($in == "e") {
 
                 $query = "SELECT *
-                    FROM $wordstable w, $transtable tr, $typestable typ
-                    WHERE tr.tid = typ.tid
-                    AND typ.wid = w.wid
-                    AND w.word LIKE '%{$_POST['query']}%'
-                    order by word";
+                          FROM $wordstable w, $transtable tr, $typestable typ
+                              WHERE tr.tid = typ.tid
+                              AND typ.wid = w.wid
+                              AND w.word LIKE '%{$_POST['query']}%'
+                              ORDER BY word";
             }
 
             if ($in == "g") {
                 $query = "SELECT *
-                    FROM $wordstable w, $transtable tr, $typestable typ
-                    WHERE typ.tid = tr.tid
-                    AND w.wid = typ.wid
-                    AND tr.translation LIKE '%{$_POST['query']}%'
-                    order by word";
+                          FROM $wordstable w, $transtable tr, $typestable typ
+                              WHERE typ.tid = tr.tid
+                              AND w.wid = typ.wid
+                              AND tr.translation LIKE '%{$_POST['query']}%'
+                              ORDER BY word";
             }
 
-	    # debugging info for the query
-	    #$content .= "$query<br />";
-	    #$content .= "{$_POST['query']}<br />";
+/* ***********************************************
+            # debugging info for the query
+            $content .= "$query<br />";
+            $content .= "{$_POST['query']}<br />";
+   ******************************************** */
 
             $result = mysql_db_query($dbName, $query);
-	    $content .= mysql_error();
+            $content .= mysql_error();
 
             if ($result && mysql_num_rows($result) > 0) {
 
-		/*
-                $res = mysql_fetch_array($result);
-                $word_old = $res[word];
-		*/
                 $word_old = '';
                 $i = 0;
 
                 while ($res = mysql_fetch_array($result)) {
-		    $content .= mysql_error();
+                    $content .= mysql_error();
 
                     if ($word_old != $res[word]) {
-			if ($word_old != '' && $i > 1)
-			{
-	                        $content .= "
-	                            <tr>
-	                                <td colspan='6' align='right'>
-	                                    <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a> - <a href=\"special/loeschen.php?wid=$wid_old&all=1\">Alle l&ouml;schen</a>
-	                                </td>
-	                            </tr><tr>
-	                                <td>&nbsp</td>
-	                            </tr>";
-			}
-			else if ($word_old != '')
-			// $i is automatically smaller than 2
-			{
-				$content .= "
-					<tr>
-						<td colspan='6' align='right'>
-							<a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a>
-						</td>
-					</tr><tr>
-						<td colspan='6'>&nbsp;</td>
-					</tr>
-				";
-			}
+                        if (($word_old != '') && ($i > 1)) {
+                                $content .= "
+                                    <tr>
+                                        <td colspan='6' align='right'>
+                                            <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a> - <a href=\"special/loeschen.php?wid=$wid_old&all=1\">Alle l&ouml;schen</a>
+                                        </td>
+                                    </tr><tr>
+                                        <td>&nbsp</td>
+                                    </tr>";
+                        }
+                        else if ($word_old != '') {
+                        // $i is automatically smaller than 2
+                                $content .= "
+                                        <tr>
+                                                <td colspan='6' align='right'>
+                                                        <a href=\"special/erweitern.php?wid=$wid_old\">Erweitern</a>
+                                                </td>
+                                        </tr><tr>
+                                                <td colspan='6'>&nbsp;</td>
+                                        </tr>
+                                ";
+                        }
 
-			$word_old = $res[word];
-			$i = 0;
+                        $word_old = $res[word];
+                        $i = 0;
                     }
 
-		    $content .= get_result($res['wid'],$res['tid'],$res['word'],$res['translation'],$res['type'],$res['comment'],$i+1);
+                    $content .= get_result($res['wid'],$res['tid'],$res['word'],$res['translation'],$res['type'],$res['comment'],$i+1);
 
                     $i++;
                     $wid_old = $res[wid];
                 }
 
-		if ($i > 1)
+                if ($i > 1) {
                     $content .= "
-		    	<tr>
-				<td colspan='6' align='right'>
-					<a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>&nbsp;-
-					<a href=\"loeschen.php?wid=$wid_old&all=1\">Alle&nbsp;l&ouml;schen</a>
-				</td>
-			</tr>";
-		else
-		    $content .= "
-		    	<tr>
-				<td colspan='6' align='right'>
-					<a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>
-				</td>
-			</tr>";
-		    
+                        <tr>
+                                <td colspan='6' align='right'>
+                                        <a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>&nbsp;-
+                                        <a href=\"loeschen.php?wid=$wid_old&all=1\">Alle&nbsp;l&ouml;schen</a>
+                                </td>
+                        </tr>";
+                } else {
+                    $content .= "
+                        <tr>
+                                <td colspan='6' align='right'>
+                                        <a href=\"erweitern.php?wid=$wid_old\">Erweitern</a>
+                                </td>
+                        </tr>";
+                }
+
             }
         }
 
