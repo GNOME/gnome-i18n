@@ -54,6 +54,26 @@ $| = 1;
 
 # used => for readability.
 
+my %charset = (
+    "da" => "iso-8859-1",
+    "de" => "iso-8859-1",
+    "el" => "iso-8859-7",
+    "es" => "iso-8859-1",
+    "fr" => "iso-8859-1",
+    "gl" => "iso-8859-1",
+    "ja" => "euc-jp",
+    "hu" => "iso-8859-2",
+    "nn" => "iso-8859-1",
+    "no" => "iso-8859-1",
+    "pt" => "iso-8859-1",
+    "ro" => "iso-8859-2",
+    "ru" => "koi8-r",
+    "sv" => "iso-8859-1",
+    "tr" => "iso-8859-9",
+    "uk" => "koi8-u",
+    "wa" => "iso-8859-1"
+)
+
 my %modulenames = (
     "da" => "Modul",
     "de" => "Paket",
@@ -490,8 +510,12 @@ foreach $lang (sort keys %langinfo){
     $link = "$details_" . substr($lang, 0, 5) . ".shtml";
     open  TABLE2, ">$htmldir/$link" or die "can't open $htmldir/$link";
     $detail = $details{$lang} || $details{"C"} . $lang;
+    $charset = $charset{$lang} || "US-ASCII";
     print TABLE2 <<"EOF";
-<html><head><title>$detail</title></head><body>
+<html><head>
+<title>$detail</title>
+<meta http-equiv=\"Content-Type\" content=\"text/html; charset=$charset\">
+</head><body>
 <a name=\"$lang\"><b>$detail</b></a><br>
 <table cellpadding=1 cellspacing=1 border=1 >
 EOF
