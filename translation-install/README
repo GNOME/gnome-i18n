@@ -1,0 +1,92 @@
+Translation Installation
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The script 'translation-install' is a small utility for installing the
+translation you're working on. To illustrate how it works, let me
+tell you what I usually do when I encounter a string which I'm not
+sure of how should be translated to fit well in the context.
+
+ 1. First thing is to fire up the program to see the string in action.
+
+ 2. Then I have a look at it, scratch me head a little and figure out
+    a meaningful string which I put in the .po file. But how do I know
+    whether it really is good enough?
+
+ 3. So I run the command
+
+      translation-install
+
+    which processes the .po file and installs it in the proper place.
+    This also screws up the running program, so I exit it (I always
+    forget to close it down before I install the new translation).
+
+ 4. Then I proceed to step 1 and repeat the procedure until I'm
+    satisfied, at which point I add a short comment to the string to
+    ensure that the next translator isn't going to wipe out my
+    carefully handcrafted and well-tested string (you can add a
+    comment in Emacs in po-mode by pressing '#' on a string).
+
+So translation-install simply converts a .po file to the corresponding
+binary .mo file and installs it in the system directories so the
+program will use them upon next launch (actually they will pick them
+up instantly, but that tends to look a bit fun so you probably want to
+restart the application).
+
+Se below for how the script works. The reason I developed the script
+is that I really don't want to go through the hassle of ./configuring
+each and every project whose .pot file I translate.
+
+      
+Installation
+~~~~~~~~~~~~
+
+First edit the script so the various options are set up correctly for
+you. For one thing, you almost certainly want to customize
+'polanguage'. It should be set to the base names of the .po files you
+want to update (e.g. 'da' for Danish da.po files).
+
+And you might want to look into the 'runprefix'. Personally I have
+granted myself the privileges to run msgfmt with sudo by inserting the
+line
+
+  ole (ALL) NOPASSWD: /usr/bin/msgfmt
+
+in /etc/sudoers so I don't have to switch to super user everytime I
+need to update a translation (of course you need to have sudo
+installed for this to work). Be a bit careful with this though, you
+might create a security hole.
+  
+When you're all done, copy the script to the relevant bin directory.
+
+By the way, you need to have awk installed (but who hasn't?).
+
+
+How the script works
+~~~~~~~~~~~~~~~~~~~~
+
+The script assumes that the current directory is a po subdirectory of
+a directory, the name of which is the package to install (so running
+it in 'galeon/po/' will install the file 'galeon.mo'). The
+'polanguage' constant dictates which .po file is selected.
+
+If this isn't the case, there needs to be a special exception in the
+script. I've already included exceptions for
+
+ - gnome-i18n/extra-po/*
+ 
+ - gimp sub domains (po-libgimp, po-plug-ins etc.)
+
+This list probably doesn't cover all of the Gnome CVS so you may have
+to add your own exception (take a look at the script). If you can't
+figure out how to do that, mail me and I'll do it for you. On second
+thought, mail me anyway, so the exception can be included in future
+versions and benefit other translators too.
+
+
+Contact info
+~~~~~~~~~~~~
+
+Maintainer: Ole Laursen <olau@hardworking.dk>.
+
+Comments and improvements are welcome. The script is released under
+the terms of the GNU GPL.

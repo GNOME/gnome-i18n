@@ -1,0 +1,84 @@
+#!/bin/sh
+#
+# This is v. 0.1 of translation-install.
+#
+# Which is a small utility for converting a .po file into the binary
+# format and installing it so it can be tested. Basically a dirty hack
+# (I don't know that much about shell programming anyway), but It
+# Works for Me and saves me from having to ./configure every program I
+# work on.
+#
+# See README for details.
+#
+# By Ole Laursen <olau@hardworking.dk>. Comments and improvements are
+# welcome. Released under the terms of the GNU GPL.
+
+#
+# --- Customizations:
+#
+
+# Your language domain:
+
+polanguage=da
+
+# This is prefixed to the msgfmt installation command - if you use
+# sudo like me, you need to add something like
+#
+#   ole (ALL) NOPASSWD: /usr/bin/msgfmt
+#
+# to your /etc/sudoers file:
+
+runprefix=sudo
+
+# Customize this to get the right installation path:
+
+prefix=/usr
+
+
+#
+# --- The script itself:
+#
+
+# first a handy function for getting parent directories:
+#   get_parent_dir 0 = name of this directory,
+#   get_parent_dir 1 = name of this directory's parent directory,
+#   etc.
+function get_parent_dir()
+{
+ echo $PWD | awk -F / "{print \$(NF - $1)}";
+}
+
+# we assume that the parent directory of this directory is the name of
+# the package
+
+name=$(get_parent_dir 1)
+
+# unfortunaly life isn't so simple so we need a bunch of hardcoded
+# exceptions
+
+if [ "$name" = "extra-po" ] ; then  # handle gnome-i18n/extra-po entries
+  name=$(get_parent_dir 0)
+  
+elif [ "$name" = "gimp" ] ; then    # handle gimp woes
+  subname=$(get_parent_dir 0)
+  
+  if [ "$subname" = "po-plug-ins" ] ; then
+    name="gimp-std-plugins"
+  elif [ "$subname" = "po-libgimp" ] ; then
+    name="gimp-libgimp"
+  elif [ "$subname" = "po-script-fu" ] ; then
+    name="gimp-script-fu"
+  fi
+elif [ "$name" = "perl" ] ; then
+  if [ $(get_parent_dir 3) = "gimp" ] ; then
+    name="gimp-perl"
+  fi
+fi
+
+
+# uncomment this line to turn on debugging
+
+#runprefix="echo $runprefix"
+
+# then some actual outputting
+$runprefix msgfmt -vc ${polanguage}.po -o ${prefix}/share/locale/${polanguage}/LC_MESSAGES/${name}.mo
