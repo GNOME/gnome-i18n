@@ -4,13 +4,13 @@ Sugestii pentru traducere aplicaþiilor/bibliotecilor GNOME în românã
 Cuprins:
   - Introducere
   - Forma limbajului
+  - Modul impersonal
   - Topica expresiilor
   - Majusculele
   - Cratima în neologisme
   - Adaptarea la situaþii extreme
   - Greºeli frecvente
-
-  
+ 
 
 Introducere
 -----------
@@ -55,6 +55,17 @@ Forma limbajului
 
 	"Could not open file %s."
 	"Nu am putut deschide fiºierul %s."
+
+
+Modul impersonal
+----------------
+  
+  * pe cât posibil ar trebui sã se încerce folosirea unui limbaj
+    personal, astfel încât sã nu se facã discriminãri pe bazã de sex
+    ºi sã se evite formulãri deranjante de genul el/ea. Exemplu:
+
+       "Are you sure you want to quit?"
+       "Sigur doriþi sã ieºiþi?"
 
 	
 Topica expresiilor
@@ -121,15 +132,47 @@ Greseli frecvente:
 	
 - articulare inutilã:
 	"User name:"
-	"Numele utilizatorului"
-	"Nume utilizator" (indicat)
+	"Numele utilizatorului" (greºit)
+	"Nume utilizator" (recomandat)
 
 - supra-utilizarea majusculelor
 
 	"Fatal Error Messages"
-	"Mesaje de Eroare Fatale"
-	"Mesaje de eroare fatale" (indicat)
+	"Mesaje de Eroare Fatale" (greºit)
+	"Mesaje de eroare fatale" (recomandat)
 
+- traducerea numelor proprii
+
+	 "Free Software Foundation"
+	 "Fundaþia Free Software" (greºit)
+	 "Free Software Foundation" (recomandat)
+
+- traducerea expresiei "free software"
+
+         "software gratuit" (greºit)
+	 "software liber" (recomandat)
+	 
+- un element care indicã aproape sigur faptul cã traducerea nu este
+  potrivitã este prezenþa particulei "se".
+
+	  "Press OK to save the session"
+	  "Apãsaþi OK ca sã se salveze sesiunea" (greºit)
+	  "Apãsaþi OK pentru salvarea sesiunii" (recomandat)
+	  
+- traducerea constantelor; în marea majoritate a cazurilor, cuvintele
+  scrise în întregime cu majuscule _nu_ trebuiesc traduse, deoarece
+  pot împiedica programul sã funcþioneze corect (în combinaþie cu
+  script-uri shell, de ex.):
+
+    #: installer/gnome-font-install.c:102 installer/gnome-font-install.c:104
+    #: installer/gnome-font-install.c:106 installer/gnome-font-install.c:109
+    msgid "PATH"
+    msgstr "CALE"
+    msgstr "PATH" (corect)
+
+   [pentru a fi siguri de efectul unei traduceri, apãsaþi 's' în
+   Emacs/po-mode ºi se va deschide o fereastrã cu linia din codul
+   sursã (dacã e disponibil) unde apare mesajul]
 
 	    				
 ---
