@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-06-15 20:01+1000\n"
+"POT-Creation-Date: 2001-06-16 16:18+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,13 @@ msgid "Cannot create ~/.xchat"
 msgstr ""
 
 #. OS/2 uses UID 0 all the time
-#: src/common/cfgfiles.c:546
+#: src/common/cfgfiles.c:548
 msgid ""
 "The default download directory is your\n"
 "home dir, you should change this at some stage."
 msgstr ""
 
-#: src/common/cfgfiles.c:550
+#: src/common/cfgfiles.c:552
 msgid ""
 "* Running IRC as root is stupid! You should\n"
 "  create a User Account and use that to login.\n"
@@ -34,11 +34,11 @@ msgid ""
 "  home dir, you should change this at some stage."
 msgstr ""
 
-#: src/common/cfgfiles.c:613
+#: src/common/cfgfiles.c:615
 msgid "I'm busy"
 msgstr ""
 
-#: src/common/cfgfiles.c:614
+#: src/common/cfgfiles.c:616
 msgid "Client Exiting"
 msgstr ""
 
@@ -71,12 +71,12 @@ msgstr ""
 msgid "Aborted"
 msgstr ""
 
-#: src/common/dcc.c:905
+#: src/common/dcc.c:921
 #, c-format
 msgid "Cannot access %s\n"
 msgstr ""
 
-#: src/common/dcc.c:1296
+#: src/common/dcc.c:1312
 msgid "No active DCCs\n"
 msgstr ""
 
@@ -90,19 +90,12 @@ msgstr ""
 msgid "NO   "
 msgstr ""
 
-#. LAME: we can't send more than 512 bytes to the server, but     *
-#. * if we split it in two packets, our offline detection wouldn't  *
-#. work
-#: src/common/notify.c:291 src/common/notify.c:327
-msgid "*** XCHAT WARNING: notify list too large.\n"
-msgstr ""
-
-#: src/common/notify.c:364
+#: src/common/notify.c:400
 #, c-format
 msgid "  %-20s online\n"
 msgstr ""
 
-#: src/common/notify.c:366
+#: src/common/notify.c:402
 #, c-format
 msgid "  %-20s offline\n"
 msgstr ""
@@ -388,16 +381,15 @@ msgstr ""
 #: src/common/outbound.c:600
 msgid ""
 "/RECONENCT [<host>] [<port>] [<password>] [<ssl>] [<accept_invalid_cert>], "
-"Can be called just as /reconnect to reconnect to the current server or with "
-"/reconnect all to reconnect to all the open servers\n"
+"Can be called just as /RECONNECT to reconnect to the current server or with "
+"/RECONNECT ALL to reconnect to all the open servers\n"
 msgstr ""
 
 #: src/common/outbound.c:603
 msgid ""
-"/RECONENCT [<host>] [<port>] [<password>], Can be called just as /reconnect "
-"to reconnect to the current server or with /reconnect all to reconnect to "
-"all the open server or with /reconnect all to reconnect to all the open "
-"servers\n"
+"/RECONENCT [<host>] [<port>] [<password>], Can be called just as /RECONNECT "
+"to reconnect to the current server or with /RECONNECT ALL to reconnect to "
+"all the open servers\n"
 msgstr ""
 
 #: src/common/outbound.c:606
@@ -450,7 +442,7 @@ msgstr ""
 
 #: src/common/outbound.c:637
 msgid ""
-"/TOPIC [<topic>], sets the topic is one is given, else shows the current "
+"/TOPIC [<topic>], sets the topic if one is given, else shows the current "
 "topic\n"
 msgstr ""
 
@@ -2801,7 +2793,7 @@ msgid "Move Dn"
 msgstr ""
 
 #: src/fe-gtk/editlist.c:320 src/fe-gtk/ignoregui.c:440
-#: src/fe-gtk/serverlist.c:677 src/fe-gtk/settings.c:1795
+#: src/fe-gtk/serverlist.c:677 src/fe-gtk/settings.c:1803
 msgid "Cancel"
 msgstr ""
 
@@ -3032,7 +3024,7 @@ msgid ""
 msgstr ""
 
 #: src/fe-gtk/gtkutil.c:52 src/fe-gtk/gtkutil.c:68 src/fe-gtk/plugingui.c:115
-#: src/fe-gtk/serverlist.c:675 src/fe-gtk/settings.c:1775
+#: src/fe-gtk/serverlist.c:675 src/fe-gtk/settings.c:1783
 #: src/fe-gtk/textgui.c:491
 msgid "Ok"
 msgstr ""
@@ -3082,7 +3074,7 @@ msgid "Mask"
 msgstr ""
 
 #: src/fe-gtk/ignoregui.c:331 src/fe-gtk/ignoregui.c:371
-#: src/fe-gtk/settings.c:1917
+#: src/fe-gtk/settings.c:1925
 msgid "CTCP"
 msgstr ""
 
@@ -4584,7 +4576,7 @@ msgstr ""
 msgid "(separate with commas)"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1535 src/fe-gtk/settings.c:1900
+#: src/fe-gtk/settings.c:1535 src/fe-gtk/settings.c:1908
 msgid "Logging"
 msgstr ""
 
@@ -4728,201 +4720,209 @@ msgstr ""
 msgid "DCC Send Options"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1680
+#: src/fe-gtk/settings.c:1683
 msgid "Fast DCC Send"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1683
+#: src/fe-gtk/settings.c:1686
 msgid "Don't wait for ACKs to send more data"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1686
-msgid "First DCC Send Port:"
+#: src/fe-gtk/settings.c:1688
+msgid "Fill Spaces"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1687
-msgid "(0=Disabled)"
-msgstr ""
-
-#: src/fe-gtk/settings.c:1689
-msgid "Last DCC Send Port:"
-msgstr ""
-
-#: src/fe-gtk/settings.c:1693
-msgid "Send Block Size:"
+#: src/fe-gtk/settings.c:1691
+msgid "File names with spaces will be filled with underscore"
 msgstr ""
 
 #: src/fe-gtk/settings.c:1694
+msgid "First DCC Send Port:"
+msgstr ""
+
+#: src/fe-gtk/settings.c:1695
+msgid "(0=Disabled)"
+msgstr ""
+
+#: src/fe-gtk/settings.c:1697
+msgid "Last DCC Send Port:"
+msgstr ""
+
+#: src/fe-gtk/settings.c:1701
+msgid "Send Block Size:"
+msgstr ""
+
+#: src/fe-gtk/settings.c:1702
 msgid "(1024=Normal)"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1705
+#: src/fe-gtk/settings.c:1713
 msgid "Built-in Replies"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1706
+#: src/fe-gtk/settings.c:1714
 msgid "Hide Version"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1709
+#: src/fe-gtk/settings.c:1717
 msgid "Do not reply to CTCP version"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1711 src/fe-gtk/textgui.c:389
+#: src/fe-gtk/settings.c:1719 src/fe-gtk/textgui.c:389
 msgid "Sound"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1714
+#: src/fe-gtk/settings.c:1722
 msgid "Sound Dir:"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1718
+#: src/fe-gtk/settings.c:1726
 msgid "Play Command:"
 msgstr ""
 
 #. prepare the dialog
-#: src/fe-gtk/settings.c:1754
+#: src/fe-gtk/settings.c:1762
 msgid "X-Chat: Preferences"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1785
+#: src/fe-gtk/settings.c:1793
 msgid "Apply"
 msgstr ""
 
 #. the tree
-#: src/fe-gtk/settings.c:1812
+#: src/fe-gtk/settings.c:1820
 msgid "Categories"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1836
+#: src/fe-gtk/settings.c:1844
 msgid "Interface Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1837
+#: src/fe-gtk/settings.c:1845
 msgid "Interface"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1842
+#: src/fe-gtk/settings.c:1850
 msgid "IRC Input/Output Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1843
+#: src/fe-gtk/settings.c:1851
 msgid "IRC Input/Output"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1847
+#: src/fe-gtk/settings.c:1855
 msgid "Window Layout Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1848
+#: src/fe-gtk/settings.c:1856
 msgid "Window Layout"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1852
+#: src/fe-gtk/settings.c:1860
 msgid "Main Window Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1853
+#: src/fe-gtk/settings.c:1861
 msgid "Main Window"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1857
+#: src/fe-gtk/settings.c:1865
 msgid "Channel Window Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1858
+#: src/fe-gtk/settings.c:1866
 msgid "Channel Windows"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1862
+#: src/fe-gtk/settings.c:1870
 msgid "Dialog Window Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1863
+#: src/fe-gtk/settings.c:1871
 msgid "Dialog Windows"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1868
+#: src/fe-gtk/settings.c:1876
 msgid "Panel Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1869
+#: src/fe-gtk/settings.c:1877
 msgid "Panel"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1874
+#: src/fe-gtk/settings.c:1882
 msgid "IRC Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1875
+#: src/fe-gtk/settings.c:1883
 msgid "IRC"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1879
+#: src/fe-gtk/settings.c:1887
 msgid "IP Address Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1880
+#: src/fe-gtk/settings.c:1888
 msgid "IP Address"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1884 src/fe-gtk/settings.c:1885
+#: src/fe-gtk/settings.c:1892 src/fe-gtk/settings.c:1893
 msgid "Proxy Server"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1889
+#: src/fe-gtk/settings.c:1897
 msgid "Away Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1890
+#: src/fe-gtk/settings.c:1898
 msgid "Away"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1894
+#: src/fe-gtk/settings.c:1902
 msgid "Highlighting Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1895
+#: src/fe-gtk/settings.c:1903
 msgid "Highlighting"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1899
+#: src/fe-gtk/settings.c:1907
 msgid "Logging Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1904
+#: src/fe-gtk/settings.c:1912
 msgid "Notification Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1905
+#: src/fe-gtk/settings.c:1913
 msgid "Notification"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1910
+#: src/fe-gtk/settings.c:1918
 msgid "Character Set (Translation Tables)"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1911
+#: src/fe-gtk/settings.c:1919
 msgid "Character Set"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1916
+#: src/fe-gtk/settings.c:1924
 msgid "CTCP Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1921
+#: src/fe-gtk/settings.c:1929
 msgid "DCC Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1922
+#: src/fe-gtk/settings.c:1930
 msgid "DCC"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1926
+#: src/fe-gtk/settings.c:1934
 msgid "File Transfer Settings"
 msgstr ""
 
-#: src/fe-gtk/settings.c:1927
+#: src/fe-gtk/settings.c:1935
 msgid "File Transfer"
 msgstr ""
 
