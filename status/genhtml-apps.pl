@@ -280,7 +280,6 @@ foreach $lang (sort keys %langinfo){
     print TABLE "eog: eog-0-6<br>\n" ;
     print TABLE "gedit: gedit-1-0<br>\n" ;
     print TABLE "gimp: gimp-1-2<br>\n" ;
-    print TABLE "gnome-db: release-0-2-3-branch<br>\n" ;
     print TABLE scalar localtime(time);
     print TABLE "</body></html>";
 

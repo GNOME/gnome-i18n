@@ -7,7 +7,6 @@
 # "Constants" #
 ###############
 @modules = (
-     "ammonite/po",
      "bonobo/po",
      "bug-buddy/po",
      "control-center/po",
@@ -29,26 +28,26 @@
      "gtk+/po",
      "gtop/po",
      "libgtop/po",
-     "trilobite/po",
      "nautilus/po",
      "oaf/po",
      "sawfish/po"
 );
 
 @xml_i18n_tools_compliants = (
-    "ammonite/po",
     "bonobo/po",
+    "bug-buddy/po",
     "control-center/po",
     "eel/po",
     "evolution/po",
-    "galeon/po",
+    "gdm2/po",
+    "ggv/po",
+    "glade/po",
     "gnome-applets/po",
     "gnome-core/po",
     "gnome-db/po",
     "gnome-media/po",
     "gnome-utils/po",
     "gnome-vfs/po",
-    "trilobite/po",
     "nautilus/po",
     "oaf/po"
 );
