@@ -11,6 +11,8 @@
 # Script to take a .pot file and make an en_GB translation of it.
 # since full AI hasn't been invented yet, you need to inspect it
 # by hand afterwards.
+# 
+# Interactive mode added for certain words by Peter Oliver, 2002-08-25.
 
 # These are as-is
 
@@ -61,12 +63,28 @@
 # <rwb197@zepler.org>
 
 use Time::gmtime;
+use Term::ReadLine;
 
 sub do_trans {
   my ($tf, $tt) = @_;
-  $msg_str =~ s/$tf/$tt/g;
-  $msg_str =~ s/\u$tf/\u$tt/g;
-  $msg_str =~ s/\U$tf/\U$tt/g;
+  $msg_str =~ s/\b$tf/$tt/g;
+  $msg_str =~ s/\b\u$tf/\u$tt/g;
+  $msg_str =~ s/\b\U$tf/\U$tt/g;
+}
+
+sub query_trans {
+    my ($tf, $tt) = @_;
+    if ( $msg_str =~ m/\b$tf/i ) {
+	print STDERR "\nmsgid: ${msg_id}msgstr: $msg_str";
+	if ( $rl->readline( "Change '$tf' to '$tt'? (y/N) " )
+	     =~ m/^\s*y(es)?\s*$/i ) {
+	    print STDERR "Changed\n";
+	    do_trans( $tf, $tt );
+	}
+	else {
+	    print STDERR "Not changed\n";
+	}
+    }
 }
 
 sub translate() {
@@ -95,7 +113,7 @@ sub translate() {
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
   do_trans("center", "centre");
-  # CHECK -> CHEQUE (sometimes)
+  query_trans("check", "cheque");
   do_trans("color", "colour");
   do_trans("customize", "customise");
   do_trans("customized", "customised");
@@ -122,7 +140,7 @@ sub translate() {
   do_trans("license", "licence");
   do_trans("labor", "labour");
   do_trans("liter", "litre");
-  # METER -> METRE (sometimes)
+  query_trans("meter", "metre");
   do_trans("millimeter", "millimetre");
   do_trans("modeled", "modelled");
   do_trans("modeler", "modeller");
@@ -138,11 +156,11 @@ sub translate() {
   do_trans("signaled", "signalled");
   do_trans("specter", "spectre");
   do_trans("theater", "theatre");
+  query_trans("tire", "tyre");
   do_trans("totaled", "totalled");
   do_trans("totaler", "totaller");
   do_trans("totaling", "totalling");
   do_trans("trash", "wastebasket");
-  # TIRE -> TYRE (sometimes)
   do_trans("vapor", "vapour");
   do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
 
@@ -153,6 +171,7 @@ sub translate() {
 }
 
 $mode = 0;
+$rl = Term::ReadLine->new();
 
 while (<>) {
    if  (/^#/) {
