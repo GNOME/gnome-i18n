@@ -143,15 +143,61 @@ status_version_new (StatusServer *server, const gchar *module, const gchar *id, 
 /**
  * status_version_download
  * @version:
- * @downloaddir:
+ * @download_dir:
  *
- * Downloads the #StatusVersion object to the @downloaddir
+ * Downloads the #StatusVersion object to the @download_dir
  */
 gboolean
-status_version_download (StatusVersion *version, gchar *downloaddir)
+status_version_download (StatusVersion *version, gchar *download_dir)
 {
 
 	return status_server_download (version->server, version->module->str, version->id->str,
-				       version->path->str, downloaddir);
+				       version->path->str, download_dir);
 
+}
+
+/**
+ * status_version_generate_pot
+ * @ version:
+ * @ download_dir:
+ * @ install_dir:
+ *
+ * Generates the .pot files and store it at install_dir
+ */
+/* TODO: We should be able to support multiple po/ directories (like GIMP)
+ * We should also check and create the needed directories
+ */
+gboolean
+status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar *install_dir)
+{
+	gchar *buf, *command;
+
+	g_message ("Generating %s.%s.pot...", version->module->str, version->id->str);
+	
+	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
+
+	if (!chdir (buf)) {
+		/* TODO: Here we should scan for po/ directories and then, generate the .pot files */
+		if (!chdir ("po")) {
+			command = g_strdup_printf ("intltool-update -p -g %s/PO/%s.%s.pot", install_dir,
+						   version->module->str, version->id->str);
+			if (system (command)) {
+				g_warning ("Unable to regenerate the %s/PO/%s.%s.pot file", install_dir,
+					   version->module->str, version->id->str);
+				g_free (command);
+				g_free (buf);
+				return FALSE;
+			}
+			g_free (command);
+			return TRUE;
+		} else {
+			g_warning ("Unable to chdir into the po dir");
+			g_free (buf);
+			return FALSE;
+		}
+	} else {
+		g_warning ("Unable to chdir into the %s dir", buf);
+		g_free (buf);
+		return FALSE;
+	}
 }

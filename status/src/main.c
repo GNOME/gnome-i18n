@@ -25,38 +25,53 @@
 #include "status.h"
 #include "status-version.h"
 
-static void
-download_versions (gpointer key, gpointer value, gpointer user_data)
-{
+typedef struct {
+	gchar *modules;
 	gchar *downloaddir;
+	gchar *installdir;
+} config_t;
+
+static void
+update_versions (gpointer key, gpointer value, gpointer user_data)
+{
+	config_t *config;
 	StatusVersion *version;
 
 	version = STATUS_VERSION (value);
-	downloaddir = (gchar *) user_data;
+	config = (config_t *) user_data;
 
 	g_message ("Downloading %s", (gchar *) key);
 
-	status_version_download (version, downloaddir);
+	if (!status_version_download (version, config->downloaddir)) {
+		g_warning ("We cannot do the download/update");
+		return;
+	}
+
+	/* TODO: Save a timestamp to remember the last update time */
+
+	status_version_generate_pot (version, config->downloaddir, config->installdir);
 }	
 
 int
 main (int argc, const char *argv[])
 {
-char *modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
-char *downloaddir = "/home/carlos/Desarrollos/gnome/";
-char *installdir = "/home/carlos/public_html/gnome/l10n/";
+config_t config;
 int ttl;
 poptContext context;
 gint rc;
 status_data *sdata;
 struct poptOption options[] = {
-	{ "modules-file", 0, POPT_ARG_STRING, &modules, 0, "Set the file where is stored all modules information", "FILE" },
-	{ "download-dir", 0, POPT_ARG_STRING, &downloaddir, 0, "Set the directory where we will store the downloaded modules", "PATH" },
-	{ "install-dir", 0, POPT_ARG_STRING, &installdir, 0, "Set the directory where we will store the output", "PATH" },
+	{ "modules-file", 0, POPT_ARG_STRING, &config.modules, 0, "Set the file where is stored all modules information", "FILE" },
+	{ "download-dir", 0, POPT_ARG_STRING, &config.downloaddir, 0, "Set the directory where we will store the downloaded modules", "PATH" },
+	{ "install-dir", 0, POPT_ARG_STRING, &config.installdir, 0, "Set the directory where we will store the output", "PATH" },
 	{ "ttl", 0, POPT_ARG_INT, &ttl, 0, "Default ttl for translations", "SECONDS" },
 	POPT_AUTOHELP
         { NULL, 0, 0, NULL, 0 }
 };
+
+	config.modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
+	config.downloaddir = "/home/carlos/Desarrollos/gnome/";
+	config.installdir = "/home/carlos/public_html/gnome/l10n/";
 
 	context = poptGetContext (NULL, argc, argv, options, 0);
 
@@ -69,13 +84,16 @@ struct poptOption options[] = {
 	g_type_init ();
 
 	/* 1.- Parse the .xml file */
-	sdata = status_xml_get_main_data (modules);
+	sdata = status_xml_get_main_data (config.modules);
 
-	/* 2.- Download/Update the versions */
+	/* 2.- Download/Update
+	 * 2a.- The version files
+	 * 2b.- The .pot file
+	 * 2c.- The translations (*.po)
+	 */
 
-	g_hash_table_foreach (sdata->versions, download_versions, downloaddir);
+	g_hash_table_foreach (sdata->versions, update_versions, &config);
 	
-	/* 3.- Update all .po files */
 	/* 3b.- Save the data ?? */
 	/* 4.- Create the .html files */
 

@@ -43,6 +43,7 @@ StatusVersion *status_version_new (StatusServer *server, const gchar *module,
 				   const gchar *id, const gchar *path);
 
 gboolean       status_version_download (StatusVersion *version, gchar *downloaddir);
+gboolean       status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar *install_dir);
 
 G_END_DECLS
 
