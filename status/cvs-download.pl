@@ -47,7 +47,7 @@ $help = '';
 $cvsroot = "~/cvs/gnome";
 $modfile = "~/cvs/gnome/web-devel-2/content/projects/gtp/status/stable/modules.dat";
 
-GetOptions ('cvs-root=s'     => \$cvsroot,
+GetOptions ('cvsroot-dir=s'     => \$cvsroot,
 	    'modules-file=s' => \$modfile,
 	    'help'           => \$help,
 	    ) or Usage();
@@ -58,9 +58,7 @@ if ($help) {
 
 my $i18n = 0;
 
-   if (! -s $ARG1) { print "File $ARG1 does not exist\n"; exit; }
-
-   open MODULES, "$ARG1" || die "Cannot open file: $ARG1";
+   open MODULES, "$modfile" || die "Cannot open file: $modfile";
 
    my @modules;
    while (<MODULES>) { 
@@ -130,7 +128,7 @@ Generate html stats with the stats from status.pl.
 
     --help                      Prints this page to standard error.
 
-    --cvs-root <location>       Specifies the directory where will
+    --cvsroot-dir <location>    Specifies the directory where will
                                 be download the cvs modules.
 
     --modules-file <location>   Specifies the file name that has
