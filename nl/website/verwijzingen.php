@@ -35,7 +35,7 @@ Nederlandse Opensource vertaalpagina op linux.org</a>: Voor meer informatie
 over Nederlandse vertalingen in het algemeen.</li>
 <li><a href="http://www2.iro.umontreal.ca/~gnutra/po/HTML/">The GNU Translation
 project</a>: Voor meer informatie over het vertalen van GNU/Linux projecten.</li>
-<li><a href="http://www.kde.org/international/netherlands/nl/index.html">KDE
+<li><a href="http://www.kde.nl/helpen/vertaling.html">KDE
 Nederlands</a>: De projectpagina van onze collega's bij KDE.</li>
 <li><a href="http://www.nongnu.org/mozilla-nl/">Mozilla-NL</a>:Mozilla
 in het Nederlands.</li>
