@@ -148,7 +148,7 @@ status_xml_get_main_data (const gchar *views_file)
 			name = id = path = sserver = NULL;
 		
 			if (strcmp(cur_version->name, "version")) {
-				if (strcmp(cur_version->name, "text")) {
+				if (strcmp(cur_version->name, "text") && strcmp (cur_version->name, "comment")) {
 					g_warning ("Bad .xml file, please fix it!! (%s)",cur_version->name );
 				}
 				continue;
@@ -220,7 +220,7 @@ status_xml_get_main_data (const gchar *views_file)
 			group_name = NULL;
 		
 			if (strcmp(cur_group->name, "group")) {
-				if (strcmp(cur_group->name, "text")) {
+				if (strcmp(cur_group->name, "text") && strcmp (cur_version->name, "comment")) {
 					g_warning ("Bad .xml file, please fix it!! (%s)",cur_group->name);
 				}
 				continue;
@@ -235,7 +235,7 @@ status_xml_get_main_data (const gchar *views_file)
 				name = NULL;
 		
 				if (strcmp(cur_ver->name, "versionrefs")) {
-					if (strcmp(cur_ver->name, "text")) {
+					if (strcmp(cur_ver->name, "text") && strcmp (cur_version->name, "comment")) {
 						g_warning ("Bad .xml file, please fix it!! (%s)",cur_ver->name);
 					}
 					continue;
@@ -292,7 +292,7 @@ status_xml_get_main_data (const gchar *views_file)
 			url_t *url;
 
 			if (strcmp (cur_group->name, "coordinator") && strcmp (cur_group->name, "url")) {
-				if (strcmp(cur_group->name, "text")) {
+				if (strcmp(cur_group->name, "text") && strcmp (cur_version->name, "comment")) {
 					g_warning ("Bad .xml file, please fix it!! (%s)",cur_group->name);
 				}
 				continue;

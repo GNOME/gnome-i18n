@@ -192,7 +192,7 @@ status_server_download (StatusServer *server, gchar *module, gchar *id, gchar *r
 					server->username->str, server->hostname->str, id, remote_path);
 		}
 		if (system (cvs_command->str)) {
-			g_warning ("Unable to checkout the module with %s", cvs_command);
+			g_warning ("Unable to checkout the module with %s", cvs_command->str);
 			g_string_free (cvs_command, TRUE);
 			g_free (buf);
 			return FALSE;
