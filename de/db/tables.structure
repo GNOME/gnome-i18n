@@ -1,0 +1,30 @@
+#
+# Table structure for table 'translations'
+
+CREATE TABLE translations (
+  tid int(11) NOT NULL default '0',
+  translation varchar(50) NOT NULL default '',
+  comment varchar(100) default NULL
+);
+# --------------------------------------------------------
+
+#
+# Table structure for table 'types'
+
+CREATE TABLE types (
+  tid int(11) NOT NULL auto_increment,
+  wid int(11) NOT NULL default '0',
+  type varchar(50) NOT NULL default '',
+  PRIMARY KEY  (tid)
+);
+# --------------------------------------------------------
+
+#
+# Table structure for table 'words'
+
+CREATE TABLE words (
+  wid int(11) NOT NULL auto_increment,
+  word varchar(50) NOT NULL default '',
+  language varchar(50) NOT NULL default '',
+  PRIMARY KEY  (wid)
+);
