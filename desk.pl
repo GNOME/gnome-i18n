@@ -8,13 +8,19 @@
 
 $VERSION = "1.0.0 beta";
 $LANGUAGE = $ARGV[0];
+$OPTION2 = $ARGV[1];
+$SEARCH = "Name";
 
 if (! $LANGUAGE){
     print "desk.pl:  missing file arguments\n";
-    print "Try `./desk.pl --help' for more information.\n";
+    print "Try `desk.pl --help' for more information.\n";
 }
 
-if($LANGUAGE){
+if ($OPTION2){
+    $SEARCH=$OPTION2;
+}
+
+if ($LANGUAGE){
 
 if ($LANGUAGE=~/^-(.)*/){
 
@@ -27,7 +33,7 @@ if ($LANGUAGE=~/^-(.)*/){
     }
 
     elsif ($LANGUAGE eq "--help" || "$LANGUAGE" eq "-H"){
-	print "Usage: ./desk.pl [LANGCODE]\n";
+	print "Usage: ./desk.pl [LANGCODE] [ENTRY]\n";
 	print "Checks .desktop and alike files for missing translations.\n\n";
 	print "  -V, --version                shows the version\n";
 	print "  -H, --help                   shows this help page\n";
@@ -36,21 +42,21 @@ if ($LANGUAGE=~/^-(.)*/){
 
     else{
     	print "desk.pl: invalid option -- $LANGUAGE\n";
-    	print "Try `./desk.pl --help' for more information.\n";
+    	print "Try `desk.pl --help' for more information.\n";
     }
 }
 
 else{
 
     $a="find ./ -print | egrep '.*\\.(desktop|soundlist"
-      ."|directory)' | xargs grep 'Name\\[$LANGUAGE\\]\\=' | cut -d: -f1 "
+      ."|directory)' | xargs grep '$SEARCH\\[$LANGUAGE\\]\\=' | cut -d: -f1 "
       ."| uniq | cut -d/ -f2- ";
 
     $b="find ./ -print | egrep '.*\\.(desktop|soundlist"
-      ."|directory)' | xargs grep 'Name\\=' | cut -d: -f1 "
+      ."|directory)' | xargs grep '$SEARCH\\=' | cut -d: -f1 "
       ."| uniq | cut -d/ -f2- ";
 
-    print "Searching for missing Name[$LANGUAGE] entries...\n";
+    print "Searching for missing $SEARCH\[$LANGUAGE\] entries...\n";
 
     open(BUF1, "$a|");
     open(BUF2, "$b|");
