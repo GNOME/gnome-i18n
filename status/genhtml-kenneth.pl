@@ -33,6 +33,7 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"el", "пАЙщТО",
 "fi", "Paketti",
 "ro", "Modul",
 "ru", "Модуль",
@@ -44,6 +45,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&Uuml;bersetzt",
+"el", "лЕТАЖЯАСЛщМА",
 "fi", "K&auml;&auml;nnetty",
 "ro", "traduse",
 "ru", "Переведено",
@@ -55,6 +57,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "Ungenau",
+"el", "аСАЖч",
 "fi", "Ep&auml;selvi&auml;",
 "ro", "neclare",
 "ru", "Нечетко",
@@ -66,6 +69,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "Un&uuml;bersetzt",
+"el", "AЛЕТэЖЯАСТА",
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "ro", "netraduse",
 "ru", "Непереведено",
@@ -77,6 +81,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"el", "AКЖАЯИХЛГТИЙэ",
 "fi", "Rivi&auml;",
 "ro", "stringuri",
 "ru", "сообщ.",
@@ -89,6 +94,7 @@ $now = time;
 "C", "Detail report for ",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
 "de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
+"el", "кЕПТОЛЕЯчР АМАЖОЯэ ЦИА ",
 "fi", "Yksityiskohtainen raportti Suomen GNOME-k&auml;&auml;nn&ouml;ksist&auml;",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "Подробный отчет о состоянии перевода Gnome на русский",

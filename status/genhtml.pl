@@ -33,6 +33,7 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"el", "Ğáêİôï",
 "hu", "Modul",
 "ro", "Modul",
 "ru", "íÏÄÕÌØ",
@@ -44,6 +45,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&Uuml;bersetzt",
+"el", "Ìåôáöñáóìİíá",
 "hu", "Lefordított",
 "ro", "traduse",
 "ru", "ğÅÒÅ×ÅÄÅÎÏ",
@@ -55,6 +57,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "Ungenau",
+"el", "ÁóáöŞ",
 "hu", "Pontatlan",
 "ro", "neclare",
 "ru", "îÅŞÅÔËÏ",
@@ -66,6 +69,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "Un&uuml;bersetzt",
+"el", "AìåôÜöñáóôá",
 "hu", "Fordítatlan",
 "ro", "netraduse",
 "ru", "îÅĞÅÒÅ×ÅÄÅÎÏ",
@@ -77,6 +81,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"el", "AëöáñéèìçôéêÜ",
 "hu", "karakterlánc",
 "ro", "stringuri",
 "ru", "ÓÏÏÂİ.",
@@ -89,6 +94,7 @@ $now = time;
 "C", "Detail report for ",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
 "de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
+"el", "ËåğôïìåñŞò áíáöïñÜ ãéá ",
 "hu", "Részletes jelentés a Magyar (hu) GNOME fordításokról",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "ğÏÄÒÏÂÎÙÊ ÏÔŞÅÔ Ï ÓÏÓÔÏÑÎÉÉ ĞÅÒÅ×ÏÄÁ Gnome ÎÁ ÒÕÓÓËÉÊ",

@@ -12,6 +12,7 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"el", "Πακέτο",
 "fi", "Paketti",
 "hu", "Modul",
 "ja", "$(B%b%8%e!<%k(B",
@@ -26,6 +27,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&Uuml;bersetzt",
+"el", "Μεταφρασμένα",
 "fi", "K&auml;&auml;nnetty",
 "fr", "Traduites",
 "hu", "Lefordνtott",
@@ -42,6 +44,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "Ungenau",
+"el", "Ασαφή",
 "fi", "Ep&auml;selvi&auml;",
 "fr", "Floues",
 "hu", "Pontatlan",
@@ -58,6 +61,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "Un&uuml;bersetzt",
+"el", "Aμετάφραστα",
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "fr", "Non traduites",
 "hu", "Fordνtatlan",
@@ -74,6 +78,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"el", "Aλφαριθμητικά",
 "fi", "rivi&auml;",
 "fr", "chaξnes",
 "hu", "karakterlαnc",
@@ -89,6 +94,7 @@ $now = time;
 
 %totals = (
 "de", "Gesamt",
+"el", "Συνολικά",
 "fi", "Yhteens&auml;",
 "hu", "Φsszes",
 "ja", "Ήη·Χ",
@@ -105,7 +111,7 @@ $now = time;
 "cs", "Detailed report for Czech (cs) GNOME translations",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i GNOME<br>Detailed report for Danish (da) GNOME translations",
 "de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung<br>Detailed report for German (de) GNOME translations",
-"el", "Detailed report for Greek (el) GNOME translations",
+"el", "Λεπτομερής αναφορά για της Ελληνικές (el) μεταφράσεις του GNOME",
 "en_GB", "Detailed report for English, British (en_GB) GNOME translations",
 "es", "Detailed report for Spanish (es) GNOME translations",
 "et", "Detailed report for Estonian (et) GNOME translations",

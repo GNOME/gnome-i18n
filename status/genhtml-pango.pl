@@ -12,6 +12,7 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"el", "Πακέτο",
 "fi", "Paketti",
 "hu", "Modul",
 "nl", "Module",
@@ -25,6 +26,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&Uuml;bersetzt",
+"el", "Μεταφρασμένα",
 "fi", "K&auml;&auml;nnetty",
 "hu", "Lefordνtott",
 "nl", "Vertaald",
@@ -38,6 +40,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "Ungenau",
+"el", "Ασαφή",
 "fi", "Ep&auml;selvi&auml;",
 "hu", "Pontatlan",
 "nl", "Wazig",
@@ -51,6 +54,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "Un&uuml;bersetzt",
+"el", "Aμετάφραστα",
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "hu", "Fordνtatlan",
 "nl", "Onvertaald",
@@ -64,6 +68,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"el", "Aλφαριθμητικά",
 "fi", "rivi&auml;",
 "hu", "karakterlαnc",
 "nl", "Meldingen",
@@ -78,6 +83,7 @@ $now = time;
 "C", "Detailed report for ",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
 "de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
+"el", "Λεπτομερής αναφορά για ",
 "fi", "Yksityiskohtainen raportti Suomen (fi) GNOME k&auml;&auml;nn&ouml;ksist&auml;",
 "hu", "Rιszletes jelentιs a Magyar (hu) GNOME fordνtαsokrσl",
 "nl", "Gedetailleerde rapportage voor Nederlands",
