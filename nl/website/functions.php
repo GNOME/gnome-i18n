@@ -94,7 +94,7 @@ function gnome_menu() { ?>
 	<div class="sectioncontent">
 		<ul class="nobullet">
 		<li><a href="gebruikers_welkom.php">G.N.O.M.E.</a></li>
-		<li><a href="gebruikers_omgeving.php">Gnome Nederlands maken</a></li>
+		<li><a href="gebruikers_omgeving.php">Taal instellen</a></li>
 		<li><a href="foutrapport.php">Vertaalfouten</a></li>
 		</ul>
 	</div>
