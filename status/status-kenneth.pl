@@ -1,4 +1,4 @@
-#!/usr/bin/perl  
+#!/usr/bin/perl
 
 #
 #  The GNOME Statustable Generator
@@ -28,8 +28,9 @@
 
 ## Constants
 
-$cvsroot = "/home/kanikus/cvs";
+$cvsroot = "/home/robert/cvs";
 $htmldir = "$cvsroot/web-devel-2/content/projects/gtp/status";
+$posdir = "$htmldir/pos";
 
 open STATUS, "STATUSFILES.in" || die "Cannot open file: STATUSFILES.in";
 
@@ -47,7 +48,7 @@ while (<STATUS>) {
 
 #@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
-sub getmsgfmt;
+sub GetMsgfmt;
 sub generatepot;
 sub getmerge;
 
@@ -112,7 +113,7 @@ foreach $lang (@langs){
 	foreach $mod (@modules){
 	    if (-f "$cvsroot/$mod/$lang.po" ) {
 	    GetMerge($lang,$mod);
-	    @result = getmsgfmt("$lang.new",$mod);
+	    @result = GetMsgfmt("$lang.new",$mod);
             $_ = $mod;
             s/\//-/; s/-po//;
             $newname = $_;
