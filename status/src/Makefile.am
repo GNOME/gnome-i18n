@@ -16,6 +16,8 @@ translation_status_SOURCES =         \
 	status-version.c	\
 	status-view.h		\
 	status-view.c		\
+	status-translation.h	\
+	status-translation.c	\
 	status-xml.c		\
 	main.c
 

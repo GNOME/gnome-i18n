@@ -1,8 +1,8 @@
 /* Translation Status program
  *
- * Author: Carlos Perelló Marín <carlos@gnome.org>
+ * Author: Carlos PerellÃ³ MarÃ­n <carlos@gnome.org>
  * 
- * Copyright (C) 2002-2003 Carlos Perelló Marín
+ * Copyright (C) 2002-2003 Carlos PerellÃ³ MarÃ­n
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -68,7 +68,7 @@ struct poptOption options[] = {
 
 	config.modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
 	config.download_dir = "/home/carlos/Desarrollos/gnome/";
-	config.install_dir = "/home/carlos/public_html/gnome/l10n/";
+	config.install_dir = "/home/carlos/public_html/GNOME/l10n/";
 
 	context = poptGetContext (NULL, argc, argv, options, 0);
 

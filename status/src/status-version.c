@@ -22,16 +22,20 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
 #include <dirent.h>
 #include "status-version.h"
+#include "status-translation.h"
 
 struct _StatusVersion {
 	GObject object;
 
 	StatusServer *server;
+	GHashTable *translations;
 	GString *module;
 	GString *id;
 	GString *path;
+	gint nstrings;
 };
 
 struct _StatusVersionClass {
@@ -62,9 +66,11 @@ status_version_init (StatusVersion *version, StatusVersionClass *klass)
 	g_return_if_fail (STATUS_IS_VERSION (version));
 
 	version->server = NULL;
+	version->translations = NULL;
 	version->module = NULL;
 	version->id = NULL;
 	version->path = NULL;
+	version->nstrings = 0;
 }
 
 static void
@@ -76,6 +82,11 @@ status_version_finalize (GObject *object)
 
 	if (version->server != NULL) {
 		g_object_unref (version->server);
+		version->server = NULL;
+	}
+	if (version->translations != NULL) {
+		g_hash_table_destroy (version->translations);
+		version->translations = NULL;
 	}
 	if (version->module != NULL) {
 		g_string_free (version->module, TRUE);
@@ -136,6 +147,7 @@ status_version_new (StatusServer *server, const gchar *module, const gchar *id, 
 	version = g_object_new (STATUS_TYPE_VERSION, NULL);
 
 	version->server = g_object_ref (server);
+	version->translations = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 	version->module = g_string_new (module);
 	version->id = g_string_new (id);
 	version->path = g_string_new (path);
@@ -175,7 +187,9 @@ status_version_download (StatusVersion *version, gchar *download_dir)
 gboolean
 status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar *install_dir)
 {
-	gchar *buf, *command;
+	gchar *buf, *command, *command_info;
+	gchar **tfu_temp, **tfu, *output, *error;
+	gint exit_status, ntoken;
 
 	g_message ("Generating %s.%s.pot...", version->module->str, version->id->str);
 	
@@ -192,6 +206,40 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 				g_free (command);
 				g_free (buf);
 				return FALSE;
+			} else {
+				command_info = g_strdup_printf ("msgfmt --statistics %s/PO/%s.%s.pot -o /dev/null",
+						install_dir, version->module->str, version->id->str);
+				if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
+						WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
+					tfu_temp = g_strsplit (output, "\n",0);
+					ntoken = 0;
+					while (tfu_temp[ntoken] != NULL) {
+						ntoken++;
+					}
+					/*
+					 * We had ntoken-1, but it seems that it's different with glib 2.0 :-?
+					 */
+					tfu = g_strsplit (tfu_temp[ntoken - 2 ], ",", 3);
+					if ( tfu[0] != NULL) {
+						if ( strstr (tfu[0], " untranslated")) {
+							sscanf (tfu[0], "%d untranslated",
+								&version->nstrings);
+						}
+						if ( tfu[1] != NULL) {
+							if ( strstr (tfu[1], " untranslated")) {
+								sscanf (tfu[1], "%d untranslated",
+									&version->nstrings);
+							}
+							if ( tfu[2] != NULL && strstr (tfu[2], " untranslated")) {
+								sscanf (tfu[2], "%d untranslated",
+									&version->nstrings);
+							}
+						}
+					}
+					g_strfreev (tfu);
+					g_strfreev (tfu_temp);
+				}
+				g_free (command_info);
 			}
 			g_free (command);
 			return TRUE;
@@ -225,6 +273,7 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 	DIR *podir;
         struct dirent *direntry;
         gchar **filesplit;
+	gchar *po_file;
 
 	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
 
@@ -237,18 +286,28 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 				while (direntry != NULL) {
 					filesplit = g_strsplit (direntry->d_name, ".", 2);
 					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
+						po_file = g_strdup_printf ("%s/PO/%s.%s.%s.po", install_dir,
+								version->module->str, version->id->str, filesplit[0]);
 						g_message ("Updating %s.%s.%s.po:", version->module->str, version->id->str, filesplit[0]);
 						command = g_strdup_printf (
-							"msgmerge %s %s/PO/%s.%s.pot -o %s/PO/%s.%s.%s.po > /dev/null",
+							"msgmerge %s %s/PO/%s.%s.pot -o %s > /dev/null",
 							direntry->d_name, install_dir, version->module->str,
-							version->id->str, install_dir, version->module->str,
-							version->id->str, filesplit[0]);
+							version->id->str, po_file);
 						if (system (command)) {
 							g_warning ("Unable to update the %s/PO/%s.%s.%s.po file",
 								   install_dir, version->module->str,
 								   version->id->str, filesplit[0]);
+						} else {
+							StatusTranslation *translation;
+							
+							translation = status_translation_new (version, po_file);
+							if (translation != NULL) {
+								g_hash_table_insert (version->translations,
+										filesplit[0], translation);
+							}
 						}
 						g_free (command);
+						g_free (po_file);
 					}
 					g_strfreev (filesplit);
 					direntry = readdir (podir);
