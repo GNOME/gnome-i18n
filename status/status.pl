@@ -70,7 +70,6 @@
      "gxsnmp/po",
      "gnome-i18n/extra-po/helix-gdm2",
      "gtkhtml/po",
-     "helix-install/src/rpm-3.0.3/po",
      "helix-setup-tools/po",
      "libgda/po",
      "libgtop/po",
