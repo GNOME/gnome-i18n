@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 # Copyright (C) 2000 Free Software Foundation
 # frob <frob@df.ru>
 # 
@@ -65,7 +65,7 @@ $now = time;
 );
 
 %details = ( 
-"C", "Detail report for ",
+"C", "Detailed report for ",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
 "de", "Detaillierte Statistik f&uuml;r deutsch &Uuml;bersetzung in GNOME",
 "nl", "Gedetailleerde rapportage voor Nederlands",
