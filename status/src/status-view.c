@@ -25,8 +25,8 @@
 struct _StatusView {
 	GObject object;
 
-	GString *name;
-	GList   *modules;
+	GString    *name;
+	GHashTable *modules;
 };
 
 struct _StatusViewClass {
@@ -38,6 +38,31 @@ static void status_view_init       (StatusView *view, StatusViewClass *klass);
 static void status_view_finalize   (GObject * object);
 
 static GObjectClass *parent_class = NULL;
+
+static void
+view_free_modules (gpointer data, gpointer user_data)
+{
+	StatusVersion *module;
+
+	module = STATUS_VERSION(data);
+
+	g_object_unref (module);
+}
+
+static void
+view_free_list_modules (gpointer key, gpointer value, gpointer user_data)
+{
+	GList *module_list;
+
+	g_free (key);
+
+	g_return_if_fail (value != NULL);
+
+	module_list = (GList *) value;
+	g_list_foreach (module_list, view_free_modules, NULL);
+	g_list_free (module_list);
+
+}
 
 /*
  * StatusView object implementation
@@ -72,8 +97,8 @@ status_view_finalize (GObject *object)
 		view->name = NULL;
 	}
 	if (view->modules != NULL) {
-		g_list_for_each (view->modules, view_free_modules, NULL);
-		g_list_free (view->modules);
+		g_hash_table_foreach (view->modules, view_free_list_modules, NULL);
+		g_hash_table_destroy (view->modules);
 		view->modules = NULL;
 	}
 
@@ -118,6 +143,7 @@ status_view_new (const gchar *name)
 	viewc = status_view (g_object_new (STATUS_TYPE_VIEW, NULL));
 
 	view->name = g_string_new (name);
+	view->modules = g_hash_table_new (g_str_hash, g_str_equal);
 
 	return view;
 }
@@ -144,11 +170,25 @@ status_view_get_name (StatusView *view)
  * status_view_add_module
  */
 gboolean
-status_view_add_module (StatusView *view, StatusVersion *module)
+status_view_add_module (StatusView *view, const gchar *group, StatusVersion *module)
 {
+	GList *modules_group, *new;
+	
 	g_return_val_if_fail (STATUS_IS_VIEW (view), FALSE);
+	g_return_val_if_fail (group != NULL, FALSE);
 	g_return_val_if_fail (STATUS_IS_VERSION (module), FALSE);
 
-	view->modules = g_list_append (view->modules, g_object_ref (modules));
+	modules_group = g_hash_table_lookup (view->modules, group);
+
+	if (modules_group == NULL) {
+		modules_group = g_list_append (modules_group, g_object_ref (module));
+		g_hash_table_insert (view->modules, group, modules_group);
+	} else {
+		new = g_list_append (modules_group, g_object_ref (module));
+		/* We only change the hash table if the head of the list has changed */
+		if (new != modules_group) {
+			g_hash_table_replace (view->modules, group, new);
+		}
+	}
 	return TRUE;
 }
