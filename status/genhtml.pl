@@ -153,6 +153,7 @@ my %total = (
 
 my %lasttranslator = (
     "C"  => "Last Translator",
+    "de" => "Letzter &Uuml;bersetzer", 
     "es" => "Último traductor",
     "ja" => "ºÇ½ªËÝÌõ¼Ô",
     "sv" => "Senaste &ouml;vers&auml;ttare"
@@ -160,6 +161,7 @@ my %lasttranslator = (
 
 my %status = (
     "C"  => "Status",
+    "de" => "Status",
     "es" => "Estado",
     "ja" => "¥¹¥Æ¡¼¥¿¥¹",
     "sv" => "Status"
@@ -167,16 +169,19 @@ my %status = (
 
 my %outdated = (
     "C"  => "OutDated",
+    "de" => "Veraltet",
     "es" => "Desactualizado",
 );
 
 my %wip = (
     "C"  => "Work in Progress",
+    "de" => "In Arbeit",
     "es" => "En proceso",
 );
 
 my %unknown = (
     "C"  => "Unknown",
+    "de" => "Unbekannt",
     "es" => "Desconocido",
     "sv" => "Ok&auml;nd"
 );
