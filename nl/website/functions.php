@@ -11,9 +11,10 @@
 //
 
 $important_branch = "gnome-2.8";
-function translate() { ?>
-<div class="translate">
-<? $url = sprintf("%s%s%s","http://",$GLOBALS["HTTP_HOST"],$GLOBALS["REQUEST_URI"]);
+function meter() { ?>
+<div class="meter">
+<?
+$url = sprintf("%s%s%s","http://",$GLOBALS["HTTP_HOST"],$GLOBALS["REQUEST_URI"]);
  ?>
 <form name="TRANS" action="http://www.systranbox.com/systran/box" method="post">
 <input name="systran_id" type="hidden" value="SystranSoft-en">
@@ -30,7 +31,7 @@ echo "</div>";
 function html_head() {
 $backgroundnumber = rand (1, 5);
 ?>
-  <link rel="icon" href="images/gnome-nl-logo.png" type="image/png">
+  <link rel="icon" href="images/gnome-16.png" type="image/png">
   <link rel="stylesheet" href="css/default.css" type="text/css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="author" content="Vincent van Adrighem">
@@ -49,15 +50,15 @@ $backgroundnumber = rand (1, 5);
 
 function gnome_head() { ?>
 <div class="hdr">
-	<a href="index.php"><img class="logo" src="images/gnome-nl-logo.png" alt="Thuis" title="Terug naar de beginpagina"></a>
+	<a href="index.php"><img class="logo" src="images/gnome-64.png" alt="Thuis" title="Terug naar de beginpagina"></a>
 </div>
 <?
 }
 
 function gnome_foot() { ?>
 <div class="copyright">
-<a href="http://www.kovoks.nl/"><img src="images/kovoks.png"
-	border="0" alt="Hosted by KovoKs.nl"></a>
+<a href="http://www.sourceforge.net/"><img src="images/sflogo.png"
+	border="0" alt="Hosted by Sourceforge"></a>
 <a href="http://validator.w3.org/check/referer"><img border="0"
         src="http://www.w3.org/Icons/valid-html401"
         alt="Valid HTML 4.01!" height="31" width="88"></a>

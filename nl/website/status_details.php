@@ -14,7 +14,7 @@ include "functions.php";
 <div class="body">
 
 <?
-translate();
+meter();
 gnome_head();
 gnome_menu();
 ?>

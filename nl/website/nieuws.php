@@ -5,7 +5,7 @@ include "functions.php";
 ?>
 
 <head>
-  <title>GParted -- News</title>
+  <title>Gnome-nl -- Nieuws</title>
 <? html_head() ?>
 </head>
 <body>
