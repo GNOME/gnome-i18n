@@ -12,6 +12,7 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"fr", "Module",
 "nl", "Module",
 "ro", "Modul",
 "ru", "íÏÄÕÌØ",
@@ -23,6 +24,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&uuml;bersetzt",
+"fr", "Traduites",
 "nl", "Vertaald",
 "ro", "traduse",
 "ru", "ðÅÒÅ×ÅÄÅÎÏ",
@@ -34,6 +36,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "ungenau",
+"fr", "Floues",
 "nl", "Wazig",
 "ro", "neclare",
 "ru", "îÅÞÅÔËÏ",
@@ -45,6 +48,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "un&uuml;bersetzt",
+"fr", "Non traduites",
 "nl", "Onvertaald",
 "ro", "netraduse",
 "ru", "îÅÐÅÒÅ×ÅÄÅÎÏ",
@@ -56,6 +60,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"fr", "chaînes",
 "nl", "Meldingen",
 "ro", "stringuri",
 "ru", "ÓÏÏÂÝ.",
@@ -76,7 +81,7 @@ $now = time;
 "et", "Detailed report for Estonian (et) GNOME translations",
 "eu", "Detailed report for Basque (eu) GNOME translations",
 "fi", "Detailed report for Finish (fi) GNOME translations",
-"fr", "Detailed report for French (fr) GNOME translations",
+"fr", "Rapport détaillé pour les traductions françaises (fr) GNOME",
 "ga", "Detailed report for Irish (ga) GNOME translations",
 "gl", "Detailed report for Galician (gl) GNOME translations",
 "hr", "Detailed report for Croatian (hr) GNOME translations",
@@ -175,7 +180,7 @@ if ($mod=~/\/po$/){
     $mod = ($mod=~/helix-install/) ? "rpm (helix-install)" : $tmp;
     } elsif ($mod=~/extra-po\//){
 	$mod = $';
-    }
+    }s
 
     $index = 0;
     foreach $info (@info){
@@ -188,6 +193,7 @@ if ($mod=~/\/po$/){
 
 
 open (TABLE, ">$htmldir/status.shtml") || die("can't open $htmldir/status.shtml");
+print TABLE "<html><head><title>Report for GNOME translations</title></head><body>"
 print TABLE "<table cellpadding=1 cellspacing=1 border=1 width=\"90%\"><tr align=center><td></td>";
 
 #First string with langs
@@ -226,7 +232,8 @@ foreach $lang (sort keys %langinfo){
     print TABLE "<td><a href=\"$link\">$langs_red</a></td>\n";
 }
     print TABLE "<td></td></tr></table>";
-    print TABLE scalar localtime(time);    
+    print TABLE scalar localtime(time);
+    print TABLE "</body></html>"
 
 # status printed.
 
@@ -235,6 +242,7 @@ foreach $lang (sort keys %langinfo){
     $link = "$details_" . substr($lang, 0, 5) . ".shtml";
 open (TABLE2, ">$htmldir/$link") || die("can't open $htmldir/$link");
     $detail = $details{$lang} || $details{"C"} . $lang;
+    print TABLE2 "<html><head><title>$detail</title></head><body>"
     print TABLE2 "<a name=\"$lang\"><b>$detail</b></a><br>";
     print TABLE2 "<table cellpadding=1 cellspacing=1 border=1 >";
     $modulename = $modulenames{$lang} || "Module";
@@ -254,7 +262,7 @@ open (TABLE2, ">$htmldir/$link") || die("can't open $htmldir/$link");
 	print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>$mod</td><td>$trns</td><td>$fuzzy</td><td>$untrns</td>" .
 		     "<td>$percent</td>";
     }
-    print TABLE2 "</table></center>";
+    print TABLE2 "</table></center></body></html>";
 }
 
 ####################
