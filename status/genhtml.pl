@@ -183,7 +183,7 @@ my %unknown = (
 
 my %details = ( 
     "C"  => "Detail report for ",
-    "da" => "Detaljeret statistik for underst&oslash;ttelse af dansk i GNOME",
+    "da" => "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
     "de" => "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
     "el" => "Λεπτομερής αναφορά για ",
     "es" => "Informe detallado de la traducci&oacute;n de GNOME al espaρol (es)",
