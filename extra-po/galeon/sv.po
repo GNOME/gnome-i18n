@@ -5,26 +5,26 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Galeon 0.7.6\n"
-"POT-Creation-Date: 2000-09-30 21:58+0200\n"
-"PO-Revision-Date: 2000-10-01 00:30+0200\n"
+"Project-Id-Version: Galeon 0.7.7\n"
+"POT-Creation-Date: 2000-10-13 21:35+0200\n"
+"PO-Revision-Date: 2000-10-14 00:39+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:388 src/trans.h:76
+#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:409 src/trans.h:76
 #: src/trans.h:81
 msgid "Bookmarks"
 msgstr "Bokmärken"
 
 #: src/bookmarks.c:827 src/bookmarks_callbacks.c:181
-#: src/browser_callbacks.c:803 src/history.c:182 src/mozcallbacks.c:139
+#: src/browser_callbacks.c:804 src/history.c:182 src/mozcallbacks.c:140
 msgid "Untitled"
 msgstr "Namnlös"
 
-#: src/bookmarks.c:996
+#: src/bookmarks.c:996 src/trans.h:383
 msgid "Temporary bookmarks"
 msgstr "Temporära bokmärken"
 
@@ -56,26 +56,94 @@ msgstr "Ny bokmärkeskategori"
 msgid "Separator"
 msgstr "Avskiljare"
 
-#: src/browser.c:118
-msgid "Galeon cannot handle this protocol"
-msgstr "Galeon kan inte hantera detta protokoll"
-
 #. fill the status bar text with progress info: percentual and kb
-#: src/browser.c:435
+#: src/browser.c:419
 msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
 msgstr "%s (%d%% färdigt, %d kB av %d kB laddade)"
 
 #. fill the status bar text with progress info: only kb
-#: src/browser.c:443
+#: src/browser.c:427
 #, c-format
 msgid "%s (%d Kb loaded)"
 msgstr "%s (%d kB laddade)"
 
-#: src/browser_callbacks.c:289
+#: src/browser.c:695
+msgid ""
+"Can't get the url for current page.\n"
+"No source avaible."
+msgstr ""
+"Kunde inte få tag i den aktuella sidans url.\n"
+"Ingen källkod finns tillgänglig."
+
+#: src/browser.c:711
+msgid "Could not create a temporary file"
+msgstr "Kunde inte skapa en temporär fil"
+
+#: src/browser.c:718
+msgid "Something went wrong while saving the file to a temporary location"
+msgstr "Någonting gick fel när filen skulle sparas på en temporär plats"
+
+#: src/browser.c:732
+msgid "Error executing external program"
+msgstr "Fel vid körning av externt program"
+
+#: src/browser_callbacks.c:290
 msgid "You must specify a Start Page in the Preferences dialog!"
 msgstr "Du måste ange en startsida i inställningarna!"
 
-#: src/find_callbacks.c:56 src/find_callbacks.c:82 src/find_callbacks.c:121
+#: src/context.c:27 src/context.c:60
+msgid "Open"
+msgstr "Öppna"
+
+#: src/context.c:28 src/context.c:61
+msgid "Open in a new window"
+msgstr "Öppna i ett nytt fönster"
+
+#: src/context.c:29 src/context.c:62
+msgid "Download file"
+msgstr "Hämta fil"
+
+#: src/context.c:30 src/context.c:63
+msgid "Copy link location"
+msgstr "Kopiera länkadress"
+
+#: src/context.c:31 src/context.c:64 src/trans.h:24
+msgid "Add temporary bookmark"
+msgstr "Lägg till temporärt bokmärke"
+
+#: src/context.c:37 src/context.c:56
+msgid "Open image"
+msgstr "Öppna bild"
+
+#: src/context.c:38 src/context.c:57
+msgid "Open image in a new window"
+msgstr "Öppna bild i ett nytt fönster"
+
+#: src/context.c:39 src/context.c:58
+msgid "Download image"
+msgstr "Hämta bild"
+
+#: src/context.c:45 src/prefs.c:429 src/trans.h:176
+msgid "View Source"
+msgstr "Visa källa"
+
+#: src/context.c:46
+msgid "Save"
+msgstr "Spara"
+
+#: src/context.c:47
+msgid "Find"
+msgstr "Sök"
+
+#: src/context.c:49 src/trans.h:35 src/trans.h:385
+msgid "Back"
+msgstr "Bakåt"
+
+#: src/context.c:50 src/trans.h:38 src/trans.h:387
+msgid "Forward"
+msgstr "Framåt"
+
+#: src/find_callbacks.c:60 src/find_callbacks.c:86 src/find_callbacks.c:125
 msgid "Not found"
 msgstr "Kunde inte hittas"
 
@@ -87,7 +155,7 @@ msgstr "Försök att ladda URL i redan existerande Galeon-fönster"
 msgid "Add a temp bookmark (don't open any window)"
 msgstr "Lägg till ett temporärt bokmärke (öppna inget fönster)"
 
-#: src/main.c:55 src/trans.h:343
+#: src/main.c:55 src/trans.h:371
 msgid "URL"
 msgstr "URL"
 
@@ -102,30 +170,29 @@ msgstr ""
 "\n"
 "Vill du importera dina existerande Netscape-bokmärken?"
 
-#: src/misc.c:120
+#: src/misc.c:155
 #, c-format
 msgid "%s not found"
 msgstr "%s inte hittad"
 
-#: src/misc.c:528
-msgid "Open"
-msgstr "Öppna"
+#. throw the error
+#: src/misc.c:344
+msgid ""
+"Galeon cannot handle this protocol,\n"
+"and no GNOME default handler is set"
+msgstr ""
+"Galeon kan inte hantera detta protokoll, och\n"
+"ingen standardhanterare är angiven i GNOME"
 
-#: src/misc.c:529
-msgid "Open in a new window"
-msgstr "Öppna i ett nytt fönster"
-
-#: src/misc.c:530
-msgid "Download"
-msgstr "Hämta"
-
-#: src/misc.c:531
-msgid "Copy link location"
-msgstr "Kopiera länkadress"
-
-#: src/misc.c:532 src/trans.h:24
-msgid "Add temporary bookmark"
-msgstr "Lägg till temporärt bokmärke"
+#: src/misc.c:359
+msgid ""
+"The protocol specified is not recognised.\n"
+"\n"
+"Would you like to try the GNOME default?"
+msgstr ""
+"Protokollet som är angivet känns inte igen.\n"
+"\n"
+"Vill du prova med standardalternativet i GNOME?"
 
 #: src/misc_callbacks.c:58
 msgid "Copyright (C) 2000 Marco Pesenti Gritti"
@@ -135,63 +202,43 @@ msgstr "Copyright © 2000 Marco Pesenti Gritti"
 msgid "A GNOME browser based on mozilla"
 msgstr "En GNOME-webbläsare, baserad på Mozilla"
 
-#: src/misc_callbacks.c:179
+#: src/misc_callbacks.c:182
 msgid "Cannot save the file"
 msgstr "Kan inte spara filen"
 
-#: src/misc_callbacks.c:211
-msgid "Could not create a temporary file"
-msgstr "Kunde inte skapa en temporär fil"
-
-#: src/misc_callbacks.c:218
-msgid "Something went wrong while saving the file to a temporary location"
-msgstr "Någonting gick fel när filen skulle sparas på en temporär plats"
-
-#: src/misc_callbacks.c:232
-msgid "Error executing external program"
-msgstr "Fel vid körning av externt program"
-
-#: src/misc_callbacks.c:260
-msgid ""
-"Can't get the url for current page.\n"
-"No source avaible."
-msgstr ""
-"Kunde inte få tag i den aktuella sidans url.\n"
-"Ingen källkod finns tillgänglig."
-
-#: src/mozcallbacks.c:253
+#: src/mozcallbacks.c:254
 msgid "Redirecting to site..."
 msgstr "Omdirigerar till webbplatsen..."
 
-#: src/mozcallbacks.c:255
+#: src/mozcallbacks.c:256
 msgid "Transferring data from site..."
 msgstr "Överför data från webbplats..."
 
-#: src/mozcallbacks.c:257
+#: src/mozcallbacks.c:258
 msgid "Waiting for authorization..."
 msgstr "Väntar på auktorisering..."
 
-#: src/mozcallbacks.c:259
+#: src/mozcallbacks.c:260
 msgid "Loading site..."
 msgstr "Laddar webbplats..."
 
-#: src/mozcallbacks.c:261
+#: src/mozcallbacks.c:262
 msgid "Done."
 msgstr "Färdig."
 
-#: src/mozcallbacks.c:265
+#: src/mozcallbacks.c:266
 msgid "Site not found."
 msgstr "Webbplatsen kunde inte hittas."
 
-#: src/mozcallbacks.c:267
+#: src/mozcallbacks.c:268
 msgid "Failed to connect to site."
 msgstr "Misslyckades med att ansluta till webbplatsen."
 
-#: src/mozcallbacks.c:269
+#: src/mozcallbacks.c:270
 msgid "Failed due to connection timeout."
 msgstr "Misslyckades på grund av att tidsgränsen för anslutning överskreds."
 
-#: src/mozcallbacks.c:271
+#: src/mozcallbacks.c:272
 msgid "User canceled connecting to site."
 msgstr "Användaren avbröt anslutningen till webbplatsen."
 
@@ -199,89 +246,89 @@ msgstr "Användaren avbröt anslutningen till webbplatsen."
 msgid "Personal Toolbar Folder"
 msgstr "Personlig verktygsradsmapp"
 
-#: src/prefs.c:377
+#: src/prefs.c:398
 msgid "Browsing"
 msgstr "Bläddring"
 
-#: src/prefs.c:378
+#: src/prefs.c:399
 msgid "User Interface"
 msgstr "Användargränssnitt"
 
-#: src/prefs.c:379
+#: src/prefs.c:400
 msgid "Handlers"
 msgstr "Hanterare"
 
-#: src/prefs.c:380
+#: src/prefs.c:401
 msgid "Rendering"
 msgstr "Rendering"
 
-#: src/prefs.c:381
+#: src/prefs.c:402
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: src/prefs.c:387 src/trans.h:75
+#: src/prefs.c:408 src/trans.h:75
 msgid "Homepage"
 msgstr "Hemsida"
 
-#: src/prefs.c:389 src/trans.h:82 src/trans.h:84 src/trans.h:324
+#: src/prefs.c:410 src/trans.h:82 src/trans.h:84 src/trans.h:352
 msgid "History"
 msgstr "Historik"
 
-#: src/prefs.c:390 src/trans.h:85 src/trans.h:92
+#: src/prefs.c:411 src/trans.h:85 src/trans.h:92
 msgid "Java"
 msgstr "Java"
 
-#: src/prefs.c:391 src/trans.h:102
+#: src/prefs.c:412 src/trans.h:102
 msgid "Filtering"
 msgstr "Filtrering"
 
-#: src/prefs.c:397 src/trans.h:125
+#: src/prefs.c:418 src/trans.h:125
 msgid "Layout"
 msgstr "Layout"
 
-#: src/prefs.c:398 src/trans.h:126 src/trans.h:130
+#: src/prefs.c:419 src/trans.h:126 src/trans.h:130
 msgid "Spinner"
 msgstr "Snurra"
 
-#: src/prefs.c:399 src/trans.h:131 src/trans.h:137
+#: src/prefs.c:420 src/trans.h:131 src/trans.h:137
 msgid "Links Menu"
 msgstr "Länkmeny"
 
-#: src/prefs.c:400 src/trans.h:138 src/trans.h:143
+#: src/prefs.c:421 src/trans.h:138 src/trans.h:143
 msgid "Completions"
 msgstr "Ifyllningar"
 
-#: src/prefs.c:401 src/trans.h:144 src/trans.h:149
+#: src/prefs.c:422 src/trans.h:144 src/trans.h:149
 msgid "Crash Recovery"
 msgstr "Kraschåterställning"
 
-#: src/prefs.c:407 src/trans.h:150 src/trans.h:164
+#: src/prefs.c:428 src/trans.h:150 src/trans.h:164
 msgid "Downloading"
 msgstr "Hämtning"
 
-#: src/prefs.c:408 src/trans.h:176
-msgid "View Source"
-msgstr "Visa källa"
-
-#: src/prefs.c:409 src/trans.h:177 src/trans.h:190
-msgid "MIME Types"
-msgstr "MIME-typer"
-
-#: src/prefs.c:415 src/trans.h:191 src/trans.h:202
+#: src/prefs.c:439 src/trans.h:191 src/trans.h:202
 msgid "Fonts"
 msgstr "Typsnitt"
 
-#: src/prefs.c:416 src/trans.h:280
+#: src/prefs.c:440 src/trans.h:203 src/trans.h:222
+msgid "Colors"
+msgstr "Färger"
+
+#: src/prefs.c:441 src/trans.h:302
 msgid "Languages"
 msgstr "Språk"
 
-#: src/prefs.c:422
+#: src/prefs.c:447
 msgid "Proxy"
 msgstr "Proxyserver"
 
-#: src/prefs.c:423 src/trans.h:210 src/trans.h:215
+#: src/prefs.c:448 src/trans.h:232 src/trans.h:237
 msgid "Cache"
 msgstr "Cache"
+
+#: src/prefs.c:449 src/trans.h:351
+msgid "Network"
+msgstr "Nätverk"
 
 #: src/session.c:126
 msgid ""
@@ -294,9 +341,9 @@ msgstr ""
 "Vill du återskapa tillståndet som gällde vid din senaste webbläsarsession?"
 
 #.
-#. * Archivo de cadenas traducibles generado por Glade.
-#. * Añada este archivo a su POTFILES.in de su proyecto.
-#. * NO lo compile como parte de su aplicación.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
 #.
 #: src/trans.h:7 src/trans.h:123
 msgid "Galeon"
@@ -342,7 +389,7 @@ msgstr "Fullskärm"
 msgid "B_ookmarks"
 msgstr "B_okmärken"
 
-#: src/trans.h:18 src/trans.h:189 src/trans.h:369
+#: src/trans.h:18 src/trans.h:189 src/trans.h:397
 msgid "Edit"
 msgstr "Redigera"
 
@@ -406,17 +453,9 @@ msgstr "_Historik..."
 msgid "Go Back - Right button: History"
 msgstr "Gå bakåt - Höger musknapp: Historik"
 
-#: src/trans.h:35 src/trans.h:357
-msgid "Back"
-msgstr "Bakåt"
-
 #: src/trans.h:36
 msgid "Go Forward - Right button: History\n"
 msgstr "Gå Framåt - Höger musknapp: Historik\n"
-
-#: src/trans.h:38 src/trans.h:359
-msgid "Forward"
-msgstr "Framåt"
 
 #: src/trans.h:39
 msgid "Reload Current Page"
@@ -454,20 +493,20 @@ msgstr "Dra mig!"
 msgid "   Location: "
 msgstr "   Adress: "
 
-#: src/trans.h:48 src/trans.h:51 src/trans.h:361
+#: src/trans.h:48 src/trans.h:51 src/trans.h:389
 msgid "Go"
 msgstr "Gå"
 
-#: src/trans.h:52 src/trans.h:336
+#: src/trans.h:52 src/trans.h:364
 msgid "Select File"
 msgstr "Välj fil"
 
-#: src/trans.h:53 src/trans.h:331 src/trans.h:334 src/trans.h:337
+#: src/trans.h:53 src/trans.h:359 src/trans.h:362 src/trans.h:365
 msgid "OK"
 msgstr "OK"
 
-#: src/trans.h:54 src/trans.h:332 src/trans.h:335 src/trans.h:338
-#: src/trans.h:384
+#: src/trans.h:54 src/trans.h:360 src/trans.h:363 src/trans.h:366
+#: src/trans.h:412
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -487,7 +526,7 @@ msgstr "Logotyp"
 msgid "Home Page"
 msgstr "Hemsida"
 
-#: src/trans.h:59 src/trans.h:344 src/trans.h:380
+#: src/trans.h:59 src/trans.h:372 src/trans.h:408
 msgid "URL:"
 msgstr "URL:"
 
@@ -635,7 +674,7 @@ msgstr "Knappverktygsrad"
 msgid "Icons"
 msgstr "Ikoner"
 
-#: src/trans.h:109
+#: src/trans.h:109 src/trans.h:205
 msgid "Text"
 msgstr "Text"
 
@@ -777,7 +816,7 @@ msgstr "Hantera FTP-URL:er med"
 
 #: src/trans.h:162
 msgid "Mozilla FTP"
-msgstr "Mozilla FTP"
+msgstr "Mozilla-FTP"
 
 #: src/trans.h:163
 msgid "Gnome FTP Handler"
@@ -823,6 +862,10 @@ msgstr "gless"
 msgid "gnp"
 msgstr "gnp"
 
+#: src/trans.h:177 src/trans.h:190
+msgid "MIME Types"
+msgstr "MIME-typer"
+
 #: src/trans.h:178
 msgid "Mime Types"
 msgstr "Mime-typer"
@@ -839,7 +882,7 @@ msgstr "Spara till disk"
 msgid "Open with program"
 msgstr "Öppna med program"
 
-#: src/trans.h:183 src/trans.h:342 src/trans.h:348 src/trans.h:378
+#: src/trans.h:183 src/trans.h:370 src/trans.h:376 src/trans.h:406
 msgid "Name"
 msgstr "Namn"
 
@@ -855,7 +898,7 @@ msgstr "Åtgärd"
 msgid "Program"
 msgstr "Program"
 
-#: src/trans.h:187 src/trans.h:319
+#: src/trans.h:187 src/trans.h:342
 msgid "Add"
 msgstr "Lägg till"
 
@@ -887,515 +930,599 @@ msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÅåÄäÖö"
 msgid "Monospace"
 msgstr "Fast breddsteg"
 
-#: src/trans.h:203 src/trans.h:209
+#: src/trans.h:204
+msgid "Background"
+msgstr "Bakgrund"
+
+#: src/trans.h:206
+msgid "Unvisited link"
+msgstr "Obesökt länk"
+
+#: src/trans.h:207
+msgid "Visited link"
+msgstr "Besökt länk"
+
+#: src/trans.h:208
+msgid "Pick the background color"
+msgstr "Välj bakgrundsfärg"
+
+#: src/trans.h:209
+msgid "Pick the text color"
+msgstr "Välj färg på texten"
+
+#: src/trans.h:210
+msgid "Pick the color unvisited links"
+msgstr "Välj färgen på obesökta länkar"
+
+#: src/trans.h:211
+msgid "Pick the color for visited links"
+msgstr "Välj färgen på besökta länkar"
+
+#: src/trans.h:212
+msgid ""
+"When a page \n"
+"provides its own colors"
+msgstr ""
+"När en sida tillhanda-\n"
+"håller sina egna färger"
+
+#: src/trans.h:214
+msgid "Use provided colors"
+msgstr "Använd tillhandahållna färger"
+
+#: src/trans.h:215
+msgid "Use my chosen colors"
+msgstr "Använd de färger jag valt"
+
+#: src/trans.h:216
+msgid "Underline links"
+msgstr "Stryk under länkar"
+
+#: src/trans.h:217 src/trans.h:219 src/trans.h:220 src/trans.h:221
+msgid "[*]"
+msgstr "[*]"
+
+#: src/trans.h:218
+msgid ""
+"[*] Note: due to limitations in Mozilla, these options are not guaranteed to "
+"work."
+msgstr ""
+"[*] Observera: på grund av begränsningar i Mozilla kan inte dessa alternativ "
+"garanteras fungera."
+
+#: src/trans.h:223 src/trans.h:231
 msgid "Proxies"
 msgstr "Proxyservrar"
 
-#: src/trans.h:204
+#: src/trans.h:224
 msgid "HTTP proxy"
 msgstr "HTTP-proxyserver"
 
-#: src/trans.h:205
+#: src/trans.h:225
 msgid "FTP proxy"
 msgstr "FTP-proxyserver"
 
-#: src/trans.h:206 src/trans.h:207
+#: src/trans.h:226 src/trans.h:227
 msgid "Port"
 msgstr "Port"
 
-#: src/trans.h:208
+#: src/trans.h:228
 msgid "No proxy for"
 msgstr "Ingen proxyserver för"
 
-#: src/trans.h:211
+#: src/trans.h:229
+msgid "Options"
+msgstr "Alternativ"
+
+#: src/trans.h:230
+msgid "Proxy keep-alive?"
+msgstr "Keep-alive på proxyservern?"
+
+#: src/trans.h:233
 msgid "Disk cache"
 msgstr "Diskcache"
 
-#: src/trans.h:212
+#: src/trans.h:234
 msgid "Memory cache"
 msgstr "Minnescache"
 
-#: src/trans.h:213 src/trans.h:214
+#: src/trans.h:235 src/trans.h:236
 msgid "Kb"
 msgstr "kB"
 
-#: src/trans.h:216
+#: src/trans.h:238
 msgid "Charsets"
 msgstr "Teckentabeller"
 
-#: src/trans.h:217
+#: src/trans.h:239
 msgid "Autodetect"
 msgstr "Upptäck automatiskt"
 
-#: src/trans.h:218
+#: src/trans.h:240
 msgid "Default charset"
 msgstr "Standardteckentabell"
 
-#: src/trans.h:219
+#: src/trans.h:241
 msgid "Off"
 msgstr "Av"
 
-#: src/trans.h:220
+#: src/trans.h:242
 msgid "Chinese"
 msgstr "Kinesisk"
 
-#: src/trans.h:221
+#: src/trans.h:243
 msgid "East asian"
 msgstr "Östasiatisk"
 
-#: src/trans.h:222
+#: src/trans.h:244
 msgid "Japanese"
 msgstr "Japansk"
 
-#: src/trans.h:223
+#: src/trans.h:245
 msgid "Korean"
 msgstr "Koreansk"
 
-#: src/trans.h:224
+#: src/trans.h:246
 msgid "Russian"
 msgstr "Rysk"
 
-#: src/trans.h:225
+#: src/trans.h:247
 msgid "Simplified Chinese"
 msgstr "Förenklad kinesisk"
 
-#: src/trans.h:226
+#: src/trans.h:248
 msgid "Traditional Chinese"
 msgstr "Traditionell kinesisk"
 
-#: src/trans.h:227
+#: src/trans.h:249
 msgid "Ukrainian"
 msgstr "Ukrainsk"
 
-#: src/trans.h:228 src/trans.h:279
+#: src/trans.h:250 src/trans.h:301
 msgid "Armenian (ARMSCII-8)"
 msgstr "Armenisk (ARMSCII-8)"
 
-#: src/trans.h:229
+#: src/trans.h:251
 msgid "Baltic (ISO-8859-13)"
 msgstr "Baltisk (ISO-8859-13)"
 
-#: src/trans.h:230
+#: src/trans.h:252
 msgid "Baltic (ISO-8859-4)"
 msgstr "Baltisk (ISO-8859-4)"
 
-#: src/trans.h:231
+#: src/trans.h:253
 msgid "Baltic (Windows-1257)"
 msgstr "Baltisk (Windows-1257)"
 
-#: src/trans.h:232
+#: src/trans.h:254
 msgid "Celtic (ISO-8859-14)"
 msgstr "Keltisk (ISO-8859-14)"
 
-#: src/trans.h:233
+#: src/trans.h:255
 msgid "Central European (IBM-852)"
 msgstr "Centraleuropeisk (IBM-852)"
 
-#: src/trans.h:234
+#: src/trans.h:256
 msgid "Central European (ISO-8859-2)"
 msgstr "Centraleuropeisk (ISO-8859-2)"
 
-#: src/trans.h:235
+#: src/trans.h:257
 msgid "Central European (MacCE)"
 msgstr "Centraleuropeisk (MacCE)"
 
-#: src/trans.h:236
+#: src/trans.h:258
 msgid "Central European (Windows-1250)"
 msgstr "Centraleuropeisk (Windows-1250)"
 
-#: src/trans.h:237
+#: src/trans.h:259
 msgid "Chinese Simplified (GB2312)"
 msgstr "Förenklad kinesisk (GB2312)"
 
-#: src/trans.h:238
+#: src/trans.h:260
 msgid "Chinese Simplified (GBK)"
 msgstr "Förenklad kinesisk (GBK)"
 
-#: src/trans.h:239
+#: src/trans.h:261
 msgid "Central European (HZ)"
 msgstr "Centraleuropeisk (HZ)"
 
-#: src/trans.h:240
+#: src/trans.h:262
 msgid "Chinese Traditional (Big5)"
 msgstr "Traditionell kinesisk (Big5)"
 
-#: src/trans.h:241
+#: src/trans.h:263
 msgid "Chinese Traditional (EUC-TW)"
 msgstr "Traditionell kinesisk (EUC-TW)"
 
-#: src/trans.h:242
+#: src/trans.h:264
 msgid "Croatian (MacCroatian)"
 msgstr "Kroatisk (MacCroatian)"
 
-#: src/trans.h:243
+#: src/trans.h:265
 msgid "Cyrillic (IBM-855)"
 msgstr "Kyrillisk (IBM-855)"
 
-#: src/trans.h:244
+#: src/trans.h:266
 msgid "Cyrillic (ISO-8859-5)"
 msgstr "Kyrillisk (ISO-8859-5)"
 
-#: src/trans.h:245
+#: src/trans.h:267
 msgid "Cyrillic (ISO-IR-111)"
 msgstr "Kyrillisk (ISO-IR-111)"
 
-#: src/trans.h:246
+#: src/trans.h:268
 msgid "Cyrillic (Windows-1251)"
 msgstr "Kyrillisk (Windows-1251)"
 
-#: src/trans.h:247
+#: src/trans.h:269
 msgid "Cyrillic/Russian (IBM-866)"
 msgstr "Kyrillisk/Rysk (IBM-866)"
 
-#: src/trans.h:248
+#: src/trans.h:270
 msgid "Cyrillic/Ukrainian (KOI8-U)"
 msgstr "Kyrillisk/Ukrainsk (KOI8-U)"
 
-#: src/trans.h:249
+#: src/trans.h:271
 msgid "Cyrillic/Ukrainian (MacUkrainian)"
 msgstr "Kyrillisk/Ukrainsk (MacUkrainian)"
 
-#: src/trans.h:250
+#: src/trans.h:272
 msgid "Greek (ISO-8859-7)"
 msgstr "Grekisk (ISO-8859-7)"
 
-#: src/trans.h:251
+#: src/trans.h:273
 msgid "Greek (MacGreek)"
 msgstr "Grekisk (MacGreek)"
 
-#: src/trans.h:252
+#: src/trans.h:274
 msgid "Greek (Windows-1253)"
 msgstr "Grekisk (Windows-1253)"
 
-#: src/trans.h:253
+#: src/trans.h:275
 msgid "Icelandic (MacIcelandic)"
 msgstr "Isländsk (MacIcelandic)"
 
-#: src/trans.h:254
+#: src/trans.h:276
 msgid "Japanese (EUC-JP)"
 msgstr "Japansk (EUC-JP)"
 
-#: src/trans.h:255
+#: src/trans.h:277
 msgid "Japanese (ISO-2022-JP)"
 msgstr "Japansk (ISO-2022-JP)"
 
-#: src/trans.h:256
+#: src/trans.h:278
 msgid "Japanese (Shift_JIS)"
 msgstr "Japansk (Shift_JIS)"
 
-#: src/trans.h:257
+#: src/trans.h:279
 msgid "Korean (EUC_KR)"
 msgstr "Koreansk (EUC_KR)"
 
-#: src/trans.h:258
+#: src/trans.h:280
 msgid "Nordic (ISO-8859-10)"
 msgstr "Nordisk (ISO-8859-10)"
 
-#: src/trans.h:259
+#: src/trans.h:281
 msgid "Romanian (MacRomanian)"
 msgstr "Rumänsk (MacRomanian)"
 
-#: src/trans.h:260
+#: src/trans.h:282
 msgid "South European (ISO-8859-3)"
 msgstr "Sydeuropeisk (ISO-8859-3)"
 
-#: src/trans.h:261
+#: src/trans.h:283
 msgid "Thai (TIS-620)"
 msgstr "Thailändsk (TIS-620)"
 
-#: src/trans.h:262
+#: src/trans.h:284
 msgid "Turkish (IBM-857)"
 msgstr "Turkisk (IBM-857)"
 
-#: src/trans.h:263
+#: src/trans.h:285
 msgid "Turkish (ISO-8859-9)"
 msgstr "Turkisk (ISO-8859-9)"
 
-#: src/trans.h:264
+#: src/trans.h:286
 msgid "Turkish (MacTurkish)"
 msgstr "Turkisk (MacTurkish)"
 
-#: src/trans.h:265
+#: src/trans.h:287
 msgid "Turkish (Windows-1254)"
 msgstr "Turkisk (Windows-1254)"
 
-#: src/trans.h:266
+#: src/trans.h:288
 msgid "Unicode (UTF-7)"
 msgstr "Unicode (UTF-7)"
 
-#: src/trans.h:267
+#: src/trans.h:289
 msgid "Unicode (UTF-8)"
 msgstr "Unicode (UTF-8)"
 
-#: src/trans.h:268
+#: src/trans.h:290
 msgid "Vietnamese (TCVN)"
 msgstr "Vietnamesisk (TCVN)"
 
-#: src/trans.h:269
+#: src/trans.h:291
 msgid "Vietnamese (VISCII)"
 msgstr "Vietnamesisk (VISCII)"
 
-#: src/trans.h:270
+#: src/trans.h:292
 msgid "Vietnamese (VPS)"
 msgstr "Vietnamesisk (VPS)"
 
-#: src/trans.h:271
+#: src/trans.h:293
 msgid "Vietnamese (Windows-1258)"
 msgstr "Vietnamesisk (Windows-1258)"
 
-#: src/trans.h:272
+#: src/trans.h:294
 msgid "Visual Hebrew (ISO-8859-8)"
 msgstr "Visuell hebreisk (ISO-8859-8)"
 
-#: src/trans.h:273
-msgid "Western (ISO-8859-8)"
-msgstr "Väst (ISO-8859-8)"
-
-#: src/trans.h:274
-msgid "Western (IBM-850)"
-msgstr "Väst (IBM-850)"
-
-#: src/trans.h:275
+#: src/trans.h:295 src/trans.h:297
 msgid "Western (ISO-8859-1)"
 msgstr "Väst (ISO-8859-1)"
 
-#: src/trans.h:276
+#: src/trans.h:296
+msgid "Western (IBM-850)"
+msgstr "Väst (IBM-850)"
+
+#: src/trans.h:298
 msgid "Western (ISO-8859-15)"
 msgstr "Väst (ISO-8859-15)"
 
-#: src/trans.h:277
+#: src/trans.h:299
 msgid "Western (MacRoman)"
 msgstr "Väst (MacRoman)"
 
-#: src/trans.h:278
+#: src/trans.h:300
 msgid "Western (Windows-1252)"
 msgstr "Väst (Windows-1252)"
 
-#: src/trans.h:281 src/trans.h:318
+#: src/trans.h:303 src/trans.h:341
 msgid "Afrikaans (af)"
 msgstr "Afikaans (af)"
 
-#: src/trans.h:282
+#: src/trans.h:304
 msgid "Albanian (sq)"
 msgstr "Albanska (sq)"
 
-#: src/trans.h:283
+#: src/trans.h:305
 msgid "Arabic (ar)"
 msgstr "Arabiska (ar)"
 
-#: src/trans.h:284
+#: src/trans.h:306
 msgid "Basque (eu)"
 msgstr "Baskiska (eu)"
 
-#: src/trans.h:285
+#: src/trans.h:307
 msgid "Bulgarian (bg)"
 msgstr "Bulgariska (bg)"
 
-#: src/trans.h:286
+#: src/trans.h:308
 msgid "Byelorussian (be)"
 msgstr "Vitryska (be)"
 
-#: src/trans.h:287
+#: src/trans.h:309
 msgid "Catalan (ca)"
 msgstr "Katalanska (ca)"
 
-#: src/trans.h:288
+#: src/trans.h:310
 msgid "Chinese (zh)"
 msgstr "Kinesiska (zh)"
 
-#: src/trans.h:289
+#: src/trans.h:311
 msgid "Croatian (hr)"
 msgstr "Kroatiska (hr)"
 
-#: src/trans.h:290
+#: src/trans.h:312
 msgid "Czech (cs)"
 msgstr "Tjeckiska (cs)"
 
-#: src/trans.h:291
+#: src/trans.h:313
 msgid "Danish (da)"
 msgstr "Danska (da)"
 
-#: src/trans.h:292
+#: src/trans.h:314
 msgid "Dutch (nl)"
 msgstr "Holländska (nl)"
 
-#: src/trans.h:293
+#: src/trans.h:315
 msgid "English (en)"
 msgstr "Engelska (en)"
 
-#: src/trans.h:294
+#: src/trans.h:316
+msgid "Estonian (et)"
+msgstr "Estniska (et)"
+
+#: src/trans.h:317
 msgid "Faeroese (fo)"
 msgstr "Färöiska (fo)"
 
-#: src/trans.h:295
+#: src/trans.h:318
 msgid "Finnish (fi)"
 msgstr "Finska (fi)"
 
-#: src/trans.h:296
+#: src/trans.h:319
 msgid "French (fr)"
 msgstr "Franska (fr)"
 
-#: src/trans.h:297
+#: src/trans.h:320
 msgid "Galician (gl)"
 msgstr "Gaeliska (gl)"
 
-#: src/trans.h:298
+#: src/trans.h:321
 msgid "German (de)"
 msgstr "Tyska (de)"
 
-#: src/trans.h:299
+#: src/trans.h:322
 msgid "Greek (el)"
 msgstr "Grekiska (el)"
 
-#: src/trans.h:300
+#: src/trans.h:323
 msgid "Hungarian (hu)"
 msgstr "Ungerska (hu)"
 
-#: src/trans.h:301
+#: src/trans.h:324
 msgid "Icelandic (is)"
 msgstr "Isländska (is)"
 
-#: src/trans.h:302
+#: src/trans.h:325
 msgid "Indonesian (id)"
 msgstr "Indonesiska (id)"
 
-#: src/trans.h:303
+#: src/trans.h:326
 msgid "Irish (ga)"
 msgstr "Irländska (ga)"
 
-#: src/trans.h:304
+#: src/trans.h:327
 msgid "Korean (ko)"
 msgstr "Koreanska (ko)"
 
-#: src/trans.h:305
+#: src/trans.h:328
 msgid "Macedonian (mk)"
 msgstr "Makedoniska (mk)"
 
-#: src/trans.h:306
+#: src/trans.h:329
 msgid "Norwegian (no)"
 msgstr "Norska (no)"
 
-#: src/trans.h:307
+#: src/trans.h:330
 msgid "Polish (pl)"
 msgstr "Polska (pl)"
 
-#: src/trans.h:308
+#: src/trans.h:331
 msgid "Portoguese (pt)"
 msgstr "Portugisiska (pt)"
 
-#: src/trans.h:309
+#: src/trans.h:332
 msgid "Romanian (ro)"
 msgstr "Rumänska (ro)"
 
-#: src/trans.h:310
+#: src/trans.h:333
 msgid "Russian (ru)"
 msgstr "Ryska (ru)"
 
-#: src/trans.h:311
+#: src/trans.h:334
 msgid "Serbian (gd)"
 msgstr "Serbiska (gd)"
 
-#: src/trans.h:312
+#: src/trans.h:335
 msgid "Slovak (sk)"
 msgstr "Slovakiska (sk)"
 
-#: src/trans.h:313
+#: src/trans.h:336
 msgid "Slovenian (sl)"
 msgstr "Slovenska (sl)"
 
-#: src/trans.h:314
+#: src/trans.h:337
 msgid "Spanish (es)"
 msgstr "Spanska (es)"
 
-#: src/trans.h:315
+#: src/trans.h:338
 msgid "Swedish (sv)"
 msgstr "Svenska (sv)"
 
-#: src/trans.h:316
+#: src/trans.h:339
 msgid "Turkish (tr)"
 msgstr "Turkiska (tr)"
 
-#: src/trans.h:317
+#: src/trans.h:340
 msgid "Ukrainian (uk)"
 msgstr "Ukrainska (uk)"
 
-#: src/trans.h:320 src/trans.h:352
+#: src/trans.h:343 src/trans.h:380
 msgid "Remove"
 msgstr "Ta bort"
 
-#: src/trans.h:321 src/trans.h:365
+#: src/trans.h:344 src/trans.h:393
 msgid "Up"
 msgstr "Upp"
 
-#: src/trans.h:322 src/trans.h:367
+#: src/trans.h:345 src/trans.h:395
 msgid "Down"
 msgstr "Ner"
 
-#: src/trans.h:323
-msgid "label142"
-msgstr "label142"
+#: src/trans.h:346
+msgid "Languajes"
+msgstr "Språk"
 
-#: src/trans.h:325
+#: src/trans.h:347
+msgid "Protocol"
+msgstr "Protokoll"
+
+#: src/trans.h:348
+msgid "HTTP Version"
+msgstr "HTTP-version"
+
+#: src/trans.h:349
+msgid "1.0"
+msgstr "1.0"
+
+#: src/trans.h:350
+msgid "1.1"
+msgstr "1.1"
+
+#: src/trans.h:353
 msgid "Title"
 msgstr "Titel"
 
-#: src/trans.h:326
+#: src/trans.h:354
 msgid "Url"
 msgstr "Url"
 
-#: src/trans.h:327
+#: src/trans.h:355
 msgid "Last time visited"
 msgstr "Tid för senaste besöket"
 
-#: src/trans.h:328
+#: src/trans.h:356
 msgid "First time visited"
 msgstr "Tid för första besöket"
 
-#: src/trans.h:329
+#: src/trans.h:357
 msgid "Times visited"
 msgstr "Antal besök"
 
-#: src/trans.h:330 src/trans.h:333
+#: src/trans.h:358 src/trans.h:361
 msgid "Select Directory"
 msgstr "Välj katalog"
 
-#: src/trans.h:339
+#: src/trans.h:367
 msgid "Find text..."
 msgstr "Sök text..."
 
-#: src/trans.h:340
+#: src/trans.h:368
 msgid "Find text or regular expression:"
 msgstr "Sök text eller reguljärt uttryck:"
 
-#: src/trans.h:341
+#: src/trans.h:369
 msgid "Match upper/lower case"
 msgstr "Skilj på små/stora bokstäver"
 
-#: src/trans.h:345
+#: src/trans.h:373
 msgid "Nick:"
 msgstr "Smeknamn:"
 
-#: src/trans.h:346 src/trans.h:381
+#: src/trans.h:374 src/trans.h:409
 msgid "Notes:"
 msgstr "Anteckningar:"
 
-#: src/trans.h:347
+#: src/trans.h:375
 msgid "Create toolbar"
 msgstr "Skapa verktygsrad"
 
-#: src/trans.h:349 src/trans.h:371
+#: src/trans.h:377 src/trans.h:399
 msgid "New item"
 msgstr "Nytt objekt"
 
-#: src/trans.h:350
+#: src/trans.h:378
 msgid "New Separator"
 msgstr "Ny avskiljare"
 
-#: src/trans.h:351
+#: src/trans.h:379
 msgid "New Category"
 msgstr "Ny kategori"
 
-#: src/trans.h:353
+#: src/trans.h:381
 msgid ""
 "Multiple\n"
 "selections"
@@ -1403,78 +1530,83 @@ msgstr ""
 "Flera\n"
 "markeringar"
 
-#: src/trans.h:355
-msgid "Temporary bookmaks"
-msgstr "Temporära bokmärken"
-
-#: src/trans.h:356
+#: src/trans.h:384
 msgid "Go to the previous bookmark"
 msgstr "Gå till föregående bokmärke"
 
-#: src/trans.h:358
+#: src/trans.h:386
 msgid "Go to the next bookmark"
 msgstr "Gå till nästa bokmärke"
 
-#: src/trans.h:360
+#: src/trans.h:388
 msgid "Load selected bookmark in the browser"
 msgstr "Läs in markerat bokmärke i webbläsaren"
 
-#: src/trans.h:362
+#: src/trans.h:390
 msgid "Close this window"
 msgstr "Stäng detta fönster"
 
-#: src/trans.h:363
+#: src/trans.h:391
 msgid "Close"
 msgstr "Stäng"
 
-#: src/trans.h:364
+#: src/trans.h:392
 msgid "Move bookmark up"
 msgstr "Flytta bokmärket uppåt"
 
-#: src/trans.h:366
+#: src/trans.h:394
 msgid "Move bookmark down"
 msgstr "Flytta bokmärket nedåt"
 
-#: src/trans.h:368
+#: src/trans.h:396
 msgid "Show edit bookmarks controls"
 msgstr "Visa knappar för bokmärkesredigering"
 
-#: src/trans.h:370
+#: src/trans.h:398
 msgid "Add a new bookmark"
 msgstr "Lägg till ett nytt bokmärke"
 
-#: src/trans.h:372
+#: src/trans.h:400
 msgid "Add a new bookmark category"
 msgstr "Lägg till en ny bokmärkeskategori"
 
-#: src/trans.h:373
+#: src/trans.h:401
 msgid "New category"
 msgstr "Ny kategori"
 
-#: src/trans.h:374
+#: src/trans.h:402
 msgid "Erase selected bookmark"
 msgstr "Ta bort markerat bokmärke"
 
-#: src/trans.h:375
+#: src/trans.h:403
 msgid "Erase"
 msgstr "Ta bort"
 
-#: src/trans.h:376
+#: src/trans.h:404
 msgid "Convert this bookmark into a permanent bookmark"
 msgstr "Konvertera det här bokmärket till ett permanent bokmärke"
 
-#: src/trans.h:377
+#: src/trans.h:405
 msgid "File"
 msgstr "Fil"
 
-#: src/trans.h:379
+#: src/trans.h:407
 msgid "Name:"
 msgstr "Namn:"
 
-#: src/trans.h:382
+#: src/trans.h:410
 msgid "Select Bookmark File"
 msgstr "Välj bokmärkesfil"
 
-#: src/trans.h:383
+#: src/trans.h:411
 msgid "Import Bookmark"
 msgstr "Importera bokmärken"
+
+#~ msgid "Western (ISO-8859-8)"
+#~ msgstr "Väst (ISO-8859-8)"
+
+#~ msgid "label142"
+#~ msgstr "label142"
+
+#~ msgid "Temporary bookmaks"
+#~ msgstr "Temporära bokmärken"
