@@ -10,8 +10,8 @@ $VERSION = "1.0.0beta";
 $LANGUAGE = $ARGV[0];
 
 if (! $LANGUAGE){
-    print "You need to specify language code, ie. ./desk.pl da\n";
-    print "for Danish and so on...\n";
+    print "desk.pl:  missing file arguments\n";
+    print "Try `./desk.pl --help' for more information.\n";
 }
 
 if($LANGUAGE){
