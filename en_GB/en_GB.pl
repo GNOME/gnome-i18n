@@ -171,7 +171,7 @@ sub translate() {
 }
 
 $mode = 0;
-$rl = Term::ReadLine->new();
+$rl = Term::ReadLine->new("String Replacement");
 
 while (<>) {
    if  (/^#/) {
