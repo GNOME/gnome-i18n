@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2000-08-31 00:02+0200\n"
+"POT-Creation-Date: 2000-08-31 17:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,80 +14,78 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: src/firestarter.c:91
+#: src/firestarter.c:52
 msgid "Firewall running"
 msgstr ""
 
-#: src/firestarter.c:94
+#: src/firestarter.c:55
 msgid "Firewall stopped"
 msgstr ""
 
-#: src/firestarter.c:206
-msgid "Select file to save log to"
-msgstr ""
-
-#: src/firestarter.c:230 src/firestarter.c:256
+#: src/firestarter.c:154 src/firestarter.c:190
 msgid "You must be root to manipulate the firewall."
 msgstr ""
 
-#: src/firestarter.c:238
+#: src/firestarter.c:163
 msgid "Firewall stopped, network traffic is now flowing freely\n"
 msgstr ""
 
-#: src/firestarter.c:262
+#: src/firestarter.c:196
 msgid "Firewall script restarted\n"
 msgstr ""
 
-#: src/firestarter.c:353
-msgid "An all-in-one Linux firewall utility for GNOME"
+#: src/firestarter.c:321
+msgid ""
+"An all-in-one Linux firewall utility for GNOME.\n"
+"http://firestarter.sourceforge.net"
 msgstr ""
 
-#: src/firestarter.c:506
+#: src/firestarter.c:475
 msgid "Port"
 msgstr ""
 
-#: src/firestarter.c:507
+#: src/firestarter.c:476
 msgid "Sent from"
 msgstr ""
 
-#: src/firestarter.c:508
+#: src/firestarter.c:477
 msgid "Service"
 msgstr ""
 
-#: src/firestarter.c:509
+#: src/firestarter.c:478
 msgid "Time"
 msgstr ""
 
-#: src/firestarter.c:511
+#: src/firestarter.c:480
 msgid "Deny all connections from"
 msgstr ""
 
-#: src/firestarter.c:512
+#: src/firestarter.c:481
 msgid "Allow all connections from"
 msgstr ""
 
-#: src/firestarter.c:513 src/menus.c:76
+#: src/firestarter.c:482 src/menus.c:78
 msgid "Open service to machine"
 msgstr ""
 
-#: src/firestarter.c:514 src/menus.c:77
+#: src/firestarter.c:483 src/menus.c:79
 msgid "Open service to anyone"
 msgstr ""
 
-#: src/firestarter.c:544
+#: src/firestarter.c:516
 msgid "Firewall hits"
 msgstr ""
 
 #. set up the clists on the dynamic rules page
-#: src/firestarter.c:553
+#: src/firestarter.c:525
 msgid "Dynamic rules"
 msgstr ""
 
-#: src/firestarter.c:586
+#: src/firestarter.c:558
 msgid "Logfile \""
 msgstr ""
 
-#: src/firestarter.c:587
+#: src/firestarter.c:559
 msgid ""
 "\" not found or access denied.\n"
 "Firewall log monitoring disabled.\n"
@@ -95,53 +93,14 @@ msgid ""
 "You can configure the path to the log file in the \"preferences\" section."
 msgstr ""
 
-#: src/druid.c:72
+#: src/druid.c:96
 msgid ""
 "The external and internal network interfaces\n"
 "can't be the same. Please change one of them,\n"
 "or alternatively disable IP Masquerading."
 msgstr ""
 
-#: src/druid.c:109
-msgid ""
-"Do you use IP Masquerading on your LAN, allowing all the machines on your "
-"network\n"
-"to communicate with the Internet via a single IP address?"
-msgstr ""
-
-#: src/druid.c:119
-msgid "No, I do not use IP Masquerading on my LAN"
-msgstr ""
-
-#: src/druid.c:124
-msgid ""
-"Yes, this machine translates the IP addresses of my LAN for the Internet"
-msgstr ""
-
-#: src/druid.c:142
-msgid "Select your internal network interface:"
-msgstr ""
-
-#: src/druid.c:154
-msgid "Autodetect internal network IP range"
-msgstr ""
-
-#: src/druid.c:159
-msgid "Specify internal network IP range manually"
-msgstr ""
-
-#: src/druid.c:171
-msgid "Enter the your internal network address range:"
-msgstr ""
-
-#: src/druid.c:182
-msgid ""
-"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
-"common\n"
-"IP range reserved for internal networks and should work for most people."
-msgstr ""
-
-#: src/druid.c:220
+#: src/druid.c:185
 msgid ""
 "Choose the device you connect to the Internet with.\n"
 "\n"
@@ -150,39 +109,118 @@ msgid ""
 "ISDN line or an ethernet connection, choose ippp0 or eth0 respectively."
 msgstr ""
 
-#: src/druid.c:234
+#: src/druid.c:197
 msgid "Detected device(s):"
 msgstr ""
 
-#: src/druid.c:262
+#: src/druid.c:202
+msgid ""
+"Select your network device from the dropdown list. Go with the default if "
+"unsure."
+msgstr ""
+
+#: src/druid.c:211
+msgid "Start Firestarter on PPP connect"
+msgstr ""
+
+#: src/druid.c:213
+msgid ""
+"Check this option and the program will start when you dial your Internet "
+"service provider.Only available when using a modem."
+msgstr ""
+
+#: src/druid.c:227
+msgid "IP address is assigned via DHCP"
+msgstr ""
+
+#: src/druid.c:229
+msgid ""
+"Check this option if you need to connect to a DHCP server. Cable modem users "
+"should check this."
+msgstr ""
+
+#: src/druid.c:260
+msgid ""
+"Do you use IP Masquerading on your LAN, allowing all the machines on your "
+"network\n"
+"to communicate with the Internet via a single IP address?"
+msgstr ""
+
+#: src/druid.c:269
+msgid "No, I do not use IP Masquerading on my LAN"
+msgstr ""
+
+#: src/druid.c:274
+msgid ""
+"Yes, this machine translates the IP addresses of my LAN for the Internet"
+msgstr ""
+
+#: src/druid.c:292
+msgid "Select your internal network interface:"
+msgstr ""
+
+#: src/druid.c:300
+msgid ""
+"Select your internal network device from the dropdown list. Go with the "
+"default if unsure."
+msgstr ""
+
+#: src/druid.c:308
+msgid "Autodetect internal network IP range"
+msgstr ""
+
+#: src/druid.c:310
+msgid "Select this and the IP range of your LAN is autodetected."
+msgstr ""
+
+#: src/druid.c:315
+msgid "Specify internal network IP range manually"
+msgstr ""
+
+#: src/druid.c:317
+msgid "Select this only if the autodetection fails."
+msgstr ""
+
+#: src/druid.c:329
+msgid "Enter the your internal network address range:"
+msgstr ""
+
+#: src/druid.c:341
+msgid ""
+"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
+"most\n"
+"common IP range reserved for internal networks."
+msgstr ""
+
+#: src/druid.c:370
 msgid ""
 "Do you run server software on your machine and want other people to have "
 "access\n"
 "to the network services you provide?"
 msgstr ""
 
-#: src/druid.c:271
+#: src/druid.c:378
 msgid "No, I do not run any public network services on my machine"
 msgstr ""
 
-#: src/druid.c:276
+#: src/druid.c:383
 msgid "Yes, I run the following services on my machine:"
 msgstr ""
 
-#: src/druid.c:388
+#: src/druid.c:495
 msgid "You must be root to use the Firestarter wizard."
 msgstr ""
 
-#: src/druid.c:393
+#: src/druid.c:500
 msgid "Firestarter Firewall Wizard"
 msgstr ""
 
 #. Create the basic druid pages
-#: src/druid.c:409
+#: src/druid.c:516
 msgid "Firestarter Wizard"
 msgstr ""
 
-#: src/druid.c:410
+#: src/druid.c:517
 msgid ""
 "Welcome to the Firestarter Firewall Wizard\n"
 "\n"
@@ -192,153 +230,268 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/druid.c:416
+#: src/druid.c:523
 msgid "Choose your external interface"
 msgstr ""
 
-#: src/druid.c:417
+#: src/druid.c:524
 msgid "IP Masquerade setup"
 msgstr ""
 
-#: src/druid.c:418
+#: src/druid.c:525
 msgid "Choose allowed services"
 msgstr ""
 
-#: src/druid.c:420
+#: src/druid.c:527
 msgid "Wizard done"
 msgstr ""
 
-#: src/druid.c:421
+#: src/druid.c:528
 msgid ""
 "The Firestarter wizard is done gathering the necessary data.\n"
 "Click the finish button to start the firewall.\n"
 "\n"
 msgstr ""
 
-#: src/preferences.c:89
-msgid "General"
-msgstr ""
-
-#: src/preferences.c:97
+#: src/preferences.c:110
 msgid "Firewall syslog file:"
 msgstr ""
 
-#. label = gtk_label_new _("Firewall script file:");
-#. gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
-#. gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2,
-#. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
-#.
-#. scriptentry = gtk_entry_new ();
-#. gtk_entry_set_text (GTK_ENTRY (scriptentry),
-#. gnome_config_get_string ("/firestarter/Files/scriptfile=/usr/local/firestarter/firewall.sh"));
-#. gtk_table_attach (GTK_TABLE (table), scriptentry, 1, 2, 1, 2,
-#. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
-#.
-#: src/preferences.c:121
-msgid "Start firewall on program startup"
+#: src/preferences.c:117
+msgid ""
+"Enther the path to the file the syslog daemon logs to. This is almost always "
+"/var/log/messages."
 msgstr ""
 
 #: src/preferences.c:125
-msgid "Stop firewall on program exit"
+msgid "Start firewall on program startup"
 msgstr ""
 
-#: src/preferences.c:129
-msgid "Exit program when window is closed (otherwise hide)"
+#: src/preferences.c:127
+msgid ""
+"Check this and the firewall will be restarted each time the program starts. "
+"Enabled by default."
 msgstr ""
 
 #: src/preferences.c:133
+msgid "Stop firewall on program exit"
+msgstr ""
+
+#: src/preferences.c:135
+msgid ""
+"Check this and the firewall will be stopped when you exit Firestarter. "
+"Enabled by default."
+msgstr ""
+
+#: src/preferences.c:141
+msgid "Exit program when window is closed (otherwise hide)"
+msgstr ""
+
+#: src/preferences.c:143
+msgid ""
+"By default when you close the program window the program is merely hidden, "
+"you can then make it visible again by clicking on the status button."
+msgstr ""
+
+#: src/preferences.c:149
 msgid "Start hidden"
 msgstr ""
 
-#: src/preferences.c:137
+#: src/preferences.c:151
+msgid ""
+"Check this and Firestarter will start hidden. Click on the status button to "
+"unhide. Disabled by default."
+msgstr ""
+
+#: src/preferences.c:156
 msgid "Remove identical firewall hit lines"
 msgstr ""
 
-#: src/scriptwriter.c:292
-#, c-format
-msgid "Firewall started, firewall script saves as %s\n"
+#: src/preferences.c:158
+msgid ""
+"Check this and the firewall hit log will filter out identical lines. Enabled "
+"by deault."
 msgstr ""
 
-#: src/service.c:99
-msgid "Unknown"
+#: src/preferences.c:203
+msgid "Play current sound file"
 msgstr ""
 
-#: src/menus.c:23 src/menus.c:34
+#: src/preferences.c:227
+msgid "Enable sounds"
+msgstr ""
+
+#: src/preferences.c:229
+msgid "Check this if you want to hear sounds on certain events"
+msgstr ""
+
+#: src/preferences.c:235
+msgid "File to play on firewall hit:"
+msgstr ""
+
+#: src/preferences.c:242
+msgid ""
+"Enter the path to the sound file that should be played when a firewall hit "
+"occurs."
+msgstr ""
+
+#: src/preferences.c:253
+msgid "File to play on firewall stop:"
+msgstr ""
+
+#: src/preferences.c:260
+msgid ""
+"Enter the path to the sound file that should be played when the firewall is "
+"stopped."
+msgstr ""
+
+#: src/preferences.c:271
+msgid "File to play on firewall restart:"
+msgstr ""
+
+#: src/preferences.c:278
+msgid ""
+"Enter the path to the sound file that should be played when the firewall is "
+"restarted."
+msgstr ""
+
+#: src/preferences.c:317
+msgid "Always show IP Masquerade page in wizard"
+msgstr ""
+
+#: src/preferences.c:319
+msgid ""
+"Check this and the IP Masquerade page will always be available in the wizard"
+msgstr ""
+
+#: src/preferences.c:325
+msgid "Kernel modules to load"
+msgstr ""
+
+#: src/preferences.c:370
+msgid "You must rerun the wizard for the changes to take affect"
+msgstr ""
+
+#: src/preferences.c:420
+msgid "Firestarter: Preferences"
+msgstr ""
+
+#: src/preferences.c:434
+msgid "General"
+msgstr ""
+
+#: src/preferences.c:435
+msgid "IP Masquerade"
+msgstr ""
+
+#: src/preferences.c:436
+msgid "Sounds"
+msgstr ""
+
+#: src/service.c:40
+msgid "unknown"
+msgstr ""
+
+#: src/menus.c:25 src/menus.c:36
 msgid "R_estart firewall"
 msgstr ""
 
-#: src/menus.c:24 src/menus.c:35
+#: src/menus.c:26 src/menus.c:37
 msgid "_Stop firewall"
 msgstr ""
 
-#: src/menus.c:33
+#: src/menus.c:35
 msgid "_Run firewall wizard"
 msgstr ""
 
-#: src/menus.c:43
+#: src/menus.c:45
 msgid "_Clear firewall hit list"
 msgstr ""
 
-#: src/menus.c:44
+#: src/menus.c:46
 msgid "R_eload entire firewall hit list"
 msgstr ""
 
-#: src/menus.c:45
+#: src/menus.c:47
 msgid "_Save firewall hit list to file"
 msgstr ""
 
-#: src/menus.c:55
+#: src/menus.c:57
 msgid "_Firewall"
 msgstr ""
 
-#: src/menus.c:56
+#: src/menus.c:58
 msgid "_Hit list"
 msgstr ""
 
-#: src/menus.c:62
+#: src/menus.c:64
 msgid "Run firewall wizard"
 msgstr ""
 
-#: src/menus.c:64
+#: src/menus.c:66
 msgid "Clear firewall hit list"
 msgstr ""
 
-#: src/menus.c:65
+#: src/menus.c:67
 msgid "Reload entire firewall hit list"
 msgstr ""
 
-#: src/menus.c:66
+#: src/menus.c:68
 msgid "Save firewall hit list to file"
 msgstr ""
 
-#: src/menus.c:68
+#: src/menus.c:70
 msgid "Restart firewall"
 msgstr ""
 
-#: src/menus.c:69
+#: src/menus.c:71
 msgid "Stop firewall"
 msgstr ""
 
-#: src/menus.c:74
+#: src/menus.c:76
 msgid "Deny all connections from machine"
 msgstr ""
 
-#: src/menus.c:75
+#: src/menus.c:77
 msgid "Allow all connections from machine"
 msgstr ""
 
-#: src/menus.c:79
+#: src/menus.c:81
 msgid "Lookup hostname"
 msgstr ""
 
-#: src/menus.c:84
+#: src/menus.c:86
 msgid "Remove this rule"
 msgstr ""
 
-#: src/menus.c:85
+#: src/menus.c:87
 msgid "Remove all rules in this group"
 msgstr ""
 
-#: src/menus.c:87
+#: src/menus.c:88
 msgid "Remove all rules in all groups"
+msgstr ""
+
+#: src/addrules.c:103 src/menus.c:90
+msgid "Add new rule"
+msgstr ""
+
+#: src/addrules.c:112
+msgid "Protocol:"
+msgstr ""
+
+#: src/addrules.c:126
+msgid "Enter IP range or hostname to deny all connections from:"
+msgstr ""
+
+#: src/addrules.c:128
+msgid "Enter IP range or hostname to allow all connections from:"
+msgstr ""
+
+#: src/addrules.c:130 src/addrules.c:139
+msgid "Enter the port number of the service to open:"
+msgstr ""
+
+#: src/addrules.c:132
+msgid "Enter IP range or hostname to open service to:"
 msgstr ""
