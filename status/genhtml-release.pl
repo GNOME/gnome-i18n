@@ -33,7 +33,7 @@ $now = time;
 "ro", "neclare",
 "ru", "îÅŞÅÔËÏ",
 "sv", "oklart",
-"tr", "bölümsel"
+"tr", "Tam tutmayan"
 );
 
 %untranslated = (

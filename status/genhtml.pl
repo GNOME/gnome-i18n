@@ -30,7 +30,7 @@ $now = time;
 "ro", "neclare",
 "ru", "îÅŞÅÔËÏ",
 "sv", "oklart",
-"tr", "parça"
+"tr", "Tam tutmayan"
 );
 
 %untranslated = (
@@ -38,7 +38,7 @@ $now = time;
 "ro", "netraduse",
 "ru", "îÅĞÅÒÅ×ÅÄÅÎÏ",
 "sv", "o&oslash;versatt",
-"tr", "tercüme edilmemiş"
+"tr", "Tercüme edilmemiş"
 );
 
 %strings = (
