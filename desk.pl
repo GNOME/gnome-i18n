@@ -33,7 +33,7 @@ if ($LANGUAGE=~/^-(.)*/){
     }
 
     elsif ($LANGUAGE eq "--help" || "$LANGUAGE" eq "-H"){
-	print "Usage: ./desk.pl [LANGCODE] [ENTRY]\n";
+	print "Usage: ./desk.pl [OPTIONS] ...LANGCODE ENTRY\n";
 	print "Checks .desktop and alike files for missing translations.\n\n";
 	print "  -V, --version                shows the version\n";
 	print "  -H, --help                   shows this help page\n";
@@ -78,12 +78,17 @@ else{
     `$c`;
     `rm desk1 && rm desk2`;
 
-    print "Well, you need to fix these:\n\n";
-    system "more DESKTOP.missing";
-    print "\nThe list is saved in DESKTOP.missing\n";
+
+    stat("DESKTOP.missing");
+        print "Well, you need to fix these:\n\n" if -s _;
+        system "more DESKTOP.missing" if -s _;
+        print "\nThe list is saved in DESKTOP.missing\n" if -s _;
+        print "\nWell, it's all perfect! Congratulation!\n" if -z _;
+        `rm DESKTOP.missing` if -z _;
     }
 }
 
 # while $file (@buf2){
 # $list.=(@buf1=~/$file/) ? $file : "";
 # }
+
