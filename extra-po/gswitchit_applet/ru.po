@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GSwitchIt 0.8\n"
-"POT-Creation-Date: 2002-01-12 23:00+0000\n"
+"POT-Creation-Date: 2002-09-02 23:42+0100\n"
 "PO-Revision-Date: 2002-01-12 23:00+0000\n"
 "Last-Translator: Sergey V. Udaltsov<svu@users.sourceforge.net>\n"
 "Language-Team: \n"
@@ -13,15 +13,19 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/gswitchit_applet.c:21
+#: src/gswitchit_applet.c:42
 msgid "Debug level"
 msgstr "Уровень отладочных сообщений"
 
-#: src/gswitchit_applet.c:22
+#: src/gswitchit_applet.c:43
 msgid "DLEVEL"
 msgstr "УРОВЕНЬ"
 
-#: src/gswitchit_applet.c:42
+#: src/gswitchit_applet.c:50
+msgid "Display notification on XKB configuration changes"
+msgstr "Оповещать об изменениях в конфигурации XKB"
+
+#: src/gswitchit_applet.c:71
 msgid ""
 "Cannot grab switchcut.\n"
 "Probably, another instance of the applet is already running."
@@ -29,58 +33,74 @@ msgstr ""
 "Не могу захватить клавишу.\n"
 "Возможно, другой экземпляр апплета уже запущен."
 
-#: src/gswitchit_applet.c:293
+#: src/gswitchit_applet.c:328
 msgid "Copyright Sergey V. Udaltsov (C) 1999-2001"
 msgstr "Авторские права Сергей В. Удальцов (c) 1999-2001"
 
-#: src/gswitchit_applet.c:295
+#: src/gswitchit_applet.c:331
 msgid "Keyboard switcher applet for the GNOME panel"
 msgstr "Индикатор переключения раскладки клавиатуры для панели GNOME"
 
-#: src/gswitchit_applet.c:302
+#: src/gswitchit_applet.c:337
 msgid "GSwitchIt web page @ Sourceforge.net"
 msgstr "Страница GSwitchIt на Sourceforge.net"
 
-#: src/gswitchit_applet.c:318
-msgid "About..."
-msgstr "О программе..."
-
-#: src/gswitchit_applet.c:325
-msgid "Home page..."
-msgstr "Домашнаяя страница..."
-
-#: src/gswitchit_applet.c:332
-msgid "Properties"
-msgstr "Свойства..."
-
-#: src/gswitchit_applet.c:338
+#: src/gswitchit_applet.c:368
 msgid "Layouts"
 msgstr "Раскладки"
 
-#: capplet/gswitchit_capplet.c:149
+#: src/gswitchit_applet.c:397
+msgid "The XKB configuration has been changed"
+msgstr "Смена конфигурации XKB"
+
+#: src/gswitchit_applet.c:432
+msgid "About..."
+msgstr "О программе..."
+
+#: src/gswitchit_applet.c:439
+msgid "Home page..."
+msgstr "Домашнаяя страница..."
+
+#: src/gswitchit_applet.c:447
+msgid "Properties"
+msgstr "Свойства..."
+
+#: capplet/gswitchit_capplet.c:193
 msgid "Press your switchcut key(s).."
 msgstr "Нажмите клавишу (комбинацию клавиш) для переключения"
 
-#: capplet/gswitchit_capplet.c:310
-msgid "Enable beep"
-msgstr "Включить звонок"
+#: capplet/gswitchit_capplet.c:331
+msgid ""
+"Make the layout accessible from the applet popup menu ONLY.\n"
+"No way to switch to this layout using the keyboard."
+msgstr ""
+"Сделать раскладку доступной ТОЛЬКО из меню апплета.\n"
+"Переключиться на эту раскладку при помощи клавиатуры невозможно."
 
-#: capplet/gswitchit_capplet.c:324
-msgid "Separate layout for each window"
-msgstr "Отдельная раскладка для каждого окна"
-
-#: capplet/gswitchit_capplet.c:387
+#: capplet/gswitchit_capplet.c:453
 msgid "Secondary"
 msgstr "Дополнительная"
 
-#: capplet/gswitchit_capplet.c:421
-msgid "Switch shortcut"
-msgstr "Клавиши переключения"
+#: capplet/gswitchit_capplet.c:521
+msgid "not used"
+msgstr "не используется"
 
-#: capplet/gswitchit_capplet.c:503
+#: capplet/gswitchit_capplet.c:578 capplet/xkb_capplet.c:376
 #, c-format
 msgid "Failed to init GConf: %s\n"
 msgstr "Ошибка инициализации GConf: %s\n"
+
+#: capplet/xkb_capplet.c:393
+msgid "Could not initialize Bonobo"
+msgstr "Ошибка инициализации Bonobo"
+
+#: capplet/xkb_capplet.c:397
+msgid "Failed to init XklConfigRegistry\n"
+msgstr "Ошибка инициализации XklConfigRegistry\n"
+
+#: capplet/xkb_capplet_preview.c:173
+msgid "Bonobo Error"
+msgstr "Ошибка Bonobo"
 
 #: src/switchcuts.inc:1
 msgid "Default XKB setting"
@@ -143,5 +163,169 @@ msgid "None"
 msgstr "Нет"
 
 #: src/switchcuts.inc:46
-msgid "User defined :"
+msgid "User defined:"
 msgstr "Определено пользователем"
+
+#: strings.tbl:6
+msgid "XKB settings: "
+msgstr "Установки XKB: "
+
+#: strings.tbl:7
+msgid "Use custom XKB settings, ignore global configuration set in XF86Config."
+msgstr ""
+"Использовать собственные установки XKB, игнорировать глобальную конфигурацию "
+"из XF86Config."
+
+#: strings.tbl:8
+msgid "_Custom"
+msgstr "Пользовательские"
+
+#: strings.tbl:9
+msgid "Use global XKB configuration set in XF86Config."
+msgstr "Использовать глобальную конфигурацию XKB, установленную в XF86Config."
+
+#: strings.tbl:10
+msgid "_Global Preconfigured"
+msgstr "Глобальные Предустановленные"
+
+#: strings.tbl:11
+msgid "Keyboard _model:"
+msgstr "_Модель клавиатуры"
+
+#: strings.tbl:12
+msgid "Choose the model of the keyboard (brand, number of keys, etc.)."
+msgstr "Выбрать модель клавиатуры (производитель, кол-во клавиш и т.п.)."
+
+#: strings.tbl:13
+msgid "_Layouts:"
+msgstr "_Раскладки:"
+
+#: strings.tbl:14
+msgid "Choose the layout. Note: one layout can provide several groups."
+msgstr ""
+"Выбрать раскладку. Замечание: Одна раскладка может состоять из нескольких "
+"групп."
+
+#: strings.tbl:15 strings.tbl:19 strings.tbl:23 strings.tbl:27
+msgid "..."
+msgstr "..."
+
+#: strings.tbl:16 strings.tbl:20 strings.tbl:24 strings.tbl:28
+msgid "Clear."
+msgstr "Очистить."
+
+#: strings.tbl:17 strings.tbl:21 strings.tbl:25 strings.tbl:29
+msgid "Clear"
+msgstr "Очистить"
+
+#: strings.tbl:18 strings.tbl:22 strings.tbl:26
+msgid "Choose the layout."
+msgstr "Выбрать раскладку."
+
+#: strings.tbl:30
+msgid ""
+"This version of XFree86 does not support multiple layouts, \n"
+"so only one layout can be choosen."
+msgstr ""
+"Эта версия XFree86 не поддерживает множественных раскладок, \n"
+"поэтому может быть выбрана только одна раскладка."
+
+#: strings.tbl:32
+msgid "General"
+msgstr "Общие"
+
+#: strings.tbl:33
+msgid "Options 1"
+msgstr "Опции 1"
+
+#: strings.tbl:34
+msgid "Options 2"
+msgstr "Опции 2"
+
+#: strings.tbl:35
+msgid "Update the preview. Can take some time."
+msgstr "Обновить просмотр. Может занять некоторое время."
+
+#: strings.tbl:36
+msgid "_Update preview"
+msgstr "_Обновить просмотр"
+
+#: strings.tbl:37
+msgid "Zoom"
+msgstr "Масштаб"
+
+#: strings.tbl:38
+msgid "Zoom in."
+msgstr "Увеличить масштаб."
+
+#: strings.tbl:39
+msgid "_In"
+msgstr "У_величить"
+
+#: strings.tbl:40
+msgid "Zoom to fit."
+msgstr "Подогнать по размеру."
+
+#: strings.tbl:41
+msgid "To _fit"
+msgstr "По в_идимой области"
+
+#: strings.tbl:42
+msgid "Zoom out."
+msgstr "Уменьшить масштаб."
+
+#: strings.tbl:43
+msgid "_Out"
+msgstr "У_меньшить"
+
+#: strings.tbl:44
+msgid "Zoom to default."
+msgstr "Установить увеличение по умолчанию."
+
+#: strings.tbl:45
+msgid "To _default"
+msgstr "По у_молчанию"
+
+#: strings.tbl:46
+msgid "Preview"
+msgstr "Просмотр"
+
+#: strings.tbl:47
+msgid "Use the system beep to indicate the switch."
+msgstr "Использовать системный гудок для индикации переключения."
+
+#: strings.tbl:48
+msgid "Enable _beep"
+msgstr "Включить _звонок"
+
+#: strings.tbl:49
+msgid "Keep separate layout for each application window."
+msgstr "Хранить отдельную раскладку для каждого окна."
+
+#: strings.tbl:50
+msgid "Separate _layout for each window"
+msgstr "Отдельная _раскладка для каждого окна"
+
+#: strings.tbl:51
+msgid "Keep the state of indicators separately for each application window."
+msgstr "Хранить состояние индикаторов отдельно для каждого окна."
+
+#: strings.tbl:52
+msgid "Save/restore _indicators with layout"
+msgstr "Сохранять/восстанавливать _индикаторы вместе с раскладкой"
+
+#: strings.tbl:53
+msgid "_Switch shortcut"
+msgstr "_Клавиши переключения"
+
+#: strings.tbl:54
+msgid "Choose the switchcut."
+msgstr "Выбрать клавишу(и) переключения."
+
+#: strings.tbl:55
+msgid "_Default layout"
+msgstr "Раскладка по _умолчанию"
+
+#: strings.tbl:56
+msgid "Choose the default layout (for newly created windows)."
+msgstr "Выбрать раскладку по умолчанию (для новых окон)."
