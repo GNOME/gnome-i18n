@@ -32,6 +32,14 @@ tot de Unix-familie behoren, zoals Linux en BSD. GNOME is een acroniem
 dat staat voor GNU Network Object Model Environment. GNOME omvat zowel
 een werkomgeving (desktop environment) als een ontwikkelplatform
 (developer platform).</p>
+<h1>9 Maart 2005: GNOME 2.10 is uitgebracht</h1>
+<p>Het GNOME Project heeft vandaag de nieuwste versie uitgebracht van
+de GNOME Werkomgeving en -Ontwikkelplatform, de vooruitstrevende werkomgeving
+voor Linux- en Unix- besturingssystemen. Versie 2.10 vergroot het gebruiksgemak,
+de stabiliteit en de kracht van GNOME door integratie van multimedia, toevoeging
+van programma -ontwikkelingsmogelijkheden en toepassing van duizenden verbeteringen
+die de eenvoudigste en vriendelijkste werkomgeving nog verder verfijnen. </p>
+Kijk <a href="start/html/">hier</a> voor meer info.
 <p>Het GNOME-NL project is opgezet om GNOME naar het Nederlands te
 vertalen. Dit omdat een werkomgeving pas echt goed is als je er gebruik van kan maken
 in je eigen taal. Het doel is daarom om een 100% vertaalde "GNOME Desktop" te hebben.
