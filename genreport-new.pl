@@ -259,7 +259,7 @@ print TABLE "</table><br><b>Report last generated: ";
 print TABLE scalar localtime;
 print TABLE " GMT+0200<br></b>";
 print TABLE "<a name=\"branches_name\"><br>
-	     <font color=\"#0000ff\"><b><u>Well, The Translation Monsters, the names of stable branches is:</u></b><br><br></a>
+	     <font color=\"#0000ff\"><b><u>Well, translation monsters, the names of stable branches are:</u></b><br><br></a>
 	     <table cellpadding=1 cellspacing=1 border=0 width=\"40%\">";
 
     foreach $key (keys (%branches)){
@@ -268,7 +268,7 @@ print TABLE "<a name=\"branches_name\"><br>
 print TABLE "</table>";
 
 print TABLE "<a name=\"more_than_100\"><br>
-	     <font color=\"#0000ff\"><b>Ok. You say: \"Vah!! That is `<font color=\"red\">101%!</font>'? Ahalam-mahalam! Why `<font color=\"red\">150%!</font>'?\"<br></a>
+	     <font color=\"#0000ff\"><b>Ok. You say: \"Wah!! That is `<font color=\"red\">101%!</font>'? Ahalam-mahalam! Why `<font color=\"red\">123%!</font>'?\"<br></a>
 	     <font color=\"#000000\">It means that module (exclude gimp) is <font color=\"#ff3030\">NOT UP-TO-DATE!</font>
 	     <br> Some strings were deleted from the module and you didn't update the translation after that.<br>
 	     WARNING: After deadline we will not include such module scores in the your team total scores.";
