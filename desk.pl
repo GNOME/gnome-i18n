@@ -14,6 +14,7 @@ $SEARCH  = "Name";
 if (! $LANG){
     print "desk.pl:  missing file arguments\n";
     print "Try `desk.pl --help' for more information.\n";
+    exit;
 }
 
 if ($OPTION2){
@@ -30,6 +31,7 @@ if ($LANG=~/^-(.)*/){
 	print "Copyright (C) 2000 Free Software Foundation, Inc.\n";
 	print "This is free software; see the source for copying conditions.  There is NO\n";
 	print "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n";
+        exit;
     }
 
     elsif ($LANG eq "--help" || "$LANG" eq "-H"){
@@ -38,13 +40,14 @@ if ($LANG=~/^-(.)*/){
 	print "  -V, --version                shows the version\n";
 	print "  -H, --help                   shows this help page\n";
 	print "\nReport bugs to <kenneth\@gnome.org>.\n";
+        exit;
     }
 
     else{
     	print "desk.pl: invalid option -- $LANG\n";
     	print "Try `desk.pl --help' for more information.\n";
+        exit;
     }
-    exit;
 }
 
 else{
@@ -65,6 +68,7 @@ else{
         open FILE, "<$file";
         while (<FILE>) {
            if ($_=~/$SEARCH\[$LANG\]\=/o){ 
+                $file = unpack("x2 A*",$file) . "\n";		
                 push @buff1, $file;
                 last;
            }
@@ -76,6 +80,7 @@ else{
         open FILE, "<$file";
         while (<FILE>) {
            if ($_=~/$SEARCH\=/o){
+                $file = unpack("x2 A*",$file) . "\n";
                 push @buff2, $file;
                 last;
            }
@@ -107,6 +112,7 @@ else{
         print "\nThe list is saved in MISSING.$LANG.$SEARCH\n" if -s _;
         print "\nWell, it's all perfect! Congratulation!\n" if -z _;
         unlink "MISSING.$LANG.$SEARCH" if -z _;
+    exit;	
 }
 
 
