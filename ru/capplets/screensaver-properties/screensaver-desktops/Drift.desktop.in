@@ -1,0 +1,77 @@
+[Desktop Entry]
+Name=_("Drift")
+Comment=_("Drifting recursive fractal cosmic flames.")
+Exec=xscreensaver-command -activate
+TryExec=drift
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=drift.png
+Author=Scot Draves <spot@cs.cmu.edu>
+ExtendedComment=_("Drift draws drifting recursive fractal cosmic flames.")
+Demo=drift -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=200
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+
+Flag=-count
+ValType=I[1-5000]=1000
+Label=_("Number of pixels to use.")
+
+Comment=_("Change the number of bubbles to use.")
+
+[Arg3]
+Name=_("Grow")
+Type=Check
+Flag=-grow
+Flag2=-no-grow
+LeftLabel=_("Fractals should grow.")
+
+Comment=_("Change whether fractals should grow.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")
+
+[Arg5]
+Name=_("Lissajous")
+Type=Check
+Flag=-liss
+Flag2=-no-liss
+LeftLabel=_("Use lissajous figures to get points.")
+
+Comment=_("Change whether to use lissajous figures to get points.")

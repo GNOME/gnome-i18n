@@ -1,0 +1,89 @@
+[Desktop Entry]
+Name=_("Crystal")
+Comment=_("Moving polygons, similar to a kaleidescope.")
+Exec=xscreensaver-command -activate
+TryExec=crystal
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=crystal.png
+Author=Jouk Jansen
+ExtendedComment=_("Moving polygons, similar to a kaleidescope.")
+Demo=crystal -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+Flag=-ncolors
+ValType=I[1-256]=64
+
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+LeftLabel[es]=Cantidad:
+LeftLabel[fr]=Nombre:
+LeftLabel[no]=Antall:
+
+Flag=-count
+ValType=I[1-5000]=1000
+Label=_("Number of polygons to use.")
+
+Comment=_("Change the number of polygons to use.")
+
+[Arg3]
+Name=_("Centre")
+Type=Check
+Flag=-centre
+Flag2=-no-centre
+LeftLabel=_("Center image.")
+
+Comment=_("Center image.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")
+
+[Arg5]
+Name=_("Maxsize")
+Type=Check
+Flag=-maxsize
+Flag2=-no-maxsize
+LeftLabel=_("Have at maximum size")
+
+Comment=_("Have at maximum size")
+
+[Arg6]
+Name=_("Cell")
+Type=Check
+Flag=-cell
+Flag2=-no-cell
+LeftLabel=_("Cell")
+
+Comment=_("Cell")

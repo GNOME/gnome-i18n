@@ -1,0 +1,99 @@
+[Desktop Entry]
+Name=_("Maze")
+Comment=_("Repeatedly create and solve a maze")
+Exec=xscreensaver-command -activate
+TryExec=maze
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=maze.png
+Author=Copyright (C) 1988 by Sun Microsystems, Inc.
+ExtendedComment=_("The maze program creates a random maze and then solves it with graphical feedback.")
+Demo=maze -grid-size 10
+
+[Arg0]
+Name=_("Speed Delay")
+Type=LRange
+LeftLabel=_("Less Delay")
+
+RightLabel=_("More Delay")
+
+Flag=-solve-delay
+ValType=I[1000-100000]=5000
+Label=_("Delay between each step in the maze.")
+
+Comment=_("The delay (in microseconds) between each step of the solution path.")
+
+[Arg1]
+Name=_("Pre-Solving Delay")
+Type=LRange
+LeftLabel=_("Less Delay")
+
+RightLabel=_("More Delay")
+
+Flag=-pre-delay
+ValType=I[1000000-5000000]=2000000
+Label=_("Delay between drawing the maze and starting the solution.")
+
+Comment=_("The delay (in microseconds) between generating a maze and starting to solve it.")
+
+[Arg2]
+Name=_("Post-Solving Delay")
+Type=LRange
+LeftLabel=_("Less Delay")
+
+RightLabel=_("More Delay")
+
+Flag=-post-delay
+ValType=I[1000000-8000000]=4000000
+Label=_("Delay between finishing the maze and starting a new one.")
+
+Comment=_("The delay (in microseconds) after solving a maze and before generating a new one.")
+
+[Arg3]
+Name=_("Live Color")
+Type=Color
+Flag=-live-color
+ValType=Color=#00ff00
+Label=_("Color of path")
+
+Comment=_("The color of the path.")
+
+[Arg4]
+Name=_("Dead Color")
+Type=Color
+Flag=-dead-color
+ValType=Color=#ff0000
+Label=_("Color of failed path")
+
+Comment=_("The color of a failed path (stippled with a 50% pattern)")
+
+[Arg5]
+Name=_("Skip Color")
+Type=Color
+Flag=-skip-color
+ValType=Color=#ffa500
+Label=_("Color of a skipped path")
+
+Comment=_("If the solver can "see" the end of a corridor it will color it this color.")
+
+[Arg6]
+Name=_("Surround Color")
+Type=Color
+Flag=-surround-color
+ValType=Color=#6a5acd
+Label=_("Color of surrounded area")
+
+Comment=_("Color for filling completely closed off areas.")
+
+[Arg7]
+Name=_("Bridge")
+Type=Check
+Flag=-bridge
+Flag2=
+LeftLabel=_("Put a bridge over the logo?")
+
+Comment=_("Controls whether or not a 'bridge' will appear over the logo.")

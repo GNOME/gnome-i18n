@@ -1,0 +1,55 @@
+[Desktop Entry]
+Name=_("Munch")
+Comment=_("Munching squares.")
+Exec=xscreensaver-command -activate
+TryExec=munch
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=munch.png
+Author=Tim  Showalter  <tjs@andrew.cmu.edu>
+ExtendedComment=_("Munch munches squares until killed.")
+Demo=munch -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg1]
+Name=_("XOR")
+Type=Check
+Flag=-xor
+Flag2=-no-xor
+LeftLabel=_("Use XOR drawing function.")
+
+Comment=_("Change to use XOR drawing function.")
+
+[Arg2]
+Name=_("Shift")
+Type=Check
+Flag=-shift
+Flag2=-no-shift
+LeftLabel=_("Draw square at weird starting points.")
+
+Comment=_("Change to draw square at weird starting points.")
+
+[Arg3]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

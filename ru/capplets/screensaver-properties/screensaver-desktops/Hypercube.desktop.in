@@ -1,0 +1,50 @@
+[Desktop Entry]
+Name=_("Hypercube")
+Comment=_("2D projection of a hypercube")
+Exec=xscreensaver-command -activate
+TryExec=hypercube
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=hypercube.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=_("Hypercube displays a wireframe projection of a hypercube.")
+Demo=hypercube -delay 2
+
+[Arg0]
+Name=_("Distance")
+Type=LRange
+Flag=-observer-z
+LeftLabel=_("Closer")
+
+RightLabel=_("Farther")
+
+ValType=I[1-15]=4
+Label=_("Distance from center of cube")
+
+Comment=_("Change the distance from center of cube")
+
+[Arg1]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

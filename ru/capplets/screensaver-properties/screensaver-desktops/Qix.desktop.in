@@ -1,0 +1,84 @@
+[Desktop Entry]
+Name=_("Qix")
+Comment=_("Bounce colored lines around a window.")
+Exec=xscreensaver-command -activate
+TryExec=qix
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=qix.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=_("Qix bounces a series of line segments around its window. This is truly the swiss army chainsaw of qix programs.")
+DefaultFlags=-linear
+Demo=qix -linear
+
+[Arg0]
+Name=_("Speed")
+Type=LRange
+LeftLabel=_("Fast")
+
+RightLabel=_("Slow")
+
+Flag=-delay
+ValType=I[10000-65000]=15000
+Label=_("Speed:")
+
+Comment=_("Changes the speed at which the Qix moves.")
+
+[Arg2]
+Name=_("Count")
+Type=NRange
+ValType=I[1-8]=1
+Flag=-count
+Label=_("Count:")
+
+LeftLabel=_("Number of Qix:")
+
+Comment=_("Sets the number of Qix you have running at once.")
+
+[Arg1]
+Name=_("Segments")
+Type=LRange
+Label=_("Length of the Trail:")
+
+ValType=I[1-1000]=50
+Flag=-segments
+LeftLabel=_("Small")
+
+RightLabel=_("Large")
+
+Comment=_("Sets the number of line segments to be drawn.")
+
+[Arg3]
+Name=_("Spread")
+Type=LRange
+ValType=I[1-400]=50
+Flag=-spread
+Label=_("Width of segment:")
+
+LeftLabel=_("Small")
+
+RightLabel=_("Large")
+
+Comment=_("Sets the distance between each line segment.")
+
+[Arg4]
+Name=_("Solid")
+Type=Check
+Flag=-solid
+Flag2=-hollow
+LeftLabel=_("Draw solid Qix.")
+
+Comment=_("Determines whether to fill in the gaps between the lines.")
+
+[Arg5]
+Name=_("Random")
+Type=Check
+Flag=-random
+Flag2=-linear
+LeftLabel=_("Set random motion for the Qix.")
+
+Comment=_("Determines whether the lines move erraticly, or bounce off the walls linearly.")

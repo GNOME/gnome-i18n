@@ -1,0 +1,61 @@
+[Desktop Entry]
+Name=_("Kaleidescope")
+Comment=_("Draws rotating line segments.")
+Exec=xscreensaver-command -activate
+TryExec=kaleidescope
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=kaleidescope.png
+Author=Ron Tapia <tapia@nmia.com>
+ExtendedComment=_("Kaleidescope draws line segments in a symmetric pattern.")
+Demo=kaleidescope -delay 2
+
+[Arg0]
+Name=_("Segments")
+Type=NRange
+Flag=-nsegments
+LeftLabel=_("Segments")
+ValType=I[1-50]=7
+
+Label=_("Number of segments.")
+
+Comment=_("Change number of segments.")
+
+[Arg1]
+Name=_("Trails")
+Type=LRange
+Flag=-ntrails
+LeftLabel=_("Less")
+
+RightLabel=_("More")
+
+ValType=I[10-500]=100
+Label=_("Number of trails.")
+
+Comment=_("Change number of trails.")
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg3]
+Name=_("Monochrome")
+Type=Check
+Flag=-color_mode mono
+Flag2=-color_mode nice
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

@@ -1,0 +1,61 @@
+[Desktop Entry]
+Name=_("Fadeplot")
+Comment=_("A waving ribbon")
+Exec=xscreensaver-command -activate
+TryExec=fadeplot
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=fadeplot.png
+Author=Bas van Gaalen and Charles Vidal
+ExtendedComment=_("Draws what looks like a waving ribbon following a sinusoidal path.")
+Demo=fadeplot -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+Flag=-ncolors
+ValType=I[1-256]=100
+Label=_("Number of Colors")
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+Flag=-count
+ValType=I[1-50]=20
+Label=_("Number")
+Comment=_("Changes the count.")
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+RightLabel=_("Slower")
+ValType=I[1-500000]=2
+Label=_("Speed of Motion")
+Comment=_("Change the delay in movement.")
+
+[Arg3]
+Name=_("Cycles")
+Type=LRange
+Flag=-cycles
+LeftLabel=_("More")
+RightLabel=_("Slower")
+ValType=I[10-1000]=50
+Label=_("Number of cycles")
+Comment=_("Change the number of cycles.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+Comment=_("Change to display in monochrome.")

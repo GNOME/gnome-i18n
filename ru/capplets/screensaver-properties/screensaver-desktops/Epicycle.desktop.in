@@ -1,0 +1,48 @@
+[Desktop Entry]
+Name=_("Epicycle")
+Comment=_("Draws a point moving around a circle which moves around a circle.")
+Exec=xscreensaver-command -activate
+TryExec=epicycle
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=epicycle.png
+Author=James Youngman <jay@gnu.org>
+ExtendedComment=_("Epicycle draws the path traced out by a point on the edge of a circle that is rotating around the rim of another circle, and so on.")
+Demo=epicycle -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg1]
+Name=_("Holdtime")
+Type=NRange
+Flag=-holdtime
+LeftLabel=_("Seconds")
+
+ValType=I[1-15]=3
+Label=_("Time finished product is shown.")
+
+Comment=_("When the figure is complete, epicycle pauses this number of seconds.")
+
+[Arg2]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

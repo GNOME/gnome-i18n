@@ -1,0 +1,263 @@
+[Desktop Entry]
+Name=Starfish
+Name[ca]=Estrela de mar
+Name[da]=SЬstjerne
+Name[es]=Estrella de mar
+Name[fi]=MeritДhti
+Name[fr]=иtoile de mer
+Name[no]=Stjernefisk
+Name[ru]=Морская звезда
+Name[uk]=Морська з╕рка
+Comment=Make a star like formation using arcs.
+Comment[ca]=Crea una formaciС semblant a una estrela usant arcs.
+Comment[da]=Lav en stjerneformet figur med buer.
+Comment[es]=Hace una formaciСn de tipo estrella usando arcos.
+Comment[fi]=Luo tДhdenkaltaisen muodostelman kaaria kДyttДen.
+Comment[fr]=Fait une formation de type Иtoile en utilisant des arcs. 
+Comment[no]=Lag en stjernelignende formasjon ved bruk av buer.
+Comment[ru]=Рисует похожие на морские звезды структуры используя дуги.
+Comment[uk]=Малю╓ схож╕ на морськ╕ з╕рки структури використовуючи дуги.
+Exec=xscreensaver-command -activate
+TryExec=starfish
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=starfish.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=Starfish bounces a series of arcs around its window in a star like formation. It uses multiple colors and multiple patterns. 
+ExtendedComment[ca]=╚Estrela de mar╩ mou una sХrie d'arcs dins la finestra en una formaciС semblant a una estrela. Usa mЗltiples colors i patrons.
+ExtendedComment[da]=SЬstjernen laver en masse buer i vinduet i en stjernelignende formation i mange forskellige farver og mЬnstre.
+ExtendedComment[es]=La estrella de mar despide una serie de arcos alrededor de su ventana en una formaciСn en estrella. Utiliza colores mЗltiples y modelos mЗltiples.
+ExtendedComment[fi]=PiirtДД kaarista tДhdenkaltaisen muodostelman kДyttДen monia vДrejД ja kuvioita.
+ExtendedComment[fr]=L'Иtoile de mer renvoit une sИrie d'arcs autour de sa fenЙtre dans une formation en Иtoile.  Elle utilise des couleurs multiples et des configurations multiples.
+ExtendedComment[no]=Stjernefisk sender en serie buer rundt i vinduet sitt i en stjernelignende formasjon. Det bruker mange farger og flere mЬnstre.
+ExtendedComment[ru]=Морская звезда рисует звездоподобные фигуры, разбрасывая кривые по поверхности экрана.
+ExtendedComment[uk]=Малю╓ схож╕ на морськ╕ з╕рки структури розкидаючи крив╕ по поверхн╕ екрана.
+DefaultFlags=-cycle
+Demo=starfish -delay 2
+
+[Arg0]
+Name=Delay
+Type=LRange
+Flag=-delay
+LeftLabel=Fast
+LeftLabel[ca]=RЮpid
+LeftLabel[da]=Hurtig
+LeftLabel[fi]=Nopea
+LeftLabel[es]=RАpido
+LeftLabel[fr]=Rapide
+LeftLabel[no]=Fort
+LeftLabel[ru]=Быстро
+LeftLabel[uk]=Швидше
+
+RightLabel=Slow
+RightLabel[ca]=Lent
+RightLabel[da]=Langsom
+RightLabel[es]=Lento
+RightLabel[fi]=Hidas
+RightLabel[fr]=Lent
+RightLabel[no]=Sakte
+RightLabel[ru]=Медленно
+RightLabel[uk]=Пов╕льн╕ше
+
+ValType=I[1-1000000]=10000
+Label=Speed of animation.
+Label[ca]=Velocitat de l'animaciС
+Label[da]=Animationshastighed.
+Label[es]=Cantidad de retardo.
+Label[fi]=Piirtonopeus.
+Label[fr]=QuantitИ de retard.
+Label[no]=Animasjonshastighet.
+Label[ru]=Скорость изменения.
+Label[uk]=Швидк╕сть ан╕мац╕╖.
+
+Comment=Change the animation step delay.
+Comment[ca]=Canvia el retard en cicles.
+Comment[da]=фndr animationshastighed.
+Comment[es]=Cambia el retardo en ciclos.
+Comment[fi]=Vaihda piirtonopeutta.
+Comment[fr]=Change le retard en cycles.
+Comment[no]=Endre pausen mellom stegene i animasjonen.
+Comment[ru]=Изменить задержку между циклами.
+Comment[uk]=Зм╕на затримки крок╕в ан╕мац╕╖.
+
+[Arg2]
+Name=Thickness
+Type=NRange
+LeftLabel=Slim
+LeftLabel[ca]=Prima
+LeftLabel[da]=Smal
+LeftLabel[es]=Delgado 
+LeftLabel[fi]=Paksuus
+LeftLabel[fr]=Mince
+LeftLabel[no]=Slank
+LeftLabel[ru]=Тонкие
+LeftLabel[uk]=Тонк╕
+
+RightLabel=Wide
+RightLabel[ca]=Grossa
+RightLabel[da]=Bred
+RightLabel[es]=Gordo 
+RightLabel[fi]=LeveД
+RightLabel[fr]=иpais
+RightLabel[no]=Bred
+RightLabel[ru]=Широкие
+RightLabel[uk]=Широк╕
+
+Flag=-thickness
+ValType=I[0-15]=0
+Label=Thickness of color bands (0 = Random)
+Label[ca]=Gruix de bandes de color (0 = aleatori)
+Label[da]=Tykkelse af farvebЕnd (0 = tilfФldig)
+Label[en_GB]=Thickness of colour bands (0 = Random)
+Label[es]=Espesor de las bandas de color (0 = al azar) 
+Label[fi]=VДrinauhojen leveys (0 = satunnainen)
+Label[fr]=иpaisseur des bandes de couleur (0 = alИatoire)
+Label[no]=Tykkheten pЕ fargebЕndene (0 = VilkЕrlig)
+Label[ru]=Толщина цветных полос (0 = случайная)
+Label[uk]=Товщина кольорових смужок (0 = випадкова)
+
+Comment=Change the thickness of color bands.
+Comment[ca]=Canvia el gruix de les bandes de color.
+Comment[da]=фndr tykkelsen pЕ farvebЕndene.
+Comment[en_GB]=Change the thickness of colour bands.
+Comment[es]=Cambia el espesor de las bandas de color.
+Comment[fi]=Vaihda vДrinauhojen paksuutta.
+Comment[fr]=Change l'Иpaisseur des bandes de couleur. 
+Comment[no]=Endre tykkheten pЕ fargebЕndene.
+Comment[ru]=Изменение толщины цветных полос.
+Comment[uk]=Зм╕на товщини кольорових смужок.
+
+[Arg3]
+Name=Rotation
+Type=NRange
+LeftLabel=Slow
+LeftLabel[ca]=Lenta
+LeftLabel[da]=Langsom
+LeftLabel[es]=Lenta
+LeftLabel[fi]=Kierto
+LeftLabel[fr]=Lente
+LeftLabel[no]=Sakte
+LeftLabel[ru]=Медленная
+LeftLabel[uk]=Пов╕льн╕ше
+
+RightLabel=Fast
+RightLabel[ca]=RЮpida
+RightLabel[da]=Hurtig
+RightLabel[es]=RАpida
+RightLabel[fi]=Nopea
+RightLabel[fr]=Rapide
+RightLabel[no]=Fort
+RightLabel[ru]=Быстрая
+RightLabel[uk]=Швидше
+
+Flag=-rotation
+ValType=I[0-12]=0
+Label=Quickness of rotation at each step (0 = Random)
+Label[ca]=Velocitat de rotaciС per pas (0 = aleatРria)
+Label[da]=Rotationshastighed ved hvert trin (0 = tilfФldig)
+Label[es]=Cambia la velocidad de rotaciСn en cada paso de progresiСn (0 = al azar)
+Label[fi]=Kierron nopeus (0 = satunnainen)
+Label[fr]=Change la vitesse de rotation Ю chaque Иtape (0 = alИatoire) 
+Label[no]=Hastigheten pЕ rotasjonen for hvert steg (0 = VilkЕrlig)
+Label[ru]=Скорость вращения при каждом шаге. 
+Label[uk]=Швидк╕сть обертання на кожен крок (0 = випадкова). 
+
+Comment=Change the quickness of rotation at each step.
+Comment[ca]=Canvia la velocitat de rotaciС a cada pas.
+Comment[da]=фndr rotationshastighed ved hvert trin.
+Comment[es]=Cambia la velocidad de rotaciСn en cada paso de progresiСn. 
+Comment[fi]=Vaihda kierron nopeutta.
+Comment[fr]=Change la vitesse de rotation Ю chaque Иtape 
+Comment[no]=Endre hastigheten pЕ rotasjonen for hvert steg.
+Comment[ru]=Изменение скорости вращения при каждом шаге. 
+Comment[uk]=Зм╕на швидкост╕ обертання на кожен крок. 
+
+[Arg5]
+Name=Duration
+Type=NRange
+LeftLabel=Seconds
+LeftLabel[ca]=Segons
+LeftLabel[da]=Sekunder
+LeftLabel[es]=Segundos
+LeftLabel[fi]=Sekuntia
+LeftLabel[fr]=Secondes
+LeftLabel[no]=Sekunder
+LeftLabel[ru]=Секунд
+LeftLabel[uk]=Секунд
+
+Flag=-duration
+ValType=I[1-60]=30
+Label=Duration of current shape.
+Label[ca]=Durada d'una forma
+Label[da]=NuvФrende forms varighed.
+Label[es]=DuraciСn para una misma forma.
+Label[fi]=Nykyisen muodon kesto
+Label[fr]=DurИe pour une mЙme forme.
+Label[no]=Varigheten til nЕvФrende form.
+Label[ru]=Время жизни формы.
+Label[uk]=Час життя форми.
+
+Comment=How long to run before choosing a new shape.
+Comment[ca]=Espera en segons abans de canviar de forma.
+Comment[da]=Hvor lang tid fЬr en ny form skal antages.
+Comment[es]=Tiempo en segundos antes de cambiar de forma.
+Comment[fr]=Kuinka kauan kestДД, ennen kuin vaihdetaan muotoa
+Comment[fr]=Combien de secondes avant de choisir une nouvelle forme.
+Comment[no]=Hvor lenge skal det kjЬres fЬr valg av ny form.
+Comment[ru]=Сколько должно пройти времени перед сменой формы.
+Comment[uk]=Ск╕льки мусить пройти часу перед зм╕ною форми.
+
+[Arg7]
+Name=Blob
+Type=Check
+LeftLabel=Use raw shapes 
+LeftLabel[ca]=Usar formes en brut
+LeftLabel[da]=Brug rЕ former
+LeftLabel[es]=Utilizar formas rЗsticas
+LeftLabel[fr]=KДytД raakoja muotoja
+LeftLabel[fr]=Utiliser des formes crues
+LeftLabel[no]=Bruk rЕ former
+LeftLabel[ru]=Использовать сырые формы
+LeftLabel[uk]=Використовувати сир╕ форми
+
+Flag=-blob
+Flag2=-no-blob
+Comment=Change the number of colors to use in star.
+Comment[ca]=Mostra les formes en comptes del camp de colors que se'n genera.
+Comment[da]=фndr antal farver som bruges i sЬstjernen.
+Comment[en_GB]=Change the number of colours to use in star.
+Comment[es]=Cambiar la cantidad de colores usados en una estrella
+Comment[fi]=Vaihda tДhdessД kДytettДvien vДrien mДДrДД
+Comment[fr]=Changer le nombre de couleurs utilisИ pour une Иtoile
+Comment[no]=Endre antall farger som skal brukes i stjernen.
+Comment[ru]=Изменить колличество цветов
+Comment[uk]=Зм╕на к╕лькост╕ кольор╕в
+
+[Arg8]
+Name=Monochrome
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=Change to display in monochrome.
+LeftLabel[ca]=Mostrar el protector en monocrom
+LeftLabel[da]=Vis som monokrom.
+LeftLabel[es]=Cambia a la visualizaciСn en monocromo.
+LeftLabel[fi]=Siirry yksivДritilaan.
+LeftLabel[fr]=Change en l'affichage en monochrome.
+LeftLabel[no]=Endre til monokrom visning.
+LeftLabel[ru]=Использовать один цвет.
+LeftLabel[uk]=Показувати збер╕гач екрана монохромно.
+
+Comment=Change to display in monochrome.
+Comment[ca]=Mostra el protector en monocrom.
+Comment[da]=фndr til at vise i monokrom.
+Comment[es]=Cambia a la visualizaciСn en monocromo.
+Comment[fi]=Siirry yksivДritilaan.
+Comment[fr]=Change en l'affichage en monochrome.
+Comment[no]=Endre til monokrom visning.
+Comment[ru]=Использовать один цвет.
+Comment[uk]=Зм╕на показу на монохромний.

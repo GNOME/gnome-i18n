@@ -1,0 +1,37 @@
+[Desktop Entry]
+Name=_("Decayscreen")
+Comment=_("Makes a screen melt down")
+Exec=xscreensaver-command -activate
+TryExec=decayscreen
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=decayscreen.png
+Author=Vivek Khera <khera@cs.duke.edu>
+ExtendedComment=_("Decayscreen makes a screen look like its melting down.")
+Demo=decayscreen -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

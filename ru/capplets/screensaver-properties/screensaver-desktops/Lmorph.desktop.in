@@ -1,0 +1,71 @@
+[Desktop Entry]
+Name=_("Lmorph")
+Comment=_("Morphing lines.")
+Exec=xscreensaver-command -activate
+TryExec=lmorph
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=lmorph.png
+Author=_("Sverre  H.  Huseby <sverrehu@online.no> & Glenn T. Lines <gtl@si.sintef.no>")
+ExtendedComment=_("Lmorph morphs between simple linedrawings using bilinear interpolation.")
+Demo=lmorph -delay 2
+
+[Arg0]
+Name=_("Points")
+Type=NRange
+LeftLabel=_("Points:")
+
+Flag=-points
+ValType=I[10-1000]=150
+Label=_("Number of points.")
+
+Comment=_("Change the number of points to use.")
+
+[Arg1]
+Name=_("Steps")
+Type=LRange
+LeftLabel=_("Less")
+
+RightLabel=_("More")
+
+Flag=-steps
+ValType=I[100-500]=300
+Label=_("Number of interpolation steps.")
+
+Comment=_("Change number of interpolation steps.")
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg3]
+Name=_("Figtype")
+Type=Check
+Flag=-figtype open
+Flag2=-figtype closed
+
+LeftLabel=_("Open figures.")
+
+Comment=_("Change from closed to open figures.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

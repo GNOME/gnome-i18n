@@ -1,0 +1,60 @@
+[Desktop Entry]
+Name=_("Moire")
+Comment=_("Draw circular interference patterns")
+Exec=xscreensaver-command -activate
+TryExec=moire
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=moire.png
+Author=Jamie  Zawinski <jwz@jwz.org>
+ExtendedComment=_("Moire draws circular interference patterns.")
+Demo=moire -delay 2
+
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+ValType=I[1-500000]=2
+
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-264]=30
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Offset")
+Type=LRange
+LeftLabel=_("Smaller")
+
+RightLabel=_("Larger")
+
+Flag=-offset
+ValType=I[5-500]=500
+Label=_("Maximum radius increment")
+
+[Arg3]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

@@ -1,0 +1,70 @@
+[Desktop Entry]
+Name=_("Spiral")
+Comment=_("The spiral program draws moving circular spiral patterns.")
+Exec=xscreensaver-command -activate
+TryExec=spiral
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=spiral.png
+Author=Darrick Brown, Peter Schmitzberger, and Jamie Zawinski
+ExtendedComment=_("The spiral program draws moving circular spiral patterns.")
+Demo=spiral -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+ValType=I[1-20]=2
+Flag=-delay
+LeftLabel=_("Time between redraws:")
+
+RightLabel=_("Seconds")
+
+Comment=_("Changes the time between redrawing the screen.")
+
+[Arg1]
+Name=_("Cycles")
+Type=LRange
+Flag=-cycles
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=350
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=64
+Label=_("Number of Colors")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg3]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+
+Flag=-count
+ValType=I[5-1000]=40
+Label=_("Number to use.")
+
+Comment=_("Change the number to use.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

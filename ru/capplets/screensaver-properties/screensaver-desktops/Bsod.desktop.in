@@ -1,0 +1,38 @@
+[Desktop Entry]
+Name=_("Bsod")
+Comment=_("Blue Screen of Death")
+Exec=xscreensaver-command -activate
+TryExec=bsod
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=bsod.png
+Author=Jamie Zawinski <jwz@netscape.com>
+ExtendedComment=_("Bsod simulates crash screens from other operating systems.")
+DefaultFlags=-root
+Demo=bsod -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

@@ -1,0 +1,223 @@
+[Desktop Entry]
+Name=Maze
+Name[ca]=Laberint
+Name[da]=Labyrint
+Name[es]=Laberinto
+Name[fi]=Labyrintti
+Name[fr]=Labyrinthe
+Name[ja]=ÌÂÏ©
+Name[no]=Labyrint
+Name[ru]=ìÁÂÉÒÉÎÔ
+Comment=Repeatedly create and solve a maze
+Comment[ca]=Crea i resol laberints contínuament.
+Comment[es]=Crea y resuelve lanerintos
+Comment[fi]=Luo ja ratkaisee labyrintin toistuvasti
+Comment[fr]=Créé et résout un labyrinthe répétitivement
+Comment[no]=Gjentagende oppretting og løsing av en labyrint
+Exec=xscreensaver-command -activate
+TryExec=maze
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=maze.png
+Author=Copyright (C) 1988 by Sun Microsystems, Inc.
+ExtendedComment=The maze program creates a random maze and then solves it with graphical feedback.
+ExtendedComment[ca]=«Laberint» crea un laberint aleatori i el resol mostrant els camins seguits.
+ExtendedComment[es]=Este salvapantallas crea y resuelve gráficamente laberintos creados al azar.
+ExtendedComment[fr]=Créé et résout graphiquement un labyrinthe.
+ExtendedComment[no]=Labyrint lager en tilfeldig labyrint og løser den med grafisk tilbakemelding.
+Demo=maze -grid-size 10
+
+[Arg0]
+Name=Speed Delay
+Type=LRange
+LeftLabel=Less Delay
+LeftLabel[ca]=Menor
+LeftLabel[es]=Menos tiempo
+LeftLabel[fr]=Plus court
+LeftLabel[no]=Kortere pause
+
+RightLabel=More Delay
+RightLabel[ca]=Major
+RightLabel[es]=Más tiempo
+RightLabel[fr]=Plus long
+RightLabel[no]=Lengre pause
+
+Flag=-solve-delay
+ValType=I[1000-100000]=5000
+Label=Delay between each step in the maze.
+Label[ca]=Retard entre passos al laberint
+Label[es]=Demora entre dos pasos en el laberinto
+Label[fr]=Délai entre chaque pas dans le labyrinthe
+Label[no]=Pause mellom hvert steg i labyrinten.
+
+Comment=The delay (in microseconds) between each step of the solution path.
+Comment[ca]=Retard (en microsegons) entre cada pas del camí solució.
+Comment[es]=Demora (en mocrosegundos) entre los pasos dados para resolver el laberinto.
+Comment[fr]=Le délai (en microsecondes) entre chaque pas lors de la résolution.
+Comment[no]=Pausen (i mikrosekunder) mellom hvert steg i løsningsstien.
+
+[Arg1]
+Name=Pre-Solving Delay
+Type=LRange
+LeftLabel=Less Delay
+LeftLabel[ca]=Menor
+LeftLabel[es]=Menos tiempo
+LeftLabel[fr]=Plus court
+LeftLabel[no]=Kortere pause
+
+RightLabel=More Delay
+RightLabel[ca]=Major
+RightLabel[es]=Más tiempo
+RightLabel[fr]=Plus long
+RightLabel[no]=Lengre pause
+
+Flag=-pre-delay
+ValType=I[1000000-5000000]=2000000
+Label=Delay between drawing the maze and starting the solution.
+Label[ca]=Retard entre dibuixar laberint i començar resolució
+Label[es]=Demora antes de la resolución
+Label[fr]=Délai entre le dessin du labyrinthe et le début de sa résolution.
+Label[no]=Pause mellom tegning av labyrinten og start på løsningen.
+
+Comment=The delay (in microseconds) between generating a maze and starting to solve it.
+Comment[ca]=Retard (en microsegons) entre generar el laberint i començar a resoldre'l.
+Comment[es]=La demora (en microsegundos) entre la creación del laberinto y el comienzo de la resolución gráfica.
+Comment[fr]=Le délai (en microsecondes) entre la génération du labyrinthe et le début de sa résolution.
+Comment[no]=Pausen (i mikrosekunder) mellom oppretting av labyrinten og start på løsning av den.
+
+[Arg2]
+Name=Post-Solving Delay
+Type=LRange
+LeftLabel=Less Delay
+LeftLabel[ca]=Menor
+LeftLabel[es]=Menos tiempo
+LeftLabel[fr]=Plus court
+LeftLabel[no]=Kortere pause
+
+RightLabel=More Delay
+RightLabel[ca]=Major
+RightLabel[es]=Más tiempo
+RightLabel[fr]=Plus long
+RightLabel[no]=Lengre pause
+
+Flag=-post-delay
+ValType=I[1000000-8000000]=4000000
+Label=Delay between finishing the maze and starting a new one.
+Label[ca]=Retard entre acabar el laberint i començar altre
+Label[es]=Demora después de la resolución
+Label[fr]=Délai après la résolution d'un labyrinthe et le début d'un nouveau.
+Label[no]=Pause mellom løsing av labyrinten og start av en ny.
+
+Comment=The delay (in microseconds) after solving a maze and before generating a new one.
+Comment[ca]=Retard (en microsegons) després de resoldre un laberint i abans de generar-ne altre.
+Comment[es]=La demora (en microsegundos) entre el fin de la resolución y la creación de un nuevo laberinto.
+Comment[fr]=Le délai (en microsecondes) après la résolution d'un labyrinthe et le début d'un nouveau.
+Comment[no]=Pausen (i mikrosekunder) etter løsing av en labyrint før oppretting av en ny.
+
+[Arg3]
+Name=Live Color
+Type=Color
+Flag=-live-color
+ValType=Color=#00ff00
+Label=Color of path
+Label[ca]=Color del camí
+Label[en_GB]=Colour of path
+Label[es]=Color del camino
+Label[fr]=Couleur du chemin
+Label[no]=Farge på sti
+Label[wa]=Coleur do tchmin
+
+Comment=The color of the path.
+Comment[ca]=El color del camí.
+Comment[en_GB]=The colour of the path.
+Comment[es]=El color del camino activo.
+Comment[fr]=La couleur du chemin.
+Comment[no]=Fargen på stien.
+Comment[wa]=Li coleur do tchmin a shûve.
+
+[Arg4]
+Name=Dead Color
+Type=Color
+Flag=-dead-color
+ValType=Color=#ff0000
+Label=Color of failed path
+Label[ca]=Color del camí fallat
+Label[en_GB]=Colour of failed path
+Label[es]=Color de los caminos errados
+Label[fr]=Couleur du chemin après un échec
+Label[no]=Farge på feil sti
+Label[wa]=Coleur des måvas tchmins
+
+Comment=The color of a failed path (stippled with a 50% pattern)
+Comment[ca]=El color del camí fallat (ocult amb un patró al 50%).
+Comment[en_GB]=The colour of a failed path (stippled with a 50% pattern)
+Comment[es]=Color de los caminos que no llevaron a ningún lado
+Comment[fr]=Couleur du chemin après un échec (couplé a 50% avec un motif)
+Comment[no]=Fargen på feil sti (stiplet med 50% mønster)
+Comment[wa]=Li coleur des måvas tchmins (rimpli a 50% avou on motif)
+
+[Arg5]
+Name=Skip Color
+Type=Color
+Flag=-skip-color
+ValType=Color=#ffa500
+Label=Color of a skipped path
+Label[ca]=Color del camí salta
+Label[en_GB]=Colour of a skipped path
+Label[es]=Color de los caminos descartados
+Label[fr]=Couleur d'évitemment
+Label[no]=Farger på oversett sti
+Label[wa]=Coleur des leyis tchmins
+
+Comment=If the solver can "see" the end of a corridor it will color it this color.
+Comment[ca]=Si el resoledor pot «veure» el final d'un corredor, el pintarà d'aquest color.
+Comment[en_GB]=If the solver can "see" the end of a corridor it will colour it this colour.
+Comment[es]=Si el resolvedor puede "ver" el final de un pasillo usara este color para el final del recorrido.
+Comment[fr]=Couleur d'un chemin évité si le solutionneur "voit" la fin d'un corridor.
+Comment[no]=Hvis løseren kan "se" slutten på en gang vil den fargelegge den med denne fargen.
+Comment[wa]=Li coleur des tchmins ki ont sti leyis ca li solveu poya "voere" li coron do tchmin.
+
+[Arg6]
+Name=Surround Color
+Type=Color
+Flag=-surround-color
+ValType=Color=#6a5acd
+Label=Color of surrounded area
+Label[ca]=Color d'àrea envoltada
+Label[en_GB]=Colour of surrounded area
+Label[es]=Color de las regiones cerradas
+Label[fr]=Couleur des zones fermées
+Label[no]=Farge på området rundt
+Label[wa]=Coleur des ressereyes redjions
+
+Comment=Color for filling completely closed off areas.
+Comment[ca]=Color per pintar àrees completament tancades.
+Comment[en_GB]=Colour for filling completely closed off areas.
+Comment[es]=Color de las regiones completamente cerradas.
+Comment[fr]=Couleur des zones entièrement fermées.
+Comment[no]=Farge på fyllet mellom avstengte områder.
+Comment[wa]=Li coleur po les redjions ki sont tot etîres ressereyes.
+
+[Arg7]
+Name=Bridge
+Type=Check
+Flag=-bridge
+Flag2=
+LeftLabel=Put a bridge over the logo?
+LeftLabel[ca]=Posar un pont sobre el logo
+LeftLabel[es]=¿ Crear un puente que pase por encima del logotipo ?
+LeftLabel[fr]=Mettre un pont au dessus du logo?
+LeftLabel[no]=Sett inn en bro over logoen?
+LeftLabel[wa]=Mete on pont ki passe hoûte do logo di X Window ?
+
+Comment=Controls whether or not a 'bridge' will appear over the logo.
+Comment[ca]=Controla si es posarà un «pont» sobre el logo.
+Comment[es]=Controla si se debe crear o no un puente por encima del logotipo.
+Comment[fr]=Contrôle si un pont apparait au dessus du logo.
+Comment[no]=Kontrollerer om en bro skal settes inn over logoen.
+Comment[wa]=Defini s' i fåt mete on pont å dzeu do logo di X Window.
+

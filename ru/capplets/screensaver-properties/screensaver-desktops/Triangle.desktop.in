@@ -1,0 +1,32 @@
+[Desktop Entry]
+Name=_("Triangle")
+Comment=_("Random mountain ranges")
+Exec=xscreensaver-command -activate
+TryExec=triangle
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=triangle.png
+Author=Tobias Gloth
+ExtendedComment=_("Generates random mountain ranges using iterative subdivision of triangles.")
+Demo=triangle -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+Flag=-ncolors
+ValType=I[1-256]=100
+Label=_("Number of Colors")
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+Comment=_("Change to display in monochrome.")

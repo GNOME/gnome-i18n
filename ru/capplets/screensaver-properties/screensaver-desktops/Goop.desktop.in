@@ -1,0 +1,64 @@
+[Desktop Entry]
+Name=_("Goop")
+Comment=_("Squishy transparent oil and bubbles")
+Exec=xscreensaver-command -activate
+TryExec=goop
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=goop.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=_("Goop draws a simulation of bubbles in layers.")
+Demo=goop -delay 2
+
+[Arg0]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+
+Flag=-count
+ValType=I[1-100]=10
+Label=_("Number of bubbles to use.")
+
+Comment=_("Change the number of bubbles to use.")
+
+[Arg1]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")
+
+[Arg3]
+Name=_("Transparent")
+Type=Check
+Flag=-transparent
+Flag2=-non-transparent
+LeftLabel=_("Have transparent bubbles.")
+
+Comment=_("Causes the colors to mix when overlapped.")
+
+[Arg4]
+Name=_("Additive")
+Type=Check
+Flag=-additive
+Flag2=-subtractive
+LeftLabel=_("Use additive color model.")

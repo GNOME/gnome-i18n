@@ -1,0 +1,145 @@
+[Desktop Entry]
+Name=Ant
+Name[ca]=Formigues
+Name[da]=Myrer
+Name[cs]=Mravenec
+Name[de]=Ameisen
+Name[es]=Hormigas
+Name[fr]=Fourmis
+Name[ja]=╣б
+Name[no]=Maur
+Name[pt_BR]=Formigas
+Name[ru]=Муравей
+Name[uk]=Мураха
+Name[wa]=Frumixhes
+Comment=Little Ants walk around, leaving colored trails.
+Comment[ca]=Unes formiguetes que caminen arreu i deixen un rastre de colors.
+Comment[cs]=Vykresluje mravence zanechАvajМcМ za sebou stopu.
+Comment[da]=SmЕ myrer der render omkring og efterlader spor.
+Comment[de]=Kleine Ameisen latschen herum und hinterlassen farbige Spuren.
+Comment[es]=PequeЯas hormigas paseandose por la pantalla y dejando huellas de colores.
+Comment[fr]=Petites fourmis qui se balladent sur l'Иcran et qui laissent des traces colorИes.
+Comment[no]=SmЕ maur gЕr rundt og etterlater seg fargede spor.
+Comment[pt_BR]=Pequenas formigas deixando um rastro colorido.
+Comment[ru]=Маленькие муравьи разгуливают по экрану оставляя цветные следы.
+Comment[uk]=Маленьк╕ мурахи розгулюють по екрану лишаючи кольоров╕ сл╕ди
+Comment[wa]=Des ptites frumixhes ki rotХt tot avЕ l' waitroШle, tot leyant des traces di coleur.
+Exec=xscreensaver-command -activate
+TryExec=ant
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=ant.png
+Author=David Bagely
+ExtendedComment=A cellular automaton that is really a two-dimensional Turing machine: as the heads (``ants'') walk along the screen, they change pixel values in their path. Then, as they pass over changed pixels, their behavior is influenced.
+ExtendedComment[ca]=Un autРmat cel╥lular que Иs realment una mЮquina de Turing bidimensional: a mesura que els capГals (formigues) caminen per la pantalla, canvien el valor dels pМxels per on es mouen. Aleshores, en passar pels pМxels canviats, el seu comportament hi Иs influenciat.
+ExtendedComment[de]=Ein zellularer Automat, der eigentlich eine zweidimensionale Turingmaschine darstellt: die KЖpfe (``Ameisen'') laufen auf dem Schirm herum und Дndern die Pixelwerte auf ihrem Pfad. Ihr Verhalten wird ihrerseits davon beeinfluъt, wenn sie Эber einen dieser geДnderten Pixel laufen.
+ExtendedComment[es]=Un autСmata celular que es en realidad una mАquina de TЭring de dos dimensiones: ya que las hormigas mientras caminan por la pantalla van cambiando el valor de los pixeles sobre los cuales pasan. Luego, cuando pasan de vuelta sobre un pixel modificado su comportamiento cambia.
+ExtendedComment[fr]=Un automate cellulaire qui est en fait une machine de TЭring Ю deux dimensions: puisque les fourmis en marchant Ю travers l'Иcran changent la valeur des pixels sur leur chemin. Puis, lorsqu'elles repassent sur des pixels ainsi modifiИs leur comportemment en est influencИ.
+ExtendedComment[no]=En cellulФr automasjon som i virkeligheten er en to-dimensjonal Turing-maskin: ettersom hodene (``maurene'') gЕr langs skjermen, endrer de piksel-verdiene langs sitt spor. Siden, ettersom de gЕr over endrede piksler, pЕvirkes deres oppfЬrsel.
+ExtendedComment[ru]=Клеточный автомат, двумерная машина Тьюринга: головки ('Муравьи') двигаясь по экрануизменяют значения точек на своем пути. Затем, когда они проходятчерез измененные точки их поведение меняется.
+ExtendedComment[uk]=Кл╕тковий автомат, що насправд╕ ╓ двовим╕рною машиною Тьюринга: головки (``мурахи'') ходять по екрану ╕ зм╕нюють значення п╕ксел╕в на сво╓му шляху. Коли вони проходять зм╕нен╕ п╕ксели, ╖хня повед╕нка також зм╕ню╓ться.
+Demo=ant -delay 2
+
+[Arg0]
+Name=Size
+Name[ru]=Размер
+Type=LRange
+LeftLabel=Small
+LeftLabel[ca]=Menudes
+LeftLabel[es]=PequeЯas
+LeftLabel[fr]=Petites
+LeftLabel[ja]=╬╝╓╣╓╓
+LeftLabel[no]=SmЕ
+LeftLabel[ru]=Меньше
+LeftLabel[uk]=Менший
+LeftLabel[wa]=Pitites
+
+RightLabel=Large
+RightLabel[ca]=Grans
+RightLabel[es]=Grandes
+RightLabel[fr]=Grandes
+RightLabel[ja]=бГ╓╜╓╓
+RightLabel[no]=Store
+RightLabel[ru]=Больше
+RightLabel[uk]=Б╕льший
+RightLabel[wa]=Grandes
+
+Flag=-size
+ValType=I[1-20]=5
+Label=Size:
+Label[ca]=Tamany:
+Label[es]=TamaЯo:
+Label[fr]=Taille:
+Label[no]=StЬrrelse:
+Label[ru]=Размер:
+Label[uk]=Розм╕р:
+Label[wa]=Grandeu:
+
+Comment=Changes the size of the ants.
+Comment[ca]=Canvia el tamany de les formigues.
+Comment[es]=Cambia el tamaЯo de las hormigas
+Comment[fr]=Change la taille des fourmis
+Comment[no]=Endre stЬrrelsen pЕ maurene.
+Comment[ru]=Изменение размера муравьев.
+Comment[uk]=Зм╕на ром╕ру мурах
+Comment[wa]=CandjН l' grandeu des frumixhes
+
+[Arg1]
+Name=Count
+Name[ru]=Количество
+Type=NRange
+LeftLabel=Ants:
+LeftLabel[ca]=Formigues:
+LeftLabel[es]=Hormigas:
+LeftLabel[fr]=Fourmis:
+LeftLabel[ja]=╣б:
+LeftLabel[no]=Maur:
+LeftLabel[ru]=Муравьев:
+LeftLabel[uk]=Мурах:
+LeftLabel[wa]=Frumixhes:
+
+Flag=-count
+ValType=I[1-10]=2
+Label=Number of ants.
+Label[ca]=Nombre de formigues
+Label[es]=Cantidad de hormigas
+Label[fr]=Nombre de fourmis
+Label[no]=Antall maur.
+Label[ru]=Число муравьев
+Label[uk]=Число мурах
+Label[wa]=Nombe di frumixhes
+
+Comment=Changes the number of ants marching across the screen.
+Comment[ca]=Canvia el nombre de formigues que volten la pantalla.
+Comment[es]=Cambia la cantidad de hormigas que deambulan por la pantalla
+Comment[fr]=Change le nombre de fourmis qui se balladent sur l'Иcran
+Comment[no]=Endre antallet maur som gЕr over skjermen.
+Comment[ru]=Изменение число муравьев шагающих по экрану.
+Comment[uk]=Зм╕на числа мурах
+Comment[wa]=CandjН li nombe di frumixhes ki rotХt tot avЕ li waitroШle
+
+[Arg2]
+Name=Truchet
+Type=Check
+Flag=-truchet
+Flag2=-no-truchet
+LeftLabel=Print the path that the ant took in the trail.
+LeftLabel[ca]=Mostrar el camМ seguit al rastre
+LeftLabel[es]=Muestra las huellas dejadas por las hormigas
+LeftLabel[fr]=Affiche les empreintes laissИes par les fourmis
+LeftLabel[no]=Tegn stien som mauren tok i sporet.
+LeftLabel[ru]=Печатать путь муравья
+LeftLabel[uk]=Друк шляху мурахи
+LeftLabel[wa]=Mostrer les royes ki les frumixhes fyНt
+
+Comment=Determines whether or not the ant leaves a truchet in the path it leaves behind.
+Comment[ca]=Determina si les formigues deixen petjades al rastre indicant la direcciС del moviment.
+Comment[es]=Determina si sМ o no las hormigas van surcando un caminito por donde pasan.
+Comment[fr]=Determine si oui ou non les fourmis creusent un chemin lors de leur passage.
+Comment[no]=Bestem om mauren etterlater seg et truchet i stien den etterlater seg.
+Comment[uk]=Визнача╓ познача╓ться чи н╕ шлях пройдений мурахами.
+Comment[wa]=DНre si les frumixhes fjhХt ou nИn des royes tot rotant.

@@ -1,0 +1,98 @@
+[Desktop Entry]
+Name=Fadeplot
+Name[ca]=Esvair
+Name[da]=Fadeplot
+Name[no]=Fadeplot
+Comment=A waving ribbon
+Exec=xscreensaver-command -activate
+TryExec=fadeplot
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=fadeplot.png
+Author=Bas van Gaalen and Charles Vidal
+ExtendedComment=Draws what looks like a waving ribbon following a sinusoidal path.
+ExtendedComment[da]=Tegner noget som ligner et bølgende farvebånd fulgt af et sinuslignende spor.
+ExtendedComment[no]=Tegner noe som ligner et bølgende fargebånd fulgt av et sinuslignende spor.
+Demo=fadeplot -delay 2
+
+[Arg0]
+Name=Colors
+Type=NRange
+LeftLabel=Colors:
+LeftLabel[da]=Farver:
+LeftLabel[no]=Farger:
+Flag=-ncolors
+ValType=I[1-256]=100
+Label=Number of Colors
+Label[da]=Antal farver
+Label[no]=Antall farger
+Comment=Change the number of colors to use.
+Comment[da]=Ændr antal farver som skal brukes.
+Comment[no]=Endre antall farger som skal brukes.
+
+[Arg1]
+Name=Count
+Type=NRange
+LeftLabel=Count:
+LeftLabel[da]=Antal:
+LeftLabel[no]=Antall:
+Flag=-count
+ValType=I[1-50]=20
+Label=Number
+Label[da]=Tal
+Label[no]=Tall
+Comment=Changes the count.
+Comment[da]=Ændrer tallet.
+Comment[no]=Endrer tallet.
+
+[Arg2]
+Name=Delay
+Type=LRange
+Flag=-delay
+LeftLabel=Faster
+LeftLabel[da]=Hurtigere
+LeftLabel[no]=Raskere
+RightLabel=Slower
+RightLabel[da]=Langsommere
+RightLabel[no]=Saktere
+ValType=I[1-500000]=2
+Label=Speed of Motion
+Label[da]=Bevægelseshastighed
+Label[no]=Bevegelseshastighet
+Comment=Change the delay in movement.
+Comment[da]=Ændr pausen i bevægelsen.
+Comment[no]=Endre pausen i bevegelsen.
+
+[Arg3]
+Name=Cycles
+Type=LRange
+Flag=-cycles
+LeftLabel=More
+LeftLabel[da]=Mere
+LeftLabel[no]=Mer
+RightLabel=Slower
+RightLabel[da]=Langsommere
+RightLabel[no]=Saktere
+ValType=I[10-1000]=50
+Label=Number of cycles
+Label[da]=Antal runder
+Label[no]=Antall runder
+Comment=Change the number of cycles.
+Comment[da]=Ændr antal runder.
+Comment[no]=Endre antall runder.
+
+[Arg4]
+Name=Monochrome
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=Display screensaver in monochrome.
+LeftLabel[da]=Vis pauseskærmen i sort/hvid.
+LeftLabel[no]=Vis skjermspareren som monokrom.
+Comment=Change to display in monochrome.
+Comment[da]=Ændr til visning i sort/hvid.
+Comment[no]=Endre til visning i monokrom.

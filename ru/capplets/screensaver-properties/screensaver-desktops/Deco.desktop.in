@@ -1,0 +1,45 @@
+[Desktop Entry]
+Name=_("Deco")
+Comment=_("Draw tacky 70s basement wall panelling.")
+Exec=xscreensaver-command -activate
+TryExec=deco
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=deco.png
+Author=Jamie Zawinski <jwz@jwz.org>\nMichael D. Bayne <mdb@go2net.com>
+ExtendedComment=_("Deco draws tacky 70s basement wall panelling.")
+Demo=deco -delay 2
+
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+ValType=I[1-20]=2
+Flag=-delay
+LeftLabel=_("Time between redraws:")
+
+RightLabel=_("seconds")
+
+Comment=_("Changes the time between redrawing the screen.")
+
+[Arg1]
+Name=_("Color")
+Type=Check
+Flag=
+Flag2=-mono
+LeftLabel=_("Use color when drawing.")
+
+Comment=_("Determines whether to draw the panels in color, or in black and white.")
+
+[Arg2]
+Name=_("Color-cycle")
+Type=Check
+Flag=-cycle
+Flag2=-no-cycle
+LeftLabel=_("Cycle through colors.")
+
+Comment=_("This will cause the panes to flash.")

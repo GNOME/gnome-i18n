@@ -1,0 +1,69 @@
+[Desktop Entry]
+Name=_("Bouboule")
+Comment=_("A blob of bubbles spinning/moving around the screen.")
+Exec=xscreensaver-command -activate
+TryExec=bouboule
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=bouboule.png
+Author=_("Jeremie Petit <jpetit@essi.fr>")
+ExtendedComment=_("Bouboule changes shape and size in a blob like form.")
+DefaultFlags=-root
+Demo=bouboule -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=64
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+
+Flag=-count
+ValType=I[1-10000]=1000
+Label=_("Number of bubbles to use.")
+
+Comment=_("Change the number of bubbles to use.")
+
+[Arg3]
+Name=_("3D")
+Type=Check
+Flag=-3d
+Flag2=
+LeftLabel=_("Use red/blue 3d seperation.")
+
+Comment=_("Use red/blue 3d seperation.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

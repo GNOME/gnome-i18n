@@ -1,0 +1,64 @@
+[Desktop Entry]
+Name=_("Grav")
+Comment=_("Draws a simple orbital simulation.")
+Exec=xscreensaver-command -activate
+TryExec=grav
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=grav.png
+Author=Greg Bowering <greg@smug.student.adelaide.edu.au>
+ExtendedComment=_("Grav draws a simple orbital simulation.")
+Demo=grav -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=200
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+
+Flag=-count
+ValType=I[1-50]=12
+Label=_("Number of planets to use.")
+
+Comment=_("Change the number of planets to use.")
+
+[Arg3]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")
+
+[Arg4]
+Name=_("Decay")
+Type=Check
+Flag=-decay
+Flag2=-no-decay
+LeftLabel=_("Orbit should decay.")
+
+Comment=_("Change whether orbit should decay.")
+
+[Arg5]
+Name=_("Trail")
+Type=Check
+Flag=-trail
+Flag2=-no-trail
+LeftLabel=_("Objects should leave trails behind them.")
+
+Comment=_("Change whether objects should leave a trail.")

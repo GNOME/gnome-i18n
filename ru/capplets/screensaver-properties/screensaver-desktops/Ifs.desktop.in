@@ -1,0 +1,35 @@
+[Desktop Entry]
+Name=_("Ifs")
+Comment=_("Draws spinning, colliding, iterated-function-system images.")
+Exec=xscreensaver-command -activate
+TryExec=ifs
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=ifs.png
+Author=Massimino Pascal <Pascal.Massimon@ens.fr>
+ExtendedComment=_("Ifs draws spinning, colliding, iterated-function-system images.")
+Demo=ifs -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=200
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

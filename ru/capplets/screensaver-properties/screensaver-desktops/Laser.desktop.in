@@ -1,0 +1,48 @@
+[Desktop Entry]
+Name=_("Laser")
+Comment=_("Draws vaguely laser-like moving lines.")
+Exec=xscreensaver-command -activate
+TryExec=laser
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=laser.png
+Author=Pascal Pensa
+ExtendedComment=_("Draws laser-like lines moving around a central focal point in varying numbers and colors.")
+Demo=laser -delay 2
+
+[Arg0]
+Name=_("Duration")
+Type=LRange
+LeftLabel=_("Shorter")
+
+RightLabel=_("Longer")
+
+Flag=-cycles
+ValType=I[10-1000]=200
+Label=_("Duration of laser burst.")
+
+Comment=_("Duration of the laser burst.  After the burst has finished, It will move to a new location on the screen.")
+
+[Arg1]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Segments:")
+
+Flag=-count
+ValType=I[1-20]=10
+Label=_("Size of burst.")
+
+Comment=_("Number of segments per laser burst.")
+
+[Arg2]
+Name=_("Mono")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

@@ -1,0 +1,37 @@
+[Desktop Entry]
+Name=_("Helix")
+Comment=_("Draws helical string-art patterns")
+:Exec=xscreensaver-command -activate
+TryExec=helix
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=helix.png
+Author=Jamie  Zawinski  <jwz@jwz.org> 
+ExtendedComment=_("Helix draws patterns composed of line segments.")
+Demo=helix -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-15]=4
+Label=_("Time between redraws.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

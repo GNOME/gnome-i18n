@@ -1,0 +1,54 @@
+[Desktop Entry]
+Name=_("Coral")
+Comment=_("Simulates coral growth")
+Exec=xscreensaver-command -activate
+TryExec=coral
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=coral.png
+Author=Frederick Roeber
+ExtendedComment=_("Simulates coral growth.")
+Demo=coral -delay 2
+
+[Arg0]
+Name=_("Density")
+Type=LRange
+Flag=-density
+LeftLabel=_("Denser")
+
+RightLabel=_("Thinner")
+ValType=I[10-100]=50
+
+Label=_("Density")
+
+Comment=_("Change the density.")
+
+[Arg1]
+Name=_("Seeds")
+Type=NRange
+
+LeftLabel=_("Seeds")
+Flag=-seeds
+ValType=I[1-100]=30
+
+Label=_("Number of seeds")
+
+Comment=_("Change number of seeds.")
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")

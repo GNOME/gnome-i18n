@@ -1,0 +1,63 @@
+[Desktop Entry]
+Name=_("Pedal")
+Comment=_("Pretty geometric picture program.")
+Exec=xscreensaver-command -activate
+TryExec=pedal
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=pedal.png
+Author=Dale Moore <Dale.Moore@cs.cmu.edu>
+ExtendedComment=_("Pedal Displays pretty geometric pictures.")
+Demo=pedal -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Shorter")
+
+RightLabel=_("Longer")
+
+ValType=I[2-30]=5
+Label=_("Time to show each picture.")
+
+Comment=_("Change the time each picture is shown.")
+
+[Arg1]
+Name=_("Maxlines")
+Type=LRange
+Flag=-maxlines
+LeftLabel=_("Less")
+
+RightLabel=_("More")
+
+ValType=I[15-5000]=200
+Label=_("Maximum number of lines.")
+
+Comment=_("Change maximum number of lines.")
+
+[Arg3]
+Name=_("Fadedelay")
+Type=LRange
+Flag=-fadedelay
+LeftLabel=_("Shorter")
+
+RightLabel=_("Longer")
+
+ValType=I[1-500000]=20
+Label=_("Time to fade away.")
+
+Comment=_("Change time to fade away.")
+
+[Arg2]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

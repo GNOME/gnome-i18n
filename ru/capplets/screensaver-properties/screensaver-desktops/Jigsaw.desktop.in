@@ -1,0 +1,28 @@
+[Desktop Entry]
+Name=_("Jigsaw")
+Comment=_("Permutes the screen image like a jigsaw puzzle.")
+Exec=xscreensaver-command -activate
+TryExec=jigsaw
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=jigsaw.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=_("Jigsaw takes an image of the screen, carves it up into jigsaw puzzle pieces, shuffles it, and solves it.")
+Demo=jigsaw -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")

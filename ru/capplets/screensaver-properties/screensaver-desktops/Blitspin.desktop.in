@@ -1,0 +1,50 @@
+[Desktop Entry]
+Name=_("Blitspin")
+Comment=_("Rotates a bitmap in an interesting way.")
+Exec=xscreensaver-command -activate
+TryExec=blitspin
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=blitspin.png
+Author=Jamie Zawinski <jwz@netscape.com>
+ExtendedComment=_("Blitspin takes a bitmap and repeatedly rotates it by 90 degrees using logical operations.")
+Demo=blitspin -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of rotation.")
+
+Comment=_("Change the delay between steps of rotation process.")
+
+[Arg1]
+Name=_("Delay2")
+Type=LRange
+Flag=-delay2
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=5000
+Label=_("Speed of the 90 degree rotation.")
+
+Comment=_("Change the delay between each 90 degree rotation.")
+
+[Arg2]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

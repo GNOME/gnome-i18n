@@ -1,0 +1,45 @@
+[Desktop Entry]
+Name=_("Pyro")
+Comment=_("Simulates fireworks")
+Exec=xscreensaver-command -activate
+TryExec=pyro
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=pyro.png
+Author=Jamie Zawinski
+ExtendedComment=_("The pyro program simulates fireworks.")
+Demo=pyro -count 1000 -scatter 100
+
+[Arg0]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+Flag=-count
+ValType=I[20-1000]=100
+Label=_("Particles on screen")
+Comment=_("How many particles should be allowed on the screen at once.")
+
+[Arg1]
+Name=_("Frequency")
+Type=LRange
+LeftLabel=_("Slower")
+RightLabel=_("Faster")
+
+Flag=-frequency
+ValType=I[10-100]=30
+Label=_("Frequency of missile launch")
+Comment=_("Changes frequency of missile launch.")
+
+[Arg2]
+Name=_("Scatter")
+LeftLabel=_("Less")
+RightLabel=_("More")
+
+Flag=-scatter
+ValType=I[10-100]=20
+Label=_("Number of particles")
+Comment=_("How many particles should appear when a missile explodes.")

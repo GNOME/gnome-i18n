@@ -1,0 +1,74 @@
+[Desktop Entry]
+Name=_("Flame")
+Comment=_("Draw weird cosmic fractals.")
+Exec=xscreensaver-command -activate
+TryExec=flame
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=flame.png
+Author=Scott Graves <spot@cs.cmu.edu>
+ExtendedComment=_("Flame generates colorful fractal displays.")
+Demo=flame -delay 2
+
+[Arg0]
+Name=_("Iterations")
+Type=NRange
+LeftLabel=_("Iterations:")
+
+Flag=-iterations
+ValType=I[1-250]=25
+Label=_("Number of fractals to generate.")
+
+Comment=_("Change the number of fractals to generate.")
+
+[Arg1]
+Name=_("Points")
+Type=LRange
+LeftLabel=_("Less")
+
+RightLabel=_("More")
+
+Flag=-points
+ValType=I[1000-50000]=10000
+Label=_("Pixels per fractal.")
+
+Comment=_("Change the number of pixels to draw for each fractal.")
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg3]
+Name=_("Delay2")
+Type=LRange
+Flag=-delay2
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[100000-7000000]=2000000
+Label=_("Time finished product is shown.")
+
+Comment=_("Change the time flame pauses after figure is complete.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

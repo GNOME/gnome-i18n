@@ -1,0 +1,42 @@
+[Desktop Entry]
+Name=_("Sierpinski")
+Comment=_("The sierpinski program draws Sierpinski triangle fractals.")
+Exec=xscreensaver-command -activate
+TryExec=sierpinski
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=sierpinski.png
+Author=Desmond  Daignault
+ExtendedComment=_("The sierpinski program draws Sierpinski triangle fractals.")
+Demo=sierpinski -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+Flag=-ncolors
+ValType=I[1-256]=64
+Label=_("Number of Colors")
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Cycles")
+Type=LRange
+Flag=-cycles
+LeftLabel=_("Faster")
+RightLabel=_("Slower")
+ValType=I[1-50]=20
+Label=_("Speed of Motion")
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+Comment=_("Change to display in monochrome.")

@@ -1,0 +1,84 @@
+[Desktop Entry]
+Name=_("Starfish")
+Comment=_("Make a star like formation using arcs.")
+Exec=xscreensaver-command -activate
+TryExec=starfish
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=starfish.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=_("Starfish bounces a series of arcs around its window in a star like formation. It uses multiple colors and multiple patterns. ")
+DefaultFlags=-cycle
+Demo=starfish -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Fast")
+
+RightLabel=_("Slow")
+
+ValType=I[1-1000000]=10000
+Label=_("Speed of animation.")
+
+Comment=_("Change the animation step delay.")
+
+[Arg2]
+Name=_("Thickness")
+Type=NRange
+LeftLabel=_("Slim")
+
+RightLabel=_("Wide")
+
+Flag=-thickness
+ValType=I[0-15]=0
+Label=_("Thickness of color bands (0 = Random)")
+
+Comment=_("Change the thickness of color bands.")
+
+[Arg3]
+Name=_("Rotation")
+Type=NRange
+LeftLabel=_("Slow")
+
+RightLabel=_("Fast")
+
+Flag=-rotation
+ValType=I[0-12]=0
+Label=_("Quickness of rotation at each step (0 = Random)")
+
+Comment=_("Change the quickness of rotation at each step.")
+
+[Arg5]
+Name=_("Duration")
+Type=NRange
+LeftLabel=_("Seconds")
+
+Flag=-duration
+ValType=I[1-60]=30
+Label=_("Duration of current shape.")
+
+Comment=_("How long to run before choosing a new shape.")
+
+[Arg7]
+Name=_("Blob")
+Type=Check
+LeftLabel=_("Use raw shapes ")
+
+Flag=-blob
+Flag2=-no-blob
+Comment=_("Change the number of colors to use in star.")
+
+[Arg8]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Change to display in monochrome.")
+
+Comment=_("Change to display in monochrome.")

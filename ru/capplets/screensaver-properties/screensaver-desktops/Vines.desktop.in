@@ -1,0 +1,32 @@
+[Desktop Entry]
+Name=_("Vines")
+Comment=_("draws pseudo-fractal geometric patterns")
+Exec=xscreensaver-command -activate
+TryExec=vines
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=vines.png
+Author=Tracy Camp
+ExtendedComment=_("The vines program is yet another geometric pattern generator, this one's claim to fame being a pseudo-fractal looking vine like pattern that creates nifty whirls and loops.")
+Demo=vines -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+Flag=-ncolors
+ValType=I[1-256]=200
+Label=_("Number of Colors")
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+Comment=_("Change to display in monochrome.")

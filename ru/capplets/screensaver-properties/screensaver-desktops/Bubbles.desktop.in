@@ -1,0 +1,64 @@
+[Desktop Entry]
+Name=_("Bubbles")
+Comment=_("Lots of random bubbles grow until they pop.")
+Exec=xscreensaver-command -activate
+TryExec=bubbles
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=bubbles.png
+Author=James Macnicol <J.Macnicol@student.anu.edu.au>
+ExtendedComment=_("Bubbles sprays tiny bubbles which grow until they go pop.")
+Demo=bubbles -delay 2
+
+[Arg0]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+ValType=I[1-500000]=2
+
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg1]
+Name=_("Simple")
+Type=Check
+Flag=-simple
+Flag2=
+LeftLabel=_("Draw circles instead of pixmap bubbles.")
+
+Comment=_("Draw circles instead of pixmap bubbles.")
+
+[Arg2]
+Name=_("Broken")
+Type=Check
+Flag=-broken
+Flag2=
+LeftLabel=_("Don't hide bubbles when they pop.")
+
+Comment=_("Don't hide bubbles when they pop.")
+
+[Arg3]
+Name=_("3D")
+Type=Check
+Flag=-3D
+Flag2=
+LeftLabel=_("Bubbles exist in three dimensions.")
+
+Comment=_("Bubbles exist in three dimensions.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

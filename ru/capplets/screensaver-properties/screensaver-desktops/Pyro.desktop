@@ -1,0 +1,80 @@
+[Desktop Entry]
+Name=Pyro
+Name[ca]=PirotХcnia
+Name[da]=FyrvФrkeri
+Name[fr]=Pyro
+Name[no]=Pyro
+Name[ru]=Салют
+Name[uk]=Салют
+Comment=Simulates fireworks
+Comment[da]=FyrvФrkerisimulation
+Comment[no]=simulerer fyrverkeri
+Comment[uk]=моделювання салюту
+Exec=xscreensaver-command -activate
+TryExec=pyro
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=pyro.png
+Author=Jamie Zawinski
+ExtendedComment=The pyro program simulates fireworks.
+ExtendedComment[no]=Pyro programmet simulerer fyrverkeri.
+ExtendedComment[uk]=Програма моделю╓ салют
+Demo=pyro -count 1000 -scatter 100
+
+[Arg0]
+Name=Count
+Type=NRange
+LeftLabel=Count:
+LeftLabel[no]=Antall:
+LeftLabel[uk]=Число:
+Flag=-count
+ValType=I[20-1000]=100
+Label=Particles on screen
+Label[no]=Partikler pЕ skjermen
+Label[uk]=Часток на екран╕
+Comment=How many particles should be allowed on the screen at once.
+Comment[no]=Hvor mange partikler skal tillates vist pЕ skjermen samtidig.
+Comment[uk]=Як багато часток може бути на екран╕ одночасно.
+
+[Arg1]
+Name=Frequency
+Type=LRange
+LeftLabel=Slower
+LeftLabel[no]=Saktere
+LeftLabel[uk]=Пов╕льн╕ше
+RightLabel=Faster
+RightLabel[no]=Raskere
+RightLabel[uk]=Швидше
+
+Flag=-frequency
+ValType=I[10-100]=30
+Label=Frequency of missile launch
+Label[no]=Frekvens pЕ rakettoppskyting
+Label[uk]=Частота вибух╕в
+Comment=Changes frequency of missile launch.
+Comment[no]=Endrer frekvensen pЕ rakettoppskyting.
+Comment[uk]=Зм╕на частоти вибух╕в.
+
+[Arg2]
+Name=Scatter
+Name[no]=Spre
+Type=LRange
+LeftLabel=Less
+LeftLabel[no]=Mindre
+LeftLabel[uk]=Менша
+RightLabel=More
+RightLabel[no]=Mer
+RightLabel[uk]=Б╕льша
+
+Flag=-scatter
+ValType=I[10-100]=20
+Label=Number of particles
+Label[no]=Antall partikler
+Label[uk]=Число часток
+Comment=How many particles should appear when a missile explodes.
+Comment[no]=Hvor mange partikler skal komme til syne nЕr en rakett eksploderer.
+Comment[uk]=Як багато може утворитися п╕сля вибуху.

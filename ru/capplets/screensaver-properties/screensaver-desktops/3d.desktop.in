@@ -1,0 +1,67 @@
+[Desktop Entry]
+Name=_("3D Clock")
+Comment=_("This draws a working analog clock composed of floating, throbbing bubbles.")
+Exec=xscreensaver-command -activate
+TryExec=t3d
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=3d.png
+Author=Bernd Paysan
+ExtendedComment=_("Time 3D is a clock.  It uses flying balls to display the time.  The balls move and wobble around to give you the impression your graphic workstation with its many XStone is doing something.")
+Demo=t3d
+
+[Arg0]
+Name=Twist
+Type=LRange
+LeftLabel=_("Low")
+
+RightLabel=_("High")
+
+Flag=-move
+ValType=I[0-3]=1
+Label=_("Twist:")
+
+Comment=_("Modifies the direction move.")
+
+[Arg3]
+Name=_("Speed")
+Type=LRange
+LeftLabel=_("Slow")
+
+RightLabel=_("Fast")
+
+Flag=-cycle
+ValType=I[5-20]=10
+Label=_("Twist speed:")
+
+Comment=_("Sets the moving cycle time.")
+
+[Arg1]
+Name=_("Wobble")
+Type=LRange
+LeftLabel=_("Low")
+
+RightLabel=_("High")
+
+Flag=-wobble
+ValType=I[0-5]=2
+Label=_("Wobble:")
+
+Comment=_("Modifies the wobbling.")
+
+[Arg2]
+Name=_("Size")
+Type=LRange
+LeftLabel=_("Small")
+
+RightLabel=_("Large")
+
+Flag=-mag
+ValType=I[1-5]=2
+Label=_("Size:")
+
+Comment=_("Changes the magnification of original picture.")

@@ -1,0 +1,35 @@
+[Desktop Entry]
+Name=_("Braid")
+Comment=_("Random color-cycling braids in a circle.")
+Exec=xscreensaver-command -activate
+TryExec=braid
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=braid.png
+Author=John Neil <neil@math.idbsu.edu>
+ExtendedComment=_("The braid program draws random color-cycling braids around a circle.")
+Demo=braid -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=64
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

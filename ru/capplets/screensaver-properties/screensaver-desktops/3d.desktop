@@ -1,0 +1,163 @@
+[Desktop Entry]
+Name=3D Clock
+Name[ca]=Rellotge 3D
+Name[cs]=3D hodiny
+Name[da]=3d-ur
+Name[de]=3D-Uhr
+Name[es]=Reloj 3D
+Name[fi]=3D-kello
+Name[fr]=Horloge 3D
+Name[no]=3D-klokke
+Name[pt_BR]=RelСgio 3D
+Name[uk]=Тривим╕рний годинник
+Name[wa]=тrlodje 3D
+Comment=This draws a working analog clock composed of floating, throbbing bubbles.
+Comment[ca]=Dibuixa un rellotge analРgic fet de bombolles que suren i bateguen.
+Comment[cs]=Vykresluje z bublin jdoucМ analogovИ hodiny.
+Comment[de]=Stellt eine funktionierende, analoge Uhr aus schwebenden  pulsierenden Blasen dar.
+Comment[es]=Dibuja un reloj a agujas con burbujas flotantes en tres dimensiones.
+Comment[fi]=PiirtДД toimivan viisarikellon leijuvista, sykkivistД kuplista.
+Comment[fr]=Horloge analogique composИe de bulles flottantes
+Comment[no]=Denne viser en analog klokke sammensatt av flytende, pulserende bobler.
+Comment[pt_BR]=Desenha um relСgio analСgico composto de bolhas flutuantes
+Comment[uk]=Працюючий аналоговий годинник з бульбашок
+Comment[wa]=тrlodje a aweyes, fwaite avou des boles Х 3D flotantes.
+Exec=xscreensaver-command -activate
+TryExec=t3d
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=3d.png
+Author=Bernd Paysan
+ExtendedComment=Time 3D is a clock.  It uses flying balls to display the time.  The balls move and wobble around to give you the impression your graphic workstation with its many XStone is doing something.
+ExtendedComment[fi]=3D-kello kДyttДД leijuvia palloja ajan nДyttДmiseen. Pallot liikkuvat ja saattavat saada aikaan vaikutelman, ettД tehokas tyЖkoneesi tekeekin jotain.
+ExtendedComment[no]=Tid 3D er en klokke. Den bruker flygende baller til Е vise tiden. Ballene beveger seg rundt og skjelver for Е gi deg intrykket av at din grafiske arbeidsstasjon, med sine mange XStone, faktisk gjЬr noe.
+ExtendedComment[pt_BR]=O `Time 3D' И um relСgio. Ele usa bolas voadoras para mostrar a hora.
+ExtendedComment[uk]=Годинник використовуючий бульбашки для показу часу.
+Demo=t3d
+
+[Arg0]
+Name=Twist
+Type=LRange
+LeftLabel=Low
+LeftLabel[fi]=Kierto
+LeftLabel[no]=Liten
+LeftLabel[pt_BR]=Baixo
+LeftLabel[uk]=Менший
+
+RightLabel=High
+RightLabel[fi]=Suuri
+RightLabel[no]=Stor
+RightLabel[pt_BR]=Alto
+RightLabel[uk]=Б╕льший
+
+Flag=-move
+ValType=I[0-3]=1
+Label=Twist:
+Label[fi]=Kierto:
+Label[no]=Vridning:
+Label[uk]=Поворот:
+
+Comment=Modifies the direction move.
+Comment[fi]=Muuttaa liikkumissuuntaa.
+Comment[no]=Endrer vridningen i bevegelsene.
+Comment[uk]=Зм╕ни величини повороту
+
+[Arg3]
+Name=Speed
+Type=LRange
+LeftLabel=Slow
+LeftLabel[es]=Lento
+LeftLabel[eu]=Astiro
+LeftLabel[fi]=Nopeus
+LeftLabel[fr]=Lent
+LeftLabel[ja]=цы╓╓
+LeftLabel[no]=Sakte
+LeftLabel[pt]=Lento
+LeftLabel[pt_BR]=Lento
+LeftLabel[ru]=Медленнее
+LeftLabel[uk]=Пов╕льш╕ше
+LeftLabel[wa]=Londjin
+
+RightLabel=Fast
+RightLabel[es]=RАpido
+RightLabel[eu]=Arin
+RightLabel[fi]=Nopea
+RightLabel[fr]=Rapide
+RightLabel[ja]=б╝╓╓
+RightLabel[no]=Rask
+RightLabel[pt]=RАpido
+RightLabel[pt_BR]=RАpido
+RightLabel[ru]=Быстрее
+RightLabel[uk]=Швидше
+RightLabel[wa]=Roed
+
+Flag=-cycle
+ValType=I[5-20]=10
+Label=Twist speed:
+Label[fi]=Kiertonopeus:
+Label[no]=Bevegelsestid:
+Label[uk]=Швидк╕сть повороту:
+
+Comment=Sets the moving cycle time.
+Comment[fi]=Asettaa pyЖrimisajan.
+Comment[no]=Setter syklustiden for bevelgelsene.
+Comment[pt_BR]=Configura o tempo de movimento
+
+[Arg1]
+Name=Wobble
+Type=LRange
+LeftLabel=Low
+LeftLabel[fi]=Pieni
+LeftLabel[no]=Lav
+LeftLabel[pt_BR]=Baixo
+LeftLabel[uk]=Менше
+
+RightLabel=High
+RightLabel[fi]=Suuri
+RightLabel[no]=HЬy
+RightLabel[pt_BR]=Alto
+RightLabel[uk]=Б╕льше
+
+Flag=-wobble
+ValType=I[0-5]=2
+Label=Wobble:
+Label[fi]=Huojunta:
+Label[no]=Skjelving:
+Label[uk]=Виляння:
+
+Comment=Modifies the wobbling.
+Comment[fi]=Muuttaa huojuntaa.
+Comment[no]=Endrer skjelvingen.
+Comment[uk]=Зм╕на виляння.
+
+[Arg2]
+Name=Size
+Type=LRange
+LeftLabel=Small
+LeftLabel[fi]=Pieni
+LeftLabel[no]=Liten
+LeftLabel[pt_BR]=Pequeno
+LeftLabel[uk]=Менший
+
+RightLabel=Large
+RightLabel[fi]=Suuri
+RightLabel[no]=Stor
+RightLabel[pt_BR]=Grande
+RightLabel[uk]=Б╕льший
+
+Flag=-mag
+ValType=I[1-5]=2
+Label=Size:
+Label[fi]=Koko:
+Label[no]=StЬrrelse:
+Label[pt_BR]=Tamanho:
+Label[uk]=Розм╕р:
+
+Comment=Changes the magnification of original picture.
+Comment[fi]=Muuttaa alkuperДisen kuvan suurennosta.
+Comment[no]=Endrer stЬrrelsen pЕ det opprinnelige bildet.
+Comment[uk]=Зм╕на зб╕льшення ориг╕нального зображення

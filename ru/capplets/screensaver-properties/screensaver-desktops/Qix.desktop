@@ -1,0 +1,218 @@
+[Desktop Entry]
+Name=Qix
+Name[ca]=Qix
+Name[da]=Qix
+Name[es]=Qix
+Name[fi]=Qix
+Name[fr]=Qix
+Name[no]=Qix
+Name[uk]=Qix
+Comment=Bounce colored lines around a window.
+Comment[ca]=Rebota lМnies de colors per una finestra.
+Comment[es]=Rebota lineas de colores en una ventana
+Comment[fi]=Kimpoilevia vДrillisiД viivoja.
+Comment[fr]=Des lignes de couleurs qui rebondissent Ю l'Иcran
+Comment[no]=Fargede linjer spretter rundt i et vindu.
+Comment[ru]=Отскакивающие от краев окна цветные линии.
+Comment[uk]=В╕дскакуюч╕ в╕д пол╕в в╕кна кольоров╕ л╕н╕╖.
+Exec=xscreensaver-command -activate
+TryExec=qix
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=qix.png
+Author=Jamie Zawinski <jwz@jwz.org>
+ExtendedComment=Qix bounces a series of line segments around its window. This is truly the swiss army chainsaw of qix programs.
+ExtendedComment[ca]=╚Qix╩ fa rebotar un grup de segments arreu de la finestra. Aquest Иs certament la mЮscara de proa dels protectors de pantalla.
+ExtendedComment[es]=Qix hace rebotar una seria de lineas de colores sobre los bordes de la pantalla. Se trata del gran clАsico de los protege pantallas.
+ExtendedComment[fr]=Qix fait rebondir une sИrie de segments de droites de couleurs sur les bords de l'Иcran; c'est le classique indИmodable des protecteurs d'Иcran.
+ExtendedComment[no]=I Qix spretter en rekke av linjesegmenter rundt i vinduet Dett er virkelig den sveitsiske motorsagen blant qix programmer.
+ExtendedComment[ru]=В Qix, набор цветных линий  летает\n по экрану, отскакивая от краев. Это воистину\n бензопила швейцарской армии всех qix программ.
+ExtendedComment[uk]=В Qix, наб╕р кольорових л╕н╕й л╕та╓ на екран╕, в╕дскакуючи в╕д кра╖в. Это насправд╕ пила швейцарсько╖ арм╕╖ вс╕х qix програм.
+DefaultFlags=-linear
+Demo=qix -linear
+
+[Arg0]
+Name=Speed
+Type=LRange
+LeftLabel=Fast
+LeftLabel[ca]=RЮpid
+LeftLabel[es]=RАpido
+LeftLabel[fr]=Rapide
+LeftLabel[no]=Fort
+LeftLabel[ru]=Быстро
+LeftLabel[uk]=Швидше
+
+RightLabel=Slow
+RightLabel[ca]=Lent
+RightLabel[es]=Lento
+RightLabel[fr]=Lent
+RightLabel[no]=Sakte
+RightLabel[ru]=Медленно
+RightLabel[uk]=Пов╕льн╕ше
+
+Flag=-delay
+ValType=I[10000-65000]=15000
+Label=Speed:
+Label[ca]=Velocitat:
+Label[es]=Velocidad:
+Label[fr]=Vitesse:
+Label[no]=Hastighet:
+Label[ru]=Скорость:
+Label[uk]=Швидк╕сть:
+
+Comment=Changes the speed at which the Qix moves.
+Comment[ca]=Canvia la velocitat de moviment del Qix.
+Comment[es]=Cambia la velocidad a la que se mueve la estructura
+Comment[fr]=Change la vitesse de dИplacement de la structure
+Comment[no]=Endre hastigheten som Qix beveger seg i.
+Comment[ru]=Изменяет скорость движения линий.
+Comment[uk]=Зм╕на швидкост╕ руху л╕н╕й.
+
+[Arg2]
+Name=Count
+Type=NRange
+ValType=I[1-8]=1
+Flag=-count
+Label=Count:
+Label[ca]=Nombre de Qix
+Label[es]=Conteo:
+Label[fr]=QuantitИ:
+Label[no]=Antall:
+Label[ru]=Колличество:
+Label[uk]=К╕льк╕сть:
+
+LeftLabel=Number of Qix:
+Label[ca]=Nombre:
+LeftLabel[es]=Cantidad de Qix:
+LeftLabel[fr]=Nombre de Qix:
+LeftLabel[no]=Antall Qix:
+LeftLabel[ru]=Колличество Qix-ов:
+LeftLabel[uk]=К╕льк╕сть Qix:
+
+Comment=Sets the number of Qix you have running at once.
+Comment[ca]=Estableix el nombre de Qix simultanis a la finestra.
+Comment[es]=Define la cantidad de "Qix" que corren por la pantalla al mismo tiempo.
+Comment[fr]=Definit le nombre de ╚═Qix═╩ prИsents en mЙme temps.
+Comment[no]=Setter antallet qix som kjЬrer samtidig.
+Comment[ru]=Задает колличество бегущих одновременно Qix-ов.
+Comment[uk]=Встановлю╓ к╕льк╕сть одночасно б╕гаючих Qix.
+
+[Arg1]
+Name=Segments
+Type=LRange
+Label=Length of the Trail:
+Label[ca]=Longitud del rastre
+Label[es]=DimensiСn de la cola:
+Label[fr]=Taille de la trainИe:
+Label[no]=Lengden pЕ sporet:
+Label[ru]=Длинна следа:
+Label[uk]=Довжини сл╕да:
+
+ValType=I[1-1000]=50
+Flag=-segments
+LeftLabel=Small
+LeftLabel[ca]=Curt
+LeftLabel[es]=Corta
+LeftLabel[fr]=Courte
+LeftLabel[no]=Liten
+LeftLabel[ru]=Короткий
+LeftLabel[uk]=Коротше
+
+RightLabel=Large
+RightLabel[ca]=Llarg
+RightLabel[es]=Larga
+RightLabel[fr]=Longue
+RightLabel[no]=Stor
+RightLabel[ru]=Длинный
+RightLabel[uk]=Довше
+
+Comment=Sets the number of line segments to be drawn.
+Comment[ca]=Estableix el nombre de rastres a dibuixar.
+Comment[es]=Define la cantidad de lineas paralelas que se dibujarАn.
+Comment[fr]=Definit le nombre de lignes parallХles de la structure.
+Comment[no]=Setter antall linjesegmenter som skal tegnes opp.
+Comment[ru]=Задает число отрезков в Qix-е.
+Comment[uk]=Встановлю╓ число в╕др╕зк╕в у Qix.
+
+[Arg3]
+Name=Spread
+Type=LRange
+ValType=I[1-400]=50
+Flag=-spread
+Label=Width of segment:
+Lebel[ca]=SeparaciС entre rastres
+Label[es]=Ancho:
+Label[fr]=Largeur:
+Label[no]=Bredden pЕ segmentet:
+Label[ru]=Ширина:
+Label[uk]=Ширина:
+
+LeftLabel=Small
+LeftLabel[ca]=Menuda
+LeftLabel[es]=Estrecho
+LeftLabel[fr]=иtroite
+LeftLabel[no]=Liten
+LeftLabel[ru]=Маленькая
+LeftLabel[uk]=Менша
+
+RightLabel=Large
+RightLabel[ca]=Gran
+RightLabel[es]=Ancho
+RightLabel[fr]=Large
+RightLabel[no]=Stor
+RightLabel[ru]=Большая
+RightLabel[uk]=Б╕льша
+
+Comment=Sets the distance between each line segment.
+Comment[ca]=Estableix la distЮncia entre segments paral╥lels.
+Comment[es]=Distancia entre las lineas.
+Comment[fr]=Distance entre les lignes.
+Comment[no]=Setter avstanden mellom hvert linjesegment.
+Comment[ru]=Задает расстояние между отрезками.
+Comment[uk]=Встановлю╓ в╕дстань м╕ж в╕др╕зками.
+
+[Arg4]
+Name=Solid
+Type=Check
+Flag=-solid
+Flag2=-hollow
+LeftLabel=Draw solid Qix.
+LeftLAbel[ca]=Dibuixar Qix sРlid
+LeftLabel[es]=SСlido
+LeftLabel[fr]=Solide
+LeftLabel[no]=Tegn helfylt Qix.
+LeftLabel[ru]=Непрерывный Qix.
+LeftLabel[uk]=Безпереривний Qix.
+
+Comment=Determines whether to fill in the gaps between the lines.
+Comment[ca]=Determina si s'emplenaran els buits entre lМnies.
+Comment[es]=Determina si se debe o no dibujar un "Qix" sСlido.
+Comment[fr]=Determine s'il faut dessiner un ╚═Qix═╩ solide.
+Comment[no]=Bestem om hullene mellom linjene skal fylles.
+Comment[ru]=Заполнять промежуток между отрезками.
+Comment[uk]=Заповнювати пром╕жок м╕ж в╕др╕зами.
+
+[Arg5]
+Name=Random
+Type=Check
+Flag=-random
+Flag2=-linear
+LeftLabel=Set random motion for the Qix.
+LeftLabel[ca]=Moviment aleatori
+LeftLabel[es]=Movimiento aleatorio
+LeftLabel[fr]=Mouvement alИatoire
+LeftLabel[no]=Sett vilkЕrlig bevegelse for Qix.
+LeftLabel[ru]=Случайное отскакивание от стен.
+LeftLabel[uk]=Випадкове в╕дбивання.
+
+Comment=Determines whether the lines move erraticly, or bounce off the walls linearly.
+Comment[ca]=Determina si les lМnies es mouen aleatРriament, o si reboten linealment a les parets.
+Comment[es]=Determina si las lineas se mueven de manera errАtica, o si tienen que rebotar de manera lineal.
+Comment[fr]=Determine si les lignes se meuvent de faГon erratique, ou si elles doivent rebondire de faГon linИaire.
+Comment[no]=Bestemmer om linjene beveger seg uten mЬnster, eller spretter fra veggene lineФrt.
+Comment[ru]=Заменить линейное отражение на случайное отскакивание.
+Comment[ru]=Визнача╓ чи л╕н╕╖ рухаються випадково чи л╕н╕йно.

@@ -1,0 +1,93 @@
+[Desktop Entry]
+Name=_("Attraction")
+Comment=_("A show of objects interacting through attractive and repulsive forces.")
+Exec=xscreensaver-command -activate
+TryExec=attraction
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=attraction.png
+Author=Jamie Zawinski <jwz@netscape.com>
+ExtendedComment=_("Attraction is based on interactions of points which attract each other up to a certain distance and then begin to repel each other.")
+DefaultFlags=-root
+Demo=attraction -delay 2
+
+[Arg0]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+
+Flag=-points
+ValType=I[2-50]=9
+Label=_("Number of points to use.")
+
+Comment=_("Change the number of points to use.")
+
+[Arg1]
+Name=_("Threshold")
+Type=LRange
+Flag=-threshold
+LeftLabel=_("Closer")
+
+RightLabel=_("Farther")
+
+ValType=I[1-1000]=100
+Label=_("Distance of attraction.")
+
+Comment=_("Change distance at which attractive force becomes repulsive.")
+
+[Arg2]
+Name=_("Size")
+Type=LRange
+Flag=-size
+LeftLabel=_("Size of point.")
+
+Comment=_("Change size of points.")
+
+[Arg3]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg4]
+Name=_("Radius")
+Type=LRange
+Flag=-radius
+LeftLabel=_("Smaller")
+
+RightLabel=_("Larger")
+
+ValType=I[50-400]=200
+Label=_("Initial spacing radius of points.")
+
+Comment=_("Change the spacing radius of the points.")
+
+[Arg5]
+Name=_("Glow")
+Type=Check
+Flag=-glow
+Flag2=
+LeftLabel=_("Have points glow vary with acceleration.")
+
+Comment=_("Have points glow vary with acceleration.")
+
+[Arg6]
+Name=_("Orbit")
+Type=Check
+Flag=-orbit
+Flag2=
+LeftLabel=_("Have initial forces on each point be tangential to original circle.")
+
+Comment=_("Have initial forces on each point be tangential to original circle.")
+

@@ -1,0 +1,61 @@
+[Desktop Entry]
+Name=_("Cynosure")
+Comment=_("Franticly displays colored rectangles.")
+Exec=xscreensaver-command -activate
+TryExec=cynosure
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=cynosure.png
+Author=Stephen Linhart, Ozymandias Desiderata, Jamie Zawinski
+ExtendedComment=_("Cynosure franticly displays colored rectangles.")
+Demo=cynosure -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=64
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Iterations")
+Type=LRange
+Flag=-iterations
+LeftLabel=_("Less")
+
+RightLabel=_("More")
+
+ValType=I[1-100]=2
+Label=_("Number of iterations.")
+
+Comment=_("Change the number of iterations.")
+
+[Arg2]
+Name=_("Delay")
+Type=LRange
+Flag=-delay
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg3]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

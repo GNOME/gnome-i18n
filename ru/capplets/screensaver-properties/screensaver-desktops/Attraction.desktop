@@ -1,0 +1,228 @@
+[Desktop Entry]
+Name=Attraction
+Name[ca]=Atrakce
+Name[da]=Tiltrækning
+Name[cs]=Pøita¾livost
+Name[es]=Atracción
+Name[fr]=Attraction
+Name[no]=Tiltrekning
+Name[pt_BR]=Atração
+Name[ru]=ğÒÉÔÑÖÅÎÉÅ
+Name[uk]=ôÑÖ¦ÎÎÑ
+Comment= A show of objects interacting through attractive and repulsive forces.
+Comment[ca]=Un conjunt d'objectes que interaccionen mitjançant forces atractives i repulsives.
+Comment[cs]=Zobrazuje objekty reagující pøita¾livımi a odpudivımi silami.
+Comment[es]=Varios objetos que interaccionan con fuerzas atractivas y repulsivas.
+Comment[fr]=Un show qui montre plusieurs objets qui interagissent avec des forces attractives et répulsives.
+Comment[no]=En visning av objekter som blir påvirket av tiltrekkende og frastøtende krefter.
+Comment[pt_BR]=Diversos objetos interagindo através de forças atrativas e repulsivas.
+Comment[ru]=ğÏËÁÚÙ×ÁÅÔ ÏÂßÅËÔÙ ×ÚÁÉÍÏÄÅÊÓÔ×ÕÀİÉÅ ÓÉÌÁÍÉ ĞÒÉÔÑÖÅÎÉÑ É ÏÔÔÁÌËÉ×ÁÎÉÑ.
+Comment[uk]=ïÂ'¤ËÔÉ ×ÚÁ¤ÍÏÄ¦ÀŞ¦ Í¦Ö ÓÏÂÏÀ ŞÅÒÅÚ ÓÉÌÉ ÔÑÖ¦ÎÎÑ ÔÁ ×¦ÄÛÔÏ×ÈÕ×ÁÎÎÑ.
+Exec=xscreensaver-command -activate
+TryExec=attraction
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=attraction.png
+Author=Jamie Zawinski <jwz@netscape.com>
+ExtendedComment=Attraction is based on interactions of points which attract each other up to a certain distance and then begin to repel each other.
+ExtendedComment[ca]=«Atracció» es basa en interaccions entre punts que s'atrauen fins una distància determinada i aleshores comencen a repel·lir-se.
+ExtendedComment[es]=Attraction está basado en las interacciones entre puntos que se atraen o repelan mutualmente, en relación con la distancia.
+ExtendedComment[fr]=Attraction est basé sur des points qui s'attirent mutuellement et qui, en deçà d'une certaine distance, se répoussent.
+ExtendedComment[no]=Attraksjon er basert på interaksjon mellom punkter som tiltrekker hverandre opp til en viss avstand og så begynner å frastøte hverandre.
+ExtendedComment[ru]=ğÒÉÔÑÖÅÎÉÅ ÏÓÎÏ×ÁÎÏ ÎÁ ×ÚÁÉÍÏÄÅÊÓÔ×ÉÉ ÔÏŞÅË ËÏÔÏÒÙÅ ĞÒÉÔÑÇÉ×ÁÀÔÓÑ ÄÒÕÇ Ë ÄÒÕÇÕ ÎÁ ÎÅËÏÔÏÒÙÈ ÒÁÓÓÔÏÑÎÉÑÈ Á ÚÁÔÅÍ ÎÁŞÉÎÁÀÔ ÏÔÔÁÌËÉ×ÁÔØÓÑ.
+DefaultFlags=-root
+Demo=attraction -delay 2
+
+[Arg0]
+Name=Count
+Name[ru]=ëÏÌÉŞÅÓÔ×Ï
+Type=NRange
+LeftLabel=Count:
+LeftLabel[ca]=Quantitat:
+LeftLabel[es]=Cantidad:
+LeftLabel[fr]=Nombre:
+LeftLabel[no]=Antall:
+LeftLabel[ru]=ëÏÌÉŞÅÓÔ×Ï:
+LeftLabel[wa]=Nombe:
+
+Flag=-points
+ValType=I[2-50]=9
+Label=Number of points to use.
+Label[ca]=Nombre de punts
+Label[es]=Cantidad de puntos a usar.
+Label[fr]=Nombre de points à utiliser.
+Label[no]=Antall punkter som skal brukes.
+Label[ru]=şÉÓÌÏ ÉÓĞÏÌØÚÕÅÍÙÈ ÔÏŞÅË.
+Label[wa]=Nombe di ponts a eployî.
+
+Comment=Change the number of points to use.
+Comment[ca]=Canvia el nombre de punts a usar.
+Comment[es]=Cambiar la cantidad de puntos de la animación.
+Comment[fr]=Changer le nombre de points de la scène.
+Comment[no]=Endre antall punkter som skal brukes.
+Comment[wa]=Candjî li nombe di ponts a eployî.
+
+[Arg1]
+Name=Threshold
+Type=LRange
+Flag=-threshold
+LeftLabel=Closer
+LeftLabel[ca]=Prop
+LeftLabel[es]=Cercana
+LeftLabel[fr]=Proche
+LeftLabel[no]=Nærmere
+
+RightLabel=Farther
+RightLabel[ca]=Lluny
+RightLabel[es]=Distante
+RightLabel[fr]=Distant
+RightLabel[no]=Fjernere
+
+ValType=I[1-1000]=100
+Label=Distance of attraction.
+Label[ca]=Distància d'atracció
+Label[es]=Distancia de atracción.
+Label[fr]=Distance d'attraction.
+Label[no]=Avstand for tiltrekning.
+
+Comment=Change distance at which attractive force becomes repulsive.
+Comment[ca]=Canvia la distància on la força atractiva esdevé repulsiva.
+Comment[es]=Cambiar la distancia a partir de la cual las fuerzas se inversan.
+Comment[fr]=Changer la distance à partir de laquelle les forces s'inversent.
+Comment[no]=Endre avstanden hvor tiltrekkende krefter blir frastøtende.
+
+[Arg2]
+Name=Size
+Type=LRange
+Flag=-size
+LeftLabel=Size of point.
+LeftLabel[ca]=Tamany del punt
+LeftLabel[es]=Tamaño de los puntos 
+LeftLabel[fr]=Taille des points
+LeftLabel[no]=Størrelse på punkt
+LeftLabel[wa]=Grandeu des ponts
+
+Comment=Change size of points.
+Comment[ca]=Canvia el tamany dels punts.
+Comment[es]=Cambiar el tamaño de los puntos.
+Comment[fr]=Changer la taille des points.
+Comment[no]=Endre størrelse på punkter.
+Comment[wa]=Candjî li grandeu des ponts.
+
+[Arg3]
+Name=Delay
+Type=LRange
+Flag=-delay
+LeftLabel=Faster
+LeftLabel[ca]=Ràpid
+LeftLabel[es]=Rápido
+LeftLabel[eu]=Arin
+LeftLabel[fr]=Rapide
+LeftLabel[ja]=Â®¤¤
+LeftLabel[no]=Fortere
+LeftLabel[pt]=Rápido
+LeftLabel[ru]=âÙÓÔÒÅÅ
+LeftLabel[wa]=Roed
+
+RightLabel=Slower
+RightLabel[ca]=Lent
+RightLabel[es]=Lento
+RightLabel[eu]=Astiro
+RightLabel[fr]=Lent
+RightLabel[ja]=ÃÙ¤¤
+RightLabel[no]=Saktere
+RightLabel[pt]=Lento
+RightLabel[ru]=íÅÄÌÅÎÎÅÅ
+RightLabel[wa]=Londjin
+
+ValType=I[1-500000]=2
+Label=Speed of Motion.
+Label[ca]=Velocitat de moviment
+Label[es]=Velocidad de la animación
+Label[eu]=Animazioaren abiadura
+Label[fr]=Vitesse de l'animation
+Label[no]=Bevegelseshastighet.
+Label[pt]=Velocidade da animação
+Label[ru]=óËÏÒÏÓÔØ Ä×ÉÖÅÎÉÑ.
+Label[wa]=Roedeu di l' animåcion
+
+Comment=Change the delay in cycles.
+Comment[ca]=Canvia el retard en cicles.
+Comment[es]=Cambiar la duración entre los ciclos.
+Comment[eu]=Animazio abiadura aldatu.
+Comment[fr]=Changer la durée entre les cycles.
+Comment[no]=Endre pausen i sykluser.
+Comment[ru]=éÚÍÅÎÅÎÉÅ ÚÁÄÅÒÖËÉ × ÃÉËÌÁÈ.
+Comment[wa]=Candjî li roedeu di l' animåcion.
+
+[Arg4]
+Name=Radius
+Type=LRange
+Flag=-radius
+LeftLabel=Smaller
+LeftLabel[ca]=Menut
+LeftLabel[es]=Pequeño
+LeftLabel[fr]=Petit
+LeftLabel[ja]=¾®¤µ¤¤
+LeftLabel[no]=Mindre
+LeftLabel[wa]=Pitit
+
+RightLabel=Larger
+RightLabel[ca]=Gran
+RightLabel[es]=Grande
+RightLabel[fr]=Grand
+RightLabel[ja]=Âç¤­¤¤
+RightLabel[no]=Større
+RightLabel[wa]=Grand
+
+ValType=I[50-400]=200
+Label=Initial spacing radius of points.
+Label[ca]=Distància inicial entre punts
+Label[es]=Tamaño inicial del radio entre los puntos
+Label[fr]=Espacement initial des points
+Label[no]=Avstandsradiusen til punktene.
+
+Comment=Change the spacing radius of the points.
+Comment[ca]=Canvia la distància inicial entre els punts
+Comment[es]=Cambiar el radio de distribución de los puntos.
+Comment[fr]=Changer le rayon de distribution des points.
+Comment[no]=Endre avstandsradiusen til punktene.
+
+[Arg5]
+Name=Glow
+Type=Check
+Flag=-glow
+Flag2=
+LeftLabel=Have points glow vary with acceleration.
+LeftLabel[ca]=Augmentar la brillantor dels punts en accelerar
+LeftLabel[es]=Hacer que los puntos brillen con la acceleración
+LeftLabel[fr]=Faire que les points brillent avec l'accelération
+LeftLabel[no]=La punktenes glød variere med aksellerasjonen.
+
+Comment=Have points glow vary with acceleration.
+Comment[ca]=Fa que la brillantor dels punts augmente amb l'acceleració.
+Comment[es]=Hacer que los puntos brillen con la acceleración
+Comment[fr]=Faire que les points brillent avec l'acceleration
+Comment[no]=La punktenes glød variere med aksellerasjonen.
+
+[Arg6]
+Name=Orbit
+Type=Check
+Flag=-orbit
+Flag2=
+LeftLabel=Have initial forces on each point be tangential to original circle.
+LeftLabel[ca]=Fer les forces inicials tangents al cercle original
+LeftLabel[es]=Hacer que las fuerzas sean inicialmente tangenciales al círculo
+LeftLabel[fr]=Faire que les forces soient au départ tangentielles au cercle.
+LeftLabel[no]=La kreftene på hvert punkt være en tangent til den originale sirkelen.
+
+Comment=Have initial forces on each point be tangential to original circle.
+Comment[ca]=Fa que les forces inicials siguen tangents al cercle original.
+Comment[es]=Hacer que las fuerzas sean inicialmente tangenciales al círculo
+Comment[fr]=Faire que les forces soient au départ tangentielles au cercle.
+Comment[no]=La kreftene på hvert punkt være en tangent til den originale sirkelen.
+

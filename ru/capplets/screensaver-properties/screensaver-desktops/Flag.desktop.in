@@ -1,0 +1,60 @@
+[Desktop Entry]
+Name=_("Flag")
+Comment=_("Draws a waving flag.")
+Exec=xscreensaver-command -activate
+TryExec=flag
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=flag.png
+Author=Charles Vidal <vidalc@univ-mlv.fr>
+ExtendedComment=_("Flag draws a waving flab, containing text or an image.")
+DefaultFlags=-root
+Demo=flag -delay 2
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=64
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Cycles")
+Type=LRange
+Flag=-cycles
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[50-500000]=3000
+Label=_("Delay between switches.")
+
+Comment=_("Change the delay between changing modes.")
+
+[Arg3]
+Name=_("Size")
+Type=NRange
+LeftLabel=_("Size:")
+
+Flag=-size
+ValType=I[1-8]=4
+Label=_("Size of pixels")
+
+Comment=_("Change the size of pixels in the flag.")
+
+[Arg4]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")

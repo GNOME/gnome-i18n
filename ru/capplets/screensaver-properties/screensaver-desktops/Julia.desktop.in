@@ -1,0 +1,60 @@
+[Desktop Entry]
+Name=_("Julia")
+Comment=_("Draws spinning, animating, julia-set fractals.")
+Exec=xscreensaver-command -activate
+TryExec=julia
+Terminal=0
+Type=Application
+
+[Screensaver Data]
+WindowIdCommand=-window-id
+RootCommand=-root
+Icon=julia.png
+Author=Sean McCullough <bankshot@mailhost.nmt.edu>
+ExtendedComment=_("Julia draws spinning, animating, julia-set fractals.")
+Demo=julia -delay 2
+
+
+[Arg0]
+Name=_("Colors")
+Type=NRange
+LeftLabel=_("Colors:")
+
+Flag=-ncolors
+ValType=I[1-256]=100
+Label=_("Number of Colors.")
+
+Comment=_("Change the number of colors to use.")
+
+[Arg1]
+Name=_("Cycles")
+Type=LRange
+Flag=-cycles
+LeftLabel=_("Faster")
+
+RightLabel=_("Slower")
+
+ValType=I[1-500000]=2
+Label=_("Speed of Motion.")
+
+Comment=_("Change the delay in cycles.")
+
+[Arg2]
+Name=_("Count")
+Type=NRange
+LeftLabel=_("Count:")
+Flag=-count
+ValType=I[1-1000]=100
+
+Label=_("Number to use.")
+
+Comment=_("Change the number to use.")
+
+[Arg3]
+Name=_("Monochrome")
+Type=Check
+Flag=-mono
+Flag2=
+LeftLabel=_("Display screensaver in monochrome.")
+
+Comment=_("Change to display in monochrome.")
