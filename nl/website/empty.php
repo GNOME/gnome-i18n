@@ -5,7 +5,7 @@ include "functions.php";
 ?>
 
 <head>
-  <title>Gnome-nl -- </title>
+  <title>Gnome-nl -- Titel hier invoegen</title>
 <? html_head() ?>
 </head>
 <body>
@@ -18,7 +18,7 @@ gnome_menu();
 ?>
 <div class="content">
 
--empty-
+-Inhoud hier invoegen-
 </div>
 
 <? gnome_foot() ?>
