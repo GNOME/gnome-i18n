@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Firestarter\n"
-"POT-Creation-Date: 2000-09-07 21:34+0300\n"
+"POT-Creation-Date: 2001-12-18 17:59+0200\n"
 "PO-Revision-Date: 2000-09-13 12:38+0100\n"
 "Last-Translator: Luc Rems <luc.rems@flashpointsystems.net>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -13,27 +13,35 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/firestarter.c:56
-msgid "Firewall running"
-msgstr "Firewall actief"
-
-#: src/firestarter.c:59
+#: src/firestarter.c:65
 msgid "Firewall stopped"
 msgstr "Firewall inactief"
 
-#: src/firestarter.c:159 src/firestarter.c:203
+#: src/firestarter.c:70
+msgid "Firewall running"
+msgstr "Firewall actief"
+
+#: src/firestarter.c:75
+msgid "All traffic halted"
+msgstr ""
+
+#: src/firestarter.c:154 src/firestarter.c:218 src/firestarter.c:250
 msgid "You must be root to manipulate the firewall."
 msgstr "U moet root zijn om de firewall aan te passen."
 
-#: src/firestarter.c:177
+#: src/firestarter.c:192
 msgid "Firewall stopped, network traffic is now flowing freely\n"
 msgstr "Firewall inactief, netwerkverkeer heeft vrije doorgang\n"
 
-#: src/firestarter.c:209
+#: src/firestarter.c:224
 msgid "Firewall script restarted\n"
 msgstr "Firewall script herstart\n"
 
-#: src/firestarter.c:334
+#: src/firestarter.c:288
+msgid "All traffic halted\n"
+msgstr ""
+
+#: src/firestarter.c:380
 msgid ""
 "An all-in-one Linux firewall utility for GNOME.\n"
 "http://firestarter.sourceforge.net"
@@ -41,124 +49,132 @@ msgstr ""
 "De alles-in-één Linux Firewall voor GNOME.\n"
 "http://firestarter.sourceforge.net"
 
-#: src/firestarter.c:484
+#: src/firestarter.c:525 src/preferences.c:425
 msgid "Port"
 msgstr "Poort"
 
-#: src/firestarter.c:485
+#: src/firestarter.c:526
 msgid "Sent from"
 msgstr "Verstuurd van"
 
-#: src/firestarter.c:486
+#: src/firestarter.c:527 src/preferences.c:426
 msgid "Service"
 msgstr "Dienst"
 
-#: src/firestarter.c:487
+#: src/firestarter.c:528
 msgid "Time"
 msgstr "Tijdstip"
 
-#: src/firestarter.c:489
+#: src/firestarter.c:530
 msgid "Deny all connections from"
 msgstr "Blokkeer alle verbindingen van"
 
-#: src/firestarter.c:490
+#: src/firestarter.c:531
 msgid "Allow all connections from"
 msgstr "Sta alle verbindigen toe van"
 
-#: src/firestarter.c:491 src/menus.c:83
+#: src/firestarter.c:532 src/menus.c:89
 msgid "Open service to machine"
 msgstr "Open dienst naar machine"
 
-#: src/firestarter.c:492 src/menus.c:84
+#: src/firestarter.c:533 src/menus.c:90
 msgid "Open service to anyone"
 msgstr "Open dienst voor iedereen"
 
-#: src/firestarter.c:525
+#: src/firestarter.c:580
 msgid "Firewall hits"
 msgstr "Firewall hits"
 
-#. set up the clists on the dynamic rules page
-#: src/firestarter.c:534
+#. Set up the clists on the dynamic rules page
+#: src/firestarter.c:592
 msgid "Dynamic rules"
 msgstr "Dynamische regels"
 
-#: src/firestarter.c:567
-msgid "Logfile \""
-msgstr "Logbestand \""
+#: src/druid.c:210
+#, fuzzy
+msgid "Choose your skill level"
+msgstr "Kies uw externe apparaat"
 
-#: src/firestarter.c:568
+#: src/druid.c:218
 msgid ""
-"\" not found or access denied.\n"
-"Firewall log monitoring disabled.\n"
+"Please choose the skill level best suited to you.\n"
 "\n"
-"You can configure the path to the log file in the \"preferences\" section."
+"Simple is recommended for most workstation users with a single computer.\n"
+"Advanced presents you with more options and is meant for experienced users\n"
+"with machines acting as gateways."
 msgstr ""
-"\" niet gevonden of geen toegang.\n"
-"Firewall log monitoring uitgeschakeld.\n"
-"\n"
-"U kan het pad naar het logbestand configureren in \"Voorkeuren\"."
 
-#: src/druid.c:96
-msgid ""
-"The external and internal network interfaces\n"
-"can't be the same. Please change one of them,\n"
-"or alternatively disable IP Masquerading."
+#: src/druid.c:232
+#, fuzzy
+msgid "Simple firewall setup"
+msgstr "Stop firewall"
+
+#: src/druid.c:239
+msgid "Advanced firewall setup"
 msgstr ""
-"De externe en interne netwerkinterfaces\n"
-"kunnen niet dezelfde zijn. Gelieve één ervan te wijzigen,\n"
-"of als alternatief kan u IP Masquerading uitschakelen."
 
-#: src/druid.c:185
+#: src/druid.c:272
+msgid "Network Device Configuration"
+msgstr ""
+
+#: src/druid.c:280
+#, fuzzy
 msgid ""
-"Choose the device you connect to the Internet with.\n"
+"Please select your Internet connected network device from the\n"
+"drop-down list of detected devices.\n"
 "\n"
-"If you connect to the net by modem, your device name is likely ppp0. If you "
-"have an\n"
-"ISDN line or an ethernet connection, choose ippp0 or eth0 respectively."
+"If you use a modem your device name is likely ppp0. If you have a\n"
+"cable modem or a DSL connection, choose eth0."
 msgstr ""
 "Selecteer het apparaat waarmee u een internetverbindig maakt.\n"
 "\n"
-"Indien u op het net gaat met een modem, dan is dit ppp0. Indien u "
-"een\n"
+"Indien u op het net gaat met een modem, dan is dit ppp0. Indien u een\n"
 "ISDN of ethernet aansluiting heeft, kies dan respectievelijk ippp0 of eth0."
 
-#: src/druid.c:197
+#: src/druid.c:293
 msgid "Detected device(s):"
 msgstr "Gedetecteerde appara(a)t(en):"
 
-#: src/druid.c:202
+#: src/druid.c:298
 msgid ""
 "Select your network device from the dropdown list. Go with the default if "
 "unsure."
 msgstr ""
-"Kies uw netwerkapparaat uit de keuzelijst. Kies het standaardapparaat indien"
-"u niet zeker bent."
+"Kies uw netwerkapparaat uit de keuzelijst. Kies het standaardapparaat "
+"indienu niet zeker bent."
 
-#: src/druid.c:211
-msgid "Start Firestarter on PPP connect"
-msgstr "Start Firestarter bij PPP connectie"
+#: src/druid.c:307
+#, fuzzy
+msgid "Start the firewall on dial-out"
+msgstr "Start firewall bij het starten van het programma"
 
-#: src/druid.c:213
+#: src/druid.c:309
+#, fuzzy
 msgid ""
-"Check this option and the program will start when you dial your Internet "
-"service provider.Only available when using a modem."
+"Check this option and the firewall will start when you dial your Internet "
+"Service Provider. Only available when using a modem."
 msgstr ""
-"Activeer deze optie en het programma start automatisch wanneer u een internet "
-"verbinding maakt. Dit werkt enkel bij het inbellen via modem."
+"Activeer deze optie en het programma start automatisch wanneer u een "
+"internet verbinding maakt. Dit werkt enkel bij het inbellen via modem."
 
-#: src/druid.c:227
+#: src/druid.c:323
 msgid "IP address is assigned via DHCP"
 msgstr "IP adres wordt via DHCP toegekend"
 
-#: src/druid.c:229
+#: src/druid.c:325
 msgid ""
 "Check this option if you need to connect to a DHCP server. Cable modem users "
 "should check this."
 msgstr ""
-"Activeer deze optie indien u met een DHCP server moet verbinden. Eigenaars van "
-"kabelmodems moeten deze optie gebruiken."
+"Activeer deze optie indien u met een DHCP server moet verbinden. Eigenaars "
+"van kabelmodems moeten deze optie gebruiken."
 
-#: src/druid.c:260
+#: src/druid.c:365
+#, fuzzy
+msgid "IP Masquerade Configuration"
+msgstr "IP Masquerade instellen"
+
+#: src/druid.c:374
 msgid ""
 "Do you use IP Masquerading on your LAN, allowing all the machines on your "
 "network\n"
@@ -168,59 +184,73 @@ msgstr ""
 "netwerk\n"
 "te communiceren met het internet via één enkel IP adress?"
 
-#: src/druid.c:269
-msgid "No, I do not use IP Masquerading on my LAN"
-msgstr "Nee, ik gebruik geen IP Masquerading in mijn LAN"
-
-#: src/druid.c:274
-msgid ""
-"Yes, this machine translates the IP addresses of my LAN for the Internet"
+#: src/druid.c:383
+msgid "Disable masquerading"
 msgstr ""
-"Ja, deze machine vertaald de IP adressen van mijn LAN voor het internet"
 
-#: src/druid.c:292
+#: src/druid.c:390
+#, fuzzy
+msgid "Enable masquerading"
+msgstr "Activeer geluid"
+
+#: src/druid.c:410
 msgid "Select your internal network interface:"
 msgstr "Selecteer uw intern netwerkapparaat"
 
-#: src/druid.c:300
+#: src/druid.c:418
+#, fuzzy
 msgid ""
-"Select your internal network device from the dropdown list. Go with the "
-"default if unsure."
+"This is the device that connects to your LAN. Go with the default if unsure."
 msgstr ""
-"Selecteer uw intern netwerkapparaat uit de keuzelijst. Kies standaard "
-"indien u niet zeker bent."
+"Kies uw netwerkapparaat uit de keuzelijst. Kies het standaardapparaat "
+"indienu niet zeker bent."
 
-#: src/druid.c:308
+#: src/druid.c:426
 msgid "Autodetect internal network IP range"
 msgstr "Auto-detecteer intern netwerk IP-bereik"
 
-#: src/druid.c:310
+#: src/druid.c:428
 msgid "Select this and the IP range of your LAN is autodetected."
-msgstr "Selecteer dit en het IP-bereik van uw LAN wordt automatisch gedetecteerd."
+msgstr ""
+"Selecteer dit en het IP-bereik van uw LAN wordt automatisch gedetecteerd."
 
-#: src/druid.c:315
-msgid "Specify internal network IP range manually"
+#: src/druid.c:435
+#, fuzzy
+msgid "Specify internal network IP range manually (Not recommended)"
 msgstr "Stel intern netwerk IP-bereik manueel in"
 
-#: src/druid.c:317
-msgid "Select this only if the autodetection fails."
+#: src/druid.c:437
+#, fuzzy
+msgid "Select this only if the automatic detection fails."
 msgstr "Selecteer dit enkel indien de autodetectie faalt."
 
-#: src/druid.c:329
-msgid "Enter the your internal network address range:"
+#: src/druid.c:450
+#, fuzzy
+msgid "Enter the internal network address range:"
 msgstr "Voer uw intern netwerk adresbereik in:"
 
-#: src/druid.c:341
+#: src/druid.c:464
+#, fuzzy
 msgid ""
-"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
-"most\n"
+"The network range is given in the form of address/mask. 192.168.0.0/24 is "
+"the most\n"
 "common IP range reserved for internal networks."
 msgstr ""
-"Het netwerkbereik wordt ingevoerd onder vorm van adres/masker. 192.168.1.0/24 is het "
-"meest\n"
+"Het netwerkbereik wordt ingevoerd onder vorm van adres/masker. "
+"192.168.1.0/24 is het meest\n"
 "gebruikte IP bereik gereserveerd voor interne netwerken."
 
-#: src/druid.c:370
+#. 	gtk_table_attach (GTK_TABLE (table2), align, 0, 1, 4, 5,
+#. 		GTK_FILL, GTK_FILL, GNOME_PAD, 0);
+#: src/druid.c:478
+msgid "Port Forwarding"
+msgstr ""
+
+#: src/druid.c:512
+msgid "Services Configuration"
+msgstr "Service configuratie"
+
+#: src/druid.c:521
 msgid ""
 "Do you run server software on your machine and want other people to have "
 "access\n"
@@ -230,98 +260,159 @@ msgstr ""
 "toegang hebben\n"
 "tot de netwerkdiensten die u aanbiedt?"
 
-#: src/druid.c:378
+#: src/druid.c:529
 msgid "No, I do not run any public network services on my machine"
 msgstr "Nee, er zijn geen publieke netwerkdiensten actief op mijn machine"
 
-#: src/druid.c:383
+#: src/druid.c:536
 msgid "Yes, I run the following services on my machine:"
 msgstr "Ja, de volgende diensten zijn actief"
 
-#: src/druid.c:495
+#: src/druid.c:651
+msgid "ICMP Configuration"
+msgstr "ICMP Configuratie"
+
+#: src/druid.c:660
+msgid ""
+"ICMP Packet Filtering can be useful to prevent some common\n"
+"Denial of Service (DoS) attacks on your network.\n"
+"\n"
+"Would you like to enable ICMP Filtering?"
+msgstr "Wilt U ICMP filtering activeren"
+
+#: src/druid.c:669
+msgid "Disable ICMP Filtering"
+msgstr ""
+
+#: src/druid.c:676
+msgid "Enable ICMP Filtering related to the following packets:"
+msgstr ""
+
+#: src/druid.c:748
+msgid "Type of Service (ToS) Configuration"
+msgstr ""
+
+#: src/druid.c:757
+msgid ""
+"Type of Service filtering allows you to re-prioritize network\n"
+"services to allow higher throughput rates for commonly used services.\n"
+"\n"
+"Would you like to enable ToS Filtering?\n"
+msgstr ""
+
+#: src/druid.c:766
+msgid "Disable ToS Filtering"
+msgstr ""
+
+#: src/druid.c:773
+msgid "Enable ToS Filtering related to the following packets:"
+msgstr ""
+
+#: src/druid.c:794
+msgid ""
+"Check this option to enable Type of Service flags for common client "
+"applications, such as WWW, FTP, SSH & E-Mail."
+msgstr ""
+
+#: src/druid.c:801
+msgid ""
+"Check this option to enable Type of Service flags for common server "
+"applications, such as SQUID, FTPd, SSHd, SMTP & POP Daemons."
+msgstr ""
+
+#: src/druid.c:808
+msgid ""
+"Selecting this option will automatically configure Type of Service for "
+"`Throughput' for both X and SSHd.You should select this ONLY if you need to "
+"run X over your link"
+msgstr ""
+
+#: src/druid.c:821
+msgid ""
+"Selecting this option will configure Type of Service flags for Maximum "
+"Throughput for the options you have selected."
+msgstr ""
+
+#: src/druid.c:825
+msgid "Reliability"
+msgstr ""
+
+#: src/druid.c:829
+msgid ""
+"Selecting this option will configure Type of Service flags for Maximum "
+"Reliability for the options you have selected."
+msgstr ""
+
+#: src/druid.c:833
+msgid "Delay"
+msgstr ""
+
+#: src/druid.c:837
+msgid ""
+"Selecting this option will configure Type of Service flags for Minimum Delay "
+"for the options you have selected."
+msgstr ""
+
+#: src/druid.c:864
+msgid ""
+"Welcome to Firestarter!\n"
+"\n"
+"\n"
+"This wizard will now help you to set up a firewall for your\n"
+"Linux machine. You will be asked some questions about\n"
+"your network setup.\n"
+"\n"
+"Press the next button to continue.\n"
+"\n"
+"\n"
+msgstr  "Deze wizard helpt u uw firewall te configureren voor uw\n"
+	"linux computer. Er zullen enkele vragen gesteld worden over\n"
+	"u netwerk configuratie."
+"\n"
+"Klick op volgende om door te gaan\n"
+"\n"
+"\n"
+
+
+#: src/druid.c:901
+msgid ""
+"The wizard is now ready to generate your firewall.\n"
+"\n"
+"Press the finish button to continue, or the back button\n"
+"to review your choices.\n"
+"\n"
+msgstr ""
+
+#: src/druid.c:957
 msgid "You must be root to use the Firestarter wizard."
 msgstr "U moet root zijn om de Firestarter wizard te gebruiken"
 
-#: src/druid.c:500
+#: src/druid.c:974
 msgid "Firestarter Firewall Wizard"
 msgstr "Firestarter Firewall Wizard"
 
-#. Create the basic druid pages
-#: src/druid.c:516
-msgid "Firestarter Wizard"
-msgstr "Firestarter Wizard"
+#: src/preferences.c:185
+#, fuzzy
+msgid "General options"
+msgstr "Algemene opties"
 
-#: src/druid.c:517
-msgid ""
-"Welcome to the Firestarter Firewall Wizard\n"
-"\n"
-"This wizard will help you set up a customized packet filtering firewall\n"
-"for your Linux machine in just a few easy steps.\n"
-"\n"
-"\n"
-msgstr ""
-"Welkom bij de Firestarter Firewall Wizard\n"
-"\n"
-"Deze wizard helpt u bij het opzetten van een aangepaste pakket filtering firewall\n"
-"voor uw Linux machine in slechts een paar eenvoudige stappen.\n"
-"\n"
-"\n"
-
-#: src/druid.c:523
-msgid "Choose your external interface"
-msgstr "Kies uw externe apparaat"
-
-#: src/druid.c:524
-msgid "IP Masquerade setup"
-msgstr "IP Masquerade instellen"
-
-#: src/druid.c:525
-msgid "Choose allowed services"
-msgstr "Kies toegestane diensten"
-
-#: src/druid.c:527
-msgid "Wizard done"
-msgstr "Wizard klaar"
-
-#: src/druid.c:528
-msgid ""
-"The Firestarter wizard is done gathering the necessary data.\n"
-"Click the finish button to start the firewall.\n"
-"\n"
-msgstr ""
-"De Firestarter wizard is klaar met verzamelen van de nodige gegevens.\n"
-"Klik op Beëindig om de firewall te starten.\n"
-"\n"
-
-#: src/preferences.c:113
-msgid "Firewall syslog file:"
-msgstr "Firewall syslog bestand:"
-
-#: src/preferences.c:120
-msgid ""
-"Enther the path to the file the syslog daemon logs to. This is almost always "
-"/var/log/messages."
-msgstr ""
-"Voer het pad in van het bestand dat de syslog daemon gebruikt. Dit is meestal altijd "
-"/var/log/messages."
-
-#: src/preferences.c:130
+#: src/preferences.c:193
 msgid "Start firewall on program startup"
 msgstr "Start firewall bij het starten van het programma"
 
-#: src/preferences.c:132
+#: src/preferences.c:195
 msgid ""
 "Check this and the firewall will be restarted each time the program starts. "
 "Enabled by default."
 msgstr ""
-"Selecteer deze optie en de firewall zal herstart worden telkens het programma start. "
-"Standaard geactiveerd."
+"Selecteer deze optie en de firewall zal herstart worden telkens het "
+"programma start. Standaard geactiveerd."
 
-#: src/preferences.c:140
+#: src/preferences.c:202
 msgid "Stop firewall on program exit"
 msgstr "Stop firewall bij het verlaten van het programma"
 
-#: src/preferences.c:142
+#: src/preferences.c:204
 msgid ""
 "Check this and the firewall will be stopped when you exit Firestarter. "
 "Enabled by default."
@@ -329,234 +420,485 @@ msgstr ""
 "Selecteer deze optie en de firewall stopt wanneer u Firestarter verlaat. "
 "Standaard geactiveerd."
 
-#: src/preferences.c:150
+#: src/preferences.c:211
 msgid "Exit program when window is closed (otherwise hide)"
 msgstr "Verlaat programma bij sluiten van venster (anders verberg)"
 
-#: src/preferences.c:152
+#: src/preferences.c:213
 msgid ""
 "By default when you close the program window the program is merely hidden, "
 "you can then make it visible again by clicking on the status button."
 msgstr ""
-"Standaard wordt het programma verborgen bij het sluiten van het venster, "
-"u kan het daarna terug zichtbaar maken door op de statusknop te klikken."
+"Standaard wordt het programma verborgen bij het sluiten van het venster, u "
+"kan het daarna terug zichtbaar maken door op de statusknop te klikken."
 
-#: src/preferences.c:160
+#: src/preferences.c:220
 msgid "Start hidden"
 msgstr "Start verborgen"
 
-#: src/preferences.c:162
+#: src/preferences.c:222
 msgid ""
 "Check this and Firestarter will start hidden. Click on the status button to "
 "unhide. Disabled by default."
-msgstr "Selecteer deze optie en Firestarter zal verborgen starten. Klik op de statusknop het terug zichtbaar te maken. Standaard uitgeschakeld."
-
-#: src/preferences.c:170
-msgid "Remove identical firewall hit lines"
-msgstr "Verwijder identieke firewall hit lijnen"
-
-#: src/preferences.c:172
-msgid ""
-"Check this and the firewall hit log will filter out identical lines. Enabled "
-"by deault."
-msgstr "Selecteer deze optie om identieke firewall hit lijnen uit de logs te filteren. Standaard geactiveerd."
-
-#: src/preferences.c:219
-msgid "Play current sound file"
-msgstr "Speel huidig geluidsbestand"
-
-#: src/preferences.c:243
-msgid "Enable sounds"
-msgstr "Activeer geluid"
-
-#: src/preferences.c:245
-msgid "Check this if you want to hear sounds on certain events"
-msgstr "Selecteer deze optie om geluiden te horen bij bepaalde gebeurtenissen"
-
-#: src/preferences.c:251
-msgid "File to play on firewall hit:"
-msgstr "Bestand te spelen bij een firewall hit:"
-
-#: src/preferences.c:258
-msgid ""
-"Enter the path to the sound file that should be played when a firewall hit "
-"occurs."
 msgstr ""
-"Voer het pad in naar het geluidsbestand dat gespeeld moet worden wanneer een firewall hit "
-"zich voordoet."
+"Selecteer deze optie en Firestarter zal verborgen starten. Klik op de "
+"statusknop het terug zichtbaar te maken. Standaard uitgeschakeld."
 
-#: src/preferences.c:269
-msgid "File to play on firewall stop:"
-msgstr "Bestand te spelen bij het stoppen van de firewall:"
-
-#: src/preferences.c:276
-msgid ""
-"Enter the path to the sound file that should be played when the firewall is "
-"stopped."
+#: src/preferences.c:432
+msgid "Block these ports explicitly"
 msgstr ""
-"Voer het pad in naar het geluidsbestand dat gespeeld moet worden wanneer de firewall "
-"wordt gestopt."
 
-#: src/preferences.c:287
-msgid "File to play on firewall restart:"
-msgstr "Bestand te spelen bij het herstarten van de firewall:"
+#: src/preferences.c:463
+msgid "Add"
+msgstr "Toevoegen"
 
-#: src/preferences.c:294
-msgid ""
-"Enter the path to the sound file that should be played when the firewall is "
-"restarted."
-msgstr ""
-"Voer het pad in naar het geluidsbestand dat gespeeld moet worden wanneer de firewall "
-"herstart wordt."
+#: src/preferences.c:537
+#, fuzzy
+msgid "Wizard options"
+msgstr "Wizard klaar"
 
-#: src/preferences.c:333 src/preferences.c:406
-msgid "Always show IP Masquerade page in wizard"
+#: src/preferences.c:544
+#, fuzzy
+msgid "Show every page in wizard"
 msgstr "IP Masquerading pagina steeds tonen in de wizard"
 
-#: src/preferences.c:335 src/preferences.c:408
+#: src/preferences.c:546
+#, fuzzy
+msgid "Check this and every wizard page will be available in the wizard"
+msgstr ""
+"Selecteer deze optie en de IP Masquerade pagina zal altijd beschikbaar zijn "
+"in de wizard"
+
+#: src/preferences.c:551
+msgid "Enable Experimental Options"
+msgstr ""
+
+#: src/preferences.c:553
 msgid ""
-"Check this and the IP Masquerade page will always be available in the wizard"
-msgstr "Selecteer deze optie en de IP Masquerade pagina zal altijd beschikbaar zijn in de wizard"
+"If you enable this, Firestarter can use some experimental patches for "
+"filtering,Do not enable this option until you have read the manual for the "
+"pre-requisties"
+msgstr ""
 
-#: src/preferences.c:341
-msgid "Kernel modules to load"
-msgstr "Te laden kernel modules"
-
-#: src/preferences.c:386 src/preferences.c:423
-msgid "You must rerun the wizard for the changes to take affect"
-msgstr "U moet de wizard heruitvoeren om de wijzigingen van kracht te laten gaan"
-
-#: src/preferences.c:414
-msgid "Try to detect the location of ipchains/iptables"
+#: src/preferences.c:559
+#, fuzzy
+msgid "Try to detect the location of system binaries"
 msgstr "Bezig met detecteren van locatie van ipchains/iptables"
 
-#: src/preferences.c:416
+#: src/preferences.c:561
 msgid ""
 "Check this and Firestarter will search for the location of some needed "
 "binaries. Do not check unless you're having problems."
-msgstr "Selecteer dit en Firestarter zal de locatie zoeken van sommige noodzakelijke binaire bestanden. Selecteer dit enkel wanneer u problemen ondervindt."
+msgstr ""
+"Selecteer dit en Firestarter zal de locatie zoeken van sommige noodzakelijke "
+"binaire bestanden. Selecteer dit enkel wanneer u problemen ondervindt."
 
-#: src/preferences.c:476
+#: src/preferences.c:567
+msgid "Preferred packet rejection method"
+msgstr ""
+
+#: src/preferences.c:574
+msgid "Deny"
+msgstr ""
+
+#: src/preferences.c:576
+msgid "Checking this box will simply ignore the unauthorized packets."
+msgstr ""
+
+#: src/preferences.c:582
+msgid "Reject"
+msgstr ""
+
+#: src/preferences.c:584
+msgid "Checking this box will reject the unauthorized packets"
+msgstr ""
+
+#: src/preferences.c:589
+#, fuzzy
+msgid "You must rerun the wizard for the changes to take effect"
+msgstr ""
+"U moet de wizard heruitvoeren om de wijzigingen van kracht te laten gaan"
+
+#: src/preferences.c:653
 msgid "Firestarter: Preferences"
 msgstr "Firestarter: Voorkeuren"
 
-#: src/preferences.c:490
+#: src/preferences.c:666
 msgid "General"
 msgstr "Algemeen"
 
-#. prefs_add_section_page (_("IP Masquerade"), create_masq_page (pbox), pbox);
-#: src/preferences.c:492
-msgid "Sounds"
-msgstr "Geluiden"
+#: src/preferences.c:667
+msgid "Blocking"
+msgstr ""
 
-#: src/preferences.c:493
+#. prefs_add_section_page (_("Sounds"), create_sounds_page (pbox), pbox);
+#: src/preferences.c:669
 msgid "Advanced"
 msgstr "Geavanceerd"
 
-#: src/service.c:40
+#: src/service.c:48
 msgid "unknown"
 msgstr "onbekend"
 
-#: src/menus.c:30 src/menus.c:41
-msgid "R_estart firewall"
-msgstr "H_erstart firewall"
+#: src/menus.c:32 src/menus.c:43
+#, fuzzy
+msgid "Start _firewall"
+msgstr "Herstart firewall"
 
-#: src/menus.c:31 src/menus.c:42
+#: src/menus.c:33 src/menus.c:44
 msgid "_Stop firewall"
 msgstr "_Stop firewall"
 
-#: src/menus.c:40
+#: src/menus.c:42
 msgid "_Run firewall wizard"
 msgstr "S_tart firewall wizard"
 
-#: src/menus.c:50
+#: src/menus.c:45
+msgid "_Halt all network traffic"
+msgstr ""
+
+#: src/menus.c:53
 msgid "_Clear firewall hit list"
 msgstr "_Wis firewall hitlijst"
 
-#: src/menus.c:51
+#: src/menus.c:54
 msgid "R_eload entire firewall hit list"
 msgstr "_Herlaadt volledige firewall hitlijst"
 
-#: src/menus.c:52
+#: src/menus.c:55
 msgid "_Save firewall hit list to file"
 msgstr "_Bewaar firewall hitlijst naar bestand"
 
-#: src/menus.c:62
+#: src/menus.c:61
+#, fuzzy
+msgid "Firestarter _Homepage"
+msgstr "Firestarter Wizard"
+
+#: src/menus.c:68
 msgid "_Firewall"
 msgstr "_Firewall"
 
-#: src/menus.c:63
+#: src/menus.c:69
 msgid "_Hit list"
 msgstr "_Hitlijst"
 
-#: src/menus.c:69
+#: src/menus.c:75
 msgid "Run firewall wizard"
 msgstr "Start firewall wizard"
 
-#: src/menus.c:71
+#: src/menus.c:77
 msgid "Clear firewall hit list"
 msgstr "Wis firewall hitlijst"
 
-#: src/menus.c:72
+#: src/menus.c:78
 msgid "Reload entire firewall hit list"
 msgstr "Herlaadt volledige firewall hitlijst"
 
-#: src/menus.c:73
+#: src/menus.c:79
 msgid "Save firewall hit list to file"
 msgstr "Bewaar firewall hitlijst naar bestand"
 
-#: src/menus.c:75
+#: src/menus.c:81
 msgid "Restart firewall"
 msgstr "Herstart firewall"
 
-#: src/menus.c:76
+#: src/menus.c:82
 msgid "Stop firewall"
 msgstr "Stop firewall"
 
-#: src/menus.c:81
+#: src/menus.c:87
 msgid "Deny all connections from machine"
 msgstr "Blokkeer alle vebindingen komende van machine"
 
-#: src/menus.c:82
+#: src/menus.c:88
 msgid "Allow all connections from machine"
 msgstr "Sta alle verbindingen toe komende van machine"
 
-#: src/menus.c:86
+#: src/menus.c:92
+msgid "Block and stop logging this port"
+msgstr "Blokeer en stop met het loggen van deze poort"
+
+#: src/menus.c:93
 msgid "Lookup hostname"
 msgstr "Zoek hostnaam"
 
-#: src/menus.c:91
+#: src/menus.c:98
 msgid "Remove this rule"
 msgstr "Verwijder deze regel"
 
-#: src/menus.c:92
+#: src/menus.c:99
 msgid "Remove all rules in this group"
 msgstr "Verwijder alle regels in deze groep"
 
-#: src/menus.c:93
+#: src/menus.c:100
 msgid "Remove all rules in all groups"
 msgstr "Verwijder alle regels in alle groepen"
 
-#: src/addrules.c:103 src/menus.c:95
+#: src/addrules.c:96 src/menus.c:102
 msgid "Add new rule"
 msgstr "Voeg nieuwe regel toe"
 
-#: src/addrules.c:112
+#: src/addrules.c:105
 msgid "Protocol:"
 msgstr "Protocol:"
 
-#: src/addrules.c:126
+#: src/addrules.c:119
 msgid "Enter IP range or hostname to deny all connections from:"
-msgstr "Voer IP bereik of hostnaam in waarvan alle verbindigen geblokkeerd moeten worden:"
+msgstr ""
+"Voer IP bereik of hostnaam in waarvan alle verbindigen geblokkeerd moeten "
+"worden:"
 
-#: src/addrules.c:128
+#: src/addrules.c:121
 msgid "Enter IP range or hostname to allow all connections from:"
-msgstr "Voer IP bereik of hostnaam in waarvan alle verbindingen toegestaan worden:"
+msgstr ""
+"Voer IP bereik of hostnaam in waarvan alle verbindingen toegestaan worden:"
 
-#: src/addrules.c:130 src/addrules.c:139
+#: src/addrules.c:123 src/addrules.c:132
 msgid "Enter the port number of the service to open:"
 msgstr "Voer het poortnummer in voor de service die geopend moet worden:"
 
-#: src/addrules.c:132
+#: src/addrules.c:125
 msgid "Enter IP range or hostname to open service to:"
-msgstr "Voer IP bereik of hostnaam in waarvoor een service geopend moet worden:"
+msgstr ""
+"Voer IP bereik of hostnaam in waarvoor een service geopend moet worden:"
+
+#: src/savelog.c:57
+msgid "Select file to save log to"
+msgstr ""
+
+#: src/util.c:63
+msgid "Old version detected"
+msgstr ""
+
+#: src/util.c:67
+msgid ""
+"\n"
+"A firewall created by an older version of\n"
+"Firestarter has been detected.\n"
+"\n"
+"OK to remove old firewall (recommended)?\n"
+msgstr ""
+
+#: src/logread.c:70
+#, fuzzy
+msgid ""
+"Log file not found or access denied.\n"
+"Firewall log monitoring disabled.\n"
+"\n"
+"You can configure the path to the log file in the \"preferences\" section."
+msgstr ""
+"\" niet gevonden of geen toegang.\n"
+"Firewall log monitoring uitgeschakeld.\n"
+"\n"
+"U kan het pad naar het logbestand configureren in \"Voorkeuren\"."
+
+#: src/sort-clist.c:440
+msgid "Could not allocate memory, exiting...\n"
+msgstr ""
+
+#: src/portfw.c:41
+msgid ""
+"The ipmasqadm program was not found on your system.\n"
+"On Linux 2.2 this program is necessary for portfwarding.\n"
+msgstr ""
+
+#: src/portfw.c:46
+msgid "Download ipmasqadm now"
+msgstr ""
+
+#: src/portfw.c:220
+#, fuzzy
+msgid "Add connection forwarding"
+msgstr "Sta alle verbindingen toe komende van machine"
+
+#: src/portfw.c:231
+#, fuzzy
+msgid "Firewall port:"
+msgstr "Firewall hits"
+
+#: src/portfw.c:247
+msgid "LAN port:"
+msgstr "LAN poort:"
+
+#: src/portfw.c:262
+msgid "LAN machine address:"
+msgstr ""
+
+#: src/portfw.c:275
+msgid "Connection type (TCP / UDP):"
+msgstr "Connectie type (TCP / UDP:"
+
+#: src/portfw.c:326
+msgid "Forward port "
+msgstr ""
+
+#: src/portfw.c:327
+msgid " to port "
+msgstr ""
+
+#: src/portfw.c:328
+msgid " on machine"
+msgstr ""
+
+#: src/portfw.c:329
+msgid " via"
+msgstr ""
+
+#: src/portfw.c:337
+msgid "Configure Port Forwarding"
+msgstr ""
+
+#: src/portfw.c:366
+msgid "Add entry"
+msgstr "Voeg een regel toe"
+
+#: src/portfw.c:372
+#, fuzzy
+msgid "Remove entry"
+msgstr "Verwijder deze regel"
+
+#: src/ipchains-script.c:759 src/netfilter-script.c:906
+#, fuzzy, c-format
+msgid "Firewall script saved as %s\n"
+msgstr "Firewall script herstart\n"
+
+#: src/lookup.c:74
+msgid "Host not found."
+msgstr "HOST niet gevonden"
+
+#: src/lookup.c:76
+msgid "The host is valid but does not have an IP address."
+msgstr ""
+
+#: src/lookup.c:78
+msgid "Non recovery error in the DNS server."
+msgstr ""
+
+#: src/lookup.c:80
+msgid "There was a problem with the DNS server. Please try again."
+msgstr "Er was een probleem met de DNS server. Probeer opnieuw aub."
+
+#~ msgid "Logfile \""
+#~ msgstr "Logbestand \""
+
+#~ msgid ""
+#~ "The external and internal network interfaces\n"
+#~ "can't be the same. Please change one of them,\n"
+#~ "or alternatively disable IP Masquerading."
+#~ msgstr ""
+#~ "De externe en interne netwerkinterfaces\n"
+#~ "kunnen niet dezelfde zijn. Gelieve één ervan te wijzigen,\n"
+#~ "of als alternatief kan u IP Masquerading uitschakelen."
+
+#~ msgid "Start Firestarter on PPP connect"
+#~ msgstr "Start Firestarter bij PPP connectie"
+
+#~ msgid "No, I do not use IP Masquerading on my LAN"
+#~ msgstr "Nee, ik gebruik geen IP Masquerading in mijn LAN"
+
+#~ msgid ""
+#~ "Yes, this machine translates the IP addresses of my LAN for the Internet"
+#~ msgstr ""
+#~ "Ja, deze machine vertaald de IP adressen van mijn LAN voor het internet"
+
+#~ msgid ""
+#~ "Select your internal network device from the dropdown list. Go with the "
+#~ "default if unsure."
+#~ msgstr ""
+#~ "Selecteer uw intern netwerkapparaat uit de keuzelijst. Kies standaard "
+#~ "indien u niet zeker bent."
+
+#~ msgid ""
+#~ "Welcome to the Firestarter Firewall Wizard\n"
+#~ "\n"
+#~ "This wizard will help you set up a customized packet filtering firewall\n"
+#~ "for your Linux machine in just a few easy steps.\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Welkom bij de Firestarter Firewall Wizard\n"
+#~ "\n"
+#~ "Deze wizard helpt u bij het opzetten van een aangepaste pakket filtering "
+#~ "firewall\n"
+#~ "voor uw Linux machine in slechts een paar eenvoudige stappen.\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Choose allowed services"
+#~ msgstr "Kies toegestane diensten"
+
+#~ msgid ""
+#~ "The Firestarter wizard is done gathering the necessary data.\n"
+#~ "Click the finish button to start the firewall.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "De Firestarter wizard is klaar met verzamelen van de nodige gegevens.\n"
+#~ "Klik op Beëindig om de firewall te starten.\n"
+#~ "\n"
+
+#~ msgid "Firewall syslog file:"
+#~ msgstr "Firewall syslog bestand:"
+
+#~ msgid ""
+#~ "Enther the path to the file the syslog daemon logs to. This is almost "
+#~ "always /var/log/messages."
+#~ msgstr ""
+#~ "Voer het pad in van het bestand dat de syslog daemon gebruikt. Dit is "
+#~ "meestal altijd /var/log/messages."
+
+#~ msgid "Remove identical firewall hit lines"
+#~ msgstr "Verwijder identieke firewall hit lijnen"
+
+#~ msgid ""
+#~ "Check this and the firewall hit log will filter out identical lines. "
+#~ "Enabled by deault."
+#~ msgstr ""
+#~ "Selecteer deze optie om identieke firewall hit lijnen uit de logs te "
+#~ "filteren. Standaard geactiveerd."
+
+#~ msgid "Play current sound file"
+#~ msgstr "Speel huidig geluidsbestand"
+
+#~ msgid "Check this if you want to hear sounds on certain events"
+#~ msgstr ""
+#~ "Selecteer deze optie om geluiden te horen bij bepaalde gebeurtenissen"
+
+#~ msgid "File to play on firewall hit:"
+#~ msgstr "Bestand te spelen bij een firewall hit:"
+
+#~ msgid ""
+#~ "Enter the path to the sound file that should be played when a firewall "
+#~ "hit occurs."
+#~ msgstr ""
+#~ "Voer het pad in naar het geluidsbestand dat gespeeld moet worden wanneer "
+#~ "een firewall hit zich voordoet."
+
+#~ msgid "File to play on firewall stop:"
+#~ msgstr "Bestand te spelen bij het stoppen van de firewall:"
+
+#~ msgid ""
+#~ "Enter the path to the sound file that should be played when the firewall "
+#~ "is stopped."
+#~ msgstr ""
+#~ "Voer het pad in naar het geluidsbestand dat gespeeld moet worden wanneer "
+#~ "de firewall wordt gestopt."
+
+#~ msgid "File to play on firewall restart:"
+#~ msgstr "Bestand te spelen bij het herstarten van de firewall:"
+
+#~ msgid ""
+#~ "Enter the path to the sound file that should be played when the firewall "
+#~ "is restarted."
+#~ msgstr ""
+#~ "Voer het pad in naar het geluidsbestand dat gespeeld moet worden wanneer "
+#~ "de firewall herstart wordt."
+
+#~ msgid "Kernel modules to load"
+#~ msgstr "Te laden kernel modules"
+
+#~ msgid "Sounds"
+#~ msgstr "Geluiden"
+
+#~ msgid "R_estart firewall"
+#~ msgstr "H_erstart firewall"
+
