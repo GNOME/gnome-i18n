@@ -130,6 +130,7 @@
 
         // first, see if the type $type is already in the table
         $type_exists = 0;
+	$debug ='';
         $query = "SELECT * FROM $typestable WHERE type = '$type' AND wid = '$wid'";
         $result_temp = mysql_db_query($dbName, $query);
         $r_temp = mysql_fetch_array($result_temp);
@@ -139,21 +140,26 @@
             // type does not exist, so insert it
             $query = "INSERT INTO $typestable VALUES(NULL, '$wid', '$type')";
             $result1 = mysql_query($query);
+	    $debug .= 'Fehler 1: '.mysql_error().'<br>';
 
         } else {
 
             $type_exists = 1;
+	    $debug .= 'Fehler 1: Die Wortart existiert<br>';
         }
 
             // get the tid which has been assigned by mySQL
             $query = "SELECT * FROM $typestable WHERE type = '$type' AND wid = '$wid'";
             $result2 = mysql_db_query($dbName, $query);
+	    $debug .= 'Fehler 2: '.mysql_error().'<br>';
             $r_temp = mysql_fetch_array($result2);
+	    $debug .= 'Fehler 3: '.mysql_error().'<br>';
             $tid = $r_temp[tid];
 
             // see if the translation already exists
             $query = "SELECT * FROM $transtable WHERE translation = '$trans' AND tid = '$tid'";
             $result3 = mysql_db_query($dbName ,$query);
+	    $debug .= 'Fehler 4: '.mysql_error().'<br>';
 
             if (0 == mysql_num_rows($result3)) {
 
@@ -161,10 +167,11 @@
                 // now we can put the new translation in the DB
                 $query = "INSERT INTO $transtable VALUES('$tid', '$trans', '$comment')";
                 $result3 = mysql_query($query);
+		$debug .= 'Fehler 5: '.mysql_error().'<br>';
 
                 if (($type_exists == 0 && !$result1) || !$result2 || !$result3) {
 
-                    $content .= '<p><font color=\"red\">Es ist ein Fehler beim Eintragen aufgetreten. Bitte kontaktieren sie den <a href="mailto:webmaster@gnome-de.org">Webmaster</a>!</font></p>';
+                    $content .= "<p><font color='red'>Es ist ein Fehler beim Eintragen aufgetreten. Bitte kontaktieren sie den <a href='mailto:webmaster@gnome-de.org'>Webmaster</a>. Geben Sie dabei bitte folgende Informationen an:</font></p><p><code>$debug</code></p>";
 
                 } else {
 
