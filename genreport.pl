@@ -63,9 +63,9 @@
 #"pt", "pt_BR", "ro", "ru", "ru_RU", "sk", "sv", "tr", "wa",
 #"zh_TW.Big5", );
 
-@langs = ( "ca", "cs", "da","de", "el", "es", "et", "eu", "fi", "fr", "ga", 
-"gl", "hr", "hu", "it", "ja", "ko", "nl", "no", "pl", "pt", "pt_BR", "ro",
-"ru", "sk", "sv", "tr", "uk", "wa", "zh_TW.Big5" );
+@langs = ( "ca", "cs", "da","de", "el", "en_GB", "es", "et", "eu", "fi", 
+"fr", "ga", "gl", "hr", "hu", "it", "ja", "ko", "nl", "no", "pl", "pt", 
+"pt_BR", "ro", "ru", "sk", "sv", "tr", "uk", "wa", "zh_TW.Big5" );
 
 $msgfmt="msgfmt --statistics";
 $cvsroot="/home/dand/cvs/gnome";
