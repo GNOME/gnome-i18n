@@ -27,187 +27,182 @@
 #		   Juan Fuentes <juan.fuentes@codetel.net.do>
 
 #use strict; #fix the file, so this can be enabled
-use POSIX qw(locale_h);
-use POSIX qw(strftime);
+# setlocale is needed here, so that the POSIX module don't
+# complain of an invalid locale entry.
+use POSIX qw(locale_h strftime setlocale LC_ALL LC_CTYPE);
 
 # Ugly, ugly,damn ugly, but it works for now.
+# Better now.
 
-my ($now,%modulenames,%translated,%fuzzy,%untranslated,%total,%status,%available,%assigned,%unknown,%modules,$totalname,$status,$lasttranslator,$translatorname,$transtatus);
-my (%strings,%details,%lasttranslator,%percent_colors,%changed_color,$totals); 
-my ($path,$mod,@info,$info,$index,$htmldir,$htmlpodir,$tmp,$lang,$grey);
-my (%langinfo,$langs_red,$link,%modinfo,$langmod,%langmod);
-my ($date,$fuzzy,$detail,$modulename,$translated,$untranslated);
-my ($stringstot,$trnstot,$fuzzytot,$untrnstot,$trbg,$percent);
-my ($strings,$newname,$trns,$untrns,$align,$changed,$release);
-my ($color,$per,%modpath,$gray,$tot,$details_,$string);
+my (@info,%langmod,%langinfo,%modinfo,%modpath,%modules);
 
 # no need to call the shell.
 
-$date   = strftime "%a %Y-%m-%d %T %z",localtime;
+my $date   = strftime "%a %Y-%m-%d %T %z",localtime;
 
 ###############
 # "Constants" #
 ###############
 
-$grey     = 0;    #odd/even strings
-$totals   = 0;  #total strings in all modules from modinfo.
-$now      = time;
-$details_ = "";
+my $grey     = 0;  #odd/even strings
+my $totals   = 0;  #total strings in all modules from modinfo.
+my $now      = time;
+my $details_ = "";
 
-$htmldir   ="/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
-$htmlpodir ="po/";
+my $htmldir   ="/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
+my $htmlpodir ="po/";
 
 # used => for readability.
 
-%modulenames = (
-"da" => "Modul",
-"de" => "Paket",
-"el" => "ÐáêÝôï",
-"es" => "M&oacute;dulo",
-"hu" => "Modul",
-"no" => "Modul",
-"ro" => "Modul",
-"ru" => "íÏÄÕÌØ",
-"sv" => "Modul",
-"tr" => "Modül",
-"uk" => "íÏÄÕÌØ",
-"wa" => "module"
- ); 
+my %modulenames = (
+    "da" => "Modul",
+    "de" => "Paket",
+    "el" => "ÐáêÝôï",
+    "es" => "M&oacute;dulo",
+    "hu" => "Modul",
+    "no" => "Modul",
+    "ro" => "Modul",
+    "ru" => "íÏÄÕÌØ",
+    "sv" => "Modul",
+    "tr" => "Modül",
+    "uk" => "íÏÄÕÌØ",
+    "wa" => "module"
+); 
 
-%translated = (
-"da" => "Oversat",
-"de" => "&Uuml;bersetzt",
-"el" => "ÌåôáöñáóìÝíá",
-"es" => "Traducidos",
-"hu" => "Lefordított",
-"no" => "Oversatt",
-"ro" => "traduse",
-"ru" => "ðÅÒÅ×ÅÄÅÎÏ",
-"sv" => "&oslash;versatt",
-"tr" => "Tercüme edilmiþ",
-"uk" => "ðÅÒÅËÌÁÄÅÎÏ",
-"wa" => "rato&ucirc;rn&eacute;s"
+my %translated = (
+    "da" => "Oversat",
+    "de" => "&Uuml;bersetzt",
+    "el" => "ÌåôáöñáóìÝíá",
+    "es" => "Traducidos",
+    "hu" => "Lefordított",
+    "no" => "Oversatt",
+    "ro" => "traduse",
+    "ru" => "ðÅÒÅ×ÅÄÅÎÏ",
+    "sv" => "&oslash;versatt",
+    "tr" => "Tercüme edilmiþ",
+    "uk" => "ðÅÒÅËÌÁÄÅÎÏ",
+    "wa" => "rato&ucirc;rn&eacute;s"
 );
 
-%fuzzy = (
-"da" => "Uklart",
-"de" => "Ungenau",
-"el" => "ÁóáöÞ",
-"es" => "Difusos",
-"hu" => "Pontatlan",
-"no" => "Uferdig",
-"ro" => "neclare",
-"ru" => "îÅÞÅÔËÏ",
-"sv" => "oklart",
-"tr" => "Tam tutmayan",
-"uk" => "îÅÞ¦ÔËÏ",
-"wa" => "&laquo;fuzzy&raquo;"
+my %fuzzy = (
+    "da" => "Uklart",
+    "de" => "Ungenau",
+    "el" => "ÁóáöÞ",
+    "es" => "Difusos",
+    "hu" => "Pontatlan",
+    "no" => "Uferdig",
+    "ro" => "neclare",
+    "ru" => "îÅÞÅÔËÏ",
+    "sv" => "oklart",
+    "tr" => "Tam tutmayan",
+    "uk" => "îÅÞ¦ÔËÏ",
+    "wa" => "&laquo;fuzzy&raquo;"
 );
 
-%untranslated = (
-"da" => "Uoversat",
-"de" => "Un&uuml;bersetzt",
-"el" => "AìåôÜöñáóôá",
-"es" => "Sin traducir",
-"hu" => "Fordítatlan",
-"no" => "Uoversatt",
-"ro" => "netraduse",
-"ru" => "îÅÐÅÒÅ×ÅÄÅÎÏ",
-"sv" => "o&oslash;versatt",
-"tr" => "Tercüme edilmemiþ",
-"uk" => "îÅÐÅÒÅËÌÁÄÅÎÏ",
-"wa" => "n&eacute;n co rato&ucirc;rn&eacute;s"
+my %untranslated = (
+    "da" => "Uoversat",
+    "de" => "Un&uuml;bersetzt",
+    "el" => "AìåôÜöñáóôá",
+    "es" => "Sin traducir",
+    "hu" => "Fordítatlan",
+    "no" => "Uoversatt",
+    "ro" => "netraduse",
+    "ru" => "îÅÐÅÒÅ×ÅÄÅÎÏ",
+    "sv" => "o&oslash;versatt",
+    "tr" => "Tercüme edilmemiþ",
+    "uk" => "îÅÐÅÒÅËÌÁÄÅÎÏ",
+    "wa" => "n&eacute;n co rato&ucirc;rn&eacute;s"
 );
 
-%strings = (
-"da" => "strenge",
-"de" => "Meldungen",
-"el" => "AëöáñéèìçôéêÜ",
-"es" => "Mensajes",
-"hu" => "karakterlánc",
-"no" => "strenger",
-"ro" => "stringuri",
-"ru" => "ÓÏÏÂÝ.",
-"sv" => "str&auml;ngar",
-"tr" => "metinler",
-"uk" => "ÐÏ×¦ÄÏÍ.",
-"wa" => "messaedjes"
+my %strings = (
+    "da" => "strenge",
+    "de" => "Meldungen",
+    "el" => "AëöáñéèìçôéêÜ",
+    "es" => "Mensajes",
+    "hu" => "karakterlánc",
+    "no" => "strenger",
+    "ro" => "stringuri",
+    "ru" => "ÓÏÏÂÝ.",
+    "sv" => "str&auml;ngar",
+    "tr" => "metinler",
+    "uk" => "ÐÏ×¦ÄÏÍ.",
+    "wa" => "messaedjes"
 );
 
-%total = (
-"de" => "Gesamt",
-"el" => "ÓõíïëéêÜ",
-"es" => "Totales",
-"fi" => "Yhteens&auml;",
-"hu" => "Összes",
-"ja" => "¹ç·×",
-"nl" => "Totaal",
-"no" => "Total",
-"ru" => "÷ÓÅÇÏ",
-"sv" => "Totalt",
-"tr" => "Toplam",
-"uk" => "÷ÓØÏÇÏ",
-"wa" => "tot&aring;"
+my %total = (
+    "de" => "Gesamt",
+    "el" => "ÓõíïëéêÜ",
+    "es" => "Totales",
+    "fi" => "Yhteens&auml;",
+    "hu" => "Összes",
+    "ja" => "¹ç·×",
+    "nl" => "Totaal",
+    "no" => "Total",
+    "ru" => "÷ÓÅÇÏ",
+    "sv" => "Totalt",
+    "tr" => "Toplam",
+    "uk" => "÷ÓØÏÇÏ",
+    "wa" => "tot&aring;"
 );
 
-%lasttranslator = (
-"C"  => "Last Translator",
-"es" => "Último traductor"
+my %lasttranslator = (
+    "C"  => "Last Translator",
+    "es" => "Último traductor"
 );
 
-%status = (
-"C"  => "Status",
-"es" => "Estado"
+my %status = (
+    "C"  => "Status",
+    "es" => "Estado"
 );
 
-%available = (
-"C"  => "Available",
-"es" => "Disponible"
+my %available = (
+    "C"  => "Available",
+    "es" => "Disponible"
 );
 
-%assigned = (
-"C"  => "Assigned",
-"es" => "Asignado"
+my %assigned = (
+    "C"  => "Assigned",
+    "es" => "Asignado"
 );
 
-%unknown = (
-"C"  => "Unknown",
-"es" => "Desconocido"
+my %unknown = (
+    "C"  => "Unknown",
+    "es" => "Desconocido"
 );
 
-%details = ( 
-"C"  => "Detail report for ",
-"da" => "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
-"de" => "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
-"el" => "ËåðôïìåñÞò áíáöïñÜ ãéá ",
-"es" => "Informe detallado de la traducci&oacute;n de GNOME al español (es)",
-"hu" => "Részletes jelentés a Magyar (hu) GNOME fordításokról",
-"no" => "Detaljert rapport for oversettelse av GNOME til norsk",
-"ru" => "ðÏÄÒÏÂÎÙÊ ÏÔÞÅÔ Ï ÓÏÓÔÏÑÎÉÉ ÐÅÒÅ×ÏÄÁ Gnome ÎÁ ÒÕÓÓËÉÊ",
-"sv" => "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
-"tr" => "Geliþmiþ durum raporu : ",
-"uk" => "äÅÔÁÌØÎÉÊ Ú×¦Ô ÐÒÏ ÓÔÁÎ ÐÅÒÅËÌÁÄÕ GNOME ÎÁ ÕËÒÁ§ÎÓØËÕ",
-"wa" => "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
+my %details = ( 
+    "C"  => "Detail report for ",
+    "da" => "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
+    "de" => "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
+    "el" => "ËåðôïìåñÞò áíáöïñÜ ãéá ",
+    "es" => "Informe detallado de la traducci&oacute;n de GNOME al español (es)",
+    "hu" => "Részletes jelentés a Magyar (hu) GNOME fordításokról",
+    "no" => "Detaljert rapport for oversettelse av GNOME til norsk",
+    "ru" => "ðÏÄÒÏÂÎÙÊ ÏÔÞÅÔ Ï ÓÏÓÔÏÑÎÉÉ ÐÅÒÅ×ÏÄÁ Gnome ÎÁ ÒÕÓÓËÉÊ",
+    "sv" => "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
+    "tr" => "Geliþmiþ durum raporu : ",
+    "uk" => "äÅÔÁÌØÎÉÊ Ú×¦Ô ÐÒÏ ÓÔÁÎ ÐÅÒÅËÌÁÄÕ GNOME ÎÁ ÕËÒÁ§ÎÓØËÕ",
+    "wa" => "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
 );
 
-%percent_colors = (
-"100%"  => "#00bb00",          
-">95%"  => "#8470ff",  
-">90%"  => "#8a2be2",
-">80%"  => "#1e90ff",          
-">70%"  => "#9400d3",
-">60%"  => "#9932cc",
-">50%"  => "#da70d6",
-"other" => ""
+my %percent_colors = (
+    "100%"  => "#00bb00",          
+    ">95%"  => "#8470ff",  
+    ">90%"  => "#8a2be2",
+    ">80%"  => "#1e90ff",          
+    ">70%"  => "#9400d3",
+    ">60%"  => "#9932cc",
+    ">50%"  => "#da70d6",
+    "other" => ""
 );
 
-%changed_color = (
-"0" => "black",
-"1" => "red",
-"2" => "green",
-"3" => "blue",
-"4" => "yellow",
-"5" => "grey"
+my %changed_color = (
+    "0" => "black",
+    "1" => "red",
+    "2" => "green",
+    "3" => "blue",
+    "4" => "yellow",
+    "5" => "grey"
 );
 
 #############################
@@ -220,31 +215,33 @@ sub printlang;
 # "Initialization" #
 ####################
 
-#setlocale (LC_LANG, "C");
 setlocale (LC_ALL, "C");
 
 #
 # read dat-files
 #
-if (open (MODULES, "modules.dat")){
+if (open (MODULES, "$htmldir/modules.dat")){
     while (<MODULES>) {
         chomp;
 	@info = split (/,/);
-	$index = 1;
+	my $index = 1;
 	while ($info[$index]){
 	    ${$modules{$info[0]}->[$index-1]} = $info[$index];
 	    $index++;
 	}
     }
     close (MODULES);
+} else {
+    print STDERR "Error: Unable to open $htmldir/modules.dat.\n\n";
+    exit(1);
 }
 
 if (open (MODINFO, "$htmldir/modinfo.dat")){
     while (<MODINFO>) {
 	chomp;
 	@info = split (/,/);
-	$index = 1;
-	$mod = $info[0];
+	my $index = 1;
+	my $mod = $info[0];
 	while ($info[$index]){
 	    ${$modinfo{$mod}->[$index-1]} = $info[$index];
 	    $index++;
@@ -258,8 +255,8 @@ if (open (LANGINFO, "$htmldir/langinfo.dat")){
     while (<LANGINFO>) {
 	chomp;
 	@info = split (/,/);
-	$index = 1;
-	$lang = $info[0];
+	my $index = 1;
+	my $lang = $info[0];
 	while ($info[$index]){
 	    ${$langinfo{$lang}->[$index-1]} = $info[$index];
 	    $index++;
@@ -271,18 +268,22 @@ if (open (LANGINFO, "$htmldir/langinfo.dat")){
 if (open (LANGMOD, "$htmldir/langmod.dat")){
     while (<LANGMOD>) {
         chomp;
-	($lang, $mod, @info) = split(/,/);
-	$index = 0;
+	my ($lang, $mod, @info) = split(/,/);
+	my $index = 0;
+	my $info;
 	foreach $info (@info) {
 	    ${$langmod{$mod}->{$lang}->[$index]} = $info;
 	    $index++;
 	}
     }
+    close (LANGMOD);
 }    
 
 ################
 # "Main loops" #
 ################
+
+my ($lang,$langs_red,$link,$gray,$mod,$trbg,$tot,$trns,$detail,$strings);
 
 # || has a higher precedence so this doesn't work use "or" or parentheses.
 
@@ -311,71 +312,83 @@ foreach $mod (sort keys %modinfo){
     print TABLE "</tr>";
 }
     
-$totalname = $total{$lang} || "Total";
+my $totalname = $total{$lang} || "Total";
 
 # Totals
-    print TABLE "<tr align=center bgcolor=\"#ffd700\"><th>$totalname</th>\n";
+print TABLE "<tr align=center bgcolor=\"#ffd700\"><th>$totalname</th>\n";
 foreach $lang (sort keys %langinfo){
     $tot = int(${$langinfo{$lang}->[0]}*100/$totals);
     print TABLE "<th align=right>$tot%</th>\n";
 }
-    print TABLE "<th>$totalname</th></tr>";
+print TABLE "<th>$totalname</th></tr>";
 
 # Last langs string
-    print TABLE "<tr align=center><td></td>";
-    foreach $lang (sort keys %langinfo){
-        $langs_red = substr($lang, 0, 5);
-        $link = "$details_" . $langs_red . ".shtml";
-        print TABLE "<td><a href=\"$link\">$langs_red</a></td>\n";
+print TABLE "<tr align=center><td></td>";
+foreach $lang (sort keys %langinfo){
+    $langs_red = substr($lang, 0, 5);
+    $link = "$details_" . $langs_red . ".shtml";
+    print TABLE "<td><a href=\"$link\">$langs_red</a></td>\n";
+}
+print TABLE "<td></td></tr></table>";
+
+print TABLE "<p>Total number of translatable strings in above modules: $totals<p>\n";
+print TABLE "$date\n<br><br>\n" ;
+
+print TABLE "Stable branches with tags: <br>\n" ;
+print TABLE " <br>\n" ;
+
+foreach $mod (sort keys %modules) {
+    if ("${$modules{$mod}->[2]}") {
+	print TABLE "$mod: ${$modules{$mod}->[2]} <br>\n";
     }
-    print TABLE "<td></td></tr></table>";
+}
 
-    print TABLE "<p>Total number of translatable strings in above modules: $totals<p>\n";
-    print TABLE "$date\n<br><br>\n" ;
-
-    print TABLE "Stable branches with tags: <br>\n" ;
-    print TABLE " <br>\n" ;
-
-    print TABLE "</body></html>\n" ;
+print TABLE "</body></html>\n" ;
     
 # status printed.
 
 # details.shtml
+
+my $percent;
+
 foreach $lang (sort keys %langinfo){
     $link = "$details_" . substr($lang, 0, 5) . ".shtml";
-    open  TABLE2, ">$htmldir/$link" || die "can't open $htmldir/$link";
+    open  TABLE2, ">$htmldir/$link" or die "can't open $htmldir/$link";
     $detail = $details{$lang} || $details{"C"} . $lang;
     print TABLE2 "<html><head><title>$detail</title></head><body>\n";
     print TABLE2 "<a name=\"$lang\"><b>$detail</b></a><br>";
     print TABLE2 "<table cellpadding=1 cellspacing=1 border=1 >";
 
-    $modulename = $modulenames{$lang} 		|| "Module";
-    $translated = $translated{$lang} 		|| "Translated";
-    $fuzzy = $fuzzy{$lang} 			|| "Fuzzy";
-    $untranslated = $untranslated{$lang} 	|| "Untranslated";
-    $status = $status{$lang}			|| "Status";
-    $lasttranslator = $lasttranslator{$lang}	|| "Last Translator";
-    $strings = $strings{$lang}			|| "strings";
-    $totalname = $total{$lang}			|| "Total";
+    my $modulename = $modulenames{$lang}	|| "Module";
+    my $translated = $translated{$lang}		|| "Translated";
+    my $fuzzy = $fuzzy{$lang} 			|| "Fuzzy";
+    my $untranslated = $untranslated{$lang} 	|| "Untranslated";
+    my $status = $status{$lang}			|| "Status";
+    my $lasttranslator = $lasttranslator{$lang}	|| "Last Translator";
+    my $strings = $strings{$lang}		|| "strings";
+    my $totalname = $total{$lang}		|| "Total";
 
     print TABLE2 "<tr bgcolor=\"#ffd700\"><th>$modulename</th>"
 		."<th>$translated</th><th>$fuzzy</th>"
 		."<th>$untranslated</th><th>%</th>"
 		."<th>$status</th><th>$lasttranslator</th>\n";
 
-    $stringstot =0; $trnstot =0; $fuzzytot= 0; $untrnstot=0 ;
+    my $stringstot =0;
+    my $trnstot =0;
+    my $fuzzytot= 0;
+    my $untrnstot=0 ;
     print TABLE2 "$date<br>\n" ;
     foreach $mod (sort keys %modinfo){
         $grey++;
         $trbg = (($gray++) % 2) ? '#deded5' : '#c5c2c5';
 	$percent = 0;
 	if (${$modinfo{$mod}->[0]}) {
-		$percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
+	    $percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
 	}
-	$trns = ("${$langmod{$mod}->{$lang}->[0]}") ? "${$langmod{$mod}->{$lang}->[0]} $strings" : "0 $strings";
-	$fuzzy = ("${$langmod{$mod}->{$lang}->[1]}") ? "${$langmod{$mod}->{$lang}->[1]} $strings" : "0 $strings";
-	$untrns = ("${$langmod{$mod}->{$lang}->[2]}") ? "${$langmod{$mod}->{$lang}->[2]} $strings" : ("${$modinfo{$mod}->[0]}" ne "-1" && "${$modinfo{$mod}->[0]}" ne "${$langmod{$mod}->{$lang}->[0]}") ? "${$modinfo{$mod}->[0]} $strings" : "0 $strings";
-	$translatorname = ("${$langmod{$mod}->{$lang}->[4]}") ? "${$langmod{$mod}->{$lang}->[4]}" : "";
+	my $trns = ("${$langmod{$mod}->{$lang}->[0]}") ? "${$langmod{$mod}->{$lang}->[0]}" : "0";
+	my $fuzzy = ("${$langmod{$mod}->{$lang}->[1]}") ? "${$langmod{$mod}->{$lang}->[1]}" : "0";
+	my $untrns = ("${$langmod{$mod}->{$lang}->[2]}") ? "${$langmod{$mod}->{$lang}->[2]}" : ("${$modinfo{$mod}->[0]}" ne "-1" && "${$modinfo{$mod}->[0]}" ne "${$langmod{$mod}->{$lang}->[0]}") ? "${$modinfo{$mod}->[0]}" : "0";
+	my $translatorname = ("${$langmod{$mod}->{$lang}->[4]}") ? "${$langmod{$mod}->{$lang}->[4]}" : "";
 
 	if ("$translatorname" ne "") {
 	    $translatorname =~ s/</&lt;/;
@@ -384,6 +397,7 @@ foreach $lang (sort keys %langinfo){
 	    $translatorname = "<br>";
 	}
 
+	my $transtatus;
 	if ("${$langmod{$mod}->{$lang}->[3]}" eq "0") {
 	    $transtatus = ("$available{$lang}") ? "<font color=\"#F80000\">$available{$lang}</font>" : "<font color=\"#F80000\">Available</font>";
 	} elsif ("${$langmod{$mod}->{$lang}->[3]}" eq "1") {
@@ -395,14 +409,14 @@ foreach $lang (sort keys %langinfo){
 	if ($percent eq 0) {
 	    print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
 	    <a href=\"$htmlpodir${$modules{$mod}->[1]}\">$mod</a></td>
-	    <td align=right>$trns</td><td align=right>$fuzzy</td>
-	    <td align=right>$untrns</td><td align=right>$percent%</td>
+	    <td align=right>$trns $strings</td><td align=right>$fuzzy $strings</td>
+	    <td align=right>$untrns $strings</td><td align=right>$percent%</td>
 	    <td>$transtatus</td><td>$translatorname</td>\n";
 	}else{
 	    print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
 	    <a href=\"$htmlpodir$mod-$lang.po\">$mod</a></td>
-	    <td align=right>$trns</td><td align=right>$fuzzy</td>
-	    <td align=right>$untrns</td><td align=right>$percent%</td>
+	    <td align=right>$trns $strings</td><td align=right>$fuzzy $strings</td>
+	    <td align=right>$untrns $strings</td><td align=right>$percent%</td>
 	    <td>$transtatus</td><td>$translatorname</td>\n";
 	}
 	$stringstot += ${$modinfo{$mod}->[0]};
@@ -413,44 +427,41 @@ foreach $lang (sort keys %langinfo){
     }
     $percent = sprintf("%.2f",$trnstot*100/$stringstot);
     print TABLE2 "<tr bgcolor=\"#ffd700\" align=center>
-        <th align=left>$totalname</th>
-    	<th align=right>$trnstot $strings</th>
-	<th align=right>$fuzzytot $strings</th>
-	<th align=right>$untrnstot $strings</th>
-	<th align=right>$percent%</th>
-	<th><br></th><th><br></th>\n";
+                  <th align=left>$totalname</th>
+    	          <th align=right>$trnstot $strings</th>
+	          <th align=right>$fuzzytot $strings</th>
+	          <th align=right>$untrnstot $strings</th>
+	          <th align=right>$percent%</th>
+	          <th><br></th><th><br></th>\n";
     print TABLE2 "</table></center>";
 }
 
 ## Subroutines code
 sub printmodule{
     my($mod, $align) = @_;
-    my($changed, $release, $string, $trbg);
-    
+    my($changed, $string, $trbg);
+
     $changed = "";
     $changed = $changed_color{int(($now - ${$modinfo{$mod}->[1]})/86400)};
-    $release = int((${$modinfo{$mod}->[2]} - $now)/86400);
 
     if ($align eq "L") {
 	$string = "<td align=right>";
-	$string.= ($release gt 0) ? "[$release] " : "";
 	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
 	$string.= "<a href=\"$htmlpodir${$modules{$mod}->[1]}\">$mod</a>";
     } else {
 	$string = "<td align=left>";
 	$string.= "<a href=\"$htmlpodir${$modules{$mod}->[1]}\">$mod</a>";
 	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
-	$string.= ($release gt 0) ? " [$release]" : "";
     }
-    
+
     print TABLE "$string</td>\n";	
-    }
-    
-    
+}
+
+
 sub printlang{
     ($mod, $lang) = @_;
-    my($percent, $color);
-    
+    my($percent, $color,$per);
+
     $percent = 0;
     if (${$modinfo{$mod}->[0]}) {
     	$percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
@@ -459,21 +470,29 @@ sub printlang{
     if ($percent eq 0){
         print TABLE "<td align=right><a href=\"$htmlpodir${$modules{$mod}->[1]}\">0%</a></td>\n";
     }else{
-    if ($percent == 100){		$color = $percent_colors{"100%"};	
-	} elsif ($percent > 95){	$color = $percent_colors{">95%"};	
-	} elsif ($percent > 90){	$color = $percent_colors{">90%"};
-	} elsif ($percent > 80){	$color = $percent_colors{">80%"};
-	} elsif ($percent > 70){	$color = $percent_colors{">70%"};
-	} elsif ($percent > 60){	$color = $percent_colors{">60%"};
-	} elsif ($percent > 50){	$color = $percent_colors{">50%"};
-	} elsif ($percent >3){		$per =  sprintf("%x",$percent*5);
-					$color = "#ff00" .  "$per";
-	} else {			$per =  sprintf("%x",$percent*5);
-					$color = "#ff000" . "$per"; }
+        if ($percent == 100) {
+            $color = $percent_colors{"100%"};
+        } elsif ($percent > 95) {
+            $color = $percent_colors{">95%"};
+        } elsif ($percent > 90) {
+            $color = $percent_colors{">90%"};
+        } elsif ($percent > 80) {
+            $color = $percent_colors{">80%"};
+        } elsif ($percent > 70) {
+            $color = $percent_colors{">70%"};
+        } elsif ($percent > 60) {
+            $color = $percent_colors{">60%"};
+        } elsif ($percent > 50) {
+            $color = $percent_colors{">50%"};
+        } elsif ($percent >3) {
+            $per =  sprintf("%x",$percent*5);
+            $color = "#ff00" .  "$per";
+        } else {
+            $per =  sprintf("%x",$percent*5);
+            $color = "#ff000" . "$per";
+        }
 
-	print TABLE "<td align=right>
-		<a href=\"$htmlpodir$mod-$lang.po\">
-		<font color='$color'>
-		$percent%</font></a></td>\n";
+        print TABLE "<td align=right><a href=\"$htmlpodir$mod-$lang.po\">
+		     <font color='$color'>$percent%</font></a></td>\n";
     }
 }
