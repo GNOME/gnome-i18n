@@ -78,7 +78,7 @@ sub translate() {
     $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
     $msg_str =~ s/YEAR-MO-DA HO:MI\+DIST/$date/;
     $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Robert Brady <rwb197\@zepler.org>/;
-    $msg_str =~ s/CHARSET/iso-8859-1/;
+    $msg_str =~ s/CHARSET/UTF-8/;
     $msg_str =~ s/ENCODING/8-bit/;
     $msg_str =~ s/LANGUAGE <LL\@li.org>//;
     return;
@@ -144,7 +144,7 @@ sub translate() {
   do_trans("trash", "wastebasket");
   # TIRE -> TYRE (sometimes)
   do_trans("vapor", "vapour");
-  do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\"\n\"Bastien Nocera <hadess\@hadess.net>");
+  do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\",\n\"Bastien Nocera <hadess\@hadess.net>");
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
