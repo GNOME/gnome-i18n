@@ -27,14 +27,14 @@ GNOME in Nederland en Vlaanderen te maken heeft.</p>
 uzelf in op de <a href="http://mail.gnome.org/mailman/listinfo/gnome-nl-list">gnome-nl-list
 Informatiepagina</a>!</p>
 <h2>Het IRC-kanaal</h2>
-<p>Wilt u in het Nederlands chatten met mede-GNOME-gebruikers? Dat kan! Op de IRC-server 
+<p><img alt="irc-account" src="images/irc-account.png" class="floatright">
+Wilt u in het Nederlands chatten met mede-GNOME-gebruikers? Dat kan! Op de IRC-server 
 <a href="irc://irc.gnome.org/gnome-nl">irc.gnome.org,</a>, 
 kanaal #gnome-nl kunt u uw ei kwijt. Mocht uw browser het ondersteunen dan 
 kunt u een chatprogramma opstarten door op de irc-verwijzing hierboven te
 klikken.</p>
 <P>In andere gevallen kunt u gebruik maken van programma's als Gaim en
 X-chat.</P>
-<div class="rightbox"><img alt="irc-account" src="images/irc-account.png"></div>
 </div>
 
 <? gnome_foot() ?>
