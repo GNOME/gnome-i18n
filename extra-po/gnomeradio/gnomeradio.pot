@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-07-06 04:40+0200\n"
+"POT-Creation-Date: 2002-07-06 20:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,66 +18,67 @@ msgstr ""
 msgid "A Gnome FM-Tuner"
 msgstr ""
 
-#: gnomeradio.desktop.in.h:2 src/gui.c:510
+#: gnomeradio.desktop.in.h:2 src/gui.c:522
 msgid "Gnomeradio"
 msgstr ""
 
-#: src/prefs.c:400
+#. dialog = gnome_dialog_new(_("Gnomeradio Settings"), GTK_STOCK_OK, GTK_STOCK_CANCEL, NULL);
+#: src/prefs.c:472
 msgid "Gnomeradio Settings"
 msgstr ""
 
-#: src/prefs.c:402
+#: src/prefs.c:476
 msgid "Misc Settings"
 msgstr ""
 
-#: src/prefs.c:403
+#: src/prefs.c:477
 msgid "Presets"
 msgstr ""
 
-#: src/prefs.c:413
+#: src/prefs.c:489
 msgid "Radio Device:"
 msgstr ""
 
-#: src/prefs.c:421
+#: src/prefs.c:497
 msgid "Mixer Source:"
 msgstr ""
 
-#: src/prefs.c:435
+#: src/prefs.c:511
 msgid "Mute on exit?"
 msgstr ""
 
-#: src/prefs.c:459
+#: src/prefs.c:557
 msgid "Name:"
 msgstr ""
 
-#: src/prefs.c:492
+#: src/prefs.c:591
 msgid "Frequency:"
 msgstr ""
 
-#: src/prefs.c:542
+#: src/prefs.c:645
 msgid "Specify the radio-device (in most cases /dev/radio)"
 msgstr ""
 
-#: src/prefs.c:544
+#: src/prefs.c:647
 msgid ""
 "Choose the mixer source (line, line1, etc.) that is able to control the "
 "volume of your radio"
 msgstr ""
 
-#: src/prefs.c:545
+#: src/prefs.c:648
 msgid "If unchecked, gnomeradio won't mute after exiting"
 msgstr ""
 
-#: src/prefs.c:546
-msgid "Start a new preset"
+#: src/prefs.c:649
+msgid "Add a new preset"
 msgstr ""
 
-#: src/prefs.c:547
+#: src/prefs.c:650
 msgid "Remove preset from List"
 msgstr ""
 
-#: src/prefs.c:548
-msgid "Add the preset to the List"
+#: src/prefs.c:651
+msgid "Update the preset in the List"
 msgstr ""
 
 #: src/gui.c:63
@@ -105,12 +106,12 @@ msgstr ""
 msgid "Gnomeradio - %.2f MHz"
 msgstr ""
 
-#: src/gui.c:193 src/gui.c:677
+#: src/gui.c:193 src/gui.c:705
 #, c-format
 msgid "Frequency: %.2f MHz"
 msgstr ""
 
-#: src/gui.c:213 src/gui.c:680
+#: src/gui.c:213 src/gui.c:708
 #, c-format
 msgid "Volume: %d%%"
 msgstr ""
@@ -119,76 +120,77 @@ msgstr ""
 msgid "manual"
 msgstr ""
 
-#: src/gui.c:435
+#: src/gui.c:443
 #, c-format
 msgid ""
 "File '%s' exists.\n"
 "Overwrite it?"
 msgstr ""
 
-#: src/gui.c:441
+#. text = g_strdup_printf(_("Error opening file '%s':\n%s"), rec_settings.filename, g_unix_error_string(errno));
+#: src/gui.c:450
 #, c-format
 msgid ""
 "Error opening file '%s':\n"
 "%s"
 msgstr ""
 
-#: src/gui.c:459 src/gui.c:675
+#: src/gui.c:470 src/gui.c:703
 msgid "Mute"
 msgstr ""
 
-#: src/gui.c:465
+#: src/gui.c:476
 msgid "Unmute"
 msgstr ""
 
 #. Feel free to put your names here translators :-)
-#: src/gui.c:475
+#: src/gui.c:486
 msgid "TRANSLATORS"
 msgstr ""
 
-#: src/gui.c:478
+#: src/gui.c:489
 msgid ""
 "Yet another Gnome FM-Tuner. But this one is the best ;-)\n"
 "(Hopefully) works with all FM-Tunercards supported by video4linux."
 msgstr ""
 
-#: src/gui.c:569
+#: src/gui.c:592
 msgid "Presets:"
 msgstr ""
 
-#: src/gui.c:668
+#: src/gui.c:696
 msgid "Scan Backwards"
 msgstr ""
 
-#: src/gui.c:669
+#: src/gui.c:697
 msgid "Scan Forwards"
 msgstr ""
 
-#: src/gui.c:670
+#: src/gui.c:698
 msgid "0.05 MHz Backwards"
 msgstr ""
 
-#: src/gui.c:671
+#: src/gui.c:699
 msgid "0.05 MHz Forwards"
 msgstr ""
 
-#: src/gui.c:672
+#: src/gui.c:700
 msgid "About Gnomeradio"
 msgstr ""
 
-#: src/gui.c:673
+#: src/gui.c:701
 msgid "Record radio as Wave or MP3"
 msgstr ""
 
-#: src/gui.c:674
+#: src/gui.c:702
 msgid "Edit your Preferences"
 msgstr ""
 
-#: src/gui.c:676
+#: src/gui.c:704
 msgid "Quit"
 msgstr ""
 
-#: src/gui.c:715
+#: src/gui.c:746
 msgid "Could not start lirc"
 msgstr ""
 
@@ -196,84 +198,85 @@ msgstr ""
 msgid "Choose a filename"
 msgstr ""
 
-#: src/record.c:140
-msgid "Gnomeradio Record"
-msgstr ""
-
-#: src/record.c:141
+#: src/record.c:143
 msgid "Start Recording"
 msgstr ""
 
+#. dialog = gnome_dialog_new(_("Gnomeradio Record"), GNOME_STOCK_BUTTON_CANCEL, NULL);
+#: src/record.c:150
+msgid "Gnomeradio Record"
+msgstr ""
+
 #. gtk_container_set_border_width(GTK_CONTAINER(misc_box), 8);
-#: src/record.c:145
+#: src/record.c:159
 msgid "General"
 msgstr ""
 
-#: src/record.c:146
+#: src/record.c:160
 msgid "Wave Settings"
 msgstr ""
 
-#: src/record.c:147
+#: src/record.c:161
 msgid "Mp3 Settings"
 msgstr ""
 
-#: src/record.c:156
+#: src/record.c:173
 msgid "Audio device:"
 msgstr ""
 
-#: src/record.c:159
+#: src/record.c:176
 msgid "Filename:"
 msgstr ""
 
-#: src/record.c:162
+#: src/record.c:179
 msgid "Choose..."
 msgstr ""
 
-#: src/record.c:163
+#: src/record.c:180
 msgid "Record as:"
 msgstr ""
 
-#: src/record.c:164
+#: src/record.c:181
 msgid "Wave (.wav)"
 msgstr ""
 
-#: src/record.c:165
+#: src/record.c:182
 msgid "MP3 (.mp3)"
 msgstr ""
 
-#: src/record.c:189
+#: src/record.c:206
 msgid "Sample rate:"
 msgstr ""
 
-#: src/record.c:190
+#: src/record.c:207
 msgid "Sample format:"
 msgstr ""
 
-#: src/record.c:191
+#: src/record.c:208
 msgid "Record in:"
 msgstr ""
 
-#: src/record.c:224
+#: src/record.c:241
 msgid "Mono"
 msgstr ""
 
-#: src/record.c:225
+#: src/record.c:242
 msgid "Stereo"
 msgstr ""
 
-#: src/record.c:243
+#: src/record.c:260
 msgid "MP3 encoder:"
 msgstr ""
 
-#: src/record.c:244
+#: src/record.c:261
 msgid "MP3 bitrate:"
 msgstr ""
 
-#: src/record.c:327
+#: src/record.c:344
 msgid "unknown error"
 msgstr ""
 
-#: src/record.c:330
+#: src/record.c:347
 #, c-format
 msgid ""
 "Mp3 encoder has stopped:\n"
@@ -281,7 +284,7 @@ msgid ""
 "Start gnomeradio from a commandline for more details"
 msgstr ""
 
-#: src/record.c:333
+#: src/record.c:350
 #, c-format
 msgid ""
 "sox has stopped:\n"
@@ -289,41 +292,41 @@ msgid ""
 "Start gnomeradio from a commandline for more details"
 msgstr ""
 
-#: src/record.c:364
+#: src/record.c:381
 #, c-format
 msgid "%i byte"
 msgstr ""
 
-#: src/record.c:367
+#: src/record.c:384
 #, c-format
 msgid "%i kb"
 msgstr ""
 
-#: src/record.c:369
+#: src/record.c:386
 #, c-format
 msgid "%.1f Mb"
 msgstr ""
 
-#: src/record.c:374
+#: src/record.c:391
 msgid "Error"
 msgstr ""
 
-#: src/record.c:376
+#: src/record.c:393
 msgid "0 byte"
 msgstr ""
 
-#: src/record.c:410
+#: src/record.c:427
 msgid "Gnomeradio recording status"
 msgstr ""
 
-#: src/record.c:424
+#: src/record.c:441
 msgid "Recording:"
 msgstr ""
 
-#: src/record.c:425
+#: src/record.c:442
 msgid "Filesize:"
 msgstr ""
 
-#: src/record.c:435
+#: src/record.c:452
 msgid "Stop Recording"
 msgstr ""
