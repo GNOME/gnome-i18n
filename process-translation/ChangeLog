@@ -1,0 +1,93 @@
+2004-08-13 Move to gnome-CVS
+	* Move:	Move to gnome-CVS (gnome-i18n/process-translation)
+
+2004-07-05 Release 2.0.1 "The dude abides..."
+	* Fixed bug: Add a check for bc, as this isn't always installed
+		     (thanks to Metin Amiroff)
+	* Feature:   Added the option to keep the translation after upload.
+		     Removed the FAQ-entry which describes this.
+	* Feature:   Added custom upload for gnome-applets-locations.
+
+2004-06-09 Release 2.0.0 "Don't try to fix me."
+	Well, I was right the last time. This is the 2.0 release.
+	It's a rock-solid release which has no outstanding bugs.
+
+	* Fixed bug: Always autodetect zenity. It's a core component of this
+		     script, so you can't turn autodetection off anymore.
+		     (This fixes the bug that zenity would still be used in
+		     console-mode)
+	* Fixed bug: Changed "head -1" to "head -n 1" (head -1 deprecated).
+		     Reported by someone who's mail I can't find anymore.
+		     Credits where credits due, so please tell me...
+	* Feature:   Added a README with some nice tips.
+		     Thanks to Metin Amiroff.
+
+2004-02-26 Release 1.9.4 "Yes... I have the memo."
+
+	This should be the last one before 2.0 gets released (knock on wood).
+
+	* Fixed bug: Made cvs.gnome.org online-check more robust. It won't
+                     complain as much as it used to.
+	* Fixed bug: Non-blocking editors would screw up the commit:
+	             changes to configure.in wouldn't get into cvs.
+		     Now, it waits until all instances of the editor
+		     (owned by you) are closed, exchanging this bug 
+		     with a less annoying one.
+	* Fixed bug: The script now actually listens to your preference
+		     when you say that it shouldn't download the
+		     configure-files. How nice.
+	* Fixed bug: A better detection if the uploader is equal to the
+		     translator. The cvs-changelog entry is much nicer now.
+	* Feature:   GLOBAL PROGRESS BAR.
+		     What? Yes, you heard me. One progress bar for all files.
+		     For when you have to commit multiple translation
+		     files at the same time. That feature was HARD! But it's
+		     there. I've already used it myself for committing the
+		     files modified by GRUT (GRand Unified Translation).
+	* Feature:   A split of the extra routines. You can now define
+		     actions to be done after every file, and actions to be
+		     done after all files have been comitted. Look for for the
+		     BIG comment-blocks in the script itself (near the bottom).
+
+2004-02-04 Third release. 1.9.3 "More features, less bugs, yadayadayada"
+
+    I'd like to thank Metin Amiroff for helping me squash those hard to
+    find bugs. It's been very VERY helpful. Thanks man!
+    
+    * Fixed bug: Incorrect recognition of filename. Script would bail out.
+    * Fixed bug: The script will now tell you if the name is incorrect.
+    * Fixed bug: Some versions of mktemp require a template.
+    * Fixed bug: Removed a very ugly error message if you invoke the script
+                 without any files available.
+    * Feature:   You can choose not to download and check the configure.in
+                 file. This saves a lot of time and bandwidth if you already
+                 know that your language is in ALL_LINGUAS.
+    * Feature:   Check if cvs.gnome.org can be reached. For dial-up users.
+    * Feature:   Rewritten commandline-parsing, new help-text available.
+    * Some minor adjustments to some error-messages and CVS-messages.
+    * Changed the README somewhat to be a bit more helpful.
+
+2004-01-06 Second release. 1.9.2
+    * Fixed some very stupid bugs.
+	The do_extra, other translator and display summary things didn't work.
+    * Added a binary-check.
+	It can be turned off, but defaults to on.
+    * Added some ideas from the script of Stanislav Visnovsky.
+	The alternate modulepath thing needed for gimp etc..
+    * Added a chmod -x line to make the translation not-executable.
+    * Fixed a very stupid bug in the "edit configure.in" part of the script.
+    * Added a filename check that should have been there from the start.
+    * Added a short history at the end of this file.
+
+2003-29-12 First public release.
+    The first release of what will become the 2.0 release.
+    We will call it 1.9.
+
+    Vincent van Adrighem
+
+2000-00-00 I created the script a long time ago.
+    You can still find the 1.0 series on the gnome-i18n list.
+    I don't maintain it anymore. I was a set of dirty scripts.
+    One did the dirty work and one displayed a nice point'n click
+    interface through zenity.
+    It was born out of an itch. I scratched it.

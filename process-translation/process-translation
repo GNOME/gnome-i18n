@@ -1,0 +1,852 @@
+#!/bin/bash
+#################################################################
+# process-translation 2.0.1                                     #
+# ------------------------------------------------------------- #
+# process-translation is a nice                                 #
+# interface for Translation-team coordinators.                  #
+# It processes translation files, checking their contents and   #
+# decompressing them if needed.                                 #
+# The files are then uploaded to GNOME-CVS.                     #
+# It can also do some extra stuff if everything is done. Just   #
+# take a look at the end of this file. You might find it useful #
+# This binary does the dirty work. It can be called directly    #
+# with only one file, or without any arguments to start         #
+# interactive mode.                                             #
+#                                                               #
+# Copyright 2002-2004 Vincent van Adrighem                      #
+#################################################################
+# Known limitations:                                            #
+# It can't cope with translations that are not in a $modulepath #
+#  directory. You have to do those by hand at the moment. The   #
+# $modulepath is $packagename/po, except for a few packages.    #
+# The script has a $modulepath-exception for gimp, gtk+,        #
+# gnome-applets-locations and gnome-glossary.                   #
+#################################################################
+# First, load the config files.
+[ -f /etc/process-translation.conf ] && . /etc/process-translation.conf
+[ -f ${HOME}/.process-translation.conf ] && . ${HOME}/.process-translation.conf
+
+# Some locales generate errors which interfere with
+# normal operation of this script
+unset LANG
+export LC_ALL=C
+export CVSROOT=":pserver:$cvs_username@cvs.gnome.org:/cvs/gnome"
+
+if [ "$configured" != "true" ] ; then
+	echo "Configuration not set (or you forgot to set the configured variable to true). Aborting!"
+	exit 1
+fi
+
+#Now, let's define the functions
+
+check_binaries () {
+binaries="sleep sed gunzip bunzip2 awk grep file tr wc bc $console_editor $x_editor"
+which zenity && zenity=true || zenity=false
+if ! [ "$check_bin" == "false" ] ; then
+    echo "If you don't like/need this binary-check, just change the config file to say check_bin=false.";
+    if ! echo "$DISPLAY" | grep -q "\:" ; then zenity=false ; fi
+    for prog in $binaries; do
+	if ! which $prog >/dev/null 2>/dev/null ; then
+	    echo $prog not found.
+	    exit 1
+	fi
+    done
+fi
+}
+
+display_help () {
+	echo "Usage:"
+	echo "`basename $0` [options] <files> [options]"
+	echo ""
+	echo "Options:"
+	echo "    You can turn options off by using --no-[option] (e.g. --no-summary)."
+	echo ""
+	echo "--summary:    Display some nice statistics about the current file (default: off)"
+	echo "--translator: You are prompted to give the name of the translator."
+	echo "              If you don't use this option, the name is extracted from"
+	echo "              translation file being processed (default: off)"
+	echo "--zenity:     Use the very nice zenity-interface to display progress"
+	echo "              (default: on)"
+	echo "--global      Global progress. Just display a global progress, not one per file"
+	echo "--extra:      Activate the extra routines at the end of the script."
+	echo "              I use it myself to upload some statistics to the webserver of my"
+	echo "              translation team, but you can do anything you wish (default: off)"
+	echo "--configure:  Check the configure.in and configure.ac files (default: on)"
+	echo "--verbose:    Print some progress messages on the console (default: $verbose)"
+	echo "--keep:       Don't remove translation after upload (default: off)."
+	echo "--help:       Display this nice usage screen."
+	echo ""
+}
+
+tell () {
+# My own version of echo. It will only print something if verbose is true.
+if [ "$verbose" == "true" ]; then
+#   Only display something if the verbose-option is set.
+#   Also, a string beginning with ### is my own indication
+#   that it should be printed without a newline at the end.
+    if echo $1 | grep "###" > /dev/null; then
+    echo -n $1 | sed 's/###//' >&2
+    else
+    echo $1 >&2
+    fi
+fi
+}
+tellstatus () {
+# The status version of echo. It will only print something if zenity is true.
+if [ "$zenity" == "true" ]; then
+    echo $1
+fi
+}
+
+parse_option() {
+#first we locate the actual option...
+option=`echo -n $1 | sed 's/--//' | sed 's/[a-z][a-z]-//'`
+
+#then we look if the user has prepended it with --no
+#and we decide what to do if we encounter an option.
+	if [ "`echo $1 | head -c 4`" == "--no" ] ; then
+		choice=false
+	else
+		choice=true
+	fi
+
+#Now, we start parsing the options
+	if [ "$option" == "zenity" ] || [ "$option" == "x" ] ; then
+		zenity=$choice
+	else
+	if [ "$option" == "translator" ]; then
+		do_other_translator=$choice
+	else
+	if [ "$option" == "global" ]; then
+		do_global=$choice
+	else
+	if [ "$option" == "extra" ]; then
+		do_extra=$choice
+	else
+	if [ "$option" == "summary" ]; then
+		summary=$choice
+	else
+	if [ "$option" == "configure" ] ; then
+		checkout_configure=$choice
+	else
+	if [ "$option" == "keep" ] ; then
+		keep=$choice
+	else
+	if [ "$option" == "help" ] || [ "`echo $1 | head -c 2`" == "-h" ]; then
+		display_help
+		exit 0
+	else
+		if [ $zenity = true ] ; then
+			zenity --warning --text="$unknown_option $1"
+		else
+			echo "$unknown_option $1"
+			sleep 1
+		fi
+	fi
+	fi
+	fi
+	fi
+	fi
+	fi
+	fi
+	fi
+}
+
+ask_translator () {
+if [ "$do_other_translator" == "true" ] ; then
+	if [ "$zenity" = "true" ] ; then
+		translator=`zenity --entry --text="$other_translator" --title="Translator" 2>&1`
+	else
+		echo -n "$other_translator"
+		read translator
+		echo ""
+	fi
+fi
+}
+
+parse_filename () {
+cur_location=`pwd`
+file="$cur_location/$1"
+cd $location
+#Check if file exists.
+if [ -f "$1" ] && echo $1 | grep -q "\.po" ; then
+    file="$1"
+else
+#maybe it was a relative filename? 
+	if ! [ -f "$file" ] || ! echo $file | grep -q "\.po" ; then
+		if [ $zenity == true ] ; then
+			zenity --error --text="$file_not_found"
+		else
+			echo "$file_not_found"
+		fi
+		file=""
+	fi
+fi
+if [ -n "$file" ] ; then
+	# Get around space-issues
+	file=`echo $file | tr " " "#"`
+	files=`echo -n $files ; echo " $file"`
+	let number_of_files+=1
+	file=""
+fi
+cd $cur_location
+}
+
+parse_commandline () {
+#Check extra options.
+while [ "`echo $1 | wc -c`" -gt "1" ] ; do
+	if [ "`echo "$1" | head -c 1`" == "`echo "-"`" ]; then
+		tell "###parsing option..."
+		tell $1
+		parse_option $1
+	else
+		#Check for a filename...
+		tell "###Checking for filename..."
+		tell $1
+		parse_filename $1
+	fi
+	shift
+done
+}
+
+decompress_files () {
+#decompress compressed translations
+for x in `ls $location/*.po.bz2 2>/dev/null` ; do
+	bunzip2 $x
+done
+for x in `ls $location/*.po.gz 2>/dev/null` ; do
+	gunzip $x
+done
+for x in `ls $location/*.po.zip 2>/dev/null` ; do
+	unzip $x
+done
+}
+
+check_file () {
+file_is_bad=false
+file="`echo $file | tr \"#\" \" \"`"
+# Check the formatting of the file (Gzipped pofile, bzipped po-file)
+if file "$file" | grep "gzip compressed data" >/dev/null; then
+	temp=`echo $file |sed 's/.gz//'`
+	if ! gunzip $file; then exit 1; fi
+	file=$temp
+	tell "Gzip compressed data"
+fi
+if file $file | grep "bzip2 compressed data" >/dev/null; then
+	temp=`echo $file |sed 's/.bz2//'`
+	if ! bunzip2 $file; then exit 1; fi
+	file=$temp
+	tell "Gzip compressed data"
+fi
+# Check the name of the file.
+# It needs to be "$module.$branch.$language.po"
+if ! echo $file | tr "." " " | wc -w | grep -q -i 4 ; then
+	if [ $zenity == true ] ; then
+		zenity --error --title="`basename $file`" --text="`basename $file`: File must be 'module.branch.language.po'"
+	else
+		echo "$file : File must be 'module.branch.language.po'"
+	fi
+	file_is_bad=true
+fi
+#Check for the possibility of incorrect UTF-8 encoding.
+if ! file $file | grep -i -q "$new_encoding" && grep -i -q "charset=$new_encoding" $file ; then
+	# ASCII is okay since it is a subset of UTF-8 
+	if ! file $file | grep -q ASCII && grep -q "charset=$new_encoding" $file; then
+		encoding=`file $file | sed 's/.*: \(.*\) .*/\1/' | awk '{ print $1 }'`
+		if [ $zenity == true ] ; then
+			zenity --error --title="`basename $file`" --text="`basename $file`, $encoding: $incorrect_translation"
+		else
+			echo "`basename $file`, $encoding: $incorrect_translation"
+		fi
+	    file_is_bad=true
+	fi
+fi
+
+# Check if the translation is okay.
+tell "Checking translation syntax..."
+if ! msgfmt -c $file 2>&1 > /dev/null && [ "$file_is_bad" == "false" ]; then
+	if [ $zenity == true ] ; then
+		zenity --error --title="`basename $file`" --text="`basename $file`: $incorrect_translation"
+	else
+		echo "$file : $incorrect_translation"
+	fi
+	file_is_bad=true
+fi
+
+if ! [ "$file_is_bad" == "true" ] ; then
+	translator="`grep "Last-Translator" $file | sed 's/.*ranslator: \(.*\) <.*>.*/\1/'`"
+	translator=`echo $translator | sed 's/ //g'`
+	translated=`if msgfmt -cv $file 2>&1 | grep translated > /dev/null; \
+	then msgfmt -cv $file 2>&1 | grep translated | \
+	sed 's/\(.*\) translated.*/\1/' ; else echo 0 ; fi`
+	fuzztrans=`if msgfmt -cv $file 2>&1 | grep fuzzy > /dev/null ; \
+	then msgfmt -cv $file 2>&1 | grep fuzzy | \
+	sed 's/.* \(.*\) fuzzy.*/\1/' ; else echo 0 ; fi`
+	untrans=`if msgfmt -cv $file 2>&1 | grep untranslated > /dev/null ; \
+	then msgfmt -cv $file 2>&1 | grep untranslated | \
+	sed 's/.* \(.*\) untranslated.*/\1/' ; else echo 0 ; fi`
+	echo "$translator $translated $fuzztrans $untrans" >> $tempstats
+	file=`echo $file | tr " " "#"`
+fi
+}
+
+check_files () {
+oldfiles=$files
+files=" "
+tempfile=`mktemp tempfile.XXXXXX`
+tempstats=`mktemp tempstats.XXXXXX`
+tempnof=`mktemp tempnof.XXXXXX`
+x=0
+oldnum_of_files=$number_of_files
+number_of_files=0
+tell "Checking $oldnum_of_files files..."
+for file in $oldfiles ; do
+	let x+=1
+	check_file
+	if ! [ "$file_is_bad" == "true" ] ; then
+		echo $file >> $tempfile
+		let number_of_files+=1
+		echo $number_of_files > $tempnof
+	fi
+	tellstatus `echo "($x * 100) / $oldnum_of_files" | bc`
+done | if [ $zenity == true ] ; then zenity --progress --auto-close --title=Files --text="Checking files..."; else tr "z" "z" ; fi
+statistics=`cat $tempstats`
+files="`cat $tempfile`"
+number_of_files="`cat $tempnof`"
+rm $tempfile
+rm $tempstats
+rm $tempnof
+rm *.mo 2>/dev/null
+}
+
+interactive_mode () {
+# This "extra Activate_extra_function", "translator ..." may be replaced
+# with your own wording, BUT! they must remain two words, and they must
+# NEVER be the same, so not: "extra activate_extra_function" and "extra Ask_for_extra_translator" because the
+# "extra" is the same there...
+args="`echo $do_extra | tr "a-z" "A-Z"` extra Activate_extra_function 0 0 0 `echo $do_other_translator | tr "a-z" "A-Z"` translator Ask_for_other_translator 0 0 0 FALSE summary Display_summary 0 0 0 `echo $checkout_configure | tr "a-z" "A-Z"` configure Checkout_configure_files 0 0 0 FALSE global Global_progress_bar 0 0 0 FALSE keep Keep_translation_after_upload 0 0 0"
+decompress_files
+for file in `ls $location/*.po  2>/dev/null` ; do
+	# Get around space-issues
+ 	file=`echo $file | tr " " "#"`
+	files=`echo -n $files ; echo " $file"`
+	let number_of_files+=1
+	file=""
+done
+if [ "$number_of_files" == "0" ] ; then
+	echo "No files found."
+	exit 1
+fi
+check_files
+for x in $files ; do
+	args="`echo $args` FALSE `basename $x` `echo $statistics | sed 's/\([^ ]* [0-9]* [0-9]* [0-9]*\) .*/\1/'`"
+	statistics="`echo $statistics | sed 's/[^ ]* [0-9]* [0-9]* [0-9]* \(.*\)/\1/'`"
+done
+
+files=`zenity --list --checklist --width=600 --height=400 --separator=" " --column=upload --column=module --column=translator --column=trans --column=fuzzy --column=untrans $args 2>&1`
+# We need to parse the options from zenity
+# so we turn the options off, and turn them on they've been selected
+do_global=false
+do_extra=false
+do_other_translator=false
+summary=false
+checkout_configure=false
+filestempfile=`mktemp ftf.XXXXXX`
+chmod 600 $filestempfile
+for transmodule in $files ; do
+	if [ $transmodule == `echo $args | awk '{print $2}'` ] ; then
+		do_extra=true
+	else
+		if [ $transmodule == `echo $args | awk '{print $8}'` ] ; then
+			do_other_translator=true
+		else
+		    if [ $transmodule == `echo $args | awk '{print $14}'` ] ; then
+			summary=true
+		    else
+		    	if [ $transmodule == `echo $args | awk '{print $20}'` ] ; then
+				checkout_configure=true
+			else
+				if [ $transmodule == `echo $args | awk '{print $26}'` ] ; then
+					tell "Global progressbar"
+					do_global=true
+				else
+				    if [ $transmodule == `echo $args | awk '{print $32}'` ] ; then
+				    	tell "Keeping translation around"
+				    	keep=true
+				    else
+		    			echo $transmodule >> $filestempfile
+				    fi
+				fi
+			fi
+		    fi
+		fi
+	fi
+done
+files=`for transmodule in \`cat $filestempfile\` ; do
+	echo $location/$transmodule
+done
+`
+rm $filestempfile
+}
+
+get_info () {
+#This part is from commit-gnome by Stanislav Visnovsky
+module=`echo $transmodule | sed 's/.*\/\([^\/]*\)/\1/' | awk ' BEGIN { FS="."; } { print $1; }'`
+branch=`echo $transmodule | awk ' BEGIN { FS="."; } { print $2; }'`
+language=`echo $transmodule | awk ' BEGIN { FS="."; } { print $3; }'`
+
+if [ $module == "gimp-libgimp" ] ; then
+        modulepath="gimp/po-libgimp" ;
+        module="gimp";
+elif [ $module == "gimp-tips" ] ; then
+        modulepath="gimp/tips" ;
+        module="gimp" ;
+elif [ $module == "gimp-script-fu" ] ; then
+        modulepath="gimp/po-script-fu" ;
+        module="gimp" ;
+elif [ $module == "gtk+-properties" ] ; then
+        modulepath="gtk+/po-properties" ;
+        module="gtk+";
+elif [ $module == "gnome-glossary" ] ; then
+        modulepath="gnome-i18n/glossary" ;
+        module="gnome-i18n";
+elif [ $module == "gnome-applets-locations" ] ; then
+        modulepath="gnome-applets/po-locations" ;
+        module="gnome-applets";
+elif [ $module == "gimp-plug-ins" ] ; then
+        modulepath="gimp/po-plug-ins" ;
+        module="gimp";
+else
+        modulepath="$module/po" ;
+fi
+
+if [ "$translator" == "" ]; then
+	translator="`grep -i "Last-Translator" $transmodule |sed 's/.*ranslator: \(.*\) <.*>.*/\1/'`"
+fi
+}
+
+do_summary () {
+if [ $summary == true ] ; then
+	summaryfile=`mktemp $module.XXXXXX`
+	chmod 600 $summaryfile
+	echo -n "Module: " > $summaryfile
+	echo $module >> $summaryfile
+	echo -n "Translator: " >> $summaryfile
+	echo $translator >> $summaryfile
+	echo -n "Encoding: " >> $summaryfile
+	file "$transmodule" >> $summaryfile
+	if [ $zenity == true ] ; then
+		zenity --text-info --width=400 --height=300 --filename=$summaryfile
+	else
+		cat $summaryfile
+		sleep 1
+	fi
+	rm $summaryfile 2>/dev/null
+fi
+}
+
+get_cvs () {
+cd $location
+# remove old cvs-folders
+if [ -d $module ]; then rm -r $module 2>/dev/null >/dev/null; tellstatus "3" ; fi
+#Check if gnome.org is on-line.
+if ! ping -c 1 cvs.gnome.org 2>/dev/null >/dev/null; then
+    sleep 1
+    if ! ping -c 3 cvs.gnome.org 2>/dev/null >/dev/null; then
+	if [ $zenity == true ] ; then
+		zenity --info --text="cvs.gnome.org seems to be offline. Still trying..."
+	else
+		echo "cvs.gnome.org seems to be offline. Still trying..."
+		sleep 1
+	fi
+    fi
+fi
+#Download source from cvs
+
+if [ "$branch" == "HEAD" ]; then
+	cvs -z3 co $modulepath/ChangeLog >/dev/null
+	tell "Changelog checked out"
+	tellstatus 10
+	cvs -z3 co $modulepath/$language.po >/dev/null
+	tell "$language.po checked out"
+	tellstatus 20
+	if [ "$checkout_configure" == "true" ] ; then
+		cvs -z3 co $module/configure.in 2>/dev/null >/dev/null
+		tell "configure.in checked out"
+		tellstatus 30
+		cvs -z3 co $module/configure.ac 2>/dev/null >/dev/null
+		tell "configure.ac checked out"
+	fi
+	tellstatus 40
+else
+	cvs -z3 co -r $branch $modulepath/ChangeLog >/dev/null
+	tell "Changelog checked out"
+	tellstatus 10
+	cvs -z3 co -r $branch $modulepath/$language.po >/dev/null
+	tell "$language checked out"
+	tellstatus 20
+	if [ "$checkout_configure" == "true" ] ; then
+		cvs -z3 co -r $branch $module/configure.in 2>/dev/null >/dev/null
+		tell "configure.in checked out"
+		tellstatus 30
+		cvs -z3 co -r $branch $module/configure.ac 2>/dev/null >/dev/null
+		tell "configure.ac checked out"
+	fi
+	tellstatus 40
+fi
+
+#Check changelog:
+if ! [ -f "$modulepath/ChangeLog" ]; then
+	if [ $zenity == true ] ; then
+		zenity --error --text="ChangeLog not found. Have you logged in to GNOME CVS?"
+	else
+		echo "ChangeLog not found. Have you logged in to GNOME CVS?"
+	fi
+	tellstatus 100
+	continue
+fi
+#Check if there already is a translation.
+chmod -x $transmodule
+if ! [ -f "$modulepath/$language.po" ]; then
+	needtoadd=true
+	if [ "$keep" == "true" ] ; then
+	    cp "$transmodule" "$modulepath/$language.po" >/dev/null
+	else
+	    mv "$transmodule" "$modulepath/$language.po" >/dev/null
+	fi
+	cd "$modulepath"
+	cvs add "$language.po" 2>/dev/null >/dev/null || cvs add "$language.po"
+	tell "$language.po scheduled for addition"
+	cd $location
+else
+	if [ "$keep" == "true" ] ; then
+	    cp "$transmodule" "$modulepath/$language.po" >/dev/null
+	else
+	    mv "$transmodule" "$modulepath/$language.po" >/dev/null
+	fi
+	tell "$language.po found in cvs"
+fi
+
+tellstatus 50
+
+}
+
+edit_changelog () {
+cd $location
+tellstatus 51
+cp $modulepath/ChangeLog $modulepath/ChangeLog.old 2>/dev/null >/dev/null
+echo -n `date +%Y-%m-%d` > $modulepath/ChangeLog
+tellstatus 52
+echo "  $uploader_name  $uploader_email" >> $modulepath/ChangeLog
+echo "" >> $modulepath/ChangeLog
+tellstatus 53
+
+#For neatness sake, try to make it say add, when a new translation is added
+if [ "$needtoadd" == "true" ]; then
+	echo -n "	* $language.po: Translation added" >> $modulepath/ChangeLog
+else
+	echo -n "	* $language.po: Translation updated" >> $modulepath/ChangeLog
+fi
+tellstatus 54
+
+#And if you have translated the file yourself, don't state the obvious by saying your own name twice.
+if ! echo "$translator" | grep -i -q "$uploader_name" ; then
+	echo -n " by " >> $modulepath/ChangeLog
+	echo -n "$translator" >> $modulepath/ChangeLog
+fi
+tellstatus 55
+echo "." >> $modulepath/ChangeLog
+cp $modulepath/ChangeLog cvslog.$module
+tellstatus 56
+echo "" >> $modulepath/ChangeLog
+cat $modulepath/ChangeLog.old >> $modulepath/ChangeLog
+rm $modulepath/ChangeLog.old
+tellstatus 57
+if ! head -n 1 $modulepath/ChangeLog | grep -i -q "$uploader_name" ; then
+	if [ $zenity == true ] ; then
+		zenity --error --text="ChangeLog corrupt."
+	else
+		echo "ChangeLog corrupt."
+	fi
+	tellstatus 100
+	continue
+fi
+tellstatus 58
+if ! file $modulepath/ChangeLog | grep -i -q UTF-8 ; then
+    if ! file $modulepath/ChangeLog | grep -i -q ASCII ; then
+	if [ $zenity == true ] ; then
+		zenity --error --text="ChangeLog not UTF-8."
+	else
+		echo "ChangeLog not UTF-8."
+	fi
+	tellstatus 100
+	continue
+    fi
+fi
+tellstatus 59
+tell "ChangeLog modified"
+}
+
+do_configure () {
+#Next, we check if the translation is already in ALL_LINGUAS
+cd $location
+tellstatus 61
+
+#For configure.in...
+tell "Testing configure files..."
+if [ -f $module/configure.in ] && grep -i ALL_LINGUAS $module/configure.in >/dev/null && ! grep -i ALL_LINGUAS $module/configure.in | grep -i "$language" >/dev/null; then
+    touch cvslog.$module.configure >/dev/null
+    tell " configure.in changes needed"
+	echo -n `date +%Y-%m-%d` > cvslog.$module.configure
+	echo "  $uploader_name  $uploader_email" >> cvslog.$module.configure
+	echo "" >> cvslog.$module.configure
+	echo -n "	* configure.in: Added $language to ALL_LINGUAS." >> cvslog.$module.configure
+else
+    tell "  no configure.in changes needed"
+fi
+tellstatus 63
+#And for configure.ac...
+if [ -f $module/configure.ac ] && grep -i ALL_LINGUAS $module/configure.ac >/dev/null && ! grep -i ALL_LINGUAS $module/configure.ac | grep -i "$language" >/dev/null; then
+    touch cvslog.$module.configure >/dev/null
+    tell "  configure.ac changes needed"
+	if ! [ $configure == true ]; then
+		echo -n `date +%Y-%m-%d` > cvslog.$module.configure
+		echo "  $uploader_name  $uploader_email" >> cvslog.$module.configure
+		echo "" >> cvslog.$module.configure
+	fi
+	echo -n "	* configure.ac: Added $language to ALL_LINGUAS." >> cvslog.$module.configure
+else
+    tell "  no configure.ac changes needed"
+fi
+tellstatus 65
+}
+
+commit_cvs () {
+cd $location
+committed=false
+#Everything is done. Now just commit the whole thing
+tell "Committing changes to cvs..."
+if [ "$branch" == "HEAD" ] || [ "$branch" == "" ] ; then
+	tell "  branch is HEAD"
+	tell "exec cvs -z3 commit -F cvslog.$module $modulepath/$language.po $modulepath/ChangeLog"
+	if cvs -z3 commit -F cvslog.$module $modulepath/$language.po $modulepath/ChangeLog >/dev/null ; then
+	    tell " base commit done."
+	    committed=true
+	else
+	    echo " commit failed"
+	    exit 1
+	fi
+	tellstatus 70
+	if [ -f cvslog.$module.configure ]; then
+		tell "  commit configure files"
+		if [ -f $module/configure.in ]; then
+			if [ -f $module/configure.ac ]; then
+				cvs -z3 commit -F cvslog.$module.configure $module/configure.in $module/configure.ac >/dev/null
+			else
+				cvs -z3 commit -F cvslog.$module.configure $module/configure.in >/dev/null
+			fi
+		else
+			cvs -z3 commit -F cvslog.$module.configure $module/configure.ac >/dev/null
+		fi
+	fi
+	tellstatus 80
+else
+	tell "  branch is $branch"
+	tell "exec cvs -z3 commit -F cvslog.$module -r $branch $modulepath/$language.po $modulepath/ChangeLog"
+	if cvs -z3 commit -F cvslog.$module -r "$branch" $modulepath/$language.po $modulepath/ChangeLog >/dev/null ; then 
+	    tell " base commit done"
+	    committed=true
+	else
+	    echo " commit didn't work"
+	    exit 1
+	fi
+	tellstatus 70
+	if [ -f cvslog.$module.configure ] ; then
+		tell "  commit configure files:"
+		if [ -f $module/configure.in ]; then
+			if [ -f $module/configure.ac ]; then
+				cvs -z3 commit -F "cvslog.$module.configure" -r "$branch" $module/configure.in $module/configure.ac >/dev/null
+			else
+				cvs -z3 commit -F "cvslog.$module.configure" -r "$branch" $module/configure.in >/dev/null
+			fi
+		else
+			if [ -f $module/configure.ac ]; then
+			    cvs -z3 commit -F "cvslog.$module.configure" -r "$branch" $module/configure.ac >/dev/null
+			fi
+		fi
+	fi
+	tellstatus 80
+
+fi
+
+cd $location
+if [ "$committed" == "true" ]; then
+	rm -r $module
+fi
+rm cvslog.$module 2>/dev/null
+rm cvslog.$module.configure 2>/dev/null
+}
+
+process_transmodule () {
+file="`echo $transmodule | tr \"#\" \" \"`"
+tell "Processing: `basename $file`"
+get_info
+# We now have a correct translation.
+do_summary
+tell "Location: $location"
+cd $location
+#we use the loop to get nice pipe-behaviour for zenity
+for x in 1 ; do
+	get_cvs
+	edit_changelog
+	do_configure
+	if [ -f cvslog.$module.configure ]; then
+		tell "Changes to configure.in or configure.ac needed"
+		tellstatus 100
+	else
+		commit_cvs
+		do_extra
+	fi
+done | if [ "$do_global" == "true" ] ; then
+	    tr "z" "z" >/dev/null
+	else
+	    if [ "$zenity" = "true" ] ; then zenity --progress --auto-close --title=CVS --text="`basename $file`: $translator"; else tr "z" "z" ; fi
+	fi
+cd $location
+if [ -f cvslog.$module.configure ]; then
+	tell "Configure change step 2"
+# We have to do this extra loop because we need a working stdout and stdin
+# for correct behaviour of  the console editor, so
+# we step out of the loop.
+    if [ -f $module/configure.ac ] ; then
+	if [ "$zenity" = "true" ] || [ "$do_global" == "true" ] ; then
+		$x_editor $module/configure.ac
+		while  ps aux | tr "/" " " | grep `whoami` | grep -w "$x_editor" | grep -w --invert-match grep
+			do sleep 1
+		done
+	else
+		$console_editor $module/configure.ac
+	fi
+    fi
+    if [ -f $module/configure.in ] ; then
+	if [ "$zenity" = "true" ] || [ "$do_global" == "true" ] ; then
+		$x_editor $module/configure.in
+		while  ps aux | tr "/" " " | grep `whoami` | grep -w "$x_editor" | grep -w --invert-match grep
+			do sleep 1
+		done
+	else
+		$console_editor $module/configure.in
+	fi
+    fi
+	for x in 1 ; do
+		tellstatus 65
+		commit_cvs
+		do_extra
+	done | if [ "$zenity" = "true" ] && [ "$do_global" != "true" ]; then zenity --progress --auto-close --title=CVS --text="`basename $file`: $translator"; else tr "z" "z" ; fi
+fi
+}
+
+do_extra () {
+
+if [ "$do_extra" == "true" ] ; then
+##############################################################
+# This last part is for my webpage. It automagically uploads #
+# a local file to the server every time someone gives me     #
+# a new translation. That way, they can easily see when      #
+# I've uploaded their file.                                  #
+# You can put whatever you want in here. Or don't use it..   #
+# This part is activated after every file.                   #
+#------------------------------------------------------------#
+# To enable this function, change the do_extra variable      #
+# to true.                                                   #
+##############################################################
+
+	cd ~/WWW/gnome-nl/website/text
+#	cvs -z3 update -Pd
+	tellstatus 90
+	if cat cvs.text | head -n 1 | grep -q -i "$translator" ; then
+		if ! cat cvs.text | head -n 1 | grep -q -i "$module" ; then
+			mv cvs.text cvs.text.orig
+			echo -n $module > cvs.text
+			echo -n ", " >> cvs.text
+			cat cvs.text.orig >> cvs.text
+			rm cvs.text.orig
+		fi
+	else
+		mv cvs.text cvs.text.orig
+		echo -n $module > cvs.text
+		echo -n ": " >> cvs.text
+		echo "$translator" >> cvs.text
+		cat cvs.text.orig >> cvs.text
+		rm cvs.text.orig
+	fi
+
+##############################################################
+# End of the do_extra routine                                #
+##############################################################
+fi
+tellstatus 100
+}
+
+echo "Process-translation  `cat $0 | head -n 3 | grep \"process-translation\" | awk '{print $3}'`"
+check_binaries
+parse_commandline $@
+
+if ! set | grep -q DISPLAY; then 
+	zenity=false
+	summary=true
+fi
+
+#FIXME: This is just temporary until the config files have been adjusted.
+if [ "$checkout_configure" != "false" ] ; then checkout_configure=true ; fi
+
+tell "Number of files on command-line: $number_of_files"
+if [ "$number_of_files" == "0" ] ; then
+	if [ "$zenity" = "true" ] ; then
+	    interactive_mode
+	else
+	    echo "No files found."
+	    exit 1
+	fi
+else
+	check_files
+fi
+tell "Number of good files: $number_of_files"
+#Now we have the good files in $files
+ask_translator
+if [ "$do_global" == "true" ] && [ "$zenity" == "false" ] ; then
+	echo "Global progress is only supported in graphical zenity-mode"
+	exit 1
+fi
+if [ "$do_global" == "true" ] ; then
+	tell "Global function activated."
+	done_file=0
+	for transmodule in $files ; do
+		if [ "$do_other_translator" != "true" ] ; then translator="" ; fi
+		process_transmodule > /dev/null
+		let done_file+=100
+		echo "$done_file / `echo $files | wc -w`" | bc
+	done | zenity --progress --auto-close --title="Process-translation" --text="Processing `echo $files | wc -w` files"
+else
+	for transmodule in $files ; do
+		if [ "$do_other_translator" != "true" ] ; then translator="" ; fi
+		process_transmodule
+	done	
+fi
+
+if [ "$do_extra" == "true" ] ; then
+##############################################################
+# You can put whatever you want in here. Or don't use it..   #
+# This part is activated once per run at the end of the      #
+# script.                                                    #
+#------------------------------------------------------------#
+# To enable this function, change the do_extra variable      #
+# to true.                                                   #
+##############################################################
+    cd ~/WWW/gnome-nl/website/text
+    cvs -z3 commit -m "$translator has translated some modules" cvs.text
+    scp cvs.text sourceforge:/home/groups/g/gn/gnome-nl/htdocs/text/ 2>/dev/null >/dev/null
+##############################################################
+# End of the do_extra routine                                #
+##############################################################
+fi

@@ -1,0 +1,93 @@
+# Process translation script FAQ
+# By Metin Amiroff.
+
+Q: 	What is this script for?
+A: 	This script is used to update the .po files which are used in open source 
+	applications to make them localizable. In other words, it does the dirty work
+	of updating/adding translations for you.
+
+Q:	What does this script do with .po files? How does it work?
+A:	The script does the following:
+	- Checks if po file is correctly encoded with UTF-8 encoding
+	- Checks if po file has any gettext errors
+	- Makes sure the po file is not executable
+	- Gives you ability to specify a different Translator credit
+	- Checks out the current CVS module the translation belongs and updates/adds po file to CVS
+	- Informs you about the commit process with a status dialog box
+	- Gives you ability to do bulk committing ie. more than one po file with one command
+
+Q:	What does this script NOT do?
+A:	Even if it can find them, if the translation file has error/errors it cannot fix it for you.
+	You should note the file that fails the check and fix it manually.
+
+Q:	What are the system requirements?
+A:	Actually all the requierents are shipped nowadays with most Linux distributions.
+	They are: sed, gunzip/bunzip2, awk, grep, file, tr, wc and not mandatory
+	nano, gedit or other text editor and zenity.
+
+Q:	How do I install the script?
+A:	Installation is easy. Untar the tarball. Copy ".process-translation.conf" file to
+	your home directory or to /etc to make it usable with another accounts. Chmod +x
+	"process-translation" file to make it executable and copy it to either /bin or /usr/local/bin.
+
+Q:	How do I set up the script?
+A:	All needed configuration options are available in ".process-translation.conf" file. Open it
+	with a text editor and change the values to suit your needs. This file is well commented.
+	After editing the values, make sure to change the "configured=false" to "configured=true".
+
+Q:	How do I run it?
+A:	Make sure you have set up your CVS path and login at least once to CVS repository
+	to create a password entry in your .cvspass file. This is only required once.
+	
+	====terminal======
+	$ export CVSROOT=:pserver:username@cvs.gnome.org:/cvs/gnome
+	$ login
+	====terminal======
+
+	Make sure you are connected to internet and the file you have translated is named in 
+	"module.branch.lang.po" style. (Example: nautilus.HEAD.nl.po) After that type this 
+	command in terminal:
+	
+	====terminal======
+	$ process-translation module.branch.lang.po
+	====terminal======
+	
+	If you want to do a bulk committing, copy all your translated files to a location you specified
+	in ".process-translation.conf" file and type this in terminal:
+
+	====terminal======
+	$ process-translation
+	====terminal======
+
+	The script is going to display some stats related with po file where you can set additional
+	values like another translator credits or extra stuff (you can only set them when doing a bulk
+	commit), and after your final check, commit it to the appropriate GNOME CVS module. 
+	While doing this you will be informed about the commit progress with a dialog box. If the file is not
+	yet in repository the script will open either "configure.in" or "configure.ac" file with the text 
+	editor and will wait for you to add your language code to ALL_LINGUAS line and save the file.
+
+Q:	How do I change the ChangeLog message that is used during the committing process?
+A:	This is hardcoded in script itself. To change it with your favourite log message open
+	"process-translation" file in text editor, scroll down the file, find and modify these lines
+	with your message:
+
+	====code======
+	#For neatness sake, try to make it say add, when a new translation is added
+	if [ "$needtoadd" == "true" ]; then
+		echo -n "	* $language.po: Translation added" >> $modulepath/ChangeLog
+	else
+		echo -n "	* $language.po: Translation updated" >> $modulepath/ChangeLog
+	fi
+	====code======
+
+Q:	I am working with different CVSs and tired of setting their paths seperately for each project.
+A:	Here is the trick you can enter in your .bashrc to make switching CVS paths on the fly:
+
+	====code======
+	alias fedoracvs='export CVSROOT=:ext:username@i18n.redhat.com:/usr/local/CVS'
+	alias gnomecvs='export CVSROOT=:pserver:username@cvs.gnome.org:/cvs/gnome'
+	alias kdecvs='export CVSROOT=:pserver:username@cvs.kde.org:/home/kde'
+	====code======
+
+	After a relogin you'll be able to switch CVS accounts with simply running their
+	alias names from command line.
