@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: X-Chat 1.4.2\n"
 "POT-Creation-Date: 2001-09-27 15:58+1000\n"
-"PO-Revision-Date: 2001-09-27 16:50CET\n"
+"PO-Revision-Date: 2001-09-28 16:51CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
-"Language-Team: Slovak <sk-i18n@linux.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -137,7 +137,7 @@ msgid ""
 "channel. If they are already on the channel this doesn't kick them (needs "
 "chanop)\n"
 msgstr ""
-"/BAN <maska> [<typ>], zakáže každého, kto odpovedá mask, z aktuálneho "
+"/BAN <maska> [<typ>], zakáže každého, kto odpovedá maske, z aktuálneho "
 "kanála. Ak už sú prihlásený v kanáli, nevykopne ich to (musíte byť chanop)\n"
 
 #: src/common/outbound.c:484
@@ -231,14 +231,16 @@ msgid ""
 "/EXEC [-o] <command>, runs the command. If -o flag is used then output is "
 "sent to current channel, else is printed to current text box\n"
 msgstr ""
-"/EXEC [-o] <príkaz>, spustí príkaz. Ak je použitý prepínač -o, výstup "
-"sa posiela do aktuálneho kanálu, inak sa vytlačí do aktuálneho textového poľa\n"
+"/EXEC [-o] <príkaz>, spustí príkaz. Ak je použitý prepínač -o, výstup sa "
+"posiela do aktuálneho kanálu, inak sa vytlačí do aktuálneho textového poľa\n"
 
 #: src/common/outbound.c:518
 msgid ""
 "/EXECKILL [-9], kills a running exec in the current session. If -9 is given "
 "the process is SIGKILL'ed\n"
 msgstr ""
+"/EXECKILL [-9], zabije programy bežiace v aktuálnom sedení. Ak je zadané "
+"-9, pošle sa signál SIGKILL\n"
 
 #: src/common/outbound.c:520
 msgid "/EXECSTOP, sends the process SIGSTOP\n"
@@ -254,15 +256,15 @@ msgstr "/EXECWRITE, pošle procesu dáta na štandardný vstup\n"
 
 #: src/common/outbound.c:526
 msgid "/FLUSHQ, flushes the current server's send queue\n"
-msgstr ""
+msgstr "/FLUSHQ, vyčistí aktuálnu frontu serveru pre posielanie\n"
 
 #: src/common/outbound.c:528
 msgid "/GATE <host> [<port>], proxies through a host, port defaults to 23\n"
-msgstr ""
+msgstr "/GATE <hostiteľ> [<port>], nastaví proxy na hostiteľa, port je štandardne 23\n"
 
 #: src/common/outbound.c:531
 msgid "/HOP <nick>, gives chanhalf-op status to the nick (needs chanop)\n"
-msgstr ""
+msgstr "/HOP <prezývka>, nastaví stav chanhalf-op pre prezývku (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:533
 msgid ""
@@ -272,12 +274,19 @@ msgid ""
 "            PRIV, CHAN, NOTI, CTCP, INVI, ALL\n"
 "    options - NOSAVE, QUIET\n"
 msgstr ""
+"/IGNORE <maska> <typy..> <možnosti..>\n"
+"    maska - maska ignorovaných hostiteľov, napr.: *!*@*.aol.com\n"
+"    typy - typy ignorovaný dát, jedna alebo všetky z:\n"
+"            PRIV, CHAN, NOTI, CTCP, INVI, ALL\n"
+"    možnosti - NOSAVE, QUIET\n"
 
 #: src/common/outbound.c:540
 msgid ""
 "/INVITE <nick> [<channel>], invites someone to a channel, by default the "
 "current channel (needs chanop)\n"
 msgstr ""
+"/INVITE <prezývka> [<kanál>], pozve niekoho do kanála, štandardne do "
+"aktuálneho kanála (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:541
 msgid "/JOIN <channel>, joins the channel\n"
@@ -285,13 +294,15 @@ msgstr "/JOIN <kanál>, prejde do kanálu\n"
 
 #: src/common/outbound.c:543
 msgid "/KICK <nick>, kicks the nick from the current channel (needs chanop)\n"
-msgstr ""
+msgstr "/KICK <prezývka>, vykopne prezývku z aktuálneho kanála (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:545
 msgid ""
 "/KICKBAN <nick>, bans then kicks the nick from the current channel (needs "
 "chanop)\n"
 msgstr ""
+"/KICKBAN <prezývka>, zakáže a potom vykopne prezývku z aktuálneho kanála "
+"(vyžaduje chanop)\n"
 
 #: src/common/outbound.c:547
 msgid "/LAGCHECK, forces a new lag check\n"
@@ -315,81 +326,89 @@ msgstr "/LOADDLL <súbor>, načíta modul\n"
 
 #: src/common/outbound.c:561
 msgid "/MDEHOP, Mass deop's all chanhalf-ops in the current channel (needs chanop)\n"
-msgstr ""
+msgstr "/MDEHOP, hromadne zruší stav všetkým chanhalf-op v aktuálnom kanáli (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:563
 msgid "/MDEOP, Mass deop's all chanops in the current channel (needs chanop)\n"
-msgstr ""
+msgstr "/MDEOP, hromadne zruší stav všetkým chanop v aktuálnom kanáli (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:565
 msgid ""
 "/MKICK, Mass kicks everyone except you in the current channel (needs "
 "chanop)\n"
-msgstr ""
+msgstr "/MKICK, hromadne vykopne každého okrem vás z aktuálneho kanála (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:567
 msgid ""
 "/MKICKB, Sets a ban of *@* and mass kicks everyone except you in the current "
 "channel (needs chanop)\n"
 msgstr ""
+"/MKICKB, nastaví zákaz *@* a hromadne vykopne každého okrem vás z "
+"aktuálneho kanála (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:569
 msgid ""
 "/ME <action>, sends the action to the current channel (actions are written "
 "in the 3rd person, like /me jumps)\n"
 msgstr ""
+"/ME <akcia>, pošle akciu do aktuálneho kanála (akcie sa píšu v tretej osobe, "
+"napríklad /me skáče)\n"
 
 #: src/common/outbound.c:570
 msgid "/MSG <nick> <message>, sends a private message\n"
-msgstr ""
+msgstr "/MSG <prezývka> <správa>, pošle súkromnú správu\n"
 
 #: src/common/outbound.c:573
 msgid "/NAMES, Lists the nicks on the current channel\n"
-msgstr ""
+msgstr "/NAMES, vypíše zoznam prezývok v aktuálnom kanáli\n"
 
 #: src/common/outbound.c:575
 msgid "/NCTCP <nick> <message>, Sends a CTCP notice\n"
-msgstr ""
+msgstr "/NCTCP <prezývka> <správa>, pošle poznámku CTCP\n"
 
 #: src/common/outbound.c:576
 msgid "/NEWSERVER <hostname> [<port>]\n"
-msgstr ""
+msgstr "/NEWSERVER <hostiteľ> [<port>]\n"
 
 #: src/common/outbound.c:577
 msgid "/NICK <nickname>, sets your nick\n"
-msgstr ""
+msgstr "/NICK <prezývka>, nastaví vašu prezývku\n"
 
 #: src/common/outbound.c:580
 msgid ""
 "/NOTICE <nick/channel> <message>, sends a notice. Notices are a type of "
 "message that should be auto reacted to\n"
 msgstr ""
+"/NOTICE <prezývka/kanál> <správa>, pošle poznámku. Poznámky sú "
+"typom správy, na ktoré by sa malo automaticky reagovať\n"
 
 #: src/common/outbound.c:582
 msgid "/NOTIFY [<nick>], lists your notify list or adds someone to it\n"
 msgstr ""
+"/NOTIFY [<prezývka>], vypíše váš zoznam upozornení, alebo niekoho do tohto zoznamu "
+"pridá\n"
 
 #: src/common/outbound.c:584
 msgid "/OP <nick>, gives chanop status to the nick (needs chanop)\n"
-msgstr ""
+msgstr "/OP <prezývka>, dá stav chanop prezývke (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:586
 msgid ""
 "/PART [<channel>] [<reason>], leaves the channel, by default the current "
 "one\n"
-msgstr ""
+msgstr "/PART [<kanál>] [<dôvod>], opustí kanál, štandardne aktuálny\n"
 
 #: src/common/outbound.c:588
 msgid "/PING <nick | channel>, CTCP pings nick or channel\n"
-msgstr ""
+msgstr "/PING <prezývka | kanál>, pošle CTCP ping na prezývku alebo kanál\n"
 
 #: src/common/outbound.c:592
 msgid "/PKILL <name>, kills the script of the given name\n"
-msgstr ""
+msgstr "/PKILL <meno>, zabije skript s daným menom\n"
 
 #: src/common/outbound.c:593
 msgid "/PLIST, lists the current python scripts\n"
-msgstr ""
+msgstr "/PLIST, vypíše zoznam aktuálnych skriptov python\n"
 
 #: src/common/outbound.c:594
 msgid "/PLOAD loads a python script\n"
@@ -397,15 +416,15 @@ msgstr "/PLOAD načíta skript python\n"
 
 #: src/common/outbound.c:598
 msgid "/QUERY <nick>, opens up a new privmsg window to someone\n"
-msgstr ""
+msgstr "/QUERY <prezývka>, otvorí nové okno pre súkromné správy niekomu\n"
 
 #: src/common/outbound.c:600
 msgid "/QUIT [<reason>], disconnects from the current server\n"
-msgstr ""
+msgstr "/QUIT [<dôvod>], odpojí sa od aktuálneho serveru\n"
 
 #: src/common/outbound.c:602
 msgid "/QUOTE <text>, sends the text in raw form to the server\n"
-msgstr ""
+msgstr "/QUOTE <text>, pošle text tak ako je na server\n"
 
 #: src/common/outbound.c:605
 msgid ""
@@ -413,6 +432,10 @@ msgid ""
 "Can be called just as /RECONNECT to reconnect to the current server or with /"
 "RECONNECT ALL to reconnect to all the open servers\n"
 msgstr ""
+"/RECONNECT [<hostiteľ>] [<port>] [<heslo>] [<ssl>] [<accept_invalid_cert>], "
+"môže sa použiť aj ako /RECONNECT "
+"pre znovupripojenie k aktuálnemu serveru alebo ako /RECONNECT ALL pre "
+"znovupripojenie ku všetkým otvoreným serverom\n"
 
 #: src/common/outbound.c:608
 msgid ""
@@ -420,82 +443,91 @@ msgid ""
 "to reconnect to the current server or with /RECONNECT ALL to reconnect to "
 "all the open servers\n"
 msgstr ""
+"/RECONNECT [<hostiteľ>] [<port>] [<heslo>], môže sa použiť aj ako /RECONNECT "
+"pre znovupripojenie k aktuálnemu serveru alebo ako /RECONNECT ALL pre "
+"znovupripojenie ku všetkým otvoreným serverom\n"
 
 #: src/common/outbound.c:611
 msgid "/RMDLL <dll name>, unloads a plugin\n"
-msgstr ""
+msgstr "/RMDLL <meno dll>, uvoľní modul\n"
 
 #: src/common/outbound.c:615
 msgid "/SAY <text>, sends the text to the object in the current window\n"
-msgstr ""
+msgstr "/SAY <text>, pošle text objektu v aktuálnom okne\n"
 
 #: src/common/outbound.c:618
 msgid "/SCPINFO, Lists some information about current Perl bindings\n"
-msgstr ""
+msgstr "/SCPINFO, vypíše niektoré informácie o aktuálnom napojení Perl\n"
 
 #: src/common/outbound.c:620
 msgid "/SET <variable> [<value>]\n"
-msgstr ""
+msgstr "/SET <premenná> [<hodnota>]\n"
 
 #: src/common/outbound.c:624
 msgid ""
 "/SERVCHAN <host> <port> <channel> [<ssl>] [<accept_invalid_cert>], connects "
 "and joins a channel\n"
 msgstr ""
+"/SERVCHAN <hostiteľ> <port> <kanál> [<ssl>] [<accept_invalid_cert>], pripojí sa "
+"a navštívi kanál\n"
 
 #: src/common/outbound.c:627
 msgid "/SERVCHAN <host> <port> <channel>, connects and joins a channel\n"
-msgstr ""
+msgstr "/SERVCHAN <hostiteľ> <port> <kanál>, pripojí sa a navštívi kanál\n"
 
 #: src/common/outbound.c:631
 msgid ""
 "/SERVER <host> [<port>] [<password>] [<ssl>] [<accept_invalid_cert>], "
 "connects to a server, the default port is 6667\n"
 msgstr ""
+"/SERVER <hostiteľ> [<port>] [<heslo>] [<ssl>] [<accept_invalid_cert>], "
+"pripojí sa na server, štandardne na port 6667\n"
 
 #: src/common/outbound.c:634
 msgid ""
 "/SERVER <host> [<port>] [<password>], connects to a server, the default port "
 "is 6667\n"
-msgstr ""
+msgstr "/SERVER <hostiteľ> [<port>] [<heslo>], pripojí sa na server, štandardný port je 6667\n"
 
 #: src/common/outbound.c:638
 msgid ""
 "/SSLSERVER <host> [<port>] [<accept_invalid_cert (y/n)>] [<password>], "
 "connects to a server, the default port is 994\n"
 msgstr ""
+"/SSLSERVER <hostiteľ> [<port>] [<accept_invalid_cert (y/n)>] [<heslo>], "
+"pripojí sa na server, štandardne na port 994\n"
 
 #: src/common/outbound.c:640
 msgid "/TIMER <seconds> <command>\n"
-msgstr ""
+msgstr "/TIMER <sekundy> <príkaz>\n"
 
 #: src/common/outbound.c:642
 msgid ""
 "/TOPIC [<topic>], sets the topic if one is given, else shows the current "
 "topic\n"
-msgstr ""
+msgstr "/TOPIC [<téma>], nastaví tému, ak je zadaná, inak zobrazí aktuálnu tému\n"
 
 #: src/common/outbound.c:643
 msgid "/UNIGNORE <mask> [QUIET]\n"
-msgstr ""
+msgstr "/UNIGNORE <maska> [QUIET]\n"
 
 #: src/common/outbound.c:645
 msgid "/UNLOADALL, Unloads all perl scripts\n"
-msgstr ""
+msgstr "/UNLOADALL, uvoľní všetky skripty Perl\n"
 
 #: src/common/outbound.c:649
 msgid ""
 "/WALLCHOP <message>, sends the message to all chanops on the current "
 "channel\n"
-msgstr ""
+msgstr "/WALLCHOP <správa>, pošle správu všetkým so stavom chanop v aktuálnom kanáli\n"
 
 #: src/common/outbound.c:651
 msgid "/WALLCHAN <message>, writes the message to all channels\n"
-msgstr ""
+msgstr "/WALLCHAN <správa>, napíše správu do všetkých kanálov\n"
 
 #: src/common/outbound.c:653
 msgid "/VOICE <nick>, gives voice status to someone (needs chanop)\n"
-msgstr ""
+msgstr "/VOICE <prezývka>, priradí niekomu stav voice (vyžaduje chanop)\n"
 
 #: src/common/outbound.c:669
 msgid "Usage:\n"
@@ -1875,7 +1907,7 @@ msgstr "Egypt"
 
 #: src/common/util.c:752
 msgid "Western Sahara"
-msgstr "Západná sahara"
+msgstr "Západná Sahara"
 
 #: src/common/util.c:753
 msgid "Eritrea"
@@ -2143,7 +2175,7 @@ msgstr "Litva"
 
 #: src/common/util.c:819
 msgid "Luxembourg"
-msgstr "Luxembursko"
+msgstr "Luxemburgsko"
 
 #: src/common/util.c:820
 msgid "Latvia"
@@ -2175,7 +2207,7 @@ msgstr "Marshallove ostrovy"
 
 #: src/common/util.c:827
 msgid "Macedonia"
-msgstr "Macedonia"
+msgstr "Makedónia"
 
 #: src/common/util.c:828
 msgid "Mali"
@@ -2899,7 +2931,7 @@ msgstr "Triediť"
 
 #: src/fe-gtk/editlist.c:351 src/fe-gtk/menu.c:1815
 msgid "Help"
-msgstr "Nápoveda"
+msgstr "Pomocník"
 
 #: src/fe-gtk/fe-gtk.c:117
 msgid "Config dir"
@@ -2988,7 +3020,7 @@ msgid ""
 "1 is set to anything the page scrolls up, else it scrolls down"
 msgstr ""
 "Príkaz Posun o stránku posunie text hore alebo dolu o jednu stránku. Ak je "
-"Data 1 vypnené, posun bude smerom hore, inak smerom dolu."
+"Data 1 vyplnené, posun bude smerom hore, inak smerom dolu."
 
 #: src/fe-gtk/fkeys.c:143
 msgid ""
@@ -3011,7 +3043,7 @@ msgid ""
 "The Next Command command sets the entry to contain the next command entered "
 "- the same as pressing down in a shell"
 msgstr ""
-"Príkaz Nasledujúci príkaz nastaví položku, aby obsahovala další zadaný "
+"Príkaz Nasledujúci príkaz nastaví položku, aby obsahovala ďalší zadaný "
 "príkaz - rovnaké ako stlačenie šipky dolu v shelle."
 
 #: src/fe-gtk/fkeys.c:149
@@ -3029,7 +3061,7 @@ msgid ""
 "This command scrolls up and down through the list of nicks. If Data 1 is set "
 "to anything it will scroll up, else it scrolls down"
 msgstr ""
-"Tento príkaz posunie hore alebo dolu v zozname prezýviek. Ak je niečo "
+"Tento príkaz posunie hore alebo dolu v zozname prezývok. Ak je niečo "
 "vyplnené v Data 1, posun bude hore, inak bude posun dolu."
 
 #: src/fe-gtk/fkeys.c:153
@@ -3050,7 +3082,7 @@ msgstr "Tento príkaz posunie prednú záložku o jednu vpravo."
 
 #: src/fe-gtk/fkeys.c:159
 msgid "Push input line into history but doesn't send to server"
-msgstr "Vloží vstupný riadok do historie, ale nepošle ho serveru"
+msgstr "Vloží vstupný riadok do histórie, ale nepošle ho serveru"
 
 #: src/fe-gtk/fkeys.c:171
 msgid "There was an error loading key bindings configuration"
@@ -3267,7 +3299,7 @@ msgstr "Limit používateľov musí byť číslo!\n"
 
 #: src/fe-gtk/maingui.c:1402 src/fe-gtk/maingui.c:1518
 msgid "Open Toolbox"
-msgstr "Otvoriť nástoje"
+msgstr "Otvoriť nástroje"
 
 #: src/fe-gtk/maingui.c:1407
 msgid "Close Toolbox"
@@ -3573,7 +3605,7 @@ msgstr "Som preč"
 
 #: src/fe-gtk/menu.c:1442
 msgid "Auto Rejoin on Kick"
-msgstr "Automaticky sa vrátiť po KICKu"
+msgstr "Automaticky sa vrátiť po vykopnutí"
 
 #: src/fe-gtk/menu.c:1446 src/fe-gtk/menu.c:1759
 msgid "Auto ReConnect to Server"
@@ -3615,7 +3647,7 @@ msgstr "CTCP odpovedí.."
 
 #: src/fe-gtk/menu.c:1495 src/fe-gtk/menu.c:1771
 msgid "Userlist Buttons.."
-msgstr "Tlačítka zoznamu používateľov.."
+msgstr "Tlačidla zoznamu používateľov.."
 
 #: src/fe-gtk/menu.c:1501 src/fe-gtk/menu.c:1772
 msgid "Userlist Popup.."
@@ -3640,7 +3672,7 @@ msgstr "Upraviť klávesové skratky.."
 
 #: src/fe-gtk/menu.c:1532 src/fe-gtk/menu.c:1778
 msgid "Reload Settings"
-msgstr "Znovunačítať nastavenia"
+msgstr "Znovu načítať nastavenia"
 
 #: src/fe-gtk/menu.c:1539 src/fe-gtk/menu.c:1780
 msgid "Save Settings now"
@@ -3656,7 +3688,7 @@ msgstr "Domovská stránka X-Chat.."
 
 #: src/fe-gtk/menu.c:1561 src/fe-gtk/menu.c:1817
 msgid "Online Docs.."
-msgstr "Online dokumentácia.."
+msgstr "On-line dokumentácia.."
 
 #: src/fe-gtk/menu.c:1568 src/fe-gtk/menu.c:1819
 msgid "About X-Chat.."
@@ -3668,7 +3700,7 @@ msgstr "Skripty perlu.."
 
 #: src/fe-gtk/menu.c:1582
 msgid "Python Script.."
-msgstr "Skripty pythona.."
+msgstr "Skripty python.."
 
 #: src/fe-gtk/menu.c:1586
 msgid "Plugin.."
@@ -3680,7 +3712,7 @@ msgstr "Zoznam Perlu"
 
 #: src/fe-gtk/menu.c:1598 src/fe-gtk/menu.c:1805 src/fe-gtk/menu.c:1808
 msgid "Python List"
-msgstr "Zoznam Pythona"
+msgstr "Zoznam Python"
 
 #: src/fe-gtk/menu.c:1602 src/fe-gtk/menu.c:1796 src/fe-gtk/menu.c:1800
 msgid "Plugin List"
@@ -3692,7 +3724,7 @@ msgstr "Všetky skripty perlu"
 
 #: src/fe-gtk/menu.c:1614
 msgid "All Python Scripts"
-msgstr "Všetky skripty Pythona"
+msgstr "Všetky skripty Python"
 
 #: src/fe-gtk/menu.c:1618
 msgid "All Plugins"
@@ -3736,7 +3768,7 @@ msgstr "Použív_ateľské menu"
 
 #: src/fe-gtk/menu.c:1648
 msgid "_Help"
-msgstr "_Nápoveda"
+msgstr "_Pomocník"
 
 #: src/fe-gtk/menu.c:1716
 msgid "X-Chat"
@@ -3755,7 +3787,7 @@ msgstr "Voľby"
 #. 33
 #: src/fe-gtk/menu.c:1758
 msgid "Auto ReJoin on Kick"
-msgstr "Automaticky sa vrátiť po KICKu"
+msgstr "Automaticky sa vrátiť po vykopnutí"
 
 #: src/fe-gtk/menu.c:1766
 msgid "Settings"
@@ -4127,15 +4159,15 @@ msgstr "Automaticky zvýrazniť"
 
 #: src/fe-gtk/settings.c:982
 msgid "Auto adjust the separator bar position as needed."
-msgstr "Automaticky prispôsobiť pozíciu oddelovača ako treba."
+msgstr "Automaticky prispôsobiť pozíciu oddeľovača ako treba."
 
 #: src/fe-gtk/settings.c:984
 msgid "Draw Separator Bar"
-msgstr "Zobrazovať oddelovač"
+msgstr "Zobrazovať oddeľovač"
 
 #: src/fe-gtk/settings.c:986
 msgid "Make the separator an actual visible line."
-msgstr "Urobiť oddelovač viditeľnou čiarov."
+msgstr "Urobiť oddeľovač viditeľnou čiarou."
 
 #: src/fe-gtk/settings.c:988
 msgid "Word Wrap"
@@ -4143,7 +4175,7 @@ msgstr "Zarovnávať slová"
 
 #: src/fe-gtk/settings.c:990
 msgid "Don't split words from one line to the next"
-msgstr "Nerozdelovať slová na konci riadku"
+msgstr "Nerozdeľovať slová na konci riadku"
 
 #: src/fe-gtk/settings.c:992
 msgid "Transparent Background"
@@ -4151,7 +4183,7 @@ msgstr "Transparentné pozadie"
 
 #: src/fe-gtk/settings.c:995
 msgid "Make the text box seem see-through"
-msgstr "Urobiť textové okno presvitné"
+msgstr "Urobiť textové okno priesvitné"
 
 #: src/fe-gtk/settings.c:997
 msgid "Tint Transparency"
@@ -4219,7 +4251,7 @@ msgstr "Nezobrazovať zoznam serverov po spustení X-Chatu"
 
 #: src/fe-gtk/settings.c:1063
 msgid "Auto Save URL list"
-msgstr "Automaticky uložit zoznam URL"
+msgstr "Automaticky uložiť zoznam URL"
 
 #: src/fe-gtk/settings.c:1066
 msgid "Auto save your URL list when exiting from X-Chat"
@@ -4301,7 +4333,7 @@ msgstr "Zobraziť prezývku a ikonu op/voice pred vstupným poľom"
 
 #: src/fe-gtk/settings.c:1135
 msgid "Nickname Completion Character:"
-msgstr "Znak pre doplnenei prezývky:"
+msgstr "Znak pre doplnenie prezývky:"
 
 #: src/fe-gtk/settings.c:1139
 msgid "Character to append to completed nicknames"
@@ -4513,7 +4545,7 @@ msgstr "Hore:"
 
 #: src/fe-gtk/settings.c:1311
 msgid "Window Size"
-msgstr "Velkosť okna"
+msgstr "Veľkosť okna"
 
 #: src/fe-gtk/settings.c:1315
 msgid "Width:"
@@ -4548,7 +4580,7 @@ msgstr "Aplet panelu"
 
 #: src/fe-gtk/settings.c:1385
 msgid "Layout For a Vertical Panel"
-msgstr "Vzhľad pre vertikálný panel"
+msgstr "Vzhľad pre vertikálny panel"
 
 #: src/fe-gtk/settings.c:1388
 msgid "Layout the X-Chat panel applet for a vertical panel"
@@ -4717,7 +4749,7 @@ msgstr "Posielať AWAY správy"
 
 #: src/fe-gtk/settings.c:1544
 msgid "Announce your away message to the channel(s) you are in"
-msgstr "Zaslať AWAY správu na kanál(y), ku ktorím ste pripojený"
+msgstr "Zaslať AWAY správu na kanál(y), ku ktorým ste pripojený"
 
 #: src/fe-gtk/settings.c:1546
 msgid "Your away settings"
