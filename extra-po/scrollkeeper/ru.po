@@ -1,13 +1,13 @@
-# Copyright (C) 2001-2002 Free Software Foundation, Inc.
+# Copyright (C) 2001 Free Software Foundation, Inc.
 # Dmitry Mastrukov <dmitry@taurussoft.org>, 2001-2002.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrollkeeper-0.3.6\n"
-"POT-Creation-Date: 2002-03-20 23:10-0600\n"
-"PO-Revision-Date: 2001-03-19 19:13+03:00\n"
+"Project-Id-Version: Scrollkeeper\n"
+"POT-Creation-Date: 2002-06-05 22:49+0400\n"
+"PO-Revision-Date: 2002-06-06 10:04+04:00\n"
 "Last-Translator: Dmitry Mastrukov <dmitry@taurussoft.org>\n"
-"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"Language-Team: Russian <RU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8BIT\n"
@@ -16,12 +16,22 @@ msgstr ""
 msgid ""
 "Usage: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
 msgstr ""
-"Использование: scrollkeeper_install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF ФАЙЛ>\n"
+"Использование: scrollkeeper_install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] "
+"<OMF ФАЙЛ>\n"
 
-#: cl/src/scrollkeeper-install.c:96 cl/src/update.c:518
+#: cl/src/scrollkeeper-install.c:95
+msgid "Could not create database.  Aborting install.\n"
+msgstr "Не удалось создать базу данных. Установка прерывается.\n"
+
+#: cl/src/scrollkeeper-install.c:99 cl/src/update.c:524
 #, c-format
 msgid "Registering %s\n"
 msgstr "Идёт регистрация %s\n"
+
+#: cl/src/scrollkeeper-install.c:101 cl/src/update.c:521
+#, c-format
+msgid "Unable to register %s\n"
+msgstr "Невозможно зарегестрировать %s\n"
 
 #: cl/src/preinstall.c:35
 msgid "Usage: scrollkeeper-preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
@@ -31,40 +41,53 @@ msgstr ""
 
 #: cl/src/preinstall.c:68
 #, c-format
-msgid "url update in OMF file %s failed\n"
-msgstr "Сбой обновления url в файле OMF %s\n"
+msgid "Unable to update URL in OMF file %s.  Copying OMF file unchanged.\n"
+msgstr ""
+"Невозможно обновить URL в файле OMF %s. Файл OMF копируется неизменённым.\n"
 
 #: cl/src/scrollkeeper-uninstall.c:32
 msgid ""
 "Usage: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF "
 "FILE>\n"
 msgstr ""
-"Использование: scrollkeeper_uninstall [-v] -q] [-p <SCROLLKEEPER_DB_DIR>] <OMF ФАЙЛ>\n"
+"Использование: scrollkeeper_uninstall [-v] -q] [-p <SCROLLKEEPER_DB_DIR>] "
+"<OMF ФАЙЛ>\n"
 
-#: cl/src/scrollkeeper-uninstall.c:86 cl/src/update.c:531
+#: cl/src/scrollkeeper-uninstall.c:86 cl/src/update.c:539
 #, c-format
 msgid "Unregistering %s\n"
-msgstr "Идёт отрегистрация %s\n"
+msgstr "Идёт отмена регистрации %s\n"
 
 #: cl/src/update.c:108
 #, c-format
 msgid "Usage: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
-msgstr "Использование: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
+msgstr ""
+"Использование: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
 
 #: cl/src/update.c:220
 #, c-format
 msgid "%s: warning: %s overrides %s\n"
-msgstr "%s: внимание: %s переписывает %s\n"
+msgstr "%s: внимание: %s перезаписывает %s\n"
 
-#: cl/src/update.c:502
+#: cl/src/update.c:410
+msgid "Could not create database.  Aborting update.\n"
+msgstr "Не удалось создать базу данных. Обновление прерывается.\n"
+
+#: cl/src/update.c:505
 #, c-format
 msgid "%s: %s: is not a directory\n"
 msgstr "%s: %s: не является каталогом\n"
 
-#: cl/src/update.c:524
+#: cl/src/update.c:530
 #, c-format
 msgid "Updating %s\n"
 msgstr "Идёт обновление %s\n"
+
+#: cl/src/update.c:533
+#, c-format
+msgid "Unable to complete update.  Could not register %s\n"
+msgstr ""
+"Невозможно полностью выполнить обновление. не удалось зарегестрировать %s\n"
 
 #: cl/src/get-cl.c:55
 msgid "Cannot open temporary file.\n"
@@ -84,17 +107,73 @@ msgstr "Нет Списка содержимого для этой локали!
 msgid "%s: out of memory: %s\n"
 msgstr "%s: не хватает памяти: %s\n"
 
-#: libs/install.c:159
+#: libs/error.c:262
 #, c-format
-msgid "wrong omf file %s\n"
-msgstr "неверный omf файл %s\n"
+msgid "OMF validation error: %s"
+msgstr "Ошибка проверки OMF на допустимость: %s"
 
-#: libs/install.c:189 libs/uninstall.c:97
+#: libs/install.c:132
+#, c-format
+msgid ""
+"TOC file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr ""
+"Файл TOC не существует, нечитаем или не является правильным документом XML: "
+"%s\n"
+
+#: libs/install.c:173
+#, c-format
+msgid ""
+"OMF file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr ""
+"Файл OMF не существует, нечитаем или не является правильным документом XML: "
+"%s\n"
+
+#: libs/install.c:182
+#, c-format
+msgid "Could not parse ScrollKeeper-OMF DTD: %s\n"
+msgstr "Не удалось разобрать ScrollKeeper-OMF DTD: %s\n"
+
+#: libs/install.c:190
+#, c-format
+msgid "OMF file [%s] does not validate against ScrollKeeper-OMF DTD: %s\n"
+msgstr ""
+"Файл OMF [%s] не является допустимым с точки зрения ScrollKeeper-OMF "
+"DTD: %s\n"
+
+#. This should not happen
+#: libs/install.c:207
+msgid "Failed to locate an <OMF> element.\n"
+msgstr "Сбой при попытке перейти на элемент <OMF>.\n"
+
+#. This should not happen
+#: libs/install.c:212
+msgid "<OMF> node has no children.\n"
+msgstr "Узел <OMF> не имеет потомков.\n"
+
+#: libs/install.c:236
+#, c-format
+msgid ""
+"Content list file does not exist, is not readable, or is not well-formed "
+"XML: %s\n"
+msgstr ""
+"Файл списка содержимого не существует, нечитаем или не является правильным "
+"документом XML: %s\n"
+
+#: libs/install.c:243
+#, c-format
+msgid ""
+"Extended content list file does not exist, is not readable, or is not well-"
+"formed XML: %s\n"
+msgstr ""
+"Расширенный файл списка содержимого не существует, нечитаем или не является "
+"правильным документом XML: %s\n"
+
+#: libs/uninstall.c:97
 #, c-format
 msgid "wrong content list file %s\n"
 msgstr "неверный файл списка содержимого %s\n"
 
-#: libs/install.c:196 libs/uninstall.c:104
+#: libs/uninstall.c:104
 #, c-format
 msgid "wrong extended content list file %s\n"
 msgstr "неверный расширенный файла списка содержимого %s\n"
@@ -104,13 +183,34 @@ msgstr "неверный расширенный файла списка соде
 msgid "%s missing\n"
 msgstr "%s отсутствует\n"
 
+#: libs/database.c:41
+#, c-format
+msgid "Could not create directory %s : %s\n"
+msgstr "Не удалось создать каталог %s : %s\n"
+
+#: libs/update-url.c:40
+msgid "OMF file was not well-formed.\n"
+msgstr "Файл OMF не является правильным.\n"
+
+#: libs/update-url.c:48
+msgid "Could not find root element of OMF file.\n"
+msgstr "Не удалось найти корневой элемент в файле OMF.\n"
+
+#: libs/update-url.c:52
+msgid "Root element of OMF file is not <omf>.\n"
+msgstr "Корневой элемент в файле OMF не является <omf>.\n"
+
+#: libs/update-url.c:64
+msgid "OMF file does not have <resource> element.\n"
+msgstr "Файл OMF не имеет элемента <resource>.\n"
+
 #: extract/src/scrollkeeper-extract.c:30
 msgid ""
 "Usage: scrollkeeper-extract <xml file> <stylesheet 1> <output file 1> "
 "<stylesheet 2> <output file 2> ...\n"
 msgstr ""
-"Использование: scrollkeeper-extract <файл xml> <стилевой файл 1> <выходной файл 1> "
-"<стилевой файл 2> <выходной вайл 2> ...\n"
+"Использование: scrollkeeper-extract <файл xml> <стилевой файл 1> <выходной "
+"файл 1> <стилевой файл 2> <выходной вайл 2> ...\n"
 
 #: extract/src/scrollkeeper-extract.c:61
 #, c-format
@@ -123,11 +223,11 @@ msgstr "3D Моделирование"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:2
 msgid "3D Rendering"
-msgstr "3D Рендеринг"
+msgstr "Трёхмерный Рендеринг"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:3
 msgid "ADA"
-msgstr ""
+msgstr "Язык программирования ADA"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:4
 msgid "Administration"
@@ -135,7 +235,7 @@ msgstr "Администрирование"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:5
 msgid "Amusement"
-msgstr "Приколы"
+msgstr "Развлечения"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:6
 msgid "Analysis"
@@ -143,7 +243,7 @@ msgstr "Анализ"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:7
 msgid "AppleTalk"
-msgstr ""
+msgstr "Сеть AppleTalk"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:8
 msgid "Applets"
@@ -155,7 +255,7 @@ msgstr "Приложения"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:10
 msgid "Arcade"
-msgstr "Аркадные"
+msgstr "Аркада"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:11
 msgid "Archiving"
@@ -175,11 +275,11 @@ msgstr "Астрофизика"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:15
 msgid "BIND"
-msgstr ""
+msgstr "Программа BIND"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:16
 msgid "Backups"
-msgstr "резервное копирование"
+msgstr "Резервное копирование"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:17
 msgid "Biology"
@@ -195,15 +295,15 @@ msgstr "Средства разработки"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:20
 msgid "C"
-msgstr ""
+msgstr "Язык программирования C"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:21
 msgid "C++"
-msgstr ""
+msgstr "Язык программирования C++"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:22
 msgid "CAD"
-msgstr ""
+msgstr "Программы CAD"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:23
 msgid "CD Mastering"
@@ -211,11 +311,11 @@ msgstr "Создание CD"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:24
 msgid "CDE"
-msgstr ""
+msgstr "Среда CDE"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:25
 msgid "CLI"
-msgstr ""
+msgstr "Программы CLI"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:26
 msgid "Calculating"
@@ -223,7 +323,7 @@ msgstr "Вычисления"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:27
 msgid "Caldera"
-msgstr ""
+msgstr "Дистрибутивы Caldera"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:28
 msgid "Calendar"
@@ -287,7 +387,7 @@ msgstr "Криптография"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:43
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:44
 msgid "Data Processing"
@@ -303,7 +403,7 @@ msgstr "Базы данных"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:47
 msgid "Debian"
-msgstr ""
+msgstr "Дистрибутивы Debian"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:48
 msgid "Debuggers"
@@ -331,7 +431,7 @@ msgstr "Рисование"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:54
 msgid "EDA"
-msgstr ""
+msgstr "EDA"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:55
 msgid "Editing"
@@ -355,7 +455,7 @@ msgstr "Окружения"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:60
 msgid "FTP"
-msgstr ""
+msgstr "Программы FTP"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:61
 msgid "Fax"
@@ -395,19 +495,19 @@ msgstr "Шрифты"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:70
 msgid "FreeBSD"
-msgstr ""
+msgstr "FreeBSD"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:71
 msgid "GNOME"
-msgstr ""
+msgstr "Среда GNOME"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:72
 msgid "GTK+"
-msgstr ""
+msgstr "Пакет GTK+"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:73
 msgid "GUI"
-msgstr ""
+msgstr "GUI"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:74
 msgid "Games"
@@ -427,7 +527,7 @@ msgstr "Графика"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:78
 msgid "HTTP"
-msgstr ""
+msgstr "Протокол HTTP"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:79
 msgid "Hardware"
@@ -459,11 +559,11 @@ msgstr "Обнаружение проникновения"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:86
 msgid "Java"
-msgstr ""
+msgstr "Язык программирования Java"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:87
 msgid "KDE"
-msgstr ""
+msgstr "Среда KDE"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:88
 msgid "Kernels"
@@ -483,7 +583,7 @@ msgstr "Лицензии"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:92
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:93
 msgid "Local"
@@ -495,11 +595,11 @@ msgstr "Менеджеры авторизации"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:95
 msgid "MIDI"
-msgstr ""
+msgstr "MIDI"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:96
 msgid "Mandrake"
-msgstr ""
+msgstr "Дистрибутивы Mandrak"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:97
 msgid "Math"
@@ -515,7 +615,7 @@ msgstr "Сообщения"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:100
 msgid "Mixers"
-msgstr ""
+msgstr "Микшеры"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:101
 msgid "Monitors"
@@ -531,7 +631,7 @@ msgstr "Музыка"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:104
 msgid "NetBSD"
-msgstr ""
+msgstr "NetBSD"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:105
 msgid "Network"
@@ -555,7 +655,7 @@ msgstr "Прочее"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:110
 msgid "PCI/ISA/PCMCIA"
-msgstr ""
+msgstr "Шины PCI/ISA/PCMCIA"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:111
 msgid "PIM"
@@ -563,7 +663,7 @@ msgstr "Персональный информационный менеджер"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:112
 msgid "PPP"
-msgstr ""
+msgstr "Протокол PPP"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:113
 msgid "Package Management"
@@ -575,7 +675,7 @@ msgstr "Системы пакетов"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:115
 msgid "Perl"
-msgstr ""
+msgstr "Язык программирования Perl"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:116
 msgid "Physics"
@@ -587,7 +687,7 @@ msgstr "Проигрыватели"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:118
 msgid "Plotting"
-msgstr ""
+msgstr "Plotting"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:119
 msgid "Presentation"
@@ -619,11 +719,11 @@ msgstr "Головоломки"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:126
 msgid "Python"
-msgstr ""
+msgstr "Язык программирования Python"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:127
 msgid "Qt"
-msgstr ""
+msgstr "Пакет Qt"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:128
 msgid "RAD"
@@ -635,11 +735,11 @@ msgstr "Запись"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:130
 msgid "Red Flag"
-msgstr ""
+msgstr "Red Flag"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:131
 msgid "Red Hat"
-msgstr ""
+msgstr "Дистрибутивы Red Hat"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:132
 msgid "Remote"
@@ -651,11 +751,11 @@ msgstr "Ролевые"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:134
 msgid "SMB"
-msgstr ""
+msgstr "Протокол SMB"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:135
 msgid "SSH"
-msgstr ""
+msgstr "Программы SSH"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:136
 msgid "Science"
@@ -687,7 +787,7 @@ msgstr "Симуляция"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:143
 msgid "Slackware"
-msgstr ""
+msgstr "Дистрибутивы Slackware"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:144
 msgid "Sound"
@@ -707,7 +807,7 @@ msgstr "Стратегия"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:148
 msgid "SuSE"
-msgstr ""
+msgstr "Дистрибутивы SuSE"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:149
 msgid "Syslog"
@@ -723,11 +823,11 @@ msgstr "Системные вызовы"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:152
 msgid "TCP/IP"
-msgstr ""
+msgstr "Протокол TCP/IP"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:153
 msgid "Tcl/Tk"
-msgstr ""
+msgstr "Язык программирования Tcl/Tk"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:154
 msgid "Technology"
@@ -735,7 +835,7 @@ msgstr "Технология"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:155
 msgid "Telnet"
-msgstr ""
+msgstr "Программы Telnet"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:156
 msgid "Terminals"
@@ -795,7 +895,7 @@ msgstr "Визуализация"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:170
 msgid "Web"
-msgstr ""
+msgstr "Паутина"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:171
 msgid "Web Publishing"
@@ -803,7 +903,7 @@ msgstr "Web-публикации"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:172
 msgid "WebML"
-msgstr ""
+msgstr "WebML"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:173
 msgid "White Papers"
@@ -819,11 +919,14 @@ msgstr "Обработка текста"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:176
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:177
 msgid "gtk++"
-msgstr ""
+msgstr "Пакет gtk++"
+
+#~ msgid "wrong omf file %s\n"
+#~ msgstr "неверный omf файл %s\n"
 
 #~ msgid "error while parsing %s\n"
 #~ msgstr "ошибка разбора %s\n"
