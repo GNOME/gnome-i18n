@@ -290,7 +290,7 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
 						po_file = g_strdup_printf ("%s/PO/%s.%s.%s.po", install_dir,
 								version->module->str, version->id->str, filesplit[0]);
-						g_message ("Updating %s.%s.%s.po:", version->module->str, version->id->str, filesplit[0]);
+						g_message ("Updating %s.%s.%s.po ...", version->module->str, version->id->str, filesplit[0]);
 						command = g_strdup_printf (
 							"msgmerge -q %s %s/PO/%s.%s.pot -o %s > /dev/null",
 							file_name, install_dir, version->module->str,
