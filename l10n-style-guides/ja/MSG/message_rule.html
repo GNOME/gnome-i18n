@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=euc-jp">
+   <META NAME="Author" CONTENT="SATOKO SUHAMA">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [ja_euc] (X11; I; SunOS 5.5.1 sun4u) [Netscape]">
+   <TITLE>Solaris メッセージの L10n：メッセージファイルのアップデート・編集 (抜粋)</TITLE>
+</HEAD>
+<BODY>
+
+
+<H1>
+<A NAME="update"></A>メッセージファイルのアップデート・編集 (抜粋)</H1>
+エンジニアからの指示にしたがって、該当するファイルを編集します。
+
+<H2>
+翻訳対象のメッセージファイルの種類</H2>
+
+<UL>
+<LI>
+<A HREF="#po">.po</A></LI>
+
+<LI>
+<A HREF="#msg">.msg</A></LI>
+
+<LI>
+<A HREF="#tmsg">.tmsg</A></LI>
+
+<LI>
+<A HREF="#java">.java</A></LI>
+
+<LI>
+<A HREF="#properties">.properties</A></LI>
+
+<LI>
+.info</LI>
+
+<LI>オンラインヘルプ</LI>
+<UL>
+<LI>
+<A HREF="#html">.html</A></LI>
+<LI><A HREF="#hs">*.hs</A></LI>
+<LI><A HREF="#mapjhm">*MAP.jhm</A></LI>
+<LI><A HREF="#tocxml">*TOC.xml</A></LI>
+
+<LI>
+<A HREF="#hlp">.help、.hlp</A></LI>
+
+<LI>
+<A HREF="#nonext">拡張子なし</A></LI>
+</UL>
+</UL>
+
+<H2>
+翻訳・アップデートを行う際の注意事項</H2>
+
+<H3>
+各メッセージファイル形式に共通</H3>
+
+<UL>
+<LI>
+SCCS 管理のファイルをアップデートする場合は、どの build の変更を反映したのかがわかるように、SCCS
+delget 時のコメントに記入すること。</LI>
+
+<BR>例:
+<BR>% sccs delget &lt;filename>
+<BR>comments?&nbsp; [s8_23] incorporated base changes.
+<BR><A HREF="codemgr">bringover, putback, SCCS ファイル編集の方法</A>
+
+<LI>
+翻訳対象外の文字列</LI>
+
+<BR>変数:&nbsp; %s (文字列)、%c (文字)、%d (10 進数) など。
+<LI>
+変数の扱い</LI>
+
+<BR>日本語メッセージでも、変数の順番が英語と同じになるようにすること。
+<BR>変数の順番を変えなければ日本語にできない場合は、次のようにして変数の順番を示す数値を指定すること。
+<BR>例:&nbsp; msgid&nbsp;&nbsp; "Checking uninstalled directory format package"
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msgstr&nbsp; "&lt;%2$s> からアンインストールされたディレクトリ形式"
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgid&nbsp;&nbsp;
+"&lt;%s> from &lt;%s>＼n"
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgstr&nbsp;
+"パッケージ &lt;%1$s> を検査中です。＼n"
+</UL>
+
+<H3>
+<A NAME="po"></A>.po ファイル</H3>
+
+<H4>
+必要な作業</H4>
+
+<DD>
+変更があった msgid の行を最新の英語版と同じにする (マージ)</DD>
+
+<DD>
+対応する msgstr の行を日本語に翻訳する。</DD>
+
+<H4>
+コメントアウト行</H4>
+
+<DD>
+行頭に # がある行は、メッセージとして認識されないコメント行です。</DD>
+
+<H4>
+エスケープシーケンス</H4>
+
+<DD>
+バックスラッシュ ＼ でエスケープする。</DD>
+
+<DD>
+例: 二重引用符 " をエスケープする場合</DD>
+
+<DD>
+use ＼"ab2admin -o start＼" to....&nbsp;&nbsp;&nbsp; のようにする。</DD>
+
+
+<H3>
+<A NAME="msg"></A>.msg ファイル</H3>
+
+<H4>
+必要な作業</H4>
+
+<DD>
+英語メッセージを翻訳した日本語メッセージに置き換える。</DD>
+
+<DD>
+メッセージ番号とメッセージ文字列との間に必ず半角スペースを 1 つ入力すること．</DD>
+
+<DD>
+　例:　3&nbsp; スーパーユーザーのパスワードを入力してください。＼n</DD>
+
+<H4>
+改行</H4>
+
+<DD>
+メッセージを複数行に改行するには、＼n を入力します。</DD>
+
+<H4>
+コメントアウト行</H4>
+
+<DD>
+行頭に $ がある行は、メッセージとして認識されないコメント行です。</DD>
+
+<H3>
+<A NAME="tmsg"></A>.tmsg ファイル</H3>
+
+<H4>
+必要な作業</H4>
+
+<DD>
+英語メッセージを翻訳した日本語メッセージに置き換える。</DD>
+
+<DD>
+メッセージ ID 番号とメッセージ文字列との間に必ず半角スペースを 1 つ入力すること。</DD>
+
+<DD>
+　例:　32134&nbsp; root で admintool を起動</DD>
+
+<H4>
+改行</H4>
+
+<DD>
+メッセージを複数行に改行するには、＼＼＼n＼ を入力します。</DD>
+
+<DD>
+　例:&nbsp;&nbsp; 32400&nbsp; このアイコンは、ブロック型特殊ファイルを表しています。＼＼＼n＼</DD>
+
+<DD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+データ型は BLOCK_DEVICE です。</DD>
+
+<H4>
+コメントアウト行</H4>
+
+<DD>
+行頭に $ がある行は、メッセージとして認識されないコメント行です。</DD>
+
+
+<H3>
+<A NAME="java"></A>.java ファイル</H3>
+
+<H4>
+必要な作業</H4>
+
+<DD>
+・ { "MsgID" ,&nbsp; "Message xxxxxxxxx" },&nbsp; の Message xxxxxxxxxx の部分を日本語メッセージに翻訳する。</DD>
+<br>
+<br>
+<DD>
+・ ファイル名と、各クラス名に _ja を付ける。</DD>
+<pre>
+        たとえば "AddressSyncConduitMessages.java" の場合は、
+        ファイル名を "AddressSyncConduitMessages_ja.java" にして、
+
+        public class AddressSyncConduitMessages extends ListResourceBundle という行を
+        public class AddressSyncConduitMessages_ja extends ListResourceBundle にする。
+</pre>
+
+<H4>
+改行</H4>
+
+<DD>
+メッセージを複数行に改行するには、+ を入力します。</DD>
+
+<DD>
+例 :&nbsp;&nbsp;&nbsp; { "MSG8", "製品が正しく動作するためには"&nbsp; +</DD>
+
+<DD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " システムをリブートする必要があります。
+" +</DD>
+
+<DD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " ここでリブートしますか
+?"},</DD>
+
+<H4>
+コメントアウト行</H4>
+
+<DD>
+行頭に // がある行、または先頭 /** と末尾 */ で囲まれている行は、メッセージとして認識されないコメント行です。</DD>
+
+<H3>
+<A NAME="properties"></A>.properties ファイル</H3>
+
+<H4>
+必要な作業</H4>
+
+<DD>
+tag=messages の "messages" 部分を日本語メッセージに翻訳する。</DD>
+
+<pre>   例: init_view_explain=Choose what to display for this first time request.
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              ここを翻訳↑
+</pre>
+
+<H4>
+改行</H4>
+<DD>
+メッセージを複数行に改行するには、＼n を入力します。</DD>
+
+<H4>
+コメントアウト行</H4>
+<DD>
+行頭に # がある行は、メッセージとして認識されないコメント行です。</DD>
+
+<H3>
+ヘルプファイル</H3>
+
+<H4>
+必要な作業</H4>
+
+<DD>
+英語の文章を翻訳した日本語文章に置き換える。</DD>
+
+<H4>
+<A NAME="html"></A>.html ファイル</H4>
+<pre>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;
+                                                            ~~~~~~~~~~~
+                                                            euc-jp にする。
+</pre>
+
+<H4>*.hs、*MAP.jhm、*TOC.xml ファイル</H4>
+<DD>.html ファイルと共に、*.hs、*MAP.jhm、*TOC.xml ファイルが含まれていることがある。</DD>
+<UL>
+<LI><A NAME="hs"></A>*.hs
+<br>先頭行 &lt;?xml version='1.0' encoding='ISO-8859-1' ?&gt; を
+&lt;?xml version='1.0' encoding='EUC_JP' ?&gt; にする。
+<br>&lt;title&gt; および &lt;label&gt; タグで囲まれた部分を日本語に訳す。
+</LI>
+
+<LI><A NAME="mapjhm"></A>*MAP.jhm
+<br>先頭行 &lt;?xml version='1.0' encoding='ISO-8859-1' ?&gt; を
+&lt;?xml version='1.0' encoding='EUC_JP' ?&gt; にする。
+<br>&lt;tocitem text= " xxxxxx  "  target=" "/&gt; の xxxxx 部分を日本語に訳す。
+</LI>
+
+<LI><A NAME="tocxml"></A>*TOC.xml
+<br>先頭行 &lt;?xml version='1.0' encoding='ISO-8859-1' ?&gt; を
+&lt;?xml version='1.0' encoding='EUC_JP' ?&gt; にする。
+<br></LI>
+</UL>
+
+<H4>
+<A NAME="hlp"></A>.help、.hlp ファイル</H4>
+
+<DD>
+行末をそろえる (1 行の文字数を半角 50 字くらいにする)</DD>
+
+<H4>
+topics/TOPICS ファイル</H4>
+
+<DD>
+以下のように、ファイル名の行の先頭に、スペースではなくタブで空白を入力すること。</DD>
+
+<DD>
+(そうしないと、実際にヘルプを表示する時にトピックスとして認識されない)</DD>
+
+<DD>
+例:</DD>
+
+<DD>
+DNS 検索リスト</DD>
+
+<DD>
+(TAB) dns_searchdomains.help</DD>
+
+<DD>
+DNS サーバー</DD>
+
+<DD>
+(TAB) dns_server.help</DD>
+
+<H4>
+<A NAME="nonext"></A>拡張子なしファイル</H4>
+
+<DD>
+行末をそろえる (1 行の文字数を半角 28 文字くらいにする)</DD>
+
+
+
+</BODY>
+</HTML>
