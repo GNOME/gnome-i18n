@@ -6,7 +6,7 @@
 # Rewrited by Carlos Perelló Marín <carlos@gnome-db.org>
 
 use POSIX qw(locale_h);
-use strict; #We should fix some checks to enable it :-(
+#use strict; #We should fix some checks to enable it :-(
 
 
 ###############
@@ -52,7 +52,7 @@ GetOptions('cvsroot-dir=s'  => \$cvsroot,
            'html-dir=s'     => \$htmldir,
            'pos-dir=s'      => \$posdir,
            'ttl=i'          => \$ttl,
-           'modules-file'   => \$modulesfile,
+           'modules-file=s' => \$modulesfile,
            'help'           => \$help,
        ) or Usage();
        
