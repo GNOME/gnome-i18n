@@ -55,7 +55,7 @@ if (is_logged_in()) {
 	}
 echo $event["from"];
 ?>: <?
-echo $newsitem["title"];
+echo $event["title"];
 ?>
 </th></tr>
 <tr><td class="news">
