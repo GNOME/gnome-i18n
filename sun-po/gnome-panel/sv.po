@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-panel\n"
-"POT-Creation-Date: 2002-05-29 03:08+1200\n"
+"POT-Creation-Date: 2002-05-30 21:00+0100\n"
 "PO-Revision-Date: 2002-05-30 04:57\n"
 "Last-Translator: Sun G11n <gnome_int_l10n@ireland.sun.com>\n"
 "Language-Team: Sun G11n <gnome_int_l10n@ireland.sun.com>\n"
@@ -72,7 +72,7 @@ msgid "_Animation filename:"
 msgstr "Animations_filnamnet:"
 
 #: applets/fish/fish.c:738 applets/gen_util/mailcheck.c:1245
-#: gnome-panel/menu-properties.c:501 gnome-panel/menu-properties.c:539
+#: gnome-panel/menu-properties.c:498 gnome-panel/menu-properties.c:536
 #: gnome-panel/panel-config.c:1369 gnome-panel/panel-util.c:241
 msgid "Browse"
 msgstr "Bläddra"
@@ -244,46 +244,57 @@ msgstr "Datorklocka"
 msgid "%A, %B %d %Y"
 msgstr "%A %d %B %Y"
 
-#: applets/gen_util/clock.c:874
+#: applets/gen_util/clock.c:854 applets/gen_util/clock.c:1086
+#: applets/gen_util/mailcheck.c:1539 applets/gen_util/mailcheck.c:1742
+#: applets/gen_util/pager.c:155 applets/gen_util/pager.c:456
+#: applets/gen_util/tasklist.c:114 applets/gen_util/tasklist.c:671
+#, fuzzy, c-format
+msgid "There was an error displaying help: %s"
+msgstr ""
+"Ett fel uppstod vid försök att logga i:\n"
+"\n"
+"%s"
+
+#: applets/gen_util/clock.c:898
 msgid "Clock Preferences"
 msgstr "Klockinställningar"
 
-#: applets/gen_util/clock.c:901
+#: applets/gen_util/clock.c:925
 msgid "Clock type"
 msgstr "Typ av klocka"
 
-#: applets/gen_util/clock.c:911
+#: applets/gen_util/clock.c:935
 msgid "_12 hour"
 msgstr "_12 timmar"
 
-#: applets/gen_util/clock.c:917
+#: applets/gen_util/clock.c:941
 msgid "_24 hour"
 msgstr "_24 timmar"
 
-#: applets/gen_util/clock.c:922
+#: applets/gen_util/clock.c:946
 msgid "_UNIX time"
 msgstr "_Unixtid"
 
-#: applets/gen_util/clock.c:926
+#: applets/gen_util/clock.c:950
 msgid "_Internet time"
 msgstr "_Internettid"
 
-#: applets/gen_util/clock.c:963
+#: applets/gen_util/clock.c:987
 msgid "Show _seconds"
 msgstr "Visa _sekunder"
 
-#: applets/gen_util/clock.c:973
+#: applets/gen_util/clock.c:997
 msgid "Show _date"
 msgstr "Visa _datum"
 
-#: applets/gen_util/clock.c:983
+#: applets/gen_util/clock.c:1007
 #, fuzzy
 msgid "Use _UTC"
 msgstr "Använd _GMT"
 
 #. Translator credits
-#: applets/gen_util/clock.c:1073 applets/gen_util/mailcheck.c:1640
-#: applets/gen_util/pager.c:422 applets/gen_util/tasklist.c:641
+#: applets/gen_util/clock.c:1120 applets/gen_util/mailcheck.c:1667
+#: applets/gen_util/pager.c:487 applets/gen_util/tasklist.c:701
 #: gnome-panel/menu.c:240
 msgid "translator_credits"
 msgstr ""
@@ -296,15 +307,15 @@ msgstr ""
 "Rapportera fel i översättningen till sv@li.org"
 
 #: applets/gen_util/GNOME_GenUtilApplet_Factory.server.in.in.h:3
-#: applets/gen_util/clock.c:1091
+#: applets/gen_util/clock.c:1138
 msgid "Clock"
 msgstr "Klocka"
 
-#: applets/gen_util/clock.c:1092
+#: applets/gen_util/clock.c:1139
 msgid "(C) 1998-2002 the Free Software Foundation"
 msgstr "© 1998-2002 Free Software Foundation"
 
-#: applets/gen_util/clock.c:1093
+#: applets/gen_util/clock.c:1140
 #, fuzzy
 msgid "The Clock displays the current time and date"
 msgstr "Klockpanelprogrammet visar aktuell tid och aktuellt datum"
@@ -398,7 +409,7 @@ msgid "Get the current time and date"
 msgstr "Visa aktuell tid och aktuellt datum"
 
 #: applets/gen_util/GNOME_GenUtilApplet_Factory.server.in.in.h:6
-#: applets/gen_util/mailcheck.c:218 applets/gen_util/mailcheck.c:1653
+#: applets/gen_util/mailcheck.c:218 applets/gen_util/mailcheck.c:1680
 msgid "Inbox Monitor"
 msgstr "Inkorgsövervakare"
 
@@ -419,12 +430,12 @@ msgid "Utility"
 msgstr "Verktyg"
 
 #: applets/gen_util/GNOME_GenUtilApplet_Factory.server.in.in.h:11
-#: applets/gen_util/tasklist.c:653
+#: applets/gen_util/tasklist.c:713
 msgid "Window List"
 msgstr "Fönsterlista"
 
 #: applets/gen_util/GNOME_GenUtilApplet_Factory.server.in.in.h:12
-#: applets/gen_util/pager.c:434 applets/gen_util/pager.glade.h:6
+#: applets/gen_util/pager.c:499 applets/gen_util/pager.glade.h:6
 msgid "Workspace Switcher"
 msgstr "Arbetsytebytare"
 
@@ -482,7 +493,7 @@ msgid "No mail."
 msgstr "Ingen e-post."
 
 #: applets/gen_util/mailcheck.c:1015 applets/gen_util/mailcheck.c:1017
-#: applets/gen_util/mailcheck.c:1816 applets/gen_util/mailcheck.c:1818
+#: applets/gen_util/mailcheck.c:1865 applets/gen_util/mailcheck.c:1867
 msgid "Status not updated"
 msgstr "Status är inte uppdaterad"
 
@@ -589,158 +600,164 @@ msgstr "Spela ett ljud när ny e-post ankommer"
 msgid "Select a_nimation"
 msgstr "Välj animation"
 
-#: applets/gen_util/mailcheck.c:1555
+#: applets/gen_util/mailcheck.c:1580
 msgid "Inbox Monitor Preferences"
 msgstr "Inställningar för inkorgsövervakare"
 
-#: applets/gen_util/mailcheck.c:1572
+#: applets/gen_util/mailcheck.c:1599
 msgid "_Mail check"
 msgstr "_E-postkontroll"
 
-#: applets/gen_util/mailcheck.c:1576
+#: applets/gen_util/mailcheck.c:1603
 msgid "Mail_box"
 msgstr "_Brevlåda"
 
-#: applets/gen_util/mailcheck.c:1654
+#: applets/gen_util/mailcheck.c:1681
 msgid "(c) 1998-2000 the Free Software Foundation"
 msgstr "© 1998-2000 Free Software Foundation"
 
-#: applets/gen_util/mailcheck.c:1655
+#: applets/gen_util/mailcheck.c:1682
 #, fuzzy
 msgid "Inbox Monitor notifies you when new mail arrives in your mailbox"
 msgstr "E-postkontroll meddelar dig när nya brev hamnar i din brevlåda"
 
-#: applets/gen_util/mailcheck.c:1792
+#: applets/gen_util/mailcheck.c:1841
 msgid "Text only"
 msgstr "Endast text"
 
-#: applets/gen_util/mailcheck.c:1819
+#: applets/gen_util/mailcheck.c:1868
 #, fuzzy
 msgid "Mail check"
 msgstr "_E-postkontroll"
 
-#: applets/gen_util/mailcheck.c:1820
+#: applets/gen_util/mailcheck.c:1869
 msgid "Mail check notifies you when new mail arrives in your mailbox"
 msgstr "E-postkontroll meddelar dig när nya brev hamnar i din brevlåda"
 
 #: applets/gen_util/mailcheck.schemas.in.h:1
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/mailcheck_applet/"
+"prefs/remote_server</key> <owner>mailcheck-applet</owner> <type>string</"
+"type> <default>mail</default> <locale name=\"C\"> <short>The mail server</"
+"short> <long>Remove server to connect to for our mail"
+msgstr ""
+
+#: applets/gen_util/mailcheck.schemas.in.h:2
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/"
+"mailcheck_applet/prefs/play_sound</key> <owner>mailcheck-applet</owner> "
+"<type>bool</type> <default>false</default> <locale name=\"C\"> <short>You've "
+"got mail!"
+msgstr ""
+
+#: applets/gen_util/mailcheck.schemas.in.h:3
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/"
+"mailcheck_applet/prefs/reset_on_clicked</key> <owner>mailcheck-applet</"
+"owner> <type>bool</type> <default>true</default> <locale name=\"C\"> "
+"<short>Whether to reset mail status when the applet is clicked"
+msgstr ""
+
+#: applets/gen_util/mailcheck.schemas.in.h:4
 #, fuzzy
 msgid "Command to execute when checking mail"
 msgstr "Kommando som ska _utföras när man klickar på fisken:"
 
-#: applets/gen_util/mailcheck.schemas.in.h:2
+#: applets/gen_util/mailcheck.schemas.in.h:5
 #, fuzzy
 msgid "Command to execute when new mail arrives"
 msgstr "Kommando som ska _utföras när man klickar på fisken:"
 
-#: applets/gen_util/mailcheck.schemas.in.h:3
+#: applets/gen_util/mailcheck.schemas.in.h:6
 #, fuzzy
 msgid "Command to execute when the applet is clicked"
 msgstr "Kommando som ska _utföras när man klickar på fisken:"
 
-#: applets/gen_util/mailcheck.schemas.in.h:4
+#: applets/gen_util/mailcheck.schemas.in.h:7
 #, fuzzy
 msgid "Command to run before checking mail"
 msgstr "Kommando som ska köras innan kontroll av e-post:"
 
-#: applets/gen_util/mailcheck.schemas.in.h:5
+#: applets/gen_util/mailcheck.schemas.in.h:8
 msgid "Do we run the exec-command"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:6
+#: applets/gen_util/mailcheck.schemas.in.h:9
 msgid "Do we run the newmail-command"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:7
+#: applets/gen_util/mailcheck.schemas.in.h:10
 msgid "How often (in milliseconds) we check the mail"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:8
+#: applets/gen_util/mailcheck.schemas.in.h:11
 msgid "If mail should be checked automatically"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:9
+#: applets/gen_util/mailcheck.schemas.in.h:12
 msgid "If this is set mail will be checked every update-freq milliseconds"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:10
+#: applets/gen_util/mailcheck.schemas.in.h:13
 msgid "If this is set, we should run the exec-command"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:11
+#: applets/gen_util/mailcheck.schemas.in.h:14
 msgid "If this is set, we should run the newmail-command"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:12
+#: applets/gen_util/mailcheck.schemas.in.h:15
 #, fuzzy
 msgid "Interval for checking mail"
 msgstr "Kommando som ska köras innan kontroll av e-post:"
 
-#: applets/gen_util/mailcheck.schemas.in.h:13
-msgid "Path to the animation file"
-msgstr ""
-
-#: applets/gen_util/mailcheck.schemas.in.h:14
-#, fuzzy
-msgid "Play a sound when mail is recieved"
-msgstr "Spela ett ljud när ny e-post ankommer"
-
-#: applets/gen_util/mailcheck.schemas.in.h:15
-msgid "Remote folder for mail retrieval"
-msgstr ""
-
 #: applets/gen_util/mailcheck.schemas.in.h:16
-msgid "Remove server to connect to for our mail"
+msgid "Path to the animation file"
 msgstr ""
 
 #: applets/gen_util/mailcheck.schemas.in.h:17
 #, fuzzy
+msgid "Play a sound when mail is recieved"
+msgstr "Spela ett ljud när ny e-post ankommer"
+
+#: applets/gen_util/mailcheck.schemas.in.h:18
+msgid "Remote folder for mail retrieval"
+msgstr ""
+
+#: applets/gen_util/mailcheck.schemas.in.h:19
+#, fuzzy
 msgid "Run this command before we check the mail"
 msgstr "Kommando som ska köras innan kontroll av e-post:"
 
-#: applets/gen_util/mailcheck.schemas.in.h:18
-#, fuzzy
-msgid "The mail server"
-msgstr "E-postserver:"
-
-#: applets/gen_util/mailcheck.schemas.in.h:19
+#: applets/gen_util/mailcheck.schemas.in.h:20
 msgid "The user's password"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:20
+#: applets/gen_util/mailcheck.schemas.in.h:21
 msgid "The user's password for the remote server"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:21
+#: applets/gen_util/mailcheck.schemas.in.h:22
 msgid "This is how we check the mail, check the mail, check the mail..."
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:22
+#: applets/gen_util/mailcheck.schemas.in.h:23
 msgid "This is how we process the mail, process the mail, process the mail..."
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:23
+#: applets/gen_util/mailcheck.schemas.in.h:24
 msgid ""
 "This is the animation that will be displayed during normal use of the "
 "mailcheck applet"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:24
+#: applets/gen_util/mailcheck.schemas.in.h:25
 msgid "Username on the remote server"
 msgstr ""
 
-#: applets/gen_util/mailcheck.schemas.in.h:25
+#: applets/gen_util/mailcheck.schemas.in.h:26
 msgid "We run this command when the user clicks on the applet"
 msgstr ""
-
-#: applets/gen_util/mailcheck.schemas.in.h:26
-msgid "Whether to reset mail status when the applet is clicked"
-msgstr ""
-
-#: applets/gen_util/mailcheck.schemas.in.h:27
-#, fuzzy
-msgid "You've got mail!"
-msgstr "Du har e-post."
 
 #: applets/gen_util/mailcheck.soundlist.in.h:1
 msgid "Mailcheck"
@@ -750,22 +767,22 @@ msgstr "Kontrollera post"
 msgid "New Mail"
 msgstr "Ny post"
 
-#: applets/gen_util/pager.c:128 applets/gen_util/pager.c:647
+#: applets/gen_util/pager.c:128 applets/gen_util/pager.c:712
 #: applets/gen_util/pager.glade.h:2
 msgid "Rows"
 msgstr "Rader"
 
-#: applets/gen_util/pager.c:128 applets/gen_util/pager.c:647
+#: applets/gen_util/pager.c:128 applets/gen_util/pager.c:712
 #, fuzzy
 msgid "Columns"
 msgstr "Räkna"
 
-#: applets/gen_util/pager.c:301
+#: applets/gen_util/pager.c:342
 #, c-format
 msgid "Error loading num_rows value for workspace switcher applet: %s\n"
 msgstr "Fel vid inläsning av num_rows-värde för arbetsytebytaren: %s\n"
 
-#: applets/gen_util/pager.c:312
+#: applets/gen_util/pager.c:353
 #, c-format
 msgid ""
 "Error loading display_workspace_names value for workspace switcher applet: %"
@@ -773,7 +790,7 @@ msgid ""
 msgstr ""
 "Fel vid inläsning av display_workspace_names-värde för arbetsytebytaren: %s\n"
 
-#: applets/gen_util/pager.c:327
+#: applets/gen_util/pager.c:368
 #, c-format
 msgid ""
 "Error loading display_all_workspaces value for workspace switcher applet: %"
@@ -781,11 +798,11 @@ msgid ""
 msgstr ""
 "Fel vid inläsning av display_all_workspaces-värde för arbetsytebytaren: %s\n"
 
-#: applets/gen_util/pager.c:435
+#: applets/gen_util/pager.c:500
 msgid "(c) 2001 Red Hat, Inc."
 msgstr "© 2001 Red Hat, Inc."
 
-#: applets/gen_util/pager.c:436
+#: applets/gen_util/pager.c:501
 #, fuzzy
 msgid ""
 "The Workspace Switcher shows you a small version of your workspaces that "
@@ -905,11 +922,11 @@ msgstr "Hjälp"
 msgid "About..."
 msgstr "Om..."
 
-#: applets/gen_util/tasklist.c:654
+#: applets/gen_util/tasklist.c:714
 msgid "(c) 2001 Red Hat, Inc"
 msgstr "© 2001 Red Hat, Inc"
 
-#: applets/gen_util/tasklist.c:655
+#: applets/gen_util/tasklist.c:715
 #, fuzzy
 msgid ""
 "The Window List shows a list of all visible windows and lets you browse them."
@@ -1045,21 +1062,21 @@ msgstr ""
 #. Translators: Task with no name, should not really happen, so
 #. * this should signal that the panel is confused by this task
 #. * (thus question marks)
-#: gnome-panel/applet.c:474 gnome-panel/foobar-widget.c:364
+#: gnome-panel/applet.c:471 gnome-panel/foobar-widget.c:364
 msgid "???"
 msgstr "???"
 
-#: gnome-panel/GNOME_Panel_Popup.xml.h:2 gnome-panel/applet.c:538
+#: gnome-panel/GNOME_Panel_Popup.xml.h:2 gnome-panel/applet.c:535
 msgid "Remove From Panel"
 msgstr "Ta bort från panelen"
 
 #. FIXME: should have a "Move" pixmap.
 #.
-#: gnome-panel/GNOME_Panel_Popup.xml.h:1 gnome-panel/applet.c:549
+#: gnome-panel/GNOME_Panel_Popup.xml.h:1 gnome-panel/applet.c:546
 msgid "Move"
 msgstr "Flytta"
 
-#: gnome-panel/applet.c:1150
+#: gnome-panel/applet.c:1147
 msgid "Can't find an empty spot"
 msgstr "Kan inte hitta ett ledigt ställe"
 
@@ -1152,8 +1169,8 @@ msgstr "Storlek och position"
 msgid "Tooltip/Name"
 msgstr "Verktygstips/Namn"
 
-#: gnome-panel/drawer.c:150 gnome-panel/menu-properties.c:522
-#: gnome-panel/menu-properties.c:556
+#: gnome-panel/drawer.c:150 gnome-panel/menu-properties.c:519
+#: gnome-panel/menu-properties.c:553
 msgid "Icon"
 msgstr "Ikon"
 
@@ -1303,20 +1320,18 @@ msgstr ""
 "Systemadministratören har förbjudit\n"
 " ändringar i panelkonfigurationen"
 
+# SUN CHANGED MESSAGE
 #: gnome-panel/gnome-panel-preferences.c:311
 #: gnome-panel/gnome-panel-preferences.glade.h:5
 #, fuzzy
-# SUN CHANGED MESSAGE
 msgid "Panel Preferences"
 msgstr "Panelinställningar"
 
-
+# SUN CHANGED MESSAGE
 #: gnome-panel/gnome-panel-preferences.desktop.in.h:1
 #, fuzzy
-# SUN CHANGED MESSAGE
 msgid "Modify the global panel preferences"
 msgstr "Ändra de globala panelinställningarna"
-
 
 #: gnome-panel/gnome-panel-preferences.desktop.in.h:2 gnome-panel/menu.c:3633
 msgid "Panel"
@@ -1576,11 +1591,10 @@ msgstr "Inget program är valt"
 msgid "List of known applications"
 msgstr "Program"
 
-#: gnome-panel/gnome-run.c:1405
 # SUN NEW TRANSLATION
+#: gnome-panel/gnome-run.c:1405
 msgid "Choose an application to run from the list"
 msgstr "Välj en applikation som ska köras från listan"
-
 
 #: gnome-panel/gnome-run.c:1499
 msgid "_Run"
@@ -1637,7 +1651,7 @@ msgstr "Hjälp med programmet %s"
 msgid "Launcher Properties"
 msgstr "Egenskaper för programknappen"
 
-#: gnome-panel/launcher.c:762 gnome-panel/menu-ditem.c:508
+#: gnome-panel/launcher.c:762 gnome-panel/menu-ditem.c:521
 #, fuzzy
 msgid "Create Launcher"
 msgstr "Skapa programknapp"
@@ -1897,14 +1911,15 @@ msgstr "KDE-menyer"
 msgid "You cannot remove your last panel."
 msgstr "Du kan inte ta bort din sista panel."
 
+# SUN CHANGED MESSAGE
 #: gnome-panel/menu.c:2900
 #, fuzzy
-# SUN CHANGED MESSAGE
 msgid ""
 "When a panel is removed, the panel and its\n"
 "applet settings are lost. Delete this panel?"
-msgstr "När en panel tas bort förloras panelen och dess\npanelprogramsinställningar. Vill du ta bort panalen?"
-
+msgstr ""
+"När en panel tas bort förloras panelen och dess\n"
+"panelprogramsinställningar. Vill du ta bort panalen?"
 
 #: gnome-panel/menu.c:3140
 msgid "Launcher..."
@@ -1926,26 +1941,23 @@ msgstr "Utloggningsknapp"
 msgid "Lock button"
 msgstr "Låsknapp"
 
+# SUN CHANGED MESSAGE
 #: gnome-panel/menu.c:3203
 #, fuzzy
-# SUN CHANGED MESSAGE
 msgid "Cannot execute panel global preferences"
 msgstr "Det går inte att köra panelens globala inställningar"
 
-
+# SUN CHANGED MESSAGE
 #: gnome-panel/menu.c:3241
 #, fuzzy
-# SUN CHANGED MESSAGE
 msgid "Delete this panel..."
 msgstr "Ta bort den här panelen..."
 
-
+# SUN CHANGED MESSAGE
 #: gnome-panel/menu.c:3243 gnome-panel/menu.c:3282
 #, fuzzy
-# SUN CHANGED MESSAGE
 msgid "Delete this panel"
 msgstr "Ta bort den här panelen"
-
 
 #: gnome-panel/menu.c:3261
 msgid "Add to panel"
@@ -2002,7 +2014,7 @@ msgstr "Kör ett kommando"
 msgid "Desktop"
 msgstr "Skrivbord"
 
-#: gnome-panel/menu-ditem.c:289 gnome-panel/menu-properties.c:517
+#: gnome-panel/menu-ditem.c:289 gnome-panel/menu-properties.c:514
 #: gnome-panel/menu.c:3672 gnome-panel/menu.c:3897
 msgid "Menu"
 msgstr "Meny"
@@ -2030,16 +2042,16 @@ msgstr ""
 "\n"
 "Detaljer: %s"
 
-#: gnome-panel/menu-ditem.c:439
+#: gnome-panel/menu-ditem.c:448
 msgid "You have to specify a name for the launcher."
 msgstr ""
 
-#: gnome-panel/menu-ditem.c:456
+#: gnome-panel/menu-ditem.c:464
 msgid "You have to specify a valid URL or command."
 msgstr ""
 
 #. class
-#: gnome-panel/menu-ditem.c:480
+#: gnome-panel/menu-ditem.c:493
 #, fuzzy, c-format
 msgid ""
 "<b>Cannot save menu item to disk</b>\n"
@@ -2050,7 +2062,7 @@ msgstr ""
 "\n"
 "Detaljer: %s"
 
-#: gnome-panel/menu-ditem.c:503
+#: gnome-panel/menu-ditem.c:516
 msgid ""
 "You can not create a new launcher at this location since the location is not "
 "writable."
@@ -2076,55 +2088,55 @@ msgstr "I en undermeny"
 msgid "On the main menu"
 msgstr "På huvudmenyn"
 
-#: gnome-panel/menu-properties.c:367
+#: gnome-panel/menu-properties.c:364
 msgid "Menu properties"
 msgstr "Menyegenskaper"
 
-#: gnome-panel/menu-properties.c:390
+#: gnome-panel/menu-properties.c:387
 msgid "Menu type"
 msgstr "Typ av meny"
 
-#: gnome-panel/menu-properties.c:397
+#: gnome-panel/menu-properties.c:394
 msgid "Global main menu"
 msgstr "Global huvudmeny"
 
-#: gnome-panel/menu-properties.c:411 gnome-panel/menu-properties.c:434
+#: gnome-panel/menu-properties.c:408 gnome-panel/menu-properties.c:431
 msgid "Main menu"
 msgstr "Huvudmeny"
 
-#: gnome-panel/menu-properties.c:425 gnome-panel/menu-properties.c:488
+#: gnome-panel/menu-properties.c:422 gnome-panel/menu-properties.c:485
 msgid "Normal menu"
 msgstr "Normal meny"
 
-#: gnome-panel/menu-properties.c:447
+#: gnome-panel/menu-properties.c:444
 msgid "Programs: "
 msgstr "Program: "
 
-#: gnome-panel/menu-properties.c:454
+#: gnome-panel/menu-properties.c:451
 msgid "Applets: "
 msgstr "Panelprogram: "
 
-#: gnome-panel/menu-properties.c:461
+#: gnome-panel/menu-properties.c:458
 msgid "Distribution menu (if found): "
 msgstr "Distributionsmeny (om den hittas): "
 
-#: gnome-panel/menu-properties.c:468
+#: gnome-panel/menu-properties.c:465
 msgid "KDE menu (if found): "
 msgstr "KDE-meny (om den hittas): "
 
-#: gnome-panel/menu-properties.c:475
+#: gnome-panel/menu-properties.c:472
 msgid "Panel menu: "
 msgstr "Panelmeny: "
 
-#: gnome-panel/menu-properties.c:482
+#: gnome-panel/menu-properties.c:479
 msgid "Desktop menu: "
 msgstr "Skrivbordsmeny: "
 
-#: gnome-panel/menu-properties.c:498
+#: gnome-panel/menu-properties.c:495
 msgid "Menu path"
 msgstr "Sökväg till meny"
 
-#: gnome-panel/menu-properties.c:529
+#: gnome-panel/menu-properties.c:526
 msgid "Use custom icon for panel button"
 msgstr "Använd anpassad ikon för panelknapp"
 
@@ -2132,12 +2144,11 @@ msgstr "Använd anpassad ikon för panelknapp"
 msgid "Cannot register control widget\n"
 msgstr "Kan inte registrera styrwidget\n"
 
+# SUN NEW TRANSLATION
 #: gnome-panel/panel-applet-frame.c:606
 #, c-format
-# SUN NEW TRANSLATION
 msgid "Exception from popup_menu '%s'\n"
 msgstr "Undantag från popup_meny '%s'\n"
-
 
 #: gnome-panel/panel-applet-frame.c:699
 #, fuzzy, c-format
@@ -2171,12 +2182,12 @@ msgstr ""
 "\n"
 "Detaljer: %s"
 
-#: gnome-panel/panel.c:937
+#: gnome-panel/panel.c:930
 #, c-format
 msgid "Open URL: %s"
 msgstr "Öppna URL: %s"
 
-#: gnome-panel/panel.c:2261
+#: gnome-panel/panel.c:2254
 msgid ""
 "No panels were found in your configuration.  I will create a menu panel for "
 "you"
@@ -2345,42 +2356,654 @@ msgid "Background"
 msgstr "Bakgrund"
 
 #: gnome-panel/panel-global-config.schemas.in.h:1
-#, fuzzy
-msgid "Display \"Run\" dialog"
-msgstr "Visa den här dialogen nästa gång"
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/global/"
+"enable_animations</key> <applyto>/apps/panel/global/enable_animations</"
+"applyto> <owner>panel</owner> <type>bool</type> <default>true</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
 
 #: gnome-panel/panel-global-config.schemas.in.h:2
-msgid "FIXME - is this resolved with the new menu stuff?"
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/global/"
+"enable_key_bindings</key> <applyto>/apps/panel/global/enable_key_bindings</"
+"applyto> <owner>panel</owner> <type>bool</type> <default>true</default> "
+"<locale name=\"C\"> <short></short> <long>"
 msgstr ""
 
 #: gnome-panel/panel-global-config.schemas.in.h:3
-msgid "FIXME - need to define limits"
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/global/"
+"highlight_launchers_on_mouseover</key> <applyto>/apps/panel/global/"
+"highlight_launchers_on_mouseover</applyto> <owner>panel</owner> <type>bool</"
+"type> <default>true</default> <locale name=\"C\"> <short></short> <long>"
 msgstr ""
 
 #: gnome-panel/panel-global-config.schemas.in.h:4
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/global/"
+"panel_show_delay</key> <applyto>/apps/panel/global/panel_show_delay</"
+"applyto> <owner>panel</owner> <type>int</type> <default>300</default> "
+"<locale name=\"C\"> <short>FIXME - need to define limits</short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:5
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/global/"
+"run_key</key> <applyto>/apps/panel/global/run_key</applyto> <owner>panel</"
+"owner> <type>string</type> <default>&lt;Alt&gt;F2</default> <locale name=\"C"
+"\"> <short>Display \"Run\" dialog</short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:6
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/global/"
+"window_screenshot_key</key> <applyto>/apps/panel/global/"
+"window_screenshot_key</applyto> <owner>panel</owner> <type>string</type> "
+"<default>&lt;Alt&gt;Print</default> <locale name=\"C\"> <short>Take a screen "
+"shot of a window</short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:7
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"global/confirm_panel_remove</key> <applyto>/apps/panel/global/"
+"confirm_panel_remove</applyto> <owner>panel</owner> <type>bool</type> "
+"<default>true</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:8
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"global/keep_menus_in_memory</key> <applyto>/apps/panel/global/"
+"keep_menus_in_memory</applyto> <owner>panel</owner> <type>bool</type> "
+"<default>true</default> <locale name=\"C\"> <short>FIXME - is this resolved "
+"with the new menu stuff?"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:9
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"global/panel_hide_delay</key> <applyto>/apps/panel/global/panel_hide_delay</"
+"applyto> <owner>panel</owner> <type>int</type> <default>500</default> "
+"<locale name=\"C\"> <short>FIXME - need to define limits"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:10
+msgid "FIXME - need to define limits"
+msgstr ""
+
+#: gnome-panel/panel-global-config.schemas.in.h:11
 #, fuzzy
 msgid "Popup the panel menu"
 msgstr "På huvudmenyn"
 
-#: gnome-panel/panel-global-config.schemas.in.h:5
+#: gnome-panel/panel-global-config.schemas.in.h:12
 #, fuzzy
 msgid "Take a screen shot"
 msgstr "Tangent för att ta skärmdump"
 
-#: gnome-panel/panel-global-config.schemas.in.h:6
-#, fuzzy
-msgid "Take a screen shot of a window"
-msgstr "Spara skärmdumpen till skriv_bordet"
-
 #: gnome-panel/panel-per-panel-config.schemas.in.h:1
-msgid "Enable the program listing in the run box"
+msgid ""
+"</long> </locale> </schema> <!-- **************************** --> <!-- Edge "
+"panel properties :: END --> <!-- **************************** --> <!-- "
+"****************************************************************************************** "
+"** Medium Screen Setup: 1 edge panel of size 36, 1 menu panel of size 24 ** "
+"****************************************************************************************** "
+"--> <!-- ********************************* --> <!-- General panel "
+"properties :: START --> <!-- ********************************* --> <schema> "
+"<key>/schemas/apps/panel/default_profiles/medium/general/"
+"advanced_run_dialog</key> <owner>panel</owner> <type>bool</type> "
+"<default>false</default> <locale name=\"C\"> <short></short> <long>"
 msgstr ""
 
 #: gnome-panel/panel-per-panel-config.schemas.in.h:2
-msgid "Show the program listing by default when opening the Run box"
+msgid ""
+"</long> </locale> </schema> <!-- *********************************** --> "
+"<!-- Panel Items for Edge Panel :: END --> <!-- "
+"*********************************** --> <!-- **************************** --"
+"> <!-- Edge panel properties :: END --> <!-- **************************** --"
+"> <!-- ****************************** --> <!-- Menu Panel Properties :: "
+"START --> <!-- ****************************** --> <schema> <key>/schemas/"
+"apps/panel/default_profiles/medium/panels/00000002/panel_type</key> "
+"<owner>panel</owner> <type>string</type> <default>menu-panel</default> "
+"<locale name=\"C\"> <short></short> <long>"
 msgstr ""
 
 #: gnome-panel/panel-per-panel-config.schemas.in.h:3
+msgid ""
+"</long> </locale> </schema> <!-- *********************************** --> "
+"<!-- Panel Items for Edge Panel :: START --> <!-- "
+"*********************************** --> <!-- Launchers --> <schema> <key>/"
+"schemas/apps/panel/default_profiles/medium/objects/00000001/object_type</"
+"key> <owner>panel</owner> <type>string</type> <default>launcher-object</"
+"default> <locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:4
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/general/applet_id_list</key> <owner>panel</owner> "
+"<type>list</type> <list_type>string</list_type> <default>[]</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:5
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/hide_button_pixmaps_enabled</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:6
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_background_color</key> "
+"<owner>panel</owner> <type>string</type> <default>#000000</default> <locale "
+"name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:7
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_background_pixmap_fit</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:8
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_size</key> <owner>panel</owner> "
+"<type>string</type> <default>panel-size-medium</default> <locale name=\"C\"> "
+"<short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:9
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/screen_id</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short></short> "
+"<long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:10
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000002/panel_background_color</key> "
+"<owner>panel</owner> <type>string</type> <default>#000000</default> <locale "
+"name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:11
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000002/panel_background_pixmap_fit</key> "
+"<owner>panel</owner> <type>bool</type> <default>false</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:12
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000002/screen_id</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short></short> "
+"<long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:13
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000001/position</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short></short> "
+"<long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:14
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000002/bonobo_iid</key> <owner>panel</"
+"owner> <type>string</type> <default>OAFIID:GNOME_PagerApplet</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:15
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000002/object_type</key> <owner>panel</"
+"owner> <type>string</type> <default>bonobo-applet</default> <locale name=\"C"
+"\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:16
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000003/panel_id</key> <owner>panel</owner> "
+"<type>string</type> <default>00000002</default> <locale name=\"C\"> <short></"
+"short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:17
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000003/panel_right_stick</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:18
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000004/position</key> <owner>panel</owner> "
+"<type>int</type> <default>-1</default> <locale name=\"C\"> <short></short> "
+"<long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:19
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/general/object_id_list</key> <owner>panel</owner> "
+"<type>list</type> <list_type>string</list_type> <default>[00000001,00000002]"
+"</default> <locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:20
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/objects/00000001/position</key> <owner>panel</owner> "
+"<type>int</type> <default>20</default> <locale name=\"C\"> <short></short> "
+"<long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:21
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/objects/00000002/launcher_location</key> "
+"<owner>panel</owner> <type>string</type> <default>applications:gnome-"
+"terminal.desktop</default> <locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:22
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/objects/00000002/panel_stick</key> <owner>panel</"
+"owner> <type>bool</type> <default>false</default> <locale name=\"C\"> "
+"<short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:23
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/panel_background_pixmap_stretch</"
+"key> <owner>panel</owner> <type>bool</type> <default>false</default> <locale "
+"name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:24
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/panel_background_type</key> "
+"<owner>panel</owner> <type>string</type> <default>no-background</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:25
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/panel_hide_mode</key> <owner>panel</"
+"owner> <type>int</type> <default>0</default> <locale name=\"C\"> <short></"
+"short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:26
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/screen_edge</key> <owner>panel</"
+"owner> <type>string</type> <default>panel-edge-bottom</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:28
+#, no-c-format
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000002/clock_format</key> <owner>panel</"
+"owner> <type>string</type> <default>%I:%M %p</default> <locale name=\"C\"> "
+"<short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:29
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000002/panel_background_pixmap_stretch</"
+"key> <owner>panel</owner> <type>bool</type> <default>false</default> <locale "
+"name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:30
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000002/panel_background_type</key> "
+"<owner>panel</owner> <type>string</type> <default>no-background</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:31
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/general/object_id_list</key> <owner>panel</owner> "
+"<type>list</type> <list_type>string</list_type> <default>[]</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:32
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/panel_background_pixmap_stretch</key> "
+"<owner>panel</owner> <type>bool</type> <default>false</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:33
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/panel_background_type</key> "
+"<owner>panel</owner> <type>string</type> <default>no-background</default> "
+"<locale name=\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:34
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/panel_hide_mode</key> <owner>panel</"
+"owner> <type>int</type> <default>0</default> <locale name=\"C\"> <short></"
+"short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:35
+msgid ""
+"</long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/screen_edge</key> <owner>panel</"
+"owner> <type>string</type> <default>panel-edge-bottom</default> <locale name="
+"\"C\"> <short></short> <long>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:36
+msgid ""
+"</short> <long></long> </locale> </schema> <!-- "
+"******************************* --> <!-- General panel properties :: END --> "
+"<!-- ******************************* --> <!-- ****************************** "
+"--> <!-- Edge panel properties :: START --> <!-- "
+"****************************** --> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_type</key> <owner>panel</owner> "
+"<type>string</type> <default>edge-panel</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:37
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/general/panel_id_list</key> <owner>panel</owner> "
+"<type>list</type> <list_type>string</list_type> <default>[00000001,00000002]"
+"</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:38
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/hide_buttons_enabled</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:39
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_background_pixmap</key> "
+"<owner>panel</owner> <type>string</type> <default> </default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:40
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_background_pixmap_rotate</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:41
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000001/panel_hide_state</key> <owner>panel</"
+"owner> <type>int</type> <default>0</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:42
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000002/panel_background_pixmap</key> "
+"<owner>panel</owner> <type>string</type> <default> </default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:43
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000002/panel_background_pixmap_rotate</key> "
+"<owner>panel</owner> <type>bool</type> <default>false</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:44
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/large/panels/00000002/panel_size</key> <owner>panel</owner> "
+"<type>string</type> <default>panel-size-small</default> <locale name=\"C\"> "
+"<short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:45
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000001/panel_id</key> <owner>panel</owner> "
+"<type>string</type> <default>00000001</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:46
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000001/panel_right_stick</key> "
+"<owner>panel</owner> <type>bool</type> <default>false</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:47
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000002/position</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:48
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000003/bonobo_iid</key> <owner>panel</"
+"owner> <type>string</type> <default>OAFIID:GNOME_MixerApplet</default> "
+"<locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:49
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000003/object_type</key> <owner>panel</"
+"owner> <type>string</type> <default>bonobo-applet</default> <locale name=\"C"
+"\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:50
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000004/panel_id</key> <owner>panel</owner> "
+"<type>string</type> <default>00000002</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:51
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/applets/00000004/panel_right_stick</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:52
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/general/applet_id_list</key> <owner>panel</owner> "
+"<type>list</type> <list_type>string</list_type> <default>"
+"[00000001,00000002,00000003,00000004]</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:53
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/objects/00000001/panel_id</key> <owner>panel</owner> "
+"<type>string</type> <default>00000002</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:54
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/objects/00000002/object_type</key> <owner>panel</"
+"owner> <type>string</type> <default>launcher-object</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:55
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/objects/00000002/position</key> <owner>panel</owner> "
+"<type>int</type> <default>25</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:56
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/hide_button_pixmaps_enabled</key> "
+"<owner>panel</owner> <type>bool</type> <default>false</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:57
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/panel_background_color</key> "
+"<owner>panel</owner> <type>string</type> <default>#000000</default> <locale "
+"name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:58
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/panel_background_pixmap_fit</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:59
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/panel_size</key> <owner>panel</"
+"owner> <type>string</type> <default>panel-size-x-small</default> <locale "
+"name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:60
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000001/screen_id</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:61
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000002/panel_background_color</key> "
+"<owner>panel</owner> <type>string</type> <default>#000000</default> <locale "
+"name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:62
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000002/panel_background_pixmap_fit</key> "
+"<owner>panel</owner> <type>bool</type> <default>false</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:63
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/medium/panels/00000002/screen_id</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:64
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/general/applet_id_list</key> <owner>panel</owner> "
+"<type>list</type> <list_type>string</list_type> <default>[]</default> "
+"<locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:65
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/hide_button_pixmaps_enabled</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:66
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/panel_background_color</key> "
+"<owner>panel</owner> <type>string</type> <default>#000000</default> <locale "
+"name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:67
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/panel_background_pixmap_fit</key> "
+"<owner>panel</owner> <type>bool</type> <default>true</default> <locale name="
+"\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:68
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/panel_size</key> <owner>panel</owner> "
+"<type>string</type> <default>panel-size-x-small</default> <locale name=\"C"
+"\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:69
+msgid ""
+"</short> <long></long> </locale> </schema> <schema> <key>/schemas/apps/panel/"
+"default_profiles/small/panels/00000001/screen_id</key> <owner>panel</owner> "
+"<type>int</type> <default>0</default> <locale name=\"C\"> <short>"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:70
+msgid "Enable the program listing in the run box"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:71
+msgid "Show the program listing by default when opening the Run box"
+msgstr ""
+
+#: gnome-panel/panel-per-panel-config.schemas.in.h:72
 msgid "Show the program listing in the Run box"
 msgstr ""
 
@@ -2432,46 +3055,47 @@ msgstr "Bonobo-testpanelprogram"
 msgid "Test Bonobo Applet Factory"
 msgstr "Fabrik för Bonobo-testpanelprogram"
 
-#: libpanel-applet/panel-applet.c:750
+#: libpanel-applet/panel-applet.c:749
 #, c-format
 msgid "Incomplete '%s' background type received"
 msgstr "Ofullständig \"%s\"-bakgrundstyp mottogs"
 
-#: libpanel-applet/panel-applet.c:764
+#: libpanel-applet/panel-applet.c:763
 #, c-format
 msgid "Incomplete '%s' background type received: %s"
 msgstr "Ofullständig \"%s\"-bakgrundstyp mottogs: %s"
 
-#: libpanel-applet/panel-applet.c:773
+#: libpanel-applet/panel-applet.c:772
 #, c-format
 msgid "Failed to get pixmap %s"
 msgstr "Misslyckades med att hämta bilden %s"
 
-#: libpanel-applet/panel-applet.c:780
+#: libpanel-applet/panel-applet.c:779
 msgid "Unknown background type received"
 msgstr "Okänd bakgrundstyp mottogs"
 
-#: libpanel-applet/panel-applet.c:949
+#: libpanel-applet/panel-applet.c:948
 msgid "The Applet's containing Panel's orientation"
 msgstr "Panelprogrammet innehåller panelens orientering"
 
-#: libpanel-applet/panel-applet.c:957
+#: libpanel-applet/panel-applet.c:956
 msgid "The Applet's containing Panel's size in pixels"
 msgstr "Panelprogrammet innehåller panelens storlek i bildpunkter"
 
-#: libpanel-applet/panel-applet.c:965
+#: libpanel-applet/panel-applet.c:964
 msgid "The Applet's containing Panel's background color or pixmap"
 msgstr "Panelprogrammet innehåller panelens bakgrundsfärg eller bild"
 
-#: libpanel-applet/panel-applet.c:973
+#: libpanel-applet/panel-applet.c:972
 msgid "The Applet's flags"
 msgstr "Panelprogrammets flaggor"
 
-#: libpanel-applet/panel-applet.c:981
 # SUN NEW TRANSLATION
+#: libpanel-applet/panel-applet.c:980
 msgid "Ranges that hint what sizes are acceptable for the applet"
-msgstr "Intervaller som ger ledtrådar om vilka storlekar som accepteras av panelprogrammet"
-
+msgstr ""
+"Intervaller som ger ledtrådar om vilka storlekar som accepteras av "
+"panelprogrammet"
 
 #: libpanel-applet/panel-test-applets.glade2.h:1
 #, fuzzy
@@ -2533,6 +3157,22 @@ msgstr ""
 #: libpanel-applet/panel-test-applets.glade2.h:15
 msgid "XX Small"
 msgstr ""
+
+#, fuzzy
+#~ msgid "The mail server"
+#~ msgstr "E-postserver:"
+
+#, fuzzy
+#~ msgid "You've got mail!"
+#~ msgstr "Du har e-post."
+
+#, fuzzy
+#~ msgid "Display \"Run\" dialog"
+#~ msgstr "Visa den här dialogen nästa gång"
+
+#, fuzzy
+#~ msgid "Take a screen shot of a window"
+#~ msgstr "Spara skärmdumpen till skriv_bordet"
 
 #~ msgid "mode"
 #~ msgstr "läge"
@@ -3090,15 +3730,6 @@ msgstr ""
 
 #~ msgid "Color selector"
 #~ msgstr "Färgväljare"
-
-#~ msgid ""
-#~ "There has been an error while trying to log in:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Ett fel uppstod vid försök att logga i:\n"
-#~ "\n"
-#~ "%s"
 
 #~ msgid "Terminal"
 #~ msgstr "Terminal"
