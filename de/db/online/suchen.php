@@ -42,23 +42,6 @@
 
     if ($show) {
 
-        if ($count == 0) {
-
-            $content .= "Suche erfolglos! Der Suchstring konnte in der Datenbank
-                         nicht gefunden werden!"
-        } else {
-
-            $content .= "
-                        <table cellpadding=\"3\"><tr>
-                            <th>Wort</th>
-                            <th></th>
-                            <th>Wortart</th>
-                            <th>&Uuml;bersetzung</th>
-                            <th>Kommentar</th>
-                            <th>Aktionen</th>
-                        </tr>";
-        }
-
         if (($show == "results") && (($in == "e") || ($in == "g"))) {
 
             if ($in == "e") {
@@ -91,6 +74,15 @@
             $content .= mysql_error();
 
             if ($result && mysql_num_rows($result) > 0) {
+
+	        $content .= "<table cellpadding=\"3\"><tr>
+		                 <th>Wort</th>
+				 <th></th>
+				 <th>Wortart</th>
+				 <th>&Uuml;bersetzung</th>
+				 <th>Kommentar</th>
+				 <th>Aktionen</th>
+				 </tr>";
 
                 $word_old = '';
                 $i = 0;
@@ -154,7 +146,10 @@
                                     </td>
                                 </tr>";
                 }
-            }
+            } else {
+                $content = "Suche erfolglos! Der Suchstring konnte in der Datenbank
+		            nicht gefunden werden!";
+	    }
         }
 
         $content .= "</table>";
