@@ -33,6 +33,11 @@
 
 #include "status.h"
 
+/* DOWNLOAD_MODULES: if you don't want to download from CVS (use local copy of
+ *                   CVS tree), set this to 0.
+ */
+#define DOWNLOAD_MODULES 1
+
 /* FIXME: We should let change those values at runtime */
 #define CVS_CO_OPTIONS "cvs -q -d \":pserver:carlos@cvs.gnome.org:/cvs/gnome\" co -P"
 #define CVSROOTDIR "/home/carlos/cvs/"
@@ -103,6 +108,11 @@ static GList *modules = NULL;
 static GHashTable *releases = NULL;
 static gint *translated = NULL;
 static gint *total = NULL;
+
+static gint *total_trans = NULL;
+static gint *total_fuzzy = NULL;
+static gint *total_untrans = NULL;
+
 
 /* Mis funciones */
 gboolean
@@ -383,7 +393,9 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 				}
 				g_strfreev (tfu);
 			} else {
-				g_warning ("Implement me!! (fill_translation)");
+				trans->translated = -1;
+				trans->fuzzy = -1;
+				trans->untranslated = -1;
 			}
 	}
 }
@@ -394,6 +406,7 @@ update_component_po (component *cmp)
 {
 	gchar *dir;
 	gchar *merge;
+	gchar *copy;
 	DIR *podir;
 	struct dirent *direntry;
 	gchar **filesplit;
@@ -421,7 +434,22 @@ update_component_po (component *cmp)
 									 filesplit[0]);
 						if (system (merge)) {
 							g_warning ("Unable to update the file %s at %s",
-								 direntry->d_name, dir);
+								   direntry->d_name, dir);
+
+							/* copy po file even when mesmerge fails, so that broken
+							 * file is available in webpage for translator to fix.
+							 */
+							copy = g_strdup_printf ("cp -f %s %s/po/%s.%s.%s.po",
+										direntry->d_name, HTMLROOTDIR,
+										cmp->name, cmp->branch, filesplit[0]);
+							if (system (copy)) {
+								g_warning ("Unable to copy file %s to %s",
+									   direntry->d_name, dir);
+							} else {
+								currtrans = (translation *) g_new0 (translation, 1);
+								fill_translation (currtrans, cmp, filesplit[0]);
+							}
+							g_free (copy);
 						} else {
 							currtrans = (translation *) g_new0 (translation, 1);
 							fill_translation (currtrans, cmp, filesplit[0]);
@@ -455,6 +483,8 @@ process_component (gpointer data, gpointer user_data)
 	cmp->translations = g_hash_table_new (g_str_hash, g_str_equal);
 
 	/* Download the component */
+	
+#if DOWNLOAD_MODULES
 	if (cmp->download && !download_component (cmp)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
 			g_warning ("Downloading: We have problems with %s.%s (module %s), skiped...",
@@ -464,7 +494,8 @@ process_component (gpointer data, gpointer user_data)
 				   cmp->dir, cmp->name);
 		}
 	}
-
+#endif
+	
 	/* Regenerate the .pot file */
 	if (cmp->regenerate && !regenerate_component_pot (cmp)) {
 		if (strcmp (cmp->dir, "gnome-i18n")) {
@@ -509,8 +540,8 @@ generate_release_locales_html (gpointer data, gpointer user_data)
 	locale = (gchar *) data;
 	html = (gchar **) user_data;
 
-	//temp = g_strdup_printf ("<td><a href=\"%s.shtml\">%s</a></td>", locale, locale);
-	temp = g_strdup_printf ("\t<td>%s</td>\n", locale);	
+	temp = g_strdup_printf ("\t<td><a href=\"%s.html\">%s</a></td>\n", locale, locale);
+	//temp = g_strdup_printf ("\t<td>%s</td>\n", locale);	
 	*html = g_strconcat (*html, temp, NULL);
 	g_free (temp);
 }
@@ -523,10 +554,12 @@ generate_release_components_html (gpointer data, gpointer user_data)
 	translation *ptrns;
 	gchar **html;
 	gchar *temp;
+	gchar *poname;
 	gchar *modulelnk;
 	gchar *comment;
 	GList *llocale;
-
+	struct stat buf;
+	
 	pcmp = (component *) data;
 	prelease = pcmp->release;
 	html = (gchar **) user_data;
@@ -542,23 +575,35 @@ generate_release_components_html (gpointer data, gpointer user_data)
 	for (; llocale != NULL; llocale = g_list_next (llocale)) {
 		ptrns = g_hash_table_lookup (pcmp->translations, llocale->data);
 		if ( ptrns == NULL) { /* We don't have a translation */
-			temp = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.pot\">0</a></td>\n",
-						pcmp->name, pcmp->branch);
+			temp = g_strdup_printf ("\t<td align=right>N/A</td>\n");
 			total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
-		} else { /* We have a translation for this locale */
-			gfloat stats;
 
-			stats = ((gfloat) ptrns->translated / (gfloat) pcmp->nstrings)*100;
-			temp = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.%s.po\">%.2f</a></td>\n",
-						pcmp->name, pcmp->branch, ptrns->locale, stats);
-			translated[g_list_position (prelease->locales, llocale)] += ptrns->translated;
-			total[g_list_position (prelease->locales, llocale)] += ptrns->translated + ptrns->fuzzy + ptrns->untranslated;
+		} else { /* We have a translation for this locale */
+
+			/* But if the translation is faulty... */
+			if ((ptrns->translated == -1) && (ptrns->fuzzy == -1) && (ptrns->untranslated == -1)) {
+				temp = g_strdup_printf ("\t<td bgcolor='#d06060' align=right>"\
+							"<a href=\"po/%s.%s.%s.po\">Error</a></td>\n",
+							pcmp->name, pcmp->branch, ptrns->locale);
+				total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
+
+			} else {
+				gfloat stats;
+
+				stats = ((gfloat) ptrns->translated / (gfloat) pcmp->nstrings)*100;
+				temp = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.%s.po\">%.2f</a></td>\n",
+							pcmp->name, pcmp->branch, ptrns->locale, stats);
+				translated[g_list_position (prelease->locales, llocale)] += ptrns->translated;
+				total[g_list_position (prelease->locales, llocale)] +=
+					ptrns->translated + ptrns->fuzzy + ptrns->untranslated;
+			}
 		}
 		*html = g_strconcat (*html, temp, NULL);
 		g_free (temp);
 	}
 
 	*html = g_strconcat (*html, modulelnk, "</tr>\n", NULL);
+	g_free (modulelnk);
 }
 	
 /*
@@ -575,7 +620,7 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 	GList *llocale;
 	GList *lcomponent;
 	component *cmp;
-	
+
 
 	prelease = (release *) value;
 
@@ -661,6 +706,195 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 	
 }
 
+
+
+/*
+ * Create individual HTML pages for every locale
+ */
+void
+generate_locale_html (gpointer key, gpointer value, gpointer user_data)
+{
+	release *prelease;
+	gchar *html;
+	gchar *temp;
+	gchar *pdate;
+	time_t date;
+	GList *llocale;
+	
+	GList *lcmp;
+	translation *ptrns;
+	component *pcmp;
+	
+	gchar *temp_info;
+	gchar *modulelnk;
+	gchar *comment;
+	
+	prelease = (release *) value;
+
+	date = time (NULL);
+	pdate = g_strdup (asctime (gmtime (&date)));
+	/* Remove the '\n' char */
+	pdate[strlen (pdate) - 1] = 0;
+
+	llocale = g_list_first (prelease->locales);
+	for (; llocale != NULL; llocale = g_list_next (llocale))
+	{
+		gfloat stats;
+
+		/* First we generate "static" section */
+		html = g_strdup_printf ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n"\
+					"<html>\n"\
+					"<head>\n"\
+					"<meta HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=ISO-8859-1\">\n"\
+					"<title>%s (%s UTC)</title>\n"\
+					"</head>\n"\
+					"<body>\n"\
+					"<center>\n"\
+					"<h1>%s<br>%s (%s UTC)</h1>\n"\
+					"</center>\n"\
+					"<p>"\
+					"<pre>"\
+					"%s"\
+					"</pre>\n"\
+					"<table cellpadding=1 cellspacing=1 border=1 width=\"90%%\">\n"\
+					"<tr align=center>\n"\
+					"\t<td>Module</td>\n", prelease->maintitle, pdate, prelease->maintitle, 
+					(gchar *)llocale->data, pdate, prelease->mainhead);
+		
+	
+		//g_list_foreach (prelease->locales, generate_release_locales_html, &html);
+		
+		html = g_strconcat (html, "\t<td>Translated</td>\n", NULL);
+		html = g_strconcat (html, "\t<td>Fuzzy</td>\n", NULL);
+		html = g_strconcat (html, "\t<td>Untranslated</td>\n", NULL);
+		html = g_strconcat (html, "\t<td>%</td>\n</tr>\n", NULL);
+	
+		translated = g_new0 (guint, g_list_length (prelease->locales));
+		total = g_new0 (guint, g_list_length (prelease->locales));
+		total_trans = g_new0 (guint, g_list_length (prelease->locales));
+		total_fuzzy = g_new0 (guint, g_list_length (prelease->locales));
+		total_untrans = g_new0 (guint, g_list_length (prelease->locales));
+		
+		/*Process each module*/	
+	
+		lcmp = g_list_first (prelease->components);
+		for (; lcmp != NULL; lcmp = g_list_next (lcmp))
+		{
+			pcmp = (component *)lcmp->data;
+			comment = g_strdup_printf ("\n<!-- %s %s -->\n", pcmp->name, pcmp->branch);
+
+			modulelnk = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.pot\">%s</a></td>\n", pcmp->name,
+				     pcmp->branch, pcmp->name);
+	
+			html = g_strconcat (html, comment, "<tr bgcolor='#c5c2c5' align=center>\n", modulelnk, NULL);
+
+			g_free (comment);
+			g_free (modulelnk);
+
+			ptrns = g_hash_table_lookup (pcmp->translations, llocale->data);
+			if ( ptrns == NULL) /* We don't have a translation */
+			{ 
+				temp = g_strdup_printf ("\t<td align=right>N/A</td>\n"\
+							"\t<td align=right>N/A</td>\n"\
+							"\t<td align=right>N/A</td>\n");
+
+				temp_info = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.pot\">N/A</a></td>\n",
+							     pcmp->name, pcmp->branch);
+				temp = g_strconcat (temp, temp_info, NULL);
+
+				total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
+			} 
+			else 
+			{ /* We have a translation for this locale */
+
+				/* But if the translation is faulty... */
+				if ((ptrns->translated == -1) && (ptrns->fuzzy == -1) && (ptrns->untranslated == -1)) {
+
+					temp = g_strdup_printf ("\t<td bgcolor='#d06060' align=right>Error</td>\n"\
+								"\t<td bgcolor='#d06060' align=right>Error</td>\n"\
+								"\t<td bgcolor='#d06060' align=right>Error</td>\n");
+					temp_info = g_strdup_printf ("\t<td bgcolor='#d06060' align=right><a href=\"po/%s.%s.%s.po\">Error</a></td>\n",
+								pcmp->name, pcmp->branch, ptrns->locale);
+					temp = g_strconcat (temp, temp_info, NULL);
+					total[g_list_position (prelease->locales, llocale)] += pcmp->nstrings;
+
+				} else {
+
+					gfloat stats;
+
+					temp = g_strdup_printf ("\t<td align=right>%d</td>\n", ptrns->translated);
+
+					temp_info = g_strdup_printf ("\t<td align=right>%d</td>\n", ptrns->fuzzy);
+					temp = g_strconcat (temp, temp_info, NULL);
+					temp_info = g_strdup_printf ("\t<td align=right>%d</td>\n", ptrns->untranslated);
+					temp = g_strconcat (temp, temp_info, NULL);
+
+					stats = ((gfloat) ptrns->translated / (gfloat) pcmp->nstrings)*100;
+					temp_info = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.%s.po\">%.2f</a></td>\n",
+								pcmp->name, pcmp->branch, ptrns->locale, stats);
+					translated[g_list_position (prelease->locales, llocale)] += ptrns->translated;
+					total[g_list_position (prelease->locales, llocale)] += ptrns->translated + ptrns->fuzzy + 
+						ptrns->untranslated;
+					temp = g_strconcat (temp, temp_info, NULL);
+
+					total_trans[g_list_position (prelease->locales, llocale)] += ptrns->translated;
+					total_fuzzy[g_list_position (prelease->locales, llocale)] += ptrns->fuzzy;
+					total_untrans[g_list_position (prelease->locales, llocale)] += ptrns->untranslated;
+
+				}
+			}
+			html = g_strconcat (html, temp, NULL);
+			g_free (temp);
+			g_free (temp_info);
+		}
+		
+	
+		/*end process each module */
+	
+		html = g_strconcat (html, "<tr align=center bgcolor=\"#ffd700\">\n\t<th>Total</th>\n", NULL);
+		
+		temp = g_strdup_printf ("\t<th align=right>%d</th>\n", 
+					total_trans[g_list_position (prelease->locales, llocale)]);
+		html = g_strconcat (html, temp, NULL);
+		
+		temp = g_strdup_printf ("\t<th align=right>%d</th>\n", 
+					total_fuzzy[g_list_position (prelease->locales, llocale)]);
+		html = g_strconcat (html, temp, NULL);
+		
+		temp = g_strdup_printf ("\t<th align=right>%d</th>\n", 
+					total_untrans[g_list_position (prelease->locales, llocale)]);
+		html = g_strconcat (html, temp, NULL);
+
+		stats = ((gfloat) translated[g_list_position (prelease->locales, llocale)] /
+			 (gfloat) total[g_list_position (prelease->locales, llocale)])*100;
+		temp = g_strdup_printf ("\t<th align=right>%.2f</th>\n", stats);
+		html = g_strconcat (html, temp, NULL);
+
+		html = g_strconcat (html, "</tr></table>\n", NULL);
+
+		html = g_strconcat (html, "</body></html>\n", NULL);
+
+		/* TODO: We should made a new function with this code */
+		{
+			FILE *htmlpage;
+			gchar *locale;
+
+			locale = (gchar *)llocale->data;
+			/*g_print("filename: %s\n", locale);*/
+			temp = g_strdup_printf (HTMLROOTDIR "/%s.html", locale);
+			htmlpage = fopen (temp, "w");
+			if (fwrite (html, strlen (html), 1, htmlpage) != 1) {
+				g_warning ("We couldn't write %s.html!!", locale);
+			}
+		}
+		g_free (temp);
+
+	}
+	g_free (pdate);
+}
+
+
+
 void
 process_module (gpointer data, gpointer user_data)
 {
@@ -709,6 +943,8 @@ main() {
   g_list_foreach (modules, process_module, NULL);
 
   g_hash_table_foreach (releases, generate_release_html, NULL);
+  
+  g_hash_table_foreach (releases, generate_locale_html, NULL);
 
   exit(EXIT_SUCCESS);
 } /* main */
