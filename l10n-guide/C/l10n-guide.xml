@@ -1,0 +1,1259 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/xml" href="params.xsl"?>
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+   "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+
+<article>
+	<articleinfo>
+	<title>Localising GNOME applications</title>
+	<subtitle>So you want to translate GNOME?</subtitle>
+
+	<authorgroup>
+		<author>
+		<firstname>Telsa</firstname><surname>Gwynne</surname>
+		<!--
+		<affiliation>
+		<address>
+		<email>hobbit@aloss.ukuu.org.uk</email>
+		</address>
+		</affiliation>
+		-->
+		</author>
+
+		<author>
+		<firstname>Dafydd</firstname><surname>Harries</surname>
+		<!--
+		<email>daf@muse.19inch.net</email>
+		-->
+		</author>
+	</authorgroup>
+
+	<copyright>
+	<year>2003</year>
+	<holder>Telsa Gwynne</holder>
+	<holder>Dafydd Harries</holder>
+	</copyright>
+
+	<copyright>
+	<year>2004</year>
+	<holder>Dafydd Harries</holder>
+	</copyright>
+
+	<legalnotice id="legalnotice">
+	<para>
+	This document can be redistributed and/or modified under the terms of
+	the GNU General Public License; either version 2 of the license, or
+	(at your option) any later version.
+	</para>
+	</legalnotice>
+
+	<revhistory>
+	<revision>
+		<revnumber>0.1</revnumber>
+		<date>7th August 2003</date>
+		<revdescription>
+		<para>
+		Started document.
+		</para>
+		</revdescription>
+	</revision>
+
+	<revision>
+		<revnumber>0.2</revnumber>
+		<date>15th August 2003</date>
+		<revdescription>
+		<para>
+		Remembered we were supposed to be writing this. Added
+		lots more sections and filled some in.
+		</para>
+		</revdescription>
+	</revision>
+
+	<revision>
+		<revnumber>0.3</revnumber>
+		<date>31st August 2003</date>
+		<revdescription>
+		<para>
+		Filled in hints, bits about editors. Need more. Added two
+		appendices.
+		</para>
+		</revdescription>
+	</revision>
+
+	<revision>
+		<revnumber>0.4</revnumber>
+		<date>02 September 2003</date>
+		<revdescription>
+		<para>
+		Corrected some punctuation etc., added stub of new section
+		"Dealing with changes".
+		</para>
+		</revdescription>
+	</revision>
+
+	 <revision>
+		<revnumber>0.5</revnumber>
+		<date>17 November 2003</date>
+		<revdescription>
+		<para>
+		Re-corrected some punctuation and stomped a few mis-spellings
+		:) Added start of content for "dealing with changes". Added
+		gedit to editor list. Added more FIXMEs.
+		</para>
+		</revdescription>
+	</revision>
+
+	<revision>
+		<revnumber>0.6</revnumber>
+		<date>4 January 2004</date>
+		<revdescription>
+		<para>
+		Replaced a reference to <quote>gtk</quote> with one to
+		<quote>gtk+</quote>, as that is the name of the CVS module.
+		Put the document under the GPL. Added some information about
+		creating and using compendia. Elaborated on the process of
+		removing a <quote>fuzzy</quote> marker. Reformatted the
+		document to 80 characters' width, and to use tabs rather than
+		spaces for indentation. Replaced <quote>-</quote> and
+		<quote>--</quote> with &amp;mdash; where appropriate. Added an
+		example for the bit about translator_credits.
+		</para>
+		</revdescription>
+	 </revision>
+	</revhistory>
+</articleinfo>
+
+<abstract>
+<para>
+Notes on how to get started translating GNOME.
+</para>
+</abstract>
+
+<sect1 id="introduction">
+<title>Introduction</title>
+
+<para>
+GNOME programs are written with the intent of being localisable. This means
+that a program can be augmented to behave in different ways in different
+(physical) locations: printed pages in America will be a different size from
+printed pages in Europe; weather temperatures will be displayed according to
+Fahrenheit and Celsius scales in different places; and the language the user
+sees from the program may be the user's native language.
+</para>
+
+<para>
+Translation is a major part of this localisation process. The bulk of GNOME
+translations are performed by native speakers on a volunteer basis. They take
+sentences in the original English, supply the appropriate translation, and add
+the file containing this information to the GNOME CVS repository so that the
+next release of the software contains the new language.
+</para>
+
+<para>
+This document tries to explain how to get involved in the translation process
+for GNOME.
+</para>
+</sect1>
+
+<sect1 id="finding">
+<title>Finding your team</title>
+
+<para>
+First of all, is anyone working on your language already?
+If so, they should be listed on the
+<ulink type="http"
+	url="http://developer.gnome.org/projects/gtp/teams.html">
+	GNOME Translation Project team list</ulink>.
+Contacting them is the first step.
+</para>
+
+<para>
+If you have found a team for the language you with to localise to, but there
+is no reponse from them, contact the <ulink type="http"
+url="http://mail.gnome.org/mailman/listinfo/gnome-i18n">GNOME
+Internationalisation mailing list</ulink>. Somebody there will advise you what
+to do.
+</para>
+
+<para>
+If there isn't a team for your language, you should also contact the mailing
+list, in which case you will likely be invited to become the coordinator for
+that language.
+</para>
+
+<para>
+If you have successfully made contact with an active team, you can probably
+safely skip the next section and move on to <xref
+linkend="translating" />.
+</para>
+</sect1>
+
+<sect1 id="founding">
+<title>Founding a team</title>
+
+<para>
+So there isn't a team for your language, but you have bravely volunteered to
+start one and be its coordinator? Well done!
+</para>
+
+<sect2 id="coord">
+<title>The role of the coordinator</title>
+
+<para>
+As the coordinator for your team, you act as the primary contact person for
+the team and are responsible for organizing the other translators in your
+team. This includes attempting to prevent multiple translators simultaneously
+attempting translations of the same file.
+</para>
+
+<para>
+Coordinators need to be subscribed to the gnome-i18n mailing list. This is
+highly recommended for all GNOME translators, but required of coordinators.
+</para>
+
+<para>
+If any members of your team have CVS access, it will likely be you. If you
+don't, each team member will send translations to you, and you will in turn
+forward them to somebody with CVS access who will commit them.  This ensures
+that all the right translations go to the right people at the right time.
+</para>
+
+<para>
+Initially, at least, bugs pertaining to your translation team will come in
+your direction. (You're not likely to get many bugs until your translation
+becomes used.) Your language will have its own component in <ulink type="http"
+url="http://bugzilla.gnome.org">GNOME's Bugzilla bug tracking system</ulink>.
+</para>
+
+<para>
+The coordinator is often expected to deal with the more technical
+aspects of translation work, such as plural forms, updating
+configure.in files and generating POT files. (All of which will be
+covered later. We hope.)
+</para>
+
+<para>
+You might also be involved in recruiting more members into your
+translation team. Many hands make the translations go faster, even
+though it might mean more work for you!
+</para>
+
+<para>
+It is also your responsibility as coordinator to stop being a coordinator when
+it is appropriate: for example when you no longer have the time to dedicate to
+the effort that it deserves. If you know that you will no longer be able to
+perform the coordination role, ask someone to take your place in advance.
+</para>
+</sect2>
+
+<sect2 id="lang-code">
+<title>Language codes</title>
+
+<para>
+To begin with, you will need to find out what your language code is. This is a
+two- or three-letter code. More popular languages will tend to have two-letter
+codes, whereas more obscure languages will tend to get stuck with a
+three-letter one. For languages spoken in more than one country, a translation
+specific to a country will be followed by an underscore and the two-letter
+country code capitalized. This can further be appended with an at-sign and
+more qualifying information. For now, know that language codes typically look
+like "fr" (French) or "en_GB" (English as used in Great Britain).
+</para>
+
+<para>
+If you do not know what the code for your language is, try looking around to
+see if there are translation efforts for other projects (such as <ulink
+type="http" url="http://kde.org"><acronym>KDE</acronym></ulink>,
+<ulink type="http" url="http://mozilla.org">Mozilla</ulink> and <ulink
+type="http" url="http://openoffice.org">OpenOffice</ulink>) in your language
+&mdash; these will (should) use the same code. If that doesn't turn up
+anything, ask the mailing list for help.
+</para>
+
+<para>
+GNOME uses standard codes as defined in
+<!-- FIXME - do proper xref -->
+<ulink type="http" url="http://www.w3.org/WAI/ER/IG/ert/iso639.htm"> ISO
+standard 639</ulink> (for language codes) and <ulink type="http"
+url="http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html">
+ISO standard 3166</ulink> (for country codes). The gnome-i18n members will
+help you identify your language code.
+</para>
+
+<para>
+Your language code is used to identify your localisation, for example in the
+names of locales and files. Once you have your code, you can start
+translating.
+</para>
+</sect2>
+
+<sect2 id="needs">
+<title>What you will need to start</title>
+
+<para>
+There are a number of things that will help you immensely in your
+translation work.
+</para>
+
+<variablelist>
+	<varlistentry>
+	<term>A mailing list</term>
+	<listitem>
+	<para>
+	You need a forum where your group can talk, preferably in its own
+	language. You can use it for monitoring who is translating what,
+	discuss difficult words and terms, and hammer out a glossary. It
+	might be appropriate to share this mailing list with a translation
+	team for another project (e.g. KDE) It is also a good place to
+	post announcements about your translation.
+	</para>
+
+	<para>
+	The mailing list might also be used by users of your translations for
+	giving feedback and general discussion.
+	</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>A web site</term>
+	<listitem>
+	<para>
+	A web site is good for introducing people to your effort, distributing
+	work, keeping track of who's working on what, and keeping things like
+	glossaries.
+	</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>A glossary</term>
+	<listitem>
+	<para>
+	It is important that your translation consistently uses the same
+	terms to avoid confusing users. A standard glossary will help you
+	ensure that you do not refer to one thing by many names. Try not to
+	invent new terms but to reuse existing ones &mdash; look for a
+	governing body for your language, or translations used in other
+	projects, or terminology used in Microsoft Windows or Apple OS X. In
+	particular, it's preferable to be consistent with other free desktop
+	environments such as KDE. If you do have to create new terminology, or
+	decide to use one word rather than another, do document your choice
+	(and the reasoning behind it) in your glossary. This saves confusion
+	later. Expect to change some of your initial glossary suggestions
+	after some time translating. It's only once you start translating that
+	you start to notice problems.
+	</para>
+
+	<para>
+	Some teams are the same people as those translating KDE or Mozilla or
+	OpenOffice into the same language. In other teams, there is a separate
+	team for each of these projects. In the second case, it's a very good
+	idea to contact these other teams and find out what they are using,
+	what they have abandoned, and so on.
+	</para>
+
+	<para>
+	A good foundation to base your glossary upon is a combination
+	of the <ulink type="http"
+	url="http://developer.gnome.org/documents/style-guide/wordlist.html">
+	GNOME Documentation Project's Style Guide</ulink> and the glossary
+	found in the gnome-i18n module, although the latter needs updating.
+	</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>An IRC channel</term>
+	<listitem>
+	<para>
+	This is a benefit for many of the same reasons as a mailing list is,
+	except that it can be more convenient for certain kinds of discussion,
+	especially for quick queries. It can also be good for helping users of
+	your translation. The
+	<ulink type="http" url="http://freenode.org">Freenode network</ulink>
+	is an IRC network dedicated to free software-related discussion and
+	would be a suitable place for hosting your channel.
+	</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>The <application>gettext</application> tools</term>
+	<listitem>
+	<para>
+	<application>gettext</application> is a package which contains
+	tools for creating translatable strings, turning those strings
+	into a list which can be translated, updating these strings,
+	and converting them into a format the computer can use. Someone
+	on your team (as many as possible really) needs these and to
+	know the basics of how to use them.
+	</para>
+
+	<para>
+	The package is installed by default on many Linux distributions.
+	Where it is not installed, it is still usually available. 
+	</para>
+
+	<para>
+	You should also look at <application>intltool</application>. This is
+	rather like a front-end to gettext and performs some tasks you need to
+	do as a Gnome translator. It is often available for your distribution,
+	but it is almost always a release or two ahead of whatever is on your
+	distribution. You can find it in Gnome CVS:
+	<command>cvs checkout intltool</command>.
+	</para>
+	</listitem>
+	</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+
+<sect1 id="translating">
+<title>Translating</title>
+
+<para>
+This is where we get down to it. There are almost 17,000 distinct strings
+which are found in the basic distribution of GNOME 2.4. This doesn't include
+Evolution, Galeon, any IM client or other things which you may see as
+necessary. There are a variety of tactics and methods you can employ, but they
+all boil down to translating all those strings.
+</para>
+
+<sect2 id="approaches">
+<title>Different approaches</title>
+
+<para>
+There are different ways of translating. Some teams simple parcel out the
+<quote>po file</quote> to different people and the members work through them
+with a text editor and return them to the person who can commit them into
+GNOME. Other teams use web-based systems such as
+<ulink type="http" url="http://prevod.org">Prevod</ulink>
+<!--FIXME: check -->
+or
+<ulink type="http" url="http://www.gyfieithu.co.uk">Gyfieithu</ulink>.
+All have advantages and disadvantages.
+</para>
+
+<para>
+<filename>.po</filename> file details are at the end of this page as the
+longest section. You can jump ahead to the section on <link
+linkend="po-files"><filename>.po</filename></link> files if you don't intend
+to use anything else.
+</para>
+</sect2>
+
+<sect2 id="web-interfaces">
+<title>Web interfaces</title>
+
+<para>
+A web interface generally provides anyone with a list of strings and waits for
+them to suggest translations for them. Someone periodically sweeps up all the
+results and feeds them back into CVS. The advantage is that only the team
+co-ordinator and the maintainer of the web interface need to care about how to
+make <filename>.po</filename> files. This lets anyone who doesn't have GNOME,
+a useful editor, or other things help with the translation. One disadvantage
+is that without being able to see the rest of the file, contributors may not
+realise how other people are translating applications. If your team is trying
+to achieve consistency, this can be a problem. Another is that comments from
+the developer to translators explaing the string are not always shown.
+</para>
+</sect2>
+
+<sect2 id="po-files">
+<title>po files</title>
+
+<para>
+There is an excellent document available about how to checkout <filename
+class="directory">po/</filename> directories, create <filename
+class="directory">.pot</filename> files, turn them into
+<filename>.po</filename> files, and check them back into CVS:
+<ulink type="http"
+url="http://developer.gnome.org/doc/tutorials/gnome-i18n/translator.html">
+Using GNOME CVS as a Translator</ulink>. You must read this. It explains all
+the details of using the <application>gettext</application> tools. Since this
+is 90% of working with <filename>.po</filename> files, you need to know it. We
+have not repeated it here. We have simply added a few comments which are in
+addition to it. They do not replace it.
+</para>
+
+<para>
+Note that you can obtain <filename>.po</filename> files from your language's
+status pages on the Gnome Translation Project website. (See below). Sometimes
+special characters (non-ASCII) can be garbled doing this, but it is a useful
+alternative to CVS.
+</para>
+
+<para>
+A <filename>.po</filename> file is simply a list of strings from the original
+program, with spaces for you to put your version in. There is a set of headers
+at the top, some of which you will have to edit. The Project-Id-Version will
+become the name of the module. The POT-Creation-Date should be filled in
+automatically. You must edit the PO-Revision-Date yourself. Language-Team
+should be your team's language and ideally an email address which will contact
+one or more of your members. The Content-Type <emphasis>must</emphasis> be
+UTF-8 and you must make sure that the resulting file is in fact UTF-8 format.
+On UNIX and UNIX-like systems, the <command>file</command> command will tell
+you what format it is in. On a machine with all the
+<application>gettext</application> facilities installed, you can use
+<command>msgfmt -cv filename.po</command>. If the file is not UTF-8,
+<command>msgfmt -cv</command> will produce an error message saying so.
+</para>
+
+<para>
+You will meet comments in the file. When they say <quote>c-format</quote>,
+this means that there are strings which the program will fill in itself. For
+example, the clock applet in <application>gnome-applets</application> has a
+string to translate of <quote>%H:%M</quote>. You can <quote>translate</quote>
+this by pasting it straight in. They will be provided by the system clock on
+the computer. %H is the hours. %M is the minutes.
+</para>
+
+<para>
+There is a separate appendix on <link linkend="c-format-stuff">common C-format
+strings</link>.
+</para>
+
+<para>
+You will also meet messages to translators from the programmer. For example,
+in <application>gnome-applets</application>, slightly after the message quoted
+above you will find the comment <quote>translators: reverse the order of these
+arguments if the time should come before the date on a clock in your
+locale</quote>.
+</para>
+
+<para>
+You will also have to replace menu accelerators: the keyboard shortcuts which
+can be used instead of clicking on menus. Expect contradictions and collisions
+in the early days. It is probably most important to do the accelerators for
+<application>gtk+</application> first, since they will be in every single
+GNOME application. Then you can use the remaining letters and try to work out
+what combinations work the best. Don't worry if you have two or more menu
+options with the same accelerator. As of 2.4, GNOME will let you cycle between
+them.
+</para>
+
+<para>
+If you meet English messages which you cannot understand, file a bug against
+the application telling the developer of the problem. If you meet English
+messages which you cannot reasonably translate, file a bug again. Translators
+as a group file dozens and dozens of these, because translators are the ones
+who spot them. The earlier you file these the better. When you learn what the
+message means, you will probably forget about filing the bug. Filing them gets
+them fixed, and stops other translators having to struggle with the strings.
+</para>
+
+<important>
+	<title>Don't touch the msgid lines</title>
+	<para>
+	Do not edit the English strings in the file. If you do that, the
+	programs for merging them into the main application will get confused.
+	Your changes to the English strings will be lost, and your
+	translations may not be incorporated.
+	</para>
+</important>
+
+</sect2>
+</sect1>
+
+<sect1 id="changes">
+<title>Dealing with changes</title>
+
+<para>
+Unfortunately, software changes, and that includes changes to the translatable
+content of the software. Strings get added, strings are changed, and sometimes
+strings are removed. Fortunately, there are tools and procedures which can
+help you to keep up with changes to the software you're translating.
+</para>
+
+<sect2 id="status-table">
+<title>The status tables</title>
+
+<para>
+Carlos Perelló Marín maintains status tables for each language translation in
+GNOME. They are available in the
+<ulink type="http" url="http://developer.gnome.org/projects/gtp/">Gnome
+Translation Project</ulink> pages. The tables include several views and are
+updated three times a day.
+</para>
+
+<simplelist>
+	<member>
+	<ulink type="http"
+	url="http://developer.gnome.org/projects/gtp/status/">index
+	page</ulink>
+	</member>
+
+	<member>
+	<ulink type="http"
+	url="http://developer.gnome.org/projects/gtp/status/gnome-2.6/essential.html">
+	essential packages: all languages
+	</ulink>
+	</member>
+
+	<member>
+	<ulink type="http"
+	url="http://developer.gnome.org/projects/gtp/status/gnome-2.6/full-info.html">
+	all packages, by group: all languages
+	</ulink>
+	</member>
+</simplelist>
+
+<para>
+For each language (follow a highlighted language for details) there are tables
+showing the overall status and a breakdown by package. These tables contain
+links to the latest <filename>.pot</filename> file (if the application has not
+been translated at all to your language yet) or the latest
+<filename>.po</filename> file (if a start has been made on the translation).
+You can download these straight from the status pages instead of using CVS.
+You can't upload them that way, but the download facility is very useful.
+</para>
+
+<para>
+And all of this is maintained for the final release of Gnome 1 (Gnome 1.4),
+the latest stable release, and for the packages which will become the next
+stable release. At the time of writing (January 2004), 2.4 was the last stable
+release and the 2.5 release, which will become 2.6, is under development.
+</para>
+
+<para>
+As soon as translations for your language have been committed to CVS, your
+language will acquire its own section in the status tables. You should
+probably bookmark the pages relevant to your language. They are very very
+useful.
+</para>
+
+<para>
+Your language page will have a URL of the form
+http://developer.gnome.org/projects/gtp/status/gnome-2.6/XX/index.html
+where XX should be replaced by your language code (lower-case). The above URL
+is for the releases that will become GNOME 2.6. If you want to see the stable
+release of Gnome, adjust the URL accordingly.
+</para>
+</sect2>
+
+<sect2 id="msgfmt">
+<title>Updating changed packages</title>
+
+<para>
+You will generally discover changes when you update your copy of a module in
+Gnome CVS or when you refresh your browser on your status pages. Again,
+<ulink type="http"
+url="http://developer.gnome.org/doc/tutorials/gnome-i18n/translator.html">
+How to use GNOME cvs as a translator</ulink> is your guide to the necessary
+cvs commands. If you know there are more strings to translate, then you need
+to generate a new <filename>.pot</filename> file which contains all the
+strings to translate and then to merge it with your <filename>xx.po</filename>
+file which has a less up-to-date set of translated strings. Generate the
+<filename>.pot</filename> file with <command>intltool-update --pot</command>.
+Merge the two together with <command>msgmerge -o new-xx.po xx.po
+.pot</command> and try very hard to get those in the right order!
+</para>
+
+<para>
+FIXME: mention <command>intltool-update xx</command>
+</para>
+
+<para>
+Then run <command>msgfmt -cv new-xx.po</command> to see how much work remains.
+If you are lucky, there will be many many <quote>fuzzy</quote> strings:
+strings which are so similar to already-translated messages that the msgfmt
+program has suggested that you use the old translation for the new string.
+</para>
+
+<caution>
+<title>Fuzzy translations are just that</title>
+<para>
+<command>msgmerge</command> gets fuzzy translations wrong from time to time.
+Every translator has their favourite suggestion which was badly wrong: my
+(Telsa's) personal favourite is the suggestion that the translation for
+<quote>Open window</quote> should be used to translate <quote>Close
+window</quote>...
+</para>
+</caution>
+
+<para>
+Go through your new file searching for instances of the string
+<quote>fuzzy</quote>. If it is in a comment above a translation that looks
+correct, then remove the word <quote>fuzzy</quote>. If <quote>fuzzy</quote> is
+the only word on the line, you can safely remove the whole comment. If you do
+not remove the word <quote>fuzzy</quote> then the translation will not be
+used. For example:
+</para>
+
+<programlisting>
+#, fuzzy
+msgid "Blah blah blah."
+msgfmt "La la la."
+</programlisting>
+
+<para>
+In this case, if you are confident in the translaton, the line with "fuzzy" in
+it can be removed entirely:
+</para>
+
+<programlisting>
+msgid "Blah blah blah."
+msgfmt "La la la."
+</programlisting>
+
+<para>
+However, you may come across a something like this:
+</para>
+
+<programlisting>
+#, c-format, fuzzy
+msgid "Very important: %s"
+msgstr "Pwysig iawn: %s"
+</programlisting>
+
+<para>
+In this case, if you wish to remove the fuzziness, the "c-format" tag must be
+left intact:
+</para>
+
+<programlisting>
+#, c-format
+msgid "Very important: %s"
+msgstr "Pwysig iawn: %s"
+</programlisting>
+
+<para>
+Sometimes a whole set of messages are moved to a new module. This can be
+particularly disheartening if you had translated them once already and think
+you now have to do them again. You can save on the work by using the
+<filename>.po</filename> file from that module with
+<command>msgmerge</command>. You can also generate yourself a compendium of
+messages you have translated which you can keep, edit, and use as a source of
+suggested translations. You can do this using <command>msgcat</command>, in
+the form <command>msgcat a.po b.po c.po > compendium</command>. You should
+check the contents of the compendium before using it for translation,
+especially for strings of the form <quote>#-#-#-#-#</quote> which indicate
+conflicts among the original <filename>.po</filename> files. This feature also
+means that you can use <command>msgcat</command> to check for inconsistencies
+among <filename>.po</filename> files. Once you have created your compendium
+with <command>msgcat</command>, you can make use of it with
+<command>msgfmt</command>, as you would any other <filename>.po</filename>
+file.
+</para>
+
+<!-- FIXME: Daf, how do you make and use a compendium? -->
+
+<para>
+You may find that a whole selection of messages are no longer used in the
+application. They will be moved down to the bottom of the
+<filename>.po</filename> file and left there, commented-out. A
+<keycap>#</keycap> at the start of a line comments it out. It is ignored.
+Unless there is a very large number of these and they really are getting in
+the way, do not delete these lines. They may come back into the application.
+They can also be used by the <command>msgmerge</command> program as a source
+for finding fuzzy translations. Leave them where they are.
+</para>
+</sect2>
+</sect1>
+
+<sect1 id="first-app">
+<title>Choosing the first packages to translate</title>
+
+<para>
+Here are some factors which may help you decide what to translate first.
+</para>
+
+<para>
+It is probably best to pick something very small the first time, in order to
+get used to the translation tools you are using. It is also useful to pick
+something which is an application rather than a library. This way, you will be
+able to run the application and see what it looks like. So a small stand-alone
+application is a good choice.
+</para>
+
+<para>
+Unless you are running GNOME built from CVS on your machine, you are likely to
+have the most recent stable release on it. Therefore, it is a good idea to
+translate the appropriate version of the application. So if you have
+<application>bug-buddy-2.4</application> on your machine, use the 2.4 branch
+of the <application>bug-buddy</application> module in CVS. If you use a
+different version, some of the strings will have changed, and when you test
+it, you won't see all of your translations.
+</para>
+
+<para>
+As soon as you test your application in its new language, you will almost
+certainly notice that common buttons and dialogue buttons are still in
+English. This is because they come from some of the libraries and are reused
+all over GNOME. To get those into your language, you will need to look at
+<application>gtk+</application>, <application>libgnome</application> and
+particularly <application>libgnomeui</application>. These files contain some
+very difficult strings, but you do not need to do them all yet. Just look for
+the strings which consistently show up in dialogue boxes. This will help
+immensely.
+</para>
+
+<para>
+The <application>gtk</application> package is part of a grouping called
+developer-libs. It contains about half of the strings in that group. Once you
+have translated <application>gtk</application> you will see a huge jump in
+your statistics.
+</para>
+
+<para>
+Some strings used in the <application>Epiphany</application> web browser come
+from Mozilla. So even when you have completed Epiphany, you may occasionally
+meet messages supplied by Mozilla which are not translated. If there is a
+Mozilla Language Pack for your language, you won't notice this. If there
+isn't, there is not a lot you can do about it. (You can persuade a friend that
+they want to translate Mozilla, of course..)
+</para>
+</sect1>
+
+<sect1 id="installing">
+<title>Installing</title>
+
+<para>
+If you have a reasonably up-to-date version of GNOME on a computer to which
+you have root access, you can test your translations on your machine and view
+them in context. This is strongly to be recommended. The machine will need a
+message object (<filename>.mo</filename>) file which you can create with the
+<command>msgfmt -cv</command> command. Run that on your po file, and you will
+find a file called <filename>messages.mo</filename> in the directory. This
+should be placed in the
+<filename class="directory">/usr/share/locale/<replaceable>XX</replaceable>/LC_MESSAGES/</filename>
+directory (where <replaceable>XX</replaceable> is the code for your locale)
+and given the name of the program. Examples might be
+<filename>metacity.mo</filename> or <filename>nautilus.mo</filename>.
+Sometimes the program name requires a version number on it. There is
+unfortunately no way to work this out. You will need to look at
+already-existing filenames in a sister directory to see what they use and copy
+those. Have a look around the different locales in <filename
+class="directory">/usr/share/locale/</filename> and you should find good
+examples to copy.
+</para>
+
+<para>
+Then run the application. Changing the .mo file will probably cause the
+application to crash, so save your work first; and if you are putting a
+<filename>gnome-terminal.mo</filename> there, make sure you are ready for the
+crash :) Once the file is in place, the app will be fine. It's just the act of
+updating the file which can cause problems.
+</para>
+
+<note>
+<title>The locale needs to exist</title>
+<para>
+The above will only work if the locale exists on your computer. If it does
+not, you will need to create it. This is simplest on Debian: there is a
+command for it. The procedure varies on other distributions, unfortunately,
+and is well outside the scope of this document. Patches are welcome. :)
+</para>
+</note>
+
+<para>
+Once you have figured out how to install your translations onto a machine,
+pass the instructions out far and wide to people who might be interested in
+testing them out. Other people always spot more mistakes than you can. They
+may also be inspired to help!
+</para>
+</sect1>
+
+<sect1 id="testing">
+<title>Testing</title>
+
+<para>
+Once you have large parts of your desktop completed, testing becomes vital.
+This is where you start realising that one of you has used one word for
+<quote>install</quote> and someone else has used another; or that that word
+<quote>body</quote> was referring to something other than a human body.
+</para>
+
+<para>
+The more testing you can do, or persuade your friends to do, the better.
+</para>
+</sect1>
+
+<sect1 id="editors">
+<title>Editors and editor tricks</title>
+
+<para>
+A number of editors have special modes for editing <filename>.po</filename>
+files, and will drop you into the appropriate mode automatically.
+</para>
+
+<para>
+Ensure that your editor is writing in UTF-8 format. If the file is not this
+format, things in GNOME CVS will break.
+</para>
+
+<para>
+Editors known to deal with UTF-8 well:
+</para>
+
+<simplelist>
+<member>Emacs</member>
+<member>Vim</member>
+<member>GEdit</member>
+</simplelist>
+
+<para>
+For <application>vim</application>, things we have found useful to put into
+<filename>.vimrc</filename> are:
+</para>
+
+<programlisting>
+set fileencodings=utf-8
+" A vim macro that makes control-E copy the msgid to the msgstr:
+map &lt;C-E&gt; :s/msgid "\(.*\)"\nmsgstr ""/msgid "\1"&lt;C-V&gt;&lt;CR&gt;msgstr "\1"/&lt;CR&gt;
+</programlisting>
+
+<para>
+There is a plugin for editing <filename>.po</filename> files in vim which has
+several other useful tricks. It is available on the <ulink type="http"
+url="http://www.vim.org">Vim website</ulink> as, unsurprisingly,
+<ulink type="http"
+url="http://vim.sourceforge.net/scripts/script.php?script_id=695">
+po.vim</ulink>
+</para>
+
+<para>
+<application>GNU-Emacs</application> has an entire PO mode.
+</para>
+
+<para>
+There is a program called <application>gtranslator</application> which helps
+you translate applications and which is specifically designed for translating
+GNOME.
+</para>
+
+<para>
+Other people are welcome to fill in more tricks for editors, ideally as
+dotfile instructions.
+</para>
+</sect1>
+
+<sect1 id="other-hints">
+<title>Other hints</title>
+
+<para>
+There are some things we have learned from bitter experience, and we are
+including them here so other people don't do it.
+</para>
+
+<itemizedlist>
+<listitem>
+	<para>
+	Don't leave it ages to get stuff on the branch. We fell for this.
+	However long it takes to check out the branch and update your
+	translation, and however painful it is, if you intend to do both HEAD
+	and branch, apply the changes to both. If you don't, you will meet a
+	day when you spend hours and hours and hours doing nothing but feeding
+	stuff back onto the branch.
+	</para>
+
+	<para>
+	If you are on a slow connection or a metered connection, check the
+	branches out into a separate directory rather than flipping between
+	branch and HEAD. It might take longer the first time, but it saves a
+	lot of time in the long run.
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	Automate as much as is safely possible. For example, when you are
+	adding new translations, you will type the same three lines into the
+	main Changelog about adding your locale to
+	<filename>configure.in</filename> something like fifty times. Make a
+	file which says it all already, and update the date daily. And then
+	just include it with an editor macro. It's a lot better than typing it
+	in fifty times. Use shell aliases for frequently used commands. For
+	example: <command>alias cy-commit='cvs commit -m "Updated Welsh
+	translation." cy.po ChangeLog'</command>
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	Find a language enthusiast! You will meet all manner of strange
+	strings to translate, from the detailed spreadsheet terminology of
+	Gnumeric to your language's equivalent of the English <quote>The quick
+	brown fox..</quote> sentence which is used in the font selector
+	because it includes every English letter. You will need to find or
+	invent your own alternative which contains the letters your language
+	uses. (This may be harder for Japanese and Chinese...)
+	</para>
+
+	<para>
+	If your language has an accepted set of translations of new
+	terminology, be aware of it, even if you don't like it. Be prepared to
+	justify why you didn't use some <quote>official</quote> terminology...
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	Expect the occasional deliberately silly string. You will meet
+	in-jokes from GNOME hackers as you go through more and more files. The
+	GEGL, for example, may be a code library, but it is also the
+	abbreviation for Genetically Engineered Goat, Large, and is just a
+	silly joke that crops up in various places in GNOME. There is no need
+	to translate it. There is also a selection of bizarre
+	<quote>hints</quote> in one of the aisleriot files.
+	</para>
+
+	<para>
+	Accept them. Put up with them. They are part of what makes GNOME fun,
+	although it's difficult to believe that when you've just worked your
+	way through four dictionaries trying to work out what the word might
+	be...
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	The gnome-i18n mailing list and the #i18n IRC channel can
+	be either really busy (gnome-i18n) or almost always quiet
+	(#i18n), but there are people on them who have almost certainly
+	met these things before, and can suggest ways to deal with
+	them. Use them.
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	It's really easy to omit the underscores which will turn a key into a
+	keyboard shortcut in a menu. You can check whether the number of
+	underscores in the msgids and the msgstrs match with the command
+	<command>msgfmt --check-accelerators=_</command> (but note that once
+	you have filled the translator_credits one in there will always be one
+	that appears to be missing).
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	Test, test, test. Whilst it is hard to get everything localised on
+	your machine, it is very easy to install your own latest translations
+	for at least some applications. Do this. It will really help.
+	</para>
+</listitem>
+
+<listitem>
+	<para>
+	Create a tarball of completed translations. (Another good candidate
+	for automation.) Put them up on the web with very simple walk-through
+	steps which let other people install them. This gets you feedback (and
+	help) much earlier than waiting for a distribution to ship them will.
+	The instructions for installing will unfortunately differ for very
+	nearly every distribution. But the results are worth it.
+	</para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+<glossary>
+<glossentry id="cvs">
+	<glossterm>CVS</glossterm>
+	<glossdef>
+	<para>
+	Concurrent Versioning System: the system used to maintain the
+	repository of GNOME code in a central place.
+	</para>
+	</glossdef>
+</glossentry>
+
+<glossentry id="i18n">
+	<glossterm>I18N</glossterm>
+	<glossdef>
+	<para>
+	The abbreviation of internationalisation (the initial and final
+	letters of the word and then eighteen letters between them): the
+	process of ensuring a program comes in a form which can be localised.
+	</para>
+	</glossdef>
+</glossentry>
+
+<glossentry id="l10n">
+	<glossterm>L10N</glossterm>
+	<glossdef>
+	<para>
+	The abbreviation of localisation (the initial and final letters and
+	then ten between them): the process of making a program work in a
+	particular location. It includes both translating messages and
+	tweaking such things as measurements, currency symbols and temperature
+	scales.
+	</para>
+	</glossdef>
+</glossentry>
+
+<glossentry id="locale">
+	<glossterm>locale</glossterm>
+	<glossdef>
+	<para>
+	FIXME
+	</para>
+	</glossdef>
+</glossentry>
+</glossary>
+
+<appendix id="gotchas">
+<title>Special characters in po files, and one special string</title>
+
+<para>
+There is a separate appendix about <link linkend="c-format-stuff">C-format
+strings</link>. Here is a list of other characters and situations which can
+cause problems.
+</para>
+
+<variablelist>
+<varlistentry>
+	<term>Escape-able characters</term>
+	<listitem>
+	<para>
+	Some characters will be interpreted by the programs which operate on
+	<filename>.po</filename> files and thus need to be escaped with a
+	backslash in front of them.
+	</para>
+
+	<para>
+	The most common character for this is a double-quote character like
+	<keycap>"</keycap>.
+	</para>
+	</listitem>
+</varlistentry>
+
+<varlistentry>
+	<term>Formatting marks</term>
+	<listitem>
+	<para>
+	You may come across the combinations <literal>\n</literal> or
+	<literal>\t</literal>. These mean newline and tab. You do not have to
+	put the same number of these into your translation, but if there is
+	one of these at the start (or end) of the string, you must include one
+	at the start (or end) of your translated string.
+	</para>
+	</listitem>
+</varlistentry>
+
+<varlistentry>
+	<term>Angle brackets and ampersands in GConf files</term>
+	<listitem>
+	<para>
+	There are one or two modules where XML is used heavily. GConf is the
+	most notable. XML treats the characters &lt;, &gt; and &amp; as
+	special. You can not just include them in your translation. You must
+	specify them as entities.
+	</para>
+
+	<simplelist>
+	<member>&lt; is represented as &amp;lt;</member>
+	<member>&gt; is represented as &amp;gt;</member>
+	<member>&amp; is represented as &amp;amp;</member>
+	</simplelist>
+
+	<para>
+	FIXME: I've sure we've met this. But where? And does
+	it apply to all .in.in.h files too?
+	</para>
+	</listitem>
+</varlistentry>
+
+<varlistentry>
+	<term>TRUE and FALSE</term>
+	<listitem>
+	<para>
+	<quote>TRUE</quote> and <quote>FALSE</quote> show up in
+	<application>gtk+</application> and in
+	<application>Gconf</application> and in a lot of files generated by
+	<application>Glade</application>. (These will have a name ending in
+	<filename>.glade</filename>.) Do not translate them. Programs expect
+	to see them and will be confused if they don't.
+	</para>
+	</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>
+There is also one very special string in the <filename>.po</filename>
+file: the msgid of <literal>translator_credits</literal>. This
+will show up when someone running the application in your
+language looks at the credits by following the
+<menuchoice>
+<guimenu>Help</guimenu>
+<guisubmenu>About</guisubmenu>
+</menuchoice>
+path in the application. They will see a <guibutton>Translation</guibutton>
+option. In that will be the contents of this
+<literal>translator_credits</literal>. This is where you put your name(s), so
+the world can see. The typical format is to put a list of names and email
+addresses on separate lines, with the URL of any team page. For example:
+</para>
+
+<programlisting>
+msgid "translator_credits"
+msgstr
+"Telsa Gwynne &lt;hobbit@aloss.ukuug.org.uk&gt;\n"
+"Dafydd Harries &lt;daf@muse.19inch.net&gt;"
+</programlisting>
+
+<para>
+Don't forget to do this one :)
+</para>
+</appendix>
+
+<appendix id="c-format-stuff">
+<title>Some C-format strings to leave alone &mdash; or to re-order</title>
+
+<para>
+This is a brief list of C-format strings you may need to know about.
+</para>
+
+<variablelist>
+<varlistentry>
+	<term>%s</term>
+	<listitem>
+	<para>This represents a string. An example is in nautilus:</para>
+	<programlisting>
+#: components/emblem/nautilus-emblem-view.c:834
+#, c-format
+msgid "The file '%s' does not appear to be a valid image."
+msgstr ""
+	</programlisting>
+	</listitem>
+	</varlistentry>
+</variablelist>
+
+<para>
+Strings containing such C-format sequnces are marked with the "c-format" tag,
+like in the example. Be aware that where there are two instances of one of
+these, they are not necessarily the same string. Another nautilus example:
+</para>
+
+<programlisting>
+#: components/hardware/nautilus-hardware-view.c:483
+#, c-format
+msgid "Uptime is %d days, %d hours, %d minutes"
+msgstr ""
+</programlisting>
+
+<para>
+If you need to re-arrange them to make them make sense, you can do that. In
+English, this is common:
+
+<programlisting>
+#, c-format
+msgid "%n out of %n"
+</programlisting>
+
+This might come out as <quote>10 out of 100</quote>. If your language wants to
+say <quote>Out of 100, 10</quote>, you can reverse them like this:
+
+<programlisting>
+#, c-format
+msgid "%n out of %n"
+msgstr "Out of  %2$d, %1$d"
+</programlisting>
+</para>
+</appendix>
+
+</article>
