@@ -39,7 +39,7 @@ mysql_select_db("gnome_nl",$db);
 if ( ! empty( $_GET["item"] ) )	
 	$sql = "select * from `events` where id = '".$_GET["item"]."'";
 else
-	$sql = "select * from `events` order by `from` desc limit ".$max_events;
+	$sql = "select * from `events` order by `from` asc limit ".$max_events;
 
 // run the query and set a result identifier to the recordset
 $res = mysql_query($sql);
