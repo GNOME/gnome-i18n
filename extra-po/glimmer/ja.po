@@ -1,22 +1,22 @@
 # Japanese Translation of glimmer
-# Copyright (C) 2000 Free Software Foundation, Inc.
+# Copyright (C) 2000-2001 Free Software Foundation, Inc.
 # Mitsuo Hamada <mhamada@redhat.com>, 2000.
+# Akira TAGOH <tagoh@gnome.gr.jp>, 2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: glimmer 0.9.19\n"
-"POT-Creation-Date: 2000-09-25 18:28+0300\n"
-"PO-Revision-Date: 2000-11-07 10:00+0900\n"
-"Last-Translator: Mitsuo Hamada <mhamada@redhat.com>\n"
+"Project-Id-Version: glimmer CVS-20011218\n"
+"POT-Creation-Date: 2001-02-06 12:58+0100\n"
+"PO-Revision-Date: 2001-12-18 20:15+0900\n"
+"Last-Translator: Akira TAGOH <tagoh@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-
-#: src/dialogs.c:18 src/dialogs.c:266 src/dialogs.c:341
+#: src/dialogs.c:18 src/dialogs.c:308 src/dialogs.c:383
 msgid "Read Error!"
-msgstr "読込みエラー"
+msgstr "読込み中にエラーが発生しました!"
 
 #: src/dialogs.c:33
 msgid ""
@@ -24,11 +24,11 @@ msgid ""
 "Would you like to create it?"
 msgstr ""
 " 存在しません。\n"
-"作成しますか？"
+"作成してもよろしいですか?"
 
 #: src/dialogs.c:65
 msgid "Write Error!"
-msgstr "書込みエラー"
+msgstr "書込み中にエラーが発生しました!"
 
 #: src/dialogs.c:80
 msgid ""
@@ -36,11 +36,11 @@ msgid ""
 "Would you like to overwrite it?"
 msgstr ""
 " すでに存在します。\n"
-"上書きしますか？"
+"上書きしてもよろしいですか?"
 
-#: src/dialogs.c:106 src/dialogs.c:152 src/dialogs.c:199 src/dialogs.c:303
+#: src/dialogs.c:106 src/dialogs.c:152 src/dialogs.c:199 src/dialogs.c:345
 msgid "Save Error!"
-msgstr "保存エラー"
+msgstr "保存中にエラーが発生しました"
 
 #: src/dialogs.c:121 src/dialogs.c:167 src/dialogs.c:214
 msgid ""
@@ -48,33 +48,45 @@ msgid ""
 "Would you like to save it now it?"
 msgstr ""
 " 書き換えられています。\n"
-"今すぐ保存しますか？"
+"今すぐ保存してもよろしいですか?"
 
-#: src/dialogs.c:236 src/file-io.c:213 src/file-io.c:349
+#: src/dialogs.c:236 src/file-io.c:217 src/file-io.c:362
 msgid "Save file with new name..."
 msgstr "名前を換えてファイルを保存"
 
+#: src/dialogs.c:266
+msgid "File Modified!"
+msgstr "ファイルは修正しました!"
+
 #: src/dialogs.c:281
+msgid ""
+" has been modified on disk since the last save.\n"
+"Would you like to reload it now?"
+msgstr ""
+" 以前保存してから書き換えられています\n"
+"今すぐ再読込してもよろしいですか?"
+
+#: src/dialogs.c:323
 msgid " could not be read."
 msgstr " 読み込まれませんでした"
 
-#: src/dialogs.c:318
+#: src/dialogs.c:360
 msgid " could not be saved!"
 msgstr " 保存されませんでした"
 
-#: src/dialogs.c:356
+#: src/dialogs.c:398
 msgid " opened as read-only!"
 msgstr " 読込み専用で開きました"
 
-#: src/dialogs.c:379
+#: src/dialogs.c:421
 msgid "Create Error!"
-msgstr " 作成エラー"
+msgstr " 作成中にエラーが発生しました!"
 
-#: src/dialogs.c:394
+#: src/dialogs.c:436
 msgid " could not be created!"
 msgstr " 作成できませんでした"
 
-#: src/dialogs.c:415
+#: src/dialogs.c:457
 msgid "Information"
 msgstr "情報"
 
@@ -92,33 +104,33 @@ msgstr "テキスト検索"
 
 #: src/findbar.c:32
 msgid "Find some text."
-msgstr "テキストを検索する"
+msgstr "テキストを検索します"
 
 #: src/highlightbar.c:21
 msgid "Highlight style."
-msgstr "ハイライトスタイル"
+msgstr "強調スタイル"
 
 #: src/highlightbar.c:26
 msgid "Re-Highlight the current buffer."
-msgstr "現在のバッファを再ハイライト"
+msgstr "現在のバッファを再強調します"
 
 #: src/main.c:43
 msgid "Specify the session file to use."
-msgstr "使用するセッションファイルを指定"
+msgstr "使用するセッションファイルを指定します"
 
 #: src/main.c:47
 msgid "Open a specific file."
-msgstr "特定のファイルを開く"
+msgstr "特定のファイルを開きます"
 
 #: src/main.c:51
 msgid "Jump to a line in the file specified by -f."
-msgstr "-f で指定されたファイルの行へ移動"
+msgstr "-f で指定されたファイルの行へ移動します"
 
-#: src/main.c:550
+#: src/main.c:556
 msgid "Creating ~/"
 msgstr "作成中 ~/"
 
-#: src/main.c:554 src/main.c:558
+#: src/main.c:560 src/main.c:564
 msgid "Creating ~/."
 msgstr "作成中 ~/."
 
@@ -128,7 +140,7 @@ msgstr "現在のセッションを保存(_S)"
 
 #: src/menus.c:60
 msgid "Save the current session"
-msgstr "現在のセッションを保存する"
+msgstr "現在のセッションを保存します"
 
 #: src/menus.c:61
 msgid "Save Session _As..."
@@ -136,7 +148,7 @@ msgstr "名前を付けてセッションを保存..."
 
 #: src/menus.c:61
 msgid "Save the current session with a different name"
-msgstr "現在のセッションを別の名前で保存する"
+msgstr "現在のセッションを別の名前で保存します"
 
 #: src/menus.c:63
 msgid "_Open Session..."
@@ -144,7 +156,7 @@ msgstr "セッションを開く(_O)"
 
 #: src/menus.c:63
 msgid "Open a session"
-msgstr "セッションを開く"
+msgstr "セッションを開きます"
 
 #: src/menus.c:73
 msgid "_New"
@@ -152,7 +164,7 @@ msgstr "新規(_N)"
 
 #: src/menus.c:73
 msgid "Create a new file."
-msgstr "新規ファイルを作成する"
+msgstr "新規ファイルを作成します"
 
 #: src/menus.c:74
 msgid "_Open..."
@@ -160,7 +172,7 @@ msgstr "開く(_O)"
 
 #: src/menus.c:74
 msgid "Open a file."
-msgstr "既存のファイルを開く"
+msgstr "既存のファイルを開きます"
 
 #: src/menus.c:75
 msgid "Open _Multiple..."
@@ -168,7 +180,7 @@ msgstr "複数ファイルを開く(_M)"
 
 #: src/menus.c:75
 msgid "Open window with explicit close."
-msgstr "別のファイルをウィンドウとともに開く"
+msgstr "別のファイルをウィンドウとともに開きます"
 
 #: src/menus.c:76
 msgid "_Revert"
@@ -176,7 +188,7 @@ msgstr "元に戻す(_R)"
 
 #: src/menus.c:76
 msgid "Revert to saved file."
-msgstr "保存したファイルの状態に戻す"
+msgstr "保存したファイルの状態に戻します"
 
 #: src/menus.c:78
 msgid "_Save"
@@ -184,7 +196,7 @@ msgstr "保存(_S)"
 
 #: src/menus.c:78 src/menus.c:79
 msgid "Save the current file."
-msgstr "現在のファイルを保存"
+msgstr "現在のファイルを保存します"
 
 #: src/menus.c:79
 msgid "Save _As"
@@ -196,7 +208,7 @@ msgstr "すべて保存(_V)"
 
 #: src/menus.c:80
 msgid "Save all open files"
-msgstr "開いているファイルをすべて保存"
+msgstr "開いているファイルをすべて保存します"
 
 #: src/menus.c:82
 msgid "_Close"
@@ -204,7 +216,7 @@ msgstr "閉じる(_C)"
 
 #: src/menus.c:82
 msgid "Close the current file."
-msgstr "現在のファイルを閉じる"
+msgstr "現在のファイルを閉じます"
 
 #: src/menus.c:83
 msgid "C_lose All"
@@ -212,7 +224,7 @@ msgstr "すべて閉じる(_L)"
 
 #: src/menus.c:83
 msgid "Close all open files"
-msgstr "開いているファイルをすべて閉じる"
+msgstr "開いているファイルをすべて閉じます"
 
 #: src/menus.c:85
 msgid "Sess_ion"
@@ -228,7 +240,7 @@ msgstr "終了(_E)"
 
 #: src/menus.c:88
 msgid "Exit the program."
-msgstr "プログラムを終了する"
+msgstr "プログラムを終了します"
 
 #: src/menus.c:100
 msgid "_Bookmark Line"
@@ -236,7 +248,7 @@ msgstr "ブックマーク"
 
 #: src/menus.c:100
 msgid "Reverse Bookmark"
-msgstr "ブックマークを反転する"
+msgstr "ブックマークを反転します"
 
 #: src/menus.c:102
 msgid "Clear"
@@ -244,7 +256,7 @@ msgstr "消去"
 
 #: src/menus.c:102
 msgid "Clear selection"
-msgstr "選択範囲を消去する"
+msgstr "選択範囲を消去します"
 
 #: src/menus.c:103
 msgid "Clear Line"
@@ -252,7 +264,7 @@ msgstr "行消去"
 
 #: src/menus.c:103 src/menus.c:104 src/menus.c:105
 msgid "Clear the current line"
-msgstr "現在の行を消去する"
+msgstr "現在の行を消去します"
 
 #: src/menus.c:104
 msgid "Clear to Line Start"
@@ -268,7 +280,7 @@ msgstr "すべて選択(_A)"
 
 #: src/menus.c:107
 msgid "Select the entire document"
-msgstr "文書全体を選択する"
+msgstr "文書全体を選択します"
 
 #: src/menus.c:108
 msgid "Select _Line"
@@ -276,7 +288,7 @@ msgstr "行選択(_L)"
 
 #: src/menus.c:108
 msgid "Select the current line."
-msgstr "現在の行を選択する"
+msgstr "現在の行を選択します"
 
 #: src/menus.c:109
 msgid "_Select Current"
@@ -284,23 +296,23 @@ msgstr "現在の単語を選択(_S)"
 
 #: src/menus.c:109
 msgid "Select the current word"
-msgstr "現在の単語を選択する"
+msgstr "現在の単語を選択します"
 
 #: src/menus.c:111
 msgid "Re-Highlight"
-msgstr "再ハイライト"
+msgstr "再強調"
 
 #: src/menus.c:111
 msgid "Re-Highlight the current file"
-msgstr "現在のファイルを再ハイライト"
+msgstr "現在のファイルを再強調します"
 
 #: src/menus.c:112
 msgid "Regenerate Highlight Tables"
-msgstr "ハイライトテーブルを再生成"
+msgstr "強調テーブルを再生成"
 
 #: src/menus.c:112
 msgid "Regenerate highlighting tables for the current mime-type"
-msgstr "現在のMIMEタイプ用にハイライトテーブルを再生成"
+msgstr "現在のMIMEタイプ用に強調テーブルを再生成します"
 
 #: src/menus.c:114
 msgid "P_roperties"
@@ -308,7 +320,7 @@ msgstr "プロパティ(_R)"
 
 #: src/menus.c:114
 msgid "Edit properties"
-msgstr "プロパティを編集する"
+msgstr "プロパティを編集します"
 
 #: src/menus.c:121
 msgid "Goto Line..."
@@ -316,7 +328,7 @@ msgstr "行移動..."
 
 #: src/menus.c:121
 msgid "Goto a line"
-msgstr "指定行へ移動する"
+msgstr "指定行へ移動します"
 
 #: src/menus.c:122
 msgid "Search Manpages (Local)"
@@ -324,7 +336,7 @@ msgstr "マニュアルページ検索(ローカル)"
 
 #: src/menus.c:122
 msgid "Search manpages"
-msgstr "マニュアルページを検索する"
+msgstr "マニュアルページを検索します"
 
 #: src/menus.c:123
 msgid "Search Manpages (Gnome)"
@@ -332,7 +344,7 @@ msgstr "マニュアルページ検索(Gnome)"
 
 #: src/menus.c:123
 msgid "Search manpages with gnome-help-browser"
-msgstr "gnomeヘルプブラウザでマニュアルを検索する"
+msgstr "gnomeヘルプブラウザでマニュアルを検索します"
 
 #: src/menus.c:125
 msgid "_Previous Bookmark"
@@ -340,7 +352,7 @@ msgstr "前のブックマークへ(_P)"
 
 #: src/menus.c:125 src/menus.c:126
 msgid "Goto the next bookmark"
-msgstr "次のブックマークへ移動する"
+msgstr "次のブックマークへ移動します"
 
 #: src/menus.c:126
 msgid "_Next Bookmark"
@@ -352,7 +364,7 @@ msgstr "括弧の対応"
 
 #: src/menus.c:128
 msgid "Goto the matching bracket"
-msgstr "対応する括弧への移動する"
+msgstr "対応する括弧への移動します"
 
 #: src/menus.c:133
 msgid "ChangeLog _Entry"
@@ -360,7 +372,7 @@ msgstr "ChangeLog エントリ(_E)"
 
 #: src/menus.c:133
 msgid "Insert ChangeLog entry"
-msgstr "ChangeLog エントリを挿入"
+msgstr "ChangeLog エントリを挿入します"
 
 #: src/menus.c:134
 msgid "_Date & Time"
@@ -368,7 +380,7 @@ msgstr "日付および時刻(_D)"
 
 #: src/menus.c:134
 msgid "Insert current date and time"
-msgstr "現在の日付と時刻を挿入する"
+msgstr "現在の日付と時刻を挿入します"
 
 #: src/menus.c:135
 msgid "_User Name"
@@ -376,7 +388,7 @@ msgstr "ユーザ名(_U)"
 
 #: src/menus.c:135
 msgid "Insert the name of the current user"
-msgstr "現在のユーザ名を挿入する"
+msgstr "現在のユーザ名を挿入します"
 
 #: src/menus.c:136
 msgid "_Name"
@@ -384,7 +396,7 @@ msgstr "名前(_N)"
 
 #: src/menus.c:136
 msgid "Insert name (from prefs)"
-msgstr "名前の挿入する(初期設定を使う)"
+msgstr "名前の挿入します(初期設定を使う)"
 
 #: src/menus.c:137
 msgid "Email _Address"
@@ -392,7 +404,7 @@ msgstr "メールアドレス(_A)"
 
 #: src/menus.c:137
 msgid "Insert email (from prefs)"
-msgstr "メールアドレスを挿入する(初期設定を使う)"
+msgstr "メールアドレスを挿入します(初期設定を使う)"
 
 #: src/menus.c:138
 msgid "_GPL Notice (C)"
@@ -400,7 +412,7 @@ msgstr "C言語用 GPL 通知(_G)"
 
 #: src/menus.c:138
 msgid "Insert GPL notice with C comments"
-msgstr "GPL 通知を C のコメント形態で挿入する"
+msgstr "GPL 通知を C のコメント形態で挿入します"
 
 #: src/menus.c:139
 msgid "G_PL Notice (C++)"
@@ -408,7 +420,7 @@ msgstr "C++用 GPL 通知(_P)"
 
 #: src/menus.c:139
 msgid "Insert GPL notice with C++ comments"
-msgstr "GPL 通知を C++ のコメント形態で挿入する"
+msgstr "GPL 通知を C++ のコメント形態で挿入します"
 
 #: src/menus.c:140
 msgid "G_PL Notice (#)"
@@ -416,7 +428,7 @@ msgstr "GPL 通知(#)(_P)"
 
 #: src/menus.c:140
 msgid "Insert GPL notice with # comments"
-msgstr "GPL 通知を # コメント形態で挿入する"
+msgstr "GPL 通知を # コメント形態で挿入します"
 
 #: src/menus.c:145
 msgid "I_ndent..."
@@ -424,7 +436,7 @@ msgstr "インデント(_N)"
 
 #: src/menus.c:145
 msgid "Indent a selected area."
-msgstr "選択された領域をインデントする"
+msgstr "選択された領域をインデントします"
 
 #: src/menus.c:146
 msgid "_Insert File..."
@@ -432,7 +444,7 @@ msgstr "ファイル挿入(_I)"
 
 #: src/menus.c:146
 msgid "Insert a file"
-msgstr "ファイルを挿入する"
+msgstr "ファイルを挿入します"
 
 #: src/menus.c:147
 msgid "_Ascii Character..."
@@ -440,7 +452,7 @@ msgstr "アスキー文字(_A)"
 
 #: src/menus.c:147
 msgid "Insert a chracter from the chooser"
-msgstr "選択ツールから文字を挿入する"
+msgstr "選択ツールから文字を挿入します"
 
 #: src/menus.c:148
 msgid "_Shell Output..."
@@ -448,7 +460,7 @@ msgstr "シェル出力(_S)"
 
 #: src/menus.c:148
 msgid "Insert output from a command"
-msgstr "コマンドの出力を挿入する"
+msgstr "コマンドの出力を挿入します"
 
 #: src/menus.c:149
 msgid "_Common Text"
@@ -460,7 +472,7 @@ msgstr "コンパイル(_C)"
 
 #: src/menus.c:155
 msgid "Compile the current source file"
-msgstr "現在のソースファイルをコンパイルする"
+msgstr "現在のソースファイルをコンパイルします"
 
 #: src/menus.c:156
 msgid "Stop Compile"
@@ -468,7 +480,7 @@ msgstr "コンパイル中止"
 
 #: src/menus.c:156
 msgid "Kill the currently executing compile process"
-msgstr "現在実行中のコンパイルプロセスを中断する"
+msgstr "現在実行中のコンパイルプロセスを中断します"
 
 #: src/menus.c:157
 msgid "_Debug"
@@ -476,7 +488,7 @@ msgstr "デバッグ(_D)"
 
 #: src/menus.c:157
 msgid "Debug the current source file"
-msgstr "現在のソースファイルをデバッグする"
+msgstr "現在のソースファイルをデバッグします"
 
 #: src/menus.c:158
 msgid "Stop Debug"
@@ -484,7 +496,7 @@ msgstr "デバッグ中止"
 
 #: src/menus.c:158
 msgid "Kill the currently executing debug process"
-msgstr "現在実行中のデバッグプロセスを中断する"
+msgstr "現在実行中のデバッグプロセスを中断します"
 
 #: src/menus.c:159
 msgid "_Execute"
@@ -492,7 +504,7 @@ msgstr "実行(_E)"
 
 #: src/menus.c:159
 msgid "Execute the current program"
-msgstr "現在のプログラムを実行する"
+msgstr "現在のプログラムを実行します"
 
 #: src/menus.c:160
 msgid "Stop Execution"
@@ -500,15 +512,15 @@ msgstr "実行中止"
 
 #: src/menus.c:160
 msgid "Kill the currently executing process"
-msgstr "現在実行中のプロセスを中断する"
+msgstr "現在実行中のプロセスを中断します"
 
 #: src/menus.c:170
 msgid "_Regenerate Menu"
-msgstr "メニュー最生成(_R)"
+msgstr "メニュー再生成(_R)"
 
 #: src/menus.c:170
 msgid "Regenerate the scripts menu"
-msgstr "スクリプトメニューを最生成する"
+msgstr "スクリプトメニューを再生成します"
 
 #: src/menus.c:176
 msgid "File Toolbar"
@@ -516,7 +528,7 @@ msgstr "ファイルツールバー"
 
 #: src/menus.c:176
 msgid "Toggle the visibility of the file toolbar"
-msgstr "ファイルツールバーの表示/非表示"
+msgstr "ファイルツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:177
 msgid "Edit Toolbar"
@@ -524,7 +536,7 @@ msgstr "編集ツールバー"
 
 #: src/menus.c:177
 msgid "Toggle the visibility of the edit toolbar"
-msgstr "編集ツールバーの表示/非表示"
+msgstr "編集ツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:178
 msgid "Build Toolbar"
@@ -532,7 +544,7 @@ msgstr "ビルドツールバー"
 
 #: src/menus.c:178
 msgid "Toggle the visibility of the build toolbar"
-msgstr "ビルドツールバーの表示/非表示"
+msgstr "ビルドツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:179
 msgid "Highlight Toolbar"
@@ -540,7 +552,7 @@ msgstr "ハイライトツールバー"
 
 #: src/menus.c:179
 msgid "Toggle the visibility of the highlight toolbar"
-msgstr "ハイライトツールバーの表示/非表示"
+msgstr "ハイライトツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:180
 msgid "Find Toolbar"
@@ -548,7 +560,7 @@ msgstr "検索ツールバー"
 
 #: src/menus.c:180
 msgid "Toggle the visibility of the find toolbar"
-msgstr "検索ツールバーの表示/非表示"
+msgstr "検索ツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:181
 msgid "Line Toolbar"
@@ -556,7 +568,7 @@ msgstr "行ツールバー"
 
 #: src/menus.c:181
 msgid "Toggle the visibility of the line toolbar"
-msgstr "行ツールバーの表示/非表示"
+msgstr "行ツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:182
 msgid "Custom Toolbar"
@@ -564,7 +576,7 @@ msgstr "カスタムツールバー"
 
 #: src/menus.c:182
 msgid "Toggle the visibility of the custom toolbar"
-msgstr "カスタムツールバーの表示/非表示"
+msgstr "カスタムツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:183
 msgid "Command Toolbar"
@@ -572,7 +584,7 @@ msgstr "コマンドツールバー"
 
 #: src/menus.c:183
 msgid "Toggle the visibility of the command toolbar"
-msgstr "コマンドツールバーの表示/非表示"
+msgstr "コマンドツールバーの表示/非表示を切替えます"
 
 #: src/menus.c:184
 msgid "Status Bar"
@@ -580,7 +592,7 @@ msgstr "ステータスバー"
 
 #: src/menus.c:184
 msgid "Toggle the visibility of the Status Bar"
-msgstr "ステータスバーの表示/非表示"
+msgstr "ステータスバーの表示/非表示を切替えます"
 
 #: src/menus.c:186
 msgid "Save View Settings"
@@ -588,7 +600,7 @@ msgstr "表示設定を保存"
 
 #: src/menus.c:186
 msgid "Save the current view settings"
-msgstr "現在の表示設定を保存する"
+msgstr "現在の表示設定を保存します"
 
 #: src/menus.c:191
 msgid "Preferences..."
@@ -596,15 +608,15 @@ msgstr "初期設定..."
 
 #: src/menus.c:191
 msgid "Edit the program preferences"
-msgstr "初期設定を編集する"
+msgstr "初期設定を編集します"
 
 #: src/menus.c:192
 msgid "Highlight Colors..."
-msgstr "ハイライト色設定..."
+msgstr "強調色設定..."
 
 #: src/menus.c:192
 msgid "Edit the highlighting colors"
-msgstr "ハイライト色設定の編集"
+msgstr "強調色設定の編集をします"
 
 #: src/menus.c:197
 msgid "New Main _Window"
@@ -620,7 +632,7 @@ msgstr "前のファイル(_P)"
 
 #: src/menus.c:199
 msgid "Goto the previous file in the list."
-msgstr "一覧の前のファイルに移動する"
+msgstr "一覧の前のファイルに移動します"
 
 #: src/menus.c:200
 msgid "_Next File"
@@ -628,7 +640,7 @@ msgstr "次のファイル(_N)"
 
 #: src/menus.c:200
 msgid "Goto the next file in the list."
-msgstr "一覧の次のファイルに移動する"
+msgstr "一覧の次のファイルに移動します"
 
 #: src/menus.c:202
 msgid "Move File _Backward"
@@ -636,7 +648,7 @@ msgstr "ファイルを後に移動(_B)"
 
 #: src/menus.c:202
 msgid "Move this file backward in the list."
-msgstr "ファイルを一覧の一つ後に移動する"
+msgstr "ファイルを一覧の一つ後に移動します"
 
 #: src/menus.c:203
 msgid "Move File _Forward"
@@ -644,7 +656,7 @@ msgstr "ファイルを前に移動(_F)"
 
 #: src/menus.c:203
 msgid "Move this file forward in the list."
-msgstr "ファイルを一覧の一つ前に移動する"
+msgstr "ファイルを一覧の一つ前に移動します"
 
 #: src/menus.c:215
 msgid "_File"
@@ -780,11 +792,11 @@ msgstr "/編集/"
 
 #: src/menus.c:252
 msgid "/Edit/Re-Highlight"
-msgstr "/編集/再ハイライト"
+msgstr "/編集/再強調"
 
 #: src/menus.c:253
 msgid "/Edit/Regenerate Highlight Tables"
-msgstr "/編集/ハイライトテーブルの再生成"
+msgstr "/編集/強調テーブルの再生成"
 
 #: src/menus.c:254
 msgid "/Edit/sep6"
@@ -851,23 +863,23 @@ msgstr "デフォルトを上書"
 msgid "Directory:"
 msgstr "ディレクトリ:"
 
-#: src/properties.c:93 src/settings.c:608
+#: src/properties.c:93 src/settings.c:630
 msgid "Highlighting"
-msgstr "ハイライト"
+msgstr "強調"
 
-#: src/properties.c:103 src/settings.c:618
+#: src/properties.c:103 src/settings.c:640
 msgid "Enable bracket highlighting ?"
 msgstr "括弧のハイライトを有効"
 
-#: src/properties.c:104 src/settings.c:620
+#: src/properties.c:104 src/settings.c:642
 msgid "Enable syntax highlighting ?"
 msgstr "予約語などのハイライトを有効"
 
-#: src/properties.c:106 src/settings.c:622
+#: src/properties.c:106 src/settings.c:644
 msgid "Indentation"
 msgstr "インデント"
 
-#: src/properties.c:118 src/settings.c:633
+#: src/properties.c:118 src/settings.c:655
 msgid "Auto Indent ?"
 msgstr "自動インデント"
 
@@ -879,7 +891,7 @@ msgstr "タブの代わりに空白を使用"
 msgid "Tab stop:"
 msgstr "空白の数:"
 
-#: src/properties.c:137 src/settings.c:299
+#: src/properties.c:137 src/settings.c:312
 msgid "Build Information"
 msgstr "ビルド情報"
 
@@ -895,232 +907,235 @@ msgstr "デバッガ:"
 msgid "Execution: "
 msgstr "実行"
 
-#: src/properties.c:193 src/settings.c:757
+#: src/color-settings.c:159 src/properties.c:193 src/settings.c:780
 msgid "Defaults"
 msgstr "デフォルト"
 
-#: src/properties.c:199 src/settings.c:763
+#: src/color-settings.c:165 src/properties.c:199 src/settings.c:786
 msgid "Undo"
 msgstr "元に戻す"
 
-#: src/settings.c:207
+#: src/settings.c:215
 msgid "Edit "
 msgstr "編集"
 
-#: src/settings.c:223 src/settings.c:226
+#: src/settings.c:233 src/settings.c:237
 msgid "Directory Settings"
 msgstr "ディレクトリ設定"
 
-#: src/settings.c:236
+#: src/settings.c:247
 msgid "Default Directory:"
 msgstr "デフォルトホーム:"
 
-#: src/settings.c:246
+#: src/settings.c:257
 msgid "Projects Directory:"
 msgstr "プロジェクトホーム:"
 
-#: src/settings.c:256 src/settings.c:259
+#: src/settings.c:267 src/settings.c:271
 msgid "History Settings"
 msgstr "履歴設定"
 
-#: src/settings.c:266
+#: src/settings.c:278
 msgid "Save toolbar settings on exit?"
 msgstr "終了時にツールバー設定を保存"
 
-#: src/settings.c:267
+#: src/settings.c:279
 msgid "Save session on exit?"
 msgstr "終了時にセッションを保存"
 
-#: src/settings.c:268
+#: src/settings.c:280
 msgid "Open last session on startup?"
 msgstr "起動時に最後に開いたセッションを開く"
 
-#: src/settings.c:269
+#: src/settings.c:281
 msgid "Auto-save session when files change?"
 msgstr "ファイル変更時にセッションを自動保存"
 
-#: src/settings.c:274
+#: src/settings.c:286
 msgid "Items to show in history lists:"
 msgstr "履歴に表示するアイテムの数:"
 
-#: src/settings.c:285
+#: src/settings.c:297
 msgid "Maximum Undo saves:"
 msgstr "元に戻すための最大履歴数:"
 
-#: src/settings.c:297
+#: src/settings.c:310
 msgid "Build Settings"
 msgstr "ビルド設定"
 
-#: src/settings.c:311
+#: src/settings.c:324
 msgid "Terminal Command:"
 msgstr "ターミナル用コマンド:"
 
-#: src/settings.c:321
+#: src/settings.c:334
 msgid "Make Command:"
 msgstr "Make 用コマンド:"
 
-#: src/settings.c:333
+#: src/settings.c:347
 msgid "User Settings"
 msgstr "ユーザ設定"
 
-#: src/settings.c:335
+#: src/settings.c:349
 msgid "User Information"
 msgstr "ユーザ情報"
 
-#: src/settings.c:347
+#: src/settings.c:361
 msgid "Name of user:"
 msgstr "ユーザ名:"
 
-#: src/settings.c:357
+#: src/settings.c:371
 msgid "Email of user:"
 msgstr "メールアドレス:"
 
-#: src/settings.c:370
+#: src/settings.c:385
 msgid "MDI Settings"
 msgstr "MDI 設定"
 
-#: src/settings.c:372
+#: src/settings.c:387
 msgid "Tab Position"
 msgstr "タブ位置"
 
-#. start of colors and fonts stuff
-#: src/settings.c:402
+#: src/settings.c:418
 msgid "Style Settings"
 msgstr "スタイル設定"
 
-#: src/settings.c:407
+#: src/settings.c:423
 msgid "Font Settings"
 msgstr "フォント設定"
 
-#: src/settings.c:410
+#: src/settings.c:427
 msgid "Fonts"
 msgstr "フォント"
 
-#: src/settings.c:421
+#: src/settings.c:438
 msgid "Default Font:"
 msgstr "デフォルトフォント:"
 
-#: src/settings.c:438
+#: src/settings.c:455
 msgid "Italic Font:"
 msgstr "イタリックフォント:"
 
-#: src/settings.c:455
+#: src/settings.c:472
 msgid "Bold Font:"
 msgstr "ボールドフォント:"
 
-#: src/settings.c:472
+#: src/settings.c:489
 msgid "Bold-Italic Font:"
 msgstr "ボールドイタリックフォント:"
 
-#: src/settings.c:489 src/settings.c:492
+#: src/settings.c:506 src/settings.c:510
 msgid "Theme Settings"
 msgstr "テーマ設定"
 
-#: src/settings.c:497
+#: src/settings.c:516
 msgid "Gtk Theme over-rides local settings ?"
 msgstr "GTK のテーマ設定を優先する"
 
-#: src/settings.c:506
+#: src/settings.c:525
 msgid "Color Settings"
 msgstr "色設定"
 
-#: src/settings.c:509
+#: src/settings.c:529
 msgid "Standard Colors"
 msgstr "標準の色"
 
-#: src/settings.c:524
+#: src/settings.c:544
 msgid "Normal Text Color:"
 msgstr "通常のテキスト色"
 
-#: src/settings.c:537
+#: src/settings.c:557
 msgid "Normal Background Color:"
 msgstr "通常の背景色"
 
-#: src/settings.c:550
+#: src/settings.c:570
 msgid "Selection Background Color:"
 msgstr "背景色の選択:"
 
-#: src/settings.c:563
+#: src/settings.c:583
 msgid "Bracket Background Color:"
 msgstr "括弧の背景色:"
 
-#: src/settings.c:588
+#: src/settings.c:608
 msgid "General/UI"
 msgstr "一般/ユーザインターフェイス"
 
-#: src/settings.c:591
+#: src/settings.c:612
 msgid "File Settings"
 msgstr "ファイル設定"
 
-#: src/settings.c:600
+#: src/settings.c:621
+msgid "Full filenames in main window title ?"
+msgstr "メインウィンドウのタイトルにフルパス名を表示する"
+
+#: src/settings.c:622
 msgid "Full filenames in notebook tabs ?"
 msgstr "タブにフルパス名を表示する"
 
-#: src/settings.c:601
+#: src/settings.c:623
 msgid "Close all on open session ?"
 msgstr "セッションを開くときにすべてを閉じる"
 
-#: src/settings.c:602
+#: src/settings.c:624
 msgid "Persistant 'Untitled' document ?"
 msgstr "'Untitled'ファイルを保持する"
 
-#: src/settings.c:603
+#: src/settings.c:625
 msgid "Show line numbers ?"
 msgstr "行番号の表示"
 
-#: src/settings.c:604
+#: src/settings.c:626
 msgid "Show line pixmaps ?"
 msgstr "行の pixmap を表示"
 
-#: src/settings.c:605
+#: src/settings.c:627
 msgid "Show blinking cursor ?"
 msgstr "カーソルの点滅"
 
-#: src/settings.c:606
+#: src/settings.c:628
 msgid "Selection shows full width ?"
 msgstr "選択範囲を完全に表示"
 
-#: src/settings.c:619
+#: src/settings.c:641
 msgid "Auto line select ?"
 msgstr "自動行選択"
 
-#: src/settings.c:638
+#: src/settings.c:660
 msgid "Use tab-stop spacing ?"
 msgstr "インデントにタブを使う"
 
-#: src/settings.c:639
+#: src/settings.c:661
 msgid "Insert spaces instead of tabs ?"
 msgstr "タブの代わりに空白を挿入しますか?"
 
-#: src/settings.c:644
+#: src/settings.c:666
 msgid "Tab-stop width:"
 msgstr "空白の数:"
 
-#: src/settings.c:655 src/settings.c:657
+#: src/settings.c:678 src/settings.c:680
 msgid "Window Geometry"
 msgstr "ウィンドウ位置"
 
-#: src/settings.c:683
+#: src/settings.c:706
 msgid "X:"
 msgstr "X:"
 
-#: src/settings.c:690
+#: src/settings.c:713
 msgid "Y:"
 msgstr "Y:"
 
-#: src/settings.c:701
+#: src/settings.c:724
 msgid "Width:"
 msgstr "幅:"
 
-#: src/settings.c:708
+#: src/settings.c:731
 msgid "Height:"
 msgstr "高さ:"
 
-#: src/settings.c:723
+#: src/settings.c:746
 msgid "Apply Window Settings"
 msgstr "ウィンドウ設定の適用"
 
-#: src/settings.c:727
+#: src/settings.c:750
 msgid "Get Window Settings"
 msgstr "現在の位置情報を使う"
 
@@ -1147,3 +1162,36 @@ msgstr "セッションを保存..."
 #: src/session.c:135
 msgid "Session save failed."
 msgstr "セッションの保存に失敗しました"
+
+#: src/color-settings.c:76
+msgid "Highlighting Colors & Fonts"
+msgstr "強調色とフォント"
+
+#: src/commandbar.c:26
+msgid "Execute string"
+msgstr "実行文字列"
+
+#: src/commandbar.c:33
+msgid "Execute a command"
+msgstr "実行コマンド"
+
+#: src/insert.c:184
+msgid "Insert File..."
+msgstr "ファイル挿入..."
+
+#: src/linebar.c:25
+msgid "Line Number"
+msgstr "行番号"
+
+#: src/linebar.c:32
+msgid "Jump to a line."
+msgstr "指定行へ移動します"
+
+#: src/mdi-routines.c:116
+#, c-format
+msgid "Line: %d / %d Col: %d Byte: %d / %d Value: %d"
+msgstr "行: %d / %d 列: %d バイト: %d / %d 値: %d"
+
+#: src/widgets/gdsmanpage.c:265
+msgid "Error!"
+msgstr "エラーが発生しました!"
