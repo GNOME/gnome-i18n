@@ -3,7 +3,7 @@
 sourcelocation="http://l10n-status.gnome.org/"
 #Check the source
 if ! wget -q -O - $sourcelocation \
-| grep "index.html\">gnome" > translation-status.tmp; then 
+| grep "index.html\">" > translation-status.tmp; then 
 	#Something went wrong...bail out
 	echo "Statuspage-location not available"
 	echo $sourcelocation
