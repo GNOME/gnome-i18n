@@ -23,7 +23,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
-#include <dirent.h>
 #include "status-version.h"
 #include "status-translation.h"
 
@@ -191,7 +190,7 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 	gchar **tfu_temp, **tfu, *output, *error;
 	gint exit_status, ntoken;
 
-	g_message ("Generating %s.%s.pot...", version->module->str, version->id->str);
+	g_message ("Generating %s.%s.pot ...", version->module->str, version->id->str);
 	
 	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
 
@@ -209,9 +208,9 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 			} else {
 				command_info = g_strdup_printf ("msgfmt --statistics %s/PO/%s.%s.pot -o /dev/null",
 						install_dir, version->module->str, version->id->str);
-				if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
+				if (g_spawn_command_line_sync (command_info, &output, &error, &exit_status, NULL) &&
 						WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
-					tfu_temp = g_strsplit (output, "\n",0);
+					tfu_temp = g_strsplit (error, "\n",0);
 					ntoken = 0;
 					while (tfu_temp[ntoken] != NULL) {
 						ntoken++;
@@ -240,6 +239,9 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 					g_strfreev (tfu_temp);
 				}
 				g_free (command_info);
+				/* FIXME: Is it correct if we free the output and error strings? */
+				g_free (output);
+				g_free (error);
 			}
 			g_free (command);
 			return TRUE;
@@ -270,8 +272,8 @@ gboolean
 status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *install_dir)
 {
 	gchar *buf, *command;
-	DIR *podir;
-        struct dirent *direntry;
+        const gchar *file_name;
+	GDir *podir;
         gchar **filesplit;
 	gchar *po_file;
 
@@ -280,18 +282,18 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 	if (!chdir (buf)) {
 		/* TODO: Here we should scan for po/ directories and then, generate the .pot files */
 		if (!chdir ("po")) {
-			podir = opendir (".");
+			podir = g_dir_open (".", 0, NULL);
 			if (podir != NULL) {
-				direntry = readdir (podir);
-				while (direntry != NULL) {
-					filesplit = g_strsplit (direntry->d_name, ".", 2);
+				file_name = g_dir_read_name (podir);
+				while (file_name != NULL) {
+					filesplit = g_strsplit (file_name, ".", 2);
 					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
 						po_file = g_strdup_printf ("%s/PO/%s.%s.%s.po", install_dir,
 								version->module->str, version->id->str, filesplit[0]);
 						g_message ("Updating %s.%s.%s.po:", version->module->str, version->id->str, filesplit[0]);
 						command = g_strdup_printf (
-							"msgmerge %s %s/PO/%s.%s.pot -o %s > /dev/null",
-							direntry->d_name, install_dir, version->module->str,
+							"msgmerge -q %s %s/PO/%s.%s.pot -o %s > /dev/null",
+							file_name, install_dir, version->module->str,
 							version->id->str, po_file);
 						if (system (command)) {
 							g_warning ("Unable to update the %s/PO/%s.%s.%s.po file",
@@ -299,20 +301,21 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 								   version->id->str, filesplit[0]);
 						} else {
 							StatusTranslation *translation;
-							
+
 							translation = status_translation_new (version, po_file);
 							if (translation != NULL) {
 								g_hash_table_insert (version->translations,
-										filesplit[0], translation);
+										g_strdup(filesplit[0]),
+										translation);
 							}
 						}
 						g_free (command);
 						g_free (po_file);
 					}
 					g_strfreev (filesplit);
-					direntry = readdir (podir);
+					file_name = g_dir_read_name (podir);
 				}
-				closedir (podir);
+				g_dir_close (podir);
 			} else {
 				g_warning ("Unable to get po file list");
 				return FALSE;

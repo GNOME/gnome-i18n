@@ -155,7 +155,7 @@ status_translation_new (StatusVersion *version, const gchar *path)
 
 	if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
 			WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
-		tfu_temp = g_strsplit (output, "\n",0);
+		tfu_temp = g_strsplit (error, "\n",0);
 		ntoken = 0;
 		while (tfu_temp[ntoken] != NULL) {
 			ntoken++;
@@ -187,7 +187,10 @@ status_translation_new (StatusVersion *version, const gchar *path)
 		g_strfreev (tfu_temp);
 	}
 	g_free (command);
-	
+	/* FIXME: Is it correct if we free the output and error strings? */
+	g_free (output);
+	g_free (error);
+
 	return translation;
 }
 
