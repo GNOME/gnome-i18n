@@ -1,0 +1,30 @@
+This is intended to be the Gnome Glossary which should be used to
+reference terms for translation. The idea is to have a set of translated
+terms used throughout Gnome in the glossary so translators can look it
+up in order to get the reference translation for a term. This is in
+order to increase the consistency in Gnome translations.
+
+The rough procedure for translating the Glossary is:
+
+First time translation:
+1. Run csv-to-pot.sh to create a .po file for translation.
+2. Translate the .po file :)
+
+e.g.
+$ ./csv-to-pot.sh GnomeGlossary.csv > mylang.po
+$ favourite_editor de.po
+$ cvs add de.po
+$ cvs ci
+
+You can also create a glossary.pot file and use your favourite msgfmt
+tools.
+
+E.g. for updating translations with fresh English terms when the .csv
+file is updated:
+$ ./csv-to-pot.sh GnomeGlossary.csv > newglossary.pot
+$ msgmerge mylang.po newglossary.pot
+
+The csv-to-pot.sh script is a little bit rough and ready so I can't
+guarantee perfect .po files generated from it.
+
+Michael Twomey <michael.twomey@ireland.sun.com>

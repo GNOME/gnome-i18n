@@ -1,3 +1,18 @@
+2001-03-23	Michael Twomey	<michael.twomey@ireland.sun.com>
+
+	* Created a .csv file from the Gnumeric glossary since this is much
+	easier to work with. No more XML scipts and the .csv file can be
+	edited by hand if necessary. The .csv is separated using | and all
+	the text is quoted using ". The other advantage is that if we keep
+	it in UTF-8 we can have all locales in it if we want :).
+	
+	* Removed .gnumeric file. It was just a pain to work with (sorry
+	Simos, undid all your hard work).
+	
+	* Created an simple script, csv-to-pot.sh to convert the .csv file
+	to a .po/.pot file. Simply run it as csv-to-pot.sh GnomeGlossary.csv
+	> myfile.po.
+
 2001-03-01  Simos Xenitellis  <simos@hellug.gr>
 
 	* .cvsignore: Added the "messages" file.
