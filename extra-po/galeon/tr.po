@@ -4,33 +4,347 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: galeon 0.7.1\n"
-"POT-Creation-Date: 2000-07-26 18:11+0200\n"
-"PO-Revision-Date: 2000-07-26 18:36+0200\n"
+"Project-Id-Version: galeon 0.7.7\n"
+"POT-Creation-Date: 2000-10-13 21:35+0200\n"
+"PO-Revision-Date: 2000-10-15 14:16+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-9\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/callbacks.c:213
+#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:409 src/trans.h:76
+#: src/trans.h:81
+msgid "Bookmarks"
+msgstr "Niþanlar"
+
+#: src/bookmarks.c:827 src/bookmarks_callbacks.c:181
+#: src/browser_callbacks.c:804 src/history.c:182 src/mozcallbacks.c:140
+msgid "Untitled"
+msgstr "Isimsiz"
+
+#: src/bookmarks.c:996 src/trans.h:383
+msgid "Temporary bookmarks"
+msgstr "Geçici niþanlar"
+
+#: src/bookmarks_callbacks.c:89
+msgid "Importing bookmarks failed"
+msgstr "Niþanlarý ithal edemedim"
+
+#: src/bookmarks_callbacks.c:93
+msgid "Bookmarks successfully imported/merged"
+msgstr "Niþanlar baþarýyla ithal edildi/birleþtirildi"
+
+#: src/bookmarks_callbacks.c:196
+msgid "Please enter the name of the bookmark"
+msgstr "Niþanýn ismini lütfen belirt"
+
+#: src/bookmarks_callbacks.c:517
+msgid "New bookmark item"
+msgstr "Yeni niþan birimi"
+
+#: src/bookmarks_callbacks.c:517
+msgid "where://do.you.want.to.go"
+msgstr "nereye://gitmek.ister.sin"
+
+#: src/bookmarks_callbacks.c:530
+msgid "New bookmark category"
+msgstr "Yeni niþan klasörü"
+
+#: src/bookmarks_callbacks.c:543
+msgid "Separator"
+msgstr "Ayrýmcý"
+
+#. fill the status bar text with progress info: percentual and kb
+#: src/browser.c:419
+msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
+msgstr "%s ( %%%d bitti, %d.000 / %d.000 bayt'ten yüklendi )"
+
+#. fill the status bar text with progress info: only kb
+#: src/browser.c:427
+#, c-format
+msgid "%s (%d Kb loaded)"
+msgstr "%s ( %d,000 bayt yüklendi"
+
+#: src/browser.c:695
+msgid ""
+"Can't get the url for current page.\n"
+"No source avaible."
+msgstr ""
+"Geçerli sayfa için adresi alamadým.\n"
+"Kaynak görüntülenemez."
+
+#: src/browser.c:711
+msgid "Could not create a temporary file"
+msgstr "Geçici dosyayý yaratamadým"
+
+#: src/browser.c:718
+msgid "Something went wrong while saving the file to a temporary location"
+msgstr "Dosyayý geçici bir mekana kaydederken bir hata oluþtu"
+
+#: src/browser.c:732
+msgid "Error executing external program"
+msgstr "Baþka bir uygulamayý baþlatýrken hata oldu"
+
+#: src/browser_callbacks.c:290
+msgid "You must specify a Start Page in the Preferences dialog!"
+msgstr "Ayar diyaloðunda bir baþlama sayfasýný belirtmek zorundasýn !"
+
+#: src/context.c:27 src/context.c:60
+msgid "Open"
+msgstr "Aç"
+
+#: src/context.c:28 src/context.c:61
+msgid "Open in a new window"
+msgstr "Yeni bir pencerede aç"
+
+#: src/context.c:29 src/context.c:62
+msgid "Download file"
+msgstr "Dosyayý yüklü"
+
+#: src/context.c:30 src/context.c:63
+msgid "Copy link location"
+msgstr "Bað mekanýný kopyala"
+
+#: src/context.c:31 src/context.c:64 src/trans.h:24
+msgid "Add temporary bookmark"
+msgstr "Geçici niþan ekle"
+
+#: src/context.c:37 src/context.c:56
+msgid "Open image"
+msgstr "Resmi aç"
+
+#: src/context.c:38 src/context.c:57
+msgid "Open image in a new window"
+msgstr "Resmi yeni bir pencerede aç"
+
+#: src/context.c:39 src/context.c:58
+msgid "Download image"
+msgstr "Resmi yükle"
+
+#: src/context.c:45 src/prefs.c:429 src/trans.h:176
+msgid "View Source"
+msgstr "Kaynaðý görüntüle"
+
+#: src/context.c:46
+msgid "Save"
+msgstr "Kaydet"
+
+#: src/context.c:47
+msgid "Find"
+msgstr "Bul"
+
+#: src/context.c:49 src/trans.h:35 src/trans.h:385
+msgid "Back"
+msgstr "Geri"
+
+#: src/context.c:50 src/trans.h:38 src/trans.h:387
+msgid "Forward"
+msgstr "Ileri"
+
+#: src/find_callbacks.c:60 src/find_callbacks.c:86 src/find_callbacks.c:125
+msgid "Not found"
+msgstr "Bulunamadý"
+
+#: src/main.c:51
+msgid "Attempt to load URL in existing Galeon window"
+msgstr "Adresi varolan Galeon penceresine yüklemeye uðraþýyorum"
+
+#: src/main.c:54
+msgid "Add a temp bookmark (don't open any window)"
+msgstr "Geçici bir niþan ekle (hiç bir pencere açma)"
+
+#: src/main.c:55 src/trans.h:371
+msgid "URL"
+msgstr "Adres"
+
+#. offer to import netscape bookmarks
+#: src/main.c:266
+msgid ""
+"This appears to be the first time you have run Galeon\n"
+"\n"
+"Would you like to import your existing Netscape bookmarks?"
+msgstr ""
+"Bu Galeon'u ilk çalýþtýrmana benziyor.\n"
+"\n"
+"Varolan Netscape niþanlarýný ithal etmek istermisin ?"
+
+#: src/misc.c:155
+#, c-format
+msgid "%s not found"
+msgstr "%s bulunamadý"
+
+#. throw the error
+#: src/misc.c:344
+msgid ""
+"Galeon cannot handle this protocol,\n"
+"and no GNOME default handler is set"
+msgstr ""
+"Galeon bu protokolu yönetemiyor,\n"
+"ve bu protokol için de bir GNOME yöneticisi yok."
+
+#: src/misc.c:359
+msgid ""
+"The protocol specified is not recognised.\n"
+"\n"
+"Would you like to try the GNOME default?"
+msgstr ""
+"Belirtilen protokol tanýnmýyor.\n"
+"\n"
+"GNOME'un önayarlý yöneticisini denemek istermisin ?"
+
+#: src/misc_callbacks.c:58
 msgid "Copyright (C) 2000 Marco Pesenti Gritti"
 msgstr "Tel'if hakký (C) 2000 Marco Pesenti Gritti"
 
-#: src/callbacks.c:215
+#: src/misc_callbacks.c:59
 msgid "A GNOME browser based on mozilla"
 msgstr "Mozilla bazlý GNOME için bir web gezgini"
 
-#: src/callbacks.c:402
-msgid "You must specify a Start Page in the Preferences dialog!"
-msgstr "Ayar diyaloðunda bir baþlama sayfasýný belirtmek zorundasýn !"
+#: src/misc_callbacks.c:182
+msgid "Cannot save the file"
+msgstr "Dosyayý kaydedemedim"
+
+#: src/mozcallbacks.c:254
+msgid "Redirecting to site..."
+msgstr "Siteye yönlendiriliyor ..."
+
+#: src/mozcallbacks.c:256
+msgid "Transferring data from site..."
+msgstr "Sunucudan bilgiyi alýyorum ..."
+
+#: src/mozcallbacks.c:258
+msgid "Waiting for authorization..."
+msgstr "Doðrulamayý bekliyorum ..."
+
+#: src/mozcallbacks.c:260
+msgid "Loading site..."
+msgstr "Site yükleniyor ..."
+
+#: src/mozcallbacks.c:262
+msgid "Done."
+msgstr "Oldu ."
+
+#: src/mozcallbacks.c:266
+msgid "Site not found."
+msgstr "Sunucu bulunamadý ."
+
+#: src/mozcallbacks.c:268
+msgid "Failed to connect to site."
+msgstr "Sunucuya baðlantý kurulamadý ."
+
+#: src/mozcallbacks.c:270
+msgid "Failed due to connection timeout."
+msgstr "Baðlantý zaman aþýmýndan dolayý baþarýsýztýr ."
+
+#: src/mozcallbacks.c:272
+msgid "User canceled connecting to site."
+msgstr "Siteye kurulanacak baðlantýyý kullanýcý kesti ."
+
+#: src/netscape.c:101
+msgid "Personal Toolbar Folder"
+msgstr "Þahsi araç çubuðu dizini"
+
+#: src/prefs.c:398
+msgid "Browsing"
+msgstr "Gezme"
+
+#: src/prefs.c:399
+msgid "User Interface"
+msgstr "Kullanýcý yüzeyi"
+
+#: src/prefs.c:400
+msgid "Handlers"
+msgstr "Yöneticiler"
+
+#: src/prefs.c:401
+msgid "Rendering"
+msgstr "Gösterim"
+
+#: src/prefs.c:402
+msgid "Advanced"
+msgstr "Geliþmiþ"
+
+#: src/prefs.c:408 src/trans.h:75
+msgid "Homepage"
+msgstr "Ana sayfa"
+
+#: src/prefs.c:410 src/trans.h:82 src/trans.h:84 src/trans.h:352
+msgid "History"
+msgstr "Geçmiþ"
+
+#: src/prefs.c:411 src/trans.h:85 src/trans.h:92
+msgid "Java"
+msgstr "Java"
+
+#: src/prefs.c:412 src/trans.h:102
+msgid "Filtering"
+msgstr "Filtralama"
+
+#: src/prefs.c:418 src/trans.h:125
+msgid "Layout"
+msgstr "Tasarý"
+
+#: src/prefs.c:419 src/trans.h:126 src/trans.h:130
+msgid "Spinner"
+msgstr "Animasyon basmasý"
+
+#: src/prefs.c:420 src/trans.h:131 src/trans.h:137
+msgid "Links Menu"
+msgstr "Baðlar mönüsü"
+
+#: src/prefs.c:421 src/trans.h:138 src/trans.h:143
+msgid "Completions"
+msgstr "Tamamlamalar"
+
+#: src/prefs.c:422 src/trans.h:144 src/trans.h:149
+msgid "Crash Recovery"
+msgstr "Çöküþ heybeti"
+
+#: src/prefs.c:428 src/trans.h:150 src/trans.h:164
+msgid "Downloading"
+msgstr "Yükleniyor"
+
+#: src/prefs.c:439 src/trans.h:191 src/trans.h:202
+msgid "Fonts"
+msgstr "Yazý tipleri"
+
+#: src/prefs.c:440 src/trans.h:203 src/trans.h:222
+msgid "Colors"
+msgstr "Renkler"
+
+#: src/prefs.c:441 src/trans.h:302
+msgid "Languages"
+msgstr "Diller"
+
+#: src/prefs.c:447
+msgid "Proxy"
+msgstr "Arasunucu"
+
+#: src/prefs.c:448 src/trans.h:232 src/trans.h:237
+msgid "Cache"
+msgstr "Arabellek"
+
+#: src/prefs.c:449 src/trans.h:351
+msgid "Network"
+msgstr "Að"
+
+#: src/session.c:126
+msgid ""
+"Galeon appears to have crashed or been killed last time it was run\n"
+"\n"
+"Would you like to recover the state of your last browsing session?"
+msgstr ""
+"Galeon sanki son çalýþtýrýlmasýnda çökmüþ gibi.\n"
+"\n"
+"Son gezinti oturumunu yeniden baþlatmak istermisin?"
 
 #.
 #. * Translatable strings file generated by Glade.
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: src/trans.h:7
+#: src/trans.h:7 src/trans.h:123
 msgid "Galeon"
 msgstr "Galeon"
 
@@ -39,180 +353,212 @@ msgid "_New window"
 msgstr "_Yeni pencere"
 
 #: src/trans.h:9
-msgid "_Download directory"
-msgstr "_Yükleme dizini"
+msgid "Open a new url"
+msgstr "Yeni bir adresi aç"
 
 #: src/trans.h:10
+msgid "Open _URL"
+msgstr "_Adresi aç"
+
+#: src/trans.h:11
+msgid "View source..."
+msgstr "Kaynaðý görüntüle..."
+
+#: src/trans.h:12
+msgid "Sets if the current window should render the page or show the source"
+msgstr ""
+"Geçerli pencerenin sayfayý göstermesini yada kaynaðý görüntülemesini belirler"
+
+#: src/trans.h:13
+msgid "View source mode"
+msgstr "Kaynak görüntülemesi"
+
+#: src/trans.h:14
+msgid "Toolbar"
+msgstr "Araç çubuðu"
+
+#: src/trans.h:15
+msgid "Statusbar"
+msgstr "Durum çubuðu"
+
+#: src/trans.h:16
+msgid "Full screen"
+msgstr "Tam ekran "
+
+#: src/trans.h:17
+msgid "B_ookmarks"
+msgstr "_Niþanlar"
+
+#: src/trans.h:18 src/trans.h:189 src/trans.h:397
+msgid "Edit"
+msgstr "Deðiþtir"
+
+#: src/trans.h:19
+msgid "Import"
+msgstr "Ithalat"
+
+#: src/trans.h:20
+msgid "Netscape bookmarks"
+msgstr "Netscape niþanlarý"
+
+#: src/trans.h:21
+msgid "Mozilla bookmarks"
+msgstr "Mozilla niþanlarý"
+
+#: src/trans.h:22
+msgid "From other location"
+msgstr "Baþka yerlerden ithal et"
+
+#: src/trans.h:23
+msgid "File bookmark"
+msgstr "Niþaný gönder"
+
+#: src/trans.h:25
+msgid "Show temporary bookmarks"
+msgstr "Geçici niþanlarý göster"
+
+#: src/trans.h:26
 msgid "_Go"
 msgstr "_Git"
 
-#: src/trans.h:11
+#: src/trans.h:27
 msgid "_Previous page"
 msgstr "_Geri"
 
-#: src/trans.h:12
+#: src/trans.h:28
 msgid "_Next Page"
 msgstr "_Ileri"
 
-#: src/trans.h:13
-msgid "_Stop"
-msgstr "_Dur"
-
-#: src/trans.h:14
+#: src/trans.h:29
 msgid "_Reload"
 msgstr "_Yenile"
 
-#: src/trans.h:15
+#: src/trans.h:30
+msgid "H_ome Page"
+msgstr "_Ana sayfa"
+
+#: src/trans.h:31
+msgid "_Stop"
+msgstr "_Dur"
+
+#: src/trans.h:32
 msgid "Log of visited pages"
 msgstr "Gezilen sayfalarýn kaydý"
 
-#: src/trans.h:16
+#: src/trans.h:33
 msgid "_History..."
 msgstr "_Geçmiþ ..."
 
-#: src/trans.h:17
-msgid "Go Back"
-msgstr "Geri git"
+#: src/trans.h:34
+msgid "Go Back - Right button: History"
+msgstr "Geri git - Sað basma: Geçmiþ"
 
-#: src/trans.h:18
-msgid "Back"
-msgstr "Geri"
+#: src/trans.h:36
+msgid "Go Forward - Right button: History\n"
+msgstr "Ileri git - Sað basma: Geçmiþ\n"
 
-#: src/trans.h:19
-msgid "Go Forward"
-msgstr "Ileri git"
-
-#: src/trans.h:20
-msgid "Forward"
-msgstr "Ileri"
-
-#: src/trans.h:21
+#: src/trans.h:39
 msgid "Reload Current Page"
 msgstr "Geçerli sayfayý yeniden yükle"
 
-#: src/trans.h:22
-msgid "Refresh"
+#: src/trans.h:40
+msgid "Reload"
 msgstr "Yenile"
 
-#: src/trans.h:23
-msgid "Go to your Start Page"
-msgstr "Baþlama sayfasýna git"
+#: src/trans.h:41
+msgid "Go to your Home Page"
+msgstr "Ana sayfaya git"
 
-#: src/trans.h:24
-msgid "Start Page"
-msgstr "Bark"
+#: src/trans.h:42
+msgid "Home"
+msgstr "Ana sayfa"
 
-#: src/trans.h:25
+#: src/trans.h:43
 msgid "Stop current data transfer"
 msgstr "Bilgi transferini durdur"
 
-#: src/trans.h:26
+#: src/trans.h:44
 msgid "Stop"
 msgstr "Dur"
 
-#: src/trans.h:27 src/trans.h:29
+#: src/trans.h:45
+msgid "Zoom"
+msgstr "Boyutla"
+
+#: src/trans.h:46 src/trans.h:49
+msgid "Drag me!"
+msgstr "Beni çek!"
+
+#: src/trans.h:47 src/trans.h:50
 msgid "   Location: "
 msgstr "   Mekan : "
 
-#: src/trans.h:28
+#: src/trans.h:48 src/trans.h:51 src/trans.h:389
 msgid "Go"
 msgstr "Git"
 
-#: src/trans.h:30
+#: src/trans.h:52 src/trans.h:364
 msgid "Select File"
 msgstr "Dosyayý seç"
 
-#: src/trans.h:31 src/trans.h:148 src/trans.h:151 src/trans.h:154
+#: src/trans.h:53 src/trans.h:359 src/trans.h:362 src/trans.h:365
 msgid "OK"
 msgstr "Oldu"
 
-#: src/trans.h:32 src/trans.h:149 src/trans.h:152 src/trans.h:155
+#: src/trans.h:54 src/trans.h:360 src/trans.h:363 src/trans.h:366
+#: src/trans.h:412
 msgid "Cancel"
 msgstr "Iptal"
 
-#: src/trans.h:33 src/trans.h:34
-msgid "Bookmarks"
-msgstr "Niþanlar"
-
-#: src/trans.h:35 src/trans.h:112
-msgid "Name"
-msgstr "Isim"
-
-#: src/trans.h:36
-msgid "URL"
-msgstr "Adres"
-
-#: src/trans.h:37
-msgid "Type"
-msgstr "Tip"
-
-#: src/trans.h:38
-msgid ""
-"Folder\n"
-"Site\n"
-msgstr ""
-"Klasör\n"
-"Site\n"
-
-#: src/trans.h:41
-msgid "Insert"
-msgstr "Içer"
-
-#: src/trans.h:42
-msgid "Remove"
-msgstr "Sil"
-
-#: src/trans.h:43
-msgid "Update"
-msgstr "Yenile"
-
-#: src/trans.h:44
+#: src/trans.h:55
 msgid "Preferences"
 msgstr "Ayarlar"
 
-#: src/trans.h:45
-msgid "label50"
-msgstr "yafta50"
+#: src/trans.h:56
+msgid "label55"
+msgstr "yafta55"
 
-#: src/trans.h:46
+#: src/trans.h:57
 msgid "Logo"
 msgstr "Logo"
 
-#: src/trans.h:47
-msgid ""
-"When adding bookmarks\n"
-"use the following title"
-msgstr ""
-"Niþan eklerken \n"
-"bu üstyazýyý kullan"
+#: src/trans.h:58
+msgid "Home Page"
+msgstr "Ana sayfa"
 
-#: src/trans.h:49
+#: src/trans.h:59 src/trans.h:372 src/trans.h:408
+msgid "URL:"
+msgstr "Adres:"
+
+#: src/trans.h:60
+msgid "Set to Current"
+msgstr "Geçerli sayfayý yap"
+
+#: src/trans.h:61
+msgid "Set to \"My Portal\""
+msgstr "\"Portal sayfam\"·olarak atala"
+
+#: src/trans.h:62
+msgid "Startup"
+msgstr "Ana sayfa"
+
+#: src/trans.h:63
 msgid "On startup show"
 msgstr "Baþlangýçta gösterilicek sayfa"
 
-#: src/trans.h:50 src/trans.h:60
-msgid ""
-"Start page\n"
-"Last page\n"
-"Blank page\n"
-msgstr ""
-"Baþlama sayfasý\n"
-"Son sayfa\n"
-"Boþ sayfa\n"
+#: src/trans.h:64 src/trans.h:69
+msgid "Home page"
+msgstr "Ana sayfa"
 
-#: src/trans.h:54
-msgid ""
-"Page title\n"
-"Ask user\n"
-msgstr ""
-"Sayfa baþlýðý\n"
-"Kullanýcýya sor\n"
+#: src/trans.h:65 src/trans.h:70
+msgid "Last page"
+msgstr "Son sayfa"
 
-#: src/trans.h:57
-msgid "Start page"
-msgstr "Bark"
+#: src/trans.h:66 src/trans.h:71
+msgid "Blank page"
+msgstr "Boþ sayfa"
 
-#: src/trans.h:58
+#: src/trans.h:67
 msgid ""
 "When opening a\n"
 " new browser show"
@@ -220,103 +566,231 @@ msgstr ""
 "Yeni bir gezgini açarken \n"
 " bunu göster"
 
-#: src/trans.h:64
-msgid "Completion Style"
-msgstr "Tamamlama stili"
-
-#: src/trans.h:65
-msgid ""
-"Auto completion\n"
-"Tab Completion\n"
-"None\n"
-msgstr ""
-"Otomatik tamamlama\n"
-"Tab tamamlamasý\n"
-"Kapalý\n"
-
-#: src/trans.h:69
-msgid "General"
-msgstr "Genel"
-
-#: src/trans.h:70
-msgid "Layout"
-msgstr "Tasarý"
-
-#: src/trans.h:71
-msgid "Show location entry on"
-msgstr "Mekaný"
-
 #: src/trans.h:72
-msgid ""
-"Separate toolbar\n"
-"Button toolbar\n"
-msgstr ""
-"ayrý bir araç çubuðunda göster\n"
-"araç çubuðunda basma olarak göster\n"
+msgid "My Portal"
+msgstr "Portal sayfam"
 
-#: src/trans.h:75
-msgid "Show error messages on"
-msgstr "Hata iletilerini"
+#: src/trans.h:73
+msgid "Stylesheet:"
+msgstr "Stil:"
 
-#: src/trans.h:76
+#: src/trans.h:74
+msgid "Select \"My Portal\"·Stylesheet"
+msgstr "\"Portal sayfam\"·stili"
+
+#: src/trans.h:77
 msgid ""
-"Status bar\n"
-"Dialog\n"
+"When adding bookmarks\n"
+"use the following title"
 msgstr ""
-"durum çubudunda göster\n"
-"diyaloklarda göster\n"
+"Niþan eklerken \n"
+"bu üstyazýyý kullan"
 
 #: src/trans.h:79
+msgid "Page title"
+msgstr "Sayfa baþlýðý"
+
+#: src/trans.h:80 src/trans.h:182
+msgid "Ask user"
+msgstr "Kullanýcýya sor"
+
+#: src/trans.h:83
+msgid "Days before expiring history items"
+msgstr "Geçmiþteki birimlerin silinme süresi"
+
+#: src/trans.h:86
+msgid "Javascript Enabled"
+msgstr "JavaScript açýk"
+
+#: src/trans.h:87 src/trans.h:90 src/trans.h:155 src/trans.h:157
+msgid "No"
+msgstr "Hayýr"
+
+#: src/trans.h:88 src/trans.h:91 src/trans.h:156 src/trans.h:158
+msgid "Yes"
+msgstr "Evet"
+
+#: src/trans.h:89
+msgid "Java Enabled"
+msgstr "Java'yý aç"
+
+#: src/trans.h:93
+msgid "Images"
+msgstr "Resimler"
+
+#: src/trans.h:94
+msgid "Load Images"
+msgstr "Resimleri yükle"
+
+#: src/trans.h:95 src/trans.h:148
+msgid "Always"
+msgstr "Daima"
+
+#: src/trans.h:96
+msgid "From current server only"
+msgstr "Sadece geçerli sunucudan"
+
+#: src/trans.h:97 src/trans.h:146
+msgid "Never"
+msgstr "Kat'iyyen"
+
+#: src/trans.h:98 src/trans.h:117
+msgid "Windows"
+msgstr "Pencereler"
+
+#: src/trans.h:99
+msgid "New windows"
+msgstr "Yeni pencereler"
+
+#: src/trans.h:100
+msgid "Allow opening in new windows"
+msgstr "Yeni pencerelerde açýlmaya izin ver"
+
+#: src/trans.h:101
+msgid "Never open in new window"
+msgstr "Kat'iyyen yeni pencerede açma"
+
+#: src/trans.h:103
+msgid "Toolbars"
+msgstr "Araç çubuklarý"
+
+#: src/trans.h:104
 msgid "Show toolbars as"
 msgstr "Araç çubuklarýný"
 
-#: src/trans.h:80
-msgid ""
-"Icons\n"
-"Text\n"
-"Both\n"
-msgstr ""
-"simge olarak göster\n"
-"metin olarak göster\n"
-"simge ve metin olarak göster\n"
+#: src/trans.h:105
+msgid "Show location entry on"
+msgstr "Mekaný"
 
-#: src/trans.h:84
-msgid "Fonts"
-msgstr "Yazý tipleri"
+#: src/trans.h:106
+msgid "Separate toolbar"
+msgstr "Araç çubuðunu ayrý tut"
 
-#: src/trans.h:85
-msgid "Serif"
-msgstr "Serifli"
+#: src/trans.h:107
+msgid "Button toolbar"
+msgstr "Basmalar çubuðu"
 
-#: src/trans.h:86
-msgid "Sans Serif"
-msgstr "Serifsiz"
+#: src/trans.h:108
+msgid "Icons"
+msgstr "Simgeler "
 
-#: src/trans.h:87
-msgid "Size"
-msgstr "Boyut"
+#: src/trans.h:109 src/trans.h:205
+msgid "Text"
+msgstr "Metin"
 
-#: src/trans.h:88 src/trans.h:90 src/trans.h:93
-msgid "Pick a Font"
-msgstr "Bir yazý tipini seç"
+#: src/trans.h:110
+msgid "Both"
+msgstr "Simge & Metin"
 
-#: src/trans.h:89 src/trans.h:91 src/trans.h:94
-msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
-msgstr "AaBbCcÇçDdEeFfGgÐðHhIýIiJjKkLlMmNnOoÖöPpRrSsÞþTtUuüÜVvWwXxYyZz"
+#: src/trans.h:111
+msgid "Show location label"
+msgstr "Mekan yaftasýný göster"
 
-#: src/trans.h:92
-msgid "Monospace"
-msgstr "Belirli"
+#: src/trans.h:112
+msgid "Show go button"
+msgstr "\"Git\"·basmasýný göster"
 
-#: src/trans.h:95
-msgid "Appearance"
-msgstr "Görünüþ"
+#: src/trans.h:113
+msgid "Errors"
+msgstr "Hatalar"
 
-#: src/trans.h:96
+#: src/trans.h:114
+msgid "Show error messages on"
+msgstr "Hata iletilerini"
+
+#: src/trans.h:115
+msgid "Status bar"
+msgstr "Durum çubuðu"
+
+#: src/trans.h:116
+msgid "Dialog"
+msgstr "Diyalok"
+
+#: src/trans.h:118
+msgid "Title "
+msgstr "Üstyazý "
+
+#: src/trans.h:119 src/trans.h:124
+#, c-format
+msgid "Galeon - %s"
+msgstr "Galeon - %s"
+
+#: src/trans.h:120
+#, c-format
+msgid "%s - Galeon"
+msgstr "%s - Galeon"
+
+#: src/trans.h:121
+#, c-format
+msgid "Galeon: %s"
+msgstr "Galeon: %s"
+
+#: src/trans.h:122
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: src/trans.h:127
+msgid "Show spinner"
+msgstr "Animasyon basmasýný göster"
+
+#: src/trans.h:128
+msgid "Animation Directory:"
+msgstr "Animasyon dizini:"
+
+#: src/trans.h:129
+msgid "Select Animation Directory"
+msgstr "Animasyon dizinini seç"
+
+#: src/trans.h:132
+msgid "Show after"
+msgstr "Bundan sonra göster"
+
+#: src/trans.h:133
+msgid "seconds"
+msgstr "saniye"
+
+#: src/trans.h:134
+msgid "Auto show"
+msgstr "Otomatikman göster"
+
+#: src/trans.h:135
+msgid "Enabled"
+msgstr "Açik"
+
+#: src/trans.h:136
+msgid "Disabled"
+msgstr "Kapalý"
+
+#: src/trans.h:139
+msgid "Completion Style"
+msgstr "Tamamlama stili"
+
+#: src/trans.h:140
+msgid "Auto completion"
+msgstr "Otomatik tamamlama"
+
+#: src/trans.h:141
+msgid "Tab Completion"
+msgstr "Tab tamamlamasý"
+
+#: src/trans.h:142
+msgid "None"
+msgstr "Yok"
+
+#: src/trans.h:145
+msgid "Recover from crashes"
+msgstr "Çöküþlerden sonra oturumu yeniden kur"
+
+#: src/trans.h:147
+msgid "Ask User"
+msgstr "Kullanýcýya sor"
+
+#: src/trans.h:151
 msgid "Auto download"
 msgstr "Otomatik yükleme"
 
-#: src/trans.h:97
+#: src/trans.h:152
 msgid ""
 "Ask for directory\n"
 "on each download"
@@ -324,237 +798,807 @@ msgstr ""
 "Her yüklemede yüklenecek\n"
 "dizini sor"
 
-#: src/trans.h:99 src/trans.h:103 src/trans.h:131 src/trans.h:135
-msgid ""
-"No\n"
-"Yes\n"
-msgstr ""
-"Hayýr\n"
-"Evet\n"
-
-#: src/trans.h:102
+#: src/trans.h:154
 msgid "Directory"
 msgstr "Dizin"
 
-#: src/trans.h:106
+#: src/trans.h:159
 msgid "Select Download Directory"
 msgstr "Yükleme dizinini belirt"
 
-#: src/trans.h:107
-msgid "Downloading"
-msgstr "Yükleniyor"
+#: src/trans.h:160
+msgid "FTP Handler"
+msgstr "FTP yöneticisi"
 
-#: src/trans.h:108
+#: src/trans.h:161
+msgid "Handle FTP URLs with"
+msgstr "FTP adreslerini"
+
+#: src/trans.h:162
+msgid "Mozilla FTP"
+msgstr "Mozilla FTP ile yönet"
+
+#: src/trans.h:163
+msgid "Gnome FTP Handler"
+msgstr "GNOME FTP yöneticisiyle yönet"
+
+#: src/trans.h:165
+msgid "View source"
+msgstr "Kaynaðý göster"
+
+#: src/trans.h:166
+msgid "Use external program to view source files"
+msgstr "Kaynak dosyalarý göstermek için baþka uygulamalarý kullan"
+
+#: src/trans.h:167
+msgid "External program:"
+msgstr "Baþka uygulama:"
+
+#: src/trans.h:168 src/trans.h:175
+msgid "gnome-edit"
+msgstr "gnome-edit"
+
+#: src/trans.h:169
+msgid "emacs"
+msgstr "emacs"
+
+#: src/trans.h:170
+msgid "gedit"
+msgstr "gedit"
+
+#: src/trans.h:171
+msgid "xemacs"
+msgstr "xemacs"
+
+#: src/trans.h:172
+msgid "gvim"
+msgstr "gvim"
+
+#: src/trans.h:173
+msgid "gless"
+msgstr "gless"
+
+#: src/trans.h:174
+msgid "gnp"
+msgstr "gnp"
+
+#: src/trans.h:177 src/trans.h:190
+msgid "MIME Types"
+msgstr "MIME Türleri"
+
+#: src/trans.h:178
 msgid "Mime Types"
 msgstr "MIME türleri"
 
-#: src/trans.h:109
-msgid "Extention"
+#: src/trans.h:179
+msgid " "
+msgstr " "
+
+#: src/trans.h:180
+msgid "Save to disk"
+msgstr "Diske kaydet"
+
+#: src/trans.h:181
+msgid "Open with program"
+msgstr "Baþka uygulama ile aç"
+
+#: src/trans.h:183 src/trans.h:370 src/trans.h:376 src/trans.h:406
+msgid "Name"
+msgstr "Isim"
+
+#: src/trans.h:184
+msgid "Extension"
 msgstr "Sonek"
 
-#: src/trans.h:110
+#: src/trans.h:185
 msgid "Action"
 msgstr "Eylem"
 
-#: src/trans.h:111
+#: src/trans.h:186
 msgid "Program"
 msgstr "Uygulama"
 
-#: src/trans.h:113
-msgid ""
-"Save to disk\n"
-"Open with program\n"
-"Ask user\n"
-msgstr ""
-"Diske kaydet\n"
-"Uygulamayla aç\n"
-"Kullanýcýya sor\n"
-
-#: src/trans.h:117
+#: src/trans.h:187 src/trans.h:342
 msgid "Add"
 msgstr "Ekle"
 
-#: src/trans.h:118
+#: src/trans.h:188
 msgid "Delete"
 msgstr "Sil"
 
-#: src/bookmarks.c:455 src/trans.h:119
-msgid "Edit"
-msgstr "Deðiþtir"
+#: src/trans.h:192
+msgid "Serif"
+msgstr "Serifli"
 
-#: src/trans.h:120
-msgid "Mime types"
-msgstr "MIME türleri"
+#: src/trans.h:193
+msgid "Sans Serif"
+msgstr "Serifsiz"
 
-#: src/trans.h:121
-msgid "Proxy"
-msgstr "Arasunucu"
+#: src/trans.h:194
+msgid "Size"
+msgstr "Boyut"
 
-#: src/trans.h:122
-msgid "Http proxy"
+#: src/trans.h:195 src/trans.h:197 src/trans.h:200
+msgid "Pick a Font"
+msgstr "Bir yazý tipini seç"
+
+#: src/trans.h:196 src/trans.h:198 src/trans.h:201
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+msgstr "AaBbCcÇçDdEeFfGgÐðHhIýIiJjKkLlMmNnOoÖöPpRrSsÞþTtUuüÜVvWwXxYyZz"
+
+#: src/trans.h:199
+msgid "Monospace"
+msgstr "Belirli"
+
+#: src/trans.h:204
+msgid "Background"
+msgstr "Ardalan"
+
+#: src/trans.h:206
+msgid "Unvisited link"
+msgstr "Ziyaret edilmemiþ bað"
+
+#: src/trans.h:207
+msgid "Visited link"
+msgstr "Ziyaret edilmiþ bað"
+
+#: src/trans.h:208
+msgid "Pick the background color"
+msgstr "Ardalan rengini seç"
+
+#: src/trans.h:209
+msgid "Pick the text color"
+msgstr "Metin rengini seç"
+
+#: src/trans.h:210
+msgid "Pick the color unvisited links"
+msgstr "Ziyaret edilmemiþ baðlarýn rengini belirt"
+
+#: src/trans.h:211
+msgid "Pick the color for visited links"
+msgstr "Ziyaret edilmiþ baðlarýn rengini belirt"
+
+#: src/trans.h:212
+msgid ""
+"When a page \n"
+"provides its own colors"
+msgstr ""
+"Bir sayfa kendi renklerini\n"
+"belirtirse"
+
+#: src/trans.h:214
+msgid "Use provided colors"
+msgstr "Belirtilen renkleri kullan"
+
+#: src/trans.h:215
+msgid "Use my chosen colors"
+msgstr "Benim özel renklerini kullan"
+
+#: src/trans.h:216
+msgid "Underline links"
+msgstr "Baðlarýn altýný cýz"
+
+#: src/trans.h:217 src/trans.h:219 src/trans.h:220 src/trans.h:221
+msgid "[*]"
+msgstr "[*]"
+
+#: src/trans.h:218
+msgid ""
+"[*] Note: due to limitations in Mozilla, these options are not guaranteed to "
+"work."
+msgstr ""
+"[*] Not: Mozillanýn bazý sýnýrlandýrmalarýndan dolayý bu seçenekler "
+"çalýþamayabilir."
+
+#: src/trans.h:223 src/trans.h:231
+msgid "Proxies"
+msgstr "Arasunucular"
+
+#: src/trans.h:224
+msgid "HTTP proxy"
 msgstr "HTTP arasunucusu"
 
-#: src/trans.h:123
-msgid "Ftp proxy"
+#: src/trans.h:225
+msgid "FTP proxy"
 msgstr "FTP arasunucusu"
 
-#: src/trans.h:124 src/trans.h:125
+#: src/trans.h:226 src/trans.h:227
 msgid "Port"
 msgstr "Kapý"
 
-#: src/trans.h:126
-msgid "Cache"
-msgstr "Arabellek"
+#: src/trans.h:228
+msgid "No proxy for"
+msgstr "Arasunucu yok"
 
-#: src/trans.h:127
+#: src/trans.h:229
+msgid "Options"
+msgstr "Seçenekler"
+
+#: src/trans.h:230
+msgid "Proxy keep-alive?"
+msgstr "Arasunucuyu aykta tutayým mý?"
+
+#: src/trans.h:233
 msgid "Disk cache"
 msgstr "Disk arabelleði"
 
-#: src/trans.h:128
+#: src/trans.h:234
 msgid "Memory cache"
 msgstr "Bellek arabelleði"
 
-#: src/trans.h:129
-msgid "Java"
-msgstr "Java"
+#: src/trans.h:235 src/trans.h:236
+msgid "Kb"
+msgstr "Kb"
 
-#: src/trans.h:130
-msgid "Javascript enabled"
-msgstr "JavaScript'i aç"
+#: src/trans.h:238
+msgid "Charsets"
+msgstr "Harf sýnýflarý"
 
-#: src/trans.h:134
-msgid "Java Enabled"
-msgstr "Java'yý aç"
+#: src/trans.h:239
+msgid "Autodetect"
+msgstr "Otomatikman taný"
 
-#: src/trans.h:138
-msgid "Other options"
-msgstr "Baþka seçenekler"
+#: src/trans.h:240
+msgid "Default charset"
+msgstr "Önayarlý harf sýnýfý"
 
-#: src/trans.h:139
-msgid "Days before expiring history items"
-msgstr "Geçmiþteki birimlerin silinme süresi"
+#: src/trans.h:241
+msgid "Off"
+msgstr "Kapalý"
 
-#: src/trans.h:140
-msgid "Advanced"
-msgstr "Geliþmiþ"
+#: src/trans.h:242
+msgid "Chinese"
+msgstr "Çince"
 
-#: src/trans.h:141
-msgid "History"
-msgstr "Geçmiþ"
+#: src/trans.h:243
+msgid "East asian"
+msgstr "Doðu Asya"
 
-#: src/trans.h:142
+#: src/trans.h:244
+msgid "Japanese"
+msgstr "Japonca"
+
+#: src/trans.h:245
+msgid "Korean"
+msgstr "Korece"
+
+#: src/trans.h:246
+msgid "Russian"
+msgstr "Rusça"
+
+#: src/trans.h:247
+msgid "Simplified Chinese"
+msgstr "Kolaylaþtýrýlmý Çince"
+
+#: src/trans.h:248
+msgid "Traditional Chinese"
+msgstr "Ananevi Çince"
+
+#: src/trans.h:249
+msgid "Ukrainian"
+msgstr "Ukraynaca"
+
+#: src/trans.h:250 src/trans.h:301
+msgid "Armenian (ARMSCII-8)"
+msgstr "Ermenice (ARMSCII-8)"
+
+#: src/trans.h:251
+msgid "Baltic (ISO-8859-13)"
+msgstr "Baltik (ISO-8859-13)"
+
+#: src/trans.h:252
+msgid "Baltic (ISO-8859-4)"
+msgstr "Baltik (ÝSO-8859-4)"
+
+#: src/trans.h:253
+msgid "Baltic (Windows-1257)"
+msgstr "Baltik (Windows-1257)"
+
+#: src/trans.h:254
+msgid "Celtic (ISO-8859-14)"
+msgstr "Keltik (ÝSO-8859-14)"
+
+#: src/trans.h:255
+msgid "Central European (IBM-852)"
+msgstr "Merkezi Avrupa (IBM-852)"
+
+#: src/trans.h:256
+msgid "Central European (ISO-8859-2)"
+msgstr "Merkezi Avrupa (ISO-8859-2)"
+
+#: src/trans.h:257
+msgid "Central European (MacCE)"
+msgstr "Merkezi Avrupa (MacCE)"
+
+#: src/trans.h:258
+msgid "Central European (Windows-1250)"
+msgstr "Merkezi Avrupa (Windows-1250)"
+
+#: src/trans.h:259
+msgid "Chinese Simplified (GB2312)"
+msgstr "Kolaylaþtýrýlmý Çince (GB2312)"
+
+#: src/trans.h:260
+msgid "Chinese Simplified (GBK)"
+msgstr "Kolaylaþtýrýlmý Çince (GBK)"
+
+#: src/trans.h:261
+msgid "Central European (HZ)"
+msgstr "Merkezi Avrupa (HZ)"
+
+#: src/trans.h:262
+msgid "Chinese Traditional (Big5)"
+msgstr "Ananevi Çince (Big5)"
+
+#: src/trans.h:263
+msgid "Chinese Traditional (EUC-TW)"
+msgstr "Ananevi Çince (EUC-TW)"
+
+#: src/trans.h:264
+msgid "Croatian (MacCroatian)"
+msgstr "Hýrvatça (MacCroatian)"
+
+#: src/trans.h:265
+msgid "Cyrillic (IBM-855)"
+msgstr "Kirilce (IBM-855)"
+
+#: src/trans.h:266
+msgid "Cyrillic (ISO-8859-5)"
+msgstr "Kirilce (ISO-8859-5)"
+
+#: src/trans.h:267
+msgid "Cyrillic (ISO-IR-111)"
+msgstr "Kirilce (ISO-IR-111)"
+
+#: src/trans.h:268
+msgid "Cyrillic (Windows-1251)"
+msgstr "Kirilce (Windows-1251)"
+
+#: src/trans.h:269
+msgid "Cyrillic/Russian (IBM-866)"
+msgstr "Kirilce/Rusça (IBM-866)"
+
+#: src/trans.h:270
+msgid "Cyrillic/Ukrainian (KOI8-U)"
+msgstr "Kirilce/Ukraynaca (KOI8-U)"
+
+#: src/trans.h:271
+msgid "Cyrillic/Ukrainian (MacUkrainian)"
+msgstr "Kirilce/Ukraynaca (MacUkrainian)"
+
+#: src/trans.h:272
+msgid "Greek (ISO-8859-7)"
+msgstr "Yunanca (ISO-8859-7)"
+
+#: src/trans.h:273
+msgid "Greek (MacGreek)"
+msgstr "Yunanca (MacGreek)"
+
+#: src/trans.h:274
+msgid "Greek (Windows-1253)"
+msgstr "Yunanca (Windows-1253)"
+
+#: src/trans.h:275
+msgid "Icelandic (MacIcelandic)"
+msgstr "Izlandaca (MacIcelandic)"
+
+#: src/trans.h:276
+msgid "Japanese (EUC-JP)"
+msgstr "Japonca (EUC-JP)"
+
+#: src/trans.h:277
+msgid "Japanese (ISO-2022-JP)"
+msgstr "Japonca (ISO-2022-JP)"
+
+#: src/trans.h:278
+msgid "Japanese (Shift_JIS)"
+msgstr "Japonca (Shift_JIS)"
+
+#: src/trans.h:279
+msgid "Korean (EUC_KR)"
+msgstr "Korece (EUC_KR)"
+
+#: src/trans.h:280
+msgid "Nordic (ISO-8859-10)"
+msgstr "Kuzey dilleri (ISO-8859-10)"
+
+#: src/trans.h:281
+msgid "Romanian (MacRomanian)"
+msgstr "Romence (MacRomanian)"
+
+#: src/trans.h:282
+msgid "South European (ISO-8859-3)"
+msgstr "Güney Avrupa dilleri (ISO-8859-3)"
+
+#: src/trans.h:283
+msgid "Thai (TIS-620)"
+msgstr "Tay (TIS-620)"
+
+#: src/trans.h:284
+msgid "Turkish (IBM-857)"
+msgstr "Türkçe (IBM-857)"
+
+#: src/trans.h:285
+msgid "Turkish (ISO-8859-9)"
+msgstr "Türkçe (ISO-8859-9)"
+
+#: src/trans.h:286
+msgid "Turkish (MacTurkish)"
+msgstr "Türkçe (MacTurkish)"
+
+#: src/trans.h:287
+msgid "Turkish (Windows-1254)"
+msgstr "Türkçe (Windows-1254)"
+
+#: src/trans.h:288
+msgid "Unicode (UTF-7)"
+msgstr "Unicode (UTF-7)"
+
+#: src/trans.h:289
+msgid "Unicode (UTF-8)"
+msgstr "Unicode (UTF-8)"
+
+#: src/trans.h:290
+msgid "Vietnamese (TCVN)"
+msgstr "Viyetnamca (TCVN)"
+
+#: src/trans.h:291
+msgid "Vietnamese (VISCII)"
+msgstr "Viyetnamca (VISCII)"
+
+#: src/trans.h:292
+msgid "Vietnamese (VPS)"
+msgstr "Viyetnamca (VPS)"
+
+#: src/trans.h:293
+msgid "Vietnamese (Windows-1258)"
+msgstr "Viyetnamca (Windows-1258)"
+
+#: src/trans.h:294
+msgid "Visual Hebrew (ISO-8859-8)"
+msgstr "Ibrece (ISO-8859-8)"
+
+#: src/trans.h:295 src/trans.h:297
+msgid "Western (ISO-8859-1)"
+msgstr "Batý dilleri (ÝSO-8859-1)"
+
+#: src/trans.h:296
+msgid "Western (IBM-850)"
+msgstr "Batý dilleri (IBM-850)"
+
+#: src/trans.h:298
+msgid "Western (ISO-8859-15)"
+msgstr "Batý dilleri (ISO-8859-15)"
+
+#: src/trans.h:299
+msgid "Western (MacRoman)"
+msgstr "Batý dilleri (MacRoman)"
+
+#: src/trans.h:300
+msgid "Western (Windows-1252)"
+msgstr "Batý dilleri (Windows-1252)"
+
+#: src/trans.h:303 src/trans.h:341
+msgid "Afrikaans (af)"
+msgstr "Afrikans (as)"
+
+#: src/trans.h:304
+msgid "Albanian (sq)"
+msgstr "Arnavutça (sq)"
+
+#: src/trans.h:305
+msgid "Arabic (ar)"
+msgstr "Arapça (ar)"
+
+#: src/trans.h:306
+msgid "Basque (eu)"
+msgstr "Baskça (eu)"
+
+#: src/trans.h:307
+msgid "Bulgarian (bg)"
+msgstr "Bulgarca (bg)"
+
+#: src/trans.h:308
+msgid "Byelorussian (be)"
+msgstr "Beyazrusça (be)"
+
+#: src/trans.h:309
+msgid "Catalan (ca)"
+msgstr "Katalança (ca)"
+
+#: src/trans.h:310
+msgid "Chinese (zh)"
+msgstr "Çince (zh)"
+
+#: src/trans.h:311
+msgid "Croatian (hr)"
+msgstr "Hýrvatça (hr)"
+
+#: src/trans.h:312
+msgid "Czech (cs)"
+msgstr "Çekçe (cs)"
+
+#: src/trans.h:313
+msgid "Danish (da)"
+msgstr "Danimarkaca (da)"
+
+#: src/trans.h:314
+msgid "Dutch (nl)"
+msgstr "Hollandaca (nl)"
+
+#: src/trans.h:315
+msgid "English (en)"
+msgstr "Ingilizce (en)"
+
+#: src/trans.h:316
+msgid "Estonian (et)"
+msgstr "Estonyaca (et)"
+
+#: src/trans.h:317
+msgid "Faeroese (fo)"
+msgstr "Farörce (fo)"
+
+#: src/trans.h:318
+msgid "Finnish (fi)"
+msgstr "Fince (fi)"
+
+#: src/trans.h:319
+msgid "French (fr)"
+msgstr "Fransýzca (fr)"
+
+#: src/trans.h:320
+msgid "Galician (gl)"
+msgstr "Gelik (gl)"
+
+#: src/trans.h:321
+msgid "German (de)"
+msgstr "Almanca (de)"
+
+#: src/trans.h:322
+msgid "Greek (el)"
+msgstr "Yunanca (el)"
+
+#: src/trans.h:323
+msgid "Hungarian (hu)"
+msgstr "Macarca (hu)"
+
+#: src/trans.h:324
+msgid "Icelandic (is)"
+msgstr "Izlandaca (is)"
+
+#: src/trans.h:325
+msgid "Indonesian (id)"
+msgstr "Endonezce (id)"
+
+#: src/trans.h:326
+msgid "Irish (ga)"
+msgstr "Irlandaca (ga)"
+
+#: src/trans.h:327
+msgid "Korean (ko)"
+msgstr "Korece (ko)"
+
+#: src/trans.h:328
+msgid "Macedonian (mk)"
+msgstr "Makedonca (mk)"
+
+#: src/trans.h:329
+msgid "Norwegian (no)"
+msgstr "Norveççe (no)"
+
+#: src/trans.h:330
+msgid "Polish (pl)"
+msgstr "Lehçe (pl)"
+
+#: src/trans.h:331
+msgid "Portoguese (pt)"
+msgstr "Portekizce (pt)"
+
+#: src/trans.h:332
+msgid "Romanian (ro)"
+msgstr "Romence (ro)"
+
+#: src/trans.h:333
+msgid "Russian (ru)"
+msgstr "Rusça (ru)"
+
+#: src/trans.h:334
+msgid "Serbian (gd)"
+msgstr "Sýrpça (gd)"
+
+#: src/trans.h:335
+msgid "Slovak (sk)"
+msgstr "Slovakça (sk)"
+
+#: src/trans.h:336
+msgid "Slovenian (sl)"
+msgstr "Slovence (sl)"
+
+#: src/trans.h:337
+msgid "Spanish (es)"
+msgstr "Ispanyolca (es)"
+
+#: src/trans.h:338
+msgid "Swedish (sv)"
+msgstr "Isveççe (sv)"
+
+#: src/trans.h:339
+msgid "Turkish (tr)"
+msgstr "Türkçe (tr)"
+
+#: src/trans.h:340
+msgid "Ukrainian (uk)"
+msgstr "Ukraynaca (uk)"
+
+#: src/trans.h:343 src/trans.h:380
+msgid "Remove"
+msgstr "Sil"
+
+#: src/trans.h:344 src/trans.h:393
+msgid "Up"
+msgstr "Yukarý"
+
+#: src/trans.h:345 src/trans.h:395
+msgid "Down"
+msgstr "Aþaða"
+
+#: src/trans.h:346
+msgid "Languajes"
+msgstr "Diller"
+
+#: src/trans.h:347
+msgid "Protocol"
+msgstr "Protokol"
+
+#: src/trans.h:348
+msgid "HTTP Version"
+msgstr "HTTP nesli"
+
+#: src/trans.h:349
+msgid "1.0"
+msgstr "1.0"
+
+#: src/trans.h:350
+msgid "1.1"
+msgstr "1.1"
+
+#: src/trans.h:353
 msgid "Title"
 msgstr "Üstyazý"
 
-#: src/trans.h:143
+#: src/trans.h:354
 msgid "Url"
 msgstr "Adres"
 
-#: src/trans.h:144
-msgid "First time visited"
-msgstr "Ilk ziyaret"
-
-#: src/trans.h:145
+#: src/trans.h:355
 msgid "Last time visited"
 msgstr "Son ziyaret"
 
-#: src/trans.h:146
+#: src/trans.h:356
+msgid "First time visited"
+msgstr "Ilk ziyaret"
+
+#: src/trans.h:357
 msgid "Times visited"
 msgstr "Ziyaret sayýsý"
 
-#: src/trans.h:147 src/trans.h:150
+#: src/trans.h:358 src/trans.h:361
 msgid "Select Directory"
 msgstr "Dizini seç"
 
-#: src/trans.h:153
-msgid "Select Color"
-msgstr "Rengi seç"
+#: src/trans.h:367
+msgid "Find text..."
+msgstr "Metni bul..."
 
-#: src/trans.h:156
-msgid "Help"
-msgstr "Yardým"
+#: src/trans.h:368
+msgid "Find text or regular expression:"
+msgstr "Metni yada erkan-ý tabiri bul:"
 
-#: src/bookmarks.c:320
-msgid "_Bookmarks"
-msgstr "_Niþanlar"
+#: src/trans.h:369
+msgid "Match upper/lower case"
+msgstr "Yazýlýmý gözardý et"
 
-#: src/bookmarks.c:393
-msgid "_File Bookmark"
-msgstr "Niþaný _postala"
+#: src/trans.h:373
+msgid "Nick:"
+msgstr "Lakap:"
 
-#: src/bookmarks.c:408
-msgid "B_ookmarks"
-msgstr "_Niþanlar"
+#: src/trans.h:374 src/trans.h:409
+msgid "Notes:"
+msgstr "Notlar:"
 
-#: src/bookmarks.c:415
-msgid "_Import"
-msgstr "_Ithal"
+#: src/trans.h:375
+msgid "Create toolbar"
+msgstr "Araç çubuðunu yarat"
 
-#: src/bookmarks.c:579 src/bookmarks.c:598 src/mozcallbacks.c:71
-msgid "Untitled"
-msgstr "Isimsiz"
+#: src/trans.h:377 src/trans.h:399
+msgid "New item"
+msgstr "Yeni birim"
 
-#: src/bookmarks.c:604
-msgid "Please enter the name of the bookmark"
-msgstr "Niþanýn ismini lütfen belirt"
+#: src/trans.h:378
+msgid "New Separator"
+msgstr "Yeni ayrýmcý"
 
-#: src/mozcallbacks.c:132
-msgid "Redirecting to site..."
-msgstr "Siteye yönlendiriliyor ..."
+#: src/trans.h:379
+msgid "New Category"
+msgstr "Yeni tür"
 
-#: src/mozcallbacks.c:134 src/mozcallbacks.c:170
-msgid "Transferring data from site..."
-msgstr "Sunucudan bilgiyi alýyorum ..."
+#: src/trans.h:381
+msgid ""
+"Multiple\n"
+"selections"
+msgstr ""
+"Çoklu\n"
+"seçimler"
 
-#: src/mozcallbacks.c:136
-msgid "Waiting for authorization..."
-msgstr "Doðrulamayý bekliyorum ..."
+#: src/trans.h:384
+msgid "Go to the previous bookmark"
+msgstr "Önceki niþana git"
 
-#: src/mozcallbacks.c:141 src/mozcallbacks.c:182
-msgid "Loading site..."
-msgstr "Site yükleniyor ..."
+#: src/trans.h:386
+msgid "Go to the next bookmark"
+msgstr "Önümüzdeki niþana git"
 
-#: src/mozcallbacks.c:143 src/mozcallbacks.c:184
-msgid "Done."
-msgstr "Oldu ."
+#: src/trans.h:388
+msgid "Load selected bookmark in the browser"
+msgstr "Seçili niþaný gezgine yükle"
 
-#: src/mozcallbacks.c:147 src/mozcallbacks.c:172
-msgid "Site not found."
-msgstr "Sunucu bulunamadý ."
+#: src/trans.h:390
+msgid "Close this window"
+msgstr "Bu pencereyi kapat"
 
-#: src/mozcallbacks.c:149 src/mozcallbacks.c:174
-msgid "Failed to connect to site."
-msgstr "Sunucuya baðlantý kurulamadý ."
+#: src/trans.h:391
+msgid "Close"
+msgstr "Kapat"
 
-#: src/mozcallbacks.c:151
-msgid "Failed due to connection timeout."
-msgstr "Baðlantý zaman aþýmýndan dolayý baþarýsýztýr ."
+#: src/trans.h:392
+msgid "Move bookmark up"
+msgstr "Niþaný yukarýya it"
 
-#: src/mozcallbacks.c:153
-msgid "User canceled connecting to site."
-msgstr "Siteye kurulanacak baðlantýyý kullanýcý kesti ."
+#: src/trans.h:394
+msgid "Move bookmark down"
+msgstr "Niþaný aþaða taþý"
 
-#: src/mozcallbacks.c:164
-msgid "Looking up host..."
-msgstr "Sunucuyu arýyorum ..."
+#: src/trans.h:396
+msgid "Show edit bookmarks controls"
+msgstr "Niþaný deðiþtirme basmalarýný göster"
 
-#: src/mozcallbacks.c:166 src/mozcallbacks.c:168
-msgid "Connecting to site..."
-msgstr "Siteye baðlanýyorum ..."
+#: src/trans.h:398
+msgid "Add a new bookmark"
+msgstr "Yeni bir niþan ekle"
 
-#: src/mozcallbacks.c:176
-msgid "Failed to transfer any data from site."
-msgstr "Siteden hiç bir bilgi alamadým ."
+#: src/trans.h:400
+msgid "Add a new bookmark category"
+msgstr "Yeni bir niþan türü ekle"
 
-#: src/mozcallbacks.c:178
-msgid "User cancelled connecting to site."
-msgstr "Siteye kurulanacak baðlantýyý kullanýcý kesti ."
+#: src/trans.h:401
+msgid "New category"
+msgstr "Yeni tür"
 
-#: src/mozcallbacks.c:273
-msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
-msgstr "%s ( %%%d bitti, %d.000 / %d.000 bayt'ten yüklendi )"
+#: src/trans.h:402
+msgid "Erase selected bookmark"
+msgstr "Seçili niþaný sil"
 
-#: src/mozcallbacks.c:278
-#, c-format
-msgid "%s (%d Kb loaded)"
-msgstr "%s ( %d,000 bayt yüklendi"
+#: src/trans.h:403
+msgid "Erase"
+msgstr "Sil"
+
+#: src/trans.h:404
+msgid "Convert this bookmark into a permanent bookmark"
+msgstr "Bu niþaný daimi bir niþana dönüþtür"
+
+#: src/trans.h:405
+msgid "File"
+msgstr "Dosya"
+
+#: src/trans.h:407
+msgid "Name:"
+msgstr "Isim:"
+
+#: src/trans.h:410
+msgid "Select Bookmark File"
+msgstr "Niþanlar dosyasýný seç"
+
+#: src/trans.h:411
+msgid "Import Bookmark"
+msgstr "Niþan ithal et"
+
