@@ -18,8 +18,8 @@
 @langs = qw ( ar as bn fa gu he hi ja ko ml mr or pa si ta te ur
               zh_TW.Big5 zh_CN.GB2312 );
 
-$cvsroot = "/home/kmaraas/cvs/gnome";
-$htmldir = $cvsroot . "/web-devel-2/content/projects/gtp/status/pango";
+$cvsroot = "/home/kmaraas/cvs/gnome/1";
+$htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/pango";
 
 #############################
 # "Subroutines declaration" # 
