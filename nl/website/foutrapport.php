@@ -25,6 +25,7 @@ vindt (en misschien iets beters weet), geef dat dan op deze manier aan ons door.
 <div style="width:	38em;">
 	<form class="important" name="form" method="post" action="sturen.php">
 		<input type="hidden" name="object" value="Gnome-nl foutrapport">
+		<input type="hidden" name="pagina" value="foutrapport">
 		<h2>Persoonlijke gegevens</h2>
 		<p>Deze informatie is optioneel, maar wel zeer gewenst.
 		We gebruiken deze gegevens alleen om je antwoord te geven op je foutrapport.
@@ -59,18 +60,18 @@ vindt (en misschien iets beters weet), geef dat dan op deze manier aan ons door.
 			<span class="formw"><input name="fout" type="text" id="fout" size="40"></span>
 		</div>
 		<div class="row">
-			<span class="label">Verbeterde vertaling:</span>
+			<span class="label">Betere vertaling:</span>
 			<span class="formw"><input name="goed" type="text" id="goed" size="40"></span>
 		</div>
 		<div class="row">
 			<span class="label">Evt. extra info:</span>
-			<span class="formw"><textarea name="extra" cols="30" rows="4" id="extra"></textarea></span>
+			<span class="formw"><textarea name="extra" cols="35" rows="4" id="extra"></textarea>&nbsp;</span>
 		</div>
 		<div class="row">
-			<span class="label"><input type="reset" name="Reset" value="Opnieuw beginnen"></span>
-			<span class="formw"><input name="Submit" type="submit" id="submit" value="Rapport versturen"></span>
+			<span class="label">&nbsp;</span>
+			<span class="formw"><input type="reset" name="Reset" value="Wissen"><input name="Submit" type="submit" id="submit" value="Rapport versturen"></span>
 		</div>
-		<p>&nbsp;</p>
+		<p style="clear: right;">&nbsp;</p>
 	</form>
 </div>
 </div>

@@ -38,7 +38,7 @@ hoe iets vertaald zou moeten worden. <a href="#lijsten">Verderop</a> staat meer 
 bepaalde dingen vertalen en hoe de vertaalbestanden (po-files) werken. Kom je problemen tegen, lees dan de 
 <a href="#ehbv">Eerste Hulp Bij Vertalen</a>.</p>
 Groetjes,<br>
-<a href="mailto:adrighem@gnome.org">Jullie coördinator.</a>
+<a href="email-webmaster.php">Jullie coördinator.</a>
 
 <a name="uitleg"></a><h1>Korte uitleg voor vertalers!</h1>
 <p>Er moeten in Linux-programma's ruwweg 2 dingen vertaald worden:
