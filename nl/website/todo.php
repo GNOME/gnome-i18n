@@ -23,7 +23,7 @@ gnome_menu();
 <p>Gnome-nl wil deze website graag uitbreiden en verbeteren. Daarvoor zijn de volgende idee&euml;n:</p>
 
 <p>Kleine aanpassingen voor de website? Kijk <a href="http://cvs.gnome.org/viewcvs/gnome-i18n/nl/website/">
-hier</a> naar de website en pas gerust wat aan. (enige CVS-kennis vereist)</p>
+hier</a> naar de website en pas gerust wat aan (enige CVS-kennis vereist).</p>
 
 <table border="1" cellpadding="10" cellspacing="0">
 <tr>
