@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PACKAGE="Gnomeradio"
+PACKAGE="gnomeradio"
 
 if [ "x$1" = "x--help" ]; then
 
