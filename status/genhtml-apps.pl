@@ -271,7 +271,6 @@ foreach $lang (sort keys %langinfo){
 # Branches used
     print TABLE "Stable branches with tags: <br>\n" ;
     print TABLE " <br>\n" ;
-    print TABLE "evolution: evolution-9-0-branch<br>\n" ;
     print TABLE "eog: eog-0-6<br>\n" ;
     print TABLE "gedit: gedit-1-0<br>\n" ;
     print TABLE "gimp: gimp-1-2<br>\n" ;

@@ -279,11 +279,11 @@ foreach $lang (sort keys %langinfo){
     print TABLE "control-center: control-center-1-0 <br>\n" ;
     print TABLE "gconf: gconf-1-0 <br>\n" ;
     print TABLE "gnome-libs: gnome-libs-1-0 <br>\n" ;
-    print TABLE "gnome-pim: gnome-pim-1-2 <br>\n" ;
     print TABLE "gnome-print: gnome-1-4-branch <br>\n" ;
-    print TABLE "gnome-vfs: gnome-vfs-1 <br>\n" ;
+    print TABLE "gnome-vfs: gnome-vfs-1-0 <br>\n" ;
     print TABLE "gtk+: gtk-1-2 <br>\n" ;
     print TABLE "libgtop: LIBGTOP_STABLE_1_0 <br>\n" ;
+    print TABLE "nautilus: nautilus-1 <br>\n" ;
     print TABLE "oaf: oaf-stable-0-6 <br>\n" ;
 
     print TABLE scalar localtime(time);

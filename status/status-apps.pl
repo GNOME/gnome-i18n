@@ -7,7 +7,10 @@
 # "Constants" #
 ###############
 @modules = (
+     "gnome-i18n/extra-po/abiword",
+     "gnome-i18n/extra-po/atomix",
      "balsa/po",
+     "gnome-i18n/extra-po/bombermaze",
      "dia/po",
      "eog/po",
      "evolution/po",
@@ -37,6 +40,8 @@
      "memprof/po",
      "pan/po",
      "radioactive/po",
+     "gnome-i18n/extra-po/red-carpet",
+     "gnome-i18n/extra-po/scrollkeeper",
      "sodipodi/po");
 
 @xml_i18n_tools_compliants = (
