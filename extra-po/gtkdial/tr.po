@@ -4,9 +4,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gtkdial 0.3.8\n"
-"POT-Creation-Date: 2001-07-03 00:58+0200\n"
-"PO-Revision-Date: 2001-07-03 01:03+0200\n"
+"Project-Id-Version: gtkdial 0.4.0\n"
+"POT-Creation-Date: 2001-09-18 16:16+0200\n"
+"PO-Revision-Date: 2001-09-20 20:19+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gtranslator.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,15 +39,15 @@ msgstr "Baþaralý baðlanma durumunda komuta çalýþtýr"
 
 #. if there is more than one service to show, make a list
 #. Set up the widgets and packing containers
-#: src/gtkdial.c:85 src/gtkdial.c:228
+#: src/gtkdial.c:85 src/gtkdial.c:229
 msgid "Dial"
 msgstr "Ara"
 
-#: src/gtkdial.c:88 src/gtkdial.c:229
+#: src/gtkdial.c:88 src/gtkdial.c:230
 msgid "Hang Up"
 msgstr "Kes"
 
-#: src/gtkdial.c:92 src/gtkdial.c:230
+#: src/gtkdial.c:92 src/gtkdial.c:231
 msgid "Exit"
 msgstr "Çýk"
 
@@ -87,44 +87,50 @@ msgstr "_Eylemler"
 msgid "_Timer"
 msgstr "_Sayaç"
 
-#: src/gtkdial.c:239
+#: src/gtkdial.c:240
 msgid "Session Time:"
 msgstr "Oturum Süresi:"
 
-#: src/gtkdial.c:240
+#: src/gtkdial.c:241
 msgid "Total Time:"
 msgstr "Toplam Süre:"
 
 #. Decide what the status bar should initially say
-#: src/gtkdial.c:250 src/gtkdial.c:362
+#: src/gtkdial.c:251
 msgid "Connected"
 msgstr "Baðlanýldý"
 
-#: src/gtkdial.c:251
+#: src/gtkdial.c:252
 msgid "Ready"
 msgstr "Hazýr"
 
-#: src/gtkdial.c:311
+#: src/gtkdial.c:312
 msgid "Select a service:"
 msgstr "Bir hizmet secçin:"
 
-#: src/gtkdial.c:337
-msgid "Connecting ..."
-msgstr "Baðlanýlýyor ..."
+#: src/gtkdial.c:338
+#, c-format
+msgid "Connecting to %s ..."
+msgstr "Baðlanýlýyor (%s) ..."
 
-#: src/gtkdial.c:384
+#: src/gtkdial.c:365
+#, c-format
+msgid "Connected to %s"
+msgstr "Baðlanýldý (%s)"
+
+#: src/gtkdial.c:389
 msgid "Disconnected"
 msgstr "Baðlantý kapalý"
 
-#: src/gtkdial.c:502
+#: src/gtkdial.c:509
 msgid "About Gtkdial"
 msgstr "Gtkdial hakkýnda bilgi"
 
-#: src/gtkdial.c:575
+#: src/gtkdial.c:582
 msgid "You're Connected - Really close?"
 msgstr "Þu an baðlýsýnýz - Gerçekten baðlantý kapatýlsýn mý?"
 
-#: src/gtkdial.c:612
+#: src/gtkdial.c:619
 msgid ""
 "No wvdial config file was available in\n"
 "any of the usual places.\n"
@@ -136,7 +142,7 @@ msgstr ""
 "\n"
 "wvdial.conf sayfasý kurumu için lütfen gwvediti çalýþtýrýn."
 
-#: src/gtkdial.c:616
+#: src/gtkdial.c:622
 msgid ""
 "The config file has no valid services.\n"
 "Run gwvedit to set them up"
@@ -144,103 +150,114 @@ msgstr ""
 "Bu ayar dosyasýnda geçerli hizmet yok.\n"
 "Hizmet eklemek/kurmak için gwvediti çalýþtýrýn"
 
-#: src/gtkdial.c:620
+#: src/gtkdial.c:625
 msgid ""
-"The config file had no information on yourmodem.\n"
+"The config file had no information on your modem.\n"
 "Run gwvedit to autodetect settings."
 msgstr ""
 "Ayar dosyasýnda modem hakkýnda hiç bir bilgi yoktur.\n"
-"Modem ayarlarýný otomatikmen iþletmek için gwvediti çalýþtýrýn."
+"Modem ayarlarýný otomatikmen tespit ettirtmek için gwvedit'i çalýþtýrýn."
 
-#: src/gtkdial.c:623
+#: src/gtkdial.c:628
 msgid "Error: wvdial error\n"
 msgstr "Hata: wvdial hatasý\n"
 
-#: src/gtkdial.c:625
+#: src/gtkdial.c:630
 msgid "A Gtkdial is already running\n"
 msgstr "Bir Gtkdial zaten çalýþtýrýlýyor\n"
 
-#: src/gtkdial.c:628
+#: src/gtkdial.c:633
 msgid "Error: sanity check - what's going on?\n"
 msgstr "Hata: saðlamlýk deneyi - neler oluyor?\n"
 
-#: src/gtkdial.c:747
+#: src/gtkdial.c:757
 #, c-format
 msgid ""
 "Your total online time has reached %d hour(s)\n"
 "and will now be reset"
 msgstr "Toplam baðlantý süreniz %i saati aþtý ve þimdi sýfýrlanacaktýr"
 
-#: src/gtkdial.c:754
+#: src/gtkdial.c:764
 #, c-format
 msgid "Your total online time has reached %d hour(s)\n"
 msgstr "Toplam baðlantý süreniz %i saati aþtý\n"
 
-#: src/properties.c:112
+#: src/properties.c:113
 msgid "Start Gtkdial in single-service mode"
 msgstr "Gtkdial tek hizmetlik modüste baþlasin"
 
-#: src/properties.c:114
+#: src/properties.c:115
 msgid "Disable audio connection alerts"
 msgstr "Baðlanma seslerini kapat"
 
-#: src/properties.c:116
-msgid "Close window after connect/kill"
-msgstr "Pencereyi baðlandýktan/baðlantýyý kapattýktan sonra kapat"
+#: src/properties.c:117
+msgid "Close window after connect/disconnect"
+msgstr "Baðlantýktan/baðlantýyý kapattýktan sonra pencereyi kapat"
 
-#: src/properties.c:118
+#: src/properties.c:119
 msgid "Show connection debugging window"
 msgstr "Baðlantý ayýklama penceresini göster"
 
-#: src/properties.c:120
+#: src/properties.c:121
 msgid "Display session timer in main window"
 msgstr "Oturum sayaçýný ana pencerede göster"
 
-#: src/properties.c:122
+#: src/properties.c:123
 msgid "Reset current session timer on each new connection"
 msgstr "Oturum sayaçýný her baðlantýda yeniden sýfýrla"
 
-#: src/properties.c:124
+#: src/properties.c:125
 msgid "Save total time of all sessions"
 msgstr "Yekin oturumlarýn toplam süresini kaydet"
 
-#: src/properties.c:126
+#: src/properties.c:127
 msgid "Display total timer in main window"
 msgstr "Ana pencerede toplam süre sayaçýný göster"
 
-#: src/properties.c:127
+#: src/properties.c:128
 msgid "Execute after connection made:"
 msgstr "Baðlandýktan sonra çalýþtýr:"
 
-#: src/properties.c:130
+#: src/properties.c:129
+msgid ""
+"The string entered below will be\n"
+"passed to the shell for execution in\n"
+"the background when a connection is\n"
+"successfully made."
+msgstr ""
+"Altta belirtilen metin baðlantýnýn\n"
+"baþarýyla kuruluþundan hemen sonra\n"
+"komuta'da çalýþtýrýlacaktýr."
+
+#: src/properties.c:135
 msgid "Alert me when total time reaches limit"
 msgstr "Toplam sayaç süresi"
 
-#: src/properties.c:131
+#: src/properties.c:136
 msgid " Alert after "
 msgstr "Uyarma: "
 
-#: src/properties.c:132
+#: src/properties.c:137
 msgid "hour(s)"
 msgstr "saatten sonra uyar"
 
-#: src/properties.c:135
+#: src/properties.c:140
 msgid "Reset total time when limit reached"
 msgstr "Toplam sayaç süresi üst sýnýrý geçerse, sayaçý sýfýrla"
 
-#: src/properties.c:187
+#: src/properties.c:192
 msgid "General"
 msgstr "Genel"
 
-#: src/properties.c:188
+#: src/properties.c:193
 msgid "Timer"
 msgstr "Sayaç"
 
-#: src/properties.c:189
+#: src/properties.c:194
 msgid "Execute"
 msgstr "Çalýþtýr"
 
-#: src/properties.c:220
+#: src/properties.c:226
 msgid "GtkDial Settings"
 msgstr "GtkDial ayarlarý"
 
@@ -252,27 +269,3 @@ msgstr "Gtkdial"
 msgid "Gtkdial dialer"
 msgstr "Gtkdial arayýcý"
 
-#~ msgid "Error: wvdial conf not present\n"
-#~ msgstr "Hata: wvdial.conf ayar dosyasý yok\n"
-
-#~ msgid "Error: no services in wvdial.conf\n"
-#~ msgstr "Hata: wvdial.conf ayar dosyasýnda hiç bir hizmet yok\n"
-
-#~ msgid "Error: no default modem in wvdial.conf\n"
-#~ msgstr "Hata: wvdial.conf ayar dosyasýnda varsayýlan modem yok\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "and will now be reset"
-#~ msgstr ""
-#~ "\n"
-#~ "ve þimdi toplam baðlantý süresi sýfýrlanacaktýr"
-
-#~ msgid "s"
-#~ msgstr " "
-
-#~ msgid "Reset"
-#~ msgstr "Sýfýrla"
-
-#~ msgid "Clear Saved Timer"
-#~ msgstr "Sayaçý sýfýrla"
