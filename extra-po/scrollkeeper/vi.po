@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: scrollkeeper VERSION\n"
-"POT-Creation-Date: 2001-12-03 01:39-0600\n"
-"PO-Revision-Date: 2002-05-03 17:41-0400\n"
+"POT-Creation-Date: 2002-07-24 21:27-0500\n"
+"PO-Revision-Date: 2003-01-20 17:04+0700\n"
 "Last-Translator: pclouds <pclouds@gmx.net>\n"
 "Language-Team: GnomeVI <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -14,40 +14,76 @@ msgstr ""
 
 #: cl/src/scrollkeeper-install.c:34
 msgid ""
-"Usage: scrollkeeper-install [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Cách dùng: scrollkeeper-install [-v] [-p <SCROLLKEEPER_DB_DIR>] <TẬP TIN OMF>\n"
+"Usage: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+msgstr "Cách dùng: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <TẬP TIN OMF>\n"
+
+#: cl/src/scrollkeeper-install.c:95
+msgid "Could not create database.  Aborting install.\n"
+msgstr "Không thể tạo cơ sở dữ liệu. Ngừng cài đặt.\n"
+
+#: cl/src/scrollkeeper-install.c:99 cl/src/update.c:524
+#, c-format
+msgid "Registering %s\n"
+msgstr "Đang đăng ký %s\n"
+
+#: cl/src/scrollkeeper-install.c:101 cl/src/update.c:521
+#, c-format
+msgid "Unable to register %s\n"
+msgstr "Không thể đăng ký %s\n"
 
 #: cl/src/preinstall.c:35
 msgid "Usage: scrollkeeper-preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
-msgstr "Cách dùng: scrollkeeper-preinstall <DOC FILE> <TẬP TIN OMF> <TẬP TIN OMF MỚI>\n"
+msgstr ""
+"Cách dùng: scrollkeeper-preinstall <DOC FILE> <TẬP TIN OMF> <TẬP TIN OMF "
+"MỚI>\n"
 
 #: cl/src/preinstall.c:68
 #, c-format
-msgid "url update in OMF file %s failed\n"
-msgstr "lỗi khi cập nhật url trong tập tin OMF %s\n"
+msgid "Unable to update URL in OMF file %s.  Copying OMF file unchanged.\n"
+msgstr "Không thể cập nhậtURL trong tập tin OMF %s. Tập tin OMF không thay đổi.\n"
 
 #: cl/src/scrollkeeper-uninstall.c:32
 msgid ""
-"Usage: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Cách dùng: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <TẬP TIN OMF>\n"
+"Usage: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF "
+"FILE>\n"
+msgstr "Cách dùng: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <TẬP TIN OMF>\n"
 
-#: cl/src/update.c:109
+#: cl/src/scrollkeeper-uninstall.c:86 cl/src/update.c:539
 #, c-format
-msgid "Usage: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
-msgstr "Cách dùng: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <THƯ MỤC OMF>]\n"
+msgid "Unregistering %s\n"
+msgstr "Đang hủy đăng ký %s\n"
 
-#: cl/src/update.c:221
+#: cl/src/update.c:108
+#, c-format
+msgid "Usage: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
+msgstr "Cách dùng: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <THƯ MỤC OMF>]\n"
+
+#: cl/src/update.c:220
 #, c-format
 msgid "%s: warning: %s overrides %s\n"
 msgstr "%s: cảnh báo: %s override %s\n"
 
-#: cl/src/update.c:500
+#: cl/src/update.c:410
+msgid "Could not create database.  Aborting update.\n"
+msgstr "Không thể tạo cơ sở dữ liệu. Ngừng cập nhật.\n"
+
+#: cl/src/update.c:505
 #, c-format
 msgid "%s: %s: is not a directory\n"
 msgstr "%s: %s: không phải là thư mục\n"
 
+#: cl/src/update.c:530
+#, c-format
+msgid "Updating %s\n"
+msgstr "Đang cập nhật %s\n"
+
+#: cl/src/update.c:533
+#, c-format
+msgid "Unable to complete update.  Could not register %s\n"
+msgstr "Không thể hoàn tất cập nhật. Không thể đăng ký %s\n"
+
 #: cl/src/get-cl.c:55
-msgid "Can not open temporary file\n"
+msgid "Cannot open temporary file.\n"
 msgstr "Không thể mở tập tin tạm.\n"
 
 #: cl/src/get-cl.c:93
@@ -55,760 +91,872 @@ msgstr "Không thể mở tập tin tạm.\n"
 msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 msgstr "Cách dùng: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 
-#: cl/src/get-cl.c:134
+#: cl/src/get-cl.c:133
 msgid "No Content List for this locale!!!\n"
 msgstr "Không có Danh sách Nội dung cho locale này!!!\n"
 
-#: toc/src/toc.c:488
-#, c-format
-msgid "error while parsing %s\n"
-msgstr "lỗi khi phân tích %s\n"
-
-#: toc/src/toc.c:502
-msgid ""
-"Usage:  toc <filename>\n"
-"\n"
-msgstr "Cách dùng: toc <tập tin>\n\n"
-
-#: libs/error.c:80
+#: libs/error.c:114
 #, c-format
 msgid "%s: out of memory: %s\n"
 msgstr "%s: hết bộ nhớ: %s\n"
 
-#: libs/install.c:163
+#: libs/error.c:262
 #, c-format
-msgid "wrong omf file %s\n"
-msgstr "tập tin omf sai %s\n"
+msgid "OMF validation error: %s"
+msgstr "Lỗi xác định tính hợp lệ của OMF: %s"
 
-#: libs/install.c:193 libs/uninstall.c:98
+#: libs/install.c:132
+#, c-format
+msgid ""
+"TOC file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr "Tập tin TOC không có, không thể đọc, hoặc bị hư: %s\n"
+
+#: libs/install.c:173
+#, c-format
+msgid ""
+"OMF file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr "Tập tin OMF không có, không thể đọc, hoặc bị hư: %s\n"
+
+#: libs/install.c:182
+#, c-format
+msgid "Could not parse ScrollKeeper-OMF DTD: %s\n"
+msgstr "Không thể phân tích Scrollkeeper-OMF DTD: %s\n"
+
+#: libs/install.c:190
+#, c-format
+msgid "OMF file [%s] does not validate against ScrollKeeper-OMF DTD: %s\n"
+msgstr "Tập tin OMF [%s] không hợp lệ với Scrollkeeper-OMF DTD: %s\n"
+
+#. This should not happen
+#: libs/install.c:207
+msgid "Failed to locate an <OMF> element.\n"
+msgstr "Lỗi định vị phần tử <OMF>.\n"
+
+#. This should not happen
+#: libs/install.c:212
+msgid "<OMF> node has no children.\n"
+msgstr "<OMF> không có con.\n"
+
+#: libs/install.c:236
+#, c-format
+msgid ""
+"Content list file does not exist, is not readable, or is not well-formed "
+"XML: %s\n"
+msgstr "Tập tin danh sách nội dung không có, không thể đọc, hoặc bị hư: %s\n"
+
+#: libs/install.c:243
+#, c-format
+msgid ""
+"Extended content list file does not exist, is not readable, or is not well-"
+"formed XML: %s\n"
+msgstr "Tập tin danh sách nội dung mở rộng không có, không thể đọc, hoặc bị hư: %s\n"
+
+#: libs/uninstall.c:97
 #, c-format
 msgid "wrong content list file %s\n"
 msgstr "tập tin Danh sách Nội dung sai %s\n"
 
-#: libs/install.c:200 libs/uninstall.c:105
+#: libs/uninstall.c:104
 #, c-format
 msgid "wrong extended content list file %s\n"
 msgstr "Tập tin Danh sách Nội dung Mở rộng sai %s\n"
 
-#: libs/uninstall.c:202
+#: libs/uninstall.c:201
 #, c-format
 msgid "%s missing\n"
 msgstr "Thiếu %s\n"
 
-#: extract/src/scrollkeeper-extract.c:29
+#: libs/database.c:41
+#, c-format
+msgid "Could not create directory %s : %s\n"
+msgstr "Không thể tạo thư mục %s: %s\n"
+
+#: libs/update-url.c:40
+msgid "OMF file was not well-formed.\n"
+msgstr "Tập tin OMF bị hư.\n"
+
+#: libs/update-url.c:48
+msgid "Could not find root element of OMF file.\n"
+msgstr "Không thể tìm thấy phần tử gốc trong tập tin OMF.\n"
+
+#: libs/update-url.c:52
+msgid "Root element of OMF file is not <omf>.\n"
+msgstr "Phần tử gốc trong tập tin OMF không phải là <omf>.\n"
+
+#: libs/update-url.c:64
+msgid "OMF file does not have <resource> element.\n"
+msgstr "Tập tin OMF không có phần tử <resource>.\n"
+
+#: extract/src/scrollkeeper-extract.c:30
 msgid ""
 "Usage: scrollkeeper-extract <xml file> <stylesheet 1> <output file 1> "
 "<stylesheet 2> <output file 2> ...\n"
-msgstr "Cách dùng: scrollkeeper-extract <tập tin xml> <stylesheet 1> <output file 1> <stylesheet 2> <output file 2> ...\n"
+msgstr ""
+"Cách dùng: scrollkeeper-extract <tập tin xml> <stylesheet 1> <output file 1> "
+"<stylesheet 2> <output file 2> ...\n"
 
-#: extract/src/scrollkeeper-extract.c:56
-msgid "Unrecognized file type\n"
-msgstr "Kiểu tập tin lạ\n"
+#: extract/src/scrollkeeper-extract.c:61
+#, c-format
+msgid "Unrecognized file type: %s\n"
+msgstr "Kiểu tập tin lạ: %s\n"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:1
 msgid "3D Modelling"
-msgstr ""
+msgstr "Mô hình hóa 3D"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:2
 msgid "3D Rendering"
-msgstr ""
+msgstr "Vẽ 3D"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:3
 msgid "ADA"
 msgstr "ADA"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:4
+msgid "Accessibility"
+msgstr ""
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:5
+msgid "Accessories"
+msgstr "Phụ tùng"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:6
 msgid "Administration"
 msgstr "Quản trị"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:5
+#: cl/templates/scrollkeeper_cl.xml.in.h:7
 msgid "Amusement"
 msgstr "Giải trí"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:6
+#: cl/templates/scrollkeeper_cl.xml.in.h:8
 msgid "Analysis"
 msgstr "Phân tích"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:7
+#: cl/templates/scrollkeeper_cl.xml.in.h:9
 msgid "AppleTalk"
 msgstr "AppleTalk"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:8
+#: cl/templates/scrollkeeper_cl.xml.in.h:10
 msgid "Applets"
 msgstr "Applet"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:9
+#: cl/templates/scrollkeeper_cl.xml.in.h:11
 msgid "Applications"
 msgstr "Ứng dụng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:10
+#: cl/templates/scrollkeeper_cl.xml.in.h:12
 msgid "Arcade"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:11
+#: cl/templates/scrollkeeper_cl.xml.in.h:13
 msgid "Archiving"
 msgstr "Lưu trữ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:12
+#: cl/templates/scrollkeeper_cl.xml.in.h:14
 msgid "Arts"
 msgstr "Nghệ thuật"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:13
+#: cl/templates/scrollkeeper_cl.xml.in.h:15
 msgid "Astronomy"
 msgstr "Thiên văn học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:14
+#: cl/templates/scrollkeeper_cl.xml.in.h:16
 msgid "Astrophysics"
 msgstr "Vật lý học thiên thể"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:15
+#: cl/templates/scrollkeeper_cl.xml.in.h:17
 msgid "BIND"
 msgstr "BIND"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:16
+#: cl/templates/scrollkeeper_cl.xml.in.h:18
 msgid "Backups"
 msgstr "Sao lưu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:17
+#: cl/templates/scrollkeeper_cl.xml.in.h:19
 msgid "Biology"
 msgstr "Sinh vật học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:18
+#: cl/templates/scrollkeeper_cl.xml.in.h:20
 msgid "Board"
 msgstr "Bảng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:19
+#: cl/templates/scrollkeeper_cl.xml.in.h:21
 msgid "Build Tools"
 msgstr "Công cụ xây dựng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:20
+#: cl/templates/scrollkeeper_cl.xml.in.h:22
 msgid "C"
 msgstr "C"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:21
+#: cl/templates/scrollkeeper_cl.xml.in.h:23
 msgid "C++"
 msgstr "C++"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:22
+#: cl/templates/scrollkeeper_cl.xml.in.h:24
 msgid "CAD"
 msgstr "CAD"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:23
+#: cl/templates/scrollkeeper_cl.xml.in.h:25
 msgid "CD Mastering"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:24
+#: cl/templates/scrollkeeper_cl.xml.in.h:26
 msgid "CDE"
 msgstr "CDE"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:25
+#: cl/templates/scrollkeeper_cl.xml.in.h:27
 msgid "CLI"
 msgstr "CLI"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:26
+#: cl/templates/scrollkeeper_cl.xml.in.h:28
 msgid "Calculating"
 msgstr "Tính toán"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:27
+#: cl/templates/scrollkeeper_cl.xml.in.h:29
 msgid "Caldera"
 msgstr "Caldera"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:28
+#: cl/templates/scrollkeeper_cl.xml.in.h:30
 msgid "Calendar"
 msgstr "Lịch"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:29
+#: cl/templates/scrollkeeper_cl.xml.in.h:31
 msgid "Capture"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:30
+#: cl/templates/scrollkeeper_cl.xml.in.h:32
 msgid "Chat"
-msgstr ""
+msgstr "Tán gẫu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:31
+#: cl/templates/scrollkeeper_cl.xml.in.h:33
 msgid "Chemistry"
 msgstr "Hoá học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:32
+#: cl/templates/scrollkeeper_cl.xml.in.h:34
 msgid "Clock"
 msgstr "Đồng hồ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:33
+#: cl/templates/scrollkeeper_cl.xml.in.h:35
 msgid "Clocks"
 msgstr "Đồng hồ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:34
+#: cl/templates/scrollkeeper_cl.xml.in.h:36
 msgid "Code Generators"
 msgstr "Bộ phát sinh mã"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:35
+#: cl/templates/scrollkeeper_cl.xml.in.h:37
 msgid "Compression"
 msgstr "Nén"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:36
+#: cl/templates/scrollkeeper_cl.xml.in.h:38
 msgid "Computer Science"
 msgstr "Khoa học máy tính"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:37
+#: cl/templates/scrollkeeper_cl.xml.in.h:39
 msgid "Config Files"
 msgstr "Tập tin cấu hình"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:38
+#: cl/templates/scrollkeeper_cl.xml.in.h:40
 msgid "Configuration"
 msgstr "Cấu hình"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:39
+#: cl/templates/scrollkeeper_cl.xml.in.h:41
 msgid "Configuration Tools"
 msgstr "Công cụ cấu hình"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:40
+#: cl/templates/scrollkeeper_cl.xml.in.h:42
 msgid "Conversion"
 msgstr "Chuyển đổi"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:41
+#: cl/templates/scrollkeeper_cl.xml.in.h:43
 msgid "Core Desktop"
-msgstr ""
+msgstr "Lõi Desktop"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:42
+#: cl/templates/scrollkeeper_cl.xml.in.h:44
 msgid "Cryptography"
 msgstr "Mã hoá"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:43
+#: cl/templates/scrollkeeper_cl.xml.in.h:45
 msgid "DNS"
 msgstr "DNS"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:44
+#: cl/templates/scrollkeeper_cl.xml.in.h:46
 msgid "Data Processing"
 msgstr "Xử lý dữ liệu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:45
+#: cl/templates/scrollkeeper_cl.xml.in.h:47
 msgid "Database"
 msgstr "Cơ sở dữ liệu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:46
+#: cl/templates/scrollkeeper_cl.xml.in.h:48
 msgid "Databases"
 msgstr "Cơ sở dữ liệu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:47
+#: cl/templates/scrollkeeper_cl.xml.in.h:49
 msgid "Debian"
 msgstr "Debian"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:48
+#: cl/templates/scrollkeeper_cl.xml.in.h:50
 msgid "Debuggers"
 msgstr "Debugger"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:49
+#: cl/templates/scrollkeeper_cl.xml.in.h:51
+msgid "Desktop"
+msgstr "Desktop"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:52
+msgid "Desktop Preferences"
+msgstr "Thông số Desktop"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:53
 msgid "Development"
 msgstr "Phát triển"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:50
+#: cl/templates/scrollkeeper_cl.xml.in.h:54
 msgid "Development Tools"
 msgstr "Công cụ phát triển"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:51
+#: cl/templates/scrollkeeper_cl.xml.in.h:55
 msgid "Display"
 msgstr "Hiển thị"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:52
+#: cl/templates/scrollkeeper_cl.xml.in.h:56
 msgid "Distributions"
 msgstr "Bản phân phối"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:53
+#: cl/templates/scrollkeeper_cl.xml.in.h:57
 msgid "Drawing"
 msgstr "Vẽ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:54
+#: cl/templates/scrollkeeper_cl.xml.in.h:58
 msgid "EDA"
 msgstr "EDA"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:55
+#: cl/templates/scrollkeeper_cl.xml.in.h:59
 msgid "Editing"
 msgstr "Biên soạn"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:56
+#: cl/templates/scrollkeeper_cl.xml.in.h:60
 msgid "Education"
 msgstr "Giáo dục"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:57
+#: cl/templates/scrollkeeper_cl.xml.in.h:61
 msgid "Email"
 msgstr "Thư điện tử"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:58
+#: cl/templates/scrollkeeper_cl.xml.in.h:62
 msgid "English"
 msgstr "Tiếng Anh"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:59
+#: cl/templates/scrollkeeper_cl.xml.in.h:63
 msgid "Environments"
 msgstr "Môi trường"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:60
+#: cl/templates/scrollkeeper_cl.xml.in.h:64
 msgid "FTP"
 msgstr "FTP"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:61
+#: cl/templates/scrollkeeper_cl.xml.in.h:65
 msgid "Fax"
 msgstr "Fax"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:62
+#: cl/templates/scrollkeeper_cl.xml.in.h:66
 msgid "Fighting"
 msgstr "Chiến đấu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:63
+#: cl/templates/scrollkeeper_cl.xml.in.h:67
 msgid "File Sharing"
 msgstr "Chia sẽ tập tin"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:64
+#: cl/templates/scrollkeeper_cl.xml.in.h:68
 msgid "File Utilities"
 msgstr "Tiện ích tập tin"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:65
+#: cl/templates/scrollkeeper_cl.xml.in.h:69
 msgid "Filesystems"
 msgstr "Hệ thống tập tin"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:66
+#: cl/templates/scrollkeeper_cl.xml.in.h:70
 msgid "Financial"
 msgstr "Tài chính"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:67
+#: cl/templates/scrollkeeper_cl.xml.in.h:71
 msgid "Firewall"
 msgstr "Bức tường lửa"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:68
+#: cl/templates/scrollkeeper_cl.xml.in.h:72
 msgid "First Person Shooters"
 msgstr "Bằng chéo! ;)"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:69
+#: cl/templates/scrollkeeper_cl.xml.in.h:73
 msgid "Fonts"
 msgstr "Font"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:70
+#: cl/templates/scrollkeeper_cl.xml.in.h:74
 msgid "FreeBSD"
 msgstr "FreeBSD"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:71
+#: cl/templates/scrollkeeper_cl.xml.in.h:75
 msgid "GNOME"
 msgstr "GNOME"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:72
+#: cl/templates/scrollkeeper_cl.xml.in.h:76
 msgid "GTK+"
 msgstr "GTK+"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:73
+#: cl/templates/scrollkeeper_cl.xml.in.h:77
 msgid "GUI"
 msgstr "GUI"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:74
+#: cl/templates/scrollkeeper_cl.xml.in.h:78
 msgid "Games"
 msgstr "Trò chơi"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:75
+#: cl/templates/scrollkeeper_cl.xml.in.h:79
 msgid "General"
 msgstr "Chung"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:76
+#: cl/templates/scrollkeeper_cl.xml.in.h:80
 msgid "Genetics"
 msgstr "Di truyền học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:77
+#: cl/templates/scrollkeeper_cl.xml.in.h:81
 msgid "Graphics"
 msgstr "Đồ hoạ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:78
+#: cl/templates/scrollkeeper_cl.xml.in.h:82
 msgid "HTTP"
 msgstr "HTTP"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:79
+#: cl/templates/scrollkeeper_cl.xml.in.h:83
 msgid "Hardware"
 msgstr "Phần cứng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:80
+#: cl/templates/scrollkeeper_cl.xml.in.h:84
 msgid "IDEs"
 msgstr "IDE"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:81
+#: cl/templates/scrollkeeper_cl.xml.in.h:85
 msgid "Input Devices"
 msgstr "Thiết bị nhập"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:82
+#: cl/templates/scrollkeeper_cl.xml.in.h:86
 msgid "Internet"
 msgstr "Internet"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:83
+#: cl/templates/scrollkeeper_cl.xml.in.h:87
 msgid "Internet Phone"
 msgstr "Điện thoại Internet"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:84
+#: cl/templates/scrollkeeper_cl.xml.in.h:88
 msgid "Introductory"
 msgstr "Mở đầu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:85
+#: cl/templates/scrollkeeper_cl.xml.in.h:89
 msgid "Intrusion Detection"
 msgstr "Phát hiện xâm nhập"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:86
+#: cl/templates/scrollkeeper_cl.xml.in.h:90
 msgid "Java"
 msgstr "Java"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:87
+#: cl/templates/scrollkeeper_cl.xml.in.h:91
 msgid "KDE"
 msgstr "KDE"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:88
+#: cl/templates/scrollkeeper_cl.xml.in.h:92
 msgid "Kernels"
-msgstr ""
+msgstr "Hạt nhân"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:89
+#: cl/templates/scrollkeeper_cl.xml.in.h:93
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:90
+#: cl/templates/scrollkeeper_cl.xml.in.h:94
 msgid "Libraries"
 msgstr "Thư viện"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:91
+#: cl/templates/scrollkeeper_cl.xml.in.h:95
 msgid "Licenses"
 msgstr "Giấy phép"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:92
+#: cl/templates/scrollkeeper_cl.xml.in.h:96
 msgid "Linux"
 msgstr "Linux"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:93
+#: cl/templates/scrollkeeper_cl.xml.in.h:97
 msgid "Local"
 msgstr "Cục bộ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:94
+#: cl/templates/scrollkeeper_cl.xml.in.h:98
 msgid "Login Managers"
 msgstr "Bộ quản lý đăng nhập"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:95
+#: cl/templates/scrollkeeper_cl.xml.in.h:99
 msgid "MIDI"
 msgstr "MIDI"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:96
+#: cl/templates/scrollkeeper_cl.xml.in.h:100
 msgid "Mandrake"
 msgstr "Mandrake"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:97
+#: cl/templates/scrollkeeper_cl.xml.in.h:101
 msgid "Math"
 msgstr "Toán học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:98
+#: cl/templates/scrollkeeper_cl.xml.in.h:102
 msgid "Maths"
 msgstr "Toán học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:99
+#: cl/templates/scrollkeeper_cl.xml.in.h:103
 msgid "Messaging"
-msgstr ""
+msgstr "Truyền thông điệp"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:100
+#: cl/templates/scrollkeeper_cl.xml.in.h:104
 msgid "Mixers"
-msgstr ""
+msgstr "Bộ trộn"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:101
+#: cl/templates/scrollkeeper_cl.xml.in.h:105
 msgid "Monitors"
 msgstr "Bộ theo dõi"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:102
+#: cl/templates/scrollkeeper_cl.xml.in.h:106
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:103
+#: cl/templates/scrollkeeper_cl.xml.in.h:107
 msgid "Music"
 msgstr "Âm nhạc"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:104
+#: cl/templates/scrollkeeper_cl.xml.in.h:108
 msgid "NetBSD"
 msgstr "NetBSD"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:105
+#: cl/templates/scrollkeeper_cl.xml.in.h:109
 msgid "Network"
 msgstr "Mạng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:106
+#: cl/templates/scrollkeeper_cl.xml.in.h:110
 msgid "Networking"
 msgstr "Mạng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:107
+#: cl/templates/scrollkeeper_cl.xml.in.h:111
 msgid "News"
 msgstr "Tin tức"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:108
+#: cl/templates/scrollkeeper_cl.xml.in.h:112
 msgid "Office"
 msgstr "Văn phòng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:109
+#: cl/templates/scrollkeeper_cl.xml.in.h:113
 msgid "Other"
 msgstr "Khác"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:110
+#: cl/templates/scrollkeeper_cl.xml.in.h:114
 msgid "PCI/ISA/PCMCIA"
 msgstr "PCI/ISA/PCMCIA"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:111
+#: cl/templates/scrollkeeper_cl.xml.in.h:115
 msgid "PIM"
 msgstr "PIM"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:112
+#: cl/templates/scrollkeeper_cl.xml.in.h:116
 msgid "PPP"
 msgstr "PPP"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:113
+#: cl/templates/scrollkeeper_cl.xml.in.h:117
 msgid "Package Management"
 msgstr "Bộ quản lý phần mềm"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:114
+#: cl/templates/scrollkeeper_cl.xml.in.h:118
 msgid "Packaging"
 msgstr "Đóng gói"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:115
+#: cl/templates/scrollkeeper_cl.xml.in.h:119
 msgid "Perl"
 msgstr "Perl"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:116
+#: cl/templates/scrollkeeper_cl.xml.in.h:120
 msgid "Physics"
 msgstr "Vật lý"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:117
+#: cl/templates/scrollkeeper_cl.xml.in.h:121
 msgid "Players"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:118
+#: cl/templates/scrollkeeper_cl.xml.in.h:122
 msgid "Plotting"
-msgstr ""
+msgstr "Vẽ (plotting)"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:119
+#: cl/templates/scrollkeeper_cl.xml.in.h:123
+msgid "Preferences"
+msgstr "Thông số"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:124
 msgid "Presentation"
 msgstr "Trình diễn"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:120
+#: cl/templates/scrollkeeper_cl.xml.in.h:125
 msgid "Printing"
 msgstr "In ấn"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:121
+#: cl/templates/scrollkeeper_cl.xml.in.h:126
 msgid "Processor"
 msgstr "Bộ xử lý"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:122
+#: cl/templates/scrollkeeper_cl.xml.in.h:127
 msgid "Profiling"
 msgstr "Lập hồ sơ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:123
+#: cl/templates/scrollkeeper_cl.xml.in.h:128
+msgid "Programming"
+msgstr "Lập trình"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:129
 msgid "Programs"
 msgstr "Chương trình"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:124
+#: cl/templates/scrollkeeper_cl.xml.in.h:130
 msgid "Publishing"
 msgstr "Xuất bản"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:125
+#: cl/templates/scrollkeeper_cl.xml.in.h:131
 msgid "Puzzles"
 msgstr "Trò ghép hình"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:126
+#: cl/templates/scrollkeeper_cl.xml.in.h:132
 msgid "Python"
 msgstr "Python"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:127
+#: cl/templates/scrollkeeper_cl.xml.in.h:133
 msgid "Qt"
 msgstr "Qt"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:128
+#: cl/templates/scrollkeeper_cl.xml.in.h:134
 msgid "RAD"
 msgstr "RAD"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:129
+#: cl/templates/scrollkeeper_cl.xml.in.h:135
 msgid "Recording"
-msgstr ""
+msgstr "Thu"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:130
+#: cl/templates/scrollkeeper_cl.xml.in.h:136
 msgid "Red Flag"
 msgstr "Hồng Kỳ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:131
+#: cl/templates/scrollkeeper_cl.xml.in.h:137
 msgid "Red Hat"
 msgstr "Red Hat"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:132
+#: cl/templates/scrollkeeper_cl.xml.in.h:138
 msgid "Remote"
 msgstr "Từ xa"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:133
+#: cl/templates/scrollkeeper_cl.xml.in.h:139
 msgid "Role-Playing"
 msgstr "Chơi theo lượt"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:134
+#: cl/templates/scrollkeeper_cl.xml.in.h:140
 msgid "SMB"
 msgstr "SMB"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:135
+#: cl/templates/scrollkeeper_cl.xml.in.h:141
 msgid "SSH"
 msgstr "SSH"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:136
+#: cl/templates/scrollkeeper_cl.xml.in.h:142
 msgid "Science"
 msgstr "Khoa học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:137
+#: cl/templates/scrollkeeper_cl.xml.in.h:143
 msgid "Scientific"
 msgstr "Khoa học"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:138
+#: cl/templates/scrollkeeper_cl.xml.in.h:144
 msgid "Screensavers"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:139
+#: cl/templates/scrollkeeper_cl.xml.in.h:145
 msgid "Security"
 msgstr "Bảo mật"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:140
+#: cl/templates/scrollkeeper_cl.xml.in.h:146
 msgid "Services"
 msgstr "Dịch vụ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:141
+#: cl/templates/scrollkeeper_cl.xml.in.h:147
 msgid "Settings"
 msgstr "Thiết lập"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:142
+#: cl/templates/scrollkeeper_cl.xml.in.h:148
 msgid "Simulation"
 msgstr "Mô phỏng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:143
+#: cl/templates/scrollkeeper_cl.xml.in.h:149
 msgid "Slackware"
 msgstr "Slackware"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:144
+#: cl/templates/scrollkeeper_cl.xml.in.h:150
 msgid "Sound"
 msgstr "Âm thanh"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:145
+#: cl/templates/scrollkeeper_cl.xml.in.h:151
+msgid "Sound and Video"
+msgstr "Âm thanh và hình ảnh"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:152
 msgid "Speech"
 msgstr "Giọng nói"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:146
+#: cl/templates/scrollkeeper_cl.xml.in.h:153
 msgid "Storage"
 msgstr "Lưu trữ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:147
+#: cl/templates/scrollkeeper_cl.xml.in.h:154
 msgid "Strategy"
 msgstr "Chiến thuật"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:148
+#: cl/templates/scrollkeeper_cl.xml.in.h:155
 msgid "SuSE"
 msgstr "SuSE"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:149
+#: cl/templates/scrollkeeper_cl.xml.in.h:156
 msgid "Syslog"
 msgstr "Syslog"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:150
+#: cl/templates/scrollkeeper_cl.xml.in.h:157
 msgid "System"
 msgstr "Hệ thống"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:151
+#: cl/templates/scrollkeeper_cl.xml.in.h:158
+msgid "System Administration"
+msgstr "Quản trị hệ thống"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:159
 msgid "System Calls"
 msgstr "Lệnh gọi hệ thống"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:152
+#: cl/templates/scrollkeeper_cl.xml.in.h:160
+msgid "System Tools"
+msgstr "Công cụ hệ thống"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:161
 msgid "TCP/IP"
 msgstr "TCP/IP"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:153
+#: cl/templates/scrollkeeper_cl.xml.in.h:162
 msgid "Tcl/Tk"
 msgstr "Tcl/Tk"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:154
+#: cl/templates/scrollkeeper_cl.xml.in.h:163
 msgid "Technology"
 msgstr "Kỹ thuật"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:155
+#: cl/templates/scrollkeeper_cl.xml.in.h:164
 msgid "Telnet"
 msgstr "Telnet"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:156
+#: cl/templates/scrollkeeper_cl.xml.in.h:165
 msgid "Terminals"
 msgstr "Terminal"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:157
+#: cl/templates/scrollkeeper_cl.xml.in.h:166
 msgid "Testing"
 msgstr "Kiểm tra"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:158
+#: cl/templates/scrollkeeper_cl.xml.in.h:167
 msgid "Text Editors"
 msgstr "Soạn thảo văn bản"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:159
+#: cl/templates/scrollkeeper_cl.xml.in.h:168
 msgid "Text Utilities"
 msgstr "Tiện ích text"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:160
+#: cl/templates/scrollkeeper_cl.xml.in.h:169
 msgid "Tutorials"
+msgstr "Tài liệu hướng dẫn"
+
+#: cl/templates/scrollkeeper_cl.xml.in.h:170
+msgid "User Guides"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:161
+#: cl/templates/scrollkeeper_cl.xml.in.h:171
 msgid "Users"
 msgstr "Người dùng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:162
+#: cl/templates/scrollkeeper_cl.xml.in.h:172
 msgid "Utilities"
 msgstr "Tiện ích"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:163
+#: cl/templates/scrollkeeper_cl.xml.in.h:173
 msgid "Utility"
 msgstr "Tiện ích"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:164
+#: cl/templates/scrollkeeper_cl.xml.in.h:174
 msgid "Version Control"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:165
+#: cl/templates/scrollkeeper_cl.xml.in.h:175
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:166
+#: cl/templates/scrollkeeper_cl.xml.in.h:176
 msgid "Video Conferencing"
-msgstr ""
+msgstr "Hội thảo video"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:167
+#: cl/templates/scrollkeeper_cl.xml.in.h:177
 msgid "Viewing"
-msgstr ""
+msgstr "Xem"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:168
+#: cl/templates/scrollkeeper_cl.xml.in.h:178
 msgid "Virus"
 msgstr "Virus"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:169
+#: cl/templates/scrollkeeper_cl.xml.in.h:179
 msgid "Visualisation"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:170
+#: cl/templates/scrollkeeper_cl.xml.in.h:180
 msgid "Web"
 msgstr "Web"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:171
+#: cl/templates/scrollkeeper_cl.xml.in.h:181
 msgid "Web Publishing"
 msgstr "Xuất bản Web"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:172
+#: cl/templates/scrollkeeper_cl.xml.in.h:182
 msgid "WebML"
 msgstr "WebML"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:173
+#: cl/templates/scrollkeeper_cl.xml.in.h:183
 msgid "White Papers"
 msgstr "Những trang trắng"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:174
+#: cl/templates/scrollkeeper_cl.xml.in.h:184
 msgid "Window Managers"
 msgstr "Bộ quản lý cửa sổ"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:175
+#: cl/templates/scrollkeeper_cl.xml.in.h:185
 msgid "Word Processing"
 msgstr ""
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:176
+#: cl/templates/scrollkeeper_cl.xml.in.h:186
 msgid "X"
 msgstr "X"
 
-#: cl/templates/scrollkeeper_cl.xml.in.h:177
+#: cl/templates/scrollkeeper_cl.xml.in.h:187
 msgid "gtk++"
 msgstr "gtk++"
+
+#~ msgid "error while parsing %s\n"
+#~ msgstr "lỗi khi phân tích %s\n"
+
+#~ msgid ""
+#~ "Usage:  toc <filename>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Cách dùng: toc <tập tin>\n"
+#~ "\n"
+
+#~ msgid "wrong omf file %s\n"
+#~ msgstr "tập tin omf sai %s\n"
