@@ -400,6 +400,8 @@ sub generatepot{
 
     if (${$modules{$mod}->[3]} eq "TRUE"){
       open (POTOUT,  "cd $cvsroot/${$modules{$mod}->[0]} && xml-i18n-update -P 1>&2 && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |") || die ("could not generate ${$modules{$mod}->[1]}");
+    } else {
+      open (POTOUT, "cd $cvsroot/${$modules{$mod}->[0]} && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |");
     }
     close (POTOUT);
 }
