@@ -1,371 +1,688 @@
-# firestarter CVS
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Yukihiro Nakai <nakai@gnome.gr.jp>, 2000.
+# firestarter ja.po.
+# Copyright (C) 2000, 2001 Free Software Foundation, Inc.
+# Takeshi Aihana <aihana@gnome.gr.jp>, 2000, 2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: firestarter CVS\n"
-"POT-Creation-Date: 2000-10-15 15:01+0900\n"
-"PO-Revision-Date: 2000-10-15 15:01+0900\n"
-"Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
+"Project-Id-Version: firestarter 0.6.0\n"
+"POT-Creation-Date: 2001-02-17 20:29+0200\n"
+"PO-Revision-Date: 2001-02-20 00:53+09:00\n"
+"Last-Translator: Takeshi Aihana <aihana@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: src/firestarter.c:87
+msgid "Old version detected"
+msgstr "古いバージョンを検出しました"
+
 #: src/firestarter.c:91
-msgid "Firewall running"
-msgstr "ファイアウォールを起動しています"
+msgid ""
+"\n"
+"A firewall created by an older version of\n"
+"Firestarter has been detected.\n"
+"\n"
+"OK to remove old firewall (recommended)?\n"
+msgstr ""
+"\n"
+"ファイヤーウォールは Firestarter の\n"
+"古いバージョンで作成されたようです。\n"
+"OK ボタンをクリックすると、\n"
+"古いファイヤーウォールを削除します。(推奨)\n"
 
-#: src/firestarter.c:94
+#: src/firestarter.c:129 src/firestarter.c:142
 msgid "Firewall stopped"
-msgstr "ファイアウォールを停止しました"
+msgstr "ファイヤーウォールは停止しています"
 
-#: src/firestarter.c:206
-msgid "Select file to save log to"
-msgstr "ログを保存するファイルを選択してください"
+#: src/firestarter.c:132 src/firestarter.c:139
+msgid "Firewall running"
+msgstr "ファイヤーウォールは動作中です"
 
-#: src/firestarter.c:230 src/firestarter.c:256
+#: src/firestarter.c:135
+msgid "All traffic halted"
+msgstr "全てのトラフィックを停止"
+
+#: src/firestarter.c:245 src/firestarter.c:309 src/firestarter.c:341
 msgid "You must be root to manipulate the firewall."
-msgstr "ファイアウォールを扱うにはrootでなければなりません。"
+msgstr "ファイヤーウォールを操作するには root になる必要があります。"
 
-#: src/firestarter.c:238
+#: src/firestarter.c:283
 msgid "Firewall stopped, network traffic is now flowing freely\n"
-msgstr "ファイアウォールは停止しています。ネットワークトラフィックは"
-"自由に流れています\n"
+msgstr "ファイヤーウォールは停止しています。ネットワーク・トラフィックは現在、無制御状態です\n"
 
-#: src/firestarter.c:262
+#: src/firestarter.c:315
 msgid "Firewall script restarted\n"
-msgstr "ファイアウォールスクリプトを再起動しました\n"
+msgstr "ファイヤーウォール・スクリプトが再起動されました\n"
 
-#: src/firestarter.c:353
-msgid "An all-in-one Linux firewall utility for GNOME"
-msgstr "GNOMEのオールインワンLinuxファイアウォールユーティリティ"
+#: src/firestarter.c:379
+msgid "All traffic halted\n"
+msgstr "全てのトラフィックを停止しました\n"
 
-#: src/firestarter.c:506
+#: src/firestarter.c:509
+msgid ""
+"An all-in-one Linux firewall utility for GNOME.\n"
+"http://firestarter.sourceforge.net"
+msgstr ""
+"GNOME向けのオールインワン Linux ファイヤーウォール・ツール。\n"
+"http://firestarter.sourceforge.net"
+
+#: src/firestarter.c:658 src/preferences.c:408
 msgid "Port"
-msgstr "ポート"
+msgstr "ポート番号"
 
-#: src/firestarter.c:507
+#: src/firestarter.c:659
 msgid "Sent from"
 msgstr "送信元"
 
-#: src/firestarter.c:508
+#: src/firestarter.c:660 src/preferences.c:409
 msgid "Service"
 msgstr "サービス"
 
-#: src/firestarter.c:509
+#: src/firestarter.c:661
 msgid "Time"
 msgstr "時間"
 
-#: src/firestarter.c:511
+#: src/firestarter.c:663
 msgid "Deny all connections from"
-msgstr "すべての接続を拒否する送信元"
+msgstr "禁止する接続"
 
-#: src/firestarter.c:512
+#: src/firestarter.c:664
 msgid "Allow all connections from"
-msgstr "すべての接続を受け付ける送信元"
+msgstr "許可する接続"
 
-#: src/firestarter.c:513 src/menus.c:76
+#: src/firestarter.c:665 src/menus.c:88
 msgid "Open service to machine"
-msgstr "サービスを開くマシン"
+msgstr "マシンに有効なサービス"
 
-#: src/firestarter.c:514 src/menus.c:77
+#: src/firestarter.c:666 src/menus.c:89
 msgid "Open service to anyone"
-msgstr "誰にでもサービスを開く"
+msgstr "公衆に有効なサービス"
 
-#: src/firestarter.c:544
+#: src/firestarter.c:699
 msgid "Firewall hits"
-msgstr "ファイアウォールヒット"
+msgstr "ファイヤーウォール・ヒット"
 
 #. set up the clists on the dynamic rules page
-#: src/firestarter.c:553
+#: src/firestarter.c:710
 msgid "Dynamic rules"
 msgstr "ダイナミックルール"
 
-#: src/firestarter.c:586
-msgid "Logfile \""
-msgstr "ログファイル \""
-
-#: src/firestarter.c:587
+#: src/firestarter.c:748
 msgid ""
-"\" not found or access denied.\n"
+"Log file not found or access denied.\n"
 "Firewall log monitoring disabled.\n"
 "\n"
 "You can configure the path to the log file in the \"preferences\" section."
 msgstr ""
-"\" は見つからないかアクセスが拒否されました。\n"
-"ファイアウォールのログモニタリングは無効です。\n"
+"ログファイルが見つからないか、またはアクセスが拒否されました。\n"
+"ファイヤーウォール・ログ監視機能は無効になります。\n"
 "\n"
-"\"設定\"セクションでログファイルのパスを設定することができます。"
+"\"設定\"メニューを選択してログファイルのパスを設定してください。"
 
-#: src/druid.c:72
+#: src/druid.c:111
 msgid ""
 "The external and internal network interfaces\n"
 "can't be the same. Please change one of them,\n"
 "or alternatively disable IP Masquerading."
 msgstr ""
-"外部と内部のネットワークインターフェースは\n"
-"同じにはできません。どちらか一つを変更するか、\n"
-"またはIPマスカレードを無効にしてください。"
+"外部及び内部ネットワーク・インタフェースを\n"
+"同じにする事が出来ません。どちらかを変更するか、\n"
+"どちらか一方の IP マスカレードを無効にして下さい。"
 
-#: src/druid.c:109
+#: src/druid.c:218
+msgid "Network Device Configuration"
+msgstr "ネットワーク・デバイスの設定"
+
+#: src/druid.c:226
 msgid ""
-"Do you use IP Masquerading on your LAN, allowing all the machines on your "
-"network\n"
-"to communicate with the Internet via a single IP address?"
-msgstr ""
-"LANのマシンすべてが一つのIPアドレスでインターネットにアクセスできるように"
-"LANでIPマスカレードを使いますか?"
-
-#: src/druid.c:119
-msgid "No, I do not use IP Masquerading on my LAN"
-msgstr "いいえ、LANでIPマスカレードを使いません"
-
-#: src/druid.c:124
-msgid ""
-"Yes, this machine translates the IP addresses of my LAN for the Internet"
-msgstr ""
-"はい、このマシンがLANのIPアドレスをインターネットのアドレスに変換します"
-
-#: src/druid.c:142
-msgid "Select your internal network interface:"
-msgstr "内部ネットワークのインターフェースを選択してください:"
-
-#: src/druid.c:154
-msgid "Autodetect internal network IP range"
-msgstr "内部ネットワークのIPレンジを自動検出"
-
-#: src/druid.c:159
-msgid "Specify internal network IP range manually"
-msgstr "内部ネットワークのIPレンジを手動で指定する"
-
-#: src/druid.c:171
-msgid "Enter the your internal network address range:"
-msgstr "内部ネットワークのアドレスレンジを入力してください:"
-
-#: src/druid.c:182
-msgid ""
-"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
-"common\n"
-"IP range reserved for internal networks and should work for most people."
-msgstr ""
-"ネットワークレンジはアドレス/マスクの形式で指定します。192.168.1.0/24は"
-"内部ネットワーク用に共通で予約されているIPレンジなのでほとんどの人々が"
-"使えるはずです。"
-
-#: src/druid.c:220
-msgid ""
-"Choose the device you connect to the Internet with.\n"
+"Please select your Internet connected network device from the\n"
+"drop-down list of detected devices.\n"
 "\n"
-"If you connect to the net by modem, your device name is likely ppp0. If you "
-"have an\n"
-"ISDN line or an ethernet connection, choose ippp0 or eth0 respectively."
+"If you use a modem your device name is likely ppp0. If you have a\n"
+"cable modem or a DSL connection, choose eth0."
 msgstr ""
-"インターネットに接続するデバイスを選択してください。\n"
+"インターネットに接続するデバイスを、検出されたデバイスの\n"
+"ドロップダウン形式の一覧から選択して下さい。\n"
 "\n"
-"ネットワークにモデムで接続するなら、デバイス名はppp0などになります。"
-"ISDNやイーサネット接続ならば、ippp0やeth0を選択してください。"
+"モデムを使って接続する場合は、デバイス名は ppp0 になります。\n"
+"ケーブルモデムを所有しているかまたは xDSL 接続の場合は eth0 を選択して下さい。"
 
-#: src/druid.c:234
+#: src/druid.c:239
 msgid "Detected device(s):"
-msgstr "検出されたデバイス(s):"
+msgstr "検出したデバイス:"
 
-#: src/druid.c:262
-msgid ""
-"Do you run server software on your machine and want other people to have "
-"access\n"
-"to the network services you provide?"
-msgstr ""
-"サーバソフトウェアをマシンで起動して、それが提供するネットワークサービスに"
-"他のユーザもアクセスできるようにしますか?"
+#: src/druid.c:244
+msgid "Select your network device from the dropdown list. Go with the default if unsure."
+msgstr "ドロップダウン・リストからネットワークデバイスを選択して下さい。不明な場合はデフォルトで良いです。"
+
+#: src/druid.c:253
+msgid "Start the firewall on dial-out"
+msgstr "ダイアル接続が完了したらファイヤーウォールを起動する"
+
+#: src/druid.c:255
+msgid "Check this option and the firewall will start when you dial your Internet Service Provider. Only available when using a modem."
+msgstr "インターネット・サービス・プロバイダ(ISP)にダイアルしたらファイヤーウォールを起動させる場合に、このオプションをチェックして下さい。モデムを使う場合にのみ有効です。"
+
+#: src/druid.c:269
+msgid "IP address is assigned via DHCP"
+msgstr "DHCP を通して指定された IP アドレス"
 
 #: src/druid.c:271
+msgid "Check this option if you need to connect to a DHCP server. Cable modem users should check this."
+msgstr "DHCP サーバーに接続する必要がある場合に、このオプションをチェックして下さい。ケーブルモデム接続ユーザーもこれをチェックする必要があります。"
+
+#: src/druid.c:309
+msgid "IP Masquerade Configuration"
+msgstr "IP マスカレードの設定"
+
+#: src/druid.c:318
+msgid ""
+"Do you use IP Masquerading on your LAN, allowing all the machines on your network\n"
+"to communicate with the Internet via a single IP address?"
+msgstr ""
+"LAN 上で全てのマシンが単一の IP アドレスを通してインターネットに接続する\n"
+"IP マスカレード機能を使用しますか？"
+
+#: src/druid.c:327
+msgid "Disable masquerading"
+msgstr "IP マスカレード機能を無効にする"
+
+#: src/druid.c:334
+msgid "Enable masquerading"
+msgstr "IP マスカレード機能を有効にする"
+
+#: src/druid.c:354
+msgid "Select your internal network interface:"
+msgstr "内部ネットワーク・インタフェースを選択して下さい:"
+
+#: src/druid.c:362
+msgid "This is the device that connects to your LAN. Go with the default if unsure."
+msgstr "これは LAN に接続するデバイスです。不明な場合はデフォルトを選択して下さい。"
+
+#: src/druid.c:370
+msgid "Autodetect internal network IP range"
+msgstr "内部ネットワークの IP レンジを自動検出する"
+
+#: src/druid.c:372
+msgid "Select this and the IP range of your LAN is autodetected."
+msgstr "これと LAN 上の自動検出された IP レンジを選択して下さい。"
+
+#: src/druid.c:379
+msgid "Specify internal network IP range manually (Not recommended)"
+msgstr "内部ネットワークの IP レンジをマニュアルで指定する (推奨しません)"
+
+#: src/druid.c:381
+msgid "Select this only if the automatic detection fails."
+msgstr "自動検出が失敗した場合にのみ、これを選択して下さい。"
+
+#: src/druid.c:394
+msgid "Enter the internal network address range:"
+msgstr "内部ネットワークのアドレスレンジを入力して下さい:"
+
+#: src/druid.c:408
+msgid ""
+"The network range is given in the form of address/mask. 192.168.0.0/24 is the most\n"
+"common IP range reserved for internal networks."
+msgstr ""
+"ネットワークレンジはアドレス/マスクの形式で与えられます。192.168.1.0/24 は共通な\n"
+"IP レンジを内部ネットワーク向けに予約されています。"
+
+#: src/druid.c:441
+msgid "Services Configuration"
+msgstr "サービスの設定"
+
+#: src/druid.c:450
+msgid ""
+"Do you run server software on your machine and want other people to have access\n"
+"to the network services you provide?"
+msgstr ""
+"ホスト上のサーバーソフトを起動して、他の人達があなたの提供する\n"
+"ネットワーク・サービスにアクセスできるようにしますか?"
+
+#: src/druid.c:458
 msgid "No, I do not run any public network services on my machine"
-msgstr "いいえ、このマシンではパブリックなネットワークサービスはしません"
+msgstr "いいえ、公衆向けのネットワーク・サービスを起動しません。"
 
-#: src/druid.c:276
+#: src/druid.c:465
 msgid "Yes, I run the following services on my machine:"
-msgstr "はい、このマシンでは次のサービスを起動します:"
+msgstr "はい、ホスト上にある次のサービスを起動します:"
 
-#: src/druid.c:388
+#: src/druid.c:572
+msgid "ICMP Configuration"
+msgstr "ICMP フィルタリング設定"
+
+#: src/druid.c:581
+msgid ""
+"ICMP Packet Filtering can be useful to prevent some common\n"
+"Denial of Service (DoS) attacks on your network.\n"
+"\n"
+"Would you like to enable ICMP Filtering?"
+msgstr ""
+"ICMP パケットフィルタリングは、DoS 攻撃(Denial of Service) から\n"
+"ネットワークを保護するのに有効な機能です。\n"
+"\n"
+"ICMP フィルタリング機能を有効にしますか？"
+
+#: src/druid.c:590
+msgid "Disable ICMP Filtering"
+msgstr "ICMP フィルタリングを無効にする"
+
+#: src/druid.c:597
+msgid "Enable ICMP Filtering related to the following packets:"
+msgstr "次のパケットに関連する ICMP パケットフィルタリングを有効にする:"
+
+#: src/druid.c:669
+msgid "Type of Service (ToS) Configuration"
+msgstr "サービス種類(ToS)の設定"
+
+#: src/druid.c:678
+msgid ""
+"Type of Service filtering allows you to re-prioritize network\n"
+"services to allow higher throughput rates for commonly used services.\n"
+"\n"
+"Would you like to enable ToS Filtering?\n"
+msgstr ""
+"一般に使用されるサービス向けの高い処理能力を可能にするために、\n"
+"サービスのフィルタリングの種類の優先順位の再定義が可能です。\n"
+"\n"
+"ToS フィルタリング処理を可能にしますか？\n"
+
+#: src/druid.c:687
+msgid "Disable ToS Filtering"
+msgstr "ToS フィルタリング処理を無効にする"
+
+#: src/druid.c:694
+msgid "Enable ToS Filtering related to the following packets:"
+msgstr "次のパケットに関連する ToS フィルタリングを有効にする:"
+
+#: src/druid.c:715
+msgid "Check this option to enable Type of Service flags for common client applications, such as WWW, FTP, SSH & E-Mail."
+msgstr "共通なクライアント・アプリ、例えば WWW, FTP, SSH, E-メール等に対するサービスフラグの種類を有効にする場合に、このオプションをチェックして下さい。"
+
+#: src/druid.c:722
+msgid "Check this option to enable Type of Service flags for common server applications, such as SQUID, FTPd, SSHd, STMP & POP Daemons."
+msgstr "共通なサーバー・アプリ、例えば SQUID, FTPd, SSHd, STMP, POP デーモン等に対するサービスフラグの種類を有効にする場合に、このオプションをチェックして下さい。"
+
+#: src/druid.c:729
+msgid "Selecting this option will automatically configure Type of Service for `Throughput' for both X and SSHd.You should select this ONLY if you need to run X over your link"
+msgstr "このオプションを選択すると、X と SSHD 向けに \"パフォーマンス\" を重視するサービスの種類を自動的に設定します。リンク越しに X を起動する場合にのみ、このオプションを選択する必要があります。"
+
+#: src/druid.c:742
+msgid "Selecting this option will configure Type of Service flags for Maximum Throughput for the options you have selected."
+msgstr "このオプションを選択すると、選択したオプション群に対して最大パフォーマンスでサービスフラグの種類を設定します。"
+
+#: src/druid.c:746
+msgid "Reliability"
+msgstr "信頼性"
+
+#: src/druid.c:750
+msgid "Selecting this option will configure Type of Service flags for Maximum Reliability for the options you have selected."
+msgstr "このオプションを選択すると、選択したオプション群に対して最大の信頼性を持つようにサービスフラグの種類を設定します。"
+
+#: src/druid.c:754
+msgid "Delay"
+msgstr "遅延"
+
+#: src/druid.c:758
+msgid "Selecting this option will configure Type of Service flags for Minimum Delay for the options you have selected."
+msgstr "このオプションを選択すると、選択したオプション群に対して最小の遅延でサービスフラグの種類を設定します。"
+
+#: src/druid.c:785
+msgid ""
+"Welcome to Firestarter!\n"
+"\n"
+"\n"
+"This wizard will now help you to set up a firewall for your\n"
+"Linux machine. You will be asked some questions about\n"
+"your network setup.\n"
+"\n"
+"Press the next button to continue.\n"
+"\n"
+"\n"
+msgstr ""
+"Firestarter へようこそ！\n"
+"\n"
+"\n"
+"このウィザードは貴方の Linux マシンに対するファイヤーウォールの\n"
+"設定のお手伝いをします。ネットワーク設定についての幾つかの質問に\n"
+"答えて下さい。\n"
+"\n"
+"続行する場合は \"次へ\" ボタンをクリックして下さい。\n"
+"\n"
+"\n"
+
+#: src/druid.c:822
+msgid ""
+"The wizard is now ready to generate your firewall.\n"
+"\n"
+"Press the finish button to continue, or the back button\n"
+"to review your choices.\n"
+"\n"
+msgstr ""
+"ファイヤーウォールを構築するための準備が整いました。\n"
+"\n"
+"続行する場合は \"完了\" ボタンをクリックして下さい。\n"
+"設定を見直す場合は \"戻る\" ボタンをクリックして下さい。\n"
+"\n"
+
+#: src/druid.c:877
 msgid "You must be root to use the Firestarter wizard."
-msgstr "Firestarterウィザードを使うにはrootでなければなりません。"
+msgstr "Firestarter ウィザードを利用するには root になる必要があります。"
 
-#: src/druid.c:393
+#: src/druid.c:894
 msgid "Firestarter Firewall Wizard"
-msgstr "Firestarterファイアウォールウィザード"
+msgstr "Firestarter ファイヤーウォール・ウィザード"
 
-#. Create the basic druid pages
-#: src/druid.c:409
-msgid "Firestarter Wizard"
-msgstr "Firestarterウィザード"
+#: src/preferences.c:169
+msgid "General options"
+msgstr "全般オプション"
 
-#: src/druid.c:410
-msgid ""
-"Welcome to the Firestarter Firewall Wizard\n"
-"\n"
-"This wizard will help you set up a customized packet filtering firewall\n"
-"for your Linux machine in just a few easy steps.\n"
-"\n"
-"\n"
-msgstr ""
-"Firestarterファイアウォールウィザード\n"
-"\n"
-"このウィザードは、Linuxマシンでパケットをフィルタするファイアウォールを\n"
-"調整するのに2、3の簡単なステップで設定できるようにします。\n"
-
-#: src/druid.c:416
-msgid "Choose your external interface"
-msgstr "外部インターフェースを選択してください"
-
-#: src/druid.c:417
-msgid "IP Masquerade setup"
-msgstr "IPマスカレードセットアップ"
-
-#: src/druid.c:418
-msgid "Choose allowed services"
-msgstr "許可するサービスを選択してください"
-
-#: src/druid.c:420
-msgid "Wizard done"
-msgstr "ウィザード終了"
-
-#: src/druid.c:421
-msgid ""
-"The Firestarter wizard is done gathering the necessary data.\n"
-"Click the finish button to start the firewall.\n"
-"\n"
-msgstr ""
-"Firestarterウィザードは必要なデータを集め終りました。\n"
-"完了ボタンを押してファイアウォールを開始してください。\n"
-"\n"
-
-#: src/preferences.c:89
-msgid "General"
-msgstr "一般"
-
-#: src/preferences.c:97
-msgid "Firewall syslog file:"
-msgstr "ファイアウォールのsyslogファイル:"
-
-#. label = gtk_label_new _("Firewall script file:");
-#. gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
-#. gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2,
-#. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
-#.
-#. scriptentry = gtk_entry_new ();
-#. gtk_entry_set_text (GTK_ENTRY (scriptentry),
-#. gnome_config_get_string ("/firestarter/Files/scriptfile=/usr/local/firestarter/firewall.sh"));
-#. gtk_table_attach (GTK_TABLE (table), scriptentry, 1, 2, 1, 2,
-#. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
-#.
-#: src/preferences.c:121
+#: src/preferences.c:178
 msgid "Start firewall on program startup"
-msgstr "プログラムの起動時にファイアウォールを開始する"
+msgstr "起動時にファイヤーウォールを起動する"
 
-#: src/preferences.c:125
+#: src/preferences.c:180
+msgid "Check this and the firewall will be restarted each time the program starts. Enabled by default."
+msgstr "プログラムを起動する度にファイヤーウォールを再起動する場合に、これをチェックして下さい。デフォルトで有効です。"
+
+#: src/preferences.c:187
 msgid "Stop firewall on program exit"
-msgstr "プログラムの終了時にファイアウォールを停止する"
+msgstr "終了時にファイヤーウォールを停止する"
 
-#: src/preferences.c:129
+#: src/preferences.c:189
+msgid "Check this and the firewall will be stopped when you exit Firestarter. Enabled by default."
+msgstr "Firestarter 終了時にファイヤーウォールを停止する場合に、これをチェックして下さい。デフォルトで有効です。"
+
+#: src/preferences.c:196
 msgid "Exit program when window is closed (otherwise hide)"
-msgstr "ウィンドウが閉じたら(または非表示になったら)プログラムを終了する"
+msgstr "ウィンドウ(隠れたものも含む)を閉じたらプログラムを終了する"
 
-#: src/preferences.c:133
+#: src/preferences.c:198
+msgid "By default when you close the program window the program is merely hidden, you can then make it visible again by clicking on the status button."
+msgstr "単に隠れたプログラムウィンドウを閉じた場合、ステータスボタンをクリックする事で再度表示させることができます。"
+
+#: src/preferences.c:205
 msgid "Start hidden"
-msgstr "非表示で開始"
+msgstr "起動時にウィンドウを隠す"
 
-#: src/preferences.c:137
-msgid "Remove identical firewall hit lines"
-msgstr "同じファイアウォールのヒット行は削除する"
+#: src/preferences.c:207
+msgid "Check this and Firestarter will start hidden. Click on the status button to unhide. Disabled by default."
+msgstr "Firestarter を非表示で起動する場合に、これをチェックして下さい。ステータスボタンをクリックすると表示します。デフォルトは無効です。"
 
-#: src/scriptwriter.c:292
-#, c-format
-msgid "Firewall started, firewall script saves as %s\n"
-msgstr "ファイアウォールが開始しました。ファイアウォールスクリプトは%s"
-"として保存します\n"
+#: src/preferences.c:252
+msgid "Play current sound file"
+msgstr "このサウンドファイルを演奏する"
 
-#: src/service.c:99
-msgid "Unknown"
+#: src/preferences.c:280
+msgid "Sound options"
+msgstr "サウンド・オプション"
+
+#: src/preferences.c:288
+msgid "Enable sounds"
+msgstr "サウンドを有効にする"
+
+#: src/preferences.c:290
+msgid "Check this if you want to hear sounds on certain events"
+msgstr "幾つかのイベントでサウンドを鳴らす場合に、これをチェックして下さい"
+
+#: src/preferences.c:298
+msgid "File to play on firewall hit:"
+msgstr "ファイヤーウォール・ヒット時のファイル:"
+
+#: src/preferences.c:303
+msgid "Enter the path to the sound file that should be played when a firewall hit occurs."
+msgstr "ファイヤーウォールにヒットした時に鳴らすサウンドファイルへのパスを入力して下さい。"
+
+#: src/preferences.c:318
+msgid "File to play on firewall stop:"
+msgstr "ファイヤーウォール停止時のファイル:"
+
+#: src/preferences.c:323
+msgid "Enter the path to the sound file that should be played when the firewall is stopped."
+msgstr "ファイヤーウォールが停止した時に鳴らすサウンドファイルへのパスを入力して下さい。"
+
+#: src/preferences.c:338
+msgid "File to play on firewall restart:"
+msgstr "ファイヤーウォール再起動時のファイル:"
+
+#: src/preferences.c:343
+msgid "Enter the path to the sound file that should be played when the firewall is restarted."
+msgstr "ファイヤーウォールが再起動した時に鳴らすサウンドファイルへのパスを入力して下さい。"
+
+#: src/preferences.c:415
+msgid "Never log these ports"
+msgstr "これらのポートはログしない"
+
+#: src/preferences.c:447
+msgid "Add"
+msgstr "追加"
+
+#: src/preferences.c:460
+msgid "Misc. options"
+msgstr "その他のオプション"
+
+#: src/preferences.c:470
+msgid "Syslog file:"
+msgstr "システム・ログファイル:"
+
+#: src/preferences.c:479
+msgid "Enter the path to the file the syslog daemon logs to. This is almost always /var/log/messages."
+msgstr "システムログ・ファイルのパスを入力して下さい。これは大抵の場合、 /var/log/message です。"
+
+#: src/preferences.c:493
+msgid "Filter identical hits"
+msgstr "フィルタ同一ヒット"
+
+#: src/preferences.c:495
+msgid "Check this and the firewall hit log will filter out identical lines. Enabled by default."
+msgstr "これをチェックすると、ファイヤーウォール・ヒット・ログは同一ラインを除外します。デフォルトで有効です。"
+
+#: src/preferences.c:519
+msgid "Wizard options"
+msgstr "ウィザードオプション"
+
+#: src/preferences.c:527
+msgid "Show every page in wizard"
+msgstr "ウィザードの各ページを表示する"
+
+#: src/preferences.c:529
+msgid "Check this and every wizard page will be available in the wizard"
+msgstr "これをチェックすると、ウィザードの各ページが表示されます。"
+
+#: src/preferences.c:534
+msgid "Filter Outbound Packets"
+msgstr "外部向けのフィルタ・パケット"
+
+#: src/preferences.c:536
+msgid "Check this and Firestarter will also filter Outbound packets. Do not check unless you are sure you need it."
+msgstr "Firestarter が外部向けのパケットもフィルタリングする場合に、これをチェックして下さい。必要がある場合にのみチェックして下さい。"
+
+#: src/preferences.c:542
+msgid "Try to detect the location of system binaries"
+msgstr "システムバイナリの格納場所を検出してみる"
+
+#: src/preferences.c:544
+msgid "Check this and Firestarter will search for the location of some needed binaries. Do not check unless you're having problems."
+msgstr "これをチェックすると、Firestarter は幾つかのバイナリの格納場所を検索します。何か問題がある場合はこれをチェックしないで下さい。"
+
+#: src/preferences.c:550
+msgid "Preferred packet rejection method"
+msgstr "使用するパケット排除方法"
+
+#: src/preferences.c:558
+msgid "Deny"
+msgstr "使用しない"
+
+#: src/preferences.c:560
+msgid "Checking this box will simply ignore the unauthorized packets."
+msgstr "これをチェックすると、認証されていないパケットを単に無視するだけです。"
+
+#: src/preferences.c:566
+msgid "Reject"
+msgstr "使用する"
+
+#: src/preferences.c:568
+msgid "Checking this box will reject the unauthorized packets"
+msgstr "これをチェックすると、認証されていないパケットを排除します。"
+
+#: src/preferences.c:573
+msgid "You must rerun the wizard for the changes to take effect"
+msgstr "変更したオプションを有効にするためにウィザードを再起動する必要があります。"
+
+#: src/preferences.c:637
+msgid "Firestarter: Preferences"
+msgstr "Firestarter: 設定"
+
+#: src/preferences.c:651
+msgid "General"
+msgstr "全般"
+
+#: src/preferences.c:652
+msgid "Logging"
+msgstr "ログ記録"
+
+#: src/preferences.c:653
+msgid "Sounds"
+msgstr "サウンド"
+
+#: src/preferences.c:654
+msgid "Advanced"
+msgstr "拡張"
+
+#: src/preferences.c:733
+msgid "Select the syslog log file"
+msgstr "システムログ・ファイルを選択して下さい"
+
+#: src/preferences.c:734
+msgid "Select the file to play a sound"
+msgstr "サウンドを鳴らすファイルの選択"
+
+#: src/preferences.c:768
+msgid "Browse"
+msgstr "参照"
+
+#: src/service.c:40
+msgid "unknown"
 msgstr "不明"
 
-#: src/menus.c:23 src/menus.c:34
+#: src/menus.c:32 src/menus.c:43
 msgid "R_estart firewall"
-msgstr "ファイアウォールの再起動(_E)"
+msgstr "再起動(_E)"
 
-#: src/menus.c:24 src/menus.c:35
+#: src/menus.c:33 src/menus.c:44
 msgid "_Stop firewall"
-msgstr "ファイアウォールの停止(_S)"
+msgstr "停止(_S)"
 
-#: src/menus.c:33
+#: src/menus.c:42
 msgid "_Run firewall wizard"
-msgstr "ファイアウォールウィザードの起動(_R)"
-
-#: src/menus.c:43
-msgid "_Clear firewall hit list"
-msgstr "ファイアウォールのヒットリストを消去(_C)"
-
-#: src/menus.c:44
-msgid "R_eload entire firewall hit list"
-msgstr "全ファイアウォールのヒットリストを再読み込み(_E)"
+msgstr "ウィザード起動(_R)"
 
 #: src/menus.c:45
-msgid "_Save firewall hit list to file"
-msgstr "ファイアウォールのヒットリストをファイルに保存(_S)"
+msgid "_Halt all network traffic"
+msgstr "全ネットワーク通信を停止(_H)"
+
+#: src/menus.c:53
+msgid "_Clear firewall hit list"
+msgstr "クリア(_C)"
+
+#: src/menus.c:54
+msgid "R_eload entire firewall hit list"
+msgstr "再読み込み(_E)"
 
 #: src/menus.c:55
-msgid "_Firewall"
-msgstr "ファイアウォール(_F)"
+msgid "_Save firewall hit list to file"
+msgstr "保存(_S)"
 
-#: src/menus.c:56
+#: src/menus.c:60
+msgid "Firestarter _Homepage"
+msgstr "Firestarter ホームページ(_H)"
+
+#: src/menus.c:67
+msgid "_Firewall"
+msgstr "ファイヤーウォール(_F)"
+
+#: src/menus.c:68
 msgid "_Hit list"
 msgstr "ヒットリスト(_H)"
 
-#: src/menus.c:62
-msgid "Run firewall wizard"
-msgstr "ファイアウォールウィザードの起動"
-
-#: src/menus.c:64
-msgid "Clear firewall hit list"
-msgstr "ファイアウォールのヒットリストの消去"
-
-#: src/menus.c:65
-msgid "Reload entire firewall hit list"
-msgstr "全ファイアウォールのヒットリストの再読み込み"
-
-#: src/menus.c:66
-msgid "Save firewall hit list to file"
-msgstr "ファイアウォールのヒットリストをファイルに保存"
-
-#: src/menus.c:68
-msgid "Restart firewall"
-msgstr "ファイアウォールの再起動"
-
-#: src/menus.c:69
-msgid "Stop firewall"
-msgstr "ファイアウォールの停止"
-
 #: src/menus.c:74
+msgid "Run firewall wizard"
+msgstr "ウィザードを起動します"
+
+#: src/menus.c:76
+msgid "Clear firewall hit list"
+msgstr "ヒットリストを消去します"
+
+#: src/menus.c:77
+msgid "Reload entire firewall hit list"
+msgstr "ヒットリストの全てを再度読み込みます"
+
+#: src/menus.c:78
+msgid "Save firewall hit list to file"
+msgstr "ヒットリストをファイルに保存します"
+
+#: src/menus.c:80
+msgid "Restart firewall"
+msgstr "ファイヤーウォールを再起動します"
+
+#: src/menus.c:81
+msgid "Stop firewall"
+msgstr "ファイヤーウォールを停止します"
+
+#: src/menus.c:86
 msgid "Deny all connections from machine"
-msgstr "すべての接続を拒否するマシン"
-
-#: src/menus.c:75
-msgid "Allow all connections from machine"
-msgstr "すべての接続を許可するマシン"
-
-#: src/menus.c:79
-msgid "Lookup hostname"
-msgstr "ホスト名のルックアップ"
-
-#: src/menus.c:84
-msgid "Remove this rule"
-msgstr "このルールの削除"
-
-#: src/menus.c:85
-msgid "Remove all rules in this group"
-msgstr "このグループのすべてのルールを削除"
+msgstr "全ての接続を禁止"
 
 #: src/menus.c:87
+msgid "Allow all connections from machine"
+msgstr "全ての接続を許可"
+
+#: src/menus.c:91
+msgid "Do not log this port"
+msgstr "このポートをログしない"
+
+#: src/menus.c:92
+msgid "Lookup hostname"
+msgstr "ホスト名の検索"
+
+#: src/menus.c:97
+msgid "Remove this rule"
+msgstr "このルールを削除"
+
+#: src/menus.c:98
+msgid "Remove all rules in this group"
+msgstr "このグループから全てのルールを削除"
+
+#: src/menus.c:99
 msgid "Remove all rules in all groups"
-msgstr "全グループのすべてのルールを削除"
+msgstr "全てのグループの全てのルールを削除"
+
+#: src/addrules.c:97 src/menus.c:101
+msgid "Add new rule"
+msgstr "新規のルールを追加"
+
+#: src/addrules.c:106
+msgid "Protocol:"
+msgstr "プロトコル:"
+
+#: src/addrules.c:120
+msgid "Enter IP range or hostname to deny all connections from:"
+msgstr "全ての接続を拒否する IP の範囲またはホスト名を入力:"
+
+#: src/addrules.c:122
+msgid "Enter IP range or hostname to allow all connections from:"
+msgstr "全ての接続を許可する IP の範囲またはホスト名を入力:"
+
+#: src/addrules.c:124 src/addrules.c:133
+msgid "Enter the port number of the service to open:"
+msgstr "有効にするサービスのポート番号を入力:"
+
+#: src/addrules.c:126
+msgid "Enter IP range or hostname to open service to:"
+msgstr "サービスを有効にする対象の IP 範囲またはホスト名を入力:"
+
+#: src/savelog.c:55
+msgid "Select file to save log to"
+msgstr "ログとして保存するファイルの選択"
+
