@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: red-carpet\n"
-"POT-Creation-Date: 2002-01-09 18:58-0500\n"
-"PO-Revision-Date: 2002-01-12 04:01+0100\n"
+"POT-Creation-Date: 2002-03-04 12:38-0500\n"
+"PO-Revision-Date: 2002-03-05 02:38+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -209,20 +209,20 @@ msgid "Path:"
 msgstr "Sökväg:"
 
 #: redcarpet.glade.h:56
-msgid "Allowed cache difference:"
-msgstr "Tillåten cacheskillnad:"
-
-#: redcarpet.glade.h:57
-msgid "seconds"
-msgstr "sekunder"
-
-#: redcarpet.glade.h:58
 msgid "Clear cached packages on startup"
 msgstr "Töm mellanlagrade paket vid uppstart"
 
-#: redcarpet.glade.h:59
+#: redcarpet.glade.h:57
 msgid "Clear cached packages on exit"
 msgstr "Töm mellanlagrade paket vid avslut"
+
+#: redcarpet.glade.h:58
+msgid "Clear cached packages after a period of time"
+msgstr "Töm mellanlagrade paket efter en tid"
+
+#: redcarpet.glade.h:59
+msgid "Days:"
+msgstr "Dagar:"
 
 #: redcarpet.glade.h:60
 msgid "Cache"
@@ -355,15 +355,15 @@ msgid ""
 msgstr ""
 "Om du är bakom en brandvägg och använder en proxyserver för att komma åt\n"
 "webbplatser bör du slå på proxystöd här. Om din proxyserver kräver\n"
-"autentisering väljer du \"Använd autentisering\" och anger ditt "
-"användarnamn\n"
-"och lösenord.\n"
+"autentisering väljer du \"Använd autentisering\" och anger ditt\n"
+"användarnamn och lösenord.\n"
 "\n"
-"Du kan ändra dessa inställningar i framtiden genom att välja Inställningar "
-"i\n"
-"menyn Inställningar. Inställningarna finns på fliken Proxyserver.\n"
+"Du kan ändra dessa inställningar i framtiden genom att välja\n"
+"Inställningar i menyn Inställningar. Inställningarna finns på fliken\n"
+"Proxyserver.\n"
 "\n"
-"När du har angett din proxyinformation klickar du på OK för att fortsätta.\n"
+"När du har angett din proxyinformation klickar du på OK för att\n"
+"fortsätta.\n"
 
 #: redcarpet.glade.h:103
 msgid "Use authentication"
@@ -446,62 +446,84 @@ msgstr ""
 msgid "Password:"
 msgstr "Lösenord:"
 
-#: redcarpet/gui-channel.c:178
-#, c-format
-msgid ""
-"<p>Transfer of %s did not complete: %s</p><p>If you select cancel, Red "
-"Carpet will skip this channel and it will be unavailable for the rest of "
-"this session (or until you refresh the channel list)."
-msgstr ""
-"<p>Överföringen av %s färdigställdes inte: %s</p><p>Om du väljer avbryt "
-"kommer Red Carpet att hoppa över denna kanal, och den kommer att vara "
-"otillgänglig under resten av sessionen (eller till du uppdaterar "
-"kanallistan)."
+#: redcarpet.glade.h:137
+msgid "Red Carpet"
+msgstr "Red Carpet"
 
-#: redcarpet/gui-channel.c:209
+#: redcarpet.glade.h:138
+msgid ""
+"Red Carpet will generate the dependency information required to analyze this "
+"failure and email it to Ximian, Inc.\n"
+"\n"
+"Please fill out the form below in the event that a follow-up is necessary to "
+"further diagnose the problem."
+msgstr ""
+"Red Carpet kommer att generera den beroendeinformation som krävs för att "
+"analysera detta fel och e-posta den till Ximian, Inc.\n"
+"\n"
+"Fyll i formuläret nedan så att du kan kontaktas ifall uppföljning är "
+"nödvändig för att ytterligare diagnosera problemet."
+
+#: redcarpet.glade.h:141
+msgid "Name: "
+msgstr "Namn: "
+
+#: redcarpet.glade.h:142
+msgid "Email:"
+msgstr "E-post:"
+
+#: redcarpet.glade.h:143
+msgid "Progress: "
+msgstr "Förlopp: "
+
+#: redcarpet.glade.h:144
+msgid "%P %%"
+msgstr "%P%%"
+
+#: redcarpet/gui-channel.c:171
+msgid ""
+"<p>If you select cancel, Red Carpet will skip this channel and it will be "
+"unavailable for the rest of this session (or until you refresh the channel "
+"list)."
+msgstr ""
+"<p>Om du väljer avbryt kommer Red Carpet att hoppa över denna kanal, och den "
+"kommer att vara otillgänglig under resten av sessionen (eller till du "
+"uppdaterar kanallistan)."
+
+#: redcarpet/gui-channel.c:198
 msgid ""
 "<p>An error occured trying to parse channel information.</p><p>This may be "
 "caused either by an old version of Red Carpet that is unable to read newer "
 "data files or by an error on the server. If you cancel, Red Carpet will skip "
 "this channel and it will be unavailable for the rest of this session (or "
-"until you refresh the channel list).</p><p>You should report this error to "
-"<a href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</a>, along "
-"with distribution information.<br>"
+"until you refresh the channel list).</p>"
 msgstr ""
 "<p>Ett fel inträffade vid försök att tolka kanalinformationen.</p><p>Detta "
 "kan antingen bero på en gammal version av Red Carpet som inte kan läsa nya "
 "datafiler eller ett fel på servern. Om du avbryter kommer Red Carpet att "
 "hoppa över denna kanal och vara otillgänglig under resten av denna session "
-"(eller till du uppdaterar kanallistan).</p><p>Du bör rapportera detta fel "
-"till <a href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</a>, "
-"tillsammans med distributionsinformation. Skriv brevet på engelska.<br>"
+"(eller till du uppdaterar kanallistan).</p>"
 
-#: redcarpet/gui-channel.c:283
+#: redcarpet/gui-channel.c:268
 #, c-format
 msgid "Downloading channel data (%s)"
 msgstr "Hämtar kanaldata (%s)"
 
-#: redcarpet/gui-channel.c:298
+#: redcarpet/gui-channel.c:283
 #, c-format
 msgid ""
 "<p>An error has occurred while downloading channel data.</p><p>Red Carpet "
 "was unable to fetch information for the \"%s\" channel from the server. Red "
 "Carpet can continue without this information, but you will be unable to "
-"access that channel during this session (unless you refresh).</p><p>If this "
-"problem persists, please report it to <a href=\"mailto:red-carpet@ximian.com"
-"\">red-carpet@ximian.com</a>. Please include distribution information with "
-"your report.</p>"
+"access that channel during this session (unless you refresh).</p>"
 msgstr ""
 "<p>Ett fel har inträffat vid hämtning av kanaldatan.</p><p>Red Carpet kunde "
 "inte hämta information för kanalen \"%s\" från servern. Red Carpet kan "
 "fortsätta utan denna information, men du kommer inte att kunna komma åt "
-"denna kanal under denna session (om du inte uppdaterar).</p><p>Om detta "
-"problem kvarstår bör du rapportera det till <a href=\"mailto:red-"
-"carpet@ximian.com\">red-carpet@ximian.com</a>. Skriv rapporten på engelska "
-"och ta med distributionsinformation.</p>"
+"denna kanal under denna session (om du inte uppdaterar).</p>"
 
-#: redcarpet/gui-channel.c:744 redcarpet/gui-init.c:302
-#: redcarpet/gui-init.c:1117 redcarpet/gui-init.c:1123
+#: redcarpet/gui-channel.c:685 redcarpet/gui-init.c:312
+#: redcarpet/gui-init.c:1134 redcarpet/gui-init.c:1140
 msgid "Downloading channel data..."
 msgstr "Hämtar kanaldata..."
 
@@ -566,7 +588,7 @@ msgstr "Hämtar filer"
 msgid "Total"
 msgstr "Totalt"
 
-#: redcarpet/gui-download.c:367 redcarpet/gui-install.c:391
+#: redcarpet/gui-download.c:367 redcarpet/gui-install.c:436
 msgid "Removing"
 msgstr "Tar bort"
 
@@ -594,16 +616,16 @@ msgstr "Paketinstallation"
 msgid "Package Removal"
 msgstr "Paketborttagning"
 
-#: redcarpet/gui-glade.c:297
+#: redcarpet/gui-glade.c:296
 msgid "Keyword not found"
 msgstr "Nyckelordet hittades inte"
 
 #. "Failed Dependencies"
-#: redcarpet/gui-html.c:156
+#: redcarpet/gui-html.c:174
 msgid "<!--html-->Failed Dependencies"
 msgstr "<!--html-->Misslyckade beroenden"
 
-#: redcarpet/gui-html.c:171
+#: redcarpet/gui-html.c:190
 msgid ""
 "<!--html-->Red Carpet was unable to successfully locate all the necessary "
 "files to complete this request. The errors and conflicts that occured are "
@@ -613,35 +635,54 @@ msgstr ""
 "fullfölja denna begäran. Felen och konflikterna som uppstod visas här "
 "tillsammans med en föreslagen åtgärd."
 
-#: redcarpet/gui-html.c:181
+#: redcarpet/gui-html.c:200
+msgid "Click here to send a dependency report"
+msgstr "Klicka här för att skicka en beroenderapport"
+
+#: redcarpet/gui-html.c:205
 msgid "Failed Dependencies"
 msgstr "Misslyckade beroenden"
 
-#: redcarpet/gui-html.c:325
+#: redcarpet/gui-html.c:296
+#, c-format
+msgid "needed by: <b>%s</b>"
+msgstr "behövd av: <b>%s</b>"
+
+#: redcarpet/gui-html.c:302
+#, c-format
+msgid "conflicts with: <b>%s</b>"
+msgstr "är i konflikt med: <b>%s</b>"
+
+#: redcarpet/gui-html.c:308
+#, c-format
+msgid "depends on: <b>%s</b>"
+msgstr "beror på: <b>%s</b>"
+
+#: redcarpet/gui-html.c:458
 msgid "needed by"
 msgstr "behövd av"
 
-#: redcarpet/gui-html.c:372 redcarpet/gui-html.c:402
+#: redcarpet/gui-html.c:505 redcarpet/gui-html.c:535
 #, c-format
 msgid "needs %s %s %s, which is being removed"
 msgstr "behöver %s %s %s, som kommer att tas bort"
 
-#: redcarpet/gui-html.c:410
+#: redcarpet/gui-html.c:543
 #, c-format
 msgid "needs %s %s %s, which cannot be found"
 msgstr "behöver %s %s %s, som inte kan hittas"
 
-#: redcarpet/gui-html.c:440
+#: redcarpet/gui-html.c:573
 #, c-format
 msgid "conflicts with %s %s %s"
 msgstr "är i konflikt med %s %s %s"
 
-#: redcarpet/gui-html.c:486
+#: redcarpet/gui-html.c:622
 #, c-format
 msgid "<!--html-->This package will be pulled in from the %s channel."
 msgstr "<!--html-->Detta paket kommer att hämtas från kanalen %s."
 
-#: redcarpet/gui-html.c:492
+#: redcarpet/gui-html.c:628
 #, c-format
 msgid ""
 "<!--html-->This package will be pulled in from the <b>unsubscribed</b> %s "
@@ -651,11 +692,11 @@ msgstr ""
 "kanalen %s."
 
 #. "Package Dependencies"
-#: redcarpet/gui-html.c:546
+#: redcarpet/gui-html.c:682
 msgid "<!--html-->Package Dependencies"
 msgstr "<!--html-->Paketberoenden"
 
-#: redcarpet/gui-html.c:566
+#: redcarpet/gui-html.c:702
 msgid ""
 "<!--html-->Your system's package database is valid!<br><br>Click the "
 "Previous button to go back."
@@ -663,61 +704,56 @@ msgstr ""
 "<!--html-->Ditt systems paketdatabas är giltig!<br><br>Klicka på knappen "
 "Föregående för att gå tillbaka."
 
-#: redcarpet/gui-html.c:597
+#: redcarpet/gui-html.c:733
 msgid "<b>1</b> Requested Package"
 msgstr "<b>1</b> begärt paket"
 
-#: redcarpet/gui-html.c:600 redcarpet/gui-html.c:620 redcarpet/gui-html.c:640
+#: redcarpet/gui-html.c:736
 #, c-format
-msgid "<b>%d</b> %s"
-msgstr "<b>%d</b> %s"
+msgid "<b>%d</b> Requested Packages"
+msgstr "<b>%d</b> begärda paket"
 
-# Här kommer en siffra framför
-#: redcarpet/gui-html.c:602
-msgid "Requested Packages"
-msgstr "begärda paket"
-
-#: redcarpet/gui-html.c:617
+#: redcarpet/gui-html.c:751
 msgid "<b>1</b> Necessary Removal"
 msgstr "<b>1</b> nödvändig borttagning"
 
-# Här kommer en siffra framför
-#: redcarpet/gui-html.c:622 redcarpet/gui-html.c:905
-msgid "Necessary Removals"
-msgstr "nödvändiga borttagningar"
+#: redcarpet/gui-html.c:754
+#, c-format
+msgid "<b>%d</b> Necessary Removals"
+msgstr "<b>%d</b> nödvändiga borttagningar"
 
-#: redcarpet/gui-html.c:637
+#: redcarpet/gui-html.c:769
 msgid "<b>1</b> Necessary Installation"
 msgstr "<b>1</b> nödvändig installation"
 
-# Här kommer en siffra framför
-#: redcarpet/gui-html.c:642 redcarpet/gui-html.c:951
-msgid "Necessary Installations"
-msgstr "nödvändiga installationer"
+#: redcarpet/gui-html.c:772
+#, c-format
+msgid "<b>%d</b> Necessary Installations"
+msgstr "<b>%d</b> nödvändiga installationer"
 
-#: redcarpet/gui-html.c:724
+#: redcarpet/gui-html.c:848
 #, c-format
 msgid "<!--html--><b>%s</b> will need to be downloaded. "
 msgstr "<!--html--><b>%s</b> kommer att behöva hämtas. "
 
-#: redcarpet/gui-html.c:733
+#: redcarpet/gui-html.c:857
 #, c-format
 msgid "<!--html-->After operations, <b>%s</b> of disk space will be used."
 msgstr "<!--html-->Efter åtgärderna kommer <b>%s</b> diskutrymme att användas."
 
-#: redcarpet/gui-html.c:739
+#: redcarpet/gui-html.c:863
 #, c-format
 msgid "<!--html-->After operations, <b>%s</b> of disk space will be freed."
 msgstr ""
 "<!--html-->Efter åtgärderna kommer <b>%s</b> diskutrymme att ha frigjorts."
 
-#: redcarpet/gui-html.c:743
+#: redcarpet/gui-html.c:867
 msgid "<!--html-->After operations, no additional space will be freed or used."
 msgstr ""
 "<!--html-->Efter åtgärderna kommer inget ytterligare utrymme att frigöras "
 "eller användas."
 
-#: redcarpet/gui-html.c:780
+#: redcarpet/gui-html.c:904
 msgid ""
 "<!--html-->You have insufficient disk space to download the requested "
 "packages. You must free up some disk space before you can continue. Some "
@@ -727,19 +763,19 @@ msgstr ""
 "begärda paketen. Du måste skapa ledigt utrymme innan du kan fortsätta. Det "
 "finns en del alternativ:"
 
-#: redcarpet/gui-html.c:784
+#: redcarpet/gui-html.c:908
 msgid "<!--html-->Removing some packages from your system"
 msgstr "<!--html-->Tar bort en del paket från ditt system"
 
-#: redcarpet/gui-html.c:785
+#: redcarpet/gui-html.c:909
 msgid "Changing your <a href=\"updater:prefs_cache\">cache settings</a>."
 msgstr "Ändrar dina <a href=\"updater:prefs_cache\">cacheinställningar</a>."
 
-#: redcarpet/gui-html.c:787
+#: redcarpet/gui-html.c:911
 msgid "<a href=\"updater:cache_clear\">Clearing your cache</a>."
 msgstr "<a href=\"updater:cache_clear\">Töm din cache</a>."
 
-#: redcarpet/gui-html.c:823
+#: redcarpet/gui-html.c:946
 msgid ""
 "<font color=#ff0000>Warning!</font> There may not be sufficient disk space "
 "to install this package, and installation of this package may fail. You "
@@ -749,54 +785,67 @@ msgstr ""
 "diskutrymme för att installera detta paket, och installation av detta paket "
 "kan misslyckas. Du bör skapa en del ledigt diskutrymme innan du fortsätter."
 
-#: redcarpet/gui-html.c:840 redcarpet/gui-html.c:897 redcarpet/gui-html.c:943
+#: redcarpet/gui-html.c:963 redcarpet/gui-html.c:1021
+#: redcarpet/gui-html.c:1066
 msgid "1&nbsp;Package"
 msgstr "1&nbsp;paket"
 
-#: redcarpet/gui-html.c:842 redcarpet/gui-html.c:899 redcarpet/gui-html.c:945
+#: redcarpet/gui-html.c:965 redcarpet/gui-html.c:1023
+#: redcarpet/gui-html.c:1068
 #, c-format
 msgid "%d&nbsp;Packages"
 msgstr "%d&nbsp;paket"
 
-#: redcarpet/gui-html.c:853
+#: redcarpet/gui-html.c:976
 msgid "Requested Removals"
 msgstr "Begärda borttagningar"
 
-#: redcarpet/gui-html.c:853
+#: redcarpet/gui-html.c:976
 msgid "Requested Installations"
 msgstr "Begärda installationer"
 
 #. "Package"
 #. "Version"
-#: redcarpet/gui-html.c:873 redcarpet/gui-html.c:924 redcarpet/gui-html.c:970
-#: redcarpet/gui-html.c:1374 redcarpet/gui-html.c:1579
-#: redcarpet/gui-html.c:1748 redcarpet/gui-html.c:2990
-#: redcarpet/gui-html.c:3238
+#: redcarpet/gui-html.c:996 redcarpet/gui-html.c:1048
+#: redcarpet/gui-html.c:1093 redcarpet/gui-html.c:1500
+#: redcarpet/gui-html.c:1724 redcarpet/gui-html.c:1893
+#: redcarpet/gui-html.c:3108 redcarpet/gui-html.c:3371
 msgid "Package"
 msgstr "Paket"
 
-#: redcarpet/gui-html.c:874 redcarpet/gui-html.c:925 redcarpet/gui-html.c:971
-#: redcarpet/gui-html.c:1375 redcarpet/gui-html.c:1580
-#: redcarpet/gui-html.c:1749 redcarpet/gui-html.c:2991
-#: redcarpet/gui-html.c:3239
+#: redcarpet/gui-html.c:997 redcarpet/gui-html.c:1049
+#: redcarpet/gui-html.c:1094 redcarpet/gui-html.c:1501
+#: redcarpet/gui-html.c:1725 redcarpet/gui-html.c:1894
+#: redcarpet/gui-html.c:3109 redcarpet/gui-html.c:3372
 msgid "Version"
 msgstr "Version"
 
-#: redcarpet/gui-html.c:877
+#: redcarpet/gui-html.c:1000
 msgid "<td width=25%>Old Version</td>"
 msgstr "<td width=25%>Gammal version</td>"
 
-#: redcarpet/gui-html.c:926 redcarpet/gui-html.c:972 redcarpet/gui-html.c:1376
-#: redcarpet/gui-html.c:1581 redcarpet/gui-html.c:1750
-#: redcarpet/gui-html.c:2992 redcarpet/gui-html.c:3240
+# Här kommer en siffra framför
+#: redcarpet/gui-html.c:1029
+msgid "Necessary Removals"
+msgstr "nödvändiga borttagningar"
+
+#: redcarpet/gui-html.c:1050 redcarpet/gui-html.c:1095
+#: redcarpet/gui-html.c:1502 redcarpet/gui-html.c:1726
+#: redcarpet/gui-html.c:1895 redcarpet/gui-html.c:3110
+#: redcarpet/gui-html.c:3373
 msgid "Size"
 msgstr "Storlek"
 
-#: redcarpet/gui-html.c:973
+# Här kommer en siffra framför
+#: redcarpet/gui-html.c:1074
+msgid "Necessary Installations"
+msgstr "nödvändiga installationer"
+
+#: redcarpet/gui-html.c:1096
 msgid "Old Version"
 msgstr "Gammal version"
 
-#: redcarpet/gui-html.c:1111
+#: redcarpet/gui-html.c:1233
 msgid "<html><body><b>Please wait, loading page...</b></body></html>"
 msgstr "<html><body><b>Var vänlig vänta, läser in sidan...</b></body></html>"
 
@@ -805,14 +854,14 @@ msgstr "<html><body><b>Var vänlig vänta, läser in sidan...</b></body></html>"
 #. View the about page
 #. View the install page
 #. go back to summary
-#: redcarpet/gui-html.c:1160 redcarpet/gui-html.c:1513
+#: redcarpet/gui-html.c:1282 redcarpet/gui-html.c:1656
 msgid ""
 "You have no packages from this channel currently installed on your system."
 msgstr ""
 "Du har för närvarande inte några paket från denna kanal installerade på ditt "
 "system."
 
-#: redcarpet/gui-html.c:1162 redcarpet/gui-html.c:1515
+#: redcarpet/gui-html.c:1284 redcarpet/gui-html.c:1658
 msgid ""
 "You can visit the channel's <a href=\"updater:info_page\">about page</a> to "
 "get more information about what software is available, or you can go "
@@ -824,20 +873,20 @@ msgstr ""
 "till <a href=\"updater:available_page\">installationssidan</a> för att "
 "installera program."
 
-#: redcarpet/gui-html.c:1167 redcarpet/gui-html.c:1521
+#: redcarpet/gui-html.c:1289 redcarpet/gui-html.c:1664
 msgid "View the <a href=\"updater:info_page\">about page</a>."
 msgstr "Visa <a href=\"updater:info_page\">om-sidan</a>."
 
-#: redcarpet/gui-html.c:1168 redcarpet/gui-html.c:1522
+#: redcarpet/gui-html.c:1290 redcarpet/gui-html.c:1665
 msgid "View the <a href=\"updater:available_page\">install page</a>."
 msgstr "Visa <a href=\"updater:available_page\">installationssidan</a>."
 
-#: redcarpet/gui-html.c:1170 redcarpet/gui-html.c:1268
-#: redcarpet/gui-html.c:1524 redcarpet/gui-html.c:2752
+#: redcarpet/gui-html.c:1292 redcarpet/gui-html.c:1394
+#: redcarpet/gui-html.c:1669 redcarpet/gui-html.c:2869
 msgid "Return to the <a href=\"updater:summary\">Summary</a>."
 msgstr "Gå tillbaka till <a href=\"updater:summary\">sammanfattningen</a>."
 
-#: redcarpet/gui-html.c:1180
+#: redcarpet/gui-html.c:1302
 msgid ""
 "You don't have any packages installed from this channel. The following pre-"
 "defined sets of packages are available, or you may select individual "
@@ -850,12 +899,13 @@ msgstr ""
 #. "All of the software .. is up to date"
 #. "To install new software..."
 #. "To remove already installed..."
+#. "Unsubscribe from this channel."
 #. "Return to the summary"
-#: redcarpet/gui-html.c:1262
+#: redcarpet/gui-html.c:1386
 msgid "All of the software from this channel is up-to-date."
 msgstr "All programvara från denna kanal är aktuell."
 
-#: redcarpet/gui-html.c:1263
+#: redcarpet/gui-html.c:1387
 msgid ""
 "To install new software from this channel, visit the <a href=\"updater:"
 "available_page\">install page</a>."
@@ -863,7 +913,7 @@ msgstr ""
 "För att installera ny programvara går du till <a href=\"updater:"
 "available_page\">installationssidan</a>."
 
-#: redcarpet/gui-html.c:1265
+#: redcarpet/gui-html.c:1389
 msgid ""
 "To remove already installed software from this channel, visit the <a href="
 "\"updater:installed_page\">remove page</a>."
@@ -871,7 +921,13 @@ msgstr ""
 "För att ta bort redan installerad programvara från denna kanal går du till "
 "<a href=\"updater:installed_page\">borttagningssidan</a>."
 
-#: redcarpet/gui-html.c:1296
+#: redcarpet/gui-html.c:1392 redcarpet/gui-html.c:1667
+msgid "<a href=\"updater:unsubscribe\">Unsubscribe</a> from this channel."
+msgstr ""
+"<a href=\"updater:unsubscribed_page\">Säg upp prenumerationen</a> på denna "
+"kanal."
+
+#: redcarpet/gui-html.c:1421
 #, c-format
 msgid ""
 "There is <b>1 update</b> available in this channel, totalling <b>%s</b> of "
@@ -880,7 +936,7 @@ msgstr ""
 "Det finns <b>1 uppdatering</b> tillgänglig i denna kanal, som kräver att <b>%"
 "s</b> data hämtas."
 
-#: redcarpet/gui-html.c:1301
+#: redcarpet/gui-html.c:1426
 #, c-format
 msgid ""
 "There are <b>%s updates</b> available in this channel, totalling <b>%s</b> "
@@ -889,7 +945,7 @@ msgstr ""
 "Det finns <b>%s uppdateringar</b> tillgängliga i denna kanal, som kräver att "
 "<b>%s</b> data hämtas."
 
-#: redcarpet/gui-html.c:1311
+#: redcarpet/gui-html.c:1436
 msgid ""
 "  You will not be able to update your system unless you run Red Carpet as "
 "root."
@@ -897,39 +953,39 @@ msgstr ""
 "  Du kommer inte att kunna uppdatera ditt system om du inte kör Red Carpet "
 "som root."
 
-#: redcarpet/gui-html.c:1341 redcarpet/gui-html.c:2978
-#: redcarpet/gui-html.c:3205
+#: redcarpet/gui-html.c:1466 redcarpet/gui-html.c:3096
+#: redcarpet/gui-html.c:3337
 msgid "Essential Updates"
 msgstr "Nödvändiga uppdateringar"
 
-#: redcarpet/gui-html.c:1342 redcarpet/gui-html.c:3206
+#: redcarpet/gui-html.c:1467 redcarpet/gui-html.c:3338
 msgid "Urgent Updates"
 msgstr "Brådskande uppdateringar"
 
-#: redcarpet/gui-html.c:1343 redcarpet/gui-html.c:3207
+#: redcarpet/gui-html.c:1468 redcarpet/gui-html.c:3339
 msgid "Suggested Updates"
 msgstr "Rekommenderade uppdateringar"
 
-#: redcarpet/gui-html.c:1344 redcarpet/gui-html.c:3208
+#: redcarpet/gui-html.c:1469 redcarpet/gui-html.c:3340
 msgid "Feature Enhancements"
 msgstr "Programförbättringar"
 
-#: redcarpet/gui-html.c:1345 redcarpet/gui-html.c:3209
+#: redcarpet/gui-html.c:1470 redcarpet/gui-html.c:3341
 msgid "Minor Fixes/Updates"
 msgstr "Mindre fixar/uppdateringar"
 
-#: redcarpet/gui-html.c:1353 redcarpet/gui-html.c:2959
-#: redcarpet/gui-html.c:3217
+#: redcarpet/gui-html.c:1479 redcarpet/gui-html.c:3077
+#: redcarpet/gui-html.c:3350
 msgid "1 update"
 msgstr "1 uppdatering"
 
-#: redcarpet/gui-html.c:1356 redcarpet/gui-html.c:2966
-#: redcarpet/gui-html.c:3219
+#: redcarpet/gui-html.c:1482 redcarpet/gui-html.c:3084
+#: redcarpet/gui-html.c:3352
 #, c-format
 msgid "%d updates"
 msgstr "%d uppdateringar"
 
-#: redcarpet/gui-html.c:1540
+#: redcarpet/gui-html.c:1685
 msgid ""
 "The following packages from this channel are currently installed on your "
 "system."
@@ -937,12 +993,12 @@ msgstr ""
 "Följande paket från denna kanal är för närvarande installerade på ditt "
 "system."
 
-#: redcarpet/gui-html.c:1546
+#: redcarpet/gui-html.c:1691
 msgid ""
 "<!--html-->  To remove packages, you will have to run Red Carpet as root."
 msgstr "<!--html-->  För att ta bort paket måste du köra Red Carpet som root."
 
-#: redcarpet/gui-html.c:1668
+#: redcarpet/gui-html.c:1813
 msgid ""
 "<p>All packages available in this channel are already installed on your "
 "system.</p>"
@@ -950,7 +1006,7 @@ msgstr ""
 "<p>Alla paket som är tillgängliga i denna kanal är redan installerade på "
 "ditt system.</p>"
 
-#: redcarpet/gui-html.c:1674
+#: redcarpet/gui-html.c:1819
 msgid ""
 "<p>You can go to the <a href=\"updater:update_page\">Update page</a> to view "
 "available updates for your software in this channel, or return to the <a "
@@ -961,7 +1017,7 @@ msgstr ""
 "gå tillbaka till <a href=\"updater:summary\">sammanfattningen</a> för att se "
 "alla tillgängliga uppdateringar.</p>"
 
-#: redcarpet/gui-html.c:1681
+#: redcarpet/gui-html.c:1826
 msgid ""
 "<p>You can go to the <a href=\"updater:summary\">Summary</a> to view all "
 "available updates for your system.</p>"
@@ -969,14 +1025,14 @@ msgstr ""
 "<p>Du kan gå till <a href=\"updater:summary\">sammanfattningen</a> för att "
 "se alla uppdateringar som är tillgängliga för ditt system.</p>"
 
-#: redcarpet/gui-html.c:1702
+#: redcarpet/gui-html.c:1847
 msgid ""
 "<!--html-->The following packages from this channel are available for "
 "installation."
 msgstr ""
 "<!--html-->Följande paket från denna kanal är tillgängliga för installation."
 
-#: redcarpet/gui-html.c:1709
+#: redcarpet/gui-html.c:1854
 msgid ""
 " Package names that are in <font color=\"#777777\">gray</font> indicate that "
 "a newer version of this package is already installed."
@@ -984,7 +1040,7 @@ msgstr ""
 " Paketnamn som är <font color=\"#777777\">grå</font> indikerar att en nyare "
 "version av detta paket redan är installerat."
 
-#: redcarpet/gui-html.c:1715
+#: redcarpet/gui-html.c:1860
 msgid ""
 "<!--html-->  To install packages, you will have to run Red Carpet as root."
 msgstr ""
@@ -997,134 +1053,122 @@ msgstr ""
 #. "Requested Version:"
 #. "Summary:"
 #. "Description:"
-#: redcarpet/gui-html.c:1874
+#: redcarpet/gui-html.c:2019
 msgid "Name:"
 msgstr "Namn:"
 
-#: redcarpet/gui-html.c:1876
+#: redcarpet/gui-html.c:2021
 msgid "Installed Version:"
 msgstr "Installerad version:"
 
-#: redcarpet/gui-html.c:1878
+#: redcarpet/gui-html.c:2023
 msgid "Size:"
 msgstr "Storlek:"
 
-#: redcarpet/gui-html.c:1880
+#: redcarpet/gui-html.c:2025
 msgid "bytes"
 msgstr "byte"
 
-#: redcarpet/gui-html.c:1881
+#: redcarpet/gui-html.c:2026
 msgid "Requested Version:"
 msgstr "Begärd version:"
 
-#: redcarpet/gui-html.c:1883
+#: redcarpet/gui-html.c:2028
 msgid "Summary:"
 msgstr "Sammanfattning:"
 
-#: redcarpet/gui-html.c:1885
+#: redcarpet/gui-html.c:2030
 msgid "Description:"
 msgstr "Beskrivning:"
 
-#: redcarpet/gui-html.c:1901
+#: redcarpet/gui-html.c:2046
 msgid "Requires:"
 msgstr "Kräver:"
 
-#: redcarpet/gui-html.c:1925 redcarpet/gui-html.c:1970
-#: redcarpet/gui-html.c:2015
+#: redcarpet/gui-html.c:2070 redcarpet/gui-html.c:2115
+#: redcarpet/gui-html.c:2160
 msgid "or"
 msgstr "eller"
 
-#: redcarpet/gui-html.c:1946
+#: redcarpet/gui-html.c:2091
 msgid "Provides:"
 msgstr "Tillhandahåller:"
 
-#: redcarpet/gui-html.c:1991
+#: redcarpet/gui-html.c:2136
 msgid "Conflicts:"
 msgstr "Är i konflikt med:"
 
-#: redcarpet/gui-html.c:2073
+#: redcarpet/gui-html.c:2218
 msgid " Update Now! "
 msgstr " Uppdatera nu! "
 
-#: redcarpet/gui-html.c:2094
+#: redcarpet/gui-html.c:2239
 msgid " Update Packages "
 msgstr " Uppdatera paket "
 
-#: redcarpet/gui-html.c:2107
+#: redcarpet/gui-html.c:2252
 msgid " Install Packages "
 msgstr " Installera paket "
 
-#: redcarpet/gui-html.c:2116
+#: redcarpet/gui-html.c:2261
 msgid " Remove Packages "
 msgstr " Ta bort paket "
 
-#: redcarpet/gui-html.c:2131
+#: redcarpet/gui-html.c:2276
 msgid " Unsubscribe "
 msgstr " Säg upp prenumeration "
 
-#: redcarpet/gui-html.c:2140
+#: redcarpet/gui-html.c:2285
 msgid " Subscribe "
 msgstr " Prenumerera "
 
 #. "Keyword search"
-#: redcarpet/gui-html.c:2160
+#: redcarpet/gui-html.c:2305
 msgid "Keyword&nbsp;Search:"
 msgstr "Nyckelordssökning:"
 
-#: redcarpet/gui-html.c:2204 redcarpet/gui-init.c:1028
+#: redcarpet/gui-html.c:2349 redcarpet/gui-init.c:1045
 msgid "Summary"
 msgstr "Sammanfattning"
 
-#: redcarpet/gui-html.c:2214
+#: redcarpet/gui-html.c:2359
 msgid "Red Carpet News"
 msgstr "Red Carpet-nyheter"
 
-#: redcarpet/gui-html.c:2224 redcarpet/gui-init.c:1042
+#: redcarpet/gui-html.c:2369 redcarpet/gui-init.c:1059
 msgid "Featured Channels"
 msgstr "Kanaltips"
 
-#: redcarpet/gui-html.c:2235 redcarpet/gui-init.c:1049
+#: redcarpet/gui-html.c:2380 redcarpet/gui-init.c:1066
 msgid "Subscribed Channels"
 msgstr "Prenumererade kanaler"
 
-#: redcarpet/gui-html.c:2246 redcarpet/gui-init.c:1055
+#: redcarpet/gui-html.c:2391 redcarpet/gui-init.c:1072
 msgid "Unsubscribed Channels"
 msgstr "Oprenumererade kanaler"
 
-#: redcarpet/gui-html.c:2256 redcarpet/gui-html.c:2335
-#: redcarpet/gui-html.c:2351
+#: redcarpet/gui-html.c:2401 redcarpet/gui-html.c:2463
+#: redcarpet/gui-html.c:2479
 msgid "About"
 msgstr "Om"
 
-#: redcarpet/gui-html.c:2318
+#: redcarpet/gui-html.c:2451
 msgid "Update"
 msgstr "Uppdatera"
 
-#: redcarpet/gui-html.c:2321
+#: redcarpet/gui-html.c:2455
 msgid "Install"
 msgstr "Installera"
 
-#: redcarpet/gui-html.c:2324
+#: redcarpet/gui-html.c:2459
 msgid "Remove"
 msgstr "Ta bort"
 
-#: redcarpet/gui-html.c:2330
-msgid "Prefs"
-msgstr "Inställn"
+#: redcarpet/gui-html.c:2562
+msgid "Credits"
+msgstr "Tack"
 
-#: redcarpet/gui-html.c:2423
-msgid "Developers"
-msgstr "Utvecklare"
-
-#: redcarpet/gui-html.c:2443
-msgid "User Interface Design"
-msgstr "Design av användargränssnittet"
-
-#: redcarpet/gui-html.c:2452
-msgid "Artwork"
-msgstr "Artister"
-
-#: redcarpet/gui-html.c:2460
+#: redcarpet/gui-html.c:2578
 msgid ""
 "<p>Red Carpet is the Ximian package management system and software portal, "
 "allowing you to install, upgrade, and remove packages on your system. For "
@@ -1143,11 +1187,11 @@ msgstr ""
 "lists.ximian.com/mailman/listinfo/red-carpet\">red-carpet@ximian.com</a>. "
 "Tack!"
 
-#: redcarpet/gui-html.c:2509
+#: redcarpet/gui-html.c:2626
 msgid "All links will open in an external browser window."
 msgstr "Alla länkar kommer att öppnas i ett externt webbläsarfönster."
 
-#: redcarpet/gui-html.c:2604
+#: redcarpet/gui-html.c:2721
 msgid "The following channels are our featured channels!"
 msgstr "Följande kanaler är våra kanaltips!"
 
@@ -1156,11 +1200,11 @@ msgstr "Följande kanaler är våra kanaltips!"
 #. view my sub channels
 #. view the news page
 #. return to the summary
-#: redcarpet/gui-html.c:2744
+#: redcarpet/gui-html.c:2861
 msgid "You are currently subscribed to all available channels!"
 msgstr "Du prenumererar för närvarande på alla tillgängliga kanaler!"
 
-#: redcarpet/gui-html.c:2745
+#: redcarpet/gui-html.c:2862
 msgid ""
 "We are constantly working on making more software available through Red "
 "Carpet, so watch the <a href=\"updater:news_page\">News Page</a> and this "
@@ -1170,16 +1214,16 @@ msgstr ""
 "Carpet, så titta på <a href=\"updater:news_page\">nyhetssidan</a> och i "
 "detta utrymme för information när fler kanaler läggs till i framtiden!"
 
-#: redcarpet/gui-html.c:2749
+#: redcarpet/gui-html.c:2866
 msgid "View my <a href=\"updater:subscribed_page\">subscribed channels</a>."
 msgstr ""
 "Visa de <a href=\"updater:subscribed_page\">kanaler jag prenumererar på</a>."
 
-#: redcarpet/gui-html.c:2751 redcarpet/gui-html.c:2774
+#: redcarpet/gui-html.c:2868 redcarpet/gui-html.c:2891
 msgid "View the <a href=\"updater:news_page\">News Page</a>."
 msgstr "Visa <a href=\"updater:news_page\">nyhetssidan</a>."
 
-#: redcarpet/gui-html.c:2763
+#: redcarpet/gui-html.c:2880
 msgid ""
 "You are currently not subscribed to any channels!<p>We suggest that you "
 "subscribe to the <a href=\"updater:channel_name?Ximian GNOME Desktop#updater:"
@@ -1196,18 +1240,18 @@ msgstr ""
 "samarbetspartners på sidan <a href=\"updater:unsubscribed_page"
 "\">oprenumererade kanaler</a>."
 
-#: redcarpet/gui-html.c:2772
+#: redcarpet/gui-html.c:2889
 msgid "View <a href=\"updater:unsubscribed_page\">unsubscribed channels</a>."
 msgstr "Visa <a href=\"updater:unsubscribed_page\">oprenumererade kanaler</a>."
 
-#: redcarpet/gui-html.c:2775
+#: redcarpet/gui-html.c:2892
 msgid ""
 "Return to the <a href=\"updater:summary\">introduction to Red Carpet</a>."
 msgstr ""
 "Gå tillbaka till <a href=\"updater:summary\">introduktionen till Red Carpet</"
 "a>."
 
-#: redcarpet/gui-html.c:2843
+#: redcarpet/gui-html.c:2960
 msgid ""
 "<font size=6><b>Welcome to Red Carpet!</b></font><p>Thank you for using Red "
 "Carpet. From resolving package dependencies to ensuring cryptographic "
@@ -1241,7 +1285,7 @@ msgstr ""
 "vänster i Red Carpet-fönstret finns <B>navigationspanelen</b> som låter dig "
 "komma åt huvudsidorna i Red Carpet.</p><p>För att bläddra i tillgängliga "
 "kanaler som du inte prenumererar på klickar du på ikonen <b>Oprenumererade "
-"kanaler</b> i navigationspanelen. När Du har gjort det kan du välja att "
+"kanaler</b> i navigationspanelen. När du har gjort det kan du välja att "
 "prenumerera på en kanal genom att klicka på den och sedan klicka på knappen "
 "<b>Prenumerera</b> nere till höger eller välja <b>Prenumerera</b> i menyn "
 "Prenumerationer.</p><p>Du får gärna komma med synpunkter och felrapporter "
@@ -1249,7 +1293,7 @@ msgstr ""
 "Bugzilla</a> eller Red Carpet-sändlistan på <a href=\"http://lists.ximian."
 "com/mailman/listinfo/red-carpet\">red-carpet@ximian.com</a>. Tack!</p>"
 
-#: redcarpet/gui-html.c:2955
+#: redcarpet/gui-html.c:3073
 msgid ""
 "There is one <b>Essential Update</b> available for your system.  To ensure "
 "that Ximian Red Carpet continues to function properly, you must install this "
@@ -1262,7 +1306,7 @@ msgstr ""
 "Red Carpet kommer automatiskt att starta om efter att du har installerat "
 "denna uppdatering."
 
-#: redcarpet/gui-html.c:2962
+#: redcarpet/gui-html.c:3080
 #, c-format
 msgid ""
 "There are %s <b>Essential Updates</b> available for your system.  To ensure "
@@ -1276,7 +1320,7 @@ msgstr ""
 "Ximian Red Carpet kommer automatiskt att starta om efter att du har "
 "installerat dessa uppdateringar."
 
-#: redcarpet/gui-html.c:3107
+#: redcarpet/gui-html.c:3239
 #, c-format
 msgid ""
 "There is <b>one update</b> available for your system, totalling <b>%s</b> of "
@@ -1285,7 +1329,7 @@ msgstr ""
 "Det finns <b>en uppdatering</b> tillgänglig för ditt system, som kräver att "
 "<b>%s</b> data hämtas."
 
-#: redcarpet/gui-html.c:3112
+#: redcarpet/gui-html.c:3244
 #, c-format
 msgid ""
 "There are <b>%s updates</b> available for your system, totalling <b>%s</b> "
@@ -1294,52 +1338,52 @@ msgstr ""
 "Det finns <b>%s uppdateringar</b> tillgängliga för ditt system, som kräver "
 "att <b>%s</b> data hämtas."
 
-#: redcarpet/gui-html.c:3123
+#: redcarpet/gui-html.c:3255
 msgid ""
 "<!--html-->  To update your system, you will have to run Red Carpet as root."
 msgstr ""
 "<!--html-->  För att uppdatera ditt system måste du köra Red Carpet som root."
 
-#: redcarpet/gui-html.c:3132 redcarpet/gui-html.c:3188
+#: redcarpet/gui-html.c:3264 redcarpet/gui-html.c:3320
 msgid " Of these updates, <b>one</b> is <b>urgent</b>."
 msgstr " Utav dessa uppdateringar är <b>en brådskande</b>."
 
-#: redcarpet/gui-html.c:3136 redcarpet/gui-html.c:3192
+#: redcarpet/gui-html.c:3268 redcarpet/gui-html.c:3324
 #, c-format
 msgid " Of these updates, <b>%s</b> are <b>urgent</b>."
 msgstr " Utav dessa uppdateringar är <b>%s brådskande</b>."
 
-#: redcarpet/gui-html.c:3374
+#: redcarpet/gui-html.c:3522
 #, c-format
 msgid "1 other in the %s channel..."
 msgstr "1 annan i kanalen %s..."
 
-#: redcarpet/gui-html.c:3378
+#: redcarpet/gui-html.c:3526
 #, c-format
 msgid "%d others in the %s channel..."
 msgstr "%d andra i kanalen %s..."
 
-#: redcarpet/gui-init.c:79
+#: redcarpet/gui-init.c:86
 msgid "Visible debugging level, ranges from 0 (nothing) to 6 (everything)"
 msgstr "Synlig felsökningsnivå, går från 0 (ingenting) till 6 (allting)"
 
-#: redcarpet/gui-init.c:82
+#: redcarpet/gui-init.c:89
 msgid "Log file debugging level, ranges from 0 (nothing) to 6 (everything)"
 msgstr "Felsökningsnivå för loggfil, går från 0 (ingenting) till 6 (allting)"
 
-#: redcarpet/gui-init.c:85
+#: redcarpet/gui-init.c:92
 msgid "The XAuthority file (usually from GDM)"
 msgstr "XAuthority-filen (vanligtvis från GDM)"
 
-#: redcarpet/gui-init.c:87
+#: redcarpet/gui-init.c:94
 msgid "Start up the Red Carpet client without premium services"
 msgstr "Starta Red Carpet-klienten utan Premium Services"
 
-#: redcarpet/gui-init.c:90
+#: redcarpet/gui-init.c:97
 msgid "(Re)configure proxy settings before starting"
 msgstr "(Om)konfigurera proxyinställningar innan start"
 
-#: redcarpet/gui-init.c:130
+#: redcarpet/gui-init.c:137
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -1348,42 +1392,46 @@ msgstr ""
 "Kunde inte hitta \"%s\".\n"
 "Försäkra dig om att Red Carpet installerats korrekt."
 
-#: redcarpet/gui-init.c:177
+#: redcarpet/gui-init.c:184
 msgid ""
 "Ximian Red Carpet was unable to determine what distribution you are on or "
 "you are running an unsupported distribution. If you are running a supported "
-"distribution, this is usually caused by some system file being modified. If "
-"this is the case, please resolve this issue or contact <a href=\"red-"
-"carpet@ximian.com\">red-carpet@ximian.com</a> for assistance."
+"distribution, this is usually caused by some system file being modified. A "
+"list of supported distributions is located <a href=\"http://www.ximian.com/"
+"products/ximian_red_carpet/download.html\">on our web site</a>."
 msgstr ""
 "Ximian Red Carpet kunde inte avgöra vilken distribution du använder, eller "
 "så använder du en distribution som inte stöds. Om kör en distribution som "
-"stöds beror detta fel oftast på att en systemfil har ändrats. Om detta "
-"stämmer bör du åtgärda detta problem eller kontakta <a href=\"red-"
-"carpet@ximian.com\">red-carpet@ximian.com</a> för hjälp."
+"stöds beror detta fel oftast på att en systemfil har ändrats. En lista med "
+"de distributioner som stöds finns på <a href=\"http://www.ximian.com/"
+"products/ximian_red_carpet/download.html\">vår webbplats</a>."
 
-#: redcarpet/gui-init.c:212
+#: redcarpet/gui-init.c:219
 #, c-format
-msgid "Unable to access packaging subsystem:<br>%s"
-msgstr "Kan inte komma åt paketeringsundersystem:<br>%s"
+msgid ""
+"Unable to access packaging subsystem:<br>%s<p>Please ensure that no other "
+"package management programs are running, and try again."
+msgstr ""
+"Kan inte komma åt paketsystem:<br>%s<p>Försäkra dig om att inga andra "
+"pakethanteringsprogram kör, och försök igen."
 
-#: redcarpet/gui-init.c:285 redcarpet/gui-init.c:1093
+#: redcarpet/gui-init.c:295 redcarpet/gui-init.c:1110
 msgid "Downloading channel list..."
 msgstr "Hämtar kanallista..."
 
-#: redcarpet/gui-init.c:290
+#: redcarpet/gui-init.c:300
 msgid "Downloading mirror list..."
 msgstr "Hämtar spegellista..."
 
-#: redcarpet/gui-init.c:296 redcarpet/gui-init.c:1110
+#: redcarpet/gui-init.c:306 redcarpet/gui-init.c:1127
 msgid "Downloading news..."
 msgstr "Hämtar nyheter..."
 
-#: redcarpet/gui-init.c:308
+#: redcarpet/gui-init.c:318
 msgid "Downloading channel artwork..."
 msgstr "Hämtar kanalgrafik..."
 
-#: redcarpet/gui-init.c:380
+#: redcarpet/gui-init.c:372
 msgid ""
 "You are not running Red Carpet as root.\n"
 "\n"
@@ -1399,124 +1447,92 @@ msgstr ""
 "prenumerationsinformation kommer inte att\n"
 "sparas under denna session."
 
-#: redcarpet/gui-init.c:472 redcarpet/gui-init.c:562 redcarpet/gui-init.c:1220
-#: redcarpet/gui-install.c:557
-#, c-format
-msgid "Transfer of %s did not complete: %s"
-msgstr "Överföring av %s färdigställdes inte: %s"
-
-#: redcarpet/gui-init.c:1003
+#: redcarpet/gui-init.c:1020
 msgid "Navigation"
 msgstr "Navigering"
 
-#: redcarpet/gui-init.c:1034
+#: redcarpet/gui-init.c:1051
 msgid "News"
 msgstr "Nyheter"
 
-#: redcarpet/gui-init.c:1062
+#: redcarpet/gui-init.c:1079
 msgid "Premium Services"
 msgstr "Premium Services"
 
-#: redcarpet/gui-init.c:1103
+#: redcarpet/gui-init.c:1120
 msgid "Downloading mirrors..."
 msgstr "Hämtar speglar..."
 
-#: redcarpet/gui-install.c:80
-#, c-format
-msgid "Unable to create directory %s for local package storage"
-msgstr "Kan inte skapa katalogen %s för lokal paketlagring"
-
-#: redcarpet/gui-install.c:177
-#, c-format
-msgid ""
-"<p>An error has occurred while Red Carpet was processing the dependencies "
-"for this transaction. This may be caused by an error in the package or on "
-"the server. You may want to try the transaction again with fewer packages. "
-"You should report this problem to <a href=\"red-carpet@ximian.com\">red-"
-"carpet@ximian.com</a> as soon as possible. Please include distribution "
-"information and the set of packages for this transaction.</p><p>Information "
-"from the dependency system:<br> %s</p>"
-msgstr ""
-"<p>Ett fel inträffade då Red Carpet behandlade beroendena för denna "
-"transaktion. Detta kan orsakas av ett fel i paketet eller på servern. Du kan "
-"prova att genomföra transaktionen igen med färre paket. Du bör rapportera "
-"detta problem till <a href=\"red-carpet@ximian.com\">red-carpet@ximian.com</"
-"a> så snart som möjligt. Skriv på engelska och ta med "
-"distributionsinformation och de paket som ingick i denna transaktion.</"
-"p><p>Information från beroendesystemet:<br> %s</p>"
-
-#: redcarpet/gui-install.c:364
+#: redcarpet/gui-install.c:409
 msgid "Beginning transaction..."
 msgstr "Påbörjar transaktion..."
 
-#: redcarpet/gui-install.c:385
+#: redcarpet/gui-install.c:430
 msgid "Configuring"
 msgstr "Konfigurerar"
 
-#: redcarpet/gui-install.c:388
+#: redcarpet/gui-install.c:433
 msgid "Installing"
 msgstr "Installerar"
 
-#: redcarpet/gui-install.c:398
+#: redcarpet/gui-install.c:443
 msgid "packages"
 msgstr "paket"
 
-#: redcarpet/gui-install.c:436 redcarpet/gui-install.c:596
-#: redcarpet/gui-transfer.c:329
+#: redcarpet/gui-install.c:481 redcarpet/gui-install.c:609
+#: redcarpet/gui-transfer.c:324
 #, c-format
 msgid "%%p%%%% (%s of %s)"
 msgstr "%%p%%%% (%s av %s)"
 
-#: redcarpet/gui-install.c:508
+#: redcarpet/gui-install.c:541
 #, c-format
 msgid "Downloading %s"
 msgstr "Hämtar %s"
 
 #. Cache hit
-#: redcarpet/gui-install.c:576
+#: redcarpet/gui-install.c:589
 #, c-format
 msgid "%s pulled from cache"
 msgstr "%s togs från cachen"
 
-#: redcarpet/gui-install.c:582
+#: redcarpet/gui-install.c:595
 #, c-format
 msgid "%s downloaded %d bytes in %d seconds (%s/s)"
 msgstr "%s hämtade %d byte på %d sekunder (%s/s)"
 
-#: redcarpet/gui-install.c:646 redcarpet/gui-install.c:818
+#: redcarpet/gui-install.c:658 redcarpet/gui-install.c:862
 msgid "%p%% (%v of %u)"
 msgstr "%p%% (%v av %u)"
 
-#: redcarpet/gui-install.c:659
+#: redcarpet/gui-install.c:671
 #, c-format
 msgid "Verifying %s"
 msgstr "Verifierar %s"
 
-#: redcarpet/gui-install.c:685
+#: redcarpet/gui-install.c:698
 #, c-format
 msgid "Cryptographic verification of %s (%s) has FAILED."
 msgstr "Kryptografisk verifiering av %s (%s) har MISSLYCKATS."
 
-#: redcarpet/gui-install.c:692
+#: redcarpet/gui-install.c:705
 #, c-format
 msgid ""
 "Red Carpet's cryptographic verification of %s (%s) has <b><font color="
 "\"#ff0000\">failed</font></b>. This means that the security of this package "
 "has somehow been compromised and Red Carpet will not install it. The "
 "downloaded package may have been corrupted and downloading the package again "
-"may fix the problem. If it doesn't, please email <a href=\"mailto:red-"
-"carpet@ximian.com\">red-carpet@ximian.com</a> with your distribution "
-"information and the name of the package that failed."
+"may fix the problem. If it doesn't, you can <a href=\"updater:send_bug_report"
+"\">send a problem report</a> to Ximian for analysis.</p>"
 msgstr ""
 "Red Carpets kryptografiska verifiering av %s (%s) har <b><font color="
 "\"#ff0000\">misslyckats</font></b>. Detta betyder att säkerheten för detta "
 "paket på något sätt har äventyrats och Red Carpet kommer inte att installera "
 "det. Det hämtade paketet kan ha skadats och att hämta paketet på nytt kan "
-"lösa problemet. Om det inte gör det bör du skriva ett brev till <a href="
-"\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</a> på engelska med "
-"din distributionsinformation och ett namn på paketet som misslyckades."
+"lösa problemet. Om det inte gör det kan du <a href=\"updater:send_bug_report"
+"\">skicka en problemrapport</a> till Ximian för analys.</p>"
 
-#: redcarpet/gui-install.c:716
+#: redcarpet/gui-install.c:751
 #, c-format
 msgid ""
 "INFO:\n"
@@ -1524,90 +1540,69 @@ msgid ""
 "Version: %s\n"
 "Release: %s\n"
 "Package Filename:\n"
-"        %s\n"
+"%s"
 msgstr ""
 "INFORMATION:\n"
 "Namn: %s (%s)\n"
 "Version: %s\n"
 "Släpp: %s\n"
 "Paketfilnamn:\n"
-"        %s\n"
+"%s"
 
-#: redcarpet/gui-install.c:737
+#: redcarpet/gui-install.c:779
 #, c-format
 msgid "Verification of %s (%s) is inconclusive; aborting"
 msgstr "Verifiering av %s (%s) är inte beviskraftig; avbryter"
 
-#: redcarpet/gui-install.c:744 redcarpet/gui-install.c:759
+#: redcarpet/gui-install.c:786 redcarpet/gui-install.c:801
 #, c-format
 msgid "Verification of %s (%s) is inconclusive; continuing"
 msgstr "Verifiering av %s (%s) är inte beviskraftig; fortsätter"
 
-#: redcarpet/gui-install.c:771
+#: redcarpet/gui-install.c:813
 #, c-format
 msgid "%s (%s) has been verified as cryptographically secure by %s"
 msgstr "%s (%s) har verifierats som kryptografiskt säker av %s"
 
-#: redcarpet/gui-install.c:778
+#: redcarpet/gui-install.c:820
 #, c-format
 msgid "The integrity of %s (%s) has been confirmed."
 msgstr "Integriteten av %s (%s) har bekräftats."
 
-#: redcarpet/gui-install.c:844 redcarpet/gui-install.c:1079
-#: redcarpet/gui-install.c:1494
+#: redcarpet/gui-install.c:899
 #, c-format
 msgid ""
 "<p>A fatal error has occurred while Red Carpet was processing this "
-"transaction. This is likely caused by an improperly built package. You "
-"should report this problem to <a href=\"mailto:red-carpet@ximian.com\">red-"
-"carpet@ximian.com</a> immediately. Please include distribution information "
-"and the set of packages in this transaction.</p><p>Information from the "
-"packaging system:<br>%s</p>"
+"transaction. This is likely caused by an improperly built package.</p><p>If "
+"this problem persists, please report it to the <a href=\"http://bugzilla."
+"ximian.com\">Ximian Bugzilla</a>.</p><p>Information from the packaging "
+"system:<br>%s</p>"
 msgstr ""
 "<p>Ett ödesdigert fel har inträffat då Red Carpet behandlade denna "
-"transaktion. Detta beror troligtvis på ett felaktigt byggt paket. Du bör "
-"omedelbart rapportera detta problem till <a href=\"mailto:red-carpet@ximian."
-"com\">red-carpet@ximian.com</a>. Skriv på engelska, och ta med "
-"distributionsinformation och de paket som ingick i transaktionen.</"
-"p><p>Information från paketsystemet:<br>%s</p>"
+"transaktion. Detta beror troligtvis på ett felaktigt byggt paket.</p><p>Om "
+"detta problem kvarstår bör du rapportera det (på engelska) i <a href="
+"\"http://bugzilla.ximian.com\">Ximian Bugzilla</a>.</p><p>Information från "
+"paketsystemet:<br>%s</p>"
 
-#: redcarpet/gui-install.c:860 redcarpet/gui-install.c:1095
-#: redcarpet/gui-install.c:1510
+#: redcarpet/gui-install.c:914
 #, c-format
 msgid ""
 "<p>An error has occurred while Red Carpet was processing this transaction. "
 "This may be caused by an improperly built or corrupted package. You may want "
-"to try the transaction again with fewer packages. You should report this "
-"problem to <a href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</"
-"a> as soon as possible. Please include distribution information and the set "
-"of packages in this transaction.</p><p>Information from the packaging system:"
-"<br>%s</p>"
+"to try the transaction again with fewer packages. You can <a href=\"updater:"
+"send_bug_report\">send a problem report</a> to Ximian for analysis.</"
+"p><p>Information from the packaging system:<br>%s</p>"
 msgstr ""
 "<p>Ett fel inträffade då Red Carpet behandlade denna transaktion. Detta kan "
 "bero på ett felaktigt byggt eller trasigt paket. Du kan prova att genomföra "
-"transaktionen igen med färre paket. Du bör rapportera detta problem till <a "
-"href=\"mailto:red-carpet@ximian.com\">red-carpet@ximian.com</a> så snart som "
-"möjligt. Skriv på engelska och ta med distributionsinformation och de paket "
-"som ingick i transaktionen.</p><p>Information från paketsystemet:<br>%s</p>"
+"transaktionen igen med färre paket. Du kan <a href=\"updater:send_bug_report"
+"\">skicka en problemrapport</a> till Ximian för analys.</p><p>Information "
+"från paketsystemet:<br>%s</p>"
 
-#: redcarpet/gui-install.c:1364
+#: redcarpet/gui-install.c:1007
 #, c-format
-msgid ""
-"<p>An error has occurred while Red Carpet was processing the dependencies "
-"for this transaction. This may be caused by an error in the package or on "
-"the server. You may want to try the transaction again with fewer packages. "
-"You should report this problem to <a href=\"red-carpet@ximian.com\">red-"
-"carpet@ximian.com</a> as soon as possible. Please include distribution "
-"information and the set of packages in this transaction.</p><p>Information "
-"from the dependency system:<br>%s</p>"
-msgstr ""
-"<p>Ett fel inträffade då Red Carpet behandlade beroendena för denna "
-"transaktion. Detta kan bero på ett fel i paketet eller på servern. Du kan "
-"prova att genomföra transaktionen igen med färre paket. Du bör rapportera "
-"detta problem till <a href=\"red-carpet@ximian.com\">red-carpet@ximian.com</"
-"a> så snart som möjligt. Skriv på engelska och ta med "
-"distributionsinformation och de paket som ingick i denna transaktion.</"
-"p><p>Information från beroendesystemet:<br>%s</p>"
+msgid "Unable to create directory %s for local package storage"
+msgstr "Kan inte skapa katalogen %s för lokal paketlagring"
 
 #: redcarpet/gui-log-display.c:78
 msgid "Download Log"
@@ -1625,20 +1620,31 @@ msgstr "Verkställandelogg"
 msgid "Removal Log"
 msgstr "Borttagningslogg"
 
-#: redcarpet/gui-priority.c:64
+#: redcarpet/gui-priority.c:76
 msgid "Premium services enabled"
 msgstr "Premium Services aktiverade"
 
-#: redcarpet/gui-priority.c:488
+#: redcarpet/gui-priority.c:501
+#, c-format
+msgid ""
+"<p>Red Carpet encountered a network error while trying to submit your "
+"activation information.  Please contact Ximian support for assistance.</"
+"p><p>Details:<br>URL: %s<br>HTTP Response: %d %s<br>Soup Error: %d</p>"
+msgstr ""
+"<p>Red Carpet råkade ut för ett nätverksfel vid försöket att skicka din "
+"aktiveringsinformation. Kontakta Ximian support för stöd.</p><p>Detaljer:"
+"<br>URL: %s<br>HTTP-svar: %d %s<br>Soup-fel: %d</p>"
+
+#: redcarpet/gui-priority.c:541
 msgid "Activate Premium Services"
 msgstr "Aktivera Premium Services"
 
-#: redcarpet/gui-priority.c:535 redcarpet/gui-uri.c:672
-#: redcarpet/gui-uri.c:946
+#: redcarpet/gui-priority.c:592 redcarpet/gui-uri.c:678
+#: redcarpet/gui-uri.c:963
 msgid "Please wait, loading page..."
 msgstr "Var vänlig vänta, läser in sidan..."
 
-#: redcarpet/gui-priority.c:597
+#: redcarpet/gui-priority.c:669
 msgid ""
 "Red Carpet is unable to create a necessary cookie for your machine used in "
 "authenticating you when using the Red Carpet Premium Services because a "
@@ -1650,198 +1656,198 @@ msgstr ""
 "speciell \"ingen kaka\"-fil finns. Du måste ta bort den filen innan du kan "
 "aktivera dessa tjänster. Filen heter /etc/ximian/no-cookie."
 
-#: redcarpet/gui-transfer.c:230
-msgid "(no error)"
-msgstr "(inget fel)"
-
-#: redcarpet/gui-transfer.c:233
-msgid "Cancelled"
-msgstr "Avbruten"
-
-#: redcarpet/gui-transfer.c:236
-msgid "Can't connect"
-msgstr "Kan inte ansluta"
-
-#: redcarpet/gui-transfer.c:239
-msgid "File not found"
-msgstr "Filen hittades inte"
-
-#: redcarpet/gui-transfer.c:242
-msgid "IO error"
-msgstr "IO-fel"
-
-#: redcarpet/gui-transfer.c:247
-msgid ""
-"Red Carpet Express was unable to verify your identity.<p>Please make sure "
-"that your premium services account is enabled.<p>To continue using Red "
-"Carpet without premium services, <a href=\"updater:disable_priority\">click "
-"here</a>. You can reenable it later by choosing Settings->Preferences-"
-">General and checking the box labelled \"Enable RC Premium Services\""
-msgstr ""
-"Red Carpet Express kunde inte verifiera din identitet.<p>Försäkra dig om att "
-"ditt Premium Services-konto är aktiverat.<p><a href=\"updater:"
-"disable_priority\">Klicka här</a> för att fortsätta använda Red Carpet utan "
-"Premium Services. Du kan återaktivera det senare genom att välja "
-"Inställningar->Inställningar->Allmänt och klicka på rutan \"Aktivera RC "
-"Premium Services\""
-
-#: redcarpet/gui-transfer.c:259
-msgid "Unable to authenticate"
-msgstr "Kunde inte autentisera"
-
-#: redcarpet/gui-transfer.c:277
+#: redcarpet/gui-transfer.c:282
 #, c-format
 msgid "%.2f MB"
 msgstr "%.2f MB"
 
-#: redcarpet/gui-transfer.c:280
+#: redcarpet/gui-transfer.c:285
 #, c-format
 msgid "%d KB"
 msgstr "%d kB"
 
-#: redcarpet/gui-transfer.c:282
+#: redcarpet/gui-transfer.c:287
 #, c-format
 msgid "%d bytes"
 msgstr "%d byte"
 
-#: redcarpet/gui-transfer.c:325
+#: redcarpet/gui-transfer.c:320
 #, c-format
 msgid "%%p%%%% (%s of %s) - %s/s"
 msgstr "%%p%%%% (%s av %s) - %s/s"
 
-#: redcarpet/gui-transfer.c:337
+#: redcarpet/gui-transfer.c:332
 #, c-format
 msgid "%s - %s/s"
 msgstr "%s - %s/s"
 
-#: redcarpet/gui-transfer.c:391
+#: redcarpet/gui-transfer.c:385
 msgid "Downloading data..."
 msgstr "Hämtar data..."
 
-#: redcarpet/gui-transfer.c:1141
+#: redcarpet/gui-transfer.c:623
+msgid "Couldn't open file for writing"
+msgstr "Kunde inte öppna fil för skrivning"
+
+#: redcarpet/gui-transfer.c:1208
 #, c-format
 msgid "%%p%%%% (%s of %s) - Paused"
 msgstr "%%p%%%% (%s av %s) - Gör paus"
 
-#: redcarpet/gui-transfer.c:1150
+#: redcarpet/gui-transfer.c:1217
 #, c-format
 msgid "%s - Paused"
 msgstr "%s - Gör paus"
 
-#: redcarpet/gui-util.c:99
+#: redcarpet/gui-transfer.c:1264
+msgid ""
+"<p>Your account for Red Carpet Premium Services could not be verfified.</"
+"p><p>Please make sure that your premium services account is enabled.</"
+"p><p>To continue using Red Carpet without premium services, <a href="
+"\"updater:disable_priority\">click here</a>. You can reenable it later by "
+"choosing Settings->Preferences->General and checking the box labelled "
+"\"Enable RC Premium Services\"</p>"
+msgstr ""
+"<p>Ditt konto för Red Carpet Premium Services kunde inte verifieras.</"
+"p><p>Försäkra dig om att ditt Premium Services-konto är aktiverat.</p><p><a "
+"href=\"updater:disable_priority\">Klicka här</a> för att fortsätta använda "
+"Red Carpet utan Premium Services. Du kan återaktivera det senare genom att "
+"välja Inställningar->Inställningar->Allmänt och klicka på rutan \"Aktivera "
+"RC Premium Services\""
+
+#: redcarpet/gui-transfer.c:1277
+#, c-format
+msgid ""
+"<p>Red Carpet was unable to complete a file transfer.</p>%s%s<p>Details:"
+"<br>URL: %s<br>Error: %s</p>"
+msgstr ""
+"<p>Red Carpet kunde inte färdigställa en filöverföring.</p>%s%s<p>Detaljer:"
+"<br>URL: %s<br>Fel: %s</p>"
+
+#: redcarpet/gui-util.c:103
 #, c-format
 msgid "Red Carpet encountered an error querying your system:<br>%s"
 msgstr ""
 "Red Carpet råkade ut för ett fel vid undersökning av ditt system:<br>%s"
 
-#: redcarpet/gui-util.c:145
+#: redcarpet/gui-util.c:157
 #, c-format
 msgid "%.2f%sMB"
 msgstr "%.2f%sMB"
 
-#: redcarpet/gui-util.c:150
+#: redcarpet/gui-util.c:162
 #, c-format
 msgid "%d%sKB"
 msgstr "%d%skB"
 
-#: redcarpet/gui-util.c:153
+#: redcarpet/gui-util.c:165
 #, c-format
 msgid "%d%sbytes"
 msgstr "%d%sbyte"
 
-#: redcarpet/gui-util.c:182
+#: redcarpet/gui-util.c:194
 msgid "zero"
 msgstr "noll"
 
-#: redcarpet/gui-util.c:183
+#: redcarpet/gui-util.c:195
 msgid "one"
 msgstr "en"
 
-#: redcarpet/gui-util.c:184
+#: redcarpet/gui-util.c:196
 msgid "two"
 msgstr "två"
 
-#: redcarpet/gui-util.c:185
+#: redcarpet/gui-util.c:197
 msgid "three"
 msgstr "tre"
 
-#: redcarpet/gui-util.c:186
+#: redcarpet/gui-util.c:198
 msgid "four"
 msgstr "fyra"
 
-#: redcarpet/gui-util.c:187
+#: redcarpet/gui-util.c:199
 msgid "five"
 msgstr "fem"
 
-#: redcarpet/gui-util.c:188
+#: redcarpet/gui-util.c:200
 msgid "six"
 msgstr "sex"
 
-#: redcarpet/gui-util.c:189
+#: redcarpet/gui-util.c:201
 msgid "seven"
 msgstr "sju"
 
-#: redcarpet/gui-util.c:190
+#: redcarpet/gui-util.c:202
 msgid "eight"
 msgstr "åtta"
 
-#: redcarpet/gui-util.c:191
+#: redcarpet/gui-util.c:203
 msgid "nine"
 msgstr "nio"
 
 #. "Red Carpet has encountered ..."
 #. Possible actions...
-#: redcarpet/gui-util.c:344
+#: redcarpet/gui-util.c:356
 msgid "Fatal Error"
 msgstr "Ödesdigert fel"
 
-#: redcarpet/gui-util.c:344
+#: redcarpet/gui-util.c:356
 msgid "Error"
 msgstr "Fel"
 
-#: redcarpet/gui-util.c:345
+#: redcarpet/gui-util.c:357
 msgid ""
 "Red Carpet has encountered an error while trying to process your request:"
 msgstr ""
 "Red Carpet har råkat ut för ett fel vid försöket att behandla din begäran:"
 
-#: redcarpet/gui-util.c:348
+#: redcarpet/gui-util.c:360
 msgid "Possible actions:"
 msgstr "Möjliga åtgärder:"
 
-#: redcarpet/gui-util.c:353
+#: redcarpet/gui-util.c:365
 msgid "<li>Click <b>Quit</b> to quit."
 msgstr "<li>Klicka på <b>Avsluta</b> för att avsluta."
 
-#: redcarpet/gui-util.c:356
+#: redcarpet/gui-util.c:368
 msgid "Quit"
 msgstr "Avsluta"
 
-#: redcarpet/gui-util.c:360
+#: redcarpet/gui-util.c:372
 msgid "<li>Click <b>Retry</b> to retry."
 msgstr "<li>Klicka på <b>Försök igen</b> för att försöka igen."
 
-#: redcarpet/gui-util.c:361 redcarpet/gui-util.c:368
+#: redcarpet/gui-util.c:373 redcarpet/gui-util.c:380
 msgid "<li>Click <b>Cancel</b> to cancel."
 msgstr "<li>Klicka på <b>Avbryt</b> för att avbryta."
 
-#: redcarpet/gui-util.c:365
+#: redcarpet/gui-util.c:377
 msgid "Retry"
 msgstr "Försök igen"
 
-#: redcarpet/gui-util.c:371
+#: redcarpet/gui-util.c:383
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: redcarpet/gui-util.c:799
+#: redcarpet/gui-util.c:670
+msgid ""
+"Red Carpet was unable to install the following packages.\n"
+"Please ensure that they exist and are valid package files.\n"
+"\n"
+msgstr ""
+"Red Carpet kunde inte installera följande paket.\n"
+"Försäkra dig om att de finns och är giltiga paketfiler.\n"
+"\n"
+
+#: redcarpet/gui-util.c:843
 msgid "Load file(s)"
 msgstr "Läs in fil(er)"
 
-#: redcarpet/gui-util.c:814
+#: redcarpet/gui-util.c:858
 msgid "Install selected packages"
 msgstr "Installera markerade paket"
 
-#: redcarpet/gui-util.c:818
+#: redcarpet/gui-util.c:862
 msgid "Install all packages in directory"
 msgstr "Installera alla paket i katalogen"
 
@@ -1849,11 +1855,11 @@ msgstr "Installera alla paket i katalogen"
 #. * This is ugly.
 #. * Change the Cancel buttons caption to Close.
 #.
-#: redcarpet/gui-util.c:829
+#: redcarpet/gui-util.c:873
 msgid "Close"
 msgstr "Stäng"
 
-#: redcarpet/gui-util.c:890
+#: redcarpet/gui-util.c:934
 msgid "Ximian Red Carpet will now restart."
 msgstr "Ximian Red Carpet kommer nu att startas om."
 
@@ -1875,13 +1881,106 @@ msgid "Unable to save mirror list (%s)."
 msgstr "Kan inte tolka spegellista (%s)."
 
 #: redcarpet/mirror.c:252
-#, c-format
-msgid ""
-"Transfer of %s did not complete: %s<p>You can continue without any mirrors "
-"by pressing \"Cancel\""
-msgstr ""
-"Överföring av %s färdigställdes inte: %s<p>Du kan fortsätta utan några "
-"speglar genom att trycka på \"Avbryt\""
+msgid "<p>You can continue without any mirrors by pressing \"Cancel\""
+msgstr "<p>Du kan fortsätta utan några speglar genom att trycka på \"Avbryt\""
+
+#~ msgid ""
+#~ "<p>Your account for Red Carpet Premium Services could not be verified.</"
+#~ "p><p>Please make sure that your premium services account is enabled.</"
+#~ "p><p>To continue using Red Carpet without premium services, <a href="
+#~ "\"updater:disable_priority\">click here</a>. You can reenable it later by "
+#~ "choosing Settings->Preferences->General and checking the box labelled "
+#~ "\"Enable RC Premium Services\"</p>"
+#~ msgstr ""
+#~ "<p>Ditt konto för Red Carpet Premium Services kunde inte verifieras.</"
+#~ "p><p>Försäkra dig om att ditt Premium Services-konto är aktiverat.</"
+#~ "p><p><a href=\"updater:disable_priority\">Klicka här</a> för att "
+#~ "fortsätta använda Red Carpet utan Premium Services. Du kan återaktivera "
+#~ "det senare genom att välja Inställningar->Inställningar->Allmänt och "
+#~ "klicka på rutan \"Aktivera RC Premium Services\""
+
+#~ msgid "Allowed cache difference:"
+#~ msgstr "Tillåten cacheskillnad:"
+
+#~ msgid "seconds"
+#~ msgstr "sekunder"
+
+#~ msgid "<b>%d</b> %s"
+#~ msgstr "<b>%d</b> %s"
+
+# Här kommer en siffra framför
+#~ msgid "Requested Packages"
+#~ msgstr "begärda paket"
+
+#~ msgid "Prefs"
+#~ msgstr "Inställn"
+
+#~ msgid "Developers"
+#~ msgstr "Utvecklare"
+
+#~ msgid "User Interface Design"
+#~ msgstr "Design av användargränssnittet"
+
+#~ msgid "Artwork"
+#~ msgstr "Artister"
+
+#~ msgid "Unable to access packaging subsystem:<br>%s"
+#~ msgstr "Kan inte komma åt paketeringsundersystem:<br>%s"
+
+#~ msgid "Transfer of %s did not complete: %s"
+#~ msgstr "Överföring av %s färdigställdes inte: %s"
+
+#~ msgid ""
+#~ "<p>An error has occurred while Red Carpet was processing the dependencies "
+#~ "for this transaction. This may be caused by an error in the package or on "
+#~ "the server. You may want to try the transaction again with fewer "
+#~ "packages. You should report this problem to <a href=\"red-carpet@ximian."
+#~ "com\">red-carpet@ximian.com</a> as soon as possible. Please include "
+#~ "distribution information and the set of packages for this transaction.</"
+#~ "p><p>Information from the dependency system:<br> %s</p>"
+#~ msgstr ""
+#~ "<p>Ett fel inträffade då Red Carpet behandlade beroendena för denna "
+#~ "transaktion. Detta kan orsakas av ett fel i paketet eller på servern. Du "
+#~ "kan prova att genomföra transaktionen igen med färre paket. Du bör "
+#~ "rapportera detta problem till <a href=\"red-carpet@ximian.com\">red-"
+#~ "carpet@ximian.com</a> så snart som möjligt. Skriv på engelska och ta med "
+#~ "distributionsinformation och de paket som ingick i denna transaktion.</"
+#~ "p><p>Information från beroendesystemet:<br> %s</p>"
+
+#~ msgid ""
+#~ "<p>An error has occurred while Red Carpet was processing the dependencies "
+#~ "for this transaction. This may be caused by an error in the package or on "
+#~ "the server. You may want to try the transaction again with fewer "
+#~ "packages. You should report this problem to <a href=\"red-carpet@ximian."
+#~ "com\">red-carpet@ximian.com</a> as soon as possible. Please include "
+#~ "distribution information and the set of packages in this transaction.</"
+#~ "p><p>Information from the dependency system:<br>%s</p>"
+#~ msgstr ""
+#~ "<p>Ett fel inträffade då Red Carpet behandlade beroendena för denna "
+#~ "transaktion. Detta kan bero på ett fel i paketet eller på servern. Du kan "
+#~ "prova att genomföra transaktionen igen med färre paket. Du bör rapportera "
+#~ "detta problem till <a href=\"red-carpet@ximian.com\">red-carpet@ximian."
+#~ "com</a> så snart som möjligt. Skriv på engelska och ta med "
+#~ "distributionsinformation och de paket som ingick i denna transaktion.</"
+#~ "p><p>Information från beroendesystemet:<br>%s</p>"
+
+#~ msgid "(no error)"
+#~ msgstr "(inget fel)"
+
+#~ msgid "Cancelled"
+#~ msgstr "Avbruten"
+
+#~ msgid "Can't connect"
+#~ msgstr "Kan inte ansluta"
+
+#~ msgid "File not found"
+#~ msgstr "Filen hittades inte"
+
+#~ msgid "IO error"
+#~ msgstr "IO-fel"
+
+#~ msgid "Unable to authenticate"
+#~ msgstr "Kunde inte autentisera"
 
 #~ msgid ""
 #~ "Red Carpet Express was unable to verify your identity.<p>Please make sure "
@@ -1909,7 +2008,7 @@ msgstr ""
 #~ "services account.  You can use the standard RC service by going to "
 #~ "Settings -> Preferences -> General"
 #~ msgstr ""
-#~ "Kan inte autentisera. Detta beror troligtvis på ett deaktiverat Premium "
+#~ "Kan inte autentisera. Detta beror troligtvis på ett inaktiverat Premium "
 #~ "Services-konto. Du kan använda den vanliga Red Carpet-tjänsten genom att "
 #~ "gå till Inställningar -> Inställningar -> Allmänt"
 
