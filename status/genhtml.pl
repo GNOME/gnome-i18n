@@ -171,17 +171,20 @@ my %outdated = (
     "C"  => "OutDated",
     "de" => "Veraltet",
     "es" => "Desactualizada",
+    "sv" => "F&ouml;r&aring;ldrad",
 );
 
 my %wip = (
     "C"  => "Work in Progress",
     "de" => "In Arbeit",
     "es" => "En proceso",
+    "sv" => "P&aring;g&aring;ende arbete",
 );
 
 my %finished = (
     "C"	 => "Finished",
     "es" => "Terminada",
+    "sv" => "Slutf&ouml;rd",
 );
 
 my %unknown = (
