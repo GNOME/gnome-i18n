@@ -214,6 +214,7 @@ foreach $mod (@modules) {
       $translated{$lang} += $mod_tr{$lang};
       fill_stats ($num);
     }
+    print TABLE "<td><nobr><font face=\"arial, helvetica\" size=2>$module</nobr></td>\n";
     $totals += $mod_total;
   }
 }
@@ -233,7 +234,10 @@ foreach $lang (@langs) {
 #  print "$translated{$lang} / $totals = $percent, num: $num ($lang)\n";  
   printf TABLE "<td align=right><font face=\"arial, helvetica\" size=2>%d%%</font></td>\n", $num;
 }
-
+  print TABLE "<tr><td></td>";                                                                          
+    foreach $lang (@langs) {                                                                                  
+    print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$lang</font></a></td>\n";
+} 
 print "\n";
 print TABLE "</table>\nReport last generated: ";
 print TABLE scalar localtime;
@@ -379,7 +383,7 @@ sub get_stats {
 sub fill_stats {
   ($percent) = @_;
   if ($num == 100) {
-    print TABLE "<td><font color=\"green\" face=\"arial, helvetica\" size=2>100%</font></td>\n";
+    print TABLE "<td><font color=\"blue\" face=\"arial, helvetica\" size=2>100%</font></td>\n";
   } else {
     if ($num == 0) {
       print TABLE "<td align=center><font face=\"arial, helvetica\" size=2>-</td>\n";
@@ -388,7 +392,7 @@ sub fill_stats {
 	print TABLE "<td><font color=\"red\" face=\"arial, helvetica\" size=2>$percent%</font></td>\n";
       } else {
 	if ($num < 50) {
-	  print TABLE "<td><font color=\"orange\" face=\"arial, helvetica\" size=2>$percent%</font></td>\n";
+	  print TABLE "<td><font color=\"magenta\" face=\"arial, helvetica\" size=2>$percent%</font></td>\n";
 	} else {
 	  if ($num > 100) {
 	    print TABLE "<td><font color=\"red\" face=\"arial, helvetica\" size=2><b>$percent%!</b></font></td>\n";
