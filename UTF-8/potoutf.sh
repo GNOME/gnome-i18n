@@ -13,4 +13,4 @@ echo "converting from" $FROM
 
 if [ -z $1 ]; then echo "Could not find the encoding"; exit; fi;
 
-(iconv --from=$FROM --to=UTF-8 < $1.tmp | sed -e "s/text\/plain; charset="$FROM"/charset=text\/plain; UTF-8/" > $1) || (echo "Could not convert - restoring old .po file" && cp $1.tmp $1)
+(iconv --from=$FROM --to=UTF-8 < $1.tmp | sed -e "s/text\/plain; charset="$FROM"/charset=text\/plain; charset=UTF-8/" > $1) || (echo "Could not convert - restoring old .po file" && cp $1.tmp $1)
