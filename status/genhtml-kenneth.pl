@@ -124,7 +124,7 @@ $now = time;
 );
 
 
-$htmldir="/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
+$htmldir="/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/apps";
 
 sub printmodule;
 sub printlang;

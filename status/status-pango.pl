@@ -8,7 +8,7 @@
 ###############
 @modules = (
      "gtk+-HEAD/po",
-     "gnome-libs-HEAD/po",
+     "gnome-libs-HEAD/po"
 );
 
 # it's for a current developer :-)

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 # Copyright (C) 2000 Free Software Foundation
 # frob <frob@df.ru>
 # 
@@ -16,6 +16,7 @@ $now = time;
 "fi", "Paketti",
 "hu", "Modul",
 "nl", "Module",
+"no", "Modul",
 "ro", "Modul",
 "ru", "Модуль",
 "sv", "Modul",
@@ -30,6 +31,7 @@ $now = time;
 "fi", "K&auml;&auml;nnetty",
 "hu", "LefordМtott",
 "nl", "Vertaald",
+"no", "Oversatt",
 "ro", "traduse",
 "ru", "Переведено",
 "sv", "&Ouml;versatt",
@@ -44,6 +46,7 @@ $now = time;
 "fi", "Ep&auml;selvi&auml;",
 "hu", "Pontatlan",
 "nl", "Wazig",
+"no", "Uferdig",
 "ro", "neclare",
 "ru", "Нечетко",
 "sv", "Luddigt",
@@ -58,6 +61,7 @@ $now = time;
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "hu", "FordМtatlan",
 "nl", "Onvertaald",
+"no", "Uoversatt",
 "ro", "netraduse",
 "ru", "Непереведено",
 "sv", "O&oslash;versatt",
@@ -72,6 +76,7 @@ $now = time;
 "fi", "rivi&auml;",
 "hu", "karakterlАnc",
 "nl", "Meldingen",
+"no", "Strenger",
 "ro", "stringuri",
 "ru", "сообщ.",
 "sv", "meddelanden",
