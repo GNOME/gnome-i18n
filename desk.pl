@@ -2,13 +2,21 @@
 
 $LANGUAGE = $ARGV[0];
 
+if ("$LANGUAGE" eq ""){
+print "You need to specify language code, ie. ./desk.pl da";
+print "for Danish and so on...";
+}
+
+else{
 $a="find ./ -print | egrep '.*\\.(desktop|soundlist"
-  ."|directory)' | xargs grep '\\[$LANGUAGE\\]' | cut -d: -f1 "
+  ."|directory)' | xargs grep 'Name\\[$LANGUAGE\\]\\=' | cut -d: -f1 "
   ."| uniq | cut -d/ -f2- > desk1";
 
 $b="find ./ -print | egrep '.*\\.(desktop|soundlist"
-  ."|directory)' | xargs grep 'Name' | cut -d: -f1 "
+  ."|directory)' | xargs grep 'Name\\=' | cut -d: -f1 "
   ."| uniq | cut -d/ -f2- > desk2";
+
+print "Searching for missing Name[$LANGUAGE] entries...\n";
 
 `$a`;
 `$b`;
@@ -22,6 +30,7 @@ $c="diff desk1 desk2 -u0 | grep '^+' |grep -v '^+++'"
 `$c`;
 `rm desk1 && rm desk2`;
 
-print "Here you go:\n\n";
+print "Well, you need to fix these:\n\n";
 system "more DESKTOP.missing";
 print "\nThe list is saved in DESKTOP.missing\n";
+}
