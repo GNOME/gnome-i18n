@@ -1,5 +1,58 @@
-Soon I will write one. Please be pacient.
-Until then, feel free to ask me about them.
+Status scripts for GNOME Translation Project
 
-Carlos Perelló Marín <carlos@gnome-db.org>
+README author: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>
+
+
+This file describes how to use the scripts for generating status HTML pages. It
+describes my experience to get these scripts generate my local status page. I
+hope it will help you to get them to work as well :-). Any comments are welcome.
+
+You need to download a file describing which CVS modules should be used (called modules.dat).
+It is in GNOME CVS module web-devel-2. In fact, there are three files; stable,
+unstable and extra:
+
+web-devel-2/content/projects/gtp/status/unstable/modules.dat
+web-devel-2/content/projects/gtp/status/stable/modules.dat
+web-devel-2/content/projects/gtp/status/extra/modules.dat
+
+Get them typing:
+
+cvs checkout web-devel-2/content/projects/gtp/status/unstable/modules.dat
+cvs checkout web-devel-2/content/projects/gtp/status/stable/modules.dat
+cvs checkout web-devel-2/content/projects/gtp/status/extra/modules.dat
+
+There are 3 steps to generate the HTML statistics using modules.dat files:
+
+1. cvs-download.pl
+The script allows to checkout or update your local CVS tree according to 
+a modules.dat file.
+
+For example using unstable (please replace <your-GNOME-CVS-root> by the correct
+path):
+./cvs-download.pl --cvsroot-dir <your-GNOME-CVS-root> \
+  --modules-file <your-GNOME-CVS-root>/web-devel-2/content/projects/gtp/status/unstable/modules.dat
+
+
+2. status.pl
+The script generates statistics for your local CVS tree, using modules.dat file
+again:
+
+Example using unstable again (please replace <your-GNOME-CVS-root> by the
+correct path and <result-path> by the path, where you want to store generated
+pages):
+./status.pl --cvsroot-dir <your-GNOME-CVS-root> \
+   --modules-file <your-GNOME-CVS-root>web-devel-2/content/projects/gtp/status/unstable/modules.dat \
+   --html-dir <result-path>
+
+3. genthml.pl
+Finally, using this script, you generate the HTML pages with the statistics
+(again replace <result-path> by the path used in the previous step for
+--html-dir:
+
+./genhtml.pl --html-dir <result-path>
+
+In <result-path> you should get statistics pages named status.shtml and
+<lang>.shtml.
+To generate statistics for your language only, change the "Constants" part of
+the script ./status.
 
