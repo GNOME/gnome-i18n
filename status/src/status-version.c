@@ -1,19 +1,22 @@
 /* Translation Status program
- * Copyright (C) 2002-2003 Carlos Perelló Marín <carlos@gnome.org>
  *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
+ * Author: Carlos Perelló Marín <carlos@gnome.org>
+ * 
+ * Copyright (C) 2002-2003 Carlos Perelló Marín
  *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
 
@@ -23,8 +26,8 @@ struct _StatusVersion {
 	GObject object;
 
 	StatusServer *server;
-	GString *branch;
-	GString *module;
+	GString *id;
+	GString *path;
 };
 
 struct _StatusVersionClass {
@@ -55,8 +58,8 @@ status_version_init (StatusVersion *version, StatusVersionClass *klass)
 	g_return_if_fail (STATUS_IS_VERSION (version));
 
 	version->server = NULL;
-	version->branch = NULL;
-	version->module = NULL;
+	version->id = NULL;
+	version->path = NULL;
 }
 
 static void
@@ -69,13 +72,13 @@ status_version_finalize (GObject *object)
 	if (version->server != NULL) {
 		g_object_unref (version->server);
 	}
-	if (version->branch != NULL) {
-		g_string_free (version->branch, TRUE);
-		version->branch = NULL;
+	if (version->id != NULL) {
+		g_string_free (version->id, TRUE);
+		version->id = NULL;
 	}
-	if (version->module != NULL) {
-		g_string_free (version->module, TRUE);
-		version->module = NULL;
+	if (version->path != NULL) {
+		g_string_free (version->path, TRUE);
+		version->path = NULL;
 	}
 
 	parent_class->finalize (object);
@@ -108,23 +111,23 @@ status_version_get_type (void)
 /**
  * status_version_new
  * @server:
- * @branch:
- * @module:
+ * @id:
+ * @path:
  *
  * Create a new #StatusVersion object
  */
 StatusVersion *
-status_version_new_cvs (StatusServer *server, const gchar *branch, const gchar *module)
+status_version_new (StatusServer *server, const gchar *id, const gchar *path)
 {
 	StatusVersion *version;
 
 	g_return_val_if_fail (STATUS_IS_SERVER (server), NULL);
 
-	version = status_version (g_object_new (STATUS_TYPE_VERSION, NULL));
+	version = STATUS_VERSION (g_object_new (STATUS_TYPE_VERSION, NULL));
 
 	version->server = g_object_ref (server);
-	version->branch = g_string_new (branch);
-	version->module = g_string_new (module);
+	version->id = g_string_new (id);
+	version->path = g_string_new (path);
 
 	return version;
 }
