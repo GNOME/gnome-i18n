@@ -5,61 +5,50 @@ include "functions.php";
 ?>
 
 <head>
-  <title>Gnome-nl -- Nieuws</title>
+  <title>GParted -- News</title>
 <? html_head() ?>
 </head>
 <body>
 <div class="body">
 
 <?
-meter();
+//meter();
 gnome_head();
 gnome_menu();
 ?>
 <div class="content">
-<h1>GNOME Vertaalnieuws</h1>
+<h1>GParted News</h1>
 <?
-$filename = "text/nieuws.text";
+$filename = "text/news.text";
 $fcontents = file($filename);
 $pos = 0;
 $aantal = 0;
-$max_nieuws = 5;
-if (!isset($alles)) {
-	while ($aantal != $max_nieuws) {
-	    list ($line_num, $line) = each ($fcontents);
+$news_per_page = 5;
+
+if ( ! empty( $_GET["alles"] ) )	
+	$max_nieuws = 1000; //arbitrary value, increase if you need more
+else
+	$max_nieuws = $news_per_page ;
+
+	while( (list ($line_num, $line) = each ($fcontents)) && $aantal < $max_nieuws  ) {
 	    if ($line_num == $pos) {
 	        echo "<table class=\"nieuws\"><tr>";
-	        echo "<th class=\"news\">", htmlspecialchars ($line), ": ";
+	        echo "<th align=LEFT class=\"news\">", htmlspecialchars ($line), ": ";
 	    } elseif ($line_num == $pos + 1) {
 	        echo htmlspecialchars ($line), "</th></tr>\n";
-		echo "<tr><td class=\"news\">";
+			  echo "<tr><td class=\"news\">";
 	    } elseif (chop($line) == "---") {
-	        echo "</td></tr></table>\n";
+	        echo "</td></tr></table>\n<br>";
 	        $pos = $line_num + 1;
-		$aantal = $aantal + 1;
+			  $aantal++;
 	    } else {
-		echo $line;
+			  echo $line;
 	    }
 	}
-	echo "<table><tr><td><a href=\"nieuws.php?alles=alles\">Ouder nieuws...</a>\n";
-} else {
-	while (list ($line_num, $line) = each ($fcontents)) {
-	    if ($line_num == $pos) {
-	        echo "<table><tr>";
-	        echo "<th class=\"news\">", htmlspecialchars ($line), ": ";
-	    } elseif ($line_num == $pos + 1) {
-	        echo htmlspecialchars ($line), "</th></tr>\n";
-		echo "<tr><td class=\"news\">";
-	    } elseif (chop($line) == "---") {
-	        echo "</td></tr></table>";
-	        $pos = $line_num + 1;
-	    } else {
-		echo $line;
-	    }
-	}
-}
-echo "</td></tr></table>";
 
+if ( ! empty( $line ) )	
+	echo "<table><tr><td><a href=\"news.php?alles=alles\">Older news...</a></td></tr></table>\n";
+	
 ?>
 
 </div>
