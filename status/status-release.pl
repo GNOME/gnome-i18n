@@ -2,7 +2,9 @@
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # frob <frob@df.ru>
 # with great help of dand, kanikus and kmaraas
+# Some changes by keld && Carlos Perelló
 
+use POSIX qw(locale_h);
 ###############
 # "Constants" #
 ###############
@@ -33,35 +35,21 @@
      "sawfish/po"
 );
 
-@xml_i18n_tools_compliants = (
-    "bonobo/po",
-    "bug-buddy/po",
-    "control-center/po",
-    "eel/po",
-    "evolution/po",
-    "gdm2/po",
-    "ggv/po",
-    "glade/po",
-    "gnome-applets/po",
-    "gnome-core/po",
-    "gnome-db/po",
-    "gnome-media/po",
-    "gnome-utils/po",
-    "gnome-vfs/po",
-    "nautilus/po",
-    "oaf/po"
+@modules_remove_2 = (
+     "gdm2/po"
 );
 
 # it's for a current developer :-)
-#@langs = ( "uk" );
+#@langs = ( "es" );
 
 
 @langs = qw ( az bg ca cs da de el en_GB es et eu fi fr ga gl hr hu 
-              is it ja ko lt ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
+	      is it ja ko lt ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
 	      vi wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/release";
+$posdir = "$htmldir/po";
 
 #############################
 # "Subroutines declaration" # 
@@ -75,16 +63,15 @@ sub getmerge;
 ####################
 
 #
-# find xml-i18n-tools 
-#
-$xmldir = `which xml-i18n-toolize 2> /dev/null`;
-chomp $xmldir;
-die "couldn't found xml-i18n-toolize" unless -e $xmldir;
-$xmldir =~ s@/bin/xml-i18n-toolize@@;
-
-#
 # read old dat-files
 #
+setlocale(LC_LANG, "C");
+setlocale(LC_ALL, "C");
+
+open(POSDIR,"mkdir -p $posdir |")
+|| die ("unable to mkdir");
+close(POSDIR);
+
 if (open (MODINFO, "$htmldir/modinfo.dat")){
     while (<MODINFO>) {
 	chomp;
@@ -227,10 +214,24 @@ sub getmerge{
      if($file=~/\//){
          $file = ($' ne "rpm-3.0.3/po") ? $' : "rpm"; 
      }
-     
-    open(MERGE,"msgmerge --output-file=$cvsroot/$mod/$lang.new.po $cvsroot/$mod/$lang.po $cvsroot/$mod/$file.pot |")
+    
+    # Here we add the "2" char.
+    if (grep /^$mod$/, @modules_remove_2) {
+    	$file = substr($file, 0, -1);
+    }
+    
+    $_ = $mod;
+    s/\//-/;
+    s/-po//;
+    $newname = $_;
+
+    open(MERGE,"LANGUAGE=C msgmerge --output-file=$cvsroot/$mod/$lang.new.po $cvsroot/$mod/$lang.po $cvsroot/$mod/$file.pot |")
     || die ("unable to msgmerge");
     close(MERGE);
+    open(MERGE,"cp -p $cvsroot/$mod/$lang.new.po $posdir/$newname-$lang.po |")
+    || die ("unable to cp");
+    close(MERGE);
+#    unlink("$cvsroot/$mod/$lang.new.po");
 }
 
 sub getmsgfmt{
@@ -240,10 +241,15 @@ print "$language  $mod\n";
     if ($language eq "pot"){
 	$mod =~/\//;
 	$file = ($' ne "po") ? $' : $`;
-     if($file=~/\//){
-         $file = ($' ne "rpm-3.0.3/po") ? $' : "rpm"; 
-     }
+	if($file=~/\//){
+	    $file = ($' ne "rpm-3.0.3/po") ? $' : "rpm"; 
+	}
 
+	# Here we add the "2" char.
+	if (grep /^$mod$/, @modules_remove_2) {
+	    $file = substr($file, 0, -1);
+	}
+     
 	$ext = "pot";
     } else {
 	$file = $language;
@@ -252,7 +258,7 @@ print "$language  $mod\n";
     
     $file = ($file=~/\//) ? $' : $file;
     
-    open(STAT,"msgfmt --statistics -o /dev/null $cvsroot/$mod/$file.$ext 2>&1 |")
+    open(STAT,"LANGUAGE=C msgfmt --statistics -o /dev/null $cvsroot/$mod/$file.$ext 2>&1 |")
     || die ("unable to msgfmt");
     $line=<STAT>;
     close(STAT);
@@ -274,20 +280,22 @@ sub generatepot{
       $domain = "helix-install/src/rpm-3.0.3";
       $file = "rpm";
     }
+
+    $oldfile = $file;
+    # Here we add the "2" char.
+    if (grep /^$mod$/, @modules_remove_2) {
+	$file = substr($file, 0, -1);
+    }
+    
     if ($' eq "po-script-fu"){
       $xgettext_plus = "&& $cvsroot/gimp/po-script-fu/script-fu-xgettext \ $cvsroot/gimp/plug-ins/script-fu/scripts/*.scm \ $cvsroot/gimp/plug-ins/gap/sel-to-anim-img.scm \ $cvsroot/gimp/plug-ins/webbrowser/web-browser.scm \ >> $cvsroot/gimp/po-script-fu/gimp-script-fu.po \ ";
     }
     print "generatepot: $mod\n";
 
     if ($file eq "po-script-fu"){
-      open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
-    } elsif (grep /^$mod$/, @xml_i18n_tools_compliants) {
-      open (POTOUT, "PACKAGE=$mod XML_I18N_EXTRACT=$xmldir/share/xml-i18n-tools/xml-i18n-update |");
+      open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot && ln po-script-fu.pot $cvsroot/$mod/po_script-fu.pot |" );
     } else {  
-      open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
-	  "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
-	  " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
-	  " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
+      open (POTOUT,  "cd $cvsroot/$mod && xml-i18n-update -P 1>&2 && cp -p $cvsroot/$mod/$file.pot $posdir/$oldfile.pot |") || die ("could not update.pl");
     }
     close (POTOUT);
 }
