@@ -19,7 +19,7 @@ function translate() { ?>
  ?>
 <form name="TRANS" action="http://www.systranbox.com/systran/box" method="post">
 <input name="systran_id" type="hidden" value="SystranSoft-en">
-<input name="systran_charset" type="hidden" value="utf-8">
+<input name="systran_charset" type="hidden" value="iso-8859-15">
 <input type="hidden" value="url" name="ttype">
 <input type="hidden" value="<? echo $url; ?>" name="systran_url">
 <input type="hidden" name="systran_lp" value="nl_en">
@@ -34,7 +34,7 @@ $backgrounds = array('background01.png', 'background02.png', 'background03.png',
 ?>
   <link rel="icon" href="images/gnome-nl-logo.png" type="image/png">
   <link rel="stylesheet" href="css/default.css" type="text/css">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
   <meta name="author" content="Vincent van Adrighem">
   <meta name="keywords" content="gnome translation dutch nl localisation vertalen i18n nederlands">
   <style type="text/css">
