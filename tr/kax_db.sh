@@ -8,7 +8,7 @@
 export BAS="<html><head><title>$TITLE</title></head><body bgcolor=\"grey\" text=\"navy\">"
 export METIN='<p align="center">Burada benim çok sevdidim ve GNOME tercümelerimde
 kullandýðým bazý standard-dýþý kelimelerin çizgiyesi ( tablosu ) var .
-Yine de sorularýn varsa , o zaman bana bir ePosta <a href=\"mailto:kabalak@gmx.net\" title=\"ePosta\">gönder</a> .</p>'
+Yine de sorularýn varsa , o zaman bana bir ePosta <a href="mailto:kabalak@gmx.net" title="ePosta">gönder</a> .</p>'
 export SON="</body>
 </html>"
 export DOSYA="kelimeler"
@@ -23,8 +23,8 @@ echo "<tr><td>Ingilizce orjinal kelimesi</td><td>Benim kullandýdým Türkçe kelime
 for i in `cat $DOSYA`
 	do
 	echo "<tr>" >> $SONUC_DOSYA
-	bir=`echo $i|sed -e 's/;;.*$//g'`
-	iki=`echo $i|sed -e 's/^.*;;//g'`
+	bir="`echo $i|sed -e 's/;;.*$//g'`"
+	iki="`echo $i|sed -e 's/^.*;;//g'`"
 	echo "<td>$bir</td><td>$iki</td> " >> $SONUC_DOSYA
 	echo "</tr>" >> $SONUC_DOSYA
 	done
