@@ -1,0 +1,1379 @@
+<!DOCTYPE ARTICLE PUBLIC "-//OASIS//DTD DocBook V3.1//EN" [
+<!ENTITY  % lat2     PUBLIC "ISO 8879:1986//ENTITIES Added Latin 2//EN">
+%lat2;
+<!ENTITY % ISOnum       PUBLIC
+          "ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN">
+%ISOnum;
+<!ENTITY % ISOpub       PUBLIC
+          "ISO 8879:1986//ENTITIES Publishing//EN">
+%ISOpub;
+]>
+
+<article id="index" lang="hu">
+  <artheader>
+    <date>$Date$</date>
+    <title>A GNOME fordítása magyarra</title>
+    <subtitle>A po fájlok, SGML fájlok, terminológia és hasznos tudnivalók</subtitle>
+    <titleabbrev>Magyar Gnome</titleabbrev>
+    <edition>v0.1</edition>
+    <authorgroup>
+      <author>
+        
+       <firstname>Szabolcs</firstname>
+       <surname>Bán</surname>
+       	   <affiliation>
+<!--   <orgname>GNOME</orgname> -->
+	     <address>
+            <email>shooby@gnome.hu</email>
+          </address>
+	   </affiliation>
+      </author>
+      <author>
+       <surname>Kovács</surname> 
+       <firstname>Emese</firstname>
+       	   <affiliation>
+<!--   <orgname>GNOME</orgname> -->
+	     <address>
+            <email>emese@gnome.hu</email>
+          </address>
+	   </affiliation>
+      </author>
+      <author>
+       
+        <surname>Tímár</surname>
+        <firstname>András</firstname>
+          <affiliation>
+<!--   <orgname>GNOME</orgname> -->
+          <address>
+            <email>timar@gnome.hu</email>
+          </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+    <copyright>
+        <year>2001</year>
+        <holder>Kovács Emese</holder>
+    </copyright>
+    
+    <copyright>
+      <year>2001</year>
+      <holder>Tímár András</holder>
+    </copyright>
+<!-- ez megy majd a licencbe, lehet, hogy magyarul -->
+ <!--   <abstract>
+      <para>
+        Permission is granted to copy, distribute and/or modify this document under the terms of the <citetitle>GNU Free Documentation License</citetitle>, Version 1.1 or any 
+        later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You may obtain a copy of the 
+        <citetitle>GNU Free Documentation License</citetitle> from the Free Software Foundation by visiting <ulink url="http://www.fsf.org" type="http">their Web site</ulink> 
+        or by writing to: Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+      </para>
+    </abstract>      
+ -->       
+    <abstract id="abstract">
+      <para>
+        Ez a leírás tippekkel és jó tanácsokkal szolgál a GNOME magyar fordítását végzõ fordítók számára.
+      </para>
+    </abstract>
+
+    <keywordset>
+    <keyword>GNOME</keyword>
+    <keyword>fordítás</keyword>
+    <keyword>hu.po</keyword>
+    <keyword>Magyar Gnome Projekt</keyword>
+    <keyword>GNOME Translation Project (GTP)</keyword>
+    </keywordset>
+  </artheader>
+
+  <sect1 id="bevezeto">
+    <title>Bevezetõ</title>
+
+    <sect2 id="errol-a-doksirol">
+      <title>Errõl a doksiról</title>
+
+      <para>
+        FIXME: Az írás célja: 
+<itemizedlist>
+
+<listitem>
+<para>
+*Segítség újonnan csatlakozó fordítóknak 
+</para>
+</listitem>
+
+<listitem>
+<para>
+*Tippek 
+</para>
+</listitem>
+
+<listitem>
+<para>
+*Irányelvek
+</para>
+</listitem>
+
+</itemizedlist>
+      </para>
+
+        
+      <important><para>
+        Ez a dokumentum még messze nem teljes. Meg fogjuk próbálni rendszeresen frissíteni és bõvíteni. 
+      </para></important>
+    
+    </sect2>
+
+    <sect2 id="a-szerzok-kerese">
+      <title>A szerzõk kérése</title>
+
+        <para>
+          Ezt a dokumentumot (dokumentum tervezetet) bárki bõvítheti vagy javíthatja, minden hozzájárulást szívesen fogadunk. Az lenne azonban a kérésünk, hogy a módosításokat minden esetben egyeztessétek a szerzõkkel. A változtatások, javítások megbeszélésére alkalmas fórumnak látszik a Magyar Gnome Fordítók levelezési listája (<email>gnome@gnome.hu</email>). Esetleg IRC-n is lehetne rendszeresíteni megbeszéléseket.
+       </para>
+     
+    </sect2>
+
+  </sect1>
+<!-- Shooby PO-HOGYANja alapján -->
+  <sect1 id="po-hogyan">
+    <title>Hogyan fordítsunk PO fájlt</title>
+<para>
+     A po fájlok sima szövegfájlok, amikben msgid-hez
+tartozó msgstr-eket kell csinálni. Lehetõleg olyan szövegszerkesztõt
+használj, ami nem saját fájlformátumot használ (ajánlott: ed, vi, joe, jed,
+emacs akár po módban is, mcedit, windows notepad, ha utána a \r-eket
+eltünteted, vagy ami a szivedhez nõtt... Word doksit azért ne küdljön senki,
+mert agyvérzést kapok, bár van antiwordöm...)</para>
+
+ <sect2 id="po-formatum">
+<title>A PO fájl formátuma</title>      
+
+<para>
+ A po fájl így néz ki, mielõtt belenyúlsz:
+
+<programlisting>
+<![CDATA[
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2000-02-13 22:33+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: src/config.c:62
+msgid ""
+"Choose the queue that you want to configure from the\n"
+"following list."
+msgstr ""
+
+...
+az msgid - msgstr parok veg nelkul jonnek egymas utan...
+...
+egyszer csak vege a faljnak.
+]]>
+</programlisting>
+</para>
+<para>
+Az msgid tartalmazza a fordítandó szöveget, ezt véletlenül sem szabad
+bántani.. Az msgstr egy üres sztringet tartalmaz, amibe a lefordított
+üzeneteket kell elhelyezni, vagy már van valami az msgstr mezõben, de fuzzy.
+A fuzzy azt jelenti, hogy a gettext az elõzõ pot generáláskor nem találta
+meg a szöveg pontos fordítását, csak valami hasonlót, de bemásolja, hogy
+segítsen. Van olyan ugyanis, hogy a fejlesztõ kijavít egy helyesírási hibát,
+vagy módosít egy dátumot. Ilyenkor nem kell az egész szöveget
+újrafordítanod, csak megkeresed a különbséget a két szöveg között, és az
+msgstr-ben kis változtatást eszközölsz, majd nem felejted el kivenni a
+fuzzy-t a fordított elem fejléc részébõl:
+
+<programlisting>
+<![CDATA[
+#: panel/menu.c:631
+#, c-format, fuzzy
+msgid "Could not get file from path: %s"
+msgstr "Nem találom a fájlt" 
+
+#: panel/menu.c:631
+#, c-format
+msgid "Could not get file from path: %s"
+msgstr "A fájl nem található a következõ útvonalon: %s" 
+]]>
+</programlisting>
+</para>
+<para>
+Állhat több sorból is egy fordítandó szöveg:
+
+<programlisting>
+<![CDATA[
+#: panel/panel_config.c:949
+msgid ""
+"Note: The panel will size itself to the\n"
+"largest applet in the panel, and that\n"
+"not all applets obey these sizes."
+msgstr ""
+]]>
+</programlisting>
+</para>
+<para>
+Ilyenkor a fordított szöveg is több sorból áll, vigyázzunk viszont arra,
+hogy logikusan a sorvégi \n-eket (újsor karakter) ne felejtsük le, ha
+hosszabb vagy rövidebb a fordítás, lehet kicsit módosítani a számukon...
+Így néz ki egy lefordított elem ilyenkor:
+
+<programlisting>
+<![CDATA[
+#: panel/panel_config.c:949
+msgid ""
+"Note: The panel will size itself to the\n"
+"largest applet in the panel, and that\n"
+"not all applets obey these sizes."
+msgstr ""
+"Megjegyzés: A panel saját magát méretezi\n"
+"a legnagyobb applethez. Az appletek\n"
+"értesülnek a méretváltozásról, de nem\n"
+"mindegyik veszi ezt figyelembe."     
+]]>
+</programlisting>
+
+
+</para></sect2>
+
+<sect2 id="amire-figyelni-kell">
+<title>Amire figyelni kell&hellip;</title>
+
+<para>
+
+A lezáró \n-ek száma meg kell egyezzen az msgid-ben és az msgstr-ben. A #,c-format fejleccel ellátott sztringeket a C nyelv printf() függvényének formátumában kell megírni (man format), pl:
+
+<programlisting>
+<![CDATA[
+msgid "number no %d"
+msgstr "%d. szám"
+]]>
+</programlisting>
+</para>
+<para>
+Itt megjegyezném, hogy a sorrend megtartása fontos, lásd 
+<programlisting>
+<![CDATA[
+msgid "%s blahblah %s blahblah %s" 
+]]>
+</programlisting>
+viszont van mód változtatni ezen: 
+
+<programlisting>
+<![CDATA[
+msgstr "%2$d blabla %1$s blabla %3$f"
+]]>
+</programlisting>
+</para>
+<para>
+Azaz lehet "indexelni" a %d, %s, %f stb. c-formátumú jelöléseket %&lt;n&gt;$&lt;x&gt;
+formában, ahol &lt;n&gt; természetes szám, &lt;x&gt; eleme {d,f,s,u,i,o,x,X,c,s,e,E,g,G}.
+</para>
+
+<para>
+Asszem az agyamra ment a tanulás... :)
+</para>
+
+<para>
+A kettõs idézõjeleket (") meg kell védeni a sztringeken belül (\"), pl:
+
+<programlisting>
+<![CDATA[
+msgid "this is a \" sign"
+msgstr "ez egy \" jel"
+]]>
+</programlisting>
+</para>
+
+<para>
+A fájl végére teszi a gettext az elavult fordításokat:
+</para>
+<para>
+<programlisting>
+#~ msgid "Debian menus"
+#~ msgstr "Debian menük"
+</programlisting>
+</para>
+<para>
+Ezekkel nem kell foglalkozni, ki is törölheted, feltehetõleg nem kerülnek
+vissza a csomagba ezek a szövegek.
+</para>
+
+
+
+</sect2>
+<sect2 id="po-fejlec">
+<title>A fejéc kitöltése</title>
+
+<para>
+
+A fejléc kitöltéséhez egy kis példa:
+<programlisting>
+<![CDATA[
+# gnome-applets Hungarian translations
+# Copyright (C) 1998-2001 Free Software Foundation, Inc.
+# Szabolcs Ban <shooby@gnome.hu>, 2000-2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-appets VERSION\n"
+"POT-Creation-Date: 2000-04-27 14:14+0200\n"
+"POT-Revision-Date: 2000-04-27 14:40+0200\n"
+"Last-Translator: Szabolcs BAN <shooby@gnome.hu>\n"
+"Language-Team: Hungarian Gnome Team <hu@gnome.hu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+]]>
+</programlisting>
+</para>
+<note>
+<title>Kis magyarázat a mezõkhöz</title>
+<para>
+<itemizedlist>
+<listitem>
+<para>
+Project-Id-Version: A csomag neve és verziója. A cvs-es csomagoknál általában VERSION vagy CVS.
+</para>
+</listitem>
+<listitem>
+<para>
+POT-Creation-Date: A pot fájl generálásának dátuma. Ha ez régi, akkor újabb hu.po fájl kell szerezni, mert valószínüleg változott azóta.
+</para>
+</listitem>
+<listitem>
+<para>
+POT-Revision-Date: A hu.po fájl utolsó módosításának ideje. Az <application>emacs</application> és néhány GUIs fordítássegítõ program is be tudja ezt mentéskor állítani.
+</para>
+</listitem>
+<listitem>
+<para>
+Last-Translator: Az utolsó fordító neve. A régebbi fordítók felkerülnek a fejléc elõtti megjegyzés mezõbe.
+</para>
+</listitem>
+<listitem>
+<para>
+Language-Team: Fordító csapat. Nálunk ez a <quote>Hungarian Gnome Team</quote>.
+</para>
+</listitem>
+<listitem>
+<para>
+A maradék három mezõnél minden PO fájlban az kell szerepeljen, ami a fenti példában van.
+</para>
+</listitem>
+</itemizedlist>
+
+</para>
+</note>
+
+</sect2>
+  
+<sect2 id="ellenorzes">
+<title>A fájl ellenõrzése</title>
+<para>
+ A fordítások elkészítése után jön a hibaellenõrzés: a <command>gettext</command> csomagban
+található <command>msgfmt</command> program megfelelõ paraméterezésével le tudod ellenõriztetni
+a szintaktikai helyességet, sõt még statisztikát is kapsz. Figyelmeztet a
+fejléc kitöltésének helytelenségére, hiányosságaira, a lefordított,
+fordítatlan és fuzzy sztringeket megszámolja.
+</para>
+<para>
+Pl:
+<screen>
+<prompt>[shooby@pussy gnome]$</prompt> <userinput>msgfmt -cvo /dev/null hu.po</userinput> 
+hu.po: warning: no header entry found
+found 1 fatal errors
+
+<prompt>[shooby@pussy gnome]$</prompt> <userinput>msgfmt -cvo /dev/null hu.po</userinput> 
+362 translated messages, 2 fuzzy translations, 2 untranslated messages.
+
+<prompt>[shooby@pussy gnome]$</prompt> <userinput>msgfmt -cvo /dev/null hu.po</userinput> 
+366 translated messages.
+</screen>
+</para>
+<para> 
+Természetesen a harmadik változat a jó, de nem mindig sikerül megtalálni
+minden szöveg magyar megfelelõjét. Ilyenkor segít a <email>gnome@gnome.hu</email> lista, 
+ahol megvitatjuk, mi lehet a legközelebb esõ változat.
+</para>
+
+
+</sect2>
+
+<sect2 id="forras-cvs-bol">
+<title>Forrás letöltése CVS-bõl</title>
+<para>
+ A po fájlokat érdemes anoncvs-bõl (anoncvs.gnome.org) letölteni, vagy a <ulink url="http://stats.gnome.hu" type="http">Magyar Gnome statisztika</ulink> lapra kitett cuccokból dolgozni. Levélhez csatolva
+elküldöd nekem, én átnézem és feltöltöm a fejlesztõi cvs-re.
+</para>
+<note>
+<title>Letöltés CVS-bõl:</title>
+<para>
+
+<screen>
+<prompt>[shooby@pussy shooby]$ </prompt><userinput>export <envar>CVSROOT=:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome</envar></userinput>
+<prompt>[shooby@pussy shooby]$ </prompt><userinput>cvs login</userinput>
+(Logging in to anoncvs@anoncvs.gnome.org)
+CVS password: 
+</screen>
+</para>
+<para>
+A jelszó üres, üss egyszerûen <keycap>entert</>.
+</para>
+<para>
+<screen>
+<prompt>[shooby@pussy shooby]$ </prompt><userinput>cvs -z3 co mc</userinput>
+</screen>
+</para>
+<para>
+&hellip;ha az mc forrását szeretnéd letölteni. A forrásra azért van szükség, hogy frissíteni tudd a po fájlt.
+</para>
+<para>
+Ha nem akarsz barátkozni a CVS-sel (pedig hidd el, érdemes), írj Shoobynak <email>shooby@gnome.hu</email> vagy Emesének <email>emese@gnome.hu</email>, küldenek Neked frissített po fájlt.</para>
+<important>
+<title>Haladó CVS használat (tagek, branch-ok, stb...)</title>
+<para>Igény esetén tervezünk ebbe a leírásba egy összefoglolót arról, hogy mit érdemes tudnia egy fordítónak a <application>CVS</application>-rõl.
+</para> 
+</important>
+</note>
+
+<para>
+ Ha cvs-bõl letöltött, vagy komplett forráskönyvtárad van, a gnome-os cuccok
+po könyvtárában van egy <filename>update.sh</filename> vagy <filename>update.pl</filename> szkript. Ha van <filename>hu.po</filename>,
+akkor egy <command>./update.pl hu</command> vagy egy <command>./update.sh hu</command> parancsot hattass a po
+könyvtárban, ez frissíti a po fájlt, a forrásoknak megfelelõen. Ha nincs
+<filename>hu.po</filename>, akkor egy <command>./update.pl</command> vagy <command>./update.sh</command> parancs létrehoz egy
+<filename><replaceable>csomagnev</replaceable>.pot</filename> fájlt, amit átmásolsz <filename>hu.po-vá</filename>, a fejlécet átírod a fent
+tárgyalt formára, és a problémát visszavezettük az elõbb tárgyalt esetre.
+
+ Használhatsz még kétes fordítást segítõ programokat is (<application>poedit</application>, <application>gnopo</application>,
+<application>gtranslator</application>, <application>emacs</application> po mode, etc,etc), de ellenõrizd a helyes formátumot
+mentés után, ne bízz meg vakon egyikben sem!
+</para>
+</sect2>
+<sect2>
+<title>A Gnome-os terminológiáról</title>
+<para>
+A terminológiát lásd a <ulink url="http://www.gnome.hu/hu/db.php3" type="http">www.gnome.hu/hu/db.php3</ulink>-ból egyelõre.
+<note>
+<title>A magyar Gnome terminológiáról&hellip;</title>
+<para>A <filename>db.php3</filename>-ban megtalálható az összes angol-magyar karakterláncpár, ami a Gnome-ban elõfordul. Terveink szerint, ebben a leírásban szerepelni fog majd egy ajánlott terminológia, ami a Gnome-os fordítások egységesítését szolgálja.
+</para> 
+</note>
+
+
+</para>
+</sect2>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </sect1>
+
+  <sect1 id="sgml-hogyan">
+    <title>Hogyan fordítsunk SGML fájlt</title>
+      <para>
+      </para>
+  </sect1>
+  <sect1 id="forditas-hogyan">
+    <title>Fordítás közben felmerülõ nyelvi (és egyéb) problémák</title>
+  <sect2 id="alapok">
+    <title>Alapok</title>
+
+      <para>
+        Kérünk, kerüld az olyan megfogalmazásokat, amelyekben a program <emphasis>egyes szám elsõ személyben</emphasis> szólal meg.
+      </para>
+
+      <variablelist>
+       
+        <varlistentry>
+         <term>A következõ fordítások nem ajánlottak:</term>
+          <listitem>
+            <caution>
+            <itemizedlist> 
+
+              <listitem> 
+                <para>Angol: <programlisting>Unable to create file: %s\n</programlisting></para>
+		<para>Magyar: <programlisting>Nem tudom a fájlt létrehozni: %s\n</programlisting></para>
+              </listitem> 
+
+             
+            </itemizedlist>
+          </caution>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <variablelist>
+        <varlistentry>
+          <term>Az ajánlott fordítások:</term>
+          <listitem>
+            <note>
+            <itemizedlist> 
+
+              <listitem> 
+                <para><programlisting>A fájl létrehozása sikertelen: %s\n</programlisting></para>
+              </listitem> 
+
+            </itemizedlist>
+            </note>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+
+      <para>
+        Kerülendõ továbbá a %s behelyettesülõ karakterláncok ragozása (hiszen a magyar nem egy egyszerû nyelv&hellip;)
+      </para>
+
+      <variablelist>
+       
+        <varlistentry>
+         <term>A következõ fordítások nem ajánlottak:</term>
+          <listitem>
+            <caution>
+            <itemizedlist> 
+
+              <listitem> 
+                <para>Angol: <programlisting>Mail from %s</programlisting></para>
+		<para>Magyar: <programlisting>Levél %s-tól</programlisting></para>
+              </listitem> 
+
+              <listitem> 
+                <para>Angol: <programlisting>%s could not be opened.</programlisting></para>
+		<para>Magyar: <programlisting>%s-t nem tudom megnyitni.</programlisting></para>
+              </listitem> 
+
+             
+            </itemizedlist>
+          </caution>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <variablelist>
+        <varlistentry>
+          <term>Az ajánlott fordítások:</term>
+          <listitem>
+            <note>
+            <itemizedlist> 
+
+              <listitem> 
+                <para><programlisting>A levél feladója: %s</programlisting></para>
+              </listitem> 
+              <listitem> 
+                <para><programlisting>%s megnyitása sikertelen.</programlisting></para>
+              </listitem> 
+            </itemizedlist>
+            </note>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+
+
+
+
+
+
+
+
+
+
+      <para>
+        Akkor is ezeket a formákat célszerû használni, ha nem teljesen fedik az angol mondat szó szerinti jelentését.
+      </para>
+
+      <para>
+        A magyar po fájlokban nagyon elterjedtek ezek a régi formák, az 1.4 GNOME kiadására jó lenne ezeket megszüntetni. Megkérnénk minden fordítót, hogy ellenõrizze az általa karbantartott po fájlokat, és az egységesítés érdekében próbálja meg alkalmazni a változtatásokat.
+      </para>
+
+  </sect2>
+
+  <sect2 id="forrobillentyuk">
+    <title>Forróbillentyûk (hotkeys)</title>
+    
+    <sect3 id="a-problema">
+    <title>A probléma</title>
+    
+    <para>
+      Teljesen hiányzik jelenleg a forró billentyûk egységesítésére irányuló törekvés a magyar Gnome fordításokban. A felhasználókat, ha megpróbálják használni a forróbillentyûket, zavarhatja, ha alkalmazásonként más és más a <menuchoice><guimenu>Fájl</guimenu><guimenuitem>Új dokumentum</guimenuitem></menuchoice> menüponthoz rendelt forróbillentyû. Arról nem is beszélve, hogy ha nem ellenõrizzük fordítás után az esetlegesen ütközõ forróbillentyûket és ugynahhoz a billenyûhöz több menüpontot is rendelünk, egyik sem fog mûködni. Ezen problémák elkerülése végett felsoroljuk a forróbillenytûk ajánlott helyét az elterjedt menük és menüpontok esetében.
+    </para>
+    
+    </sect3>
+    
+    <sect3 id="a-megoldas">
+    <title>A megoldás</title>
+    
+    <itemizedlist>
+      
+      <listitem>
+        <para>_Fájl</para>
+          <simplelist>
+            <member>Új dok_umentum</member>
+            <member>_Megnyitás</member>
+            <member></member>
+            <member>M_entés</member>
+            <member>Me_ntés másként...</member>
+            <member>Nyomtatás beállítása</member>
+            <member>_Nyomtatás</member>
+            <member>Nyomtatási _kép</member>
+            <member>_Bezárás</member>
+            <member></member>
+            <member></member>
+            <member></member>
+            <member>_Kilépés</member>
+            <member></member>
+          </simplelist>
+      </listitem>
+      <listitem>  
+        <para>_Szerkesztés</para>
+          <simplelist>
+            <member>Visszavonás</member>
+            <member>Újra</member>
+            <member>Kivágás</member>
+            <member>Másolás</member>
+            <member>Beillesztés</member>
+            <member>Törlés</member>
+            <member></member>
+            <member>Kijelölés</member>
+            <member>Mindent kijelöl</member>
+            <member></member>
+            <member></member>
+            <member>Tulajdonságok</member>
+            <member>Beállítások</member>
+          </simplelist>
+      </listitem>
+      <listitem>
+        <para>_Nézet</para>
+          <simplelist>
+           
+            <member>Új nézet</member>
+            <member>_Elõnézet</member>
+            <member>Frissítés</member>
+            <member>Nagyítás</member>
+         </simplelist>
+      </listitem>
+      <listitem>
+        <para>_Suchen</para>
+          <simplelist>
+            <member>_Suchen</member>
+            <member>_Weitersuchen</member>
+            <member>E_rsetzen</member>
+            <member>_Gehe zu...</member>
+            <member>_Vorheriges Lesezeichen</member>
+            <member>_N&auml;chstes Lesezeichen</member>
+            <member>!!!FIXME!!!</member>
+          </simplelist>
+      </listitem>
+      <listitem>
+       <para>D_okumente</para>
+     </listitem>
+     <listitem>
+        <para>E_instellungen</para>
+          <simplelist>
+            <member>_Einstellungen</member>
+            <member>!!!FIXME!!!</member>
+          </simplelist>
+      </listitem>
+      <listitem>
+        <para>_Fenster</para>
+          <simplelist>
+            <member>Neues _Hauptfenster</member>
+            <member>_Vorherige Datei</member>
+            <member>_N&auml;chste Datei</member>
+            <member>Datei _zur&uuml;ckbewegen</member>
+            <member>Datei v_orbewegen</member>
+          </simplelist>
+      </listitem>
+      <listitem>
+        <para>_Hilfe</para>
+          <simplelist>
+            <member>_Info</member>
+            <member>Hilfe-I_ndex</member>
+            <member>_Fehlerbericht einschicken</member>
+            <member>_Erste Schritte</member>
+            <member>Hand_buch</member>
+            <member>!!!FIXME!!!</member>
+          </simplelist>
+      </listitem>
+      <listitem>
+        <para>!!!FIXME!!!</para>               
+      </listitem>
+    
+    </itemizedlist>
+    
+    </sect3>
+    
+  </sect2>
+                    
+  <sect2 id="nomen">
+    <title>Wann ein &quot;-&quot; und wann nicht...</title>
+    
+    <sect3 id="problem2">
+    <title>Das Problem</title>
+    
+      <para>
+        Es kommt &ouml;fter vor, dass W&ouml;rter aus zusammengesetzten Nomen bestehen. So z.B. <emphasis>Dateioptionsmen&uuml;</emphasis>. Soll man nun das Wort
+        zusammenschreiben oder es &quot;irgendwo&quot; mit einem Bindestrich trennen? Man muss dabei &uuml;berpr&uuml;fen, welche Nomen zusammengeh&ouml;ren
+        und welche nicht. Das ist zumeist ein sehr gro&szlig;es Problem. Im o.g. Fall kann man entweder <emphasis>Dateioptions-Men&uuml;</emphasis> oder <emphasis>
+        Datei-Optionsmen&uuml;</emphasis> sagen; auch <emphasis>Datei-Options-Men&uuml;</emphasis> w&auml;re hier eine M&ouml;glichkeit. Bis jetzt wurde dies in
+        jeder &Uuml;bersetzung nach Gef&uuml;hl gemacht. Es sollte jedoch von nun an ein gewisses Schema dahinterstecken, wie, wann und wo man trennt. Deshalb 
+        folgender Vorschlag f&uuml;r die Zukunft...
+      </para>
+    
+    </sect3>
+    
+    <sect3 id="loesung2">
+    <title>Die L&ouml;sung</title>
+    
+      <para>
+        Generell sollte man bei zusammengesetzten W&ouml;rtern die aus einem Teil englisch und aus dem anderen deutsch sind einen Bindestrich benutzen:
+      </para>
+      
+      <note>
+      <para>
+        Die Server-Adresse konnte nicht ermittelt werden.
+      </para>
+           
+       <para>
+        In Men&uuml;s sollte man, um obiges Beispiel noch einmal aufzugrifen <emphasis>Datei-Optionsmen&uuml;</emphasis> benutzen.
+      </para>
+      
+      <para>
+        Ansonsten, wenn es m&ouml;glich ist, sind Umschreibungen auf jeden Fall besser als &quot;Verkettungen&quot;: 
+        <emphasis>Men&uuml; f&uuml;r Dateioptionen</emphasis>
+      </para>
+      </note>
+ 
+   </sect3>
+ 
+ </sect2>
+      
+  <sect2 id="lexikon">
+    <title>Lexikon</title>
+
+      <para>
+        Auf den nachfolgenden Seiten werden Tipps f&uuml;r &Uuml;bersetzungen in den verschiedenen Bereichen gegeben, die m&ouml;glichst befolgt werden sollen.
+        Falls es Fragen oder Unklarheiten gibt, so sollte eine E-Mail mit dem Problem an einen der Autoren geschickt werden.
+      </para>
+  </sect2>
+        
+    <sect2 id="dialoge">
+    <title>Dialogfelder</title>
+
+      <variablelist>
+
+        <varlistentry>
+        <term>OK</term>
+          <listitem>
+            <para>
+              Bitte nicht mit &quot;In Ordnung&quot; oder dergleichen &uuml;bersetzen, sondern <emphasis>OK</emphasis> &uuml;bernehmen.
+            </para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term>Try</term>
+          <listitem>
+            <para>
+              Der Button <emphasis>Try</emphasis> wird mit <emphasis>&Uuml;bernehmen</emphasis> übersetzt.
+            </para>
+          </listitem>
+        </varlistentry>
+        
+        <varlistentry>
+        <term>Apply</term>
+          <listitem>
+            <para>
+              Apply mit <emphasis>Anwenden</emphasis> &uuml;bersetzen.
+            </para>
+          </listitem>
+        </varlistentry>
+        
+        <varlistentry>
+        <term>Undo</term>
+          <listitem>
+            <caution>
+              <para>
+                <emphasis>Nicht zur&uuml;cknehmen.</emphasis>
+              </para>
+              <para>
+                Besser &uuml;bersetzt man mit <emphasis>R&uuml;ckg&auml;ngig</emphasis>.
+              </para>
+            </caution>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term>Advanced</term>
+          <listitem>
+            <para>
+              Der Button <emphasis>Advanced</emphasis> wird mit <emphasis>Komplex</emphasis> &uuml;bersetzt.
+            </para>
+          </listitem>
+        </varlistentry>
+	   
+	   <varlistentry>
+	   <term>Browse</term>
+	     <listitem>
+	       <para>
+	         Wie aus der Windows-Welt bekannt: <emphasis>Durchsuchen</emphasis>
+	       </para>
+	     </listitem>
+	    </varlistentry>
+	    
+	   <varlistentry>
+        <term>Button</term>
+          <listitem>
+            <para>
+              In Dialogen: <emphasis>Knopf</emphasis> sonst <emphasis>Button</emphasis>. <emphasis>Dr&uuml;cken Sie den OK Button.</emphasis>
+            </para>
+            <para>
+              <emphasis>Mouse buttons</emphasis> sind allerdings <emphasis>Maustasten</emphasis>.
+            </para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>    
+
+    <sect2 id="menue">
+    <title>Men&uuml;s</title>
+
+      <sect3 id="datei">
+      <title>Datei</title>
+        
+        <variablelist>
+
+          <varlistentry>
+          <term>File</term>
+            <listitem>
+              <para>
+                Datei
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>New(...)</term>
+            <listitem>  
+              <para>
+                Neu(...)
+              </para>
+            </listitem>
+          </varlistentry>
+            
+          <varlistentry>
+          <term>Open(...)</term>
+            <listitem>
+              <para>
+                &Ouml;ffnen(...)
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Save (as...)</term>
+            <listitem>
+              <para>
+                Speichern (unter...)
+              </para>
+           </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Save all</term>
+            <listitem>
+              <para>
+                Alles speichern
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Recover</term>
+            <listitem>
+              <para>
+                Wiederherstellen
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Print(...)</term>
+            <listitem>
+              <para>
+                Drucken(...)
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Print preview...</term>
+            <listitem>
+              <para>
+                Druckvorschau...
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Close (All)</term>
+            <listitem>
+              <para>
+                (Alle) schlie&szlig;en
+              </para>
+            </listitem>
+          </varlistentry>
+            
+          <varlistentry>
+          <term>Recent Files</term>
+            <listitem>
+              <para>
+                Letzte &ouml;ffnen
+              </para>
+            </listitem>
+          </varlistentry>
+                        
+          <varlistentry>
+          <term>Exit</term>
+            <listitem>
+              <para>
+                Beenden
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Quit</term>
+            <listitem>
+              <para>
+                Verlassen
+             </para>
+            </listitem>
+          </varlistentry>
+          
+        </variablelist>
+        
+      </sect3>
+        
+      <sect3 id="bearbeiten">
+      <title>Bearbeiten</title>
+        
+        <variablelist>
+      
+          <varlistentry>
+          <term>Edit</term>
+            <listitem>
+              <para>
+                Bearbeiten
+              </para>
+            </listitem>
+          </varlistentry>
+        
+          <varlistentry>
+          <term>Undo</term>
+            <listitem>
+              <para>
+                R&uuml;ckg&auml;ngig
+              </para>
+            </listitem>
+          </varlistentry>
+        
+          <varlistentry>
+          <term>Redo</term>
+            <listitem>
+              <para>
+                Wiederherstellen
+              </para>
+            </listitem>
+          </varlistentry>
+      
+          <varlistentry>
+          <term>Cut, Copy, Paste</term>
+            <listitem>
+              <para>
+                Ausschneiden, Kopieren, Einf&uuml;gen
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Clear (line)</term>
+            <listitem>
+              <para>
+                (Zeile) l&ouml;schen
+              </para>
+            </listitem>
+          </varlistentry>
+            
+          <varlistentry>
+          <term>Select (All)</term>
+            <listitem>
+              <para>
+                (Alles) ausw&auml;hlen
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>Deselect (All)</term>
+            <listitem>
+              <para>
+                (Alles) abw&auml;hlen
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>Properties</term>
+            <listitem>
+              <para>
+                Eigenschaften
+              </para>
+            </listitem>
+          </varlistentry>
+          
+        </variablelist>
+        
+      </sect3>
+        
+      <sect3 id="ansicht">
+      <title>Ansicht</title>
+        
+        <variablelist>
+            
+          <varlistentry>
+          <term>View</term>
+            <listitem>
+              <para>
+                Im Men&uuml; <emphasis>Ansicht</emphasis>. Kann aber auch je nach Zusammenhang <emphasis>betrachten</emphasis> hei&szlig;en.
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>Zoom in/out</term>
+            <listitem>
+              <para>
+                Hinein/herauszoomen
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>Add/Remove view</term>
+            <listitem>
+              <para>
+                Ansicht hinzuf&uuml;gen/entfernen
+              </para>
+            </listitem></varlistentry>
+          
+          <varlistentry>
+          <term>View</term>
+            <listitem>
+              <para>
+                Ansicht
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>Add/Remove View</term>
+            <listitem>
+              <para>
+                Ansicht hinzuf&uuml;gen/entfernen
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>New View</term>
+            <listitem>
+              <para>
+                Neue Ansicht
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>Preview</term>
+            <listitem>
+              <para>
+                Vorschau
+              </para>
+            </listitem>
+          </varlistentry>
+            
+          <varlistentry>
+          <term>Refresh</term>
+            <listitem>
+              <para>
+                 Aktualisieren
+              </para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+          
+      </sect3>
+        
+      <sect3 id="suchen">
+      <title>Suchen</title>
+      
+        <variablelist>
+        
+          <varlistentry>
+          <term>Find...</term>
+            <listitem>
+              <para>
+                Auf <emphasis role="bold">keinen</emphasis> Fall mit &quot;Finden...&quot; &uuml;bersetzen! <emphasis>Suchen...</emphasis> ist richtig.
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+          <term>Replace...</term>
+            <listitem>
+              <para>
+                Ersetzen...
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>Goto (line)...</term>
+            <listitem>
+              <para>
+                Hier ausnahmsweise <emphasis>Gehe zu...</emphasis>
+              </para>
+            </listitem>
+          </varlistentry>
+          
+        </variablelist>  
+      
+      </sect3>
+    
+      <sect3 id="einstellungen">
+      <title>Einstellungen</title>
+      
+        <variablelist>
+        
+          <varlistentry>
+          <term>Settings</term>
+            <listitem>
+              <para>
+                Einstellungen
+              </para>
+            </listitem>
+          </varlistentry>
+          
+        </variablelist>
+        
+        <para>!!!!!!!!!!!!!!!!!!!!!FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</para>
+        
+      </sect3>
+      
+      <sect3 id="dokumente">
+      <title>Dokumente</title>
+      
+        <variablelist>
+        
+          <varlistentry>
+          <term>Documents</term>
+            <listitem>
+              <para>
+                Dokumente
+              </para>
+            </listitem>
+          </varlistentry>
+        
+        </variablelist>
+      
+        <para>!!!!!!!!!!!!!!!!!!!!!!!!FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!</para>
+      
+      </sect3>
+      
+      <sect3 id="fenster">
+      <title>Fenster</title>
+      
+        <variablelist>
+        
+          <varlistentry>
+          <term>Window</term>
+            <listitem>
+              <para>
+                Fenster
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>New Main Window</term>
+           <listitem>
+             <para>
+                Neues Hauptfenster
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>Previous File</term>
+            <listitem>
+              <para>
+                Vorherige Datei
+              </para>
+            </listitem>
+          </varlistentry>
+           
+          <varlistentry>
+          <term>Next File</term>
+            <listitem>
+              <para>
+                N&auml;chste Datei
+              </para>
+            </listitem>
+          </varlistentry>
+        
+        </variablelist>
+        
+        <para>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</para>
+        
+      </sect3>
+       
+      <sect3 id="hilfe">
+      <title>Hilfe</title>
+       
+        <variablelist>
+         
+          <varlistentry>
+          <term>Help</term>
+            <listitem>
+              <para>
+                Hilfe
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>About...</term>
+            <listitem>
+              <para>
+                Bitte nicht &quot;&Uuml;ber&quot;, sondern <emphasis>Info...</emphasis>. Es gibt eine Ausnahme: <emphasis>About &lt;Programmname&gt;</emphasis> 
+                mit <emphasis>&Uuml;ber &lt;Programmname&gt;</emphasis> &uuml;bersetzen.
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>Help Index</term>
+            <listitem>
+              <para>
+                Hilfe-Index
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>Reporting Bugs</term>
+            <listitem>
+              <para>
+                Fehlerbericht einschicken
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>First Steps</term>
+            <listitem>
+              <para>
+                Erste Schritte
+              </para>
+            </listitem>
+          </varlistentry>
+          
+          <varlistentry>
+          <term>Help</term>
+            <listitem>
+              <para>
+                Hilfe
+              </para>
+            </listitem>
+          </varlistentry>  
+          
+          <varlistentry>
+          <term>Manual</term>
+            <listitem>
+              <para>
+                Handbuch
+              </para>
+            </listitem>
+          </varlistentry>
+          
+        </variablelist>
+      
+      </sect3>
+    
+    </sect2>
+    
+    <sect2 id="string-kategorie">
+    <title>Strings nach Kategorien</title>
+      
+      <para>!!!FIXME!!!</para>
+      <para>Ich bitte jeden, mir Ideen mitzuteilen, wie dieser Paragraph aussehen soll!!!! Bitte E-Mail an <emphasis>cm@ggtt.de</emphasis> oder 
+      <emphasis>br@ggtt.de</emphasis>. Im Voraus, ein recht herzliches Dankesch&ouml;n :-)</para>
+      
+        <sect3 id="kategorie-foo">
+        <title>Kategorie: Foo</title>
+            
+          <para>!!!FIXME!!!</para>
+          <para>Hier sollte was stehen! Eure Ideen bitte...</para>
+          
+        </sect3>
+          
+    </sect2>
+
+</sect1>
+<sect1 id="licenc">
+  <title>Licenc és köszönetnyilvánítás</title>
+    <para>
+    </para>
+</sect1>
+
+
+
+<sect1>
+<title>Melléklet</title>
+<para>
+</>
+</>
+             
+</article>
