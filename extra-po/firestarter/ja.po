@@ -1,49 +1,54 @@
 # firestarter ja.po.
-# Copyright (C) 2000, 2001 Free Software Foundation, Inc.
-# Takeshi Aihana <aihana@gnome.gr.jp>, 2000, 2001.
+# Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc.
+# Takeshi Aihana <aihana@gnome.gr.jp>, 2000, 2001, 2002.
 #
+#, no-wrap
 msgid ""
 msgstr ""
-"Project-Id-Version: firestarter 0.8.0\n"
-"POT-Creation-Date: 2001-12-18 17:59+0200\n"
-"PO-Revision-Date: 2001-12-16 13:18+0900\n"
+"Project-Id-Version: firestarter 0.8.1\n"
+"POT-Creation-Date: 2002-01-15 22:44+0900\n"
+"PO-Revision-Date: 2002-01-15 22:45+0900\n"
 "Last-Translator: Takeshi Aihana <aihana@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/firestarter.c:65
+#: src/firestarter.c:68
 msgid "Firewall stopped"
 msgstr "ファイヤーウォールは停止しています"
 
-#: src/firestarter.c:70
+#: src/firestarter.c:73
 msgid "Firewall running"
 msgstr "ファイヤーウォールは動作中です"
 
-#: src/firestarter.c:75
+#: src/firestarter.c:78
 msgid "All traffic halted"
 msgstr "全てのトラフィックを停止"
 
-#: src/firestarter.c:154 src/firestarter.c:218 src/firestarter.c:250
+#: src/firestarter.c:157
 msgid "You must be root to manipulate the firewall."
 msgstr "ファイヤーウォールを操作するには root になる必要があります。"
 
-#: src/firestarter.c:192
+#: src/firestarter.c:161
+msgid "You must be root to manipulate the firewall.\n"
+msgstr "ファイヤーウォールを操作するには root になる必要があります。\n"
+
+#: src/firestarter.c:213
 msgid "Firewall stopped, network traffic is now flowing freely\n"
 msgstr ""
 "ファイヤーウォールは停止しています。ネットワーク・トラフィックは現在、無制御"
 "状態です\n"
 
-#: src/firestarter.c:224
+#: src/firestarter.c:241
 msgid "Firewall script restarted\n"
 msgstr "ファイヤーウォール・スクリプトが再起動されました\n"
 
-#: src/firestarter.c:288
+#: src/firestarter.c:301
 msgid "All traffic halted\n"
 msgstr "全てのトラフィックを停止しました\n"
 
-#: src/firestarter.c:380
+#: src/firestarter.c:393
 msgid ""
 "An all-in-one Linux firewall utility for GNOME.\n"
 "http://firestarter.sourceforge.net"
@@ -51,44 +56,60 @@ msgstr ""
 "GNOME向けのオールインワン Linux ファイヤーウォール・ツール。\n"
 "http://firestarter.sourceforge.net"
 
-#: src/firestarter.c:525 src/preferences.c:425
+#: src/firestarter.c:544
+msgid "Startup without panel applet"
+msgstr "起動時にパネル・アプレットを表示しない"
+
+#: src/firestarter.c:545
+msgid "Start the firewall"
+msgstr "ファイヤーウォールの起動"
+
+#: src/firestarter.c:546
+msgid "Stop the firewall"
+msgstr "ファイヤーウォールの停止"
+
+#: src/firestarter.c:547
+msgid "Halt all network traffic"
+msgstr "全てのネットワーク通信を停止"
+
+#: src/firestarter.c:554 src/preferences.c:425
 msgid "Port"
 msgstr "ポート番号"
 
-#: src/firestarter.c:526
+#: src/firestarter.c:555
 msgid "Sent from"
 msgstr "送信元"
 
-#: src/firestarter.c:527 src/preferences.c:426
+#: src/firestarter.c:556 src/preferences.c:426
 msgid "Service"
 msgstr "サービス"
 
-#: src/firestarter.c:528
+#: src/firestarter.c:557
 msgid "Time"
 msgstr "時間"
 
-#: src/firestarter.c:530
+#: src/firestarter.c:559
 msgid "Deny all connections from"
 msgstr "禁止する接続"
 
-#: src/firestarter.c:531
+#: src/firestarter.c:560
 msgid "Allow all connections from"
 msgstr "許可する接続"
 
-#: src/firestarter.c:532 src/menus.c:89
+#: src/firestarter.c:561 src/menus.c:89
 msgid "Open service to machine"
 msgstr "マシンに有効なサービス"
 
-#: src/firestarter.c:533 src/menus.c:90
+#: src/firestarter.c:562 src/menus.c:90
 msgid "Open service to anyone"
 msgstr "公衆に有効なサービス"
 
-#: src/firestarter.c:580
+#: src/firestarter.c:631
 msgid "Firewall hits"
 msgstr "ファイヤーウォール・ヒット"
 
 #. Set up the clists on the dynamic rules page
-#: src/firestarter.c:592
+#: src/firestarter.c:643
 msgid "Dynamic rules"
 msgstr "ダイナミックルール"
 
@@ -262,11 +283,11 @@ msgstr "いいえ、公衆向けのネットワーク・サービスを起動しません。"
 msgid "Yes, I run the following services on my machine:"
 msgstr "はい、ホスト上にある次のサービスを起動します:"
 
-#: src/druid.c:651
+#: src/druid.c:654
 msgid "ICMP Configuration"
 msgstr "ICMP フィルタリング設定"
 
-#: src/druid.c:660
+#: src/druid.c:663
 msgid ""
 "ICMP Packet Filtering can be useful to prevent some common\n"
 "Denial of Service (DoS) attacks on your network.\n"
@@ -278,19 +299,19 @@ msgstr ""
 "\n"
 "ICMP フィルタリング機能を有効にしますか？"
 
-#: src/druid.c:669
+#: src/druid.c:672
 msgid "Disable ICMP Filtering"
 msgstr "ICMP フィルタリングを無効にする"
 
-#: src/druid.c:676
+#: src/druid.c:679
 msgid "Enable ICMP Filtering related to the following packets:"
 msgstr "次のパケットに関連する ICMP パケットフィルタリングを有効にする:"
 
-#: src/druid.c:748
+#: src/druid.c:751
 msgid "Type of Service (ToS) Configuration"
 msgstr "サービス種類(ToS)の設定"
 
-#: src/druid.c:757
+#: src/druid.c:760
 msgid ""
 "Type of Service filtering allows you to re-prioritize network\n"
 "services to allow higher throughput rates for commonly used services.\n"
@@ -302,15 +323,15 @@ msgstr ""
 "\n"
 "ToS フィルタリング処理を可能にしますか？\n"
 
-#: src/druid.c:766
+#: src/druid.c:769
 msgid "Disable ToS Filtering"
 msgstr "ToS フィルタリング処理を無効にする"
 
-#: src/druid.c:773
+#: src/druid.c:776
 msgid "Enable ToS Filtering related to the following packets:"
 msgstr "次のパケットに関連する ToS フィルタリングを有効にする:"
 
-#: src/druid.c:794
+#: src/druid.c:797
 msgid ""
 "Check this option to enable Type of Service flags for common client "
 "applications, such as WWW, FTP, SSH & E-Mail."
@@ -318,7 +339,7 @@ msgstr ""
 "共通なクライアント・アプリ、例えば WWW, FTP, SSH, E-メール等に対するサービス"
 "フラグの種類を有効にする場合に、このオプションをチェックして下さい。"
 
-#: src/druid.c:801
+#: src/druid.c:804
 msgid ""
 "Check this option to enable Type of Service flags for common server "
 "applications, such as SQUID, FTPd, SSHd, SMTP & POP Daemons."
@@ -327,7 +348,7 @@ msgstr ""
 "るサービスフラグの種類を有効にする場合に、このオプションをチェックして下さ"
 "い。"
 
-#: src/druid.c:808
+#: src/druid.c:811
 msgid ""
 "Selecting this option will automatically configure Type of Service for "
 "`Throughput' for both X and SSHd.You should select this ONLY if you need to "
@@ -337,7 +358,7 @@ msgstr ""
 "サービスの種類を自動的に設定します。リンク越しに X を起動する場合にのみ、この"
 "オプションを選択する必要があります。"
 
-#: src/druid.c:821
+#: src/druid.c:824
 msgid ""
 "Selecting this option will configure Type of Service flags for Maximum "
 "Throughput for the options you have selected."
@@ -345,11 +366,11 @@ msgstr ""
 "このオプションを選択すると、選択したオプション群に対して最大パフォーマンスで"
 "サービスフラグの種類を設定します。"
 
-#: src/druid.c:825
+#: src/druid.c:828
 msgid "Reliability"
 msgstr "信頼性"
 
-#: src/druid.c:829
+#: src/druid.c:832
 msgid ""
 "Selecting this option will configure Type of Service flags for Maximum "
 "Reliability for the options you have selected."
@@ -357,11 +378,11 @@ msgstr ""
 "このオプションを選択すると、選択したオプション群に対して最大の信頼性を持つよ"
 "うにサービスフラグの種類を設定します。"
 
-#: src/druid.c:833
+#: src/druid.c:836
 msgid "Delay"
 msgstr "遅延"
 
-#: src/druid.c:837
+#: src/druid.c:840
 msgid ""
 "Selecting this option will configure Type of Service flags for Minimum Delay "
 "for the options you have selected."
@@ -369,7 +390,7 @@ msgstr ""
 "このオプションを選択すると、選択したオプション群に対して最小の遅延でサービス"
 "フラグの種類を設定します。"
 
-#: src/druid.c:864
+#: src/druid.c:867
 msgid ""
 "Welcome to Firestarter!\n"
 "\n"
@@ -393,7 +414,7 @@ msgstr ""
 "\n"
 "\n"
 
-#: src/druid.c:901
+#: src/druid.c:904
 msgid ""
 "The wizard is now ready to generate your firewall.\n"
 "\n"
@@ -407,11 +428,11 @@ msgstr ""
 "設定を見直す場合は \"戻る\" ボタンをクリックして下さい。\n"
 "\n"
 
-#: src/druid.c:957
+#: src/druid.c:960
 msgid "You must be root to use the Firestarter wizard."
 msgstr "Firestarter ウィザードを利用するには root になる必要があります。"
 
-#: src/druid.c:974
+#: src/druid.c:977
 msgid "Firestarter Firewall Wizard"
 msgstr "Firestarter ファイヤーウォール・ウィザード"
 
@@ -555,7 +576,7 @@ msgstr "ブロック"
 msgid "Advanced"
 msgstr "拡張"
 
-#: src/service.c:48
+#: src/service.c:49
 msgid "unknown"
 msgstr "不明"
 
@@ -773,7 +794,7 @@ msgstr "エントリの追加"
 msgid "Remove entry"
 msgstr "エントリの削除"
 
-#: src/ipchains-script.c:759 src/netfilter-script.c:906
+#: src/ipchains-script.c:827 src/netfilter-script.c:970
 #, c-format
 msgid "Firewall script saved as %s\n"
 msgstr "ファイヤーウォール・スクリプトに %s の名前を付けて保存しました。\n"
