@@ -22,6 +22,7 @@
 #include <popt.h>
 #include <glib.h>
 
+
 #define N_(String) String
 
 char *modules = "/home/gnome-i18n/translation-status.xml";
@@ -41,8 +42,8 @@ struct poptOption options[] = {
 
 GHashTable *status_xml_parse (gchar *modules);
 void status_update_po_release (gpointer key, gpointer value, gpointer user_data);
-/*void generate_locale_html (gpointer key, gpointer value, gpointer user_data);
-void generate_release_html (gpointer key, gpointer value, gpointer user_data);*/
+void generate_locale_html (gpointer key, gpointer value, gpointer user_data);
+void generate_release_html (gpointer key, gpointer value, gpointer user_data);
 
 int
 main (int argc, const char *argv[])

@@ -121,12 +121,9 @@ generate_release_components_html (gpointer data, gpointer user_data)
  * Generates the HTML reports
  */
 void
-/*
 generate_release_html (gpointer key, gpointer value, gpointer user_data)
-*/
-generate_release_html (release *prelease)
 {
-/*	release *prelease;*/
+	release *prelease;
 	GString *html;
 	gchar *temp;
 	gchar *pdate;
@@ -136,7 +133,7 @@ generate_release_html (release *prelease)
 	component *cmp;
 
 
-/*	prelease = (release *) value;*/
+	prelease = (release *) value;
 
 	date = time (NULL);
 	pdate = g_strdup (asctime (gmtime (&date)));
@@ -236,12 +233,9 @@ generate_release_html (release *prelease)
  * Create individual HTML pages for every locale
  */
 void
-/*
 generate_locale_html (gpointer key, gpointer value, gpointer user_data)
-*/
-generate_locale_html (release *prelease)
 {
-/*	release *prelease;*/
+	release *prelease;
 	GString *html;
 	gchar *temp;
 	gchar *pdate;
@@ -258,7 +252,7 @@ generate_locale_html (release *prelease)
 	gchar *modulelnk;
 	gchar *comment;
 	
-/*	prelease = (release *) value;*/
+	prelease = (release *) value;
 
 	date = time (NULL);
 	pdate = g_strdup (asctime (gmtime (&date)));
