@@ -4,15 +4,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Code Comander\n"
-"POT-Creation-Date: 2000-09-25 18:28+0300\n"
-"PO-Revision-Date: 2000-11-03 18:07+03:00\n"
+"POT-Creation-Date: 2001-02-06 12:58+0100\n"
+"PO-Revision-Date: 2001-02-16 14:45+03:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: src/dialogs.c:18 src/dialogs.c:266 src/dialogs.c:341
+#: src/dialogs.c:18 src/dialogs.c:308 src/dialogs.c:383
 msgid "Read Error!"
 msgstr "Ошибка чтения!"
 
@@ -36,7 +36,7 @@ msgstr ""
 " уже существует.\n"
 "Вы хотите переписать его?"
 
-#: src/dialogs.c:106 src/dialogs.c:152 src/dialogs.c:199 src/dialogs.c:303
+#: src/dialogs.c:106 src/dialogs.c:152 src/dialogs.c:199 src/dialogs.c:345
 msgid "Save Error!"
 msgstr "Ошибка сохранения!"
 
@@ -48,31 +48,43 @@ msgstr ""
 " был изменен.\n"
 "Вы хотите сохранить его?"
 
-#: src/dialogs.c:236 src/file-io.c:213 src/file-io.c:349
+#: src/dialogs.c:236 src/file-io.c:217 src/file-io.c:362
 msgid "Save file with new name..."
 msgstr "Сохранить файл с новым именем..."
 
+#: src/dialogs.c:266
+msgid "File Modified!"
+msgstr "Файл изменен!"
+
 #: src/dialogs.c:281
+msgid ""
+" has been modified on disk since the last save.\n"
+"Would you like to reload it now?"
+msgstr ""
+" был изменен на диске со времени последнего сохранения.\n"
+"Хотите перезагрузить его?"
+
+#: src/dialogs.c:323
 msgid " could not be read."
 msgstr " не удалось прочитать."
 
-#: src/dialogs.c:318
+#: src/dialogs.c:360
 msgid " could not be saved!"
 msgstr " не удалось сохранить!"
 
-#: src/dialogs.c:356
+#: src/dialogs.c:398
 msgid " opened as read-only!"
 msgstr " открыт только для чтения!"
 
-#: src/dialogs.c:379
+#: src/dialogs.c:421
 msgid "Create Error!"
 msgstr "Ошибка создания!"
 
-#: src/dialogs.c:394
+#: src/dialogs.c:436
 msgid " could not be created!"
 msgstr " не может быть создан!"
 
-#: src/dialogs.c:415
+#: src/dialogs.c:457
 msgid "Information"
 msgstr "Информация"
 
@@ -112,11 +124,11 @@ msgstr "Открыть указанный файл."
 msgid "Jump to a line in the file specified by -f."
 msgstr "Перейти к строке в файле указанной с помощью -f."
 
-#: src/main.c:550
+#: src/main.c:556
 msgid "Creating ~/"
 msgstr "Создание ~/"
 
-#: src/main.c:554 src/main.c:558
+#: src/main.c:560 src/main.c:564
 msgid "Creating ~/."
 msgstr "Создание ~/."
 
@@ -234,7 +246,7 @@ msgstr "Строка закладки"
 
 #: src/menus.c:100
 msgid "Reverse Bookmark"
-msgstr ""
+msgstr "Обратить закладки"
 
 #: src/menus.c:102
 msgid "Clear"
@@ -849,23 +861,23 @@ msgstr "Переписать исходные ?"
 msgid "Directory:"
 msgstr "Каталог:"
 
-#: src/properties.c:93 src/settings.c:608
+#: src/properties.c:93 src/settings.c:630
 msgid "Highlighting"
 msgstr "Подсветка"
 
-#: src/properties.c:103 src/settings.c:618
+#: src/properties.c:103 src/settings.c:640
 msgid "Enable bracket highlighting ?"
 msgstr "Включить подсветку скобок ?"
 
-#: src/properties.c:104 src/settings.c:620
+#: src/properties.c:104 src/settings.c:642
 msgid "Enable syntax highlighting ?"
 msgstr "Включить подсветку синтаксиса ?"
 
-#: src/properties.c:106 src/settings.c:622
+#: src/properties.c:106 src/settings.c:644
 msgid "Indentation"
 msgstr "Выравнивание"
 
-#: src/properties.c:118 src/settings.c:633
+#: src/properties.c:118 src/settings.c:655
 msgid "Auto Indent ?"
 msgstr "Автовыравнивание ?"
 
@@ -877,7 +889,7 @@ msgstr "Использовать пробелы вместо табуляций ?"
 msgid "Tab stop:"
 msgstr "Отступ табуляции:"
 
-#: src/properties.c:137 src/settings.c:299
+#: src/properties.c:137 src/settings.c:312
 msgid "Build Information"
 msgstr "Информация для сборки"
 
@@ -893,232 +905,235 @@ msgstr "Отладчик: "
 msgid "Execution: "
 msgstr "Выполнение: "
 
-#: src/properties.c:193 src/settings.c:757
+#: src/color-settings.c:159 src/properties.c:193 src/settings.c:780
 msgid "Defaults"
 msgstr "По умолчанию"
 
-#: src/properties.c:199 src/settings.c:763
+#: src/color-settings.c:165 src/properties.c:199 src/settings.c:786
 msgid "Undo"
 msgstr "Откат"
 
-#: src/settings.c:207
+#: src/settings.c:215
 msgid "Edit "
 msgstr "Правка"
 
-#: src/settings.c:223 src/settings.c:226
+#: src/settings.c:233 src/settings.c:237
 msgid "Directory Settings"
 msgstr "Установки каталогов"
 
-#: src/settings.c:236
+#: src/settings.c:247
 msgid "Default Directory:"
 msgstr "Каталог по умолчанию:"
 
-#: src/settings.c:246
+#: src/settings.c:257
 msgid "Projects Directory:"
 msgstr "Каталог проектов:"
 
-#: src/settings.c:256 src/settings.c:259
+#: src/settings.c:267 src/settings.c:271
 msgid "History Settings"
 msgstr "Установки истории"
 
-#: src/settings.c:266
+#: src/settings.c:278
 msgid "Save toolbar settings on exit?"
 msgstr "Сохранить установки панели инструментов при выходе?"
 
-#: src/settings.c:267
+#: src/settings.c:279
 msgid "Save session on exit?"
 msgstr "Сохранить сеанс и выйти?"
 
-#: src/settings.c:268
+#: src/settings.c:280
 msgid "Open last session on startup?"
 msgstr "Открывать последний сеанс при запуске?"
 
-#: src/settings.c:269
+#: src/settings.c:281
 msgid "Auto-save session when files change?"
 msgstr "Сохранять сеанс автоматически при изменении файлов?"
 
-#: src/settings.c:274
+#: src/settings.c:286
 msgid "Items to show in history lists:"
 msgstr "Элементы показываемые в списке истории:"
 
-#: src/settings.c:285
+#: src/settings.c:297
 msgid "Maximum Undo saves:"
 msgstr "Максимумальный откат:"
 
-#: src/settings.c:297
+#: src/settings.c:310
 msgid "Build Settings"
 msgstr "Установки сборки"
 
-#: src/settings.c:311
+#: src/settings.c:324
 msgid "Terminal Command:"
 msgstr "Команда терминала"
 
-#: src/settings.c:321
+#: src/settings.c:334
 msgid "Make Command:"
 msgstr "Команда make:"
 
-#: src/settings.c:333
+#: src/settings.c:347
 msgid "User Settings"
 msgstr "Установки пользователя"
 
-#: src/settings.c:335
+#: src/settings.c:349
 msgid "User Information"
 msgstr "Информация о пользователе"
 
-#: src/settings.c:347
+#: src/settings.c:361
 msgid "Name of user:"
 msgstr "Имя пользователя:"
 
-#: src/settings.c:357
+#: src/settings.c:371
 msgid "Email of user:"
 msgstr "Эл.адрес пользователя:"
 
-#: src/settings.c:370
+#: src/settings.c:385
 msgid "MDI Settings"
 msgstr "Установки MDI"
 
-#: src/settings.c:372
+#: src/settings.c:387
 msgid "Tab Position"
 msgstr "Положение закладок"
 
-#. start of colors and fonts stuff
-#: src/settings.c:402
+#: src/settings.c:418
 msgid "Style Settings"
 msgstr "Установки стиля"
 
-#: src/settings.c:407
+#: src/settings.c:423
 msgid "Font Settings"
 msgstr "Установки шрифтов"
 
-#: src/settings.c:410
+#: src/settings.c:427
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: src/settings.c:421
+#: src/settings.c:438
 msgid "Default Font:"
 msgstr "Шрифт по умолчанию:"
 
-#: src/settings.c:438
+#: src/settings.c:455
 msgid "Italic Font:"
 msgstr "Наклонный шрифт:"
 
-#: src/settings.c:455
+#: src/settings.c:472
 msgid "Bold Font:"
 msgstr "Полужирный шрифт:"
 
-#: src/settings.c:472
+#: src/settings.c:489
 msgid "Bold-Italic Font:"
 msgstr "Полужирный наклонный шрифт:"
 
-#: src/settings.c:489 src/settings.c:492
+#: src/settings.c:506 src/settings.c:510
 msgid "Theme Settings"
 msgstr "Установки темы"
 
-#: src/settings.c:497
+#: src/settings.c:516
 msgid "Gtk Theme over-rides local settings ?"
 msgstr "Тема Gtk перекрывает локальные установки?"
 
-#: src/settings.c:506
+#: src/settings.c:525
 msgid "Color Settings"
 msgstr "Установки цветов"
 
-#: src/settings.c:509
+#: src/settings.c:529
 msgid "Standard Colors"
 msgstr "Стандартные цвета"
 
-#: src/settings.c:524
+#: src/settings.c:544
 msgid "Normal Text Color:"
 msgstr "Цвет нормального текста:"
 
-#: src/settings.c:537
+#: src/settings.c:557
 msgid "Normal Background Color:"
 msgstr "Цвет фона нормального текста:"
 
-#: src/settings.c:550
+#: src/settings.c:570
 msgid "Selection Background Color:"
 msgstr "Цвет фона выделения:"
 
-#: src/settings.c:563
+#: src/settings.c:583
 msgid "Bracket Background Color:"
 msgstr "Цвет фона скобок:"
 
-#: src/settings.c:588
+#: src/settings.c:608
 msgid "General/UI"
 msgstr "Общие/Интерфейс"
 
-#: src/settings.c:591
+#: src/settings.c:612
 msgid "File Settings"
 msgstr "Установки файлов"
 
-#: src/settings.c:600
+#: src/settings.c:621
+msgid "Full filenames in main window title ?"
+msgstr "Полные имена файлов в заголовке окна?"
+
+#: src/settings.c:622
 msgid "Full filenames in notebook tabs ?"
 msgstr "Полные имена файлов на закладках блокнота?"
 
-#: src/settings.c:601
+#: src/settings.c:623
 msgid "Close all on open session ?"
 msgstr "Закрыть все в открытом сеансе?"
 
-#: src/settings.c:602
+#: src/settings.c:624
 msgid "Persistant 'Untitled' document ?"
-msgstr ""
+msgstr "Постоянный \"Неозаглавленный\" документ?"
 
-#: src/settings.c:603
+#: src/settings.c:625
 msgid "Show line numbers ?"
 msgstr "Показать номера строк?"
 
-#: src/settings.c:604
+#: src/settings.c:626
 msgid "Show line pixmaps ?"
 msgstr "Показать строчную картинку?"
 
-#: src/settings.c:605
+#: src/settings.c:627
 msgid "Show blinking cursor ?"
 msgstr "Показать мигающий курсор?"
 
-#: src/settings.c:606
+#: src/settings.c:628
 msgid "Selection shows full width ?"
 msgstr "Выделение показывает полную ширину?"
 
-#: src/settings.c:619
+#: src/settings.c:641
 msgid "Auto line select ?"
 msgstr "Автовыбор строки ?"
 
-#: src/settings.c:638
+#: src/settings.c:660
 msgid "Use tab-stop spacing ?"
 msgstr "Использовать табуляцию?"
 
-#: src/settings.c:639
+#: src/settings.c:661
 msgid "Insert spaces instead of tabs ?"
 msgstr "Использовать пробелы вместо табуляций ?"
 
-#: src/settings.c:644
+#: src/settings.c:666
 msgid "Tab-stop width:"
 msgstr "Отступ табуляции:"
 
-#: src/settings.c:655 src/settings.c:657
+#: src/settings.c:678 src/settings.c:680
 msgid "Window Geometry"
 msgstr "Геометрия окна"
 
-#: src/settings.c:683
+#: src/settings.c:706
 msgid "X:"
 msgstr "X:"
 
-#: src/settings.c:690
+#: src/settings.c:713
 msgid "Y:"
 msgstr "Y:"
 
-#: src/settings.c:701
+#: src/settings.c:724
 msgid "Width:"
 msgstr "Ширина:"
 
-#: src/settings.c:708
+#: src/settings.c:731
 msgid "Height:"
 msgstr "Высота:"
 
-#: src/settings.c:723
+#: src/settings.c:746
 msgid "Apply Window Settings"
 msgstr "Применить установки окна"
 
-#: src/settings.c:727
+#: src/settings.c:750
 msgid "Get Window Settings"
 msgstr "Получить установки окна"
 
@@ -1145,3 +1160,36 @@ msgstr "Сохранить файл сеанса..."
 #: src/session.c:135
 msgid "Session save failed."
 msgstr "Сохранение сеанса не удалось."
+
+#: src/color-settings.c:76
+msgid "Highlighting Colors & Fonts"
+msgstr "Цвета подсветки и шрифты"
+
+#: src/commandbar.c:26
+msgid "Execute string"
+msgstr "Исполняемая строка"
+
+#: src/commandbar.c:33
+msgid "Execute a command"
+msgstr "Выполнить команду"
+
+#: src/insert.c:184
+msgid "Insert File..."
+msgstr "Вставить файл..."
+
+#: src/linebar.c:25
+msgid "Line Number"
+msgstr "Номер строки"
+
+#: src/linebar.c:32
+msgid "Jump to a line."
+msgstr "Перейти к строке."
+
+#: src/mdi-routines.c:116
+#, c-format
+msgid "Line: %d / %d Col: %d Byte: %d / %d Value: %d"
+msgstr "Строка: %d / %d Столбец: %d Байт: %d / %d Значение: %d"
+
+#: src/widgets/gdsmanpage.c:265
+msgid "Error!"
+msgstr "Ошибка!"
