@@ -32,6 +32,7 @@
      "gtkhtml/po",
      "gnome-i18n/extra-po/gtm",
      "guppi3/po",
+     "libgda/po",
      "mc/po",
      "memprof/po",
      "pan/po",
@@ -39,10 +40,13 @@
      "sodipodi/po");
 
 @xml_i18n_tools_compliants = (
+    "eog/po",
     "evolution/po",
+    "gal/po",
     "galeon/po",
     "gnome-db/po",
-    "gnumeric/po"
+    "gnumeric/po",
+    "libgda/po"
 );
 
 # it's for a current developer :-)

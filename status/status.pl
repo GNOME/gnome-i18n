@@ -28,10 +28,8 @@
      "gnome-pilot/po",
      "gnopo/po",
      "gphoto/po",
-     "gtkhtml/po",
      "gtk+-HEAD/po",
      "gtranslator/po",
-     "libgda/po",
      "magicdev/po",
      "pong/po",
      "pybliographer/po",
@@ -40,9 +38,7 @@
      "ximian-setup-tools/po");
 
 @xml_i18n_tools_compliants = (
-    "gtkhtml/po",
     "gtranslator/po",
-    "libgda/po"
 );
 
 # it's for a current developer :-)

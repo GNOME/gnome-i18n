@@ -35,11 +35,14 @@
 
 @xml_i18n_tools_compliants = (
     "ammonite/po",
+    "bonobo/po",
     "evolution/po",
     "galeon/po",
+    "gnome-applets/po",
     "gnome-db/po",
     "gnome-vfs/po",
-    "nautilus/po"
+    "nautilus/po",
+    "oaf/po"
 );
 
 # it's for a current developer :-)
