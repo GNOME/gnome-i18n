@@ -77,7 +77,7 @@ my %translated = (
     "no" => "Oversatt",
     "ro" => "traduse",
     "ru" => "ðÅÒÅ×ÅÄÅÎÏ",
-    "sv" => "&oslash;versatt",
+    "sv" => "&Ouml;versatt",
     "tr" => "Tercüme edilmiþ",
     "uk" => "ðÅÒÅËÌÁÄÅÎÏ",
     "wa" => "rato&ucirc;rn&eacute;s"
@@ -93,7 +93,7 @@ my %fuzzy = (
     "no" => "Uferdig",
     "ro" => "neclare",
     "ru" => "îÅÞÅÔËÏ",
-    "sv" => "oklart",
+    "sv" => "Luddigt",
     "tr" => "Tam tutmayan",
     "uk" => "îÅÞ¦ÔËÏ",
     "wa" => "&laquo;fuzzy&raquo;"
@@ -109,7 +109,7 @@ my %untranslated = (
     "no" => "Uoversatt",
     "ro" => "netraduse",
     "ru" => "îÅÐÅÒÅ×ÅÄÅÎÏ",
-    "sv" => "o&oslash;versatt",
+    "sv" => "O&ouml;versatt",
     "tr" => "Tercüme edilmemiþ",
     "uk" => "îÅÐÅÒÅËÌÁÄÅÎÏ",
     "wa" => "n&eacute;n co rato&ucirc;rn&eacute;s"
@@ -125,7 +125,7 @@ my %strings = (
     "no" => "strenger",
     "ro" => "stringuri",
     "ru" => "ÓÏÏÂÝ.",
-    "sv" => "str&auml;ngar",
+    "sv" => "meddelanden",
     "tr" => "metinler",
     "uk" => "ÐÏ×¦ÄÏÍ.",
     "wa" => "messaedjes"
@@ -150,28 +150,33 @@ my %total = (
 my %lasttranslator = (
     "C"  => "Last Translator",
     "es" => "Último traductor",
-    "ja" => "ºÇ½ªËÝÌõ¼Ô"
+    "ja" => "ºÇ½ªËÝÌõ¼Ô",
+    "sv" => "Senaste &ouml;vers&auml;ttare"
 );
 
 my %status = (
     "C"  => "Status",
     "es" => "Estado",
-    "ja" => "¥¹¥Æ¡¼¥¿¥¹"
+    "ja" => "¥¹¥Æ¡¼¥¿¥¹",
+    "sv" => "Status"
 );
 
 my %available = (
     "C"  => "Available",
-    "es" => "Disponible"
+    "es" => "Disponible",
+    "sv" => "Ledig"
 );
 
 my %assigned = (
     "C"  => "Assigned",
-    "es" => "Asignado"
+    "es" => "Asignado",
+    "sv" => "Tilldelad"
 );
 
 my %unknown = (
     "C"  => "Unknown",
-    "es" => "Desconocido"
+    "es" => "Desconocido",
+    "sv" => "Ok&auml;nd"
 );
 
 my %details = ( 
@@ -184,7 +189,7 @@ my %details = (
     "ja" => "ÆüËÜ¸ì(Japanese)ËÝÌõ¾õ¶·¾ÜºÙ¥ì¥Ý¡¼¥È",
     "no" => "Detaljert rapport for oversettelse av GNOME til norsk",
     "ru" => "ðÏÄÒÏÂÎÙÊ ÏÔÞÅÔ Ï ÓÏÓÔÏÑÎÉÉ ÐÅÒÅ×ÏÄÁ Gnome ÎÁ ÒÕÓÓËÉÊ",
-    "sv" => "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
+    "sv" => "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME",
     "tr" => "Geliþmiþ durum raporu : ",
     "uk" => "äÅÔÁÌØÎÉÊ Ú×¦Ô ÐÒÏ ÓÔÁÎ ÐÅÒÅËÌÁÄÕ GNOME ÎÁ ÕËÒÁ§ÎÓØËÕ",
     "wa" => "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"

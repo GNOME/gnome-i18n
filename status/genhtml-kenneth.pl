@@ -52,7 +52,7 @@ $now = time;
 "fi", "K&auml;&auml;nnetty",
 "ro", "traduse",
 "ru", "Переведено",
-"sv", "&oslash;versatt",
+"sv", "&Ouml;versatt",
 "tr", "TercЭme edilmiЧ",
 "uk", "Перекладено",
 "wa", "rato&ucirc;rn&eacute;s"
@@ -66,7 +66,7 @@ $now = time;
 "fi", "Ep&auml;selvi&auml;",
 "ro", "neclare",
 "ru", "Нечетко",
-"sv", "oklart",
+"sv", "Luddigt",
 "tr", "Tam tutmayan",
 "uk", "Неч╕тко",
 "wa", "&laquo;fuzzy&raquo;"
@@ -80,7 +80,7 @@ $now = time;
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "ro", "netraduse",
 "ru", "Непереведено",
-"sv", "o&oslash;versatt",
+"sv", "O&ouml;versatt",
 "tr", "TercЭme edilmemiЧ",
 "uk", "Неперекладено",
 "wa", "n&eacute;n co rato&ucirc;rn&eacute;s"
@@ -94,7 +94,7 @@ $now = time;
 "fi", "Rivi&auml;",
 "ro", "stringuri",
 "ru", "сообщ.",
-"sv", "str&auml;ngar",
+"sv", "meddelanden",
 "tr", "metinler",
 "uk", "пов╕дом.",
 "wa", "messaedjes"
@@ -109,7 +109,7 @@ $now = time;
 "fi", "Yksityiskohtainen raportti Suomen GNOME-k&auml;&auml;nn&ouml;ksist&auml;",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "Подробный отчет о состоянии перевода Gnome на русский",
-"sv", "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
+"sv", "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME",
 "tr", "GeliЧmiЧ durum raporu : ",
 "uk", "Детальний зв╕т про стан перекладу GNOME на укра╖нську",
 "wa", "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
