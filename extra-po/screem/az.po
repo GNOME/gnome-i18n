@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: screem 0.2.10\n"
-"POT-Creation-Date: 2001-02-20 15:02+0100\n"
+"POT-Creation-Date: 2001-02-28 11:40+0100\n"
 "PO-Revision-Date: 2000-07-30 21:01+0200\n"
 "Last-Translator: Vasif Ismailoglu MD <azerb_linux@hotmail.com>\n"
 "Language-Team: Azerbaijani Turkish\n"
@@ -147,7 +147,7 @@ msgstr "Düzəldici görünüşünə keç"
 
 #: include/menus.h:134 plugins/imageWizard/imageWizard.glade.h:39
 #: src/glade/screem.glade.h:100 src/glade/screem.glade.h:101
-#: src/glade/screem.glade.h:232 src/glade/screem.glade.h:414
+#: src/glade/screem.glade.h:232 src/glade/screem.glade.h:418
 msgid "Preview"
 msgstr "Nümayiş"
 
@@ -155,7 +155,7 @@ msgstr "Nümayiş"
 msgid "Switch to the Preview view"
 msgstr "Nümayiş görünüşünə keç"
 
-#: include/menus.h:142 src/glade/screem.glade.h:425
+#: include/menus.h:142 src/glade/screem.glade.h:429
 msgid "Link"
 msgstr "Bağ"
 
@@ -271,7 +271,7 @@ msgstr "_Daxil Et"
 msgid "_Tools"
 msgstr "_Vasitələr"
 
-#: libneon/dav_207.c:140
+#: libneon/dav_207.c:138
 #, c-format
 msgid ""
 "Invalid HTTP status line in status element at line %d of response:\n"
@@ -279,10 +279,6 @@ msgid ""
 msgstr ""
 "Cavabın hal elementinin %d sətirində xətalı HTTP hal sətiri:\n"
 "Hal sətiri: %s"
-
-#: libneon/dav_locks.c:551
-msgid "No locks found.\n"
-msgstr "Heç bir qıfıl tapılmadı.\n"
 
 #: libneon/hip_xml.c:125
 msgid "document root"
@@ -296,133 +292,154 @@ msgstr "namə'lum element"
 msgid "unspecified"
 msgstr "izahatsız"
 
-#: libneon/hip_xml.c:269 libneon/hip_xml.c:290
+#: libneon/hip_xml.c:273 libneon/hip_xml.c:294
 #, c-format
 msgid "XML is not valid (%s found in parent %s)"
 msgstr "XML məqbul şəkildə deyildir (%s da(də) %s tapıldı)"
 
-#: libneon/hip_xml.c:309
-#, c-format
-msgid "Unknown XML element `%s:%s'"
+#: libneon/hip_xml.c:314
+#, fuzzy, c-format
+msgid "Unknown XML element `%s (in %s)'"
 msgstr "Namə'lum XML elementi `%s:%s'"
 
-#: libneon/http_basic.c:305
+#: libneon/http_basic.c:300
 msgid "Server does not allow partial GETs."
 msgstr "Verici qismi GETlərə icazə verməz"
 
-#: libneon/http_basic.c:342 libneon/http_basic.c:385
+#: libneon/http_basic.c:336 libneon/http_basic.c:378
 #, c-format
 msgid "Could not write to file: %s"
 msgstr "Dosyeyə yaza bilmirəm: %s"
 
-#: libneon/http_request.c:751
+#: libneon/http_request.c:763
 msgid "Could not read chunk size"
 msgstr "Parça böyüklüyü oxuna bilmir"
 
-#: libneon/http_request.c:785
+#: libneon/http_request.c:769
+#, fuzzy
+msgid "Could not parse chunk size"
+msgstr "Parça böyüklüyü oxuna bilmir"
+
+#: libneon/http_request.c:801
 msgid "Could not read response body"
 msgstr "Cavab oxuna bilmir"
 
-#: libneon/http_request.c:797
+#: libneon/http_request.c:814
 msgid "Error reading chunked response body"
 msgstr "Parçalanmış cavabda oxuma xətası "
 
-#: libneon/http_request.c:874
+#: libneon/http_request.c:891
 #, c-format
 msgid "%s: connection was closed by proxy server."
 msgstr "%s: bağlantı vakil verici tərəfindən qapatıldı."
 
-#: libneon/http_request.c:877
+#: libneon/http_request.c:894
 #, c-format
 msgid "%s: connection was closed by server."
 msgstr "%s: bağlantı verici tərəfindən qapatıldı."
 
-#: libneon/http_request.c:882
+#: libneon/http_request.c:899
 #, c-format
 msgid "%s: connection timed out."
 msgstr "%s: bağlantı müddəti doldu."
 
-#: libneon/http_request.c:953
+#: libneon/http_request.c:907
+#, c-format
+msgid "%s: socket error."
+msgstr ""
+
+#: libneon/http_request.c:974
 msgid "Could not send request"
 msgstr "İStək göndərilə bilmədi"
 
 #. error
-#: libneon/http_request.c:985
+#: libneon/http_request.c:1006
 msgid "Error waiting for response"
 msgstr "Cavab gözləmə xətası"
 
-#: libneon/http_request.c:1006
+#: libneon/http_request.c:1027
 msgid "Could not send request body"
 msgstr "İstək göndərilə bilmədi"
 
-#: libneon/http_request.c:1025
+#: libneon/http_request.c:1046
 msgid "Could not read status line"
 msgstr "Hal sətiri oxuna bilmədi"
 
-#: libneon/http_request.c:1053 libneon/http_request.c:1108
-#: libneon/http_request.c:1124 libneon/http_request.c:1133
+#: libneon/http_request.c:1057
+#, fuzzy
+msgid "Could not parse response status line."
+msgstr "Hal sətiri oxuna bilmədi"
+
+#: libneon/http_request.c:1074 libneon/http_request.c:1129
+#: libneon/http_request.c:1145 libneon/http_request.c:1154
 msgid "Error reading response headers"
 msgstr "Cavab başlıqları oxuna bilmədi"
 
-#: libneon/http_request.c:1066
+#: libneon/http_request.c:1087
 msgid "Error sending request body"
 msgstr "İstək göndərmə xətası"
 
-#: libneon/http_request.c:1074 libneon/http_request.c:1556
-#: libneon/http_request.c:1584
+#: libneon/http_request.c:1095 libneon/http_request.c:1584
+#: libneon/http_request.c:1612
 msgid "Could not negotiate SSL session"
 msgstr "SSL iclası görüşülə bilmədi"
 
-#: libneon/http_request.c:1145
+#: libneon/http_request.c:1166
 msgid "Response header too long"
 msgstr "Cavab başlığı çox uzundur"
 
-#: libneon/http_request.c:1229
+#: libneon/http_request.c:1251
 msgid "Malformed header line."
 msgstr "Xəsəli başlıq sətiri."
 
-#: libneon/http_request.c:1424
+#: libneon/http_request.c:1446
 msgid "Proxy server was not authenticated correctly."
 msgstr "Vəkil verici düzgün tanıdılmayıb."
 
-#: libneon/http_request.c:1429
+#: libneon/http_request.c:1451
 msgid "Server was not authenticated correctly."
 msgstr "Verici düzgün tanıdılmayıb."
 
-#. It failed
-#: libneon/http_request.c:1523
+#: libneon/http_request.c:1549
 msgid "Could not create SSL connection through proxy server"
 msgstr "Vəkil vericidən SSl bağlantısı qurula bilmədi"
 
-#: libneon/http_request.c:1542
+#: libneon/http_request.c:1570
 msgid "Could not connect to proxy server"
 msgstr "Vəkil vericiyə bağlana bilmədim"
 
-#: libneon/http_request.c:1577
+#: libneon/http_request.c:1605
 msgid "Could not connect to server"
 msgstr "Vericiyə bağlana bilmədim"
 
-#: libneon/socket.c:431
+#. This might not or might not be an error depending on
+#. the context.
+#: libneon/socket.c:268
+#, fuzzy
+msgid "Connection was closed by server"
+msgstr "%s: bağlantı verici tərəfindən qapatıldı."
+
+#: libneon/socket.c:562
 msgid "Line too long"
 msgstr "Sətir çox uzundur"
 
-#: libneon/socket.c:535
+#: libneon/socket.c:666
 msgid "Host not found"
 msgstr "Ev Sahibi tapıla bilmədi"
 
-#: libneon/socket.c:538
+#: libneon/socket.c:669
 msgid "Host not found (try again later?)"
 msgstr "Ev Sahibi tapıla bilmədi (sonra yenə sınayım mı?)"
 
-#: libneon/socket.c:541
+#: libneon/socket.c:672
 msgid "Host exists but has no address."
 msgstr "Ev Sahibi mövcuddur, amma ünvanı yoxdur."
 
-#: libneon/socket.c:545
+#: libneon/socket.c:676
 msgid "Non-recoverable error in resolver library."
 msgstr "Ayıqlayıcı kitabxanada bərpası imkansız xəta."
 
-#: libneon/socket.c:687
+#: libneon/socket.c:859
 msgid "This application does not have SSL support."
 msgstr "Bu proqramın SSL dəstəyi yoxdur."
 
@@ -516,10 +533,10 @@ msgstr "ri"
 
 #: libneon/sslcerts.c:439
 msgid "Exit  "
-msgstr "Çıx\t"
+msgstr "Çıx  "
 
 #: libneon/sslcerts.c:441 src/glade/screem.glade.h:10
-#: src/glade/screem.glade.h:240
+#: src/glade/screem.glade.h:244
 msgid "Help"
 msgstr "Kömək"
 
@@ -544,8 +561,8 @@ msgstr "Bir rəngi daxil et"
 #: plugins/colourWizard/colourWizard.c:84
 #: plugins/entityWizard/entityWizard.c:86 plugins/formWizard/formWizard.c:85
 #: plugins/frameWizard/frameWizard.c:124 plugins/imageWizard/imageWizard.c:207
-#: plugins/imagemapWizard/imagemapwiz.c:59 plugins/linkWizard/linkWizard.c:207
-#: plugins/ssiWizard/ssiWizard.c:99 plugins/tableWizard/tableWizard.c:82
+#: plugins/linkWizard/linkWizard.c:207 plugins/ssiWizard/ssiWizard.c:99
+#: plugins/tableWizard/tableWizard.c:82
 msgid "_Insert/"
 msgstr "_Daxil Et/"
 
@@ -563,11 +580,11 @@ msgstr "Tərz düzəldicisini aç"
 
 #: plugins/cssWizard/css.c:108 plugins/uploadWizard/uploadWizard.c:167
 msgid "_Tools/"
-msgstr "_Vazitələr/"
+msgstr "_Vasitələr/"
 
 #: plugins/cssWizard/css.c:113 plugins/cssWizard/css.glade.h:19
 msgid "CSS Wizard"
-msgstr "CSS sehirbazı"
+msgstr "CSS Sehirbazı"
 
 #. Open File Selection Window
 #: plugins/cssWizard/css.c:475
@@ -622,8 +639,9 @@ msgid "visited"
 msgstr "Ziyarət edilmiş bağ"
 
 #: plugins/cssWizard/css.glade.h:16
+#, fuzzy
 msgid "active"
-msgstr ""
+msgstr "Qeyd Et"
 
 #: plugins/cssWizard/css.glade.h:17
 msgid "first-line"
@@ -695,7 +713,7 @@ msgstr "Sinif"
 
 #: plugins/cssWizard/css.glade.h:37
 msgid "Pseudo Class"
-msgstr "Yalançı sinif"
+msgstr "Yalançı Sinif"
 
 #: plugins/cssWizard/css.glade.h:38
 msgid "font-family"
@@ -745,11 +763,11 @@ msgstr ""
 #: plugins/cssWizard/css.glade.h:49 plugins/cssWizard/css.glade.h:56
 #: plugins/cssWizard/css.glade.h:376 plugins/cssWizard/css.glade.h:377
 #: plugins/cssWizard/css.glade.h:378 plugins/cssWizard/css.glade.h:379
-#: plugins/tableWizard/tablewizard.glade.h:39 src/glade/screem.glade.h:337
-#: src/glade/screem.glade.h:339 src/glade/screem.glade.h:381
-#: src/glade/screem.glade.h:383 src/glade/screem.glade.h:416
-#: src/glade/screem.glade.h:417 src/glade/screem.glade.h:418
-#: src/glade/screem.glade.h:419 src/glade/screem.glade.h:422
+#: plugins/tableWizard/tablewizard.glade.h:39 src/glade/screem.glade.h:341
+#: src/glade/screem.glade.h:343 src/glade/screem.glade.h:385
+#: src/glade/screem.glade.h:387 src/glade/screem.glade.h:420
+#: src/glade/screem.glade.h:421 src/glade/screem.glade.h:422
+#: src/glade/screem.glade.h:423 src/glade/screem.glade.h:426
 msgid "Pick a color"
 msgstr "Bir rəng seç"
 
@@ -782,8 +800,9 @@ msgid "Select background image"
 msgstr "Arxaplan rəsmini seç"
 
 #: plugins/cssWizard/css.glade.h:58
+#, fuzzy
 msgid "repeat"
-msgstr ""
+msgstr "Sahə"
 
 #: plugins/cssWizard/css.glade.h:59
 msgid "repeat-x"
@@ -799,14 +818,19 @@ msgid "no-repeat"
 msgstr "arxaplanı döşə"
 
 #: plugins/cssWizard/css.glade.h:62
+#, fuzzy
 msgid "scroll"
 msgstr ""
+"\n"
+"sürüşdür\n"
+"sabit\n"
 
 #: plugins/cssWizard/css.glade.h:63
+#, fuzzy
 msgid "fixed"
-msgstr ""
+msgstr "dosye:"
 
-#: plugins/cssWizard/css.glade.h:64 src/glade/screem.glade.h:423
+#: plugins/cssWizard/css.glade.h:64 src/glade/screem.glade.h:427
 msgid "Background"
 msgstr "Arxaplan"
 
@@ -1068,8 +1092,9 @@ msgid "sub"
 msgstr "<sub>"
 
 #: plugins/cssWizard/css.glade.h:104
+#, fuzzy
 msgid "super"
-msgstr ""
+msgstr "Kağız"
 
 #: plugins/cssWizard/css.glade.h:105
 #, fuzzy
@@ -1082,8 +1107,9 @@ msgid "text-top"
 msgstr "mətn dönüşdürülməsi"
 
 #: plugins/cssWizard/css.glade.h:107
+#, fuzzy
 msgid "middle"
-msgstr ""
+msgstr "Dosye"
 
 #: plugins/cssWizard/css.glade.h:108
 #: plugins/imageWizard/imageWizard.glade.h:30
@@ -1111,7 +1137,7 @@ msgstr ""
 #: plugins/cssWizard/css.glade.h:276 plugins/cssWizard/css.glade.h:299
 #: plugins/cssWizard/css.glade.h:322 plugins/cssWizard/css.glade.h:345
 #: plugins/cssWizard/css.glade.h:368 plugins/cssWizard/css.glade.h:509
-#: src/glade/screem.glade.h:274
+#: src/glade/screem.glade.h:278
 #, c-format
 msgid "50%"
 msgstr ""
@@ -1122,7 +1148,7 @@ msgstr ""
 #: plugins/cssWizard/css.glade.h:281 plugins/cssWizard/css.glade.h:304
 #: plugins/cssWizard/css.glade.h:327 plugins/cssWizard/css.glade.h:350
 #: plugins/cssWizard/css.glade.h:373 plugins/cssWizard/css.glade.h:514
-#: src/glade/screem.glade.h:275
+#: src/glade/screem.glade.h:279
 #, c-format
 msgid "100%"
 msgstr ""
@@ -1241,7 +1267,7 @@ msgstr ""
 msgid "90%"
 msgstr ""
 
-#: plugins/cssWizard/css.glade.h:182 src/glade/screem.glade.h:424
+#: plugins/cssWizard/css.glade.h:182 src/glade/screem.glade.h:428
 msgid "Text"
 msgstr "Mətn"
 
@@ -1328,8 +1354,9 @@ msgstr ""
 
 #: plugins/cssWizard/css.glade.h:401 plugins/cssWizard/css.glade.h:416
 #: plugins/cssWizard/css.glade.h:431 plugins/cssWizard/css.glade.h:446
+#, fuzzy
 msgid "medium"
-msgstr ""
+msgstr "Orta"
 
 #: plugins/cssWizard/css.glade.h:402 plugins/cssWizard/css.glade.h:417
 #: plugins/cssWizard/css.glade.h:432 plugins/cssWizard/css.glade.h:447
@@ -1547,7 +1574,7 @@ msgstr "Bir xüsusi hərf şəklini əlavə et"
 msgid "Screem: Entity Wizard"
 msgstr "SCREEM : Şəkil sehirbazı"
 
-#: plugins/entityWizard/entityWizard.glade.h:8 src/glade/screem.glade.h:261
+#: plugins/entityWizard/entityWizard.glade.h:8 src/glade/screem.glade.h:265
 msgid "Insert"
 msgstr "Daxil Et"
 
@@ -1555,7 +1582,7 @@ msgstr "Daxil Et"
 #: plugins/entityWizard/entityWizard.glade.h:12
 #: plugins/entityWizard/entityWizard.glade.h:15
 #: plugins/formWizard/formWizard.glade.h:12 src/glade/screem.glade.h:207
-#: src/glade/screem.glade.h:517
+#: src/glade/screem.glade.h:521
 msgid "Name"
 msgstr "Ad"
 
@@ -1565,9 +1592,9 @@ msgstr "Ad"
 msgid "Entity"
 msgstr "Şəkil"
 
-#: plugins/entityWizard/entityWizard.glade.h:11 src/glade/screem.glade.h:289
-#: src/glade/screem.glade.h:294 src/glade/screem.glade.h:397
-#: src/glade/screem.glade.h:401
+#: plugins/entityWizard/entityWizard.glade.h:11 src/glade/screem.glade.h:293
+#: src/glade/screem.glade.h:298 src/glade/screem.glade.h:401
+#: src/glade/screem.glade.h:405
 msgid "ISO-8859-1"
 msgstr "ISO-8859-1"
 
@@ -1767,7 +1794,6 @@ msgid "Screem: Image Wizard"
 msgstr "Screem : Rəsm sehirbazı"
 
 #: plugins/imageWizard/imageWizard.glade.h:8
-#: plugins/imagemapWizard/imagemap.glade.h:8
 msgid "Image"
 msgstr "Rəsm"
 
@@ -1785,7 +1811,7 @@ msgstr "Rəsmin yolu"
 
 #: plugins/imageWizard/imageWizard.glade.h:12
 msgid "Alt text:"
-msgstr "Ehtiuat mətni :"
+msgstr "Bütün mətn:"
 
 #: plugins/imageWizard/imageWizard.glade.h:13
 msgid "Text to display if the browser  is not displaying images"
@@ -1885,7 +1911,7 @@ msgstr "Başlanğıc eni :"
 msgid "Initial Height:"
 msgstr "Başlanğıc hündürlüyü :"
 
-#: plugins/imageWizard/imageWizard.glade.h:43 src/glade/screem.glade.h:479
+#: plugins/imageWizard/imageWizard.glade.h:43 src/glade/screem.glade.h:483
 msgid "File Size:"
 msgstr "Dosye böyüklüyü :"
 
@@ -1894,85 +1920,6 @@ msgstr "Dosye böyüklüyü :"
 #: plugins/imageWizard/imageWizard.glade.h:46
 msgid "0"
 msgstr "0"
-
-#.
-#. * Translatable strings file generated by Glade.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: plugins/imagemapWizard/imagemap.glade.h:7
-#: plugins/imagemapWizard/imagemapwiz.c:218
-msgid "Image map"
-msgstr "Rəsm xəritəsi"
-
-#: plugins/imagemapWizard/imagemap.glade.h:9 src/glade/screem.glade.h:405
-msgid "label1"
-msgstr "etiket1"
-
-#: plugins/imagemapWizard/imagemap.glade.h:10
-#: plugins/imagemapWizard/imagemapwiz.c:178
-msgid "Area"
-msgstr "Sahə"
-
-#: plugins/imagemapWizard/imagemap.glade.h:11 src/glade/screem.glade.h:370
-msgid "label2"
-msgstr "etiket2"
-
-#: plugins/imagemapWizard/imagemap.glade.h:12
-msgid "Tools"
-msgstr "Vasitələr"
-
-#: plugins/imagemapWizard/imagemapwiz.c:45
-msgid "Image map..."
-msgstr "Rəsm xəritəsi..."
-
-#: plugins/imagemapWizard/imagemapwiz.c:46
-msgid "Create an image map file"
-msgstr "Təzə bir rəsm xəritəsi dosyesi yarat"
-
-#: plugins/imagemapWizard/imagemapwiz.c:63
-msgid "Image map Wizard"
-msgstr "Rəsm Xəritəsi Sehirbazı"
-
-#: plugins/imagemapWizard/imagemapwiz.c:138
-msgid "Image:"
-msgstr "Rəsm:"
-
-#: plugins/imagemapWizard/imagemapwiz.c:154
-msgid "file:"
-msgstr "dosye:"
-
-#: plugins/imagemapWizard/imagemapwiz.c:194
-msgid "Link to:"
-msgstr "Bağla:"
-
-#: plugins/imagemapWizard/imagemapwiz.c:248
-msgid "Tools:"
-msgstr "Vasitələr:"
-
-#: plugins/imagemapWizard/imagemapwiz.c:268
-msgid "Save map"
-msgstr "Xəritəni qeyd et"
-
-#: plugins/imagemapWizard/imagemapwiz.c:280
-msgid "Erase"
-msgstr "Sil"
-
-#: plugins/imagemapWizard/imagemapwiz.c:293
-msgid "Select"
-msgstr "Seç"
-
-#: plugins/imagemapWizard/imagemapwiz.c:306
-msgid "Rectangle"
-msgstr "Düzbucaq"
-
-#: plugins/imagemapWizard/imagemapwiz.c:319
-msgid "Circle"
-msgstr "Dairə"
-
-#: plugins/imagemapWizard/imagemapwiz.c:332
-msgid "Polygon"
-msgstr "Çoxguşəli"
 
 #: plugins/linkWizard/linkWizard.c:191
 msgid "Link..."
@@ -2140,7 +2087,7 @@ msgstr "Xəta ismarıcı : "
 msgid "Size format: "
 msgstr "Böyüklük Şəkli"
 
-#: plugins/ssiWizard/ssiWizard.c:530 src/glade/screem.glade.h:529
+#: plugins/ssiWizard/ssiWizard.c:530 src/glade/screem.glade.h:533
 msgid "Execute"
 msgstr "İşə Sal"
 
@@ -2353,11 +2300,11 @@ msgstr "Rəsm istifadə et :"
 msgid "Unknown system error"
 msgstr "Namə'lum sistem xətası"
 
-#: plugins/uploadWizard/davdriver.c:141
+#: plugins/uploadWizard/davdriver.c:173
 msgid "The connection timed out."
 msgstr "Bağlantı müddəti doldu"
 
-#: plugins/uploadWizard/davdriver.c:145
+#: plugins/uploadWizard/davdriver.c:177
 msgid ""
 "The server did not authenticate itself correctly.\n"
 "Report this error to your server administrator."
@@ -2365,7 +2312,7 @@ msgstr ""
 "Verici özünü düzgün tanıtmır.\n"
 "Bunu verici idarəcinə bildir."
 
-#: plugins/uploadWizard/davdriver.c:150
+#: plugins/uploadWizard/davdriver.c:182
 msgid ""
 "The proxy server did not authenticate itself correctly.\n"
 "Report this error to your proxy server administrator."
@@ -2373,28 +2320,28 @@ msgstr ""
 "Vəkil Verici özünü düzgün tanıtmır.\n"
 "Bunu verici idarəcinə bildir."
 
-#: plugins/uploadWizard/davdriver.c:178
+#: plugins/uploadWizard/davdriver.c:219
 msgid "SSL support has not be compiled in."
 msgstr "SSL dəstəyi daha verilməyib."
 
-#: plugins/uploadWizard/davdriver.c:207
+#: plugins/uploadWizard/davdriver.c:248
 msgid "The server does not appear to be a WebDAV server."
 msgstr "Verici WebDAV vericisinə oxşamır."
 
-#: plugins/uploadWizard/davdriver.c:212
+#: plugins/uploadWizard/davdriver.c:253
 msgid "The server does not support the executable live property."
 msgstr "Verici işə salınan ömrü dəstəkləmir."
 
-#: plugins/uploadWizard/davdriver.c:243 plugins/uploadWizard/davdriver.c:263
-#: plugins/uploadWizard/davdriver.c:296
+#: plugins/uploadWizard/davdriver.c:284 plugins/uploadWizard/davdriver.c:304
+#: plugins/uploadWizard/davdriver.c:337
 msgid "Could not open file: "
 msgstr "Dosye açıla bilmir: "
 
-#: plugins/uploadWizard/davdriver.c:271 plugins/uploadWizard/davdriver.c:303
+#: plugins/uploadWizard/davdriver.c:312 plugins/uploadWizard/davdriver.c:344
 msgid "Could not write to file: "
 msgstr "Dosyeyə yazıla bilmir: "
 
-#: plugins/uploadWizard/davdriver.c:415
+#: plugins/uploadWizard/davdriver.c:460
 msgid "Could not access resource"
 msgstr "Mənbəyə çata bilmədim"
 
@@ -2412,7 +2359,7 @@ msgstr ""
 "Yerli dosyelər üçün təkmilləşdirmə tarixini müəyyənləşdirə "
 "bilmədim"
 
-#: plugins/uploadWizard/sites.c:334
+#: plugins/uploadWizard/sites.c:336
 msgid ""
 "Upload succeeded, but could not retrieve modification time.\n"
 "If this message persists, turn off safe mode."
@@ -2421,26 +2368,26 @@ msgstr ""
 "edə bilmirəm.\n"
 "Bu ismarıc yenə gəlsə, e'tibarlı moddan çıx."
 
-#: plugins/uploadWizard/sites.c:518
+#: plugins/uploadWizard/sites.c:520
 msgid "Remote file has been modified - not overwriting with local changes"
 msgstr ""
 "Uzaq dosyelər dəyişdirildi - yerli dəyişikliklərlə üstünə yazmıram"
 
-#: plugins/uploadWizard/sites.c:832
+#: plugins/uploadWizard/sites.c:836
 msgid "Could not examine file."
 msgstr "Dosyeyi sınaya bilmirəm."
 
-#: plugins/uploadWizard/sites.c:875
+#: plugins/uploadWizard/sites.c:879
 msgid "Could not checksum file"
 msgstr "Dosyenin checksum edə bilmədim"
 
-#: plugins/uploadWizard/sites.c:891
+#: plugins/uploadWizard/sites.c:895
 msgid "The target of the symlink could not be read."
 msgstr "Yumşaq bağın hədəfi oxuna bilmir."
 
 #: plugins/uploadWizard/uploadWizard.c:153
 #: plugins/uploadWizard/uploadwizard.glade.h:8
-#: plugins/uploadWizard/uploadwizard.glade.h:31 src/glade/screem.glade.h:488
+#: plugins/uploadWizard/uploadwizard.glade.h:31 src/glade/screem.glade.h:492
 msgid "Upload"
 msgstr "Göndər"
 
@@ -2731,26 +2678,26 @@ msgid "URI:"
 msgstr "URI:"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:33 src/glade/screem.glade.h:182
-#: src/glade/screem.glade.h:454
+#: src/glade/screem.glade.h:458
 msgid "Username:"
 msgstr "İstifadəçi adı :"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:34 src/glade/screem.glade.h:183
-#: src/glade/screem.glade.h:455
+#: src/glade/screem.glade.h:459
 msgid "Password:"
 msgstr "Parol :"
 
-#: plugins/uploadWizard/uploadwizard.glade.h:35 src/glade/screem.glade.h:346
+#: plugins/uploadWizard/uploadwizard.glade.h:35 src/glade/screem.glade.h:350
 msgid "Path:"
 msgstr "Yol :"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:36 src/glade/screem.glade.h:173
-#: src/glade/screem.glade.h:451
+#: src/glade/screem.glade.h:455
 msgid "FTP"
 msgstr "FTP"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:37 src/glade/screem.glade.h:174
-#: src/glade/screem.glade.h:452
+#: src/glade/screem.glade.h:456
 msgid "WebDAV"
 msgstr "WebDAV"
 
@@ -3088,13 +3035,13 @@ msgstr "Köməkçi scriptləri dəyişdir"
 msgid "Edit Helpers"
 msgstr "Köməkçiləri dəyişdir"
 
-#: src/glade/screem.glade.h:97 src/glade/screem.glade.h:351
+#: src/glade/screem.glade.h:97 src/glade/screem.glade.h:355
 #: src/preferences.c:639
 msgid "Helpers"
 msgstr "Köməkçilər"
 
 #: src/glade/screem.glade.h:102 src/glade/screem.glade.h:103
-#: src/glade/screem.glade.h:239
+#: src/glade/screem.glade.h:243
 msgid "Link View"
 msgstr "Bağ Görünüşü"
 
@@ -3154,7 +3101,7 @@ msgstr "Sil"
 msgid "Rename the file/directory"
 msgstr "Dosyeyi/qovluğu təzədən adlandır"
 
-#: src/glade/screem.glade.h:120 src/glade/screem.glade.h:507
+#: src/glade/screem.glade.h:120 src/glade/screem.glade.h:511
 msgid "Rename"
 msgstr "Yeniden adlandır"
 
@@ -3162,7 +3109,7 @@ msgstr "Yeniden adlandır"
 msgid "View file/directory properties"
 msgstr "Dosye/qovluq xüsusiyyətləri göstər"
 
-#: src/glade/screem.glade.h:122 src/glade/screem.glade.h:525
+#: src/glade/screem.glade.h:122 src/glade/screem.glade.h:529
 msgid "Properties"
 msgstr "Xüsusiyyətlər"
 
@@ -3179,8 +3126,8 @@ msgid "ASCII"
 msgstr "ASCII"
 
 #: src/glade/screem.glade.h:126 src/glade/screem.glade.h:191
-#: src/glade/screem.glade.h:194 src/glade/screem.glade.h:460
-#: src/glade/screem.glade.h:467
+#: src/glade/screem.glade.h:194 src/glade/screem.glade.h:464
+#: src/glade/screem.glade.h:471
 msgid "Ignore"
 msgstr "Keç"
 
@@ -3188,7 +3135,7 @@ msgstr "Keç"
 msgid "Refresh the file tree"
 msgstr "Dosye ağaçını təzələ"
 
-#: src/glade/screem.glade.h:128 src/glade/screem.glade.h:279
+#: src/glade/screem.glade.h:128 src/glade/screem.glade.h:283
 msgid "Refresh"
 msgstr "Təzələ"
 
@@ -3209,7 +3156,7 @@ msgid "Complete"
 msgstr "Qurtardı"
 
 #: src/glade/screem.glade.h:133 src/glade/screem.glade.h:214
-#: src/glade/screem.glade.h:327 src/glade/screem.glade.h:348
+#: src/glade/screem.glade.h:331 src/glade/screem.glade.h:352
 msgid "Add"
 msgstr "Əlavə Et"
 
@@ -3263,12 +3210,11 @@ msgstr "Düşük"
 
 #: src/glade/screem.glade.h:146
 msgid "Medium"
-msgstr ""
+msgstr "Orta"
 
 #: src/glade/screem.glade.h:147
-#, fuzzy
 msgid "High"
-msgstr "Hündürlük :"
+msgstr "Hündür"
 
 #: src/glade/screem.glade.h:149
 msgid "Screem: Site Information"
@@ -3314,7 +3260,7 @@ msgstr "Sayt Mə'lumatları"
 msgid "An identifying name for the site"
 msgstr "Saytı təsvir edən bir ad"
 
-#: src/glade/screem.glade.h:160 src/glade/screem.glade.h:438
+#: src/glade/screem.glade.h:160 src/glade/screem.glade.h:442
 msgid "Site Name:"
 msgstr "Sayt adı :"
 
@@ -3327,11 +3273,11 @@ msgid "The site pathname"
 msgstr "Sayt yolu"
 
 #: src/glade/screem.glade.h:163 src/glade/screem.glade.h:172
-#: src/glade/screem.glade.h:450
+#: src/glade/screem.glade.h:454
 msgid "Local"
 msgstr "Yerli"
 
-#: src/glade/screem.glade.h:164 src/glade/screem.glade.h:445
+#: src/glade/screem.glade.h:164 src/glade/screem.glade.h:449
 msgid "Remote Host Details"
 msgstr "Uzaqdakı vericinin Mə'lumatları"
 
@@ -3351,11 +3297,11 @@ msgstr "Saytın bildiriləcəyi adres"
 msgid "Upload to:"
 msgstr "Yükləmə hədəfi :"
 
-#: src/glade/screem.glade.h:169 src/glade/screem.glade.h:446
+#: src/glade/screem.glade.h:169 src/glade/screem.glade.h:450
 msgid "Upload Method:"
 msgstr "Yükləmə yolu :"
 
-#: src/glade/screem.glade.h:170 src/glade/screem.glade.h:448
+#: src/glade/screem.glade.h:170 src/glade/screem.glade.h:452
 msgid "Remote path:"
 msgstr "Uzaqdakı yol :"
 
@@ -3395,11 +3341,11 @@ msgid ""
 "publish the site"
 msgstr ""
 
-#: src/glade/screem.glade.h:184 src/glade/screem.glade.h:457
+#: src/glade/screem.glade.h:184 src/glade/screem.glade.h:461
 msgid "Upload Options"
 msgstr "Yükləmə seçənəkləri"
 
-#: src/glade/screem.glade.h:185 src/glade/screem.glade.h:463
+#: src/glade/screem.glade.h:185 src/glade/screem.glade.h:467
 msgid "Passive FTP"
 msgstr "Passiv FTP"
 
@@ -3423,19 +3369,19 @@ msgstr "Yumuşaq bağlar :"
 msgid "Maintain permissions:"
 msgstr "Səlahiyyələi idarə et :"
 
-#: src/glade/screem.glade.h:192 src/glade/screem.glade.h:461
+#: src/glade/screem.glade.h:192 src/glade/screem.glade.h:465
 msgid "Exec"
 msgstr "İşə Sal"
 
-#: src/glade/screem.glade.h:193 src/glade/screem.glade.h:462
+#: src/glade/screem.glade.h:193 src/glade/screem.glade.h:466
 msgid "All"
 msgstr "Hamısı"
 
-#: src/glade/screem.glade.h:195 src/glade/screem.glade.h:468
+#: src/glade/screem.glade.h:195 src/glade/screem.glade.h:472
 msgid "Follow"
 msgstr "Təqib et"
 
-#: src/glade/screem.glade.h:196 src/glade/screem.glade.h:469
+#: src/glade/screem.glade.h:196 src/glade/screem.glade.h:473
 msgid "Maintain"
 msgstr "İdrarə et"
 
@@ -3463,7 +3409,7 @@ msgstr "Rəqəm"
 msgid "Average Size"
 msgstr "Ortalama böyüklük"
 
-#: src/glade/screem.glade.h:205 src/glade/screem.glade.h:487
+#: src/glade/screem.glade.h:205 src/glade/screem.glade.h:491
 msgid "Statistics"
 msgstr "Statistikaları"
 
@@ -3495,13 +3441,13 @@ msgstr "Qovluq"
 msgid "File"
 msgstr "Dosye"
 
-#: src/glade/screem.glade.h:215 src/glade/screem.glade.h:331
-#: src/glade/screem.glade.h:349 src/glade/screem.glade.h:533
+#: src/glade/screem.glade.h:215 src/glade/screem.glade.h:335
+#: src/glade/screem.glade.h:353 src/glade/screem.glade.h:537
 msgid "Update"
 msgstr "Təzələ"
 
-#: src/glade/screem.glade.h:216 src/glade/screem.glade.h:329
-#: src/glade/screem.glade.h:350
+#: src/glade/screem.glade.h:216 src/glade/screem.glade.h:333
+#: src/glade/screem.glade.h:354
 msgid "Remove"
 msgstr "Sil"
 
@@ -3574,24 +3520,32 @@ msgstr ""
 msgid "Labels:"
 msgstr "etiket1"
 
-#: src/glade/screem.glade.h:237 src/glade/screem.glade.h:314
+#: src/glade/screem.glade.h:237 src/glade/screem.glade.h:318
 msgid "on"
 msgstr "açıq"
 
-#: src/glade/screem.glade.h:238 src/glade/screem.glade.h:315
+#: src/glade/screem.glade.h:238 src/glade/screem.glade.h:319
 msgid "off"
 msgstr "qapalı"
 
-#: src/glade/screem.glade.h:241
+#: src/glade/screem.glade.h:239
+msgid ""
+"Broken Link checking\n"
+"is currently broken and\n"
+"does not actually perform\n"
+"the check."
+msgstr ""
+
+#: src/glade/screem.glade.h:245
 msgid "L: 0 C: 0"
 msgstr "Sı. : 0 Sü. :0="
 
-#: src/glade/screem.glade.h:242
+#: src/glade/screem.glade.h:246
 #, fuzzy
 msgid "(C) 1999, 2000, 2001 David A Knight"
 msgstr "Təlif haqqı(C) 1999, 2000 David A Knight"
 
-#: src/glade/screem.glade.h:243
+#: src/glade/screem.glade.h:247
 msgid ""
 "SCREEM: Site CReating and Editing EnvironMent\n"
 "Screem provides an integrated development environment for creating and "
@@ -3605,154 +3559,155 @@ msgstr ""
 "\n"
 "SCREEM GNU GPL nəsil 2 ya da daha təzə nəsillərə görə yayılır"
 
-#: src/glade/screem.glade.h:247
+#: src/glade/screem.glade.h:251
 msgid "SCREEM: Site CReating and Editing EnvironMent"
 msgstr "SCREEM : Sayt yaratma və düzəltmə vasitəsi"
 
-#: src/glade/screem.glade.h:248
+#: src/glade/screem.glade.h:252
 msgid "Screem: External Browser Settings"
 msgstr "Screem : Xarici Səyyahlar Qurğuları"
 
-#: src/glade/screem.glade.h:249
+#: src/glade/screem.glade.h:253
 msgid "Browser:"
 msgstr "Səyyah :"
 
-#: src/glade/screem.glade.h:250 src/glade/screem.glade.h:269
+#: src/glade/screem.glade.h:254 src/glade/screem.glade.h:273
 msgid "Select a browser"
 msgstr "Bir səyyah seç"
 
-#: src/glade/screem.glade.h:251
+#: src/glade/screem.glade.h:255
 msgid "Select icon for browser button"
 msgstr "Səyyah düyməsi üçün istifadə ediləcək timsalı bildir"
 
-#: src/glade/screem.glade.h:252
+#: src/glade/screem.glade.h:256
 msgid "Preview using http url"
 msgstr "Http ünvanını istifadə edərək bax"
 
-#: src/glade/screem.glade.h:253
+#: src/glade/screem.glade.h:257
 msgid "Spell Check"
 msgstr "Imla yoxlaması"
 
-#: src/glade/screem.glade.h:254
+#: src/glade/screem.glade.h:258
 msgid "Word:"
 msgstr "Kəlimə :"
 
-#: src/glade/screem.glade.h:255 src/glade/screem.glade.h:263
+#: src/glade/screem.glade.h:259 src/glade/screem.glade.h:267
 msgid "Check"
 msgstr "Yoxla"
 
-#: src/glade/screem.glade.h:256
+#: src/glade/screem.glade.h:260
 msgid "Alternatives"
 msgstr "Ehtiyatlar"
 
-#: src/glade/screem.glade.h:257
+#: src/glade/screem.glade.h:261
 msgid "label130"
 msgstr "etiket130"
 
-#: src/glade/screem.glade.h:258
+#: src/glade/screem.glade.h:262
 msgid "Accept"
 msgstr "Qəbul Et"
 
-#: src/glade/screem.glade.h:259
+#: src/glade/screem.glade.h:263
 msgid "Skip"
 msgstr "Keç"
 
-#: src/glade/screem.glade.h:260 src/glade/screem.glade.h:367
+#: src/glade/screem.glade.h:264 src/glade/screem.glade.h:371
 msgid "Replace"
 msgstr "Yerinə Qoy"
 
-#: src/glade/screem.glade.h:262
+#: src/glade/screem.glade.h:266
 msgid "Insert with case"
 msgstr "Yazılımına görə daxil et"
 
-#: src/glade/screem.glade.h:264
+#: src/glade/screem.glade.h:268
 msgid "Main dictionary:"
 msgstr "Ana lüğət :"
 
-#: src/glade/screem.glade.h:265
+#: src/glade/screem.glade.h:269
 msgid "Ispell command:"
 msgstr "Ispell əmri :"
 
-#: src/glade/screem.glade.h:266
+#: src/glade/screem.glade.h:270
 msgid "Configure"
 msgstr "Quraşdır"
 
-#: src/glade/screem.glade.h:267
+#: src/glade/screem.glade.h:271
 msgid "Screem: Helper Settings"
 msgstr "Screem : Köməkçilər Qurğuları"
 
-#: src/glade/screem.glade.h:268
+#: src/glade/screem.glade.h:272
 msgid "Helper:"
 msgstr "Köməkçi :"
 
-#: src/glade/screem.glade.h:270
+#: src/glade/screem.glade.h:274
 msgid "Select icon for helper"
 msgstr "Köməkçinin timsalını seç"
 
-#: src/glade/screem.glade.h:271
+#: src/glade/screem.glade.h:275
 msgid "Refresh View"
 msgstr "Görünüşü təzələ"
 
-#: src/glade/screem.glade.h:272
+#: src/glade/screem.glade.h:276
+#, fuzzy
 msgid "Zoom"
-msgstr ""
+msgstr "alt"
 
-#: src/glade/screem.glade.h:273
+#: src/glade/screem.glade.h:277
 #, c-format
 msgid "25%"
 msgstr ""
 
-#: src/glade/screem.glade.h:276
+#: src/glade/screem.glade.h:280
 #, c-format
 msgid "200%"
 msgstr ""
 
-#: src/glade/screem.glade.h:277
+#: src/glade/screem.glade.h:281
 #, c-format
 msgid "300%"
 msgstr ""
 
-#: src/glade/screem.glade.h:278
+#: src/glade/screem.glade.h:282
 #, c-format
 msgid "400%"
 msgstr ""
 
-#: src/glade/screem.glade.h:280
+#: src/glade/screem.glade.h:284
 msgid "Attempts to tidy up the HTML by fixing the order of close tags etc"
 msgstr ""
 "HTML mümkün olduğu qədəi ilə təmiz tutmaya çalış; yə'ni hər "
 "%TAG'i qapat vs."
 
-#: src/glade/screem.glade.h:281
+#: src/glade/screem.glade.h:285
 msgid "Fix HTML"
 msgstr "HTML'i təmiz tut"
 
-#: src/glade/screem.glade.h:282
+#: src/glade/screem.glade.h:286
 msgid "Screem: Preferences"
 msgstr "SCREEM : Qurğular"
 
-#: src/glade/screem.glade.h:283
+#: src/glade/screem.glade.h:287
 msgid "label133"
 msgstr "etiket133"
 
-#: src/glade/screem.glade.h:284 src/glade/screem.glade.h:317
+#: src/glade/screem.glade.h:288 src/glade/screem.glade.h:321
 #: src/preferences.c:639
 msgid "Misc"
 msgstr "Qarışıq"
 
-#: src/glade/screem.glade.h:285
+#: src/glade/screem.glade.h:289
 msgid "Defaults"
 msgstr "Əsas"
 
-#: src/glade/screem.glade.h:286
+#: src/glade/screem.glade.h:290
 msgid "Filename:"
 msgstr "Dosye adı: "
 
-#: src/glade/screem.glade.h:287
+#: src/glade/screem.glade.h:291
 msgid "Charset:"
 msgstr "Xarakter dəstəsi (charset): "
 
-#: src/glade/screem.glade.h:288
+#: src/glade/screem.glade.h:292
 msgid ""
 "This is the name of the initial file when you create a new site, and "
 "defaults to index.html"
@@ -3760,163 +3715,160 @@ msgstr ""
 "təzə bir sayt yaradıldığında başlangıç dosyesinin adı; ön "
 "qurğulu ad \"index.html\" idir."
 
-#: src/glade/screem.glade.h:290 src/glade/screem.glade.h:398
-#, fuzzy
+#: src/glade/screem.glade.h:294 src/glade/screem.glade.h:402
 msgid "ISO-8859-2"
-msgstr "ISO-8859-1"
+msgstr "ISO-8859-2"
 
-#: src/glade/screem.glade.h:291 src/glade/screem.glade.h:399
-#, fuzzy
+#: src/glade/screem.glade.h:295 src/glade/screem.glade.h:403
 msgid "ISO-8859-5"
-msgstr "ISO-8859-1"
+msgstr "ISO-8859-5"
 
-#: src/glade/screem.glade.h:292 src/glade/screem.glade.h:400
-#, fuzzy
+#: src/glade/screem.glade.h:296 src/glade/screem.glade.h:404
 msgid "ISO-8859-7"
-msgstr "ISO-8859-1"
+msgstr "ISO-8859-7"
 
-#: src/glade/screem.glade.h:293
+#: src/glade/screem.glade.h:297
 msgid "The default character set for html pages, defaults to ISO-8859-1"
 msgstr ""
 "HTML səhifələri üçün əsas xarakter dəstəsi (charset) ISO-8859-1dır"
 
-#: src/glade/screem.glade.h:295
+#: src/glade/screem.glade.h:299
 msgid "DTD:"
 msgstr "DTD:"
 
-#: src/glade/screem.glade.h:296
+#: src/glade/screem.glade.h:300
 msgid "The default Document Type Definition to use for sgml/xml documents"
 msgstr "sgml/xml üçün işlədiləcək Əsas Sənəd Növü "
 
-#: src/glade/screem.glade.h:297
+#: src/glade/screem.glade.h:301
 msgid ""
 "Causes screem to load the projects that were previously in use when screem "
 "was last exited"
 msgstr ""
 
-#: src/glade/screem.glade.h:298
+#: src/glade/screem.glade.h:302
 msgid "Auto load projects on startup"
 msgstr ""
 
-#: src/glade/screem.glade.h:299
+#: src/glade/screem.glade.h:303
 msgid "Automatically open pages which were open in auto loaded projects"
 msgstr ""
 
-#: src/glade/screem.glade.h:300
+#: src/glade/screem.glade.h:304
 msgid "Auto open pages"
 msgstr ""
 
-#: src/glade/screem.glade.h:301
+#: src/glade/screem.glade.h:305
 msgid ""
 "With this enabled then editing features will only be enabled where they make "
 "sense, eg no auto entity insertion when editing a section of javascript.  If "
 "editing large documents you may want this switched off"
 msgstr ""
 
-#: src/glade/screem.glade.h:302
+#: src/glade/screem.glade.h:306
 #, fuzzy
 msgid "Enable Document Parsing"
 msgstr "Kəlimə qırmasını aç"
 
-#: src/glade/screem.glade.h:303
+#: src/glade/screem.glade.h:307
 msgid "Display Settings"
 msgstr "Ekran Qurğuları"
 
-#: src/glade/screem.glade.h:304
+#: src/glade/screem.glade.h:308
 msgid "Syntax Highlighting"
 msgstr "Vurğulamayı aç"
 
-#: src/glade/screem.glade.h:305
+#: src/glade/screem.glade.h:309
 msgid "Inline Tagging"
 msgstr "İçəridə TAQlə"
 
-#: src/glade/screem.glade.h:306
+#: src/glade/screem.glade.h:310
 msgid "Auto indent"
 msgstr "Avtomatik çəntiklə"
 
-#: src/glade/screem.glade.h:307
+#: src/glade/screem.glade.h:311
 msgid "Intelligent tag closing"
 msgstr "Ağıllı taq qapatması"
 
-#: src/glade/screem.glade.h:308
+#: src/glade/screem.glade.h:312
 msgid "Pick a Font"
 msgstr "Bir yazı növünü seç"
 
-#: src/glade/screem.glade.h:309
+#: src/glade/screem.glade.h:313
 msgid "<HTML><HEAD><TITLE>FONT PICKER</TITLE></HEAD></HTML>"
 msgstr "<HTML><HEAD><TITLE>YAZI NÖVÜ SEÇİCİSİ</TITLE></HEAD></HTML>"
 
-#: src/glade/screem.glade.h:310
+#: src/glade/screem.glade.h:314
 msgid "Notebook toolbar"
 msgstr "Qeyd dəftərçəsi çubuğu"
 
-#: src/glade/screem.glade.h:311
+#: src/glade/screem.glade.h:315
 msgid "display view toolbar"
 msgstr "ekran çubuğunu göstər"
 
-#: src/glade/screem.glade.h:312
+#: src/glade/screem.glade.h:316
 msgid "The font to be used in the editor"
 msgstr "Editorda istifadə ediləcək yazı növü"
 
-#: src/glade/screem.glade.h:313
+#: src/glade/screem.glade.h:317
 msgid "Auto entity insertion"
 msgstr "Avtomatik şəkilləndirilmiş olaraq daxil et"
 
-#: src/glade/screem.glade.h:316
+#: src/glade/screem.glade.h:320
 msgid "by charset"
 msgstr "yazı sinifinə görə"
 
-#: src/glade/screem.glade.h:318
+#: src/glade/screem.glade.h:322
 msgid "Editor Keys"
 msgstr "Düzəldici düymələri"
 
-#: src/glade/screem.glade.h:319
+#: src/glade/screem.glade.h:323
 msgid "The key combinations currently set"
 msgstr "Hazırkı düymə axışları"
 
-#: src/glade/screem.glade.h:320
+#: src/glade/screem.glade.h:324
 msgid "Key Combo"
 msgstr "Düymə axışı"
 
-#: src/glade/screem.glade.h:321
+#: src/glade/screem.glade.h:325
 msgid "Action / Text"
 msgstr "Gediş / Mətn"
 
-#: src/glade/screem.glade.h:322
+#: src/glade/screem.glade.h:326
 msgid "New key combo:"
 msgstr "Təzə düymə axışı :"
 
-#: src/glade/screem.glade.h:323
+#: src/glade/screem.glade.h:327
 msgid ""
 "The key combination which will perform the action/insert the text shown "
 "below."
 msgstr "Altdakı mətni/gedişi edəcək düymə axışı. "
 
-#: src/glade/screem.glade.h:324
+#: src/glade/screem.glade.h:328
 msgid "Grab a key combination"
 msgstr "Bir düymə axışını yaxala"
 
-#: src/glade/screem.glade.h:325
+#: src/glade/screem.glade.h:329
 msgid "Grab key..."
 msgstr "Düyməni yaxala ..."
 
-#: src/glade/screem.glade.h:326
+#: src/glade/screem.glade.h:330
 msgid "Add the current combo"
 msgstr "Hazırkı düymə axışını əlavə et"
 
-#: src/glade/screem.glade.h:328
+#: src/glade/screem.glade.h:332
 msgid "Remove the select combo"
 msgstr "Hazırkı düymə axışını sil"
 
-#: src/glade/screem.glade.h:330
+#: src/glade/screem.glade.h:334
 msgid "Update the selected combo"
 msgstr "Hazırkı düymə axışını təzələ"
 
-#: src/glade/screem.glade.h:332
+#: src/glade/screem.glade.h:336
 msgid "Action/Text"
 msgstr "Gediş/Mətn"
 
-#: src/glade/screem.glade.h:333
+#: src/glade/screem.glade.h:337
 msgid ""
 "The action to be taken in the editor when the key combo is pressed, or the "
 "text to insert when it is pressed if it doesn't match one of the presets."
@@ -3924,244 +3876,252 @@ msgstr ""
 "Düymə axışı basılınca işə salınacaq əməliyyat, ya da ön "
 "qurğulu qiymətlərin heç birinə yoldaş deyilsə, daxil ediləcək mətn."
 
-#: src/glade/screem.glade.h:334
+#: src/glade/screem.glade.h:338
 msgid "Editor keys"
 msgstr "Düzəldici düymələri"
 
-#: src/glade/screem.glade.h:335
+#: src/glade/screem.glade.h:339
 msgid "Editor Colours & Syntax Highlighting"
 msgstr "Düzəldici rəngləri & vurğulaması"
 
-#: src/glade/screem.glade.h:336
+#: src/glade/screem.glade.h:340
 msgid "Editor Colours"
 msgstr "Düzəldici rəngləri"
 
-#: src/glade/screem.glade.h:338
+#: src/glade/screem.glade.h:342
 msgid "Editor Background Colour"
 msgstr "Düzəldicinin arxaplan rəngi"
 
-#: src/glade/screem.glade.h:340
+#: src/glade/screem.glade.h:344
 msgid "Editor Text Colour"
 msgstr "Düzəldici mətn rəngi"
 
-#: src/glade/screem.glade.h:341
+#: src/glade/screem.glade.h:345
 msgid "Syntax Colours"
 msgstr "Vurğulama rəngləri"
 
-#: src/glade/screem.glade.h:342
+#: src/glade/screem.glade.h:346
 msgid "Helper Applications"
 msgstr "Köməkçi proqramlar"
 
-#: src/glade/screem.glade.h:343
+#: src/glade/screem.glade.h:347
 msgid "Path"
 msgstr "Yol"
 
-#: src/glade/screem.glade.h:344
+#: src/glade/screem.glade.h:348
 msgid "Mime Type"
 msgstr "MIME növü"
 
-#: src/glade/screem.glade.h:345
+#: src/glade/screem.glade.h:349
 msgid "Mime Type:"
 msgstr "MIME növü :"
 
-#: src/glade/screem.glade.h:347
+#: src/glade/screem.glade.h:351
 msgid "Select Icon for helper toolbar button"
 msgstr "Köməkçilər çubuğundakı düymənin timsalını seç"
 
-#: src/glade/screem.glade.h:352
+#: src/glade/screem.glade.h:356
 msgid "Printer Setup"
 msgstr "Çap etmə quruluşu"
 
-#: src/glade/screem.glade.h:353 src/glade/screem.glade.h:361
+#: src/glade/screem.glade.h:357 src/glade/screem.glade.h:365
 #: src/preferences.c:640
 msgid "Printing"
 msgstr "Çap etmə"
 
-#: src/glade/screem.glade.h:354
+#: src/glade/screem.glade.h:358
 msgid "Add header"
 msgstr "Başlığı əlavə et"
 
-#: src/glade/screem.glade.h:355
+#: src/glade/screem.glade.h:359
 msgid "Enable word wrapping"
 msgstr "Kəlimə qırmasını aç"
 
-#: src/glade/screem.glade.h:356
+#: src/glade/screem.glade.h:360
 msgid "Print line numbers every:"
 msgstr "Sətir nömrəsini hər :"
 
-#: src/glade/screem.glade.h:357
+#: src/glade/screem.glade.h:361
 msgid "line(s)"
 msgstr "sətir çap et"
 
-#: src/glade/screem.glade.h:358
+#: src/glade/screem.glade.h:362
 msgid "Portrait"
 msgstr "Portret"
 
-#: src/glade/screem.glade.h:359
+#: src/glade/screem.glade.h:363
 msgid "Landscape"
 msgstr "Mənzərə"
 
-#: src/glade/screem.glade.h:360
+#: src/glade/screem.glade.h:364
 msgid "Paper"
 msgstr "Kağız"
 
-#: src/glade/screem.glade.h:362 src/glade/screem.glade.h:364
+#: src/glade/screem.glade.h:366 src/glade/screem.glade.h:368
 #: src/preferences.c:640
 msgid "Java"
 msgstr "Java"
 
-#: src/glade/screem.glade.h:363
+#: src/glade/screem.glade.h:367
 msgid "Compiler:"
 msgstr "Ayıqlayıcı :"
 
-#: src/glade/screem.glade.h:365
+#: src/glade/screem.glade.h:369
 msgid "Screem: Find/Replace"
 msgstr "Screem : Tap/Yerinə Qoy"
 
-#: src/glade/screem.glade.h:366
+#: src/glade/screem.glade.h:370
 msgid "Find Next"
 msgstr "Sonrakını tap"
 
-#: src/glade/screem.glade.h:368
+#: src/glade/screem.glade.h:372
 msgid "Replace All"
 msgstr "Hamısının yerinə qoy"
 
-#: src/glade/screem.glade.h:369
+#: src/glade/screem.glade.h:373
 msgid "Files which contain matches appear here"
 msgstr "Axtarılacaq mətni daxil edən dosyelər burada düzüləcəkdir"
 
-#: src/glade/screem.glade.h:371
+#: src/glade/screem.glade.h:374
+msgid "label2"
+msgstr "etiket2"
+
+#: src/glade/screem.glade.h:375
 msgid "label3"
 msgstr "etiket3"
 
-#: src/glade/screem.glade.h:372
+#: src/glade/screem.glade.h:376
 msgid "Find string:"
 msgstr "Mətni tap :"
 
-#: src/glade/screem.glade.h:373
+#: src/glade/screem.glade.h:377
 msgid "The string to search for"
 msgstr "Axtarılacaq mətn"
 
-#: src/glade/screem.glade.h:374
+#: src/glade/screem.glade.h:378
 msgid "Replace string"
 msgstr "Mətni yerinə qoy"
 
-#: src/glade/screem.glade.h:375
+#: src/glade/screem.glade.h:379
 msgid "The string to replace the find string with"
 msgstr "Tapılacaq mətnin yerinə yerləşdiriləcək mətn"
 
-#: src/glade/screem.glade.h:376
+#: src/glade/screem.glade.h:380
 msgid "Use regular expressions"
 msgstr "İfadələri istifadə et"
 
-#: src/glade/screem.glade.h:377
+#: src/glade/screem.glade.h:381
 msgid "From Start"
 msgstr "Başdan"
 
-#: src/glade/screem.glade.h:378
+#: src/glade/screem.glade.h:382
 msgid "From Current position"
 msgstr "Hazırkı yerdən"
 
-#: src/glade/screem.glade.h:379
+#: src/glade/screem.glade.h:383
 msgid "Check all files"
 msgstr "Bütün Dosyeləri yoxla"
 
-#: src/glade/screem.glade.h:380 src/glade/screem.glade.h:515
+#: src/glade/screem.glade.h:384 src/glade/screem.glade.h:519
 msgid "window1"
 msgstr "pəncərə1"
 
-#: src/glade/screem.glade.h:382
+#: src/glade/screem.glade.h:386
 msgid "Fore Colour"
 msgstr "Önplan rəngi"
 
-#: src/glade/screem.glade.h:384
+#: src/glade/screem.glade.h:388
 msgid "Back Colour"
 msgstr "Arxaplan rəngi"
 
-#: src/glade/screem.glade.h:385 src/glade/screem.glade.h:386
-#: src/glade/screem.glade.h:430
+#: src/glade/screem.glade.h:389 src/glade/screem.glade.h:390
+#: src/glade/screem.glade.h:434
 msgid "SCREEM: Page Druid"
 msgstr "SCREEM : Səhifə sehirbazı"
 
-#: src/glade/screem.glade.h:387
+#: src/glade/screem.glade.h:391
 msgid "The Page Druid will guide you through the creation of a new page"
 msgstr ""
 "Səhifə sehirbazı sənə təzə bir səhifənin yaradılışında sənə "
 "köməkçi olacaqdır"
 
-#: src/glade/screem.glade.h:388
+#: src/glade/screem.glade.h:392
 msgid "SCREEM: Page Druid - Details"
 msgstr "SCREEM : Səhifə sehirbazı - Ətraflı Mə'lumat"
 
-#: src/glade/screem.glade.h:389
+#: src/glade/screem.glade.h:393
 msgid "Basic Details"
 msgstr "Əsas Mə'lumatlar"
 
-#: src/glade/screem.glade.h:390
+#: src/glade/screem.glade.h:394
 msgid "Page Path: (including filename)"
 msgstr "Səhifə yolu : ( dosye adı daxil )"
 
-#: src/glade/screem.glade.h:391
+#: src/glade/screem.glade.h:395
 msgid "Page Doctype:"
 msgstr "Səhifənin sənəd olaraq növü:"
 
-#: src/glade/screem.glade.h:392
+#: src/glade/screem.glade.h:396
 msgid "Page Stylesheet:"
 msgstr "Səhifə tərzi :"
 
-#: src/glade/screem.glade.h:393
+#: src/glade/screem.glade.h:397
 msgid "Meta Information"
 msgstr "Meta Mə'lumatları"
 
-#: src/glade/screem.glade.h:394
+#: src/glade/screem.glade.h:398
 msgid "Page Title:"
 msgstr "Səhifənin Başlığı :"
 
-#: src/glade/screem.glade.h:395
+#: src/glade/screem.glade.h:399
 msgid "Page Author:"
 msgstr "Səhifə Müəllifi :"
 
-#: src/glade/screem.glade.h:396
+#: src/glade/screem.glade.h:400
 msgid "Page Character Set:"
 msgstr "Səhifənin hərf sinifi :"
 
-#: src/glade/screem.glade.h:402
+#: src/glade/screem.glade.h:406
 msgid "Page Keywords:"
 msgstr "Səhifənin açar kəlimələri :"
 
-#: src/glade/screem.glade.h:403
+#: src/glade/screem.glade.h:407
 msgid "SCREEM: Page Druid - Templates"
 msgstr "SCREEM : Səhifə sehirbazı - Nümunələr"
 
-#: src/glade/screem.glade.h:404
+#: src/glade/screem.glade.h:408
 msgid "Available Page Templates"
 msgstr "Erişilir səhifə nümunələri"
 
-#: src/glade/screem.glade.h:406
+#: src/glade/screem.glade.h:409
+msgid "label1"
+msgstr "etiket1"
+
+#: src/glade/screem.glade.h:410
 msgid "Template Settings"
 msgstr "Nümunə Qurğuları"
 
-#: src/glade/screem.glade.h:407
+#: src/glade/screem.glade.h:411
 msgid "Use Standard Template"
 msgstr "Əsas qurğulu nümunəs istifadə et"
 
-#: src/glade/screem.glade.h:408
+#: src/glade/screem.glade.h:412
 msgid "Use Custom Template"
 msgstr "Xüsusi bir nümunəs istifadə et"
 
-#: src/glade/screem.glade.h:409
+#: src/glade/screem.glade.h:413
 msgid "Custom Settings"
 msgstr "Xüsusi Qurğular"
 
-#: src/glade/screem.glade.h:410
+#: src/glade/screem.glade.h:414
 msgid "Template File:"
 msgstr "Nümunə dosyesi :"
 
-#: src/glade/screem.glade.h:411
+#: src/glade/screem.glade.h:415
 msgid "Template Information"
 msgstr "Nümunə Mə'lumatları"
 
-#: src/glade/screem.glade.h:412
+#: src/glade/screem.glade.h:416
 msgid ""
 "This label will be filled with information about the page template that is "
 "currently selected."
@@ -4169,39 +4129,39 @@ msgstr ""
 "Hazırkı nümunənin mə'lumatları ilə doldurulacaq bir mətnin burada "
 "göstərilməsi lazımdır."
 
-#: src/glade/screem.glade.h:413
+#: src/glade/screem.glade.h:417
 msgid "SCREEM: Page Druid - Colours"
 msgstr "SCREEM : Səhifə sehirbazı - Rənglər"
 
-#: src/glade/screem.glade.h:415 src/preferences.c:639
+#: src/glade/screem.glade.h:419 src/preferences.c:639
 msgid "Colours"
 msgstr "Rənglər"
 
-#: src/glade/screem.glade.h:420
+#: src/glade/screem.glade.h:424
 msgid "Overide template settings"
 msgstr "Nümunə xüsusiyyətlərini hökmsüz say"
 
-#: src/glade/screem.glade.h:421
+#: src/glade/screem.glade.h:425
 msgid "Page defines frameset"
 msgstr "Səhifə çərçivələr istifadə edir"
 
-#: src/glade/screem.glade.h:426
+#: src/glade/screem.glade.h:430
 msgid "Visited Link"
 msgstr "Ziyarət edilmiş bağ"
 
-#: src/glade/screem.glade.h:427
+#: src/glade/screem.glade.h:431
 msgid "Active Link"
 msgstr "Hazırkı bağ"
 
-#: src/glade/screem.glade.h:428
+#: src/glade/screem.glade.h:432
 msgid "Images"
 msgstr "Rəsmlər"
 
-#: src/glade/screem.glade.h:429
+#: src/glade/screem.glade.h:433
 msgid "Background:"
 msgstr "Arxaplan :"
 
-#: src/glade/screem.glade.h:431
+#: src/glade/screem.glade.h:435
 msgid ""
 "Click Finish for the page to be created, or click back to\n"
 "check that the information you entered was correct."
@@ -4209,86 +4169,86 @@ msgstr ""
 "Səhifənin yaradılması üçün indi \"Qurtar\"'a bas ya da geri\n"
 "gedib vediyin mə'lumatların düzgünlüyünü yoxla."
 
-#: src/glade/screem.glade.h:433 src/glade/screem.glade.h:434
-#: src/glade/screem.glade.h:470
+#: src/glade/screem.glade.h:437 src/glade/screem.glade.h:438
+#: src/glade/screem.glade.h:474
 msgid "SCREEM: Site Druid"
 msgstr "SCREEM : Sayt sehirbazı"
 
-#: src/glade/screem.glade.h:435
+#: src/glade/screem.glade.h:439
 msgid "The Site Druid will guide you through the creation of a new site"
 msgstr ""
 "Sayt sehirbazı təzə bir sayt yaradılışında sənə köməkçi "
 "olacaqdır"
 
-#: src/glade/screem.glade.h:436
+#: src/glade/screem.glade.h:440
 msgid "SCREEM: Site Druid - Details/Management"
 msgstr "SCREEM : Sayt sehirbazı - Ətraflı Mə'lumat/İdarə"
 
-#: src/glade/screem.glade.h:437
+#: src/glade/screem.glade.h:441
 msgid "Site Details"
 msgstr "Sayt haqqında Ətraflı Mə'lumat"
 
-#: src/glade/screem.glade.h:439
+#: src/glade/screem.glade.h:443
 msgid "Site Pathname:"
 msgstr "Sayt Yolu :"
 
-#: src/glade/screem.glade.h:440
+#: src/glade/screem.glade.h:444
 msgid "Site Template:"
 msgstr "Sayt Nümunəsi :"
 
-#: src/glade/screem.glade.h:441
+#: src/glade/screem.glade.h:445
 msgid "Site Management"
 msgstr "Sayt İdarəsi"
 
-#: src/glade/screem.glade.h:442
+#: src/glade/screem.glade.h:446
 msgid "Use CVS:"
 msgstr "CVSdən istifadə et :"
 
-#: src/glade/screem.glade.h:443
+#: src/glade/screem.glade.h:447
 msgid "Default Page Template:"
 msgstr "Əsas qurğulu səhifə nümunəsi :"
 
-#: src/glade/screem.glade.h:444
+#: src/glade/screem.glade.h:448
 msgid "SCREEM: Site Druid - Publish Settings (1)"
 msgstr "SCREEM : Sayt sehirbazı - Nəşriyyat Qurğuları (1)"
 
-#: src/glade/screem.glade.h:447
+#: src/glade/screem.glade.h:451
 msgid "Hostname:"
 msgstr "Verici adı :"
 
-#: src/glade/screem.glade.h:449
+#: src/glade/screem.glade.h:453
 msgid "Base URI of Site:"
 msgstr "Saytın ana URI'si :"
 
-#: src/glade/screem.glade.h:453
+#: src/glade/screem.glade.h:457
 msgid "Remote Authentication"
 msgstr "Uzaqdan Tanıtma"
 
-#: src/glade/screem.glade.h:456
+#: src/glade/screem.glade.h:460
 msgid "SCREEM: Site Druid - Publish Settings (2)"
 msgstr "SCREEM : Sayt sehirbazı - Nəşriyyat Qurğuları (2)"
 
-#: src/glade/screem.glade.h:458
+#: src/glade/screem.glade.h:462
 msgid "Maintain Permissions:"
 msgstr "İdarə Səlahiyyətləri :"
 
-#: src/glade/screem.glade.h:459
+#: src/glade/screem.glade.h:463
 msgid "Symbolic Links:"
 msgstr "Yumuşaq bağlar :"
 
-#: src/glade/screem.glade.h:464
+#: src/glade/screem.glade.h:468
 msgid "No Delete"
 msgstr "Qətiyyən silme"
 
-#: src/glade/screem.glade.h:465
+#: src/glade/screem.glade.h:469
 msgid "Check Moved"
 msgstr "Daşınmışları yoxla"
 
-#: src/glade/screem.glade.h:466
+#: src/glade/screem.glade.h:470
 msgid "No Overwrite"
 msgstr "Üstünə yazma"
 
-#: src/glade/screem.glade.h:471
+#: src/glade/screem.glade.h:475
 msgid ""
 "Site Definition complete.  Click finish for the site to be created,\n"
 "or go back and check the details you entered."
@@ -4297,214 +4257,218 @@ msgstr ""
 "bas,\n"
 "ya da geri gedib verdiğin Mə'lumatları yoxla."
 
-#: src/glade/screem.glade.h:473
+#: src/glade/screem.glade.h:477
 msgid "File Properties"
 msgstr "Dosy Xüsusiyyətləri"
 
-#: src/glade/screem.glade.h:474
+#: src/glade/screem.glade.h:478
 msgid "Full Name:"
 msgstr "Tam Ad :"
 
-#: src/glade/screem.glade.h:475
+#: src/glade/screem.glade.h:479
 msgid "File Name:"
 msgstr "Dosye adı:"
 
-#: src/glade/screem.glade.h:476
+#: src/glade/screem.glade.h:480
 msgid "Filename will go here"
 msgstr "Dosye adı burada olacaqdır"
 
-#: src/glade/screem.glade.h:477
+#: src/glade/screem.glade.h:481
 msgid "File Type:"
 msgstr "Dosye Növü:"
 
-#: src/glade/screem.glade.h:478
+#: src/glade/screem.glade.h:482
 msgid "The file type will go here"
 msgstr "Dosye növü burada olacaqdır"
 
-#: src/glade/screem.glade.h:480
+#: src/glade/screem.glade.h:484
 msgid "File size will go here"
 msgstr "Dosye böyüküyü burada olacaqdır"
 
-#: src/glade/screem.glade.h:481
+#: src/glade/screem.glade.h:485
 msgid "File Created on:"
 msgstr "Dosye burada yaradıldı:"
 
-#: src/glade/screem.glade.h:482
+#: src/glade/screem.glade.h:486
 msgid "Last Modified on:"
 msgstr "Son Təkmilləşdirmə Tarixi"
 
-#: src/glade/screem.glade.h:483
+#: src/glade/screem.glade.h:487
 msgid "Last Accessed on:"
 msgstr "Son Çatma Tarixi: "
 
-#: src/glade/screem.glade.h:484 src/glade/screem.glade.h:485
-#: src/glade/screem.glade.h:486
+#: src/glade/screem.glade.h:488 src/glade/screem.glade.h:489
+#: src/glade/screem.glade.h:490
 msgid "date/time will go here"
 msgstr "tarix/vaxt burada olacaqdır"
 
-#: src/glade/screem.glade.h:489
+#: src/glade/screem.glade.h:493
 msgid "Exclude from uploading"
 msgstr "Yükləmə gedişatından çıxart"
 
-#: src/glade/screem.glade.h:490
+#: src/glade/screem.glade.h:494
 msgid "Upload as ASCII File"
 msgstr "ASCII Dosye olaraq göndər"
 
-#: src/glade/screem.glade.h:491
+#: src/glade/screem.glade.h:495
 msgid "Ignore the file when fetching"
 msgstr "Alarkən dosyedən imtina et"
 
-#: src/glade/screem.glade.h:492
+#: src/glade/screem.glade.h:496
 msgid "Options"
 msgstr "Seçənəklər"
 
-#: src/glade/screem.glade.h:493
+#: src/glade/screem.glade.h:497
 msgid "File Permissions"
 msgstr "Dosye Səlahiyyətləri"
 
-#: src/glade/screem.glade.h:494
+#: src/glade/screem.glade.h:498
 msgid "File Ownership"
 msgstr "Dosye Yiyəsi"
 
-#: src/glade/screem.glade.h:495
+#: src/glade/screem.glade.h:499
 msgid "Owner:"
 msgstr "Yiyə:"
 
-#: src/glade/screem.glade.h:496
+#: src/glade/screem.glade.h:500
 msgid "Group:"
 msgstr "Qrup:"
 
-#: src/glade/screem.glade.h:497
+#: src/glade/screem.glade.h:501
 msgid "Permissions"
 msgstr "Səlahiyyətlər:"
 
-#: src/glade/screem.glade.h:498
+#: src/glade/screem.glade.h:502
 msgid "Screem: Loaded DTDs"
 msgstr "Scremm. Yüklənən DTDlər"
 
-#: src/glade/screem.glade.h:499
+#: src/glade/screem.glade.h:503
 msgid "Identifier"
 msgstr "Tanıdıcı"
 
-#: src/glade/screem.glade.h:500
+#: src/glade/screem.glade.h:504
 msgid "path"
 msgstr "yol"
 
-#: src/glade/screem.glade.h:501
+#: src/glade/screem.glade.h:505
 msgid "The above shows the DTDs supported by Screem on this system"
 msgstr "Sistemdəki Scremmin dəstəklədiyi DTDləri göstərir"
 
-#: src/glade/screem.glade.h:502
+#: src/glade/screem.glade.h:506
 msgid "As sibling"
 msgstr "Qardaş olaraq"
 
-#: src/glade/screem.glade.h:503
+#: src/glade/screem.glade.h:507
 msgid "As child"
 msgstr "Törəmə olaraq"
 
-#: src/glade/screem.glade.h:504
+#: src/glade/screem.glade.h:508
 msgid "_Save"
 msgstr "_Qeyd Et"
 
-#: src/glade/screem.glade.h:505
+#: src/glade/screem.glade.h:509
 msgid "Save _As"
 msgstr "_Fərqli Qeyd Et"
 
-#: src/glade/screem.glade.h:506
+#: src/glade/screem.glade.h:510
 msgid "_Close"
 msgstr "_Qapat"
 
-#: src/glade/screem.glade.h:508
-#, fuzzy
+#: src/glade/screem.glade.h:512
 msgid "Screem: Fetch DTD?"
 msgstr "Scremm. Yüklənən DTDlər"
 
-#: src/glade/screem.glade.h:509
+#: src/glade/screem.glade.h:513
 msgid "Fetch"
-msgstr ""
+msgstr "Al"
 
-#: src/glade/screem.glade.h:510
+#: src/glade/screem.glade.h:514
 msgid "Don't Fetch"
-msgstr ""
+msgstr "Alma"
 
-#: src/glade/screem.glade.h:511
+#: src/glade/screem.glade.h:515
 msgid ""
 "The DTD used by the current document cant be found by Screem.\n"
 "Screem can fetch the DTD from the url in the doctype.\n"
 "Should it be fetched now?"
 msgstr ""
+"Hazırkı sənəddə \"Screem\"də tapılmayan bir DTD istifadə edilib.\n"
+"\"Doctype\"dakı url Scremm tərəfindən alına bilməz.\n"
+"İndi alınsın mı?"
 
-#: src/glade/screem.glade.h:514
+#: src/glade/screem.glade.h:518
+#, fuzzy
 msgid "Don't show this message again"
-msgstr ""
+msgstr "Bu ismrıcı bir də göstərmə (soruşmadan al)"
 
-#: src/glade/screem.glade.h:516
+#: src/glade/screem.glade.h:520
 msgid "label36"
 msgstr "etiket136"
 
-#: src/glade/screem.glade.h:518
+#: src/glade/screem.glade.h:522
 msgid "Flags"
 msgstr "Seçənəklər"
 
-#: src/glade/screem.glade.h:519
+#: src/glade/screem.glade.h:523
 msgid "Site"
 msgstr "Sayt"
 
-#: src/glade/screem.glade.h:520
+#: src/glade/screem.glade.h:524
 msgid "label18"
 msgstr "etiket18"
 
-#: src/glade/screem.glade.h:521
+#: src/glade/screem.glade.h:525
 msgid "label19"
 msgstr "etiket19"
 
-#: src/glade/screem.glade.h:522
+#: src/glade/screem.glade.h:526
 msgid "Browse"
 msgstr "Gəz"
 
-#: src/glade/screem.glade.h:523
+#: src/glade/screem.glade.h:527
 msgid "label132"
 msgstr "etiket132"
 
-#: src/glade/screem.glade.h:524
+#: src/glade/screem.glade.h:528
 msgid "Struct"
 msgstr "Şəkilləndirmə"
 
-#: src/glade/screem.glade.h:526
+#: src/glade/screem.glade.h:530
 msgid "Messages"
 msgstr "İsmarıclar"
 
-#: src/glade/screem.glade.h:527
+#: src/glade/screem.glade.h:531
 msgid "Errors"
 msgstr "Xətalar"
 
-#: src/glade/screem.glade.h:528
+#: src/glade/screem.glade.h:532
 msgid "Guile scripts can be typed/loaded here and then executed"
 msgstr ""
 "Guile scriptlər buradan yazıla/yüklənə bilinir və işə salına bilinir"
 
-#: src/glade/screem.glade.h:530
+#: src/glade/screem.glade.h:534
 msgid "Load..."
 msgstr "Yüklə ..."
 
-#: src/glade/screem.glade.h:531
+#: src/glade/screem.glade.h:535
 msgid "Guile"
 msgstr "Guile"
 
-#: src/glade/screem.glade.h:532
+#: src/glade/screem.glade.h:536
 msgid "Screem: Update from CVS?"
 msgstr ""
 
-#: src/glade/screem.glade.h:534
+#: src/glade/screem.glade.h:538
 #, fuzzy
 msgid "Don't Update"
 msgstr "Təzələ"
 
-#: src/glade/screem.glade.h:535
+#: src/glade/screem.glade.h:539
+#, fuzzy
 msgid "Don't show message again for this site"
-msgstr ""
+msgstr "Bu ismrıcı bir də göstərmə (soruşmadan al)"
 
-#: src/glade/screem.glade.h:536
+#: src/glade/screem.glade.h:540
 msgid ""
 "This site uses CVS for version control\n"
 "Attempt to update to the latest version?"
@@ -4599,7 +4563,7 @@ msgstr "Daşımanı rədd et"
 #: src/editor.c:464
 #, c-format
 msgid "%s is not a valid element of this documents DTD"
-msgstr ""
+msgstr "%s bu sənədin hökmlü DTD üzvü deyildir"
 
 #: src/editor.c:1392
 #, c-format
@@ -4648,37 +4612,41 @@ msgstr "Guile Scriptləri"
 msgid "Wizards"
 msgstr "Sehirbazlar"
 
-#. set out thread going to actually check the links
 #: src/linkView.c:269
 msgid ""
 "Checking for broken links (may take a while depending on your connection "
 "speed)"
 msgstr ""
 
-#: src/linkView.c:1198
+#: src/linkView.c:1201
 #, fuzzy
 msgid "Link/File exists"
 msgstr "Bağ mətni"
 
-#: src/linkView.c:1199
+#: src/linkView.c:1202
 msgid "External Link/File"
 msgstr ""
 
-#: src/linkView.c:1200
+#: src/linkView.c:1203
 msgid "Broken Link"
 msgstr ""
 
-#: src/linkView.c:1201
+#: src/linkView.c:1204
 #, fuzzy
 msgid "Ignored"
 msgstr "Keç"
 
-#: src/linkView.c:1202
+#: src/linkView.c:1205
 msgid "Requires Upload"
 msgstr ""
 
-#: src/linkView.c:1203
+#: src/linkView.c:1206
 msgid "Checking Link"
+msgstr ""
+
+#: src/linkView.c:1405
+#, c-format
+msgid "Timeout checking: %s"
 msgstr ""
 
 #: src/main.c:88
@@ -4694,39 +4662,39 @@ msgid "PATH"
 msgstr ""
 
 #. init guile
-#: src/main.c:168
+#: src/main.c:169
 msgid "Initialising Guile\n"
 msgstr "Guile'i başladıram\n"
 
-#: src/main.c:194
+#: src/main.c:195
 #, fuzzy
 msgid "Loading DTDs\n"
 msgstr "DTD növləri yüklənir\n"
 
-#: src/main.c:198
+#: src/main.c:199
 #, fuzzy
 msgid "Initialising gnome-vfs\n"
-msgstr "Guile'i başladıram\n"
+msgstr "\"gnome-vfx\"i başladıram"
 
-#: src/main.c:202
+#: src/main.c:203
 msgid "Creating Interface\n"
 msgstr "Ara üzü yaradıram\n"
 
-#: src/main.c:220
+#: src/main.c:221
 msgid "Loading Modules...\n"
 msgstr "Modulları yükləyirəm...\n"
 
-#: src/main.c:222
+#: src/main.c:223
 msgid "Modules loaded\n"
 msgstr "Modullar yükləndi\n"
 
-#: src/main.c:224
+#: src/main.c:225
 #, fuzzy
 msgid "Modules not supported\n"
 msgstr "Modullar dəstəklənmir\n"
 
 # c-format
-#: src/main.c:341
+#: src/main.c:342
 #, c-format
 msgid ""
 "Save site: %s\n"
@@ -4735,11 +4703,11 @@ msgstr ""
 "Saytı qeyd et: %s\n"
 "(%s)"
 
-#: src/main.c:436
+#: src/main.c:437
 msgid "screem_hints.txt"
 msgstr "screem_hints.txt"
 
-#: src/main.c:528
+#: src/main.c:529
 msgid ""
 "Your SCREEM tips file appears to be missing!\n"
 "There should be a file called screem_hints.txt in the\n"
@@ -4822,38 +4790,36 @@ msgid ""
 "<html><head><title>SCREEM</title></head><body bgcolor=\"black\" "
 "text=\"white\"><h1 align=\"center\">SCREEM</h1><h3 align=\"center\">Site "
 "CReating and Editing EnvironMent</h3><hr><div align=\"center\">Welcome to %s "
-"version %s</div><br><h3>TODO Before release:</h3><ul><li>Documentation - "
-"Volunteers accepted<li>Lots of testing - and what better way to test than to "
-"write documentation:-)</ul><br><h3>Release Notes:</h3><ul><li>Please do "
-"<em>not</em> use the gnome bug track system for screem bugs<br> They will "
-"not be dealt with, instead use the bug tracking system on our SourceForge "
-"project page. (accessable from screem.org) <li>On the fly document parsing "
-"can now be disabled, which will sort out the speed problem with large "
-"documents (but will also disabled a number of other features)<li>Fixed small "
-"bug in page druid<li>Table Wizard updated<li>A default DTD can be set for "
-"documents which don't specify one<li>Inline tagging and the properties tab "
-"now take the allowed attributes from the DTD for the current "
-"document.<li>The structure tree now supports drag and drop<ul><li>Move tags "
-"around in the tree itself<li>drop urls onto the tree to insert link "
-"tags<li>drop plain text onto the tree to insert text</ul><li>The open page "
-"tabs now have a popup menu by right clicking on them.  This allows you to "
-"save/close/rename a page without viewing it.<li>Insert Tags menu added to "
-"editor popup, which allows you to insert valid tags based upon the DTD in "
-"use (or the default DTD if one is not specified) <li>More Translations - "
-"thanks to Christophe Merlet syncing Screem up with the ones in Gnome CVS, "
-"and to all those who contribute to the translations <li>Switching the "
-"viewbar off in the preferences will display the notebook tabs for the views "
-"instead (requires restart) <li>If a DTD is not found locally Screem will "
-"fetch it from the uri in the DOCTYPE (Requires gnome-vfs) <li>Fetched DTDs "
-"are stored in ~/.screem/dtds and are added to the catalog file held there. "
-"<li>Removed paned view - messages and file listing/tag tree etc are now dock "
-"items. <li>Dock items should remember their position properly "
-"now.<li>Ability to show/hide any dock item via a popup menu<li>Autoloading "
-"of sites which were open last time screem was in use added (can be switched "
-"off)<li>Auto loading of pages when a site is opened that were open when it "
-"was last closed<li>An improved link view primarily by Matt Colyer "
-"<ul><li>Showing of broken links if built with gnome-vfs "
-"support.<li>Zoomable. <li>Selectable depth of links to show. </ul></ul>"
+"version %s</div><br><h3>Release Notes:</h3><ul><li>Please do <em>not</em> "
+"use the gnome bug track system for screem bugs<br> They will not be dealt "
+"with, instead use the bug tracking system on our SourceForge project page. "
+"(accessable from screem.org) <li>On the fly document parsing can now be "
+"disabled, which will sort out the speed problem with large documents (but "
+"will also disabled a number of other features)<li>Fixed small bug in page "
+"druid<li>Table Wizard updated<li>A default DTD can be set for documents "
+"which don't specify one<li>Inline tagging and the properties tab now take "
+"the allowed attributes from the DTD for the current document.<li>The "
+"structure tree now supports drag and drop<ul><li>Move tags around in the "
+"tree itself<li>drop urls onto the tree to insert link tags<li>drop plain "
+"text onto the tree to insert text</ul><li>The open page tabs now have a "
+"popup menu by right clicking on them.  This allows you to save/close/rename "
+"a page without viewing it.<li>Insert Tags menu added to editor popup, which "
+"allows you to insert valid tags based upon the DTD in use (or the default "
+"DTD if one is not specified) <li>More Translations - thanks to Christophe "
+"Merlet syncing Screem up with the ones in Gnome CVS, and to all those who "
+"contribute to the translations <li>Switching the viewbar off in the "
+"preferences will display the notebook tabs for the views instead (requires "
+"restart) <li>If a DTD is not found locally Screem will fetch it from the uri "
+"in the DOCTYPE (Requires gnome-vfs) <li>Fetched DTDs are stored in "
+"~/.screem/dtds and are added to the catalog file held there. <li>Removed "
+"paned view - messages and file listing/tag tree etc are now dock items. "
+"<li>Dock items should remember their position properly now.<li>Ability to "
+"show/hide any dock item via a popup menu<li>Autoloading of sites which were "
+"open last time screem was in use added (can be switched off)<li>Auto loading "
+"of pages when a site is opened that were open when it was last closed<li>An "
+"improved link view primarily by Matt Colyer <ul><li>Showing of broken links "
+"if built with gnome-vfs support.<li>Zoomable. <li>Selectable depth of links "
+"to show. </ul></ul>"
 msgstr ""
 
 #: src/print.c:190
@@ -4983,6 +4949,57 @@ msgstr "Bir düyməyə bas .."
 msgid "Not set"
 msgstr "Qurma"
 
+#~ msgid "No locks found.\n"
+#~ msgstr "Heç bir qıfıl tapılmadı.\n"
+
+#~ msgid "Image map"
+#~ msgstr "Rəsm xəritəsi"
+
+#~ msgid "Area"
+#~ msgstr "Sahə"
+
+#~ msgid "Tools"
+#~ msgstr "Vasitələr"
+
+#~ msgid "Image map..."
+#~ msgstr "Rəsm xəritəsi..."
+
+#~ msgid "Create an image map file"
+#~ msgstr "Təzə bir rəsm xəritəsi dosyesi yarat"
+
+#~ msgid "Image map Wizard"
+#~ msgstr "Rəsm Xəritəsi Sehirbazı"
+
+#~ msgid "Image:"
+#~ msgstr "Rəsm:"
+
+#~ msgid "file:"
+#~ msgstr "dosye:"
+
+#~ msgid "Link to:"
+#~ msgstr "Bağla:"
+
+#~ msgid "Tools:"
+#~ msgstr "Vasitələr:"
+
+#~ msgid "Save map"
+#~ msgstr "Xəritəni qeyd et"
+
+#~ msgid "Erase"
+#~ msgstr "Sil"
+
+#~ msgid "Select"
+#~ msgstr "Seç"
+
+#~ msgid "Rectangle"
+#~ msgstr "Düzbucaq"
+
+#~ msgid "Circle"
+#~ msgstr "Dairə"
+
+#~ msgid "Polygon"
+#~ msgstr "Çoxguşəli"
+
 #~ msgid ""
 #~ "\n"
 #~ "link\n"
@@ -5021,15 +5038,6 @@ msgstr "Qurma"
 #~ "x yönünə döşə\n"
 #~ "y yönünə döşə\n"
 #~ "döşəmə\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "scroll\n"
-#~ "fixed\n"
-#~ msgstr ""
-#~ "\n"
-#~ "sürüşdür\n"
-#~ "sabit\n"
 
 #~ msgid ""
 #~ "\n"
@@ -5447,7 +5455,6 @@ msgstr "Qurma"
 #~ msgid "Hides the messages notebook"
 #~ msgstr "İsmarıclar qeyd dəftəçəsini gizlədər"
 
-#, fuzzy
 #~ msgid ""
 #~ "<html><head><title>SCREEM</title></head><body bgcolor=\"black\" "
 #~ "text=\"white\"><h1 align=\"center\">SCREEM</h1><h3 align=\"center\">Site "

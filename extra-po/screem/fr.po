@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: screem 0.4.0\n"
-"POT-Creation-Date: 2001-02-20 14:56+0100\n"
-"PO-Revision-Date: 2001-02-20 14:23+0100\n"
+"POT-Creation-Date: 2001-02-28 12:01+0100\n"
+"PO-Revision-Date: 2001-02-28 12:13+0100\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -147,7 +147,7 @@ msgstr "Passe dans la vue Éditeur"
 
 #: include/menus.h:134 plugins/imageWizard/imageWizard.glade.h:39
 #: src/glade/screem.glade.h:100 src/glade/screem.glade.h:101
-#: src/glade/screem.glade.h:232 src/glade/screem.glade.h:414
+#: src/glade/screem.glade.h:232 src/glade/screem.glade.h:418
 msgid "Preview"
 msgstr "Aperçu"
 
@@ -155,7 +155,7 @@ msgstr "Aperçu"
 msgid "Switch to the Preview view"
 msgstr "Passe dans la vue Aperçu"
 
-#: include/menus.h:142 src/glade/screem.glade.h:425
+#: include/menus.h:142 src/glade/screem.glade.h:429
 msgid "Link"
 msgstr "Lien"
 
@@ -271,7 +271,7 @@ msgstr "_Insertion"
 msgid "_Tools"
 msgstr "_Outils"
 
-#: libneon/dav_207.c:140
+#: libneon/dav_207.c:138
 #, c-format
 msgid ""
 "Invalid HTTP status line in status element at line %d of response:\n"
@@ -280,10 +280,6 @@ msgstr ""
 "Ligne d'état HTTP invalide dans l'élément d'état à la ligne %d de la réponse "
 ":\n"
 "La ligne d'état était : %s"
-
-#: libneon/dav_locks.c:551
-msgid "No locks found.\n"
-msgstr "Aucun verrous trouvés.\n"
 
 #: libneon/hip_xml.c:125
 msgid "document root"
@@ -297,133 +293,151 @@ msgstr "élément inconnu"
 msgid "unspecified"
 msgstr "non spécifié"
 
-#: libneon/hip_xml.c:269 libneon/hip_xml.c:290
+#: libneon/hip_xml.c:273 libneon/hip_xml.c:294
 #, c-format
 msgid "XML is not valid (%s found in parent %s)"
 msgstr "XML non valide (%s trouvé dans le parent %s)"
 
-#: libneon/hip_xml.c:309
+#: libneon/hip_xml.c:314
 #, c-format
-msgid "Unknown XML element `%s:%s'"
-msgstr "élément XML inconnu `%s:%s'"
+msgid "Unknown XML element `%s (in %s)'"
+msgstr "Élément XML inconnu `%s (dans %s)'"
 
-#: libneon/http_basic.c:305
+#: libneon/http_basic.c:300
 msgid "Server does not allow partial GETs."
 msgstr "Le serveur ne permet pas les GETs partiels"
 
-#: libneon/http_basic.c:342 libneon/http_basic.c:385
+#: libneon/http_basic.c:336 libneon/http_basic.c:378
 #, c-format
 msgid "Could not write to file: %s"
 msgstr "Ne peut écrire dans le fichier : %s"
 
-#: libneon/http_request.c:751
+#: libneon/http_request.c:763
 msgid "Could not read chunk size"
 msgstr "Ne peut lire la taille du chunk"
 
-#: libneon/http_request.c:785
+#: libneon/http_request.c:769
+msgid "Could not parse chunk size"
+msgstr "Ne peut analyser la taille du chunk"
+
+#: libneon/http_request.c:801
 msgid "Could not read response body"
 msgstr "Ne peut lire le corps de la réponse"
 
-#: libneon/http_request.c:797
+#: libneon/http_request.c:814
 msgid "Error reading chunked response body"
 msgstr "Erreur de lecture du corps de la réponse chunké"
 
-#: libneon/http_request.c:874
+#: libneon/http_request.c:891
 #, c-format
 msgid "%s: connection was closed by proxy server."
 msgstr "%s : la connection a été interrompue par le serveur proxy."
 
-#: libneon/http_request.c:877
+#: libneon/http_request.c:894
 #, c-format
 msgid "%s: connection was closed by server."
 msgstr "%s : la connection a été interrompue par le serveur."
 
-#: libneon/http_request.c:882
+#: libneon/http_request.c:899
 #, c-format
 msgid "%s: connection timed out."
 msgstr "%s : la connection est périmée"
 
-#: libneon/http_request.c:953
+#: libneon/http_request.c:907
+#, c-format
+msgid "%s: socket error."
+msgstr "%s : erreur de socket."
+
+#: libneon/http_request.c:974
 msgid "Could not send request"
 msgstr "Ne peut envoyer la requête"
 
 #. error
-#: libneon/http_request.c:985
+#: libneon/http_request.c:1006
 msgid "Error waiting for response"
 msgstr "Erreur lors de l'attente d'une réponse"
 
-#: libneon/http_request.c:1006
+#: libneon/http_request.c:1027
 msgid "Could not send request body"
 msgstr "Ne peut envoyer le corps de la requête"
 
-#: libneon/http_request.c:1025
+#: libneon/http_request.c:1046
 msgid "Could not read status line"
 msgstr "Ne peut lire la ligne d'état"
 
-#: libneon/http_request.c:1053 libneon/http_request.c:1108
-#: libneon/http_request.c:1124 libneon/http_request.c:1133
+#: libneon/http_request.c:1057
+msgid "Could not parse response status line."
+msgstr "Ne peut analyser la réponse de la ligne d'état."
+
+#: libneon/http_request.c:1074 libneon/http_request.c:1129
+#: libneon/http_request.c:1145 libneon/http_request.c:1154
 msgid "Error reading response headers"
 msgstr "Erreur de lecture des en-têtes de la réponse"
 
-#: libneon/http_request.c:1066
+#: libneon/http_request.c:1087
 msgid "Error sending request body"
 msgstr "Erreur d'envoi du corps de la requête"
 
-#: libneon/http_request.c:1074 libneon/http_request.c:1556
-#: libneon/http_request.c:1584
+#: libneon/http_request.c:1095 libneon/http_request.c:1584
+#: libneon/http_request.c:1612
 msgid "Could not negotiate SSL session"
 msgstr "Ne peut négocier une session SSL"
 
-#: libneon/http_request.c:1145
+#: libneon/http_request.c:1166
 msgid "Response header too long"
 msgstr "En-tête de la réponse trop longue"
 
-#: libneon/http_request.c:1229
+#: libneon/http_request.c:1251
 msgid "Malformed header line."
 msgstr "Ligne d'en-tête mal formée"
 
-#: libneon/http_request.c:1424
+#: libneon/http_request.c:1446
 msgid "Proxy server was not authenticated correctly."
 msgstr "Le serveur proxy n'a pas été authentifié correctement."
 
-#: libneon/http_request.c:1429
+#: libneon/http_request.c:1451
 msgid "Server was not authenticated correctly."
 msgstr "Le serveur n'a pas été authentifié correctement."
 
-#. It failed
-#: libneon/http_request.c:1523
+#: libneon/http_request.c:1549
 msgid "Could not create SSL connection through proxy server"
 msgstr "Ne peut établir de connection SSL à travers le serveur proxy."
 
-#: libneon/http_request.c:1542
+#: libneon/http_request.c:1570
 msgid "Could not connect to proxy server"
 msgstr "Ne peut se connecter au serveur proxy."
 
-#: libneon/http_request.c:1577
+#: libneon/http_request.c:1605
 msgid "Could not connect to server"
 msgstr "Ne peut se connecter au serveur"
 
-#: libneon/socket.c:431
+#. This might not or might not be an error depending on
+#. the context.
+#: libneon/socket.c:268
+msgid "Connection was closed by server"
+msgstr "La connexion a été fermée par le serveur"
+
+#: libneon/socket.c:562
 msgid "Line too long"
 msgstr "Ligne trop longue"
 
-#: libneon/socket.c:535
+#: libneon/socket.c:666
 msgid "Host not found"
 msgstr "Hôte introuvable"
 
-#: libneon/socket.c:538
+#: libneon/socket.c:669
 msgid "Host not found (try again later?)"
 msgstr "Hôte introuvable (essayer plus tard  ?)"
 
-#: libneon/socket.c:541
+#: libneon/socket.c:672
 msgid "Host exists but has no address."
 msgstr "L'hôte existe, mais n'a pas d'adresse."
 
-#: libneon/socket.c:545
+#: libneon/socket.c:676
 msgid "Non-recoverable error in resolver library."
 msgstr "Erreur irrécupérable dans la bibliothèque de résolution."
 
-#: libneon/socket.c:687
+#: libneon/socket.c:859
 msgid "This application does not have SSL support."
 msgstr "Cette application n'a pas de support SSL."
 
@@ -520,7 +534,7 @@ msgid "Exit  "
 msgstr "Quitter  "
 
 #: libneon/sslcerts.c:441 src/glade/screem.glade.h:10
-#: src/glade/screem.glade.h:240
+#: src/glade/screem.glade.h:244
 msgid "Help"
 msgstr "Aide"
 
@@ -545,8 +559,8 @@ msgstr "Insérez une couleur"
 #: plugins/colourWizard/colourWizard.c:84
 #: plugins/entityWizard/entityWizard.c:86 plugins/formWizard/formWizard.c:85
 #: plugins/frameWizard/frameWizard.c:124 plugins/imageWizard/imageWizard.c:207
-#: plugins/imagemapWizard/imagemapwiz.c:59 plugins/linkWizard/linkWizard.c:207
-#: plugins/ssiWizard/ssiWizard.c:99 plugins/tableWizard/tableWizard.c:82
+#: plugins/linkWizard/linkWizard.c:207 plugins/ssiWizard/ssiWizard.c:99
+#: plugins/tableWizard/tableWizard.c:82
 msgid "_Insert/"
 msgstr "_Insertion/"
 
@@ -739,11 +753,11 @@ msgstr "small-caps"
 #: plugins/cssWizard/css.glade.h:49 plugins/cssWizard/css.glade.h:56
 #: plugins/cssWizard/css.glade.h:376 plugins/cssWizard/css.glade.h:377
 #: plugins/cssWizard/css.glade.h:378 plugins/cssWizard/css.glade.h:379
-#: plugins/tableWizard/tablewizard.glade.h:39 src/glade/screem.glade.h:337
-#: src/glade/screem.glade.h:339 src/glade/screem.glade.h:381
-#: src/glade/screem.glade.h:383 src/glade/screem.glade.h:416
-#: src/glade/screem.glade.h:417 src/glade/screem.glade.h:418
-#: src/glade/screem.glade.h:419 src/glade/screem.glade.h:422
+#: plugins/tableWizard/tablewizard.glade.h:39 src/glade/screem.glade.h:341
+#: src/glade/screem.glade.h:343 src/glade/screem.glade.h:385
+#: src/glade/screem.glade.h:387 src/glade/screem.glade.h:420
+#: src/glade/screem.glade.h:421 src/glade/screem.glade.h:422
+#: src/glade/screem.glade.h:423 src/glade/screem.glade.h:426
 msgid "Pick a color"
 msgstr "Sélectionnez une couleur"
 
@@ -799,7 +813,7 @@ msgstr "scroll"
 msgid "fixed"
 msgstr "fixed"
 
-#: plugins/cssWizard/css.glade.h:64 src/glade/screem.glade.h:423
+#: plugins/cssWizard/css.glade.h:64 src/glade/screem.glade.h:427
 msgid "Background"
 msgstr "Arrière-plan"
 
@@ -1095,7 +1109,7 @@ msgstr "-100%"
 #: plugins/cssWizard/css.glade.h:276 plugins/cssWizard/css.glade.h:299
 #: plugins/cssWizard/css.glade.h:322 plugins/cssWizard/css.glade.h:345
 #: plugins/cssWizard/css.glade.h:368 plugins/cssWizard/css.glade.h:509
-#: src/glade/screem.glade.h:274
+#: src/glade/screem.glade.h:278
 #, c-format
 msgid "50%"
 msgstr "50%"
@@ -1106,7 +1120,7 @@ msgstr "50%"
 #: plugins/cssWizard/css.glade.h:281 plugins/cssWizard/css.glade.h:304
 #: plugins/cssWizard/css.glade.h:327 plugins/cssWizard/css.glade.h:350
 #: plugins/cssWizard/css.glade.h:373 plugins/cssWizard/css.glade.h:514
-#: src/glade/screem.glade.h:275
+#: src/glade/screem.glade.h:279
 #, c-format
 msgid "100%"
 msgstr "100%"
@@ -1221,7 +1235,7 @@ msgstr "80%"
 msgid "90%"
 msgstr "90%"
 
-#: plugins/cssWizard/css.glade.h:182 src/glade/screem.glade.h:424
+#: plugins/cssWizard/css.glade.h:182 src/glade/screem.glade.h:428
 msgid "Text"
 msgstr "Texte"
 
@@ -1521,7 +1535,7 @@ msgstr "Insère une entité de caractères spécial"
 msgid "Screem: Entity Wizard"
 msgstr "Screem : Assistant Entité"
 
-#: plugins/entityWizard/entityWizard.glade.h:8 src/glade/screem.glade.h:261
+#: plugins/entityWizard/entityWizard.glade.h:8 src/glade/screem.glade.h:265
 msgid "Insert"
 msgstr "Insérer"
 
@@ -1529,7 +1543,7 @@ msgstr "Insérer"
 #: plugins/entityWizard/entityWizard.glade.h:12
 #: plugins/entityWizard/entityWizard.glade.h:15
 #: plugins/formWizard/formWizard.glade.h:12 src/glade/screem.glade.h:207
-#: src/glade/screem.glade.h:517
+#: src/glade/screem.glade.h:521
 msgid "Name"
 msgstr "Nom"
 
@@ -1539,9 +1553,9 @@ msgstr "Nom"
 msgid "Entity"
 msgstr "Entité"
 
-#: plugins/entityWizard/entityWizard.glade.h:11 src/glade/screem.glade.h:289
-#: src/glade/screem.glade.h:294 src/glade/screem.glade.h:397
-#: src/glade/screem.glade.h:401
+#: plugins/entityWizard/entityWizard.glade.h:11 src/glade/screem.glade.h:293
+#: src/glade/screem.glade.h:298 src/glade/screem.glade.h:401
+#: src/glade/screem.glade.h:405
 msgid "ISO-8859-1"
 msgstr "ISO-8859-1"
 
@@ -1741,7 +1755,6 @@ msgid "Screem: Image Wizard"
 msgstr "Screem : Assistant Image"
 
 #: plugins/imageWizard/imageWizard.glade.h:8
-#: plugins/imagemapWizard/imagemap.glade.h:8
 msgid "Image"
 msgstr "Image"
 
@@ -1859,7 +1872,7 @@ msgstr "Largeur d'origine:"
 msgid "Initial Height:"
 msgstr "Hauteur d'origine:"
 
-#: plugins/imageWizard/imageWizard.glade.h:43 src/glade/screem.glade.h:479
+#: plugins/imageWizard/imageWizard.glade.h:43 src/glade/screem.glade.h:483
 msgid "File Size:"
 msgstr "Taille du fichier :"
 
@@ -1868,85 +1881,6 @@ msgstr "Taille du fichier :"
 #: plugins/imageWizard/imageWizard.glade.h:46
 msgid "0"
 msgstr "0"
-
-#.
-#. * Translatable strings file generated by Glade.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: plugins/imagemapWizard/imagemap.glade.h:7
-#: plugins/imagemapWizard/imagemapwiz.c:218
-msgid "Image map"
-msgstr "Carte d'image"
-
-#: plugins/imagemapWizard/imagemap.glade.h:9 src/glade/screem.glade.h:405
-msgid "label1"
-msgstr "label1"
-
-#: plugins/imagemapWizard/imagemap.glade.h:10
-#: plugins/imagemapWizard/imagemapwiz.c:178
-msgid "Area"
-msgstr "Aire"
-
-#: plugins/imagemapWizard/imagemap.glade.h:11 src/glade/screem.glade.h:370
-msgid "label2"
-msgstr "label2"
-
-#: plugins/imagemapWizard/imagemap.glade.h:12
-msgid "Tools"
-msgstr "Outils"
-
-#: plugins/imagemapWizard/imagemapwiz.c:45
-msgid "Image map..."
-msgstr "Carte d'image..."
-
-#: plugins/imagemapWizard/imagemapwiz.c:46
-msgid "Create an image map file"
-msgstr "Crée un fichier de carte d'image"
-
-#: plugins/imagemapWizard/imagemapwiz.c:63
-msgid "Image map Wizard"
-msgstr "Assistant Carte d'image"
-
-#: plugins/imagemapWizard/imagemapwiz.c:138
-msgid "Image:"
-msgstr "Image :"
-
-#: plugins/imagemapWizard/imagemapwiz.c:154
-msgid "file:"
-msgstr "fichier :"
-
-#: plugins/imagemapWizard/imagemapwiz.c:194
-msgid "Link to:"
-msgstr "Lien vers :"
-
-#: plugins/imagemapWizard/imagemapwiz.c:248
-msgid "Tools:"
-msgstr "Outils :"
-
-#: plugins/imagemapWizard/imagemapwiz.c:268
-msgid "Save map"
-msgstr "Enregistrer la carte"
-
-#: plugins/imagemapWizard/imagemapwiz.c:280
-msgid "Erase"
-msgstr "Effacer"
-
-#: plugins/imagemapWizard/imagemapwiz.c:293
-msgid "Select"
-msgstr "Sélectionner"
-
-#: plugins/imagemapWizard/imagemapwiz.c:306
-msgid "Rectangle"
-msgstr "Rectangle"
-
-#: plugins/imagemapWizard/imagemapwiz.c:319
-msgid "Circle"
-msgstr "Cercle"
-
-#: plugins/imagemapWizard/imagemapwiz.c:332
-msgid "Polygon"
-msgstr "Polygone"
 
 #: plugins/linkWizard/linkWizard.c:191
 msgid "Link..."
@@ -2114,7 +2048,7 @@ msgstr "Message d'erreur : "
 msgid "Size format: "
 msgstr "Format de taille :"
 
-#: plugins/ssiWizard/ssiWizard.c:530 src/glade/screem.glade.h:529
+#: plugins/ssiWizard/ssiWizard.c:530 src/glade/screem.glade.h:533
 msgid "Execute"
 msgstr "Execute"
 
@@ -2327,11 +2261,11 @@ msgstr "Utiliser une image :"
 msgid "Unknown system error"
 msgstr "Erreur système inconnue"
 
-#: plugins/uploadWizard/davdriver.c:141
+#: plugins/uploadWizard/davdriver.c:173
 msgid "The connection timed out."
 msgstr "Le délai de connexion a expiré."
 
-#: plugins/uploadWizard/davdriver.c:145
+#: plugins/uploadWizard/davdriver.c:177
 msgid ""
 "The server did not authenticate itself correctly.\n"
 "Report this error to your server administrator."
@@ -2339,7 +2273,7 @@ msgstr ""
 "Le serveur ne s'est pas authentifié correctement.\n"
 "Rapportez cette erreur à votre administrateur système."
 
-#: plugins/uploadWizard/davdriver.c:150
+#: plugins/uploadWizard/davdriver.c:182
 msgid ""
 "The proxy server did not authenticate itself correctly.\n"
 "Report this error to your proxy server administrator."
@@ -2347,28 +2281,28 @@ msgstr ""
 "Le serveur proxy ne s'est pas authentifié correctement.\n"
 "Rapporter cette erreur à votre administrateur système."
 
-#: plugins/uploadWizard/davdriver.c:178
+#: plugins/uploadWizard/davdriver.c:219
 msgid "SSL support has not be compiled in."
 msgstr "Le support SSL n'a pas été inclu lors de la compilation."
 
-#: plugins/uploadWizard/davdriver.c:207
+#: plugins/uploadWizard/davdriver.c:248
 msgid "The server does not appear to be a WebDAV server."
 msgstr "Le serveur n'apparait pas être un serveur WebDAV."
 
-#: plugins/uploadWizard/davdriver.c:212
+#: plugins/uploadWizard/davdriver.c:253
 msgid "The server does not support the executable live property."
 msgstr "Le serveur ne supporte pas la propriété `executable live'."
 
-#: plugins/uploadWizard/davdriver.c:243 plugins/uploadWizard/davdriver.c:263
-#: plugins/uploadWizard/davdriver.c:296
+#: plugins/uploadWizard/davdriver.c:284 plugins/uploadWizard/davdriver.c:304
+#: plugins/uploadWizard/davdriver.c:337
 msgid "Could not open file: "
 msgstr "Ne peut ouvrir le fichier :"
 
-#: plugins/uploadWizard/davdriver.c:271 plugins/uploadWizard/davdriver.c:303
+#: plugins/uploadWizard/davdriver.c:312 plugins/uploadWizard/davdriver.c:344
 msgid "Could not write to file: "
 msgstr "Ne peut écrire vers le fichier :"
 
-#: plugins/uploadWizard/davdriver.c:415
+#: plugins/uploadWizard/davdriver.c:460
 msgid "Could not access resource"
 msgstr "Ne peut accéder à la ressource"
 
@@ -2384,7 +2318,7 @@ msgstr "^[nN]"
 msgid "Could not set modification time of local file."
 msgstr "Ne peut définir la date de modification du fichier local."
 
-#: plugins/uploadWizard/sites.c:334
+#: plugins/uploadWizard/sites.c:336
 msgid ""
 "Upload succeeded, but could not retrieve modification time.\n"
 "If this message persists, turn off safe mode."
@@ -2392,27 +2326,27 @@ msgstr ""
 "Publication effectué, mais ne peut récupérer la date de modification.\n"
 "Si ce message persiste, invalidez le mode sain."
 
-#: plugins/uploadWizard/sites.c:518
+#: plugins/uploadWizard/sites.c:520
 msgid "Remote file has been modified - not overwriting with local changes"
 msgstr ""
 "Le fichier distant a été modifié - ne l'écrase pas avec les modifications "
 "locales"
 
-#: plugins/uploadWizard/sites.c:832
+#: plugins/uploadWizard/sites.c:836
 msgid "Could not examine file."
 msgstr "Ne peut examiner le fichier."
 
-#: plugins/uploadWizard/sites.c:875
+#: plugins/uploadWizard/sites.c:879
 msgid "Could not checksum file"
 msgstr "Ne peut calculer le checksum du fichier"
 
-#: plugins/uploadWizard/sites.c:891
+#: plugins/uploadWizard/sites.c:895
 msgid "The target of the symlink could not be read."
 msgstr "La cible du lien symbolique ne peut être lue."
 
 #: plugins/uploadWizard/uploadWizard.c:153
 #: plugins/uploadWizard/uploadwizard.glade.h:8
-#: plugins/uploadWizard/uploadwizard.glade.h:31 src/glade/screem.glade.h:488
+#: plugins/uploadWizard/uploadwizard.glade.h:31 src/glade/screem.glade.h:492
 msgid "Upload"
 msgstr "Publication"
 
@@ -2698,26 +2632,26 @@ msgid "URI:"
 msgstr "URI :"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:33 src/glade/screem.glade.h:182
-#: src/glade/screem.glade.h:454
+#: src/glade/screem.glade.h:458
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:34 src/glade/screem.glade.h:183
-#: src/glade/screem.glade.h:455
+#: src/glade/screem.glade.h:459
 msgid "Password:"
 msgstr "Mot de passe :"
 
-#: plugins/uploadWizard/uploadwizard.glade.h:35 src/glade/screem.glade.h:346
+#: plugins/uploadWizard/uploadwizard.glade.h:35 src/glade/screem.glade.h:350
 msgid "Path:"
 msgstr "Chemin :"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:36 src/glade/screem.glade.h:173
-#: src/glade/screem.glade.h:451
+#: src/glade/screem.glade.h:455
 msgid "FTP"
 msgstr "FTP"
 
 #: plugins/uploadWizard/uploadwizard.glade.h:37 src/glade/screem.glade.h:174
-#: src/glade/screem.glade.h:452
+#: src/glade/screem.glade.h:456
 msgid "WebDAV"
 msgstr "WebDAV"
 
@@ -3055,13 +2989,13 @@ msgstr "Édite les scripts d'aide"
 msgid "Edit Helpers"
 msgstr "Édite les applets d'aide"
 
-#: src/glade/screem.glade.h:97 src/glade/screem.glade.h:351
+#: src/glade/screem.glade.h:97 src/glade/screem.glade.h:355
 #: src/preferences.c:639
 msgid "Helpers"
 msgstr "Applets d'aide"
 
 #: src/glade/screem.glade.h:102 src/glade/screem.glade.h:103
-#: src/glade/screem.glade.h:239
+#: src/glade/screem.glade.h:243
 msgid "Link View"
 msgstr "Vue des liens"
 
@@ -3121,7 +3055,7 @@ msgstr "Supprimer"
 msgid "Rename the file/directory"
 msgstr "Renomme le fichier/répertoire"
 
-#: src/glade/screem.glade.h:120 src/glade/screem.glade.h:507
+#: src/glade/screem.glade.h:120 src/glade/screem.glade.h:511
 msgid "Rename"
 msgstr "Renommer"
 
@@ -3129,7 +3063,7 @@ msgstr "Renommer"
 msgid "View file/directory properties"
 msgstr "Voir les propriétés du fichier/répertoire"
 
-#: src/glade/screem.glade.h:122 src/glade/screem.glade.h:525
+#: src/glade/screem.glade.h:122 src/glade/screem.glade.h:529
 msgid "Properties"
 msgstr "Propriétés"
 
@@ -3146,8 +3080,8 @@ msgid "ASCII"
 msgstr "ASCII"
 
 #: src/glade/screem.glade.h:126 src/glade/screem.glade.h:191
-#: src/glade/screem.glade.h:194 src/glade/screem.glade.h:460
-#: src/glade/screem.glade.h:467
+#: src/glade/screem.glade.h:194 src/glade/screem.glade.h:464
+#: src/glade/screem.glade.h:471
 msgid "Ignore"
 msgstr "Ignorer"
 
@@ -3155,7 +3089,7 @@ msgstr "Ignorer"
 msgid "Refresh the file tree"
 msgstr "Rafraichit l'arborescence de fichier"
 
-#: src/glade/screem.glade.h:128 src/glade/screem.glade.h:279
+#: src/glade/screem.glade.h:128 src/glade/screem.glade.h:283
 msgid "Refresh"
 msgstr "Rafraichir"
 
@@ -3176,7 +3110,7 @@ msgid "Complete"
 msgstr "Achever"
 
 #: src/glade/screem.glade.h:133 src/glade/screem.glade.h:214
-#: src/glade/screem.glade.h:327 src/glade/screem.glade.h:348
+#: src/glade/screem.glade.h:331 src/glade/screem.glade.h:352
 msgid "Add"
 msgstr "Ajouter"
 
@@ -3280,7 +3214,7 @@ msgstr "Détails du site"
 msgid "An identifying name for the site"
 msgstr "Un identifiant pour le site"
 
-#: src/glade/screem.glade.h:160 src/glade/screem.glade.h:438
+#: src/glade/screem.glade.h:160 src/glade/screem.glade.h:442
 msgid "Site Name:"
 msgstr "Nom du site :"
 
@@ -3293,11 +3227,11 @@ msgid "The site pathname"
 msgstr "Chemin d'accès du site"
 
 #: src/glade/screem.glade.h:163 src/glade/screem.glade.h:172
-#: src/glade/screem.glade.h:450
+#: src/glade/screem.glade.h:454
 msgid "Local"
 msgstr "Local"
 
-#: src/glade/screem.glade.h:164 src/glade/screem.glade.h:445
+#: src/glade/screem.glade.h:164 src/glade/screem.glade.h:449
 msgid "Remote Host Details"
 msgstr "Détails de l'hôte distant"
 
@@ -3317,11 +3251,11 @@ msgstr "L'URL où le site peut être visualisé"
 msgid "Upload to:"
 msgstr "Publier vers :"
 
-#: src/glade/screem.glade.h:169 src/glade/screem.glade.h:446
+#: src/glade/screem.glade.h:169 src/glade/screem.glade.h:450
 msgid "Upload Method:"
 msgstr "Méthode de publication :"
 
-#: src/glade/screem.glade.h:170 src/glade/screem.glade.h:448
+#: src/glade/screem.glade.h:170 src/glade/screem.glade.h:452
 msgid "Remote path:"
 msgstr "Chemin d'accès distant :"
 
@@ -3369,11 +3303,11 @@ msgstr ""
 "Mot de passe pour la connexion, si vous ne le fournissez pas, il vous sera "
 "demandé lorsque vous essaierez de publier le site"
 
-#: src/glade/screem.glade.h:184 src/glade/screem.glade.h:457
+#: src/glade/screem.glade.h:184 src/glade/screem.glade.h:461
 msgid "Upload Options"
 msgstr "Options de publication"
 
-#: src/glade/screem.glade.h:185 src/glade/screem.glade.h:463
+#: src/glade/screem.glade.h:185 src/glade/screem.glade.h:467
 msgid "Passive FTP"
 msgstr "FTP passif"
 
@@ -3397,19 +3331,19 @@ msgstr "Liens symboliques :"
 msgid "Maintain permissions:"
 msgstr "Maintenir les permissions :"
 
-#: src/glade/screem.glade.h:192 src/glade/screem.glade.h:461
+#: src/glade/screem.glade.h:192 src/glade/screem.glade.h:465
 msgid "Exec"
 msgstr "Exec"
 
-#: src/glade/screem.glade.h:193 src/glade/screem.glade.h:462
+#: src/glade/screem.glade.h:193 src/glade/screem.glade.h:466
 msgid "All"
 msgstr "Tout"
 
-#: src/glade/screem.glade.h:195 src/glade/screem.glade.h:468
+#: src/glade/screem.glade.h:195 src/glade/screem.glade.h:472
 msgid "Follow"
 msgstr "Suivre"
 
-#: src/glade/screem.glade.h:196 src/glade/screem.glade.h:469
+#: src/glade/screem.glade.h:196 src/glade/screem.glade.h:473
 msgid "Maintain"
 msgstr "Maintenir"
 
@@ -3437,7 +3371,7 @@ msgstr "Nombre"
 msgid "Average Size"
 msgstr "Taille moyenne"
 
-#: src/glade/screem.glade.h:205 src/glade/screem.glade.h:487
+#: src/glade/screem.glade.h:205 src/glade/screem.glade.h:491
 msgid "Statistics"
 msgstr "Statistiques"
 
@@ -3469,13 +3403,13 @@ msgstr "Répertoire"
 msgid "File"
 msgstr "Fichier"
 
-#: src/glade/screem.glade.h:215 src/glade/screem.glade.h:331
-#: src/glade/screem.glade.h:349 src/glade/screem.glade.h:533
+#: src/glade/screem.glade.h:215 src/glade/screem.glade.h:335
+#: src/glade/screem.glade.h:353 src/glade/screem.glade.h:537
 msgid "Update"
 msgstr "Mise à jour"
 
-#: src/glade/screem.glade.h:216 src/glade/screem.glade.h:329
-#: src/glade/screem.glade.h:350
+#: src/glade/screem.glade.h:216 src/glade/screem.glade.h:333
+#: src/glade/screem.glade.h:354
 msgid "Remove"
 msgstr "Enlever"
 
@@ -3547,23 +3481,34 @@ msgstr "Profondeur de la carte :"
 msgid "Labels:"
 msgstr "Étiquettes :"
 
-#: src/glade/screem.glade.h:237 src/glade/screem.glade.h:314
+#: src/glade/screem.glade.h:237 src/glade/screem.glade.h:318
 msgid "on"
 msgstr "oui"
 
-#: src/glade/screem.glade.h:238 src/glade/screem.glade.h:315
+#: src/glade/screem.glade.h:238 src/glade/screem.glade.h:319
 msgid "off"
 msgstr "non"
 
-#: src/glade/screem.glade.h:241
+#: src/glade/screem.glade.h:239
+msgid ""
+"Broken Link checking\n"
+"is currently broken and\n"
+"does not actually perform\n"
+"the check."
+msgstr ""
+"La vérification des liens cassés\n"
+"est actuellement cassée et\n"
+"ne peut effectuer la vérification."
+
+#: src/glade/screem.glade.h:245
 msgid "L: 0 C: 0"
 msgstr "L: 0 C: 0"
 
-#: src/glade/screem.glade.h:242
+#: src/glade/screem.glade.h:246
 msgid "(C) 1999, 2000, 2001 David A Knight"
 msgstr "(C) 1999, 2000, 2001 David A Knight"
 
-#: src/glade/screem.glade.h:243
+#: src/glade/screem.glade.h:247
 msgid ""
 "SCREEM: Site CReating and Editing EnvironMent\n"
 "Screem provides an integrated development environment for creating and "
@@ -3578,153 +3523,153 @@ msgstr ""
 "Screem est distribué sous les termes de la Licence Publique Générale GNU "
 "version 2 ou supérieure."
 
-#: src/glade/screem.glade.h:247
+#: src/glade/screem.glade.h:251
 msgid "SCREEM: Site CReating and Editing EnvironMent"
 msgstr "SCREEM : Site CReating and Editing EnvironMent"
 
-#: src/glade/screem.glade.h:248
+#: src/glade/screem.glade.h:252
 msgid "Screem: External Browser Settings"
 msgstr "Screem : Paramètres du navigateur externe"
 
-#: src/glade/screem.glade.h:249
+#: src/glade/screem.glade.h:253
 msgid "Browser:"
 msgstr "Navigateur :"
 
-#: src/glade/screem.glade.h:250 src/glade/screem.glade.h:269
+#: src/glade/screem.glade.h:254 src/glade/screem.glade.h:273
 msgid "Select a browser"
 msgstr "Sélectionnez un navigateur"
 
-#: src/glade/screem.glade.h:251
+#: src/glade/screem.glade.h:255
 msgid "Select icon for browser button"
 msgstr "Sélectionnez une icône pour le bouton du navigateur"
 
-#: src/glade/screem.glade.h:252
+#: src/glade/screem.glade.h:256
 msgid "Preview using http url"
 msgstr "Aperçu utilisant l'URL http"
 
-#: src/glade/screem.glade.h:253
+#: src/glade/screem.glade.h:257
 msgid "Spell Check"
 msgstr "Correcteur orthographique"
 
-#: src/glade/screem.glade.h:254
+#: src/glade/screem.glade.h:258
 msgid "Word:"
 msgstr "Mot :"
 
-#: src/glade/screem.glade.h:255 src/glade/screem.glade.h:263
+#: src/glade/screem.glade.h:259 src/glade/screem.glade.h:267
 msgid "Check"
 msgstr "Correcteur"
 
-#: src/glade/screem.glade.h:256
+#: src/glade/screem.glade.h:260
 msgid "Alternatives"
 msgstr "Alternatives"
 
-#: src/glade/screem.glade.h:257
+#: src/glade/screem.glade.h:261
 msgid "label130"
 msgstr "label130"
 
-#: src/glade/screem.glade.h:258
+#: src/glade/screem.glade.h:262
 msgid "Accept"
 msgstr "Accepter"
 
-#: src/glade/screem.glade.h:259
+#: src/glade/screem.glade.h:263
 msgid "Skip"
 msgstr "Passer"
 
-#: src/glade/screem.glade.h:260 src/glade/screem.glade.h:367
+#: src/glade/screem.glade.h:264 src/glade/screem.glade.h:371
 msgid "Replace"
 msgstr "Remplacer"
 
-#: src/glade/screem.glade.h:262
+#: src/glade/screem.glade.h:266
 msgid "Insert with case"
 msgstr "Insèrer avec la casse"
 
-#: src/glade/screem.glade.h:264
+#: src/glade/screem.glade.h:268
 msgid "Main dictionary:"
 msgstr "Dictionnaire principal :"
 
-#: src/glade/screem.glade.h:265
+#: src/glade/screem.glade.h:269
 msgid "Ispell command:"
 msgstr "Commande ispell :"
 
-#: src/glade/screem.glade.h:266
+#: src/glade/screem.glade.h:270
 msgid "Configure"
 msgstr "Configuration"
 
-#: src/glade/screem.glade.h:267
+#: src/glade/screem.glade.h:271
 msgid "Screem: Helper Settings"
 msgstr "Screem : Paramètres d'aide"
 
-#: src/glade/screem.glade.h:268
+#: src/glade/screem.glade.h:272
 msgid "Helper:"
 msgstr "Aide :"
 
-#: src/glade/screem.glade.h:270
+#: src/glade/screem.glade.h:274
 msgid "Select icon for helper"
 msgstr "Sélectionnez ne icône pour l'aide"
 
-#: src/glade/screem.glade.h:271
+#: src/glade/screem.glade.h:275
 msgid "Refresh View"
 msgstr "Rafraichir la vue"
 
-#: src/glade/screem.glade.h:272
+#: src/glade/screem.glade.h:276
 msgid "Zoom"
 msgstr "Zoom"
 
-#: src/glade/screem.glade.h:273
+#: src/glade/screem.glade.h:277
 #, c-format
 msgid "25%"
 msgstr "25ù"
 
-#: src/glade/screem.glade.h:276
+#: src/glade/screem.glade.h:280
 #, c-format
 msgid "200%"
 msgstr "200%"
 
-#: src/glade/screem.glade.h:277
+#: src/glade/screem.glade.h:281
 #, c-format
 msgid "300%"
 msgstr "300%"
 
-#: src/glade/screem.glade.h:278
+#: src/glade/screem.glade.h:282
 #, c-format
 msgid "400%"
 msgstr "400%"
 
-#: src/glade/screem.glade.h:280
+#: src/glade/screem.glade.h:284
 msgid "Attempts to tidy up the HTML by fixing the order of close tags etc"
 msgstr ""
 "Tente de nettoyer l'HTML en corrigeant l'ordre des balises fermantes, etc"
 
-#: src/glade/screem.glade.h:281
+#: src/glade/screem.glade.h:285
 msgid "Fix HTML"
 msgstr "Corrige HTML"
 
-#: src/glade/screem.glade.h:282
+#: src/glade/screem.glade.h:286
 msgid "Screem: Preferences"
 msgstr "Screem : Préférences"
 
-#: src/glade/screem.glade.h:283
+#: src/glade/screem.glade.h:287
 msgid "label133"
 msgstr "label133"
 
-#: src/glade/screem.glade.h:284 src/glade/screem.glade.h:317
+#: src/glade/screem.glade.h:288 src/glade/screem.glade.h:321
 #: src/preferences.c:639
 msgid "Misc"
 msgstr "Divers"
 
-#: src/glade/screem.glade.h:285
+#: src/glade/screem.glade.h:289
 msgid "Defaults"
 msgstr "Défauts"
 
-#: src/glade/screem.glade.h:286
+#: src/glade/screem.glade.h:290
 msgid "Filename:"
 msgstr "Nom du fichier :"
 
-#: src/glade/screem.glade.h:287
+#: src/glade/screem.glade.h:291
 msgid "Charset:"
 msgstr "Table de caractères :"
 
-#: src/glade/screem.glade.h:288
+#: src/glade/screem.glade.h:292
 msgid ""
 "This is the name of the initial file when you create a new site, and "
 "defaults to index.html"
@@ -3732,34 +3677,34 @@ msgstr ""
 "C'est le nom du fichier initial quand vous créez un nouveau site, etest par "
 "défaut index.html"
 
-#: src/glade/screem.glade.h:290 src/glade/screem.glade.h:398
+#: src/glade/screem.glade.h:294 src/glade/screem.glade.h:402
 msgid "ISO-8859-2"
 msgstr "ISO-8859-2"
 
-#: src/glade/screem.glade.h:291 src/glade/screem.glade.h:399
+#: src/glade/screem.glade.h:295 src/glade/screem.glade.h:403
 msgid "ISO-8859-5"
 msgstr "ISO-8859-5"
 
-#: src/glade/screem.glade.h:292 src/glade/screem.glade.h:400
+#: src/glade/screem.glade.h:296 src/glade/screem.glade.h:404
 msgid "ISO-8859-7"
 msgstr "ISO-8859-7"
 
-#: src/glade/screem.glade.h:293
+#: src/glade/screem.glade.h:297
 msgid "The default character set for html pages, defaults to ISO-8859-1"
 msgstr ""
 "La table de caractères par défaut pour les pages HTML, ISO-8859-1 par défaut"
 
-#: src/glade/screem.glade.h:295
+#: src/glade/screem.glade.h:299
 msgid "DTD:"
 msgstr "DTD :"
 
-#: src/glade/screem.glade.h:296
+#: src/glade/screem.glade.h:300
 msgid "The default Document Type Definition to use for sgml/xml documents"
 msgstr ""
 "La DTD (Document Type Definition) pardéfaut à utiliser pour les documents "
 "SGML/XML"
 
-#: src/glade/screem.glade.h:297
+#: src/glade/screem.glade.h:301
 msgid ""
 "Causes screem to load the projects that were previously in use when screem "
 "was last exited"
@@ -3767,21 +3712,21 @@ msgstr ""
 "Force screem à charger les projets qui étaient en cours d'utilisation la "
 "dernière foois que screem a été quitté."
 
-#: src/glade/screem.glade.h:298
+#: src/glade/screem.glade.h:302
 msgid "Auto load projects on startup"
 msgstr "Chargement automatique des projets au démarrage"
 
-#: src/glade/screem.glade.h:299
+#: src/glade/screem.glade.h:303
 msgid "Automatically open pages which were open in auto loaded projects"
 msgstr ""
 "Charge automatiquement les pages qui étaient ouvertes dans les projets "
 "chargés"
 
-#: src/glade/screem.glade.h:300
+#: src/glade/screem.glade.h:304
 msgid "Auto open pages"
 msgstr "Ouverture automatique des pages"
 
-#: src/glade/screem.glade.h:301
+#: src/glade/screem.glade.h:305
 msgid ""
 "With this enabled then editing features will only be enabled where they make "
 "sense, eg no auto entity insertion when editing a section of javascript.  If "
@@ -3792,79 +3737,79 @@ msgstr ""
 "vous éditez une section de JavaScript.  Si vous éditez de grands documents, "
 "vous devriez le désactiver."
 
-#: src/glade/screem.glade.h:302
+#: src/glade/screem.glade.h:306
 msgid "Enable Document Parsing"
 msgstr "Activer l'analyse du document"
 
-#: src/glade/screem.glade.h:303
+#: src/glade/screem.glade.h:307
 msgid "Display Settings"
 msgstr "Réglages de l'affichage"
 
-#: src/glade/screem.glade.h:304
+#: src/glade/screem.glade.h:308
 msgid "Syntax Highlighting"
 msgstr "Coloration syntaxique"
 
-#: src/glade/screem.glade.h:305
+#: src/glade/screem.glade.h:309
 msgid "Inline Tagging"
 msgstr "Attribution auto"
 
-#: src/glade/screem.glade.h:306
+#: src/glade/screem.glade.h:310
 msgid "Auto indent"
 msgstr "Indentation auto"
 
-#: src/glade/screem.glade.h:307
+#: src/glade/screem.glade.h:311
 msgid "Intelligent tag closing"
 msgstr "Fermeture de balise intelligente"
 
-#: src/glade/screem.glade.h:308
+#: src/glade/screem.glade.h:312
 msgid "Pick a Font"
 msgstr "Choisissez une police"
 
-#: src/glade/screem.glade.h:309
+#: src/glade/screem.glade.h:313
 msgid "<HTML><HEAD><TITLE>FONT PICKER</TITLE></HEAD></HTML>"
 msgstr "<HTML><HEAD><TITLE>S&eacute;lecteur de police</TITLE></HEAD></HTML>"
 
-#: src/glade/screem.glade.h:310
+#: src/glade/screem.glade.h:314
 msgid "Notebook toolbar"
 msgstr "Barre d'outil carnet"
 
-#: src/glade/screem.glade.h:311
+#: src/glade/screem.glade.h:315
 msgid "display view toolbar"
 msgstr "Afficher la barre d'outil Vue"
 
-#: src/glade/screem.glade.h:312
+#: src/glade/screem.glade.h:316
 msgid "The font to be used in the editor"
 msgstr "La police à utiliser dans l'éditeur"
 
-#: src/glade/screem.glade.h:313
+#: src/glade/screem.glade.h:317
 msgid "Auto entity insertion"
 msgstr "Insertion d'entité automatique"
 
-#: src/glade/screem.glade.h:316
+#: src/glade/screem.glade.h:320
 msgid "by charset"
 msgstr "en fonction du jeu de caractéres"
 
-#: src/glade/screem.glade.h:318
+#: src/glade/screem.glade.h:322
 msgid "Editor Keys"
 msgstr "Éditeur de touches"
 
-#: src/glade/screem.glade.h:319
+#: src/glade/screem.glade.h:323
 msgid "The key combinations currently set"
 msgstr "Combinaisons de touches actuellement définies"
 
-#: src/glade/screem.glade.h:320
+#: src/glade/screem.glade.h:324
 msgid "Key Combo"
 msgstr "Combinaison de touches"
 
-#: src/glade/screem.glade.h:321
+#: src/glade/screem.glade.h:325
 msgid "Action / Text"
 msgstr "Action / Texte"
 
-#: src/glade/screem.glade.h:322
+#: src/glade/screem.glade.h:326
 msgid "New key combo:"
 msgstr "Nouvelle combinaison de touche :"
 
-#: src/glade/screem.glade.h:323
+#: src/glade/screem.glade.h:327
 msgid ""
 "The key combination which will perform the action/insert the text shown "
 "below."
@@ -3872,31 +3817,31 @@ msgstr ""
 "La combinaison de touche qui effectura l'action/insertion du texte affiché "
 "dessous."
 
-#: src/glade/screem.glade.h:324
+#: src/glade/screem.glade.h:328
 msgid "Grab a key combination"
 msgstr "Capture une combinaison de touche"
 
-#: src/glade/screem.glade.h:325
+#: src/glade/screem.glade.h:329
 msgid "Grab key..."
 msgstr "Capture les touches..."
 
-#: src/glade/screem.glade.h:326
+#: src/glade/screem.glade.h:330
 msgid "Add the current combo"
 msgstr "Ajoute la combinaison courante"
 
-#: src/glade/screem.glade.h:328
+#: src/glade/screem.glade.h:332
 msgid "Remove the select combo"
 msgstr "Supprime la combinaison sélectionnée"
 
-#: src/glade/screem.glade.h:330
+#: src/glade/screem.glade.h:334
 msgid "Update the selected combo"
 msgstr "Met à jour la combinaison sélectionnée"
 
-#: src/glade/screem.glade.h:332
+#: src/glade/screem.glade.h:336
 msgid "Action/Text"
 msgstr "Action/Texte"
 
-#: src/glade/screem.glade.h:333
+#: src/glade/screem.glade.h:337
 msgid ""
 "The action to be taken in the editor when the key combo is pressed, or the "
 "text to insert when it is pressed if it doesn't match one of the presets."
@@ -3905,242 +3850,250 @@ msgstr ""
 "pressée, ou le texte à insérer quand il est tapé si il ne correspond à "
 "aucune des présélections."
 
-#: src/glade/screem.glade.h:334
+#: src/glade/screem.glade.h:338
 msgid "Editor keys"
 msgstr "Éditeur de touches"
 
-#: src/glade/screem.glade.h:335
+#: src/glade/screem.glade.h:339
 msgid "Editor Colours & Syntax Highlighting"
 msgstr "Couleurs de l'éditeur & Coloration syntaxique"
 
-#: src/glade/screem.glade.h:336
+#: src/glade/screem.glade.h:340
 msgid "Editor Colours"
 msgstr "Couleurs de l'éditeur"
 
-#: src/glade/screem.glade.h:338
+#: src/glade/screem.glade.h:342
 msgid "Editor Background Colour"
 msgstr "Couleur de l'arrière-plan de l'éditeur"
 
-#: src/glade/screem.glade.h:340
+#: src/glade/screem.glade.h:344
 msgid "Editor Text Colour"
 msgstr "Couleur du texte de l'éditeur"
 
-#: src/glade/screem.glade.h:341
+#: src/glade/screem.glade.h:345
 msgid "Syntax Colours"
 msgstr "Couleurs de syntaxe"
 
-#: src/glade/screem.glade.h:342
+#: src/glade/screem.glade.h:346
 msgid "Helper Applications"
 msgstr "Applications d'aide"
 
-#: src/glade/screem.glade.h:343
+#: src/glade/screem.glade.h:347
 msgid "Path"
 msgstr "Chemin"
 
-#: src/glade/screem.glade.h:344
+#: src/glade/screem.glade.h:348
 msgid "Mime Type"
 msgstr "Type MIME"
 
-#: src/glade/screem.glade.h:345
+#: src/glade/screem.glade.h:349
 msgid "Mime Type:"
 msgstr "Type MIME :"
 
-#: src/glade/screem.glade.h:347
+#: src/glade/screem.glade.h:351
 msgid "Select Icon for helper toolbar button"
 msgstr "Sélectionnez une icône pour le bouton de la barre d'outil d'aide"
 
-#: src/glade/screem.glade.h:352
+#: src/glade/screem.glade.h:356
 msgid "Printer Setup"
 msgstr "Paramètres d'impression"
 
-#: src/glade/screem.glade.h:353 src/glade/screem.glade.h:361
+#: src/glade/screem.glade.h:357 src/glade/screem.glade.h:365
 #: src/preferences.c:640
 msgid "Printing"
 msgstr "Impression"
 
-#: src/glade/screem.glade.h:354
+#: src/glade/screem.glade.h:358
 msgid "Add header"
 msgstr "Ajouter un en-tête"
 
-#: src/glade/screem.glade.h:355
+#: src/glade/screem.glade.h:359
 msgid "Enable word wrapping"
 msgstr "Activer le retour à la ligne"
 
-#: src/glade/screem.glade.h:356
+#: src/glade/screem.glade.h:360
 msgid "Print line numbers every:"
 msgstr "Imprimer les numéros de lignes toutes les :"
 
-#: src/glade/screem.glade.h:357
+#: src/glade/screem.glade.h:361
 msgid "line(s)"
 msgstr "ligne(s)"
 
-#: src/glade/screem.glade.h:358
+#: src/glade/screem.glade.h:362
 msgid "Portrait"
 msgstr "Portrait"
 
-#: src/glade/screem.glade.h:359
+#: src/glade/screem.glade.h:363
 msgid "Landscape"
 msgstr "Paysage"
 
-#: src/glade/screem.glade.h:360
+#: src/glade/screem.glade.h:364
 msgid "Paper"
 msgstr "Papier"
 
-#: src/glade/screem.glade.h:362 src/glade/screem.glade.h:364
+#: src/glade/screem.glade.h:366 src/glade/screem.glade.h:368
 #: src/preferences.c:640
 msgid "Java"
 msgstr "Java"
 
-#: src/glade/screem.glade.h:363
+#: src/glade/screem.glade.h:367
 msgid "Compiler:"
 msgstr "Compilateur :"
 
-#: src/glade/screem.glade.h:365
+#: src/glade/screem.glade.h:369
 msgid "Screem: Find/Replace"
 msgstr "Screem : Rechercher/Remplacer"
 
-#: src/glade/screem.glade.h:366
+#: src/glade/screem.glade.h:370
 msgid "Find Next"
 msgstr "Rechercher le suivant"
 
-#: src/glade/screem.glade.h:368
+#: src/glade/screem.glade.h:372
 msgid "Replace All"
 msgstr "Remplacer tout"
 
-#: src/glade/screem.glade.h:369
+#: src/glade/screem.glade.h:373
 msgid "Files which contain matches appear here"
 msgstr "Les fichiers qui contienne des occurences apparaissent ici"
 
-#: src/glade/screem.glade.h:371
+#: src/glade/screem.glade.h:374
+msgid "label2"
+msgstr "label2"
+
+#: src/glade/screem.glade.h:375
 msgid "label3"
 msgstr "label3"
 
-#: src/glade/screem.glade.h:372
+#: src/glade/screem.glade.h:376
 msgid "Find string:"
 msgstr "Rechercher la chaîne :"
 
-#: src/glade/screem.glade.h:373
+#: src/glade/screem.glade.h:377
 msgid "The string to search for"
 msgstr "La chaîne à rechercher"
 
-#: src/glade/screem.glade.h:374
+#: src/glade/screem.glade.h:378
 msgid "Replace string"
 msgstr "Remplacer par la chaîne :"
 
-#: src/glade/screem.glade.h:375
+#: src/glade/screem.glade.h:379
 msgid "The string to replace the find string with"
 msgstr "La chaîne de remplacement de la chaîne cherchée"
 
-#: src/glade/screem.glade.h:376
+#: src/glade/screem.glade.h:380
 msgid "Use regular expressions"
 msgstr "Utiliser les expressions régulières"
 
-#: src/glade/screem.glade.h:377
+#: src/glade/screem.glade.h:381
 msgid "From Start"
 msgstr "Depuis le début"
 
-#: src/glade/screem.glade.h:378
+#: src/glade/screem.glade.h:382
 msgid "From Current position"
 msgstr "Depuis le position courante"
 
-#: src/glade/screem.glade.h:379
+#: src/glade/screem.glade.h:383
 msgid "Check all files"
 msgstr "Vérifier tous les fichiers"
 
-#: src/glade/screem.glade.h:380 src/glade/screem.glade.h:515
+#: src/glade/screem.glade.h:384 src/glade/screem.glade.h:519
 msgid "window1"
 msgstr "window1"
 
-#: src/glade/screem.glade.h:382
+#: src/glade/screem.glade.h:386
 msgid "Fore Colour"
 msgstr "Couleur du premier plan"
 
-#: src/glade/screem.glade.h:384
+#: src/glade/screem.glade.h:388
 msgid "Back Colour"
 msgstr "Couleur de l'arrière-plan"
 
-#: src/glade/screem.glade.h:385 src/glade/screem.glade.h:386
-#: src/glade/screem.glade.h:430
+#: src/glade/screem.glade.h:389 src/glade/screem.glade.h:390
+#: src/glade/screem.glade.h:434
 msgid "SCREEM: Page Druid"
 msgstr "SCREEM : Druide Page"
 
-#: src/glade/screem.glade.h:387
+#: src/glade/screem.glade.h:391
 msgid "The Page Druid will guide you through the creation of a new page"
 msgstr "Le druide page vous guidera durant la création d'une nouvelle page."
 
-#: src/glade/screem.glade.h:388
+#: src/glade/screem.glade.h:392
 msgid "SCREEM: Page Druid - Details"
 msgstr "SCREEM : Druide Page - Détails"
 
-#: src/glade/screem.glade.h:389
+#: src/glade/screem.glade.h:393
 msgid "Basic Details"
 msgstr "Détails de base"
 
-#: src/glade/screem.glade.h:390
+#: src/glade/screem.glade.h:394
 msgid "Page Path: (including filename)"
 msgstr "Chemin d'accès de la page (inclus le nom de fichier) :"
 
-#: src/glade/screem.glade.h:391
+#: src/glade/screem.glade.h:395
 msgid "Page Doctype:"
 msgstr "Doctype de la page :"
 
-#: src/glade/screem.glade.h:392
+#: src/glade/screem.glade.h:396
 msgid "Page Stylesheet:"
 msgstr "Feuille de style de la page :"
 
-#: src/glade/screem.glade.h:393
+#: src/glade/screem.glade.h:397
 msgid "Meta Information"
 msgstr "Méta Information"
 
-#: src/glade/screem.glade.h:394
+#: src/glade/screem.glade.h:398
 msgid "Page Title:"
 msgstr "Titre du document :"
 
-#: src/glade/screem.glade.h:395
+#: src/glade/screem.glade.h:399
 msgid "Page Author:"
 msgstr "Auteur de la page :"
 
-#: src/glade/screem.glade.h:396
+#: src/glade/screem.glade.h:400
 msgid "Page Character Set:"
 msgstr "Jeu de caractère de la page :"
 
-#: src/glade/screem.glade.h:402
+#: src/glade/screem.glade.h:406
 msgid "Page Keywords:"
 msgstr "Mots clés de la page :"
 
-#: src/glade/screem.glade.h:403
+#: src/glade/screem.glade.h:407
 msgid "SCREEM: Page Druid - Templates"
 msgstr "SCREEM : Druide Page - Modèles"
 
-#: src/glade/screem.glade.h:404
+#: src/glade/screem.glade.h:408
 msgid "Available Page Templates"
 msgstr "Modèles de page disponible"
 
-#: src/glade/screem.glade.h:406
+#: src/glade/screem.glade.h:409
+msgid "label1"
+msgstr "label1"
+
+#: src/glade/screem.glade.h:410
 msgid "Template Settings"
 msgstr "Paramètres du modèle"
 
-#: src/glade/screem.glade.h:407
+#: src/glade/screem.glade.h:411
 msgid "Use Standard Template"
 msgstr "Utiliser un modèle standard"
 
-#: src/glade/screem.glade.h:408
+#: src/glade/screem.glade.h:412
 msgid "Use Custom Template"
 msgstr "Utiliser un modèle personnalisé"
 
-#: src/glade/screem.glade.h:409
+#: src/glade/screem.glade.h:413
 msgid "Custom Settings"
 msgstr "Paramètres personnalisés"
 
-#: src/glade/screem.glade.h:410
+#: src/glade/screem.glade.h:414
 msgid "Template File:"
 msgstr "Fichier Modèle :"
 
-#: src/glade/screem.glade.h:411
+#: src/glade/screem.glade.h:415
 msgid "Template Information"
 msgstr "Information du modèle"
 
-#: src/glade/screem.glade.h:412
+#: src/glade/screem.glade.h:416
 msgid ""
 "This label will be filled with information about the page template that is "
 "currently selected."
@@ -4148,39 +4101,39 @@ msgstr ""
 "Ce champ sera rempli avec les informations à propos du modèle de page qui "
 "sera sélectionné."
 
-#: src/glade/screem.glade.h:413
+#: src/glade/screem.glade.h:417
 msgid "SCREEM: Page Druid - Colours"
 msgstr "SCREEM : Druide Page - Couleurs"
 
-#: src/glade/screem.glade.h:415 src/preferences.c:639
+#: src/glade/screem.glade.h:419 src/preferences.c:639
 msgid "Colours"
 msgstr "Couleurs"
 
-#: src/glade/screem.glade.h:420
+#: src/glade/screem.glade.h:424
 msgid "Overide template settings"
 msgstr "Écrase les paramètres du modèle"
 
-#: src/glade/screem.glade.h:421
+#: src/glade/screem.glade.h:425
 msgid "Page defines frameset"
 msgstr "La page définie un jeu de frame"
 
-#: src/glade/screem.glade.h:426
+#: src/glade/screem.glade.h:430
 msgid "Visited Link"
 msgstr "Lien visité"
 
-#: src/glade/screem.glade.h:427
+#: src/glade/screem.glade.h:431
 msgid "Active Link"
 msgstr "Lien actif"
 
-#: src/glade/screem.glade.h:428
+#: src/glade/screem.glade.h:432
 msgid "Images"
 msgstr "Images"
 
-#: src/glade/screem.glade.h:429
+#: src/glade/screem.glade.h:433
 msgid "Background:"
 msgstr "Arrière-plan :"
 
-#: src/glade/screem.glade.h:431
+#: src/glade/screem.glade.h:435
 msgid ""
 "Click Finish for the page to be created, or click back to\n"
 "check that the information you entered was correct."
@@ -4188,84 +4141,84 @@ msgstr ""
 "Cliquez sur Terminer pour que la page soit créée, ou sur Retour\n"
 "pour vérifier que les informations que vous avez rentrées sont correctes."
 
-#: src/glade/screem.glade.h:433 src/glade/screem.glade.h:434
-#: src/glade/screem.glade.h:470
+#: src/glade/screem.glade.h:437 src/glade/screem.glade.h:438
+#: src/glade/screem.glade.h:474
 msgid "SCREEM: Site Druid"
 msgstr "SCREEM : Druide Site"
 
-#: src/glade/screem.glade.h:435
+#: src/glade/screem.glade.h:439
 msgid "The Site Druid will guide you through the creation of a new site"
 msgstr "Le Druide Site vous guidera à travers la création d'un nouveau site"
 
-#: src/glade/screem.glade.h:436
+#: src/glade/screem.glade.h:440
 msgid "SCREEM: Site Druid - Details/Management"
 msgstr "SCREEM : Druide Site - Détails/Gestion"
 
-#: src/glade/screem.glade.h:437
+#: src/glade/screem.glade.h:441
 msgid "Site Details"
 msgstr "Détails du site"
 
-#: src/glade/screem.glade.h:439
+#: src/glade/screem.glade.h:443
 msgid "Site Pathname:"
 msgstr "Chemin d'accès du site :"
 
-#: src/glade/screem.glade.h:440
+#: src/glade/screem.glade.h:444
 msgid "Site Template:"
 msgstr "Modèle du site :"
 
-#: src/glade/screem.glade.h:441
+#: src/glade/screem.glade.h:445
 msgid "Site Management"
 msgstr "Gestion du site"
 
-#: src/glade/screem.glade.h:442
+#: src/glade/screem.glade.h:446
 msgid "Use CVS:"
 msgstr "Utiliser CVS :"
 
-#: src/glade/screem.glade.h:443
+#: src/glade/screem.glade.h:447
 msgid "Default Page Template:"
 msgstr "Modèle de page par défaut :"
 
-#: src/glade/screem.glade.h:444
+#: src/glade/screem.glade.h:448
 msgid "SCREEM: Site Druid - Publish Settings (1)"
 msgstr "SCREEM : Druide Site - Paramètres de publication (1)"
 
-#: src/glade/screem.glade.h:447
+#: src/glade/screem.glade.h:451
 msgid "Hostname:"
 msgstr "Nom d'hôte :"
 
-#: src/glade/screem.glade.h:449
+#: src/glade/screem.glade.h:453
 msgid "Base URI of Site:"
 msgstr "URI de base du site :"
 
-#: src/glade/screem.glade.h:453
+#: src/glade/screem.glade.h:457
 msgid "Remote Authentication"
 msgstr "Authentification distante"
 
-#: src/glade/screem.glade.h:456
+#: src/glade/screem.glade.h:460
 msgid "SCREEM: Site Druid - Publish Settings (2)"
 msgstr "SCREEM : Druide Site - Paramètres de publication (2)"
 
-#: src/glade/screem.glade.h:458
+#: src/glade/screem.glade.h:462
 msgid "Maintain Permissions:"
 msgstr "Maintien des permissions :"
 
-#: src/glade/screem.glade.h:459
+#: src/glade/screem.glade.h:463
 msgid "Symbolic Links:"
 msgstr "Liens symboliques :"
 
-#: src/glade/screem.glade.h:464
+#: src/glade/screem.glade.h:468
 msgid "No Delete"
 msgstr "Ne pas supprimer"
 
-#: src/glade/screem.glade.h:465
+#: src/glade/screem.glade.h:469
 msgid "Check Moved"
 msgstr "Vérifier déplacé"
 
-#: src/glade/screem.glade.h:466
+#: src/glade/screem.glade.h:470
 msgid "No Overwrite"
 msgstr "Pas d'écrasement"
 
-#: src/glade/screem.glade.h:471
+#: src/glade/screem.glade.h:475
 msgid ""
 "Site Definition complete.  Click finish for the site to be created,\n"
 "or go back and check the details you entered."
@@ -4273,136 +4226,136 @@ msgstr ""
 "Définition de site complétée.  Cliquez sur Terminer pour que le site\n"
 "soit créé ou Retour pour vérifier les paramètres que vous avez rentrés."
 
-#: src/glade/screem.glade.h:473
+#: src/glade/screem.glade.h:477
 msgid "File Properties"
 msgstr "Propriétés du fichier"
 
-#: src/glade/screem.glade.h:474
+#: src/glade/screem.glade.h:478
 msgid "Full Name:"
 msgstr "Nom complet :"
 
-#: src/glade/screem.glade.h:475
+#: src/glade/screem.glade.h:479
 msgid "File Name:"
 msgstr "Nom du fichier :"
 
-#: src/glade/screem.glade.h:476
+#: src/glade/screem.glade.h:480
 msgid "Filename will go here"
 msgstr "Le nom du fichier sera affiché ici"
 
-#: src/glade/screem.glade.h:477
+#: src/glade/screem.glade.h:481
 msgid "File Type:"
 msgstr "Type de fichier :"
 
-#: src/glade/screem.glade.h:478
+#: src/glade/screem.glade.h:482
 msgid "The file type will go here"
 msgstr "Le type de fichier sera affiché ici"
 
-#: src/glade/screem.glade.h:480
+#: src/glade/screem.glade.h:484
 msgid "File size will go here"
 msgstr "La taille du fichier sera affichée ici"
 
-#: src/glade/screem.glade.h:481
+#: src/glade/screem.glade.h:485
 msgid "File Created on:"
 msgstr "Fichier créé le :"
 
-#: src/glade/screem.glade.h:482
+#: src/glade/screem.glade.h:486
 msgid "Last Modified on:"
 msgstr "Dernière modification le :"
 
-#: src/glade/screem.glade.h:483
+#: src/glade/screem.glade.h:487
 msgid "Last Accessed on:"
 msgstr "Dernier accès le :"
 
-#: src/glade/screem.glade.h:484 src/glade/screem.glade.h:485
-#: src/glade/screem.glade.h:486
+#: src/glade/screem.glade.h:488 src/glade/screem.glade.h:489
+#: src/glade/screem.glade.h:490
 msgid "date/time will go here"
 msgstr "date/heure sera affiché ici"
 
-#: src/glade/screem.glade.h:489
+#: src/glade/screem.glade.h:493
 msgid "Exclude from uploading"
 msgstr "Exclure de la publication"
 
-#: src/glade/screem.glade.h:490
+#: src/glade/screem.glade.h:494
 msgid "Upload as ASCII File"
 msgstr "Publier comme fichier ASCII"
 
-#: src/glade/screem.glade.h:491
+#: src/glade/screem.glade.h:495
 msgid "Ignore the file when fetching"
 msgstr "Ignorer le fichier lors du téléchargement"
 
-#: src/glade/screem.glade.h:492
+#: src/glade/screem.glade.h:496
 msgid "Options"
 msgstr "Options"
 
-#: src/glade/screem.glade.h:493
+#: src/glade/screem.glade.h:497
 msgid "File Permissions"
 msgstr "Permissions de fichier :"
 
-#: src/glade/screem.glade.h:494
+#: src/glade/screem.glade.h:498
 msgid "File Ownership"
 msgstr "Propriétaire de fichier"
 
-#: src/glade/screem.glade.h:495
+#: src/glade/screem.glade.h:499
 msgid "Owner:"
 msgstr "Propriétaire :"
 
-#: src/glade/screem.glade.h:496
+#: src/glade/screem.glade.h:500
 msgid "Group:"
 msgstr "Groupe :"
 
-#: src/glade/screem.glade.h:497
+#: src/glade/screem.glade.h:501
 msgid "Permissions"
 msgstr "Permissions"
 
-#: src/glade/screem.glade.h:498
+#: src/glade/screem.glade.h:502
 msgid "Screem: Loaded DTDs"
 msgstr "Screem : DTDs chargées"
 
-#: src/glade/screem.glade.h:499
+#: src/glade/screem.glade.h:503
 msgid "Identifier"
 msgstr "Identifiant"
 
-#: src/glade/screem.glade.h:500
+#: src/glade/screem.glade.h:504
 msgid "path"
 msgstr "chemin"
 
-#: src/glade/screem.glade.h:501
+#: src/glade/screem.glade.h:505
 msgid "The above shows the DTDs supported by Screem on this system"
 msgstr "Ci-dessus sont affichés les DTD supportées par Screem sur ce système"
 
-#: src/glade/screem.glade.h:502
+#: src/glade/screem.glade.h:506
 msgid "As sibling"
 msgstr "Comme sibling"
 
-#: src/glade/screem.glade.h:503
+#: src/glade/screem.glade.h:507
 msgid "As child"
 msgstr "Comme enfant"
 
-#: src/glade/screem.glade.h:504
+#: src/glade/screem.glade.h:508
 msgid "_Save"
 msgstr "_Enregistrer"
 
-#: src/glade/screem.glade.h:505
+#: src/glade/screem.glade.h:509
 msgid "Save _As"
 msgstr "Enregistrer _sous"
 
-#: src/glade/screem.glade.h:506
+#: src/glade/screem.glade.h:510
 msgid "_Close"
 msgstr "_Fermer"
 
-#: src/glade/screem.glade.h:508
+#: src/glade/screem.glade.h:512
 msgid "Screem: Fetch DTD?"
 msgstr "Screem : Récupérer la DTD ?"
 
-#: src/glade/screem.glade.h:509
+#: src/glade/screem.glade.h:513
 msgid "Fetch"
 msgstr "Récupérer"
 
-#: src/glade/screem.glade.h:510
+#: src/glade/screem.glade.h:514
 msgid "Don't Fetch"
 msgstr "Ne pas récupérer"
 
-#: src/glade/screem.glade.h:511
+#: src/glade/screem.glade.h:515
 msgid ""
 "The DTD used by the current document cant be found by Screem.\n"
 "Screem can fetch the DTD from the url in the doctype.\n"
@@ -4412,75 +4365,75 @@ msgstr ""
 "Screem peut récupérer la DTD à partir de l'URL dans le DOCTYPE.\n"
 "Doit-elle etre récupéré maintenant ?"
 
-#: src/glade/screem.glade.h:514
+#: src/glade/screem.glade.h:518
 msgid "Don't show this message again"
 msgstr "Ne plus réafficher ce message"
 
-#: src/glade/screem.glade.h:516
+#: src/glade/screem.glade.h:520
 msgid "label36"
 msgstr "label36"
 
-#: src/glade/screem.glade.h:518
+#: src/glade/screem.glade.h:522
 msgid "Flags"
 msgstr "Drapeaux"
 
-#: src/glade/screem.glade.h:519
+#: src/glade/screem.glade.h:523
 msgid "Site"
 msgstr "Site"
 
-#: src/glade/screem.glade.h:520
+#: src/glade/screem.glade.h:524
 msgid "label18"
 msgstr "label18"
 
-#: src/glade/screem.glade.h:521
+#: src/glade/screem.glade.h:525
 msgid "label19"
 msgstr "label19"
 
-#: src/glade/screem.glade.h:522
+#: src/glade/screem.glade.h:526
 msgid "Browse"
 msgstr "Navig"
 
-#: src/glade/screem.glade.h:523
+#: src/glade/screem.glade.h:527
 msgid "label132"
 msgstr "label132"
 
-#: src/glade/screem.glade.h:524
+#: src/glade/screem.glade.h:528
 msgid "Struct"
 msgstr "Struct"
 
-#: src/glade/screem.glade.h:526
+#: src/glade/screem.glade.h:530
 msgid "Messages"
 msgstr "Messages"
 
-#: src/glade/screem.glade.h:527
+#: src/glade/screem.glade.h:531
 msgid "Errors"
 msgstr "Erreurs"
 
-#: src/glade/screem.glade.h:528
+#: src/glade/screem.glade.h:532
 msgid "Guile scripts can be typed/loaded here and then executed"
 msgstr "Les scripts Guile peuvent être tapés/chargés ici et exécutés"
 
-#: src/glade/screem.glade.h:530
+#: src/glade/screem.glade.h:534
 msgid "Load..."
 msgstr "Chargement..."
 
-#: src/glade/screem.glade.h:531
+#: src/glade/screem.glade.h:535
 msgid "Guile"
 msgstr "Guile"
 
-#: src/glade/screem.glade.h:532
+#: src/glade/screem.glade.h:536
 msgid "Screem: Update from CVS?"
 msgstr "Screem : Mettre à jour depuis le CVS ?"
 
-#: src/glade/screem.glade.h:534
+#: src/glade/screem.glade.h:538
 msgid "Don't Update"
 msgstr "Ne pas mettre à jour"
 
-#: src/glade/screem.glade.h:535
+#: src/glade/screem.glade.h:539
 msgid "Don't show message again for this site"
 msgstr "Ne plus réafficher ce message pour ce site"
 
-#: src/glade/screem.glade.h:536
+#: src/glade/screem.glade.h:540
 msgid ""
 "This site uses CVS for version control\n"
 "Attempt to update to the latest version?"
@@ -4627,7 +4580,6 @@ msgstr "Scripts Guile"
 msgid "Wizards"
 msgstr "Assistants"
 
-#. set out thread going to actually check the links
 #: src/linkView.c:269
 msgid ""
 "Checking for broken links (may take a while depending on your connection "
@@ -4636,29 +4588,34 @@ msgstr ""
 "Vérification des liens cachés (peut prendre du temps selon la vitesse de "
 "votre connexion)"
 
-#: src/linkView.c:1198
+#: src/linkView.c:1201
 msgid "Link/File exists"
 msgstr "Le lien/fichier existe"
 
-#: src/linkView.c:1199
+#: src/linkView.c:1202
 msgid "External Link/File"
 msgstr "Lien/fichier externe"
 
-#: src/linkView.c:1200
+#: src/linkView.c:1203
 msgid "Broken Link"
 msgstr "Lien cassé"
 
-#: src/linkView.c:1201
+#: src/linkView.c:1204
 msgid "Ignored"
 msgstr "Ignoré"
 
-#: src/linkView.c:1202
+#: src/linkView.c:1205
 msgid "Requires Upload"
 msgstr "Nécessite un téléchargement"
 
-#: src/linkView.c:1203
+#: src/linkView.c:1206
 msgid "Checking Link"
 msgstr "Vérification du lien"
+
+#: src/linkView.c:1405
+#, c-format
+msgid "Timeout checking: %s"
+msgstr "Vérification du délai d'expiration : %s"
 
 #: src/main.c:88
 msgid "Disables splash screen on start up"
@@ -4673,35 +4630,35 @@ msgid "PATH"
 msgstr "CHEMIN"
 
 #. init guile
-#: src/main.c:168
+#: src/main.c:169
 msgid "Initialising Guile\n"
 msgstr "Initialisation de Guile\n"
 
-#: src/main.c:194
+#: src/main.c:195
 msgid "Loading DTDs\n"
 msgstr "Chargement des DTDs\n"
 
-#: src/main.c:198
+#: src/main.c:199
 msgid "Initialising gnome-vfs\n"
 msgstr "Initialisation de gnome-vfs\n"
 
-#: src/main.c:202
+#: src/main.c:203
 msgid "Creating Interface\n"
 msgstr "Création de l'interface\n"
 
-#: src/main.c:220
+#: src/main.c:221
 msgid "Loading Modules...\n"
 msgstr "Chargement des modules...\n"
 
-#: src/main.c:222
+#: src/main.c:223
 msgid "Modules loaded\n"
 msgstr "Modules chargés\n"
 
-#: src/main.c:224
+#: src/main.c:225
 msgid "Modules not supported\n"
 msgstr "Modules non supportés\n"
 
-#: src/main.c:341
+#: src/main.c:342
 #, c-format
 msgid ""
 "Save site: %s\n"
@@ -4710,11 +4667,11 @@ msgstr ""
 "Enregistrer le site : %s\n"
 "(%s)"
 
-#: src/main.c:436
+#: src/main.c:437
 msgid "screem_hints.txt"
 msgstr "screem_hints_fr.txt"
 
-#: src/main.c:528
+#: src/main.c:529
 msgid ""
 "Your SCREEM tips file appears to be missing!\n"
 "There should be a file called screem_hints.txt in the\n"
@@ -4792,43 +4749,41 @@ msgid "Keys"
 msgstr "Touches"
 
 #: src/preview.c:182
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "<html><head><title>SCREEM</title></head><body bgcolor=\"black\" "
 "text=\"white\"><h1 align=\"center\">SCREEM</h1><h3 align=\"center\">Site "
 "CReating and Editing EnvironMent</h3><hr><div align=\"center\">Welcome to %s "
-"version %s</div><br><h3>TODO Before release:</h3><ul><li>Documentation - "
-"Volunteers accepted<li>Lots of testing - and what better way to test than to "
-"write documentation:-)</ul><br><h3>Release Notes:</h3><ul><li>Please do "
-"<em>not</em> use the gnome bug track system for screem bugs<br> They will "
-"not be dealt with, instead use the bug tracking system on our SourceForge "
-"project page. (accessable from screem.org) <li>On the fly document parsing "
-"can now be disabled, which will sort out the speed problem with large "
-"documents (but will also disabled a number of other features)<li>Fixed small "
-"bug in page druid<li>Table Wizard updated<li>A default DTD can be set for "
-"documents which don't specify one<li>Inline tagging and the properties tab "
-"now take the allowed attributes from the DTD for the current "
-"document.<li>The structure tree now supports drag and drop<ul><li>Move tags "
-"around in the tree itself<li>drop urls onto the tree to insert link "
-"tags<li>drop plain text onto the tree to insert text</ul><li>The open page "
-"tabs now have a popup menu by right clicking on them.  This allows you to "
-"save/close/rename a page without viewing it.<li>Insert Tags menu added to "
-"editor popup, which allows you to insert valid tags based upon the DTD in "
-"use (or the default DTD if one is not specified) <li>More Translations - "
-"thanks to Christophe Merlet syncing Screem up with the ones in Gnome CVS, "
-"and to all those who contribute to the translations <li>Switching the "
-"viewbar off in the preferences will display the notebook tabs for the views "
-"instead (requires restart) <li>If a DTD is not found locally Screem will "
-"fetch it from the uri in the DOCTYPE (Requires gnome-vfs) <li>Fetched DTDs "
-"are stored in ~/.screem/dtds and are added to the catalog file held there. "
-"<li>Removed paned view - messages and file listing/tag tree etc are now dock "
-"items. <li>Dock items should remember their position properly "
-"now.<li>Ability to show/hide any dock item via a popup menu<li>Autoloading "
-"of sites which were open last time screem was in use added (can be switched "
-"off)<li>Auto loading of pages when a site is opened that were open when it "
-"was last closed<li>An improved link view primarily by Matt Colyer "
-"<ul><li>Showing of broken links if built with gnome-vfs "
-"support.<li>Zoomable. <li>Selectable depth of links to show. </ul></ul>"
+"version %s</div><br><h3>Release Notes:</h3><ul><li>Please do <em>not</em> "
+"use the gnome bug track system for screem bugs<br> They will not be dealt "
+"with, instead use the bug tracking system on our SourceForge project page. "
+"(accessable from screem.org) <li>On the fly document parsing can now be "
+"disabled, which will sort out the speed problem with large documents (but "
+"will also disabled a number of other features)<li>Fixed small bug in page "
+"druid<li>Table Wizard updated<li>A default DTD can be set for documents "
+"which don't specify one<li>Inline tagging and the properties tab now take "
+"the allowed attributes from the DTD for the current document.<li>The "
+"structure tree now supports drag and drop<ul><li>Move tags around in the "
+"tree itself<li>drop urls onto the tree to insert link tags<li>drop plain "
+"text onto the tree to insert text</ul><li>The open page tabs now have a "
+"popup menu by right clicking on them.  This allows you to save/close/rename "
+"a page without viewing it.<li>Insert Tags menu added to editor popup, which "
+"allows you to insert valid tags based upon the DTD in use (or the default "
+"DTD if one is not specified) <li>More Translations - thanks to Christophe "
+"Merlet syncing Screem up with the ones in Gnome CVS, and to all those who "
+"contribute to the translations <li>Switching the viewbar off in the "
+"preferences will display the notebook tabs for the views instead (requires "
+"restart) <li>If a DTD is not found locally Screem will fetch it from the uri "
+"in the DOCTYPE (Requires gnome-vfs) <li>Fetched DTDs are stored in "
+"~/.screem/dtds and are added to the catalog file held there. <li>Removed "
+"paned view - messages and file listing/tag tree etc are now dock items. "
+"<li>Dock items should remember their position properly now.<li>Ability to "
+"show/hide any dock item via a popup menu<li>Autoloading of sites which were "
+"open last time screem was in use added (can be switched off)<li>Auto loading "
+"of pages when a site is opened that were open when it was last closed<li>An "
+"improved link view primarily by Matt Colyer <ul><li>Showing of broken links "
+"if built with gnome-vfs support.<li>Zoomable. <li>Selectable depth of links "
+"to show. </ul></ul>"
 msgstr ""
 "<html><head><title>SCREEM</title></head><body bgcolor=\"black\" "
 "text=\"white\"><h1 align=\"center\">SCREEM</h1><h3 align=\"center\">Site "
@@ -5007,6 +4962,57 @@ msgstr "Pressez une touche..."
 #: src/toolbar.c:259 src/toolbar.c:263 src/toolbar.c:267
 msgid "Not set"
 msgstr "Non défini"
+
+#~ msgid "No locks found.\n"
+#~ msgstr "Aucun verrous trouvés.\n"
+
+#~ msgid "Image map"
+#~ msgstr "Carte d'image"
+
+#~ msgid "Area"
+#~ msgstr "Aire"
+
+#~ msgid "Tools"
+#~ msgstr "Outils"
+
+#~ msgid "Image map..."
+#~ msgstr "Carte d'image..."
+
+#~ msgid "Create an image map file"
+#~ msgstr "Crée un fichier de carte d'image"
+
+#~ msgid "Image map Wizard"
+#~ msgstr "Assistant Carte d'image"
+
+#~ msgid "Image:"
+#~ msgstr "Image :"
+
+#~ msgid "file:"
+#~ msgstr "fichier :"
+
+#~ msgid "Link to:"
+#~ msgstr "Lien vers :"
+
+#~ msgid "Tools:"
+#~ msgstr "Outils :"
+
+#~ msgid "Save map"
+#~ msgstr "Enregistrer la carte"
+
+#~ msgid "Erase"
+#~ msgstr "Effacer"
+
+#~ msgid "Select"
+#~ msgstr "Sélectionner"
+
+#~ msgid "Rectangle"
+#~ msgstr "Rectangle"
+
+#~ msgid "Circle"
+#~ msgstr "Cercle"
+
+#~ msgid "Polygon"
+#~ msgstr "Polygone"
 
 #~ msgid ""
 #~ "\n"
