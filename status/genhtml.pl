@@ -184,7 +184,8 @@ my %lasttranslator = (
     "ja" => "ºÇ½ªËÝÌõ¼Ô",
     "nn" => "Siste omsetjar",
     "pt" => "Último tradutor",
-    "sv" => "Senaste &ouml;vers&auml;ttare"
+    "sv" => "Senaste &ouml;vers&auml;ttare",
+    "wa" => "Dierin rato&ucirc;rneu"
 );
 
 my %status = (
@@ -197,7 +198,8 @@ my %status = (
     "ja" => "¥¹¥Æ¡¼¥¿¥¹",
     "nn" => "Status",
     "pt" => "Estado",
-    "sv" => "Status"
+    "sv" => "Status",
+    "wa" => "Sitatus"
 );
 
 my %outdated = (
@@ -210,6 +212,7 @@ my %outdated = (
     "nn" => "Utdatert",
     "pt" => "Abandonada",
     "sv" => "F&ouml;r&aring;ldrad",
+    "wa" => "Trop v&icirc;"
 );
 
 my %wip = (
@@ -222,6 +225,7 @@ my %wip = (
     "nn" => "P&aring;g&aring;ande arbeid",
     "pt" => "Em curso",
     "sv" => "P&aring;g&aring;ende arbete",
+    "wa" => "On overe dissu"
 );
 
 my %finished = (
@@ -233,6 +237,7 @@ my %finished = (
     "nn" => "Ferdig",
     "pt" => "Terminada",
     "sv" => "Slutf&ouml;rd",
+    "wa" => "Fini"
 );
 
 my %unknown = (
@@ -244,7 +249,8 @@ my %unknown = (
     "gl" => "Descoñecido",
     "nn" => "Ukjend",
     "pt" => "Desconhecido",
-    "sv" => "Ok&auml;nd"
+    "sv" => "Ok&auml;nd",
+    "wa" => "N&eacute;n cnoxhou"
 );
 
 my %details = ( 
