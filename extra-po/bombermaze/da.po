@@ -1,13 +1,22 @@
-# Danish of bombermaze.
+# Danish translation of Bombermaze.
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Keld Simonsen, <keld@dkuug.dk>, 2001.
+# Ole Laursen <olau@hardworking.dk>, 2001.
+#
+# Konventioner:
+#
+# BomberMaze -> labyrintbombning
+# sprite -> billede
+# frame -> billede
+# auto-fire -> hurtigskydning
+# power-up -> bonusting (hm, nogen bedre forslag?)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bombermaze 0.6.4\n"
-"POT-Creation-Date: 2001-02-19 21:07+0100\n"
-"PO-Revision-Date: 2001-04-03 12:46-0200\n"
-"Last-Translator: Keld Simonsen, <keld@dkuug.dk>\n"
+"POT-Creation-Date: 2001-06-15 08:42+0200\n"
+"PO-Revision-Date: 2001-08-04 10:00+02:00\n"
+"Last-Translator: Ole Laursen <olau@hardworking.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -16,7 +25,7 @@ msgstr ""
 #. ////////////////////////////////////////////////////////////////////////////
 #: src/ui.cc:42
 msgid "BomberMaze"
-msgstr "BomberMaze"
+msgstr "Labyrintbombning"
 
 #: src/ui.cc:43
 msgid "(C) 2000 Sydney Tang"
@@ -42,7 +51,7 @@ msgstr "Nyt spil med 3 spillere"
 msgid "New 4 player game"
 msgstr "Nyt spil med 4 spillere"
 
-#: src/preferences.cc:1691 src/ui.cc:118
+#: src/preferences.cc:1759 src/ui.cc:118
 msgid "Quit game"
 msgstr "Afslut spil"
 
@@ -55,7 +64,7 @@ msgid ""
 "New theme will be applied at the\n"
 "beginning of the next round."
 msgstr ""
-"Nyt tema vil blive anvendt ved\n"
+"Det nye tema vil blive anvendt ved\n"
 "begyndelsen på den næste runde."
 
 #: src/ui.cc:222
@@ -64,6 +73,8 @@ msgid ""
 "Please select another one from the\n"
 "Preferences dialog."
 msgstr ""
+"Det nuværende tema har et ugyldigt format.\n"
+"Vælg venligst et andet i indstillingsvinduet."
 
 #: src/ui.cc:230
 msgid ""
@@ -71,6 +82,8 @@ msgid ""
 "Please select another one from the\n"
 "Preferences dialog."
 msgstr ""
+"Den nuværende kortfil har et ugyldigt format.\n"
+"Vælg venligst en anden i indstillingsvinduet."
 
 #: src/ui.cc:418
 msgid "round:"
@@ -84,39 +97,41 @@ msgstr "%d:"
 #: src/ui.cc:588
 #, c-format
 msgid "Error: gnome_init failed; return value = %d\n"
-msgstr ""
+msgstr "Fejl: gnome_init fejlede; returnerede værdi = %d\n"
 
 #: src/ui.cc:594
 msgid "Error: widget creation failed\n"
-msgstr ""
+msgstr "Fejl: kontroloprettelse mislykkedes\n"
 
 #: src/ui.cc:600
 msgid "Error: failed to initialize preferences\n"
-msgstr ""
+msgstr "Fejl: kunne ikke klargøre indstillinger\n"
 
 #: src/ui.cc:606
 msgid "Error: failed to load images\n"
-msgstr ""
+msgstr "Fejl: kunne ikke indlæse billeder\n"
 
+# i spilprogrammeringssprog betyder 'sprite' bare et billede (som man
+# som oftest bruger til personer, ting osv. i spillet)
 #: src/ui.cc:796
 #, c-format
 msgid "Error: cannot load sprite file '%s'\n"
-msgstr ""
+msgstr "Fejl: kan ikke indlæse billedfilen '%s'\n"
 
 #: src/ui.cc:806
 #, c-format
 msgid "Error: sprite file '%s' has invalid dimensions\n"
-msgstr ""
+msgstr "Fejl: billedfilen '%s' har ugyldige dimensioner\n"
 
 #: src/ui.cc:876
 #, c-format
 msgid "Error: '%s' is taller than two map squares\n"
-msgstr ""
+msgstr "Fejl: '%s' er højere end to kortkvadrater\n"
 
 #: src/ui.cc:881
 #, c-format
 msgid "Error: '%s' is wider than one map square\n"
-msgstr ""
+msgstr "Fejl: '%s' er bredere end et kortkvadrat\n"
 
 #: src/ui.cc:1161 src/ui.cc:1165 src/ui.cc:1267 src/ui.cc:1273
 #, c-format
@@ -125,33 +140,34 @@ msgstr "%d"
 
 #: src/ui.cc:1174
 msgid "Game is paused"
-msgstr ""
+msgstr "Spillet er på pause"
 
 #: src/ui.cc:1225
 msgid "Game Over"
-msgstr "Slut på spil"
+msgstr "Spillet er slut"
 
 #: src/ui.cc:1230
 msgid "Match Status"
-msgstr ""
+msgstr "Kampstatus"
 
 #: src/ui.cc:1247
 #, c-format
 msgid "Round %d results"
-msgstr ""
+msgstr "Resultater efter runde %d"
 
 #: src/ui.cc:1257
 msgid "Player"
 msgstr "Spiller"
 
+# ... kampe (RETMIG: eller 'vinder'?)
 #: src/ui.cc:1261
 msgid "Wins"
-msgstr "Vinder"
+msgstr "Vundne"
 
 #: src/ui.cc:1286
 #, c-format
 msgid "Player %d wins the match!"
-msgstr "Spiller %d vinder kampen"
+msgstr "Spiller %d vinder kampen!"
 
 #: src/ui.cc:1290
 msgid "Stalemate"
@@ -165,228 +181,240 @@ msgstr "Spiller %d vinder denne runde"
 #: src/ui.cc:1305
 #, c-format
 msgid "press [%s] to continue"
-msgstr "tryk [%s] for at fortsætte"
+msgstr "tryk på [%s] for at fortsætte"
 
-#: src/preferences.cc:1699 src/ui.cc:1314
+#: src/preferences.cc:1767 src/ui.cc:1314
 msgid "Continue"
 msgstr "Fortsæt"
 
-#: src/preferences.cc:618
+#: src/preferences.cc:623
 msgid ""
 "Error while loading theme.\n"
 "Please choose another one."
 msgstr ""
+"Fejl under indlæsning af tema.\n"
+"Vælg venligst et andet."
 
-#: src/preferences.cc:716 src/preferences.cc:1452
+#: src/preferences.cc:721 src/preferences.cc:1459
 msgid ""
 "Error while parsing map.\n"
 "Please choose another one."
 msgstr ""
+"Fejl under indlæsning af kort.\n"
+"Vælg venligst et andet."
 
-#: src/preferences.cc:1277 src/preferences.cc:1375
+#: src/preferences.cc:1282 src/preferences.cc:1380
 msgid "Invalid map file"
-msgstr ""
+msgstr "Ugyldig kortfil"
 
-#: src/preferences.cc:1642
+#: src/preferences.cc:1710
 msgid "BomberMaze Preferences"
-msgstr ""
+msgstr "Labyrintbombningsindstillinger"
 
-#: src/preferences.cc:1683
+#: src/preferences.cc:1751
 msgid "Pause game"
-msgstr ""
+msgstr "Sæt spil på pause"
 
-#: src/preferences.cc:1707
+#: src/preferences.cc:1775
 msgid "Game control keys"
-msgstr ""
+msgstr "Spilstyringstaster"
 
-#: src/preferences.cc:1724
+#: src/preferences.cc:1792
 #, c-format
 msgid "Start %d player game"
-msgstr ""
+msgstr "Start spil med %d spillere"
 
-#: src/preferences.cc:1735
+#: src/preferences.cc:1803
 msgid "Game start keys"
-msgstr ""
+msgstr "Spilstartstaster"
 
-#: src/preferences.cc:1749
+#: src/preferences.cc:1817
 msgid "Miscellaneous"
 msgstr "Forskelligt"
 
-#: src/preferences.cc:1754
+#: src/preferences.cc:1822
 msgid "Wins per match"
 msgstr "Sejre per kamp"
 
-#: src/preferences.cc:1764
+#: src/preferences.cc:1832
 msgid ""
 "Enable Continue button\n"
 "on Match Status dialog"
 msgstr ""
+"Aktivér fortsætknappen\n"
+"i kampstatusvinduet"
 
-#: src/preferences.cc:1775
+#: src/preferences.cc:1843
 msgid ""
 "Show Match Status dialog\n"
 "between rounds"
 msgstr ""
+"Vis kampstatusvinduet\n"
+"mellem runder"
 
-#: src/preferences.cc:1786
+#: src/preferences.cc:1854
 msgid "Case sensitive controls"
-msgstr ""
+msgstr "Forskel på små og store bogstaver i styringstaster"
 
-#: src/preferences.cc:1799
+#: src/preferences.cc:1867
 msgid "General"
 msgstr "Generelt"
 
-#: src/preferences.cc:1821 src/preferences.cc:1844 src/preferences.cc:1953
-#: src/preferences.cc:2013 src/preferences.cc:2121 src/preferences.cc:2212
-#: src/preferences.cc:2285
+#: src/preferences.cc:1889 src/preferences.cc:1912 src/preferences.cc:2021
+#: src/preferences.cc:2132 src/preferences.cc:2240 src/preferences.cc:2331
+#: src/preferences.cc:2404
 msgid "Defaults"
 msgstr "Standardværdier"
 
-#: src/preferences.cc:1831 src/preferences.cc:1921
+#: src/preferences.cc:1899 src/preferences.cc:1989
 msgid "Map"
 msgstr "Kort"
 
-#: src/preferences.cc:1851 src/preferences.cc:1960
+#: src/preferences.cc:1919 src/preferences.cc:2030
 msgid "Preview"
-msgstr "Forhåndsvisning"
+msgstr "Eksempel"
 
-#: src/preferences.cc:1900
+#: src/preferences.cc:1968
 msgid "Show wall perimeter"
-msgstr ""
+msgstr "Vis vægomkreds"
 
-#: src/preferences.cc:1910
+#: src/preferences.cc:1978
 msgid "Show top wall only"
-msgstr ""
+msgstr "Vis øverste væg kun"
 
-#: src/preferences.cc:1928 src/preferences.cc:1937
+#: src/preferences.cc:1996 src/preferences.cc:2005
 msgid "Theme"
 msgstr "Tema"
 
-#: src/preferences.cc:1993
+#: src/preferences.cc:2112
 #, c-format
 msgid "Player %d"
 msgstr "Spiller %d"
 
-#: src/preferences.cc:2030
+#: src/preferences.cc:2149
 msgid "Up"
 msgstr "Op"
 
-#: src/preferences.cc:2038
+#: src/preferences.cc:2157
 msgid "Right"
 msgstr "Højre"
 
-#: src/preferences.cc:2046
+#: src/preferences.cc:2165
 msgid "Down"
 msgstr "Ned"
 
-#: src/preferences.cc:2054
+#: src/preferences.cc:2173
 msgid "Left"
 msgstr "Venstre"
 
-#: src/preferences.cc:2062
+#: src/preferences.cc:2181
 msgid "Movement"
 msgstr "Flytning"
 
-#: src/preferences.cc:2075
+#: src/preferences.cc:2194
 msgid "Drop bomb"
-msgstr "Slip bombe"
+msgstr "Læg bombe"
 
-#: src/preferences.cc:2083
+# 'auto-fire' betyder at man kan holde knappen inde
+#: src/preferences.cc:2202
 msgid "Enable auto-fire"
-msgstr "Aktivér automatisk skydning"
+msgstr "Aktivér hurtigskydning"
 
-#: src/preferences.cc:2093
+#: src/preferences.cc:2212
 msgid "Special action"
-msgstr "Speciel handling"
+msgstr "Specialhandling"
 
-#: src/preferences.cc:2101
+#: src/preferences.cc:2220
 msgid "Action"
 msgstr "Handling"
 
-#: src/preferences.cc:2108 src/preferences.cc:2134
+#: src/preferences.cc:2227 src/preferences.cc:2253
 msgid "Numeric"
 msgstr "Numerisk"
 
-#: src/preferences.cc:2141
+#: src/preferences.cc:2260
 msgid "Initial number of bombs"
-msgstr ""
+msgstr "Startantallet af bomber"
 
-#: src/preferences.cc:2147
+#: src/preferences.cc:2266
 msgid "Initial explosion size"
-msgstr ""
+msgstr "Starteksplosionsstørrelsen"
 
-#: src/preferences.cc:2153
+#: src/preferences.cc:2272
 msgid "Bomb explosion delay (tenths of a second)"
-msgstr ""
+msgstr "Bombeeksplosionsforsinkelse (tiendedele sekunder)"
 
-#: src/preferences.cc:2160
+#: src/preferences.cc:2279
 msgid "Bomb chain reaction delay (frames)"
-msgstr ""
+msgstr "Bombekædereaktionsforsinkelse (billeder)"
 
-#: src/preferences.cc:2167
+#: src/preferences.cc:2286
 msgid "Flame duration (frames)"
-msgstr ""
+msgstr "Flammevarighed (billeder)"
 
-#: src/preferences.cc:2174
+#: src/preferences.cc:2293
 msgid "Brick shatter duration (frames)"
-msgstr ""
+msgstr "Stenforsvindingsvarighed (billeder)"
 
-#: src/preferences.cc:2181
+#: src/preferences.cc:2300
 msgid "Power-up shatter duration (frames)"
-msgstr ""
+msgstr "Forsvindingsvarighed for bonusting (billeder)"
 
-#: src/preferences.cc:2188
+#: src/preferences.cc:2307
 msgid "Probability of power-ups (%)"
-msgstr ""
+msgstr "Sandsynlighed for bonusting (%)"
 
-#: src/preferences.cc:2198
+#: src/preferences.cc:2317
 msgid "Power-ups"
-msgstr ""
+msgstr "Bonusting"
 
-#: src/preferences.cc:2226
+#: src/preferences.cc:2345
 msgid "Probability of individual power-up types"
-msgstr ""
+msgstr "Sandsynlighed for individuelle bonusting"
 
-#: src/preferences.cc:2233
+#: src/preferences.cc:2352
 msgid "Extra Bomb"
-msgstr ""
+msgstr "Ekstra bombe"
 
-#: src/preferences.cc:2240
+#: src/preferences.cc:2359
 msgid "Extra Range"
-msgstr ""
+msgstr "Større rækkevidde"
 
-#: src/preferences.cc:2247
+# RETMIG: dækker det over fjernantændelse?
+#: src/preferences.cc:2366
 msgid "Trigger Bomb"
-msgstr ""
+msgstr "Antænd bombe"
 
-#: src/preferences.cc:2254
+#: src/preferences.cc:2373
 msgid "Kick Bomb"
-msgstr ""
+msgstr "Spark til bombe"
 
-#: src/preferences.cc:2261
+#: src/preferences.cc:2380
 msgid "Extra Speed"
-msgstr ""
+msgstr "Ekstra hastighed"
 
-#: src/preferences.cc:2271 src/preferences.cc:2298
+#: src/preferences.cc:2390 src/preferences.cc:2417
 msgid "Animation"
-msgstr ""
+msgstr "Animering"
 
-#: src/preferences.cc:2305
+# dækker vist nogenlunde
+#: src/preferences.cc:2424
 msgid "Animation clock tick period (milliseconds)"
-msgstr ""
+msgstr "Animeringsinterval (millisekunder)"
 
-#: src/preferences.cc:2311 src/preferences.cc:2332
+#: src/preferences.cc:2430 src/preferences.cc:2451
 msgid "start new game to apply"
-msgstr ""
+msgstr "start et nyt spil for at anvende dette"
 
-#: src/preferences.cc:2316
+#: src/preferences.cc:2435
 msgid "Steps to middle of square"
-msgstr ""
+msgstr "Skridt til midten af kvadrater"
 
-#: src/preferences.cc:2321
+#: src/preferences.cc:2440
 msgid "restart program to apply"
-msgstr ""
+msgstr "genstart programmet for at anvende dette"
 
-#: src/preferences.cc:2326
+# hm, ikke helt godt
+#: src/preferences.cc:2445
 msgid "Initial Player move delay (clock ticks)"
-msgstr ""
+msgstr "Startspillerforsinkelse (klokkeslag)"
