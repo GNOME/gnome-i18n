@@ -118,7 +118,7 @@ $now = time;
 "cs", "Detailed report for Czech (cs) GNOME translations",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i GNOME<br>Detailed report for Danish (da) GNOME translations",
 "de", "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung<br>Detailed report for German (de) GNOME translations",
-"el", "Λεπτομερής αναφορά για της Ελληνικές (el) μεταφράσεις του GNOME",
+"el", "Λεπτομερής αναφορά για τις Ελληνικές (el) μεταφράσεις του GNOME",
 "en_GB", "Detailed report for English, British (en_GB) GNOME translations",
 "es", "Informe detallado de la traducci&oacute;n de GNOME al espaρol (es)",
 "et", "Detailed report for Estonian (et) GNOME translations",
