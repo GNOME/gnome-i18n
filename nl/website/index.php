@@ -22,17 +22,20 @@ gnome_menu();
 <div class="content">
 <h1>Welkom bij GNOME Nederlands</h1>
 
-<p>Het GNOME-NL project is opgezet om GNOME naar het Nederlands te
-vertalen. GNOME is een vrije (Libre), gebruikersvriendelijke, krachtige
+<p>GNOME is een vrije (Libre), gebruikersvriendelijke, krachtige
 en toegankelijke grafische werkomgeving voor de besturingssystemen die
 tot de Unix-familie behoren, zoals Linux en BSD. GNOME is een acroniem
 dat staat voor GNU Network Object Model Environment. GNOME omvat zowel
 een werkomgeving (desktop environment) als een ontwikkelplatform
 (developer platform).</p>
-<p>Op deze website is informatie te vinden over de voortgang van het project,
+<p>Het GNOME-NL project is opgezet om GNOME naar het Nederlands te
+vertalen. Dit omdat een werkomgeving pas echt goed is als je er gebruik van kan maken
+in je eigen taal.</p>
+<p>GNOME-NL is ondertussen uitgegroeid tot een heuse community. Klik op de diverse opties
+in het menu om eens te kijken waar we ons mee bezig houden, of kom eens langs op de discussielijst
+of op <a href="irc://irc.gnome.org/">IRC</a> en maak kennis met GNOME-NL.</p>
+<p>Op deze website is ook informatie te vinden over de voortgang van het project,
 alsmede informatie voor nieuwe vertalers. Kijk daarvoor in het menu onder het kopje "Vertalers".</p>
-<p>Ook voor gebruikers hebben we een stukje van deze site ingedeeld om
-uit te leggen hoe ze gebruik kunnen maken van deze vertalingen.</p>
 <p>Heb je een vertaalfout gevonden? Laat dat dan direct weten
 <a href="foutrapport.php">via dit formulier.</a></p>
 </div>

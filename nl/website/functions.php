@@ -84,6 +84,7 @@ function gnome_menu() { ?>
 	$line = chop($line);
 	$line = substr($line, 0, strlen($line) - 5);
 	echo "(", $line, ")</li>\n"; ?>
+		<li><a href="gnome-nl.php">De community</a></li>
 		</ul>
 	</div>
 </div>
