@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gabber\n"
-"POT-Creation-Date: 2002-03-10 01:35-0500\n"
+"POT-Creation-Date: 2002-06-13 17:13-0400\n"
 "PO-Revision-Date: 2002-02-04 00:07+0800\n"
 "Last-Translator: Hasbullah Bin Pit <sebol@ikhlas.com>\n"
 "Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.net>\n"
@@ -35,12 +35,12 @@ msgid "Loading the list of agents..."
 msgstr "Memuatkan senarai agen..."
 
 #: src/AddContactDruid.cc:383 src/AddContactDruid.cc:531
-#: src/AgentInterface.cc:229 src/AgentInterface.cc:399
+#: src/AgentInterface.cc:243 src/AgentInterface.cc:420
 msgid "Error receiving XML for Agent Browser, see standard output."
 msgstr "Ralat menerima XML untuk Pelayar Agen, lihat output standard"
 
 #: src/AddContactDruid.cc:392 src/AddContactDruid.cc:540
-#: src/AgentInterface.cc:238
+#: src/AgentInterface.cc:252
 msgid "Error, this server does not support agents."
 msgstr "Ralat, pelayan ini tidak menyokong agen"
 
@@ -77,20 +77,20 @@ msgid "Search completed."
 msgstr "Pencarian selesai."
 
 #. Update dummy node text
-#: src/AgentInterface.cc:198
+#: src/AgentInterface.cc:212
 msgid "Error occurred querying this agent. Please try again later."
 msgstr "Ralat berlaku ketika mencari agen. Sila cuba lagi kelak."
 
-#: src/AgentInterface.cc:407
+#: src/AgentInterface.cc:428
 #, c-format
 msgid "Error, %s does not support agents."
 msgstr "Ralat, pelayan %s tidak menyokong agen."
 
-#: src/AgentInterface.cc:462
+#: src/AgentInterface.cc:483
 msgid "Loading registration information..."
 msgstr "Memuatkan maklumat pendaftaran..."
 
-#: src/AgentInterface.cc:587
+#: src/AgentInterface.cc:608
 #, c-format
 msgid ""
 "Error attempting to register with %s.\n"
@@ -101,15 +101,15 @@ msgstr ""
 "\n"
 "Agen samada mati atau tidak boleh dijangkau atau salah konfigurasi."
 
-#: src/AgentInterface.cc:649
+#: src/AgentInterface.cc:670
 msgid "Sending registration information..."
 msgstr "Mengirim maklumat pendaftaran..."
 
-#: src/AgentInterface.cc:662 src/AgentInterface.cc:667
+#: src/AgentInterface.cc:683 src/AgentInterface.cc:688
 msgid "Registration Failed"
 msgstr "Pendaftaran gagal"
 
-#: src/AgentInterface.cc:665
+#: src/AgentInterface.cc:686
 #, c-format
 msgid ""
 "Registration Failed:\n"
@@ -119,7 +119,7 @@ msgstr ""
 "%s"
 
 #. Subscribe to this new user
-#: src/AgentInterface.cc:726
+#: src/AgentInterface.cc:747
 msgid "Automatic subscription request."
 msgstr "Permintaan langganan automatik."
 
@@ -189,8 +189,8 @@ msgstr "Tandatangan kehadiran adalah sah"
 
 #. Set the tooltip as well
 #: src/ContactInfoInterface.cc:592 src/ContactInfoInterface.cc:593
-#: src/StatusInterface.cc:430 ui/ContactInfo_dlg.glade.h:29
-#: ui/Gabber_win.glade.h:38
+#: src/StatusInterface.cc:435 ui/ContactInfo_dlg.glade.h:29
+#: ui/Gabber_win.glade.h:37
 msgid "Presence is not signed"
 msgstr "Kehadiran tidak ditandatangani"
 
@@ -211,10 +211,10 @@ msgid "%s's Contact Information"
 msgstr "Maklumat Rakan %s"
 
 #: src/ContactInfoInterface.cc:647 src/ContactInterface.cc:88
-#: src/ContactInterface.cc:208 src/FTInterface.cc:97 src/FTInterface.cc:185
-#: src/FTInterface.cc:300 src/FTInterface.cc:436 src/GCInterface.cc:192
-#: src/GroupsInterface.cc:159 src/MessageViews.cc:413 src/MessageViews.cc:591
-#: src/MessageViews.cc:1122 src/MessageViews.cc:1746
+#: src/ContactInterface.cc:208 src/FTInterface.cc:94 src/FTInterface.cc:204
+#: src/FTInterface.cc:319 src/FTInterface.cc:455 src/GCInterface.cc:192
+#: src/GroupsInterface.cc:179 src/MessageViews.cc:415 src/MessageViews.cc:595
+#: src/MessageViews.cc:1119 src/MessageViews.cc:1739
 msgid " - Gabber"
 msgstr " - Gabber"
 
@@ -223,8 +223,8 @@ msgstr " - Gabber"
 msgid "%s's Computer"
 msgstr "Komputer %s"
 
-#: src/ContactInfoInterface.cc:1154 src/ContactInfoInterface.cc:1161
-#: src/ContactInfoInterface.cc:1165
+#: src/ContactInfoInterface.cc:1155 src/ContactInfoInterface.cc:1162
+#: src/ContactInfoInterface.cc:1166
 msgid "yes"
 msgstr "ya"
 
@@ -393,56 +393,61 @@ msgstr "Tatacara baru"
 msgid "Sorry, your server does not support Jabber filters."
 msgstr "Maaf, pelayan anda tidak menyokong tapisan Jabber."
 
-#: src/FTInterface.cc:97
+#: src/FTInterface.cc:94
 #, c-format
 msgid "Receive File(s) from %s"
 msgstr "Menerima fail daripada %s"
 
-#: src/FTInterface.cc:145
+#: src/FTInterface.cc:141
+#, c-format
+msgid "%s tried to offer files, but all the URLs sent are invalid."
+msgstr "%s cuba menawarkan fail, tetapi semua URL adalah tidak sah."
+
+#: src/FTInterface.cc:160
 msgid "Error, a file save path must be specified."
 msgstr "Ralat, path penyimpanan fail mesti dinyatakan."
 
-#: src/FTInterface.cc:185
+#: src/FTInterface.cc:204
 #, c-format
 msgid "Send File to %s"
 msgstr "Kirim Fail kepada %s"
 
-#: src/FTInterface.cc:280
+#: src/FTInterface.cc:299
 msgid "Waiting for connection..."
 msgstr "Menunggu sambungan..."
 
-#: src/FTInterface.cc:300
+#: src/FTInterface.cc:319
 #, c-format
 msgid "Sending File to %s"
 msgstr "Mengirim Fail kepada %s"
 
-#: src/FTInterface.cc:417
+#: src/FTInterface.cc:436
 msgid "Receiving from"
 msgstr "Menerima daripada"
 
 #. Show how big the file is
-#: src/FTInterface.cc:425 src/FTInterface.cc:428
+#: src/FTInterface.cc:444 src/FTInterface.cc:447
 msgid "Pending..."
 msgstr "Tertangguh..."
 
-#: src/FTInterface.cc:436
+#: src/FTInterface.cc:455
 #, c-format
 msgid "Receiving File from %s"
 msgstr "Menerima Fail daripada %s"
 
-#: src/FTInterface.cc:462
+#: src/FTInterface.cc:481
 msgid "Connected, requesting file..."
 msgstr "Tersambung, meminta fail..."
 
-#: src/FTInterface.cc:469
+#: src/FTInterface.cc:488
 msgid "Accepting connection..."
 msgstr "Menerima sambungan..."
 
-#: src/FTInterface.cc:488
+#: src/FTInterface.cc:507
 msgid "Error, transfer unexpectedly ended."
 msgstr "Ralat, pemindahan terhenti tidak diduga."
 
-#: src/FTInterface.cc:489
+#: src/FTInterface.cc:508
 msgid ""
 "The file transfer has ended unexpectedly.\n"
 "The received portion of the file has been saved."
@@ -450,46 +455,46 @@ msgstr ""
 "pemindahan fail terhenti tanpa diduga.\n"
 "bahagian fail yang diterima telahpun disimpan."
 
-#: src/FTInterface.cc:541
+#: src/FTInterface.cc:560
 msgid "Hide details"
 msgstr "Sorok huraian"
 
-#: src/FTInterface.cc:548
+#: src/FTInterface.cc:567
 msgid "Show details"
 msgstr "Papar huraian"
 
-#: src/FTInterface.cc:561
+#: src/FTInterface.cc:580
 msgid "Sending..."
 msgstr "Mengirim..."
 
-#: src/FTInterface.cc:590
+#: src/FTInterface.cc:609
 msgid "Receiving data..."
 msgstr "Menerima data..."
 
-#: src/FTInterface.cc:678
+#: src/FTInterface.cc:697
 msgid "Complete."
 msgstr "Selesai."
 
-#: src/FTInterface.cc:683
+#: src/FTInterface.cc:702
 msgid "Error, received more data than expected."
 msgstr "Ralat, menerima lebih data daripada yang dijangka."
 
 #. Update the speed
-#: src/FTInterface.cc:708
+#: src/FTInterface.cc:727
 #, c-format
 msgid "%s/second"
 msgstr "%s/saat"
 
-#: src/FTInterface.cc:715
+#: src/FTInterface.cc:734
 msgid "Under one minute remaining."
 msgstr "Baki kurang daripada satu minit."
 
-#: src/FTInterface.cc:721
+#: src/FTInterface.cc:740
 #, c-format
 msgid "%s hours, %s minutes remaining."
 msgstr "%s jam, %s minit baki."
 
-#: src/FTInterface.cc:725
+#: src/FTInterface.cc:744
 #, c-format
 msgid "%s minutes remaining."
 msgstr "%s minit baki."
@@ -508,7 +513,7 @@ msgstr "Anda telah dijemput ke %s"
 msgid "Group Chat Invitation from "
 msgstr "Jemputan Chat berkumpulan daripada "
 
-#: src/GabberApp.cc:238
+#: src/GabberApp.cc:240
 msgid ""
 "An error occurred while trying to parse the received XML.\n"
 "You have been disconnected."
@@ -516,7 +521,7 @@ msgstr ""
 "Terdapat ralat berlaku bila cuba menghantar XML yang diterima.\n"
 "Anda telah diputuskan."
 
-#: src/GabberApp.cc:241
+#: src/GabberApp.cc:243
 msgid ""
 "\n"
 "Attempting to reconnect..."
@@ -530,12 +535,12 @@ msgstr ""
 #. *     d = manage(Gnome::Dialogs::question_modal(question,
 #. *						     slot(this, &GabberWin::handle_disconnect_qry)));
 #.
-#: src/GabberApp.cc:250 src/GabberWin.cc:356 src/GabberWin.cc:479
+#: src/GabberApp.cc:252 src/GabberWin.cc:356 src/GabberWin.cc:479
 #: src/GabberWin.cc:641
 msgid "Logged out"
 msgstr "Terlogkeluar"
 
-#: src/GabberApp.cc:485 src/GabberApp.cc:651
+#: src/GabberApp.cc:481 src/GabberApp.cc:647
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -543,7 +548,7 @@ msgstr ""
 "Ralat, tak dapat memuatkan katalaluan.\n"
 "Sila cuba logmasuk lagi."
 
-#: src/GabberApp.cc:497
+#: src/GabberApp.cc:493
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -551,11 +556,11 @@ msgstr ""
 "Anda pasti ingin Gabber mencuba\n"
 "untuk mendaftar "
 
-#: src/GabberApp.cc:500
+#: src/GabberApp.cc:496
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:505
+#: src/GabberApp.cc:501
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -565,11 +570,11 @@ msgstr ""
 "Anda ingin Gabber cuba mencipta akaun\n"
 "baru pada pelayan Jabber yang dipilih?"
 
-#: src/GabberApp.cc:513
+#: src/GabberApp.cc:509
 msgid "Attempt to create a new user failed: \n"
 msgstr "Cubaan mencipta pengguna baru gagal: \n"
 
-#: src/GabberApp.cc:515
+#: src/GabberApp.cc:511
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -579,7 +584,7 @@ msgstr ""
 ". Sila pilih nama pengguna lain atau tentusahkan maklumat \n"
 "logmasuk anda."
 
-#: src/GabberApp.cc:522
+#: src/GabberApp.cc:518
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -589,11 +594,11 @@ msgstr ""
 "menyokong digest authentication.\n"
 "Cuba menyambung lagi dengan digest dimatikan."
 
-#: src/GabberApp.cc:697
+#: src/GabberApp.cc:693
 msgid "Transmitter error. Disconnected: "
 msgstr "Ralat penghantaran. Diputuskan:  "
 
-#: src/GabberApp.cc:803
+#: src/GabberApp.cc:799
 #, c-format
 msgid ""
 "Unfortunately, %s does not support Invisible.\n"
@@ -626,7 +631,7 @@ msgstr "Log untuk "
 msgid "Invalid"
 msgstr "Taksah"
 
-#: src/GabberUtility.cc:179 ui/Gabber_win.glade.h:34
+#: src/GabberUtility.cc:179 ui/Gabber_win.glade.h:33
 msgid "Offline"
 msgstr "LuarTalian"
 
@@ -697,22 +702,22 @@ msgstr "Tak dapat menyimpan fail. Sila cuba nama atau lokasi lain."
 msgid "%s from groupchat %s"
 msgstr "%s daripada kumpulan chat %s"
 
-#: src/GabberWidgets.cc:280 src/MessageViews.cc:814
+#: src/GabberWidgets.cc:280 src/MessageViews.cc:812
 #, c-format
 msgid "%s..."
 msgstr "%s..."
 
-#: src/GabberWidgets.cc:372 src/StatusInterface.cc:449
+#: src/GabberWidgets.cc:372 src/StatusInterface.cc:454
 msgid " [stopped]"
 msgstr " [terhenti]"
 
-#: src/GabberWidgets.cc:377 src/StatusInterface.cc:454
+#: src/GabberWidgets.cc:377 src/StatusInterface.cc:459
 msgid " [paused]"
 msgstr " [tertangguh] "
 
 #. Status Indicator(s)
 #: src/GabberWin.cc:140 src/GabberWin.cc:453 src/GabberWin.cc:853
-#: src/StatusInterface.cc:407 ui/Gabber_win.glade.h:11
+#: src/StatusInterface.cc:412 ui/Gabber_win.glade.h:11
 msgid "Disconnected"
 msgstr "Diputuskan"
 
@@ -795,16 +800,16 @@ msgstr "Menyambungan semula..."
 msgid "Logging in..."
 msgstr "Menglogmasuk..."
 
-#: src/GabberWin.cc:1071 src/RosterView.cc:920
+#: src/GabberWin.cc:1071 src/RosterView.cc:947
 msgid "Not in Roster"
 msgstr "Tiada di Roster"
 
-#: src/GroupsInterface.cc:159
+#: src/GroupsInterface.cc:179
 #, c-format
 msgid "Edit Groups for %s"
 msgstr "Edit Kumpulan untuk %s"
 
-#: src/MessageManager.cc:578
+#: src/MessageManager.cc:588
 msgid ""
 "An error occurred trying to sign your message.\n"
 "Send the message unsigned?"
@@ -812,7 +817,7 @@ msgstr ""
 "Ralat berlaku ketika cuba menandatangani mesej anda.\n"
 "Kirim tanda pandatangan?"
 
-#: src/MessageManager.cc:614 src/MessageManager.cc:637
+#: src/MessageManager.cc:624 src/MessageManager.cc:647
 msgid ""
 "An error occurred trying to encrypt your message.\n"
 "Send the message unencrypted?"
@@ -823,71 +828,75 @@ msgstr ""
 #. FIXME: implement grab_focus() in PrettyJID - focus goes to either _entJID or _cboResource->get_entry()
 #. 	  _entSendTo->grab_focus();
 #. Set the title
-#: src/MessageViews.cc:206 src/MessageViews.cc:409
+#: src/MessageViews.cc:207 src/MessageViews.cc:411
 #: ui/MessageSend_win.glade.h:7
 msgid "New Blank Message - Gabber"
 msgstr "Mesej ikosong baru - Gabber"
 
-#: src/MessageViews.cc:413
+#: src/MessageViews.cc:415
 #, c-format
 msgid "Message to %s"
 msgstr "Mesej kepada %s"
 
 #. Set the window title
-#: src/MessageViews.cc:591
+#: src/MessageViews.cc:595
 #, c-format
 msgid "Message from %s"
 msgstr "Mesej daripada %s"
 
 #. Set the tooltip
-#: src/MessageViews.cc:677 src/MessageViews.cc:1178 src/MessageViews.cc:1363
-#: ui/MessageRecv_win.glade.h:12 ui/OOOChat_win.glade.h:12
+#: src/MessageViews.cc:678 src/MessageViews.cc:1175 src/MessageViews.cc:1356
+#: ui/MessageRecv_win.glade.h:11 ui/OOOChat_win.glade.h:12
 msgid "This message is not encrypted"
 msgstr "Mesej ini tidak dienkripsikan"
 
 #. Set the tooltip
-#: src/MessageViews.cc:697 src/MessageViews.cc:1212
+#: src/MessageViews.cc:698 src/MessageViews.cc:1209
 msgid "Signature on message is invalid"
 msgstr "Tandatangan pada mesej tidah sah"
 
 #. Set the tooltip
-#: src/MessageViews.cc:707 src/MessageViews.cc:1203 src/MessageViews.cc:1369
+#: src/MessageViews.cc:708 src/MessageViews.cc:1200 src/MessageViews.cc:1362
 msgid "Signature on message is valid"
 msgstr "Tandatangan pada mesen adalah sah"
 
 #. Set the tooltip
-#: src/MessageViews.cc:754 src/MessageViews.cc:1253 src/MessageViews.cc:1375
+#: src/MessageViews.cc:755 src/MessageViews.cc:1250 src/MessageViews.cc:1368
 msgid "This message is encrypted"
 msgstr "Mesej ini terenkripsi"
 
 #. Create label
-#: src/MessageViews.cc:778
+#: src/MessageViews.cc:776
 msgid "Attached URL:"
 msgstr "URL disisip:"
 
-#: src/MessageViews.cc:1082 ui/OOOChat_win.glade.h:15
+#: src/MessageViews.cc:1079 ui/OOOChat_win.glade.h:15
 #, no-c-format
 msgid "You just received a message from %s."
 msgstr "Anda baru sahaja menerima mesej daripada %s."
 
 #. Set the window title
-#: src/MessageViews.cc:1122
+#: src/MessageViews.cc:1119
 #, c-format
 msgid "Chat with %s"
 msgstr "Chat dengan %s"
 
 #. Display the error
-#: src/MessageViews.cc:1554 src/MessageViews.cc:2174
+#: src/MessageViews.cc:1547 src/MessageViews.cc:2174
 msgid "Error"
 msgstr "Ralat"
 
-#: src/MessageViews.cc:1746
+#: src/MessageViews.cc:1739
 #, c-format
 msgid "Group Chat in %s"
 msgstr "Kumpulan Chat pada %s"
 
+#: src/MessageViews.cc:1832 ui/GCJoin_dlg.glade.h:9
+msgid "Server"
+msgstr "Pelayan"
+
 #. Setup a message object
-#: src/MessageViews.cc:1856 src/MessageViews.cc:2225
+#: src/MessageViews.cc:1855 src/MessageViews.cc:2225
 #, c-format
 msgid "%s has changed the subject to: %s"
 msgstr "%s telah menukar tajuk ke: %s"
@@ -917,7 +926,7 @@ msgstr "Tetapan Sambungan - Gabber"
 msgid "Log in - Gabber"
 msgstr "Log masuk - Gabber"
 
-#: src/PrefsInterface.cc:652
+#: src/PrefsInterface.cc:658
 msgid "Automatically away due to being idle"
 msgstr "Away automatik kerana leka"
 
@@ -934,21 +943,23 @@ msgid "Unable to open file. Please try another name or location."
 msgstr "Tak dapat membuka fail. SIla cuba nama atau lokasi lain."
 
 #. Update the statusbar and clear in 30 seconds
-#: src/RosterView.cc:406
+#: src/RosterView.cc:432
 msgid " is now online"
 msgstr " sekarang dalam talian"
 
 #. Update the statusbar and clear in 30 seconds
-#: src/RosterView.cc:426
+#: src/RosterView.cc:452
 msgid " is now offline"
 msgstr " sekarang diluar talian"
 
-#: src/RosterView.cc:662
+#. The jid is stored in the Gtk:: CTree in UTF-8,
+#. while the nickname is in the local encoding.
+#: src/RosterView.cc:689
 #, c-format
 msgid "Are you sure you want to remove %s from your roster?"
 msgstr "Anda pasti untuk membuang %s daripada roster?"
 
-#: src/RosterView.cc:722
+#: src/RosterView.cc:749
 #, c-format
 msgid "Would you also like to remove all contacts associated with %s?"
 msgstr "Adakah anda juga ingin membuang semua rakan berkait dengan %s?"
@@ -962,15 +973,15 @@ msgstr ""
 "Pengguna berikut ingin menambah anda dalam senarai rakan. Anda ingin "
 "Mengizinkannya?"
 
-#: src/StatusInterface.cc:411
+#: src/StatusInterface.cc:416
 msgid "Connected"
 msgstr "Tersambung"
 
-#: src/StatusInterface.cc:415
+#: src/StatusInterface.cc:420
 msgid "Connected using SSL"
 msgstr "Tersambung menggunakan SSL"
 
-#: src/StatusInterface.cc:425
+#: src/StatusInterface.cc:430
 msgid "Presence is signed"
 msgstr "Kehadiran ditandatangani"
 
@@ -1700,7 +1711,7 @@ msgstr "Jemputan Kumpulan Chat - Gabber"
 msgid "Join Room"
 msgstr "Sertai Bilik"
 
-#: ui/GCIRecv_dlg.glade.h:7 ui/MessageRecv_win.glade.h:11
+#: ui/GCIRecv_dlg.glade.h:7 ui/MessageRecv_win.glade.h:10
 msgid "Subject:"
 msgstr "Tajuk:"
 
@@ -1727,10 +1738,6 @@ msgstr "katalaluan:"
 #: ui/GCJoin_dlg.glade.h:8
 msgid "Room"
 msgstr "Bilik"
-
-#: ui/GCJoin_dlg.glade.h:9
-msgid "Server"
-msgstr "Pelayan"
 
 #: ui/GCJoin_dlg.glade.h:10
 msgid "The room or channel to join"
@@ -1772,7 +1779,7 @@ msgstr "Jangan Ganggu"
 msgid "Group Chat - Gabber"
 msgstr "Kumpulan Chat - Gabber"
 
-#: ui/GC_win.glade.h:7 ui/MessageRecv_win.glade.h:4
+#: ui/GC_win.glade.h:7 ui/MessageRecv_win.glade.h:3
 #: ui/MessageSend_win.glade.h:4 ui/OOOChat_win.glade.h:6
 msgid "History"
 msgstr "Sejarah"
@@ -1781,7 +1788,7 @@ msgstr "Sejarah"
 msgid "Invite Contacts..."
 msgstr "Jemput rakan..."
 
-#: ui/GC_win.glade.h:10 ui/MessageRecv_win.glade.h:6
+#: ui/GC_win.glade.h:10 ui/MessageRecv_win.glade.h:5
 #: ui/MessageSend_win.glade.h:6 ui/OOOChat_win.glade.h:9
 msgid "Message History..."
 msgstr "Sejarah Mesej..."
@@ -1794,11 +1801,11 @@ msgstr "Mesej..."
 msgid "Not Available"
 msgstr "Tiada"
 
-#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:35
+#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:34
 msgid "One-on-One Chat..."
 msgstr "Chat Satu-dgn-Satu..."
 
-#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:43
+#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:42
 msgid "Send Contacts..."
 msgstr "Kirim Rakan..."
 
@@ -1911,37 +1918,37 @@ msgstr "Lihat Agen/Sistem Permesejan Segera..."
 msgid "Edit Groups..."
 msgstr "Edit Kumpulan..."
 
-#: ui/Gabber_win.glade.h:13 ui/Login_dlg.glade.h:13 ui/Welcome_win.glade.h:4
+#: ui/Gabber_win.glade.h:13
+msgid "Edit Jabber Message _Rules..."
+msgstr "Edit _Tatacara Mesej Jabber..."
+
+#: ui/Gabber_win.glade.h:14 ui/Login_dlg.glade.h:13 ui/Welcome_win.glade.h:4
 msgid "Gabber"
 msgstr "Gabber"
 
-#: ui/Gabber_win.glade.h:14
+#: ui/Gabber_win.glade.h:15
 msgid "Gabber Manual"
 msgstr "Manual Gabber"
 
-#: ui/Gabber_win.glade.h:15
+#: ui/Gabber_win.glade.h:16
 msgid "Gabber Manual..."
 msgstr "Manual Gabber..."
 
-#: ui/Gabber_win.glade.h:16
+#: ui/Gabber_win.glade.h:17
 msgid "Gabber _Manual..."
 msgstr "_Manual Gabber..."
 
-#: ui/Gabber_win.glade.h:17
+#: ui/Gabber_win.glade.h:18
 msgid "Hide Main Window"
 msgstr "Sorok Tetingkap Utama"
 
-#: ui/Gabber_win.glade.h:18
+#: ui/Gabber_win.glade.h:19
 msgid "Hide _Agents"
 msgstr "Sorok _Agen"
 
-#: ui/Gabber_win.glade.h:19
+#: ui/Gabber_win.glade.h:20
 msgid "Hide _Offline Contacts"
 msgstr "Sorok Rakan _LuarTalian"
-
-#: ui/Gabber_win.glade.h:20
-msgid "Jabber Message _Rules..."
-msgstr "_Tataca_ra Mesej Jabber..."
 
 #: ui/Gabber_win.glade.h:21
 msgid "Join Group Chat"
@@ -1984,40 +1991,40 @@ msgid "Manage Groups..."
 msgstr "Urus Kumpulan..."
 
 #: ui/Gabber_win.glade.h:32
-msgid "New Blank _Message..."
-msgstr "_Mesej kosong yang baru..."
-
-#: ui/Gabber_win.glade.h:33
 msgid "Number of online contacts"
 msgstr "Bilangan rakan dalam talian"
 
-#: ui/Gabber_win.glade.h:36
+#: ui/Gabber_win.glade.h:35
 msgid "Preferences..."
 msgstr "Keutamaan..."
 
-#: ui/Gabber_win.glade.h:37
+#: ui/Gabber_win.glade.h:36
 msgid "Presence"
 msgstr "Kehadiran"
 
-#: ui/Gabber_win.glade.h:39
+#: ui/Gabber_win.glade.h:38
 msgid "Queued messages"
 msgstr "Mesej tertangguh"
 
-#: ui/Gabber_win.glade.h:40
+#: ui/Gabber_win.glade.h:39
 msgid "Remove Agent"
 msgstr "Buang Agen"
 
-#: ui/Gabber_win.glade.h:41
+#: ui/Gabber_win.glade.h:40
 msgid "Remove Contact"
 msgstr "Padam Rakan"
 
-#: ui/Gabber_win.glade.h:42
+#: ui/Gabber_win.glade.h:41
 msgid "Resubscribe"
 msgstr "Ulanglanggan"
 
-#: ui/Gabber_win.glade.h:44
+#: ui/Gabber_win.glade.h:43
 msgid "Send File..."
 msgstr "Kirim Fail..."
+
+#: ui/Gabber_win.glade.h:44
+msgid "Send _Message..."
+msgstr "Kirim _Mesej..."
 
 #: ui/Gabber_win.glade.h:45
 msgid "Show Main Window"
@@ -2043,7 +2050,7 @@ msgstr "Papar bar menu"
 msgid "Show presence indicator"
 msgstr "Papar penunjuk kehadiran"
 
-#: ui/Gabber_win.glade.h:51 ui/MessageRecv_win.glade.h:14
+#: ui/Gabber_win.glade.h:51 ui/MessageRecv_win.glade.h:13
 #: ui/MessageSend_win.glade.h:13 ui/OOOChat_win.glade.h:13
 #: ui/SubscriptionRequest_dlg.glade.h:10
 msgid "View Contact Info..."
@@ -2054,56 +2061,56 @@ msgid "View History..."
 msgstr "Lihat Sejarah..."
 
 #: ui/Gabber_win.glade.h:53
+msgid "_Actions"
+msgstr "_Aksi"
+
+#: ui/Gabber_win.glade.h:54
 msgid "_Add Contact..."
 msgstr "T_ambah Rakan..."
 
-#: ui/Gabber_win.glade.h:54
+#: ui/Gabber_win.glade.h:55
 msgid "_Browse Agents/IM Systems..."
 msgstr "_Lihat Agen/Sistem permesejan Segera..."
 
-#: ui/Gabber_win.glade.h:55
+#: ui/Gabber_win.glade.h:56
 msgid "_Connection Settings..."
 msgstr "Tetapan _Sambungan..."
 
-#: ui/Gabber_win.glade.h:56
+#: ui/Gabber_win.glade.h:57
 msgid "_Debug"
 msgstr "_Nyahpepijat"
 
-#: ui/Gabber_win.glade.h:57
+#: ui/Gabber_win.glade.h:58
 msgid "_Export Roster..."
 msgstr "_Eksport Roster..."
 
-#: ui/Gabber_win.glade.h:58
+#: ui/Gabber_win.glade.h:59
 msgid "_Gabber"
 msgstr "_Gabber"
 
-#: ui/Gabber_win.glade.h:59
+#: ui/Gabber_win.glade.h:60
 msgid "_Ignore List..."
 msgstr "_Abaikan Senarai..."
 
-#: ui/Gabber_win.glade.h:60
+#: ui/Gabber_win.glade.h:61
 msgid "_Import Roster..."
 msgstr "_Import Roster..."
 
-#: ui/Gabber_win.glade.h:61
+#: ui/Gabber_win.glade.h:62
 msgid "_Log in..."
 msgstr "_Log masuk..."
 
-#: ui/Gabber_win.glade.h:62
+#: ui/Gabber_win.glade.h:63
 msgid "_My Information..."
 msgstr "_Maklumat saya..."
 
-#: ui/Gabber_win.glade.h:63
+#: ui/Gabber_win.glade.h:64
 msgid "_Raw XML Input..."
 msgstr "Input XML _rawak..."
 
-#: ui/Gabber_win.glade.h:64
+#: ui/Gabber_win.glade.h:65
 msgid "_Roster"
 msgstr "_Roster"
-
-#: ui/Gabber_win.glade.h:65
-msgid "_Services"
-msgstr "_Servis"
 
 #: ui/Ignore_dlg.glade.h:1
 msgid "Add a JabberID"
@@ -2297,32 +2304,31 @@ msgstr "Namapengg_una:"
 msgid "jabber.com"
 msgstr "jabber.com"
 
-#: ui/MessageRecv_win.glade.h:3 ui/MessageSend_win.glade.h:3
-#: ui/OOOChat_win.glade.h:5
-msgid "Encrypt this message"
-msgstr "Enkripsikan mesej ini"
-
-#: ui/MessageRecv_win.glade.h:5 ui/MessageSend_win.glade.h:5
+#: ui/MessageRecv_win.glade.h:4 ui/MessageSend_win.glade.h:5
 #: ui/OOOChat_win.glade.h:7
 msgid "Info"
 msgstr "Maklumat"
 
-#: ui/MessageRecv_win.glade.h:8
+#: ui/MessageRecv_win.glade.h:7
 #, no-c-format
 msgid "Message from %s - Gabber"
 msgstr "Mesej drpd. %s - Gabber"
 
-#: ui/MessageRecv_win.glade.h:9
+#: ui/MessageRecv_win.glade.h:8
 msgid "Reply..."
 msgstr "Balas..."
 
-#: ui/MessageRecv_win.glade.h:10
+#: ui/MessageRecv_win.glade.h:9
 msgid "Sender:"
 msgstr "Pengirim:"
 
-#: ui/MessageRecv_win.glade.h:13
+#: ui/MessageRecv_win.glade.h:12
 msgid "Time:"
 msgstr "Masa:"
+
+#: ui/MessageSend_win.glade.h:3 ui/OOOChat_win.glade.h:5
+msgid "Encrypt this message"
+msgstr "Enkripsikan mesej ini"
 
 #: ui/MessageSend_win.glade.h:9
 msgid "Send _to:"
@@ -2827,22 +2833,26 @@ msgid "_Interface"
 msgstr "_Antaramuka"
 
 #: ui/Prefs_win.glade.h:93
+msgid "_Keyserver:"
+msgstr "_Pelayankekunci:"
+
+#: ui/Prefs_win.glade.h:94
 msgid "_Logs"
 msgstr "_Log"
 
-#: ui/Prefs_win.glade.h:94
+#: ui/Prefs_win.glade.h:95
 msgid "_Messages and Chats"
 msgstr "_mesej dan Chat"
 
-#: ui/Prefs_win.glade.h:95 ui/Status_dlg.glade.h:6
+#: ui/Prefs_win.glade.h:96 ui/Status_dlg.glade.h:6
 msgid "_Status:"
 msgstr "_Status:"
 
-#: ui/Prefs_win.glade.h:96
+#: ui/Prefs_win.glade.h:97
 msgid "minute(s)"
 msgstr "minit"
 
-#: ui/Prefs_win.glade.h:97
+#: ui/Prefs_win.glade.h:98
 msgid "~/.Gabber/"
 msgstr "~/.Gabber/"
 
@@ -3217,6 +3227,12 @@ msgstr "http://www.jabberview.com/"
 #: ui/Welcome_win.glade.h:46
 msgid "jabber.org"
 msgstr "jabber.org"
+
+#~ msgid "New Blank _Message..."
+#~ msgstr "_Mesej kosong yang baru..."
+
+#~ msgid "_Services"
+#~ msgstr "_Servis"
 
 #~ msgid "/me has changed the subject to: "
 #~ msgstr "/me telah menukar tajuk kepada: "
