@@ -6,45 +6,41 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Firestarter 0.4.1\n"
-"POT-Creation-Date: 2000-08-22 17:29+0300\n"
-"PO-Revision-Date: 2000-08-22 16:50+0200\n"
+"POT-Creation-Date: 2000-08-31 00:02+0200\n"
+"PO-Revision-Date: 2000-08-31 00:13+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/firestarter.c:90
+#: src/firestarter.c:91
 msgid "Firewall running"
 msgstr "Brandväggen aktiv"
 
-#: src/firestarter.c:93
+#: src/firestarter.c:94
 msgid "Firewall stopped"
 msgstr "Brandväggen stoppad"
 
-#: src/firestarter.c:205
+#: src/firestarter.c:206
 msgid "Select file to save log to"
 msgstr "Välj fil att spara loggen i"
 
-#: src/firestarter.c:229 src/firestarter.c:255
+#: src/firestarter.c:230 src/firestarter.c:256
 msgid "You must be root to manipulate the firewall."
 msgstr "Du måste vara root för att kunna ändra i brandväggen."
 
-#: src/firestarter.c:237
+#: src/firestarter.c:238
 msgid "Firewall stopped, network traffic is now flowing freely\n"
 msgstr "Brandväggen är stoppad, nätverkstrafiken flyter nu fritt\n"
 
-#: src/firestarter.c:261
+#: src/firestarter.c:262
 msgid "Firewall script restarted\n"
 msgstr "Brandväggsskriptet omstartat\n"
 
-#: src/firestarter.c:352
-msgid ""
-"An all-in-one Linux firewall utility for GNOME.\n"
-"http://firestarter.sourceforge.net"
-msgstr ""
-"Ett allt-i-ett-verktyg för Linuxbrandväggar i GNOME.\n"
-"http://firestarter.sourceforge.net"
+#: src/firestarter.c:353
+msgid "An all-in-one Linux firewall utility for GNOME"
+msgstr "Ett allt-i-ett-verktyg för Linuxbrandväggar i GNOME"
 
 #: src/firestarter.c:506
 msgid "Port"
@@ -78,20 +74,20 @@ msgstr "Öppna tjänsten åt datorn"
 msgid "Open service to anyone"
 msgstr "Öppna tjänsten åt alla"
 
-#: src/firestarter.c:546
+#: src/firestarter.c:544
 msgid "Firewall hits"
 msgstr "Brandväggsträffar"
 
 #. set up the clists on the dynamic rules page
-#: src/firestarter.c:555
+#: src/firestarter.c:553
 msgid "Dynamic rules"
 msgstr "Dynamiska regler"
 
-#: src/firestarter.c:588
+#: src/firestarter.c:586
 msgid "Logfile \""
 msgstr "Loggfilen \""
 
-#: src/firestarter.c:589
+#: src/firestarter.c:587
 msgid ""
 "\" not found or access denied.\n"
 "Firewall log monitoring disabled.\n"
@@ -103,7 +99,7 @@ msgstr ""
 "\n"
 "Du kan ändra sökvägen till loggfilen i inställningarna."
 
-#: src/druid.c:96
+#: src/druid.c:72
 msgid ""
 "The external and internal network interfaces\n"
 "can't be the same. Please change one of them,\n"
@@ -113,7 +109,55 @@ msgstr ""
 "kan inte vara samma. Var vänlig och ändra en av\n"
 "dem, eller deaktivera IP-maskerad."
 
+#: src/druid.c:109
+msgid ""
+"Do you use IP Masquerading on your LAN, allowing all the machines on your "
+"network\n"
+"to communicate with the Internet via a single IP address?"
+msgstr ""
+"Använder du IP-maskerad på ditt lokala nätverk, och låter på det sättet alla "
+"maskiner\n"
+"på ditt nätverk kommunicera med Internet med en enda IP-adress?"
+
+#: src/druid.c:119
+msgid "No, I do not use IP Masquerading on my LAN"
+msgstr "Nej, jag använder inte IP-maskerad på mitt lokala nätverk"
+
+#: src/druid.c:124
+msgid ""
+"Yes, this machine translates the IP addresses of my LAN for the Internet"
+msgstr ""
+"Ja, den här maskinen översätter IP-adresserna på mitt lokala nätverk för "
+"Internet"
+
+#: src/druid.c:142
+msgid "Select your internal network interface:"
+msgstr "Välj ditt interna nätverksgränssnitt:"
+
+#: src/druid.c:154
+msgid "Autodetect internal network IP range"
+msgstr "Autodetektera det interna IP-intervallet"
+
+#: src/druid.c:159
+msgid "Specify internal network IP range manually"
+msgstr "Ange IP-intervallet för det interna nätverket manuellt."
+
+#: src/druid.c:171
+msgid "Enter the your internal network address range:"
+msgstr "Ange ditt interna nätverks adressintervall:"
+
 #: src/druid.c:182
+msgid ""
+"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
+"common\n"
+"IP range reserved for internal networks and should work for most people."
+msgstr ""
+"Nätverksintervallet är angivet på formen adress/mask. 192.168.1.0/24 är det "
+"vanligaste\n"
+"IP-intervallet som är reserverat för interna nätverk, och bör fungera för "
+"de flesta."
+
+#: src/druid.c:220
 msgid ""
 "Choose the device you connect to the Internet with.\n"
 "\n"
@@ -127,106 +171,11 @@ msgstr ""
 "ISDN-anslutning eller en Ethernet-anslutning bör du välja ippp0 respektive\n"
 "eth0."
 
-#: src/druid.c:194
+#: src/druid.c:234
 msgid "Detected device(s):"
 msgstr "Upptäckta enheter:"
 
-#: src/druid.c:199
-msgid ""
-"Select your network device from the dropdown list. Go with the default if "
-"unsure."
-msgstr ""
-"Välj din nätverksenhet från rullgardinsmenyn. Använd standardvärdet om du är "
-"osäker."
-
-#: src/druid.c:208
-msgid "Start Firestarter on PPP connect"
-msgstr "Starta Firestarter vid PPP-anslutning"
-
-#: src/druid.c:210
-msgid ""
-"Check this option and the program will start when you dial your Internet "
-"service provider.Only available when using a modem."
-msgstr ""
-"Om du slår på det här alternativet kommer programmet att startas när du "
-"ringer upp din Internetleverantör. Endast tillgängligt om du använder modem."
-
-#: src/druid.c:224
-msgid "IP address is assigned via DHCP"
-msgstr "IP-adressen tilldelas via DHCP"
-
-#: src/druid.c:226
-msgid ""
-"Check this option if you need to connect to a DHCP server. Cable modem users "
-"should check this."
-msgstr ""
-"Slå på det här alternativet om du måste ansluta till en DHCP-server. "
-"Använder du kabelmodem bör du slå på detta alternativ."
-
-#: src/druid.c:257
-msgid ""
-"Do you use IP Masquerading on your LAN, allowing all the machines on your "
-"network\n"
-"to communicate with the Internet via a single IP address?"
-msgstr ""
-"Använder du IP-maskerad på ditt lokala nätverk, och låter på det sättet alla "
-"maskiner\n"
-"på ditt nätverk kommunicera med Internet med en enda IP-adress?"
-
-#: src/druid.c:266
-msgid "No, I do not use IP Masquerading on my LAN"
-msgstr "Nej, jag använder inte IP-maskerad på mitt lokala nätverk"
-
-#: src/druid.c:271
-msgid ""
-"Yes, this machine translates the IP addresses of my LAN for the Internet"
-msgstr ""
-"Ja, den här maskinen översätter IP-adresserna på mitt lokala nätverk för "
-"Internet"
-
-#: src/druid.c:289
-msgid "Select your internal network interface:"
-msgstr "Välj ditt interna nätverksgränssnitt:"
-
-#: src/druid.c:297
-msgid ""
-"Select your internal network device from the dropdown list. Go with the "
-"default if unsure."
-msgstr ""
-"Välj ditt interna nätverksgränssnitt från rullgardinsmenyn. Använd "
-"standardalternativet om du är osäker."
-
-#: src/druid.c:305
-msgid "Autodetect internal network IP range"
-msgstr "Autodetektera det interna IP-intervallet"
-
-#: src/druid.c:307
-msgid "Select this and the IP range of your LAN is autodetected."
-msgstr "Välj detta för att autodetektera IP-intervallet i ditt lokala nätverk."
-
-#: src/druid.c:312
-msgid "Specify internal network IP range manually"
-msgstr "Ange IP-intervallet för det interna nätverket manuellt."
-
-#: src/druid.c:314
-msgid "Select this only if the autodetection fails."
-msgstr "Välj endast detta om autodetekteringen misslyckas."
-
-#: src/druid.c:326
-msgid "Enter the your internal network address range:"
-msgstr "Ange ditt interna nätverks adressintervall:"
-
-#: src/druid.c:338
-msgid ""
-"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
-"most\n"
-"common IP range reserved for internal networks."
-msgstr ""
-"Nätverksintervallet är angivet på formen adress/mask. 192.168.1.0/24 är det "
-"vanligaste\n"
-"IP-intervallet som är reserverat för interna nätverk."
-
-#: src/druid.c:367
+#: src/druid.c:262
 msgid ""
 "Do you run server software on your machine and want other people to have "
 "access\n"
@@ -236,28 +185,28 @@ msgstr ""
 "till\n"
 "nätverkstjänsterna du erbjuder?"
 
-#: src/druid.c:375
+#: src/druid.c:271
 msgid "No, I do not run any public network services on my machine"
 msgstr "Nej, jag kör inga öppna nätverkstjänster på min maskin"
 
-#: src/druid.c:380
+#: src/druid.c:276
 msgid "Yes, I run the following services on my machine:"
 msgstr "Ja, jag kör följande tjänster på min maskin:"
 
-#: src/druid.c:492
+#: src/druid.c:388
 msgid "You must be root to use the Firestarter wizard."
 msgstr "Du måste vara root för att kunna använda Firestarter-guiden."
 
-#: src/druid.c:497
+#: src/druid.c:393
 msgid "Firestarter Firewall Wizard"
 msgstr "Firestarter-brandväggsguiden"
 
 #. Create the basic druid pages
-#: src/druid.c:513
+#: src/druid.c:409
 msgid "Firestarter Wizard"
 msgstr "Firestarter-guiden"
 
-#: src/druid.c:514
+#: src/druid.c:410
 msgid ""
 "Welcome to the Firestarter Firewall Wizard\n"
 "\n"
@@ -273,23 +222,23 @@ msgstr ""
 "\n"
 "\n"
 
-#: src/druid.c:520
+#: src/druid.c:416
 msgid "Choose your external interface"
 msgstr "Välj ditt externa gränssnitt"
 
-#: src/druid.c:521
+#: src/druid.c:417
 msgid "IP Masquerade setup"
 msgstr "IP-maskeradsinställningar"
 
-#: src/druid.c:522
+#: src/druid.c:418
 msgid "Choose allowed services"
 msgstr "Välj tillåtna tjänster"
 
-#: src/druid.c:524
+#: src/druid.c:420
 msgid "Wizard done"
 msgstr "Guiden färdig"
 
-#: src/druid.c:525
+#: src/druid.c:421
 msgid ""
 "The Firestarter wizard is done gathering the necessary data.\n"
 "Click the finish button to start the firewall.\n"
@@ -299,103 +248,53 @@ msgstr ""
 "Klicka på knappen \"Slutför\" för att aktivera brandväggen.\n"
 "\n"
 
-#: src/preferences.c:85
+#: src/preferences.c:89
+msgid "General"
+msgstr "Allmänt"
+
+#: src/preferences.c:97
 msgid "Firewall syslog file:"
 msgstr "Brandväggens syslog-fil:"
 
-#: src/preferences.c:92
-msgid ""
-"Enther the path to the file the syslog daemon logs to. This is almost always "
-"/var/log/messages."
-msgstr ""
-"Ange sökvägen till den fil som syslog-demonen loggar till. Detta brukar "
-"nästan alltid vara /var/log/messages."
-
-#.
 #. label = gtk_label_new _("Firewall script file:");
 #. gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
 #. gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2,
 #. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
 #.
 #. scriptentry = gtk_entry_new ();
-#. gtk_tooltips_set_tip (ttips, scriptentry, _(
-#. "Enther the path to the firewall script. "
-#. "This is /etc/firestarter/firewall.sh by default."), "");
 #. gtk_entry_set_text (GTK_ENTRY (scriptentry),
 #. gnome_config_get_string ("/firestarter/Files/scriptfile=/usr/local/firestarter/firewall.sh"));
 #. gtk_table_attach (GTK_TABLE (table), scriptentry, 1, 2, 1, 2,
 #. GTK_FILL, GTK_FILL, GNOME_PAD, GNOME_PAD_SMALL);
 #.
-#: src/preferences.c:115
+#: src/preferences.c:121
 msgid "Start firewall on program startup"
 msgstr "Aktivera brandväggen vid programstart"
 
-#: src/preferences.c:117
-msgid ""
-"Check this and the firewall will be restarted each time the program starts. "
-"Enabled by default."
-msgstr ""
-"Om du slår på detta kommer brandväggen att startas om varje gång programmet "
-"startar. Påslaget som standard."
-
-#: src/preferences.c:123
+#: src/preferences.c:125
 msgid "Stop firewall on program exit"
 msgstr "Stoppa brandväggen vid programslut"
 
-#: src/preferences.c:125
-msgid ""
-"Check this and the firewall will be stopped when you exit Firestarter. "
-"Enabled by default."
-msgstr ""
-"Om du slår på detta kommer brandväggen att stoppas när du avslutar "
-"Firestarter. Påslaget som standard."
-
-#: src/preferences.c:131
+#: src/preferences.c:129
 msgid "Exit program when window is closed (otherwise hide)"
 msgstr "Avsluta programmet när fönstret stängs (göm annars)"
 
 #: src/preferences.c:133
-msgid ""
-"By default when you close the program window the program is merely hidden, "
-"you can then make it visible again by clicking on the status button."
-msgstr ""
-"Som standard göms bara fönstret när du stänger programfönstret. Du kan göra "
-"det synligt igen genom att klicka på statusknappen."
-
-#: src/preferences.c:139
 msgid "Start hidden"
 msgstr "Starta gömt"
 
-#: src/preferences.c:141
-msgid "Check this and the firewall will start hidden. Disabled by default."
-msgstr ""
-"Om du slår på detta kommer brandväggen att startas gömd. Deaktiverat som "
-"standard."
-
-#: src/preferences.c:146
+#: src/preferences.c:137
 msgid "Remove identical firewall hit lines"
 msgstr "Ta bort identiska rader med brandväggsträffar"
 
-#: src/preferences.c:148
-msgid ""
-"Check this and the firewall hit log will filter out identical lines. Enabled "
-"by deault."
-msgstr ""
-"Om du slår på detta kommer träffloggen i brandväggen att filtrera bort "
-"identiska rader. Påslaget som standard."
-
-#: src/preferences.c:219
-msgid "Firestarter: Preferences"
-msgstr "Firestarter: Inställningar"
-
-#: src/scriptwriter.c:318
+#: src/scriptwriter.c:292
 #, c-format
 msgid "Firewall started, firewall script saves as %s\n"
 msgstr "Brandväggen aktiverad, brandväggsskriptet sparas som %s\n"
 
-#: src/service.c:40
-msgid "unknown"
-msgstr "okänd"
+#: src/service.c:99
+msgid "Unknown"
+msgstr "Okänd"
 
 #: src/menus.c:23 src/menus.c:34
 msgid "R_estart firewall"
@@ -477,8 +376,89 @@ msgstr "Ta bort alla regler i denna grupp"
 msgid "Remove all rules in all groups"
 msgstr "Ta bort alla regler i alla grupper"
 
-#~ msgid "General"
-#~ msgstr "Allmänt"
+#~ msgid ""
+#~ "Select your network device from the dropdown list. Go with the default if "
+#~ "unsure."
+#~ msgstr ""
+#~ "Välj din nätverksenhet från rullgardinsmenyn. Använd standardvärdet om du är "
+#~ "osäker."
+
+#~ msgid "Start Firestarter on PPP connect"
+#~ msgstr "Starta Firestarter vid PPP-anslutning"
+
+#~ msgid ""
+#~ "Check this option and the program will start when you dial your Internet "
+#~ "service provider.Only available when using a modem."
+#~ msgstr ""
+#~ "Om du slår på det här alternativet kommer programmet att startas när du "
+#~ "ringer upp din Internetleverantör. Endast tillgängligt om du använder modem."
+
+#~ msgid "IP address is assigned via DHCP"
+#~ msgstr "IP-adressen tilldelas via DHCP"
+
+#~ msgid ""
+#~ "Check this option if you need to connect to a DHCP server. Cable modem users "
+#~ "should check this."
+#~ msgstr ""
+#~ "Slå på det här alternativet om du måste ansluta till en DHCP-server. "
+#~ "Använder du kabelmodem bör du slå på detta alternativ."
+
+#~ msgid ""
+#~ "Select your internal network device from the dropdown list. Go with the "
+#~ "default if unsure."
+#~ msgstr ""
+#~ "Välj ditt interna nätverksgränssnitt från rullgardinsmenyn. Använd "
+#~ "standardalternativet om du är osäker."
+
+#~ msgid "Select this and the IP range of your LAN is autodetected."
+#~ msgstr ""
+#~ "Välj detta för att autodetektera IP-intervallet i ditt lokala nätverk."
+
+#~ msgid "Select this only if the autodetection fails."
+#~ msgstr "Välj endast detta om autodetekteringen misslyckas."
+
+#~ msgid ""
+#~ "Enther the path to the file the syslog daemon logs to. This is almost always "
+#~ "/var/log/messages."
+#~ msgstr ""
+#~ "Ange sökvägen till den fil som syslog-demonen loggar till. Detta brukar "
+#~ "nästan alltid vara /var/log/messages."
+
+#~ msgid ""
+#~ "Check this and the firewall will be restarted each time the program starts. "
+#~ "Enabled by default."
+#~ msgstr ""
+#~ "Om du slår på detta kommer brandväggen att startas om varje gång programmet "
+#~ "startar. Påslaget som standard."
+
+#~ msgid ""
+#~ "Check this and the firewall will be stopped when you exit Firestarter. "
+#~ "Enabled by default."
+#~ msgstr ""
+#~ "Om du slår på detta kommer brandväggen att stoppas när du avslutar "
+#~ "Firestarter. Påslaget som standard."
+
+#~ msgid ""
+#~ "By default when you close the program window the program is merely hidden, "
+#~ "you can then make it visible again by clicking on the status button."
+#~ msgstr ""
+#~ "Som standard göms bara fönstret när du stänger programfönstret. Du kan göra "
+#~ "det synligt igen genom att klicka på statusknappen."
+
+#~ msgid "Check this and the firewall will start hidden. Disabled by default."
+#~ msgstr ""
+#~ "Om du slår på detta kommer brandväggen att startas gömd. Deaktiverat som "
+#~ "standard."
+
+#~ msgid ""
+#~ "Check this and the firewall hit log will filter out identical lines. Enabled "
+#~ "by deault."
+#~ msgstr ""
+#~ "Om du slår på detta kommer träffloggen i brandväggen att filtrera bort "
+#~ "identiska rader. Påslaget som standard."
+
+#~ msgid "Firestarter: Preferences"
+#~ msgstr "Firestarter: Inställningar"
 
 #~ msgid "Firewall script file:"
 #~ msgstr "Skriptfil för brandvägg:"
