@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm 0.4.4\n"
-"POT-Creation-Date: 2001-02-09 15:38+0100\n"
+"POT-Creation-Date: 2001-01-21 23:40+0000\n"
 "PO-Revision-Date: 2001-02-12 16:12+01:00\n"
 "Last-Translator: Antonio de la Torre <adltorre@terra.es>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -26,12 +26,12 @@ msgstr "URL"
 #: applet/dialog-add.c:69 applet/dialog-add.c:92 applet/dialog-add.c:313
 #: applet/dialog-add.c:343 applet/dialog-new.c:114 src/dialog-add.c:59
 #: src/dialog-add.c:75 src/dialog-add.c:267 src/dialog-add.c:285
-#: src/dialog-new.c:96 src/dialog-numdown.c:161 src/main.c:334
+#: src/dialog-new.c:80 src/dialog-numdown.c:161 src/main.c:334
 msgid "URL:\n"
 msgstr "URL:\n"
 
 #: applet/dialog-add.c:98 applet/dialog-add.c:350 applet/dialog-new.c:115
-#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:97
+#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:81
 #: src/dialog-numdown.c:162 src/main.c:336
 msgid "already in the list"
 msgstr "ya está en la lista"
@@ -379,11 +379,7 @@ msgstr "GTM - Directorio de Descarga"
 msgid "Suggest directory by pattern matching"
 msgstr "Sugerir un directorio por patrones coincidentes"
 
-#: src/dialog-common-elements.c:192
-msgid "No directory matched."
-msgstr "Sin coincidencia de directorio"
-
-#: applet/dialog-new.c:75 src/dialog-common-elements.c:212
+#: applet/dialog-new.c:75 src/dialog-common-elements.c:198
 msgid "Multiple download not implemented yet"
 msgstr "Descarga multiple aún no implementada"
 
@@ -399,16 +395,16 @@ msgstr ""
 "The GNOME transfer manager.\n"
 "http://gtm.sourceforge.net/"
 
-#: src/dialog-new.c:52
-msgid "Invalid URL."
-msgstr "URL no válida."
+#: applet/dialog-new.c:53 src/dialog-new.c:54 src/dialog-prop.c:62
+msgid "Invalid URL"
+msgstr "URL no válida"
 
 #. URL
-#: applet/dialog-new.c:189 src/dialog-new.c:161
+#: applet/dialog-new.c:189 src/dialog-new.c:141
 msgid "Please enter URL of the file to download:"
 msgstr "Por favor introduzca la URL del fichero a descargar:"
 
-#: src/dialog-new.c:186
+#: src/dialog-new.c:168
 msgid "GTM - New file to download"
 msgstr "GTM - Nuevo fichero a descargar"
 
@@ -422,36 +418,42 @@ msgstr "Número menor es mejor que número mayor."
 
 #: src/dialog-numdown.c:309
 msgid "Can't suggest directory as it would not be the same for all URLs."
-msgstr "No se puede sugerir directorio por lo que no sería el mismo para todas las URLs"
+msgstr ""
+"No se puede sugerir directorio por lo que no sería el mismo para todas las "
+"URLs"
+
+#: src/dialog-numdown.c:319
+msgid "No URLs match a directory."
+msgstr ""
 
 #. Pre-URL
-#: src/dialog-numdown.c:346
+#: src/dialog-numdown.c:352
 msgid "Part of URL before number:"
 msgstr "Parte de URL antes del número"
 
 #. Numbers From/To
-#: src/dialog-numdown.c:356
+#: src/dialog-numdown.c:362
 msgid "Numbers:"
 msgstr "Números:"
 
-#: src/dialog-numdown.c:363
+#: src/dialog-numdown.c:369
 msgid "From: "
 msgstr "Desde:"
 
-#: src/dialog-numdown.c:376
+#: src/dialog-numdown.c:382
 msgid "To: "
 msgstr "A: "
 
-#: src/dialog-numdown.c:394
+#: src/dialog-numdown.c:400
 msgid "Number of digits to pad leading zeroes to:"
 msgstr "Número de dígitos para rellenar los ceros del encabezamiento"
 
 #. Post-URL
-#: src/dialog-numdown.c:409
+#: src/dialog-numdown.c:415
 msgid "Part of URL after number:"
 msgstr "Parte de URL despues del número"
 
-#: src/dialog-numdown.c:433
+#: src/dialog-numdown.c:439
 msgid "GTM - Numeric Download"
 msgstr "GTM - Descarga Numérica"
 
@@ -549,7 +551,8 @@ msgstr "Usar FTP pasivo"
 
 #: applet/dialog-prop.c:202 src/dialog-prefs.c:633
 msgid "Dialog new or dialog add changes default download dir"
-msgstr "Directorio de descarga por defecto de dialogo nuevo o dialogo añadir cambios"
+msgstr ""
+"Directorio de descarga por defecto de dialogo nuevo o dialogo añadir cambios"
 
 #: src/dialog-prefs.c:640
 msgid "Confirm remove when transfer incomplete"
@@ -629,10 +632,6 @@ msgstr "Pantalla"
 msgid "Sound"
 msgstr "Sonido"
 
-#: applet/dialog-new.c:53 src/dialog-prop.c:62
-msgid "Invalid URL"
-msgstr "URL no válida"
-
 #: src/dialog-prop.c:77
 msgid "Old URL filename must be the same on the new URL"
 msgstr "Nombre de archivo de la antigua URL debe ser el mismo de la nueva"
@@ -679,27 +678,27 @@ msgstr "Restante (kB)"
 msgid "Progress"
 msgstr "Progreso"
 
-#: src/wget-log.c:89
+#: src/wget-log.c:88
 msgid "Socket error when downloading URL:\n"
 msgstr "Error de socket al descargar URL:\n"
 
-#: src/wget-log.c:92 src/wget-log.c:98
+#: src/wget-log.c:91 src/wget-log.c:97
 msgid "Connection refused when downloading URL:\n"
 msgstr "Conexión rechazada al descargar URL:\n"
 
-#: src/wget-log.c:95
+#: src/wget-log.c:94
 msgid "No route to host:\n"
 msgstr "Sin ruta al host:\n"
 
-#: src/wget-log.c:101
+#: src/wget-log.c:100
 msgid "Host not found when downloading URL:\n"
 msgstr "Huesped no encontrado al descargar URL:\n"
 
-#: src/wget-log.c:104
+#: src/wget-log.c:103
 msgid "Unknown error when downloading URL:\n"
 msgstr "Error desconocido al descargar URL:\n"
 
-#: src/wget-log.c:113 src/wget-log.c:120
+#: src/wget-log.c:112 src/wget-log.c:119
 msgid "File not found when downloading URL:\n"
 msgstr "Archivo no encontrado al descargar URL:\n"
 
@@ -776,481 +775,365 @@ msgstr "GTM Applet - Propiedades"
 msgid "Bindings"
 msgstr "Eventos"
 
-#: src/fe-gtk/settings.c:1260
-msgid "Your irc settings"
-msgstr "Configuración del IRC"
-
-#: src/fe-gtk/settings.c:1264
-msgid "Quit Message:"
-msgstr "Mesaje de salida:"
-
-#: src/fe-gtk/settings.c:1268
-msgid "Part Message:"
-msgstr "Mesaje de Salida:"
-
-#: src/fe-gtk/settings.c:1272
-msgid ""
-"These can be a filename relative to ~/.xchat/ to be\n"
-"used as a list of random quit or part reasons."
-msgstr ""
-"Éste puede ser un nombre de archivo asociado a ~/.xchat/ para ser\n"
-"usado en una lista de razones de salidas o partidas."
-
-#: src/fe-gtk/settings.c:1275
-msgid "External Programs"
-msgstr "Programas externos"
-
-#: src/fe-gtk/settings.c:1278
-msgid "DNS Lookup Program:"
-msgstr "Programa DNS Lookup"
-
-#: src/fe-gtk/settings.c:1283
-msgid "Timing"
-msgstr "Temporización"
-
-#: src/fe-gtk/settings.c:1286
-msgid "Auto ReConnect Delay:"
-msgstr "Retraso de la reconexión"
-
-#: src/fe-gtk/settings.c:1287 src/fe-gtk/settings.c:1527
-#: src/fe-gtk/settings.c:1530
-msgid "seconds."
-msgstr "segundos."
-
-#: src/fe-gtk/settings.c:1298
-msgid "Address"
-msgstr "Dirección"
-
-#: src/fe-gtk/settings.c:1301
-msgid "Hostname / IP Number:"
-msgstr "Número del Hostname / IP:"
-
-#: src/fe-gtk/settings.c:1305
-msgid ""
-"Most people should leave this blank, it's only\n"
-"usefull for machines with multiple addresses."
-msgstr ""
-"La mayoría de usuarios pueden dejar esto en blanco, es sólo\n"
-"útil para máquinas con múltiples direcciones."
-
-#: src/fe-gtk/settings.c:1310
-msgid "Get my IP from Server (for use in DCC Send only)"
-msgstr "Obtener mi IP del servidor (para usuarlo tan sólo en Envíos DCC)"
-
-#: src/fe-gtk/settings.c:1313
-msgid "For people using a 10.* or 192.168.* IP number."
-msgstr "Para aquellos que usen un número IP 10.* o 192.168.*"
-
-#: src/fe-gtk/settings.c:1331
-msgid "(Disabled)"
-msgstr "(Deshabilitado)"
-
-#: src/fe-gtk/settings.c:1332
-msgid "Wingate"
-msgstr "Wingate"
-
-#: src/fe-gtk/settings.c:1333
-msgid "Socks4"
-msgstr "Socks4"
-
-#: src/fe-gtk/settings.c:1334
-msgid "Socks5"
-msgstr "Socks5"
-
-#: src/fe-gtk/settings.c:1341
-msgid "Proxy Server Hostname:"
-msgstr "Hostname del Servidor Proxy:"
-
-#: src/fe-gtk/settings.c:1345
-msgid "Proxy Server Port:"
-msgstr "Puerto del Servidor Proxy:"
-
-#: src/fe-gtk/settings.c:1347
-msgid "Proxy Type:"
-msgstr "Tipo de Proxy:"
-
-#: src/fe-gtk/settings.c:1360
-msgid "Show away once"
-msgstr "Mostrar mensaje de despedida una vez"
-
-#: src/fe-gtk/settings.c:1363
-msgid "Only show away messages the first time they're seen"
-msgstr ""
-"Mostrar únicamente los mensajes de despedida la primera vez que son vistos"
-
-#: src/fe-gtk/settings.c:1364
-msgid "Announce away messsages"
-msgstr "Anunciar mensajes de despedida"
-
-#: src/fe-gtk/settings.c:1369
-msgid "Announce your away message to the channel(s) you are in"
-msgstr "Mostrar tu mensaje de despedida en los canales en los que estés"
-
-#: src/fe-gtk/settings.c:1371
-msgid "Your away settings"
-msgstr "Configuración propia de despedida"
-
-#: src/fe-gtk/settings.c:1374
-msgid "Away Reason:"
-msgstr "Razón para Despedida:"
-
-#: src/fe-gtk/settings.c:1390
-msgid "Words to Highlight:"
-msgstr "Palabras para Resaltar:"
-
-#: src/fe-gtk/settings.c:1394
-msgid "(separate with commas)"
-msgstr "(separar con comas)"
-
-#: src/fe-gtk/settings.c:1405 src/fe-gtk/settings.c:1770
-msgid "Logging"
-msgstr "Histórico"
-
-#: src/fe-gtk/settings.c:1408
-msgid "Enable logging conversations to disk"
-msgstr "Guardar conversaciones a disco"
-
-#: src/fe-gtk/settings.c:1409
-msgid "Always timestamp logs"
-msgstr "Mostrar siempre la hora"
-
-#: src/fe-gtk/settings.c:1413
-msgid "Always apply timestamp to disk logs"
-msgstr "Mostrar siempre la hora en los registro del disco"
-
-#: src/fe-gtk/settings.c:1414
-msgid "Log name mask:"
-msgstr "Máscara de archivo de registro:"
-
-#: src/fe-gtk/settings.c:1428
-msgid "Generic"
-msgstr "Generico"
-
-#: src/fe-gtk/settings.c:1429
-msgid "Show notifies in active window"
-msgstr "Mostrar notificaciones en ventana activa"
-
-#: src/fe-gtk/settings.c:1435
-msgid "Send /whois"
-msgstr "Enviar /whois"
-
-#: src/fe-gtk/settings.c:1440
-msgid "User List Notify Highlighting"
-msgstr "Resaltar las Notificaciones de la Lista de Usuarios"
-
-#: src/fe-gtk/settings.c:1441
-msgid "Highlight Notifies"
-msgstr "Resaltar Notificaciones"
-
-#: src/fe-gtk/settings.c:1444
-msgid "Highlight notified users in the user list"
-msgstr "Resaltar usuarios notificados en la lista de usuarios"
-
-#: src/fe-gtk/settings.c:1447
-msgid "Notified User Color:"
-msgstr "Color de Usuario Notificado:"
-
-#: src/fe-gtk/settings.c:1452
-msgid "Notification Timeouts"
-msgstr "Esperas para Notificación"
-
-#: src/fe-gtk/settings.c:1455
-msgid "Notify Check Interval:"
-msgstr "Intervalo para el registro de notificaciones:"
-
-#: src/fe-gtk/settings.c:1456
-msgid "seconds (0=Disable)."
-msgstr "segundos (0=Desactiva)."
-
-#: src/fe-gtk/settings.c:1466
-msgid "Enable Character Translation"
-msgstr "Habilitar la Traducción de Caracteres"
-
-#: src/fe-gtk/settings.c:1471
-msgid "Translation File:"
-msgstr "Archivo de Traducción:"
-
-#: src/fe-gtk/settings.c:1476
-msgid "Use a ircII style translation file."
-msgstr "Usar un archivo de traducción de estilo IRCII."
-
-#: src/fe-gtk/settings.c:1487
-msgid "Auto Open DCC Send Window"
-msgstr "Abrir Ventanas de Envío DCC automáticamente"
-
-#: src/fe-gtk/settings.c:1492
-msgid "Automatically open DCC Send Window"
-msgstr "Automáticamente abre la ventana cuando se produzca un envío por DCC"
-
-#: src/fe-gtk/settings.c:1493
-msgid "Auto Open DCC Recv Window"
-msgstr "Abrir automáticamente las ventanas de recepción de DCC"
-
-#: src/fe-gtk/settings.c:1498
-msgid "Automatically open DCC Recv Window"
-msgstr "Automáticamente abre la Ventana de Recepción DCC"
-
-#: src/fe-gtk/settings.c:1499
-msgid "Auto Open DCC Chat Window"
-msgstr "Abrir Ventana de Charla DCC automáticamente"
-
-#: src/fe-gtk/settings.c:1504
-msgid "Automatically open DCC Chat Window"
-msgstr "Automáticamente abre Ventana de Charla DCC"
-
-#: src/fe-gtk/settings.c:1505
-msgid "Resume on Auto Accept"
-msgstr "Resumir al aceptar envío automáticamente"
-
-#: src/fe-gtk/settings.c:1509
-msgid "When Auto-Accepting DCC, try to resume."
-msgstr "Intenta seguir la transferencia desde donde se cortó"
-
-#: src/fe-gtk/settings.c:1521
-msgid "Timeouts"
-msgstr "Interrupciones"
-
-#: src/fe-gtk/settings.c:1526
-msgid "DCC Offers Timeout:"
-msgstr "Espera para Ofrecimientos DCC:"
-
-#: src/fe-gtk/settings.c:1529
-msgid "DCC Stall Timeout:"
-msgstr "Espera para el establecimiento DCC"
-
-#: src/fe-gtk/settings.c:1532
-msgid "Received files"
-msgstr "Ficheros recibidos"
-
-#: src/fe-gtk/settings.c:1536
-msgid "File Permissions:"
-msgstr "Permisos del fichero:"
-
-#: src/fe-gtk/settings.c:1538
-msgid "(octal)"
-msgstr "(octal)"
-
-#: src/fe-gtk/settings.c:1540
-msgid "Directory to save to:"
-msgstr "Directorio donde guardar:"
-
-#: src/fe-gtk/settings.c:1543
-msgid "Save file with Nickname"
-msgstr "Guardar fichero con nick"
-
-#: src/fe-gtk/settings.c:1546
-msgid "Put the sender's nickname in incoming filenames"
-msgstr "Coloca el nick del que envia en el nombre del fichero"
-
-#: src/fe-gtk/settings.c:1548
-msgid "DCC Send Options"
-msgstr "Opciones del Envío DCC"
-
-#: src/fe-gtk/settings.c:1550
-msgid "Fast DCC Send"
-msgstr "Envío DCC Rápido"
-
-#: src/fe-gtk/settings.c:1553
-msgid "Don't wait for ACKs to send more data"
-msgstr "No esperar ACKs para enviar mas datos"
-
-#: src/fe-gtk/settings.c:1556
-msgid "First DCC Send Port:"
-msgstr "Primer Puerto de Envío DCC"
-
-#: src/fe-gtk/settings.c:1557
-msgid "(0=Disabled)"
-msgstr "(0=Deshabilitado)"
-
-#: src/fe-gtk/settings.c:1559
-msgid "Last DCC Send Port:"
-msgstr "Último Puerto de Envío DCC"
-
-#: src/fe-gtk/settings.c:1563
-msgid "Send Block Size:"
-msgstr "Enviar Tamaño del Bloque:"
-
-#: src/fe-gtk/settings.c:1564
-msgid "(1024=Normal)"
-msgstr "(1024=Normal)"
-
-#: src/fe-gtk/settings.c:1575
-msgid "Built-in Replies"
-msgstr "Réplicas por defecto"
-
-#: src/fe-gtk/settings.c:1576
-msgid "Hide Version"
-msgstr "Versión escondida"
-
-#: src/fe-gtk/settings.c:1579
-msgid "Do not reply to CTCP version"
-msgstr "No contestar al comando CTCP version"
-
-#: src/fe-gtk/settings.c:1581
-msgid "Sound"
-msgstr "Sonido"
-
-#: src/fe-gtk/settings.c:1584
-msgid "Sound Dir:"
-msgstr "Dir. de sonidos:"
-
-#: src/fe-gtk/settings.c:1588
-msgid "Play Command:"
-msgstr "Comando de reproducción:"
-
-#. prepare the dialog
-#: src/fe-gtk/settings.c:1624
-msgid "X-Chat: Preferences"
-msgstr "X-Chat: Preferencias"
-
-#: src/fe-gtk/settings.c:1655
-msgid "Apply"
-msgstr "Aplicar"
-
-#: src/fe-gtk/settings.c:1665
-msgid "Cancel"
-msgstr "Cancelar"
-
-#. the tree
-#: src/fe-gtk/settings.c:1682
-msgid "Categories"
-msgstr "Categorías"
-
-#: src/fe-gtk/settings.c:1706
-msgid "Interface Settings"
-msgstr "Configuración del interface"
-
-#: src/fe-gtk/settings.c:1707
-msgid "Interface"
-msgstr "Interface"
-
-#: src/fe-gtk/settings.c:1712
-msgid "IRC Input/Output Settings"
-msgstr "Configuraciones de entrada/salida IRC"
-
-#: src/fe-gtk/settings.c:1713
-msgid "IRC Input/Output"
-msgstr "Entrada/salida IRC"
-
-#: src/fe-gtk/settings.c:1717
-msgid "Window Layout Settings"
-msgstr "Configuración de la disposición de la ventana"
-
-#: src/fe-gtk/settings.c:1718
-msgid "Window Layout"
-msgstr "Disposición de la ventana"
-
-#: src/fe-gtk/settings.c:1722
-msgid "Main Window Settings"
-msgstr "Configuración para la ventana principal"
-
-#: src/fe-gtk/settings.c:1723
-msgid "Main Window"
-msgstr "Ventana principal"
-
-#: src/fe-gtk/settings.c:1727
-msgid "Channel Window Settings"
-msgstr "Configuración para las ventanas de canal"
-
-#: src/fe-gtk/settings.c:1728
-msgid "Channel Windows"
-msgstr "Ventanas de canal"
-
-#: src/fe-gtk/settings.c:1732
-msgid "Dialog Window Settings"
-msgstr "Configuración para la ventana de diálogos"
-
-#: src/fe-gtk/settings.c:1733
-msgid "Dialog Windows"
-msgstr "Ventana de diálogos"
-
-#: src/fe-gtk/settings.c:1738
-msgid "Panel Settings"
-msgstr "Configuraciones del panel"
-
-#: src/fe-gtk/settings.c:1739
-msgid "Panel"
-msgstr "Panel"
-
-#: src/fe-gtk/settings.c:1744
-msgid "IRC Settings"
-msgstr "Configuración del IRC"
-
-#: src/fe-gtk/settings.c:1745
-msgid "IRC"
-msgstr "IRC"
-
-#: src/fe-gtk/settings.c:1749
-msgid "IP Address Settings"
-msgstr "Configuraciones de la dirección IP"
-
-#: src/fe-gtk/settings.c:1750
-msgid "IP Address"
-msgstr "Dirección IP"
-
-#: src/fe-gtk/settings.c:1754 src/fe-gtk/settings.c:1755
-msgid "Proxy Server"
-msgstr "Servidor Proxy"
-
-#: src/fe-gtk/settings.c:1759
-msgid "Away Settings"
-msgstr "Configuraciones de salida temporal"
-
-#: src/fe-gtk/settings.c:1760
-msgid "Away"
-msgstr "Salida temporal"
-
-#: src/fe-gtk/settings.c:1764
-msgid "Highlighting Settings"
-msgstr "Configuraciones para el resaltado"
-
-#: src/fe-gtk/settings.c:1765
-msgid "Highlighting"
-msgstr "Resaltados"
-
-#: src/fe-gtk/settings.c:1769
-msgid "Logging Settings"
-msgstr "Configuraciones del Histórico"
-
-#: src/fe-gtk/settings.c:1774
-msgid "Notification Settings"
-msgstr "Configuraciones de Notificación"
-
-#: src/fe-gtk/settings.c:1775
-msgid "Notification"
-msgstr "Notificación"
-
-#: src/fe-gtk/settings.c:1780
-msgid "Character Set (Translation Tables)"
-msgstr "Módulo de Caracteres (Tablas de Traducción)"
-
-#: src/fe-gtk/settings.c:1781
-msgid "Character Set"
-msgstr "Módulo de Caracteres"
-
-#: src/fe-gtk/settings.c:1786
-msgid "CTCP Settings"
-msgstr "Configuracion CTCP"
-
-#: src/fe-gtk/settings.c:1787
-msgid "CTCP"
-msgstr "CTCP"
-
-#: src/fe-gtk/settings.c:1791
-msgid "DCC Settings"
-msgstr "Configuración del DCC"
-
-#: src/fe-gtk/settings.c:1792
-msgid "DCC"
-msgstr "DCC"
-
-#: src/fe-gtk/settings.c:1796
-msgid "File Transfer Settings"
-msgstr "Configuracion para la transferencia de ficheros"
-
-#: src/fe-gtk/settings.c:1797
-msgid "File Transfer"
-msgstr "Transferencia de ficheros"
+#~ msgid "No directory matched."
+#~ msgstr "Sin coincidencia de directorio"
+
+#~ msgid "Invalid URL."
+#~ msgstr "URL no válida."
+
+#~ msgid "Your irc settings"
+#~ msgstr "Configuración del IRC"
+
+#~ msgid "Quit Message:"
+#~ msgstr "Mesaje de salida:"
+
+#~ msgid "Part Message:"
+#~ msgstr "Mesaje de Salida:"
+
+#~ msgid ""
+#~ "These can be a filename relative to ~/.xchat/ to be\n"
+#~ "used as a list of random quit or part reasons."
+#~ msgstr ""
+#~ "Éste puede ser un nombre de archivo asociado a ~/.xchat/ para ser\n"
+#~ "usado en una lista de razones de salidas o partidas."
+
+#~ msgid "External Programs"
+#~ msgstr "Programas externos"
+
+#~ msgid "DNS Lookup Program:"
+#~ msgstr "Programa DNS Lookup"
+
+#~ msgid "Timing"
+#~ msgstr "Temporización"
+
+#~ msgid "Auto ReConnect Delay:"
+#~ msgstr "Retraso de la reconexión"
+
+#~ msgid "seconds."
+#~ msgstr "segundos."
+
+#~ msgid "Address"
+#~ msgstr "Dirección"
+
+#~ msgid "Hostname / IP Number:"
+#~ msgstr "Número del Hostname / IP:"
+
+#~ msgid ""
+#~ "Most people should leave this blank, it's only\n"
+#~ "usefull for machines with multiple addresses."
+#~ msgstr ""
+#~ "La mayoría de usuarios pueden dejar esto en blanco, es sólo\n"
+#~ "útil para máquinas con múltiples direcciones."
+
+#~ msgid "Get my IP from Server (for use in DCC Send only)"
+#~ msgstr "Obtener mi IP del servidor (para usuarlo tan sólo en Envíos DCC)"
+
+#~ msgid "For people using a 10.* or 192.168.* IP number."
+#~ msgstr "Para aquellos que usen un número IP 10.* o 192.168.*"
+
+#~ msgid "(Disabled)"
+#~ msgstr "(Deshabilitado)"
+
+#~ msgid "Wingate"
+#~ msgstr "Wingate"
+
+#~ msgid "Socks4"
+#~ msgstr "Socks4"
+
+#~ msgid "Socks5"
+#~ msgstr "Socks5"
+
+#~ msgid "Proxy Server Hostname:"
+#~ msgstr "Hostname del Servidor Proxy:"
+
+#~ msgid "Proxy Server Port:"
+#~ msgstr "Puerto del Servidor Proxy:"
+
+#~ msgid "Proxy Type:"
+#~ msgstr "Tipo de Proxy:"
+
+#~ msgid "Show away once"
+#~ msgstr "Mostrar mensaje de despedida una vez"
+
+#~ msgid "Only show away messages the first time they're seen"
+#~ msgstr ""
+#~ "Mostrar únicamente los mensajes de despedida la primera vez que son vistos"
+
+#~ msgid "Announce away messsages"
+#~ msgstr "Anunciar mensajes de despedida"
+
+#~ msgid "Announce your away message to the channel(s) you are in"
+#~ msgstr "Mostrar tu mensaje de despedida en los canales en los que estés"
+
+#~ msgid "Your away settings"
+#~ msgstr "Configuración propia de despedida"
+
+#~ msgid "Away Reason:"
+#~ msgstr "Razón para Despedida:"
+
+#~ msgid "Words to Highlight:"
+#~ msgstr "Palabras para Resaltar:"
+
+#~ msgid "(separate with commas)"
+#~ msgstr "(separar con comas)"
+
+#~ msgid "Logging"
+#~ msgstr "Histórico"
+
+#~ msgid "Enable logging conversations to disk"
+#~ msgstr "Guardar conversaciones a disco"
+
+#~ msgid "Always timestamp logs"
+#~ msgstr "Mostrar siempre la hora"
+
+#~ msgid "Always apply timestamp to disk logs"
+#~ msgstr "Mostrar siempre la hora en los registro del disco"
+
+#~ msgid "Log name mask:"
+#~ msgstr "Máscara de archivo de registro:"
+
+#~ msgid "Generic"
+#~ msgstr "Generico"
+
+#~ msgid "Show notifies in active window"
+#~ msgstr "Mostrar notificaciones en ventana activa"
+
+#~ msgid "Send /whois"
+#~ msgstr "Enviar /whois"
+
+#~ msgid "User List Notify Highlighting"
+#~ msgstr "Resaltar las Notificaciones de la Lista de Usuarios"
+
+#~ msgid "Highlight Notifies"
+#~ msgstr "Resaltar Notificaciones"
+
+#~ msgid "Highlight notified users in the user list"
+#~ msgstr "Resaltar usuarios notificados en la lista de usuarios"
+
+#~ msgid "Notified User Color:"
+#~ msgstr "Color de Usuario Notificado:"
+
+#~ msgid "Notification Timeouts"
+#~ msgstr "Esperas para Notificación"
+
+#~ msgid "Notify Check Interval:"
+#~ msgstr "Intervalo para el registro de notificaciones:"
+
+#~ msgid "seconds (0=Disable)."
+#~ msgstr "segundos (0=Desactiva)."
+
+#~ msgid "Enable Character Translation"
+#~ msgstr "Habilitar la Traducción de Caracteres"
+
+#~ msgid "Translation File:"
+#~ msgstr "Archivo de Traducción:"
+
+#~ msgid "Use a ircII style translation file."
+#~ msgstr "Usar un archivo de traducción de estilo IRCII."
+
+#~ msgid "Auto Open DCC Send Window"
+#~ msgstr "Abrir Ventanas de Envío DCC automáticamente"
+
+#~ msgid "Automatically open DCC Send Window"
+#~ msgstr "Automáticamente abre la ventana cuando se produzca un envío por DCC"
+
+#~ msgid "Auto Open DCC Recv Window"
+#~ msgstr "Abrir automáticamente las ventanas de recepción de DCC"
+
+#~ msgid "Automatically open DCC Recv Window"
+#~ msgstr "Automáticamente abre la Ventana de Recepción DCC"
+
+#~ msgid "Auto Open DCC Chat Window"
+#~ msgstr "Abrir Ventana de Charla DCC automáticamente"
+
+#~ msgid "Automatically open DCC Chat Window"
+#~ msgstr "Automáticamente abre Ventana de Charla DCC"
+
+#~ msgid "Resume on Auto Accept"
+#~ msgstr "Resumir al aceptar envío automáticamente"
+
+#~ msgid "When Auto-Accepting DCC, try to resume."
+#~ msgstr "Intenta seguir la transferencia desde donde se cortó"
+
+#~ msgid "Timeouts"
+#~ msgstr "Interrupciones"
+
+#~ msgid "DCC Offers Timeout:"
+#~ msgstr "Espera para Ofrecimientos DCC:"
+
+#~ msgid "DCC Stall Timeout:"
+#~ msgstr "Espera para el establecimiento DCC"
+
+#~ msgid "Received files"
+#~ msgstr "Ficheros recibidos"
+
+#~ msgid "File Permissions:"
+#~ msgstr "Permisos del fichero:"
+
+#~ msgid "(octal)"
+#~ msgstr "(octal)"
+
+#~ msgid "Directory to save to:"
+#~ msgstr "Directorio donde guardar:"
+
+#~ msgid "Save file with Nickname"
+#~ msgstr "Guardar fichero con nick"
+
+#~ msgid "Put the sender's nickname in incoming filenames"
+#~ msgstr "Coloca el nick del que envia en el nombre del fichero"
+
+#~ msgid "DCC Send Options"
+#~ msgstr "Opciones del Envío DCC"
+
+#~ msgid "Fast DCC Send"
+#~ msgstr "Envío DCC Rápido"
+
+#~ msgid "Don't wait for ACKs to send more data"
+#~ msgstr "No esperar ACKs para enviar mas datos"
+
+#~ msgid "First DCC Send Port:"
+#~ msgstr "Primer Puerto de Envío DCC"
+
+#~ msgid "(0=Disabled)"
+#~ msgstr "(0=Deshabilitado)"
+
+#~ msgid "Last DCC Send Port:"
+#~ msgstr "Último Puerto de Envío DCC"
+
+#~ msgid "Send Block Size:"
+#~ msgstr "Enviar Tamaño del Bloque:"
+
+#~ msgid "(1024=Normal)"
+#~ msgstr "(1024=Normal)"
+
+#~ msgid "Built-in Replies"
+#~ msgstr "Réplicas por defecto"
+
+#~ msgid "Hide Version"
+#~ msgstr "Versión escondida"
+
+#~ msgid "Do not reply to CTCP version"
+#~ msgstr "No contestar al comando CTCP version"
+
+#~ msgid "Sound Dir:"
+#~ msgstr "Dir. de sonidos:"
+
+#~ msgid "Play Command:"
+#~ msgstr "Comando de reproducción:"
+
+#~ msgid "X-Chat: Preferences"
+#~ msgstr "X-Chat: Preferencias"
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "Categories"
+#~ msgstr "Categorías"
+
+#~ msgid "Interface Settings"
+#~ msgstr "Configuración del interface"
+
+#~ msgid "Interface"
+#~ msgstr "Interface"
+
+#~ msgid "IRC Input/Output Settings"
+#~ msgstr "Configuraciones de entrada/salida IRC"
+
+#~ msgid "IRC Input/Output"
+#~ msgstr "Entrada/salida IRC"
+
+#~ msgid "Window Layout Settings"
+#~ msgstr "Configuración de la disposición de la ventana"
+
+#~ msgid "Window Layout"
+#~ msgstr "Disposición de la ventana"
+
+#~ msgid "Main Window Settings"
+#~ msgstr "Configuración para la ventana principal"
+
+#~ msgid "Main Window"
+#~ msgstr "Ventana principal"
+
+#~ msgid "Channel Window Settings"
+#~ msgstr "Configuración para las ventanas de canal"
+
+#~ msgid "Channel Windows"
+#~ msgstr "Ventanas de canal"
+
+#~ msgid "Dialog Window Settings"
+#~ msgstr "Configuración para la ventana de diálogos"
+
+#~ msgid "Dialog Windows"
+#~ msgstr "Ventana de diálogos"
+
+#~ msgid "Panel Settings"
+#~ msgstr "Configuraciones del panel"
+
+#~ msgid "Panel"
+#~ msgstr "Panel"
+
+#~ msgid "IRC Settings"
+#~ msgstr "Configuración del IRC"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid "IP Address Settings"
+#~ msgstr "Configuraciones de la dirección IP"
+
+#~ msgid "IP Address"
+#~ msgstr "Dirección IP"
+
+#~ msgid "Proxy Server"
+#~ msgstr "Servidor Proxy"
+
+#~ msgid "Away Settings"
+#~ msgstr "Configuraciones de salida temporal"
+
+#~ msgid "Away"
+#~ msgstr "Salida temporal"
+
+#~ msgid "Highlighting Settings"
+#~ msgstr "Configuraciones para el resaltado"
+
+#~ msgid "Highlighting"
+#~ msgstr "Resaltados"
+
+#~ msgid "Logging Settings"
+#~ msgstr "Configuraciones del Histórico"
+
+#~ msgid "Notification Settings"
+#~ msgstr "Configuraciones de Notificación"
+
+#~ msgid "Notification"
+#~ msgstr "Notificación"
+
+#~ msgid "Character Set (Translation Tables)"
+#~ msgstr "Módulo de Caracteres (Tablas de Traducción)"
+
+#~ msgid "Character Set"
+#~ msgstr "Módulo de Caracteres"
+
+#~ msgid "CTCP Settings"
+#~ msgstr "Configuracion CTCP"
+
+#~ msgid "CTCP"
+#~ msgstr "CTCP"
+
+#~ msgid "DCC Settings"
+#~ msgstr "Configuración del DCC"
+
+#~ msgid "DCC"
+#~ msgstr "DCC"
+
+#~ msgid "File Transfer Settings"
+#~ msgstr "Configuracion para la transferencia de ficheros"
+
+#~ msgid "File Transfer"
+#~ msgstr "Transferencia de ficheros"
 
 #~ msgid "Enable double buffer"
 #~ msgstr "Habilitar doble buffer"
