@@ -43,6 +43,33 @@
       <description>FIXME: Add a good description</description>
     </group>
   </release>
+  <release name="gnome-2.4">
+    <group name="developer-libs">
+      <description>GNOME developer platform. Essential software.</description>
+      <essential/>
+      <frozen/>
+    </group>
+    <group name="desktop">
+      <description>GNOME desktop. Essential software.</description>
+      <essential/>
+      <frozen/>
+    </group>
+    <group name="fifth-toe">
+      <description>GNOME Fifth Toe. Extra software.</description>
+    </group>
+    <group name="bindings">
+      <description>Additional GNOME language bindings.</description>
+    </group>
+    <group name="developer-app">
+      <description>GNOME developer carpet bag.</description>
+    </group>
+    <group name="office">
+      <description>GNOME Office</description>
+    </group>
+    <group name="extras">
+      <description>Extra GNOME software of all sorts.</description>
+    </group>
+  </release>
 
   <module name="acme">
     <version release="gnome-2.2">
@@ -54,9 +81,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="acme" dir="acme" group="desktop">
+        <podir dir="po"/>
+        <potname name="acme.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="alleyoop">
     <version release="gnome-2.2">
+      <component name="alleyoop" dir="alleyoop" group="extras">
+        <podir dir="po"/>
+        <potname name="alleyoop.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="alleyoop" dir="alleyoop" group="extras">
         <podir dir="po"/>
         <potname name="alleyoop.pot"/>
@@ -85,6 +130,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="anjuta" dir="anjuta" group="developer-app">
+        <podir dir="po"/>
+        <potname name="anjuta.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="atk">
     <version release="gnome-2.2">
@@ -96,9 +150,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="atk" dir="atk" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="atk10.pot"/>
+        <branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="atomix">
     <version release="gnome-2.2">
+      <component name="atomix" dir="atomix" group="extras">
+        <podir dir="po"/>
+        <potname name="atomix.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="atomix" dir="atomix" group="extras">
         <podir dir="po"/>
         <potname name="atomix.pot"/>
@@ -127,9 +199,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="balsa" dir="balsa" group="fifth-toe">
+        <podir dir="po"/>
+        <potname name="balsa.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="battfink">
     <version release="gnome-2.2">
+      <component name="battfink" dir="battfink" group="extras">
+	<podir dir="po"/>
+	<potname name="battfink-0.1.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="battfink" dir="battfink" group="extras">
 	<podir dir="po"/>
 	<potname name="battfink-0.1.pot"/>
@@ -160,6 +250,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="bonobo-activation" dir="bonobo-activation" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="bonobo-activation.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="bonobo-conf">
     <version release="gnome-1.4">
@@ -174,6 +273,15 @@
   </module>
   <module name="bonobo-config">
     <version release="gnome-2.2">
+      <component name="bonobo-config" dir="bonobo-config" group="extras">
+	<podir dir="po"/>
+	<potname name="bonobo-config.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="bonobo-config" dir="bonobo-config" group="extras">
 	<podir dir="po"/>
 	<potname name="bonobo-config.pot"/>
@@ -202,9 +310,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="bug-buddy" dir="bug-buddy" group="desktop">
+        <podir dir="po"/>
+        <potname name="bug-buddy.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="camorama">
     <version release="gnome-2.2">
+      <component name="camorama" dir="camorama" group="fifth-toe">
+       <podir dir="po"/>
+       <potname name="camorama.pot"/>
+       <branch name="HEAD"/>
+       <regenerate/>
+       <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="camorama" dir="camorama" group="fifth-toe">
        <podir dir="po"/>
        <potname name="camorama.pot"/>
@@ -233,6 +359,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="dedit" dir="dedit" group="extras">
+	<podir dir="po"/>
+	<potname name="dedit2.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="devhelp">
     <version release="gnome-1.4">
@@ -253,9 +388,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="devhelp" dir="devhelp" group="extras">
+	<podir dir="po"/>
+	<potname name="devhelp.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="dia">
     <version release="gnome-2.2">
+      <component name="dia" dir="dia" group="office">
+        <podir dir="po"/>
+        <potname name="dia.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="dia" dir="dia" group="office">
         <podir dir="po"/>
         <potname name="dia.pot"/>
@@ -317,6 +470,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="eel" dir="eel" group="desktop">
+        <podir dir="po"/>
+        <potname name="eel-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="eog">
     <version release="gnome-1.4">
@@ -337,9 +499,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="eog" dir="eog" group="desktop">
+        <podir dir="po"/>
+        <potname name="eog.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="epiphany">
     <version release="gnome-2.2">
+      <component name="epiphany" dir="epiphany" group="extras">
+	<podir dir="po"/>
+	<potname name="epiphany-2.0.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="epiphany" dir="epiphany" group="extras">
 	<podir dir="po"/>
 	<potname name="epiphany-2.0.pot"/>
@@ -368,6 +548,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="evolution" dir="evolution" group="extras">
+	<podir dir="po"/>
+	<potname name="evolution-1.4.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="file-roller">
     <version release="gnome-2.2">
@@ -375,6 +564,15 @@
 	<podir dir="po"/>
 	<potname name="file-roller.pot"/>
 	<branch name="gnome-2-2"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="file-roller" dir="file-roller" group="desktop">
+	<podir dir="po"/>
+	<potname name="file-roller.pot"/>
+	<branch name="HEAD"/>
 	<regenerate/>
 	<download/>
       </component>
@@ -390,9 +588,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="firestarter" dir="firestarter" group="extras">
+        <podir dir="po/"/>
+        <potname name="firestarter.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="fontilus">
     <version release="gnome-2.2">
+      <component name="fontilus" dir="fontilus" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="fontilus.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="fontilus" dir="fontilus" group="fifth-toe">
 	<podir dir="po"/>
 	<potname name="fontilus.pot"/>
@@ -432,6 +648,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gal" dir="gal" group="extras">
+	<podir dir="po"/>
+	<potname name="gal-\$\{GAL_API_VERSION\}.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="galeon">
     <version release="gnome-1.4">
@@ -444,6 +669,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="galeon" dir="galeon" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="galeon-2.0.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="galeon" dir="galeon" group="fifth-toe">
 	<podir dir="po"/>
 	<potname name="galeon-2.0.pot"/>
@@ -474,9 +708,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gcalctool" dir="gcalctool" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="gcalctool.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gcm">
     <version release="gnome-2.2">
+      <component name="gcm" dir="gcm" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="gcm.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gcm" dir="gcm" group="fifth-toe">
 	<podir dir="po"/>
 	<potname name="gcm.pot"/>
@@ -507,6 +759,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gcompris" dir="gcompris" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="gcompris.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gconf">
     <version release="gnome-1.4">
@@ -527,6 +788,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gconf" dir="gconf" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="GConf2.pot"/>
+        <branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gconf-editor">
     <version release="gnome-2.2">
@@ -534,6 +804,15 @@
         <podir dir="po"/>
         <potname name="gconf-editor.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="gconf-editor" dir="gconf-editor" group="desktop">
+        <podir dir="po"/>
+        <potname name="gconf-editor.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -550,6 +829,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="gdl" dir="gdl" group="extras">
+	<podir dir="po"/>
+	<potname name="gdl-1.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gdl" dir="gdl" group="extras">
 	<podir dir="po"/>
 	<potname name="gdl-1.pot"/>
@@ -578,6 +866,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gdm2" dir="gdm2" group="desktop">
+        <podir dir="po"/>
+        <potname name="gdm-2.4.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gedit">
     <version release="gnome-1.4">
@@ -598,9 +895,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gedit" dir="gedit" group="desktop">
+        <podir dir="po"/>
+        <potname name="gedit-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gedit-plugins">
     <version release="gnome-2.2">
+      <component name="gedit-plugins" dir="gedit-plugins" group="extras">
+        <podir dir="po"/>
+        <potname name="gedit-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gedit-plugins" dir="gedit-plugins" group="extras">
         <podir dir="po"/>
         <potname name="gedit-2.0.pot"/>
@@ -631,6 +946,15 @@
        <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gftp" dir="gftp" group="extras">
+       <podir dir="po"/>
+       <potname name="gftp.pot"/>
+       <branch name="HEAD"/>
+       <regenerate/>
+       <download/>
+      </component>
+    </version>
   </module>
   <module name="ggv">
     <version release="gnome-1.4">
@@ -651,6 +975,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="ggv" dir="ggv" group="desktop">
+        <podir dir="po"/>
+        <potname name="ggv.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="ghex">
     <version release="gnome-1.4">
@@ -663,6 +996,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="ghex" dir="ghex" group="developer-app">
+        <podir dir="po"/>
+        <potname name="ghex-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="ghex" dir="ghex" group="developer-app">
         <podir dir="po"/>
         <potname name="ghex-2.0.pot"/>
@@ -749,6 +1091,44 @@
         <branch name="HEAD"/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gimp-freetype" dir="gimp-freetype" group="extras">
+        <podir dir="po"/>
+        <potname name="gimp14-freetype.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+      <component name="gimp" dir="gimp" group="extras">
+        <podir dir="po"/>
+        <potname name="gimp14.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+      </component>
+      <component name="gimp-libgimp" dir="gimp" group="extras">
+        <podir dir="po-libgimp"/>
+        <potname name="gimp14.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+      </component>
+      <component name="gimp-plug-ins" dir="gimp" group="extras">
+        <podir dir="po-plug-ins"/>
+        <potname name="gimp14.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+      </component>
+      <component name="gimp-script-fu" dir="gimp" group="extras">
+        <podir dir="po-script-fu"/>
+        <potname name="gimp14.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+      </component>
+      <component name="gimp-tips" dir="gimp" group="extras">
+        <podir dir="tips"/>
+        <potname name="gimp14-tips.pot"/>
+        <branch name="HEAD"/>
+      </component>
+    </version>
   </module>
   <module name="gip">
     <version release="gnome-1.4">
@@ -780,6 +1160,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="glade" dir="glade" group="developer-app">
+        <podir dir="po"/>
+        <potname name="glade-2.0.pot"/>
+        <branch name="glade-gnome2-branch"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="glib">
     <version release="gnome-2.2">
@@ -791,9 +1180,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="glib" dir="glib" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="glib20.pot"/>
+        <branch name="glib-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="glimmer">
     <version release="gnome-2.2">
+      <component name="glimmer" dir="glimmer" group="extras">
+	<podir dir="po"/>
+	<potname name="glimmer-too.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="glimmer" dir="glimmer" group="extras">
 	<podir dir="po"/>
 	<potname name="glimmer-too.pot"/>
@@ -844,9 +1251,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-applets" dir="gnome-applets" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-applets-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-build">
     <version release="gnome-2.2">
+      <component name="gnome-build" dir="gnome-build" group="extras">
+        <podir dir="po"/>
+        <potname name="gbf-1.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-build" dir="gnome-build" group="extras">
         <podir dir="po"/>
         <potname name="gbf-1.pot"/>
@@ -895,6 +1320,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-control-center" dir="gnome-control-center" group="desktop">
+        <podir dir="po"/>
+        <potname name="control-center-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-core">
     <version release="gnome-1.4">
@@ -939,6 +1373,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-desktop" dir="gnome-desktop" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-desktop-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-doorman">
     <version release="gnome-1.4">
@@ -970,9 +1413,25 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-games" dir="gnome-games" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-games.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-glossary">
     <version release="gnome-2.2">
+      <component name="gnome-glossary" dir="gnome-i18n" group="extras">
+	<podir dir="glossary"/>
+	<potname name="gnome-glossary.pot"/>
+	<branch name="HEAD"/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-glossary" dir="gnome-i18n" group="extras">
 	<podir dir="glossary"/>
 	<potname name="gnome-glossary.pot"/>
@@ -999,6 +1458,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-hello" dir="gnome-hello" group="extras">
+	<podir dir="po"/>
+	<potname name="gnome-hello-2.0.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-icon-theme">
     <version release="gnome-2.2">
@@ -1006,6 +1474,15 @@
 	<podir dir="po"/>
 	<potname name="gnome-icon-theme.pot"/>
 	<branch name="gnome-2-2"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="gnome-icon-theme" dir="gnome-icon-theme" group="desktop">
+	<podir dir="po"/>
+	<potname name="gnome-icon-theme.pot"/>
+	<branch name="HEAD"/>
 	<regenerate/>
 	<download/>
       </component>
@@ -1054,6 +1531,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-mag" dir="gnome-mag" group="extras">
+	<podir dir="po"/>
+	<potname name="gnome-mag.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-media">
     <version release="gnome-1.4">
@@ -1074,6 +1560,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-media" dir="gnome-media" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-media-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-mime-data">
     <version release="gnome-2.2">
@@ -1085,9 +1580,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-mime-data" dir="gnome-mime-data" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="gnome-mime-data.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-network">
     <version release="gnome-2.2">
+      <component name="gnome-network" dir="gnome-network" group="extras">
+	<podir dir="po"/>
+	<potname name="gnome-network.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-network" dir="gnome-network" group="extras">
 	<podir dir="po"/>
 	<potname name="gnome-network.pot"/>
@@ -1118,6 +1631,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-panel" dir="gnome-panel" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-panel-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-pilot">
     <version release="gnome-1.4">
@@ -1138,9 +1660,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-pilot" dir="gnome-pilot" group="extras">
+	<podir dir="po"/>
+	<potname name="gnome-pilot.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-pilot-conduits">
     <version release="gnome-2.2">
+      <component name="gnome-pilot-conduits" dir="gnome-pilot-conduits" group="extras">
+	<podir dir="po"/>
+	<potname name="gnome-pilot-conduits.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-pilot-conduits" dir="gnome-pilot-conduits" group="extras">
 	<podir dir="po"/>
 	<potname name="gnome-pilot-conduits.pot"/>
@@ -1169,9 +1709,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-pim" dir="gnome-pim" group="extras">
+        <podir dir="po"/>
+        <potname name="gnome-pim.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-pkgview">
     <version release="gnome-2.2">
+      <component name="gnome-pkgview" dir="gnome-pkgview" group="extras">
+	<podir dir="po"/>
+	<potname name="gnome-pkgview.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-pkgview" dir="gnome-pkgview" group="extras">
 	<podir dir="po"/>
 	<potname name="gnome-pkgview.pot"/>
@@ -1213,6 +1771,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-session" dir="gnome-session" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-session-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-spell">
     <version release="gnome-1.4">
@@ -1233,9 +1800,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-spell" dir="gnome-spell" group="extras">
+        <podir dir="po"/>
+        <potname name="gnome-spell-1.0-pre2.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-system-tools">
     <version release="gnome-2.2">
+      <component name="gnome-system-tools" dir="gnome-system-tools" group="extras">
+        <podir dir="po"/>
+        <potname name="gnome-system-tools.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-system-tools" dir="gnome-system-tools" group="extras">
         <podir dir="po"/>
         <potname name="gnome-system-tools.pot"/>
@@ -1255,9 +1840,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-terminal" dir="gnome-terminal" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-terminal.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-themes">
     <version release="gnome-2.2">
+      <component name="gnome-themes" dir="gnome-themes" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-themes.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-themes" dir="gnome-themes" group="desktop">
         <podir dir="po"/>
         <potname name="gnome-themes.pot"/>
@@ -1273,6 +1876,15 @@
         <podir dir="po"/>
         <potname name="gnome-utils-2.0.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="gnome-utils" dir="gnome-utils" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-utils-2.0.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -1297,9 +1909,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnome-vfs" dir="gnome-vfs" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="gnome-vfs-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gnome-vfs-extras">
     <version release="gnome-2.2">
+      <component name="gnome-vfs-extras" dir="gnome-vfs-extras" group="extras">
+        <podir dir="po"/>
+        <potname name="gnome-vfs-extras.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnome-vfs-extras" dir="gnome-vfs-extras" group="extras">
         <podir dir="po"/>
         <potname name="gnome-vfs-extras.pot"/>
@@ -1319,9 +1949,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnomechat" dir="gnomechat" group="extras">
+	<podir dir="po"/>
+	<potname name="gnomechat.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gnomemeeting">
     <version release="gnome-2.2">
+      <component name="gnomemeeting" dir="gnomemeeting" group="fifth-toe">
+        <podir dir="po"/>
+        <potname name="gnomemeeting.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnomemeeting" dir="gnomemeeting" group="fifth-toe">
         <podir dir="po"/>
         <potname name="gnomemeeting.pot"/>
@@ -1350,9 +1998,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnomeicu" dir="gnomeicu" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="gnomeicu.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gnomeradio">
     <version release="gnome-2.2">
+      <component name="gnomeradio" dir="gnomeradio" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="gnomeradio.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gnomeradio" dir="gnomeradio" group="fifth-toe">
 	<podir dir="po"/>
 	<potname name="gnomeradio.pot"/>
@@ -1372,9 +2038,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnomoku" dir="gnomoku" group="extras">
+        <podir dir="po"/>
+        <potname name="gnomoku.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gthumb">
     <version release="gnome-2.2">
+      <component name="gthumb" dir="gthumb" group="fifth-toe">
+        <podir dir="po"/>
+        <potname name="gthumb.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gthumb" dir="gthumb" group="fifth-toe">
         <podir dir="po"/>
         <potname name="gthumb.pot"/>
@@ -1414,6 +2098,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gnumeric" dir="gnumeric" group="office">
+        <podir dir="po"/>
+        <potname name="gnumeric.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gpdf">
     <version release="gnome-1.4">
@@ -1434,9 +2127,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gpdf" dir="gpdf" group="extras">
+        <podir dir="po"/>
+        <potname name="gpdf.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gok">
     <version release="gnome-2.2">
+      <component name="gok" dir="gok" group="fifth-toe">
+        <podir dir="po"/>
+        <potname name="gok.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gok" dir="gok" group="fifth-toe">
         <podir dir="po"/>
         <potname name="gok.pot"/>
@@ -1457,6 +2168,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="gperfmeter" dir="gperfmeter" group="extras">
+        <podir dir="po"/>
+        <potname name="gnome-perfmeter.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gperfmeter" dir="gperfmeter" group="extras">
         <podir dir="po"/>
         <potname name="gnome-perfmeter.pot"/>
@@ -1498,9 +2218,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gswitchit" dir="gswitchit" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="gswitchit.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gtetrinet">
     <version release="gnome-2.2">
+      <component name="gtetrinet" dir="gtetrinet" group="fifth-toe">
+        <podir dir="po"/>
+	<potname name="gtetrinet.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gtetrinet" dir="gtetrinet" group="fifth-toe">
         <podir dir="po"/>
 	<potname name="gtetrinet.pot"/>
@@ -1529,6 +2267,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gtk+" dir="gtk+" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="gtk20.pot"/>
+        <branch name="gtk-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="gtkhtml">
     <version release="gnome-1.4">
@@ -1541,6 +2288,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="gtkhtml" dir="gtkhtml" group="extras">
+        <podir dir="po"/>
+        <potname name="gtkhtml.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="gtkhtml" dir="gtkhtml" group="extras">
         <podir dir="po"/>
         <potname name="gtkhtml.pot"/>
@@ -1580,6 +2336,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="gturing" dir="gturing" group="extras">
+	<podir dir="po"/>
+	<potname name="gturing-2.0.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="gucharmap">
     <version release="gnome-2.2">
@@ -1591,7 +2356,16 @@
        <download/>
       </component>
     </version>
-   </module>
+    <version release="gnome-2.4">
+      <component name="gucharmap" dir="gucharmap" group="fifth-toe">
+       <podir dir="po"/>
+       <potname name="gucharmap.pot"/>
+       <branch name="HEAD"/>
+       <regenerate/>
+       <download/>
+      </component>
+    </version>
+  </module>
   <module name="guikachu">
     <version release="gnome-1.4">
       <component name="guikachu" dir="guikachu" group="extras">
@@ -1603,6 +2377,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="guikachu" dir="guikachu" group="extras">
+	<podir dir="po"/>
+	<potname name="guikachu.pot"/>
+	<branch name="guikachu-gnome-2-branch"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="guikachu" dir="guikachu" group="extras">
 	<podir dir="po"/>
 	<potname name="guikachu.pot"/>
@@ -1633,6 +2416,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libbonobo" dir="libbonobo" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="libbonobo-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libbonoboui">
     <version release="gnome-2.2">
@@ -1640,6 +2432,15 @@
         <podir dir="po"/>
         <potname name="libbonoboui-2.0.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="libbonoboui" dir="libbonoboui" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="libbonoboui-2.0.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -1677,6 +2478,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libgda" dir="libgda" group="office">
+        <podir dir="po"/>
+        <potname name="libgda-2.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libgnome">
     <version release="gnome-2.2">
@@ -1684,6 +2494,15 @@
         <podir dir="po"/>
         <potname name="libgnome-2.0.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="libgnome" dir="libgnome" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="libgnome-2.0.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -1699,9 +2518,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libgnomecanvas" dir="libgnomecanvas" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="libgnomecanvas-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libgnomedb">
     <version release="gnome-2.2">
+      <component name="libgnomedb" dir="libgnomedb" group="office">
+        <podir dir="po"/>
+        <potname name="libgnomedb-2.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="libgnomedb" dir="libgnomedb" group="office">
         <podir dir="po"/>
         <potname name="libgnomedb-2.pot"/>
@@ -1721,6 +2558,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libgnomeprint" dir="libgnomeprint" group="desktop">
+        <podir dir="po"/>
+        <potname name="libgnomeprint-2.2.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libgnomeprintui">
     <version release="gnome-2.2">
@@ -1728,6 +2574,15 @@
         <podir dir="po"/>
         <potname name="libgnomeprintui-2.2.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="libgnomeprintui" dir="libgnomeprintui" group="desktop">
+        <podir dir="po"/>
+        <potname name="libgnomeprintui-2.2.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -1743,9 +2598,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libgnomeui" dir="libgnomeui" group="developer-libs">
+        <podir dir="po"/>
+        <potname name="libgnomeui-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libgtcpsocket">
     <version release="gnome-2.2">
+      <component name="libgtcpsocket" dir="libgtcpsocket" group="extras">
+       <podir dir="po"/>
+       <potname name="libgtcpsocket-1.0.pot"/>
+       <branch name="HEAD"/>
+       <regenerate/>
+       <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="libgtcpsocket" dir="libgtcpsocket" group="extras">
        <podir dir="po"/>
        <potname name="libgtcpsocket-1.0.pot"/>
@@ -1774,9 +2647,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libgtop" dir="libgtop" group="desktop">
+        <podir dir="po"/>
+        <potname name="libgtop-2.0.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libmrproject">
     <version release="gnome-2.2">
+      <component name="libmrproject" dir="libmrproject" group="office">
+	<podir dir="po"/>
+	<potname name="libmrproject.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="libmrproject" dir="libmrproject" group="office">
 	<podir dir="po"/>
 	<potname name="libmrproject.pot"/>
@@ -1796,6 +2687,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="libmimedir" dir="libmimedir" group="extras">
+        <podir dir="po"/>
+        <potname name="libmimedir.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="libwnck">
     <version release="gnome-2.2">
@@ -1803,6 +2703,15 @@
         <podir dir="po"/>
         <potname name="libwnck.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="libwnck" dir="libwnck" group="desktop">
+        <podir dir="po"/>
+        <potname name="libwnck.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -1819,6 +2728,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="magicdev" dir="magicdev" group="extras">
+	<podir dir="po"/>
+	<potname name="magicdev.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="magicdev" dir="magicdev" group="extras">
 	<podir dir="po"/>
 	<potname name="magicdev.pot"/>
@@ -1847,9 +2765,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="memprof" dir="memprof" group="developer-app">
+        <podir dir="po"/>
+        <potname name="memprof.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="mergeant">
     <version release="gnome-2.2">
+      <component name="mergeant" dir="mergeant" group="office">
+	<podir dir="po"/>
+	<potname name="mergeant.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="mergeant" dir="mergeant" group="office">
 	<podir dir="po"/>
 	<potname name="mergeant.pot"/>
@@ -1869,9 +2805,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="metacity" dir="metacity" group="desktop">
+        <podir dir="po"/>
+        <potname name="metacity.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="metatheme">
     <version release="gnome-2.2">
+      <component name="metatheme" dir="metatheme" group="extras">
+        <podir dir="po"/>
+        <potname name="metatheme.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="metatheme" dir="metatheme" group="extras">
         <podir dir="po"/>
         <potname name="metatheme.pot"/>
@@ -1900,6 +2854,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="mlview" dir="mlview" group="extras">
+        <podir dir="po"/>
+        <potname name="mlview.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="monkey-media">
     <version release="gnome-2.2">
@@ -1911,9 +2874,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="monkey-media" dir="monkey-media" group="extras">
+        <podir dir="po"/>
+	<potname name="monkey-media.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="mrproject">
     <version release="gnome-2.2">
+      <component name="mrproject" dir="mrproject" group="office">
+	<podir dir="po"/>
+	<potname name="mrproject.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="mrproject" dir="mrproject" group="office">
 	<podir dir="po"/>
 	<potname name="mrproject.pot"/>
@@ -1942,9 +2923,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="nautilus" dir="nautilus" group="desktop">
+        <podir dir="po"/>
+        <potname name="nautilus.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="nautilus-cd-burner">
     <version release="gnome-2.2">
+      <component name="nautilus-cd-burner" dir="nautilus-cd-burner" group="extras">
+        <podir dir="po"/>
+        <potname name="nautilus-cd-burner.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="nautilus-cd-burner" dir="nautilus-cd-burner" group="extras">
         <podir dir="po"/>
         <potname name="nautilus-cd-burner.pot"/>
@@ -1964,9 +2963,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="nautilus-gtkhtml" dir="nautilus-gtkhtml" group="extras">
+        <podir dir="po"/>
+        <potname name="nautilus-gtkhtml.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="nautilus-media">
     <version release="gnome-2.2">
+      <component name="nautilus-media" dir="nautilus-media" group="desktop">
+        <podir dir="po"/>
+        <potname name="nautilus-media.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="nautilus-media" dir="nautilus-media" group="desktop">
         <podir dir="po"/>
         <potname name="nautilus-media.pot"/>
@@ -1986,9 +3003,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="nautilus-mozilla" dir="nautilus-mozilla" group="extras">
+        <podir dir="po"/>
+        <potname name="nautilus-mozilla.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="nautilus-rpm">
     <version release="gnome-2.2">
+      <component name="nautilus-rpm" dir="nautilus-rpm" group="extras">
+        <podir dir="po"/>
+        <potname name="nautilus-rpm.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="nautilus-rpm" dir="nautilus-rpm" group="extras">
         <podir dir="po"/>
         <potname name="nautilus-rpm.pot"/>
@@ -2020,6 +3055,15 @@
       </component>
     </version>
     <version release="gnome-2.2">
+      <component name="pan" dir="pan" group="fifth-toe">
+        <podir dir="po"/>
+        <potname name="pan.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="pan" dir="pan" group="fifth-toe">
         <podir dir="po"/>
         <potname name="pan.pot"/>
@@ -2070,6 +3114,15 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="pong" dir="pong" group="extras">
+	<podir dir="po"/>
+	<potname name="pong2.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="popt">
     <version release="gnome-1.4">
@@ -2084,6 +3137,15 @@
   </module>
   <module name="printman">
     <version release="gnome-2.2">
+      <component name="printman" dir="printman" group="extras">
+        <podir dir="po"/>
+        <potname name="printman.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="printman" dir="printman" group="extras">
         <podir dir="po"/>
         <potname name="printman.pot"/>
@@ -2108,6 +3170,15 @@
         <podir dir="po"/>
         <potname name="gnome-system-monitor.pot"/>
         <branch name="gnome-2-2"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="procman" dir="procman" group="desktop">
+        <podir dir="po"/>
+        <potname name="gnome-system-monitor.pot"/>
+        <branch name="HEAD"/>
         <regenerate/>
         <download/>
       </component>
@@ -2143,6 +3214,15 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="radioactive" dir="radioactive" group="extras">
+        <podir dir="po"/>
+        <potname name="radioactive.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="red-carpet">
     <version release="gnome-2.2">
@@ -2154,9 +3234,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="red-carpet" dir="red-carpet" group="extras">
+	<podir dir="po"/>
+	<potname name="red-carpet.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="rhythmbox">
     <version release="gnome-2.2">
+      <component name="rhythmbox" dir="rhythmbox" group="extras">
+	<podir dir="po"/>
+	<potname name="rhythmbox.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="rhythmbox" dir="rhythmbox" group="extras">
 	<podir dir="po"/>
 	<potname name="rhythmbox.pot"/>
@@ -2194,6 +3292,14 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="sawfish" dir="sawfish" group="extras">
+        <podir dir="po"/>
+        <potname name="sawfish.pot"/>
+        <branch name="gnome-2"/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="seahorse">
     <version release="gnome-2.2">
@@ -2201,6 +3307,15 @@
 	<podir dir="po"/>
 	<potname name="seahorse.pot"/>
 	<branch name="seahorse-0-6"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="seahorse" dir="seahorse" group="fifth-toe">
+	<podir dir="po"/>
+	<potname name="seahorse.pot"/>
+	<branch name="HEAD"/>
 	<regenerate/>
 	<download/>
       </component>
@@ -2227,9 +3342,27 @@
        <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="stickynotes_applet" dir="stickynotes_applet" group="fifth-toe">
+       <podir dir="po"/>
+       <potname name="stickynotes_applet.pot"/>
+       <branch name="HEAD"/>
+       <regenerate/>
+       <download/>
+      </component>
+    </version>
   </module>
   <module name="themus">
     <version release="gnome-2.2">
+      <component name="themus" dir="themus" group="extras">
+       <podir dir="po"/>
+       <potname name="themus.pot"/>
+       <branch name="HEAD"/>
+       <regenerate/>
+       <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="themus" dir="themus" group="extras">
        <podir dir="po"/>
        <potname name="themus.pot"/>
@@ -2260,9 +3393,27 @@
 	<download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="totem" dir="totem" group="fifth-toe">
+        <podir dir="po"/>
+	<potname name="totem.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
   </module>
   <module name="uf-view">
     <version release="gnome-2.2">
+      <component name="uf-view" dir="uf-view" group="extras">
+	<podir dir="po"/>
+	<potname name="uf-view.pot"/>
+	<branch name="HEAD"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="uf-view" dir="uf-view" group="extras">
 	<podir dir="po"/>
 	<potname name="uf-view.pot"/>
@@ -2278,6 +3429,15 @@
 	<podir dir="po"/>
 	<potname name="vte.pot"/>
 	<branch name="gnome-2-2"/>
+	<regenerate/>
+	<download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
+      <component name="vte" dir="vte" group="desktop">
+	<podir dir="po"/>
+	<potname name="vte.pot"/>
+	<branch name="HEAD"/>
 	<regenerate/>
 	<download/>
       </component>
@@ -2315,9 +3475,27 @@
         <download/>
       </component>
     </version>
+    <version release="gnome-2.4">
+      <component name="yelp" dir="yelp" group="desktop">
+        <podir dir="po"/>
+        <potname name="yelp.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
   </module>
   <module name="zenity">
     <version release="gnome-2.2">
+      <component name="zenity" dir="zenity" group="fifth-toe">
+        <podir dir="po"/>
+        <potname name="zenity-0.1.pot"/>
+        <branch name="HEAD"/>
+        <regenerate/>
+        <download/>
+      </component>
+    </version>
+    <version release="gnome-2.4">
       <component name="zenity" dir="zenity" group="fifth-toe">
         <podir dir="po"/>
         <potname name="zenity-0.1.pot"/>
