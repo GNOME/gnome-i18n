@@ -15,6 +15,10 @@ function must_be_logged_in() {
 		Header("WWW-Authenticate: Basic realm=\"GNOME-NL\"");
 		Header("HTTP/1.0 401 Unauthorized");
 		echo "You must login.\n";
+		echo "You can use \"gnome-nl\" as a username.\n";
+		echo "And \"gnome-nl\" as a password.\n";
+		echo "Your IP-address and software specs will be logged.\n";
+		echo "This is to prevent abuse.\n";
 		exit;
 	} else {
 		$md5pass = md5($GLOBALS["PHP_AUTH_PW"]);
