@@ -64,15 +64,15 @@ use Time::gmtime;
 
 sub do_trans {
   my ($tf, $tt) = @_;
-  $msg_str =~ s/$tf/$tt/;
-  $msg_str =~ s/\u$tf/\u$tt/;
-  $msg_str =~ s/\U$tf/\U$tt/;
+  $msg_str =~ s/$tf/$tt/g;
+  $msg_str =~ s/\u$tf/\u$tt/g;
+  $msg_str =~ s/\U$tf/\U$tt/g;
 }
 
 sub translate() {
   if (!($msg_str eq "\"\"\n")) {
   
-    $date = sprintf("%04i-%02i-%02i %02i:%02i+0000\n", gmtime()->year+1900,
+    $date = sprintf("%04i-%02i-%02i %02i:%02i+0000", gmtime()->year+1900,
     gmtime()->mon+1, gmtime()->mday, gmtime()->hour, gmtime()->min);
   
     $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
@@ -151,13 +151,15 @@ sub translate() {
   }
 }
 
+$mode = 0;
+
 while (<>) {
    if  (/^#/) {
      s/SOME DESCRIPTIVE TITLE/English (British) translation/;
      $year = gmtime()->year+1900;
      s/YEAR/$year/;
      s/FIRST AUTHOR <EMAIL\@ADDRESS>/Robert Brady <rwb197\@ecs.soton.ac.uk>, Bastien Nocera <hadess\@hadess.net>/;
-     print;
+     print unless ((/^#, fuzzy/) && ($mode eq 0));
    } elsif (/^msgid /) {
      $msg_id .= substr($_, 6);
      $mode = 1;
