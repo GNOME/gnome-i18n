@@ -12,9 +12,8 @@
 
 # Multi-po-dirs module format: ("module_name", "custom_po_dir", ... )
 # po-script-fu commented before fixing
-@gimp = ("gimp", "po-libgimp", "po-plug-ins"); #, "po-script-fu");
+@gimp = ("gimp", "po-libgimp", "po-plug-ins", "po-script-fu" ); #"plug-ins/perl/po");
 
-#Changed by frob (1)
 %branches = (
 	   "gnome-libs", "gnome-libs-1-0",
 	   "libgtop", "LIBGTOP_STABLE_1_0",
@@ -23,7 +22,6 @@
 	  );
 
 $gray = 0;
-#End of changed by frob (1)
 
 @modules = (
     "achtung",
@@ -45,6 +43,7 @@ $gray = 0;
     "ggv",
     "ghex",
      \@gimp,
+    "gimp-freetype",
     "glade",
     "gnome-applets",
     "gnome-chess",
@@ -52,6 +51,7 @@ $gray = 0;
     "gnome-db",
     "gnome-games",
     "gnome-libs",
+    "gnome-lokkit",
     "gnome-media",
     "gnome-pilot",
     "gnome-pim",
@@ -77,14 +77,14 @@ $gray = 0;
 );
 
 # it's for a current developer :-)
-#@langs = ( "ru");
+# @langs = ( "ru");
 
 @langs = ( "bg_BG.cp1251", "ca", "cs", "da","de", "el", "en_GB", "es", "et", 
 "eu", "fi", "fr", "ga", "gl", "hr", "hu", "is", "it", "ja", "ko", "lt", "nl", 
 "no", "pl", "pt", "pt_BR", "ro", "ru", "sr", "sk", "sv", "tr", "uk", "wa", 
 "zh_TW.Big5", "zh_CN.GB2312" );
 
-$msgfmt="msgfmt --statistics";
+#$msgfmt="msgfmt --statistics";
 $cvsroot="/home/kmaraas/cvs/gnome";
 $htmldir="/home/kmaraas/public_html/genreport";
 
@@ -362,19 +362,22 @@ sub generate_pot {
     $domain = $module;
     $pot_dir = $module . "/po";
   } else {
-    $domain = $pot_dir;
+    $domain =  $pot_dir;
     $pot_dir = $module . "/" . $pot_dir;
   }
   
-#  print "\ngenerate_pot(): module: $module ; pot_dir: $pot_dir ; domain: $domain \n";
-
 #  if (!open (POTOUT, "cd $cvsroot/$pot_dir && ./update.sh 2>&1 |")) {
 #    print " (no update.sh)"; 
+    if ($domain eq "po-script-fu"){
+    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && mv gimp-script-fu.pot po-script-fu.pot |" );
+      } else {  
     open (POTOUT,  "xgettext --default-domain=$domain --directory=$cvsroot/$module \ " . 
 	  "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$pot_dir/POTFILES.in \ " . 
-	  " && test ! $domain.po || ( rm -f $cvsroot/$pot_dir/$domain.pot \ " . 
+	  " && test ! -f $domain.po || ( rm -f $cvsroot/$pot_dir/$domain.pot \ " . 
 	  " && mv $domain.po $cvsroot/$pot_dir/$domain.pot ) 2>&1 |") || die ("could not xgettext");
-#  }
+      }
+    
+  
   close (POTOUT);
 }
 
