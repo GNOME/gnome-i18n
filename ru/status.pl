@@ -71,7 +71,7 @@
 #@langs = ( "ru" );
 
 
-@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no pl pt pt_BR ro ru sk sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+@langs = qw ( bg ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no pl pt pt_BR ro ru sk sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "~/cvs/gnome";
 $htmldir = "~/cvs/gnomeweb-wml/www.gnome.org/gnome-i18n";

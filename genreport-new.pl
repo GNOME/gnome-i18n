@@ -80,7 +80,7 @@ $gray = 0;
 # it's for a current developer :-)
 # @langs = ( "ru");
 
-@langs = ( "bg_BG.cp1251", "ca", "cs", "cy", "da","de", "el", "en_GB", "es", 
+@langs = ( "bg", "ca", "cs", "cy", "da","de", "el", "en_GB", "es", 
 "et", "eu", "fi", "fr", "ga", "gl", "hr", "hu", "is", "it", "ja", "ko", "lt", 
 "nl", "no", "nn", "pl", "pt", "pt_BR", "ro", "ru", "sr", "sk", "sv", "tr", 
 "uk", "wa", "zh_TW.Big5", "zh_CN.GB2312" );
