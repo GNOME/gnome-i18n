@@ -1,38 +1,65 @@
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Valek Filippov <frob@df.ru>, 2000.
 #
+#: src/druid.c:821
 msgid ""
 msgstr ""
 "Project-Id-Version: firestarter-0.5.0 pre 2\n"
-"POT-Creation-Date: 2000-11-02 18:19+0200\n"
-"PO-Revision-Date: 2000-11-03 17:38+03:00\n"
+"POT-Creation-Date: 2001-02-10 16:04+0200\n"
+"PO-Revision-Date: 2001-02-12 12:52+0300\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: src/firestarter.c:53
-msgid "Firewall running"
-msgstr "Межсетевой экран включен"
+#: src/firestarter.c:87
+msgid "Old version detected"
+msgstr "Обнаружена старая версия"
 
-#: src/firestarter.c:56
+#: src/firestarter.c:91
+msgid ""
+"\n"
+"A firewall created by an older version of\n"
+"Firestarter has been detected.\n"
+"\n"
+"OK to remove old firewall (recommended)?\n"
+msgstr ""
+"\n"
+"Обнаружен межсетевой экран созданный\n"
+"старой версией Firestarter.\n"
+"\n"
+"Удалить старый межсетевой экран (рекомендуется)?\n"
+
+#: src/firestarter.c:129 src/firestarter.c:142
 msgid "Firewall stopped"
 msgstr "Межсетевой экран отключен"
 
-#: src/firestarter.c:156 src/firestarter.c:200
+#: src/firestarter.c:132 src/firestarter.c:139
+msgid "Firewall running"
+msgstr "Межсетевой экран включен"
+
+#: src/firestarter.c:135
+msgid "All traffic halted"
+msgstr "Весь трафик останавливается"
+
+#: src/firestarter.c:245 src/firestarter.c:309 src/firestarter.c:341
 msgid "You must be root to manipulate the firewall."
 msgstr "Вы должны быть root чтобы управлять межсетевым экраном."
 
-#: src/firestarter.c:174
+#: src/firestarter.c:283
 msgid "Firewall stopped, network traffic is now flowing freely\n"
 msgstr "Межсетевой экран отключен, сетевой трафик сейчас проходит свободно\n"
 
-#: src/firestarter.c:206
+#: src/firestarter.c:315
 msgid "Firewall script restarted\n"
 msgstr "Сценарий межсетевого экрана перезапущен\n"
 
-#: src/firestarter.c:344
+#: src/firestarter.c:379
+msgid "All traffic halted\n"
+msgstr "Весь трафик останавливается\n"
+
+#: src/firestarter.c:509
 msgid ""
 "An all-in-one Linux firewall utility for GNOME.\n"
 "http://firestarter.sourceforge.net"
@@ -40,64 +67,60 @@ msgstr ""
 "Инструмент для настройки межсетевого экрана linux в GNOME.\n"
 "http://firestarter.sourceforge.net"
 
-#: src/firestarter.c:494 src/preferences.c:433
+#: src/firestarter.c:658 src/preferences.c:408
 msgid "Port"
 msgstr "Порт"
 
-#: src/firestarter.c:495
+#: src/firestarter.c:659
 msgid "Sent from"
 msgstr "Послано от"
 
-#: src/firestarter.c:496 src/preferences.c:434
+#: src/firestarter.c:660 src/preferences.c:409
 msgid "Service"
 msgstr "Сервис"
 
-#: src/firestarter.c:497
+#: src/firestarter.c:661
 msgid "Time"
 msgstr "Время"
 
-#: src/firestarter.c:499
+#: src/firestarter.c:663
 msgid "Deny all connections from"
 msgstr "Заблокировать все соединения от"
 
-#: src/firestarter.c:500
+#: src/firestarter.c:664
 msgid "Allow all connections from"
 msgstr "Позволить все соединения от"
 
-#: src/firestarter.c:501 src/menus.c:83
+#: src/firestarter.c:665 src/menus.c:88
 msgid "Open service to machine"
 msgstr "Открыть сервис к машине"
 
-#: src/firestarter.c:502 src/menus.c:84
+#: src/firestarter.c:666 src/menus.c:89
 msgid "Open service to anyone"
 msgstr "Открыть сервис ко всем"
 
-#: src/firestarter.c:535
+#: src/firestarter.c:699
 msgid "Firewall hits"
 msgstr "Попадания в межсетевой экран"
 
 #. set up the clists on the dynamic rules page
-#: src/firestarter.c:544
+#: src/firestarter.c:710
 msgid "Dynamic rules"
 msgstr "Динамические правила"
 
-#: src/firestarter.c:577
-msgid "Logfile \""
-msgstr "Файл журнала \""
-
-#: src/firestarter.c:578
+#: src/firestarter.c:748
 msgid ""
-"\" not found or access denied.\n"
+"Log file not found or access denied.\n"
 "Firewall log monitoring disabled.\n"
 "\n"
 "You can configure the path to the log file in the \"preferences\" section."
 msgstr ""
-"\" не найден или доступ к нему запрещен.\n"
+"Файл журнала не найден или доступ к нему запрещен.\n"
 "Отслеживание журнала межсетевого экрана отключено.\n"
 "\n"
 "Вы можете настроить путь к файлу журнала в разделе \"Настройки\"."
 
-#: src/druid.c:96
+#: src/druid.c:111
 msgid ""
 "The external and internal network interfaces\n"
 "can't be the same. Please change one of them,\n"
@@ -107,26 +130,31 @@ msgstr ""
 "не могут быть одинаковы. Пожалуйста, измените\n"
 "один из них или отключите IP маскарад."
 
-#: src/druid.c:194
+#: src/druid.c:218
+msgid "Network Device Configuration"
+msgstr "Настройка сетевого устройства"
+
+#: src/druid.c:226
 msgid ""
-"Choose the device you connect to the Internet with.\n"
+"Please select your Internet connected network device from the\n"
+"drop-down list of detected devices.\n"
 "\n"
-"If you connect to the net by modem, your device name is likely ppp0. If you "
-"have an\n"
-"ISDN line or an ethernet connection, choose ippp0 or eth0 respectively."
+"If you use a modem your device name is likely ppp0. If you have a\n"
+"cable modem or a DSL connection, choose eth0."
 msgstr ""
-"Выберите устройство, через которое вы подключены к Интернет.\n"
+"Выберите устройство, через которое вы подключены к Интернет\n"
+"из выпадающего списка обнаруженных устройств.\n"
 "\n"
-"Если вы подключены через модем, название вашего устройства должно быть "
-"похоже на ppp0.\n"
+"Если вы подключены через модем, название вашего устройства должно быть похоже "
+"на ppp0.\n"
 "Если у вас линия ISDN или подключение через локальную сеть, попробуйте ippp0 "
 "или eth0 соответственно."
 
-#: src/druid.c:206
+#: src/druid.c:239
 msgid "Detected device(s):"
 msgstr "Обнаруженные устройства:"
 
-#: src/druid.c:211
+#: src/druid.c:244
 msgid ""
 "Select your network device from the dropdown list. Go with the default if "
 "unsure."
@@ -134,91 +162,97 @@ msgstr ""
 "Выберите ваше сетевое устройство из выпадающего списка. Оставьте то что было "
 "если не уверены."
 
-#: src/druid.c:220
-msgid "Start Firestarter on PPP connect"
-msgstr "Запуск Firestarter при соединении по PPP"
+#: src/druid.c:253
+msgid "Start the firewall on dial-out"
+msgstr "Включать межсетевой экран при дозвоне"
 
-#: src/druid.c:222
+#: src/druid.c:255
 msgid ""
-"Check this option and the program will start when you dial your Internet "
-"service provider.Only available when using a modem."
+"Check this option and the firewall will start when you dial your Internet "
+"Service Provider. Only available when using a modem."
 msgstr ""
 "Отметьте этот параметр и программа будет запускаться когда вы дозваниваетесь "
 "до вашего провайдера Internet. Доступно только при использовании модема."
 
-#: src/druid.c:236
+#: src/druid.c:269
 msgid "IP address is assigned via DHCP"
 msgstr "IP-адреса получаются по DHCP"
 
-#: src/druid.c:238
+#: src/druid.c:271
 msgid ""
 "Check this option if you need to connect to a DHCP server. Cable modem users "
 "should check this."
 msgstr "Отметьте этот параметр, если вам надо подключаться к DHCP-серверу."
 
-#: src/druid.c:269
+#: src/druid.c:309
+msgid "IP Masquerade Configuration"
+msgstr "Настройка трансляции адресов"
+
+#: src/druid.c:318
 msgid ""
 "Do you use IP Masquerading on your LAN, allowing all the machines on your "
 "network\n"
 "to communicate with the Internet via a single IP address?"
 msgstr ""
-"Вы используете IP маскарад на вашей ЛВС, чтобы позволить всем машинам в "
-"вашей сети\n"
+"Вы используете IP маскарад на вашей ЛВС, чтобы позволить всем машинам в вашей "
+"сети\n"
 "взаимодействовать с Internet через один IP адрес?"
 
-#: src/druid.c:278
-msgid "No, I do not use IP Masquerading on my LAN"
-msgstr "Нет, я не использую IP маскарад на моей ЛВС"
+#: src/druid.c:327
+msgid "Disable masquerading"
+msgstr "Отключить трансляцию адресов"
 
-#: src/druid.c:283
-msgid ""
-"Yes, this machine translates the IP addresses of my LAN for the Internet"
-msgstr "Да, эта машина транслирует IP-адреса моей ЛВС в Internet"
+#: src/druid.c:334
+msgid "Enable masquerading"
+msgstr "Включить трансляцию адресов"
 
-#: src/druid.c:301
+#: src/druid.c:354
 msgid "Select your internal network interface:"
 msgstr "Выберите ваш внутренний сетевой интерфейс:"
 
-#: src/druid.c:309
+#: src/druid.c:362
 msgid ""
-"Select your internal network device from the dropdown list. Go with the "
-"default if unsure."
+"This is the device that connects to your LAN. Go with the default if unsure."
 msgstr ""
-"Выберите сетевое устройство вашей внутренней сети. Оставьте то что есть если "
-"не уверены."
+"Это устройство, которое подключено к вашей локальной сети. Оставьте то что "
+"было, если не уверены."
 
-#: src/druid.c:317
+#: src/druid.c:370
 msgid "Autodetect internal network IP range"
 msgstr "Автоопределение диапазона IP-адресов внутренней сети"
 
-#: src/druid.c:319
+#: src/druid.c:372
 msgid "Select this and the IP range of your LAN is autodetected."
 msgstr ""
 "Выберите это и IP-диапазон вашей локальной сети будет определяться "
 "автоматически."
 
-#: src/druid.c:324
-msgid "Specify internal network IP range manually"
-msgstr "Указать вручную диапазон IP-адресов внутренней сети"
+#: src/druid.c:379
+msgid "Specify internal network IP range manually (Not recommended)"
+msgstr "Указать вручную диапазон IP-адресов внутренней сети (Не рекомендуется)"
 
-#: src/druid.c:326
-msgid "Select this only if the autodetection fails."
+#: src/druid.c:381
+msgid "Select this only if the automatic detection fails."
 msgstr "Выберите это только если автоопределение не удалось."
 
-#: src/druid.c:338
-msgid "Enter the your internal network address range:"
+#: src/druid.c:394
+msgid "Enter the internal network address range:"
 msgstr "Введите диапазон адресов вашей внутренней сети:"
 
-#: src/druid.c:350
+#: src/druid.c:408
 msgid ""
-"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
+"The network range is given in the form of address/mask. 192.168.0.0/24 is the "
 "most\n"
 "common IP range reserved for internal networks."
 msgstr ""
-"Сетевой диапазон задается в форме адрес/маска. 192.168.1.0/24 -- общий\n"
-"IP-диапазон зарезервированный для внутренних сетей."
+"Сетевой диапазон задается в форме адрес/маска. 192.168.1.0/24 -- "
+"общий\nIP-диапазон зарезервированный для внутренних сетей."
 
-#: src/druid.c:379
+#: src/druid.c:441
+msgid "Services Configuration"
+msgstr "Настройка сервисов"
+
+#: src/druid.c:450
 msgid ""
 "Do you run server software on your machine and want other people to have "
 "access\n"
@@ -227,102 +261,172 @@ msgstr ""
 "Вы запустили на вашем компьютере серверное обеспечение, к которому хотите "
 "предоставить доступ другим людям из сети?"
 
-#: src/druid.c:387
+#: src/druid.c:458
 msgid "No, I do not run any public network services on my machine"
 msgstr "Нет никаких публичных сервисов на моем компьютере"
 
-#: src/druid.c:392
+#: src/druid.c:465
 msgid "Yes, I run the following services on my machine:"
 msgstr "Да, на моем компьютере запущены следующие сервисы:"
 
-#: src/druid.c:494
+#: src/druid.c:572
+msgid "ICMP Configuration"
+msgstr "Настройка ICMP"
+
+#: src/druid.c:581
 msgid ""
 "ICMP Packet Filtering can be useful to prevent some common\n"
 "Denial of Service (DoS) attacks on your network.\n"
 "\n"
-"Would you like to enable ICMP Filtering?\n"
+"Would you like to enable ICMP Filtering?"
 msgstr ""
 "Фильтрация ICMP пакетов может быть полезна для предотвращения некоторых\n"
 "обычных атак типа \"Отказ в обслуживании\" (DoS) на вашу сеть.\n"
 "\n"
-"Хотите включить фильтрацию ICMP?\n"
+"Хотите включить фильтрацию ICMP?"
 
-#: src/druid.c:503
-msgid "I would like to filter all ICMP Packets"
-msgstr "Я хочу фильтровать все ICMP пакеты"
+#: src/druid.c:590
+msgid "Disable ICMP Filtering"
+msgstr "Отключить фильтрацию ICMP"
 
-#: src/druid.c:508
-msgid "I would like to filter the following ICMP Packets on my machine:"
-msgstr "Я хочу фильтровать следующие ICMP пакеты на моем компьютере:"
+#: src/druid.c:597
+msgid "Enable ICMP Filtering related to the following packets:"
+msgstr "Включить фильтрацию ICMP для следующих пакетов:"
 
-#: src/druid.c:586
+#: src/druid.c:669
+msgid "Type of Service (ToS) Configuration"
+msgstr "Настройка типа обслуживания"
+
+#: src/druid.c:678
+msgid ""
+"Type of Service filtering allows you to re-prioritize network\n"
+"services to allow higher throughput rates for commonly used services.\n"
+"\n"
+"Would you like to enable ToS Filtering?\n"
+msgstr ""
+"Фильтрация по типу обслуживания (ToS) позволяет вам переприоритизировать\n"
+"сетевые услуги чтобы предоставить повышенную скорость для общеиспользуемых "
+"сервисов.\n"
+"\n"
+"Хотите включить фильтрацию по типу обслуживания?\n"
+
+#: src/druid.c:687
+msgid "Disable ToS Filtering"
+msgstr "Отключить фильтрацию по типу обслуживания"
+
+#: src/druid.c:694
+msgid "Enable ToS Filtering related to the following packets:"
+msgstr "Включить фильтрацию по типу обслуживания для следующих пакетов:"
+
+#: src/druid.c:715
+msgid ""
+"Check this option to enable Type of Service flags for common client "
+"applications, such as WWW, FTP, SSH & E-Mail."
+msgstr ""
+"Выберите этот параметр, чтобы включить флаги типа обслуживания для обычных "
+"клиентских приложений, таких как WWW, FTP, SSH и эл.почта."
+
+#: src/druid.c:722
+msgid ""
+"Check this option to enable Type of Service flags for common server "
+"applications, such as SQUID, FTPd, SSHd, STMP & POP Daemons."
+msgstr ""
+"Выберите этот параметр, чтобы включить флаги типа обслуживания для обычных "
+"клиентских приложений, таких как SQUID, FTPd, SSHd, SMTP и POP демоны."
+
+#: src/druid.c:729
+msgid ""
+"Selecting this option will automatically configure Type of Service for "
+"`Throughput' for both X and SSHd.You should select this ONLY if you need to "
+"run X over your link"
+msgstr ""
+"Выбор этого параметра будет автоматически настраивать тип обслуживания для "
+"\"Производительности\" как для X так и для SSHd. Вы должны выбрать это ТОЛЬКО "
+"если вы хотите запускать X через ваш канал"
+
+#: src/druid.c:742
+msgid ""
+"Selecting this option will configure Type of Service flags for Maximum "
+"Throughput for the options you have selected."
+msgstr ""
+"Выбор этого параметра будет автоматически настраивать тип обслуживания для "
+"максимальной производительности для тех параметров, которые вы выбрали."
+
+#: src/druid.c:746
+msgid "Reliability"
+msgstr "Надежность"
+
+#: src/druid.c:750
+msgid ""
+"Selecting this option will configure Type of Service flags for Maximum "
+"Reliability for the options you have selected."
+msgstr ""
+"Выбор этого параметра будет автоматически настраивать тип обслуживания для "
+"максимальной надежности для тех параметров, которые вы выбрали."
+
+#: src/druid.c:754
+msgid "Delay"
+msgstr "Задержка"
+
+#: src/druid.c:758
+msgid ""
+"Selecting this option will configure Type of Service flags for Minimum Delay "
+"for the options you have selected."
+msgstr ""
+"Выбор этого параметра будет автоматически настраивать тип обслуживания для "
+"минимальной задержки для тех параметров, которые вы выбрали."
+
+#: src/druid.c:785
+msgid ""
+"Welcome to Firestarter!\n"
+"\n"
+"\n"
+"This wizard will now help you to set up a firewall for your\n"
+"Linux machine. You will be asked some questions about\n"
+"your network setup.\n"
+"\n"
+"Press the next button to continue.\n"
+"\n"
+"\n"
+msgstr ""
+"Добро пожаловать в Firestarter!\n"
+"\n"
+"Эта программа поможет вам настроить межсетевой экран\n"
+"на вашем компьютере. Вам будет задано несколько вопросов\n"
+"о ваших сетевых настройках.\n"
+"\n"
+"Нажмите \"След.\" для продолжения.\n"
+
+#: src/druid.c:822
+msgid ""
+"The wizard is now ready to generate your firewall.\n"
+"\n"
+"Press the finish button to continue, or the back button\n"
+"to review your choices.\n"
+"\n"
+msgstr ""
+"Помощник готов создать ваш межсетевой экран.\n"
+"\n"
+"Нажмите \"Завершить\" для продолжения, или \"Назад\"\n"
+"чтобы просмотреть что вы выбрали.\n"
+
+#: src/druid.c:877
 msgid "You must be root to use the Firestarter wizard."
 msgstr "Вы должны быть root, чтобы использовать \"Помощника по Firestarter\"."
 
-#: src/druid.c:591
+#: src/druid.c:894
 msgid "Firestarter Firewall Wizard"
 msgstr "Помощник по межсетевому экрану Firestarter"
 
-#. Create the basic druid pages
-#: src/druid.c:607
-msgid "Firestarter Wizard"
-msgstr "Помощник по Firestarter"
-
-#: src/druid.c:608
-msgid ""
-"Welcome to the Firestarter Firewall Wizard\n"
-"\n"
-"This wizard will help you set up a customized packet filtering firewall\n"
-"for your Linux machine in just a few easy steps.\n"
-"\n"
-"\n"
-msgstr ""
-"Добро пожаловать к помощнику по межсетевому экрану Firestarter\n"
-"\n"
-"С его помощью вы установите и настроите пакет для фильтрации межсетевым\n"
-"экраном для вашего Linux компьютера за несколько простых шагов.\n"
-"\n"
-"\n"
-
-#: src/druid.c:614
-msgid "Choose your external interface"
-msgstr "Выберите ваш внешний интерфейс"
-
-#: src/druid.c:615
-msgid "IP Masquerading Configuration"
-msgstr "Настройка IP маскарада"
-
-#: src/druid.c:616
-msgid "Services Configuration"
-msgstr "Настройка сервисов"
-
-#: src/druid.c:617
-msgid "ICMP Configuration"
-msgstr "Настройка ICMP"
-
-#: src/druid.c:619
-msgid "Wizard done"
-msgstr "Помощник завершил работу"
-
-#: src/druid.c:620
-msgid ""
-"The Firestarter wizard is done gathering the necessary data.\n"
-"Click the finish button to start the firewall.\n"
-"\n"
-msgstr ""
-"Помощник по Firestarter завершил сбор необходимых данных.\n"
-"Нажмите кнопку \"Завершнить\", чтобы включить межсетевой экран.\n"
-"\n"
-
-#: src/preferences.c:167
+#: src/preferences.c:169
 msgid "General options"
 msgstr "Общие параметры"
 
-#: src/preferences.c:176
+#: src/preferences.c:178
 msgid "Start firewall on program startup"
 msgstr "Включать межсетевой экран при запуске программы"
 
-#: src/preferences.c:178
+#: src/preferences.c:180
 msgid ""
 "Check this and the firewall will be restarted each time the program starts. "
 "Enabled by default."
@@ -330,11 +434,11 @@ msgstr ""
 "Отметьте это и межсетевой экран будет перезапускаться каждый раз при запуске "
 "программы. Включено по умолчанию."
 
-#: src/preferences.c:185
+#: src/preferences.c:187
 msgid "Stop firewall on program exit"
 msgstr "Отключать межсетевой экран при выходе из программы"
 
-#: src/preferences.c:187
+#: src/preferences.c:189
 msgid ""
 "Check this and the firewall will be stopped when you exit Firestarter. "
 "Enabled by default."
@@ -342,11 +446,11 @@ msgstr ""
 "Отметьте это и межсетевой экран будет отключен при выходе из Firestarter. "
 "Включено по умолчанию."
 
-#: src/preferences.c:194
+#: src/preferences.c:196
 msgid "Exit program when window is closed (otherwise hide)"
 msgstr "Выходить из программы при закрытии окна (иначе скрывать)"
 
-#: src/preferences.c:196
+#: src/preferences.c:198
 msgid ""
 "By default when you close the program window the program is merely hidden, "
 "you can then make it visible again by clicking on the status button."
@@ -354,11 +458,11 @@ msgstr ""
 "По умолчанию, когда вы закрываете окно программы программа прячется, вы "
 "можете сделать ее видимой снова щелкнув на кнопке состояния."
 
-#: src/preferences.c:203
+#: src/preferences.c:205
 msgid "Start hidden"
 msgstr "Запустить скрытым"
 
-#: src/preferences.c:205
+#: src/preferences.c:207
 msgid ""
 "Check this and Firestarter will start hidden. Click on the status button to "
 "unhide. Disabled by default."
@@ -366,49 +470,27 @@ msgstr ""
 "Отметьте это и Firestarter будет запускаться скрытым. Щелкните на кнопке "
 "состояния, чтобы сделать его видимым. По умолчанию отключено."
 
-#: src/preferences.c:212
-msgid "Remove identical firewall hit lines"
-msgstr "Удалить одинаковые строки попаданий в межсетевой экран"
-
-#: src/preferences.c:214
-msgid ""
-"Check this and the firewall hit log will filter out identical lines. Enabled "
-"by deault."
-msgstr ""
-"Отметьте это и межсетевой экран будет фильтровать одинаковые строки в "
-"журнале попаданий. Включено по умолчанию."
-
-#: src/preferences.c:226
-msgid "Firewall syslog file:"
-msgstr "Файл журнала межсетевого экрана:"
-
-#: src/preferences.c:231
-msgid ""
-"Enter the path to the file the syslog daemon logs to. This is almost always "
-"/var/log/messages."
-msgstr "Введите путь к файлу журнала демона syslog. Почти всегда это /var/log/messages."
-
-#: src/preferences.c:278
+#: src/preferences.c:252
 msgid "Play current sound file"
 msgstr "Воспроизвести текущий звуковой файл"
 
-#: src/preferences.c:306
+#: src/preferences.c:280
 msgid "Sound options"
 msgstr "Параметры звуков"
 
-#: src/preferences.c:314
+#: src/preferences.c:288
 msgid "Enable sounds"
 msgstr "Включить звуки"
 
-#: src/preferences.c:316
+#: src/preferences.c:290
 msgid "Check this if you want to hear sounds on certain events"
 msgstr "Отметьте это, если вы хотите слышать звуки при некоторых событиях"
 
-#: src/preferences.c:324
+#: src/preferences.c:298
 msgid "File to play on firewall hit:"
 msgstr "Файл для воспроизведения при попадании в межсетевой экран:"
 
-#: src/preferences.c:329
+#: src/preferences.c:303
 msgid ""
 "Enter the path to the sound file that should be played when a firewall hit "
 "occurs."
@@ -416,11 +498,11 @@ msgstr ""
 "Введите путь к звуковому файлу, который должен быть воспроизведен при "
 "попадании в межсетевой экран."
 
-#: src/preferences.c:344
+#: src/preferences.c:318
 msgid "File to play on firewall stop:"
 msgstr "Файл для воспроизведения при отключении межсетевого экрана:"
 
-#: src/preferences.c:349
+#: src/preferences.c:323
 msgid ""
 "Enter the path to the sound file that should be played when the firewall is "
 "stopped."
@@ -428,11 +510,11 @@ msgstr ""
 "Введите путь к звуковому файлу, который должен быть воспроизведен при "
 "отключении межсетевого экрана."
 
-#: src/preferences.c:364
+#: src/preferences.c:338
 msgid "File to play on firewall restart:"
 msgstr "Файл для воспроизведения при перезапуске межсетевого экрана:"
 
-#: src/preferences.c:369
+#: src/preferences.c:343
 msgid ""
 "Enter the path to the sound file that should be played when the firewall is "
 "restarted."
@@ -440,33 +522,71 @@ msgstr ""
 "Введите путь к звуковому файлу, который должен быть воспроизведен при "
 "перезапуске межсетевого экрана."
 
-#: src/preferences.c:440
+#: src/preferences.c:415
 msgid "Never log these ports"
 msgstr "Никогда не записывать в журнал эти порты"
 
-#: src/preferences.c:472
+#: src/preferences.c:447
 msgid "Add"
 msgstr "Добавить"
 
-#: src/preferences.c:500
+#: src/preferences.c:460
+msgid "Misc. options"
+msgstr "Разные параметры"
+
+#: src/preferences.c:470
+msgid "Syslog file:"
+msgstr "Файл журнала:"
+
+#: src/preferences.c:479
+msgid ""
+"Enter the path to the file the syslog daemon logs to. This is almost always "
+"/var/log/messages."
+msgstr ""
+"Введите путь к файлу журнала демона syslog. Почти всегда это "
+"/var/log/messages."
+
+#: src/preferences.c:493
+msgid "Filter identical hits"
+msgstr "Фильтровать идентичные попадания"
+
+#: src/preferences.c:495
+msgid ""
+"Check this and the firewall hit log will filter out identical lines. Enabled "
+"by deault."
+msgstr ""
+"Отметьте это и межсетевой экран будет фильтровать одинаковые строки в журнале "
+"попаданий. Включено по умолчанию."
+
+#: src/preferences.c:519
 msgid "Wizard options"
 msgstr "Параметры помощника"
 
-#: src/preferences.c:508
-msgid "Always show IP Masquerade page in wizard"
-msgstr "Всегда показывать в помощнике страницу IP Маскарадинга"
+#: src/preferences.c:527
+msgid "Show every page in wizard"
+msgstr "Показать каждую страницу в помощнике"
 
-#: src/preferences.c:510
+#: src/preferences.c:529
+msgid "Check this and every wizard page will be available in the wizard"
+msgstr "Отметьте это и каждая страница будет всегда доступна в помощнике"
+
+#: src/preferences.c:534
+msgid "Filter Outbound Packets"
+msgstr "Фильтр исходящих пакетов"
+
+#: src/preferences.c:536
 msgid ""
-"Check this and the IP Masquerade page will always be available in the wizard"
+"Check this and Firestarter will also filter Outbound packets. Do not check "
+"unless you are sure you need it."
 msgstr ""
-"Отметьте это и страница IP Маскарадинга будет всегда доступна в помощнике"
+"Отметьте это и Firestarter будет фильтровать исходящие пакеты. Не отмечайте, "
+"если не уверены, что вам это надо."
 
-#: src/preferences.c:515
-msgid "Try to detect the location of ipchains/iptables"
-msgstr "Попытаться определить расположение ipchains/iptables"
+#: src/preferences.c:542
+msgid "Try to detect the location of system binaries"
+msgstr "Попытаться определить расположение системных программ"
 
-#: src/preferences.c:517
+#: src/preferences.c:544
 msgid ""
 "Check this and Firestarter will search for the location of some needed "
 "binaries. Do not check unless you're having problems."
@@ -474,61 +594,60 @@ msgstr ""
 "Отметьте это и Firestarter будет искать расположение некоторых необходимых "
 "программ. Не отмечайте если у вас нет проблем."
 
-#: src/preferences.c:523
-msgid "Preferred packet rejection method (ipchains only)"
-msgstr "Предпочтительный метод отброса пакета (только ipchains)"
+#: src/preferences.c:550
+msgid "Preferred packet rejection method"
+msgstr "Предпочтительный метод отброса пакета"
 
-#: src/preferences.c:531
+#: src/preferences.c:558
 msgid "Deny"
 msgstr "Отказ"
 
-#: src/preferences.c:533
-msgid "Checking this box will simple ignore the unauthorized packets."
-msgstr "Отметка здесь приведет к простому игнорированию неавторизованных пакетов."
+#: src/preferences.c:560
+msgid "Checking this box will simply ignore the unauthorized packets."
+msgstr ""
+"Отметка здесь приведет к простому игнорированию неавторизованных пакетов."
 
-#: src/preferences.c:539
+#: src/preferences.c:566
 msgid "Reject"
 msgstr "Выброс"
 
-#: src/preferences.c:541
-msgid ""
-"Check this and your machine will send an icmp reply to the sender of the "
-"rejected packets"
-msgstr "Отметка здесь приведет к передаче отправителю icmp ответа об отбросе пакета"
+#: src/preferences.c:568
+msgid "Checking this box will reject the unauthorized packets"
+msgstr "Отметка здесь приведет к отбрасыванию неавторизованных пакетов."
 
-#: src/preferences.c:546
+#: src/preferences.c:573
 msgid "You must rerun the wizard for the changes to take effect"
 msgstr "Вы должны перезапустить помощника, чтобы изменения подействовали"
 
-#: src/preferences.c:607
+#: src/preferences.c:637
 msgid "Firestarter: Preferences"
 msgstr "Firestarter: Настройки"
 
-#: src/preferences.c:621
+#: src/preferences.c:651
 msgid "General"
 msgstr "Общие"
 
-#: src/preferences.c:622
+#: src/preferences.c:652
 msgid "Logging"
 msgstr "Журналирование"
 
-#: src/preferences.c:623
+#: src/preferences.c:653
 msgid "Sounds"
 msgstr "Звуки"
 
-#: src/preferences.c:624
+#: src/preferences.c:654
 msgid "Advanced"
 msgstr "Дополнительные"
 
-#: src/preferences.c:703
+#: src/preferences.c:733
 msgid "Select the syslog log file"
 msgstr "Выберите файл журнала syslog"
 
-#: src/preferences.c:704
+#: src/preferences.c:734
 msgid "Select the file to play a sound"
 msgstr "Выберите файл для воспроизведения звука"
 
-#: src/preferences.c:738
+#: src/preferences.c:768
 msgid "Browse"
 msgstr "Просмотр"
 
@@ -536,91 +655,99 @@ msgstr "Просмотр"
 msgid "unknown"
 msgstr "неизвестно"
 
-#: src/menus.c:30 src/menus.c:41
+#: src/menus.c:32 src/menus.c:43
 msgid "R_estart firewall"
 msgstr "Перезапустить межсетевой экран"
 
-#: src/menus.c:31 src/menus.c:42
+#: src/menus.c:33 src/menus.c:44
 msgid "_Stop firewall"
 msgstr "Отключить межсетевой экран"
 
-#: src/menus.c:40
+#: src/menus.c:42
 msgid "_Run firewall wizard"
 msgstr "Запустить помощника по межсетевому экрану"
 
-#: src/menus.c:50
+#: src/menus.c:45
+msgid "_Halt all network traffic"
+msgstr "Остановить весть сетевой трафик"
+
+#: src/menus.c:53
 msgid "_Clear firewall hit list"
 msgstr "Очистить список попаданий в межсетевой экран"
 
-#: src/menus.c:51
+#: src/menus.c:54
 msgid "R_eload entire firewall hit list"
 msgstr "Перезагрузить весь список попаданий в межсетевой экран"
 
-#: src/menus.c:52
+#: src/menus.c:55
 msgid "_Save firewall hit list to file"
 msgstr "Сохранить список попаданий в межсетевой экран в файле"
 
-#: src/menus.c:62
+#: src/menus.c:60
+msgid "Firestarter _Homepage"
+msgstr "Домашняя страница Firestarter"
+
+#: src/menus.c:67
 msgid "_Firewall"
 msgstr "Межсетевой экран"
 
-#: src/menus.c:63
+#: src/menus.c:68
 msgid "_Hit list"
 msgstr "Список попаданий"
 
-#: src/menus.c:69
+#: src/menus.c:74
 msgid "Run firewall wizard"
 msgstr "Запустить помощника по межсетевому экрану"
 
-#: src/menus.c:71
+#: src/menus.c:76
 msgid "Clear firewall hit list"
 msgstr "Очистить список попаданий в межсетевой экран"
 
-#: src/menus.c:72
+#: src/menus.c:77
 msgid "Reload entire firewall hit list"
 msgstr "Перезагрузить весь список попаданий в межсетевой экран"
 
-#: src/menus.c:73
+#: src/menus.c:78
 msgid "Save firewall hit list to file"
 msgstr "Сохранить список попаданий в межсетевой экран в файле"
 
-#: src/menus.c:75
+#: src/menus.c:80
 msgid "Restart firewall"
 msgstr "Перезапустить межсетевой экран"
 
-#: src/menus.c:76
+#: src/menus.c:81
 msgid "Stop firewall"
 msgstr "Отключить межсетевой экран"
 
-#: src/menus.c:81
+#: src/menus.c:86
 msgid "Deny all connections from machine"
 msgstr "Заблокировать все соединения от"
 
-#: src/menus.c:82
+#: src/menus.c:87
 msgid "Allow all connections from machine"
 msgstr "Позволить все соединения от"
 
-#: src/menus.c:86
+#: src/menus.c:91
 msgid "Do not log this port"
 msgstr "Не заносить в журнал этот порт"
 
-#: src/menus.c:87
+#: src/menus.c:92
 msgid "Lookup hostname"
 msgstr "Поиск имени хоста"
 
-#: src/menus.c:92
+#: src/menus.c:97
 msgid "Remove this rule"
 msgstr "Удалить это правило"
 
-#: src/menus.c:93
+#: src/menus.c:98
 msgid "Remove all rules in this group"
 msgstr "Удалить все правила в этой группе"
 
-#: src/menus.c:94
+#: src/menus.c:99
 msgid "Remove all rules in all groups"
 msgstr "Удалить все правила во всех группах"
 
-#: src/addrules.c:97 src/menus.c:96
+#: src/addrules.c:97 src/menus.c:101
 msgid "Add new rule"
 msgstr "Добавить новое правило"
 
@@ -649,3 +776,4 @@ msgstr "Введите IP-диапазон или имя хоста, на котором открыт сервис:"
 #: src/savelog.c:55
 msgid "Select file to save log to"
 msgstr "Выберите файл для сохранения журнала"
+
