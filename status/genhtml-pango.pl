@@ -12,6 +12,7 @@ $now = time;
 %modulenames = (
 "da", "Modul",
 "de", "Paket",
+"nl", "Module",
 "ro", "Modul",
 "ru", "Модуль",
 "sv", "Modul",
@@ -22,6 +23,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&uuml;bersetzt",
+"nl", "Vertaald",
 "ro", "traduse",
 "ru", "Переведено",
 "sv", "&Ouml;versatt",
@@ -32,6 +34,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "ungenau",
+"nl", "Wazig",
 "ro", "neclare",
 "ru", "Нечетко",
 "sv", "Luddigt",
@@ -42,6 +45,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "Un&uuml;bersetzt",
+"nl", "Onvertaald",
 "ro", "netraduse",
 "ru", "Непереведено",
 "sv", "O&oslash;versatt",
@@ -52,6 +56,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"nl", "Meldingen",
 "ro", "stringuri",
 "ru", "сообщ.",
 "sv", "meddelanden",
@@ -63,6 +68,7 @@ $now = time;
 "C", "Detail report for ",
 "da", "Detaljeret statistik for underst&oslash;ttelse af dansk i Gnome",
 "de", "Detaillierte Statistik f&uuml;r deutsch &Uuml;bersetzung in GNOME",
+"nl", "Gedetailleerde rapportage voor Nederlands",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "Подробный отчет о состоянии перевода Gnome на русский",
 "sv", "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME",

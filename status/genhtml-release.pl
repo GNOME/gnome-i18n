@@ -12,6 +12,7 @@ $now = time;
 %modulenames = (
 "de", "Paket",
 "da", "Modul",
+"nl", "Module",
 "no", "Modul",
 "ro", "Modul",
 "ru", "Модуль",
@@ -23,6 +24,7 @@ $now = time;
 %translated = (
 "da", "Oversat",
 "de", "&uuml;bersetzt",
+"nl", "Vertaald",
 "no", "Oversatt",
 "ro", "traduse",
 "ru", "Переведено",
@@ -34,6 +36,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "ungenau",
+"nl", "Wazig",
 "no", "Usikker",
 "ro", "neclare",
 "ru", "Нечетко",
@@ -45,6 +48,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "un&uuml;bersetzt",
+"nl", "Onvertaald",
 "no", "Ikke oversatt",
 "ro", "netraduse",
 "ru", "Непереведено",
@@ -56,6 +60,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
+"nl", "Meldingen",
 "no", "strenger",
 "ro", "stringuri",
 "ru", "сообщ.",
@@ -86,8 +91,8 @@ $now = time;
 "ja", "Detailed report for Japanese (ja) GNOME translations",
 "ko", "Detailed report for Korean (ko) GNOME translations",
 "lt", "Detailed report for Lithuanian (lt) GNOME translations",
+"nl", "Gedetailleerde rapportage voor de Nederlandse (nl) GNOME vertalingen",
 "no", "Detaljert rapport for oversettelse av GNOME til norsk<br>Detailed report for Bokmal Norweigian (no) GNOME translations",
-"nl", "Detailed report for Dutch (nl) GNOME translations",
 "pl", "Detailed report for Polish (pl) GNOME translations",
 "pt", "Detailed report for Portuguese (pt) GNOME translations",
 "pt_BR", "Detailed report for Portuguese, Brazilian (pt_BR) GNOME translations",
