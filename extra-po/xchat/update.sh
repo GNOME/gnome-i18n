@@ -22,3 +22,5 @@ mv $1.po $1.po.old && msgmerge $1.po.old $PACKAGE.pot -o $1.po \
 && rm $1.po.old;
 
 fi;
+
+msgfmt $1.po --statistics -o /dev/null
