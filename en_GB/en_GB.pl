@@ -169,6 +169,7 @@ sub translate() {
   do_trans("humor", "humour");
   do_trans("initialization", "initialisation");
   do_trans("initialize", "initialise");
+  do_trans("initializing", "initialising");
   do_trans("initialized", "initialised");
   do_trans("jeweled", "jewelled");
   do_trans("judgment", "judgement");
