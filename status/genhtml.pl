@@ -179,6 +179,11 @@ my %wip = (
     "es" => "En proceso",
 );
 
+my %finished = (
+    "C"	 => "Finished",
+    "es" => "Terminada",
+);
+
 my %unknown = (
     "C"  => "Unknown",
     "de" => "Unbekannt",
@@ -480,7 +485,11 @@ foreach $lang (sort keys %langinfo){
         if (${$langmod{$mod}->{$lang}->[3]} ==  0) {
             $transtatus = ("$outdated{$lang}") ? "<font color=\"#F80000\">$outdated{$lang}</font>" : "<font color=\"#F80000\">$outdated{$defaultlang}</font>";
         } elsif (${$langmod{$mod}->{$lang}->[3]} == 1) {
-            $transtatus = ("$wip{$lang}") ? "$wip{$lang}" : "$wip{$defaultlang}";
+	    if ($percent == 100) {
+	        $transtatus = ("$finished{$lang}") ? "$finished{$lang}" : "$finished{$defaultlang}";
+	    } else {
+                $transtatus = ("$wip{$lang}") ? "$wip{$lang}" : "$wip{$defaultlang}";
+	    }
         } else {
             $transtatus = ("$unknown{$lang}") ? "$unknown{$lang}" : "$unknown{$defaultlang}";
         }
