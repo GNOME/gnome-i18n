@@ -42,7 +42,7 @@ $now = time;
 "ru", "Нечетко",
 "sv", "Luddigt",
 "tr", "Tam tutmayan",
-"uk", "Неч╕тко"
+"uk", "Не визначено"
 );
 
 %untranslated = (
@@ -54,7 +54,7 @@ $now = time;
 "ru", "Непереведено",
 "sv", "O&ouml;versatt",
 "tr", "TercЭme edilmemiЧ",
-"uk", "Неперекладено"
+"uk", "Не перекладено"
 );
 
 %strings = (
@@ -129,6 +129,7 @@ $now = time;
 
 
 $htmldir="/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
+#$htmldir="../ru"; # for test
 
 
 sub printmodule;
@@ -170,8 +171,8 @@ if (open (LANGINFO, "$htmldir/langinfo.dat")){
     }
 }    
 
-if (open (LANGMOD, "$htmldir/langmod.dat")){                                    
-    while (<LANGMOD>) {                                                         
+if (open (LANGMOD, "$htmldir/langmod.dat")){ 
+    while (<LANGMOD>) {
     chomp;                                                                  
     ($lang, $mod, @info) = split(/,/);                                                     
 
@@ -180,7 +181,7 @@ if ($mod=~/\/po$/){
     $mod = ($mod=~/helix-install/) ? "rpm (helix-install)" : $tmp;
     } elsif ($mod=~/extra-po\//){
 	$mod = $';
-    }s
+    }
 
     $index = 0;
     foreach $info (@info){
@@ -193,7 +194,7 @@ if ($mod=~/\/po$/){
 
 
 open (TABLE, ">$htmldir/status.shtml") || die("can't open $htmldir/status.shtml");
-print TABLE "<html><head><title>Report for GNOME translations</title></head><body>"
+print TABLE "<html><head><title>Report for GNOME translations</title></head><body>";
 print TABLE "<table cellpadding=1 cellspacing=1 border=1 width=\"90%\"><tr align=center><td></td>";
 
 #First string with langs
@@ -233,7 +234,7 @@ foreach $lang (sort keys %langinfo){
 }
     print TABLE "<td></td></tr></table>";
     print TABLE scalar localtime(time);
-    print TABLE "</body></html>"
+    print TABLE "</body></html>";
 
 # status printed.
 
@@ -242,7 +243,7 @@ foreach $lang (sort keys %langinfo){
     $link = "$details_" . substr($lang, 0, 5) . ".shtml";
 open (TABLE2, ">$htmldir/$link") || die("can't open $htmldir/$link");
     $detail = $details{$lang} || $details{"C"} . $lang;
-    print TABLE2 "<html><head><title>$detail</title></head><body>"
+    print TABLE2 "<html><head><title>$detail</title></head><body>";
     print TABLE2 "<a name=\"$lang\"><b>$detail</b></a><br>";
     print TABLE2 "<table cellpadding=1 cellspacing=1 border=1 >";
     $modulename = $modulenames{$lang} || "Module";
