@@ -22,10 +22,19 @@ echo "<tr>";
       if ($count>1) {
         echo "<td></td>";
       } else {
-        echo "<td>$word</td>";
+        echo "<td valign=\"top\">$word</td>";
       }
-      echo "<td>$count.</td><td>$type</td><td>$trans</td><td>$comment</td><td><a href=\"edit.php?wid=$wid&tid=$tid&trans_old=$trans\">Bearbeiten</a> - 
-	  <a href=\"delete.php?wid=$wid&tid=$tid&trans=$trans\">Löschen</a></td></tr>\n";
+	  $comment = wordwrap($comment, 40, "\n", 1);
+	  $comment = str_replace("\n", "<br>", $comment);
+      print <<< END
+	  <td valign="top">$count.</td>
+	  <td valign="top">$type</td>
+	  <td valign="top">$trans</td>
+	  <td valign="top">$comment</td>
+	  <td valign="top"><a href="edit.php?wid=$wid&tid=$tid&trans_old=$trans">Bearbeiten</a> - 
+	  <a href="delete.php?wid=$wid&tid=$tid&trans=$trans">Löschen</a></td>
+	  </tr>
+END;
 
 }
 
