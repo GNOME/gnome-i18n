@@ -2,7 +2,7 @@
 
 @langs = qw ( af ar as az bg bn bs ca cs cy da de el en_GB eo es et eu fa fi fr ga 
               gl gu he hi hr hu id is it ja ko kn ko ks lt lv mi ml mk mr nl 
-              no nn or pa pl ps pt pt_BR ro ru sd si sk sl sp sr sv ta te th 
+              no nn or pa pl ps pt pt_BR ro ru sd si sk sl sp sr sv ta te th tr
               ur wa vi zh_CN zh_TW );
 
 $cvsroot = "/home/kmaraas/cvs/gnome/";
