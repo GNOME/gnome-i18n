@@ -5,85 +5,161 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: galeon CVS\n"
-"POT-Creation-Date: 2000-09-19 15:28+0000\n"
-"PO-Revision-Date: 2000-09-26 00:00+0900\n"
+"POT-Creation-Date: 2000-10-13 21:35+0200\n"
+"PO-Revision-Date: 2000-10-15 00:00+0900\n"
 "Last-Translator: Yukihiro Nakai <nakai@gnome.gr.jp>\n"
 "Language-Team: Japan GNOME Users Group <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bookmarks.c:139 src/bookmarks.c:444 src/prefs.c:375 src/trans.h:74
-#: src/trans.h:80
+#: src/bookmarks.c:142 src/bookmarks.c:447 src/prefs.c:409 src/trans.h:76
+#: src/trans.h:81
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
-#: src/bookmarks.c:801 src/bookmarks_callbacks.c:172 src/history.c:182
-#: src/mozcallbacks.c:139
+#: src/bookmarks.c:827 src/bookmarks_callbacks.c:181
+#: src/browser_callbacks.c:804 src/history.c:182 src/mozcallbacks.c:140
 msgid "Untitled"
 msgstr "無題"
 
-#: src/bookmarks.c:964
+#: src/bookmarks.c:996 src/trans.h:383
 msgid "Temporary bookmarks"
 msgstr "一時ブックマーク"
 
-#: src/bookmarks_callbacks.c:80
+#: src/bookmarks_callbacks.c:89
 msgid "Importing bookmarks failed"
 msgstr "ブックマークのインポートに失敗しました"
 
-#: src/bookmarks_callbacks.c:84
+#: src/bookmarks_callbacks.c:93
 msgid "Bookmarks successfully imported/merged"
 msgstr "ブックマークのインポート／統合に成功しました"
 
-#: src/bookmarks_callbacks.c:187
+#: src/bookmarks_callbacks.c:196
 msgid "Please enter the name of the bookmark"
 msgstr "ブックマーク名を入力してください"
 
-#: src/bookmarks_callbacks.c:508
+#: src/bookmarks_callbacks.c:517
 msgid "New bookmark item"
 msgstr "新規ブックマーク"
 
-#: src/bookmarks_callbacks.c:508
+#: src/bookmarks_callbacks.c:517
 msgid "where://do.you.want.to.go"
 msgstr "where://do.you.want.to.go"
 
-#: src/bookmarks_callbacks.c:521
+#: src/bookmarks_callbacks.c:530
 msgid "New bookmark category"
 msgstr "新規ブックマークカテゴリ"
 
-#: src/bookmarks_callbacks.c:534
+#: src/bookmarks_callbacks.c:543
 msgid "Separator"
 msgstr "区切り"
 
-#: src/browser.c:107
-msgid "Galeon cannot handle this protocol"
-msgstr "Galeonはこのプロトコルを扱えません"
-
 #. fill the status bar text with progress info: percentual and kb
-#: src/browser.c:395
+#: src/browser.c:419
 msgid "%s (%d%% complete, %d Kb of %d Kb loaded)"
 msgstr "%s (%d%% 完了、%dKB中%dKBが読み込まれました) "
 
 #. fill the status bar text with progress info: only kb
-#: src/browser.c:402
+#: src/browser.c:427
 #, c-format
 msgid "%s (%d Kb loaded)"
 msgstr "%s (%dKBが読み込まれました)"
 
-#: src/browser_callbacks.c:267
+#: src/browser.c:695
+msgid ""
+"Can't get the url for current page.\n"
+"No source avaible."
+msgstr ""
+"現在のページのURLが取得できません。\n"
+"ソースが有効ではありません。"
+
+#: src/browser.c:711
+msgid "Could not create a temporary file"
+msgstr "一時ファイルを生成できませんでした"
+
+#: src/browser.c:718
+msgid "Something went wrong while saving the file to a temporary location"
+msgstr "ファイルを一時場所に保存するときに問題が何か発生しました"
+
+#: src/browser.c:732
+msgid "Error executing external program"
+msgstr "外部プログラムの実行でエラーが発生しました"
+
+#: src/browser_callbacks.c:290
 msgid "You must specify a Start Page in the Preferences dialog!"
 msgstr "設定ダイアログでスタートページを指定してください!"
 
-#: src/find_callbacks.c:56 src/find_callbacks.c:82 src/find_callbacks.c:121
+#: src/context.c:27 src/context.c:60
+msgid "Open"
+msgstr "開く"
+
+#: src/context.c:28 src/context.c:61
+msgid "Open in a new window"
+msgstr "新しいウィンドウで開く"
+
+#: src/context.c:29 src/context.c:62
+msgid "Download file"
+msgstr "ダウンロードファイル"
+
+#: src/context.c:30 src/context.c:63
+msgid "Copy link location"
+msgstr "リンクの場所をコピー"
+
+#: src/context.c:31 src/context.c:64 src/trans.h:24
+msgid "Add temporary bookmark"
+msgstr "一時ブックマークに追加"
+
+#: src/context.c:37 src/context.c:56
+msgid "Open image"
+msgstr "画像を開く"
+
+#: src/context.c:38 src/context.c:57
+msgid "Open image in a new window"
+msgstr "画像を新しいウィンドウで開く"
+
+#: src/context.c:39 src/context.c:58
+msgid "Download image"
+msgstr "画像のダウンロード"
+
+#: src/context.c:45 src/prefs.c:429 src/trans.h:176
+msgid "View Source"
+msgstr "ソースの表示"
+
+#: src/context.c:46
+msgid "Save"
+msgstr "保存"
+
+#: src/context.c:47
+msgid "Find"
+msgstr "検索"
+
+#: src/context.c:49 src/trans.h:35 src/trans.h:385
+msgid "Back"
+msgstr "戻る"
+
+#: src/context.c:50 src/trans.h:38 src/trans.h:387
+msgid "Forward"
+msgstr "進む"
+
+#: src/find_callbacks.c:60 src/find_callbacks.c:86 src/find_callbacks.c:125
 msgid "Not found"
 msgstr "見つかりません"
 
-#: src/main.c:50
+#: src/main.c:51
 msgid "Attempt to load URL in existing Galeon window"
 msgstr "存在するGaleonウィンドウにURLを読み込む"
 
+#: src/main.c:54
+msgid "Add a temp bookmark (don't open any window)"
+msgstr "一時ブックマークに追加(ウィンドウは開きません)"
+
+#: src/main.c:55 src/trans.h:371
+msgid "URL"
+msgstr "URL"
+
 #. offer to import netscape bookmarks
-#: src/main.c:247
+#: src/main.c:266
 msgid ""
 "This appears to be the first time you have run Galeon\n"
 "\n"
@@ -93,30 +169,27 @@ msgstr ""
 "\n"
 "既存のNetscapeのブックマークをインポートしますか?"
 
-#: src/misc.c:120
+#: src/misc.c:155
 #, c-format
 msgid "%s not found"
 msgstr "%sは見つかりませんでした"
 
-#: src/misc.c:654
-msgid "Open"
-msgstr "開く"
+#. throw the error
+#: src/misc.c:344
+msgid ""
+"Galeon cannot handle this protocol,\n"
+"and no GNOME default handler is set"
+msgstr "Galeonはこのプロトコルを扱えません、\n"
+"GNOMEデフォルトハンドラがセットされていません"
 
-#: src/misc.c:655
-msgid "Open in a new window"
-msgstr "新しいウィンドウで開く"
-
-#: src/misc.c:656
-msgid "Download"
-msgstr "ダウンロード"
-
-#: src/misc.c:657
-msgid "Copy link location"
-msgstr "リンクの場所をコピー"
-
-#: src/misc.c:658 src/trans.h:23
-msgid "Add temporary bookmark"
-msgstr "一時ブックマークに追加"
+#: src/misc.c:359
+msgid ""
+"The protocol specified is not recognised.\n"
+"\n"
+"Would you like to try the GNOME default?"
+msgstr ""
+"指定されたプロトコルは認識できません。\n"
+"GNOMEのデフォルトを試してみますか?"
 
 #: src/misc_callbacks.c:58
 msgid "Copyright (C) 2000 Marco Pesenti Gritti"
@@ -126,63 +199,43 @@ msgstr "Copyright (C) 2000 Marco Pesenti Gritti"
 msgid "A GNOME browser based on mozilla"
 msgstr "MozillaベースのGNOMEブラウザ"
 
-#: src/misc_callbacks.c:228
+#: src/misc_callbacks.c:182
 msgid "Cannot save the file"
 msgstr "ファイルを保存できません"
 
-#: src/misc_callbacks.c:260
-msgid "Could not create a temporary file"
-msgstr "一時ファイルを生成できませんでした"
-
-#: src/misc_callbacks.c:267
-msgid "Something went wrong while saving the file to a temporary location"
-msgstr "ファイルを一時場所に保存するときに問題が何か発生しました"
-
-#: src/misc_callbacks.c:281
-msgid "Error executing external program"
-msgstr "外部プログラムの実行でエラーが発生しました"
-
-#: src/misc_callbacks.c:309
-msgid ""
-"Can't get the url for current page.\n"
-"No source avaible."
-msgstr ""
-"現在のページのURLが取得できません。\n"
-"ソースが有効ではありません。"
-
-#: src/mozcallbacks.c:253
+#: src/mozcallbacks.c:254
 msgid "Redirecting to site..."
 msgstr "サイトへリダイレクトしています..."
 
-#: src/mozcallbacks.c:255
+#: src/mozcallbacks.c:256
 msgid "Transferring data from site..."
 msgstr "サイトからデータを取得しています..."
 
-#: src/mozcallbacks.c:257
+#: src/mozcallbacks.c:258
 msgid "Waiting for authorization..."
 msgstr "認証を待っています..."
 
-#: src/mozcallbacks.c:259
+#: src/mozcallbacks.c:260
 msgid "Loading site..."
 msgstr "サイトを読み込んでいます..."
 
-#: src/mozcallbacks.c:261
+#: src/mozcallbacks.c:262
 msgid "Done."
 msgstr "完了。"
 
-#: src/mozcallbacks.c:265
+#: src/mozcallbacks.c:266
 msgid "Site not found."
 msgstr "サイトが見つかりません。"
 
-#: src/mozcallbacks.c:267
+#: src/mozcallbacks.c:268
 msgid "Failed to connect to site."
 msgstr "サイトに接続できませんでした。"
 
-#: src/mozcallbacks.c:269
+#: src/mozcallbacks.c:270
 msgid "Failed due to connection timeout."
 msgstr "タイムアウトで接続できませんでした。"
 
-#: src/mozcallbacks.c:271
+#: src/mozcallbacks.c:272
 msgid "User canceled connecting to site."
 msgstr "サイトへの接続がユーザにキャンセルされました。"
 
@@ -190,81 +243,89 @@ msgstr "サイトへの接続がユーザにキャンセルされました。"
 msgid "Personal Toolbar Folder"
 msgstr "パーソナルツールバーフォルダ"
 
-#: src/prefs.c:364
+#: src/prefs.c:398
 msgid "Browsing"
 msgstr "ブラウズ"
 
-#: src/prefs.c:365
+#: src/prefs.c:399
 msgid "User Interface"
 msgstr "ユーザインターフェース"
 
-#: src/prefs.c:366
+#: src/prefs.c:400
 msgid "Handlers"
 msgstr "ハンドラ"
 
-#: src/prefs.c:367
+#: src/prefs.c:401
 msgid "Rendering"
 msgstr "レンダリング"
 
-#: src/prefs.c:368
+#: src/prefs.c:402
 msgid "Advanced"
 msgstr "上級"
 
-#: src/prefs.c:374 src/trans.h:73
+#: src/prefs.c:408 src/trans.h:75
 msgid "Homepage"
 msgstr "ホームページ"
 
-#: src/prefs.c:376 src/trans.h:81 src/trans.h:83 src/trans.h:226
+#: src/prefs.c:410 src/trans.h:82 src/trans.h:84 src/trans.h:352
 msgid "History"
 msgstr "履歴"
 
-#: src/prefs.c:377 src/trans.h:84 src/trans.h:93
+#: src/prefs.c:411 src/trans.h:85 src/trans.h:92
 msgid "Java"
 msgstr "Java"
 
-#: src/prefs.c:378 src/trans.h:105
+#: src/prefs.c:412 src/trans.h:102
 msgid "Filtering"
 msgstr "フィルタリング"
 
-#: src/prefs.c:384 src/trans.h:132
+#: src/prefs.c:418 src/trans.h:125
 msgid "Layout"
 msgstr "レイアウト"
 
-#: src/prefs.c:385 src/trans.h:133 src/trans.h:140
+#: src/prefs.c:419 src/trans.h:126 src/trans.h:130
+msgid "Spinner"
+msgstr "スピナー"
+
+#: src/prefs.c:420 src/trans.h:131 src/trans.h:137
 msgid "Links Menu"
 msgstr "リンクメニュー"
 
-#: src/prefs.c:386 src/trans.h:141 src/trans.h:147
+#: src/prefs.c:421 src/trans.h:138 src/trans.h:143
 msgid "Completions"
 msgstr "補完"
 
-#: src/prefs.c:387 src/trans.h:148 src/trans.h:154
+#: src/prefs.c:422 src/trans.h:144 src/trans.h:149
 msgid "Crash Recovery"
 msgstr "クラッシュ時のリカバリ"
 
-#: src/prefs.c:393 src/trans.h:155 src/trans.h:172
+#: src/prefs.c:428 src/trans.h:150 src/trans.h:164
 msgid "Downloading"
 msgstr "ダウンロード"
 
-#: src/prefs.c:394 src/trans.h:185
-msgid "View Source"
-msgstr "ソースの表示"
-
-#: src/prefs.c:395 src/trans.h:186 src/trans.h:200
-msgid "MIME Types"
-msgstr "MIMEタイプ"
-
-#: src/prefs.c:401 src/trans.h:201 src/trans.h:212
+#: src/prefs.c:439 src/trans.h:191 src/trans.h:202
 msgid "Fonts"
 msgstr "フォント"
 
-#: src/prefs.c:407
+#: src/prefs.c:440 src/trans.h:203 src/trans.h:222
+msgid "Colors"
+msgstr "カラー"
+
+#: src/prefs.c:441 src/trans.h:302
+msgid "Languages"
+msgstr "言語"
+
+#: src/prefs.c:447
 msgid "Proxy"
 msgstr "プロクシ"
 
-#: src/prefs.c:408 src/trans.h:220 src/trans.h:225
+#: src/prefs.c:448 src/trans.h:232 src/trans.h:237
 msgid "Cache"
 msgstr "キャッシュ"
+
+#: src/prefs.c:449 src/trans.h:351
+msgid "Network"
+msgstr "ネットワーク"
 
 #: src/session.c:126
 msgid ""
@@ -281,7 +342,7 @@ msgstr ""
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: src/trans.h:7
+#: src/trans.h:7 src/trans.h:123
 msgid "Galeon"
 msgstr "Galeon"
 
@@ -318,181 +379,183 @@ msgid "Statusbar"
 msgstr "ステータスバー"
 
 #: src/trans.h:16
+msgid "Full screen"
+msgstr "全画面"
+
+#: src/trans.h:17
 msgid "B_ookmarks"
 msgstr "ブックマーク(_O)"
 
-#: src/trans.h:17 src/trans.h:199 src/trans.h:271
+#: src/trans.h:18 src/trans.h:189 src/trans.h:397
 msgid "Edit"
 msgstr "編集"
 
-#: src/trans.h:18
+#: src/trans.h:19
 msgid "Import"
 msgstr "インポート"
 
-#: src/trans.h:19
+#: src/trans.h:20
 msgid "Netscape bookmarks"
 msgstr "Netscapeブックマーク"
 
-#: src/trans.h:20
+#: src/trans.h:21
 msgid "Mozilla bookmarks"
 msgstr "Mozillaブックマーク"
 
-#: src/trans.h:21
+#: src/trans.h:22
 msgid "From other location"
 msgstr "他の場所から"
 
-#: src/trans.h:22
+#: src/trans.h:23
 msgid "File bookmark"
 msgstr "ファイルブックマーク"
 
-#: src/trans.h:24
+#: src/trans.h:25
 msgid "Show temporary bookmarks"
 msgstr "一時ブックマークの表示"
 
-#: src/trans.h:25
+#: src/trans.h:26
 msgid "_Go"
 msgstr "移動(_G)"
 
-#: src/trans.h:26
+#: src/trans.h:27
 msgid "_Previous page"
 msgstr "前のページへ(_P)"
 
-#: src/trans.h:27
+#: src/trans.h:28
 msgid "_Next Page"
 msgstr "次のページへ(_N)"
 
-#: src/trans.h:28
+#: src/trans.h:29
 msgid "_Reload"
 msgstr "再読み込み(_R)"
 
-#: src/trans.h:29
+#: src/trans.h:30
 msgid "H_ome Page"
 msgstr "ホームページ(_O)"
 
-#: src/trans.h:30
+#: src/trans.h:31
 msgid "_Stop"
 msgstr "中止(_S)"
 
-#: src/trans.h:31
+#: src/trans.h:32
 msgid "Log of visited pages"
 msgstr "訪問したページのログ"
 
-#: src/trans.h:32
+#: src/trans.h:33
 msgid "_History..."
 msgstr "履歴(_H)"
 
-#: src/trans.h:33
+#: src/trans.h:34
 msgid "Go Back - Right button: History"
 msgstr "戻る - 右ボタン: 履歴"
 
-#: src/trans.h:34 src/trans.h:259
-msgid "Back"
-msgstr "戻る"
-
-#: src/trans.h:35
+#: src/trans.h:36
 msgid "Go Forward - Right button: History\n"
 msgstr "進む - 右ボタン: 履歴\n"
 
-#: src/trans.h:37 src/trans.h:261
-msgid "Forward"
-msgstr "進む"
-
-#: src/trans.h:38
+#: src/trans.h:39
 msgid "Reload Current Page"
 msgstr "現在のページを読み込み直す"
 
-#: src/trans.h:39
+#: src/trans.h:40
 msgid "Reload"
 msgstr "再読込"
 
-#: src/trans.h:40
+#: src/trans.h:41
 msgid "Go to your Home Page"
 msgstr "ホームページに戻る"
 
-#: src/trans.h:41
+#: src/trans.h:42
 msgid "Home"
 msgstr "ホーム"
 
-#: src/trans.h:42
+#: src/trans.h:43
 msgid "Stop current data transfer"
 msgstr "現在のデータ転送を中止する"
 
-#: src/trans.h:43
+#: src/trans.h:44
 msgid "Stop"
 msgstr "中止"
 
-#: src/trans.h:44
+#: src/trans.h:45
 msgid "Zoom"
 msgstr "拡大"
 
-#: src/trans.h:45 src/trans.h:47
+#: src/trans.h:46 src/trans.h:49
+msgid "Drag me!"
+msgstr "これをドラッグ!"
+
+#: src/trans.h:47 src/trans.h:50
 msgid "   Location: "
 msgstr "   場所:"
 
-#: src/trans.h:46 src/trans.h:263
+#: src/trans.h:48 src/trans.h:51 src/trans.h:389
 msgid "Go"
 msgstr "移動"
 
-#: src/trans.h:48 src/trans.h:238
+#: src/trans.h:52 src/trans.h:364
 msgid "Select File"
 msgstr "ファイルの選択"
 
-#: src/trans.h:49 src/trans.h:233 src/trans.h:236 src/trans.h:239
+#: src/trans.h:53 src/trans.h:359 src/trans.h:362 src/trans.h:365
 msgid "OK"
 msgstr "OK"
 
-#: src/trans.h:50 src/trans.h:234 src/trans.h:237 src/trans.h:240
-#: src/trans.h:286
+#: src/trans.h:54 src/trans.h:360 src/trans.h:363 src/trans.h:366
+#: src/trans.h:412
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/trans.h:51
+#: src/trans.h:55
 msgid "Preferences"
 msgstr "設定"
 
-#: src/trans.h:52
+#: src/trans.h:56
 msgid "label55"
 msgstr "ラベル55"
 
-#: src/trans.h:53
+#: src/trans.h:57
 msgid "Logo"
 msgstr "ロゴ"
 
-#: src/trans.h:54
+#: src/trans.h:58
 msgid "Home Page"
 msgstr "ホームページ"
 
-#: src/trans.h:55 src/trans.h:246 src/trans.h:282
+#: src/trans.h:59 src/trans.h:372 src/trans.h:408
 msgid "URL:"
 msgstr "URL:"
 
-#: src/trans.h:56
+#: src/trans.h:60
 msgid "Set to Current"
 msgstr "現在ページにセット"
 
-#: src/trans.h:57
+#: src/trans.h:61
 msgid "Set to \"My Portal\""
 msgstr "\"マイポータル\"に設定"
 
-#: src/trans.h:58
+#: src/trans.h:62
 msgid "Startup"
 msgstr "スタートアップ"
 
-#: src/trans.h:59
+#: src/trans.h:63
 msgid "On startup show"
 msgstr "スタートアップ時に表示"
 
-#: src/trans.h:60 src/trans.h:66
-msgid ""
-"Home page\n"
-"Last page\n"
-"Blank page\n"
-msgstr ""
-"ホームページ\n"
-"最後のページ\n"
-"何もなし\n"
+#: src/trans.h:64 src/trans.h:69
+msgid "Home page"
+msgstr "ホームページ"
 
-#: src/trans.h:64
+#: src/trans.h:65 src/trans.h:70
+msgid "Last page"
+msgstr "最後のページ"
+
+#: src/trans.h:66 src/trans.h:71
+msgid "Blank page"
+msgstr "ブランクページ"
+
+#: src/trans.h:67
 msgid ""
 "When opening a\n"
 " new browser show"
@@ -500,19 +563,19 @@ msgstr ""
 "新規ブラウザを開いた\n"
 "ときの表示"
 
-#: src/trans.h:70
+#: src/trans.h:72
 msgid "My Portal"
 msgstr "マイポータル"
 
-#: src/trans.h:71
+#: src/trans.h:73
 msgid "Stylesheet:"
 msgstr "スタイルシート:"
 
-#: src/trans.h:72
+#: src/trans.h:74
 msgid "Select \"My Portal\" Stylesheet"
 msgstr "\"マイポータル\"スタイルシートを選択"
 
-#: src/trans.h:75
+#: src/trans.h:77
 msgid ""
 "When adding bookmarks\n"
 "use the following title"
@@ -520,199 +583,209 @@ msgstr ""
 "ブックマークの追加時に\n"
 "使うタイトル"
 
-#: src/trans.h:77
-msgid ""
-"Page title\n"
-"Ask user\n"
-msgstr ""
-"ページのタイトル\n"
-"ユーザに問い合わせる\n"
+#: src/trans.h:79
+msgid "Page title"
+msgstr "ページタイトル"
 
-#: src/trans.h:82
+#: src/trans.h:80 src/trans.h:182
+msgid "Ask user"
+msgstr "ユーザに問い合わせる"
+
+#: src/trans.h:83
 msgid "Days before expiring history items"
 msgstr "何日前なら履歴から消すか"
 
-#: src/trans.h:85
+#: src/trans.h:86
 msgid "Javascript Enabled"
 msgstr "JavaScript"
 
-#: src/trans.h:86 src/trans.h:90 src/trans.h:160 src/trans.h:163
-msgid ""
-"No\n"
-"Yes\n"
-msgstr ""
-"無効\n"
-"有効\n"
+#: src/trans.h:87 src/trans.h:90 src/trans.h:155 src/trans.h:157
+msgid "No"
+msgstr "いいえ"
+
+#: src/trans.h:88 src/trans.h:91 src/trans.h:156 src/trans.h:158
+msgid "Yes"
+msgstr "はい"
 
 #: src/trans.h:89
 msgid "Java Enabled"
 msgstr "Java"
 
-#: src/trans.h:94
+#: src/trans.h:93
 msgid "Images"
 msgstr "画像"
 
-#: src/trans.h:95
+#: src/trans.h:94
 msgid "Load Images"
 msgstr "画像の読み込み"
 
-#: src/trans.h:96
-msgid ""
-"Always\n"
-"From current server only\n"
-"Never\n"
-msgstr ""
-"常に\n"
-"現在のサーバだけ\n"
-"しない\n"
+#: src/trans.h:95 src/trans.h:148
+msgid "Always"
+msgstr "常に"
 
-#: src/trans.h:100 src/trans.h:123
+#: src/trans.h:96
+msgid "From current server only"
+msgstr "現在のサーバからのみ"
+
+#: src/trans.h:97 src/trans.h:146
+msgid "Never"
+msgstr "しない"
+
+#: src/trans.h:98 src/trans.h:117
 msgid "Windows"
 msgstr "ウィンドウ"
 
-#: src/trans.h:101
+#: src/trans.h:99
 msgid "New windows"
 msgstr "新規ウィンドウ"
 
-#: src/trans.h:102
-msgid ""
-"Allow opening in new windows\n"
-"Never open in new window\n"
-msgstr ""
-"新規ウィンドウを開く\n"
-"新規ウィンドウは開かない\n"
+#: src/trans.h:100
+msgid "Allow opening in new windows"
+msgstr "新しいウィンドウで開いてよいことにする"
 
-#: src/trans.h:106
+#: src/trans.h:101
+msgid "Never open in new window"
+msgstr "新しいウィンドウで開かない"
+
+#: src/trans.h:103
 msgid "Toolbars"
 msgstr "ツールバー"
 
-#: src/trans.h:107
+#: src/trans.h:104
 msgid "Show toolbars as"
 msgstr "ツールバーの表示は"
 
-#: src/trans.h:108
+#: src/trans.h:105
 msgid "Show location entry on"
 msgstr "場所の入力の表示"
 
-#: src/trans.h:109
-msgid ""
-"Separate toolbar\n"
-"Button toolbar\n"
-msgstr ""
-"区切り入りツールバーで\n"
-"ボタンツールバーで\n"
+#: src/trans.h:106
+msgid "Separate toolbar"
+msgstr "分割ツールバー"
 
-#: src/trans.h:112
-msgid ""
-"Icons\n"
-"Text\n"
-"Both\n"
-msgstr ""
-"アイコン\n"
-"テキスト\n"
-"両方\n"
+#: src/trans.h:107
+msgid "Button toolbar"
+msgstr "ボタンツールバー"
 
-#: src/trans.h:116
+#: src/trans.h:108
+msgid "Icons"
+msgstr "アイコン"
+
+#: src/trans.h:109 src/trans.h:205
+msgid "Text"
+msgstr "テキスト"
+
+#: src/trans.h:110
+msgid "Both"
+msgstr "両方"
+
+#: src/trans.h:111
 msgid "Show location label"
 msgstr "場所ラベルの表示"
 
-#: src/trans.h:117
-msgid "Show spinner"
-msgstr "スピナーの表示"
+#: src/trans.h:112
+msgid "Show go button"
+msgstr "goボタンの表示"
 
-#: src/trans.h:118
+#: src/trans.h:113
 msgid "Errors"
 msgstr "エラー"
 
-#: src/trans.h:119
+#: src/trans.h:114
 msgid "Show error messages on"
 msgstr "エラーメッセージの表示"
 
-#: src/trans.h:120
-msgid ""
-"Status bar\n"
-"Dialog\n"
-msgstr ""
-"ステータスバー\n"
-"ダイアログ\n"
+#: src/trans.h:115
+msgid "Status bar"
+msgstr "ステータスバー"
 
-#: src/trans.h:124
+#: src/trans.h:116
+msgid "Dialog"
+msgstr "ダイアログ"
+
+#: src/trans.h:118
 msgid "Title "
 msgstr "タイトル "
 
-#: src/trans.h:125
-#, c-format
-msgid ""
-"Galeon - %s\n"
-"%s - Galeon\n"
-"Galeon: %s\n"
-"%s\n"
-"Galeon\n"
-msgstr ""
-"Galeon - %s\n"
-"%s - Galeon\n"
-"Galeon: %s\n"
-"%s\n"
-"Galeon\n"
-
-#: src/trans.h:131
+#: src/trans.h:119 src/trans.h:124
 #, c-format
 msgid "Galeon - %s"
 msgstr "Galeon - %s"
 
-#: src/trans.h:134
+#: src/trans.h:120
+msgid "%s - Galeon"
+msgstr "%s - Galeon"
+
+#: src/trans.h:121
+msgid "Galeon: %s"
+msgstr "Galeon: %s"
+
+#: src/trans.h:122
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: src/trans.h:127
+msgid "Show spinner"
+msgstr "スピナーの表示"
+
+#: src/trans.h:128
+msgid "Animation Directory:"
+msgstr "アニメーションディレクトリ:"
+
+#: src/trans.h:129
+msgid "Select Animation Directory"
+msgstr "アニメーションディレクトリの選択"
+
+#: src/trans.h:132
 msgid "Show after"
 msgstr "表示は"
 
-#: src/trans.h:135
+#: src/trans.h:133
 msgid "seconds"
 msgstr "秒後"
 
-#: src/trans.h:136
+#: src/trans.h:134
 msgid "Auto show"
 msgstr "自動表示"
 
-#: src/trans.h:137
-msgid ""
-"Enabled\n"
-"Disabled\n"
-msgstr ""
-"有効\n"
-"無効\n"
+#: src/trans.h:135
+msgid "Enabled"
+msgstr "有効"
 
-#: src/trans.h:142
+#: src/trans.h:136
+msgid "Disabled"
+msgstr "無効"
+
+#: src/trans.h:139
 msgid "Completion Style"
 msgstr "補完のスタイル"
 
-#: src/trans.h:143
-msgid ""
-"Auto completion\n"
-"Tab Completion\n"
-"None\n"
-msgstr ""
-"自動補完\n"
-"タブによる補完\n"
-"なし\n"
+#: src/trans.h:140
+msgid "Auto completion"
+msgstr "自動補完"
 
-#: src/trans.h:149
+#: src/trans.h:141
+msgid "Tab Completion"
+msgstr "タブ補完"
+
+#: src/trans.h:142
+msgid "None"
+msgstr "なし"
+
+#: src/trans.h:145
 msgid "Recover from crashes"
 msgstr "クラッシュ時のリカバリ"
 
-#: src/trans.h:150
-msgid ""
-"Never\n"
-"Ask User\n"
-"Always\n"
-msgstr ""
-"しない\n"
-"ユーザに問い合わせ\n"
-"常にする\n"
+#: src/trans.h:147
+msgid "Ask User"
+msgstr "ユーザに問い合わせる"
 
-#: src/trans.h:156
+#: src/trans.h:151
 msgid "Auto download"
 msgstr "自動ダウンロード"
 
-#: src/trans.h:157
+#: src/trans.h:152
 msgid ""
 "Ask for directory\n"
 "on each download"
@@ -720,231 +793,730 @@ msgstr ""
 "ダウンロード毎に\n"
 "ディレクトリを問い合わせる"
 
-#: src/trans.h:159
+#: src/trans.h:154
 msgid "Directory"
 msgstr "ディレクトリ"
 
-#: src/trans.h:166
+#: src/trans.h:159
 msgid "Select Download Directory"
 msgstr "ダウンロードするディレクトリの選択"
 
-#: src/trans.h:167
+#: src/trans.h:160
 msgid "FTP Handler"
 msgstr "FTPハンドラ"
 
-#: src/trans.h:168
+#: src/trans.h:161
 msgid "Handle FTP URLs with"
 msgstr "FTP URLのハンドルは"
 
-#: src/trans.h:169
-msgid ""
-"Mozilla FTP\n"
-"Gnome FTP Handler\n"
-msgstr ""
-"MozillaのFTPで\n"
-"GNOMEのFTPハンドラで\n"
+#: src/trans.h:162
+msgid "Mozilla FTP"
+msgstr "Mozilla FTP"
 
-#: src/trans.h:173
+#: src/trans.h:163
+msgid "Gnome FTP Handler"
+msgstr "Gnome FTPハンドラ"
+
+#: src/trans.h:165
 msgid "View source"
 msgstr "ソースの表示"
 
-#: src/trans.h:174
+#: src/trans.h:166
 msgid "Use external program to view source files"
 msgstr "ソースの表示には外部プログラムを使う"
 
-#: src/trans.h:175
+#: src/trans.h:167
 msgid "External program:"
 msgstr "外部プログラム:"
 
-#: src/trans.h:176
-msgid ""
-"gnome-edit\n"
-"emacs\n"
-"gedit\n"
-"xemacs\n"
-"gvim\n"
-"gless\n"
-"gnp\n"
-msgstr ""
-"gnome-edit\n"
-"emacs\n"
-"gedit\n"
-"xemacs\n"
-"gvim\n"
-"gless\n"
-"gnp\n"
-
-#: src/trans.h:184
+#: src/trans.h:168 src/trans.h:175
 msgid "gnome-edit"
 msgstr "gnome-edit"
 
-#: src/trans.h:187
+#: src/trans.h:169
+msgid "emacs"
+msgstr "emacs"
+
+#: src/trans.h:170
+msgid "gedit"
+msgstr "gedit"
+
+#: src/trans.h:171
+msgid "xemacs"
+msgstr "xemacs"
+
+#: src/trans.h:172
+msgid "gvim"
+msgstr "gvim"
+
+#: src/trans.h:173
+msgid "gless"
+msgstr "gless"
+
+#: src/trans.h:174
+msgid "gnp"
+msgstr "gnp"
+
+#: src/trans.h:177 src/trans.h:190
+msgid "MIME Types"
+msgstr "MIMEタイプ"
+
+#: src/trans.h:178
 msgid "Mime Types"
 msgstr "MIMEタイプ"
 
-#: src/trans.h:188
+#: src/trans.h:179
 msgid " "
 msgstr " "
 
-#: src/trans.h:189
-msgid ""
-"Save to disk\n"
-"Open with program\n"
-"Ask user\n"
-msgstr ""
-"ディスクに保存\n"
-"プログラムで開く\n"
-"ユーザに問い合わせる\n"
+#: src/trans.h:180
+msgid "Save to disk"
+msgstr "ディスクに保存"
 
-#: src/trans.h:193 src/trans.h:244 src/trans.h:250 src/trans.h:280
+#: src/trans.h:181
+msgid "Open with program"
+msgstr "プログラムで開く"
+
+#: src/trans.h:183 src/trans.h:370 src/trans.h:376 src/trans.h:406
 msgid "Name"
 msgstr "名称"
 
-#: src/trans.h:194
+#: src/trans.h:184
 msgid "Extension"
 msgstr "拡張子"
 
-#: src/trans.h:195
+#: src/trans.h:185
 msgid "Action"
 msgstr "アクション"
 
-#: src/trans.h:196
+#: src/trans.h:186
 msgid "Program"
 msgstr "プログラム"
 
-#: src/trans.h:197
+#: src/trans.h:187 src/trans.h:342
 msgid "Add"
 msgstr "追加"
 
-#: src/trans.h:198
+#: src/trans.h:188
 msgid "Delete"
 msgstr "削除"
 
-#: src/trans.h:202
+#: src/trans.h:192
 msgid "Serif"
 msgstr "Serif"
 
-#: src/trans.h:203
+#: src/trans.h:193
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: src/trans.h:204
+#: src/trans.h:194
 msgid "Size"
 msgstr "サイズ"
 
-#: src/trans.h:205 src/trans.h:207 src/trans.h:210
+#: src/trans.h:195 src/trans.h:197 src/trans.h:200
 msgid "Pick a Font"
 msgstr "フォントの選択"
 
-#: src/trans.h:206 src/trans.h:208 src/trans.h:211
+#: src/trans.h:196 src/trans.h:198 src/trans.h:201
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 
-#: src/trans.h:209
+#: src/trans.h:199
 msgid "Monospace"
 msgstr "モノスペース"
 
-#: src/trans.h:213 src/trans.h:219
+#: src/trans.h:204
+msgid "Background"
+msgstr "バックグラウンド"
+
+#: src/trans.h:206
+msgid "Unvisited link"
+msgstr "訪問していないリンク"
+
+#: src/trans.h:207
+msgid "Visited link"
+msgstr "訪問したリンク"
+
+#: src/trans.h:208
+msgid "Pick the background color"
+msgstr "バックグラウンドからーを取得"
+
+#: src/trans.h:209
+msgid "Pick the text color"
+msgstr "テキストカラーを取得"
+
+#: src/trans.h:210
+msgid "Pick the color unvisited links"
+msgstr "訪問していないリンクのカラーを取得"
+
+#: src/trans.h:211
+msgid "Pick the color for visited links"
+msgstr "訪問したリンクのカラーを取得"
+
+#: src/trans.h:212
+msgid ""
+"When a page \n"
+"provides its own colors"
+msgstr ""
+"ページがカラーを\n"
+"指定しているときは"
+
+#: src/trans.h:214
+msgid "Use provided colors"
+msgstr "指定されたカラーを使う"
+
+#: src/trans.h:215
+msgid "Use my chosen colors"
+msgstr "選択したカラーを使う"
+
+#: src/trans.h:216
+msgid "Underline links"
+msgstr "リンクに下線をつける"
+
+#: src/trans.h:217 src/trans.h:219 src/trans.h:220 src/trans.h:221
+msgid "[*]"
+msgstr "[*]"
+
+#: src/trans.h:218
+msgid ""
+"[*] Note: due to limitations in Mozilla, these options are not guaranteed to "
+"work."
+msgstr ""
+"[*] 注意: Mozillaの制限のため、これらのオプションは動作保証されません。"
+
+#: src/trans.h:223 src/trans.h:231
 msgid "Proxies"
 msgstr "プロクシ"
 
-#: src/trans.h:214
+#: src/trans.h:224
 msgid "HTTP proxy"
 msgstr "HTTPプロクシ"
 
-#: src/trans.h:215
+#: src/trans.h:225
 msgid "FTP proxy"
 msgstr "FTPプロクシ"
 
-#: src/trans.h:216 src/trans.h:217
+#: src/trans.h:226 src/trans.h:227
 msgid "Port"
 msgstr "ポート"
 
-#: src/trans.h:218
+#: src/trans.h:228
 msgid "No proxy for"
 msgstr "プロクシを使わないのは"
 
-#: src/trans.h:221
+#: src/trans.h:229
+msgid "Options"
+msgstr "オプション"
+
+#: src/trans.h:230
+msgid "Proxy keep-alive?"
+msgstr "Proxyはkeep-aliveにしますか?"
+
+#: src/trans.h:233
 msgid "Disk cache"
 msgstr "ディスクキャッシュ"
 
-#: src/trans.h:222
+#: src/trans.h:234
 msgid "Memory cache"
 msgstr "メモリキャッシュ"
 
-#: src/trans.h:223 src/trans.h:224
+#: src/trans.h:235 src/trans.h:236
 msgid "Kb"
 msgstr "KB"
 
-#: src/trans.h:227
-msgid "Title"
-msgstr "タイトル"
+#: src/trans.h:238
+msgid "Charsets"
+msgstr "キャラクタセット"
 
-#: src/trans.h:228
-msgid "Url"
-msgstr "URL"
+#: src/trans.h:239
+msgid "Autodetect"
+msgstr "自動検出"
 
-#: src/trans.h:229
-msgid "Last time visited"
-msgstr "前回訪問時間"
-
-#: src/trans.h:230
-msgid "First time visited"
-msgstr "最初の訪問時間"
-
-#: src/trans.h:231
-msgid "Times visited"
-msgstr "訪問回数"
-
-#: src/trans.h:232 src/trans.h:235
-msgid "Select Directory"
-msgstr "ディレクトリの選択"
+#: src/trans.h:240
+msgid "Default charset"
+msgstr "デフォルトキャラクタセット"
 
 #: src/trans.h:241
-msgid "Find text..."
-msgstr "テキストの検索..."
+msgid "Off"
+msgstr "オフ"
 
 #: src/trans.h:242
-msgid "Find text or regular expression:"
-msgstr "テキストまたは正規表現の検索:"
+msgid "Chinese"
+msgstr "中国語"
 
 #: src/trans.h:243
-msgid "Match upper/lower case"
-msgstr "大文字／小文字を区別する"
+msgid "East asian"
+msgstr "東アジア"
+
+#: src/trans.h:244
+msgid "Japanese"
+msgstr "日本語"
 
 #: src/trans.h:245
-msgid "URL"
-msgstr "URL"
+msgid "Korean"
+msgstr "韓国語"
+
+#: src/trans.h:246
+msgid "Russian"
+msgstr "ロシア語"
 
 #: src/trans.h:247
-msgid "Nick:"
-msgstr "略称:"
+msgid "Simplified Chinese"
+msgstr "中国語(簡体)"
 
-#: src/trans.h:248 src/trans.h:283
-msgid "Notes:"
-msgstr "メモ:"
+#: src/trans.h:248
+msgid "Traditional Chinese"
+msgstr "中国語(繁体)"
 
 #: src/trans.h:249
-msgid "Create toolbar"
-msgstr "ツールバーの作成"
+msgid "Ukrainian"
+msgstr "ウクラニア語"
 
-#: src/trans.h:251 src/trans.h:273
-msgid "New item"
-msgstr "新規アイテム"
+#: src/trans.h:250 src/trans.h:301
+msgid "Armenian (ARMSCII-8)"
+msgstr "アルメニア語 (ARMSCII-8)"
+
+#: src/trans.h:251
+msgid "Baltic (ISO-8859-13)"
+msgstr "バルト語 (ISO-8859-13)"
 
 #: src/trans.h:252
-msgid "New Separator"
-msgstr "新規区切り線"
+msgid "Baltic (ISO-8859-4)"
+msgstr "バルト語 (ISO-8859-4)"
 
 #: src/trans.h:253
-msgid "New Category"
-msgstr "新規カテゴリ"
+msgid "Baltic (Windows-1257)"
+msgstr "バルト語 (Windows-1257)"
 
 #: src/trans.h:254
+msgid "Celtic (ISO-8859-14)"
+msgstr "ケルト語 (ISO-8859-14)"
+
+#: src/trans.h:255
+msgid "Central European (IBM-852)"
+msgstr "中央ヨーロッパ (IBM-852)"
+
+#: src/trans.h:256
+msgid "Central European (ISO-8859-2)"
+msgstr "中央ヨーロッパ (ISO-8859-2)"
+
+#: src/trans.h:257
+msgid "Central European (MacCE)"
+msgstr "中央ヨーロッパ (MacCE)"
+
+#: src/trans.h:258
+msgid "Central European (Windows-1250)"
+msgstr "中央ヨーロッパ (Windwos-1250)"
+
+#: src/trans.h:259
+msgid "Chinese Simplified (GB2312)"
+msgstr "中国語(簡体)(GB2312)"
+
+#: src/trans.h:260
+msgid "Chinese Simplified (GBK)"
+msgstr "中国語(簡体)(GBK)"
+
+#: src/trans.h:261
+msgid "Central European (HZ)"
+msgstr "中央ヨーロッパ (HZ)"
+
+#: src/trans.h:262
+msgid "Chinese Traditional (Big5)"
+msgstr "中国語(繁体)(Big5)"
+
+#: src/trans.h:263
+msgid "Chinese Traditional (EUC-TW)"
+msgstr "中国語(繁体)(EUC-TW)"
+
+#: src/trans.h:264
+msgid "Croatian (MacCroatian)"
+msgstr "クロアチア語 (MacCroatian)"
+
+#: src/trans.h:265
+msgid "Cyrillic (IBM-855)"
+msgstr "キリル (IBM-855)"
+
+#: src/trans.h:266
+msgid "Cyrillic (ISO-8859-5)"
+msgstr "キリル (ISO-8859-5)"
+
+#: src/trans.h:267
+msgid "Cyrillic (ISO-IR-111)"
+msgstr "キリル (ISO-IR-111)"
+
+#: src/trans.h:268
+msgid "Cyrillic (Windows-1251)"
+msgstr "キリル (Windows-1251)"
+
+#: src/trans.h:269
+msgid "Cyrillic/Russian (IBM-866)"
+msgstr "キリル/ロシア語 (IBM-866)"
+
+#: src/trans.h:270
+msgid "Cyrillic/Ukrainian (KOI8-U)"
+msgstr "キリル/ウクラニア語 (KOI8-U)"
+
+#: src/trans.h:271
+msgid "Cyrillic/Ukrainian (MacUkrainian)"
+msgstr "キリル/ウクラニア語 (MacUkrainian)"
+
+#: src/trans.h:272
+msgid "Greek (ISO-8859-7)"
+msgstr "ギリシャ語 (ISO-8859-7)"
+
+#: src/trans.h:273
+msgid "Greek (MacGreek)"
+msgstr "ギリシャ語 (MacGreek)"
+
+#: src/trans.h:274
+msgid "Greek (Windows-1253)"
+msgstr "ギリシャ語 (Windows-1253)"
+
+#: src/trans.h:275
+msgid "Icelandic (MacIcelandic)"
+msgstr "アイスランド語 (MacIcelandic)"
+
+#: src/trans.h:276
+msgid "Japanese (EUC-JP)"
+msgstr "日本語 (EUC-JP)"
+
+#: src/trans.h:277
+msgid "Japanese (ISO-2022-JP)"
+msgstr "日本語 (ISO-2022-JP)"
+
+#: src/trans.h:278
+msgid "Japanese (Shift_JIS)"
+msgstr "日本語 (シフトJIS)"
+
+#: src/trans.h:279
+msgid "Korean (EUC_KR)"
+msgstr "韓国語 (EUC_KR)"
+
+#: src/trans.h:280
+msgid "Nordic (ISO-8859-10)"
+msgstr "北欧諸語 (ISO-8859-10)"
+
+#: src/trans.h:281
+msgid "Romanian (MacRomanian)"
+msgstr "ルーマニア語 (MacRomanian)"
+
+#: src/trans.h:282
+msgid "South European (ISO-8859-3)"
+msgstr "南ヨーロッパ (ISO-8859-3)"
+
+#: src/trans.h:283
+msgid "Thai (TIS-620)"
+msgstr "タイ (TIS-620)"
+
+#: src/trans.h:284
+msgid "Turkish (IBM-857)"
+msgstr "トルコ語 (IBM-857)"
+
+#: src/trans.h:285
+msgid "Turkish (ISO-8859-9)"
+msgstr "トルコ語 (ISO-8859-9)"
+
+#: src/trans.h:286
+msgid "Turkish (MacTurkish)"
+msgstr "トルコ語 (MacTurkish)"
+
+#: src/trans.h:287
+msgid "Turkish (Windows-1254)"
+msgstr "トルコ語 (Windows-1254)"
+
+#: src/trans.h:288
+msgid "Unicode (UTF-7)"
+msgstr "Unicode (UTF-7)"
+
+#: src/trans.h:289
+msgid "Unicode (UTF-8)"
+msgstr "Unicode (UTF-8)"
+
+#: src/trans.h:290
+msgid "Vietnamese (TCVN)"
+msgstr "ベトナム語 (TCVN)"
+
+#: src/trans.h:291
+msgid "Vietnamese (VISCII)"
+msgstr "ベトナム語 (VISCII)"
+
+#: src/trans.h:292
+msgid "Vietnamese (VPS)"
+msgstr "ベトナム語 (VPS)"
+
+#: src/trans.h:293
+msgid "Vietnamese (Windows-1258)"
+msgstr "ベトナム語 (Windows-1258)"
+
+#: src/trans.h:294
+msgid "Visual Hebrew (ISO-8859-8)"
+msgstr "ヘブライ語 (ISO-8859-8)"
+
+#: src/trans.h:295 src/trans.h:297
+msgid "Western (ISO-8859-1)"
+msgstr "Western (ISO-8859-1)"
+
+#: src/trans.h:296
+msgid "Western (IBM-850)"
+msgstr "Western (IBM-850)"
+
+#: src/trans.h:298
+msgid "Western (ISO-8859-15)"
+msgstr "Western (ISO-8859-15)"
+
+#: src/trans.h:299
+msgid "Western (MacRoman)"
+msgstr "Western (MacRoman)"
+
+#: src/trans.h:300
+msgid "Western (Windows-1252)"
+msgstr "Western (Windows-1252)"
+
+#: src/trans.h:303 src/trans.h:341
+msgid "Afrikaans (af)"
+msgstr "アフリカーンス (af)"
+
+#: src/trans.h:304
+msgid "Albanian (sq)"
+msgstr "アルバニア語 (sq)"
+
+#: src/trans.h:305
+msgid "Arabic (ar)"
+msgstr "アラビア語 (ar)"
+
+#: src/trans.h:306
+msgid "Basque (eu)"
+msgstr "バスク語 (eu)"
+
+#: src/trans.h:307
+msgid "Bulgarian (bg)"
+msgstr "ブルガリア語 (bg)"
+
+#: src/trans.h:308
+msgid "Byelorussian (be)"
+msgstr "ベラルーシ語 (be)"
+
+#: src/trans.h:309
+msgid "Catalan (ca)"
+msgstr "カタロニア語 (ca)"
+
+#: src/trans.h:310
+msgid "Chinese (zh)"
+msgstr "中国語 (zh)"
+
+#: src/trans.h:311
+msgid "Croatian (hr)"
+msgstr "クロアチア語 (hr)"
+
+#: src/trans.h:312
+msgid "Czech (cs)"
+msgstr "チェコ語 (cs)"
+
+#: src/trans.h:313
+msgid "Danish (da)"
+msgstr "デンマーク語 (da)"
+
+#: src/trans.h:314
+msgid "Dutch (nl)"
+msgstr "オランダ語 (nl)"
+
+#: src/trans.h:315
+msgid "English (en)"
+msgstr "英語 (en)"
+
+#: src/trans.h:316
+msgid "Estonian (et)"
+msgstr "エストニア語 (et)"
+
+#: src/trans.h:317
+msgid "Faeroese (fo)"
+msgstr "フェロー語 (fo)"
+
+#: src/trans.h:318
+msgid "Finnish (fi)"
+msgstr "フィンランド語 (fi)"
+
+#: src/trans.h:319
+msgid "French (fr)"
+msgstr "フランス語 (fr)"
+
+#: src/trans.h:320
+msgid "Galician (gl)"
+msgstr "Galician (gl)"
+
+#: src/trans.h:321
+msgid "German (de)"
+msgstr "ドイツ語 (de)"
+
+#: src/trans.h:322
+msgid "Greek (el)"
+msgstr "ギリシャ語 (el)"
+
+#: src/trans.h:323
+msgid "Hungarian (hu)"
+msgstr "ハンガリア語 (hu)"
+
+#: src/trans.h:324
+msgid "Icelandic (is)"
+msgstr "アイスランド語 (is)"
+
+#: src/trans.h:325
+msgid "Indonesian (id)"
+msgstr "インドネシア語 (id)"
+
+#: src/trans.h:326
+msgid "Irish (ga)"
+msgstr "アイルランド語 (ga)"
+
+#: src/trans.h:327
+msgid "Korean (ko)"
+msgstr "韓国語 (ko)"
+
+#: src/trans.h:328
+msgid "Macedonian (mk)"
+msgstr "マケドニア語 (mk)"
+
+#: src/trans.h:329
+msgid "Norwegian (no)"
+msgstr "ノルウェー語 (no)"
+
+#: src/trans.h:330
+msgid "Polish (pl)"
+msgstr "ポーランド語 (pl)"
+
+#: src/trans.h:331
+msgid "Portoguese (pt)"
+msgstr "ポルトガル語 (pt)"
+
+#: src/trans.h:332
+msgid "Romanian (ro)"
+msgstr "ルーマニア語 (ro)"
+
+#: src/trans.h:333
+msgid "Russian (ru)"
+msgstr "ロシア語 (ru)"
+
+#: src/trans.h:334
+msgid "Serbian (gd)"
+msgstr "セルビア語 (gd)"
+
+#: src/trans.h:335
+msgid "Slovak (sk)"
+msgstr "スロバキア語 (sk)"
+
+#: src/trans.h:336
+msgid "Slovenian (sl)"
+msgstr "スロベニア語 (sl)"
+
+#: src/trans.h:337
+msgid "Spanish (es)"
+msgstr "スペイン語 (es)"
+
+#: src/trans.h:338
+msgid "Swedish (sv)"
+msgstr "スウェデーン語 (sv)"
+
+#: src/trans.h:339
+msgid "Turkish (tr)"
+msgstr "トルコ語 (tr)"
+
+#: src/trans.h:340
+msgid "Ukrainian (uk)"
+msgstr "ウクラニア語 (uk)"
+
+#: src/trans.h:343 src/trans.h:380
 msgid "Remove"
 msgstr "削除"
 
-#: src/trans.h:255
+#: src/trans.h:344 src/trans.h:393
+msgid "Up"
+msgstr "上へ"
+
+#: src/trans.h:345 src/trans.h:395
+msgid "Down"
+msgstr "下へ"
+
+#: src/trans.h:346
+msgid "Languajes"
+msgstr "言語"
+
+#: src/trans.h:347
+msgid "Protocol"
+msgstr "プロトコル"
+
+#: src/trans.h:348
+msgid "HTTP Version"
+msgstr "HTTPバージョン"
+
+#: src/trans.h:349
+msgid "1.0"
+msgstr "1.0"
+
+#: src/trans.h:350
+msgid "1.1"
+msgstr "1.1"
+
+#: src/trans.h:353
+msgid "Title"
+msgstr "タイトル"
+
+#: src/trans.h:354
+msgid "Url"
+msgstr "URL"
+
+#: src/trans.h:355
+msgid "Last time visited"
+msgstr "前回訪問時間"
+
+#: src/trans.h:356
+msgid "First time visited"
+msgstr "最初の訪問時間"
+
+#: src/trans.h:357
+msgid "Times visited"
+msgstr "訪問回数"
+
+#: src/trans.h:358 src/trans.h:361
+msgid "Select Directory"
+msgstr "ディレクトリの選択"
+
+#: src/trans.h:367
+msgid "Find text..."
+msgstr "テキストの検索..."
+
+#: src/trans.h:368
+msgid "Find text or regular expression:"
+msgstr "テキストまたは正規表現の検索:"
+
+#: src/trans.h:369
+msgid "Match upper/lower case"
+msgstr "大文字／小文字を区別する"
+
+#: src/trans.h:373
+msgid "Nick:"
+msgstr "略称:"
+
+#: src/trans.h:374 src/trans.h:409
+msgid "Notes:"
+msgstr "メモ:"
+
+#: src/trans.h:375
+msgid "Create toolbar"
+msgstr "ツールバーの作成"
+
+#: src/trans.h:377 src/trans.h:399
+msgid "New item"
+msgstr "新規アイテム"
+
+#: src/trans.h:378
+msgid "New Separator"
+msgstr "新規区切り線"
+
+#: src/trans.h:379
+msgid "New Category"
+msgstr "新規カテゴリ"
+
+#: src/trans.h:381
 msgid ""
 "Multiple\n"
 "selections"
@@ -952,86 +1524,180 @@ msgstr ""
 "複数\n"
 "選択"
 
-#: src/trans.h:257
-msgid "Temporary bookmaks"
-msgstr "一時ブックマーク"
-
-#: src/trans.h:258
+#: src/trans.h:384
 msgid "Go to the previous bookmark"
 msgstr "前のブックマークに移動"
 
-#: src/trans.h:260
+#: src/trans.h:386
 msgid "Go to the next bookmark"
 msgstr "次のブックマークに移動"
 
-#: src/trans.h:262
+#: src/trans.h:388
 msgid "Load selected bookmark in the browser"
 msgstr "選択したブックマークをブラウザで読み込む"
 
-#: src/trans.h:264
+#: src/trans.h:390
 msgid "Close this window"
 msgstr "このウィンドウを閉じる"
 
-#: src/trans.h:265
+#: src/trans.h:391
 msgid "Close"
 msgstr "閉じる"
 
-#: src/trans.h:266
+#: src/trans.h:392
 msgid "Move bookmark up"
 msgstr "ブックマークを上に移動"
 
-#: src/trans.h:267
-msgid "Up"
-msgstr "上へ"
-
-#: src/trans.h:268
+#: src/trans.h:394
 msgid "Move bookmark down"
 msgstr "ブックマークを下に移動"
 
-#: src/trans.h:269
-msgid "Down"
-msgstr "下へ"
-
-#: src/trans.h:270
+#: src/trans.h:396
 msgid "Show edit bookmarks controls"
 msgstr "ブックマークのコントロール表示"
 
-#: src/trans.h:272
+#: src/trans.h:398
 msgid "Add a new bookmark"
 msgstr "新規ブックマークの追加"
 
-#: src/trans.h:274
+#: src/trans.h:400
 msgid "Add a new bookmark category"
 msgstr "新規カテゴリの追加"
 
-#: src/trans.h:275
+#: src/trans.h:401
 msgid "New category"
 msgstr "新規カテゴリ"
 
-#: src/trans.h:276
+#: src/trans.h:402
 msgid "Erase selected bookmark"
 msgstr "選択したブックマークの消去"
 
-#: src/trans.h:277
+#: src/trans.h:403
 msgid "Erase"
 msgstr "消去"
 
-#: src/trans.h:278
+#: src/trans.h:404
 msgid "Convert this bookmark into a permanent bookmark"
 msgstr "このブックマークを永続ブックマークに変換"
 
-#: src/trans.h:279
+#: src/trans.h:405
 msgid "File"
 msgstr "ファイル"
 
-#: src/trans.h:281
+#: src/trans.h:407
 msgid "Name:"
 msgstr "名称:"
 
-#: src/trans.h:284
+#: src/trans.h:410
 msgid "Select Bookmark File"
 msgstr "ブックマークファイルの選択"
 
-#: src/trans.h:285
+#: src/trans.h:411
 msgid "Import Bookmark"
 msgstr "ブックマークのインポート"
+
+#~ msgid ""
+#~ "Home page\n"
+#~ "Last page\n"
+#~ "Blank page\n"
+#~ msgstr ""
+#~ "ホームページ\n"
+#~ "最後のページ\n"
+#~ "何もなし\n"
+
+#~ msgid ""
+#~ "Allow opening in new windows\n"
+#~ "Never open in new window\n"
+#~ msgstr ""
+#~ "新規ウィンドウを開く\n"
+#~ "新規ウィンドウは開かない\n"
+
+#~ msgid ""
+#~ "Separate toolbar\n"
+#~ "Button toolbar\n"
+#~ msgstr ""
+#~ "区切り入りツールバーで\n"
+#~ "ボタンツールバーで\n"
+
+#~ msgid ""
+#~ "Icons\n"
+#~ "Text\n"
+#~ "Both\n"
+#~ msgstr ""
+#~ "アイコン\n"
+#~ "テキスト\n"
+#~ "両方\n"
+
+#~ msgid ""
+#~ "Status bar\n"
+#~ "Dialog\n"
+#~ msgstr ""
+#~ "ステータスバー\n"
+#~ "ダイアログ\n"
+
+#~ msgid ""
+#~ "Galeon - %s\n"
+#~ "%s - Galeon\n"
+#~ "Galeon: %s\n"
+#~ "%s\n"
+#~ "Galeon\n"
+#~ msgstr ""
+#~ "Galeon - %s\n"
+#~ "%s - Galeon\n"
+#~ "Galeon: %s\n"
+#~ "%s\n"
+#~ "Galeon\n"
+
+#~ msgid ""
+#~ "Auto completion\n"
+#~ "Tab Completion\n"
+#~ "None\n"
+#~ msgstr ""
+#~ "自動補完\n"
+#~ "タブによる補完\n"
+#~ "なし\n"
+
+#~ msgid ""
+#~ "Never\n"
+#~ "Ask User\n"
+#~ "Always\n"
+#~ msgstr ""
+#~ "しない\n"
+#~ "ユーザに問い合わせ\n"
+#~ "常にする\n"
+
+#~ msgid ""
+#~ "Mozilla FTP\n"
+#~ "Gnome FTP Handler\n"
+#~ msgstr ""
+#~ "MozillaのFTPで\n"
+#~ "GNOMEのFTPハンドラで\n"
+
+#~ msgid ""
+#~ "gnome-edit\n"
+#~ "emacs\n"
+#~ "gedit\n"
+#~ "xemacs\n"
+#~ "gvim\n"
+#~ "gless\n"
+#~ "gnp\n"
+#~ msgstr ""
+#~ "gnome-edit\n"
+#~ "emacs\n"
+#~ "gedit\n"
+#~ "xemacs\n"
+#~ "gvim\n"
+#~ "gless\n"
+#~ "gnp\n"
+
+#~ msgid ""
+#~ "Save to disk\n"
+#~ "Open with program\n"
+#~ "Ask user\n"
+#~ msgstr ""
+#~ "ディスクに保存\n"
+#~ "プログラムで開く\n"
+#~ "ユーザに問い合わせる\n"
+
+#~ msgid "Temporary bookmaks"
+#~ msgstr "一時ブックマーク"
