@@ -251,7 +251,7 @@ foreach $lang (@langs) {
   printf TABLE "<td align=right><font face=\"arial, helvetica\" size=2>%d%%</font></td>\n", $num;
 }
   print TABLE "<tr><td></td>";                                                                          
-    foreach $lang (@langs_reg) {
+    foreach $lang (@langs_red) {
         print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$lang</font></a></td>\n";
 } 
 print "\n";
