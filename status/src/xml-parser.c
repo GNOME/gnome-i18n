@@ -358,6 +358,7 @@ chars_found(void *ctx, const CHAR *chars, int len)
 			if ( currrelease->mainhead != NULL ){
 				old = currrelease->mainhead;
 				currrelease->mainhead = g_strconcat (old, buff, NULL);
+				g_free (old);
 				g_free (buff);
 			} else {
 				currrelease->mainhead = buff;

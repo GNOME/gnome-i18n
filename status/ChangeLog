@@ -1,3 +1,14 @@
+2002-05-05  Carlos Perello Marin <carlos@gnome-db.org>
+
+	* src/html-reports.c: Lots of memory leaks fixes. Now the application
+	gets only one or two Mb long instead of the 405Mb it was getting :-(.
+	We use now GString instead of char * directly.
+	* src/main.c: Small change to be able to debug the application
+	more easily. I will revert all changes after all memory leaks gets
+	fixed.
+	* src/po-management.c: Small bug fixed.
+	* src/xml-parser.c: fixed a memory leak.
+
 2002-05-05  Abel Cheung  <maddog@linux.org.hk>
 
 	* translation-status.xml:

@@ -24,7 +24,7 @@
 
 #define N_(String) String
 
-char *modules;
+char *modules = "/home/gnome-i18n/translation-status.xml";
 char *cvsdir = "/home/gnome-i18n/cvs/";
 char *installdir = "/home/gnome-i18n/html/";
 int ttl;
@@ -41,8 +41,8 @@ struct poptOption options[] = {
 
 GHashTable *status_xml_parse (gchar *modules);
 void status_update_po_release (gpointer key, gpointer value, gpointer user_data);
-void generate_locale_html (gpointer key, gpointer value, gpointer user_data);
-void generate_release_html (gpointer key, gpointer value, gpointer user_data);
+/*void generate_locale_html (gpointer key, gpointer value, gpointer user_data);
+void generate_release_html (gpointer key, gpointer value, gpointer user_data);*/
 
 int
 main (int argc, const char *argv[])
@@ -72,7 +72,9 @@ GHashTable *releases;
 	
 	/* 2b.- Save the data ?? */
 	/* 3.- Create the .html files */
+	/* FIXME: We should generate the html files now instead of inside
+	 * status_update_po_release but it cannot be done now.
 	g_hash_table_foreach (releases, generate_release_html, NULL);
 	g_hash_table_foreach (releases, generate_locale_html, NULL);
-
+*/
 }

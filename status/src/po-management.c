@@ -109,6 +109,7 @@ regenerate_component_pot (component *cmp)
 				g_free (dir);
 				return FALSE;
 			}
+			g_free (dir);
 		} else {
 			g_warning ("Unable to chdir into %s", dir);
 			g_free (dir);
@@ -134,7 +135,7 @@ copy_component_pot (component *cmp)
 	gint ntoken;
 	gint return_val;
 	gchar buf[200];
-	GString *stats;
+	GString *stats = NULL;
 	gchar **tfu_temp;
 
 	if (! chdir (cvsdir)) {
@@ -217,7 +218,9 @@ copy_component_pot (component *cmp)
 					} else {
 						cmp->nstrings = -1;
 					}
-					g_string_free (stats, TRUE);
+					if (stats) {
+						g_string_free (stats, TRUE);
+					}
 					break;
 			}
 		} else {
@@ -340,7 +343,9 @@ fill_translation (component *cmp, gchar *locale)
 				trans->fuzzy = -1;
 				trans->untranslated = -1;
 			}
-			g_string_free (stats, TRUE);
+			if (stats) {
+				g_string_free (stats, TRUE);
+			}
 	}
 }
 
@@ -400,6 +405,7 @@ update_component_po (component *cmp)
 					g_strfreev (filesplit);
 					direntry = readdir (podir);
 				}
+				closedir (podir);
 			} else {
 				g_free (dir);
 				return FALSE;
@@ -476,5 +482,7 @@ status_update_po_release (gpointer key, gpointer value, gpointer user_data)
 
 	rls = (release *) value;
 	g_list_foreach (rls->components, process_component, NULL);
+	generate_release_html (rls);
+	generate_locale_html (rls);
 
 }

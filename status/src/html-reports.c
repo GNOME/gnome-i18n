@@ -43,15 +43,15 @@ void
 generate_release_locales_html (gpointer data, gpointer user_data)
 {
 	gchar *locale;
-	gchar **html;
+	GString **html;
 	gchar *temp;
 
 	locale = (gchar *) data;
-	html = (gchar **) user_data;
+	html = (GString **) user_data;
 
 	temp = g_strdup_printf ("\t<td><a href=\"%s.html\">%s</a></td>\n", locale, locale);
 	//temp = g_strdup_printf ("\t<td>%s</td>\n", locale);	
-	*html = g_strconcat (*html, temp, NULL);
+	*html = g_string_append (*html, temp);
 	g_free (temp);
 }
 
@@ -61,7 +61,7 @@ generate_release_components_html (gpointer data, gpointer user_data)
 	release *prelease;
 	component *pcmp;
 	translation *ptrns;
-	gchar **html;
+	GString **html;
 	gchar *temp;
 	gchar *poname;
 	gchar *modulelnk;
@@ -70,14 +70,16 @@ generate_release_components_html (gpointer data, gpointer user_data)
 	
 	pcmp = (component *) data;
 	prelease = pcmp->release;
-	html = (gchar **) user_data;
+	html = (GString **) user_data;
 
 	comment = g_strdup_printf ("\n<!-- %s %s -->\n", pcmp->name, pcmp->branch);
 
 	modulelnk = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.pot\">%s</a></td>\n", pcmp->name,
 				     pcmp->branch, pcmp->name);
 	
-	*html = g_strconcat (*html, comment, "<tr bgcolor='#c5c2c5' align=center>\n", modulelnk, NULL);
+	*html = g_string_append (*html, comment);
+	*html = g_string_append (*html, "<tr bgcolor='#c5c2c5' align=center>\n");
+	*html = g_string_append (*html, modulelnk);
 	
 	llocale = g_list_first (prelease->locales);
 	for (; llocale != NULL; llocale = g_list_next (llocale)) {
@@ -106,11 +108,12 @@ generate_release_components_html (gpointer data, gpointer user_data)
 					ptrns->translated + ptrns->fuzzy + ptrns->untranslated;
 			}
 		}
-		*html = g_strconcat (*html, temp, NULL);
+		*html = g_string_append (*html, temp);
 		g_free (temp);
 	}
 
-	*html = g_strconcat (*html, modulelnk, "</tr>\n", NULL);
+	*html = g_string_append (*html, modulelnk);
+	*html = g_string_append (*html, "</tr>\n");
 	g_free (modulelnk);
 }
 	
@@ -118,10 +121,13 @@ generate_release_components_html (gpointer data, gpointer user_data)
  * Generates the HTML reports
  */
 void
+/*
 generate_release_html (gpointer key, gpointer value, gpointer user_data)
+*/
+generate_release_html (release *prelease)
 {
-	release *prelease;
-	gchar *html;
+/*	release *prelease;*/
+	GString *html;
 	gchar *temp;
 	gchar *pdate;
 	time_t date;
@@ -130,7 +136,7 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 	component *cmp;
 
 
-	prelease = (release *) value;
+/*	prelease = (release *) value;*/
 
 	date = time (NULL);
 	pdate = g_strdup (asctime (gmtime (&date)));
@@ -138,7 +144,7 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 	pdate[strlen (pdate) - 1] = 0;
 
 	/* First we generate "static" section */
-	html = g_strdup_printf ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n"\
+	temp = g_strdup_printf ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n"\
 				"<html>\n"\
 				"<head>\n"\
 				"<meta HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=ISO-8859-1\">\n"\
@@ -156,18 +162,20 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 				"<tr align=center>\n"\
 				"\t<td></td>\n", prelease->maintitle, pdate, prelease->maintitle, pdate,
 				prelease->mainhead);
+	html = g_string_new (temp);
+	g_free (temp);
 	g_free (pdate);
 
 	g_list_foreach (prelease->locales, generate_release_locales_html, &html);
 	
-	html = g_strconcat (html, "\t<td></td>\n</tr>\n", NULL);
+	html = g_string_append (html, "\t<td></td>\n</tr>\n");
 
 	translated = g_new0 (guint, g_list_length (prelease->locales));
 	total = g_new0 (guint, g_list_length (prelease->locales));
 	
 	g_list_foreach (prelease->components, generate_release_components_html, &html);
 
-	html = g_strconcat (html, "<tr align=center bgcolor=\"#ffd700\">\n\t<th>Total</th>\n", NULL);
+	html = g_string_append (html, "<tr align=center bgcolor=\"#ffd700\">\n\t<th>Total</th>\n");
 
 	llocale = g_list_first (prelease->locales);
 	for (; llocale != NULL; llocale = g_list_next (llocale)) {
@@ -176,17 +184,18 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 		stats = ( (gfloat) translated[g_list_position (prelease->locales, llocale)] /
 			 (gfloat) total[g_list_position (prelease->locales, llocale)])*100;
 		temp = g_strdup_printf ("\t<th align=right>%.2f</th>\n", stats);
-		html = g_strconcat (html, temp, NULL);
+		html = g_string_append (html, temp);
 		g_free (temp);
 	}
-	html = g_strconcat (html, "\t<th>Total</th>\n</tr>\n<tr align=center>\n\t<td></td>\n", NULL);
+	html = g_string_append (html, "\t<th>Total</th>\n</tr>\n<tr align=center>\n\t<td></td>\n");
 	
 	g_list_foreach (prelease->locales, generate_release_locales_html, &html);
 
-	html = g_strconcat (html, "\t<td></td>\n</tr></table>\n", NULL);
+	html = g_string_append (html, "\t<td></td>\n</tr></table>\n");
 
 	temp = g_strdup_printf ("<p>Total number of translatable strings in above modules: %d\n", total[0]);
-	html = g_strconcat (html, temp, "<p>Stable branches with tags: <br><br>\n", NULL);
+	html = g_string_append (html, temp);
+	html = g_string_append (html, "<p>Stable branches with tags: <br><br>\n");
 
 	g_free (temp);
 
@@ -195,12 +204,12 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 		cmp = (component *) lcomponent->data;
 		if (strcmp (cmp->branch, "HEAD")) {
 			temp = g_strdup_printf ("%s: %s<br>\n", cmp->name, cmp->branch);
-			html = g_strconcat (html, temp, NULL);
+			html = g_string_append (html, temp);
 			g_free (temp);
 		}
 	}
 	
-	html = g_strconcat (html, "</body></html>\n", NULL);
+	html = g_string_append (html, "</body></html>\n");
 
 	/* TODO: We should made a new function with this code */
 	{
@@ -211,12 +220,14 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
 		htmlpage = fopen (path, "w");
 		g_free (path);
 		
-		if (fwrite (html, strlen (html), 1, htmlpage) != 1) {
+		if (fwrite (html->str, html->len, 1, htmlpage) != 1) {
 			g_error ("We couldn't write status.shtml!!");
 		}
 		fclose (htmlpage);
+		g_string_free (html, TRUE);
 	}
-	
+	g_free (translated);
+	g_free (total);
 }
 
 
@@ -225,10 +236,13 @@ generate_release_html (gpointer key, gpointer value, gpointer user_data)
  * Create individual HTML pages for every locale
  */
 void
+/*
 generate_locale_html (gpointer key, gpointer value, gpointer user_data)
+*/
+generate_locale_html (release *prelease)
 {
-	release *prelease;
-	gchar *html;
+/*	release *prelease;*/
+	GString *html;
 	gchar *temp;
 	gchar *pdate;
 	time_t date;
@@ -242,7 +256,7 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 	gchar *modulelnk;
 	gchar *comment;
 	
-	prelease = (release *) value;
+/*	prelease = (release *) value;*/
 
 	date = time (NULL);
 	pdate = g_strdup (asctime (gmtime (&date)));
@@ -255,7 +269,7 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 		gfloat stats;
 
 		/* First we generate "static" section */
-		html = g_strdup_printf ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n"\
+		temp = g_strdup_printf ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n"\
 					"<html>\n"\
 					"<head>\n"\
 					"<meta HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=ISO-8859-1\">\n"\
@@ -273,14 +287,16 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 					"<tr align=center>\n"\
 					"\t<td>Module</td>\n", prelease->maintitle, pdate, prelease->maintitle, 
 					(gchar *)llocale->data, pdate, prelease->mainhead);
+		html = g_string_new (temp);
+		g_free (temp);
 		
 	
 		//g_list_foreach (prelease->locales, generate_release_locales_html, &html);
 		
-		html = g_strconcat (html, "\t<td>Translated</td>\n", NULL);
-		html = g_strconcat (html, "\t<td>Fuzzy</td>\n", NULL);
-		html = g_strconcat (html, "\t<td>Untranslated</td>\n", NULL);
-		html = g_strconcat (html, "\t<td>%</td>\n</tr>\n", NULL);
+		html = g_string_append (html, "\t<td>Translated</td>\n");
+		html = g_string_append (html, "\t<td>Fuzzy</td>\n");
+		html = g_string_append (html, "\t<td>Untranslated</td>\n");
+		html = g_string_append (html, "\t<td>%</td>\n</tr>\n");
 	
 		translated = g_new0 (guint, g_list_length (prelease->locales));
 		total = g_new0 (guint, g_list_length (prelease->locales));
@@ -299,7 +315,9 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 			modulelnk = g_strdup_printf ("\t<td align=right><a href=\"po/%s.%s.pot\">%s</a></td>\n", pcmp->name,
 				     pcmp->branch, pcmp->name);
 	
-			html = g_strconcat (html, comment, "<tr bgcolor='#c5c2c5' align=center>\n", modulelnk, NULL);
+			html = g_string_append (html, comment);
+			html = g_string_append (html, "<tr bgcolor='#c5c2c5' align=center>\n");
+			html = g_string_append (html, modulelnk);
 
 			g_free (comment);
 			g_free (modulelnk);
@@ -359,7 +377,7 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 
 				}
 			}
-			html = g_strconcat (html, temp, NULL);
+			html = g_string_append (html, temp);
 			g_free (temp);
 			g_free (temp_info);
 		}
@@ -367,28 +385,32 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 	
 		/*end process each module */
 	
-		html = g_strconcat (html, "<tr align=center bgcolor=\"#ffd700\">\n\t<th>Total</th>\n", NULL);
+		html = g_string_append (html, "<tr align=center bgcolor=\"#ffd700\">\n\t<th>Total</th>\n");
 		
 		temp = g_strdup_printf ("\t<th align=right>%d</th>\n", 
 					total_trans[g_list_position (prelease->locales, llocale)]);
-		html = g_strconcat (html, temp, NULL);
+		html = g_string_append (html, temp);
+		g_free (temp);
 		
 		temp = g_strdup_printf ("\t<th align=right>%d</th>\n", 
 					total_fuzzy[g_list_position (prelease->locales, llocale)]);
-		html = g_strconcat (html, temp, NULL);
+		html = g_string_append (html, temp);
+		g_free (temp);
 		
 		temp = g_strdup_printf ("\t<th align=right>%d</th>\n", 
 					total_untrans[g_list_position (prelease->locales, llocale)]);
-		html = g_strconcat (html, temp, NULL);
+		html = g_string_append (html, temp);
+		g_free (temp);
 
 		stats = ((gfloat) translated[g_list_position (prelease->locales, llocale)] /
 			 (gfloat) total[g_list_position (prelease->locales, llocale)])*100;
 		temp = g_strdup_printf ("\t<th align=right>%.2f</th>\n", stats);
-		html = g_strconcat (html, temp, NULL);
+		html = g_string_append (html, temp);
+		g_free (temp);
 
-		html = g_strconcat (html, "</tr></table>\n", NULL);
+		html = g_string_append (html, "</tr></table>\n");
 
-		html = g_strconcat (html, "</body></html>\n", NULL);
+		html = g_string_append (html, "</body></html>\n");
 
 		/* TODO: We should made a new function with this code */
 		{
@@ -399,14 +421,18 @@ generate_locale_html (gpointer key, gpointer value, gpointer user_data)
 			locale = (gchar *)llocale->data;
 			path = g_strconcat (installdir, "/", prelease->version, "/", locale, ".html",  NULL);
 			htmlpage = fopen (path, "w");
-			if (fwrite (html, strlen (html), 1, htmlpage) != 1) {
+			if (fwrite (html->str, html->len, 1, htmlpage) != 1) {
 				g_warning ("We couldn't write %s.html!!", locale);
 			}
 			fclose (htmlpage);
 			g_free (path);
+			g_string_free (html, TRUE);
 		}
-		g_free (temp);
-
+		g_free (translated);
+                g_free (total);
+                g_free (total_trans);
+		g_free (total_fuzzy);
+		g_free (total_untrans);
 	}
 	g_free (pdate);
 }
