@@ -165,16 +165,14 @@ my %status = (
     "sv" => "Status"
 );
 
-my %available = (
-    "C"  => "Available",
-    "es" => "Disponible",
-    "sv" => "Ledig"
+my %outdated = (
+    "C"  => "OutDated",
+    "es" => "Desactualizado",
 );
 
-my %assigned = (
-    "C"  => "Assigned",
-    "es" => "Asignado",
-    "sv" => "Tilldelad"
+my %wip = (
+    "C"  => "Work in Progress",
+    "es" => "En proceso",
 );
 
 my %unknown = (
@@ -473,12 +471,13 @@ foreach $lang (sort keys %langinfo){
         }
 
         my $transtatus;
+	my $defaultlang = "C";
         if (${$langmod{$mod}->{$lang}->[3]} ==  0) {
-            $transtatus = ("$available{$lang}") ? "<font color=\"#F80000\">$available{$lang}</font>" : "<font color=\"#F80000\">Available</font>";
+            $transtatus = ("$outdated{$lang}") ? "<font color=\"#F80000\">$outdated{$lang}</font>" : "<font color=\"#F80000\">$outdated{$defaultlang}</font>";
         } elsif (${$langmod{$mod}->{$lang}->[3]} == 1) {
-            $transtatus = ("$assigned{$lang}") ? "$assigned{$lang}" : "Assigned";
+            $transtatus = ("$wip{$lang}") ? "$wip{$lang}" : "$wip{$defaultlang}";
         } else {
-            $transtatus = ("$unknown{$lang}") ? "$unknown{$lang}" : "Unknown";
+            $transtatus = ("$unknown{$lang}") ? "$unknown{$lang}" : "$unknown{$defaultlang}";
         }
 
 	$percent_int = sprintf ("%d%%", $percent);
