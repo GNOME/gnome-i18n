@@ -29,7 +29,7 @@
 ## Constants
 
 $cvsroot = "../..";
-$htmldir = "$cvsroot/web-devel-2/content/projects/gtp/status";
+$htmldir ="./";
 $posdir  = "$htmldir/pos";
 
 ## Use the supplied arguments
@@ -53,7 +53,7 @@ while (<STATUS>) {
 
 close STATUS;
 
-open LANG, "LANGINFO.in" || die "Cannot open file: $ARG1";
+open LANG, "LANGINFO.in" || die "Cannot open file: LANGINFO.in";
 
 my @langs;   
 while (<LANG>) {
@@ -63,11 +63,12 @@ while (<LANG>) {
 
 close LANG;
 
-sub GetMsgfmt;
-sub generatepot;
-sub getmerge;
+&GetMerge;
+&GetMsgfmt;
+&GeneratePot;
+&Initia;
 
-## Initialization
+sub Initia { 
 
 ## read old dat-files
 if (open (MODINFO, "$htmldir/modinfo.dat")){
@@ -103,7 +104,6 @@ if (open (LANGMOD, "$htmldir/langmod.dat")){
 }
 
 ## Main loops
-my $modflag = 0; # does we need write modinfo?
 
 foreach $mod (@modules){
     if ($mod=~/extra-po/){ # don't generate in extra-po
@@ -146,58 +146,64 @@ foreach $lang (@langs){
 	${$langinfo{$lang}->[0]} = $total_msg;
 }
 
+}
+
 ## Files generation
-if ($modflag) {               # Change modinfo if needed.
 
-open (MODINFO, ">$htmldir/modinfo.dat") || die ("can't open $htmldir/modinfo.dat");
+   open MODINFO, ">$htmldir/modinfo.dat" 
+     || die "can't open $htmldir/modinfo.dat\n";
 
-foreach $mod (@modules){
-$string = "${$modinfo{$mod}->[0]}" . "," . "${$modinfo{$mod}->[1]}";
-$index = 2;
-    while (${$modinfoold{$mod}->[$index]}){
-	$string = $string . "," . ${$modinfoold{$mod}->[$index]};
-	$index++;
-    }
-    print MODINFO "$mod,$string\n";
+   foreach $mod (@modules){
+      $string = "${$modinfo{$mod}->[0]}" . "," . "${$modinfo{$mod}->[1]}";
+      $index = 2;
+      while (${$modinfoold{$mod}->[$index]}){
+	 $string = $string . "," . ${$modinfoold{$mod}->[$index]};
+	 $index++;
+      }
+      print MODINFO "$mod,$string\n";
+   }
+      close MODINFO;
+
+
+      open LANGINFO, ">$htmldir/langinfo.dat" 
+        || die "can't open $htmldir/langinfo.dat";
+
+      foreach $lang (@langs){
+         $string = "${$langinfo{$lang}->[0]}"; # in the future we add [1] and [2]
+         $index = 1;
+         while (${$langinfoold{$lang}->[$index]}){
+            $string = $string . "," . ${$langinfoold{$lang}->[$index]};
+            $index++;
+            print $string . "\n";
+         }
+         print LANGINFO "$lang,$string\n";
+      }
+      close (LANGINFO);
+
+
+      open LANGMOD, ">$htmldir/langmod.dat" 
+        || die "Can't open file: $htmldir/langmod.dat\n";
+
+      foreach $lang (@langs){
+         foreach $mod (@modules){
+            $string = "${$langmod{$lang}->{$mod}->[0]}". ",". 
+                      "${$langmod{$lang}->{$mod}->[1]}". ",". 
+                      "${$langmod{$lang}->{$mod}->[2]}";
+            $index = 3;
+            while (${$langmodold{$lang}->{$mod}->[$index]}){
+	       $string = $string . "," . ${$langmodold{$lang}->{$mod}->[$index]};
+	       $index++;
+            }
+            print LANGMOD "$lang,$mod,$string\n";
+         }
+      }
+      close LANGMOD;
+   
 }
-}
-close MODINFO;
 
-##-----------------------
-open LANGINFO, ">$htmldir/langinfo.dat" || die "can't open $htmldir/langinfo.dat";
-
-foreach $lang (@langs){
-$string = "${$langinfo{$lang}->[0]}"; # in the future we add [1] and [2]
-$index = 1;
-    while (${$langinfoold{$lang}->[$index]}){
-	$string = $string . "," . ${$langinfoold{$lang}->[$index]};
-	$index++;
-print $string . "\n";
-	}
-print LANGINFO "$lang,$string\n";
-}
-close (LANGINFO);
-
-##-----------------------
-open LANGMOD, ">$htmldir/langmod.dat" || die "Can't open file: $htmldir/langmod.dat\n";
-
-foreach $lang (@langs){
-    foreach $mod (@modules){
-     $string = "${$langmod{$lang}->{$mod}->[0]}". ",". 
-               "${$langmod{$lang}->{$mod}->[1]}". ",". 
-               "${$langmod{$lang}->{$mod}->[2]}";
-    $index = 3;
-    while (${$langmodold{$lang}->{$mod}->[$index]}){
-	$string = $string . "," . ${$langmodold{$lang}->{$mod}->[$index]};
-	$index++;
-    }
-    print LANGMOD "$lang,$mod,$string\n";
-}
-}
-close LANGMOD;
-}
-
-## Subroutines
+########################
+## Subrutine GetMerge ##
+########################
 
 sub GetMerge{
     ($lang,$mod) = @_;
@@ -216,6 +222,10 @@ sub GetMerge{
     close MERGE;
 }
 
+#########################
+## Subrutine GetMsgfmt ##
+#########################
+
 sub GetMsgfmt{
     ($language,$mod) = @_;
     print "$language  $mod\n";
@@ -231,6 +241,7 @@ sub GetMsgfmt{
     open(STAT,"msgfmt --statistics -o /dev/null $cvsroot/$mod/$file.$ext 2>&1 |")
     || die ("unable to msgfmt");
     $line=<STAT>;
+
     close(STAT);
     ($trns) = $line =~ /(\d+) translated\s.+/;
     ($fuzz) = $line =~ /(\d+) fuzzy\s.+/;
@@ -238,6 +249,10 @@ sub GetMsgfmt{
     $total = $trns + $fuzz + $untr;
     return($total,$trns,$fuzz,$untr);
 }
+
+###########################
+## Subrutine GeneratePot ##
+###########################
 
 sub GeneratePot{
     $mod = $_[0];
@@ -251,29 +266,36 @@ sub GeneratePot{
         $file = "rpm";
     }
     if ($' eq "po-script-fu"){
-    $xgettext_plus = "&& $cvsroot/gimp/po-script-fu/script-fu-xgettext \ $cvsroot/gimp/plug-ins/script-fu/scripts/*.scm \ $cvsroot/gimp/plug-ins/gap/sel-to-anim-img.scm \ $cvsroot/gimp/plug-ins/webbrowser/web-browser.scm \ >> $cvsroot/gimp/po-script-fu/gimp-script-fu.po \ ";
+       $xgettext_plus = "&& $cvsroot/gimp/po-script-fu/script-fu-xgettext \ ".
+			"$cvsroot/gimp/plug-ins/script-fu/scripts/*.scm \ ".
+			"$cvsroot/gimp/plug-ins/gap/sel-to-anim-img.scm \ ".
+			"$cvsroot/gimp/plug-ins/webbrowser/web-browser.scm \ >> ".
+			"$cvsroot/gimp/po-script-fu/gimp-script-fu.po \ ";
     }
-    print "Generatepot: $mod\n";
+    print "Generating POT: $mod\n";
 
     if ($file eq "po-script-fu") {
       open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
     } else {
-      if (-x "$cvsroot/$mod/update.pl") {
-	system ("cd $cvsroot/$mod && ./update.pl -P $file" );
-	return;
-      } else {  
-   	open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
+       if (-x "$cvsroot/$mod/update.pl") {
+ 	  system ("cd $cvsroot/$mod && ./update.pl -P $file" );
+	  return;
+       } else {  
+   	  open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
    	      "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
    	      " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
    	      " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
-     }
+      }
     }
     link("$cvsroot/$mod/$file.pot", "$posdir/$file.pot");
     close (POTOUT);
   }
 
 
-# Array structures:
+#####################
+# Array structures ##
+#####################
+
 # langmod  $mod:$lang:$trns:$fuzz:$untr
 # ${$langmod{$lang}->{$mod}->[0]} = "trns";
 # ${$langmod{$lang}->{$mod}->[1]} = "fuzz";
