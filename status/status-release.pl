@@ -17,7 +17,7 @@
      "ghex/po",
      "glade/po",
      "gnome-applets/po",
-     "gnome-core-HEAD/po",
+     "gnome-core/po",
      "gnome-games/po",
      "gnome-libs/po",
      "gnome-media/po",
@@ -36,6 +36,7 @@
 @xml_i18n_tools_compliants = (
     "ammonite/po",
     "bonobo/po",
+    "control-center/po",
     "evolution/po",
     "galeon/po",
     "gnome-applets/po",
@@ -49,7 +50,9 @@
 #@langs = ( "uk" );
 
 
-@langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+@langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu 
+              is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk vi 
+	      wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome/1";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/release";
