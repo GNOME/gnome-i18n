@@ -40,7 +40,7 @@ $now = time;
 "sv", "&Ouml;versatt",
 "tr", "TercЭme edilmiЧ",
 "uk", "Перекладено",
-"wa", "rato&ucircu;rn&eacute;s"
+"wa", "rato&ucirc;rn&eacute;s"
 );
 
 %fuzzy = (
@@ -76,7 +76,7 @@ $now = time;
 "sv", "O&ouml;versatt",
 "tr", "TercЭme edilmemiЧ",
 "uk", "Неперекладено",
-"wa", "n&eacute;n co rato&ucircu;rn&eacute;s"
+"wa", "n&eacute;n co rato&ucirc;rn&eacute;s"
 );
 
 %strings = (
@@ -147,7 +147,7 @@ $now = time;
 "sv", "Detaljerad rapport f&ouml;r st&ouml;d av svenska i GNOME<br>Detailed report for Swedish (sv) GNOME translations",
 "tr", "TЭrkГe GNOME tercЭmeleri iГin geliЧmiЧ durum raporu<br>Detailed report for Turkish (tr) GNOME translations",
 "uk", "Детальний зв╕т про стан перекладу GNOME на укра╖нську<br>Detailed report for Ukrainian (uk) GNOME translations",
-"wa", "Sipepieus rapoirt po les walons (wa) rato&ucircu;rnaedjes di GNOME"
+"wa", "Sipepieus rapoirt po les walons (wa) rato&ucirc;rnaedjes di GNOME"
 );
 
 %percent_colors = (
