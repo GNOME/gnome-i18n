@@ -131,17 +131,21 @@ sub translate() {
 
   $msg_str = $msg_id;
   
+  do_trans("aluminum", "aluminium");
   do_trans("analog", "analogue");
   do_trans("armor", "armour");
+  do_trans("behavior","behaviour");
   do_trans("caliber", "calibre");
   do_trans("canceled", "cancelled");
   do_trans("canceling", "cancelling");
   do_trans("catalog", "catalogue");
+  do_trans("categorize","categorise");
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
   do_trans("center", "centre");
   query_trans("checked", "chequered");
   query_trans("check", "cheque");
+  do_trans("cipher", "cypher");
   do_trans("color", "colour");
   do_trans("customize", "customise");
   do_trans("customized", "customised");
@@ -150,8 +154,11 @@ sub translate() {
   do_trans("dialing", "dialling");
   do_trans("dialed", "dialled");
   do_trans("dialog", "dialogue");
+  do_trans("eggplant","aubergine");
   do_trans("encyclopedia", "encyclopaedia");
   do_trans("endeavor", "endeavour");
+  do_trans("equaled", "equalled");
+  do_trans("equaling", "equalling");
   do_trans("favor", "favour");
   do_trans("fiber", "fibre");
   do_trans("flavor", "flavour");
@@ -160,12 +167,14 @@ sub translate() {
   do_trans("harbor", "harbour");
   do_trans("honor", "honour");
   do_trans("humor", "humour");
+  do_trans("initialization", "initialisation");
   do_trans("initialize", "initialise");
+  do_trans("initialized", "initialised");
   do_trans("jeweled", "jewelled");
   do_trans("judgment", "judgement");
   do_trans("kilometer", "kilometre");
   do_trans("labeled", "labelled");
-  do_trans("license", "licence");
+  query_trans("license", "licence");
   do_trans("labor", "labour");
   do_trans("liter", "litre");
   query_trans("meter", "metre");
@@ -178,18 +187,25 @@ sub translate() {
   do_trans("organize", "organise");
   do_trans("paneled", "panelled");
   do_trans("paneling", "panelling");
+  query_trans("practise","practice");
+  do_trans("routing", "routeing");
   do_trans("rumor", "rumour");
   do_trans("saber", "sabre");
   do_trans("scepter", "sceptre");
   do_trans("signaled", "signalled");
+  do_trans("signaling", "signalling");
+  do_trans("simultanous", "simultaneous");
   do_trans("specter", "spectre");
+  do_trans("sulfur", "sulphur");
   do_trans("theater", "theatre");
   query_trans("tire", "tyre");
   do_trans("totaled", "totalled");
   do_trans("totaler", "totaller");
   do_trans("totaling", "totalling");
   do_trans("trash", "wastebasket");
+  do_trans("uninitialized","uninitialised");
   do_trans("vapor", "vapour");
+  do_trans("vise", "vice");
   do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
 
 # This causes the string not to be copied
