@@ -11,8 +11,53 @@
 # since full AI hasn't been invented yet, you need to inspect it
 # by hand afterwards.
 
-# Can be used as-is for Irish, Gibraltan, Channel Isles, Canadian,
-# Australian, Falkandese, etc.
+# These are as-is
+
+# en_AI         Anguillan English
+# en_AC         Ascension Island English
+# en_AU         Australian English
+# en_AQ         Antartican English
+# en_BB         Barbados English
+# en_BM         Bermudan English
+# en_BS         Bahamas English
+# en_BZ         Belize English
+# en_CX         Christmas Island English
+# en_EU         European English
+# en_FK         Fakland Islands English
+# en_GB         British English
+# en_GI         Gibraltan English
+# en_GG         Guernsey English
+# en_HK         Hong Kong English
+# en_IE         Irish English
+# en_IM         Manx English
+# en_IO         British Indian Ocean English
+# en_HM         Heard & McDonald Islands English
+# en_JE         Jersey English
+# en_JM         Jamaican English
+# en_KY         Cayman Islands English
+# en_MS         Montserrat English
+# en_NF         Norfolk Island English
+# en_NZ         New Zealand English
+# en_PN         Pitcairn English
+# en_SH         Saint Helena English
+# en_TC         Turks & Caicos English
+# en_VG         British Virgin Isles English
+# en_ZA         South African English
+
+# en_CA         Canadian English
+#               (Canadian uses some US forms)
+
+# The government websites of the following countries use British forms.
+
+# en_BW         Botswanan English
+# en_KE         Kenyan English
+# en_ZM         Zambian English
+# en_ZW         Zimbabwe English
+
+
+
+# if you find an inaccuracy in this list, please mail me at 
+# <rwb197@zepler.org>
 
 use Time::gmtime;
 
