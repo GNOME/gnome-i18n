@@ -51,7 +51,7 @@ $now = time;
 
 %strings = (
 "da", "strenge",
-"de", "Meldung",
+"de", "Meldungen",
 "ro", "stringuri",
 "ru", "сообщ.",
 "sv", "meddelanden",
