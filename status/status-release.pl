@@ -27,11 +27,17 @@
      "gnome-pim/po",
      "gnome-utils/po",
      "gnomeicu/po",
+     "gnorpm/po",
      "gnumeric/po",
      "gtk+/po",
+     "gnome-i18n/extra-po/gtm",
      "gtop/po",
      "libgtop/po",
-     "mc/po"
+     "magicdev/po",
+     "mc/po",
+     "rp3/po",
+     "gnome-i18n/extra-po/sawfish",
+     "gnome-i18n/extra-po/xchat"
 );
 
 # it's for a current developer :-)
@@ -41,7 +47,7 @@
 @langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome";
-$htmldir = "/home/kmaraas/cvs/gnome/gnomeweb-wml/www.gnome.org/i18n/release";
+$htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/release";
 
 #############################
 # "Subroutines declaration" # 

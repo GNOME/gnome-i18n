@@ -84,7 +84,7 @@ $now = time;
 );
 
 
-$htmldir="/home/kmaraas/cvs/gnome/gnomeweb-wml/www.gnome.org/i18n/release";
+$htmldir="/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/release";
 
 
 sub printmodule;

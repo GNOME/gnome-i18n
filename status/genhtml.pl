@@ -79,7 +79,7 @@ $now = time;
 );
 
 
-$htmldir="/home/kmaraas/cvs/gnome/gnomeweb-wml/www.gnome.org/i18n";
+$htmldir="/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
 
 
 sub printmodule;

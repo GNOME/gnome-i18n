@@ -12,10 +12,14 @@
      "bonobo/po",
      "bug-buddy/po",
      "control-center/po",
+     "control-center-HEAD/po",
      "dia/po",
      "dr-genius/po",
+     "ee/po",
      "eog/po",
      "evolution/po",
+     "gnome-i18n/extra-po/firestarter",
+     "gnome-i18n/extra-po/galeon",
      "gconf/po",
      "gdm2/po",
      "gnome-i18n/extra-po/gdm2beta5",
@@ -32,12 +36,16 @@
      "gimp-freetype/po",
      "glade/po",
      "gnome-i18n/extra-po/gnapster",
+#     "gnome-admin-tools/hardware-admin/po",
      "gnome-applets/po",
      "gnome-chess/po",
      "gnome-core/po",
      "gnome-db/po",
+     "gnome-i18n/extra-po/gnome-find",
      "gnome-games/po",
+     "gnome-iconedit/po",
      "gnome-libs/po",
+     "gnome-libs-HEAD/po",
      "gnome-lokkit/po",
      "gnome-media/po",
      "gnome-pilot/po",
@@ -49,10 +57,12 @@
      "gnop/po",
      "gnopo/po",
      "gnorpm/po",
+     "gnome-i18n/extra-po/gnucash",
      "gnumeric/po",
      "gphoto/po",
      "gtkhtml/po",
      "gtk+/po",
+     "gtk+-HEAD/po",
      "gnome-i18n/extra-po/gtm",
      "gtop/po",
      "gtranslator/po",
@@ -66,6 +76,7 @@
      "mc/po",
      "memprof/po",
      "nautilus/po",
+     "oaf/po",
      "pan/po",
      "pybliographer/po",
      "rp3/po",
@@ -81,7 +92,7 @@
 @langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome";
-$htmldir = "/home/kmaraas/cvs/gnome/gnomeweb-wml/www.gnome.org/i18n";
+$htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
 
 #############################
 # "Subroutines declaration" # 
