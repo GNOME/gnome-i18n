@@ -1,310 +1,356 @@
-# Japanese Translation
-# Copyright (C) 2000 Free Software Foundation, Inc.
+# gtm ja.po.
+# Copyright (C) 2000,2001 Free Software Foundation, Inc.
 # Mitsuo Hamada <mhamada@redhat.com>, 2000.
+# Takeshi Aihana <aihana@gnome.gr.jp>,2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gtm 0.4.2\n"
-"POT-Creation-Date: 2000-07-19 21:48+0100\n"
-"PO-Revision-Date: 2000-10-23 17:23+09:00\n"
-"Last-Translator: Mitsuo Hamada <mhamada@redhat.com>\n"
+"Project-Id-Version: gtm 0.4.9\n"
+"POT-Creation-Date: 2001-10-05 01:23+0100\n"
+"PO-Revision-Date: 2001-10-11 21:45+0900\n"
+"Last-Translator: Takehsi Aihana <aihana@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:298
-msgid "url to fetch"
-msgstr "取り込みたい URL"
+#: src/Gtm-impl.c:101
+msgid "Refusing request from CORBA client, URL already in the list:"
+msgstr ""
+"CORBA クライアントからの要求が拒否されました。URL が既に一覧の中にあります:"
 
-#: src/main.c:298
+#: src/main.c:390
+msgid "url to fetch"
+msgstr "同期する URL"
+
+#: src/main.c:390
 msgid "URL"
 msgstr "URL"
 
-#. If there where errors give them to the user
-#: applet/dialog-add.c:68 applet/dialog-add.c:78 applet/dialog-add.c:291
-#: applet/dialog-add.c:309 applet/dialog-new.c:105 src/dialog-add.c:69
-#: src/dialog-add.c:86 src/dialog-add.c:302 src/dialog-add.c:320
-#: src/dialog-new.c:110 src/main.c:334
+#. If there were errors give them to the user
+#: applet/dialog-add.c:85 applet/dialog-add.c:108 applet/dialog-add.c:325
+#: applet/dialog-add.c:347 applet/dialog-new.c:128 src/dialog-add.c:63
+#: src/dialog-add.c:82 src/dialog-add.c:265 src/dialog-add.c:286
+#: src/dialog-new.c:129 src/main.c:429
 msgid "URL:\n"
 msgstr "URL:\n"
 
-#: applet/dialog-add.c:81 applet/dialog-add.c:312 applet/dialog-new.c:106
-#: src/dialog-add.c:89 src/dialog-add.c:323 src/dialog-new.c:111
-#: src/main.c:336
+#: src/dialog-add.c:85 src/dialog-add.c:289 src/dialog-new.c:130
+#: src/main.c:431
 msgid "already in the list"
-msgstr "すでにリストにあります"
+msgstr "一覧の中に既にあります"
 
-#: src/main.c:394
+#. GTM Server couldn't be started
+#: applet/dialog-add.c:94 applet/dialog-add.c:333 applet/dialog-new.c:122
+#: applet/gtm_applet.c:193 src/main.c:436
+msgid "Couldn't start GTM"
+msgstr "GTM を起動することが出来ませんでした"
+
+#: src/main.c:477
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
 msgstr ""
-"すでに GNOME Transfer Manger が起動されています.\n"
-"GNOME Transfer Manager ひとつしか起動できません."
+"他の GNOME 転送マネージャが起動中です。\n"
+"GNOME 転送マネージャは一つだけ起動する事が可能です。"
 
-#: src/main-window.c:92
+#: src/main-window.c:104
 msgid ""
 "Some files being downloaded now.\n"
 "Do you really want to quit?"
 msgstr ""
-"現在、ファイルのダウンロード中です.\n"
-"本当に中止しますか ?"
-
-#: src/main-window.c:199
-msgid "_New..."
-msgstr "新規(_N)"
-
-#: src/main-window.c:199
-msgid "New file to download"
-msgstr "新規ファイルのダウンロード"
-
-#: src/main-window.c:203
-msgid "_Remove..."
-msgstr "削除(_R)"
-
-#: src/main-window.c:203 src/main-window.c:278
-msgid "Remove selected files"
-msgstr "選択したファイルの削除"
-
-#: src/main-window.c:207
-msgid "_List Statistics..."
-msgstr "一覧の統計 (_L)..."
-
-#: src/main-window.c:208
-msgid "Show file list summary"
-msgstr "ファイル一覧概略の表示"
-
-#: src/main-window.c:217
-msgid "Select _All"
-msgstr "すべてを選択(_A)"
-
-#: src/main-window.c:218
-msgid "Select all files from the list"
-msgstr "一覧からすべてのファイルを選択"
+"現在、幾つかのファイルがダウンロードされています。\n"
+"本当に終了して宜しいですか？"
 
 #: src/main-window.c:220
-msgid "Unselect All"
-msgstr "すべてを選択しない"
+msgid "_New..."
+msgstr "新規(_N)..."
 
-#: src/main-window.c:221
-msgid "Unselect all files from the list"
-msgstr "一覧からすべてのファイルを選択しない"
+#: applet/dialog-new.c:209 src/dialog-new.c:221 src/main-window.c:220
+msgid "New file to download"
+msgstr "新しいファイルをダウンロードします"
 
 #: src/main-window.c:224
+msgid "_Remove from list..."
+msgstr "一覧から削除(_R)..."
+
+#: src/main-window.c:225 src/main-window.c:314
+msgid "Remove selected files from the list"
+msgstr "指定したファイルを一覧から削除します"
+
+#: src/main-window.c:234
+msgid "Select _All"
+msgstr "全て選択(_A)"
+
+#: src/main-window.c:235
+msgid "Select all files from the list"
+msgstr "一覧から指定されたファイルを全て選択します"
+
+#: src/main-window.c:237
+msgid "Unselect All"
+msgstr "全て取り消し"
+
+#: src/main-window.c:238
+msgid "Unselect all files from the list"
+msgstr "指定された全てのファイルの選択を取り消します"
+
+#: src/main-window.c:241
 msgid "Toggles auto download"
-msgstr "自動ダウンロードのトグル"
+msgstr "自動ダウンロード"
 
-#: src/main-window.c:225
+#: src/main-window.c:242
 msgid "Toggles auto download of selected files"
-msgstr "選択されたファイルの自動ダウンロードのトグル"
+msgstr "選択したファイルを自動ダウンロードに切り替えます"
 
-#: src/file-list.c:70 src/main-window.c:234 src/main-window.c:282
+#: src/file-list.c:70 src/main-window.c:251 src/main-window.c:318
 msgid "Start"
 msgstr "開始"
 
-#: src/main-window.c:235
+#: src/main-window.c:252
 msgid "Start/Resume the download of the selected files"
-msgstr "選択ファイルのダウンロードを開始/再開"
+msgstr "選択したファイルのダウンロードを開始/再開します"
 
-#: src/file-list.c:73 src/main-window.c:239 src/main-window.c:287
+#: src/file-list.c:73 src/main-window.c:256 src/main-window.c:323
 msgid "Stop"
 msgstr "停止"
 
-#: src/main-window.c:240
+#: src/main-window.c:257
 msgid "Stop the download of the selected files"
-msgstr "選択されたファイルのダウンロードを停止"
+msgstr "選択したファイルのダウンロードを停止します"
 
-#: src/file-list.c:76 src/main-window.c:243 src/main-window.c:291
+#: src/file-list.c:76 src/main-window.c:260 src/main-window.c:327
 msgid "Restart"
 msgstr "再開"
 
-#: src/main-window.c:244 src/main-window.c:292
+#: src/main-window.c:261 src/main-window.c:328
 msgid "Restart the download of selected files from the beginning"
-msgstr "選択されたファイルのダウンロードを始めからやり直す"
+msgstr "選択したファイルのダウンロードを最初に戻って再開します"
 
-#: src/main-window.c:265
+#: src/main-window.c:266 src/main-window.c:333
+msgid "Pause Auto Dl"
+msgstr "自動ダウンロード一時停止"
+
+#: src/main-window.c:267 src/main-window.c:334
+msgid "Pause all auto downloads"
+msgstr "全ての自動ダウンロードを一時停止します"
+
+#: src/main-window.c:278
+msgid "_Statistics..."
+msgstr "統計(_S)..."
+
+#: src/main-window.c:279
+msgid "Show file list summary"
+msgstr "ファイル一覧の概要を表示します"
+
+#: src/main-window.c:282
+msgid "_Numeric Download..."
+msgstr "番号ダウンロード(_N)..."
+
+#: src/main-window.c:283
+msgid "Download a group of URLs differing by number"
+msgstr "番号が異なる URL のグループをダウンロードします"
+
+#: src/main-window.c:299
 msgid "_Download"
 msgstr "ダウンロード(_D)"
 
-#: src/main-window.c:274
+#: src/main-window.c:300
+msgid "_Tools"
+msgstr "ツール(_T)"
+
+#: src/main-window.c:309
 msgid "New"
-msgstr "新規ファイル"
+msgstr "新規"
 
-#: src/main-window.c:274
+#: src/main-window.c:309
 msgid "Add new file to download"
-msgstr "ダウンロードするファイルを新たに追加"
+msgstr "新規にファイルをダウンロード一覧に追加します"
 
-#: src/file-list.c:66 src/main-window.c:278
+#: src/main-window.c:313
 msgid "Remove"
 msgstr "削除"
 
-#: src/main-window.c:283
+#: src/main-window.c:319
 msgid "Start/Resume the download of selected files"
-msgstr "選択ファイルのダウンロードを開始/再開"
+msgstr "選択したファイルのダウンロードを開始/再開します"
 
-#: src/main-window.c:288
+#: src/main-window.c:324
 msgid "Stop the download of selected files"
-msgstr "選択されたファイルのダウンロードを停止"
+msgstr "選択したファイルのダウンロードを停止します"
 
-#: src/main-window.c:297
+#: src/main-window.c:337
 msgid "Toggle Auto Dl"
-msgstr "自動ダウンロードのトグル"
+msgstr "自動ダウンロード"
 
-#: src/main-window.c:298
+#: src/main-window.c:338
 msgid "Toggle auto download of selected files"
-msgstr "選択されたファイルの自動ダウンロードのトグル"
+msgstr "選択したファイルを自動ダウンロードに切り替えます"
 
-#: src/main-window.c:301
+#: src/main-window.c:342
+msgid "Dl Info Page"
+msgstr "ダウンロード情報ページ"
+
+#: src/main-window.c:343
+msgid "Toggle download info page"
+msgstr "ダウンロード情報ページの表示を切り替えます"
+
+#: applet/dialog-prop.c:291 src/dialog-prop.c:234 src/main-window.c:346
 msgid "Properties"
-msgstr "プロパティ"
+msgstr "設定"
 
-#: src/main-window.c:302
+#: src/main-window.c:347
 msgid "Open properties for selected file"
-msgstr "選択されたファイルのプロパティ"
+msgstr "選択したファイルの設定を開きます"
 
-#: src/main-window.c:305
+#: src/main-window.c:350
 msgid "Quit"
 msgstr "終了"
 
-#: src/main-window.c:305
+#: src/main-window.c:350
 msgid "Quit gtm"
-msgstr "gtm の終了"
+msgstr "GTM を終了します"
 
-#: src/file-data.c:42
+#: src/file-data.c:43
 msgid "Not Started"
-msgstr "開始されてません"
+msgstr "開始されていません"
 
-#: src/file-data.c:45
+#: src/file-data.c:46
 msgid "Not Running"
-msgstr "起動されてません"
+msgstr "実行されていません"
 
-#: src/file-data.c:48
+#: src/file-data.c:49
 msgid "Not Connected"
-msgstr "接続されてません"
+msgstr "接続されていません"
 
-#: src/file-data.c:51
+#: src/file-data.c:52
 msgid "Connected"
-msgstr "接続されました"
+msgstr "接続完了"
 
-#: src/file-data.c:54
+#: src/file-data.c:55
 msgid "Retrieving"
-msgstr "取込み中"
+msgstr "収集中"
 
-#: src/file-data.c:57
+#: src/file-data.c:58
 msgid "Completed"
 msgstr "完了"
 
-#: src/file-list.c:375
+#: src/file-list.c:66
+msgid "Remove from list"
+msgstr "一覧から削除"
+
+#: src/file-list.c:388
 msgid "S"
 msgstr "S"
 
-#: src/file-list.c:376
+#: src/file-list.c:389
 #, c-format
 msgid "%"
 msgstr "%"
 
-#: src/file-list.c:377
+#: src/file-list.c:390
 msgid "Remain"
 msgstr "残り"
 
-#: src/file-list.c:378
+#: src/file-list.c:391
 msgid "Filename"
 msgstr "ファイル名"
 
-#: src/download-info.c:64
-msgid "Location"
-msgstr "場所"
+#: src/file-list.c:646
+msgid "File:\n"
+msgstr "ファイル:\n"
 
-#: src/download-info.c:78
+#: src/file-list.c:647
+msgid "already exists."
+msgstr "既にあります。"
+
+#: src/file-list.c:649
+msgid "File already exists"
+msgstr "ファイルが既にあります"
+
+#: src/file-list.c:650
+msgid "Delete Existing File"
+msgstr "既存のファイルの削除"
+
+#: src/file-list.c:651
+msgid "Attempt to Resume"
+msgstr "レジュームを試す"
+
+#: src/file-list.c:654
+msgid "A file of the same name already exists in the target directory."
+msgstr "対象のディレクトリ内に同名のファイルが既に存在しています。"
+
+#: src/download-info.c:75
 msgid "Url:"
 msgstr "URL:"
 
-#: src/download-info.c:86
+#: src/download-info.c:83
 msgid "File:"
-msgstr "ファイル"
+msgstr "ファイル:"
 
-#: src/download-info.c:94
+#: src/download-info.c:91
 msgid "Size:"
 msgstr "サイズ:"
 
-#: src/download-info.c:110
+#: src/download-info.c:99
+msgid "Dir:"
+msgstr "ディレクトリ:"
+
+#: src/download-info.c:115
 msgid "Status"
-msgstr "状況"
+msgstr "状態"
 
-#: src/download-info.c:118
+#: src/download-info.c:123
 msgid "State:"
-msgstr "状況:"
+msgstr "状態:"
 
-#: src/download-info.c:126
-msgid "Retrieve progress:"
-msgstr "進捗を調べる:"
-
-#: src/download-info.c:134
+#: src/download-info.c:132
 msgid "Retrieved:"
-msgstr "検索済み:"
+msgstr "収集:"
 
-#: src/download-info.c:142
-msgid "Estimated:"
-msgstr "見積り時間:"
+#: src/download-info.c:146
+msgid "Estimated/Remain:"
+msgstr "予測/残り:"
 
-#: src/download-info.c:150
-msgid "Remain:"
-msgstr "残り:"
-
-#: src/dialog-stats.c:135 src/download-info.c:166
-msgid "Total"
-msgstr "合計"
+#: src/download-info.c:166
+msgid "Total/Session"
+msgstr "合計/セッション"
 
 #: src/download-info.c:174
-msgid "Total time:"
-msgstr "合計時間:"
+msgid "Time:"
+msgstr "転送時間:"
 
-#: src/download-info.c:183
-msgid "Total speed:"
-msgstr "合計の速度:"
+#: src/download-info.c:187
+msgid "Speed:"
+msgstr "転送速度:"
 
-#: src/download-info.c:200
-msgid "Session"
-msgstr "セッション"
-
-#: src/download-info.c:208
-msgid "Session time:"
-msgstr "セッション時間:"
-
-#: src/download-info.c:217
-msgid "Session speed:"
-msgstr "セッション速度:"
-
-#: src/download-info.c:263
+#: src/download-info.c:233
 msgid "Options"
 msgstr "オプション"
 
-#: src/download-info.c:277
-msgid "Local dir:"
-msgstr "Local dir:"
+#. Use proxy
+#: applet/dialog-add.c:287 applet/dialog-new.c:242
+#: src/dialog-common-elements.c:78 src/dialog-prefs.c:435
+#: src/dialog-prop.c:154 src/download-info.c:241
+msgid "Use proxy"
+msgstr "プロキシを使用する"
 
-#: applet/dialog-add.c:260 applet/dialog-new.c:182 src/dialog-add.c:270
-#: src/dialog-new.c:215 src/dialog-prop.c:159 src/download-info.c:285
-msgid "Disable proxy"
-msgstr "プロクシを無効"
+#: applet/dialog-add.c:293 applet/dialog-new.c:248
+#: src/dialog-common-elements.c:85 src/dialog-prop.c:186
+#: src/download-info.c:248
+msgid "Use auto download"
+msgstr "自動ダウンロードを使用する"
 
-#: applet/dialog-add.c:264 applet/dialog-new.c:186 src/dialog-add.c:274
-#: src/dialog-new.c:219 src/dialog-prop.c:191 src/download-info.c:292
-msgid "Disable auto download"
-msgstr "自動ダウンロードを無効"
-
-#: src/download-info.c:356
+#: src/download-info.c:315
 msgid "Unspecified"
-msgstr "特定されてません"
+msgstr "指定されていません"
 
-#: src/download-info.c:466
+#: src/download-info.c:431
 msgid "staled"
-msgstr "古くなったもの"
+msgstr "廃れた"
 
 #: src/download-dirs.c:111
-msgid "GTM - Target directory"
-msgstr "GTM - ターゲットディレクトリ"
+msgid "Target directory"
+msgstr "対象ディレクトリ"
 
 #: src/download-dirs.c:116
 msgid "Pattern:"
@@ -312,94 +358,137 @@ msgstr "パターン:"
 
 #: src/download-dirs.c:122
 msgid "Download matching URLs to directory:"
-msgstr "該当 URL をディレクトリにダウンロード:"
+msgstr "一致する URL からのダウンロード:"
 
-#: applet/dialog-add.c:247 src/dialog-add.c:255 src/download-dirs.c:127
-msgid "GTM - Add Download Dir"
-msgstr "GTM - ダウンロードするディレクトリを追加"
+#: applet/dialog-add.c:273 src/download-dirs.c:127
+msgid "Add Download Dir"
+msgstr " ダウンロードディレクトリの追加"
 
-#: src/download-dirs.c:254
-msgid "Pattern"
-msgstr "パターン"
+#: src/download-dirs.c:262
+msgid "URL Pattern"
+msgstr "URL パターン"
 
-#: src/download-dirs.c:255
+#: src/download-dirs.c:263
 msgid "Download to Directory"
-msgstr "ディレクトリにダウンロード"
+msgstr "ダウンロードするディレクトリ"
 
 #. List operation buttons
-#: src/download-dirs.c:268
+#: src/download-dirs.c:276
 msgid "Insert..."
 msgstr "挿入..."
 
-#: src/download-dirs.c:269
+#: src/download-dirs.c:277
 msgid "Edit..."
 msgstr "編集..."
 
-#: src/download-dirs.c:270
+#: src/download-dirs.c:278
 msgid "Delete"
 msgstr "削除"
 
-#: src/dialog-about.c:49
-msgid "GNOME Transfer Manager"
-msgstr "GNOME Transfer Manager"
+#: applet/dialog-add.c:269 applet/dialog-new.c:225
+#: src/dialog-common-elements.c:58
+msgid "Override Download dir"
+msgstr "ダウンロード・ディレクトリの上書き"
 
-#: src/dialog-about.c:52
+#: applet/dialog-new.c:229 src/dialog-common-elements.c:64
+msgid "New Download Dir"
+msgstr "新規ダウンロード・ディレクトリ"
+
+#: src/dialog-common-elements.c:217
+msgid "No override download directory entered."
+msgstr "ダウンロード・ディレクトリを上書きしない。"
+
+#: applet/dialog-new.c:91 src/dialog-common-elements.c:244
+msgid "Multiple download not implemented yet"
+msgstr "まだ同時ダウンロードは実装されていません"
+
+#: src/dialog-about.c:50
+msgid "GNOME Transfer Manager"
+msgstr "GNOME 転送マネージャ"
+
+#: src/dialog-about.c:53
 msgid ""
 "The GNOME transfer manager.\n"
 "http://gtm.sourceforge.net/"
 msgstr ""
-"The GNOME transfer manager.\n"
+"GNOME転送マネージャ。\n"
 "http://gtm.sourceforge.net/"
 
-#: applet/dialog-new.c:52 src/dialog-new.c:56 src/dialog-prop.c:62
-msgid "Invalid URL"
-msgstr "無効な URL"
+#: src/dialog-new.c:52
+msgid "Invalid URL."
+msgstr "不正なURLです。"
 
-#: applet/dialog-new.c:74 src/dialog-new.c:78
-msgid "Multiple download not implemented yet"
-msgstr "マルチダウンロードはまだ実装されてません"
+#: src/dialog-new.c:71
+msgid "Can't write to selected download directory."
+msgstr "指定したディレクトリに書き込めません。"
 
-#: src/dialog-new.c:168
-msgid "GTM - New file to download"
-msgstr "GTM - 新規ファイルのダウンロード"
-
-#. Set its contents
-#: applet/dialog-new.c:156 src/dialog-new.c:175
+#. URL
+#: applet/dialog-new.c:214 src/dialog-new.c:199
 msgid "Please enter URL of the file to download:"
-msgstr "ダウンロードするファイルの URL を入力してください:"
+msgstr "ダウンロードするファイルの URL を入力して下さい:"
 
-#: applet/dialog-add.c:242 applet/dialog-new.c:166 src/dialog-add.c:251
-#: src/dialog-new.c:184
-msgid "Download dir:"
-msgstr "Download dir:"
+#: src/dialog-numdown.c:146
+msgid "Invalid URLs."
+msgstr "不正な URL です。"
 
-#: applet/dialog-new.c:170 src/dialog-new.c:188
-msgid "GTM - New Download Dir"
-msgstr "GTM - 新規ダウンロードディレクトリ"
+#: src/dialog-numdown.c:181
+msgid "Minimum number is greater than maximum number."
+msgstr "最小値が最大値を上回っています。"
 
-#: src/dialog-new.c:200
-msgid "Suggest directory by pattern matching"
-msgstr "パターンマッチに該当するディレクトリ"
+#: src/dialog-numdown.c:215
+msgid "At least one of the URLs is already in the list"
+msgstr "少なくとも一つの URL が既に一覧にあります。"
+
+#. Pre-URL
+#: src/dialog-numdown.c:288
+msgid "Part of URL before number:"
+msgstr "番号の前の URL 部分:"
+
+#. Numbers From/To
+#: src/dialog-numdown.c:299
+msgid "Numbers:"
+msgstr "番号:"
+
+#: src/dialog-numdown.c:306
+msgid "From: "
+msgstr "転送元: "
+
+#: src/dialog-numdown.c:319
+msgid "To: "
+msgstr "転送先: "
+
+#: src/dialog-numdown.c:337
+msgid "Number of digits to pad leading zeroes to:"
+msgstr "0 でパディングした番号桁:"
+
+#. Post-URL
+#: src/dialog-numdown.c:352
+msgid "Part of URL after number:"
+msgstr "番号の後ろの URL 部分:"
+
+#: src/dialog-numdown.c:373
+msgid "Numeric Download"
+msgstr "番号付きダウンロード"
 
 #: src/dialog-restart.c:49
-msgid "GTM - Restart selected files"
-msgstr "GTM - 選択されたファイルの再開"
+msgid "Restart selected files"
+msgstr "選択したファイルの転送再開"
 
 #: src/dialog-restart.c:54
 msgid ""
 "The files already downloaded will be erased.\n"
 "Are you sure you want to restart selected files?"
 msgstr ""
-"すでにダウンロード済みのファイルは消去されます.\n"
-"ほんとうにダウンロードをやり直しますか?"
+"既にダウンロードしたファイルは消去されます。\n"
+"選択したファイルの転送を本当に再開しますか？"
 
 #: src/dialog-remove.c:50
-msgid "GTM - Remove selected files"
-msgstr "GTM - 選択されたファイルの削除"
+msgid "Remove selected files from list"
+msgstr "選択したファイルを削除します"
 
 #: src/dialog-remove.c:55
-msgid "Do you really want to remove selected files?"
-msgstr "ほんとうに選択されたファイルを削除しますか?"
+msgid "Do you really want to remove selected files from the list?"
+msgstr "本当に選択したファイルを一覧から削除しますか？"
 
 #: src/dialog-prefs.c:38
 msgid "Text"
@@ -413,279 +502,371 @@ msgstr "アイコン"
 msgid "Both"
 msgstr "両方"
 
-#. Use proxy
-#: src/dialog-prefs.c:355
-msgid "Use proxy"
-msgstr "プロクシの使用"
+#: applet/dialog-prop.c:42 src/dialog-prefs.c:60
+msgid "None"
+msgstr "無し"
 
-#: src/dialog-prefs.c:362
+#: applet/dialog-prop.c:43 src/dialog-prefs.c:61
+msgid "HTTP"
+msgstr "HTTP"
+
+#: applet/dialog-prop.c:44 src/dialog-prefs.c:62
+msgid "FTP"
+msgstr "FTP"
+
+#: applet/dialog-prop.c:46 src/dialog-prefs.c:64
+msgid "HTTPS"
+msgstr "HTTPS"
+
+#. Proxy username
+#: src/dialog-prefs.c:444
 msgid "Username:"
-msgstr "ユーザ名:"
+msgstr "アカウント:"
 
-#: src/dialog-prefs.c:370
+#. Proxy password
+#: src/dialog-prefs.c:453
 msgid "Password:"
-msgstr "パスワード"
+msgstr "パスワード:"
 
-#: src/dialog-prefs.c:379
+#. Proxy for HTTP
+#: src/dialog-prefs.c:463
 msgid "HTTP:"
 msgstr "HTTP:"
 
-#: src/dialog-prefs.c:387
+#. Proxy for FTP
+#: src/dialog-prefs.c:472
 msgid "FTP:"
 msgstr "FTP:"
 
-#: src/dialog-prefs.c:444
+#. Proxy for HTTPS
+#: src/dialog-prefs.c:482
+msgid "HTTPS:"
+msgstr "HTTPS:"
+
+#: src/dialog-prefs.c:559
 msgid "Interface to connect:"
-msgstr "接続用インターフェース:"
+msgstr "接続インタフェース:"
 
-#: src/dialog-prefs.c:452
-msgid "Check interface time:"
-msgstr "interface 時間のチェック:"
+#: src/dialog-prefs.c:567
+msgid "Check interface time (ms):"
+msgstr "インタフェース時間の確認 (ms):"
 
-#: src/dialog-prefs.c:467
+#: src/dialog-prefs.c:580
 msgid "Simultaneous:"
-msgstr "同時:"
+msgstr "同時転送:"
 
-#: src/dialog-prefs.c:477
+#: src/dialog-prefs.c:590
 msgid "Manual stop disables auto download"
-msgstr "手動停止で自動ダウンロードを無効"
+msgstr "自動ダウンロードの無効をマニュアルで指定する"
 
-#: src/dialog-prefs.c:483
+#: src/dialog-prefs.c:596
 msgid "Stop download on link loss"
-msgstr "リンク喪失の際にダウンロードを停止"
+msgstr "リンクを失った場合のダウンロードを停止する"
 
-#: applet/dialog-prop.c:159 src/dialog-prefs.c:536
+#: src/dialog-prefs.c:602
+msgid "Remember whether auto download is paused"
+msgstr "自動ダウンロードが一時停止かどうかを記憶する"
+
+#: src/dialog-prefs.c:663
 msgid "Default download dir:"
-msgstr "デフォルト"
+msgstr "デフォルトのダウンロードディレクトリ:"
 
-#: src/dialog-prefs.c:539
-msgid "GTM - Def Download Dir"
-msgstr "GTM - デフォルトディレクトリ"
+#: src/dialog-prefs.c:666
+msgid "Def Download Dir"
+msgstr "デフォルトのダウンロード・ディレクトリ"
 
-#: src/dialog-prefs.c:548
+#: src/dialog-prefs.c:675
+msgid "Timeout (seconds):"
+msgstr "タイムアウト (秒):"
+
+#: src/dialog-prefs.c:686
 msgid "Number retries:"
-msgstr "リトライ回数:"
+msgstr "再開する数:"
 
-#: src/dialog-prefs.c:552
+#: src/dialog-prefs.c:690
 msgid "Unlimited"
-msgstr "無制限"
+msgstr "制限なし"
 
-#: src/dialog-prefs.c:555
+#: src/dialog-prefs.c:693
 msgid "Limited"
-msgstr "制限"
+msgstr "制限あり"
 
-#: src/dialog-prefs.c:566
+#: src/dialog-prefs.c:704
 msgid "Use passive FTP"
-msgstr "パッシブ FTP を使用"
+msgstr "パッシブ FTP を使用する"
 
-#: applet/dialog-prop.c:202 src/dialog-prefs.c:633
-msgid "Dialog new or dialog add changes default download dir"
-msgstr "新規あるいはデフォルトダウンロードディレクトリに変更を追加"
+#: applet/dialog-prop.c:163 src/dialog-prefs.c:711
+msgid "Presume Protocol:"
+msgstr "プロトコルの推測:"
 
-#: src/dialog-prefs.c:640
+#. Shell command on completion
+#: src/dialog-prefs.c:726
+msgid "Run command when all downloads completed:"
+msgstr "ダウンロードが終了したら実行するコマンド:"
+
+#: src/dialog-prefs.c:735
+msgid "Run Now"
+msgstr "今すぐ実行"
+
+#: src/dialog-prefs.c:828
+msgid ""
+"Overriding download dir on URL addition dialogs changes default download dir"
+msgstr ""
+"URL "
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"追加ダイアログ上のダウンロード・ディレクトリを上書きすると、デフォルトのダウンロード・ディレクトリを変更する"
+
+#: src/dialog-prefs.c:836
 msgid "Confirm remove when transfer incomplete"
-msgstr "転送に失敗の際にファイルの削除を確認"
+msgstr "転送が不完全な場合にファイルの削除を確認する"
 
-#: src/dialog-prefs.c:647
+#: src/dialog-prefs.c:843
 msgid "Confirm remove completed transfers"
-msgstr "転送終了したファイルの削除を確認"
+msgstr "転送が完了したファイルの削除を確認する"
 
-#: src/dialog-prefs.c:654
+#: src/dialog-prefs.c:850
 msgid "Confirm restart"
-msgstr "再開の確認"
+msgstr "再開を確認する"
 
-#: applet/dialog-prop.c:209 src/dialog-prefs.c:661
+#: applet/dialog-prop.c:210 src/dialog-prefs.c:857
 msgid "Confirm drag and drop URL"
-msgstr "URL のドラッグ&ドロップの確認"
+msgstr "ドラッグ&ドロップされた URL を確認する"
 
-#: src/dialog-prefs.c:714
+#: src/dialog-prefs.c:910
 msgid "Toolbar style:"
 msgstr "ツールバースタイル:"
 
-#: src/dialog-prefs.c:729
-msgid "File list refresh rate:"
-msgstr "ファイル一覧の書換頻度:"
+#: src/dialog-prefs.c:925
+msgid "File list refresh rate (ms):"
+msgstr "ファイル一覧のリフレッシュ間隔 (ms):"
 
-#: src/dialog-prefs.c:743
+#: src/dialog-prefs.c:937
 msgid "Show list statistics"
-msgstr "一覧の統計を表示"
+msgstr "一覧の概要を表示する"
 
-#: src/dialog-prefs.c:748
+#: src/dialog-prefs.c:942
 msgid "Show page statistics"
-msgstr "ページの統計を表示"
+msgstr "ページの概要を表示する"
 
-#: src/dialog-prefs.c:753
-msgid "Show download info page"
-msgstr "ダウンロード情報ページの表示"
+#: src/dialog-prefs.c:947
+msgid "Auto hide download info page"
+msgstr "ダウンロード情報ページを自動的に隠します"
 
-#: src/dialog-prefs.c:807
+#: src/dialog-prefs.c:952
+msgid "Auto hide download info page timeout (ms):"
+msgstr "ダウンロード情報ページを自動的に隠す間隔 (ms):"
+
+#: src/dialog-prefs.c:1019
 msgid "Use sound"
-msgstr "サウンドを使用"
+msgstr "サウンドを使用する"
 
-#: src/dialog-prefs.c:812
+#: src/dialog-prefs.c:1024
 msgid "Use beep"
-msgstr "ブザーの使用"
+msgstr "サウンドにビープ音を使用する"
 
-#: src/dialog-prefs.c:853
-msgid "GTM - Preferences"
-msgstr "GTM - 初期設定"
+#: src/dialog-prefs.c:1065
+msgid "Preferences"
+msgstr "設定"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:866 src/dialog-prop.c:252
+#: src/dialog-prefs.c:1078 src/dialog-prop.c:251
 msgid "Proxy"
-msgstr "プロクシ"
+msgstr "プロキシ"
 
-#: src/dialog-prefs.c:870
+#: src/dialog-prefs.c:1082
 msgid "Auto"
 msgstr "自動"
 
 #. Create the notebook pages
-#: applet/dialog-prop.c:305 src/dialog-prefs.c:874 src/dialog-prop.c:248
+#: applet/dialog-prop.c:300 src/dialog-prefs.c:1086 src/dialog-prop.c:247
 msgid "Download"
 msgstr "ダウンロード"
 
-#: src/dialog-prefs.c:878
+#: src/dialog-prefs.c:1090
 msgid "Directories"
 msgstr "ディレクトリ"
 
-#: applet/dialog-prop.c:309 src/dialog-prefs.c:882
+#: applet/dialog-prop.c:304 src/dialog-prefs.c:1094
 msgid "Confirmations"
 msgstr "確認"
 
-#: src/dialog-prefs.c:886
+#: src/dialog-prefs.c:1098
 msgid "Display"
 msgstr "表示"
 
-#: src/dialog-prefs.c:890
+#: src/dialog-prefs.c:1102
 msgid "Sound"
 msgstr "サウンド"
 
-#: src/dialog-prop.c:77
-msgid "Old URL filename must be the same on the new URL"
-msgstr "古い URL ファイル名は新しい URL 上のものと同じでなければなりません"
+#: applet/dialog-new.c:72 src/dialog-prop.c:66
+msgid "Invalid URL"
+msgstr "不正な URL です"
 
-#: src/dialog-prop.c:184
+#: src/dialog-prop.c:78
+msgid "Old URL filename must be the same on the new URL"
+msgstr ""
+"古い URL でのファイル名は、新しい URL でのそれと同じでなければなりません"
+
+#: src/dialog-prop.c:179
 msgid "URL:"
 msgstr "URL:"
 
-#: src/dialog-prop.c:235
-msgid "GTM - Properties"
-msgstr "GTM - プロパティ"
-
-#: src/dialog-add.c:231
-msgid "GTM - Add files to download"
-msgstr "GTM - ダウンロードするファイルを追加"
-
-#. Set its contents
-#: applet/dialog-add.c:228 src/dialog-add.c:238
+#. URLs
+#: applet/dialog-add.c:255 src/dialog-add.c:212
 msgid "URLs to be added"
-msgstr "追加される URL"
+msgstr "追加された URL"
 
-#: src/dialog-stats.c:95
+#: applet/dialog-add.c:250 src/dialog-add.c:241
+msgid "Add files to download"
+msgstr "ダウンロードするファイルの追加"
+
+#: src/dialog-stats.c:99
 msgid "List summary"
-msgstr "一覧の概要"
+msgstr "リストの概要"
+
+#: src/dialog-stats.c:145
+msgid "Total"
+msgstr "合計"
 
 #. row labels
-#: src/dialog-stats.c:139
+#: src/dialog-stats.c:149
 msgid "Number of files"
 msgstr "ファイル数"
 
-#: src/dialog-stats.c:142
-msgid "Total size (KB)"
-msgstr "サイズ合計 (KB)"
+#: src/dialog-stats.c:152
+msgid "Total size (kB)"
+msgstr "合計サイズ (Kバイト)"
 
-#: src/dialog-stats.c:145
-msgid "Retrieved (KB)"
-msgstr "取込み済 (KB)"
+#: src/dialog-stats.c:155
+msgid "Retrieved (kB)"
+msgstr "受信サイズ (Kバイト)"
 
-#: src/dialog-stats.c:148
-msgid "Remaining (KB)"
-msgstr "残り (KB)"
+#: src/dialog-stats.c:158
+msgid "Remaining (kB)"
+msgstr "残りサイズ (Kバイト)"
 
-#: src/dialog-stats.c:151
+#: src/dialog-stats.c:161
 msgid "Progress"
-msgstr "進行"
+msgstr "進捗"
 
-#: src/wget-log.c:86
+#: src/wget-log.c:85
 msgid "Socket error when downloading URL:\n"
-msgstr "ダウンロード中にソケットエラー:\n"
+msgstr "URL からダウンロード中にソケットエラーが発生:\n"
 
-#: src/wget-log.c:89 src/wget-log.c:92
+#: src/wget-log.c:88 src/wget-log.c:94
 msgid "Connection refused when downloading URL:\n"
-msgstr "ダウンロード中に接続が拒否されました:\n"
+msgstr "URL からダウンロード中に接続が切断されました:\n"
 
-#: src/wget-log.c:95
+#: src/wget-log.c:91
+msgid "No route to host:\n"
+msgstr "ホストへのルートが存在しません:\n"
+
+#: src/wget-log.c:97
 msgid "Host not found when downloading URL:\n"
-msgstr "ホストがみつかりませんでした:\n"
+msgstr "ダウンロードする URL のホストが見つかりませんでした:\n"
 
-#: src/wget-log.c:98
+#: src/wget-log.c:100
+msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
+msgstr "サポートしていないプロトコル - https には wget >= 1.7 が必要:\n"
+
+#: src/wget-log.c:104
 msgid "Unknown error when downloading URL:\n"
-msgstr "ダウンロード中に未知のエラー:\n"
+msgstr "URL からダウンロード中に不明なエラーが発生:\n"
 
-#: src/wget-log.c:105 src/wget-log.c:112
+#: src/wget-log.c:114 src/wget-log.c:121
 msgid "File not found when downloading URL:\n"
-msgstr "ファイルが見つかりませんでした:\n"
+msgstr "ダウンロードする URL にファイルが見つかりません:\n"
 
-#: applet/gtm_applet.c:409
+#: src/wget-log.c:128
+msgid ""
+"Can't continue download, existing local file conflicts with remote file:\n"
+msgstr ""
+"ダウンロードが続行できません。ローカルファイルとリモートファイルが衝突しています:\n"
+
+#: src/wget-log.c:175
+msgid "Can't write to target directory:\n"
+msgstr "対象ディレクトリに書き込めません:\n"
+
+#: applet/gtm_applet.c:495
 msgid "Drop URL from netscape, gmc, gftp..."
-msgstr "Netscape, gmc, fgtp などから URL をドロップ..."
+msgstr "ネットスケープ、gmc、gftpから URL をドロップ..."
 
-#: applet/gtm_applet.c:441
+#: applet/gtm_applet.c:538
 msgid "Properties..."
 msgstr "プロパティ..."
 
-#: applet/gtm_applet.c:447
+#: applet/gtm_applet.c:544
 msgid "About..."
-msgstr "GTM について..."
+msgstr "情報..."
 
-#: applet/dialog-prop.c:244 applet/gtm_applet.c:453
+#: applet/dialog-prop.c:239 applet/gtm_applet.c:550
 msgid "New URL"
-msgstr "新規 URL"
+msgstr "新しいURL"
 
-#: applet/dialog-prop.c:245 applet/gtm_applet.c:459
+#: applet/dialog-prop.c:240 applet/gtm_applet.c:556
 msgid "Open GTM"
-msgstr "GTM を開く"
+msgstr "GTM を開きます"
 
 #: applet/dialog-about.c:45
 msgid "GNOME Transfer Manager Applet"
-msgstr "GNOME Transfer Manager アプレット"
+msgstr "GNOME 転送マネージャ・アプレット"
 
 #: applet/dialog-about.c:48
 msgid ""
 "The GNOME transfer manager applet.\n"
 "http://gtm.sourceforge.net/"
 msgstr ""
-"The GNOME transfer manager アプレット.\n"
+"GNOME転送マネージャ・アプレット。\n"
 "http://gtm.sourceforge.net/"
 
-#: applet/dialog-add.c:223
-msgid "GTM Applet - Add files to download"
-msgstr "GTM Applet - ダウンロードファイルの追加"
+#. CORBA error
+#: applet/dialog-add.c:99 applet/dialog-add.c:338 applet/dialog-new.c:125
+msgid "CORBA error"
+msgstr "CORBA エラー"
 
-#: applet/dialog-new.c:151
-msgid "GTM Applet - New file to download"
-msgstr "GTM Applet - 新規ダウンロードファイル"
+#: applet/dialog-add.c:114 applet/dialog-add.c:354 applet/dialog-new.c:129
+msgid "not accepted by GTM"
+msgstr "GTM で受け入れない"
 
-#: applet/dialog-prop.c:152
-msgid "Disable the download dir"
-msgstr "ダウンロードディレクトリの無効にする"
-
-#: applet/dialog-prop.c:163
-msgid "GTM Applet - Def Download Dir"
-msgstr "GTM Applet - デフォルトダウンロードディレクトリ"
-
-#: applet/dialog-prop.c:243
+#: applet/dialog-prop.c:238
 msgid "(none)"
-msgstr "(なし)"
+msgstr "(無し)"
 
-#: applet/dialog-prop.c:255
+#: applet/dialog-prop.c:250
 msgid "Button1 click:"
-msgstr "ボタン1 のクリック:"
+msgstr "ボタン１をクリック:"
 
-#: applet/dialog-prop.c:296
-msgid "GTM Applet - Properties"
-msgstr "GTM Applet - プロパティ"
-
-#: applet/dialog-prop.c:313
+#: applet/dialog-prop.c:308
 msgid "Bindings"
-msgstr "バインディング"
+msgstr "義務"
+
