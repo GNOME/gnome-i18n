@@ -20,6 +20,7 @@
  *
  */
 
+#include <stdio.h>
 #include "status-module.h"
 
 struct _StatusModule {
@@ -114,6 +115,37 @@ status_module_get_type (void)
 	return type;
 }
 
+static void
+generate_version_report (gpointer data, gpointer user_data)
+{
+	StatusVersion *version;
+	GHashTable *translations;
+	FILE *module_index;
+
+	version = STATUS_VERSION (data);
+	module_index = (FILE *) user_data;
+	
+/*	status_version_report (version);*/
+
+	fprintf (module_index, "    <div class=\"moduleVersion\">\n");
+	fprintf (module_index, "      <h1 class=\"moduleVersionTitle\">%s</h1>\n", status_version_get_id (version));
+	fprintf (module_index, "      <table class=\"moduleVersionTable\">\n");
+	fprintf (module_index, "        <tr>\n");
+	fprintf (module_index, "          <td>%s</td>\n", "language");
+	fprintf (module_index, "          <td>%s</td>\n", "trans.");
+	fprintf (module_index, "          <td>%%</td>\n");
+	fprintf (module_index, "          <td>%s</td>\n", "fuzzy");
+	fprintf (module_index, "          <td>%%</td>\n");
+	fprintf (module_index, "          <td>%s</td>\n", "untrans.");
+	fprintf (module_index, "          <td>%%</td>\n");
+	fprintf (module_index, "        </tr>\n");
+
+	translations = status_version_get_translations (version);
+
+	fprintf (module_index, "      </table>\n");
+	fprintf (module_index, "    </div>\n");
+}
+
 /**
  * status_module_new
  * @name: The module name
@@ -161,4 +193,29 @@ status_module_add_version (StatusModule *module, StatusVersion *version)
 
 	module->versions = g_list_append (module->versions, g_object_ref (version));
 	return TRUE;
+}
+
+/**
+ * status_module_report
+ */
+void
+status_module_report (StatusModule *module)
+{
+	FILE *module_index;
+	gchar *index_name;
+	gchar *title;
+
+	index_name = g_strdup_printf ("%s/modules/%s/index.html", config.install_dir, module->name->str);
+	title = g_strdup_printf ("%s - %s", config.default_title, module->name->str);
+	
+	if (module->versions != NULL) {
+		module_index = status_web_new_file (index_name, title, NULL);
+		fprintf (module_index, "  <body>\n");
+		g_list_foreach (module->versions, generate_version_report, module_index);
+		fprintf (module_index, "  </body>\n");
+		fprintf (module_index, "</html>\n");
+		fclose (module_index);
+	}
+	g_free (index_name);
+	g_free (title);
 }

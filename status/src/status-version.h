@@ -44,6 +44,10 @@ StatusVersion *status_version_new (StatusServer *server, const gchar *module,
 
 gboolean       status_version_download (StatusVersion *version, gchar *downloaddir);
 gboolean       status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar *install_dir);
+gint           status_version_get_nstrings (StatusVersion *version);
+GHashTable    *status_version_get_translations (StatusVersion *version);
+const gchar   *status_version_get_id (StatusVersion *version);
+
 
 G_END_DECLS
 

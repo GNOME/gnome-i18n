@@ -32,6 +32,18 @@ typedef struct {
 	GHashTable *views;
 } status_data;
 
+typedef struct {
+	gchar *modules;
+	gchar *download_dir;
+	gchar *install_dir;
+	gchar *templates_dir;
+	gchar *default_title;
+} config_t;
+
+extern config_t config;
+
 status_data *status_xml_get_main_data (const gchar *views_file);
+FILE        *status_web_new_file (gchar *file_name, gchar *title, gchar *lang);
+
 
 #endif

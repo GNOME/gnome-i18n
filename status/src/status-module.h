@@ -24,6 +24,7 @@
 #define STATUS_MODULE_H
 
 #include <glib-object.h>
+#include "status.h"
 #include "status-version.h"
 
 G_BEGIN_DECLS
@@ -43,6 +44,7 @@ StatusModule *status_module_new (const gchar *name);
 
 gchar        *status_module_get_name (const StatusModule *module);
 gboolean      status_module_add_version (StatusModule *module, StatusVersion *version);
+void          status_module_report (StatusModule *module);
 
 G_END_DECLS
 

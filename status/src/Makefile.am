@@ -19,6 +19,7 @@ translation_status_SOURCES =         \
 	status-translation.h	\
 	status-translation.c	\
 	status-xml.c		\
+	status-web.c		\
 	main.c
 
 translation_status_LDADD = $(TRANSLATION_STATUS_LIBS) $(INTLLIBS) $(POPT_LIBS)

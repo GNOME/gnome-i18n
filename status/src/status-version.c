@@ -165,6 +165,8 @@ gboolean
 status_version_download (StatusVersion *version, gchar *download_dir)
 {
 
+	g_return_val_if_fail (STATUS_IS_VERSION (version), FALSE);
+	
 	g_print ("Downloading %s - %s ...\n", version->module->str, version->id->str);
 
 	return status_server_download (version->server, version->module->str, version->id->str,
@@ -190,6 +192,8 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 	gchar **tfu_temp, **tfu, *output, *error;
 	gint exit_status, ntoken;
 	gchar *path;
+
+	g_return_val_if_fail (STATUS_IS_VERSION (version), FALSE);
 
 	g_print ("\tGenerating %s.%s.pot ...\n", version->module->str, version->id->str);
 	
@@ -299,6 +303,8 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 	gchar *po_file;
 	gchar *path;
 
+	g_return_val_if_fail (STATUS_IS_VERSION (version), FALSE);
+
 	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
 
 	if (!chdir (buf)) {
@@ -365,4 +371,28 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 	}
 	g_free (buf);
 	return TRUE;
+}
+
+gint
+status_version_get_nstrings (StatusVersion *version)
+{
+	g_return_val_if_fail (STATUS_IS_VERSION (version), -1);
+	
+	return version->nstrings;
+}
+
+GHashTable *
+status_version_get_translations (StatusVersion *version)
+{
+	g_return_val_if_fail (STATUS_IS_VERSION (version), NULL);
+
+	return version->translations;
+}
+
+const gchar *
+status_version_get_id (StatusVersion *version)
+{
+	g_return_val_if_fail (STATUS_IS_VERSION (version), NULL);
+
+	return version->id->str;
 }
