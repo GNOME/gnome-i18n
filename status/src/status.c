@@ -269,7 +269,7 @@ copy_component_pot (component *cmp)
 						}
 						g_strfreev (tfu);
 					} else {
-						g_warning ("Implement me!!");
+						g_warning ("Implement me!! (copy_component_pot)");
 					}
 						break;
 			}
@@ -378,7 +378,7 @@ fill_translation (translation *trans, component *cmp, gchar *locale)
 				}
 				g_strfreev (tfu);
 			} else {
-				g_warning ("Implement me!!");
+				g_warning ("Implement me!! (fill_translation)");
 			}
 	}
 }
@@ -865,7 +865,7 @@ end_element(void *ctx, const CHAR *name) {
 							g_list_append (currcomponent->release->components,
 								       currcomponent);
 					} else {
-						g_warning ("Implement me!!!");
+						g_warning ("Implement me!!! (end_element)");
 					}
 					currcomponent->pmodule = currmodule;
 					currcomponent = NULL;
