@@ -2,12 +2,15 @@
 <!ATTLIST translation-status
   xmlns CDATA #FIXED 'http://developer.gnome.org/projects/gtp/status/translation-status.dtd' >
 
-<!ELEMENT release (maintitle, mainhead, mainfoot) >
+<!ELEMENT release (group*) >
 <!ATTLIST release name ID #REQUIRED >
 
-<!ELEMENT maintitle (#PCDATA) >
-<!ELEMENT mainhead (#PCDATA) >
-<!ELEMENT mainfoot (#PCDATA) >
+<!ELEMENT group (description, essential?, frozen?) >
+<!ATTLIST group name ID #REQUIRED >
+
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT essential EMPTY >
+<!ELEMENT frozen EMPTY >
 
 <!ELEMENT module (version*) >
 <!ATTLIST module name CDATA #REQUIRED >
@@ -18,6 +21,7 @@
 <!ELEMENT component (podir, potname, branch, regenerate?, download?, nextrelease?) >
 <!ATTLIST component name CDATA #REQUIRED >
 <!ATTLIST component dir CDATA #REQUIRED >
+<!ATTLIST component group IDREF #REQUIRED >
 
 <!ELEMENT podir EMPTY >
 <!ATTLIST podir dir CDATA #REQUIRED >
