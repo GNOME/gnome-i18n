@@ -48,7 +48,7 @@ $backgrounds = array('background01.png', 'background02.png', 'background03.png',
 function gnome_head() {
 $logos = array('gnome-nl-logo.png', 'gnome-nl-logo.png', 'gnome-be-logo.png');
 ?><div class="hdr">
-	<a href="index.php"><img class="logoleft" src="images/<?
+	<a href="index.php"><img class="logo" src="images/<?
         echo $logos[rand (0, count ($logos) - 1)];
 ?>" alt="Thuis" title="Terug naar de beginpagina"></a>
 </div>
