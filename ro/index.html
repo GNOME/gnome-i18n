@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+
+<head>
+<title>Proiectul de traducere GNOME in romana</title>
+</head>
+<body bgcolor="#FFFFFF">
+<div align="center"><h1>Proiectul de traducere GNOME in romana</h1></div>
+
+<p>
+<ul>
+	<li><a href="#about">Despre</a></li>
+	<li><a href="#translate">Cum/ce sa traduceti</a></li>
+	<li><a href="#tools">Unelte</a></li>
+	<li><a href="#mail">Lista mail</a></li>
+	<li><a href="#team">Echipa</a></li>
+</ul>
+
+</p>
+<p><a name="about"></a>
+<h2>Despre</h2><p>
+	<a href="http://www.gnome.org">Proiectul GNOME</a> are ca scop un desktop deschis pentru orice utilizator. 
+	Noi vrem ca 'orice utilizator' sa includa si romanii care nu cunosc limba engleza.
+	<p>
+	Pentru aceasta traducem pachetele care alcatuiesc desktopul GNOME, iar cat de mult am progresat puteti vedea 
+	la <a href="http://developer.gnome.org/projects/gtp/status/release/ro.shtml">pagina de status</a>.
+</p>
+
+<p><a name="translate"></a>
+<h2>Cum/ce sa traduceti</h2><p>
+	Pentru a putea tine pasul cu GNOME care evolueaza foarte rapid avem nevoie de ajutorul tau. Singurele cunostinte 
+	necesare sunt cele de limba engleza (folosire calculator constituie un plus :-)
+	<p>
+	Toate textele care sunt folosite de o aplicatie sunt adunate intr-un singur fisier care trebuie tradus. 
+	In sursa, acesta se afla in po/pachet.pot (generat cu ./update.pl -P in acel director). 
+	Daca este nevoie doar de actualizare, aceasta se face cu <br>
+	<b>msgmerge ro.po pachet.pot -o ro_nou.po</b><br>
+	Fisierul se va 'compila' cu <br>
+	<b>msgfmt ro.po -o pachet.mo</b> <br>
+	iar pachet.mo se va copia in <b>/usr/share/locale/ro/LC_MESSAGES/</b> 
+	(sau <b>/usr/local/share/locale/...</b> daca ai instalat pachetul din surse in /usr/local)
+	<p>
+	Inainte de te apuca de tradus mergi la <a href="http://lug.ro/gnome/tmanager">lug.ro/gnome/tmanager</a>
+	pentru a vedea daca pachetul respectiv nu este deja mentinut de altcineva. Inscrie-te ca traducator si selecteaza
+	pachetul dorit. Abia apoi poti incepe traducerea. Astfel nu vom lucra mai multi la acelasi pachet.
+	<p>
+	Fisierul tradus trimite-l coordonatorului (<a href="mailto:mandreiana@yahoo.com">Marius Andreiana</a>).
+	Chiar daca nu mai ai timp, nu ezita sa-l trimiti tradus partial. Pentru orice nelamuriri sau pentru a ne saluta,
+	foloseste <a href="#mail">lista de mail</a>.
+</p>
+
+<p><a name="tools"></a>
+<h2>Unelte</h2><p>
+	Traducerile trebuie sa fie cu diacritice. Pentru a putea scrie diacritice folositi <a href="Xmodmap.ro">acest Xmodmap</a>.
+	Intr-un terminal X da comanda <br>
+	<b>xmodmap Xmodmap.ro</b><br>
+	Maparea tastelor este data in fisier. Nu merge in toate
+	editoarele, dar in emacs sau vi sigur. <br>
+	Se pare ca locale trebuie sa fie setat la en_US inainte, caci cu ro_RO nu merge (<b>export LC_ALL=en_US</b>)
+	<p>
+	Un mic dictionar se afla <a href="dictionar.txt">aici</a>, iar altul <a href="dictionar2.html">aici</a>. Mod de utilizare:<br>
+	<b>cat dictionar.txt | grep cuvant</b>
+	<p>
+	Sunt si <a href="sugestii.txt">cateva sugestii</a> pentru stilul de traducere.
+</p>
+<p><a name="mail"></a>
+<h2>Lista de mail</h2><p>
+	Lista noastra de mail este gazduita la <a href="http://pelican.level7.ro/mailman/listinfo/gnome-ro">pelican</a>
+</p>
+<p><a name="team"></a>
+<h2>Echipa</h2><p>
+GNOME in limba romana v-a fost adus de (in ordine invers alfabetica :-)<p>
+<ul>
+	<li><a href="mailto:GiantELF@home.ro">Valentin Tutu</a></li>
+	<li><a href="mailto:dumol@go.ro">Misu Moldovan</a></li>
+	<li><a href="mailto:dand@dnttm.ro">Dan Damian</a></li>
+	<li><a href="mailto:mandreiana@yahoo.com">Marius Andreiana</a> (<a href="http://lug.ro/~marius/marius.html">despre</a>) (coordonator)</li>
+</ul>
+</p>
+
+
+</body>
+</html>
