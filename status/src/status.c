@@ -130,9 +130,16 @@ download_component (component *cmp)
 			} else {
 				g_free (list);
 			}
-			checkout = g_strdup_printf (CVS_CO_OPTIONS " -d %s.%s %s > /dev/null", cmp->dir,
-						    cmp->branch, cmp->dir);
-			g_print ("=== Checking out %s module to %s.%s  ===\n", cmp->dir, cmp->dir, cmp->branch);
+			if (strcmp (cmp->branch, "HEAD")) {
+				checkout = g_strdup_printf (CVS_CO_OPTIONS " -r %s -d %s.%s %s > /dev/null",
+							    cmp->branch, cmp->dir, cmp->branch, cmp->dir);
+				g_print ("=== Checking out %s branch of %s module to %s.%s  ===\n",
+					 cmp->branch, cmp->dir, cmp->dir, cmp->branch);
+			} else {
+				checkout = g_strdup_printf (CVS_CO_OPTIONS " -d %s.%s %s > /dev/null", cmp->dir,
+							    cmp->branch, cmp->dir);
+				g_print ("=== Checking out %s module to %s.%s  ===\n", cmp->dir, cmp->dir, cmp->branch);
+			}
 		} else {
 			checkout = g_strdup_printf (CVS_CO_OPTIONS " %s > /dev/null", cmp->dir);
 			g_print ("=== Checking out %s module ===\n", cmp->dir);
