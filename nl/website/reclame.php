@@ -3,7 +3,7 @@
 $reclame = array('<div>
 GNOME-NL wordt gesponsord door Kovoks!
 <center><a href="http://www.kovoks.nl/">
-<img src="http://www.kovoks.nl/image/logo.gif" alt="KovoKs-logo"></a></center>
+<img src="images/kovoks.banner-groot.gif" alt="KovoKs-logo"></a></center>
 </div>', 
 	'<div><p>Heeft u een vertaalfout gevonden in de software? Laat dat dan direct weten
 <a href="foutrapport.php">via dit formulier.</a></p></div>', 
