@@ -1,5 +1,16 @@
 2003-09-17  Carlos Perelló Marín <carlos@gnome.org>
 
+	* src/main.c: Added the template option to generate web pages based on
+	those templates.
+	* src/status-translation.c: Fixed a bug. Carlos, remember that a
+	GString is not a gchar *.... :-(
+	* src/status-version.c: Changed to follow the new directory struct.
+	* src/status-view.c: Fixed a double free
+	* data/templates/main-header.template: Added it's the header template
+	for all our web pages.
+
+2003-09-17  Carlos Perelló Marín <carlos@gnome.org>
+
 	* src/main.c: We use the "C" locale by default, when we start to use
 	.po files we will change it at run time when needed.
 	* src/status-version.c: /s/g_message/g_print/ and improbed the

@@ -151,7 +151,7 @@ status_translation_new (StatusVersion *version, const gchar *path)
 	translation->version = g_object_ref (version);
 	translation->path = g_string_new (path);
 
-	command = g_strdup_printf ("msgfmt --statistics %s -o /dev/null", translation->path);
+	command = g_strdup_printf ("msgfmt --statistics %s -o /dev/null", translation->path->str);
 
 	if (g_spawn_command_line_sync (command, &output, &error, &exit_status, NULL) &&
 			WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {

@@ -30,6 +30,7 @@ typedef struct {
 	gchar *modules;
 	gchar *download_dir;
 	gchar *install_dir;
+	gchar *templates_dir;
 } config_t;
 
 static void
@@ -53,23 +54,29 @@ update_versions (gpointer key, gpointer value, gpointer user_data)
 int
 main (int argc, const char *argv[])
 {
-config_t config;
-int ttl;
-poptContext context;
-gint rc;
-status_data *sdata;
-struct poptOption options[] = {
-	{ "modules-file", 0, POPT_ARG_STRING, &config.modules, 0, "Set the file where is stored all modules information", "FILE" },
-	{ "download-dir", 0, POPT_ARG_STRING, &config.download_dir, 0, "Set the directory where we will store the downloaded modules", "PATH" },
-	{ "install-dir", 0, POPT_ARG_STRING, &config.install_dir, 0, "Set the directory where we will store the output", "PATH" },
-	{ "ttl", 0, POPT_ARG_INT, &ttl, 0, "Default ttl for translations", "SECONDS" },
-	POPT_AUTOHELP
-        { NULL, 0, 0, NULL, 0 }
-};
+	config_t config;
+	int ttl;
+	poptContext context;
+	gint rc;
+	status_data *sdata;
+	struct poptOption options[] = {
+		{ "modules-file", 0, POPT_ARG_STRING, &config.modules, 0,
+		"Set the file where is stored all modules information", "FILE" },
+		{ "download-dir", 0, POPT_ARG_STRING, &config.download_dir, 0,
+		"Set the directory where we will store the downloaded modules", "PATH" },
+		{ "install-dir", 0, POPT_ARG_STRING, &config.install_dir, 0,
+		"Set the directory where we will store the output", "PATH" },
+		{ "templates-dir", 0, POPT_ARG_STRING, &config.templates_dir, 0,
+		"Set the directory where is stored the web templates", "PATH" },
+		{ "ttl", 0, POPT_ARG_INT, &ttl, 0, "Default ttl for translations", "SECONDS" },
+		POPT_AUTOHELP
+	        { NULL, 0, 0, NULL, 0 }
+	};
 
 	config.modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
 	config.download_dir = "/home/carlos/Desarrollos/gnome/";
 	config.install_dir = "/home/carlos/public_html/GNOME/l10n/";
+	config.templates_dir = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/templates/";
 
 	/* We want always default locale for sort, messages, etc... we will change it
 	 * as needed.

@@ -165,7 +165,7 @@ gboolean
 status_version_download (StatusVersion *version, gchar *download_dir)
 {
 
-	g_print ("Downloading %s - %s ...", version->module->str, version->id->str);
+	g_print ("Downloading %s - %s ...\n", version->module->str, version->id->str);
 
 	return status_server_download (version->server, version->module->str, version->id->str,
 				       version->path->str, download_dir);
@@ -189,25 +189,46 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 	gchar *buf, *command, *command_info;
 	gchar **tfu_temp, **tfu, *output, *error;
 	gint exit_status, ntoken;
+	gchar *path;
 
-	g_print ("\tGenerating %s.%s.pot ...", version->module->str, version->id->str);
+	g_print ("\tGenerating %s.%s.pot ...\n", version->module->str, version->id->str);
 	
 	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
 
 	if (!chdir (buf)) {
 		/* TODO: Here we should scan for po/ directories and then, generate the .pot files */
 		if (!chdir ("po")) {
-			command = g_strdup_printf ("intltool-update -p -g %s/PO/%s.%s", install_dir,
+			path = g_strdup_printf ("%s/modules/%s/%s", install_dir,
+					version->module->str, version->id->str);
+			/* First, we check if the destination path already exists */
+			if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
+				/* FIXME: We should use the mkdir function directly */
+				command = g_strdup_printf ("mkdir -p %s", path);
+				if (system (command)) {
+					g_warning ("Unable to create the %s directory", path);
+					g_free (command);
+					g_free (path);
+					return FALSE;
+				}
+				g_free (command);
+				command = NULL;
+			} else if (!g_file_test (buf, G_FILE_TEST_IS_DIR)) {
+				g_warning ("%s is not a directory!!", path);
+				g_free (path);
+				return FALSE;
+			}
+			command = g_strdup_printf ("intltool-update -p -g %s/%s.%s", path,
 						   version->module->str, version->id->str);
 			if (system (command)) {
-				g_warning ("Unable to regenerate the %s/PO/%s.%s.pot file", install_dir,
+				g_warning ("Unable to regenerate the %s/%s.%s.pot file", path,
 					   version->module->str, version->id->str);
 				g_free (command);
 				g_free (buf);
+				g_free (path);
 				return FALSE;
 			} else {
-				command_info = g_strdup_printf ("msgfmt --statistics %s/PO/%s.%s.pot -o /dev/null",
-						install_dir, version->module->str, version->id->str);
+				command_info = g_strdup_printf ("msgfmt --statistics %s/%s.%s.pot -o /dev/null",
+						path, version->module->str, version->id->str);
 				if (g_spawn_command_line_sync (command_info, &output, &error, &exit_status, NULL) &&
 						WIFEXITED (exit_status) && WEXITSTATUS (exit_status) == 0) {
 					tfu_temp = g_strsplit (error, "\n",0);
@@ -239,9 +260,9 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 					g_strfreev (tfu_temp);
 				}
 				g_free (command_info);
-				/* FIXME: Is it correct if we free the output and error strings? */
 				g_free (output);
 				g_free (error);
+				g_free (path);
 			}
 			g_free (command);
 			return TRUE;
@@ -276,6 +297,7 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 	GDir *podir;
         gchar **filesplit;
 	gchar *po_file;
+	gchar *path;
 
 	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
 
@@ -288,16 +310,19 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 				while (file_name != NULL) {
 					filesplit = g_strsplit (file_name, ".", 2);
 					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
-						po_file = g_strdup_printf ("%s/PO/%s.%s.%s.po", install_dir,
+						path = g_strdup_printf ("%s/modules/%s/%s", install_dir,
+								version->module->str, version->id->str);
+
+						po_file = g_strdup_printf ("%s/%s.%s.%s.po", path,
 								version->module->str, version->id->str, filesplit[0]);
-						g_print ("\tUpdating %s.%s.%s.po ...", version->module->str, version->id->str, filesplit[0]);
+						g_print ("\tUpdating %s.%s.%s.po ...\n", version->module->str, version->id->str, filesplit[0]);
 						command = g_strdup_printf (
-							"msgmerge -q %s %s/PO/%s.%s.pot -o %s > /dev/null",
-							file_name, install_dir, version->module->str,
+							"msgmerge -q %s %s/%s.%s.pot -o %s > /dev/null",
+							file_name, path, version->module->str,
 							version->id->str, po_file);
 						if (system (command)) {
-							g_warning ("Unable to update the %s/PO/%s.%s.%s.po file",
-								   install_dir, version->module->str,
+							g_warning ("Unable to update the %s/%s.%s.%s.po file",
+								   path, version->module->str,
 								   version->id->str, filesplit[0]);
 						} else {
 							StatusTranslation *translation;
@@ -310,18 +335,27 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 							}
 						}
 						g_free (command);
+						command = NULL;
 						g_free (po_file);
+						po_file = NULL;
+						g_free (path);
+						path = NULL;
 					}
 					g_strfreev (filesplit);
+					filesplit = NULL;
 					file_name = g_dir_read_name (podir);
 				}
+				file_name = NULL;
 				g_dir_close (podir);
+				podir = NULL;
 			} else {
 				g_warning ("Unable to get po file list");
+				g_free (buf);
 				return FALSE;
 			}
 		} else {
 			g_warning ("Unable to chdir into the po dir");
+			g_free (buf);
 			return FALSE;
 		}
 	} else {

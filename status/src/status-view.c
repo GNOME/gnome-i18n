@@ -54,8 +54,6 @@ view_free_list_modules (gpointer key, gpointer value, gpointer user_data)
 {
 	GList *module_list;
 
-	g_free (key);
-
 	g_return_if_fail (value != NULL);
 
 	module_list = (GList *) value;
