@@ -8,6 +8,7 @@
 ###############
 @modules = (
      "ammonite/po",
+     "evolution/po",
      "balsa/po",
      "bonobo/po",
      "bug-buddy/po",
@@ -65,12 +66,12 @@
 );
 
 @xml_i18n_tools_compliants = (
-    "ammonite"
-    "evolution"
-    "galeon"
-    "gnome-db"
-    "gnome-vfs"
-    "nautilus"
+    "ammonite/po",
+    "evolution/po",
+    "galeon/po",
+    "gnome-db/po",
+    "gnome-vfs/po",
+    "nautilus/po"
 );
 
 # it's for a current developer :-)
