@@ -230,7 +230,6 @@ sub getmerge{
 
 sub getmsgfmt{
     ($language,$mod) = @_;
-print "$language  $mod\n";
     my ($file, $ext, $total, $trns, $fuzz, $untr);
     if ($language eq "pot"){
 	$mod =~/\//;
