@@ -20,6 +20,7 @@
  *
  */
 
+#include <stdlib.h>
 #include <popt.h>
 #include <glib.h>
 #include <locale.h>
@@ -28,13 +29,16 @@
 #include "status-module.h"
 
 config_t config;
+GList *langs;
 
 static void
 update_versions (gpointer key, gpointer value, gpointer user_data)
 {
 	StatusVersion *version;
+	status_data *sdata;
 
 	version = STATUS_VERSION (value);
+	sdata = (status_data *) user_data;
 
 	if (status_version_download (version, config.download_dir)) {
 		/* TODO: Save a timestamp to remember the last update time */
@@ -85,7 +89,8 @@ main (int argc, const char *argv[])
 	/* We want always default locale for sort, messages, etc... we will change it
 	 * as needed.
 	 */
-	setlocale (LC_ALL, "C");
+	setlocale (LC_MESSAGES, "C");
+	setenv ("LC_MESSAGES", "C", 1);
 
 	context = poptGetContext (NULL, argc, argv, options, 0);
 
@@ -99,6 +104,7 @@ main (int argc, const char *argv[])
 
 	/* 1.- Parse the .xml file */
 	sdata = status_xml_get_main_data (config.modules);
+	langs = NULL;
 
 	/* 2.- Download/Update
 	 * 2a.- The version files
@@ -106,7 +112,7 @@ main (int argc, const char *argv[])
 	 * 2c.- The translations (*.po)
 	 */
 
-	g_hash_table_foreach (sdata->versions, update_versions, NULL);
+	g_hash_table_foreach (sdata->versions, update_versions, sdata);
 	
 	/* 3b.- Save the data ?? */
 	/* 4.- Create the .html files */

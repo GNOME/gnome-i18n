@@ -23,6 +23,7 @@
 #ifndef STATUS_H
 #define STATUS_H
 
+#include <stdio.h>
 #include <glib.h>
 
 typedef struct {
@@ -41,9 +42,9 @@ typedef struct {
 } config_t;
 
 extern config_t config;
+extern GList *langs;
 
 status_data *status_xml_get_main_data (const gchar *views_file);
 FILE        *status_web_new_file (gchar *file_name, gchar *title, gchar *lang);
-
-
+void         status_web_end_file (FILE *file);
 #endif

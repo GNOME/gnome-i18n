@@ -194,21 +194,33 @@ status_translation_new (StatusVersion *version, const gchar *path)
 	return translation;
 }
 
-gint status_translation_get_ntranslated (StatusTranslation *translation)
+StatusVersion *
+status_translation_get_version (StatusTranslation *translation)
+{
+	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), NULL);
+
+	return translation->version;
+}
+
+
+gint
+status_translation_get_ntranslated (StatusTranslation *translation)
 {
 	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), -1);
 
 	return translation->translated;
 }
 
-gint status_translation_get_nfuzzy (StatusTranslation *translation)
+gint
+status_translation_get_nfuzzy (StatusTranslation *translation)
 {
 	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), -1);
 
 	return translation->fuzzy;
 }
 
-gint status_translation_get_nuntranslated (StatusTranslation *translation)
+gint
+status_translation_get_nuntranslated (StatusTranslation *translation)
 {
 	g_return_val_if_fail (STATUS_IS_TRANSLATION (translation), -1);
 

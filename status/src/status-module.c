@@ -21,7 +21,9 @@
  */
 
 #include <stdio.h>
+#include "status.h"
 #include "status-module.h"
+#include "status-translation.h"
 
 struct _StatusModule {
 	GObject object;
@@ -115,15 +117,22 @@ status_module_get_type (void)
 	return type;
 }
 
+
 static void
 generate_version_report (gpointer data, gpointer user_data)
 {
 	StatusVersion *version;
+	StatusTranslation *translation;
 	GHashTable *translations;
 	FILE *module_index;
+	gint nstrings, translated, fuzzy, untranslated;
+	gfloat ptranslated, pfuzzy, puntranslated;
+	GList *lang;
 
 	version = STATUS_VERSION (data);
 	module_index = (FILE *) user_data;
+
+	translations = status_version_get_translations (version);
 	
 /*	status_version_report (version);*/
 
@@ -138,9 +147,39 @@ generate_version_report (gpointer data, gpointer user_data)
 	fprintf (module_index, "          <td>%%</td>\n");
 	fprintf (module_index, "          <td>%s</td>\n", "untrans.");
 	fprintf (module_index, "          <td>%%</td>\n");
+	fprintf (module_index, "          <td>%s</td>\n", "graph");
 	fprintf (module_index, "        </tr>\n");
-
-	translations = status_version_get_translations (version);
+	
+	if (nstrings != translated + fuzzy + untranslated) {
+		/* TODO: We should implement a way to show a warning */
+	}
+	
+	for (lang = g_list_first (langs); lang != NULL; lang = g_list_next (lang)) {
+		translation = g_hash_table_lookup (translations, lang->data);
+		if (translation == NULL) {
+			continue;
+		}
+		
+		translated = status_translation_get_ntranslated (translation);
+		fuzzy = status_translation_get_nfuzzy (translation);
+		untranslated = status_translation_get_nuntranslated (translation);
+		version = status_translation_get_version (translation);
+		nstrings = status_version_get_nstrings (version);
+		ptranslated = (float) translated / (float) nstrings;
+		pfuzzy = (float) fuzzy / (float) nstrings;
+		puntranslated = (float) untranslated / (float) nstrings;
+		
+		fprintf (module_index, "        <tr>\n");
+		fprintf (module_index, "          <td>%s</td>\n", lang->data);
+		fprintf (module_index, "          <td>%d</td>\n", translated);
+		fprintf (module_index, "          <td>%.2f</td>\n", ptranslated*100);
+		fprintf (module_index, "          <td>%d</td>\n", fuzzy);
+		fprintf (module_index, "          <td>%.2f</td>\n", pfuzzy*100);
+		fprintf (module_index, "          <td>%d</td>\n", untranslated);
+		fprintf (module_index, "          <td>%.2f</td>\n", puntranslated*100);
+		fprintf (module_index, "          <td><img src=\"/images/bar0.png\" height=\"15\" width=\"%d\"><img src=\"/images/bar4.png\" height=\"15\" width=\"%d\"><img src=\"/images/bar1.png\" height=\"15\" width=\"%d\"></td>\n", (gint) (200.0*ptranslated), (gint) (200.0*pfuzzy), (gint) (200.0*puntranslated));
+		fprintf (module_index, "        </tr>\n");
+	}
 
 	fprintf (module_index, "      </table>\n");
 	fprintf (module_index, "    </div>\n");
@@ -210,10 +249,8 @@ status_module_report (StatusModule *module)
 	
 	if (module->versions != NULL) {
 		module_index = status_web_new_file (index_name, title, NULL);
-		fprintf (module_index, "  <body>\n");
 		g_list_foreach (module->versions, generate_version_report, module_index);
-		fprintf (module_index, "  </body>\n");
-		fprintf (module_index, "</html>\n");
+		status_web_end_file (module_index);
 		fclose (module_index);
 	}
 	g_free (index_name);

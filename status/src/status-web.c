@@ -30,7 +30,6 @@ status_web_new_file (gchar *file_name, gchar *title, gchar *lang)
 	FILE *file, *header_template;
 	gchar *template;
 	gchar buf[256];
-	gint nread = 0;
 	const gchar *xml_header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 	const gchar *doctype_header = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">";
 
@@ -51,5 +50,27 @@ status_web_new_file (gchar *file_name, gchar *title, gchar *lang)
 
 	fprintf (file, "  </head>\n");
 
+	fprintf (file, "  <body>\n");
+
 	return file;
+}
+
+void
+status_web_end_file (FILE *file)
+{
+	FILE *header_template;
+	gchar *template;
+	gchar buf[256];
+
+	template = g_strdup_printf ("%s/main-banner.template", config.templates_dir);
+	header_template = fopen (template, "r");
+
+	while (fgets (buf, 256, header_template) != NULL) {
+		fprintf (file, "%s", buf);
+	}
+	fclose (header_template);
+	g_free (template);
+
+	fprintf (file, "  </body>\n");
+	fprintf (file, "</html>\n");
 }

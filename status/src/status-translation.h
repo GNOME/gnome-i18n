@@ -41,6 +41,7 @@ GType          status_translation_get_type (void);
 
 StatusTranslation *status_translation_new (StatusVersion *version, const gchar *path);
 
+StatusVersion *status_translation_get_version (StatusTranslation *translation);
 gint status_translation_get_ntranslated (StatusTranslation *translation);
 gint status_translation_get_nfuzzy (StatusTranslation *translation);
 gint status_translation_get_nuntranslated (StatusTranslation *translation);

@@ -23,6 +23,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
+#include <string.h>
+#include "status.h"
 #include "status-version.h"
 #include "status-translation.h"
 
@@ -316,6 +318,9 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 				while (file_name != NULL) {
 					filesplit = g_strsplit (file_name, ".", 2);
 					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
+						if (g_list_find_custom (langs, filesplit[0], strcmp) == NULL) {
+							langs = g_list_insert_sorted (langs, g_strdup (filesplit[0]), strcmp);
+						}						
 						path = g_strdup_printf ("%s/modules/%s/%s", install_dir,
 								version->module->str, version->id->str);
 
