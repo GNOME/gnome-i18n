@@ -21,7 +21,7 @@ $| = 1;
 
 my (%modules,%langinfo,%modinfo,%modinfoold,$line,%langinfoold,
     $mod,%langmodold,%langmod); 
-my @langs = qw ( az bg br ca cs da de el en en_GB es et eu fi fr fr_BE fr_FR
+my @langs = qw ( ar az bg br ca cs da de el en en_GB es et eu fi fr
 		 ga gl hr hu id is it ja ko lt lv ms nl nn no pl pt pt_BR
 		 ro ru sk sl sp sr sr_YU sv ta tr uk vi wa zh_CN zh_TW );
 
