@@ -30,11 +30,20 @@
      "libgtop/po",
      "nautilus/po",
      "oaf/po",
-     "sawfish/po",
+     "sawfish/po"
+);
+
+@xml_i18n_tools_compliants = (
+    "ammonite/po",
+    "evolution/po",
+    "galeon/po",
+    "gnome-db/po",
+    "gnome-vfs/po",
+    "nautilus/po"
 );
 
 # it's for a current developer :-)
-#@langs = ( "no" );
+#@langs = ( "uk" );
 
 
 @langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
@@ -52,6 +61,15 @@ sub getmerge;
 ####################
 # "Initialization" #
 ####################
+
+#
+# find xml-i18n-tools 
+#
+$xmldir = `which xml-i18n-toolize 2> /dev/null`;
+chomp $xmldir;
+die "couldn't found xml-i18n-toolize" unless -e $xmldir;
+$xmldir =~ s@/bin/xml-i18n-toolize@@;
+
 #
 # read old dat-files
 #
@@ -241,23 +259,25 @@ sub generatepot{
     $domain = $`;
     $file = ($' ne "po") ? $' : $`;
     if ($domain eq "helix-install"){
-    $domain = "helix-install/src/rpm-3.0.3";
-    $file = "rpm";
+      $domain = "helix-install/src/rpm-3.0.3";
+      $file = "rpm";
     }
     if ($' eq "po-script-fu"){
-    $xgettext_plus = "&& $cvsroot/gimp/po-script-fu/script-fu-xgettext \ $cvsroot/gimp/plug-ins/script-fu/scripts/*.scm \ $cvsroot/gimp/plug-ins/gap/sel-to-anim-img.scm \ $cvsroot/gimp/plug-ins/webbrowser/web-browser.scm \ >> $cvsroot/gimp/po-script-fu/gimp-script-fu.po \ ";
+      $xgettext_plus = "&& $cvsroot/gimp/po-script-fu/script-fu-xgettext \ $cvsroot/gimp/plug-ins/script-fu/scripts/*.scm \ $cvsroot/gimp/plug-ins/gap/sel-to-anim-img.scm \ $cvsroot/gimp/plug-ins/webbrowser/web-browser.scm \ >> $cvsroot/gimp/po-script-fu/gimp-script-fu.po \ ";
     }
-print "generatepot: $mod\n";
+    print "generatepot: $mod\n";
 
     if ($file eq "po-script-fu"){
-    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
-      } else {  
-    open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
+      open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
+    } elsif (grep /^$mod$/, @xml_i18n_tools_compliants) {
+      open (POTOUT, "PACKAGE=$mod XML_I18N_EXTRACT=$xmldir/share/xml-i18n-tools/xml-i18n-update |");
+    } else {  
+      open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
 	  "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
 	  " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
 	  " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
-      }
-close (POTOUT);
+    }
+    close (POTOUT);
 }
 
 
