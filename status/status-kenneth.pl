@@ -60,8 +60,8 @@ if (open (MODINFO, "$htmldir/modinfo.dat")){
         @info = split(/,/);
 	$index = 1;
 	while ($info[$index]){
-           ${$modinfoold{$info[0]}->[$index-1]} = $info[$index];
-	   $index++;
+            ${$modinfoold{$info[0]}->[$index-1]} = $info[$index];
+ 	    $index++;
 	}
     }
 }
@@ -83,26 +83,26 @@ if (open (LANGMOD, "$htmldir/langmod.dat")){
         chomp;
         @info = split(/,/);
         ($stupid, $stupid, @{$langmodold{$info[0]}->{$info[1]}}) = @info;
-}
+    }
 }
 
 ## Main loops
 my $modflag = 0; # does we need write modinfo?
 
 foreach $mod (@modules){
-	if ($mod=~/extra-po/){ # don't generate in extra-po
-	} else {
-	GeneratePot($mod);
-	}
-	if (-d "$cvsroot/$mod"){
-	@result = GetMsgfmt("pot",$mod);
-	${ $modinfo { $mod } -> [0] } = ($result[0] - 1);
-	if ( ${$modinfoold{$mod}->[0]} ne ($result[0] - 1)){
-	${ $modinfo { $mod } -> [1] } = time;
-	$modflag = 1;
-    } else {
-    ${ $modinfo { $mod } -> [1] } = ${ $modinfoold { $mod } -> [1] };
+    if ($mod=~/extra-po/){ # don't generate in extra-po
+    } else { 
+        GeneratePot($mod); 
     }
+    if (-d "$cvsroot/$mod"){
+        @result = GetMsgfmt("pot",$mod);
+        ${ $modinfo { $mod } -> [0] } = ($result[0] - 1);
+        if ( ${$modinfoold{$mod}->[0]} ne ($result[0] - 1)){
+            ${ $modinfo { $mod } -> [1] } = time;
+            $modflag = 1;
+        } else {
+            ${ $modinfo { $mod } -> [1] } = ${ $modinfoold { $mod } -> [1] };
+        }
     }
 }
 
@@ -114,8 +114,7 @@ foreach $lang (@langs){
 	    GetMerge($lang,$mod);
 	    @result = getmsgfmt("$lang.new",$mod);
             $_ = $mod;
-            s/\//-/;
-            s/-po//;
+            s/\//-/; s/-po//;
             $newname = $_;
             unlink("$posdir/$newname-$lang.po");
             link("$cvsroot/$mod/$lang.new.po", "$posdir/$newname-$lang.po");
@@ -164,11 +163,13 @@ print LANGINFO "$lang,$string\n";
 close (LANGINFO);
 
 ##-----------------------
-open LANGMOD, ">$htmldir/langmod.dat" || die "Can't open file: $htmldir/langmod.dat";
+open LANGMOD, ">$htmldir/langmod.dat" || die "Can't open file: $htmldir/langmod.dat\n";
 
 foreach $lang (@langs){
     foreach $mod (@modules){
-     $string = "${$langmod{$lang}->{$mod}->[0]}" . "," . "${$langmod{$lang}->{$mod}->[1]}" . "," . "${$langmod{$lang}->{$mod}->[2]}";
+     $string = "${$langmod{$lang}->{$mod}->[0]}". ",". 
+               "${$langmod{$lang}->{$mod}->[1]}". ",". 
+               "${$langmod{$lang}->{$mod}->[2]}";
     $index = 3;
     while (${$langmodold{$lang}->{$mod}->[$index]}){
 	$string = $string . "," . ${$langmodold{$lang}->{$mod}->[$index]};
@@ -194,7 +195,7 @@ sub GetMerge{
     $POFILE  = "$cvsroot/$mod/$lang.po";
     $POTFILE = "$cvsroot/$mod/$file.pot";
 
-    open MERGE, "msgmerge --output-file=$cvsroot/$mod/$lang.new.po $cvsroot/$mod/$lang.po $cvsroot/$mod/$file.pot |" || die "Unable to merge";
+    open MERGE, "msgmerge --output-file=$OUTFILE $POFILE $POTFILE |" || die "Unable to merge\n";
     close MERGE;
 }
 
@@ -243,11 +244,11 @@ sub GeneratePot{
       if (-x "$cvsroot/$mod/update.pl") {
 	system ("cd $cvsroot/$mod && ./update.pl -P $file" );
 	return;
-   #   } else {  
-   #	open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
-   #	      "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
-   #	      " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
-   #	      " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
+      } else {  
+   	open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
+   	      "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
+   	      " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
+   	      " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
      }
     }
     link("$cvsroot/$mod/$file.pot", "$posdir/$file.pot");
