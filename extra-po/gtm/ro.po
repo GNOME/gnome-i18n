@@ -1,12 +1,12 @@
 # Romanian translation of GNOME Transfer Manager
-# Copyright (C) 2000,2001 Free Software Foundation, Inc.
-# Miºu Moldovan <dumol@go.ro>, 2000, 2001
+# Copyright (C) 2000 - 2002 Free Software Foundation, Inc.
+# Miºu Moldovan <dumol@go.ro>, 2000 - 2002.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gtm 0.4.10\n"
-"POT-Creation-Date: 2001-09-30 17:52+0100\n"
-"PO-Revision-Date: 2001-10-01 23:34+0300\n"
+"Project-Id-Version: gtm 0.4.12\n"
+"POT-Creation-Date: 2002-07-25 23:16+0100\n"
+"PO-Revision-Date: 2001-08-01 23:05+0300\n"
 "Last-Translator: Miºu Moldovan <dumol@go.ro>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "Refusing request from CORBA client, URL already in the list:"
 msgstr "Refuz cererea din parte clientului CORBA, URL-ul existã deja în listã"
 
-#: src/main.c:390
+#: src/main.c:391
 msgid "url to fetch"
 msgstr "URL de descãrcat"
 
-#: src/main.c:390
+#: src/main.c:391
 msgid "URL"
 msgstr "URL"
 
@@ -29,22 +29,22 @@ msgstr "URL"
 #: applet/dialog-add.c:85 applet/dialog-add.c:108 applet/dialog-add.c:325
 #: applet/dialog-add.c:347 applet/dialog-new.c:128 src/dialog-add.c:63
 #: src/dialog-add.c:82 src/dialog-add.c:265 src/dialog-add.c:286
-#: src/dialog-new.c:129 src/main.c:429
+#: src/dialog-new.c:129 src/main.c:430
 msgid "URL:\n"
 msgstr "URL:\n"
 
 #: src/dialog-add.c:85 src/dialog-add.c:289 src/dialog-new.c:130
-#: src/main.c:431
+#: src/main.c:432
 msgid "already in the list"
 msgstr "existã deja în listã"
 
 #. GTM Server couldn't be started
 #: applet/dialog-add.c:94 applet/dialog-add.c:333 applet/dialog-new.c:122
-#: applet/gtm_applet.c:193 src/main.c:436
+#: applet/gtm_applet.c:259 src/main.c:437
 msgid "Couldn't start GTM"
 msgstr "Nu am putut porni GTM"
 
-#: src/main.c:477
+#: src/main.c:478
 msgid ""
 "There is Another GNOME Transfer Manager running.\n"
 "Only one GNOME Transfer Manager can be running."
@@ -52,7 +52,35 @@ msgstr ""
 "Un alt Manager de Transfer GNOME ruleazã deja.\n"
 "Nu se pot rula douã Managere de Transfer GNOME în acelaºi timp."
 
-#: src/main-window.c:104
+#: src/main-window.c:76
+msgid "Opening multiple files is not implemented yet.\n"
+msgstr "Deschiderea fiºierlor multiple nu a fost încã implementatã.\n"
+
+#: src/main-window.c:85
+msgid "Could not determine MIME type...\n"
+msgstr "Nu pot determina tipul MIME...\n"
+
+#: src/main-window.c:106
+msgid ""
+" has a MIME type of:\n"
+"\n"
+" '"
+msgstr ""
+" are tipul MIME:\n"
+"\n"
+" '"
+
+#: src/main-window.c:108
+msgid ""
+"'\n"
+"\n"
+"Press OK to configure a handler"
+msgstr ""
+"'\n"
+"\n"
+"Apãsaþi OK pentru a configura o asociere"
+
+#: src/main-window.c:182
 msgid ""
 "Some files being downloaded now.\n"
 "Do you really want to quit?"
@@ -60,151 +88,159 @@ msgstr ""
 "Existã fiºiere în curs de descãrcare.\n"
 "Chiar doriþi sã ieºiþi?"
 
-#: src/main-window.c:220
+#: src/main-window.c:298
 msgid "_New..."
 msgstr "_Nou..."
 
-#: applet/dialog-new.c:209 src/dialog-new.c:221 src/main-window.c:220
+#: applet/dialog-new.c:209 src/dialog-new.c:221 src/main-window.c:298
 msgid "New file to download"
 msgstr "Adaugã un nou fiºier la descãrcare"
 
-#: src/main-window.c:224
+#: src/main-window.c:302
 msgid "_Remove from list..."
 msgstr "ªte_rge din listã..."
 
-#: src/main-window.c:225 src/main-window.c:314
+#: src/main-window.c:303 src/main-window.c:397
 msgid "Remove selected files from the list"
 msgstr "ªterge fiºierele selectate din listã"
 
-#: src/main-window.c:234
+#: src/main-window.c:312
 msgid "Select _All"
 msgstr "Selecte_azã tot"
 
-#: src/main-window.c:235
+#: src/main-window.c:313
 msgid "Select all files from the list"
 msgstr "Selecteazã toate fiºierele din listã"
 
-#: src/main-window.c:237
+#: src/main-window.c:315
 msgid "Unselect All"
 msgstr "Deselecteazã tot"
 
-#: src/main-window.c:238
+#: src/main-window.c:316
 msgid "Unselect all files from the list"
 msgstr "Deselecteazã toate fiºierele din listã"
 
-#: src/main-window.c:241
+#: src/main-window.c:319
 msgid "Toggles auto download"
 msgstr "Descãrcare automatã"
 
-#: src/main-window.c:242
+#: src/main-window.c:320
 msgid "Toggles auto download of selected files"
 msgstr "Activeazã/Deactiveazã descãrcarea automatã a fiºierelor selectate"
 
-#: src/file-list.c:70 src/main-window.c:251 src/main-window.c:318
+#: src/file-list.c:75 src/main-window.c:329 src/main-window.c:401
 msgid "Start"
 msgstr "Start"
 
-#: src/main-window.c:252
+#: src/main-window.c:330
 msgid "Start/Resume the download of the selected files"
 msgstr "Porneºte/Reporneºte descãrcarea fiºierelor selectate"
 
-#: src/file-list.c:73 src/main-window.c:256 src/main-window.c:323
+#: src/file-list.c:78 src/main-window.c:334 src/main-window.c:406
 msgid "Stop"
 msgstr "Stop"
 
-#: src/main-window.c:257
+#: src/main-window.c:335
 msgid "Stop the download of the selected files"
 msgstr "Opreºte descãrcarea fiºierelor selectate"
 
-#: src/file-list.c:76 src/main-window.c:260 src/main-window.c:327
+#: src/file-list.c:81 src/main-window.c:338 src/main-window.c:410
 msgid "Restart"
 msgstr "Restart"
 
-#: src/main-window.c:261 src/main-window.c:328
+#: src/main-window.c:339 src/main-window.c:411
 msgid "Restart the download of selected files from the beginning"
 msgstr "Reporneºte de la început descãrcarea fiºierelor selectate"
 
-#: src/main-window.c:266 src/main-window.c:333
+#: src/main-window.c:343
+msgid "D_rop wget process"
+msgstr "Închide p_rocesul wget"
+
+#: src/main-window.c:344
+msgid "Dettach from wget process and leave it in background"
+msgstr "Desprinde-te de procesul wget ºi lasã-l în fundal"
+
+#: src/main-window.c:349 src/main-window.c:416
 msgid "Pause Auto Dl"
 msgstr "Manual"
 
-#: src/main-window.c:267 src/main-window.c:334
+#: src/main-window.c:350 src/main-window.c:417
 msgid "Pause all auto downloads"
 msgstr "Opreºte toate descãrcãrile automate"
 
-#: src/main-window.c:278
+#: src/main-window.c:361
 msgid "_Statistics..."
-msgstr "_Statistica..."
+msgstr "_Statistici..."
 
-#: src/main-window.c:279
+#: src/main-window.c:362
 msgid "Show file list summary"
 msgstr "Aratã sumarul listei de fiºiere"
 
-#: src/main-window.c:282
+#: src/main-window.c:365
 msgid "_Numeric Download..."
 msgstr "Descãrcare _numericã..."
 
-#: src/main-window.c:283
+#: src/main-window.c:366
 msgid "Download a group of URLs differing by number"
 msgstr "Descarcã un grup de URL-uri ce diferã prin numãr"
 
-#: src/main-window.c:299
+#: src/main-window.c:382
 msgid "_Download"
 msgstr "_Descãrcare"
 
-#: src/main-window.c:300
+#: src/main-window.c:383
 msgid "_Tools"
 msgstr "Unel_te"
 
-#: src/main-window.c:309
+#: src/main-window.c:392
 msgid "New"
 msgstr "Nou"
 
-#: src/main-window.c:309
+#: src/main-window.c:392
 msgid "Add new file to download"
 msgstr "Adaugã un nou fiºier la descãrcare"
 
-#: src/main-window.c:313
+#: src/main-window.c:396
 msgid "Remove"
 msgstr "ªterge"
 
-#: src/main-window.c:319
+#: src/main-window.c:402
 msgid "Start/Resume the download of selected files"
 msgstr "Porneºte/Reporneºte descãrcarea fiºierelor selectate"
 
-#: src/main-window.c:324
+#: src/main-window.c:407
 msgid "Stop the download of selected files"
 msgstr "Opreºte descãrcarea fiºierelor selectate"
 
-#: src/main-window.c:337
+#: src/main-window.c:420
 msgid "Toggle Auto Dl"
 msgstr "Auto"
 
-#: src/main-window.c:338
+#: src/main-window.c:421
 msgid "Toggle auto download of selected files"
 msgstr "Activeazã/Dezactiveazã descãrcarea automatã a fiºierelor selectate"
 
-#: src/main-window.c:342
+#: src/main-window.c:425
 msgid "Dl Info Page"
 msgstr "Info"
 
-#: src/main-window.c:343
+#: src/main-window.c:426
 msgid "Toggle download info page"
 msgstr "Aratã/Nu arãta pagina cu informaþii despre descãrcare"
 
-#: applet/dialog-prop.c:291 src/dialog-prop.c:234 src/main-window.c:346
+#: applet/dialog-prop.c:384 src/dialog-prop.c:234 src/main-window.c:429
 msgid "Properties"
-msgstr "URL/Proxy"
+msgstr "URL"
 
-#: src/main-window.c:347
+#: src/main-window.c:430
 msgid "Open properties for selected file"
 msgstr "Deschide proprietãþile fiºierului selectat"
 
-#: src/main-window.c:350
+#: src/main-window.c:433
 msgid "Quit"
 msgstr "Ieºi"
 
-#: src/main-window.c:350
+#: src/main-window.c:433
 msgid "Quit gtm"
 msgstr "Ieºire din GTM"
 
@@ -232,48 +268,55 @@ msgstr "Descãrcare"
 msgid "Completed"
 msgstr "Terminat"
 
-#: src/file-list.c:66
+#: src/file-list.c:67
+msgid "Open"
+msgstr "Deschide"
+
+#: src/file-list.c:71
 msgid "Remove from list"
 msgstr "ªterge din listã"
 
-#: src/file-list.c:388
+#: src/file-list.c:85
+msgid "Drop wget process"
+msgstr "Desprinde procesul wget"
+
+#: src/file-list.c:417
 msgid "S"
 msgstr "S"
 
-#: src/file-list.c:389
-#, c-format
+#: src/file-list.c:418
 msgid "%"
 msgstr "%"
 
-#: src/file-list.c:390
+#: src/file-list.c:419
 msgid "Remain"
 msgstr "Rãmas"
 
-#: src/file-list.c:391
+#: src/file-list.c:420
 msgid "Filename"
 msgstr "Nume fiºier"
 
-#: src/file-list.c:646
+#: src/file-list.c:675
 msgid "File:\n"
 msgstr "Fiºier:\n"
 
-#: src/file-list.c:647
+#: src/file-list.c:676
 msgid "already exists."
 msgstr "existã deja."
 
-#: src/file-list.c:649
+#: src/file-list.c:678
 msgid "File already exists"
 msgstr "Fiºierul existã deja"
 
-#: src/file-list.c:650
+#: src/file-list.c:679
 msgid "Delete Existing File"
 msgstr "ªterge fiºierul existent"
 
-#: src/file-list.c:651
+#: src/file-list.c:680
 msgid "Attempt to Resume"
 msgstr "Încearcã sã reiei descãrcarea"
 
-#: src/file-list.c:654
+#: src/file-list.c:683
 msgid "A file of the same name already exists in the target directory."
 msgstr "Un fiºier cu acelaºi nume existã deja în directorul þintã."
 
@@ -327,7 +370,7 @@ msgstr "Opþiuni"
 
 #. Use proxy
 #: applet/dialog-add.c:287 applet/dialog-new.c:242
-#: src/dialog-common-elements.c:78 src/dialog-prefs.c:435
+#: src/dialog-common-elements.c:78 src/dialog-prefs.c:464
 #: src/dialog-prop.c:154 src/download-info.c:241
 msgid "Use proxy"
 msgstr "Utilizeazã proxy"
@@ -516,182 +559,185 @@ msgstr "FTP"
 msgid "HTTPS"
 msgstr "HTTPS"
 
+#: src/dialog-prefs.c:470
+msgid "Same proxy for all protocols"
+msgstr "Acelaºi proxy pentru toate protocoalele"
+
 #. Proxy username
-#: src/dialog-prefs.c:444
+#: src/dialog-prefs.c:479
 msgid "Username:"
 msgstr "Nume utilizator:"
 
 #. Proxy password
-#: src/dialog-prefs.c:453
+#: src/dialog-prefs.c:488
 msgid "Password:"
 msgstr "Parolã:"
 
 #. Proxy for HTTP
-#: src/dialog-prefs.c:463
+#: src/dialog-prefs.c:498
 msgid "HTTP:"
 msgstr "HTTP:"
 
 #. Proxy for FTP
-#: src/dialog-prefs.c:472
+#: src/dialog-prefs.c:507
 msgid "FTP:"
 msgstr "FTP:"
 
 #. Proxy for HTTPS
-#: src/dialog-prefs.c:482
+#: src/dialog-prefs.c:517
 msgid "HTTPS:"
 msgstr "HTTPS:"
 
-#: src/dialog-prefs.c:559
+#: applet/dialog-prop.c:318 src/dialog-prefs.c:607
 msgid "Interface to connect:"
 msgstr "Conectare la interfaþa:"
 
-#: src/dialog-prefs.c:567
+#: applet/dialog-prop.c:326 src/dialog-prefs.c:615
 msgid "Check interface time (ms):"
 msgstr "Verificã interfaþa la (ms):"
 
-#: src/dialog-prefs.c:580
+#: src/dialog-prefs.c:628
 msgid "Simultaneous:"
 msgstr "Numãrul descãrcãrilor simultane:"
 
-#: src/dialog-prefs.c:590
+#: src/dialog-prefs.c:638
 msgid "Manual stop disables auto download"
 msgstr "Oprirea manualã dezactiveazã descãrcarea automatã"
 
-#: src/dialog-prefs.c:596
+#: src/dialog-prefs.c:644
 msgid "Stop download on link loss"
 msgstr "Opreºte descãrcarea la pierderea legãturii"
 
-#: src/dialog-prefs.c:602
+#: src/dialog-prefs.c:650
 msgid "Remember whether auto download is paused"
 msgstr "Reþine descãrcãrile automate oprite manual"
 
-#: src/dialog-prefs.c:663
+#: src/dialog-prefs.c:711
 msgid "Default download dir:"
 msgstr "Directorul implicit:"
 
-#: src/dialog-prefs.c:666
+#: src/dialog-prefs.c:714
 msgid "Def Download Dir"
 msgstr "Selectaþi directorul implicit pentru descãrcare"
 
-#: src/dialog-prefs.c:675
+#: src/dialog-prefs.c:723
 msgid "Timeout (seconds):"
 msgstr "Timeout (secunde):"
 
-#: src/dialog-prefs.c:686
+#: src/dialog-prefs.c:734
 msgid "Number retries:"
 msgstr "Numãrul de încercãri:"
 
-#: src/dialog-prefs.c:690
+#: src/dialog-prefs.c:738
 msgid "Unlimited"
 msgstr "Nelimitat"
 
-#: src/dialog-prefs.c:693
+#: src/dialog-prefs.c:741
 msgid "Limited"
 msgstr "Limitat"
 
-#: src/dialog-prefs.c:704
+#: src/dialog-prefs.c:752
 msgid "Use passive FTP"
 msgstr "Utilizeazã FTP pasiv"
 
-#: applet/dialog-prop.c:163 src/dialog-prefs.c:711
+#: applet/dialog-prop.c:194 src/dialog-prefs.c:759
 msgid "Presume Protocol:"
 msgstr "Protocolul implicit:"
 
 #. Shell command on completion
-#: src/dialog-prefs.c:726
+#: src/dialog-prefs.c:774
 msgid "Run command when all downloads completed:"
-msgstr "Porneºte acest program când terminarea tuturor descãrcãrilor:"
+msgstr "Porneºte acest program la terminarea tuturor descãrcãrilor:"
 
-#: src/dialog-prefs.c:735
+#: src/dialog-prefs.c:783
 msgid "Run Now"
 msgstr "Porneºte acum"
 
-#: src/dialog-prefs.c:828
+#: src/dialog-prefs.c:876
 msgid ""
 "Overriding download dir on URL addition dialogs changes default download dir"
 msgstr ""
-"Schimbarea directorului de descãrcare în dialogurile de adãugare a unui nou "
-"URL schimbã directorul implicit"
+"Schimbarea directorului de descãrcare schimbã directorul implicit"
 
-#: src/dialog-prefs.c:836
+#: src/dialog-prefs.c:884
 msgid "Confirm remove when transfer incomplete"
 msgstr "Confirmare la ºtergerea unui transfer incomplet"
 
-#: src/dialog-prefs.c:843
+#: src/dialog-prefs.c:891
 msgid "Confirm remove completed transfers"
 msgstr "Confirmare la ºtergerea transferurilor terminate"
 
-#: src/dialog-prefs.c:850
+#: src/dialog-prefs.c:898
 msgid "Confirm restart"
 msgstr "Confirmare la repornirea transferurilor"
 
-#: applet/dialog-prop.c:210 src/dialog-prefs.c:857
+#: applet/dialog-prop.c:241 src/dialog-prefs.c:905
 msgid "Confirm drag and drop URL"
 msgstr "Confirmare la tragerea unui URL"
 
-#: src/dialog-prefs.c:910
+#: src/dialog-prefs.c:958
 msgid "Toolbar style:"
 msgstr "Stilul barei de unelte:"
 
-#: src/dialog-prefs.c:925
+#: src/dialog-prefs.c:973
 msgid "File list refresh rate (ms):"
 msgstr "Reactualizeazã lista de fiºiere la (ms):"
 
-#: src/dialog-prefs.c:937
+#: src/dialog-prefs.c:985
 msgid "Show list statistics"
 msgstr "Aratã statisticile în listã"
 
-#: src/dialog-prefs.c:942
+#: src/dialog-prefs.c:990
 msgid "Show page statistics"
 msgstr "Aratã pagina cu statistici"
 
-#: src/dialog-prefs.c:947
+#: src/dialog-prefs.c:995
 msgid "Auto hide download info page"
 msgstr "Ascunde automat pagina cu informaþii despre descãrcare"
 
-#: src/dialog-prefs.c:952
+#: src/dialog-prefs.c:1000
 msgid "Auto hide download info page timeout (ms):"
 msgstr "Ascunde pagina cu informaþii dupã (ms):"
 
-#: src/dialog-prefs.c:1019
+#: src/dialog-prefs.c:1067
 msgid "Use sound"
-msgstr "Semnalizeazã prin placa de sunet"
+msgstr "Semnalizeazã prin sunete"
 
-#: src/dialog-prefs.c:1024
+#: src/dialog-prefs.c:1072
 msgid "Use beep"
-msgstr "Semnalizeazã prin speaker"
+msgstr "Semnalizeazã prin bipuri"
 
-#: src/dialog-prefs.c:1065
+#: src/dialog-prefs.c:1113
 msgid "Preferences"
 msgstr "Preferinþe"
 
 #. Create the notebook pages
-#: src/dialog-prefs.c:1078 src/dialog-prop.c:251
+#: src/dialog-prefs.c:1126 src/dialog-prop.c:251
 msgid "Proxy"
 msgstr "Proxy"
 
-#: src/dialog-prefs.c:1082
+#: applet/dialog-prop.c:405 src/dialog-prefs.c:1130
 msgid "Auto"
 msgstr "Auto"
 
 #. Create the notebook pages
-#: applet/dialog-prop.c:300 src/dialog-prefs.c:1086 src/dialog-prop.c:247
+#: applet/dialog-prop.c:393 src/dialog-prefs.c:1134 src/dialog-prop.c:247
 msgid "Download"
 msgstr "Descãrcare"
 
-#: src/dialog-prefs.c:1090
+#: src/dialog-prefs.c:1138
 msgid "Directories"
 msgstr "Directoare"
 
-#: applet/dialog-prop.c:304 src/dialog-prefs.c:1094
+#: applet/dialog-prop.c:397 src/dialog-prefs.c:1142
 msgid "Confirmations"
 msgstr "Confirmãri"
 
-#: src/dialog-prefs.c:1098
+#: src/dialog-prefs.c:1146
 msgid "Display"
 msgstr "Afiºare"
 
-#: src/dialog-prefs.c:1102
+#: src/dialog-prefs.c:1150
 msgid "Sound"
 msgstr "Sunet"
 
@@ -745,62 +791,62 @@ msgstr "Rãmas (kB)"
 msgid "Progress"
 msgstr "Progres"
 
-#: src/wget-log.c:85
+#: src/wget-log.c:92
 msgid "Socket error when downloading URL:\n"
 msgstr "Eroare socket la descãrcarea URL-ului:\n"
 
-#: src/wget-log.c:88 src/wget-log.c:94
+#: src/wget-log.c:95 src/wget-log.c:101
 msgid "Connection refused when downloading URL:\n"
 msgstr "Conectare refuzatã la descãrcarea URL-ulului:\n"
 
-#: src/wget-log.c:91
+#: src/wget-log.c:98
 msgid "No route to host:\n"
 msgstr "Gazda nu a fost gãsitã:\n"
 
-#: src/wget-log.c:97
+#: src/wget-log.c:104
 msgid "Host not found when downloading URL:\n"
 msgstr "Nu existã gazda URL-ului:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:107
 msgid "Unsupported protocol - you need wget >= 1.7 for https:\n"
 msgstr "Protocol nesuportat - aveþi nevoie de wget >= 1.7 pentru https:\n"
 
-#: src/wget-log.c:104
+#: src/wget-log.c:111
 msgid "Unknown error when downloading URL:\n"
 msgstr "Eroare necunoscutã la descãrcarea URL-ului:\n"
 
-#: src/wget-log.c:114 src/wget-log.c:121
+#: src/wget-log.c:121 src/wget-log.c:128
 msgid "File not found when downloading URL:\n"
 msgstr "Fiºier inexistent la URL-ul:\n"
 
-#: src/wget-log.c:128
+#: src/wget-log.c:135
 msgid ""
 "Can't continue download, existing local file conflicts with remote file:\n"
 msgstr ""
 "Nu pot continua descãrcarea, fiºierul local existent are acelaºi nume cu cel "
 "ce trebuie descãrcat\n"
 
-#: src/wget-log.c:175
+#: src/wget-log.c:182
 msgid "Can't write to target directory:\n"
 msgstr "Nu pot scrie în directorul þintã:\n"
 
-#: applet/gtm_applet.c:495
+#: applet/gtm_applet.c:580
 msgid "Drop URL from netscape, gmc, gftp..."
 msgstr "Trageþi un URL din netscape, gmc, gftp..."
 
-#: applet/gtm_applet.c:538
+#: applet/gtm_applet.c:623
 msgid "Properties..."
 msgstr "Proprietãþi..."
 
-#: applet/gtm_applet.c:544
+#: applet/gtm_applet.c:629
 msgid "About..."
 msgstr "Despre..."
 
-#: applet/dialog-prop.c:239 applet/gtm_applet.c:550
+#: applet/dialog-prop.c:270 applet/gtm_applet.c:635
 msgid "New URL"
 msgstr "URL nou"
 
-#: applet/dialog-prop.c:240 applet/gtm_applet.c:556
+#: applet/dialog-prop.c:271 applet/gtm_applet.c:641
 msgid "Open GTM"
 msgstr "Deschide GTM"
 
@@ -825,15 +871,19 @@ msgstr "Eroare CORBA"
 msgid "not accepted by GTM"
 msgstr "nu e acceptat de GTM"
 
-#: applet/dialog-prop.c:238
+#: applet/dialog-prop.c:269
 msgid "(none)"
 msgstr "(niciunul)"
 
-#: applet/dialog-prop.c:250
+#: applet/dialog-prop.c:281
 msgid "Button1 click:"
 msgstr "Clic cu Buton1:"
 
-#: applet/dialog-prop.c:308
+#: applet/dialog-prop.c:339
+msgid "Open GTM on network"
+msgstr "Porneºte GTM la conectare"
+
+#: applet/dialog-prop.c:401
 msgid "Bindings"
 msgstr "Legãturi"
 
