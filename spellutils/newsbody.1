@@ -1,0 +1,92 @@
+.TH newsbody 1 "APRIL 2000" Unix "User Manuals"
+
+.SH NAME
+newsbody \- Run a program on the body of a mail or news message
+
+.SH SYNOPSIS
+.B newsbody [-fhqsv] [-k
+.I headername
+.B ] -n
+.I message
+.B -p
+.I program
+.B [-- [
+.I arguments...
+.B ]]
+
+.SH DESCRIPTION
+.B newsbody
+copies the body of a news or email article in
+.I message
+to a temporary file (called the
+.IR bodyfile )
+and then calls
+.I program
+with its
+.IR arguments .
+.I program
+is supposed to somehow change the
+.IR bodyfile .
+It can for instance be a spell checker. Afterwards the possibly
+changed body is remerged with the headers and copied back into the
+.IR message .
+
+.PP
+If
+.I message
+is specified as
+.I \-
+then
+.B newsbody
+will act as a filter, i.e. standard input and standard output will
+be used.
+
+.PP
+.B %f
+in the
+.I arguments
+will be expanded to the name of the
+.IR bodyfile ,
+or
+.B \-
+if the -f option is used. Use
+.B %%
+for a real % character.
+
+.SH OPTIONS
+.IP -f
+The called program is a filter so don't make a temporary file, but
+pipe the body to its standard input and read it back from its
+standard output.
+.IP -h
+Keep the entire header. This flag can also be used if
+.I newsfile
+doesn't have a header at all.
+.IP -q
+Also remove quotes before filtering the body. Lines starting with
+> are considered quotes.
+.IP -s
+Also remove signature before filtering the body.
+.IP -k\ headername
+Keep these header lines in the bodyfile. Multiple -k flags are
+allowed.
+.IP -v
+Print the version and exit.
+
+.SH FILES
+.B newsbody
+uses one or two temporary files with names given by the
+.BR tmpnam (3)
+function.
+
+.SH BUGS
+If some system call gives an unexpected error
+.B newsbody
+will stop immediately with an error message leaving its temporary
+files.
+
+.SH AUTHOR
+Byrial Jensen <byrial@image.dk>
+
+.SH SEE ALSO
+.BR pospell (1).

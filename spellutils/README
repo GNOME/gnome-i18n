@@ -1,0 +1,162 @@
+THE SPELLUTILS PACKAGE
+
+Spellutils is a suite of programs which are used to isolate some
+parts from various types of files and hand them over to another
+program which may change the texts; it is typically a spell checker.
+Afterwards the possibly changed text parts are copied back in place
+in the original file.
+
+
+THE POSPELL PROGRAM
+
+The program pospell will isolate the translations from a .po-file
+then call some other program which may change the translations (e.g.
+a spell checker), and eventually copy them back in place in the
+.po-file.
+
+Usage: pospell [-fsv] [-l language] -n pofile -p program [-- [arguments...]]
+
+It copies the translation strings of the pofile to a temporary
+file, called the spellfile, and then calls the program `program'
+with all the `arguments'. Afterwards the possibly changed strings
+is copied back into `pofile' and the spellfile is deleted.
+
+If you specify `-' as pofile, pospell will read the file from
+standard input and later write it back to standard output.
+
+`%f' in the `program-argument's will be expanded to the name of the
+temporary body file. `%%' gives a literal `%'.
+
+The optional flags mean:
+  -f: The called program is a filter so don't make a temporary file,
+      but pipe the spellfile to its standard input, and later read
+      its standard output.
+  -l language: Only translations with the indicated language code are
+      copied to the spellfile.
+  -s: Quit with an error message if unrecognized items are found in
+      the `pofile' or `spellfile'.
+  -v: Print version and exit.
+
+Examples:
+
+Check the spelling of the Danish texts in a .po-file with ispell:
+
+$ pospell -n da.po -p ispell -- -d dansk -x %f
+
+See how the generated spellfile really looks like:
+
+$ pospell -n da.po -p less -- %f
+
+Check the spelling of the Danish texts in a multilingual .po-file
+with ispell:
+
+$ pospell -l da -n some_program.po -p ispell -- -d dansk -x %f
+
+
+THE NEWSBODY PROGRAM
+
+The program newsbody will isolate the body part of a news or email
+message, then call some other program which may change the body,
+and eventually merge the headers with the possibly changed body.
+
+Command line options exist to also exclude quotes and signature,
+and to keep certain or all header lines.
+
+The program was originally made to be called from slrn's
+post_filter_hook, but nothing prevents other uses of it.
+
+Usage: newsbody [-fhqsv] [-k headername] -n newsfile -p program
+       [-- [arguments...]]
+
+It copies the body of the news article in `newsfile' to a temporary
+file and then calls the program `program' with all the `arguments'.
+Afterwards the possibly changed body is copied back into 'newsfile'
+and the temporary file is deleted.
+
+If you specify `-' as newsfile, newsbody will read the file from
+standard input and later write it back to standard output.
+
+`%f' in the `program-argument's will be expanded to the name of the
+temporary body file. `%%' gives a literal `%'.
+
+The optional flags mean:
+  -f: The called program is a filter so don't make a temporary
+      file, but pipe the body to its standard input, and later
+      read its standard output.
+  -h: Keep the entire header. This flag can also be used if
+      `newsfile' doesn't have a header at all.
+  -k headername: Keep these header lines in the body file.
+      (Multiple -k flags are allowed).
+  -q: Also remove quotes before filtering the body.
+      Lines starting with `>' are considered quotes.
+  -s: Also remove signature before filtering the body.
+  -v: Print version and exit.
+
+Examples:
+
+Use newsbody to call ispell from the Mutt mailer, but don't
+spell check your quotes (they should not be changed) or your
+signature.
+
+Method 1 using Mutt's built-in ispell command:
+ - Make a shell script with this command:
+   newsbody -hqs -n $2 -p ispell -- -x %f
+ - Make Mutt's ispell command call the script by means of this
+   command in your .muttrc:
+   set ispell=path/to/script
+
+Method 2 using a filter:
+ - Define this Mutt macro in your .muttrc:
+   macro compose i \
+           "<filter-entry>newsbody -hqs -n - -p ispell -- -x %f<enter>" \
+           "run ispell on the selected part"
+
+
+REQUIREMENTS TO MAKE THE SPELLUTILS PROGRAMS
+
+Nothing special besides a C compiler which understands standard ISO C
+(also called ANSI C), and a make program.
+
+I have tried to make the programs as portable as possible. If
+something have to be done to build or run it on your particular
+system, please tell me about it.
+
+
+INSTALLATION
+
+Spellutils uses GNU autoconf, so these few command should be
+sufficient to make and install the programs:
+
+$ ./configure
+$ make
+$ make install
+
+Please see the INSTALL file for a more detailed explanation of the
+`configure' shell script and the its options.
+
+
+COPYRIGHT AND LICENSE
+
+Copyright (C) Byrial Jensen <byrial@image.dk>
+
+Some included parts are taken from the GNU libc, GNU autoconf, GNU
+automake and GNU gettext packages: Copyright (C) Free Software
+Foundation, Inc.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+The GNU General Public License is in the COPYING file.
+
+
+AUTHOR
+
+Byrial Jensen <byrial@image.dk>.
+Comments, suggestions, and bug reports are welcome.

@@ -1,0 +1,130 @@
+.TH pospell 1 "APRIL 2000" Unix "User Manuals"
+
+.SH NAME
+pospell \- Run a program on the translation strings of a .po-file
+
+.SH SYNOPSIS
+.B pospell [-l
+.I language
+.B ] [-fsv]
+.B -n
+.I pofile
+.B -p
+.I program
+.B [-- [
+.I arguments...
+.B ]]
+
+.SH DESCRIPTION
+.B pospell
+copies the translations from the
+.I pofile
+to a temporary file (called the
+.IR spellfile )
+and then calls
+.I program
+with its
+.IR arguments .
+.I program
+is supposed to somehow change the
+.IR spellfile .
+It is typically a spell checker. Afterwards the possibly changed
+translations in
+.I spellfile
+is copied back into the
+.IR pofile .
+
+.PP
+If
+.I pofile
+is specified as
+.I \-
+then
+.B pospell
+will act as a filter, i.e. standard input and standard output will
+be used.
+
+.PP
+.B %f
+in the
+.I arguments
+will be expanded to the name of the
+.IR spellfile ,
+or
+.B \-
+if the -f option is used. Use
+.B %%
+for a real % character.
+
+All comment lines in the 
+.I pofile
+are replaced with lines with "#" as the only character in the
+.IR spellfile .
+The msgid strings with original text in the
+.I pofile
+are replaced with lines with ">" and "]" as the only characters in the
+.IR spellfile .
+The msgstr strings with file headers (i.e. strings without corresponding
+msgid strings) are replaced with lines with ")" and "]" as the only
+characters in the
+.IR spellfile .
+Don't change or remove these lines from the
+.I spellfile
+- they are used when the
+.I spellfile
+and the
+.I pofile
+are merged together after running the
+.IR program .
+
+The normal msgstr strings are copied to the
+.I spellfile
+with some changes:
+1) The word msgstr and everything else before the string is replaced by a
+"+" character.
+2) Strings with C escape sequences followed by a letter like "one\\ttwo"
+are split to parts like "one\\t" "two".
+3) Leading whitespace in continuation lines is removed.
+The changes of kind 1) and 2) are undone when the
+.I spellfile
+is copied back into the
+.IR pofile ,
+but removed whitespace will not be restored.
+
+.SH OPTIONS
+.IP -f
+The called program is a filter so don't make a temporary file, but
+pipe the
+.I spellfile
+to its standard input and read it back from its standard output.
+.IP -l\ language
+Only translations with the indicated language code are copied to the
+.IR spellfile .
+.IP -s
+Quit with an error message if unrecognized items are found in the
+.I pofile
+or
+.IR spellfile .
+
+.IP -v
+Print the version and exit.
+
+.SH FILES
+.B pospell
+uses one or two temporary files with names given by the
+.BR tmpnam (3)
+function.
+
+.SH BUGS
+If some system call gives an unexpected error
+.B pospell
+will stop immediately with an error message leaving its temporary
+files.
+
+.SH AUTHOR
+Byrial Jensen <byrial@image.dk>
+
+.SH SEE ALSO
+The GNU gettext utilities.
+
+.BR newsbody (1).
