@@ -134,7 +134,6 @@ function gnome_menu() { ?>
 		<ul class="nobullet">
 		<li><a href="woordenboeken.php">Woordenboeken</a></li>
 		<li><a href="verwijzingen.php">Andere websites</a></li>
-		<li><a href="http://sourceforge.net/projects/gnome-nl">Sourceforge project</a></li>
 		</ul>
 	</div>
 </div>
