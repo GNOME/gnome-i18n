@@ -1,7 +1,7 @@
 # firestarter fr.po.
 # Copyright (C) 2000-2002 Free Software Foundation, Inc.
 # Christophe Merlet (RedFox) <redfox@eikonex.org>, 2001-2002.
-# Frederic Renet <fred@pipo.com>, 2001.
+# maintainer: Frederic Renet <fred@pipo.com>, 2001-2002.
 #
 msgid ""
 msgstr ""
@@ -122,7 +122,6 @@ msgid "Network Device Configuration"
 msgstr "Configuration du périphérique réseau"
 
 #: src/druid.c:280
-#, fuzzy
 msgid ""
 "Please select your Internet connected network device from the\n"
 "drop-down list of detected devices.\n"
@@ -150,9 +149,8 @@ msgstr ""
 "si vous n'êtes pas sur."
 
 #: src/druid.c:307
-#, fuzzy
 msgid "Start the firewall on dial-out"
-msgstr "Lancer le pare-feu au démarrage du programme"
+msgstr "Lancer le pare-feu à la connection"
 
 #: src/druid.c:309
 msgid ""
@@ -218,7 +216,6 @@ msgstr ""
 "détectée automatiquement."
 
 #: src/druid.c:435
-#, fuzzy
 msgid "Specify internal network IP range manually (Not recommended)"
 msgstr "Spécifier manuellement la fourchette des IP du réseau interne"
 
@@ -232,7 +229,6 @@ msgid "Enter the internal network address range:"
 msgstr "Saisissez l'intervalle des adresses IP du réseau interne"
 
 #: src/druid.c:464
-#, fuzzy
 msgid ""
 "The network range is given in the form of address/mask. 192.168.0.0/24 is "
 "the most\n"
@@ -240,14 +236,13 @@ msgid ""
 msgstr ""
 "La fourchette réseau est donnée sous la forme de adresse/masque. "
 "192.168.1.0/24 est la fourchette\n"
-"habituelle des IP réservée pour les réseaux internes et devrait marcher "
-"pourla plupart des gens."
+"habituelle des IP réservée pour les réseaux internes"
 
 #. 	gtk_table_attach (GTK_TABLE (table2), align, 0, 1, 4, 5,
 #. 		GTK_FILL, GTK_FILL, GNOME_PAD, 0);
 #: src/druid.c:478
 msgid "Port Forwarding"
-msgstr ""
+msgstr "Port Forwarding"
 
 #: src/druid.c:512
 msgid "Services Configuration"
@@ -284,6 +279,7 @@ msgid ""
 msgstr ""
 "Le filtrage des paquets ICMP peut être util pour se protéger contre\n"
 "certaines attaques de type déni de service sur votre réseau.\n"
+"\n"
 "Voulez vous activer le filtrage ICMP ?"
 
 #: src/druid.c:669
@@ -391,7 +387,7 @@ msgstr ""
 "Bienvenue sur Firestarter!\n"
 "\n"
 "\n"
-"Ce guide va vous aider à configurer un Firewall\n"
+"Cet assistant va vous aider à configurer un Firewall\n"
 "plusieurs questions vous seront posées.\n"
 "\n"
 "Cliquez sur suivant pour continuer.\n"
@@ -406,6 +402,11 @@ msgid ""
 "to review your choices.\n"
 "\n"
 msgstr ""
+"L'assistant est maintenant près à créer votre firewall.\n"
+"\n"
+"Cliquez sur le button terminer pour finir, ou sur le bouton retour\n"
+"pour vérifier vos choix.\n"
+"\n"
 
 #: src/druid.c:957
 msgid "You must be root to use the Firestarter wizard."
@@ -487,7 +488,8 @@ msgstr "Afficher toutes les pages dans l'assistant"
 #: src/preferences.c:546
 msgid "Check this and every wizard page will be available in the wizard"
 msgstr ""
-"Si vous validez cette option est toutes les pages du guide seront visibles"
+"Si vous validez cette option est toutes les pages de l'assistant seront "
+"visibles"
 
 #: src/preferences.c:551
 msgid "Enable Experimental Options"
@@ -540,7 +542,8 @@ msgstr "Si vous validez cette option les paquets interdits seront rejetés"
 #: src/preferences.c:589
 msgid "You must rerun the wizard for the changes to take effect"
 msgstr ""
-"Vous devez relancer le guide pour que les changements soit pris en compte"
+"Vous devez relancer l'assistant pour que les changements soient pris en "
+"compte"
 
 #: src/preferences.c:653
 msgid "Firestarter: Preferences"
@@ -564,9 +567,8 @@ msgid "unknown"
 msgstr "Inconnu"
 
 #: src/menus.c:32 src/menus.c:43
-#, fuzzy
 msgid "Start _firewall"
-msgstr "Relancer le _pare-feu"
+msgstr "_Relancer le pare-feu"
 
 #: src/menus.c:33 src/menus.c:44
 msgid "_Stop firewall"
@@ -598,7 +600,7 @@ msgstr "_Page d'acceuil Firestarter"
 
 #: src/menus.c:68
 msgid "_Firewall"
-msgstr "_Pare_feu"
+msgstr "Pare_feu"
 
 #: src/menus.c:69
 msgid "_Hit list"
@@ -638,7 +640,7 @@ msgstr "Autoriser toutes les connexions de la machine"
 
 #: src/menus.c:92
 msgid "Block and stop logging this port"
-msgstr ""
+msgstr "Bloquer et arréter de logguer ce port"
 
 #: src/menus.c:93
 msgid "Lookup hostname"
@@ -666,12 +668,11 @@ msgstr "Protocole :"
 
 #: src/addrules.c:119
 msgid "Enter IP range or hostname to deny all connections from:"
-msgstr "Indiquez le nom de l'hote ou la fourchette des adresses IP à rejeter:"
+msgstr "Indiquez le nom de l'hôte ou la fourchette des adresses IP à rejeter:"
 
 #: src/addrules.c:121
-#, fuzzy
 msgid "Enter IP range or hostname to allow all connections from:"
-msgstr "Autoriser toutes les connexions en provenance de"
+msgstr "Indiquez le nom de l'hôte ou la fourchette des adresses IP à accepter:"
 
 #: src/addrules.c:123 src/addrules.c:132
 msgid "Enter the port number of the service to open:"
@@ -679,7 +680,7 @@ msgstr "Indiquez le numéro du port du service à ouvrir:"
 
 #: src/addrules.c:125
 msgid "Enter IP range or hostname to open service to:"
-msgstr "Indiquez le nom de l'hôte ou la fourchette des adresses IP authorisés:"
+msgstr "Indiquez le nom de l'hôte ou la fourchette des adresses IP autorisés:"
 
 #: src/savelog.c:57
 msgid "Select file to save log to"
@@ -704,14 +705,13 @@ msgstr ""
 "D'accord pour remplacer l'ancien firewall (recommandé)?\n"
 
 #: src/logread.c:70
-#, fuzzy
 msgid ""
 "Log file not found or access denied.\n"
 "Firewall log monitoring disabled.\n"
 "\n"
 "You can configure the path to the log file in the \"preferences\" section."
 msgstr ""
-"\" non trouvé ou accès refusé.\n"
+"Le fichier de log n'a pas été trouvé ou l'accès a été refusé.\n"
 "Le suivi des logs du pare-feu est désactivé.\n"
 "\n"
 "Vous pouvez configurer le chemin du fichier de log dans la section "
@@ -734,14 +734,12 @@ msgid "Download ipmasqadm now"
 msgstr "Téléchargez ipmasqadm maintenant"
 
 #: src/portfw.c:220
-#, fuzzy
 msgid "Add connection forwarding"
-msgstr "Autoriser toutes les connexions de la machine"
+msgstr "Ajouter un forward de connection"
 
 #: src/portfw.c:231
-#, fuzzy
 msgid "Firewall port:"
-msgstr "Hits du pare-feu"
+msgstr "Port du firewall:"
 
 #: src/portfw.c:247
 msgid "LAN port:"
@@ -780,14 +778,13 @@ msgid "Add entry"
 msgstr "Ajouter une règle"
 
 #: src/portfw.c:372
-#, fuzzy
 msgid "Remove entry"
 msgstr "Enlever cette règle"
 
 #: src/ipchains-script.c:759 src/netfilter-script.c:906
-#, fuzzy, c-format
+#, c-format
 msgid "Firewall script saved as %s\n"
-msgstr "Script du pare-feu relancé comme %s\n"
+msgstr "Script du pare-feu relancé sous le nom %s\n"
 
 #: src/lookup.c:74
 msgid "Host not found."
@@ -819,9 +816,8 @@ msgstr "Il y a un problème avec le serveur de nom (DNS). Essayez de nouveau."
 #~ "Activez cette option si vous voulez associé des sons à certains "
 #~ "évènements."
 
-#, fuzzy
 #~ msgid "File to play on firewall hit:"
-#~ msgstr "Vider la liste des hits du pare-feu"
+#~ msgstr "Fichier son à jouer lors d'une touche sur le firewall:"
 
 #~ msgid ""
 #~ "Enter the path to the sound file that should be played when a firewall "
@@ -856,9 +852,8 @@ msgstr "Il y a un problème avec le serveur de nom (DNS). Essayez de nouveau."
 #~ msgid "Select the syslog log file"
 #~ msgstr "Sélectionnez le fichier de log système"
 
-#, fuzzy
 #~ msgid "Select the file to play a sound"
-#~ msgstr "Sélectionner le fichier de log"
+#~ msgstr "Sélectionner le fichier son à jouer:"
 
 #~ msgid "Browse"
 #~ msgstr "Naviguer"
@@ -869,9 +864,8 @@ msgstr "Il y a un problème avec le serveur de nom (DNS). Essayez de nouveau."
 #~ msgid "Syslog file:"
 #~ msgstr "Fichier de log système :"
 
-#, fuzzy
 #~ msgid "Filter identical hits"
-#~ msgstr "Hits du pare-feu"
+#~ msgstr "Ne pas afficher les touches identiques"
 
 #~ msgid ""
 #~ "The external and internal network interfaces\n"
@@ -889,12 +883,13 @@ msgstr "Il y a un problème avec le serveur de nom (DNS). Essayez de nouveau."
 #~ msgstr "Fichier de log \""
 
 #~ msgid "No, I do not use IP Masquerading on my LAN"
-#~ msgstr "Non, je n'utilise par l'IP Masquerading sur mon réseau"
+#~ msgstr ""
+#~ "Non, je n'utilise par le camouflage IP (IP Masquerading) sur mon réseau"
 
 #~ msgid ""
 #~ "Yes, this machine translates the IP addresses of my LAN for the Internet"
 #~ msgstr ""
-#~ "Oui, cette machine traduit les adresses IP de mon réseau pour Internet"
+#~ "Oui, cette machine camoufle les adresses IP de mon réseau pour Internet"
 
 #~ msgid ""
 #~ "Welcome to the Firestarter Firewall Wizard\n"
@@ -928,6 +923,5 @@ msgstr "Il y a un problème avec le serveur de nom (DNS). Essayez de nouveau."
 #~ msgid "Firewall started, firewall script saves as %s\n"
 #~ msgstr "Pare-feu lancé, script du pare-feu enregistré sous %s\n"
 
-#, fuzzy
 #~ msgid "Firewall script file:"
-#~ msgstr "Fichier de log système du pare-feu"
+#~ msgstr "Fichier de script:"
