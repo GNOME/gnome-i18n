@@ -5,35 +5,56 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: firestarter\n"
-"POT-Creation-Date: 2000-11-02 18:19+0200\n"
+"POT-Creation-Date: 2001-02-19 21:18+0100\n"
 "PO-Revision-Date: 2000-08-21 11:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua\n"
 "Language-Team: Ukrainian <linux@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-u\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: src/firestarter.c:53
-msgid "Firewall running"
-msgstr "Брандмауер запущено"
+#: src/firestarter.c:87
+msgid "Old version detected"
+msgstr ""
 
-#: src/firestarter.c:56
+#: src/firestarter.c:91
+msgid ""
+"\n"
+"A firewall created by an older version of\n"
+"Firestarter has been detected.\n"
+"\n"
+"OK to remove old firewall (recommended)?\n"
+msgstr ""
+
+#: src/firestarter.c:129 src/firestarter.c:142
 msgid "Firewall stopped"
 msgstr "Брандмауер зупинено"
 
-#: src/firestarter.c:156 src/firestarter.c:200
+#: src/firestarter.c:132 src/firestarter.c:139
+msgid "Firewall running"
+msgstr "Брандмауер запущено"
+
+#: src/firestarter.c:135
+msgid "All traffic halted"
+msgstr ""
+
+#: src/firestarter.c:245 src/firestarter.c:309 src/firestarter.c:341
 msgid "You must be root to manipulate the firewall."
 msgstr "Ви ма╓те бути користувачем root щоб керувати брандмауером."
 
-#: src/firestarter.c:174
+#: src/firestarter.c:283
 msgid "Firewall stopped, network traffic is now flowing freely\n"
 msgstr "Брандмауер зупинено, ╕нформац╕йний обм╕н зараз проходить в╕льно\n"
 
-#: src/firestarter.c:206
+#: src/firestarter.c:315
 msgid "Firewall script restarted\n"
 msgstr "Сценар╕й брандмауера перезапущено\n"
 
-#: src/firestarter.c:344
+#: src/firestarter.c:379
+msgid "All traffic halted\n"
+msgstr ""
+
+#: src/firestarter.c:509
 msgid ""
 "An all-in-one Linux firewall utility for GNOME.\n"
 "http://firestarter.sourceforge.net"
@@ -41,54 +62,51 @@ msgstr ""
 "Зас╕б налаштування брандмауера Linux в GNOME.\n"
 "http://firestarter.sourceforge.net"
 
-#: src/firestarter.c:494 src/preferences.c:433
+#: src/firestarter.c:658 src/preferences.c:408
 msgid "Port"
 msgstr "Порт"
 
-#: src/firestarter.c:495
+#: src/firestarter.c:659
 msgid "Sent from"
 msgstr "В╕д╕слано в╕д"
 
-#: src/firestarter.c:496 src/preferences.c:434
+#: src/firestarter.c:660 src/preferences.c:409
 msgid "Service"
 msgstr "Серв╕с"
 
-#: src/firestarter.c:497
+#: src/firestarter.c:661
 msgid "Time"
 msgstr "Час"
 
-#: src/firestarter.c:499
+#: src/firestarter.c:663
 msgid "Deny all connections from"
 msgstr "Заблокувати вс╕ з'╓днання в╕д"
 
-#: src/firestarter.c:500
+#: src/firestarter.c:664
 msgid "Allow all connections from"
 msgstr "Дозволити вс╕ з'╓днання в╕д"
 
-#: src/firestarter.c:501 src/menus.c:83
+#: src/firestarter.c:665 src/menus.c:88
 msgid "Open service to machine"
 msgstr "В╕дкрити серв╕си машин╕"
 
-#: src/firestarter.c:502 src/menus.c:84
+#: src/firestarter.c:666 src/menus.c:89
 msgid "Open service to anyone"
 msgstr "В╕дкрити серв╕си вс╕м"
 
-#: src/firestarter.c:535
+#: src/firestarter.c:699
 msgid "Firewall hits"
 msgstr "Потрапляння в брандмауер"
 
 #. set up the clists on the dynamic rules page
-#: src/firestarter.c:544
+#: src/firestarter.c:710
 msgid "Dynamic rules"
 msgstr "Динам╕чн╕ правила"
 
-#: src/firestarter.c:577
-msgid "Logfile \""
-msgstr "Файл журналу \""
-
-#: src/firestarter.c:578
+#: src/firestarter.c:748
+#, fuzzy
 msgid ""
-"\" not found or access denied.\n"
+"Log file not found or access denied.\n"
 "Firewall log monitoring disabled.\n"
 "\n"
 "You can configure the path to the log file in the \"preferences\" section."
@@ -98,7 +116,7 @@ msgstr ""
 "\n"
 "Ви можете налиштуватя шлях до файлу журналу в розд╕л╕ \"Налаштування\"."
 
-#: src/druid.c:96
+#: src/druid.c:111
 msgid ""
 "The external and internal network interfaces\n"
 "can't be the same. Please change one of them,\n"
@@ -108,13 +126,19 @@ msgstr ""
 "не можуть бути однаковими. Зм╕н╕ть один з\n"
 "них чи в╕д╕мкн╕ть маскарад IP."
 
-#: src/druid.c:194
+#: src/druid.c:218
+#, fuzzy
+msgid "Network Device Configuration"
+msgstr "Конф╕╜урац╕я серв╕с╕в"
+
+#: src/druid.c:226
+#, fuzzy
 msgid ""
-"Choose the device you connect to the Internet with.\n"
+"Please select your Internet connected network device from the\n"
+"drop-down list of detected devices.\n"
 "\n"
-"If you connect to the net by modem, your device name is likely ppp0. If you "
-"have an\n"
-"ISDN line or an ethernet connection, choose ippp0 or eth0 respectively."
+"If you use a modem your device name is likely ppp0. If you have a\n"
+"cable modem or a DSL connection, choose eth0."
 msgstr ""
 "Вибер╕ть пристр╕й, через який ви з'╓дну╓тесь з Internet.\n"
 "\n"
@@ -122,34 +146,36 @@ msgstr ""
 "Якщо у вас л╕н╕я ISDN чи з'╓днання через локальну мережу, спробуйте ippp0 чи "
 "eth0 в╕дпов╕дно."
 
-#: src/druid.c:206
+#: src/druid.c:239
 msgid "Detected device(s):"
 msgstr "Виявлен╕ пристро╖:"
 
-#: src/druid.c:211
+#: src/druid.c:244
 msgid ""
 "Select your network device from the dropdown list. Go with the default if "
 "unsure."
 msgstr ""
 "Вибер╕ть ваш мережевий пристр╕й з списку. Якщо не впевнен╕, толиш╕ть що ╓."
 
-#: src/druid.c:220
-msgid "Start Firestarter on PPP connect"
-msgstr "Запуск Firestarter на з'╓днанн╕ PPP"
+#: src/druid.c:253
+#, fuzzy
+msgid "Start the firewall on dial-out"
+msgstr "Запускати брандмауер на запуску програми"
 
-#: src/druid.c:222
+#: src/druid.c:255
+#, fuzzy
 msgid ""
-"Check this option and the program will start when you dial your Internet "
-"service provider.Only available when using a modem."
+"Check this option and the firewall will start when you dial your Internet "
+"Service Provider. Only available when using a modem."
 msgstr ""
 "Вибер╕ть цей параметр ╕ програма буде запускатись коли ви телефону╓те до "
 "вашего провайдера Internet. Доступно лише при використанн╕ модема."
 
-#: src/druid.c:236
+#: src/druid.c:269
 msgid "IP address is assigned via DHCP"
 msgstr "Адреса IP признача╓ться через DHCP"
 
-#: src/druid.c:238
+#: src/druid.c:271
 msgid ""
 "Check this option if you need to connect to a DHCP server. Cable modem users "
 "should check this."
@@ -157,7 +183,12 @@ msgstr ""
 "Вибер╕ть цей параметр, якщо вам необх╕дно з'╓днуватись з сервером DHCP. "
 "Користувач╕ кабельних модем╕в мусять це вибирати."
 
-#: src/druid.c:269
+#: src/druid.c:309
+#, fuzzy
+msgid "IP Masquerade Configuration"
+msgstr "Конф╕╜урац╕я IP-маскараду"
+
+#: src/druid.c:318
 msgid ""
 "Do you use IP Masquerading on your LAN, allowing all the machines on your "
 "network\n"
@@ -166,58 +197,65 @@ msgstr ""
 "Ви використову╓те маскарад IP у локальн╕й мереж╕, щоб дозволити вс╕м машинам "
 "у мереж╕ вза╓мод╕яти з Internet через одну адресу IP?"
 
-#: src/druid.c:278
-msgid "No, I do not use IP Masquerading on my LAN"
-msgstr "Н╕, я не використовую маскарад IP в локальн╕й мереж╕"
+#: src/druid.c:327
+msgid "Disable masquerading"
+msgstr ""
 
-#: src/druid.c:283
-msgid ""
-"Yes, this machine translates the IP addresses of my LAN for the Internet"
-msgstr "Так, ця машина транслю╓ адреси IP локально╖ мереж╕ в Internet"
+#: src/druid.c:334
+#, fuzzy
+msgid "Enable masquerading"
+msgstr "Ув╕мкнути звуки"
 
-#: src/druid.c:301
+#: src/druid.c:354
 msgid "Select your internal network interface:"
 msgstr "Вибер╕ть ваш внутр╕шн╕й мережевий ╕нтерфейс:"
 
-#: src/druid.c:309
+#: src/druid.c:362
+#, fuzzy
 msgid ""
-"Select your internal network device from the dropdown list. Go with the "
-"default if unsure."
+"This is the device that connects to your LAN. Go with the default if unsure."
 msgstr ""
-"Вибер╕ть ваш внутр╕шн╕й пристр╕й мереж╕ з списку. Залиште як ╓ якщо ви не "
-"впевнен╕."
+"Вибер╕ть ваш мережевий пристр╕й з списку. Якщо не впевнен╕, толиш╕ть що ╓."
 
-#: src/druid.c:317
+#: src/druid.c:370
 msgid "Autodetect internal network IP range"
 msgstr "Автовизначення д╕апазрну адрес IP внутр╕шньо╖ мереж╕"
 
-#: src/druid.c:319
+#: src/druid.c:372
 msgid "Select this and the IP range of your LAN is autodetected."
 msgstr "Вибер╕ть це ╕ д╕апазон IP вашо╖ локадьно╖ мереж╕ буде автовизначатися."
 
-#: src/druid.c:324
-msgid "Specify internal network IP range manually"
+#: src/druid.c:379
+#, fuzzy
+msgid "Specify internal network IP range manually (Not recommended)"
 msgstr "Вказати вручну д╕апазон адрес IP внутр╕шньо╖ мереж╕"
 
-#: src/druid.c:326
-msgid "Select this only if the autodetection fails."
+#: src/druid.c:381
+#, fuzzy
+msgid "Select this only if the automatic detection fails."
 msgstr "Вибер╕ть це лише якщо в╕дбува╓ться зб╕й автовизначення."
 
-#: src/druid.c:338
-msgid "Enter the your internal network address range:"
+#: src/druid.c:394
+#, fuzzy
+msgid "Enter the internal network address range:"
 msgstr "Введ╕ть д╕апазон адрес вашо╖ внутр╕шньо╖ мереж╕:"
 
-#: src/druid.c:350
+#: src/druid.c:408
+#, fuzzy
 msgid ""
-"The network range is given in the form of addess/mask. 192.168.1.0/24 is the "
-"most\n"
+"The network range is given in the form of address/mask. 192.168.0.0/24 is "
+"the most\n"
 "common IP range reserved for internal networks."
 msgstr ""
 "Д╕апазон мереж╕ вказу╓ться у форм╕ адреса/маска. 192.168.1.0/24 -- "
 "загальний\n"
 "д╕апазон IP зарезервований для внутр╕шн╕х мереж."
 
-#: src/druid.c:379
+#: src/druid.c:441
+msgid "Services Configuration"
+msgstr "Конф╕╜урац╕я серв╕с╕в"
+
+#: src/druid.c:450
 msgid ""
 "Do you run server software on your machine and want other people to have "
 "access\n"
@@ -226,102 +264,146 @@ msgstr ""
 "Ви запустили на ваш╕й машин╕ серверне забезпечення, до якого хочете надати "
 "доступ ╕ншим людям з мереж╕?"
 
-#: src/druid.c:387
+#: src/druid.c:458
 msgid "No, I do not run any public network services on my machine"
 msgstr "Н╕, н╕яких публ╕чних серв╕с╕в на ма╖й машин╕ не запущено"
 
-#: src/druid.c:392
+#: src/druid.c:465
 msgid "Yes, I run the following services on my machine:"
 msgstr "Так, на мо╖й машин╕ запущено так╕ серв╕си:"
 
-#: src/druid.c:494
+#: src/druid.c:572
+msgid "ICMP Configuration"
+msgstr "Конф╕╜урац╕я ICMP"
+
+#: src/druid.c:581
+#, fuzzy
 msgid ""
 "ICMP Packet Filtering can be useful to prevent some common\n"
 "Denial of Service (DoS) attacks on your network.\n"
 "\n"
-"Would you like to enable ICMP Filtering?\n"
+"Would you like to enable ICMP Filtering?"
 msgstr ""
 "Ф╕льтрування пакет╕в ICMP може бути корисним для уникнення деяких\n"
 "атак Denial of Service (DoS) у ваш╕й переж╕.\n"
 "\n"
 "Чи хочете ви ув╕мкнути ф╕льтрування ICMP?\n"
 
-#: src/druid.c:503
-msgid "I would like to filter all ICMP Packets"
-msgstr "Хот╕лось би ф╕льтрувати вс╕ пакети ICMP"
+#: src/druid.c:590
+msgid "Disable ICMP Filtering"
+msgstr ""
 
-#: src/druid.c:508
-msgid "I would like to filter the following ICMP Packets on my machine:"
-msgstr "Хот╕лось би ф╕льтрувати так╕ пакети ICMP на мо╖й машин╕:"
+#: src/druid.c:597
+msgid "Enable ICMP Filtering related to the following packets:"
+msgstr ""
 
-#: src/druid.c:586
+#: src/druid.c:669
+#, fuzzy
+msgid "Type of Service (ToS) Configuration"
+msgstr "Конф╕╜урац╕я серв╕с╕в"
+
+#: src/druid.c:678
+msgid ""
+"Type of Service filtering allows you to re-prioritize network\n"
+"services to allow higher throughput rates for commonly used services.\n"
+"\n"
+"Would you like to enable ToS Filtering?\n"
+msgstr ""
+
+#: src/druid.c:687
+msgid "Disable ToS Filtering"
+msgstr ""
+
+#: src/druid.c:694
+msgid "Enable ToS Filtering related to the following packets:"
+msgstr ""
+
+#: src/druid.c:715
+msgid ""
+"Check this option to enable Type of Service flags for common client "
+"applications, such as WWW, FTP, SSH & E-Mail."
+msgstr ""
+
+#: src/druid.c:722
+msgid ""
+"Check this option to enable Type of Service flags for common server "
+"applications, such as SQUID, FTPd, SSHd, STMP & POP Daemons."
+msgstr ""
+
+#: src/druid.c:729
+msgid ""
+"Selecting this option will automatically configure Type of Service for "
+"`Throughput' for both X and SSHd.You should select this ONLY if you need to "
+"run X over your link"
+msgstr ""
+
+#: src/druid.c:742
+msgid ""
+"Selecting this option will configure Type of Service flags for Maximum "
+"Throughput for the options you have selected."
+msgstr ""
+
+#: src/druid.c:746
+msgid "Reliability"
+msgstr ""
+
+#: src/druid.c:750
+msgid ""
+"Selecting this option will configure Type of Service flags for Maximum "
+"Reliability for the options you have selected."
+msgstr ""
+
+#: src/druid.c:754
+#, fuzzy
+msgid "Delay"
+msgstr "Заборонити"
+
+#: src/druid.c:758
+msgid ""
+"Selecting this option will configure Type of Service flags for Minimum Delay "
+"for the options you have selected."
+msgstr ""
+
+#: src/druid.c:785
+msgid ""
+"Welcome to Firestarter!\n"
+"\n"
+"\n"
+"This wizard will now help you to set up a firewall for your\n"
+"Linux machine. You will be asked some questions about\n"
+"your network setup.\n"
+"\n"
+"Press the next button to continue.\n"
+"\n"
+"\n"
+msgstr ""
+
+#: src/druid.c:822
+msgid ""
+"The wizard is now ready to generate your firewall.\n"
+"\n"
+"Press the finish button to continue, or the back button\n"
+"to review your choices.\n"
+"\n"
+msgstr ""
+
+#: src/druid.c:877
 msgid "You must be root to use the Firestarter wizard."
 msgstr "Ви змушен╕ бути root, щоб використовувати \"Пом╕чника з Firestarter\"."
 
-#: src/druid.c:591
+#: src/druid.c:894
 msgid "Firestarter Firewall Wizard"
 msgstr "Пом╕чник з брандмауера Firestarter"
 
-#. Create the basic druid pages
-#: src/druid.c:607
-msgid "Firestarter Wizard"
-msgstr "Пом╕чник з Firestarter"
-
-#: src/druid.c:608
-msgid ""
-"Welcome to the Firestarter Firewall Wizard\n"
-"\n"
-"This wizard will help you set up a customized packet filtering firewall\n"
-"for your Linux machine in just a few easy steps.\n"
-"\n"
-"\n"
-msgstr ""
-"Ласко просимо до пом╕чника з брандмауера Firestarter\n"
-"\n"
-"З його допомогою ви встановите ╕ налашту╓те пакет для ф╕льтрування\n"
-"брандмауером для вашо╖ Linux-машини за дек╕лька простих крок╕в.\n"
-"\n"
-"\n"
-
-#: src/druid.c:614
-msgid "Choose your external interface"
-msgstr "Вибер╕ть ваш зовн╕шн╕й ╕нтерфейс"
-
-#: src/druid.c:615
-msgid "IP Masquerading Configuration"
-msgstr "Конф╕╜урац╕я IP-маскараду"
-
-#: src/druid.c:616
-msgid "Services Configuration"
-msgstr "Конф╕╜урац╕я серв╕с╕в"
-
-#: src/druid.c:617
-msgid "ICMP Configuration"
-msgstr "Конф╕╜урац╕я ICMP"
-
-#: src/druid.c:619
-msgid "Wizard done"
-msgstr "Пом╕чник завершив роботу"
-
-#: src/druid.c:620
-msgid ""
-"The Firestarter wizard is done gathering the necessary data.\n"
-"Click the finish button to start the firewall.\n"
-"\n"
-msgstr ""
-"Пом╕чник з Firestarter завершив зб╕р необх╕дних даних.\n"
-"Натисн╕ть кнопку \"Завершити\", щоб запустити брандмауер.\n"
-"\n"
-
-#: src/preferences.c:167
+#: src/preferences.c:169
 msgid "General options"
 msgstr "Загальн╕ параметри"
 
-#: src/preferences.c:176
+#: src/preferences.c:178
 msgid "Start firewall on program startup"
 msgstr "Запускати брандмауер на запуску програми"
 
-#: src/preferences.c:178
+#: src/preferences.c:180
 msgid ""
 "Check this and the firewall will be restarted each time the program starts. "
 "Enabled by default."
@@ -329,11 +411,11 @@ msgstr ""
 "Вибер╕ть це ╕ брандмауер буде перезапускатись щоразу коли запуска╓ться "
 "програма. Типово ув╕мкнено."
 
-#: src/preferences.c:185
+#: src/preferences.c:187
 msgid "Stop firewall on program exit"
 msgstr "Зупиняти брандмауер на виход╕ з програми"
 
-#: src/preferences.c:187
+#: src/preferences.c:189
 msgid ""
 "Check this and the firewall will be stopped when you exit Firestarter. "
 "Enabled by default."
@@ -341,11 +423,11 @@ msgstr ""
 "Вибер╕ть це ╕ брандмауер буде зупинятись на виход╕ з Firestarter. Типово "
 "ув╕мкнено."
 
-#: src/preferences.c:194
+#: src/preferences.c:196
 msgid "Exit program when window is closed (otherwise hide)"
 msgstr "Виходити з програми на закриванн╕ в╕кна (╕накше прибирати)"
 
-#: src/preferences.c:196
+#: src/preferences.c:198
 msgid ""
 "By default when you close the program window the program is merely hidden, "
 "you can then make it visible again by clicking on the status button."
@@ -353,11 +435,11 @@ msgstr ""
 "Типово, коли ви закрива╓те в╕кно програми воно просто прибира╓ться, ви "
 "можете пот╕м знову зробити його видимим клацаючи на кнопку стану."
 
-#: src/preferences.c:203
+#: src/preferences.c:205
 msgid "Start hidden"
 msgstr "Запустити прихованим"
 
-#: src/preferences.c:205
+#: src/preferences.c:207
 msgid ""
 "Check this and Firestarter will start hidden. Click on the status button to "
 "unhide. Disabled by default."
@@ -365,50 +447,27 @@ msgstr ""
 "Вибер╕ть це ╕ Firestarter буде запускатись прихованим. Клацанням на кнопц╕ "
 "стану ви можете зробити його видимим. Типово вимкнено."
 
-#: src/preferences.c:212
-msgid "Remove identical firewall hit lines"
-msgstr "Видалити однаков╕ рядки потраплянь у брандмауер"
-
-#: src/preferences.c:214
-msgid ""
-"Check this and the firewall hit log will filter out identical lines. Enabled "
-"by deault."
-msgstr ""
-"Вибер╕ть це ╕ з журналу потраплянь у брандмауер буде видалено однаков╕ "
-"рядки. Типово ув╕мкнено."
-
-#: src/preferences.c:226
-msgid "Firewall syslog file:"
-msgstr "Файл журналу брандмауера:"
-
-#: src/preferences.c:231
-msgid ""
-"Enter the path to the file the syslog daemon logs to. This is almost always "
-"/var/log/messages."
-msgstr ""
-"Введ╕ть шлях до файлу журналу демона syslog. Зазвичай це /var/log/messages."
-
-#: src/preferences.c:278
+#: src/preferences.c:252
 msgid "Play current sound file"
 msgstr "В╕дтворити поточний звуковий файл"
 
-#: src/preferences.c:306
+#: src/preferences.c:280
 msgid "Sound options"
 msgstr "Звуков╕ параметри"
 
-#: src/preferences.c:314
+#: src/preferences.c:288
 msgid "Enable sounds"
 msgstr "Ув╕мкнути звуки"
 
-#: src/preferences.c:316
+#: src/preferences.c:290
 msgid "Check this if you want to hear sounds on certain events"
 msgstr "Ув╕мкн╕ть це, якщо ви хочете чути звуки на певних под╕ях"
 
-#: src/preferences.c:324
+#: src/preferences.c:298
 msgid "File to play on firewall hit:"
 msgstr "Файл для в╕дтворення на попаданн╕ у брандмауер:"
 
-#: src/preferences.c:329
+#: src/preferences.c:303
 msgid ""
 "Enter the path to the sound file that should be played when a firewall hit "
 "occurs."
@@ -416,22 +475,22 @@ msgstr ""
 "Введ╕ть шлях до звукового файлу який ма╓ звучати при на попаданн╕ в "
 "брандмауер."
 
-#: src/preferences.c:344
+#: src/preferences.c:318
 msgid "File to play on firewall stop:"
 msgstr "Файл для в╕дтворення на зупинц╕ брандмауера:"
 
-#: src/preferences.c:349
+#: src/preferences.c:323
 msgid ""
 "Enter the path to the sound file that should be played when the firewall is "
 "stopped."
 msgstr ""
 "Введ╕ть шлях до звукового файлу який ма╓ звучати при на зупинц╕ брандмауера."
 
-#: src/preferences.c:364
+#: src/preferences.c:338
 msgid "File to play on firewall restart:"
 msgstr "Файл для в╕дтворення на перезапуску брандмауера:"
 
-#: src/preferences.c:369
+#: src/preferences.c:343
 msgid ""
 "Enter the path to the sound file that should be played when the firewall is "
 "restarted."
@@ -439,32 +498,77 @@ msgstr ""
 "Введ╕ть шлях до звукового файлу який ма╓ звучати при на перезапуску "
 "брандмауера."
 
-#: src/preferences.c:440
+#: src/preferences.c:415
 msgid "Never log these ports"
 msgstr "Не вести журнал за цими портами"
 
-#: src/preferences.c:472
+#: src/preferences.c:447
 msgid "Add"
 msgstr "Додати"
 
-#: src/preferences.c:500
+#: src/preferences.c:460
+#, fuzzy
+msgid "Misc. options"
+msgstr "Параметри пом╕чника"
+
+#: src/preferences.c:470
+#, fuzzy
+msgid "Syslog file:"
+msgstr "Файл журналу брандмауера:"
+
+#: src/preferences.c:479
+msgid ""
+"Enter the path to the file the syslog daemon logs to. This is almost always "
+"/var/log/messages."
+msgstr ""
+"Введ╕ть шлях до файлу журналу демона syslog. Зазвичай це /var/log/messages."
+
+#: src/preferences.c:493
+#, fuzzy
+msgid "Filter identical hits"
+msgstr "Потрапляння в брандмауер"
+
+#: src/preferences.c:495
+msgid ""
+"Check this and the firewall hit log will filter out identical lines. Enabled "
+"by deault."
+msgstr ""
+"Вибер╕ть це ╕ з журналу потраплянь у брандмауер буде видалено однаков╕ "
+"рядки. Типово ув╕мкнено."
+
+#: src/preferences.c:519
 msgid "Wizard options"
 msgstr "Параметри пом╕чника"
 
-#: src/preferences.c:508
-msgid "Always show IP Masquerade page in wizard"
+#: src/preferences.c:527
+#, fuzzy
+msgid "Show every page in wizard"
 msgstr "Завжди показувати в пом╕чнику стор╕нку маскараду IP"
 
-#: src/preferences.c:510
-msgid ""
-"Check this and the IP Masquerade page will always be available in the wizard"
+#: src/preferences.c:529
+#, fuzzy
+msgid "Check this and every wizard page will be available in the wizard"
 msgstr "Вибер╕т це ╕ стор╕нка маскараду IP завжди буде доступною з пом╕чника"
 
-#: src/preferences.c:515
-msgid "Try to detect the location of ipchains/iptables"
+#: src/preferences.c:534
+msgid "Filter Outbound Packets"
+msgstr ""
+
+#: src/preferences.c:536
+#, fuzzy
+msgid ""
+"Check this and Firestarter will also filter Outbound packets. Do not check "
+"unless you are sure you need it."
+msgstr ""
+"Вибер╕ть це ╕ Firestarter буде шукати положення деяких необх╕дних програм. "
+"Не вибирайте якщо у вас нема╓ проблем."
+
+#: src/preferences.c:542
+#, fuzzy
+msgid "Try to detect the location of system binaries"
 msgstr "Спробувати визначити розм╕щення ipchains/iptables"
 
-#: src/preferences.c:517
+#: src/preferences.c:544
 msgid ""
 "Check this and Firestarter will search for the location of some needed "
 "binaries. Do not check unless you're having problems."
@@ -472,62 +576,62 @@ msgstr ""
 "Вибер╕ть це ╕ Firestarter буде шукати положення деяких необх╕дних програм. "
 "Не вибирайте якщо у вас нема╓ проблем."
 
-#: src/preferences.c:523
-msgid "Preferred packet rejection method (ipchains only)"
+#: src/preferences.c:550
+#, fuzzy
+msgid "Preferred packet rejection method"
 msgstr "Кращий метод в╕дкидання (лише ipchains)"
 
-#: src/preferences.c:531
+#: src/preferences.c:558
 msgid "Deny"
 msgstr "Заборонити"
 
-#: src/preferences.c:533
-msgid "Checking this box will simple ignore the unauthorized packets."
+#: src/preferences.c:560
+#, fuzzy
+msgid "Checking this box will simply ignore the unauthorized packets."
 msgstr "Виб╕р цього призведе до ╕╜норування неавторизованих пакет╕в"
 
-#: src/preferences.c:539
+#: src/preferences.c:566
 msgid "Reject"
 msgstr "В╕дкидати"
 
-#: src/preferences.c:541
-msgid ""
-"Check this and your machine will send an icmp reply to the sender of the "
-"rejected packets"
-msgstr ""
-"Ваша машина буде в╕дсилати ICMP-в╕дпов╕дь в╕дправнику в╕дкинутих пакет╕в"
+#: src/preferences.c:568
+#, fuzzy
+msgid "Checking this box will reject the unauthorized packets"
+msgstr "Виб╕р цього призведе до ╕╜норування неавторизованих пакет╕в"
 
-#: src/preferences.c:546
+#: src/preferences.c:573
 msgid "You must rerun the wizard for the changes to take effect"
 msgstr "Необх╕дно перезапустити пом╕чника, щоб зм╕ни вступили в д╕ю"
 
-#: src/preferences.c:607
+#: src/preferences.c:637
 msgid "Firestarter: Preferences"
 msgstr "Firestarter: параметри"
 
-#: src/preferences.c:621
+#: src/preferences.c:651
 msgid "General"
 msgstr "Загальн╕"
 
-#: src/preferences.c:622
+#: src/preferences.c:652
 msgid "Logging"
 msgstr "Журналювання"
 
-#: src/preferences.c:623
+#: src/preferences.c:653
 msgid "Sounds"
 msgstr "Звуки"
 
-#: src/preferences.c:624
+#: src/preferences.c:654
 msgid "Advanced"
 msgstr "Додатков╕"
 
-#: src/preferences.c:703
+#: src/preferences.c:733
 msgid "Select the syslog log file"
 msgstr "Вибер╕ть журнальний файл syslog"
 
-#: src/preferences.c:704
+#: src/preferences.c:734
 msgid "Select the file to play a sound"
 msgstr "Вибер╕ть файл для в╕дтворення звуку"
 
-#: src/preferences.c:738
+#: src/preferences.c:768
 msgid "Browse"
 msgstr "Перегляд"
 
@@ -535,91 +639,100 @@ msgstr "Перегляд"
 msgid "unknown"
 msgstr "нев╕домо"
 
-#: src/menus.c:30 src/menus.c:41
+#: src/menus.c:32 src/menus.c:43
 msgid "R_estart firewall"
 msgstr "Перезапустити брандмауера"
 
-#: src/menus.c:31 src/menus.c:42
+#: src/menus.c:33 src/menus.c:44
 msgid "_Stop firewall"
 msgstr "Зупинити брандмауера"
 
-#: src/menus.c:40
+#: src/menus.c:42
 msgid "_Run firewall wizard"
 msgstr "Запустити пом╕чника з брандмауера"
 
-#: src/menus.c:50
+#: src/menus.c:45
+msgid "_Halt all network traffic"
+msgstr ""
+
+#: src/menus.c:53
 msgid "_Clear firewall hit list"
 msgstr "Очистити список потраплянь у брандмауер"
 
-#: src/menus.c:51
+#: src/menus.c:54
 msgid "R_eload entire firewall hit list"
 msgstr "Перезавантажити весь список потраплянь у брандмауер"
 
-#: src/menus.c:52
+#: src/menus.c:55
 msgid "_Save firewall hit list to file"
 msgstr "Зберегти список потраплянь у брандмауер у файл╕"
 
-#: src/menus.c:62
+#: src/menus.c:60
+#, fuzzy
+msgid "Firestarter _Homepage"
+msgstr "Пом╕чник з Firestarter"
+
+#: src/menus.c:67
 msgid "_Firewall"
 msgstr "Брандмауер"
 
-#: src/menus.c:63
+#: src/menus.c:68
 msgid "_Hit list"
 msgstr "Список потраплянь"
 
-#: src/menus.c:69
+#: src/menus.c:74
 msgid "Run firewall wizard"
 msgstr "Запустити пом╕чника з брандмауера"
 
-#: src/menus.c:71
+#: src/menus.c:76
 msgid "Clear firewall hit list"
 msgstr "Очистити список потраплянь у брандмауер"
 
-#: src/menus.c:72
+#: src/menus.c:77
 msgid "Reload entire firewall hit list"
 msgstr "Перезавантажити весь список потраплянь у брандмауер"
 
-#: src/menus.c:73
+#: src/menus.c:78
 msgid "Save firewall hit list to file"
 msgstr "Зберегти список потраплянь у брандмауер у файл╕"
 
-#: src/menus.c:75
+#: src/menus.c:80
 msgid "Restart firewall"
 msgstr "Перезапустити брандмауер"
 
-#: src/menus.c:76
+#: src/menus.c:81
 msgid "Stop firewall"
 msgstr "Зупинити брандмауер"
 
-#: src/menus.c:81
+#: src/menus.c:86
 msgid "Deny all connections from machine"
 msgstr "Заблокувати вс╕ з'╓днання в╕д"
 
-#: src/menus.c:82
+#: src/menus.c:87
 msgid "Allow all connections from machine"
 msgstr "Дозволити вс╕ з'╓днання в╕д"
 
-#: src/menus.c:86
+#: src/menus.c:91
 msgid "Do not log this port"
 msgstr "Не журналювати цей порт"
 
-#: src/menus.c:87
+#: src/menus.c:92
 msgid "Lookup hostname"
 msgstr "Пошук назви машини"
 
-#: src/menus.c:92
+#: src/menus.c:97
 msgid "Remove this rule"
 msgstr "Видалити це правило"
 
-#: src/menus.c:93
+#: src/menus.c:98
 msgid "Remove all rules in this group"
 msgstr "Видалити вс╕ правила у ц╕й груп╕"
 
-#: src/menus.c:94
+#: src/menus.c:99
 msgid "Remove all rules in all groups"
 msgstr "Видалити вс╕ правили у вс╕х групах"
 
-#: src/addrules.c:97 src/menus.c:96
+#: src/addrules.c:97 src/menus.c:101
 msgid "Add new rule"
 msgstr "Додати нове правило"
 
@@ -646,3 +759,73 @@ msgstr "Д╕апазон IP-адрес для яких в╕дкрито серв╕с:"
 #: src/savelog.c:55
 msgid "Select file to save log to"
 msgstr "Вибер╕ть файл для збереження журналу"
+
+#: src/ipchains-script.c:489 src/netfilter-script.c:502
+#, fuzzy, c-format
+msgid "Firewall script saved as %s\n"
+msgstr "Сценар╕й брандмауера перезапущено\n"
+
+#~ msgid "Logfile \""
+#~ msgstr "Файл журналу \""
+
+#~ msgid "Start Firestarter on PPP connect"
+#~ msgstr "Запуск Firestarter на з'╓днанн╕ PPP"
+
+#~ msgid "No, I do not use IP Masquerading on my LAN"
+#~ msgstr "Н╕, я не використовую маскарад IP в локальн╕й мереж╕"
+
+#~ msgid ""
+#~ "Yes, this machine translates the IP addresses of my LAN for the Internet"
+#~ msgstr "Так, ця машина транслю╓ адреси IP локально╖ мереж╕ в Internet"
+
+#~ msgid ""
+#~ "Select your internal network device from the dropdown list. Go with the "
+#~ "default if unsure."
+#~ msgstr ""
+#~ "Вибер╕ть ваш внутр╕шн╕й пристр╕й мереж╕ з списку. Залиште як ╓ якщо ви не "
+#~ "впевнен╕."
+
+#~ msgid "I would like to filter all ICMP Packets"
+#~ msgstr "Хот╕лось би ф╕льтрувати вс╕ пакети ICMP"
+
+#~ msgid "I would like to filter the following ICMP Packets on my machine:"
+#~ msgstr "Хот╕лось би ф╕льтрувати так╕ пакети ICMP на мо╖й машин╕:"
+
+#~ msgid ""
+#~ "Welcome to the Firestarter Firewall Wizard\n"
+#~ "\n"
+#~ "This wizard will help you set up a customized packet filtering firewall\n"
+#~ "for your Linux machine in just a few easy steps.\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Ласко просимо до пом╕чника з брандмауера Firestarter\n"
+#~ "\n"
+#~ "З його допомогою ви встановите ╕ налашту╓те пакет для ф╕льтрування\n"
+#~ "брандмауером для вашо╖ Linux-машини за дек╕лька простих крок╕в.\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Choose your external interface"
+#~ msgstr "Вибер╕ть ваш зовн╕шн╕й ╕нтерфейс"
+
+#~ msgid "Wizard done"
+#~ msgstr "Пом╕чник завершив роботу"
+
+#~ msgid ""
+#~ "The Firestarter wizard is done gathering the necessary data.\n"
+#~ "Click the finish button to start the firewall.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Пом╕чник з Firestarter завершив зб╕р необх╕дних даних.\n"
+#~ "Натисн╕ть кнопку \"Завершити\", щоб запустити брандмауер.\n"
+#~ "\n"
+
+#~ msgid "Remove identical firewall hit lines"
+#~ msgstr "Видалити однаков╕ рядки потраплянь у брандмауер"
+
+#~ msgid ""
+#~ "Check this and your machine will send an icmp reply to the sender of the "
+#~ "rejected packets"
+#~ msgstr ""
+#~ "Ваша машина буде в╕дсилати ICMP-в╕дпов╕дь в╕дправнику в╕дкинутих пакет╕в"
