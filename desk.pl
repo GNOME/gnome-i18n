@@ -81,9 +81,9 @@ else{
 
 
     stat("MISSING.$SEARCH");
-        print "Well, you need to fix these:\n\n" if -s _;
+        print "\nWell, you need to fix these:\n\n" if -s _;
         print @result if -s _;
         print "\nThe list is saved in MISSING.$SEARCH\n" if -s _;
         print "\nWell, it's all perfect! Congratulation!\n" if -z _;
-        `rm MISSING.$SEARCH` if -z _;
+        unlink "MISSING.$SEARCH" if -z _;
 }
