@@ -1,4 +1,4 @@
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN" [
+<!DOCTYPE ARTICLE PUBLIC "-//OASIS//DTD DocBook V3.1//EN" [
 <!ENTITY  % ISOLat1     PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN">
 %ISOLat1;
 <!ENTITY % ISOnum       PUBLIC
@@ -9,61 +9,64 @@
 %ISOpub;
 ]>
 
-<book id="index" lang="de">
-  <bookinfo>
+<article id="index" lang="de">
+  <artheader>
+    <date>$Date$</date>
     <title>Deutsche GNOME &Uuml;bersetzungen</title>
-    <subtitle>Strings in po-Dateien</subtitle>
+    <subtitle>Meldungen in po-Dateien</subtitle>
     <titleabbrev>GNOME-DE-DOK</titleabbrev>
-    <edition>v0.2</edition>
-
+    <edition>v0.3</edition>
     <authorgroup>
       <author>
         <firstname>Christian</firstname>
-	<othername>"chrisime"</othername>
+        <othername>"chrisime"</othername>
         <surname>Meyer</surname>
-	<authorblurb>
-	  <para><email>linux@chrisime.de</email></para>
-          <para>UIN: 72107443</para>
-	</authorblurb>
+	   <affiliation>
+<!--   <orgname>GNOME</orgname> -->
+	     <address>
+            <email>cm@ggtt.de</email>
+          </address>
+	   </affiliation>
       </author>
       <author>
         <firstname>Benedikt</firstname>
-	<othername>"bratislav"</othername>
+        <othername>"bratislav"</othername>
         <surname>Roth</surname>
-	<authorblurb>
-	  <para><email>Benedikt.Roth@gmx.net</email></para>
-          <para>UIN: 21132692</para>
-	</authorblurb>
+        <affiliation>
+<!--   <orgname>GNOME</orgname> -->
+          <address>
+            <email>br@ggtt.de</email>
+          </address>
+        </affiliation>
       </author>
     </authorgroup>
 
     <copyright>
-      <year>2000</year> <holder>Christian Meyer</holder>
+        <year>2000</year>
+        <holder>Christian Meyer</holder>
     </copyright>
-    <copyright>
-      <year>2000</year> <holder>Benedikt Roth</holder>
-    </copyright>
-     <legalnotice>
-      <blockquote>
-        <para>
-          Permission is granted to copy, distribute and/or modify this document under the terms of the 
-          <citetitle>GNU Free Documentation License</citetitle>, Version 1.1 or any later version published
-          by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-
-          Cover Texts. You may obtain a copy of the <citetitle>GNU Free Documentation License</citetitle> 
-          from the Free Software Foundation by visiting <ulink type="http" url="http://www.fsf.org">their Web site</ulink> 
-          or by writing to: Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
-        </para>
-      </blockquote>      
-    </legalnotice>
     
-    <date>$Date$</date> 
-
-    <abstract id="abstract">
+    <copyright>
+      <year>2000</year>
+      <holder>Benedikt Roth</holder>
+    </copyright>
+    <abstract>
+      <para>
+        Permission is granted to copy, distribute and/or modify this document under the terms of the 
+        <citetitle>GNU Free Documentation License</citetitle>, Version 1.1 or any later version published
+        by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-
+        Cover Texts. You may obtain a copy of the <citetitle>GNU Free Documentation License</citetitle> 
+        from the Free Software Foundation by visiting <ulink type="http" url="http://www.fsf.org">their Web site</ulink> 
+        or by writing to: Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+      </para>
+    </abstract>      
+        
+<!--    <abstract id="abstract">
       <para>
         Dieses Dokument enthält Tips und Richtlinien für die &Uuml;bersetzung des GNOME Desktops ins Deutsche.
       </para>
     </abstract>
-
+-->
     <keywordset>
     <keyword>GNOME</keyword>
     <keyword>&Uuml;bersetzung</keyword>
@@ -71,14 +74,12 @@
     <keyword>German Translation Team</keyword>
     <keyword>GNOME Translation Project (GTP)</keyword>
     </keywordset>
-  </bookinfo>
+  </artheader>
 
-  <toc></toc>
-
-  <chapter id="anmerkungen">
+  <sect1 id="anmerkungen">
     <title>Anfang</title>
 
-    <sect1 id="ueberdieseddokument">
+    <sect2 id="ueberdieseddokument">
       <title>&Uuml;ber dieses Dokument</title>
 
       <para>
@@ -95,9 +96,9 @@
         Wenn es uns zeitlich m&ouml;glich ist, werden wir jedes Wochenende eine neue Version ins Netz stellen!
       </para></important>
     
-    </sect1>
+    </sect2>
 
-    <sect1 id="hinweisedesauthors">
+    <sect2 id="hinweisedesauthors">
       <title>Hinweis des Authors</title>
 
         <para>
@@ -106,11 +107,11 @@
           Autoren schicken, damit wir eventuelle Fehler sofort beseitigen k&ouml;nnen. Alternativ k&ouml;nnen dazu auch in der deutschen Mailingliste (gnome-de@gnome.org)
           Fragen gestellt werden. Ausserdem findet jeden Mittwoch am Abend eine Diskussion im IRC-Chat statt (irc.gnome.org, #de). Wer Lust hat, kann gerne vorbeischauen.
        </para>
-     </sect1>
+     </sect2>
 
-  </chapter>
+  </sect1>
 
-  <chapter id="grundsatz">
+  <sect1 id="grundsatz">
     <title>Grundsätzliches</title>
 
       <para>
@@ -187,23 +188,23 @@
         und klingen nicht ganz so &quot;zusammmengew&uuml;rfelt&quot;.
       </para>
 
-  </chapter>
+  </sect1>
 
-  <chapter id="hotkey">
+  <sect1 id="hotkey">
     <title>Hotkeys</title>
     
-    <sect1 id="problem">
+    <sect2 id="problem1">
     <title>Das Problem</title>
     
     <para>
       Momentan fehlt es den Hotkeys in den Men&uuml;s an Einheitlichkeit. So wurde beispielsweise einmal &quot;Datei _speichern unter&quot;, dann mal wieder
-      &quot;Datei speichern _unter&quot; gew&auml;hlt! Auch hier ist es wichtig sich zu einigen, da sonst jedes Programm andere Hotkeys hat, was dem User den Umgang 
+      &quot;Datei speichern _unter&quot; gew&auml;hlt! Auch hier ist es wichtig sich zu einigen, da sonst jedes Programm andere Hotkeys hat, was dem Benutzer den Umgang 
       mit den Programmen zus&auml;tzlich erschwert! Der Gro&szlig;teil der &Uuml;bersetzer hat sich auf folgenden Standard geeinigt:
     </para>
     
-    </sect1>
+    </sect2>
     
-    <sect1 id="loesung">
+    <sect2 id="loesung1">
     <title>Die L&ouml;sung</title>
     
     <itemizedlist>
@@ -264,13 +265,61 @@
     
     </itemizedlist>
     
-    </sect1>
+    </sect2>
     
-  </chapter>
+  </sect1>
                     
-  <chapter id="lexikon">
+  <sect1 id="nomen">
+    <title>Wann ein &quot;-&quot; und wann nicht...</title>
+    
+    <sect2 id="problem2">
+    <title>Das Problem</title>
+    
+      <para>
+        Es kommt &ouml;fter vor, dass W&ouml;rter aus zusammengesetzten Nomen bestehen. So z.B. <emphasis>Dateioptionsmen&uuml;</emphasis>. Soll man nun das Wort
+        zusammenschreiben oder es &quot;irgendwo&quot; mit einem Bindestrich trennen? Man muss dabei &uuml;berpr&uuml;fen, welche Nomen zusammengeh&ouml;ren
+        und welche nicht. Das ist zumeist ein sehr gro&szlig;es Problem. Im o.g. Fall kann man entweder <emphasis>Dateioptions-Men&uuml;</emphasis> oder <emphasis>
+        Datei-Optionsmen&uuml;</emphasis> sagen; auch <emphasis>Datei-Options-Men&uuml;</emphasis> w&auml;re hier eine M&ouml;glichkeit. Bis jetzt wurde dies in
+        jeder &Uuml;bersetzung nach Gef&uuml;hl gemacht. Es sollte jedoch von nun an ein gewisses Schema dahinterstecken, wie, wann und wo man trennt. Deshalb folgender
+        Vorschlag f&uuml;r die Zukunft...
+      </para>
+    
+    </sect2>
+    
+    <sect2 id="loesung2">
+    <title>Die L&ouml;sung</title>
+    
+      <para>
+        Generell sollte man bei zusammengesetzten W&ouml;rtern die aus einem Teil englisch und aus dem anderen deutsch sind einen Bindestrich benutzen:
+      </para>
+      
+      <note>
+      <para>
+        Die Server-Adresse konnte nicht ermittelt werden.
+      </para>
+           
+       <para>
+        In Men&uuml;s sollte man, um obiges Beispiel noch einmal aufzugrifen <emphasis>Datei-Optionsmen&uuml;</emphasis> benutzen.
+      </para>
+      
+      <para>
+        Ansonsten, wenn es m&ouml;glich ist sind Umschreibungen auf jeden Fall besser als &quot;Verkettungen&quot;! <emphasis>Men&uuml; f&uuml;r Dateioptionen</emphasis>
+      </para>
+      </note>
+ 
+   </sect2>
+ 
+ </sect1>
+      
+  <sect1 id="lexikon">
     <title>Lexikon</title>
 
+      <para>
+        Auf den nachfolgenden Seiten werden Tipps f&uuml;r &Uuml;bersetzungen in den verschiedenen Bereichen gegeben, die m&ouml;glichst befolgt werden sollen.
+        Falls es Fragen oder Unklarheiten gibt, so sollte eine E-Mail mit dem Problem an einen der Autoren geschickt werden.
+      </para>
+  </sect1>
+        
     <sect1 id="dialoge">
     <title>Dialogfelder</title>
 
@@ -829,16 +878,17 @@
     <title>Strings nach Kategorien</title>
       
       <para>!!!FIXME!!!</para>
-        
+      <para>Ich bitte jeden, mir Ideen mitzuteilen, wie dieser Paragraph aussehen soll!!!! Bitte E-Mail an <emphasis>cm@ggtt.de</emphasis> oder 
+      <emphasis>br@ggtt.de</emphasis>. Im Voraus, ein recht herzliches Dankesch&ouml;n :-)</para>
+      
         <sect2 id="kategorie-foo">
         <title>Kategorie: Foo</title>
             
           <para>!!!FIXME!!!</para>
+          <para>Hier sollte was stehen! Eure Ideen bitte...</para>
           
         </sect2>
           
     </sect1>
                 
-  </chapter>  
-
-</book>
+</article>
