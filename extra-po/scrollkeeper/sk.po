@@ -1,22 +1,38 @@
+# translation of sk.po to Slovak
 # scrollkeeper Slovak translation.
-# Copyright (C) 2001 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002 Free Software Foundation, Inc.
 # Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2001.
+# Stanislav Vi¹òovský <visnovsky@nenya.ms.mff.cuni.cz>, 2002
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: scrollkeeper\n"
-"POT-Creation-Date: 2001-12-03 01:39-0600\n"
-"PO-Revision-Date: 2002-01-04 16:08CET\n"
-"Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
+"Project-Id-Version: sk\n"
+"POT-Creation-Date: 2002-06-19 22:48-0500\n"
+"PO-Revision-Date: 2002-07-03 17:32+0200\n"
+"Last-Translator: Stanislav Vi¹òovský <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 1.0beta2\n"
 
 #: cl/src/scrollkeeper-install.c:34
-msgid "Usage: scrollkeeper-install [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Pou¾itie: scrollkeeper-install [-p <SCROLLKEEPER_DB_PRIEÈ>] <OMF SÚBOR>\n"
+msgid "Usage: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
+msgstr "Pou¾itie: scrollkeeper-install [-v] [-q] [-p <SCROLLKEEPER_DB_PRIEÈ>] <OMF SÚBOR>\n"
+
+#: cl/src/scrollkeeper-install.c:95
+msgid "Could not create database.  Aborting install.\n"
+msgstr "Nepodarilo sa vytvori» databázu. Preru¹ujem in¹taláciu.\n"
+
+#: cl/src/scrollkeeper-install.c:99 cl/src/update.c:524
+#, c-format
+msgid "Registering %s\n"
+msgstr "Registrujem %s\n"
+
+#: cl/src/scrollkeeper-install.c:101 cl/src/update.c:521
+#, c-format
+msgid "Unable to register %s\n"
+msgstr "Nepodarilo sa registrova» %s\n"
 
 #: cl/src/preinstall.c:35
 msgid "Usage: scrollkeeper-preinstall <DOC FILE> <OMF FILE> <NEW OMF FILE>\n"
@@ -24,80 +40,159 @@ msgstr "Pou¾itie: scrollkeeper-preinstall <DOC SÚBOR> <OMF SÚBOR> <NOVÝ OMF SÚBO
 
 #: cl/src/preinstall.c:68
 #, c-format
-msgid "url update in OMF file %s failed\n"
-msgstr "Aktualizácia URL v súbore OMF %s zlyhala\n"
+msgid "Unable to update URL in OMF file %s.  Copying OMF file unchanged.\n"
+msgstr ""
+"Aktualizácia URL v súbore OMF %s zlyhala. Kopírovanie súboru OMF "
+"nezmenené.\n"
 
 #: cl/src/scrollkeeper-uninstall.c:32
-msgid "Usage: scrollkeeper-uninstall [-v] [-p <SCROLLKEEPER_DB_DIR>] <OMF FILE>\n"
-msgstr "Pou¾itie: scrollkeeper-uninstall [-p <SCROLLKEEPER_DB_PRIEÈ>] <OMF SÚBOR>\n"
+msgid ""
+"Usage: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] <OMF "
+"FILE>\n"
+msgstr "Pou¾itie: scrollkeeper-uninstall [-v] [-q] [-p <SCROLLKEEPER_DB_PRIEÈ>] <OMF SÚBOR>\n"
 
-#: cl/src/update.c:109
+#: cl/src/scrollkeeper-uninstall.c:86 cl/src/update.c:539
 #, c-format
-msgid "Usage: %s [-v] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
-msgstr "Pou¾itie: %s [-p <SCROLLKEEPER_DB_PRIEÈ>] [-o <OMF_SÚBOR>]\n"
+msgid "Unregistering %s\n"
+msgstr "Odregistrovávam %s\n"
 
-#: cl/src/update.c:221
+#: cl/src/update.c:108
+#, c-format
+msgid "Usage: %s [-v] [-q] [-p <SCROLLKEEPER_DB_DIR>] [-o <OMF_DIR>]\n"
+msgstr "Pou¾itie: %s [-v] [-q] [-p <SCROLLKEEPER_DB_PRIEÈ>] [-o <OMF_SÚBOR>]\n"
+
+#: cl/src/update.c:220
 #, c-format
 msgid "%s: warning: %s overrides %s\n"
 msgstr "%s: varovanie: %s predefinováva %s\n"
 
-#: cl/src/update.c:500
+#: cl/src/update.c:410
+msgid "Could not create database.  Aborting update.\n"
+msgstr "Nepodarilo sa vytvori» databázu. Konèím aktualizáciu.\n"
+
+#: cl/src/update.c:505
 #, c-format
 msgid "%s: %s: is not a directory\n"
 msgstr "%s: %s: nie je prieèinok\n"
 
+#: cl/src/update.c:530
+#, c-format
+msgid "Updating %s\n"
+msgstr "Aktualizujem %s\n"
+
+#: cl/src/update.c:533
+#, c-format
+msgid "Unable to complete update.  Could not register %s\n"
+msgstr "Nepodarilo sa dokonèi» aktualizáciu. Nebolo mo¾né zaregistrova» %s\n"
+
 #: cl/src/get-cl.c:55
-msgid "Can not open temporary file\n"
-msgstr "Nepodarilo sa otvori» doèasný súbor\n"
+msgid "Cannot open temporary file.\n"
+msgstr "Nepodarilo sa otvori» doèasný súbor.\n"
 
 #: cl/src/get-cl.c:93
 #, c-format
 msgid "Usage: %s [-v] <LOCALE> <CATEGORY TREE FILE NAME>\n"
 msgstr "Pou¾itie: %s [-v] <LOKALIZÁCIA> <MENO SÚBORU SO STROMOM KATEGÓRIÍ>\n"
 
-#: cl/src/get-cl.c:134
+#: cl/src/get-cl.c:133
 msgid "No Content List for this locale!!!\n"
 msgstr "Pre túto lokalizáciu nie je Obsah!!!\n"
 
-#: toc/src/toc.c:488
-#, c-format
-msgid "error while parsing %s\n"
-msgstr "chyba pri spracovaní %s\n"
-
-#: toc/src/toc.c:502
-msgid ""
-"Usage:  toc <filename>\n"
-"\n"
-msgstr ""
-"Pou¾itie:  toc <menosúboru>\n"
-"\n"
-
-#: libs/error.c:80
+#: libs/error.c:114
 #, c-format
 msgid "%s: out of memory: %s\n"
 msgstr "%s: nedostatok pamäte: %s\n"
 
-#: libs/install.c:163
+#: libs/error.c:262
 #, c-format
-msgid "wrong omf file %s\n"
-msgstr "nesprávny súbor OMF %s\n"
+msgid "OMF validation error: %s"
+msgstr "Chyba pri overení OMF: %s"
 
-#: libs/install.c:193 libs/uninstall.c:98
+#: libs/install.c:132
+#, c-format
+msgid "TOC file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr "Súbor s obsahom neexistuje, nedá sa preèíta» alebo obsahuje neplatné XML: %s\n"
+
+#: libs/install.c:173
+#, c-format
+msgid "OMF file does not exist, is not readable, or is not well-formed XML: %s\n"
+msgstr "Súbor OMF neexistuje, nedá sa preèíta» alebo obsahuje neplatné XML: %s\n"
+
+#: libs/install.c:182
+#, c-format
+msgid "Could not parse ScrollKeeper-OMF DTD: %s\n"
+msgstr "Nepodarilo sa spracova» ScrollKeeper-OMF DTD: %s\n"
+
+#: libs/install.c:190
+#, c-format
+msgid "OMF file [%s] does not validate against ScrollKeeper-OMF DTD: %s\n"
+msgstr "Súbor OMF [%s] neodpovedá ScrollKeeper-OMF DTD: %s\n"
+
+#. This should not happen
+#: libs/install.c:207
+msgid "Failed to locate an <OMF> element.\n"
+msgstr "Nepodarilo sa nájs» element <OMF>.\n"
+
+#. This should not happen
+#: libs/install.c:212
+msgid "<OMF> node has no children.\n"
+msgstr "Uzol <OMF> nemá ¾iadnych potomkov.\n"
+
+#: libs/install.c:236
+#, c-format
+msgid ""
+"Content list file does not exist, is not readable, or is not well-formed "
+"XML: %s\n"
+msgstr ""
+"Súbor s obsahom neexistuje, nie je mo¾né ho preèíta» alebo obsahuje neplatné "
+"XML: %s\n"
+
+#: libs/install.c:243
+#, c-format
+msgid ""
+"Extended content list file does not exist, is not readable, or is not well-"
+"formed XML: %s\n"
+msgstr ""
+"Súbor s roz¹íreným obsahom neexistuje, nie je mo¾né ho preèíta» alebo "
+"obsahuje neplatné XML: %s\n"
+
+#: libs/uninstall.c:97
 #, c-format
 msgid "wrong content list file %s\n"
 msgstr "nesprávny súbor obsahu %s\n"
 
-#: libs/install.c:200 libs/uninstall.c:105
+#: libs/uninstall.c:104
 #, c-format
 msgid "wrong extended content list file %s\n"
 msgstr "nesprávny roz¹írený súbor obsahu %s\n"
 
-#: libs/uninstall.c:202
+#: libs/uninstall.c:201
 #, c-format
 msgid "%s missing\n"
 msgstr "%s chýba\n"
 
-#: extract/src/scrollkeeper-extract.c:29
+#: libs/database.c:41
+#, c-format
+msgid "Could not create directory %s : %s\n"
+msgstr "Nepodarilo sa vytvori» prieèinok %s: %s\n"
+
+#: libs/update-url.c:40
+msgid "OMF file was not well-formed.\n"
+msgstr "Súbor OMG nie je správne formátovaný.\n"
+
+#: libs/update-url.c:48
+msgid "Could not find root element of OMF file.\n"
+msgstr "Nepodarilo sa nájs» koreòový element súboru OMF.\n"
+
+#: libs/update-url.c:52
+msgid "Root element of OMF file is not <omf>.\n"
+msgstr "Koreòový element súboru OMF nie je <omf>.\n"
+
+#: libs/update-url.c:64
+msgid "OMF file does not have <resource> element.\n"
+msgstr "Súbor OMG neobsahuje element <resource>.\n"
+
+#: extract/src/scrollkeeper-extract.c:30
 msgid ""
 "Usage: scrollkeeper-extract <xml file> <stylesheet 1> <output file 1> "
 "<stylesheet 2> <output file 2> ...\n"
@@ -105,9 +200,10 @@ msgstr ""
 "Pou¾itie: scrollkeeper-extract <súbor xml> <stylesheet 1> <výstupný súbor 1> "
 "<stylesheet 2> <výstupný súbor 2> ...\n"
 
-#: extract/src/scrollkeeper-extract.c:56
-msgid "Unrecognized file type\n"
-msgstr "Nerozpoznaný typ súboru\n"
+#: extract/src/scrollkeeper-extract.c:61
+#, c-format
+msgid "Unrecognized file type: %s\n"
+msgstr "Nerozpoznaný typ súboru: %s\n"
 
 #: cl/templates/scrollkeeper_cl.xml.in.h:1
 msgid "3D Modelling"
@@ -816,4 +912,17 @@ msgstr "X"
 #: cl/templates/scrollkeeper_cl.xml.in.h:177
 msgid "gtk++"
 msgstr "gtk++"
+
+#~ msgid "error while parsing %s\n"
+#~ msgstr "chyba pri spracovaní %s\n"
+
+#~ msgid ""
+#~ "Usage:  toc <filename>\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Pou¾itie:  toc <menosúboru>\n"
+#~ "\n"
+
+#~ msgid "wrong omf file %s\n"
+#~ msgstr "nesprávny súbor OMF %s\n"
 
