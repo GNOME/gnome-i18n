@@ -68,6 +68,12 @@ meerdere mensen, is nog wel te doen. Prioriteit is laag.
 <td valign="top">Overige zaken:
 <td valign="top">&nbsp;
 
+<tr style="background-color: lightgrey;">
+<td valign="top"><strong>Merchandising</strong>: T-shirts, bekers, aanstekers,
+chocolade-voetjes, etc...kostprijs+kleine bijdrage die we dan weer kunnen gebruiken
+voor andere zaken zoals flyers op bijeenkomsten ofzo. 
+<td valign="top">Is nog slechts een idee. Misschien over een maandje of wat, dat we dit kunnen gaan uitwerken.
+
 <tr style="background-color: red;">
 <td valign="top">Opzetten van <strong>vertaalinfra voor documentatie</strong> om ook dat in de toekomst eenvoudig vertaald te kunnen hebben.<br>
 Idee: Zo opzettendat een deel van de code zo naar l10n-stats kan (iedere taal heeft het
