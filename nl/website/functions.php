@@ -9,7 +9,8 @@
 //	check_html()
 //      html_head()
 //
-
+include "mysql_password.php";
+$GLOBALS['mysql_password'] = $password;
 $important_branch = "gnome-2.10";
 function translate() { ?>
 <div class="translate">
@@ -80,12 +81,14 @@ function gnome_menu() { ?>
 		<li><a href="index.php">Thuis</a></li>
 		<li><a href="nieuws.php">Nieuws</a> <?
 //Dit stukje vist de datum uit de nieuwstekst-spool.
-	$filename = "text/nieuws.text";
-	$fcontents = file($filename);
-	list ($line_num, $line) = each ($fcontents);
-	$line = chop($line);
-	$line = substr($line, 0, strlen($line) - 5);
-	echo "(", $line, ")</li>\n"; ?>
+	$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
+	mysql_select_db("gnome_nl",$db);
+
+// build the query, order by newest ID and limit it to 10
+	$sql = "select * from news order by id desc limit 1";
+	$res = mysql_query($sql);
+	$newsitem = mysql_fetch_assoc($res);
+	echo "(", $newsitem["posted"], ")</li>\n"; ?>
 		<li><a href="gnome-nl.php">De community</a></li>
 		<li><a href="todo.php">TO DO</a></li>
 		</ul>
@@ -96,7 +99,7 @@ function gnome_menu() { ?>
 	<div class="sectioncontent">
 		<ul class="nobullet">
 		<li><a href="gebruikers_welkom.php">G.N.O.M.E.</a></li>
-		<li><a href="http://live.gnome.org/GNOME_2dtips_2dNederlands">Tips & Trucs</a></li>
+		<li><a href="http://live.gnome.org/GNOME-tips-Nederlands">Tips & Trucs</a></li>
 		<li><a href="gebruikers_omgeving.php">Taal instellen</a></li>
 		<li><a href="foutrapport.php">Vertaalfouten</a></li>
 		</ul>

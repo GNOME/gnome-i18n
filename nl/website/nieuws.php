@@ -19,35 +19,57 @@ gnome_menu();
 <div class="content">
 <h1>Gnome-nl Nieuws</h1>
 <?
-$filename = "text/nieuws.text";
-$fcontents = file($filename);
-$pos = 0;
-$aantal = 0;
-$news_per_page = 5;
+$news_per_page = 10;
 
 if ( ! empty( $_GET["alles"] ) )	
-	$max_nieuws = 1000; //arbitrary value, increase if you need more
+	$max_news = 1000; //arbitrary value, increase if you need more
 else
-	$max_nieuws = $news_per_page ;
+	$max_news = $news_per_page ;
 
-	while( (list ($line_num, $line) = each ($fcontents)) && $aantal < $max_nieuws  ) {
-	    if ($line_num == $pos) {
-	        echo "<table class=\"nieuws\"><tr>";
-	        echo "<th align=LEFT class=\"news\">", htmlspecialchars ($line), ": ";
-	    } elseif ($line_num == $pos + 1) {
-	        echo htmlspecialchars ($line), "</th></tr>\n";
-			  echo "<tr><td class=\"news\">";
-	    } elseif (chop($line) == "---") {
-	        echo "</td></tr></table>\n<br>";
-	        $pos = $line_num + 1;
-			  $aantal++;
-	    } else {
-			  echo $line;
-	    }
-	}
+// connect to mysql and select database
+$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl","$password");
+mysql_select_db("gnome_nl",$db);
 
-if ( ! empty( $line ) )	
-	echo "<table><tr><td><a href=\"nieuws.php?alles=alles\">Ouder nieuws...</a></td></tr></table>\n";
+// build the query, order by newest ID and limit it to 10
+if ( ! empty( $_GET["item"] ) )	
+	$sql = "select * from news where id = '".$_GET["item"]."'";
+else
+	$sql = "select * from news order by id desc limit ".$max_news;
+
+// run the query and set a result identifier to the recordset
+$res = mysql_query($sql);
+
+// loop the recordset
+while ( $aantal < $max_news && $newsitem = mysql_fetch_assoc($res) ) {
+  // this sticks the results row by row into an array called $newsitem. rows are called via $array["COLUMN"]
+  $aantal++;
+?><table class="nieuws"><tr><th align=LEFT class="news"><?
+echo $newsitem["posted"];
+?>: <?
+echo $newsitem["title"];
+?></th></tr>
+<tr><td class="news">
+<?
+if ( ! empty( $_GET["item"] ) )	
+	echo "<b>";
+echo $newsitem["summary"];
+if ( ! empty( $_GET["item"] ) )	
+	echo "</b>"; ?>
+</td></tr>
+<?
+	if ( ! empty( $newsitem["content"] ) ) {
+		if ( ! empty( $_GET["item"] ) )	
+			echo '<tr><td class="news">'.$newsitem["content"].'</a></td></tr>';
+		else
+			echo '<tr><td class="news"><a href="'.$PHP_SELF.'?item='.$newsitem["id"].'">Lees verder...</a></td></tr>';
+	};
+?>
+</table>
+<?
+};
+
+if ( empty( $_GET["alles"]) &&  empty( $_GET["item"] ) )	
+	echo "<table><tr><td><a href=\"".$PHP_SELF."?alles=alles\">Ouder nieuws...</a></td></tr></table>\n";
 	
 ?>
 
