@@ -44,7 +44,7 @@
 #@langs = ( "no" );
 
 
-@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status/release";
@@ -257,7 +257,7 @@ sub generatepot{
 print "generatepot: $mod\n";
 
     if ($file eq "po-script-fu"){
-    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && mv gimp-script-fu.pot po-script-fu.pot |" );
+    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
       } else {  
     open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
 	  "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 

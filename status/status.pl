@@ -19,7 +19,9 @@
      "eog/po",
      "evolution/po",
      "gnome-i18n/extra-po/firestarter",
+     "gal/po",
      "gnome-i18n/extra-po/galeon",
+     "gnome-i18n/extra-po/garp",
      "gconf/po",
      "gdm2/po",
      "gnome-i18n/extra-po/gdm2beta5",
@@ -35,8 +37,8 @@
      "gimp/po-plug-ins",
      "gimp-freetype/po",
      "glade/po",
+     "gnome-i18n/extra-po/glimmer",
      "gnome-i18n/extra-po/gnapster",
-#     "gnome-admin-tools/hardware-admin/po",
      "gnome-applets/po",
      "gnome-chess/po",
      "gnome-core/po",
@@ -71,6 +73,8 @@
      "gnome-i18n/extra-po/helix-gdm2",
      "gtkhtml/po",
      "helix-install/src/rpm-3.0.3/po",
+     "helix-setup-tools/po",
+     "libgda/po",
      "libgtop/po",
      "magicdev/po",
      "mc/po",
@@ -80,16 +84,18 @@
      "pan/po",
      "pybliographer/po",
      "rp3/po",
+     "gnome-i18n/extra-po/screem",
      "sodipodi/po",
      "gnome-i18n/extra-po/sawfish",
-     "gnome-i18n/extra-po/xchat"
+     "gnome-i18n/extra-po/xchat",
+     "xpdf/po"
 );
 
 # it's for a current developer :-)
 #@langs = ( "no" );
 
 
-@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv tr uk wa zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome";
 $htmldir = "/home/kmaraas/cvs/gnome/web-devel-2/content/projects/gtp/status";
@@ -302,7 +308,7 @@ sub generatepot{
 print "generatepot: $mod\n";
 
     if ($file eq "po-script-fu"){
-    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && mv gimp-script-fu.pot po-script-fu.pot |" );
+    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
       } else {  
     open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
 	  "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
