@@ -8,6 +8,17 @@
 # Multi-po-dirs module format: ("module_name", "custom_po_dir", ... )
 @gimp = ("gimp", "po-libgimp", "po-plug-ins", "po-script-fu");
 
+#Changed by frob (1)
+%branches = (
+	   "gnome-libs", "gnome-libs-1-0",
+	   "libgtop", "LIBGTOP_STABLE_1_0",
+	   "control-center", "control-center-1-0",
+	   "gtk+", "gtk-1-2"
+	  );
+
+$gray = 0;
+#End of changed by frob (1)
+
 @modules = (
     "achtung",
 #    "audiofile",
@@ -69,11 +80,8 @@
     "sodipodi",
 );
 
-#@langs = ( "ca", "cs", "da","de", "en_GB", "es", "es_DO", "es_ES",
-#"es_GT", "es_HN", "es_MX", "es_PA", "es_PE", "es_SV", "eu", "fi",
-#"fr", "ga", "hr", "hu", "it", "ja", "ko", "nl", "no", "pigl", "pl",
-#"pt", "pt_BR", "ro", "ru", "ru_RU", "sk", "sv", "tr", "wa",
-#"zh_TW.Big5", );
+# it's for a current developer :-)
+#@langs = ( "ru");
 
 @langs = ( "bg_BG.cp1251", "ca", "cs", "da","de", "el", "en_GB", "es", "et", 
 "eu", "fi", "fr", "ga", "gl", "hr", "hu", "is", "it", "ja", "ko", "lt", "nl", 
@@ -124,9 +132,11 @@ print TABLE <<'EOF';
 <table cellpadding=1 cellspacing=1 border=1 width="90%">
 <tr><td></td>
 EOF
-
+    $index = 0;
 foreach $lang (@langs) {
-    print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$lang</font></a></td>\n";
+    $langs_red = substr($lang, 0, 5);
+    $langs_red[++$index] = $langs_red;
+    print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$langs_red</font></a></td>\n";
 }
 print TABLE "</tr>\n";
 
@@ -194,13 +204,19 @@ foreach $mod (@modules) {
   }
 
   if (-d "$cvsroot/$po_dir") {
-    if ($gray == 0) {
-      print TABLE "<tr bgcolor=#ddddd0 align=right><td><nobr><font face=\"arial, helvetica\" size=2>$module</nobr></td>\n";
-      $gray = 1;
-    } else {
-      print TABLE "<tr align=right><td><nobr><font face=\"arial, helvetica\" size=2>$module</nobr></td>\n";
-      $gray = 0;
-    }
+    
+    
+    $modulebg =$trbg = (($gray++) % 2) ? '#deded5' : '#c5c2c5';
+    $modulecolor = "black";
+    $moduleprint = $module;
+        
+    if ($branches{$module}){
+    $modulebg = "#ffd700";
+    $modulecolor = "#1e90ff";
+    $moduleprint = "<a href=\"#branches_name\">$module</>";
+    };
+    
+        print TABLE "<tr bgcolor='$trbg'  align=right><td bgcolor='$modulebg'><nobr><font color='$modulecolor' face=\"arial, helvetica\" size=2>$moduleprint</nobr></td>\n";
 
     # print "Totals:\n";
     foreach $lang (@langs) {
@@ -214,12 +230,12 @@ foreach $mod (@modules) {
       $translated{$lang} += $mod_tr{$lang};
       fill_stats ($num);
     }
-    print TABLE "<td align=left><nobr><font face=\"arial, helvetica\" size=2>$module</nobr></td>\n";
+    print TABLE "<td align=left bgcolor='$modulebg'><nobr><font color='$modulecolor' face=\"arial, helvetica\" size=2>$moduleprint</nobr></td>\n";
     $totals += $mod_total;
   }
 }
 
-print TABLE "<tr><th><font face=\"arial, helvetica\" size=2>Total: </th>\n";
+print TABLE "<tr bgcolor=\"#ffd700\"><th><font face=\"arial, helvetica\" size=2>Total: </th>\n";
 foreach $lang (@langs) {
   if (!$translated{$lang}) {
     $percent = 0;
@@ -235,12 +251,28 @@ foreach $lang (@langs) {
   printf TABLE "<td align=right><font face=\"arial, helvetica\" size=2>%d%%</font></td>\n", $num;
 }
   print TABLE "<tr><td></td>";                                                                          
-    foreach $lang (@langs) {                                                                                  
-    print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$lang</font></a></td>\n";
+    foreach $lang (@langs_reg) {
+        print TABLE "<td align=center><a href=\"details.shtml#$lang\"><font face=\"arial, helvetica\" size=2>$lang</font></a></td>\n";
 } 
 print "\n";
-print TABLE "</table>\nReport last generated: ";
+print TABLE "</table><br><b>Report last generated: ";
 print TABLE scalar localtime;
+print TABLE " GMT+0200<br></b>";
+print TABLE "<a name=\"branches_name\"><br>
+	     <font color=\"#0000ff\"><b><u>Well, The Translation Monsters, the names of stable branches is:</u></b><br><br></a>
+	     <table cellpadding=1 cellspacing=1 border=0 width=\"40%\">";
+
+    foreach $key (keys (%branches)){
+	print TABLE "<td><font color=\"#00008b\"><b>$key</b></td><td><font color=\"#36648b\"><b>$branches{$key}</b></td><tr>";
+    }
+print TABLE "</table>";
+
+print TABLE "<a name=\"more_than_100\"><br>
+	     <font color=\"#0000ff\"><b>Ok. You say: \"Vah!! That is `<font color=\"red\">101%!</font>'? Ahalam-mahalam! Why `<font color=\"red\">150%!</font>'?\"<br></a>
+	     <font color=\"#000000\">It means that module (exclude gimp) is <font color=\"#ff3030\">NOT UP-TO-DATE!</font>
+	     <br> Some strings were deleted from the module and you didn't update the translation after that.<br>
+	     WARNING: After deadline we will not include such module scores in the your team total scores.";
+	     
 
 print TABLE <<"EOF";
 <!-- End of Table -->
