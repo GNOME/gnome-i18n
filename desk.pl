@@ -6,7 +6,7 @@
 #  Author(s): Kenneth Christiansen
 
 
-$VERSION = "1.0.0 beta";
+$VERSION = "1.0.0 beta 4";
 $LANG    = $ARGV[0];
 $OPTION2 = $ARGV[1];
 $SEARCH  = "Name";
@@ -44,32 +44,53 @@ if ($LANG=~/^-(.)*/){
     	print "desk.pl: invalid option -- $LANG\n";
     	print "Try `desk.pl --help' for more information.\n";
     }
+    exit;
 }
 
 else{
 
     $a="find ./ -print | egrep '.*\\.(desktop|soundlist"
-      ."|directory)' | xargs grep '$SEARCH\\[$LANG\\]\\=' "
-      ."| cut -d: -f1 | uniq | cut -d/ -f2- ";
+      ."|directory)' ";
 
     $b="find ./ -print | egrep '.*\\.(desktop|soundlist"
-      ."|directory)' | xargs grep '$SEARCH\\=' "
-      ."| cut -d: -f1 | uniq | cut -d/ -f2- ";
+      ."|directory)' "; 
 
     print "Searching for missing $SEARCH\[$LANG\] entries...\n";
 
     open(BUF1, "$a|");
     open(BUF2, "$b|");
 
-    @buf1 = sort (<BUF1>);
-    @buf2 = sort (<BUF2>);
+    @buf1 = <BUF1>;
+    foreach my $file (@buf1){ 
+        open FILE, "<$file";
+        while (<FILE>) {
+           if ($_=~/$SEARCH\[$LANG\]\=/o){ 
+                push @buff1, $file;
+                last;
+           }
+        }
+    }
+
+    @buf2 = <BUF2>;
+    foreach my $file (@buf2){
+        open FILE, "<$file";
+        while (<FILE>) {
+           if ($_=~/$SEARCH\=/o){
+                push @buff2, $file;
+                last;
+           }
+        }
+    }
+
+    @bufff1 = sort (@buff1);
+    @bufff2 = sort (@buff2);
 
     my %in2;
-    foreach (@buf1) {
+    foreach (@bufff1) {
         $in2{$_} = 1;
     }
  
-    foreach (@buf2){
+   foreach (@bufff2){
         if (!exists($in2{$_})){
             push @result, $_ } 
         }
@@ -80,10 +101,12 @@ else{
     close OUT1;
 
 
-    stat("MISSING.$SEARCH");
+    stat("MISSING.$LANG.$SEARCH");
         print "\nWell, you need to fix these:\n\n" if -s _;
         print @result if -s _;
         print "\nThe list is saved in MISSING.$LANG.$SEARCH\n" if -s _;
         print "\nWell, it's all perfect! Congratulation!\n" if -z _;
         unlink "MISSING.$LANG.$SEARCH" if -z _;
 }
+
+
