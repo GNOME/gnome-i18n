@@ -75,7 +75,7 @@
 );
 
 # it's for a current developer :-)
-#@langs = ( "no" );
+#@langs = ( "uk" );
 
 
 @langs = qw ( az bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
