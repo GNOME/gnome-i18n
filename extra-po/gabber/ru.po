@@ -4,43 +4,43 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gabber 0.8.1cvs\n"
-"POT-Creation-Date: 2001-01-20 14:50-0500\n"
-"PO-Revision-Date: 2001-01-26 11:04+02:00\n"
+"POT-Creation-Date: 2001-02-10 15:16-0500\n"
+"PO-Revision-Date: 2001-02-21 20:26+03:00\n"
 "Last-Translator: Eugene Sandulenko <sev@interhack.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: src/AddUserDruid.cc:205
+#: src/AddContactDruid.cc:204
 msgid "Loading list of agents..."
 msgstr "Загружаю список агентов..."
 
-#: src/AddUserDruid.cc:484
+#: src/AddContactDruid.cc:459
 msgid "Loading information from agent..."
 msgstr "Загружаю информацию от агента..."
 
-#: src/AddUserDruid.cc:571
+#: src/AddContactDruid.cc:546
 msgid "Information loaded."
 msgstr "Информация загружена."
 
-#: src/AddUserDruid.cc:577
+#: src/AddContactDruid.cc:552
 msgid "Error attempting to search agent."
 msgstr "Ошибка во время поиска агента."
 
-#: src/AddUserDruid.cc:621
+#: src/AddContactDruid.cc:597
 msgid "Searching..."
 msgstr "Ищу..."
 
-#: src/AddUserDruid.cc:673
+#: src/AddContactDruid.cc:649
 msgid "Error "
 msgstr "Ошибка "
 
-#: src/AddUserDruid.cc:686
+#: src/AddContactDruid.cc:662
 msgid "Search completed."
 msgstr "Поиск завершен."
 
-#: src/AddUserDruid.cc:782 src/AddUserDruid.cc:836
+#: src/AddContactDruid.cc:759 src/AddContactDruid.cc:813
 msgid "Error loading list of agents."
 msgstr "Ошибка во время загрузки списка агентов."
 
@@ -77,28 +77,39 @@ msgid "Registration Failed"
 msgstr "Регистрация не удалась"
 
 #. Set the tooltip as well
-#: src/EditUserDlg.cc:412
+#: src/ContactInfoInterface.cc:450 src/ContactInfoInterface.cc:451
 msgid "Presence signature is invalid"
 msgstr "Неверная подпись присутствия"
 
 #. Set the tooltip as well
-#: src/EditUserDlg.cc:420
+#: src/ContactInfoInterface.cc:459 src/ContactInfoInterface.cc:460
 msgid "Presence signature is valid"
 msgstr "Правильная подпись присутствия"
 
 #. Set the tooltip as well
-#: src/EditUserDlg.cc:429 ui/gabber.glade.h:296
+#: src/ContactInfoInterface.cc:469 src/ContactInfoInterface.cc:470
+#: ui/ContactInfo_dlg.glade.h:27
 msgid "Presence is not signed"
 msgstr "Присутствие не подписано"
 
 #. Set the labels appropriately
-#: src/EditUserDlg.cc:434
+#: src/ContactInfoInterface.cc:475
 msgid "offline:"
 msgstr "не в сети:"
 
-#: src/EditUserDlg.cc:437
+#: src/ContactInfoInterface.cc:478
 msgid "No presence has been received."
 msgstr "Не была получена информация о присутствии."
+
+#. Set the title, since libglade doesn't
+#: src/ContactInfoInterface.cc:617
+msgid "Gabber: My Contact Info"
+msgstr "Gabber: Информация для связи со мной"
+
+#: src/ContactInfoInterface.cc:988 src/ContactInfoInterface.cc:995
+#: src/ContactInfoInterface.cc:999
+msgid "yes"
+msgstr "да"
 
 #. Add base widgets into this container
 #: src/FilterInterface.cc:58
@@ -127,7 +138,9 @@ msgid "continue processing rules."
 msgstr "продолжить обрабатывать правила."
 
 #. Create remove button
-#: src/FilterInterface.cc:102 src/FilterInterface.cc:216 ui/gabber.glade.h:318
+#: src/FilterInterface.cc:102 src/FilterInterface.cc:216
+#: ui/Contact_dlg.glade.h:3 ui/FilterList_dlg.glade.h:5 ui/GCI_dlg.glade.h:6
+#: ui/Ignore_dlg.glade.h:9
 msgid "Remove"
 msgstr "Удалить"
 
@@ -174,19 +187,11 @@ msgstr "Новое правило"
 msgid "Sorry, your server does not support Jabber filters."
 msgstr "Извините, но Ваш сервер не поддерживает фильтры Jabber'а"
 
-#: src/GCJoinDlg.cc:70 ui/gabber.glade.h:214
-msgid "Jabber Group Chat"
-msgstr "Беседа группы Jabber'а"
-
-#: src/GCJoinDlg.cc:71 ui/gabber.glade.h:199
-msgid "IRC"
-msgstr "IRC"
-
-#: src/GabberApp.cc:287
+#: src/GabberApp.cc:289
 msgid "A server-side error has occured:\n"
 msgstr "Возникла ошибка на стороне сервера:\n"
 
-#: src/GabberApp.cc:344 src/GabberApp.cc:442
+#: src/GabberApp.cc:341 src/GabberApp.cc:497
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -194,7 +199,7 @@ msgstr ""
 "Ошибка, не могу загрузить пароль.\n"
 "Пожалуйста, попробуйте подключиться еще раз."
 
-#: src/GabberApp.cc:355
+#: src/GabberApp.cc:352
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -202,11 +207,11 @@ msgstr ""
 "Вы уверены, что хотите, чтобы Gabber\n"
 "попытался зарегистрировать "
 
-#: src/GabberApp.cc:358
+#: src/GabberApp.cc:355
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:363
+#: src/GabberApp.cc:360
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -216,11 +221,11 @@ msgstr ""
 "Хотите чтобы Gabber попытался создать новую\n"
 "учетную запись на выбранном Jabber сервере?"
 
-#: src/GabberApp.cc:371
+#: src/GabberApp.cc:368
 msgid "Attempt to create a new user failed: \n"
 msgstr "Сбой при попытке создать нового пользователя: \n"
 
-#: src/GabberApp.cc:373
+#: src/GabberApp.cc:370
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -230,7 +235,7 @@ msgstr ""
 "Пожалуйста, выберите другое имя пользователя или проверьте Вашу\n"
 "информацию для подключения."
 
-#: src/GabberApp.cc:380
+#: src/GabberApp.cc:377
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -244,106 +249,128 @@ msgstr ""
 #. since adding an int to a pointer moves the pointer forward, not appending
 #. it as a string.  
 #. ha ha, ok, thanks
-#: src/GabberApp.cc:482
+#: src/GabberApp.cc:537
 msgid "Transmitter error. Disconnected: "
 msgstr "Ошибка передатчика. Связь разорвана:"
 
-#: src/GabberApp.cc:486
+#: src/GabberApp.cc:541
 msgid "Couldn't Resolve Hostname"
 msgstr "Не могу определить имя узла"
 
-#: src/GabberApp.cc:489
+#: src/GabberApp.cc:544
 msgid "Couldn't Establish TCP Connection"
 msgstr "Не могу установить связь по TCP"
 
-#: src/GabberApp.cc:492
+#: src/GabberApp.cc:547
 msgid "Connection Broken"
 msgstr "Связь оборвана"
 
-#: src/GabberApp.cc:495
+#: src/GabberApp.cc:550
 msgid "No Connection"
 msgstr "Нет связи"
 
-#: src/GabberApp.cc:498
+#: src/GabberApp.cc:553
 msgid "Socket Error"
 msgstr "Ошибка сокета"
 
-#: src/GabberApp.cc:501
+#: src/GabberApp.cc:556
 msgid "I/O Error"
 msgstr "Ошибка ввода/вывода"
 
-#: src/GabberApp.cc:504
+#: src/GabberApp.cc:559
 msgid "Protocol Error"
 msgstr "Ошибка протокола"
 
-#: src/GabberUtility.cc:79
+#: src/GabberGPG.cc:457
+msgid "The signature was valid"
+msgstr "Подпись была правильной"
+
+#: src/GabberGPG.cc:463
+msgid "The signature was not valid"
+msgstr "Неверная подпись"
+
+#: src/GabberGPG.cc:467
+msgid "Could not determine key information"
+msgstr "Не удалось определить ключевую информацию"
+
+#: src/GabberGPG.cc:470
+msgid "This message was signed"
+msgstr "Это сообщение было подписано"
+
+#: src/GabberLogger.cc:234
+msgid "Logs for "
+msgstr "Протоколы для "
+
+#: src/GabberUtility.cc:97
 msgid "Invalid"
 msgstr "Неправильный"
 
-#: src/GabberUtility.cc:81
+#: src/GabberUtility.cc:99
 msgid "Offline"
 msgstr "Не в сети"
 
 #. Setup the menu
-#: src/GabberUtility.cc:83 src/GabberWin.cc:197 src/GabberWin.cc:213
-#: src/GabberWin.cc:413 src/GabberWin.cc:417 src/MessageViews.cc:1273
-#: ui/gabber.glade.h:277
+#: src/GabberUtility.cc:101 src/GabberWin.cc:194 src/GabberWin.cc:210
+#: src/GabberWin.cc:419 src/GabberWin.cc:423 src/MessageViews.cc:1265
+#: ui/Gabber_win.glade.h:29
 msgid "Online"
 msgstr "В сети"
 
-#: src/GabberUtility.cc:85 src/GabberWin.cc:198 src/GabberWin.cc:214
-#: src/MessageViews.cc:1274 ui/gabber.glade.h:51
+#: src/GabberUtility.cc:103 src/GabberWin.cc:195 src/GabberWin.cc:211
+#: src/MessageViews.cc:1266 ui/GC_win.glade.h:4 ui/Gabber_win.glade.h:8
 msgid "Chatty"
 msgstr "Можно побеседовать"
 
-#: src/GabberUtility.cc:87 src/GabberWin.cc:199 src/GabberWin.cc:215
-#: src/MessageViews.cc:1275 ui/gabber.glade.h:37
+#: src/GabberUtility.cc:105 src/GabberWin.cc:196 src/GabberWin.cc:212
+#: src/MessageViews.cc:1267 ui/GC_win.glade.h:3 ui/Gabber_win.glade.h:5
 msgid "Away"
 msgstr "Отошел"
 
-#: src/GabberUtility.cc:89 src/GabberWin.cc:200 src/GabberWin.cc:216
-#: src/MessageViews.cc:1276 ui/gabber.glade.h:272
+#: src/GabberUtility.cc:107 src/GabberWin.cc:197 src/GabberWin.cc:213
+#: src/MessageViews.cc:1268 ui/GC_win.glade.h:11 ui/Gabber_win.glade.h:28
 msgid "Not Available"
 msgstr "Недоступен"
 
-#: src/GabberUtility.cc:91 src/GabberWin.cc:201 src/GabberWin.cc:217
-#: src/MessageViews.cc:1277 ui/gabber.glade.h:85
+#: src/GabberUtility.cc:109 src/GabberWin.cc:198 src/GabberWin.cc:214
+#: src/MessageViews.cc:1269 ui/GC_win.glade.h:7 ui/Gabber_win.glade.h:9
 msgid "Do Not Disturb"
 msgstr "Не беспокоить"
 
-#: src/GabberUtility.cc:102
+#: src/GabberUtility.cc:120
 msgid "both"
 msgstr "оба"
 
-#: src/GabberUtility.cc:104
+#: src/GabberUtility.cc:122
 msgid "from"
 msgstr "от"
 
-#: src/GabberUtility.cc:106
+#: src/GabberUtility.cc:124
 msgid "to"
 msgstr "к"
 
-#: src/GabberUtility.cc:109 ui/gabber.glade.h:518
+#: src/GabberUtility.cc:127 ui/ContactInfo_dlg.glade.h:47
+#: ui/TransInfo_dlg.glade.h:21
 msgid "none"
 msgstr "нет"
 
-#: src/GabberUtility.cc:118
+#: src/GabberUtility.cc:136
 msgid "Both of you can see each other's presence."
 msgstr "Теперь вы оба можете видеть присутствие друг друга."
 
-#: src/GabberUtility.cc:120
+#: src/GabberUtility.cc:138
 msgid "You cannot see their presence, but they can see yours."
 msgstr "Вы не можете видеть их присутствия, но они могут видеть Ваше."
 
-#: src/GabberUtility.cc:122
+#: src/GabberUtility.cc:140
 msgid "You can see their presence, but they cannot see yours."
 msgstr "Вы можете видеть их присутствие, но они не видят Вашего."
 
-#: src/GabberUtility.cc:126 ui/gabber.glade.h:267
+#: src/GabberUtility.cc:144 ui/ContactInfo_dlg.glade.h:21
+#: ui/TransInfo_dlg.glade.h:10
 msgid "Neither of you can see the other's presence."
 msgstr "Никто из вас не может видеть присутствие другого."
 
-#: src/GabberUtility.cc:161
+#: src/GabberUtility.cc:231
 msgid "Unable to save file. Please try another name or location."
 msgstr "Не могу записать файл. Пожалуйста, попробуйте другое имя или место."
 
@@ -355,15 +382,15 @@ msgstr "Вы хотите разорвать связь с Jabber'ом?"
 msgid "Logged in"
 msgstr "Подключен"
 
-#: src/GabberWin.cc:347
+#: src/GabberWin.cc:353
 msgid "Logged out"
 msgstr "Отключен"
 
-#: src/GabberWin.cc:371
+#: src/GabberWin.cc:377
 msgid "Gabber: The GNOME Jabber Client."
 msgstr "Gabber: GNOME клиент Jabber'а."
 
-#: src/GabberWin.cc:373
+#: src/GabberWin.cc:379
 msgid ""
 "More information about Jabber:\n"
 "  http://www.jabbercentral.com/\n"
@@ -377,223 +404,228 @@ msgstr ""
 "  http://jabber.com/\n"
 "\n"
 
-#: src/GabberWin.cc:374
+#: src/GabberWin.cc:380
 msgid "Thanks:\n"
 msgstr "Благодарности:\n"
 
-#: src/GabberWin.cc:375
+#: src/GabberWin.cc:381
 msgid "  Thomas Muldowne - several patches/fixes\n"
 msgstr "  Томасу Малдоуну (Thomas Muldowne) - несколько заплаток/исправлений\n"
 
-#: src/GabberWin.cc:376
+#: src/GabberWin.cc:382
 msgid "  David Zoll - Small bug fixes, g_asserts\n"
 msgstr "  Дэйвиду Золлу (David Zoll) - Мелкие багфиксы, g_asserts\n"
 
-#: src/GabberWin.cc:377
+#: src/GabberWin.cc:383
 msgid "  Erich Zigler - Gabber FreeBSD port\n"
 msgstr "  Эрику Циглеру (Erich Zigler) - Фришный порт Габбера\n"
 
-#: src/GabberWin.cc:378
+#: src/GabberWin.cc:384
 msgid "  Lauris Kaplinski - e-font and e-unicode\n"
 msgstr "  Лауриусу Каплински (Lauris Kaplinski) - e-font and e-unicode\n"
 
-#: src/GabberWin.cc:379
+#: src/GabberWin.cc:385
 msgid "  All of the translators\n"
 msgstr "  Всем переводчикам\n"
 
-#: src/GabberWin.cc:380
+#: src/GabberWin.cc:386
 msgid "  gtkmm - especially kenelson and cactus\n"
 msgstr "  gtkmm - особенно kenelson и cactus\n"
 
-#: src/GabberWin.cc:381
+#: src/GabberWin.cc:387
 msgid "  artwiz and garrett - amazing icons\n"
 msgstr "  artwiz и garrett - превосходные пиктограммы\n"
 
-#: src/GabberWin.cc:382
+#: src/GabberWin.cc:388
 msgid "  gnomeicu and gaim\n"
 msgstr "  gnomeicu и gaim\n"
 
-#: src/GabberWin.cc:383
+#: src/GabberWin.cc:389
 msgid "  All of the Jabber and GNOME people!\n"
 msgstr "  Всем пиплам от Jabber и GNOME!\n"
 
-#: src/GabberWin.cc:384
+#: src/GabberWin.cc:390
 msgid "Gabber's website: http://gabber.sourceforge.net/ "
 msgstr "Веб узел Gabber'а: http://gabber.sourceforge.net/ "
 
-#: src/GabberWin.cc:387
-msgid "Dave Smith <dave@jabber.org> - Lots and lots of code."
-msgstr "Дэйв Смит (Dave Smith) <dave@jabber.org> - Программирование."
+#: src/GabberWin.cc:393
+msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
+msgstr "Дэйв Смит (Dave \"DizzyD\" Smith) <dave@jabber.org>"
 
-#: src/GabberWin.cc:388
-msgid ""
-"Julian Missig <julian@jabber.org> - User Interface, project manager, and code"
-msgstr ""
-"Джулиан Миссиг (Julian Missig) <julian@jabber.org> - Пользовательский "
-"интерфейс, менеджер проекта и программирование"
+#: src/GabberWin.cc:394
+msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
+msgstr "Julian \\\"x-virge\\\" Missig <julian@jabber.org>"
 
-#: src/GabberWin.cc:389
-msgid ""
-"Brandon Lees <brandon@aspect.net> - Lots of code, including message queuing "
-"and GnuPG support"
-msgstr ""
-"Брэндон Лии (Brandon Lees) <brandon@aspect.net> - Программирование, в том "
-"числе поддержка очереди сообщений и GnuPG"
-
-#: src/GabberWin.cc:390
-msgid "Eliot Landrum <eliot@landrum.cx> - Tester, author of Gabber Manual"
-msgstr ""
-"Эллиот Лэндрум (Eliot Landrum) <eliot@landrum.cx> - Тестирование, автор "
-"Руководства по Gabber'у"
-
-#: src/GabberWin.cc:391
-msgid "Konrad Podloucky - TCPTransmitter"
-msgstr "Конрад Подлуцки (Konrad Podloucky) - TCPTransmitter"
-
-#: src/GabberWin.cc:392
-msgid "Dave Lee - XHTML Logging, XMLConfig"
-msgstr "Дейв Ли (Dave Lee) - XHTML протоколирование, XMLConfig"
+#: src/GabberWin.cc:395
+msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
+msgstr "Brandon \\\"brandon2\\\" Lees <brandon@aspect.net>"
 
 #: src/GabberWin.cc:396
+msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
+msgstr "Эллиот Лэндрум (Eliot Landrum) <eliot@landrum.cx>"
+
+#: src/GabberWin.cc:397
+msgid "Konrad Podloucky"
+msgstr "Конрад Подлуцки (Konrad Podloucky)"
+
+#: src/GabberWin.cc:398
+msgid "Dave \"bigdave\" Lee"
+msgstr "Dave \\\"bigdave\\\" Lee"
+
+#: src/GabberWin.cc:402
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr ""
 "Все права сохраняются (c) 1999-2001 Джулиан Миссиг (Julian Missig) и Дэйв "
 "Смит (Dave Smith)"
 
 #. Chat
-#: src/GabberWin.cc:420
+#: src/GabberWin.cc:426
 msgid "Chat with me!"
-msgstr "Побеседуем!"
+msgstr "Побеседуй со мной!"
 
 #. Away
-#: src/GabberWin.cc:423
+#: src/GabberWin.cc:429
 msgid "I'm away."
 msgstr "Я отошел."
 
 #. Not available
-#: src/GabberWin.cc:426
+#: src/GabberWin.cc:432
 msgid "I'm not available right now."
 msgstr "Я сейчас недоступен."
 
 #. Do not disturb
-#: src/GabberWin.cc:429
+#: src/GabberWin.cc:435
 msgid "Please do not disturb me right now."
 msgstr "Пожалуйста, не беспокойте меня сейчас."
 
-#: src/GabberWin.cc:577
+#: src/GabberWin.cc:583
 msgid "Disconnected"
 msgstr "Связь разорвана"
 
-#: src/GabberWin.cc:648 src/WelcomeDruid.cc:301
+#: src/GabberWin.cc:654 src/WelcomeDruid.cc:301
 msgid "Logging in..."
 msgstr "Подключаюсь..."
 
-#: src/GabberWin.cc:684 src/RosterView.cc:700
-msgid "Not In Roster"
-msgstr "Не в Реестре"
+#: src/GabberWin.cc:692 src/RosterView.cc:702
+msgid "Not in Roster"
+msgstr "Нет в Реестре"
 
-#: src/HistoryDlg.cc:53
-msgid "Error opening history. Either file does not exist or you found a bug."
+#: src/MessageManager.cc:403
+msgid ""
+"An error occured trying to sign your message.\n"
+"Send the message unsigned?"
 msgstr ""
-"Ошибка открытия истории. Или файл не существует или вы обнаружили ошибку в "
-"программе."
+"При попытке подписать ваше сообщение возникла ошибка.\n"
+"Отправить сообщение неподписанным?"
 
-#: src/HistoryDlg.cc:65
-msgid "History for "
-msgstr "История для "
+#: src/MessageManager.cc:437 src/MessageManager.cc:460
+msgid ""
+"An error occured trying to encrypt your message.\n"
+"Send the message unencrypted?"
+msgstr ""
+"При попытке зашифровать сообщение возникла ошибка.\n"
+"Отправить сообщение незашифрованным?"
 
 #. Set the title
 #: src/MessageViews.cc:85
 msgid "Gabber: Message from "
 msgstr "Gabber: Сообщение от "
 
-#: src/MessageViews.cc:103 src/MessageViews.cc:640
+#: src/MessageViews.cc:95 src/MessageViews.cc:631
 msgid "Reply to: "
 msgstr "Ответ к: "
 
-#: src/MessageViews.cc:109
+#: src/MessageViews.cc:101
 msgid "Gabber: Message - "
 msgstr "Gabber: Сообщение - "
 
 #. Set the title
-#: src/MessageViews.cc:142
+#: src/MessageViews.cc:135
 msgid "Gabber: Message to "
 msgstr "Gabber: Сообщение к "
 
-#: src/MessageViews.cc:157 src/MessageViews.cc:638
+#: src/MessageViews.cc:142 src/MessageViews.cc:629
 msgid "Message to: "
 msgstr "Сообщение к: "
 
 #. Set the tooltip
-#: src/MessageViews.cc:307 src/MessageViews.cc:966 src/MessageViews.cc:1106
-#: ui/gabber.glade.h:410
+#: src/MessageViews.cc:292 src/MessageViews.cc:958 src/MessageViews.cc:1098
+#: ui/Message_win.glade.h:28 ui/OOOChat_win.glade.h:13
 msgid "This message is not encrypted"
 msgstr "Это сообщение не зашифровано"
 
 #. Set the tooltip
-#: src/MessageViews.cc:363 src/MessageViews.cc:996
+#: src/MessageViews.cc:349 src/MessageViews.cc:988
 msgid "Signature on message is invalid"
 msgstr "Подпись сообщения не верна"
 
 #. Set the tooltip
-#: src/MessageViews.cc:373 src/MessageViews.cc:987 src/MessageViews.cc:1112
+#: src/MessageViews.cc:359 src/MessageViews.cc:979 src/MessageViews.cc:1104
 msgid "Signature on message is valid"
 msgstr "Подпись сообщения верна"
 
 #. Set the tooltip
-#: src/MessageViews.cc:419 src/MessageViews.cc:1036 src/MessageViews.cc:1118
+#: src/MessageViews.cc:405 src/MessageViews.cc:1028 src/MessageViews.cc:1110
 msgid "This message is encrypted"
 msgstr "Это сообщение зашифровано"
 
 #. Prepare the text
-#: src/MessageViews.cc:685
+#: src/MessageViews.cc:676
 msgid " wrote:\n"
 msgstr " написал:\n"
 
-#: src/MessageViews.cc:899
-msgid "Gabber: One on One Chat with "
-msgstr "Gabber: Беседа один на один с "
+#: src/MessageViews.cc:891
+msgid "Gabber: Chat with "
+msgstr "Gabber: Беседа с "
 
-#: src/MessageViews.cc:1294
+#: src/MessageViews.cc:1286
 msgid "Gabber: Group Chat in "
 msgstr "Gabber: Беседа группы на "
 
-#: src/MessageViews.cc:1363
+#: src/MessageViews.cc:1355
 msgid "Gabber: Group Chat - "
 msgstr "Gabber: Беседа группы - "
 
 #. Setup a message object
-#: src/MessageViews.cc:1382
+#: src/MessageViews.cc:1374
 msgid "/me has changed the subject to: "
 msgstr "/me has changed the subject to: "
 
-#: src/MessageViews.cc:1488
+#: src/MessageViews.cc:1480
 msgid "Session Disconnected"
 msgstr "Сессия разорвана"
 
+#: src/MessageViews.cc:1700 ui/GCJoin_dlg.glade.h:3
+msgid "Jabber Group Chat 1.0"
+msgstr "Беседа группы Jabber'а 1.0"
+
+#: src/MessageViews.cc:1701 ui/GCJoin_dlg.glade.h:2
+msgid "IRC"
+msgstr "IRC"
+
 #. Set the title, since libglade doesn't
-#: src/PrefsWin.cc:167 ui/gabber.glade.h:169
+#: src/PrefsInterface.cc:345 ui/Prefs_win.glade.h:45
 msgid "Gabber: Preferences"
 msgstr "Gabber: Настройки"
 
-#: src/RosterView.cc:343
+#: src/RosterView.cc:361
 msgid " is now online"
 msgstr " теперь в сети"
 
-#: src/RosterView.cc:358
+#: src/RosterView.cc:376
 msgid " went offline"
 msgstr " отключился от сети"
 
-#: src/RosterView.cc:531
+#: src/RosterView.cc:533
 msgid "Are you sure you want to remove "
 msgstr "Вы уверены, что хотите удалить "
 
-#: src/RosterView.cc:537
+#: src/RosterView.cc:539
 msgid " from your roster?"
 msgstr " из Вашего реестра?"
 
 #. Initialize instructions
-#: src/SubscriptionRequestDlg.cc:64
+#: src/S10nInterface.cc:72
 msgid ""
 "The following user would like to add you to their contact list. Do you wish "
 "to allow this?"
@@ -601,9 +633,9 @@ msgstr ""
 "Нижеуказанный пользователь хочет добавить Вас в свой список пользователей. "
 "Желаете разрешить?"
 
-#: src/TransInfoDlg.cc:65 src/TransInfoDlg.cc:72 src/TransInfoDlg.cc:76
-msgid "yes"
-msgstr "да"
+#: src/TCPTransmitter.cc:475
+msgid "Disconnected. Reconnecting..."
+msgstr "Отключился. Переподключение..."
 
 #: src/WelcomeDruid.cc:125
 msgid "Login successful."
@@ -633,381 +665,1828 @@ msgstr "Пароли совпадают."
 msgid "Passwords do not match!"
 msgstr "Пароли не совпадают!"
 
-#: ui/gabber.glade.h:1
-msgid " "
-msgstr " "
-
-#: ui/gabber.glade.h:2
-msgid "    "
-msgstr "    "
-
-#: ui/gabber.glade.h:3
-msgid ">"
-msgstr ">"
-
-#: ui/gabber.glade.h:4
-msgid "<"
-msgstr "<"
-
-#: ui/gabber.glade.h:5
-msgid "<- Add"
-msgstr "<- Добавить"
-
-#: ui/gabber.glade.h:6
-msgid "."
-msgstr "."
-
-#: ui/gabber.glade.h:7
-msgid "0 members"
-msgstr "0 членов"
-
-#: ui/gabber.glade.h:8
-msgid "5222"
-msgstr "5222"
-
-#: ui/gabber.glade.h:9
-msgid "A unique resource, can be anything"
-msgstr "Уникальный ресурс, может быть любым"
-
-#: ui/gabber.glade.h:10
-msgid "About"
-msgstr "О программе"
-
-#: ui/gabber.glade.h:11
-msgid "Action"
-msgstr "Действие"
-
-#: ui/gabber.glade.h:12
-msgid "Add"
-msgstr "Добавить"
-
-#: ui/gabber.glade.h:13
-msgid "Add Contact"
-msgstr "Добавить пользователя"
-
-#: ui/gabber.glade.h:14
-msgid "Add Contact..."
-msgstr "Добавить пользователя..."
-
-#: ui/gabber.glade.h:15
+#: ui/AUDruid_win.glade.h:1
 msgid "Add a Contact to your Roster"
 msgstr "Добавить пользователя в ваш Реестр"
 
-#: ui/gabber.glade.h:16
-msgid "Add a JabberID"
-msgstr "Добавить JabberID"
+#: ui/AUDruid_win.glade.h:2
+msgid "Add a Specific Contact"
+msgstr "Добавить указанного пользователя"
 
-#: ui/gabber.glade.h:17
-msgid "Add contact to roster"
-msgstr "Добавить пользователя в реестр"
-
-#: ui/gabber.glade.h:18
-msgid "Add this Contact..."
-msgstr "Добавить этого пользователя..."
-
-#: ui/gabber.glade.h:19
-msgid "Add to Roster"
-msgstr "Добавить в Реестр"
-
-#: ui/gabber.glade.h:20
-msgid "Add..."
-msgstr "Добавить..."
-
-#: ui/gabber.glade.h:21
-msgid "Address"
-msgstr "Адрес"
-
-#: ui/gabber.glade.h:22
-msgid "Advanced Options"
-msgstr "Дополнительные параметры"
-
-#: ui/gabber.glade.h:23
+#: ui/AUDruid_win.glade.h:3
 msgid "After Adding this User"
 msgstr "После добавления этого пользователя"
 
-#: ui/gabber.glade.h:24
-msgid "Agent Name:"
-msgstr "Имя агента:"
-
-#: ui/gabber.glade.h:25
+#: ui/AUDruid_win.glade.h:4 ui/RegDruid_win.glade.h:1
 msgid "Agent:"
 msgstr "Агент:"
 
-#: ui/gabber.glade.h:26
+#: ui/AUDruid_win.glade.h:5
+msgid "Confirm User Information"
+msgstr "Подтвердите информацию о пользователе"
+
+#: ui/AUDruid_win.glade.h:6 ui/ContactInfo_dlg.glade.h:7
+#: ui/MyContactInfo_win.glade.h:6 ui/SubscriptionRequest_dlg.glade.h:2
+msgid "Contact Information"
+msgstr "Информация для связи"
+
+#: ui/AUDruid_win.glade.h:7
+msgid "Contact Information - Select Nickname"
+msgstr "Информация о пользователе - Выберите псевдоним"
+
+#: ui/AUDruid_win.glade.h:8 ui/ContactInfo_dlg.glade.h:8
+#: ui/MyContactInfo_win.glade.h:7
+msgid "Country:"
+msgstr "Страна:"
+
+#: ui/AUDruid_win.glade.h:9
+msgid "Display the group configuration for this contact."
+msgstr "Показывать конфигурацию группы для этого пользователя."
+
+#: ui/AUDruid_win.glade.h:10
+msgid "Finish"
+msgstr "Завершить"
+
+#: ui/AUDruid_win.glade.h:11 ui/ContactInfo_dlg.glade.h:11
+msgid "Full Name:"
+msgstr "Полное имя:"
+
+#: ui/AUDruid_win.glade.h:12
+msgid "Gabber: Add a User to your Roster"
+msgstr "Gabber: Добавить пользователя в Ваш Реестр"
+
+#: ui/AUDruid_win.glade.h:13 ui/ContactInfo_dlg.glade.h:15
+#: ui/Welcome_win.glade.h:29
+msgid "Go to this web site"
+msgstr "Перейти на этот веб узел"
+
+#: ui/AUDruid_win.glade.h:14
+msgid "IM _Protocol:"
+msgstr "IM протокол:"
+
+#: ui/AUDruid_win.glade.h:15
+msgid ""
+"If you have found the person you are looking for, simply select their name "
+"and click next.\n"
+"\n"
+"Otherwise, you may press back and try again."
+msgstr ""
+"Если Вы нашли человека, которого искали, просто выберите его имя и нажмите "
+"Дальше.\n"
+"\n"
+"Еще вы можете нажать 'Назад' и сделать еще одну попытку."
+
+#: ui/AUDruid_win.glade.h:18
+msgid "Jabber ID"
+msgstr "Jabber ID"
+
+#: ui/AUDruid_win.glade.h:19 ui/ContactInfo_dlg.glade.h:18
+#: ui/SubscriptionRequest_dlg.glade.h:4 ui/TransInfo_dlg.glade.h:8
+#: ui/Welcome_win.glade.h:38
+msgid "JabberID:"
+msgstr "JabberID:"
+
+#: ui/AUDruid_win.glade.h:20 ui/RegDruid_win.glade.h:6
+msgid "Loading..."
+msgstr "Загружаю..."
+
+#: ui/AUDruid_win.glade.h:21
+msgid "Locate a Contact"
+msgstr "Найти пользователя"
+
+#: ui/AUDruid_win.glade.h:22 ui/SubscriptionRequest_dlg.glade.h:5
+#: ui/TransInfo_dlg.glade.h:11
+msgid "Nickname:"
+msgstr "Псевдоним:"
+
+#: ui/AUDruid_win.glade.h:23
+msgid ""
+"Please fill in the contact's username (Or ICQ number, AIM screenname, etc.) "
+"and the server the contact is on.\n"
+"\n"
+"You can also select an IM protocol other than Jabber if the user is using "
+"something such as ICQ, AIM, Yahoo!, MSN, etc."
+msgstr ""
+"Пожалуйста, введите имя пользователя (или номер ICQ, AIM screenname, и т.д.) "
+"и сервер, к которому подключен пользователь.\n"
+"\n"
+"Вы также можете выбрать IM протокол, отличный от Jabber, если пользователь "
+"пользуется чем-то наподобие ICQ, AIM, Yahoo!, MSN, и т.д."
+
+#: ui/AUDruid_win.glade.h:26
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: ui/AUDruid_win.glade.h:27
+msgid "Search an Agent"
+msgstr "Поиск агента"
+
+#: ui/AUDruid_win.glade.h:28
+msgid "Search for a Contact"
+msgstr "Поиск пользователя"
+
+#: ui/AUDruid_win.glade.h:29
+msgid "Select Agent"
+msgstr "Выбрать агента"
+
+#: ui/AUDruid_win.glade.h:30
+msgid "Select Contact"
+msgstr "Выбрать пользователя"
+
+#: ui/AUDruid_win.glade.h:31
+msgid ""
+"Select a nickname for this contact and ensure that it is the person you "
+"intend to add to your roster.\n"
+"\n"
+"This information can be found in the Contact Info dialog."
+msgstr ""
+"Выберите псевдоним для этого пользователя и убедитесь что это тот кого вы хотите добавить к вашему реестру.\n"
+"\n"
+"Эту информацию можно найти в диалоге 'Информация о пользователе'."
+
+#: ui/AUDruid_win.glade.h:34
+msgid "Select an Agent to Search"
+msgstr "Выбрать агента для поиска"
+
+#: ui/AUDruid_win.glade.h:35
+msgid "Select on which agent you would like to search for the contact."
+msgstr "Выберите какого агента вы хотите использовать для поиска пользователей."
+
+#: ui/AUDruid_win.glade.h:36
+msgid "Step through this druid again for another contact."
+msgstr "Еще раз пройдите с этим Помощником для другого пользователя."
+
+#: ui/AUDruid_win.glade.h:37
+msgid "Subscription Request Reason"
+msgstr "Причина запроса подписки"
+
+#: ui/AUDruid_win.glade.h:38
+msgid "The IM protocol the user is using"
+msgstr "IM протокол, который использует пользователь"
+
+#: ui/AUDruid_win.glade.h:39
+msgid ""
+"The contact you would like to add to your roster is displayed to the right.\n"
+"\n"
+"The subscription request reason is the reason Gabber will give as to why you "
+"should be able to see when this person is online. It can be left blank."
+msgstr ""
+"Пользователь, которого Вы хотите добавить в свой реестр теперь отображен "
+"справа.\n"
+"\n"
+"Причина запроса на подписку -- это пояснение, которое Gabber передаст, чтобы "
+"объяснить, почему Вы хотите видеть, в сети ли этот пользователь. Его можно "
+"оставить и пустым."
+
+#: ui/AUDruid_win.glade.h:42
+msgid ""
+"There are several ways Gabber can locate a contact. Please select one of "
+"them."
+msgstr ""
+"Есть несколько способов для Gabber, чтобы найти пользователя. Пожалуйста, "
+"выберите один из них."
+
+#: ui/AUDruid_win.glade.h:43
+msgid "This druid will step you through adding contacts to your roster."
+msgstr ""
+"Этот Помощник по шагам поможет Вам добавить пользователей в Ваш реестр."
+
+#: ui/AUDruid_win.glade.h:44
+msgid ""
+"To continue:\n"
+"Fill in a nickname for this contact."
+msgstr ""
+"Чтобы продолжить:\n"
+"Введите псевдоним для этого пользователя."
+
+#: ui/AUDruid_win.glade.h:46
+msgid ""
+"To continue:\n"
+"Fill in any field."
+msgstr ""
+"Чтобы продолжить:\n"
+"Заполните какое-либо поле."
+
+#: ui/AUDruid_win.glade.h:48
+msgid ""
+"To continue:\n"
+"Fill in username and server."
+msgstr ""
+"Чтобы продолжить:\n"
+"Введите имя пользователя и сервер."
+
+#: ui/AUDruid_win.glade.h:50
+msgid ""
+"To continue:\n"
+"Select the agent you would like to search."
+msgstr ""
+"Чтобы продолжить:\n"
+"Выберите агента, которого хотите использовать для поиска."
+
+#: ui/AUDruid_win.glade.h:52
+msgid ""
+"To continue:\n"
+"Select the contact you would like to add."
+msgstr ""
+"Чтобы продолжить:\n"
+"Выберите пользователя, которого хотите добавить."
+
+#: ui/AUDruid_win.glade.h:54
+msgid ""
+"To search for a contact, simply enter whatever information you know about "
+"the contact for which you are looking."
+msgstr ""
+"Чтобы найти пользователя, просто введите какую-либо информацию, которую Вы "
+"знаете о нем."
+
+#: ui/AUDruid_win.glade.h:55 ui/ContactInfo_dlg.glade.h:38
+msgid "Web Site:"
+msgstr "Веб узел:"
+
+#: ui/AUDruid_win.glade.h:56
+msgid ""
+"You have now been stepped through all of the contact options.\n"
+"Gabber has sent a subscription (authorization) request\n"
+"to the contact, asking that you can see when they are online.\n"
+"If they accept, you will see when/if they come online."
+msgstr ""
+"Теперь Вы прошли через все параметры пользователя.\n"
+"Gabber уже послал запрос на подписку (авторизацию)\n"
+"пользователю, спрашивая, можете ли Вы видеть когда он в сети.\n"
+"Если он даст свое согласие, вы сможете увидеть, когда/если он подключится."
+
+#: ui/AUDruid_win.glade.h:60
+msgid "_Add by username (JabberID, ICQ #, AIM screename, etc)."
+msgstr "Добавить по имени пользователя (JabberID, ICQ #, AIM screename, и т.д.)."
+
+#: ui/AUDruid_win.glade.h:61 ui/ContactInfo_dlg.glade.h:42
+#: ui/GCJoin_dlg.glade.h:13 ui/MyContactInfo_win.glade.h:34
+#: ui/Welcome_win.glade.h:72
+msgid "_Nickname:"
+msgstr "Псевдоним:"
+
+#: ui/AUDruid_win.glade.h:62
+msgid "_Search an agent (JUD, ICQ, MSN, etc)."
+msgstr "Найти через агента (JUD, ICQ, MSN и т.д.)"
+
+#: ui/AUDruid_win.glade.h:63 ui/GCJoin_dlg.glade.h:16 ui/Login_dlg.glade.h:24
+#: ui/Welcome_win.glade.h:75
+msgid "_Server:"
+msgstr "Сервер:"
+
+#: ui/AUDruid_win.glade.h:64 ui/Login_dlg.glade.h:25 ui/Welcome_win.glade.h:76
+msgid "_Username:"
+msgstr "Имя пользователя:"
+
+#: ui/AUDruid_win.glade.h:65 ui/ContactInfo_dlg.glade.h:46
+msgid "eMail:"
+msgstr "e-mail:"
+
+#: ui/AUDruid_win.glade.h:66
+msgid "user"
+msgstr "user"
+
+#: ui/AUDruid_win.glade.h:67
+msgid "user@server"
+msgstr "user@server"
+
+#: ui/AgentBrowser_dlg.glade.h:1
+msgid "Browse"
+msgstr "Просмотр"
+
+#: ui/AgentBrowser_dlg.glade.h:2
+msgid "Gabber: Agents Browser"
+msgstr "Gabber: Просмотрщик агентов"
+
+#: ui/AgentBrowser_dlg.glade.h:3
+msgid "Info..."
+msgstr "Информация..."
+
+#: ui/AgentBrowser_dlg.glade.h:4 ui/TransInfo_dlg.glade.h:12
+msgid "Register..."
+msgstr "Регистрироваться..."
+
+#: ui/AgentBrowser_dlg.glade.h:5 ui/TransInfo_dlg.glade.h:13
+msgid "Search..."
+msgstr "Поиск..."
+
+#: ui/AgentBrowser_dlg.glade.h:6
+msgid "_Server to Browse:"
+msgstr "Просмотреть сервер:"
+
+#: ui/AgentBrowser_dlg.glade.h:7
+msgid "label379"
+msgstr "label379"
+
+#: ui/Contact_dlg.glade.h:1
+msgid "Drag contacts you would like to send below:"
+msgstr "Перетащите ниже пользователей, которых вы хотите переслать:"
+
+#: ui/Contact_dlg.glade.h:2
+msgid "Gabber: Send Contact(s)"
+msgstr "Gabber: Переслать информацию о пользователях"
+
+#: ui/Contact_dlg.glade.h:4
+msgid "Send Contacts"
+msgstr "Переслать пользователей"
+
+#: ui/Contact_dlg.glade.h:5
+msgid "Send these contacts to:"
+msgstr "Кому переслать этих пользователей:"
+
+#: ui/Contact_dlg.glade.h:6
+msgid "label514"
+msgstr "label354"
+
+#: ui/Contact_dlg.glade.h:7
+msgid "label515"
+msgstr "label168"
+
+#: ui/ContactInfo_dlg.glade.h:1
+msgid " "
+msgstr " "
+
+#: ui/ContactInfo_dlg.glade.h:2 ui/MyContactInfo_win.glade.h:1
+msgid "About"
+msgstr "О программе"
+
+#: ui/ContactInfo_dlg.glade.h:3 ui/MyContactInfo_win.glade.h:4
+msgid "Birthday"
+msgstr "Дата рождения"
+
+#: ui/ContactInfo_dlg.glade.h:4 ui/MyContactInfo_win.glade.h:5
+msgid "Birthday:"
+msgstr "Дата рождения:"
+
+#: ui/ContactInfo_dlg.glade.h:5
+msgid "City:"
+msgstr "Город:"
+
+#: ui/ContactInfo_dlg.glade.h:6
+msgid "Client:"
+msgstr "Клиент:"
+
+#: ui/ContactInfo_dlg.glade.h:9
+msgid "Current Time:"
+msgstr "Текущее время:"
+
+#: ui/ContactInfo_dlg.glade.h:10 ui/TransInfo_dlg.glade.h:4
+msgid "Explanation:"
+msgstr "Пояснение:"
+
+#: ui/ContactInfo_dlg.glade.h:12
+msgid "Gabber: Contact Information"
+msgstr "Gabber: Информация для связи"
+
+#: ui/ContactInfo_dlg.glade.h:13
+msgid "General Information"
+msgstr "Общая информация"
+
+#: ui/ContactInfo_dlg.glade.h:14 ui/MyContactInfo_win.glade.h:11
+msgid "General _Info"
+msgstr "Общая информация"
+
+#: ui/ContactInfo_dlg.glade.h:16
+msgid "Home Phone:"
+msgstr "Домашний телефон:"
+
+#: ui/ContactInfo_dlg.glade.h:17
+msgid "Jabber Client"
+msgstr "Клиент Jabber"
+
+#: ui/ContactInfo_dlg.glade.h:19 ui/MyContactInfo_win.glade.h:13
+msgid "Location"
+msgstr "Положение"
+
+#: ui/ContactInfo_dlg.glade.h:20 ui/MyContactInfo_win.glade.h:14
+msgid "Name:"
+msgstr "Имя:"
+
+#: ui/ContactInfo_dlg.glade.h:22
+msgid "Operating System:"
+msgstr "Операционная Система:"
+
+#: ui/ContactInfo_dlg.glade.h:23 ui/MyContactInfo_win.glade.h:15
+msgid "Organization Details"
+msgstr "Об организации"
+
+#: ui/ContactInfo_dlg.glade.h:24 ui/MyContactInfo_win.glade.h:16
+msgid "Personal Details"
+msgstr "Подробности об отправителе"
+
+#: ui/ContactInfo_dlg.glade.h:25
+msgid "Postal Code:"
+msgstr "Почтовый индекс:"
+
+#: ui/ContactInfo_dlg.glade.h:26
+msgid "Presence and Status"
+msgstr "Присутствие и Состояние"
+
+#: ui/ContactInfo_dlg.glade.h:28 ui/MyContactInfo_win.glade.h:18
+msgid "Primary eMail:"
+msgstr "Основной e-mail:"
+
+#: ui/ContactInfo_dlg.glade.h:29 ui/MyContactInfo_win.glade.h:19
+msgid "Role:"
+msgstr "Роль:"
+
+#: ui/ContactInfo_dlg.glade.h:30
+msgid "State:"
+msgstr "Штат:"
+
+#: ui/ContactInfo_dlg.glade.h:31
+msgid "Street:"
+msgstr "Улица:"
+
+#: ui/ContactInfo_dlg.glade.h:32 ui/TransInfo_dlg.glade.h:16
+msgid "Subscription"
+msgstr "Подписка"
+
+#: ui/ContactInfo_dlg.glade.h:33 ui/TransInfo_dlg.glade.h:17
+msgid "Subscription type:"
+msgstr "Тип подписки:"
+
+#: ui/ContactInfo_dlg.glade.h:34 ui/MyContactInfo_win.glade.h:23
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ui/ContactInfo_dlg.glade.h:35 ui/MyContactInfo_win.glade.h:24
+msgid "Unit:"
+msgstr "Единицы:"
+
+#: ui/ContactInfo_dlg.glade.h:36
+msgid "User's Computer"
+msgstr "Компьютер пользователя"
+
+#: ui/ContactInfo_dlg.glade.h:37 ui/Message_win.glade.h:31
+msgid "Version:"
+msgstr "Версия:"
+
+#: ui/ContactInfo_dlg.glade.h:39 ui/MyContactInfo_win.glade.h:25
+msgid "_About"
+msgstr "О программе"
+
+#: ui/ContactInfo_dlg.glade.h:40
+msgid "_Client Info"
+msgstr "Информация о клиенте"
+
+#: ui/ContactInfo_dlg.glade.h:41 ui/MyContactInfo_win.glade.h:33
+msgid "_Location"
+msgstr "Положение"
+
+#: ui/ContactInfo_dlg.glade.h:43 ui/MyContactInfo_win.glade.h:35
+msgid "_Organization"
+msgstr "Организация"
+
+#: ui/ContactInfo_dlg.glade.h:44 ui/MyContactInfo_win.glade.h:36
+msgid "_Personal Info"
+msgstr "Личная информация"
+
+#: ui/ContactInfo_dlg.glade.h:45 ui/Login_dlg.glade.h:23
+#: ui/Message_win.glade.h:33 ui/Welcome_win.glade.h:74
+msgid "_Resource:"
+msgstr "Ресурс:"
+
+#: ui/ContactInfo_dlg.glade.h:48
+msgid "online:"
+msgstr "в сети:"
+
+#: ui/EditGroups_dlg.glade.h:1
+msgid "<- Add"
+msgstr "<- Добавить"
+
+#: ui/EditGroups_dlg.glade.h:2
+msgid "Available Groups"
+msgstr "Доступные группы"
+
+#: ui/EditGroups_dlg.glade.h:3
+msgid "Current Groups"
+msgstr "Текущие группы"
+
+#: ui/EditGroups_dlg.glade.h:4
+msgid "Gabber: Edit Groups"
+msgstr "Gabber: Редактировать группы"
+
+#: ui/EditGroups_dlg.glade.h:5
+msgid "Groups for:"
+msgstr "Группы для:"
+
+#: ui/EditGroups_dlg.glade.h:6
+msgid "Remove ->"
+msgstr "Удалить ->"
+
+#: ui/EditGroups_dlg.glade.h:7
+msgid "_Group:"
+msgstr "Группа:"
+
+#: ui/EditGroups_dlg.glade.h:8
+msgid "label205"
+msgstr "label205"
+
+#: ui/EditGroups_dlg.glade.h:9
+msgid "label206"
+msgstr "label206"
+
+#: ui/FilterList_dlg.glade.h:1 ui/Ignore_dlg.glade.h:2
+msgid "Add..."
+msgstr "Добавить..."
+
+#: ui/FilterList_dlg.glade.h:2
+msgid "Edit..."
+msgstr "Редактировать..."
+
+#: ui/FilterList_dlg.glade.h:3
+msgid "Gabber: Jabber Message Rules List"
+msgstr "Gabber: Список правил сообщений Jabber"
+
+#: ui/FilterList_dlg.glade.h:4
+msgid "Jabber Message Rules List"
+msgstr "Список правил сообщений Jabber"
+
+#: ui/FilterList_dlg.glade.h:6
+msgid "label354"
+msgstr "label354"
+
+#: ui/Filter_dlg.glade.h:1
+msgid "Action"
+msgstr "Действие"
+
+#: ui/Filter_dlg.glade.h:2
+msgid "Add"
+msgstr "Добавить"
+
+#: ui/Filter_dlg.glade.h:3
+msgid "Condition"
+msgstr "Условие"
+
+#: ui/Filter_dlg.glade.h:4
+msgid "Gabber: Edit a Jabber Message Rule"
+msgstr "Gabber: Редактировать правила сообщений Jabber"
+
+#: ui/Filter_dlg.glade.h:5
+msgid "Rule Name:"
+msgstr "Имя правила:"
+
+#: ui/GCIRecv_dlg.glade.h:1
+msgid "Gabber: Group Chat Invitation"
+msgstr "Gabber: Приглашение в беседу группы"
+
+#: ui/GCIRecv_dlg.glade.h:2
+msgid "Group Information"
+msgstr "Информация о группе"
+
+#: ui/GCIRecv_dlg.glade.h:3 ui/GCJoin_dlg.glade.h:4
+msgid "Join Room"
+msgstr "Войти в комнату"
+
+#: ui/GCIRecv_dlg.glade.h:4
+msgid "Room:"
+msgstr "Комната:"
+
+#: ui/GCIRecv_dlg.glade.h:5
+msgid "Server:"
+msgstr "Сервер:"
+
+#: ui/GCIRecv_dlg.glade.h:6
+msgid "You have been invited to a groupchat by "
+msgstr "Вас пригласил беседовать в группу "
+
+#: ui/GCI_dlg.glade.h:1
+msgid "Chat Subject:"
+msgstr "Тема беседы:"
+
+#: ui/GCI_dlg.glade.h:2
+msgid "Contacts to Invite"
+msgstr "Приглашаемые пользователи"
+
+#: ui/GCI_dlg.glade.h:3
+msgid "Drag contacts you would like to invite below:"
+msgstr "Перетащите ниже пользователей, которых вы хотите пригласить:"
+
+#: ui/GCI_dlg.glade.h:4
+msgid "Gabber: Group Chat Invitor"
+msgstr "Gabber: Приглашающий в беседу группы"
+
+#: ui/GCI_dlg.glade.h:5
+msgid "Invite"
+msgstr "Пригласить"
+
+#: ui/GCI_dlg.glade.h:7
+msgid "label506"
+msgstr "label206"
+
+#: ui/GCI_dlg.glade.h:8
+msgid "label507"
+msgstr "label205"
+
+#: ui/GCJoin_dlg.glade.h:1
+msgid "Gabber: Join Group Chat"
+msgstr "Gabber: Присоединиться к беседе группы"
+
+#: ui/GCJoin_dlg.glade.h:5
+msgid "Nickname"
+msgstr "Псевдоним:"
+
+#: ui/GCJoin_dlg.glade.h:6
+msgid "Password for the room, if needed"
+msgstr "Пароль для комнаты, если необходим"
+
+#: ui/GCJoin_dlg.glade.h:7
+msgid "Password:"
+msgstr "Пароль:"
+
+#: ui/GCJoin_dlg.glade.h:8
+msgid "Room"
+msgstr "Комната"
+
+#: ui/GCJoin_dlg.glade.h:9
+msgid "Server"
+msgstr "Сервер"
+
+#: ui/GCJoin_dlg.glade.h:10
+msgid "The room or channel to join"
+msgstr "Комната или канал для присоединения"
+
+#: ui/GCJoin_dlg.glade.h:11
+msgid "You can join a group chat room by filling in the fields below:"
+msgstr ""
+"Вы можете войти в комнату для беседы группы, заполнив нижеследующие поля:"
+
+#: ui/GCJoin_dlg.glade.h:12
+msgid "_IRC Server:"
+msgstr "IRC сервер:"
+
+#: ui/GCJoin_dlg.glade.h:14
+msgid "_Protocol:"
+msgstr "Протокол:"
+
+#: ui/GCJoin_dlg.glade.h:15
+msgid "_Room:"
+msgstr "Комната:"
+
+#: ui/GC_win.glade.h:1
+msgid "0 members"
+msgstr "0 членов"
+
+#: ui/GC_win.glade.h:2
+msgid "Available"
+msgstr "Доступен"
+
+#: ui/GC_win.glade.h:5 ui/OOOChat_win.glade.h:3
+msgid "Close"
+msgstr "Закрыть"
+
+#: ui/GC_win.glade.h:6 ui/OOOChat_win.glade.h:4
+msgid "Close Dialog"
+msgstr "Закрыть диалог"
+
+#: ui/GC_win.glade.h:8
+msgid "Gabber: Group Chat"
+msgstr "Gabber: Беседа группы"
+
+#: ui/GC_win.glade.h:9 ui/Message_win.glade.h:9 ui/OOOChat_win.glade.h:7
+msgid "History"
+msgstr "История"
+
+#: ui/GC_win.glade.h:10 ui/Message_win.glade.h:12 ui/OOOChat_win.glade.h:9
+msgid "Message History..."
+msgstr "История сообщений..."
+
+#: ui/GC_win.glade.h:12
+msgid "Show/Hide Users in Group"
+msgstr "Показать/Спрятать пользователей в группе"
+
+#: ui/GC_win.glade.h:13
+msgid "User List"
+msgstr "Список пользователей"
+
+#: ui/GC_win.glade.h:14 ui/Message_win.glade.h:34
+msgid "_Subject:"
+msgstr "Тема:"
+
+#: ui/GC_win.glade.h:15
+msgid "label296"
+msgstr "label296"
+
+#: ui/GPGInfo_dlg.glade.h:1
 msgid "Aliases:"
 msgstr "Псевдонимы:"
 
-#: ui/gabber.glade.h:27
+#: ui/GPGInfo_dlg.glade.h:2
+msgid "Gabber: Signature Info"
+msgstr "Gabber: Информация о подписи"
+
+#: ui/GPGInfo_dlg.glade.h:3
+msgid "Key ID:"
+msgstr "ID ключа:"
+
+#: ui/GPGInfo_dlg.glade.h:4
+msgid "This message was not signed."
+msgstr "Это сообщение не было подписано."
+
+#: ui/GPGInfo_dlg.glade.h:5
+msgid "User ID:"
+msgstr "ID Пользователя"
+
+#: ui/GPGPass_dlg.glade.h:1
+msgid "Gabber: GPG Passphrase"
+msgstr "Gabber: Парольная фраза GPG"
+
+#: ui/GPGPass_dlg.glade.h:2
+msgid ""
+"In order to encrypt and sign messages, Gabber needs your GPG key's "
+"passphrase."
+msgstr ""
+"Для того чтобы шифровать и подписывать сообщения, Gabber'у нужна Ваша "
+"парольная фраза для GPG."
+
+#: ui/GPGPass_dlg.glade.h:3
+msgid ""
+"There was an error trying to use your passphrase with the GPG key you "
+"selected. Either try again or disable GPG."
+msgstr ""
+"Возникла ошибка при использовании Вашей парольной фразы с выбранным GPG "
+"ключом. Попробуйте еще раз или же выключите GPG."
+
+#: ui/GPGPass_dlg.glade.h:4
+msgid ""
+"This passphrase will not be stored in Gabber's config file, so Gabber has to "
+"ask you every session."
+msgstr ""
+"Эта парольная фраза не будет сохранена в конфигурационном файле Gabber'а, "
+"поэтому он будет спрашивать ее у Вас при каждом запуске."
+
+#: ui/GPGPass_dlg.glade.h:5
+msgid "_Passphrase:"
+msgstr "Пароль:"
+
+#: ui/Gabber_win.glade.h:1
+msgid "."
+msgstr "."
+
+#: ui/Gabber_win.glade.h:2
+msgid "Add Contact"
+msgstr "Добавить пользователя"
+
+#: ui/Gabber_win.glade.h:3
+msgid "Add Contact..."
+msgstr "Добавить пользователя..."
+
+#: ui/Gabber_win.glade.h:4
+msgid "Agent _Information..."
+msgstr "Информация об агенте..."
+
+#: ui/Gabber_win.glade.h:6
+msgid "Browse Agents"
+msgstr "Просмотр агентов"
+
+#: ui/Gabber_win.glade.h:7
+msgid "Browse Agents/IM Systems..."
+msgstr "Просмотр Агентов/IM систем..."
+
+#: ui/Gabber_win.glade.h:10
+msgid "Docklet Popup"
+msgstr "Всплывающий блок"
+
+#: ui/Gabber_win.glade.h:11
+msgid "Edit _Groups..."
+msgstr "Редактировать Группы:"
+
+#: ui/Gabber_win.glade.h:12
+msgid "Extra"
+msgstr "Дополнение"
+
+#: ui/Gabber_win.glade.h:13 ui/Login_dlg.glade.h:4 ui/Message_win.glade.h:7
+#: ui/Welcome_win.glade.h:22
+msgid "Gabber"
+msgstr "Gabber"
+
+#: ui/Gabber_win.glade.h:14
+msgid "Gabber Manual"
+msgstr "Руководство по Gabber'у"
+
+#: ui/Gabber_win.glade.h:15
+msgid "Gabber Manual..."
+msgstr "Руководство по Gabber'у..."
+
+#: ui/Gabber_win.glade.h:16
+msgid "Gabber _Manual..."
+msgstr "Руководство по Gabber'у..."
+
+#: ui/Gabber_win.glade.h:17
+msgid "Hide _Agents"
+msgstr "Спрятать Агентов"
+
+#: ui/Gabber_win.glade.h:18
+msgid "Hide _Offline Contacts"
+msgstr "Спрятать пользователей, которые не в сети"
+
+#: ui/Gabber_win.glade.h:19
+msgid "Jabber Message _Rules..."
+msgstr "Правила сообщений Jabber..."
+
+#: ui/Gabber_win.glade.h:20
+msgid "Join Group Chat"
+msgstr "Присоединиться к беседе группы"
+
+#: ui/Gabber_win.glade.h:21
+msgid "Join Group _Chat..."
+msgstr "Присоединиться к беседе группы..."
+
+#: ui/Gabber_win.glade.h:22
+msgid "Join a Group Chat..."
+msgstr "Присоединиться к беседе группы..."
+
+#: ui/Gabber_win.glade.h:23
+msgid "Log _out of Agent"
+msgstr "Отключение агента"
+
+#: ui/Gabber_win.glade.h:24
+msgid "Log_out"
+msgstr "Отключиться"
+
+#: ui/Gabber_win.glade.h:25
+msgid "Manage _Groups..."
+msgstr "Управление группами..."
+
+#: ui/Gabber_win.glade.h:26
+msgid "Manage _Transport"
+msgstr "Управление транспортом"
+
+#: ui/Gabber_win.glade.h:27
+msgid "New Blank _Message..."
+msgstr "Новое пустое сообщение..."
+
+#: ui/Gabber_win.glade.h:30
+msgid "Re_subscribe"
+msgstr "Переподписаться"
+
+#: ui/Gabber_win.glade.h:31
+msgid "Show _Headlines"
+msgstr "Показывать заголовки"
+
+#: ui/Gabber_win.glade.h:32
+msgid "Show as being"
+msgstr "Показать как существо"
+
+#: ui/Gabber_win.glade.h:33
+msgid "View Contact _Info..."
+msgstr "Просмотр информации для связи..."
+
+#: ui/Gabber_win.glade.h:34
+msgid "View _History..."
+msgstr "Просмотр истории..."
+
+#: ui/Gabber_win.glade.h:35
+msgid "_Add Contact..."
+msgstr "Добавить пользователя..."
+
+#: ui/Gabber_win.glade.h:36
+msgid "_Add this Contact..."
+msgstr "Добавить этого пользователя..."
+
+#: ui/Gabber_win.glade.h:37
+msgid "_Browse Agents/IM Systems..."
+msgstr "Просмотр Агентов/IM систем..."
+
+#: ui/Gabber_win.glade.h:38
+msgid "_Debug"
+msgstr "Отладка"
+
+#: ui/Gabber_win.glade.h:39
+msgid "_Delete Contact"
+msgstr "Удалить пользователя"
+
+#: ui/Gabber_win.glade.h:40
+msgid "_Gabber"
+msgstr "Gabber"
+
+#: ui/Gabber_win.glade.h:41
+msgid "_Hide Main Window"
+msgstr "Спрятать главное окно"
+
+#: ui/Gabber_win.glade.h:42
+msgid "_Log into Agent"
+msgstr "Подключиться к агенту"
+
+#: ui/Gabber_win.glade.h:43
+msgid "_Login..."
+msgstr "Подключение..."
+
+#: ui/Gabber_win.glade.h:44
+msgid "_Manage User"
+msgstr "Управление пользователем"
+
+#: ui/Gabber_win.glade.h:45
+msgid "_Message..."
+msgstr "Сообщение..."
+
+#: ui/Gabber_win.glade.h:46
+msgid "_My Contact Info..."
+msgstr "Информация для связи со мной..."
+
+#: ui/Gabber_win.glade.h:47
+msgid "_One-on-One Chat..."
+msgstr "Беседа один на один..."
+
+#: ui/Gabber_win.glade.h:48
+msgid "_Raw XML Input..."
+msgstr "Прямой ввод XML..."
+
+#: ui/Gabber_win.glade.h:49
+msgid "_Remove Agent"
+msgstr "Удалить агента"
+
+#: ui/Gabber_win.glade.h:50
+msgid "_Services"
+msgstr "Сервисы"
+
+#: ui/Gabber_win.glade.h:51
+msgid "_Show Main Window"
+msgstr "Показать главное окно"
+
+#: ui/Gabber_win.glade.h:52
+msgid "label168"
+msgstr "label168"
+
+#: ui/Gabber_win.glade.h:53
+msgid "label169"
+msgstr "label169"
+
+#: ui/Ignore_dlg.glade.h:1
+msgid "Add a JabberID"
+msgstr "Добавить JabberID"
+
+#: ui/Ignore_dlg.glade.h:3
 msgid "Allow people not on my roster to contact me"
 msgstr "Позволить тем кого нет в моем реестре связываться со мной"
 
-#: ui/gabber.glade.h:28
-msgid "Attempting to Register"
-msgstr "Пытаюсь зарегистрировать"
+#: ui/Ignore_dlg.glade.h:4
+msgid "Contacts to Ignore"
+msgstr "Игнорируемые пользователи"
 
-#: ui/gabber.glade.h:29
+#: ui/Ignore_dlg.glade.h:5
+msgid "Drag contacts you would like to ignore below:"
+msgstr "Перетащите ниже пользователей, которых вы хотите игнорировать:"
+
+#: ui/Ignore_dlg.glade.h:6
+msgid "Gabber: Ignore List"
+msgstr "Gabber: Список игнорируемых"
+
+#: ui/Ignore_dlg.glade.h:7
+msgid "Ignore Options"
+msgstr "Параметры игнорирования"
+
+#: ui/Ignore_dlg.glade.h:8
+msgid ""
+"People who are ignored cannot see when you are online, and you will not "
+"receive messages from them."
+msgstr ""
+"Люди, которых вы игнорируете не могут увидеть когда вы в сети и вы не будете "
+"получать сообщения от них."
+
+#: ui/Ignore_dlg.glade.h:10
+msgid "label508"
+msgstr "label168"
+
+#: ui/Ignore_dlg.glade.h:11
+msgid "label509"
+msgstr "label169"
+
+#: ui/Login_dlg.glade.h:1
+msgid "A unique resource, can be anything"
+msgstr "Уникальный ресурс, может быть любым"
+
+#: ui/Login_dlg.glade.h:2 ui/Prefs_win.glade.h:2
 msgid "Automatically login to the default profile on startup"
 msgstr "При старте автоматически подключаться с профилем по умолчанию"
 
-#: ui/gabber.glade.h:30
-msgid "Automatically open normal messages"
-msgstr "Автоматически открывать обычные сообщения"
-
-#: ui/gabber.glade.h:31
-msgid "Automatically open one-on-one chats"
-msgstr "Автоматически открывать беседы один на один"
-
-#: ui/gabber.glade.h:32
+#: ui/Login_dlg.glade.h:3 ui/Prefs_win.glade.h:5
 msgid "Automatically reconnect to the server when disconnected"
 msgstr ""
 "Автоматически восстанавливать соединение с сервером в случае разрыва связи"
 
-#: ui/gabber.glade.h:33
+#: ui/Login_dlg.glade.h:5
+msgid "Gabber: Login"
+msgstr "Gabber: Подключение"
+
+#: ui/Login_dlg.glade.h:6 ui/Status_dlg.glade.h:2
+msgid "Jabber client priority. 0 is default"
+msgstr "Приоритет клиента Jabber. 0 по умолчанию"
+
+#: ui/Login_dlg.glade.h:7
+msgid "Login"
+msgstr "Подключиться"
+
+#: ui/Login_dlg.glade.h:8 ui/Prefs_win.glade.h:55
+msgid "Login Options"
+msgstr "Опции подключения"
+
+#: ui/Login_dlg.glade.h:9
+msgid "Make this profile the default"
+msgstr "Сделать этот профиль по умолчанию"
+
+#: ui/Login_dlg.glade.h:10
+msgid "Manage Profiles..."
+msgstr "Управление профилями..."
+
+#: ui/Login_dlg.glade.h:11 ui/Welcome_win.glade.h:41
+msgid "P_ort:"
+msgstr "Порт:"
+
+#: ui/Login_dlg.glade.h:12
+msgid "Port to connect to"
+msgstr "Порт для подключения"
+
+#: ui/Login_dlg.glade.h:13 ui/Status_dlg.glade.h:3
+msgid "Pr_iority:"
+msgstr "Приоритет:"
+
+#: ui/Login_dlg.glade.h:14
+msgid "Profile Details"
+msgstr "Детали профиля"
+
+#: ui/Login_dlg.glade.h:15
+msgid "Profile:"
+msgstr "Профиль:"
+
+#: ui/Login_dlg.glade.h:16 ui/Welcome_win.glade.h:43
+msgid "Save Password"
+msgstr "Записать пароль"
+
+#: ui/Login_dlg.glade.h:17
+msgid "Use Secure Socket Layers"
+msgstr "Использовать Secure Socket Layers"
+
+#: ui/Login_dlg.glade.h:18
+msgid "Use digest authentication, do not send plaintext password"
+msgstr "Используйте дайджест идентификацию -- не посылайте открытых паролей"
+
+#: ui/Login_dlg.glade.h:19
+msgid "Your Jabber password"
+msgstr "Ваш пароль Jabber"
+
+#: ui/Login_dlg.glade.h:20
+msgid "Your Jabber server"
+msgstr "Ваш Jabber сервер"
+
+#: ui/Login_dlg.glade.h:21
+msgid "Your Jabber username"
+msgstr "Ваше имя пользователя Jabber"
+
+#: ui/Login_dlg.glade.h:22 ui/Welcome_win.glade.h:73
+msgid "_Password:"
+msgstr "Пароль:"
+
+#: ui/Login_dlg.glade.h:26 ui/Welcome_win.glade.h:79
+msgid "jabber.com"
+msgstr "jabber.com"
+
+#: ui/Message_win.glade.h:1 ui/OOOChat_win.glade.h:1
+msgid "Add this Contact..."
+msgstr "Добавить этого пользователя..."
+
+#: ui/Message_win.glade.h:2 ui/OOOChat_win.glade.h:2
+msgid "Add to Roster"
+msgstr "Добавить в Реестр"
+
+#: ui/Message_win.glade.h:3
+msgid "Advanced Options"
+msgstr "Дополнительные параметры"
+
+#: ui/Message_win.glade.h:4
 msgid "Autoupdate Information"
 msgstr "Информация по автообновлению"
 
-#: ui/gabber.glade.h:34
-msgid "Available"
-msgstr "Доступен"
-
-#: ui/gabber.glade.h:35
-msgid "Available Groups"
-msgstr "Доступные группы"
-
-#: ui/gabber.glade.h:36
-msgid "Available:"
-msgstr "Доступны:"
-
-#: ui/gabber.glade.h:38
-msgid "Away:"
-msgstr "Отошли:"
-
-#: ui/gabber.glade.h:39
-msgid "Basic Information"
-msgstr "Основная информация"
-
-#: ui/gabber.glade.h:40
-msgid "Birthday"
-msgstr "Дата рождения"
-
-#: ui/gabber.glade.h:41
-msgid "Birthday:"
-msgstr "Дата рождения:"
-
-#: ui/gabber.glade.h:42
-msgid "Blank Message"
-msgstr "Пустое сообщение"
-
-#: ui/gabber.glade.h:43
-msgid "Blank Message XML"
-msgstr "Пустое сообщение XML"
-
-#: ui/gabber.glade.h:44
-msgid "Body:"
-msgstr "Тело:"
-
-#: ui/gabber.glade.h:45
-msgid "Browse"
-msgstr "Просмотр"
-
-#: ui/gabber.glade.h:46
-msgid "Browse Agents"
-msgstr "Просмотр агентов"
-
-#: ui/gabber.glade.h:47
-msgid "Browse Agents/IM Systems..."
-msgstr "Просмотр Агентов/IM систем..."
-
-#: ui/gabber.glade.h:48
-msgid "Browse..."
-msgstr "Просмотр..."
-
-#: ui/gabber.glade.h:49
-msgid "Chat Subject:"
-msgstr "Тема беседы:"
-
-#: ui/gabber.glade.h:50
-msgid "Chats"
-msgstr "Беседы"
-
-#: ui/gabber.glade.h:52
-msgid "Chatty:"
-msgstr "Можно побеседовать:"
-
-#: ui/gabber.glade.h:53
-msgid "City:"
-msgstr "Город:"
-
-#: ui/gabber.glade.h:54
-msgid "Client:"
-msgstr "Клиент:"
-
-#: ui/gabber.glade.h:55
-msgid "Close"
-msgstr "Закрыть"
-
-#: ui/gabber.glade.h:56
-msgid "Close Dialog"
-msgstr "Закрыть диалог"
-
-#: ui/gabber.glade.h:57
-msgid "Color for available users"
-msgstr "Цвет для доступных пользователей"
-
-#: ui/gabber.glade.h:58
-msgid "Color for away users"
-msgstr "Цвет для пользователей, которые отошли"
-
-#: ui/gabber.glade.h:59
-msgid "Color for chatty users"
-msgstr "Цвет для пользователей, с которыми можно побеседовать"
-
-#: ui/gabber.glade.h:60
-msgid "Color for do not disturb users"
-msgstr "Цвет для пользователей, которых не беспокоить"
-
-#: ui/gabber.glade.h:61
-msgid "Color for not availabe (extended away) users"
-msgstr "Цвет для недоступных (отошел надолго) пользователей"
-
-#: ui/gabber.glade.h:62
-msgid "Color for offline users"
-msgstr "Цвет для пользователей не в сети"
-
-#: ui/gabber.glade.h:63
-msgid "Color for queued messages"
-msgstr "Цвет для сообщений, поставленных в очередь"
-
-#: ui/gabber.glade.h:64
-msgid "Color for queued one-on-one chats"
-msgstr "Цвет для бесед один на один, поставленных в очередь"
-
-#: ui/gabber.glade.h:65
-msgid "Color for users not in the roster"
-msgstr "Цвет для пользователей не в реестре"
-
-#: ui/gabber.glade.h:66
-msgid "Color for users without a subscription"
-msgstr "Цвет для пользователей без подписки"
-
-#: ui/gabber.glade.h:67
-msgid "Condition"
-msgstr "Условие"
-
-#: ui/gabber.glade.h:68
-msgid "Confirm Password:"
-msgstr "Повторите пароль:"
-
-#: ui/gabber.glade.h:69
-msgid "Confirm User Information"
-msgstr "Подтвердите информацию о пользователе"
-
-#: ui/gabber.glade.h:70
-msgid "Contact Information"
-msgstr "Информация для связи"
-
-#: ui/gabber.glade.h:71
-msgid "Contact Information - Select Nickname"
-msgstr "Информация о пользователе - Выберите псевдоним"
-
-#: ui/gabber.glade.h:72
-msgid "Contacts to Ignore"
-msgstr "Игнорируемые пользователи"
-
-#: ui/gabber.glade.h:73
-msgid "Contacts to Invite"
-msgstr "Приглашаемые пользователи"
-
-#: ui/gabber.glade.h:74
-msgid "Country:"
-msgstr "Страна:"
-
-#: ui/gabber.glade.h:75
-msgid "Current Groups"
-msgstr "Текущие группы"
-
-#: ui/gabber.glade.h:76
-msgid "Current Time:"
-msgstr "Текущее время:"
-
-#: ui/gabber.glade.h:77
+#: ui/Message_win.glade.h:5 ui/RegDruid_win.glade.h:3
+#: ui/TransInfo_dlg.glade.h:3
 msgid "Description:"
 msgstr "Описание:"
 
-#: ui/gabber.glade.h:78
-msgid "Display icons next to contacts indicating their status"
-msgstr "Показывать пиктограммы состояния рядом с пользователем"
-
-#: ui/gabber.glade.h:79
-msgid "Display status docklet"
-msgstr "Показывать блок статуса"
-
-#: ui/gabber.glade.h:80
-msgid "Display status indicator"
-msgstr "Показывать индикатор состояния"
-
-#: ui/gabber.glade.h:81
-msgid "Display the group configuration for this contact."
-msgstr "Показывать конфигурацию группы для этого пользователя."
-
-#: ui/gabber.glade.h:82
-msgid "Display timestamps in group chats"
-msgstr "Показывать время в беседах группы"
-
-#: ui/gabber.glade.h:83
-msgid "Display timestamps in one-on-one chats"
-msgstr "Показывать время в беседах один на один"
-
-#: ui/gabber.glade.h:84
-msgid "Display toolbar of commonly used actions"
-msgstr "Показывать панель инструментов с часто используемыми действиями"
-
-#: ui/gabber.glade.h:86
-msgid "Do Not Disturb:"
-msgstr "Не беспокоить:"
-
-#: ui/gabber.glade.h:87
-msgid "Do not publish my information in JUD"
-msgstr "Не публиковать информацию обо мне на JUD"
-
-#: ui/gabber.glade.h:88
-msgid "Docklet Popup"
-msgstr "Всплывающий блок"
-
-#: ui/gabber.glade.h:89
-msgid "Drag contacts you would like to ignore below:"
-msgstr "Перетащите ниже пользователей, которых вы хотите игнорировать:"
-
-#: ui/gabber.glade.h:90
-msgid "Drag contacts you would like to invite below:"
-msgstr "Перетащите ниже пользователей, которых вы хотите пригласить:"
-
-#: ui/gabber.glade.h:91
-msgid "Drag contacts you would like to send below:"
-msgstr "Перетащите ниже пользователей, которых вы хотите переслать:"
-
-#: ui/gabber.glade.h:92
-msgid "Edit _Groups..."
-msgstr "Редактировать Группы:"
-
-#: ui/gabber.glade.h:93
-msgid "Edit..."
-msgstr "Редактировать..."
-
-#: ui/gabber.glade.h:94
-msgid "Encrypt messages, one-on-one chats, and presence with GPG"
-msgstr "Шифровать сообщения, беседы один на один и присутствие с помощью GPG"
-
-#: ui/gabber.glade.h:95
+#: ui/Message_win.glade.h:6 ui/OOOChat_win.glade.h:5
 msgid "Encrypt this message"
 msgstr "Зашифровать это сообщение"
 
-#: ui/gabber.glade.h:96
+#: ui/Message_win.glade.h:8
+msgid "Gabber: Message"
+msgstr "Gabber: Сообщение"
+
+#: ui/Message_win.glade.h:10 ui/OOOChat_win.glade.h:8
+msgid "Info"
+msgstr "Информация"
+
+#: ui/Message_win.glade.h:11
+msgid "JabberID to which this message should be sent"
+msgstr "JabberID того, кому должно быть послано это сообщение"
+
+#: ui/Message_win.glade.h:13
+msgid "Person who sent this message"
+msgstr "Тот, кто послал это сообщение"
+
+#: ui/Message_win.glade.h:14
+msgid "Quote"
+msgstr "Цитировать"
+
+#: ui/Message_win.glade.h:15
+msgid "Quote received message in reply"
+msgstr "Цитировать принятые сообщения в ответе"
+
+#: ui/Message_win.glade.h:16
+msgid "Read Next"
+msgstr "Прочитать следующее"
+
+#: ui/Message_win.glade.h:17
+msgid "Received Message"
+msgstr "Принятое сообщение"
+
+#: ui/Message_win.glade.h:18
+msgid "Reply"
+msgstr "Ответить"
+
+#: ui/Message_win.glade.h:19 ui/RawXML_dlg.glade.h:8
+msgid "Send"
+msgstr "Послать"
+
+#: ui/Message_win.glade.h:20
+msgid "Send _to:"
+msgstr "Послать к:"
+
+#: ui/Message_win.glade.h:21
+msgid "Send as OOOChat"
+msgstr "Послать как Беседу 1-на-1"
+
+#: ui/Message_win.glade.h:22
+msgid "Send as One-on-One Chat"
+msgstr "Послать как беседу один на один"
+
+#: ui/Message_win.glade.h:23
+msgid "Sender:"
+msgstr "Переслал:"
+
+#: ui/Message_win.glade.h:24
+msgid "Show Advanced Options"
+msgstr "Показать расширенные опции"
+
+#: ui/Message_win.glade.h:25
+msgid "Show Received Message"
+msgstr "Показать принятое сообщение"
+
+#: ui/Message_win.glade.h:26 ui/OOOChat_win.glade.h:11
+msgid "Specific resource to which this message should be sent"
+msgstr "Конкретный ресурс, куда следует послать это сообщение"
+
+#: ui/Message_win.glade.h:27
+msgid "Subject of this message"
+msgstr "Тема этого сообщения"
+
+#: ui/Message_win.glade.h:29
+msgid "Time:"
+msgstr "Время:"
+
+#: ui/Message_win.glade.h:30
+msgid "URI:"
+msgstr "URI:"
+
+#: ui/Message_win.glade.h:32 ui/OOOChat_win.glade.h:14
+#: ui/SubscriptionRequest_dlg.glade.h:8
+msgid "View Contact Info..."
+msgstr "Просмотр информации для связи..."
+
+#: ui/Message_win.glade.h:35
+msgid "http://gabber.sourceforge.net/"
+msgstr "http://gabber.sourceforge.net/"
+
+#: ui/MyContactInfo_win.glade.h:2
+msgid "Address _2:"
+msgstr "Адрес 2:"
+
+#: ui/MyContactInfo_win.glade.h:3 ui/Welcome_win.glade.h:2
+msgid "Basic Information"
+msgstr "Основная информация"
+
+#: ui/MyContactInfo_win.glade.h:8
+msgid "Do not publish my information in JUD"
+msgstr "Не публиковать информацию обо мне на JUD"
+
+#: ui/MyContactInfo_win.glade.h:9 ui/Welcome_win.glade.h:21
+msgid "Fa_mily Name:"
+msgstr "Фамилия:"
+
+#: ui/MyContactInfo_win.glade.h:10
+msgid "Gabber: User Information"
+msgstr "Gabber: Информация о пользователе"
+
+#: ui/MyContactInfo_win.glade.h:12
+msgid "Jabber Users Directory"
+msgstr "Каталог пользователей Jabber (JUD)"
+
+#: ui/MyContactInfo_win.glade.h:17
+msgid "Pos_tal Code:"
+msgstr "Почтовый индекс:"
+
+#: ui/MyContactInfo_win.glade.h:20
+msgid ""
+"The information on the 'General Info' page will be sent to the Jabber Users "
+"Directory (JUD), a searchable directory of many Jabber users.\n"
+"\n"
+"All other User Information is accessible if people ask specifically for your "
+"User Information, or 'vCard.'"
+msgstr ""
+"Информация на странице 'Общая информация' будет передана в каталог "
+"пользователей Jabber (JUD) -- каталог, в котором можно производить поиск "
+"многих пользователей Jabber.\n"
+"\n"
+"Вся остальная Информация о пользователе доступна, если кто-то специально "
+"попросит вашу 'Информацию о пользователе' или 'vCard.'"
+
+#: ui/MyContactInfo_win.glade.h:26
+msgid "_Address:"
+msgstr "Адрес:"
+
+#: ui/MyContactInfo_win.glade.h:27
+msgid "_City:"
+msgstr "Город:"
+
+#: ui/MyContactInfo_win.glade.h:28
+msgid "_Country:"
+msgstr "Страна:"
+
+#: ui/MyContactInfo_win.glade.h:29 ui/Welcome_win.glade.h:69
+msgid "_Full Name:"
+msgstr "Полное имя:"
+
+#: ui/MyContactInfo_win.glade.h:30 ui/Welcome_win.glade.h:70
+msgid "_Given Name:"
+msgstr "Имя:"
+
+#: ui/MyContactInfo_win.glade.h:31
+msgid "_Home Phone:"
+msgstr "Домашний телефон:"
+
+#: ui/MyContactInfo_win.glade.h:32
+msgid "_JUD"
+msgstr "JUD"
+
+#: ui/MyContactInfo_win.glade.h:37
+msgid "_State/Province:"
+msgstr "Штат/Провинция (Республика/Область):"
+
+#: ui/MyContactInfo_win.glade.h:38
+msgid "_Web Site:"
+msgstr "Веб узел:"
+
+#: ui/MyContactInfo_win.glade.h:39 ui/Welcome_win.glade.h:77
+msgid "_eMail:"
+msgstr "e-mail:"
+
+#: ui/OOOChat_win.glade.h:6
+msgid "Gabber: One-on-One Chat with [name]"
+msgstr "Gabber: Беседа один на один с [имя]"
+
+#: ui/OOOChat_win.glade.h:10
+msgid "Send as Normal Message"
+msgstr "Послать как обычное сообщение"
+
+#: ui/OOOChat_win.glade.h:12
+msgid "Status"
+msgstr "Состояние"
+
+#: ui/Prefs_win.glade.h:1
+msgid "    "
+msgstr "    "
+
+#: ui/Prefs_win.glade.h:3
+msgid "Automatically open normal messages"
+msgstr "Автоматически открывать обычные сообщения"
+
+#: ui/Prefs_win.glade.h:4
+msgid "Automatically open one-on-one chats"
+msgstr "Автоматически открывать беседы один на один"
+
+#: ui/Prefs_win.glade.h:6
+msgid "Available:"
+msgstr "Доступны:"
+
+#: ui/Prefs_win.glade.h:7
+msgid "Away:"
+msgstr "Отошли:"
+
+#: ui/Prefs_win.glade.h:8
+msgid "Chats"
+msgstr "Беседы"
+
+#: ui/Prefs_win.glade.h:9
+msgid "Chatty:"
+msgstr "Можно побеседовать:"
+
+#: ui/Prefs_win.glade.h:10
+msgid "Color for available users"
+msgstr "Цвет для доступных пользователей"
+
+#: ui/Prefs_win.glade.h:11
+msgid "Color for away users"
+msgstr "Цвет для пользователей, которые отошли"
+
+#: ui/Prefs_win.glade.h:12
+msgid "Color for chatty users"
+msgstr "Цвет для пользователей, с которыми можно побеседовать"
+
+#: ui/Prefs_win.glade.h:13
+msgid "Color for do not disturb users"
+msgstr "Цвет для пользователей, которых не беспокоить"
+
+#: ui/Prefs_win.glade.h:14
+msgid "Color for not availabe (extended away) users"
+msgstr "Цвет для недоступных (отошел надолго) пользователей"
+
+#: ui/Prefs_win.glade.h:15
+msgid "Color for offline users"
+msgstr "Цвет для пользователей не в сети"
+
+#: ui/Prefs_win.glade.h:16
+msgid "Color for queued messages"
+msgstr "Цвет для сообщений, поставленных в очередь"
+
+#: ui/Prefs_win.glade.h:17
+msgid "Color for queued one-on-one chats"
+msgstr "Цвет для бесед один на один, поставленных в очередь"
+
+#: ui/Prefs_win.glade.h:18
+msgid "Color for users not in the roster"
+msgstr "Цвет для пользователей не в реестре"
+
+#: ui/Prefs_win.glade.h:19
+msgid "Color for users without a subscription"
+msgstr "Цвет для пользователей без подписки"
+
+#: ui/Prefs_win.glade.h:20
+msgid "Display icons next to contacts indicating their status"
+msgstr "Показывать пиктограммы состояния рядом с пользователем"
+
+#: ui/Prefs_win.glade.h:21
+msgid "Display status docklet"
+msgstr "Показывать блок статуса"
+
+#: ui/Prefs_win.glade.h:22
+msgid "Display status indicator"
+msgstr "Показывать индикатор состояния"
+
+#: ui/Prefs_win.glade.h:23
+msgid "Display timestamps in group chats"
+msgstr "Показывать время в беседах группы"
+
+#: ui/Prefs_win.glade.h:24
+msgid "Display timestamps in one-on-one chats"
+msgstr "Показывать время в беседах один на один"
+
+#: ui/Prefs_win.glade.h:25
+msgid "Display toolbar of commonly used actions"
+msgstr "Показывать панель инструментов с часто используемыми действиями"
+
+#: ui/Prefs_win.glade.h:26
+msgid "Do Not Disturb:"
+msgstr "Не беспокоить:"
+
+#: ui/Prefs_win.glade.h:27
+msgid "Encrypt messages, one-on-one chats, and presence with GPG"
+msgstr "Шифровать сообщения, беседы один на один и присутствие с помощью GPG"
+
+#: ui/Prefs_win.glade.h:28
+msgid "GPG Encryption"
+msgstr "Шифрование GPG"
+
+#: ui/Prefs_win.glade.h:29
+msgid "Gabber: Available Color"
+msgstr "Gabber: Цвет доступного"
+
+#: ui/Prefs_win.glade.h:30
+msgid "Gabber: Available Icon"
+msgstr "Gabber: Пиктограмма доступного"
+
+#: ui/Prefs_win.glade.h:31
+msgid "Gabber: Away Color"
+msgstr "Gabber: Цвет отошедшего"
+
+#: ui/Prefs_win.glade.h:32
+msgid "Gabber: Away Icon"
+msgstr "Gabber: Пиктограмма отошедшего"
+
+#: ui/Prefs_win.glade.h:33
+msgid "Gabber: Chatty Color"
+msgstr "Gabber: Цвет 'можно побеседовать'"
+
+#: ui/Prefs_win.glade.h:34
+msgid "Gabber: Chatty Icon"
+msgstr "Gabber: Пиктограмма 'можно побеседовать'"
+
+#: ui/Prefs_win.glade.h:35
+msgid "Gabber: Do Not Disturb Color"
+msgstr "Gabber: Цвет 'Не беспокоить'"
+
+#: ui/Prefs_win.glade.h:36
+msgid "Gabber: Do Not Disturb Icon"
+msgstr "Gabber: Пиктограмма 'Не беспокоить'"
+
+#: ui/Prefs_win.glade.h:37
+msgid "Gabber: Logs Saved in"
+msgstr "Gabber: Протоколы записаны"
+
+#: ui/Prefs_win.glade.h:38
+msgid "Gabber: Normal Message Color"
+msgstr "Gabber: Цвет обычного сообщения"
+
+#: ui/Prefs_win.glade.h:39
+msgid "Gabber: Not Available Icon"
+msgstr "Gabber: Пиктограмма 'Не доступен'"
+
+#: ui/Prefs_win.glade.h:40
+msgid "Gabber: Not AvailableColor"
+msgstr "Gabber: Цвет 'Не доступен'"
+
+#: ui/Prefs_win.glade.h:41
+msgid "Gabber: Not in Roster Color"
+msgstr "Gabber: Цвет `Не в Реестре'"
+
+#: ui/Prefs_win.glade.h:42
+msgid "Gabber: Offline Color"
+msgstr "Gabber: Цвет `Не в сети'"
+
+#: ui/Prefs_win.glade.h:43
+msgid "Gabber: Offline Icon"
+msgstr "Gabber: Пиктограмма `Не в сети'"
+
+#: ui/Prefs_win.glade.h:44
+msgid "Gabber: One-on-One Chat Color"
+msgstr "Gabber: Цвет для беседы один на один"
+
+#: ui/Prefs_win.glade.h:46
+msgid "Gabber: Stalker Color"
+msgstr "Gabber: Цвет сталкера"
+
+#: ui/Prefs_win.glade.h:47
+msgid "Key ID"
+msgstr "ID ключа"
+
+#: ui/Prefs_win.glade.h:48
+msgid "Leave the message type intact"
+msgstr "Оставить тип сообщения неизмененным"
+
+#: ui/Prefs_win.glade.h:49
+msgid "Log Format"
+msgstr "Формат протокола"
+
+#: ui/Prefs_win.glade.h:50
+msgid "Log Location"
+msgstr "Положение протокола"
+
+#: ui/Prefs_win.glade.h:51
+msgid "Log Purging Frequency"
+msgstr "Частота очистки протокола"
+
+#: ui/Prefs_win.glade.h:52
+msgid "Log messages and chats as XHTML"
+msgstr "Протоколировать сообщения и беседы как XHTML"
+
+#: ui/Prefs_win.glade.h:53
+msgid "Log messages and chats as XML"
+msgstr "Протоколировать сообщения и беседы как XML"
+
+#: ui/Prefs_win.glade.h:54
+msgid "Logging"
+msgstr "Протоколирование"
+
+#: ui/Prefs_win.glade.h:56
+msgid "Logs Saved in:"
+msgstr "Протоколы записаны:"
+
+#: ui/Prefs_win.glade.h:57
+msgid "Main _Window"
+msgstr "Главное окно"
+
+#: ui/Prefs_win.glade.h:58
+msgid "Move the logs to a subdirectory every month"
+msgstr "Перемещать протоколы в подкаталог каждый месяц"
+
+#: ui/Prefs_win.glade.h:59
+msgid "Normal Message:"
+msgstr "Обычное сообщение:"
+
+#: ui/Prefs_win.glade.h:60
+msgid "Not Available:"
+msgstr "Недоступны:"
+
+#: ui/Prefs_win.glade.h:61
+msgid "Not in Roster:"
+msgstr "Не в Реестре:"
+
+#: ui/Prefs_win.glade.h:62
+msgid "Offline:"
+msgstr "Не в сети:"
+
+#: ui/Prefs_win.glade.h:63
+msgid "One-on-One Chat:"
+msgstr "Беседа один на один:"
+
+#: ui/Prefs_win.glade.h:64
+msgid "Proxy or Firewall"
+msgstr "Прокси или брандмауэр"
+
+#: ui/Prefs_win.glade.h:65
+msgid "Purge the logs every month"
+msgstr "Очищать протоколы каждый месяц"
+
+#: ui/Prefs_win.glade.h:66
+msgid "Receive all messages as normal messages"
+msgstr "Принимать все сообщения как обычные"
+
+#: ui/Prefs_win.glade.h:67
+msgid "Receive all messages as one-on-one chats"
+msgstr "Принимать все сообщения как беседы один на один"
+
+#: ui/Prefs_win.glade.h:68
+msgid "Receiving"
+msgstr "Принимаю"
+
+#: ui/Prefs_win.glade.h:69
+msgid "Right-click the panel and Add to Panel -> Status Dock."
+msgstr ""
+"Щелкните правой кнопкой мыши на панели и Добавить на панель -> Блок состояния"
+
+#: ui/Prefs_win.glade.h:70
+msgid "Roster Colors and Icons"
+msgstr "Цвета и пиктограммы Реестра"
+
+#: ui/Prefs_win.glade.h:71
+msgid "Save logs of encrypted messages"
+msgstr "Записать протоколы зашифрованных сообщений"
+
+#: ui/Prefs_win.glade.h:72
+msgid "Save logs of messages and chats"
+msgstr "Записать протоколы сообщений и бесед"
+
+#: ui/Prefs_win.glade.h:73
+msgid "Save main window position"
+msgstr "Записать положение главного окна"
+
+#: ui/Prefs_win.glade.h:74
+msgid "Save main window size"
+msgstr "Записать размер главного окна"
+
+#: ui/Prefs_win.glade.h:75
+msgid "Secret Key"
+msgstr "Секретный ключ"
+
+#: ui/Prefs_win.glade.h:76
+msgid "Send normal messages by default"
+msgstr "Посылать обычные сообщения по умолчанию"
+
+#: ui/Prefs_win.glade.h:77
+msgid "Send one-on-one chats by default"
+msgstr "Посылать беседы один на один по умолчанию"
+
+#: ui/Prefs_win.glade.h:78
+msgid "Sending"
+msgstr "Посылаю"
+
+#: ui/Prefs_win.glade.h:79
+msgid "Size and Position"
+msgstr "Размер и положение"
+
+#: ui/Prefs_win.glade.h:80
+msgid "Sorry, none yet"
+msgstr "Извините, еще не"
+
+#: ui/Prefs_win.glade.h:81
+msgid "Stalker:"
+msgstr "Сталкер:"
+
+#: ui/Prefs_win.glade.h:82
+msgid "Status Docklet"
+msgstr "Блок состояния"
+
+#: ui/Prefs_win.glade.h:83
+msgid "Toolbars"
+msgstr "Панели инструментов"
+
+#: ui/Prefs_win.glade.h:84
+msgid "User ID"
+msgstr "ID Пользователя"
+
+#: ui/Prefs_win.glade.h:85
+msgid "_Appearance"
+msgstr "Внешний вид"
+
+#: ui/Prefs_win.glade.h:86
+msgid "_Connection"
+msgstr "Связь"
+
+#: ui/Prefs_win.glade.h:87
+msgid "_Encryption"
+msgstr "Шифрование"
+
+#: ui/Prefs_win.glade.h:88
+msgid "_Logs"
+msgstr "Протоколы"
+
+#: ui/Prefs_win.glade.h:89
+msgid "_Messages"
+msgstr "Сообщения"
+
+#: ui/Prefs_win.glade.h:90
+msgid "~/.Gabber/"
+msgstr "~/.Gabber/"
+
+#: ui/RawXML_dlg.glade.h:1
+msgid "Blank Message"
+msgstr "Пустое сообщение"
+
+#: ui/RawXML_dlg.glade.h:2
+msgid "Blank Message XML"
+msgstr "Пустое сообщение XML"
+
+#: ui/RawXML_dlg.glade.h:3
+msgid "Gabber: Raw XML Input"
+msgstr "Gabber: Прямой ввод XML"
+
+#: ui/RawXML_dlg.glade.h:4
+msgid "IQ"
+msgstr "IQ"
+
+#: ui/RawXML_dlg.glade.h:5
+msgid "IQ XML"
+msgstr "IQ XML"
+
+#: ui/RawXML_dlg.glade.h:6
+msgid ""
+"If you know what you're doing, enter XML to send to the server below. Output "
+"will be in STDOUT (for now)."
+msgstr ""
+"Если Вы знаете, что делаете, введите XML, который послать нижеуказанному "
+"серверу. Результат будет в STDOUT (пока)."
+
+#: ui/RawXML_dlg.glade.h:7
+msgid "Raw XML Input"
+msgstr "Прямой ввод XML"
+
+#: ui/RegDruid_win.glade.h:2
+msgid "Attempting to Register"
+msgstr "Пытаюсь зарегистрировать"
+
+#: ui/RegDruid_win.glade.h:4
+msgid "Gabber: Agent Registration"
+msgstr "Gabber: Регистрация агента"
+
+#: ui/RegDruid_win.glade.h:5
+msgid "Loading Registration Information"
+msgstr "Загружаю регистрационную информацию"
+
+#: ui/RegDruid_win.glade.h:7
+msgid ""
+"Please wait while Gabber attempts to register with the information you "
+"entered."
+msgstr ""
+"Пожалуйста, подождите, пока Gabber пытается зарегистрироваться с "
+"информацией, которую Вы ввели."
+
+#: ui/RegDruid_win.glade.h:8
+msgid ""
+"Please wait while Gabber tries to load the information needed to register "
+"with this agent."
+msgstr ""
+"Пожалуйста, подождите, пока Gabber пытается загрузить информацию, "
+"необходимую для регистрации у этого агента."
+
+#: ui/RegDruid_win.glade.h:9
+msgid "Register with an Agent"
+msgstr "Зарегистрироваться у агента"
+
+#: ui/RegDruid_win.glade.h:10
+msgid "Registration Successful"
+msgstr "Регистрация успешна"
+
+#: ui/RegDruid_win.glade.h:11
+msgid "Registration with this agent has been successful."
+msgstr "Регистрация у этого агента увенчалась успехом."
+
+#: ui/RegDruid_win.glade.h:12 ui/TransInfo_dlg.glade.h:15
+msgid "Service Provided:"
+msgstr "Сервис обеспечен:"
+
+#: ui/RegDruid_win.glade.h:13
+msgid ""
+"The agent has logged in successfully\n"
+"and has been added to your roster."
+msgstr ""
+"Агент подключился успешно\n"
+"и был добавлен в Ваш реестр."
+
+#: ui/RegDruid_win.glade.h:15
+msgid "This agent requires the fields you see to the right to be filled out."
+msgstr ""
+"Этот агент требует чтобы были заполнены поля, которые Вы видите справа."
+
+#: ui/RegDruid_win.glade.h:16
+msgid "This druid will step you through registering with an agent."
+msgstr "Этот Помощник по шагам поможет Вам пройти регистрацию у агента."
+
+#: ui/RegDruid_win.glade.h:17
+msgid ""
+"To continue:\n"
+"Fill out all required fields."
+msgstr ""
+"Чтобы продолжить:\n"
+"Заполните все требуемые поля."
+
+#: ui/Status_dlg.glade.h:1
+msgid "Gabber: My Status"
+msgstr "Gabber: Состояние пользователя"
+
+#: ui/Status_dlg.glade.h:4
+msgid "Show as being:"
+msgstr "Показать как существо:"
+
+#: ui/Status_dlg.glade.h:5
+msgid "Update Status"
+msgstr "Обновить состояние"
+
+#: ui/Status_dlg.glade.h:6
+msgid "_Status:"
+msgstr "Состояние:"
+
+#: ui/Status_dlg.glade.h:7
+msgid "online"
+msgstr "в сети"
+
+#: ui/SubscriptionRequest_dlg.glade.h:1
+msgid "Add contact to roster"
+msgstr "Добавить пользователя в реестр"
+
+#: ui/SubscriptionRequest_dlg.glade.h:3
+msgid "Gabber: Subscription Request"
+msgstr "Gabber: Запрос на подписку"
+
+#: ui/SubscriptionRequest_dlg.glade.h:6
+msgid "Request Reason"
+msgstr "Причина запроса"
+
+#: ui/SubscriptionRequest_dlg.glade.h:7
+msgid "Send Message..."
+msgstr "Отправить сообщение..."
+
+#: ui/SubscriptionRequest_dlg.glade.h:9
+msgid "Would you like to allow [user@server] to add you to their list?"
+msgstr "Согласны ли Вы позволить [user@server] добавить Вас в свой список?"
+
+#: ui/TransInfo_dlg.glade.h:1
+msgid "Agent Name:"
+msgstr "Имя агента:"
+
+#: ui/TransInfo_dlg.glade.h:2
+msgid "Browse..."
+msgstr "Просмотр..."
+
+#: ui/TransInfo_dlg.glade.h:5
+msgid "Gabber: Transport Information"
+msgstr "Gabber: Информация о транспорте"
+
+#: ui/TransInfo_dlg.glade.h:6
+msgid "Group Chat Capable:"
+msgstr "Может вести беседу группы:"
+
+#: ui/TransInfo_dlg.glade.h:7
+msgid "Has SubAgents:"
+msgstr "Имеет подагентов:"
+
+#: ui/TransInfo_dlg.glade.h:9
+msgid "Login Information"
+msgstr "Информация о подключении"
+
+#: ui/TransInfo_dlg.glade.h:14
+msgid "Searchable:"
+msgstr "Можно искать:"
+
+#: ui/TransInfo_dlg.glade.h:18
+msgid "Transport Information"
+msgstr "Информация о транспорте"
+
+#: ui/TransInfo_dlg.glade.h:19
+msgid "Username:"
+msgstr "Имя пользователя:"
+
+#: ui/TransInfo_dlg.glade.h:20
+msgid "no"
+msgstr "нет"
+
+#: ui/Welcome_win.glade.h:1
+msgid "5222"
+msgstr "5222"
+
+#: ui/Welcome_win.glade.h:3
 msgid ""
 "Enter the name of the Jabber server you would like to use.\n"
 "\n"
 "'jabber.com' is a stable public server, while 'jabber.org' is an unstable "
-"one which will have test releases of Jabber server on it.\n"
+"one which will have test releases of Jabber server on it. \n"
 "\n"
 "If you already have an account, enter the name of the server you are "
 "registered on.\n"
@@ -1026,7 +2505,7 @@ msgstr ""
 "Большинство серверов Jabber используют порт 5222, поэтому Вам не нужно его "
 "менять, если об этом не сказано отдельно."
 
-#: ui/gabber.glade.h:103
+#: ui/Welcome_win.glade.h:10
 msgid ""
 "Enter your desired password, and then enter it again to confirm that you did "
 "not make a mistake.\n"
@@ -1039,7 +2518,7 @@ msgstr ""
 "Если у Вас уже есть учетная запись Jabber, введите пароль, с которым вы "
 "зарегистрировались ранее."
 
-#: ui/gabber.glade.h:106
+#: ui/Welcome_win.glade.h:13
 msgid ""
 "Enter your desired username.\n"
 "\n"
@@ -1054,7 +2533,7 @@ msgstr ""
 "Если у Вас уже есть учетная запись Jabber, введите имя, с которым вы "
 "зарегистрировались ранее."
 
-#: ui/gabber.glade.h:111
+#: ui/Welcome_win.glade.h:18
 msgid ""
 "Enter your preferred nickname, name and eMail address.\n"
 "\n"
@@ -1067,59 +2546,7 @@ msgstr ""
 "Смотрите Gabber -> Информация о пользователе... чтобы увидеть в каком виде "
 "эта информация видна другим."
 
-#: ui/gabber.glade.h:114
-msgid "Expand all groups by default"
-msgstr "Раскрывать все группы по умолчанию"
-
-#: ui/gabber.glade.h:115
-msgid "Explanation:"
-msgstr "Пояснение:"
-
-#: ui/gabber.glade.h:116
-msgid "Extra"
-msgstr "Дополнение"
-
-#: ui/gabber.glade.h:117
-msgid "Family Name:"
-msgstr "Фамилия:"
-
-#: ui/gabber.glade.h:118
-msgid "Finish"
-msgstr "Завершить"
-
-#: ui/gabber.glade.h:119
-msgid "From:"
-msgstr "От:"
-
-#: ui/gabber.glade.h:120
-msgid "Full Name:"
-msgstr "Полное имя:"
-
-#: ui/gabber.glade.h:121
-msgid "GPG Encryption"
-msgstr "Шифрование GPG"
-
-#: ui/gabber.glade.h:122
-msgid "Gabber"
-msgstr "Gabber"
-
-#: ui/gabber.glade.h:123
-msgid "Gabber Manual"
-msgstr "Руководство по Gabber'у"
-
-#: ui/gabber.glade.h:124
-msgid "Gabber Manual..."
-msgstr "Руководство по Gabber'у..."
-
-#: ui/gabber.glade.h:125
-msgid "Gabber Profiles"
-msgstr "Профили Gabber'а"
-
-#: ui/gabber.glade.h:126
-msgid "Gabber _Manual..."
-msgstr "Руководство по Gabber'у..."
-
-#: ui/gabber.glade.h:127
+#: ui/Welcome_win.glade.h:23
 msgid ""
 "Gabber is now trying to log into and register with the Jabber server you "
 "selected.\n"
@@ -1139,1020 +2566,55 @@ msgstr ""
 "Иначе Вам будет представлен диалог подключения, где Вы сможете сделать "
 "изменения и сделать еще одну попытку."
 
-#: ui/gabber.glade.h:132
-msgid "Gabber: Add a User to your Roster"
-msgstr "Gabber: Добавить пользователя в Ваш Реестр"
-
-#: ui/gabber.glade.h:133
-msgid "Gabber: Agent Registration"
-msgstr "Gabber: Регистрация агента"
-
-#: ui/gabber.glade.h:134
-msgid "Gabber: Agents Browser"
-msgstr "Gabber: Просмотрщик агентов"
-
-#: ui/gabber.glade.h:135
-msgid "Gabber: Available Color"
-msgstr "Gabber: Цвет доступного"
-
-#: ui/gabber.glade.h:136
-msgid "Gabber: Available Icon"
-msgstr "Gabber: Пиктограмма доступного"
-
-#: ui/gabber.glade.h:137
-msgid "Gabber: Away Color"
-msgstr "Gabber: Цвет отошедшего"
-
-#: ui/gabber.glade.h:138
-msgid "Gabber: Away Icon"
-msgstr "Gabber: Пиктограмма отошедшего"
-
-#: ui/gabber.glade.h:139
-msgid "Gabber: Chatty Color"
-msgstr "Gabber: Цвет 'можно побеседовать'"
-
-#: ui/gabber.glade.h:140
-msgid "Gabber: Chatty Icon"
-msgstr "Gabber: Пиктограмма 'можно побеседовать'"
-
-#: ui/gabber.glade.h:141
-msgid "Gabber: Contact Information"
-msgstr "Gabber: Информация для связи"
-
-#: ui/gabber.glade.h:142
-msgid "Gabber: Do Not Disturb Color"
-msgstr "Gabber: Цвет 'Не беспокоить'"
-
-#: ui/gabber.glade.h:143
-msgid "Gabber: Do Not Disturb Icon"
-msgstr "Gabber: Пиктограмма 'Не беспокоить'"
-
-#: ui/gabber.glade.h:144
-msgid "Gabber: Edit Groups"
-msgstr "Gabber: Редактировать группы"
-
-#: ui/gabber.glade.h:145
-msgid "Gabber: Edit a Jabber Message Rule"
-msgstr "Gabber: Редактировать правила сообщений Jabber"
-
-#: ui/gabber.glade.h:146
-msgid "Gabber: GPG Passphrase"
-msgstr "Gabber: Парольная фраза GPG"
-
-#: ui/gabber.glade.h:147
-msgid "Gabber: Group Chat"
-msgstr "Gabber: Беседа группы"
-
-#: ui/gabber.glade.h:148
-msgid "Gabber: Group Chat Invitation"
-msgstr "Gabber: Приглашение в беседу группы"
-
-#: ui/gabber.glade.h:149
-msgid "Gabber: Group Chat Invitor"
-msgstr "Gabber: Приглашающий в беседу группы"
-
-#: ui/gabber.glade.h:150
-msgid "Gabber: Headline"
-msgstr "Gabber: Заголовок"
-
-#: ui/gabber.glade.h:151
-msgid "Gabber: Headlines"
-msgstr "Gabber: Заголовки"
-
-#: ui/gabber.glade.h:152
-msgid "Gabber: History"
-msgstr "Gabber: История"
-
-#: ui/gabber.glade.h:153
-msgid "Gabber: Ignore List"
-msgstr "Gabber: Список игнорируемых"
-
-#: ui/gabber.glade.h:154
-msgid "Gabber: Jabber Message Rules List"
-msgstr "Gabber: Список правил сообщений Jabber"
-
-#: ui/gabber.glade.h:155
-msgid "Gabber: Join Group Chat"
-msgstr "Gabber: Присоединиться к беседе группы"
-
-#: ui/gabber.glade.h:156
-msgid "Gabber: Login"
-msgstr "Gabber: Подключение"
-
-#: ui/gabber.glade.h:157
-msgid "Gabber: Logs Saved in"
-msgstr "Gabber: Протоколы записаны"
-
-#: ui/gabber.glade.h:158
-msgid "Gabber: Manage Profiles"
-msgstr "Gabber: Управление профилями"
-
-#: ui/gabber.glade.h:159
-msgid "Gabber: Message"
-msgstr "Gabber: Сообщение"
-
-#: ui/gabber.glade.h:160
-msgid "Gabber: New Profile"
-msgstr "Gabber: Новый профиль"
-
-#: ui/gabber.glade.h:161
-msgid "Gabber: Normal Message Color"
-msgstr "Gabber: Цвет обычного сообщения"
-
-#: ui/gabber.glade.h:162
-msgid "Gabber: Not Available Icon"
-msgstr "Gabber: Пиктограмма 'Не доступен'"
-
-#: ui/gabber.glade.h:163
-msgid "Gabber: Not AvailableColor"
-msgstr "Gabber: Цвет 'Не доступен'"
-
-#: ui/gabber.glade.h:164
-msgid "Gabber: Not in Roster Color"
-msgstr "Gabber: Цвет `Не в Реестре'"
-
-#: ui/gabber.glade.h:165
-msgid "Gabber: Offline Color"
-msgstr "Gabber: Цвет `Не в сети'"
-
-#: ui/gabber.glade.h:166
-msgid "Gabber: Offline Icon"
-msgstr "Gabber: Пиктограмма `Не в сети'"
-
-#: ui/gabber.glade.h:167
-msgid "Gabber: One-on-One Chat Color"
-msgstr "Gabber: Цвет для беседы один на один"
-
-#: ui/gabber.glade.h:168
-msgid "Gabber: One-on-One Chat with [name]"
-msgstr "Gabber: Беседа один на один с [имя]"
-
-#: ui/gabber.glade.h:170
-msgid "Gabber: Raw XML Input"
-msgstr "Gabber: Прямой ввод XML"
-
-#: ui/gabber.glade.h:171
-msgid "Gabber: Remove All Transport Users?"
-msgstr "Gabber: Удалить всех пользователей транспорта?"
-
-#: ui/gabber.glade.h:172
-msgid "Gabber: Remove All Users"
-msgstr "Gabber: Удалить всех пользователей"
-
-#: ui/gabber.glade.h:173
-msgid "Gabber: Send Contact(s)"
-msgstr "Gabber: Переслать информацию о пользователях"
-
-#: ui/gabber.glade.h:174
-msgid "Gabber: Signature Info"
-msgstr "Gabber: Информация о подписи"
-
-#: ui/gabber.glade.h:175
-msgid "Gabber: Stalker Color"
-msgstr "Gabber: Цвет сталкера"
-
-#: ui/gabber.glade.h:176
-msgid "Gabber: Subscription Request"
-msgstr "Gabber: Запрос на подписку"
-
-#: ui/gabber.glade.h:177
+#: ui/Welcome_win.glade.h:28
 msgid "Gabber: The GNOME Jabber Client"
 msgstr "Gabber: GNOME клиент Jabber'а"
 
-#: ui/gabber.glade.h:178
-msgid "Gabber: Transport Information"
-msgstr "Gabber: Информация о транспорте"
-
-#: ui/gabber.glade.h:179
-msgid "Gabber: User Information"
-msgstr "Gabber: Информация о пользователе"
-
-#: ui/gabber.glade.h:180
-msgid "Gabber: User Status"
-msgstr "Gabber: Состояние пользователя"
-
-#: ui/gabber.glade.h:181
-msgid "General Information"
-msgstr "Общая информация"
-
-#: ui/gabber.glade.h:182
-msgid "General _Info"
-msgstr "Общая информация"
-
-#: ui/gabber.glade.h:183
-msgid "Given Name:"
-msgstr "Имя:"
-
-#: ui/gabber.glade.h:184
-msgid "Go to this web site"
-msgstr "Перейти на этот веб узел"
-
-#: ui/gabber.glade.h:185
-msgid "Group Chat Capable:"
-msgstr "Может вести беседу группы:"
-
-#: ui/gabber.glade.h:186
-msgid "Group Information"
-msgstr "Информация о группе"
-
-#: ui/gabber.glade.h:187
-msgid "Group:"
-msgstr "Группа:"
-
-#: ui/gabber.glade.h:188
-msgid "Groups for:"
-msgstr "Группы для:"
-
-#: ui/gabber.glade.h:189
-msgid "Has SubAgents:"
-msgstr "Имеет подагентов:"
-
-#: ui/gabber.glade.h:190
-msgid "Headline"
-msgstr "Заголовок"
-
-#: ui/gabber.glade.h:191
-msgid "Hide _Agents/Transports"
-msgstr "Спрятать Агентов/Транспорты"
-
-#: ui/gabber.glade.h:192
-msgid "Hide _Offline Contacts"
-msgstr "Спрятать пользователей, которые не в сети"
-
-#: ui/gabber.glade.h:193
-msgid "History"
-msgstr "История"
-
-#: ui/gabber.glade.h:194
-msgid "History for [name]"
-msgstr "История для [name]"
-
-#: ui/gabber.glade.h:195
-msgid "Home Phone:"
-msgstr "Домашний телефон:"
-
-#: ui/gabber.glade.h:196
-msgid "IM Protocol:"
-msgstr "IM протокол:"
-
-#: ui/gabber.glade.h:197
-msgid "IQ"
-msgstr "IQ"
-
-#: ui/gabber.glade.h:198
-msgid "IQ XML"
-msgstr "IQ XML"
-
-#: ui/gabber.glade.h:200
-msgid "IRC Server:"
-msgstr "IRC сервер:"
-
-#: ui/gabber.glade.h:201
-msgid ""
-"If you have found the person you are looking for, simply select their name "
-"and click next.\n"
-"\n"
-"Otherwise, you may press back and try again."
-msgstr ""
-"Если Вы нашли человека, которого искали, просто выберите его имя и нажмите "
-"Дальше.\n"
-"\n"
-"Еще вы можете нажать 'Назад' и сделать еще одну попытку."
-
-#: ui/gabber.glade.h:204
-msgid ""
-"If you know what you're doing, enter XML to send to the server below. Output "
-"will be in STDOUT (for now)."
-msgstr ""
-"Если Вы знаете, что делаете, введите XML, который послать нижеуказанному "
-"серверу. Результат будет в STDOUT (пока)."
-
-#: ui/gabber.glade.h:205
-msgid "Ignore Options"
-msgstr "Параметры игнорирования"
-
-#: ui/gabber.glade.h:206
-msgid ""
-"In order to encrypt and sign messages, Gabber needs your GPG key's "
-"passphrase."
-msgstr ""
-"Для того чтобы шифровать и подписывать сообщения, Gabber'у нужна Ваша "
-"парольная фраза для GPG."
-
-#: ui/gabber.glade.h:207
-msgid "Info"
-msgstr "Информация"
-
-#: ui/gabber.glade.h:208
-msgid "Info..."
-msgstr "Информация..."
-
-#: ui/gabber.glade.h:209
-msgid "Invite"
-msgstr "Пригласить"
-
-#: ui/gabber.glade.h:210
+#: ui/Welcome_win.glade.h:30
 msgid "JID with Resource:"
 msgstr "JID с ресурсом:"
 
-#: ui/gabber.glade.h:211
+#: ui/Welcome_win.glade.h:31
 msgid "Jabber Account Password"
 msgstr "Пароль учетной записи Jabber"
 
-#: ui/gabber.glade.h:212
+#: ui/Welcome_win.glade.h:32
 msgid "Jabber Account Username"
 msgstr "Имя пользователя учетной записи Jabber"
 
-#: ui/gabber.glade.h:213
-msgid "Jabber Client"
-msgstr "Клиент Jabber"
-
-#: ui/gabber.glade.h:215
-msgid "Jabber ID"
-msgstr "Jabber ID"
-
-#: ui/gabber.glade.h:216
-msgid "Jabber Message Rules List"
-msgstr "Список правил сообщений Jabber"
-
-#: ui/gabber.glade.h:217
-msgid "Jabber Message _Rules..."
-msgstr "Правила сообщений Jabber..."
-
-#: ui/gabber.glade.h:218
+#: ui/Welcome_win.glade.h:33
 msgid "Jabber Password"
 msgstr "Пароль Jabber"
 
-#: ui/gabber.glade.h:219
+#: ui/Welcome_win.glade.h:34
 msgid "Jabber Resource"
 msgstr "Ресурс Jabber"
 
-#: ui/gabber.glade.h:220
+#: ui/Welcome_win.glade.h:35
 msgid "Jabber Server"
 msgstr "Jabber сервер"
 
-#: ui/gabber.glade.h:221
+#: ui/Welcome_win.glade.h:36
 msgid "Jabber Username"
 msgstr "Имя пользователя Jabber"
 
-#: ui/gabber.glade.h:222
-msgid "Jabber Users Directory"
-msgstr "Каталог пользователей Jabber (JUD)"
-
-#: ui/gabber.glade.h:223
-msgid "Jabber client priority. 0 is default"
-msgstr "Приоритет клиента Jabber. 0 по умолчанию"
-
-#: ui/gabber.glade.h:224
+#: ui/Welcome_win.glade.h:37
 msgid "JabberID"
 msgstr "JabberID"
 
-#: ui/gabber.glade.h:225
-msgid "JabberID to which this message should be sent"
-msgstr "JabberID того, кому должно быть послано это сообщение"
-
-#: ui/gabber.glade.h:226
-msgid "JabberID:"
-msgstr "JabberID:"
-
-#: ui/gabber.glade.h:227
-msgid "Join Group Chat"
-msgstr "Присоединиться к беседе группы"
-
-#: ui/gabber.glade.h:228
-msgid "Join Group _Chat..."
-msgstr "Присоединиться к беседе группы..."
-
-#: ui/gabber.glade.h:229
-msgid "Join Room"
-msgstr "Войти в комнату"
-
-#: ui/gabber.glade.h:230
-msgid "Join a Group Chat..."
-msgstr "Присоединиться к беседе группы..."
-
-#: ui/gabber.glade.h:231
-msgid "Jump to:"
-msgstr "Перейти на:"
-
-#: ui/gabber.glade.h:232
-msgid "Keep Open"
-msgstr "Держать открытым"
-
-#: ui/gabber.glade.h:233
-msgid "Keep this dialog open"
-msgstr "Держать это окно открытым"
-
-#: ui/gabber.glade.h:234
-msgid "Key ID"
-msgstr "ID ключа"
-
-#: ui/gabber.glade.h:235
-msgid "Key ID:"
-msgstr "ID ключа:"
-
-#: ui/gabber.glade.h:236
-msgid "Leave Roster Items Alone"
-msgstr "Оставить пункты Реестра отдельно"
-
-#: ui/gabber.glade.h:237
-msgid "Leave Users on Roster"
-msgstr "Оставить пользователей в Реестре"
-
-#: ui/gabber.glade.h:238
-msgid "Leave the message type intact"
-msgstr "Оставить тип сообщения неизмененным"
-
-#: ui/gabber.glade.h:239
-msgid "Loading Registration Information"
-msgstr "Загружаю регистрационную информацию"
-
-#: ui/gabber.glade.h:240
-msgid "Loading..."
-msgstr "Загружаю..."
-
-#: ui/gabber.glade.h:241
-msgid "Locate a Contact"
-msgstr "Найти пользователя"
-
-#: ui/gabber.glade.h:242
-msgid "Locate by searching an agent (JUD, ICQ, MSN, etc)."
-msgstr "Найти через поиск агента (JUD, ICQ, MSN и т.д.)"
-
-#: ui/gabber.glade.h:243
-msgid "Locate by username and (If using jabber) server."
-msgstr "Найти по имени пользователя и (если пользуется jabber'ом) сервера."
-
-#: ui/gabber.glade.h:244
-msgid "Location"
-msgstr "Положение"
-
-#: ui/gabber.glade.h:245
-msgid "Log Format"
-msgstr "Формат протокола"
-
-#: ui/gabber.glade.h:246
-msgid "Log Location"
-msgstr "Положение протокола"
-
-#: ui/gabber.glade.h:247
-msgid "Log Purging Frequency"
-msgstr "Частота очистки протокола"
-
-#: ui/gabber.glade.h:248
-msgid "Log _out of Transport"
-msgstr "Отключение от транспорта"
-
-#: ui/gabber.glade.h:249
-msgid "Log messages and chats as XHTML"
-msgstr "Протоколировать сообщения и беседы как XHTML"
-
-#: ui/gabber.glade.h:250
-msgid "Log messages and chats as XML"
-msgstr "Протоколировать сообщения и беседы как XML"
-
-#: ui/gabber.glade.h:251
-msgid "Log_out"
-msgstr "Отключиться"
-
-#: ui/gabber.glade.h:252
-msgid "Logging"
-msgstr "Протоколирование"
-
-#: ui/gabber.glade.h:253
+#: ui/Welcome_win.glade.h:39
 msgid "Logging In"
 msgstr "Подключаюсь"
 
-#: ui/gabber.glade.h:254
-msgid "Login"
-msgstr "Подключиться"
-
-#: ui/gabber.glade.h:255
-msgid "Login Information"
-msgstr "Информация о подключении"
-
-#: ui/gabber.glade.h:256
-msgid "Login Options"
-msgstr "Опции подключения"
-
-#: ui/gabber.glade.h:257
+#: ui/Welcome_win.glade.h:40
 msgid "Login Successful"
 msgstr "Подключение успешно"
 
-#: ui/gabber.glade.h:258
-msgid "Logs Saved in:"
-msgstr "Протоколы записаны:"
-
-#: ui/gabber.glade.h:259
-msgid "Main _Window"
-msgstr "Главное окно"
-
-#: ui/gabber.glade.h:260
-msgid "Make this profile the default"
-msgstr "Сделать этот профиль по умолчанию"
-
-#: ui/gabber.glade.h:261
-msgid "Manage Profiles..."
-msgstr "Управление профилями..."
-
-#: ui/gabber.glade.h:262
-msgid "Manage _Groups..."
-msgstr "Управление группами..."
-
-#: ui/gabber.glade.h:263
-msgid "Manage _Transport"
-msgstr "Управление транспортом"
-
-#: ui/gabber.glade.h:264
-msgid "Message History..."
-msgstr "История сообщений..."
-
-#: ui/gabber.glade.h:265
-msgid "Move the logs to a subdirectory every month"
-msgstr "Перемещать протоколы в подкаталог каждый месяц"
-
-#: ui/gabber.glade.h:266
-msgid "Name:"
-msgstr "Имя:"
-
-#: ui/gabber.glade.h:268
-msgid "New Blank _Message..."
-msgstr "Новое пустое сообщение..."
-
-#: ui/gabber.glade.h:269
-msgid "New Profile"
-msgstr "Новый профиль"
-
-#: ui/gabber.glade.h:270
-msgid "Nickname:"
-msgstr "Псевдоним:"
-
-#: ui/gabber.glade.h:271
-msgid "Normal Message:"
-msgstr "Обычное сообщение:"
-
-#: ui/gabber.glade.h:273
-msgid "Not Available:"
-msgstr "Недоступны:"
-
-#: ui/gabber.glade.h:274
-msgid "Not in Roster:"
-msgstr "Не в Реестре:"
-
-#: ui/gabber.glade.h:275
-msgid "Offline:"
-msgstr "Не в сети:"
-
-#: ui/gabber.glade.h:276
-msgid "One-on-One Chat:"
-msgstr "Беседа один на один:"
-
-#: ui/gabber.glade.h:278
-msgid "Operating System:"
-msgstr "Операционная Система:"
-
-#: ui/gabber.glade.h:279
-msgid "Organization Details"
-msgstr "Об организации"
-
-#: ui/gabber.glade.h:280
-msgid "Passphrase:"
-msgstr "Пароль:"
-
-#: ui/gabber.glade.h:281
-msgid "Password for the room, if needed"
-msgstr "Пароль для комнаты, если необходим"
-
-#: ui/gabber.glade.h:282
-msgid "Password:"
-msgstr "Пароль:"
-
-#: ui/gabber.glade.h:283
-msgid ""
-"People who are ignored cannot see when you are online, and you will not "
-"receive messages from them."
-msgstr ""
-"Люди, которых вы игнорируете не могут увидеть когда вы в сети и вы не будете "
-"получать сообщения от них."
-
-#: ui/gabber.glade.h:284
-msgid "Person who sent this message"
-msgstr "Тот, кто послал это сообщение"
-
-#: ui/gabber.glade.h:285
-msgid "Personal Details"
-msgstr "Подробности об отправителе"
-
-#: ui/gabber.glade.h:286
-msgid ""
-"Please fill in the contact's username (Or ICQ number, AIM screenname, etc.) "
-"and the server the contact is on.\n"
-"\n"
-"You can also select an IM protocol other than Jabber if the user is using "
-"something such as ICQ, AIM, Yahoo!, MSN, etc."
-msgstr ""
-"Пожалуйста, введите имя пользователя (или номер ICQ, AIM screenname, и т.д.) "
-"и сервер, к которому подключен пользователь.\n"
-"\n"
-"Вы также можете выбрать IM протокол, отличный от Jabber, если пользователь "
-"пользуется чем-то наподобие ICQ, AIM, Yahoo!, MSN, и т.д."
-
-#: ui/gabber.glade.h:289
-msgid ""
-"Please wait while Gabber attempts to register with the information you "
-"entered."
-msgstr ""
-"Пожалуйста, подождите, пока Gabber пытается зарегистрироваться с "
-"информацией, которую Вы ввели."
-
-#: ui/gabber.glade.h:290
-msgid ""
-"Please wait while Gabber tries to load the information needed to register "
-"with this agent."
-msgstr ""
-"Пожалуйста, подождите, пока Gabber пытается загрузить информацию, "
-"необходимую для регистрации у этого агента."
-
-#: ui/gabber.glade.h:291
-msgid "Port to connect to"
-msgstr "Порт для подключения"
-
-#: ui/gabber.glade.h:292
-msgid "Port:"
-msgstr "Порт:"
-
-#: ui/gabber.glade.h:293
-msgid "Postal Code:"
-msgstr "Почтовый индекс:"
-
-#: ui/gabber.glade.h:294
+#: ui/Welcome_win.glade.h:42
 msgid "Preparing to Register Jabber Account"
 msgstr "Готовлюсь зарегистрировать учетную запись Jabber"
 
-#: ui/gabber.glade.h:295
-msgid "Presence and Status"
-msgstr "Присутствие и Состояние"
-
-#: ui/gabber.glade.h:297
-msgid "Primary eMail:"
-msgstr "Основной e-mail:"
-
-#: ui/gabber.glade.h:298
-msgid "Priority:"
-msgstr "Приоритет:"
-
-#: ui/gabber.glade.h:299
-msgid "Profile Details"
-msgstr "Детали профиля"
-
-#: ui/gabber.glade.h:300
-msgid "Profile Name:"
-msgstr "Имя профиля:"
-
-#: ui/gabber.glade.h:301
-msgid "Profile:"
-msgstr "Профиль:"
-
-#: ui/gabber.glade.h:302
-msgid "Protocol:"
-msgstr "Протокол:"
-
-#: ui/gabber.glade.h:303
-msgid "Proxy or Firewall"
-msgstr "Прокси или брандмауэр"
-
-#: ui/gabber.glade.h:304
-msgid "Purge the logs every month"
-msgstr "Очищать протоколы каждый месяц"
-
-#: ui/gabber.glade.h:305
-msgid "Quote"
-msgstr "Цитировать"
-
-#: ui/gabber.glade.h:306
-msgid "Quote received message in reply"
-msgstr "Цитировать принятые сообщения в ответе"
-
-#: ui/gabber.glade.h:307
-msgid "Raw XML Input"
-msgstr "Прямой ввод XML"
-
-#: ui/gabber.glade.h:308
-msgid "Re-request _Subscription"
-msgstr "Снова запросить подписку"
-
-#: ui/gabber.glade.h:309
-msgid "Read Next"
-msgstr "Прочитать следующее"
-
-#: ui/gabber.glade.h:310
-msgid "Receive all messages as normal messages"
-msgstr "Принимать все сообщения как обычные"
-
-#: ui/gabber.glade.h:311
-msgid "Receive all messages as one-on-one chats"
-msgstr "Принимать все сообщения как беседы один на один"
-
-#: ui/gabber.glade.h:312
-msgid "Received Message"
-msgstr "Принятое сообщение"
-
-#: ui/gabber.glade.h:313
-msgid "Receiving"
-msgstr "Принимаю"
-
-#: ui/gabber.glade.h:314
-msgid "Register with an Agent"
-msgstr "Зарегистрироваться у агента"
-
-#: ui/gabber.glade.h:315
-msgid "Register..."
-msgstr "Регистрироваться..."
-
-#: ui/gabber.glade.h:316
-msgid "Registration Successful"
-msgstr "Регистрация успешна"
-
-#: ui/gabber.glade.h:317
-msgid "Registration with this agent has been successful."
-msgstr "Регистрация у этого агента увенчалась успехом."
-
-#: ui/gabber.glade.h:319
-msgid "Remove ->"
-msgstr "Удалить ->"
-
-#: ui/gabber.glade.h:320
-msgid "Remove All Roster Items"
-msgstr "Удалить все пункты из Реестра"
-
-#: ui/gabber.glade.h:321
-msgid "Remove All Users of Transport"
-msgstr "Удалить всех пользователей транспорта"
-
-#: ui/gabber.glade.h:322
-msgid "Reply"
-msgstr "Ответить"
-
-#: ui/gabber.glade.h:323
-msgid "Request Reason"
-msgstr "Причина запроса"
-
-#: ui/gabber.glade.h:324
-msgid "Resource:"
-msgstr "Ресурс:"
-
-#: ui/gabber.glade.h:325
-msgid "Right-click the panel and Add to Panel -> Status Dock."
-msgstr ""
-"Щелкните правой кнопкой мыши на панели и Добавить на панель -> Блок состояния"
-
-#: ui/gabber.glade.h:326
-msgid "Role:"
-msgstr "Роль:"
-
-#: ui/gabber.glade.h:327
-msgid "Room"
-msgstr "Комната"
-
-#: ui/gabber.glade.h:328
-msgid "Room:"
-msgstr "Комната:"
-
-#: ui/gabber.glade.h:329
-msgid "Roster Colors and Icons"
-msgstr "Цвета и пиктограммы Реестра"
-
-#: ui/gabber.glade.h:330
-msgid "Rule Name:"
-msgstr "Имя правила:"
-
-#: ui/gabber.glade.h:331
-msgid "Run the new Jabber account wizard"
-msgstr "Запустить волшебника новой учетной записи Jabber"
-
-#: ui/gabber.glade.h:332
-msgid "Save Password"
-msgstr "Записать пароль"
-
-#: ui/gabber.glade.h:333
-msgid "Save logs of encrypted messages"
-msgstr "Записать протоколы зашифрованных сообщений"
-
-#: ui/gabber.glade.h:334
-msgid "Save logs of messages and chats"
-msgstr "Записать протоколы сообщений и бесед"
-
-#: ui/gabber.glade.h:335
-msgid "Save main window position"
-msgstr "Записать положение главного окна"
-
-#: ui/gabber.glade.h:336
-msgid "Save main window size"
-msgstr "Записать размер главного окна"
-
-#: ui/gabber.glade.h:337
-msgid "Search"
-msgstr "Поиск"
-
-#: ui/gabber.glade.h:338
-msgid "Search Results"
-msgstr "Результаты поиска"
-
-#: ui/gabber.glade.h:339
-msgid "Search an Agent"
-msgstr "Поиск агента"
-
-#: ui/gabber.glade.h:340
-msgid "Search for a Contact"
-msgstr "Поиск пользователя"
-
-#: ui/gabber.glade.h:341
-msgid "Search for:"
-msgstr "Искать:"
-
-#: ui/gabber.glade.h:342
-msgid "Search..."
-msgstr "Поиск..."
-
-#: ui/gabber.glade.h:343
-msgid "Searchable:"
-msgstr "Можно искать:"
-
-#: ui/gabber.glade.h:344
-msgid "Secret Key"
-msgstr "Секретный ключ"
-
-#: ui/gabber.glade.h:345
-msgid "Select Contact"
-msgstr "Выбрать пользователя"
-
-#: ui/gabber.glade.h:346
-msgid "Select a Specific User"
-msgstr "Выберите конкретного пользователя"
-
-#: ui/gabber.glade.h:347
-msgid ""
-"Select a nickname for this contact.\n"
-"\n"
-"This information can be found in the Contact Info dialog."
-msgstr ""
-"Выберите псевдоним для этого пользователя.\n"
-"\n"
-"Эту информацию можно найти в диалоге 'Информация о пользователе'."
-
-#: ui/gabber.glade.h:350
-msgid "Send"
-msgstr "Послать"
-
-#: ui/gabber.glade.h:351
-msgid "Send Contacts"
-msgstr "Переслать пользователей"
-
-#: ui/gabber.glade.h:352
-msgid "Send Message..."
-msgstr "Отправить сообщение..."
-
-#: ui/gabber.glade.h:353
-msgid "Send as Normal Message"
-msgstr "Послать как обычное сообщение"
-
-#: ui/gabber.glade.h:354
-msgid "Send as OOOChat"
-msgstr "Послать как Беседу 1-на-1"
-
-#: ui/gabber.glade.h:355
-msgid "Send as One-on-One Chat"
-msgstr "Послать как беседу один на один"
-
-#: ui/gabber.glade.h:356
-msgid "Send normal messages by default"
-msgstr "Посылать обычные сообщения по умолчанию"
-
-#: ui/gabber.glade.h:357
-msgid "Send one-on-one chats by default"
-msgstr "Посылать беседы один на один по умолчанию"
-
-#: ui/gabber.glade.h:358
-msgid "Send these contacts to:"
-msgstr "Кому переслать этих пользователей:"
-
-#: ui/gabber.glade.h:359
-msgid "Send to:"
-msgstr "Послать к:"
-
-#: ui/gabber.glade.h:360
-msgid "Sender:"
-msgstr "Переслал:"
-
-#: ui/gabber.glade.h:361
-msgid "Sending"
-msgstr "Посылаю"
-
-#: ui/gabber.glade.h:362
-msgid "Server"
-msgstr "Сервер"
-
-#: ui/gabber.glade.h:363
-msgid "Server to Browse:"
-msgstr "Просмотреть сервер:"
-
-#: ui/gabber.glade.h:364
-msgid "Server:"
-msgstr "Сервер:"
-
-#: ui/gabber.glade.h:365
-msgid "Service Provided:"
-msgstr "Сервис обеспечен:"
-
-#: ui/gabber.glade.h:366
-msgid "Show Advanced Options"
-msgstr "Показать расширенные опции"
-
-#: ui/gabber.glade.h:367
-msgid "Show Received Message"
-msgstr "Показать принятое сообщение"
-
-#: ui/gabber.glade.h:368
-msgid "Show _Headlines"
-msgstr "Показывать заголовки"
-
-#: ui/gabber.glade.h:369
-msgid "Show as being"
-msgstr "Показать как существо"
-
-#: ui/gabber.glade.h:370
-msgid "Show as being:"
-msgstr "Показать как существо:"
-
-#: ui/gabber.glade.h:371
-msgid "Show/Hide Users in Group"
-msgstr "Показать/Спрятать пользователей в группе"
-
-#: ui/gabber.glade.h:372
-msgid "Size and Position"
-msgstr "Размер и положение"
-
-#: ui/gabber.glade.h:373
-msgid "Sorry, none yet"
-msgstr "Извините, еще не"
-
-#: ui/gabber.glade.h:374
-msgid "Specific resource to which this message should be sent"
-msgstr "Конкретный ресурс, куда следует послать это сообщение"
-
-#: ui/gabber.glade.h:375
-msgid "Stalker:"
-msgstr "Сталкер:"
-
-#: ui/gabber.glade.h:376
-msgid "State:"
-msgstr "Штат:"
-
-#: ui/gabber.glade.h:377
-msgid "Status"
-msgstr "Состояние"
-
-#: ui/gabber.glade.h:378
-msgid "Status Docklet"
-msgstr "Блок состояния"
-
-#: ui/gabber.glade.h:379
-msgid "Status:"
-msgstr "Состояние:"
-
-#: ui/gabber.glade.h:380
-msgid "Step through this druid again for another contact."
-msgstr "Еще раз пройдите с этим Помощником для другого пользователя."
-
-#: ui/gabber.glade.h:381
-msgid "Street:"
-msgstr "Улица:"
-
-#: ui/gabber.glade.h:382
-msgid "Subject of this message"
-msgstr "Тема этого сообщения"
-
-#: ui/gabber.glade.h:383
-msgid "Subject:"
-msgstr "Тема:"
-
-#: ui/gabber.glade.h:384
-msgid "Subscription"
-msgstr "Подписка"
-
-#: ui/gabber.glade.h:385
-msgid "Subscription Request Reason"
-msgstr "Причина запроса подписки"
-
-#: ui/gabber.glade.h:386
-msgid "Subscription type:"
-msgstr "Тип подписки:"
-
-#: ui/gabber.glade.h:387
-msgid "The IM protocol the user is using"
-msgstr "IM протокол, который использует пользователь"
-
-#: ui/gabber.glade.h:388
+#: ui/Welcome_win.glade.h:44
 msgid ""
 "The JabberID which Gabber is going to try to register (Or try to login with "
 "if you already have an account) is displayed to the right, along with the "
@@ -2168,44 +2630,7 @@ msgstr ""
 "Если вы уверены, что хотите попытаться зарегистрироваться с этим JabberID, "
 "щелкните 'Дальше'. Иначе щелкните 'Назад' и сделайте необходимые изменения."
 
-#: ui/gabber.glade.h:391
-msgid ""
-"The agent has logged in successfully\n"
-"and has been added to your roster."
-msgstr ""
-"Агент подключился успешно\n"
-"и был добавлен в Ваш реестр."
-
-#: ui/gabber.glade.h:393
-msgid ""
-"The contact you would like to add to your roster is displayed to the right.\n"
-"\n"
-"The subscription request reason is the reason Gabber will give as to why you "
-"should be able to see when this person is online. It can be left blank."
-msgstr ""
-"Пользователь, которого Вы хотите добавить в свой реестр теперь отображен "
-"справа.\n"
-"\n"
-"Причина запроса на подписку -- это пояснение, которое Gabber передаст, чтобы "
-"объяснить, почему Вы хотите видеть, в сети ли этот пользователь. Его можно "
-"оставить и пустым."
-
-#: ui/gabber.glade.h:396
-msgid ""
-"The information on the 'General Info' page will be sent to the Jabber Users "
-"Directory (JUD), a searchable directory of many Jabber users.\n"
-"\n"
-"All other User Information is accessible if people ask specifically for your "
-"User Information, or 'vCard.'"
-msgstr ""
-"Информация на странице 'Общая информация' будет передана в каталог "
-"пользователей Jabber (JUD) -- каталог, в котором можно производить поиск "
-"многих пользователей Jabber.\n"
-"\n"
-"Вся остальная Информация о пользователе доступна, если кто-то специально "
-"попросит вашу 'Информацию о пользователе' или 'vCard.'"
-
-#: ui/gabber.glade.h:399
+#: ui/Welcome_win.glade.h:47
 msgid ""
 "The resource can be anything you want it to be.\n"
 "\n"
@@ -2225,61 +2650,7 @@ msgstr ""
 "Отличающиеся ресурсы позволяют Вам подключиться к тому же jabber серверу "
 "много раз под тем же именем пользователя."
 
-#: ui/gabber.glade.h:404
-msgid "The room or channel to join"
-msgstr "Комната или канал для присоединения"
-
-#: ui/gabber.glade.h:405
-msgid ""
-"There are several ways Gabber can locate a contact. Please select one of "
-"them."
-msgstr ""
-"Есть несколько способов для Gabber, чтобы найти пользователя. Пожалуйста, "
-"выберите один из них."
-
-#: ui/gabber.glade.h:406
-msgid ""
-"There was an error trying to use your passphrase with the GPG key you "
-"selected. Either try again or disable GPG."
-msgstr ""
-"Возникла ошибка при использовании Вашей парольной фразы с выбранным GPG "
-"ключом. Попробуйте еще раз или же выключите GPG."
-
-#: ui/gabber.glade.h:407
-msgid "This agent requires the fields you see to the right to be filled out."
-msgstr ""
-"Этот агент требует чтобы были заполнены поля, которые Вы видите справа."
-
-#: ui/gabber.glade.h:408
-msgid "This druid will step you through adding contacts to your roster."
-msgstr ""
-"Этот Помощник по шагам поможет Вам добавить пользователей в Ваш реестр."
-
-#: ui/gabber.glade.h:409
-msgid "This druid will step you through registering with an agent."
-msgstr "Этот Помощник по шагам поможет Вам пройти регистрацию у агента."
-
-#: ui/gabber.glade.h:411
-msgid "This message was not signed."
-msgstr "Это сообщение не было подписано."
-
-#: ui/gabber.glade.h:412
-msgid ""
-"This passphrase will not be stored in Gabber's config file, so Gabber has to "
-"ask you every session."
-msgstr ""
-"Эта парольная фраза не будет сохранена в конфигурационном файле Gabber'а, "
-"поэтому он будет спрашивать ее у Вас при каждом запуске."
-
-#: ui/gabber.glade.h:413
-msgid "Time:"
-msgstr "Время:"
-
-#: ui/gabber.glade.h:414
-msgid "Title:"
-msgstr "Заголовок:"
-
-#: ui/gabber.glade.h:415
+#: ui/Welcome_win.glade.h:52
 msgid ""
 "To continue:\n"
 "Both passwords must match."
@@ -2287,7 +2658,7 @@ msgstr ""
 "Чтобы продолжить:\n"
 "Оба пароля должны совпадать."
 
-#: ui/gabber.glade.h:417
+#: ui/Welcome_win.glade.h:54
 msgid ""
 "To continue:\n"
 "Enter a resource."
@@ -2295,7 +2666,7 @@ msgstr ""
 "Чтобы продолжить:\n"
 "Введите ресурс."
 
-#: ui/gabber.glade.h:419
+#: ui/Welcome_win.glade.h:56
 msgid ""
 "To continue:\n"
 "Enter your desired username."
@@ -2303,31 +2674,7 @@ msgstr ""
 "Чтобы продолжить:\n"
 "Введите имя пользователя, которое Вы хотите использовать."
 
-#: ui/gabber.glade.h:421
-msgid ""
-"To continue:\n"
-"Fill in a nickname for this contact."
-msgstr ""
-"Чтобы продолжить:\n"
-"Введите псевдоним для этого пользователя."
-
-#: ui/gabber.glade.h:423
-msgid ""
-"To continue:\n"
-"Fill in any field."
-msgstr ""
-"Чтобы продолжить:\n"
-"Заполните какое-либо поле."
-
-#: ui/gabber.glade.h:425
-msgid ""
-"To continue:\n"
-"Fill in username and server."
-msgstr ""
-"Чтобы продолжить:\n"
-"Введите имя пользователя и сервер."
-
-#: ui/gabber.glade.h:427
+#: ui/Welcome_win.glade.h:58
 msgid ""
 "To continue:\n"
 "Fill in your preferred nickname."
@@ -2335,15 +2682,7 @@ msgstr ""
 "Чтобы продолжить:\n"
 "Введите предпочитаемый Вами псевдоним."
 
-#: ui/gabber.glade.h:429
-msgid ""
-"To continue:\n"
-"Fill out all required fields."
-msgstr ""
-"Чтобы продолжить:\n"
-"Заполните все требуемые поля."
-
-#: ui/gabber.glade.h:431
+#: ui/Welcome_win.glade.h:60
 msgid ""
 "To continue:\n"
 "Select a Jabber server."
@@ -2351,95 +2690,7 @@ msgstr ""
 "Чтобы продолжить:\n"
 "Выберите Jabber сервер."
 
-#: ui/gabber.glade.h:433
-msgid ""
-"To continue:\n"
-"Select the contact you would like to add."
-msgstr ""
-"Чтобы продолжить:\n"
-"Выберите пользователя, которого хотите добавить."
-
-#: ui/gabber.glade.h:435
-msgid ""
-"To search for a contact, simply enter whatever information you know about "
-"the contact for which you are looking."
-msgstr ""
-"Чтобы найти пользователя, просто введите какую-либо информацию, которую Вы "
-"знаете о нем."
-
-#: ui/gabber.glade.h:436
-msgid "Toolbars"
-msgstr "Панели инструментов"
-
-#: ui/gabber.glade.h:437
-msgid "Transport Information"
-msgstr "Информация о транспорте"
-
-#: ui/gabber.glade.h:438
-msgid "Transport _Information..."
-msgstr "Информация о транспорте..."
-
-#: ui/gabber.glade.h:439
-msgid "URI:"
-msgstr "URI:"
-
-#: ui/gabber.glade.h:440
-msgid "Unit:"
-msgstr "Единицы:"
-
-#: ui/gabber.glade.h:441
-msgid "Update Status"
-msgstr "Обновить состояние"
-
-#: ui/gabber.glade.h:442
-msgid "Use Secure Socket Layers"
-msgstr "Использовать Secure Socket Layers"
-
-#: ui/gabber.glade.h:443
-msgid "Use digest authentication, do not send plaintext password"
-msgstr "Используйте дайджест идентификацию -- не посылайте открытых паролей"
-
-#: ui/gabber.glade.h:444
-msgid "User ID"
-msgstr "ID Пользователя"
-
-#: ui/gabber.glade.h:445
-msgid "User ID:"
-msgstr "ID Пользователя"
-
-#: ui/gabber.glade.h:446
-msgid "User List"
-msgstr "Список пользователей"
-
-#: ui/gabber.glade.h:447
-msgid "User's Computer"
-msgstr "Компьютер пользователя"
-
-#: ui/gabber.glade.h:448
-msgid "Username:"
-msgstr "Имя пользователя:"
-
-#: ui/gabber.glade.h:449
-msgid "Version:"
-msgstr "Версия:"
-
-#: ui/gabber.glade.h:450
-msgid "View Contact Info..."
-msgstr "Просмотр информации для связи..."
-
-#: ui/gabber.glade.h:451
-msgid "View Contact _Info..."
-msgstr "Просмотр информации для связи..."
-
-#: ui/gabber.glade.h:452
-msgid "View _History..."
-msgstr "Просмотр истории..."
-
-#: ui/gabber.glade.h:453
-msgid "Web Site:"
-msgstr "Веб узел:"
-
-#: ui/gabber.glade.h:454
+#: ui/Welcome_win.glade.h:62
 msgid ""
 "Welcome to Gabber.\n"
 "This druid will step you through the\n"
@@ -2449,32 +2700,7 @@ msgstr ""
 "Этот Помощник по шагам проведет Вас\n"
 "по основной установке Gabber'а."
 
-#: ui/gabber.glade.h:457
-msgid "Would you like to allow [user@server] to add you to their list?"
-msgstr "Согласны ли Вы позволить [user@server] добавить Вас в свой список?"
-
-#: ui/gabber.glade.h:458
-msgid "You can join a group chat room by filling in the fields below:"
-msgstr ""
-"Вы можете войти в комнату для беседы группы, заполнив нижеследующие поля:"
-
-#: ui/gabber.glade.h:459
-msgid "You have been invited to a groupchat by "
-msgstr "Вас пригласил беседовать в группу "
-
-#: ui/gabber.glade.h:460
-msgid ""
-"You have now been stepped through all of the contact options.\n"
-"Gabber has sent a subscription (authorization) request\n"
-"to the contact, asking that you can see when they are online.\n"
-"If they accept, you will see when/if they come online."
-msgstr ""
-"Теперь Вы прошли через все параметры пользователя.\n"
-"Gabber уже послал запрос на подписку (авторизацию)\n"
-"пользователю, спрашивая, можете ли Вы видеть когда он в сети.\n"
-"Если он даст свое согласие, вы сможете увидеть, когда/если он подключится."
-
-#: ui/gabber.glade.h:464
+#: ui/Welcome_win.glade.h:65
 msgid ""
 "You may now start using Gabber.\n"
 "Further information can be found under\n"
@@ -2484,226 +2710,18 @@ msgstr ""
 "Больше информации можно найти в\n"
 "Помощь -> Руководство по Gabber'у..."
 
-#: ui/gabber.glade.h:467
-msgid "Your Jabber password"
-msgstr "Ваш пароль Jabber"
+#: ui/Welcome_win.glade.h:68
+msgid "_Confirm Password:"
+msgstr "Повторите пароль:"
 
-#: ui/gabber.glade.h:468
-msgid "Your Jabber server"
-msgstr "Ваш Jabber сервер"
+#: ui/Welcome_win.glade.h:71
+msgid "_List of Servers:"
+msgstr "Список серверов:"
 
-#: ui/gabber.glade.h:469
-msgid "Your Jabber username"
-msgstr "Ваше имя пользователя Jabber"
+#: ui/Welcome_win.glade.h:78
+msgid "http://www.jabberview.com/"
+msgstr "http://www.jabberview.com/"
 
-#: ui/gabber.glade.h:470
-msgid "[user@server/resource]"
-msgstr "[user@server/resource]"
-
-#: ui/gabber.glade.h:471
-msgid "_About"
-msgstr "О программе"
-
-#: ui/gabber.glade.h:472
-msgid "_Add Contact..."
-msgstr "Добавить пользователя..."
-
-#: ui/gabber.glade.h:473
-msgid "_Add this Contact..."
-msgstr "Добавить этого пользователя..."
-
-#: ui/gabber.glade.h:474
-msgid "_Address"
-msgstr "Адрес"
-
-#: ui/gabber.glade.h:475
-msgid "_Appearance"
-msgstr "Внешний вид"
-
-#: ui/gabber.glade.h:476
-msgid "_Browse Agents/IM Systems..."
-msgstr "Просмотр Агентов/IM систем..."
-
-#: ui/gabber.glade.h:477
-msgid "_Client Info"
-msgstr "Информация о клиенте"
-
-#: ui/gabber.glade.h:478
-msgid "_Connection"
-msgstr "Связь"
-
-#: ui/gabber.glade.h:479
-msgid "_Debug"
-msgstr "Отладка"
-
-#: ui/gabber.glade.h:480
-msgid "_Delete Contact"
-msgstr "Удалить пользователя"
-
-#: ui/gabber.glade.h:481
-msgid "_Encryption"
-msgstr "Шифрование"
-
-#: ui/gabber.glade.h:482
-msgid "_Gabber"
-msgstr "Gabber"
-
-#: ui/gabber.glade.h:483
-msgid "_Hide Main Window"
-msgstr "Спрятать главное окно"
-
-#: ui/gabber.glade.h:484
-msgid "_JUD"
-msgstr "JUD"
-
-#: ui/gabber.glade.h:485
-msgid "_Location"
-msgstr "Положение"
-
-#: ui/gabber.glade.h:486
-msgid "_Log into Transport"
-msgstr "Подключиться к транспорту"
-
-#: ui/gabber.glade.h:487
-msgid "_Login..."
-msgstr "Подключение..."
-
-#: ui/gabber.glade.h:488
-msgid "_Logs"
-msgstr "Протоколы"
-
-#: ui/gabber.glade.h:489
-msgid "_Manage User"
-msgstr "Управление пользователем"
-
-#: ui/gabber.glade.h:490
-msgid "_Message..."
-msgstr "Сообщение..."
-
-#: ui/gabber.glade.h:491
-msgid "_Messages"
-msgstr "Сообщения"
-
-#: ui/gabber.glade.h:492
-msgid "_My Contact Info..."
-msgstr "Информация для связи со мной..."
-
-#: ui/gabber.glade.h:493
-msgid "_One-on-One Chat..."
-msgstr "Беседа один на один..."
-
-#: ui/gabber.glade.h:494
-msgid "_Organization"
-msgstr "Организация"
-
-#: ui/gabber.glade.h:495
-msgid "_Personal Info"
-msgstr "Личная информация"
-
-#: ui/gabber.glade.h:496
-msgid "_Raw XML Input..."
-msgstr "Прямой ввод XML..."
-
-#: ui/gabber.glade.h:497
-msgid "_Remove Transport"
-msgstr "Удалить транспорт"
-
-#: ui/gabber.glade.h:498
-msgid "_Services"
-msgstr "Сервисы"
-
-#: ui/gabber.glade.h:499
-msgid "_Show Main Window"
-msgstr "Показать главное окно"
-
-#: ui/gabber.glade.h:500
-msgid "eMail:"
-msgstr "e-mail:"
-
-#: ui/gabber.glade.h:501
-msgid "http://gabber.sourceforge.net/"
-msgstr "http://gabber.sourceforge.net/"
-
-#: ui/gabber.glade.h:502
-msgid "jabber.com"
-msgstr "jabber.com"
-
-#: ui/gabber.glade.h:503
+#: ui/Welcome_win.glade.h:80
 msgid "jabber.org"
 msgstr "jabber.org"
-
-#: ui/gabber.glade.h:504
-msgid "label168"
-msgstr "label168"
-
-#: ui/gabber.glade.h:505
-msgid "label169"
-msgstr "label169"
-
-#: ui/gabber.glade.h:506
-msgid "label205"
-msgstr "label205"
-
-#: ui/gabber.glade.h:507
-msgid "label206"
-msgstr "label206"
-
-#: ui/gabber.glade.h:508
-msgid "label296"
-msgstr "label296"
-
-#: ui/gabber.glade.h:509
-msgid "label354"
-msgstr "label354"
-
-#: ui/gabber.glade.h:510
-msgid "label379"
-msgstr "label379"
-
-#: ui/gabber.glade.h:511
-msgid "label506"
-msgstr "label206"
-
-#: ui/gabber.glade.h:512
-msgid "label507"
-msgstr "label205"
-
-#: ui/gabber.glade.h:513
-msgid "label508"
-msgstr "label168"
-
-#: ui/gabber.glade.h:514
-msgid "label509"
-msgstr "label169"
-
-#: ui/gabber.glade.h:515
-msgid "label514"
-msgstr "label354"
-
-#: ui/gabber.glade.h:516
-msgid "label515"
-msgstr "label168"
-
-#: ui/gabber.glade.h:517
-msgid "no"
-msgstr "нет"
-
-#: ui/gabber.glade.h:519
-msgid "online"
-msgstr "в сети"
-
-#: ui/gabber.glade.h:520
-msgid "online:"
-msgstr "в сети:"
-
-#: ui/gabber.glade.h:521
-msgid "user"
-msgstr "user"
-
-#: ui/gabber.glade.h:522
-msgid "user@server"
-msgstr "user@server"
-
-#: ui/gabber.glade.h:523
-msgid "~/.Gabber/"
-msgstr "~/.Gabber/"
