@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gtm 0.4.4\n"
-"POT-Creation-Date: 2001-01-21 23:40+0000\n"
-"PO-Revision-Date: 2001-02-12 16:12+01:00\n"
+"POT-Creation-Date: 2001-02-20 02:55+0000\n"
+"PO-Revision-Date: 2001-03-06 10:55+01:00\n"
 "Last-Translator: Antonio de la Torre <adltorre@terra.es>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,12 +26,12 @@ msgstr "URL"
 #: applet/dialog-add.c:69 applet/dialog-add.c:92 applet/dialog-add.c:313
 #: applet/dialog-add.c:343 applet/dialog-new.c:114 src/dialog-add.c:59
 #: src/dialog-add.c:75 src/dialog-add.c:267 src/dialog-add.c:285
-#: src/dialog-new.c:80 src/dialog-numdown.c:161 src/main.c:334
+#: src/dialog-new.c:96 src/dialog-numdown.c:161 src/main.c:334
 msgid "URL:\n"
 msgstr "URL:\n"
 
 #: applet/dialog-add.c:98 applet/dialog-add.c:350 applet/dialog-new.c:115
-#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:81
+#: src/dialog-add.c:78 src/dialog-add.c:288 src/dialog-new.c:97
 #: src/dialog-numdown.c:162 src/main.c:336
 msgid "already in the list"
 msgstr "ya está en la lista"
@@ -62,7 +62,7 @@ msgstr ""
 msgid "_New..."
 msgstr "_Nuevo..."
 
-#: src/main-window.c:204
+#: src/dialog-new.c:186 src/main-window.c:204
 msgid "New file to download"
 msgstr "Nuevo fichero a descargar"
 
@@ -174,7 +174,7 @@ msgstr "Iniciar-Parar Auto Dl"
 msgid "Toggle auto download of selected files"
 msgstr "Iniciar-Parar auto descarga de los ficheros seleccionados"
 
-#: src/main-window.c:318
+#: src/dialog-prop.c:235 src/main-window.c:318
 msgid "Properties"
 msgstr "Propiedades"
 
@@ -329,8 +329,8 @@ msgid "staled"
 msgstr "pasado"
 
 #: src/download-dirs.c:111
-msgid "GTM - Target directory"
-msgstr "GTM - Directorio de destino"
+msgid "Target directory"
+msgstr "Directorio de destino"
 
 #: src/download-dirs.c:116
 msgid "Pattern:"
@@ -340,9 +340,9 @@ msgstr "Modelo:"
 msgid "Download matching URLs to directory:"
 msgstr "Descargar las URLs coincidentes al directorio:"
 
-#: applet/dialog-add.c:265 src/download-dirs.c:127
-msgid "GTM - Add Download Dir"
-msgstr "GTM - Añadir Directorio de Descarga"
+#: src/download-dirs.c:127
+msgid "Add Download Dir"
+msgstr "Añadir Directorio de Descarga"
 
 #: src/download-dirs.c:262
 msgid "Pattern"
@@ -372,22 +372,26 @@ msgid "Download dir:"
 msgstr "Directorio de Descarga:"
 
 #: src/dialog-common-elements.c:50
-msgid "GTM - Download Dir"
-msgstr "GTM - Directorio de Descarga"
+msgid "Download Dir"
+msgstr "Directorio de Descarga"
 
 #: src/dialog-common-elements.c:63
 msgid "Suggest directory by pattern matching"
 msgstr "Sugerir un directorio por patrones coincidentes"
 
-#: applet/dialog-new.c:75 src/dialog-common-elements.c:198
+#: src/dialog-common-elements.c:192
+msgid "No directory matched."
+msgstr "Sin coincidencia de directorio"
+
+#: applet/dialog-new.c:75 src/dialog-common-elements.c:212
 msgid "Multiple download not implemented yet"
 msgstr "Descarga multiple aún no implementada"
 
-#: src/dialog-about.c:49
+#: src/dialog-about.c:50
 msgid "GNOME Transfer Manager"
 msgstr "GNOME Transfer Manager"
 
-#: src/dialog-about.c:52
+#: src/dialog-about.c:53
 msgid ""
 "The GNOME transfer manager.\n"
 "http://gtm.sourceforge.net/"
@@ -395,18 +399,14 @@ msgstr ""
 "The GNOME transfer manager.\n"
 "http://gtm.sourceforge.net/"
 
-#: applet/dialog-new.c:53 src/dialog-new.c:54 src/dialog-prop.c:62
-msgid "Invalid URL"
-msgstr "URL no válida"
+#: src/dialog-new.c:52
+msgid "Invalid URL."
+msgstr "URL no válida."
 
 #. URL
-#: applet/dialog-new.c:189 src/dialog-new.c:141
+#: applet/dialog-new.c:189 src/dialog-new.c:161
 msgid "Please enter URL of the file to download:"
 msgstr "Por favor introduzca la URL del fichero a descargar:"
-
-#: src/dialog-new.c:168
-msgid "GTM - New file to download"
-msgstr "GTM - Nuevo fichero a descargar"
 
 #: src/dialog-numdown.c:182
 msgid "Invalid URLs."
@@ -422,44 +422,40 @@ msgstr ""
 "No se puede sugerir directorio por lo que no sería el mismo para todas las "
 "URLs"
 
-#: src/dialog-numdown.c:319
-msgid "No URLs match a directory."
-msgstr ""
-
 #. Pre-URL
-#: src/dialog-numdown.c:352
+#: src/dialog-numdown.c:346
 msgid "Part of URL before number:"
 msgstr "Parte de URL antes del número"
 
 #. Numbers From/To
-#: src/dialog-numdown.c:362
+#: src/dialog-numdown.c:356
 msgid "Numbers:"
 msgstr "Números:"
 
-#: src/dialog-numdown.c:369
+#: src/dialog-numdown.c:363
 msgid "From: "
 msgstr "Desde:"
 
-#: src/dialog-numdown.c:382
+#: src/dialog-numdown.c:376
 msgid "To: "
 msgstr "A: "
 
-#: src/dialog-numdown.c:400
+#: src/dialog-numdown.c:394
 msgid "Number of digits to pad leading zeroes to:"
 msgstr "Número de dígitos para rellenar los ceros del encabezamiento"
 
 #. Post-URL
-#: src/dialog-numdown.c:415
+#: src/dialog-numdown.c:409
 msgid "Part of URL after number:"
 msgstr "Parte de URL despues del número"
 
-#: src/dialog-numdown.c:439
-msgid "GTM - Numeric Download"
-msgstr "GTM - Descarga Numérica"
+#: src/dialog-numdown.c:433
+msgid "Numeric Download"
+msgstr "Descargar Numérica"
 
 #: src/dialog-restart.c:49
-msgid "GTM - Restart selected files"
-msgstr "GTM - Reiniciar archivos seleccionados"
+msgid "Restart selected files"
+msgstr "Reiniciar archivos seleccionados"
 
 #: src/dialog-restart.c:54
 msgid ""
@@ -470,8 +466,8 @@ msgstr ""
 "¿Está seguro de que quiere reiniciar?"
 
 #: src/dialog-remove.c:50
-msgid "GTM - Remove selected files from list"
-msgstr "GTM - Eliminar archivos seleccionados de la lista"
+msgid "Remove selected files from list"
+msgstr "Eliminar los archivos seleccionados de la lista"
 
 #: src/dialog-remove.c:55
 msgid "Do you really want to remove selected files from the list?"
@@ -530,8 +526,8 @@ msgid "Default download dir:"
 msgstr "Directorio de descarga por defecto:"
 
 #: src/dialog-prefs.c:539
-msgid "GTM - Def Download Dir"
-msgstr "GTM - Directorio de descarga por defecto"
+msgid "Def Download Dir"
+msgstr "Directorio de descarga por defecto"
 
 #: src/dialog-prefs.c:548
 msgid "Number retries:"
@@ -599,8 +595,8 @@ msgid "Use beep"
 msgstr "Usar bip"
 
 #: src/dialog-prefs.c:853
-msgid "GTM - Preferences"
-msgstr "GTM - Preferencias"
+msgid "Preferences"
+msgstr "Preferencias"
 
 #. Create the notebook pages
 #: src/dialog-prefs.c:866 src/dialog-prop.c:252
@@ -632,6 +628,10 @@ msgstr "Pantalla"
 msgid "Sound"
 msgstr "Sonido"
 
+#: applet/dialog-new.c:53 src/dialog-prop.c:62
+msgid "Invalid URL"
+msgstr "URL no válida"
+
 #: src/dialog-prop.c:77
 msgid "Old URL filename must be the same on the new URL"
 msgstr "Nombre de archivo de la antigua URL debe ser el mismo de la nueva"
@@ -640,18 +640,14 @@ msgstr "Nombre de archivo de la antigua URL debe ser el mismo de la nueva"
 msgid "URL:"
 msgstr "URL:"
 
-#: src/dialog-prop.c:235
-msgid "GTM - Properties"
-msgstr "GTM - Propiedades"
-
 #. URLs
 #: applet/dialog-add.c:246 src/dialog-add.c:206
 msgid "URLs to be added"
 msgstr "URLs para ser añadidas"
 
 #: src/dialog-add.c:243
-msgid "GTM - Add files to download"
-msgstr "GTM - Añadir archivos a descargar"
+msgid "Add files to download"
+msgstr "Añadir archivos para descargar"
 
 #: src/dialog-stats.c:96
 msgid "List summary"
@@ -678,27 +674,27 @@ msgstr "Restante (kB)"
 msgid "Progress"
 msgstr "Progreso"
 
-#: src/wget-log.c:88
+#: src/wget-log.c:89
 msgid "Socket error when downloading URL:\n"
 msgstr "Error de socket al descargar URL:\n"
 
-#: src/wget-log.c:91 src/wget-log.c:97
+#: src/wget-log.c:92 src/wget-log.c:98
 msgid "Connection refused when downloading URL:\n"
 msgstr "Conexión rechazada al descargar URL:\n"
 
-#: src/wget-log.c:94
+#: src/wget-log.c:95
 msgid "No route to host:\n"
 msgstr "Sin ruta al host:\n"
 
-#: src/wget-log.c:100
+#: src/wget-log.c:101
 msgid "Host not found when downloading URL:\n"
 msgstr "Huesped no encontrado al descargar URL:\n"
 
-#: src/wget-log.c:103
+#: src/wget-log.c:104
 msgid "Unknown error when downloading URL:\n"
 msgstr "Error desconocido al descargar URL:\n"
 
-#: src/wget-log.c:112 src/wget-log.c:119
+#: src/wget-log.c:113 src/wget-log.c:120
 msgid "File not found when downloading URL:\n"
 msgstr "Archivo no encontrado al descargar URL:\n"
 
@@ -743,6 +739,10 @@ msgstr "Error CORBA"
 msgid "GTM Applet - Add files to download"
 msgstr "GTM Applet - Añadir archivos para descargar"
 
+#: applet/dialog-add.c:265
+msgid "GTM - Add Download Dir"
+msgstr "GTM - Añadir Directorio de Descarga"
+
 #: applet/dialog-new.c:184
 msgid "GTM Applet - New file to download"
 msgstr "GTM Applet - Nuevo fichero para descargar"
@@ -775,11 +775,23 @@ msgstr "GTM Applet - Propiedades"
 msgid "Bindings"
 msgstr "Eventos"
 
-#~ msgid "No directory matched."
-#~ msgstr "Sin coincidencia de directorio"
+#~ msgid "GTM - Download Dir"
+#~ msgstr "GTM - Directorio de Descarga"
 
-#~ msgid "Invalid URL."
-#~ msgstr "URL no válida."
+#~ msgid "GTM - New file to download"
+#~ msgstr "GTM - Nuevo fichero a descargar"
+
+#~ msgid "GTM - Numeric Download"
+#~ msgstr "GTM - Descarga Numérica"
+
+#~ msgid "GTM - Remove selected files from list"
+#~ msgstr "GTM - Eliminar archivos seleccionados de la lista"
+
+#~ msgid "GTM - Properties"
+#~ msgstr "GTM - Propiedades"
+
+#~ msgid "GTM - Add files to download"
+#~ msgstr "GTM - Añadir archivos a descargar"
 
 #~ msgid "Your irc settings"
 #~ msgstr "Configuración del IRC"
