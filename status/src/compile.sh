@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CC=gcc
-EXTRA_CFLAGS="-Werror -static -g3 -fno-omit-frame-pointer"
+EXTRA_CFLAGS="-Werror -g3 -fno-omit-frame-pointer"
 PKGCONFIG=pkg-config
 XMLCONFIG=xml-config
 GLIBCONFIG=glib-config
@@ -39,10 +39,13 @@ if which $PKGCONFIG >/dev/null 2>&1; then
 		GLIB_CFLAGS=`$PKGCONFIG --cflags glib-2.0`
 		GLIB_LDFLAGS=`$PKGCONFIG --libs glib-2.0`
 	}
-	$PKGCONFIG xml && {
+	if $PKGCONFIG xml; then
 		XML_CFLAGS=`$PKGCONFIG --cflags xml`
 		XML_LDFLAGS=`$PKGCONFIG --libs xml`
-	}
+	elif $PKGCONFIG libxml; then
+		XML_CFLAGS=`$PKGCONFIG --cflags libxml`
+		XML_LDFLAGS=`$PKGCONFIG --libs libxml`
+	fi
 else
 	$GLIBCONFIG --version >/dev/null 2>&1 && {
 		GLIB_CFLAGS=`$GLIBCONFIG --cflags glib`
