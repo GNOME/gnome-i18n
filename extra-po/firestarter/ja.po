@@ -5,9 +5,9 @@
 #, no-wrap
 msgid ""
 msgstr ""
-"Project-Id-Version: firestarter 0.8.1\n"
-"POT-Creation-Date: 2002-01-15 22:44+0900\n"
-"PO-Revision-Date: 2002-01-15 22:45+0900\n"
+"Project-Id-Version: firestarter 0.8.2\n"
+"POT-Creation-Date: 2002-03-10 13:25+0900\n"
+"PO-Revision-Date: 2002-03-10 13:35+0900\n"
 "Last-Translator: Takeshi Aihana <aihana@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -127,9 +127,8 @@ msgid ""
 msgstr ""
 "貴方に最適なスキルレベルを選択して下さい。\n"
 "\n"
-"\"簡易\" は単一のマシン上で作業を行うデスクトップ・ユーザ向けにお奨めです。\n"
-"\"拡張\" はたくさんのオプションを提供し、ゲートウェイを使ってマシンを管理する"
-"経験豊富なユーザ向けです。"
+"\"簡易設定\" は単一のマシン上で作業を行うデスクトップ・ユーザ向けにお奨めします。\n"
+"\"拡張設定\" はたくさんのオプションを提供し、ゲートウェイを使ってマシンを管理する経験豊富なユーザ向けです。"
 
 #: src/druid.c:232
 msgid "Simple firewall setup"
@@ -672,7 +671,7 @@ msgstr "このグループから全てのルールを削除"
 msgid "Remove all rules in all groups"
 msgstr "全てのグループの全てのルールを削除"
 
-#: src/addrules.c:96 src/menus.c:102
+#: src/menus.c:102 src/addrules.c:96
 msgid "Add new rule"
 msgstr "新規のルールを追加"
 
@@ -700,23 +699,27 @@ msgstr "サービスを有効にする対象の IP 範囲またはホスト名を入力:"
 msgid "Select file to save log to"
 msgstr "ログとして保存するファイルの選択"
 
-#: src/util.c:63
+#: src/util.c:64
 msgid "Old version detected"
 msgstr "古いバージョンを検出しました"
 
-#: src/util.c:67
+#: src/util.c:68
 msgid ""
 "\n"
-"A firewall created by an older version of\n"
-"Firestarter has been detected.\n"
+"A firewall created by an older version of Firestarter has been detected.\n"
 "\n"
-"OK to remove old firewall (recommended)?\n"
+"OK to remove old firewall?\n"
+"Old firewall settings will be stored in "
 msgstr ""
 "\n"
-"ファイヤーウォールは Firestarter の\n"
-"古いバージョンで作成されたようです。\n"
-"OK ボタンをクリックすると、\n"
-"古いファイヤーウォールを削除します。(推奨)\n"
+"ファイヤーウォールは Firestarter の古いバージョンで作成されたようです。\n"
+"\n"
+"古いファイヤーウォールを削除する場合は \"OK\" ボタンをクリックして下さい。\n"
+"古いファイヤーウォールは以下に格納されています: "
+
+#: src/util.c:72
+msgid "/firestarter/backup"
+msgstr "/firestarter/backup"
 
 #: src/logread.c:70
 msgid ""
@@ -746,55 +749,55 @@ msgstr ""
 msgid "Download ipmasqadm now"
 msgstr "ipmasqadm を今すぐダウンロード"
 
-#: src/portfw.c:220
+#: src/portfw.c:221
 msgid "Add connection forwarding"
 msgstr "接続フォワーディングの追加"
 
-#: src/portfw.c:231
+#: src/portfw.c:232
 msgid "Firewall port:"
 msgstr "ファイヤーウォール・ポート:"
 
-#: src/portfw.c:247
+#: src/portfw.c:248
 msgid "LAN port:"
 msgstr "LAN ポート:"
 
-#: src/portfw.c:262
+#: src/portfw.c:263
 msgid "LAN machine address:"
 msgstr "LAN マシン・アドレス:"
 
-#: src/portfw.c:275
+#: src/portfw.c:276
 msgid "Connection type (TCP / UDP):"
 msgstr "接続タイプ (TCP/ UDP):"
 
-#: src/portfw.c:326
+#: src/portfw.c:327
 msgid "Forward port "
 msgstr "ポート"
 
-#: src/portfw.c:327
+#: src/portfw.c:328
 msgid " to port "
 msgstr "のポートにフォワード"
 
-#: src/portfw.c:328
+#: src/portfw.c:329
 msgid " on machine"
 msgstr "(マシン上で)"
 
-#: src/portfw.c:329
+#: src/portfw.c:330
 msgid " via"
 msgstr " を通して"
 
-#: src/portfw.c:337
+#: src/portfw.c:338
 msgid "Configure Port Forwarding"
 msgstr "ポート・フォワーディング設定"
 
-#: src/portfw.c:366
+#: src/portfw.c:367
 msgid "Add entry"
 msgstr "エントリの追加"
 
-#: src/portfw.c:372
+#: src/portfw.c:373
 msgid "Remove entry"
 msgstr "エントリの削除"
 
-#: src/ipchains-script.c:827 src/netfilter-script.c:970
+#: src/ipchains-script.c:827 src/netfilter-script.c:974
 #, c-format
 msgid "Firewall script saved as %s\n"
 msgstr "ファイヤーウォール・スクリプトに %s の名前を付けて保存しました。\n"
