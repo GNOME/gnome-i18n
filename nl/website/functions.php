@@ -90,6 +90,16 @@ function gnome_menu() { ?>
 	</div>
 </div>
 <div class="section">
+	<div class="sectiontitle">Gebruikers</div>
+	<div class="sectioncontent">
+		<ul class="nobullet">
+		<li><a href="gebruikers_welkom.php">G.N.O.M.E.</a></li>
+		<li><a href="gebruikers_omgeving.php">Gnome Nederlands maken</a></li>
+		<li><a href="foutrapport.php">Vertaalfouten</a></li>
+		</ul>
+	</div>
+</div>
+<div class="section">
 	<div class="sectiontitle">Vertalers</div>
 	<div class="sectioncontent">
 		<ul class="nobullet">
@@ -107,15 +117,6 @@ function gnome_menu() { ?>
 		echo "      <li><a href=\"status.php?gnomeversion=$line\">$line</a></li>\n";
 	} ?>
 		</ul>
-		</ul>
-	</div>
-</div>
-<div class="section">
-	<div class="sectiontitle">Gebruikers</div>
-	<div class="sectioncontent">
-		<ul class="nobullet">
-		<li><a href="gebruikers_omgeving.php">Gnome Nederlands</a></li>
-		<li><a href="foutrapport.php">Vertaalfouten</a></li>
 		</ul>
 	</div>
 </div>
