@@ -30,7 +30,7 @@ gemaakt zijn om het vertalen makkelijker en sneller te maken. Je kunt ze zoals
 altijd vinden via freshmeat.net, maar ik heb hier een klein lijstje voor de
 ongeduldigen onder ons:
 </p><ul>
-<li><a href="http://www.gtranslator.org">Gtranslator</a>: De GNOME 2 gebaseerde
+<li><a href="http://gtranslator.sourceforge.net">Gtranslator</a>: De GNOME 2 gebaseerde
 translation-editor. Features zijn o.a. deelvensters om de lijst met vertalingen 
 tegelijk te zien met je huidige vertaling, functies om fouten ongedaan te maken, 
 een leerbuffer om veel voorkomende teksten niet iedere keer opnieuw te hoeven
