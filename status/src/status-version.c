@@ -26,6 +26,7 @@ struct _StatusVersion {
 	GObject object;
 
 	StatusServer *server;
+	GString *module;
 	GString *id;
 	GString *path;
 };
@@ -58,6 +59,7 @@ status_version_init (StatusVersion *version, StatusVersionClass *klass)
 	g_return_if_fail (STATUS_IS_VERSION (version));
 
 	version->server = NULL;
+	version->module = NULL;
 	version->id = NULL;
 	version->path = NULL;
 }
@@ -71,6 +73,10 @@ status_version_finalize (GObject *object)
 
 	if (version->server != NULL) {
 		g_object_unref (version->server);
+	}
+	if (version->module != NULL) {
+		g_string_free (version->module, TRUE);
+		version->module = NULL;
 	}
 	if (version->id != NULL) {
 		g_string_free (version->id, TRUE);
@@ -111,13 +117,14 @@ status_version_get_type (void)
 /**
  * status_version_new
  * @server:
+ * @module:
  * @id:
  * @path:
  *
  * Create a new #StatusVersion object
  */
 StatusVersion *
-status_version_new (StatusServer *server, const gchar *id, const gchar *path)
+status_version_new (StatusServer *server, const gchar *module, const gchar *id, const gchar *path)
 {
 	StatusVersion *version;
 
@@ -126,8 +133,25 @@ status_version_new (StatusServer *server, const gchar *id, const gchar *path)
 	version = g_object_new (STATUS_TYPE_VERSION, NULL);
 
 	version->server = g_object_ref (server);
+	version->module = g_string_new (module);
 	version->id = g_string_new (id);
 	version->path = g_string_new (path);
 
 	return version;
+}
+
+/**
+ * status_version_download
+ * @version:
+ * @downloaddir:
+ *
+ * Downloads the #StatusVersion object to the @downloaddir
+ */
+gboolean
+status_version_download (StatusVersion *version, gchar *downloaddir)
+{
+
+	return status_server_download (version->server, version->module->str, version->id->str,
+				       version->path->str, downloaddir);
+
 }

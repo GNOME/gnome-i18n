@@ -131,8 +131,12 @@ status_server_new (const gchar *hostname, const gchar *username, const gchar *pa
 	server = g_object_new (STATUS_TYPE_SERVER, NULL);
 
 	server->hostname = g_string_new (hostname);
-	server->username = g_string_new (username);
-	server->password = g_string_new (password);
+	if (username != NULL) {
+		server->username = g_string_new (username);
+		server->password = g_string_new (password);
+	} else {
+		server->username = g_string_new ("anonymous");
+	}
 
 	return server;
 }
@@ -146,61 +150,70 @@ status_server_new (const gchar *hostname, const gchar *username, const gchar *pa
  *
  */
 gboolean
-status_server_download (StatusServer *server, gchar *id, gchar *remote_path, gchar *local_path)
+status_server_download (StatusServer *server, gchar *module, gchar *id, gchar *remote_path, gchar *local_path)
 {
 	GString *cvs_command;
-	gchar *buf;
+	gchar *buf, *command_buf;
+	gchar *downloaddir;
 	struct stat stat_path;
 
+	buf = g_strdup_printf ("%s/%s", local_path, module);
+
 	/* First, we check if the destination path already exists */
-	if (!g_file_test (local_path, G_FILE_TEST_EXISTS)) {
+	if (!g_file_test (buf, G_FILE_TEST_EXISTS)) {
 		/* FIXME: We should use the mkdir function directly */
-		buf = g_strdup_printf ("mkdir -p %s", local_path);
-		if (system (buf)) {
-			g_warning ("Unable to create the %s directory", local_path);
-			g_free (buf);
+		command_buf = g_strdup_printf ("mkdir -p %s", buf);
+		if (system (command_buf)) {
+			g_warning ("Unable to create the %s directory", buf);
+			g_free (command_buf);
 			return FALSE;
 		}
-		g_free (buf);
-		buf = NULL;
-	} else if (!g_file_test (local_path, G_FILE_TEST_IS_DIR)) {
-		g_warning ("%s is not a directory!!", local_path);
+		g_free (command_buf);
+		command_buf = NULL;
+	} else if (!g_file_test (buf, G_FILE_TEST_IS_DIR)) {
+		g_warning ("%s is not a directory!!", buf);
 		return FALSE;
 	}
 	
-	buf = g_strdup_printf ("%s/%s", local_path, remote_path);
+	downloaddir = g_strdup_printf ("%s/%s", buf, id);
 
-	if (!g_file_test (buf, G_FILE_TEST_EXISTS)) {
-		g_free (buf);
-		buf = NULL;
+	if (!g_file_test (downloaddir, G_FILE_TEST_EXISTS)) {
+		g_free (downloaddir);
+		downloaddir = NULL;
 
-		chdir (local_path);
+		chdir (buf);
 		
 		cvs_command = g_string_new ("");
 		if (strcmp (id, "HEAD")) {
 			g_string_printf (cvs_command, "cvs -q -d :pserver:%s@%s co -P -r %s -d %s %s",
-					server->username, server->hostname, id, id, remote_path);
+					server->username->str, server->hostname->str, id, id, remote_path);
 		} else {
 			g_string_printf (cvs_command, "cvs -q -d :pserver:%s@%s co -P -d %s %s",
-					server->username, server->hostname, id, remote_path);
+					server->username->str, server->hostname->str, id, remote_path);
 		}
-		if (system (cvs_command)) {
+		if (system (cvs_command->str)) {
 			g_warning ("Unable to checkout the module with %s", cvs_command);
-			g_free (cvs_command);
-			return FALSE;
-		} else {
-			return TRUE;
-		}
-	} else if (!g_file_test (buf, G_FILE_TEST_IS_DIR)) {
-		g_warning ("%s is not a directory!!", buf);
-		g_free (buf);
-	} else {
-		chdir (buf);
-		if (system ("cvs -q update -P")) {
-			g_warning ("Unable to update %s ", buf);
+			g_string_free (cvs_command, TRUE);
 			g_free (buf);
 			return FALSE;
 		} else {
+			g_free (buf);
+			return TRUE;
+		}
+	} else if (!g_file_test (downloaddir, G_FILE_TEST_IS_DIR)) {
+		g_warning ("%s is not a directory!!", downloaddir);
+		g_free (downloaddir);
+		g_free (buf);
+		return FALSE;
+	} else {
+		chdir (downloaddir);
+		if (system ("cvs -q update -P")) {
+			g_warning ("Unable to update %s ", downloaddir);
+			g_free (downloaddir);
+			g_free (buf);
+			return FALSE;
+		} else {
+			g_free (downloaddir);
 			g_free (buf);
 			return TRUE;
 		}

@@ -39,7 +39,10 @@ typedef struct _StatusVersionClass StatusVersionClass;
 
 GType          status_version_get_type (void);
 
-StatusVersion *status_version_new (StatusServer *server, const gchar *id, const gchar *path);
+StatusVersion *status_version_new (StatusServer *server, const gchar *module,
+				   const gchar *id, const gchar *path);
+
+gboolean       status_version_download (StatusVersion *version, gchar *downloaddir);
 
 G_END_DECLS
 

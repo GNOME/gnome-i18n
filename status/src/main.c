@@ -23,28 +23,40 @@
 #include <popt.h>
 #include <glib.h>
 #include "status.h"
+#include "status-version.h"
 
+static void
+download_versions (gpointer key, gpointer value, gpointer user_data)
+{
+	gchar *downloaddir;
+	StatusVersion *version;
+
+	version = STATUS_VERSION (value);
+	downloaddir = (gchar *) user_data;
+
+	g_message ("Downloading %s", (gchar *) key);
+
+	status_version_download (version, downloaddir);
+}	
+
+int
+main (int argc, const char *argv[])
+{
 char *modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
-char *cvsdir = "/home/carlos/Desarrollos/gnome/";
+char *downloaddir = "/home/carlos/Desarrollos/gnome/";
 char *installdir = "/home/carlos/public_html/gnome/l10n/";
 int ttl;
-
+poptContext context;
+gint rc;
+status_data *sdata;
 struct poptOption options[] = {
 	{ "modules-file", 0, POPT_ARG_STRING, &modules, 0, "Set the file where is stored all modules information", "FILE" },
-	{ "cvs-dir", 0, POPT_ARG_STRING, &cvsdir, 0, "Set the directory where we can find cvs modules", "PATH" },
+	{ "download-dir", 0, POPT_ARG_STRING, &downloaddir, 0, "Set the directory where we will store the downloaded modules", "PATH" },
 	{ "install-dir", 0, POPT_ARG_STRING, &installdir, 0, "Set the directory where we will store the output", "PATH" },
 	{ "ttl", 0, POPT_ARG_INT, &ttl, 0, "Default ttl for translations", "SECONDS" },
 	POPT_AUTOHELP
         { NULL, 0, 0, NULL, 0 }
 };
-
-int
-main (int argc, const char *argv[])
-{
-
-poptContext context;
-gint rc;
-status_data *sdata;
 
 	context = poptGetContext (NULL, argc, argv, options, 0);
 
@@ -56,12 +68,16 @@ status_data *sdata;
 
 	g_type_init ();
 
-	/* 1.- Parse the modules .xml file */
+	/* 1.- Parse the .xml file */
 	sdata = status_xml_get_main_data (modules);
+
+	/* 2.- Download/Update the versions */
+
+	g_hash_table_foreach (sdata->versions, download_versions, downloaddir);
 	
-	/* 2.- Update all .po files */
-	/* 2b.- Save the data ?? */
-	/* 3.- Create the .html files */
+	/* 3.- Update all .po files */
+	/* 3b.- Save the data ?? */
+	/* 4.- Create the .html files */
 
 	/* We should free now the dinamic memory */
 	g_hash_table_destroy (sdata->servers);

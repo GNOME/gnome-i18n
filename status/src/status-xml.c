@@ -168,7 +168,7 @@ status_xml_get_main_data (const gchar *views_file)
 				continue;
 			}
 		
-			version = status_version_new (g_object_ref (server), id, path);
+			version = status_version_new (g_object_ref (server), module_name, id, path);
 
 			/* We don't check if it already exists because we get a valid XML and the DTD
 			 * file does not allow two versions with the same name

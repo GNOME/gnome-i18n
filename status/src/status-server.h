@@ -40,7 +40,8 @@ GType          status_server_get_type (void);
 
 StatusServer *status_server_new (const gchar *hostname, const gchar *username, const gchar *password);
 
-gboolean status_server_download (StatusServer *server, gchar *id, gchar *remote_path, gchar *local_path);
+gboolean status_server_download (StatusServer *server, gchar *module, gchar *id,
+				 gchar *remote_path, gchar *local_path);
 
 G_END_DECLS
 
