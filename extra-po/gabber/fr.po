@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gabber 0.8.4.10\n"
-"POT-Creation-Date: 2001-11-04 00:26-0500\n"
-"PO-Revision-Date: 2001-11-04 10:26+0100\n"
+"POT-Creation-Date: 2001-11-04 16:28-0500\n"
+"PO-Revision-Date: 2001-11-04 22:52+0100\n"
 "Last-Translator: Frederic Crozat <fred@crozat.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -164,8 +164,17 @@ msgid "No presence has been received."
 msgstr "Pas information de présence reçue."
 
 #: src/ContactInfoInterface.cc:715
-msgid "'s Contact Information - Gabber"
-msgstr "Information du Contact - Gabber"
+#, c-format
+msgid "%s's Contact Information"
+msgstr "Information de Contact de %s"
+
+#: src/ContactInfoInterface.cc:715 src/ContactInterface.cc:86
+#: src/ContactInterface.cc:203 src/FTInterface.cc:91 src/FTInterface.cc:178
+#: src/FTInterface.cc:307 src/FTInterface.cc:412 src/GCInterface.cc:191
+#: src/GroupsInterface.cc:157 src/MessageViews.cc:202 src/MessageViews.cc:519
+#: src/MessageViews.cc:524 src/MessageViews.cc:1091 src/MessageViews.cc:1721
+msgid " - Gabber"
+msgstr " - Gabber"
 
 #: src/ContactInfoInterface.cc:717
 msgid "'s Computer"
@@ -179,14 +188,6 @@ msgstr "oui"
 #: src/ContactInterface.cc:86
 msgid "Received Contacts(s) from "
 msgstr "Contact(s) Reçu(s) de "
-
-#: src/ContactInterface.cc:86 src/ContactInterface.cc:203
-#: src/FTInterface.cc:91 src/FTInterface.cc:178 src/FTInterface.cc:307
-#: src/FTInterface.cc:412 src/GCInterface.cc:191 src/GroupsInterface.cc:157
-#: src/MessageViews.cc:202 src/MessageViews.cc:519 src/MessageViews.cc:524
-#: src/MessageViews.cc:1091 src/MessageViews.cc:1721
-msgid " - Gabber"
-msgstr " - Gabber"
 
 #: src/ContactInterface.cc:203
 msgid "Send Contacts(s) to "
@@ -343,8 +344,9 @@ msgid "Sorry, your server does not support Jabber filters."
 msgstr "Désolé, votre serveur ne supporte pas les filtres Jabber."
 
 #: src/FTInterface.cc:91
-msgid "Receive File(s) from "
-msgstr "Recoit un(des) Fichier(s) de "
+#, c-format
+msgid "Receive File(s) from %s"
+msgstr "Recoit un(des) Fichier(s) de %s"
 
 #: src/FTInterface.cc:138
 msgid "Error, a file save path must be specified."
@@ -363,8 +365,9 @@ msgid "Waiting for connection..."
 msgstr "Attente de connexion..."
 
 #: src/FTInterface.cc:307
-msgid "Sending File to "
-msgstr "Envoie un fichier à "
+#, c-format
+msgid "Sending File to %s"
+msgstr "Envoie un fichier à %s"
 
 #: src/FTInterface.cc:394
 msgid "Receiving from"
@@ -376,32 +379,64 @@ msgid "Pending..."
 msgstr "En attente..."
 
 #: src/FTInterface.cc:412
-msgid "Receiving File from "
-msgstr "Reçois un(des) Fichier(s) de "
+#, c-format
+msgid "Receiving File from %s"
+msgstr "Reçois un(des) Fichier(s) de %s"
 
-#: src/FTInterface.cc:439
+#: src/FTInterface.cc:438
 msgid "Connected, requesting file..."
 msgstr "Connecté, demande de fichier..."
 
-#: src/FTInterface.cc:446
+#: src/FTInterface.cc:445
 msgid "Accepting connection..."
 msgstr "Accepte la connexion..."
 
-#: src/FTInterface.cc:522
+#: src/FTInterface.cc:464
+msgid "Error, transfer unexpectedly ended."
+msgstr "Erreur, fin non attendue du transfert."
+
+#: src/FTInterface.cc:465
+msgid ""
+"The file transfer has ended unexpectedly.\n"
+"The received portion of the file has been saved."
+msgstr ""
+"Le transfert de fichier s'est arrêté de façon inattendue.\n"
+"La partie reçue du fichier a été sauvegardée."
+
+#: src/FTInterface.cc:533
 msgid "Sending..."
 msgstr "Envoi..."
 
-#: src/FTInterface.cc:551
+#: src/FTInterface.cc:562
 msgid "Receiving data..."
 msgstr "Réception de données..."
 
-#: src/FTInterface.cc:639
+#: src/FTInterface.cc:650
 msgid "Complete."
 msgstr "Terminé."
 
-#: src/FTInterface.cc:644
+#: src/FTInterface.cc:655
 msgid "Error, received more data than expected."
 msgstr "Erreur, reçu plus de données que prévu."
+
+#. Update the speed
+#: src/FTInterface.cc:680
+msgid "/second"
+msgstr "/seconde"
+
+#: src/FTInterface.cc:687
+msgid "Under one minute remaining."
+msgstr "Moins d'une minute restante."
+
+#: src/FTInterface.cc:693
+#, c-format
+msgid "%s hours, %s minutes remaining."
+msgstr "%s heures, %s minutes restantes."
+
+#: src/FTInterface.cc:697
+#, c-format
+msgid "%s minutes remaining."
+msgstr "%s minutes restantes."
 
 #: src/GCInterface.cc:65 src/GCInterface.cc:216
 msgid " on IRC Server "
@@ -415,7 +450,7 @@ msgstr "Vous avez été invité à "
 msgid "Group Chat Invitation from "
 msgstr "Invitation à une Discussion de Groupe venant de "
 
-#: src/GabberApp.cc:383 src/GabberApp.cc:539
+#: src/GabberApp.cc:384 src/GabberApp.cc:540
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
@@ -423,7 +458,7 @@ msgstr ""
 "Erreur, impossible de charger le mot de passe.\n"
 "Merci d'essayer de vous connecter encore."
 
-#: src/GabberApp.cc:394
+#: src/GabberApp.cc:395
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
@@ -431,11 +466,11 @@ msgstr ""
 "Etes-vous sûr de vouloir que Gabber essaie\n"
 "de s'enregistrer "
 
-#: src/GabberApp.cc:397
+#: src/GabberApp.cc:398
 msgid "?"
 msgstr "?"
 
-#: src/GabberApp.cc:402
+#: src/GabberApp.cc:403
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
@@ -445,11 +480,11 @@ msgstr ""
 "Voulez-vous que Gabber essaie de créer un\n"
 "nouveau compte sur le serveur Jabber selectionné ?"
 
-#: src/GabberApp.cc:410
+#: src/GabberApp.cc:411
 msgid "Attempt to create a new user failed: \n"
 msgstr "La tentative de création d'un nouvel utilisateur a échouée: \n"
 
-#: src/GabberApp.cc:412
+#: src/GabberApp.cc:413
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
@@ -459,7 +494,7 @@ msgstr ""
 ". Merci de sélectionner un nom d'utilisateur différent ou \n"
 "vérifier vos informations de connection."
 
-#: src/GabberApp.cc:419
+#: src/GabberApp.cc:420
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
@@ -469,7 +504,7 @@ msgstr ""
 "supporte pas l'authentification masquée.\n"
 "Essayez de vous connecter à nouvezau en désactivé l'authentification masquée."
 
-#: src/GabberApp.cc:578
+#: src/GabberApp.cc:579
 msgid "Transmitter error. Disconnected: "
 msgstr "Erreur de transmission. Déconnecté : "
 
@@ -660,8 +695,9 @@ msgid "Not in Roster"
 msgstr "Pas dans la Liste"
 
 #: src/GroupsInterface.cc:157
-msgid "Edit Groups for "
-msgstr "Editer les Groupes pour "
+#, c-format
+msgid "Edit Groups for %s"
+msgstr "Editer les Groupes pour %s"
 
 #: src/MessageManager.cc:478
 msgid ""
