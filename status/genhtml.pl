@@ -547,7 +547,7 @@ foreach $lang (sort keys %langinfo){
             $transtatus = ("$outdated{$lang}") ? "<font color=\"#F80000\">$outdated{$lang}</font>" : "<font color=\"#F80000\">$outdated{$defaultlang}</font>";
         } elsif (${$langmod{$mod}->{$lang}->[3]} == 1) {
 	    if ($percent == 100) {
-	        $transtatus = ("$finished{$lang}") ? "$finished{$lang}" : "$finished{$defaultlang}";
+	        $transtatus = ("$finished{$lang}") ? "<font color=\"#00BB00\">$finished{$lang}</font>" : "<font color=\"#00BB00\">$finished{$defaultlang}</font>";
 	    } else {
                 $transtatus = ("$wip{$lang}") ? "$wip{$lang}" : "$wip{$defaultlang}";
 	    }
