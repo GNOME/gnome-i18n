@@ -28,9 +28,9 @@
 
 ## Constants
 
-$cvsroot = "/home/robert/cvs";
+$cvsroot = "../..";
 $htmldir = "$cvsroot/web-devel-2/content/projects/gtp/status";
-$posdir = "$htmldir/pos";
+$posdir  = "$htmldir/pos";
 
 ## Use the supplied arguments
 
@@ -47,17 +47,21 @@ open STATUS, "$ARG1" || die "Cannot open file: $ARG1";
 
 my @modules;
 while (<STATUS>) {
-    next if /^#/;
-    next if /^\n/;
-    next if /^\s/;
-    chomp $_;
-    push @modules, "$_";
+    next if /^#/; next if /^\n/; next if /^\s/;
+    chomp $_; push @modules, "$_";
 }
 
-# Uncomment if you just want to do it for yourself
-@langs = ( "no" );
+close STATUS;
 
-#@langs = qw ( bg_BG.cp1251 ca cs da de el en_GB es et eu fi fr ga gl hr hu is it ja ko lt nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_TW.Big5 zh_CN.GB2312 );
+open LANG, "LANGINFO.in" || die "Cannot open file: $ARG1";
+
+my @langs;   
+while (<LANG>) {
+    next if /^#/; next if /^\n/; next if /^\s/;
+    $_ =~ s/(#|\s)(.*)//; chomp $_; push @langs, "$_";
+}
+
+close LANG;
 
 sub GetMsgfmt;
 sub generatepot;
