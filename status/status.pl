@@ -11,16 +11,32 @@ use POSIX qw(locale_h);
 ###############
 
 # it's for a current developer :-)
-@langs = ( "es" );
+#@langs = ( "es" );
 
-@langs = qw ( az bg ca cs da de el en_GB es et eu fi fr ga gl hr hu is it
+@langs = qw ( az ca cs da de el en_GB es et eu fi fr ga gl hr hu is it
 	      ja ko lt lv ms nl no nn pl pt pt_BR ro ru sk sl sr sv ta tr uk
-	      vi wa zh_TW.Big5 zh_CN.GB2312 );
+	      vi wa zh_TW zh_CN.GB2312 );
 
-$cvsroot = "/home/carlos/cvs/gnome2";
-$htmldir = "/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
-$posdir = "$htmldir/po";
-$ttl = 7776000; # This is when a module is marked as unmantained ( 3 months )
+@Usage = ("Usage: status.pl [OPTION]...\n".
+          "Generate stats with the status of .po files translations.\n".
+	  "\n".
+	  "  --cvsroot-dir <location>    Specifies the directory where are\n".
+	  "                              the CVS modules.\n".
+	  "\n".
+	  "  --help                      Prints this page to standard error.\n".
+	  "\n".
+	  "  --html-dir <location>       Specifies the directory where will\n".
+	  "                              be stored the stats files.\n".
+	  "\n".
+	  "  --modulesdat <location>     Specifies the file name that has\n".
+	  "                              the modules info.\n".
+	  "\n".
+	  "  --pos-dir <location>        Specifies the directory where will\n".
+	  "                              be stored the .po/.pot files.\n".
+	  "\n".
+	  "  --ttl <seconds>             Time (in seconds) to mark a translation\n".
+	  "                              as available to other translators.\n");
+
 
 #############################
 # "Subroutines declaration" # 
@@ -37,6 +53,56 @@ sub gettrnsinfo;
 setlocale (LC_LANG, "C");
 setlocale (LC_ALL, "C");
 
+while (@ARGV) {
+    if ($ARGV[0] eq "--cvsroot-dir") {
+        $cvsroot = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--html-dir") {
+        $htmldir = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--pos-dir") {
+        $posdir = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--ttl") {
+        $ttl = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--modules-file") {
+        $modulesfile = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--help") {
+        print STDERR @Usage;
+	exit (0);
+    } else {
+        print STDERR "Error: Unrecognized option '$ARGV[0]'.\n\n";
+	print STDERR @Usage;
+	exit(1);
+    }
+    shift @ARGV;
+}
+
+#
+# Now we setup the default options
+#
+if ($cvsroot eq "") {
+    $cvsroot = "/home/carlos/cvs/gnome2/";
+}
+
+if ($htmldir eq "") {
+    $htmldir = "/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status/";
+}
+
+if ($posdir eq "") {
+    $posdir = $htmldir."po/";
+}
+
+if ($ttl eq "") {
+    $ttl = 7776000; # This is when a module is marked as unmantained ( 3 months )
+}
+
+if ($modulesfile eq "") {
+    $modulesfile = $htmldir."modules.dat";
+}
+
 open (POSDIR, "mkdir -p $posdir |") || die ("unable to mkdir");
 close (POSDIR);
 
@@ -44,7 +110,7 @@ close (POSDIR);
 # read modules info
 #
 
-if (open (MODULES, "modules.dat")){
+if (open (MODULES, $modulesfile)){
     while (<MODULES>) {
         chomp;
 	@info = split (/,/);
@@ -55,6 +121,9 @@ if (open (MODULES, "modules.dat")){
 	}
     }
     close (MODULES);
+} else {
+    print STDERR "Error: Unable to open $modulesfile.\n\n";
+    exit(1);
 }
 								  
 
@@ -125,7 +194,7 @@ foreach $lang (@langs){
 	    getmerge($lang,$mod);
 	    @result = getmsgfmt ("$lang.new", $mod);
 	    @info = gettrnsinfo ("$lang.new", $mod);
-	    unlink("$cvsroot/$mod/$lang.new.po");
+	    unlink("$cvsroot/${$modules{$mod}->[0]}/$lang.new.po");
 	    if ($result[1]){
 		$total_msg += $result[1];
 	    }
@@ -139,7 +208,11 @@ foreach $lang (@langs){
 	    }
 	    ${$langmod{$lang}->{$mod}->[4]} = @info[1];
 	} else {
+	    ${$langmod{$lang}->{$mod}->[0]} = 0;
+	    ${$langmod{$lang}->{$mod}->[1]} = 0;
+	    ${$langmod{$lang}->{$mod}->[2]} = 0;
 	    ${$langmod{$lang}->{$mod}->[3]} = 0;
+	    ${$langmod{$lang}->{$mod}->[4]} = "";
 	}
     }
     ${$langinfo{$lang}->[0]} = $total_msg;
@@ -236,6 +309,15 @@ sub getmsgfmt{
     ($trns) = $line =~ /(\d+) translated\s.+/;
     ($fuzz) = $line =~ /(\d+) fuzzy\s.+/;
     ($untr) = $line =~ /(\d+) untranslated\s.+/;
+    if ("$trns" == "") {
+        $trns = "0";
+    }
+    if ("$fuzz" == "") {
+        $fuzz = "0";
+    }
+    if ("$untr" == "") {
+        $untr = "0";
+    }
     $total = $trns + $fuzz + $untr;
     return ($total,$trns,$fuzz,$untr);
 }
@@ -299,8 +381,8 @@ sub generatepot{
 
     print "generatepot: $mod\n";
 
-    if (${$modules{$mod}->[2]} ne ""){
-      open (POTOUT,  "${$modules{$mod}->[2]} && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |" ) || die ("could not generate ${$modules{$mod}->[1]}");
+    if (${$modules{$mod}->[3]} ne ""){
+      open (POTOUT,  "${$modules{$mod}->[3]} && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |" ) || die ("could not generate ${$modules{$mod}->[1]}");
     } else {
       open (POTOUT,  "cd $cvsroot/${$modules{$mod}->[0]} && xml-i18n-update -P 1>&2 && cp -p $cvsroot/${$modules{$mod}->[0]}/${$modules{$mod}->[1]} $posdir |") || die ("could not generate ${$modules{$mod}->[1]}");
     }
@@ -308,11 +390,13 @@ sub generatepot{
 }
 
 # Array structures:
-# modules  $mod:$moddir:$modpot:$modpotcreate:$modpomerge
+# modules  $mod:$moddir:$modpot:$modpotcreate:$modpomerge:$brahch_name:$next_release_date
 # ${$modules{$mod}->[0]} = "Directory where its .po/.pot files are"
 # ${$modules{$mod}->[1]} = "Its .pot file name"
 # ${$modules{$mod}->[2]} = "Command to generate the .pot file"
 # ${$modules{$mod}->[3]} = "Command to update the .po files"
+# ${$modules{$mod}->[4]} = "branch of module name"
+# ${$modules{$mod}->[5]} = "date of next release (in seconds)"
 #
 # langmod  $mod:$lang:$trns:$fuzz:$untr:$trns_status:$last_trns
 # ${$langmod{$lang}->{$mod}->[0]} = "trns";
@@ -321,11 +405,9 @@ sub generatepot{
 # ${$langmod{$lang}->{$mod}->[3]} = "trns status";
 # ${$langmod{$lang}->{$mod}->[4]} = "last trns";
 #
-# modinfo   $mod:$msgs:$recent_chng_date:$stable_brahch_name:$next_release_date
+# modinfo   $mod:$msgs:$recent_chng_date
 # ${$modinfo{$mod}->[0]} = "msgs in module";
 # ${$modinfo{$mod}->[1]} = "date of msgs num changed";
-# ${$modinfo{$mod}->[2]} = "stable branch of module name";
-# ${$modinfo{$mod}->[3]} = "date of next release";
 #
 # langinfo   $lang:$total_trns:$score:$score_date
 # ${$langinfo{$lang}->[0]} = "total trns msg for lang";

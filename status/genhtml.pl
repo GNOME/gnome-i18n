@@ -49,9 +49,6 @@ my $totals   = 0;  #total strings in all modules from modinfo.
 my $now      = time;
 my $details_ = "";
 
-my $htmldir   ="/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status";
-my $htmlpodir ="po/";
-
 # used => for readability.
 
 my %modulenames = (
@@ -205,6 +202,22 @@ my %changed_color = (
     "5" => "grey"
 );
 
+@Usage = ("Usage: genhtml.pl [OPTION]...\n".
+          "Generate html stats with the stats from status.pl.\n".
+	  "\n".
+	  "  --help                      Prints this page to standard error.\n".
+	  "\n".
+	  "  --html-dir <location>       Specifies the directory where will\n".
+	  "                              be stored the stats files.\n".
+	  "\n".
+	  "  --html-po-url <location>    Specifies the url where will\n".
+	  "                              be stored the .po/.pot files.\n".
+	  "\n".
+	  "  --modulesdat <location>     Specifies the file name that has\n".
+	  "                              the modules info.\n".
+	  "\n");
+
+
 #############################
 # "Subroutines declaration" # 
 #############################
@@ -217,10 +230,43 @@ sub printlang;
 
 setlocale (LC_ALL, "C");
 
+while (@ARGV) {
+    if ($ARGV[0] eq "--html-dir") {
+        $htmldir = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--html-po-url") {
+        $htmlpourl = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--modules-file") {
+        $modulesfile = $ARGV[1];
+	shift @ARGV;
+    } elsif ($ARGV[0] eq "--help") {
+        print STDERR @Usage;
+	exit (0);
+    } else {
+        print STDERR "Error: Unrecognized option '$ARGV[0]'.\n\n";
+	print STDERR @Usage;
+	exit(1);
+    }
+    shift @ARGV;
+}
+
+if ($htmldir eq "") {
+    $htmldir = "/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status/";
+}
+
+if ($htmlpourl eq "") {
+    $htmlpourl = $htmldir."po/";
+}
+
+if ($modulesfile eq "") {
+    $modulesfile = $htmldir."modules.dat";
+}
+
 #
 # read dat-files
 #
-if (open (MODULES, "$htmldir/modules.dat")){
+if (open (MODULES, "$modulesfile")){
     while (<MODULES>) {
         chomp;
 	@info = split (/,/);
@@ -232,7 +278,7 @@ if (open (MODULES, "$htmldir/modules.dat")){
     }
     close (MODULES);
 } else {
-    print STDERR "Error: Unable to open $htmldir/modules.dat.\n\n";
+    print STDERR "Error: Unable to open $modulesfile.\n\n";
     exit(1);
 }
 
@@ -334,13 +380,17 @@ print TABLE "<td></td></tr></table>";
 print TABLE "<p>Total number of translatable strings in above modules: $totals<p>\n";
 print TABLE "$date\n<br><br>\n" ;
 
-print TABLE "Stable branches with tags: <br>\n" ;
-print TABLE " <br>\n" ;
+my $string = "Stable branches with tags: <br>\n<br>\n" ;
+my $branches = "0";
 
 foreach $mod (sort keys %modules) {
-    if ("${$modules{$mod}->[2]}") {
-	print TABLE "$mod: ${$modules{$mod}->[2]} <br>\n";
+    if ("${$modules{$mod}->[2]}" && "${$modules{$mod}->[2]}" ne "HEAD") {
+	$string = "$string" . "$mod: ${$modules{$mod}->[2]} <br>\n";
+	$branches = "1";
     }
+}
+if ($branches == 1) {
+    print TABLE $string;
 }
 
 print TABLE "</body></html>\n" ;
@@ -385,9 +435,9 @@ foreach $lang (sort keys %langinfo){
 	if (${$modinfo{$mod}->[0]}) {
 	    $percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
 	}
-	my $trns = ("${$langmod{$mod}->{$lang}->[0]}") ? "${$langmod{$mod}->{$lang}->[0]}" : "0";
-	my $fuzzy = ("${$langmod{$mod}->{$lang}->[1]}") ? "${$langmod{$mod}->{$lang}->[1]}" : "0";
-	my $untrns = ("${$langmod{$mod}->{$lang}->[2]}") ? "${$langmod{$mod}->{$lang}->[2]}" : ("${$modinfo{$mod}->[0]}" ne "-1" && "${$modinfo{$mod}->[0]}" ne "${$langmod{$mod}->{$lang}->[0]}") ? "${$modinfo{$mod}->[0]}" : "0";
+	my $trns = ("${$langmod{$mod}->{$lang}->[0]}") ? "${$langmod{$mod}->{$lang}->[0]}" : 0;
+	my $fuzzy = ("${$langmod{$mod}->{$lang}->[1]}") ? "${$langmod{$mod}->{$lang}->[1]}" : 0;
+	my $untrns = ("${$langmod{$mod}->{$lang}->[2]}" && "${$langmod{$mod}->{$lang}->[2]}" != -1 ) ? "${$langmod{$mod}->{$lang}->[2]}" : ($trns != 0 || $fuzzy != 0) ? 0 : "${$modinfo{$mod}->[0]}";
 	my $translatorname = ("${$langmod{$mod}->{$lang}->[4]}") ? "${$langmod{$mod}->{$lang}->[4]}" : "";
 
 	if ("$translatorname" ne "") {
@@ -398,23 +448,23 @@ foreach $lang (sort keys %langinfo){
 	}
 
 	my $transtatus;
-	if ("${$langmod{$mod}->{$lang}->[3]}" eq "0") {
+	if (${$langmod{$mod}->{$lang}->[3]} ==  0) {
 	    $transtatus = ("$available{$lang}") ? "<font color=\"#F80000\">$available{$lang}</font>" : "<font color=\"#F80000\">Available</font>";
-	} elsif ("${$langmod{$mod}->{$lang}->[3]}" eq "1") {
+	} elsif (${$langmod{$mod}->{$lang}->[3]} == 1) {
 	    $transtatus = ("$assigned{$lang}") ? "$assigned{$lang}" : "Assigned";
 	} else {
 	    $transtatus = ("$unknown{$lang}") ? "$unknown{$lang}" : "Unknown";
 	}
 	   
-	if ($percent eq 0) {
+	if ($percent == 0) {
 	    print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
-	    <a href=\"$htmlpodir${$modules{$mod}->[1]}\">$mod</a></td>
+	    <a href=\"$htmlpourl${$modules{$mod}->[1]}\">$mod</a></td>
 	    <td align=right>$trns $strings</td><td align=right>$fuzzy $strings</td>
 	    <td align=right>$untrns $strings</td><td align=right>$percent%</td>
 	    <td>$transtatus</td><td>$translatorname</td>\n";
 	}else{
 	    print TABLE2 "<tr bgcolor='$trbg' align=center><td align=left>
-	    <a href=\"$htmlpodir$mod-$lang.po\">$mod</a></td>
+	    <a href=\"$htmlpourl$mod-$lang.po\">$mod</a></td>
 	    <td align=right>$trns $strings</td><td align=right>$fuzzy $strings</td>
 	    <td align=right>$untrns $strings</td><td align=right>$percent%</td>
 	    <td>$transtatus</td><td>$translatorname</td>\n";
@@ -447,10 +497,10 @@ sub printmodule{
     if ($align eq "L") {
 	$string = "<td align=right>";
 	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
-	$string.= "<a href=\"$htmlpodir${$modules{$mod}->[1]}\">$mod</a>";
+	$string.= "<a href=\"$htmlpourl${$modules{$mod}->[1]}\">$mod</a>";
     } else {
 	$string = "<td align=left>";
-	$string.= "<a href=\"$htmlpodir${$modules{$mod}->[1]}\">$mod</a>";
+	$string.= "<a href=\"$htmlpourl${$modules{$mod}->[1]}\">$mod</a>";
 	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
     }
 
@@ -467,8 +517,8 @@ sub printlang{
     	$percent = int(${$langmod{$mod}->{$lang}->[0]}*100/${$modinfo{$mod}->[0]});
     }
 
-    if ($percent eq 0){
-        print TABLE "<td align=right><a href=\"$htmlpodir${$modules{$mod}->[1]}\">0%</a></td>\n";
+    if ($percent == 0){
+        print TABLE "<td align=right><a href=\"$htmlpourl${$modules{$mod}->[1]}\">0%</a></td>\n";
     }else{
         if ($percent == 100) {
             $color = $percent_colors{"100%"};
@@ -492,7 +542,7 @@ sub printlang{
             $color = "#ff000" . "$per";
         }
 
-        print TABLE "<td align=right><a href=\"$htmlpodir$mod-$lang.po\">
+        print TABLE "<td align=right><a href=\"$htmlpourl$mod-$lang.po\">
 		     <font color='$color'>$percent%</font></a></td>\n";
     }
 }
