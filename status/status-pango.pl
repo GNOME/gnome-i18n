@@ -15,7 +15,7 @@
 #@langs = ( "no" );
 
 
-@langs = qw ( ar as bn fa gu he hi ja ko ma mr or pa si ta te ur
+@langs = qw ( ar as bn fa gu he hi ja ko ml mr or pa si ta te ur
               zh_TW.Big5 zh_CN.GB2312 );
 
 $cvsroot = "/home/kmaraas/cvs/gnome";
