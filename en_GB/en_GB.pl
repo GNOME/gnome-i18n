@@ -144,7 +144,7 @@ sub translate() {
   do_trans("trash", "wastebasket");
   # TIRE -> TYRE (sometimes)
   do_trans("vapor", "vapour");
-  do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\",\n\"Bastien Nocera <hadess\@hadess.net>");
+  do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
