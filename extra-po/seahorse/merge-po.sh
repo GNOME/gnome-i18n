@@ -9,7 +9,7 @@ echo "Simply call $0 with your LANG, e.g. $0 tr"
 ;;
 *)
 [ -f $package.pot -a -f $1.po ] && msgmerge $1.po $package.pot -o $1.po
-msgfmt --statistics $1.po 
+msgfmt --statistics $1.po -o /dev/null
 [ -f messages ] && rm -f messages
 ;;
 esac
