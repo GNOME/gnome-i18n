@@ -60,6 +60,7 @@ my %modulenames = (
     "de" => "Paket",
     "el" => "ÐáêÝôï",
     "es" => "M&oacute;dulo",
+    "fr" => "Module",
     "ja" => "¥â¥¸¥å¡¼¥ë",
     "hu" => "Modul",
     "no" => "Modul",
@@ -76,6 +77,7 @@ my %translated = (
     "de" => "&Uuml;bersetzt",
     "el" => "ÌåôáöñáóìÝíá",
     "es" => "Traducidos",
+    "fr" => "Traduites",
     "hu" => "Lefordított",
     "ja" => "ËÝÌõºÑ¤ß",
     "no" => "Oversatt",
@@ -92,6 +94,7 @@ my %fuzzy = (
     "de" => "Ungenau",
     "el" => "ÁóáöÞ",
     "es" => "Difusos",
+    "fr" => "Approximées",
     "hu" => "Pontatlan",
     "ja" => "¥Õ¥¡¥¸¡¼",
     "no" => "Uferdig",
@@ -108,6 +111,7 @@ my %untranslated = (
     "de" => "Un&uuml;bersetzt",
     "el" => "AìåôÜöñáóôá",
     "es" => "Sin traducir",
+    "fr" => "Non traduites",
     "hu" => "Fordítatlan",
     "ja" => "Ì¤Ìõ",
     "no" => "Uoversatt",
@@ -124,6 +128,7 @@ my %strings = (
     "de" => "Meldungen",
     "el" => "AëöáñéèìçôéêÜ",
     "es" => "Mensajes",
+    "fr" => "Chaînes",
     "hu" => "karakterlánc",
     "ja" => "¸Ä",
     "no" => "strenger",
@@ -139,6 +144,7 @@ my %total = (
     "de" => "Gesamt",
     "el" => "ÓõíïëéêÜ",
     "es" => "Totales",
+    "fr" => "Total",
     "fi" => "Yhteens&auml;",
     "hu" => "Összes",
     "ja" => "¹ç·×",
@@ -155,6 +161,7 @@ my %lasttranslator = (
     "C"  => "Last Translator",
     "de" => "Letzter &Uuml;bersetzer", 
     "es" => "Último traductor",
+    "fr" => "Dernier traducteur",
     "ja" => "ºÇ½ªËÝÌõ¼Ô",
     "sv" => "Senaste &ouml;vers&auml;ttare"
 );
@@ -163,6 +170,7 @@ my %status = (
     "C"  => "Status",
     "de" => "Status",
     "es" => "Estado",
+    "es" => "État",
     "ja" => "¥¹¥Æ¡¼¥¿¥¹",
     "sv" => "Status"
 );
@@ -171,6 +179,7 @@ my %outdated = (
     "C"  => "OutDated",
     "de" => "Veraltet",
     "es" => "Desactualizada",
+    "fr" => "À l'abandon",
     "sv" => "F&ouml;r&aring;ldrad",
 );
 
@@ -178,12 +187,14 @@ my %wip = (
     "C"  => "Work in Progress",
     "de" => "In Arbeit",
     "es" => "En proceso",
+    "fr" => "En cours",
     "sv" => "P&aring;g&aring;ende arbete",
 );
 
 my %finished = (
     "C"	 => "Finished",
     "es" => "Terminada",
+    "fr" => "Terminé",
     "sv" => "Slutf&ouml;rd",
 );
 
@@ -191,6 +202,7 @@ my %unknown = (
     "C"  => "Unknown",
     "de" => "Unbekannt",
     "es" => "Desconocido",
+    "fr" => "Inconnu",
     "sv" => "Ok&auml;nd"
 );
 
@@ -200,6 +212,7 @@ my %details = (
     "de" => "Detaillierte Statistik f&uuml;r deutsche GNOME &Uuml;bersetzung",
     "el" => "ËåðôïìåñÞò áíáöïñÜ ãéá ",
     "es" => "Informe detallado de la traducci&oacute;n de GNOME al español (es)",
+    "fr" => "Rapport détaillé pour la traduction francophone (fr) du projet GNOME",
     "hu" => "Részletes jelentés a Magyar (hu) GNOME fordításokról",
     "ja" => "ÆüËÜ¸ì(Japanese)ËÝÌõ¾õ¶·¾ÜºÙ¥ì¥Ý¡¼¥È",
     "no" => "Detaljert rapport for oversettelse av GNOME til norsk",
