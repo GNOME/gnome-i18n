@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: screem\n"
-"POT-Creation-Date: 2000-11-20 18:28+0100\n"
-"PO-Revision-Date: 2000-11-15 23:52+0100\n"
+"POT-Creation-Date: 2000-11-20 18:46+0100\n"
+"PO-Revision-Date: 2000-11-22 00:51+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -3162,12 +3162,11 @@ msgstr "Låg"
 
 #: src/glade/screem.glade.h:146
 msgid "Medium"
-msgstr ""
+msgstr "Mellan"
 
 #: src/glade/screem.glade.h:147
-#, fuzzy
 msgid "High"
-msgstr "Höjd:"
+msgstr "Hög"
 
 #: src/glade/screem.glade.h:149
 msgid "Screem: Site Information"
@@ -3641,19 +3640,16 @@ msgstr ""
 "standardvärdet är index.html"
 
 #: src/glade/screem.glade.h:290 src/glade/screem.glade.h:392
-#, fuzzy
 msgid "ISO-8859-2"
-msgstr "ISO-8859-1"
+msgstr "ISO-8859-2"
 
 #: src/glade/screem.glade.h:291 src/glade/screem.glade.h:393
-#, fuzzy
 msgid "ISO-8859-5"
-msgstr "ISO-8859-1"
+msgstr "ISO-8859-5"
 
 #: src/glade/screem.glade.h:292 src/glade/screem.glade.h:394
-#, fuzzy
 msgid "ISO-8859-7"
-msgstr "ISO-8859-1"
+msgstr "ISO-8859-7"
 
 #: src/glade/screem.glade.h:293
 msgid "The default character set for html pages, defaults to ISO-8859-1"
@@ -4271,21 +4267,20 @@ msgid "_Close"
 msgstr "_Stäng"
 
 #: src/glade/screem.glade.h:502
-#, fuzzy
 msgid "Screem: Fetch DTD?"
-msgstr "Screem: Inlästa DTD:er"
+msgstr "Screem: Hämta DTD?"
 
 #: src/glade/screem.glade.h:503
 msgid "Fetch"
-msgstr ""
+msgstr "Hämta"
 
 #: src/glade/screem.glade.h:504
 msgid "Don't Fetch"
-msgstr ""
+msgstr "Hämta inte"
 
 #: src/glade/screem.glade.h:505
 msgid "Don't show this message again (automatically fetch without asking)"
-msgstr ""
+msgstr "Visa inte detta meddelande igen (hämta automatiskt utan att fråga)"
 
 #: src/glade/screem.glade.h:506
 msgid ""
@@ -4293,6 +4288,9 @@ msgid ""
 "Screem can fetch the DTD from the url in the doctype.\n"
 "Should it be fetched now?"
 msgstr ""
+"DTD:en som används av det aktuella dokumentet kan inte hittas av Screem.\n"
+"Screem kan inte hämta DTD:en från url:en i dokumenttypen.\n"
+"Ska den hämtas nu?"
 
 #: src/Helpers.c:245
 msgid "Exec Helpers"
@@ -4379,7 +4377,7 @@ msgstr "Avbryt drag"
 #: src/editor.c:460
 #, c-format
 msgid "%s is not a valid element of this documents DTD"
-msgstr ""
+msgstr "%s är inte ett giltigt element i detta dokuments DTD"
 
 #: src/editor.c:1343
 #, c-format
@@ -4440,9 +4438,8 @@ msgid "Loading DTD types\n"
 msgstr "Läser in DTD-typer\n"
 
 #: src/main.c:193
-#, fuzzy
 msgid "Initialising gnome-vfs"
-msgstr "Initierar Guile\n"
+msgstr "Initierar gnome-vfs"
 
 #: src/main.c:197
 msgid "Creating Interface\n"
@@ -4552,7 +4549,7 @@ msgid "Keys"
 msgstr "Nycklar"
 
 #: src/preview.c:181
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<html><head><title>SCREEM</title></head><body bgcolor=\"black\" "
 "text=\"white\"><h1 align=\"center\">SCREEM</h1><h3 align=\"center\">Site "
@@ -4592,7 +4589,10 @@ msgstr ""
 "angivits), har lagts till som redigerarpopupmeny<li>Fler översättningar - "
 "tack till Christophe Merlet som synkat Screem med de som finns i Gnome CVS "
 "<li>Att växla visaraden till av i inställningarna kommer att visa flikarna "
-"för vyerna i stället (kräver omstart) </ul>"
+"för vyerna i stället (kräver omstart) <li>Om inte en DTD hittas lokalt "
+"kommer Screem att hämta det från uri:n i DOCTYPE (kräver gnome-vfs) <li> "
+"Hämtade DTD:er sparas i ~/.screem/dtds och läggs till katalogfilfältet "
+"där. </ul>"
 
 #: src/print.c:190
 msgid "Pages"
