@@ -341,12 +341,12 @@ sub printmodule{
     if ($align eq "L") {
 	$string = "<td align=right>";
 	$string.= ($release gt 0) ? "[$release] " : "";
-	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp*&nbsp</font>" : "";
+	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
 	$string.= $mod;
     } else {
 	$string = "<td align=left>";
 	$string.= $mod;
-	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp*&nbsp</font>" : "";
+	$string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
 	$string.= ($release gt 0) ? " [$release]" : "";
     }
 
