@@ -63,7 +63,7 @@ sub Main{
 
       $module = "${$modules{$mod}->[0]}";
       if (${$modules{$mod}->[4]} eq "TRUE") {
-          print ("Actualizando $mod de la rama ${$modules{$mod}->[2]}\n");
+          print ("Updating $mod from ${$modules{$mod}->[2]} branch\n");
           if ($module =~ /gnome-i18n/) {
               $i18n = 1;
 	      next;
@@ -73,10 +73,10 @@ sub Main{
 	          if ("${$modules{$mod}->[2]}" ne "HEAD") {
                       system("cd $cvsroot/$mod && cvs update");
 	          } else {
-	              print "rama equivocada para el módulo $mod\n";
+	              print "you have a wrong branch for $mod\n";
 	          }
 	      } elsif ("${$modules{$mod}->[2]}" ne "HEAD") {
-	          print "rama equivocada para el módulo $mod\n";
+	          print "you have a wrong branch for $mod\n";
 	      } else {
 	          system("cd $cvsroot/$mod && cvs update");
 	      }
@@ -88,13 +88,13 @@ sub Main{
 	      }
           }
       } else {
-          print ("No se actualizará $mod\n");
 	  if ($module =~ /gnome-i18n/) {
 	      $i18n = 1;
 	  }
       }
    }
    if ($i18n == 1) {
+       print ("Updating gnome-i18n\n");
        if (-f "$cvsroot/gnome-i18n/CVS/Entries") {
           system("cd $cvsroot/gnome-i18n && cvs update");
        } else {
