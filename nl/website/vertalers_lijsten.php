@@ -28,18 +28,15 @@ moeten abonneren. Het is een lijst met middelmatig verkeer van een a twee
 e-mails per dag. Lid worden van de discussielist doe je op de
 <a href="http://mail.gnome.org/mailman/listinfo/gnome-i18n">mailman pagina</a>
 van gnome.org.</li>
-<li><b>vertaling@nl.linux.org:</b> Nederlandstalige discussielijst waar de Nederlandse
+<li><b>vertaling@vrijschrift.org:</b> Nederlandstalige discussielijst waar de Nederlandse
 vertalingen van de hele open source gemeenschap worden gecoordineerd.
 Geautomatiseerde berichten van nieuwe programma worden hier gepost door
 robotten. Ook kun je hier vragen stellen aan je Nederlandse medevertalers.
 Hier zijn niet alleen gnome-vertalers lid van, maar ook KDE, en algemene GNU
 vertalers. Hier zouden alle vertalers lid van moeten worden. De lijst is zeker
 niet druk te noemen met gemiddeld slechts enkele e-mails per week. Abonneren op
-de lijst doe je door een bericht met "subscribe" als onderwerp naar 
-<a href="mailto:vertaling-request@nl.linux.org">vertaling-request@nl.linux.org</a>
-te sturen. Je kunt bladeren door de archieven van de lijst door te kijken op
-<a href="http://mail.nl.linux.org/vertaling/">Dutch-GNU-List-archive
-(cookies aanzetten)</a>.</li>
+de lijst doe je door te kijken op
+<a href="http://mailman.vrijschrift.nl/listinfo/vertaling">de infopagina</a>.</li>
 </ol>
 </div>
 
