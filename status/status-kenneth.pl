@@ -28,7 +28,7 @@
 
 ## Constants
 
-$cvsroot = "../..";
+$cvsroot = "../../";
 $htmldir ="./";
 $posdir  = "$htmldir/pos";
 
@@ -41,6 +41,8 @@ if ($ARGV[0]=~/^-(.)*/){
 
 sub Main{
 
+mkdir("$cvsroot/STABLE", 0755);
+
 if (! -s $ARG1) { print "File $ARG1 does not exist\n"; exit; }
 
 open STATUS, "$ARG1" || die "Cannot open file: $ARG1";
@@ -48,7 +50,26 @@ open STATUS, "$ARG1" || die "Cannot open file: $ARG1";
 my @modules;
 while (<STATUS>) {
     next if /^#/; next if /^\n/; next if /^\s/;
-    chomp $_; push @modules, "$_";
+    $module = $1;
+    if ($module = /(.*)\/po\s*(.*)/) {
+        $module = $1; $branch = $2;
+        if ($branch eq "HEAD") { 
+            if (! -s "$cvsroot/$module") {
+                system("cd $cvsroot && cvs co $module");
+            } else {
+                system("cd $cvsroot && cvs up $module");
+            }
+        } else {
+            if (! -s "$cvsroot/STABLE/$module") {
+                system("cd $cvsroot && cvs co -r $branch $module");
+            } else {
+                system("cd $cvsroot && cvs up $module");
+            }
+        }
+    } else { print "\nYou need to add info about branch to the infofile\n"; }   
+
+    $module =~ s/(.*)/$1\/po/o;
+    chomp $module; push @modules, "$module";
 }
 
 close STATUS;
