@@ -146,9 +146,10 @@ sub translate() {
   do_trans("vapor", "vapour");
   do_trans("translator_credits", "Robert Brady <rwb197\@ecs.soton.ac.uk>\"\n\"Bastien Nocera <hadess\@hadess.net>");
 
-  if ($msg_str eq $msg_id) {
-    $msg_str = "\"\"\n";
-  }
+# This causes the string not to be copied
+#  if ($msg_str eq $msg_id) {
+#    $msg_str = "\"\"\n";
+#  }
 }
 
 $mode = 0;
