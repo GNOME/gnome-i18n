@@ -25,20 +25,38 @@
 #                  Carlos Perelló Marín <carlos@gnome-db.org>
 
 #use strict;
+use Getopt::Long;
+use POSIX qw(locale_h);
 
-## Constants
- 
-my $cvsroot = "../..";
+sub Usage;
+
+####################
+# "Initialization" #
+####################
+
+setlocale (LC_ALL, "C");
+
+my $prog = "cvs-download.pl";
+
+# Parse command line arguments, we'll use getopt::long for this.
+# It's easier and work for multiple command line options.
+
+# default values for options
+my ($help, $cvsroot, $modfile);
+$help = '';
+$cvsroot = "~/cvs/gnome";
+$modfile = "~/cvs/gnome/web-devel-2/content/projects/gtp/status/stable/modules.dat";
+
+GetOptions ('cvs-root=s'     => \$cvsroot,
+	    'modules-file=s' => \$modfile,
+	    'help'           => \$help,
+	    ) or Usage();
+
+if ($help) {
+    Usage();
+}
+
 my $i18n = 0;
-
-## Use the supplied arguments
-
-if ($ARGV[0]=~/^-(.)*/){
-   if ("$ARGV[0]" eq "--modules-file"
-    || "$ARGV[0]" eq "-M"){ $ARG1=$ARGV[1];         &Main; }
-}  else {                   $ARG1="modules-release.dat";    &Main; }
- 
-sub Main{
 
    if (! -s $ARG1) { print "File $ARG1 does not exist\n"; exit; }
 
@@ -101,4 +119,24 @@ sub Main{
           system("cd $cvsroot && cvs co gnome-i18n");
        }
    }
+
+
+sub Usage
+{
+    print <<"HELP";
+
+Usage: $prog [OPTION]....
+Generate html stats with the stats from status.pl.
+
+    --help                      Prints this page to standard error.
+
+    --cvs-root <location>       Specifies the directory where will
+                                be download the cvs modules.
+
+    --modules-file <location>   Specifies the file name that has
+                                the modules info.
+
+HELP
+
+exit -1;
 }
