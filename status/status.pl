@@ -11,6 +11,9 @@ use POSIX qw(locale_h);
 # "Constants" #
 ###############
 
+## Always print as the first thing
+$| = 1;
+
 # it's for a current developer :-)
 #my @langs = ( "es" );
 

@@ -38,14 +38,17 @@ setlocale (LC_ALL, "C");
 
 my $prog = "cvs-download.pl";
 
+## Always print as the first thing
+$| = 1;
+
 # Parse command line arguments, we'll use getopt::long for this.
 # It's easier and work for multiple command line options.
 
 # default values for options
 my ($help, $cvsroot, $modfile);
 $help = '';
-$cvsroot = "~/cvs/gnome";
-$modfile = "~/cvs/gnome/web-devel-2/content/projects/gtp/status/stable/modules.dat";
+$cvsroot = "/home/carlos/cvs/gnome";
+$modfile = "/home/carlos/cvs/gnome/web-devel-2/content/projects/gtp/status/stable/modules.dat";
 
 GetOptions ('cvsroot-dir=s'     => \$cvsroot,
 	    'modules-file=s' => \$modfile,
@@ -58,7 +61,7 @@ if ($help) {
 
 my $i18n = 0;
 
-   open MODULES, "$modfile" || die "Cannot open file: $modfile";
+   open MODULES, "$modfile" or die "Cannot open file: $modfile";
 
    my @modules;
    while (<MODULES>) { 
@@ -79,7 +82,7 @@ my $i18n = 0;
 
       $module = "${$modules{$mod}->[0]}";
       if (${$modules{$mod}->[4]} eq "TRUE") {
-          print ("Updating $mod from ${$modules{$mod}->[2]} branch\n");
+          print "Updating $mod from ${$modules{$mod}->[2]} branch\n";
           if ($module =~ /gnome-i18n/) {
               $i18n = 1;
 	      next;
@@ -110,7 +113,7 @@ my $i18n = 0;
       }
    }
    if ($i18n == 1) {
-       print ("Updating gnome-i18n\n");
+       print "Updating gnome-i18n\n";
        if (-f "$cvsroot/gnome-i18n/CVS/Entries") {
           system("cd $cvsroot/gnome-i18n && cvs update");
        } else {

@@ -50,6 +50,9 @@ my $totals   = 0;  #total strings in all modules from modinfo.
 my $now      = time;
 my $details_ = "";
 
+## Always print as the first thing
+$| = 1;
+
 # used => for readability.
 
 my %modulenames = (
