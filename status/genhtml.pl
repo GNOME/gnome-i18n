@@ -72,7 +72,7 @@ $now = time;
 
 %strings = (
 "da", "strenge",
-"hu", "karakterlánc"
+"hu", "karakterlánc",
 "ro", "stringuri",
 "ru", "ÓÏÏÂİ.",
 "sv", "str&auml;ngar",
