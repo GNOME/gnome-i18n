@@ -137,7 +137,7 @@ $now = time;
 "hu", "Részletes jelentés a Magyar (hu) GNOME fordításokról",
 "is", "Detailed report for Icelandic (is) GNOME translations",
 "it", "Detailed report for Italian (it) GNOME translations",
-"ja", "GNOME¤ÎÆüËÜ¸ìÌõ¤Ë´Ø¤¹¤ë¾ÜºÙ¥ì¥İ¡¼¥È",
+"ja", "GNOME¤ÎÆüËÜ¸ìÌõ¤Ë´Ø¤¹¤ë¾ÜºÙ¥ì¥İ¡¼¥È<br>(Detailed report for Japanese(ja) translations",
 "ko", "Detailed report for Korean (ko) GNOME translations",
 "lt", "Detailed report for Lithuanian (lt) GNOME translations",
 "nl", "Gedetailleerde rapportage voor de Nederlandse (nl) GNOME vertalingen",
