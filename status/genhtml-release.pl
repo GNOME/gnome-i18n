@@ -15,7 +15,8 @@ $now = time;
 "ro", "Modul",
 "ru", "Модуль",
 "sv", "Modul",
-"tr", "ModЭl"
+"tr", "ModЭl",
+"uk", "Модуль"
  ); 
 
 %translated = (
@@ -24,7 +25,8 @@ $now = time;
 "ro", "traduse",
 "ru", "Переведено",
 "sv", "&oslash;versatt",
-"tr", "TercЭme edilmiЧ"
+"tr", "TercЭme edilmiЧ",
+"uk", "Перекладено"
 );
 
 %fuzzy = (
@@ -33,7 +35,8 @@ $now = time;
 "ro", "neclare",
 "ru", "Нечетко",
 "sv", "oklart",
-"tr", "Tam tutmayan"
+"tr", "Tam tutmayan",
+"uk", "Неч╕тко"
 );
 
 %untranslated = (
@@ -42,7 +45,8 @@ $now = time;
 "ro", "netraduse",
 "ru", "Непереведено",
 "sv", "o&oslash;versatt",
-"tr", "TercЭme edilmemiЧ"
+"tr", "TercЭme edilmemiЧ",
+"uk", "Неперекладено"
 );
 
 %strings = (
@@ -51,7 +55,8 @@ $now = time;
 "ro", "stringuri",
 "ru", "сообщ.",
 "sv", "str&auml;ngar",
-"tr", "metinler"
+"tr", "metinler",
+"uk", "пов╕дом."
 );
 
 %details = ( 
@@ -60,7 +65,8 @@ $now = time;
 "no", "Detaljert rapport for oversettelse av GNOME til norsk",
 "ru", "Подробный отчет о состоянии перевода Gnome на русский",
 "sv", "Detaljerad rapport f&Oslash;r Sverige-support i Gnome",
-"tr", "GeliЧmiЧ durum raporu : "
+"tr", "GeliЧmiЧ durum raporu : ",
+"uk", "Детальний зв╕т про стан перекладу GNOME на укра╖нську"
 );
 
 %percent_colors = (
