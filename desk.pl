@@ -75,15 +75,15 @@ else{
         }
     }
 
-    open(OUT1, ">DESKTOP.missing");
+    open(OUT1, ">MISSING.$SEARCH");
        print OUT1 @result ;
     close OUT1;
 
 
-    stat("DESKTOP.missing");
+    stat("MISSING.$SEARCH");
         print "Well, you need to fix these:\n\n" if -s _;
         print @result if -s _;
-        print "\nThe list is saved in DESKTOP.missing\n" if -s _;
+        print "\nThe list is saved in MISSING.$SEARCH\n" if -s _;
         print "\nWell, it's all perfect! Congratulation!\n" if -z _;
-        `rm DESKTOP.missing` if -z _;
+        `rm MISSING.$SEARCH` if -z _;
 }
