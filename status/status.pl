@@ -311,17 +311,22 @@ sub generatepot{
     }
 print "generatepot: $mod\n";
 
-    if ($file eq "po-script-fu"){
-    open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
+    if ($file eq "po-script-fu") {
+      open (POTOUT,  "cd $cvsroot/gimp/po-script-fu && ./update.sh 2>&1 && cp gimp-script-fu.pot po-script-fu.pot |" );
+    } else {
+      if (-x "$cvsroot/$mod/update.pl") {
+	system ("cd $cvsroot/$mod && ./update.pl -P $file" );
+	return;
       } else {  
-    open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
-	  "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
-	  " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
-	  " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
+	open (POTOUT,  "xgettext --default-domain=$file --directory=$cvsroot/$domain \ " . 
+	      "--add-comments --keyword=_ --keyword=N_ --files-from=$cvsroot/$mod/POTFILES.in \ " . 
+	      " && test ! -f $file.po || ( rm -f $cvsroot/$mod/$file.pot \ " . 
+	      " && cp $file.po $cvsroot/$mod/$file.pot ) 2>&1 |") || die ("could not xgettext");
       }
+    }
     link("$cvsroot/$mod/$file.pot", "$posdir/$file.pot");
-close (POTOUT);
-}
+    close (POTOUT);
+  }
 
 
 # Array structures:
