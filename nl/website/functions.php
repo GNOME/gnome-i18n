@@ -14,7 +14,7 @@ include "mysql_password.php";
 $GLOBALS['mysql_password'] = $password;
 $important_branch = "gnome-2.10";
 function translate() { ?>
-<div class="translate">
+<div>
 <? $url = sprintf("%s%s%s","http://",$GLOBALS["HTTP_HOST"],$GLOBALS["REQUEST_URI"]);
  ?>
 <form name="TRANS" action="http://www.systranbox.com/systran/box" method="post">
@@ -23,7 +23,7 @@ function translate() { ?>
 <input type="hidden" value="url" name="ttype">
 <input type="hidden" value="<? echo $url; ?>" name="systran_url">
 <input type="hidden" name="systran_lp" value="nl_en">
-<input type="image" alt="English translation" src="images/uk-flag.gif">
+<input type="image" alt="English translation" src="images/uk-flag.gif" class="floatright">
 </form>
 <?
 echo "</div>";
