@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-02-10 15:16-0500\n"
+"POT-Creation-Date: 2001-02-22 16:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,38 +75,62 @@ msgstr ""
 msgid "Registration Failed"
 msgstr ""
 
+#: src/ContactInfoInterface.cc:389
+msgid " day"
+msgstr ""
+
+#: src/ContactInfoInterface.cc:394
+msgid " days"
+msgstr ""
+
+#: src/ContactInfoInterface.cc:405
+msgid " hr"
+msgstr ""
+
+#: src/ContactInfoInterface.cc:412
+msgid " hrs"
+msgstr ""
+
+#: src/ContactInfoInterface.cc:423
+msgid " min"
+msgstr ""
+
+#: src/ContactInfoInterface.cc:429
+msgid " mins"
+msgstr ""
+
 #. Set the tooltip as well
-#: src/ContactInfoInterface.cc:450 src/ContactInfoInterface.cc:451
+#: src/ContactInfoInterface.cc:563 src/ContactInfoInterface.cc:564
 msgid "Presence signature is invalid"
 msgstr ""
 
 #. Set the tooltip as well
-#: src/ContactInfoInterface.cc:459 src/ContactInfoInterface.cc:460
+#: src/ContactInfoInterface.cc:572 src/ContactInfoInterface.cc:573
 msgid "Presence signature is valid"
 msgstr ""
 
 #. Set the tooltip as well
-#: src/ContactInfoInterface.cc:469 src/ContactInfoInterface.cc:470
+#: src/ContactInfoInterface.cc:582 src/ContactInfoInterface.cc:583
 #: ui/ContactInfo_dlg.glade.h:27
 msgid "Presence is not signed"
 msgstr ""
 
 #. Set the labels appropriately
-#: src/ContactInfoInterface.cc:475
+#: src/ContactInfoInterface.cc:588
 msgid "offline:"
 msgstr ""
 
-#: src/ContactInfoInterface.cc:478
+#: src/ContactInfoInterface.cc:591
 msgid "No presence has been received."
 msgstr ""
 
 #. Set the title, since libglade doesn't
-#: src/ContactInfoInterface.cc:617
+#: src/ContactInfoInterface.cc:730
 msgid "Gabber: My Contact Info"
 msgstr ""
 
-#: src/ContactInfoInterface.cc:988 src/ContactInfoInterface.cc:995
-#: src/ContactInfoInterface.cc:999
+#: src/ContactInfoInterface.cc:1123 src/ContactInfoInterface.cc:1130
+#: src/ContactInfoInterface.cc:1134
 msgid "yes"
 msgstr ""
 
@@ -186,85 +210,53 @@ msgstr ""
 msgid "Sorry, your server does not support Jabber filters."
 msgstr ""
 
-#: src/GabberApp.cc:289
+#: src/GabberApp.cc:299
 msgid "A server-side error has occured:\n"
 msgstr ""
 
-#: src/GabberApp.cc:341 src/GabberApp.cc:497
+#: src/GabberApp.cc:351 src/GabberApp.cc:507
 msgid ""
 "Error, unable to load the password.\n"
 "Please try logging in again."
 msgstr ""
 
-#: src/GabberApp.cc:352
+#: src/GabberApp.cc:362
 msgid ""
 "Are you sure you would like Gabber to try\n"
 "to register "
 msgstr ""
 
-#: src/GabberApp.cc:355
+#: src/GabberApp.cc:365
 msgid "?"
 msgstr ""
 
-#: src/GabberApp.cc:360
+#: src/GabberApp.cc:370
 msgid ""
 "Gabber could not log you in.\n"
 "Would you like Gabber to try to create a new\n"
 "account on the selected Jabber server?"
 msgstr ""
 
-#: src/GabberApp.cc:368
+#: src/GabberApp.cc:378
 msgid "Attempt to create a new user failed: \n"
 msgstr ""
 
-#: src/GabberApp.cc:370
+#: src/GabberApp.cc:380
 msgid ""
 "\n"
 ". Please select a different user name or verify your \n"
 "login information."
 msgstr ""
 
-#: src/GabberApp.cc:377
+#: src/GabberApp.cc:387
 msgid ""
 "Login failed. It is possible this server does not\n"
 "support digest authentication.\n"
 "Try connecting again with digest disabled."
 msgstr ""
 
-#. The "nsmitter error. Disconnected:" bug was caused by the _(...) + e
-#. since adding an int to a pointer moves the pointer forward, not appending
-#. it as a string.  
-#. ha ha, ok, thanks
-#: src/GabberApp.cc:537
-msgid "Transmitter error. Disconnected: "
-msgstr ""
-
-#: src/GabberApp.cc:541
-msgid "Couldn't Resolve Hostname"
-msgstr ""
-
 #: src/GabberApp.cc:544
-msgid "Couldn't Establish TCP Connection"
-msgstr ""
-
-#: src/GabberApp.cc:547
-msgid "Connection Broken"
-msgstr ""
-
-#: src/GabberApp.cc:550
-msgid "No Connection"
-msgstr ""
-
-#: src/GabberApp.cc:553
-msgid "Socket Error"
-msgstr ""
-
-#: src/GabberApp.cc:556
-msgid "I/O Error"
-msgstr ""
-
-#: src/GabberApp.cc:559
-msgid "Protocol Error"
+msgid "Transmitter error. Disconnected: "
 msgstr ""
 
 #: src/GabberGPG.cc:457
@@ -287,205 +279,204 @@ msgstr ""
 msgid "Logs for "
 msgstr ""
 
-#: src/GabberUtility.cc:97
+#: src/GabberUtility.cc:98
 msgid "Invalid"
 msgstr ""
 
-#: src/GabberUtility.cc:99
+#: src/GabberUtility.cc:100
 msgid "Offline"
 msgstr ""
 
-#. Setup the menu
-#: src/GabberUtility.cc:101 src/GabberWin.cc:194 src/GabberWin.cc:210
-#: src/GabberWin.cc:419 src/GabberWin.cc:423 src/MessageViews.cc:1265
-#: ui/Gabber_win.glade.h:29
+#. set a default status
+#: src/GabberUtility.cc:102 src/GabberUtility.cc:251 src/GabberWin.cc:426
+#: src/GabberWin.cc:430 ui/Gabber_win.glade.h:26
 msgid "Online"
 msgstr ""
 
-#: src/GabberUtility.cc:103 src/GabberWin.cc:195 src/GabberWin.cc:211
-#: src/MessageViews.cc:1266 ui/GC_win.glade.h:4 ui/Gabber_win.glade.h:8
+#: src/GabberUtility.cc:104 src/GabberUtility.cc:252 ui/GC_win.glade.h:4
+#: ui/Gabber_win.glade.h:8
 msgid "Chatty"
 msgstr ""
 
-#: src/GabberUtility.cc:105 src/GabberWin.cc:196 src/GabberWin.cc:212
-#: src/MessageViews.cc:1267 ui/GC_win.glade.h:3 ui/Gabber_win.glade.h:5
+#: src/GabberUtility.cc:106 src/GabberUtility.cc:253 ui/GC_win.glade.h:3
+#: ui/Gabber_win.glade.h:5
 msgid "Away"
 msgstr ""
 
-#: src/GabberUtility.cc:107 src/GabberWin.cc:197 src/GabberWin.cc:213
-#: src/MessageViews.cc:1268 ui/GC_win.glade.h:11 ui/Gabber_win.glade.h:28
+#: src/GabberUtility.cc:108 src/GabberUtility.cc:254 ui/GC_win.glade.h:9
+#: ui/Gabber_win.glade.h:25
 msgid "Not Available"
 msgstr ""
 
-#: src/GabberUtility.cc:109 src/GabberWin.cc:198 src/GabberWin.cc:214
-#: src/MessageViews.cc:1269 ui/GC_win.glade.h:7 ui/Gabber_win.glade.h:9
+#: src/GabberUtility.cc:110 src/GabberUtility.cc:255 ui/GC_win.glade.h:5
+#: ui/Gabber_win.glade.h:9
 msgid "Do Not Disturb"
 msgstr ""
 
-#: src/GabberUtility.cc:120
+#: src/GabberUtility.cc:121
 msgid "both"
 msgstr ""
 
-#: src/GabberUtility.cc:122
+#: src/GabberUtility.cc:123
 msgid "from"
 msgstr ""
 
-#: src/GabberUtility.cc:124
+#: src/GabberUtility.cc:125
 msgid "to"
 msgstr ""
 
-#: src/GabberUtility.cc:127 ui/ContactInfo_dlg.glade.h:47
+#: src/GabberUtility.cc:128 ui/ContactInfo_dlg.glade.h:47
 #: ui/TransInfo_dlg.glade.h:21
 msgid "none"
 msgstr ""
 
-#: src/GabberUtility.cc:136
+#: src/GabberUtility.cc:137
 msgid "Both of you can see each other's presence."
 msgstr ""
 
-#: src/GabberUtility.cc:138
+#: src/GabberUtility.cc:139
 msgid "You cannot see their presence, but they can see yours."
 msgstr ""
 
-#: src/GabberUtility.cc:140
+#: src/GabberUtility.cc:141
 msgid "You can see their presence, but they cannot see yours."
 msgstr ""
 
-#: src/GabberUtility.cc:144 ui/ContactInfo_dlg.glade.h:21
+#: src/GabberUtility.cc:145 ui/ContactInfo_dlg.glade.h:21
 #: ui/TransInfo_dlg.glade.h:10
 msgid "Neither of you can see the other's presence."
 msgstr ""
 
-#: src/GabberUtility.cc:231
+#: src/GabberUtility.cc:290
 msgid "Unable to save file. Please try another name or location."
 msgstr ""
 
-#: src/GabberWin.cc:274
+#: src/GabberWin.cc:279
 msgid "Are you sure you want to disconnect from Jabber?"
 msgstr ""
 
-#: src/GabberWin.cc:302
+#: src/GabberWin.cc:307
 msgid "Logged in"
 msgstr ""
 
-#: src/GabberWin.cc:353
+#: src/GabberWin.cc:359
 msgid "Logged out"
 msgstr ""
 
-#: src/GabberWin.cc:377
+#: src/GabberWin.cc:384
 msgid "Gabber: The GNOME Jabber Client."
 msgstr ""
 
-#: src/GabberWin.cc:379
+#: src/GabberWin.cc:386
 msgid ""
 "More information about Jabber:\n"
-"  http://www.jabbercentral.com/\n"
+"  http://www.jabbercentral.org/\n"
 "  http://jabber.org/\n"
 "  http://jabber.com/\n"
 "\n"
 msgstr ""
 
-#: src/GabberWin.cc:380
+#: src/GabberWin.cc:387
 msgid "Thanks:\n"
 msgstr ""
 
-#: src/GabberWin.cc:381
-msgid "  Thomas Muldowne - several patches/fixes\n"
-msgstr ""
-
-#: src/GabberWin.cc:382
-msgid "  David Zoll - Small bug fixes, g_asserts\n"
-msgstr ""
-
-#: src/GabberWin.cc:383
-msgid "  Erich Zigler - Gabber FreeBSD port\n"
-msgstr ""
-
-#: src/GabberWin.cc:384
-msgid "  Lauris Kaplinski - e-font and e-unicode\n"
-msgstr ""
-
-#: src/GabberWin.cc:385
-msgid "  All of the translators\n"
-msgstr ""
-
-#: src/GabberWin.cc:386
-msgid "  gtkmm - especially kenelson and cactus\n"
-msgstr ""
-
-#: src/GabberWin.cc:387
-msgid "  artwiz and garrett - amazing icons\n"
-msgstr ""
-
 #: src/GabberWin.cc:388
-msgid "  gnomeicu and gaim\n"
+msgid "  Thomas Muldowney - several patches/fixes\n"
 msgstr ""
 
 #: src/GabberWin.cc:389
-msgid "  All of the Jabber and GNOME people!\n"
+msgid "  David Zoll - Small bug fixes, g_asserts\n"
 msgstr ""
 
 #: src/GabberWin.cc:390
-msgid "Gabber's website: http://gabber.sourceforge.net/ "
+msgid "  Erich Zigler - Gabber FreeBSD port\n"
+msgstr ""
+
+#: src/GabberWin.cc:391
+msgid "  Lauris Kaplinski - e-font and e-unicode\n"
+msgstr ""
+
+#: src/GabberWin.cc:392
+msgid "  All of the translators\n"
 msgstr ""
 
 #: src/GabberWin.cc:393
-msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
+msgid "  gtkmm - especially kenelson and cactus\n"
 msgstr ""
 
 #: src/GabberWin.cc:394
-msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
+msgid "  artwiz and garrett - amazing icons\n"
 msgstr ""
 
 #: src/GabberWin.cc:395
-msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
+msgid "  gnomeicu and gaim\n"
 msgstr ""
 
 #: src/GabberWin.cc:396
-msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
+msgid "  All of the Jabber and GNOME people!\n"
 msgstr ""
 
 #: src/GabberWin.cc:397
-msgid "Konrad Podloucky"
+msgid "Gabber's website: http://gabber.sourceforge.net/ "
 msgstr ""
 
-#: src/GabberWin.cc:398
-msgid "Dave \"bigdave\" Lee"
+#: src/GabberWin.cc:400
+msgid "Dave \"DizzyD\" Smith <dave@jabber.org>"
+msgstr ""
+
+#: src/GabberWin.cc:401
+msgid "Julian \"x-virge\" Missig <julian@jabber.org>"
 msgstr ""
 
 #: src/GabberWin.cc:402
+msgid "Brandon \"brandon2\" Lees <brandon@aspect.net>"
+msgstr ""
+
+#: src/GabberWin.cc:403
+msgid "Eliot \"e-t\" Landrum <eliot@landrum.cx>"
+msgstr ""
+
+#: src/GabberWin.cc:404
+msgid "Konrad Podloucky <konrad@crunchy-frog.org>"
+msgstr ""
+
+#: src/GabberWin.cc:405
+msgid "Dave \"bigdave\" Lee"
+msgstr ""
+
+#: src/GabberWin.cc:409
 msgid "Copyright (c) 1999-2001 Julian Missig and Dave Smith"
 msgstr ""
 
 #. Chat
-#: src/GabberWin.cc:426
+#: src/GabberWin.cc:433
 msgid "Chat with me!"
 msgstr ""
 
 #. Away
-#: src/GabberWin.cc:429
+#: src/GabberWin.cc:436
 msgid "I'm away."
 msgstr ""
 
 #. Not available
-#: src/GabberWin.cc:432
+#: src/GabberWin.cc:439
 msgid "I'm not available right now."
 msgstr ""
 
 #. Do not disturb
-#: src/GabberWin.cc:435
+#: src/GabberWin.cc:442
 msgid "Please do not disturb me right now."
 msgstr ""
 
-#: src/GabberWin.cc:583
+#: src/GabberWin.cc:559
 msgid "Disconnected"
 msgstr ""
 
-#: src/GabberWin.cc:654 src/WelcomeDruid.cc:301
+#: src/GabberWin.cc:630 src/WelcomeDruid.cc:301
 msgid "Logging in..."
 msgstr ""
 
-#: src/GabberWin.cc:692 src/RosterView.cc:702
+#: src/GabberWin.cc:668 src/RosterView.cc:704
 msgid "Not in Roster"
 msgstr ""
 
@@ -524,23 +515,23 @@ msgid "Message to: "
 msgstr ""
 
 #. Set the tooltip
-#: src/MessageViews.cc:292 src/MessageViews.cc:958 src/MessageViews.cc:1098
-#: ui/Message_win.glade.h:28 ui/OOOChat_win.glade.h:13
+#: src/MessageViews.cc:292 src/MessageViews.cc:952 src/MessageViews.cc:1092
+#: ui/Message_win.glade.h:28 ui/OOOChat_win.glade.h:11
 msgid "This message is not encrypted"
 msgstr ""
 
 #. Set the tooltip
-#: src/MessageViews.cc:349 src/MessageViews.cc:988
+#: src/MessageViews.cc:349 src/MessageViews.cc:982
 msgid "Signature on message is invalid"
 msgstr ""
 
 #. Set the tooltip
-#: src/MessageViews.cc:359 src/MessageViews.cc:979 src/MessageViews.cc:1104
+#: src/MessageViews.cc:359 src/MessageViews.cc:973 src/MessageViews.cc:1098
 msgid "Signature on message is valid"
 msgstr ""
 
 #. Set the tooltip
-#: src/MessageViews.cc:405 src/MessageViews.cc:1028 src/MessageViews.cc:1110
+#: src/MessageViews.cc:405 src/MessageViews.cc:1022 src/MessageViews.cc:1104
 msgid "This message is encrypted"
 msgstr ""
 
@@ -549,32 +540,32 @@ msgstr ""
 msgid " wrote:\n"
 msgstr ""
 
-#: src/MessageViews.cc:891
+#: src/MessageViews.cc:885
 msgid "Gabber: Chat with "
 msgstr ""
 
-#: src/MessageViews.cc:1286
+#: src/MessageViews.cc:1282
 msgid "Gabber: Group Chat in "
 msgstr ""
 
-#: src/MessageViews.cc:1355
+#: src/MessageViews.cc:1351
 msgid "Gabber: Group Chat - "
 msgstr ""
 
 #. Setup a message object
-#: src/MessageViews.cc:1374
+#: src/MessageViews.cc:1370
 msgid "/me has changed the subject to: "
 msgstr ""
 
-#: src/MessageViews.cc:1480
+#: src/MessageViews.cc:1515
 msgid "Session Disconnected"
 msgstr ""
 
-#: src/MessageViews.cc:1700 ui/GCJoin_dlg.glade.h:3
+#: src/MessageViews.cc:1716 ui/GCJoin_dlg.glade.h:3
 msgid "Jabber Group Chat 1.0"
 msgstr ""
 
-#: src/MessageViews.cc:1701 ui/GCJoin_dlg.glade.h:2
+#: src/MessageViews.cc:1717 ui/GCJoin_dlg.glade.h:2
 msgid "IRC"
 msgstr ""
 
@@ -583,19 +574,19 @@ msgstr ""
 msgid "Gabber: Preferences"
 msgstr ""
 
-#: src/RosterView.cc:361
+#: src/RosterView.cc:359
 msgid " is now online"
 msgstr ""
 
-#: src/RosterView.cc:376
+#: src/RosterView.cc:374
 msgid " went offline"
 msgstr ""
 
-#: src/RosterView.cc:533
+#: src/RosterView.cc:531
 msgid "Are you sure you want to remove "
 msgstr ""
 
-#: src/RosterView.cc:539
+#: src/RosterView.cc:537
 msgid " from your roster?"
 msgstr ""
 
@@ -606,8 +597,21 @@ msgid ""
 "to allow this?"
 msgstr ""
 
-#: src/TCPTransmitter.cc:475
+#: src/TCPTransmitter.cc:502
+msgid "Couldn't Resolve Hostname"
+msgstr ""
+
+#. shouldn't happen
+#: src/TCPTransmitter.cc:509
+msgid "Unknown Error"
+msgstr ""
+
+#: src/TCPTransmitter.cc:533
 msgid "Disconnected. Reconnecting..."
+msgstr ""
+
+#: src/TCPTransmitter.cc:556
+msgid "Unknown error"
 msgstr ""
 
 #: src/WelcomeDruid.cc:125
@@ -668,7 +672,6 @@ msgid "Contact Information - Select Nickname"
 msgstr ""
 
 #: ui/AUDruid_win.glade.h:8 ui/ContactInfo_dlg.glade.h:8
-#: ui/MyContactInfo_win.glade.h:7
 msgid "Country:"
 msgstr ""
 
@@ -856,7 +859,7 @@ msgid "_Add by username (JabberID, ICQ #, AIM screename, etc)."
 msgstr ""
 
 #: ui/AUDruid_win.glade.h:61 ui/ContactInfo_dlg.glade.h:42
-#: ui/GCJoin_dlg.glade.h:13 ui/MyContactInfo_win.glade.h:34
+#: ui/GCJoin_dlg.glade.h:13 ui/MyContactInfo_win.glade.h:33
 #: ui/Welcome_win.glade.h:72
 msgid "_Nickname:"
 msgstr ""
@@ -978,7 +981,7 @@ msgstr ""
 msgid "General Information"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:14 ui/MyContactInfo_win.glade.h:11
+#: ui/ContactInfo_dlg.glade.h:14 ui/MyContactInfo_win.glade.h:10
 msgid "General _Info"
 msgstr ""
 
@@ -990,11 +993,11 @@ msgstr ""
 msgid "Jabber Client"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:19 ui/MyContactInfo_win.glade.h:13
+#: ui/ContactInfo_dlg.glade.h:19 ui/MyContactInfo_win.glade.h:12
 msgid "Location"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:20 ui/MyContactInfo_win.glade.h:14
+#: ui/ContactInfo_dlg.glade.h:20 ui/MyContactInfo_win.glade.h:13
 msgid "Name:"
 msgstr ""
 
@@ -1002,11 +1005,11 @@ msgstr ""
 msgid "Operating System:"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:23 ui/MyContactInfo_win.glade.h:15
+#: ui/ContactInfo_dlg.glade.h:23 ui/MyContactInfo_win.glade.h:14
 msgid "Organization Details"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:24 ui/MyContactInfo_win.glade.h:16
+#: ui/ContactInfo_dlg.glade.h:24 ui/MyContactInfo_win.glade.h:15
 msgid "Personal Details"
 msgstr ""
 
@@ -1018,11 +1021,11 @@ msgstr ""
 msgid "Presence and Status"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:28 ui/MyContactInfo_win.glade.h:18
+#: ui/ContactInfo_dlg.glade.h:28
 msgid "Primary eMail:"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:29 ui/MyContactInfo_win.glade.h:19
+#: ui/ContactInfo_dlg.glade.h:29 ui/MyContactInfo_win.glade.h:18
 msgid "Role:"
 msgstr ""
 
@@ -1042,11 +1045,11 @@ msgstr ""
 msgid "Subscription type:"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:34 ui/MyContactInfo_win.glade.h:23
+#: ui/ContactInfo_dlg.glade.h:34 ui/MyContactInfo_win.glade.h:22
 msgid "Title:"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:35 ui/MyContactInfo_win.glade.h:24
+#: ui/ContactInfo_dlg.glade.h:35 ui/MyContactInfo_win.glade.h:23
 msgid "Unit:"
 msgstr ""
 
@@ -1058,7 +1061,7 @@ msgstr ""
 msgid "Version:"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:39 ui/MyContactInfo_win.glade.h:25
+#: ui/ContactInfo_dlg.glade.h:39 ui/MyContactInfo_win.glade.h:24
 msgid "_About"
 msgstr ""
 
@@ -1066,15 +1069,15 @@ msgstr ""
 msgid "_Client Info"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:41 ui/MyContactInfo_win.glade.h:33
+#: ui/ContactInfo_dlg.glade.h:41 ui/MyContactInfo_win.glade.h:32
 msgid "_Location"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:43 ui/MyContactInfo_win.glade.h:35
+#: ui/ContactInfo_dlg.glade.h:43 ui/MyContactInfo_win.glade.h:34
 msgid "_Organization"
 msgstr ""
 
-#: ui/ContactInfo_dlg.glade.h:44 ui/MyContactInfo_win.glade.h:36
+#: ui/ContactInfo_dlg.glade.h:44 ui/MyContactInfo_win.glade.h:35
 msgid "_Personal Info"
 msgstr ""
 
@@ -1267,39 +1270,43 @@ msgstr ""
 msgid "Available"
 msgstr ""
 
-#: ui/GC_win.glade.h:5 ui/OOOChat_win.glade.h:3
-msgid "Close"
-msgstr ""
-
-#: ui/GC_win.glade.h:6 ui/OOOChat_win.glade.h:4
-msgid "Close Dialog"
-msgstr ""
-
-#: ui/GC_win.glade.h:8
+#: ui/GC_win.glade.h:6
 msgid "Gabber: Group Chat"
 msgstr ""
 
-#: ui/GC_win.glade.h:9 ui/Message_win.glade.h:9 ui/OOOChat_win.glade.h:7
+#: ui/GC_win.glade.h:7 ui/Message_win.glade.h:9 ui/OOOChat_win.glade.h:5
 msgid "History"
 msgstr ""
 
-#: ui/GC_win.glade.h:10 ui/Message_win.glade.h:12 ui/OOOChat_win.glade.h:9
+#: ui/GC_win.glade.h:8 ui/Message_win.glade.h:12 ui/OOOChat_win.glade.h:7
 msgid "Message History..."
 msgstr ""
 
-#: ui/GC_win.glade.h:12
+#: ui/GC_win.glade.h:10
 msgid "Show/Hide Users in Group"
 msgstr ""
 
-#: ui/GC_win.glade.h:13
+#: ui/GC_win.glade.h:11
 msgid "User List"
 msgstr ""
 
-#: ui/GC_win.glade.h:14 ui/Message_win.glade.h:34
+#: ui/GC_win.glade.h:12
+msgid "View Contact _Info"
+msgstr ""
+
+#: ui/GC_win.glade.h:13 ui/Gabber_win.glade.h:41
+msgid "_Message..."
+msgstr ""
+
+#: ui/GC_win.glade.h:14 ui/Gabber_win.glade.h:43
+msgid "_One-on-One Chat..."
+msgstr ""
+
+#: ui/GC_win.glade.h:15 ui/Message_win.glade.h:34
 msgid "_Subject:"
 msgstr ""
 
-#: ui/GC_win.glade.h:15
+#: ui/GC_win.glade.h:16
 msgid "label296"
 msgstr ""
 
@@ -1374,171 +1381,147 @@ msgid "Browse Agents/IM Systems..."
 msgstr ""
 
 #: ui/Gabber_win.glade.h:10
-msgid "Docklet Popup"
-msgstr ""
-
-#: ui/Gabber_win.glade.h:11
 msgid "Edit _Groups..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:12
-msgid "Extra"
-msgstr ""
-
-#: ui/Gabber_win.glade.h:13 ui/Login_dlg.glade.h:4 ui/Message_win.glade.h:7
+#: ui/Gabber_win.glade.h:11 ui/Login_dlg.glade.h:4 ui/Message_win.glade.h:7
 #: ui/Welcome_win.glade.h:22
 msgid "Gabber"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:14
+#: ui/Gabber_win.glade.h:12
 msgid "Gabber Manual"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:15
+#: ui/Gabber_win.glade.h:13
 msgid "Gabber Manual..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:16
+#: ui/Gabber_win.glade.h:14
 msgid "Gabber _Manual..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:17
+#: ui/Gabber_win.glade.h:15
 msgid "Hide _Agents"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:18
+#: ui/Gabber_win.glade.h:16
 msgid "Hide _Offline Contacts"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:19
+#: ui/Gabber_win.glade.h:17
 msgid "Jabber Message _Rules..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:20
+#: ui/Gabber_win.glade.h:18
 msgid "Join Group Chat"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:21
+#: ui/Gabber_win.glade.h:19
 msgid "Join Group _Chat..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:22
+#: ui/Gabber_win.glade.h:20
 msgid "Join a Group Chat..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:23
+#: ui/Gabber_win.glade.h:21
 msgid "Log _out of Agent"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:24
+#: ui/Gabber_win.glade.h:22
 msgid "Log_out"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:25
+#: ui/Gabber_win.glade.h:23
 msgid "Manage _Groups..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:26
-msgid "Manage _Transport"
-msgstr ""
-
-#: ui/Gabber_win.glade.h:27
+#: ui/Gabber_win.glade.h:24
 msgid "New Blank _Message..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:30
+#: ui/Gabber_win.glade.h:27
 msgid "Re_subscribe"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:31
+#: ui/Gabber_win.glade.h:28
 msgid "Show _Headlines"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:32
+#: ui/Gabber_win.glade.h:29
 msgid "Show as being"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:33
+#: ui/Gabber_win.glade.h:30
 msgid "View Contact _Info..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:34
+#: ui/Gabber_win.glade.h:31
 msgid "View _History..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:35
+#: ui/Gabber_win.glade.h:32
 msgid "_Add Contact..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:36
+#: ui/Gabber_win.glade.h:33
 msgid "_Add this Contact..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:37
+#: ui/Gabber_win.glade.h:34
 msgid "_Browse Agents/IM Systems..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:38
+#: ui/Gabber_win.glade.h:35
 msgid "_Debug"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:39
+#: ui/Gabber_win.glade.h:36
 msgid "_Delete Contact"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:40
+#: ui/Gabber_win.glade.h:37
 msgid "_Gabber"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:41
+#: ui/Gabber_win.glade.h:38
 msgid "_Hide Main Window"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:42
+#: ui/Gabber_win.glade.h:39
 msgid "_Log into Agent"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:43
+#: ui/Gabber_win.glade.h:40
 msgid "_Login..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:44
-msgid "_Manage User"
-msgstr ""
-
-#: ui/Gabber_win.glade.h:45
-msgid "_Message..."
-msgstr ""
-
-#: ui/Gabber_win.glade.h:46
+#: ui/Gabber_win.glade.h:42
 msgid "_My Contact Info..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:47
-msgid "_One-on-One Chat..."
-msgstr ""
-
-#: ui/Gabber_win.glade.h:48
+#: ui/Gabber_win.glade.h:44
 msgid "_Raw XML Input..."
 msgstr ""
 
-#: ui/Gabber_win.glade.h:49
+#: ui/Gabber_win.glade.h:45
 msgid "_Remove Agent"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:50
+#: ui/Gabber_win.glade.h:46
 msgid "_Services"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:51
+#: ui/Gabber_win.glade.h:47
 msgid "_Show Main Window"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:52
+#: ui/Gabber_win.glade.h:48
 msgid "label168"
 msgstr ""
 
-#: ui/Gabber_win.glade.h:53
+#: ui/Gabber_win.glade.h:49
 msgid "label169"
 msgstr ""
 
@@ -1584,8 +1567,8 @@ msgstr ""
 msgid "A unique resource, can be anything"
 msgstr ""
 
-#: ui/Login_dlg.glade.h:2 ui/Prefs_win.glade.h:2
-msgid "Automatically login to the default profile on startup"
+#: ui/Login_dlg.glade.h:2
+msgid "Automatically login on Gabber startup"
 msgstr ""
 
 #: ui/Login_dlg.glade.h:3 ui/Prefs_win.glade.h:5
@@ -1689,7 +1672,7 @@ msgstr ""
 msgid "Description:"
 msgstr ""
 
-#: ui/Message_win.glade.h:6 ui/OOOChat_win.glade.h:5
+#: ui/Message_win.glade.h:6 ui/OOOChat_win.glade.h:3
 msgid "Encrypt this message"
 msgstr ""
 
@@ -1697,7 +1680,7 @@ msgstr ""
 msgid "Gabber: Message"
 msgstr ""
 
-#: ui/Message_win.glade.h:10 ui/OOOChat_win.glade.h:8
+#: ui/Message_win.glade.h:10 ui/OOOChat_win.glade.h:6
 msgid "Info"
 msgstr ""
 
@@ -1757,7 +1740,7 @@ msgstr ""
 msgid "Show Received Message"
 msgstr ""
 
-#: ui/Message_win.glade.h:26 ui/OOOChat_win.glade.h:11
+#: ui/Message_win.glade.h:26 ui/OOOChat_win.glade.h:9
 msgid "Specific resource to which this message should be sent"
 msgstr ""
 
@@ -1773,7 +1756,7 @@ msgstr ""
 msgid "URI:"
 msgstr ""
 
-#: ui/Message_win.glade.h:32 ui/OOOChat_win.glade.h:14
+#: ui/Message_win.glade.h:32 ui/OOOChat_win.glade.h:12
 #: ui/SubscriptionRequest_dlg.glade.h:8
 msgid "View Contact Info..."
 msgstr ""
@@ -1790,27 +1773,31 @@ msgstr ""
 msgid "Basic Information"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:8
+#: ui/MyContactInfo_win.glade.h:7
 msgid "Do not publish my information in JUD"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:9 ui/Welcome_win.glade.h:21
+#: ui/MyContactInfo_win.glade.h:8 ui/Welcome_win.glade.h:21
 msgid "Fa_mily Name:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:10
+#: ui/MyContactInfo_win.glade.h:9
 msgid "Gabber: User Information"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:12
+#: ui/MyContactInfo_win.glade.h:11
 msgid "Jabber Users Directory"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:17
+#: ui/MyContactInfo_win.glade.h:16
 msgid "Pos_tal Code:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:20
+#: ui/MyContactInfo_win.glade.h:17
+msgid "Primary _eMail:"
+msgstr ""
+
+#: ui/MyContactInfo_win.glade.h:19
 msgid ""
 "The information on the 'General Info' page will be sent to the Jabber Users "
 "Directory (JUD), a searchable directory of many Jabber users.\n"
@@ -1819,60 +1806,64 @@ msgid ""
 "User Information, or 'vCard.'"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:26
+#: ui/MyContactInfo_win.glade.h:25
 msgid "_Address:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:27
+#: ui/MyContactInfo_win.glade.h:26
 msgid "_City:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:28
+#: ui/MyContactInfo_win.glade.h:27
 msgid "_Country:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:29 ui/Welcome_win.glade.h:69
+#: ui/MyContactInfo_win.glade.h:28 ui/Welcome_win.glade.h:69
 msgid "_Full Name:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:30 ui/Welcome_win.glade.h:70
+#: ui/MyContactInfo_win.glade.h:29 ui/Welcome_win.glade.h:70
 msgid "_Given Name:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:31
+#: ui/MyContactInfo_win.glade.h:30
 msgid "_Home Phone:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:32
+#: ui/MyContactInfo_win.glade.h:31
 msgid "_JUD"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:37
+#: ui/MyContactInfo_win.glade.h:36
 msgid "_State/Province:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:38
+#: ui/MyContactInfo_win.glade.h:37
 msgid "_Web Site:"
 msgstr ""
 
-#: ui/MyContactInfo_win.glade.h:39 ui/Welcome_win.glade.h:77
+#: ui/MyContactInfo_win.glade.h:38 ui/Welcome_win.glade.h:77
 msgid "_eMail:"
 msgstr ""
 
-#: ui/OOOChat_win.glade.h:6
+#: ui/OOOChat_win.glade.h:4
 msgid "Gabber: One-on-One Chat with [name]"
 msgstr ""
 
-#: ui/OOOChat_win.glade.h:10
+#: ui/OOOChat_win.glade.h:8
 msgid "Send as Normal Message"
 msgstr ""
 
-#: ui/OOOChat_win.glade.h:12
+#: ui/OOOChat_win.glade.h:10
 msgid "Status"
 msgstr ""
 
 #: ui/Prefs_win.glade.h:1
 msgid "    "
+msgstr ""
+
+#: ui/Prefs_win.glade.h:2
+msgid "Automatically login to the default profile on startup"
 msgstr ""
 
 #: ui/Prefs_win.glade.h:3
