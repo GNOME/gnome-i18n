@@ -44,7 +44,7 @@ $now = time;
 %fuzzy = (
 "da", "Uklart",
 "de", "Ungenau",
-"es", "Confusas",
+"es", "Difusas",
 "fi", "Ep&auml;selvi&auml;",
 "fr", "Floues",
 "hu", "Pontatlan",
@@ -61,7 +61,7 @@ $now = time;
 %untranslated = (
 "da", "Uoversat",
 "de", "Un&uuml;bersetzt",
-"es", "No traducidas",
+"es", "Sin traducir",
 "fi", "K&auml;&auml;nt&auml;m&auml;tt&auml;",
 "fr", "Non traduites",
 "hu", "Fordítatlan",
@@ -78,7 +78,7 @@ $now = time;
 %strings = (
 "da", "strenge",
 "de", "Meldungen",
-"es", "Cadenas",
+"es", "Mensajes",
 "fi", "rivi&auml;",
 "fr", "chaînes",
 "hu", "karakterlánc",
