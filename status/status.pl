@@ -194,7 +194,7 @@ foreach my $lang (sort (@langs)){
             ${$langmod{$lang}->{$mod}->[0]} = 0;
             ${$langmod{$lang}->{$mod}->[1]} = 0;
             ${$langmod{$lang}->{$mod}->[2]} = 0;
-            ${$langmod{$lang}->{$mod}->[3]} = 0;
+            ${$langmod{$lang}->{$mod}->[3]} = 2;
             ${$langmod{$lang}->{$mod}->[4]} = " ";
         }
     }
@@ -339,7 +339,7 @@ sub gettrnsinfo {
 	my $status = getstatusfromdate ($date_pot, $date_po, $ttl);
 	return ($status, $author);
     } else {
-        return (0, "");
+        return (2, "");
     }
 }
 

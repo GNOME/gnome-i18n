@@ -38,6 +38,7 @@ my (@info,%langmod,%langinfo,%modinfo,%modpath,%modules);
 
 # no need to call the shell.
 
+setlocale (LC_TIME, "C");
 my $date   = strftime "%a %Y-%m-%d %T %z",localtime;
 
 ###############
@@ -599,6 +600,8 @@ EOF
 	    } else {
                 $transtatus = ("$wip{$lang}") ? "$wip{$lang}" : "$wip{$defaultlang}";
 	    }
+        } elsif (${$langmod{$mod}->{$lang}->[3]} == 2) {
+            $transtatus = ("$untranslated{$lang}") ? "<font color=\"#0033FF\">$untranslated{$lang}</font>" : "<font color=\"#0033FF\">$untranslated{$defaultlang}</font>";
         } else {
             $transtatus = ("$unknown{$lang}") ? "$unknown{$lang}" : "$unknown{$defaultlang}";
         }
