@@ -114,7 +114,6 @@ function gnome_menu() { ?>
 		<li><a href="vertalers_technisch.php">Technische tips</a></li>
 		<li><a href="status.php">Statusoverzicht</a>
 			<ul><li><a href="status_details.php">Details</a></li>
-		</li>
 <?
 //Dit stukje zoekt uit welke projecten nu eigenlijk actief vertaald worden.
 	$filename = "text/versions.text";
