@@ -34,9 +34,9 @@
 #include "status.h"
 
 /* FIXME: We should let change those values at runtime */
-#define CVS_CO_OPTIONS "cvs -q -d \":pserver:baddog@cvs.gnome.org:/cvs/gnome\" co -P"
-#define CVSROOTDIR "/home/maddog/cvs/gnome2/"
-#define HTMLROOTDIR "/home/maddog/public_html/gnome-status/unstable/"
+#define CVS_CO_OPTIONS "cvs -q -d \":pserver:carlos@cvs.gnome.org:/cvs/gnome\" co -P"
+#define CVSROOTDIR "/home/carlos/cvs/"
+#define HTMLROOTDIR "/home/carlos/html/"
 
 /* Event map */
 typedef enum {
