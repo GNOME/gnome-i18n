@@ -22,6 +22,7 @@
 
 #include <popt.h>
 #include <glib.h>
+#include <locale.h>
 #include "status.h"
 #include "status-version.h"
 
@@ -69,6 +70,11 @@ struct poptOption options[] = {
 	config.modules = "/home/carlos/Desarrollos/gnome/gnome-i18n/status/data/status-gnome.xml";
 	config.download_dir = "/home/carlos/Desarrollos/gnome/";
 	config.install_dir = "/home/carlos/public_html/GNOME/l10n/";
+
+	/* We want always default locale for sort, messages, etc... we will change it
+	 * as needed.
+	 */
+	setlocale (LC_ALL, "C");
 
 	context = poptGetContext (NULL, argc, argv, options, 0);
 

@@ -165,7 +165,7 @@ gboolean
 status_version_download (StatusVersion *version, gchar *download_dir)
 {
 
-	g_message ("Downloading %s - %s ...", version->module->str, version->id->str);
+	g_print ("Downloading %s - %s ...", version->module->str, version->id->str);
 
 	return status_server_download (version->server, version->module->str, version->id->str,
 				       version->path->str, download_dir);
@@ -190,7 +190,7 @@ status_version_generate_pot (StatusVersion *version, gchar *download_dir, gchar 
 	gchar **tfu_temp, **tfu, *output, *error;
 	gint exit_status, ntoken;
 
-	g_message ("Generating %s.%s.pot ...", version->module->str, version->id->str);
+	g_print ("\tGenerating %s.%s.pot ...", version->module->str, version->id->str);
 	
 	buf = g_strdup_printf ("%s/%s/%s", download_dir, version->module->str, version->id->str);
 
@@ -290,7 +290,7 @@ status_version_update_po (StatusVersion *version, gchar *download_dir, gchar *in
 					if (filesplit[1] != NULL && filesplit[2] == NULL && !strcmp (filesplit[1], "po")) {
 						po_file = g_strdup_printf ("%s/PO/%s.%s.%s.po", install_dir,
 								version->module->str, version->id->str, filesplit[0]);
-						g_message ("Updating %s.%s.%s.po ...", version->module->str, version->id->str, filesplit[0]);
+						g_print ("\tUpdating %s.%s.%s.po ...", version->module->str, version->id->str, filesplit[0]);
 						command = g_strdup_printf (
 							"msgmerge -q %s %s/PO/%s.%s.pot -o %s > /dev/null",
 							file_name, install_dir, version->module->str,
