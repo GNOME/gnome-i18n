@@ -79,7 +79,7 @@ Als het niet juist werkt kun je de code proberen te veranderen in:</p>
 <ul><li>nl_NL@Euro</li>
 <li>nl_NL</li>
 <li>nl</li></ul>
-<p><b>Opmerking 2:</b>Het gebruik van sommige taalinstellingen kan leiden tot
+<p>Het gebruik van sommige taalinstellingen kan ook leiden tot
 zeer traag opstartende of afsluitende programma's (pauzes lopen soms op tot 30
 seconden). Dit wordt waarschijnlijk veroorzaakt door incompatibiliteiten tussen
 de al wat oudere bibliotheken en de nieuwe fontconfig + UTF-8 mogelijkheden van

@@ -34,12 +34,13 @@ $maintainerlist = array();
 $packagelist = array();
 $fmaintainers = "text/translators.text";
 $fpackages = file( "text/packages.$gnomeversion.text" );
+$fhpackages = file( "text/packages.HEAD.text" );
 $fp = fopen( $fmaintainers, 'r' );
 $fmaintainers_contents = fread( $fp, filesize( $fmaintainers ) );
 fclose( $fp );
 // Place the individual lines from the file contents into an array.
 $maintainers_lines = explode ( "\n", $fmaintainers_contents );
-// Split each of the lines into a name a password and a packagelist
+// Split each of the lines into a name, an email and a packagelist
 foreach ( $maintainers_lines as $line ) {
 	list( $name, $email, $packages ) = explode( ':', $line );
 	$length = strlen ( $line);
@@ -67,6 +68,7 @@ if (!isset($maint_num)) {
 			echo "<tr class=\"oneven\"><td>Module</td><td>&nbsp;.Po</td></tr>\n";
 			$packagelist = explode( ' ', $packages );
 			foreach ( $packagelist as $package ) {
+				//for current gnome version.
 				list ($pline_num, $pline) = each ($fpackages);
 				list ($pline_num, $pline) = each ($fpackages);
 				$url_prefix = chop ($pline);
@@ -95,6 +97,35 @@ if (!isset($maint_num)) {
 					$url = $pline;
 				}
 				reset($fpackages);
+				//for HEAD
+				list ($pline_num, $pline) = each ($fhpackages);
+				list ($pline_num, $pline) = each ($fhpackages);
+				$url_prefix = chop ($pline);
+				while (list ($pline_num, $pline) = each ($fhpackages)) {
+					$packagename = chop ($pline);
+					if ("$packagename" == "$package") {
+					    $packagename = $pline;
+					    list ($pline_num, $pline) = each ($fhpackages);
+					    list ($pline_num, $branch) = each ($fhpackages);
+					    list ($pline_num, $transl) = each ($fhpackages);
+					    list ($pline_num, $percentage) = each ($fhpackages);
+					    list ($pline_num, $fuzzy) = each ($fhpackages);
+					    list ($pline_num, $pline) = each ($fhpackages);
+					    list ($pline_num, $untransl) = each ($fhpackages);
+					    list ($pline_num, $pline) = each ($fhpackages);
+					    list ($pline_num, $pline) = each ($fhpackages);
+					    $url = "$url_prefix$gnomeversion/$url";
+						echo "  <tr><td>$packagename</td>";
+						$kleur=percentagekleur($percentage);
+						echo "    <td class=\"percentage\" bgcolor=\"$kleur\">$percentage</td>\n";
+						if ($percentage < 100) {
+							array_push($urls, $url);
+						}
+						echo "</tr>\n";
+					}
+					$url = $pline;
+				}
+				reset($fhpackages);
 			}
 		}
 	}

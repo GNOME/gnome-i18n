@@ -65,7 +65,7 @@ function gnome_foot() { ?>
 <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://nl.gnome.org/">
 	<img border="0" src="http://jigsaw.w3.org/css-validator/images/vcss"
 	 alt="Correct CSS!" height="31" width="88"></a>
-<a href="mailto:adrighem&#064;gnome.org">Webmaster</a>
+<a href="mailto:adrighem&#064;gnome.org">Vincent van Adrighem (webmaster)</a>
 </div>
 <? }
 
