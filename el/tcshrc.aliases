@@ -1,0 +1,7 @@
+# The update.pl script makes the first two obsolete.
+alias gnome_merge	'msgmerge --strict --verbose -o `date "+%d%h%y-"`el.po el.po GNOME.poa'
+alias gnome_pot		'xgettext --default-domain=GNOME --directory=.. --add-comments --keyword=__ --keyword=_ --keyword=N_ --files-from=./POTFILES.in'
+
+# Quick and clean checking
+# First time run: mknod /dev/null.mo c 1 3
+alias msgcheck		'msgfmt -c --statistics --verbose --strict -o /dev/null'
