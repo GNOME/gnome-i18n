@@ -41,6 +41,7 @@ als de bovenstaande niet toereikend blijken.</p>
 <li><a href="http://majstro.com/Web/Majstro/dict.php?bronTaal=eng&doelTaal=dut&prec=0&teVertalen=&gebrTaal=dut">Majstro</a></li>
 <li><a href="http://dictionaries.travlang.com/EnglishDutch">Travlang</a></li>
 <li><a href="http://www.freedict.com/onldict/dut.html">Freedict</a></li>
+<li><a href="http://www.langdy.com/dacc_g.htm">WinDi</a></li>
 <li><a href="http://europa.eu.int/eurodicautom/Controller">Eurodicautom</a></li>
 <li><a href="http://www.kde.nl/nl/woordenlijst.html">De woordenlijst van onze collega's van KDE</a></li>
 <li><a href="http://wiktionary.org/">De Wiktionary</a>: Een Wiki Woordenboek.</li>
