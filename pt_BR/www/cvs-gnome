@@ -1,0 +1,11 @@
+export CVSROOT=:pserver:anonymous@anoncvs.gnome.org:/cvs/gnome
+
+test -f ~/.cvspass || touch ~/.cvspass
+cvs login
+
+if [ "$1" = "init" ]; then
+	shift
+	cvs co $@
+else
+	cvs update -P -d $@
+fi
