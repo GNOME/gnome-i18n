@@ -57,6 +57,8 @@ $logos = array('gnome-nl-logo.png', 'gnome-nl-logo.png', 'gnome-be-logo.png');
 
 function gnome_foot() { ?>
 <div class="copyright">
+<a href="http://mozillanl.mozdev.org/"><img src="images/getfirefox.gif"
+	border="0" alt="Best bekeken met Mozilla Firefox"></a>
 <a href="http://www.kovoks.nl/"><img src="images/kovoks.banner.gif"
 	border="0" alt="Hosted by KovoKs.nl"></a>
 <a href="http://validator.w3.org/check/referer"><img border="0"
