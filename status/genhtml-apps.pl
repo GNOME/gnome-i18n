@@ -268,6 +268,14 @@ foreach $lang (sort keys %langinfo){
     print TABLE "<td><a href=\"$link\">$langs_red</a></td>\n";
 }
     print TABLE "<td></td></tr></table>";
+# Branches used
+    print TABLE "Stable branches with tags: <br>\n" ;
+    print TABLE " <br>\n" ;
+    print TABLE "evolution: evolution-9-0-branch<br>\n" ;
+    print TABLE "eog: eog-0-6<br>\n" ;
+    print TABLE "gedit: gedit-1-0<br>\n" ;
+    print TABLE "gimp: gimp-1-2<br>\n" ;
+    print TABLE "gnome-db: release-0-2-3-branch<br>\n" ;
     print TABLE scalar localtime(time);
     print TABLE "</body></html>";
 

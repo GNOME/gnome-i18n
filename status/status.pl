@@ -33,7 +33,6 @@
      "gtranslator/po",
      "libgda/po",
      "magicdev/po",
-     "pan/po",
      "pong/po",
      "pybliographer/po",
      "rp3/po",
