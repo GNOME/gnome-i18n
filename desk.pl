@@ -64,31 +64,26 @@ else{
     @buf1 = sort (<BUF1>);
     @buf2 = sort (<BUF2>);
 
-    open(OUT1, ">desk1");
-	print OUT1 @buf1 ;
+    my %in2;
+    foreach (@buf1) {
+        $in2{$_} = 1;
+    }
+ 
+    foreach (@buf2){
+        if (!exists($in2{$_})){
+            push @result, $_ } 
+        }
+    }
+
+    open(OUT1, ">DESKTOP.missing");
+       print OUT1 @result ;
     close OUT1;
-
-    open(OUT2, ">desk2");
-        print OUT2 @buf2 ;
-    close OUT2;
-
-    $c="diff desk1 desk2 -u0 | grep '^+' |grep -v '^+++'"
-      ."|grep -v '^\@\@' > DESKTOP.missing";
-
-    `$c`;
-    `rm desk1 && rm desk2`;
 
 
     stat("DESKTOP.missing");
         print "Well, you need to fix these:\n\n" if -s _;
-        system "more DESKTOP.missing" if -s _;
+        print @result if -s _;
         print "\nThe list is saved in DESKTOP.missing\n" if -s _;
         print "\nWell, it's all perfect! Congratulation!\n" if -z _;
         `rm DESKTOP.missing` if -z _;
-    }
 }
-
-# while $file (@buf2){
-# $list.=(@buf1=~/$file/) ? $file : "";
-# }
-
