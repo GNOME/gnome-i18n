@@ -170,7 +170,7 @@ my %status = (
 my %outdated = (
     "C"  => "OutDated",
     "de" => "Veraltet",
-    "es" => "Desactualizado",
+    "es" => "Desactualizada",
 );
 
 my %wip = (
@@ -541,7 +541,7 @@ sub printmodule{
 
     if ($align eq "L") {
         $string = "<td align=right>";
-        $string.= ($changed ne " ") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
+        $string.= ($changed ne "") ? "<font color='$changed'>&nbsp;*&nbsp;</font>" : "";
         $string.= "<a href=\"$htmlpourl${$modules{$mod}->[1]}\">$mod</a>";
     } else {
         $string = "<td align=left>";
