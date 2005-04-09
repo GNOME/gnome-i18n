@@ -71,7 +71,7 @@ function gnome_foot() { ?>
 	 alt="Correct CSS!" height="31" width="88"></a>
 <a href="email-webmaster.php">Vincent van Adrighem (webmaster)</a>
 </div>
-<div class="invisible">Unwated mail catch address: <a href="mailto:laatze.maarkomen@dirck.mine.nu">laatze.maarkomen@dirck.mine.nu</a></div>
+<div class="invisible">Unwanted mail catch address: <a href="mailto:laatze.maarkomen@dirck.mine.nu">laatze.maarkomen@dirck.mine.nu</a></div>
 <? }
 
 function gnome_menu() { ?>
@@ -86,7 +86,7 @@ function gnome_menu() { ?>
 	$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
 	mysql_select_db("gnome_nl",$db);
 
-// build the query, order by newest ID and limit it to 10
+// build the query, order by newest ID and limit it to 1
 	$sql = "select * from news order by id desc limit 1";
 	$res = mysql_query($sql);
 	$newsitem = mysql_fetch_assoc($res);
