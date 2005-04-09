@@ -62,6 +62,23 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 
+<p class="blosxomTitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
+
+
+<p>
+didn't do that much this week. slowly getting more time to do some programming<br>again (finally). got to open my mac mini for the third time (ugh), now it will<br>remain opened until i finally have working memory.<br><br>today i installed daapd (and howl/mDNSResponder) on my fileserver (where all my music is on). it's very easy to setup and works great. now when i launch iTunes on any machine on my network, I get an item "Kris' music", which is a remote library with all of my music which is on the fileserver. very nifty. i hope this also works over VPNs, so the next step is to setup a VPN, and try if iTunes finds this daap server when i am at the university for example. if you are interested in setting this up, here's a link:<br><a href="http://the.taoofmac.com/space/HOWTO/Set%20Up%20daapd%20on%20Fedora%20Linux">http://the.taoofmac.com/space/HOWTO/Set%20Up%20daapd%20on%20Fedora%20Linux</a>. I wonder whether rhythmbox or some other linux app has support for this.<br><br><hr width="50%"><br><br>nu ik door het verliezen van m'n OV (gelukkig al een nieuwe aangevraagd) veel betaal voor het reizen per trein denk ik dat ik het recht heb om wat te zeggen over het materieel. zo zat (nou ja, stond) ik afgelopen week voor het eerst in een nieuwe sprinter. wat een klotedingen zijn dat geworden, veel luidruchtiger dan eerst. ze zien er wel mooi uit. het piepje van de deuren is wel grappig. het is wel jammer om te zien dat het erop lijkt dat het treinmaterieel achteruit gaat. zo vind ik de nieuwe dubbeldekkers (die intercity dingen) ook een stuk minder prettig dan de oude (die gele bakken). op de een of andere manier zit ik lekkerder in de oude en slapen ze vooral prettig (je kan tenminste met je benen bij de stoel tegenover je). ook zijn die nieuwe intercities erg koud in de winter! op het gebied van verwarming winnen die oude barrels uit 1960 of zo nog steeds. nog steeds vind ik de koplopers en die beneluxtrein de prettigste treinen om een tijd in te zitten, ook oude bakken dus. zal wel aan mij liggen.</p>
+<p>
+<em><a href="http://www.livejournal.com/users/inverted_tree/39880.html">April 09, 2005 07:13 PM</a></em>
+</p>
+
+
+
+
+
+
+
+
+
 <p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
@@ -512,27 +529,6 @@ Also, one of our new GStreamer supporters, Jon Lech Johansen, released <a href="
 After the release of GNOME 2.10 and the <a href="http://mail.gnome.org/archives/gnome-nl-list/2005-March/msg00014.html">congratulations from our KDE-nl colleagues</a>, it was time to celebrate the release locally. A total of 10 people had a great evening in the Stairway to Heaven in Utrecht, the Netherlands. Of course made the obligatory <a href="http://ronald.bitfreak.net/priv/tuxbier.jpg">Tux-with-beer picture</a>, but most importantly, we all celebrated the continued livelihood of our beloved GNOME. <a href="http://ronald.bitfreak.net/priv/wijbier.jpg">Here</a>'s another picture showing (clock-wise) Kris (with blue hair!), Wouter, Jeroen, Hette, Tino, Vincent and Reinout. Not shown but definately there were Laurens, Marcel and Tim. Great release-party, let's hope we can soon do this again!</p>
 <p>
 <em><a href="http://www.advogato.org/person/rbultje/diary.html?start=94">March 10, 2005 10:52 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 08, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-
-
-<h4><a href="http://uwog.net/blog/?p=36">AbiWord Won&#8217;t Fall for Feature Bloat</a></h4>
-<p>
-<p><a href="http://tieguy.org/blog/index.cgi/326">Luis</a>: First of all, that awful toolbar is for some reason how Martin likes his AbiWord. Beats me as well why anyone would like that, and I agree it could use a lot of cleanup.<br>
-Then on to any possible feature bloat. This can hardly be jugded just by looking at that toolbar, as it only shows the really basic functionality users expect from every WordProcessor. That said, we are trying to be very, very careful about the features we add to AbiWord. For example, all the new stuff you&#8217;ve seen floating by the last couple of weeks (Equation/MathML/LaTeX support, Grammar checker support, etc) is all <em>completely</em> implemented in plugins. We&#8217;ve been refactoring AbiWord for this very purpose. In fact, the featureset of AbiWord 2.4 will be (without the plugins) exactly the same as the featureset of AbiWord 2.2 (ignoring the usual tweaks all over the place).<br>
-As long I&#8217;m involved in AbiWord&#8217;s development, I&#8217;ll battle against any feature bloat in AbiWord&#8217;s core.</p></p>
-<p>
-<em><a href="http://uwog.net/blog/?p=36">by uwog at March 08, 2005 09:17 PM</a></em>
 </p>
 </div>
 
