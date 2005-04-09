@@ -29,6 +29,7 @@ gnome_menu();
 <ul>
 <li><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a> <a href="http://www.livejournal.com/users/inverted_tree/data/rss">(rss)</a></li>
 <li><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a> <a href="http://www.moerman.org/~uwog/blog/wp-rss2.php">(rss)</a></li>
+<li><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a> <a href="http://www.klijmij.net/~michel/index.php/feed/">(rss)</a></li>
 <li><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a> <a href="http://geeklog.eyesopened.nl/index.rdf">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a> <a href="http://www.advogato.org/person/rbultje/rss.xml">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a> <a href="http://www.advogato.org/person/adrighem/rss.xml">(rss)</a></li>
@@ -53,6 +54,65 @@ gnome_menu();
 
 
 
+<div class="blosxomDate>April 09, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+<h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/03/31/waarom/">Waarom&#8230;</a></h4>
+<p>
+<p>Waarom maakt heel de USA zich druk om de euthanasie van Terry Schiavo en roepen alle conservatieven en gelovigen om het hardst over het "right to live", maar hoor je niemand zo over de barbaarse doodstraf praten, of Guantanamo Bay?</p></p>
+<p>
+<em><a href="http://www.klijmij.net/~michel/index.php/archief/2005/03/31/waarom/">by Michel at April 09, 2005 10:00 AM</a></em>
+</p>
+
+
+
+
+
+<div class="blosxomDate>April 08, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+<h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/ubuntu-hoary-hedgehog/">Ubuntu &#8220;Hoary Hedgehog&#8221;</a></h4>
+<p>
+<p>De nieuwste versie van <a href="http://www.ubuntulinux.org/">Ubuntu Linux</a> is uit! Nadat de eerste versie, <em>Warty Warthog</em>, de nieuwe distributie omhoog deed schieten in de ranglijst van <a href="http://www.distrowatch.com/">Distrowatch</a> is dit de tweede release.</p>
+
+<p>Ubuntu is gebaseerd op de nieuwste <a href="http://nl.gnome.org/">GNOME</a> werkomgeving en beschikbaar voor PC (zowel 32-bit als 64-bit) en Mac. Downloaden is niet nodig, want je kan <em>gratis</em> CD&#8217;s bestellen in net kartonnen hoesje via <a href="http://shipit.ubuntulinux.org/">http://shipit.ubuntulinux.org</a>. Met deze release zal de Ubuntu-hype nog wel even voortduren&#8230;</p></p>
+<p>
+<em><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/ubuntu-hoary-hedgehog/">by Michel at April 08, 2005 09:45 PM</a></em>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/iets-vrolijkers/">Iets vrolijkers&#8230;</a></h4>
+<p>
+<p>De nieuwe paus is bekend:</p>
+
+<p><img src="http://michel.klijmij.net/wp-content/nieuwepaus.jpg" alt="Paus Rohannus Bonus I"></p></p>
+<p>
+<em><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/iets-vrolijkers/">by Michel at April 08, 2005 02:45 PM</a></em>
+</p>
+
+
+
+
+
 <div class="blosxomDate>April 06, 2005</div>
 
 
@@ -67,6 +127,57 @@ gnome_menu();
 http://nl.gnome.org/planet.php</p>
 <p>
 <em><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">April 06, 2005 03:59 PM</a></em>
+</p>
+
+
+
+
+
+
+
+
+
+<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+<h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/06/oma/">Oma</a></h4>
+<p>
+<div>
+<p align="right"><em>Sterven doe je niet ineens,<br>
+maar af en toe &#8216;n beetje<br>
+en alle beetjes die je stierf,<br>
+&#8216;t is vreemd, maar die vergeet je,<br>
+het is je dikwijls zelfs ontgaan,<br>
+je zegt ik ben wat moe,<br>
+maar op &#8216;n keer dan ben je aan<br>
+je laatste beetje toe.</em></p>
+
+
+<p>Na een moeilijke tijd van afnemende gezondheid is in alle rust van ons heengegaan onze moeder, schoonmoeder, oma, zuster en schoonzuster</p>
+
+
+<p align="center"><strong>Johanna Maria de Winter<br>
+Hanny</strong></p>
+
+
+<p align="center">* 18 juni 1920                                 † 30 maart 2005</p>
+
+
+<p align="right">Ingrid Klijmij - Woerlee<br>
+John Klijmij<br>
+Michel en Astrid<br>
+Laurens<br>
+<br>
+Paul Woerlee<br>
+Cor Witbraad<br>
+
+Frans de Winter<br>
+Lies de Winter - van der Steen</p>
+
+<p>De crematieplechtigheid heeft op 6 april in familiekring plaatsgevonden.</p>
+</div></p>
+<p>
+<em><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/06/oma/">by Michel at April 06, 2005 01:00 PM</a></em>
 </p>
 
 
@@ -182,6 +293,29 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 </p></p>
 <p>
 <em><a href="http://uwog.net/blog/?p=40">by uwog at April 04, 2005 01:24 AM</a></em>
+</p>
+
+
+
+
+
+<div class="blosxomDate>April 03, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+<h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/03/lenteehmzomer/">Lente&#8230;ehm&#8230;zomer?</a></h4>
+<p>
+<p>Heerlijk weer dit weekend. Dus de fiets op! Gelukkig ben je zo de bruisende metropool Gouda uit en het Groene Hart in. We hebben de Veenweideroute gereden, pas geleden uitgezet door <a href="http://www.reeuwijkseland.nl/">Het Reeuwijkse Land</a>. De kaart en beschrijving zijn van die site te downloaden, maar je kan natuurlijk ook gewoon even langs de <a href="http://www.vvvgroenehart.nl/">VVV</a>.</p>
+
+<p><img src="http://www.klijmij.net/~michel/wp-content/veenweide_klein.jpg" alt="Veenweideroute" border="0" align="right"></p>
+
+<p>De route ging via Reeuwijk-Brug naar Reeuwijk-Dorp, Boskoop, Tempel (een echt gehucht!), de Reeuwijkse Hout en langs de Reeuwijkse Plassen. Zeker met dit weer een prima tocht, niet te lang ook. Bij de Plassen stonden 2 ijsverkopers (druk!), dus ook dat is goed geregeld.</p></p>
+<p>
+<em><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/03/lenteehmzomer/">by Michel at April 03, 2005 05:30 PM</a></em>
 </p>
 
 
@@ -396,108 +530,6 @@ Then on to any possible feature bloat. This can hardly be jugded just by looking
 As long I&#8217;m involved in AbiWord&#8217;s development, I&#8217;ll battle against any feature bloat in AbiWord&#8217;s core.</p></p>
 <p>
 <em><a href="http://uwog.net/blog/?p=36">by uwog at March 08, 2005 09:17 PM</a></em>
-</p>
-
-
-
-
-
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=3">8 Mar 2005</a></h4>
-<p>
-<p>The impossible has happened. We have 100% interface translation for GNOME 2.10. This in spite of some 6000-7000 new strings alongside the normal string updates... I'd like to thank the Dutch translation team for their effort.<p>
-This is a first for us, a Dutch press release. I'm very excited about this. It means we're finally coming of age as a GNOME community. Can't wait 'till tomorrow when 2.10 will be a fact!</p>
-<p>
-<em><a href="http://www.advogato.org/person/adrighem/diary.html?start=3">March 08, 2005 02:34 PM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 07, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=93">7 Mar 2005</a></h4>
-<p>
-<b>European software patents</b><br>
-I just heard multiple such rumours... After the EP (EU parliament) proposed to restart the directive decision-makery, after MPs (national parliaments) of many countries opposed the directive, after many citizens openly opposed the directive, after Denmark announced they would oppose the A-item, at least for the meeting this morning, after all our tries ...
-<p>
-... the EC (EU council) just passed the patent directive. Long live democracy. :-(.</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=93">March 07, 2005 10:19 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 06, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=92">6 Mar 2005</a></h4>
-<p>
-<b>GNOME 2.10 release party</b><br>
-At the day of the release (Wednesday, March 9th), GNOME-nl will be organizing one of the GNOME release parties to celebrate the release of our all-beloved GNOME 2.10. See <a href="http://live.gnome.org/Gnome210Party">this page</a> for a complete list. Our party will be held in the Stairway to Heaven, which is a popular cafe close to the train station of Utrecht. All interested people are invited to come and join us from 20.00 on.
-<p>
-All dutch GNOME developers, translaters, contributors and enthusiasts are hereby invited to come and join us in this celebration. Don't bring your laptop, however, it's not a LAN/install party. See you wednesday!</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=92">March 06, 2005 09:33 PM</a></em>
-</p>
-
-
-
-
-
-
-
-
-
-<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-
-
-<h4><a href="http://uwog.net/blog/?p=35">03-06-2005</a></h4>
-<p>
-<p>Finally got around syncing my personal AbiWord-pet-branch with CVS HEAD again. You probably all know the irritating situation of having written a patch that wasn&#8217;t immediately committed (for whatever reason) or was put away in a branch, and you look at it again after 6 months. It&#8217;ll never apply in the current state, so you have to update and rework it. You always end up ignoring the problem until it&#8217;s too late. This becomes especially frustrating when the <a href="http://www.abisource.com/mailinglists/abiword-dev/2005/Mar/0082.html">patch is this big</a>. Glad I finally got around doing it.</p>
-	<p>Can&#8217;t close this blog entry without a last reply to <a href="http://log.ometer.com/2005-03.html#3">Havoc</a>: first of all, it would be insanely nice if the cvs access procedures that will apply to FC Extra&#8217;s would also apply to Fedora Core!<br>
-Now, on to the Gnumeric exclusion problem. I noticed desktop-backgrounds-extra is not in a seperate SRPM. There goes my additional saved 6MB. Let&#8217;s see. How about ditching the openoffice.org-* packages? That would make enough room for Abi to fit in, and Gnumeric as well! I ofcourse realize that his will never happen without a nice GNOMEy presentation application. So if anyone has written one, but just never gotten around to committing it in GNOME&#8217;s cvs, now is the time!</p>
-	<p>BTW, p0rn on <a href="http://planet.gnome.org/">planet.gnome.org</a>? Not that I have any particular problem with it, being Dutch and all, but I just wouldn&#8217;t file it under &#8220;Tips&#8217;n'Hacks&#8221;.</p></p>
-<p>
-<em><a href="http://uwog.net/blog/?p=35">by uwog at March 06, 2005 02:18 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 04, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
-
-
-<p>
-Jakub, we went to 'Dolni Dvur' and went skiing in 'Spindleruv Mlyn' (if I spelled it correctly). If I'm right, those places are not far from Liberec. Anyway, what makes .cz attractive is that it's cheap. The beer is cheap (and good), restaurants are cheap (~EUR 60 for a good dinner for 5 persons, in the Netherlands that would cost about ~EUR 200), public transit is cheap and skiing too (equipment rent and ski passes). Also, we were told that .cz had good slopes for beginners. For us (5 students), it was a perfect place to go on holiday for a week.<br><br>[oh, i do have comments switched on and they work fine ...]</p>
-<p>
-<em><a href="http://www.livejournal.com/users/inverted_tree/38997.html">March 04, 2005 11:30 PM</a></em>
 </p>
 </div>
 
