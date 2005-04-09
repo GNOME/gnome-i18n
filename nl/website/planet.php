@@ -25,7 +25,7 @@ gnome_menu();
 ?>
 <div class="content">
 <div class="rightbox">
-<p>Je kunt deze planet ook in je eigen RSS verzamelaar invoegen.
+<p>Je kunt deze planet ook aan je eigen RSS-verzameling toevoegen.
 Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 </p>
 <center><h3>Leden</h3></center>
