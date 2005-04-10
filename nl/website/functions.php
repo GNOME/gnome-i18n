@@ -92,8 +92,7 @@ function gnome_menu() { ?>
 	$res = mysql_query($sql);
 	$newsitem = mysql_fetch_assoc($res);
 	echo "(", $newsitem["posted"], ")</li>\n"; ?>
-		<li><a href="planet.php">Planet GNOME-NL</a>
-		    <a href="data/rss20.xml">rss</a></li>
+		<li><a href="planet.php">Planet GNOME-NL</a></li>
 		<li><a href="agenda.php">Agenda</a></li>
 		<li><a href="gnome-nl.php">De community</a></li>
 		<li><a href="todo.php">TO DO</a></li>
