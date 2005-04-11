@@ -144,7 +144,7 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></h4>
 <p>
 <p>Last saturday we thought about setting up some kind of planet GNOME-NL. And now, (drumroll please), here it is:<p>
-http://nl.gnome.org/planet.php</p>
+<a href="http://nl.gnome.org/planet.php">http://nl.gnome.org/planet.php</a></p>
 <p>
 <em><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">April 06, 2005 03:59 PM</a></em>
 </p>
