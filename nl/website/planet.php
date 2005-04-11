@@ -36,6 +36,7 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 <li><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a> <a href="http://geeklog.eyesopened.nl/index.rdf">(rss)</a></li>
 <li><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a> <a href="http://vanschouwen.system-x.org/wp-rss2.php">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a> <a href="http://www.advogato.org/person/rbultje/rss.xml">(rss)</a></li>
+<li><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a> <a href="http://weblog.lambda1.be/feeds/ruben-nl.rss">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a> <a href="http://www.advogato.org/person/adrighem/rss.xml">(rss)</a></li>
 </ul>
 </div>
@@ -430,6 +431,57 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 
 
 
+<div class="blosxomDate>March 30, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+
+
+<h4><a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">Buzzzz</a></h4>
+<p>
+<em>"Wij zijn 4 psychologiestudenten 2e kan en wij hebben uw hulp nodig: Voor ons psychologisch onderzoek zoeken wij 21 medewerkers uit de informatica-riching."</em><br>
+<br>
+Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb ingeschreven voor electroshocks...<br>
+<br>
+<div align="center"><img src="http://weblog.lambda1.be/31-mar-2005.jpg" alt="marginal"><br>
+<em>Nu 100% marginaal ongeschoren!</em></div></p>
+<p>
+<em><a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">March 30, 2005 08:16 PM</a></em>
+</p>
+
+
+
+
+
+<div class="blosxomDate>March 28, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+
+
+<h4><a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">1 jaar</a></h4>
+<p>
+Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Voornemens voor het volgende jaar:<br>
+<br>
+<ul><br>
+    <li>Eens iets interessant posten</li><br>
+    <li>Wanneer ik echt open source software begin te maken, de weblog splitsen in een geek sectie en een normal life sectie</li><br>
+</ul><br>
+<br>
+<div align="center"><img src="http://weblog.lambda1.be/28-mar-2005.jpg" alt="Creepy"><br>
+<em>Foto van de dag, aan jullie om te beslissen wat er op staat</em></div></p>
+<p>
+<em><a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">March 28, 2005 07:52 AM</a></em>
+</p>
+
+
+
+
+
 <div class="blosxomDate>March 26, 2005</div>
 
 
@@ -480,58 +532,6 @@ Bastien already said that we had basic javascript functionality people working i
 The result of that is that the plugin and the child application (which is spawned on its own for security reasons) interact using some basic IPC command-set. This, in combination with the javascript-functionality, means that I can click images on a <a href="http://ronald.bitfreak.net/priv/pimp.png">HTML page</a> and the player will react as it should. The javascript-calls are compatible with Quicktime Player. Woohoo, finally a kick-ass mozilla media player. :-). Get your daily dose of Totem-CVS today!</p>
 <p>
 <em><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">March 23, 2005 06:22 PM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 14, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=96">14 Mar 2005</a></h4>
-<p>
-<b>MP4 authoring</b><br>
-After Jon's release of pyMusique, I felt the strong need to get my hands on a working MPEG-4 ISO muxer (for GStreamer). Reasons are simple:
-<ul>
-<li>Writing tags to music downloaded from iTMS (yes, they're untagged!).
-<li>Capture MPEG-4 video/audio in a MPEG-4 container using Cupid.
-<li>Transcoding my Ogg/Vorbis files to MPEG-4 so I can transfer them to my iPod.
-</ul>
-And so I did. GStreamer can now write full-spec MPEG-4 files. <a href="http://ronald.bitfreak.net/priv/mp4.jpg">Screenshot</a>. Tested with all of the above use cases. (3) can be done using gst-launch, tags are conserved. (2) just works. Jon is adding support for (1) right now. Get your daily dose of GStreamer CVS right now!</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=96">March 14, 2005 04:49 PM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 13, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-
-
-<h4><a href="http://uwog.net/blog/?p=39">Moderation and Helpfulness</a></h4>
-<p>
-<p><b>Blog Comments</b><br>
-For some reason, all comments to my blog needed moderation (didn&#8217;t I turn that off? no I did not, but there is another slightly obscure &#8220;Comment author must have a previously approved comment&#8221; option); I just figured people had dumped me en masse on their /ignore list, until I looked a bit better in the WordPress Admin. Now people can happily chat with me again, sorry! I&#8217;ll approve all non-spam comments immediately.</p>
-	<p><b>Fedora Extras</b><br>
-In other news, I did my first steps in the World of Fedora Extras Package Building. Immediately ran into some problems due to me being new to the process and the big flux RawHide is in now. Fortunately, the guys from Red Hat and #fedora-devel were really helpful in getting me going. Quite unexpected, as I figured most people would just be too busy with their normal Red Hat job to help some n00b volunteer. Thanks!</p>
-	<p><b>MS Word</b><br>
-Apparently, some Word developers <a href="http://blogs.msdn.com/rick_schaut/archive/2005/03/13/394808.aspx">read planet.gnome.org as well</a>. Welcome, I&#8217;d say! Now while I&#8217;m at it: I use MS Word occasionally myself (for some customers that expect Word documents, and to look for features that AbiWord could nicely adopt as well) and I would really love to have LaTeX math support in Word. If you have some spare time the comming weeks Rick, could you add that? Of course, I&#8217;d be willing to add it myself, if Word was GPLed :-)</p>
-	<p><b>Dutch GNOME 2.10 release notes</b><br>
-Since we&#8217;re in a cheery mood, and someone on my blog told me to <a href="http://uwog.net/blog/?p=34#comment-2125">quit whining</a> a few days back (yay for blog comments :), we&#8217;re now working on fixing the Dutch GNOME 2.10 release notes translations. Thanks for the help Danilo and Murray!</p></p>
-<p>
-<em><a href="http://uwog.net/blog/?p=39">by uwog at March 13, 2005 04:05 PM</a></em>
 </p>
 </div>
 
