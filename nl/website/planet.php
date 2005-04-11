@@ -57,6 +57,28 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 
+<div class="blosxomDate>April 11, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
+
+
+<h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=5">11 Apr 2005</a></h4>
+<p>
+<p><b>GNOME-NL</b><p>
+We gaan de goede kant op. Er zijn enkele goede ontwepen voor naamkaartjes. Gisteren hebben Reinout, Ronald en Michiel gewerkt aan een stuk voor in Linux Magazine. Er is een rekening besteld om zo de financi&#195;&#171;le kant wat beter te organiseren. De toekomst ziet er zonnig uit.<p>
+<b>Andere activiteiten</b><p>
+Afgelopen zaterdag een feestje gehad. Veel bier (Grolsch en Palm) en een gezellige sfeer. Met de nachttrein naar huis, maaaaaaar voordta het zo ver was, eerst nog even een tussenstop in een lokale kroeg. Je moet wel het maximale uit zo'n avond halen. Ik hoef je niet te vertellen dat er zondag weinig gebeurde. Altijd lekker, zo'n weekendje.</p>
+<p>
+<em><a href="http://www.advogato.org/person/adrighem/diary.html?start=5">April 11, 2005 11:47 AM</a></em>
+</p>
+
+
+
+
+
 <div class="blosxomDate>April 09, 2005</div>
 
 
@@ -509,26 +531,6 @@ It's kinda evil, but hey, why not? All poor packagers are busy already, so let's
 Also, one of our new GStreamer supporters, Jon Lech Johansen, released <a href="http://fuware.nanocrew.net/pymusique/">pyMusique</a> today, which is a Gtk-application that lets you buy music from the iTunes Music Store from your GNOME desktop. I'm already a happy user of this piece of software. Great work, Jon!</p>
 <p>
 <em><a href="http://www.advogato.org/person/rbultje/diary.html?start=95">March 11, 2005 10:19 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 10, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=94">10 Mar 2005</a></h4>
-<p>
-<b>GNOME-nl release party</b><br>
-After the release of GNOME 2.10 and the <a href="http://mail.gnome.org/archives/gnome-nl-list/2005-March/msg00014.html">congratulations from our KDE-nl colleagues</a>, it was time to celebrate the release locally. A total of 10 people had a great evening in the Stairway to Heaven in Utrecht, the Netherlands. Of course made the obligatory <a href="http://ronald.bitfreak.net/priv/tuxbier.jpg">Tux-with-beer picture</a>, but most importantly, we all celebrated the continued livelihood of our beloved GNOME. <a href="http://ronald.bitfreak.net/priv/wijbier.jpg">Here</a>'s another picture showing (clock-wise) Kris (with blue hair!), Wouter, Jeroen, Hette, Tino, Vincent and Reinout. Not shown but definately there were Laurens, Marcel and Tim. Great release-party, let's hope we can soon do this again!</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=94">March 10, 2005 10:52 AM</a></em>
 </p>
 </div>
 
