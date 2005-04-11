@@ -34,6 +34,7 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 <li><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a> <a href="http://www.moerman.org/~uwog/blog/wp-rss2.php">(rss)</a></li>
 <li><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a> <a href="http://www.klijmij.net/~michel/index.php/feed/">(rss)</a></li>
 <li><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a> <a href="http://geeklog.eyesopened.nl/index.rdf">(rss)</a></li>
+<li><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a> <a href="http://vanschouwen.system-x.org/wp-rss2.php">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a> <a href="http://www.advogato.org/person/rbultje/rss.xml">(rss)</a></li>
 <li><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a> <a href="http://www.advogato.org/person/adrighem/rss.xml">(rss)</a></li>
 </ul>
@@ -58,6 +59,28 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 <div class="blosxomDate>April 11, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+
+
+<h4><a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></h4>
+<p>
+<p>Had a nice gettogether with <a href="http://geeklog.eyesopened.nl/">Michiel</a> and <a href="http://www.advogato.org/person/rbultje/">Ronald</a> today, to discuss a magazine article about GNOME we&#8217;re going to write. I baked a quiche with broccoli, cashew nuts and blue cheese for dinner, didn&#8217;t even get one complaint about the <a href="http://vegatopia.com/">absence of meat</a> <img src="http://vanschouwen.system-x.org/wp-images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley"> </p>
+	<p>Last Friday I did an introductory presentation about GNOME for small entrepreneurs on the isle of <a href="http://www.texel.nl/">Texel</a>, on invitation of Alex de Haan from <a href="http://www.stichtingsoftwareconsulent.nl/html/agenda.html">Stichting De Softwareconsulent</a>. Pieter Valentijn (Dutch <a href="http://www.turbocash.nl/">TurboCASH</a> developer) was kind enough to give me a ride. Picture I made of the audience:<br>
+<img src="http://vanschouwen.system-x.org/pictures/mkb publiek" alt="The audience"></p>
+	<p>I found out that there&#8217;s a couple of GNOME modules that aren&#8217;t listed on the <a href="http://l10n-status.gnome.org/">status pages</a> but require translation nevertheless; this was the case with the gnome-2.10 branch of <a href="http://www.gnome.org/projects/epiphany/extensions">epiphany-extensions</a>. Can someone explain to me why just the HEAD branch is listed on the status page?
+</p></p>
+<p>
+<em><a href="http://vanschouwen.system-x.org/?p=16">by Reinout at April 11, 2005 09:27 PM</a></em>
+</p>
+
+
+
+
+
 
 
 
@@ -155,6 +178,30 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
+<div class="blosxomDate>April 07, 2005</div>
+
+
+
+
+<p class="blosxomTitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+
+
+<h4><a href="http://vanschouwen.system-x.org/?p=15">GNOME-nl PR</a></h4>
+<p>
+<p>Past Saturday I did a talk for the <a href="http://62.58.32.90/bijeenkomsten_2005">Dutch Linux User Group</a> about translating free software (slides <a href="http://www.cs.vu.nl/~reinout/presentatie%202%20april%2005.pdf">here</a>).<br>
+In the process I did a little PR for the GNOME-nl initiative as well. As a proof of our existance we now even have our own <a href="http://nl.gnome.org/planet.php">Planet<br>
+</a> - unfortunately it barfs on the nice unicode characters elsewhere in my blog, so I&#8217;m not listed yet&#8230; (arrrgh!)</p>
+	<p><strong><a href="http://www.mandrivalinux.com/">Mandrakesoft</a> announces name change after the merger with Conectiva:</strong></p>
+	<p><img src="http://images.mandrakesoft.com/img/mandrivalinux-logo-en-anim.gif" alt="Mandriva">
+</p></p>
+<p>
+<em><a href="http://vanschouwen.system-x.org/?p=15">by Reinout at April 07, 2005 02:43 PM</a></em>
+</p>
+
+
+
+
+
 <div class="blosxomDate>April 06, 2005</div>
 
 
@@ -169,6 +216,25 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <a href="http://nl.gnome.org/planet.php">http://nl.gnome.org/planet.php</a></p>
 <p>
 <em><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">April 06, 2005 03:59 PM</a></em>
+</p>
+
+
+
+
+
+
+
+
+
+<p class="blosxomTitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+
+
+<h4><a href="http://vanschouwen.system-x.org/?p=14">Bloedbank</a></h4>
+<p>
+<p><a href="http://www.hannawillemijn.nl/archives/000076.html">Hanna</a>, het heeft even geduurd, maar vandaag ben ik dan ook een keer naar de bloedbank geweest. Nu weet ik eindelijk dat ik bloedgroep O positief heb. Grappig!
+</p></p>
+<p>
+<em><a href="http://vanschouwen.system-x.org/?p=14">by Reinout at April 06, 2005 02:14 PM</a></em>
 </p>
 
 
@@ -466,71 +532,6 @@ Apparently, some Word developers <a href="http://blogs.msdn.com/rick_schaut/arch
 Since we&#8217;re in a cheery mood, and someone on my blog told me to <a href="http://uwog.net/blog/?p=34#comment-2125">quit whining</a> a few days back (yay for blog comments :), we&#8217;re now working on fixing the Dutch GNOME 2.10 release notes translations. Thanks for the help Danilo and Murray!</p></p>
 <p>
 <em><a href="http://uwog.net/blog/?p=39">by uwog at March 13, 2005 04:05 PM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 12, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-
-
-<h4><a href="http://uwog.net/blog/?p=38">How to spend your spare time</a></h4>
-<p>
-<p><em>Note: this entry is not intended to just bash Eugina, nor is it directed *only* at her. Her article was merely the cause that made me write this entry to address a more general problem. A problem that I see happening all the time: users often have the wrong expectations about OSS and the development process involved. We wrote a short <a href="http://www.abisource.com/support/expectations.phtml">essay</a> about this as well a while ago.</em></p>
-	<p>@Eugenia: If you (read: if users&#8230;) want to be able to <a href="http://www.osnews.com/story.php?news_id=9933">dictate</a> what developers should or should not implement, then by all means, go ask commercial developers to implement it for you. They like to be told what to do, as customers are their only hope for survival (some cash might help speed up the process). Unbound OSS developers (ie. not working for any company) can do with <em>their spare time</em> whatever they want. No really. Their spare time. Try to remember that. Write it 1000 times on the wall: &#8220;Noone can dictate how people should spend <em>their spare time</em>&#8220;. Some developers love talking to users. Some don&#8217;t. There is nothing you can change about that. If you don&#8217;t like that, then you don&#8217;t have any other option then to start your own software movement where users can dictate what developers should do. I think such a movement would flourish!</p>
-	<p>Oh, and this may come as a surprise to some: OSS is not about killing CompanyA or being more competitive than ProductX. Often developers just enjoy writing good code or being part of a community. Heck, all too often have I been told that I should quit AbiWord development and join the OpenOffice.org team. Because clearly, OpenOffice.org is the only viable competitor against MS Word. Well, *I don&#8217;t care*!  I have fun hacking and maintaining AbiWord and I greatly enjoy the community surrounding AbiWord. I don&#8217;t enjoy working on OpenOffice.org. Too bad if people don&#8217;t like the way I spend my spare time.</p></p>
-<p>
-<em><a href="http://uwog.net/blog/?p=38">by uwog at March 12, 2005 12:48 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomDate>March 11, 2005</div>
-
-
-
-
-<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-
-
-<h4><a href="http://uwog.net/blog/?p=37">How not to organize release note translations</a></h4>
-<p>
-<p>Being part of GNOME-NL, I myself together with the whole team spent a large amout of time translating the GNOME 2.10 release notes into Dutch, including some nice Dutch screenshots. We figured it would be really nice for novice (potential) users to be able to read all the goodness in their own languages.<br>
-Now, this is where the mess begins. Not only were the official release notes continuously changed until the very last moment (note: bad), the process of creating the latest and the greatest .po file was a mess as well. Murray was as helpful as he could be, suggesting we needed gnome-doc-utils CVS HEAD (note: bad). When the final 2.10 release was made, we generated the HTML ourselves to host them on <a href="http://nl.gnome.org">http://nl.gnome.org</a>, which looked fine. However, the Dutch release notes linked on <a href="http://gnome.org">http://gnome.org/</a> were still partially in English! Whuh? Murray told us to follow the instructions in the &#8220;releng&#8221; module to get a proper .po file, which we did, but to no avail. There seems no way to get a .po file that <em>is</em> correct, so we are left in the dark (note: bad) now. Additionally, we noticed today that the (partial) Dutch translation was <em>dropped altogether</em> from gnome.org, without any notice (note: really really bad)!<br>
-We&#8217;re very keen on giving a perfect experience to (potential) Dutch GNOME users, hence our <a href="http://l10n-status.gnome.org/gnome-2.10/top.html">high ranking</a> in the overall GNOME translation list with just 3 fuzzy strings left. However, this whole release notes translation experience is just so demotivating, that I doubt I&#8217;ll spend my time on it next time.</p>
-	<p><em>Note: I do love the effort a lot of people have put into making localized release notes possible, but currently, it is just not working</em></p></p>
-<p>
-<em><a href="http://uwog.net/blog/?p=37">by uwog at March 11, 2005 06:15 PM</a></em>
-</p>
-
-
-
-
-
-
-
-
-
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=95">11 Mar 2005</a></h4>
-<p>
-<b>Release day</b><br>
-It's kinda evil, but hey, why not? All poor packagers are busy already, so let's give them some more work. I've released <a href="http://ronald.bitfreak.net/me/cupid.php">Cupid 0.0.2</a>, which is a GStreamer/GNOME video-capture and -display tool, and <a href="http://gstreamer.freedesktop.org/releases/gst-ffmpeg/0.8.4.html">GStreamer-FFmpeg 0.8.4</a>, which is a set of GStreamer plugins based on the popular and high-quality ffmpeg codecs.
-
-<p> <b>Other people release, too</b><br>
-Also, one of our new GStreamer supporters, Jon Lech Johansen, released <a href="http://fuware.nanocrew.net/pymusique/">pyMusique</a> today, which is a Gtk-application that lets you buy music from the iTunes Music Store from your GNOME desktop. I'm already a happy user of this piece of software. Great work, Jon!</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=95">March 11, 2005 10:19 AM</a></em>
 </p>
 </div>
 
