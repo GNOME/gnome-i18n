@@ -82,6 +82,28 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 
+
+
+
+
+<p class="blosxomtitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
+
+
+<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=98">12 Apr 2005</a></h4>
+<p class="blosxomstory">
+<b>Dutch Gnomeys</b><br>
+The people ate GNOME-NL have set up a private, unique and special <a href="http://nl.gnome.org/planet.php">Planet Gnome-NL</a> which features your all-beloved GNOME hackers, but then only the special dutch flavour. Also, we're currently working on an article in a national news magazine, which looks promising. The best of all this is that we're doing cool stuff and are having fun at that. Yay!
+<p>
+<b>Totem</b>
+So lately, I've been doing stability and finetuning work for Totem. It's nice to see that it "just works" most of the time, I've wanted this kind of a media player for years. Looks good, works well and hey, it's GStreamer-based. Other people are also helping, such as Christoph Burghardt, who's working on a zoom feature using the GStreamer backend. I'm trying to get a friend into fixing the unimplemented aspect-ratio menu item, it's his first C code, so it'll require some guidance, but that's good. In other parts, the nautilus properties page, thumbnailer and mozilla plugin all also received a lot of finetuning love. All in all, I think I can be a bit proud of the whole thing - even though it is still mostly Bastien's work. ;-).</p>
+<p>
+<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=98">April 12, 2005 10:02 PM</a></em>
+</p>
+
+
+
+
+
 <div class="blosxomdate>April 11, 2005</div>
 
 
@@ -515,28 +537,6 @@ The current nautilus progress dialog looks like:</p></p>
 	<p><p><a href="http://geeklog.eyesopened.nl/wp-content/images/screenshot"><img src="http://geeklog.eyesopened.nl/wp-content/images/screenshot_thumb.png" class="center"></a></p></p></p>
 <p>
 <em><a href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">by Michiel at March 26, 2005 03:10 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blosxomdate>March 23, 2005</div>
-
-
-
-
-<p class="blosxomtitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">23 Mar 2005</a></h4>
-<p class="blosxomstory">
-<b>Totem Mozilla Embedding</b><br>
-Bastien already said that we had basic javascript functionality people working in the Totem-Mozilla plugin. Today, I finished the second part of the job: a two-way communication protocol. Should ideally use DBUS for that, but we're using something of ourselves right now.
-<p>
-The result of that is that the plugin and the child application (which is spawned on its own for security reasons) interact using some basic IPC command-set. This, in combination with the javascript-functionality, means that I can click images on a <a href="http://ronald.bitfreak.net/priv/pimp.png">HTML page</a> and the player will react as it should. The javascript-calls are compatible with Quicktime Player. Woohoo, finally a kick-ass mozilla media player. :-). Get your daily dose of Totem-CVS today!</p>
-<p>
-<em><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">March 23, 2005 06:22 PM</a></em>
 </p>
 </div>
 
