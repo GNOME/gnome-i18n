@@ -59,16 +59,16 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 
-<div class="blosxomDate>April 11, 2005</div>
+<div class="blosxomdate>April 11, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+<p class="blosxomtitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
 
 
 <h4><a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></h4>
-<p>
+<p class="blosxomstory">
 <p>Had a nice gettogether with <a href="http://geeklog.eyesopened.nl/">Michiel</a> and <a href="http://www.advogato.org/person/rbultje/">Ronald</a> today, to discuss a magazine article about GNOME we&#8217;re going to write. I baked a quiche with broccoli, cashew nuts and blue cheese for dinner, didn&#8217;t even get one complaint about the <a href="http://vegatopia.com/">absence of meat</a> <img src="http://vanschouwen.system-x.org/wp-images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley"> </p>
 	<p>Last Friday I did an introductory presentation about GNOME for small entrepreneurs on the isle of <a href="http://www.texel.nl/">Texel</a>, on invitation of Alex de Haan from <a href="http://www.stichtingsoftwareconsulent.nl/html/agenda.html">Stichting De Softwareconsulent</a>. Pieter Valentijn (Dutch <a href="http://www.turbocash.nl/">TurboCASH</a> developer) was kind enough to give me a ride. Picture I made of the audience:<br>
 <img src="http://vanschouwen.system-x.org/pictures/mkb publiek" alt="The audience"></p>
@@ -86,11 +86,11 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
+<p class="blosxomtitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=5">11 Apr 2005</a></h4>
-<p>
+<p class="blosxomstory">
 <p><b>GNOME-NL</b><p>
 We gaan de goede kant op. Er zijn enkele goede ontwepen voor naamkaartjes. Gisteren hebben Reinout, Ronald en Michiel gewerkt aan een stuk voor in Linux Magazine. Er is een rekening besteld om zo de financi&#195;&#171;le kant wat beter te organiseren. De toekomst ziet er zonnig uit.<p>
 <b>Andere activiteiten</b><p>
@@ -103,15 +103,15 @@ Afgelopen zaterdag een feestje gehad. Veel bier (Grolsch en Palm) en een gezelli
 
 
 
-<div class="blosxomDate>April 09, 2005</div>
+<div class="blosxomdate>April 09, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
+<p class="blosxomtitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
 
 
-<p>
+<p class="blosxomstory">
 didn't do that much this week. slowly getting more time to do some programming<br>again (finally). got to open my mac mini for the third time (ugh), now it will<br>remain opened until i finally have working memory.<br><br>today i installed daapd (and howl/mDNSResponder) on my fileserver (where all my music is on). it's very easy to setup and works great. now when i launch iTunes on any machine on my network, I get an item "Kris' music", which is a remote library with all of my music which is on the fileserver. very nifty. i hope this also works over VPNs, so the next step is to setup a VPN, and try if iTunes finds this daap server when i am at the university for example. if you are interested in setting this up, here's a link:<br><a href="http://the.taoofmac.com/space/HOWTO/Set%20Up%20daapd%20on%20Fedora%20Linux">http://the.taoofmac.com/space/HOWTO/Set%20Up%20daapd%20on%20Fedora%20Linux</a>. I wonder whether rhythmbox or some other linux app has support for this.<br><br><hr width="50%"><br><br>nu ik door het verliezen van m'n OV (gelukkig al een nieuwe aangevraagd) veel betaal voor het reizen per trein denk ik dat ik het recht heb om wat te zeggen over het materieel. zo zat (nou ja, stond) ik afgelopen week voor het eerst in een nieuwe sprinter. wat een klotedingen zijn dat geworden, veel luidruchtiger dan eerst. ze zien er wel mooi uit. het piepje van de deuren is wel grappig. het is wel jammer om te zien dat het erop lijkt dat het treinmaterieel achteruit gaat. zo vind ik de nieuwe dubbeldekkers (die intercity dingen) ook een stuk minder prettig dan de oude (die gele bakken). op de een of andere manier zit ik lekkerder in de oude en slapen ze vooral prettig (je kan tenminste met je benen bij de stoel tegenover je). ook zijn die nieuwe intercities erg koud in de winter! op het gebied van verwarming winnen die oude barrels uit 1960 of zo nog steeds. nog steeds vind ik de koplopers en die beneluxtrein de prettigste treinen om een tijd in te zitten, ook oude bakken dus. zal wel aan mij liggen.</p>
 <p>
 <em><a href="http://www.livejournal.com/users/inverted_tree/39880.html">April 09, 2005 07:13 PM</a></em>
@@ -125,11 +125,11 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+<p class="blosxomtitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/03/31/waarom/">Waarom&#8230;</a></h4>
-<p>
+<p class="blosxomstory">
 <p>Waarom maakt heel de USA zich druk om de euthanasie van Terry Schiavo en roepen alle conservatieven en gelovigen om het hardst over het "right to live", maar hoor je niemand zo over de barbaarse doodstraf praten, of Guantanamo Bay?</p></p>
 <p>
 <em><a href="http://www.klijmij.net/~michel/index.php/archief/2005/03/31/waarom/">by Michel at April 09, 2005 10:00 AM</a></em>
@@ -139,16 +139,16 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<div class="blosxomDate>April 08, 2005</div>
+<div class="blosxomdate>April 08, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+<p class="blosxomtitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/ubuntu-hoary-hedgehog/">Ubuntu &#8220;Hoary Hedgehog&#8221;</a></h4>
-<p>
+<p class="blosxomstory">
 <p>De nieuwste versie van <a href="http://www.ubuntulinux.org/">Ubuntu Linux</a> is uit! Nadat de eerste versie, <em>Warty Warthog</em>, de nieuwe distributie omhoog deed schieten in de ranglijst van <a href="http://www.distrowatch.com/">Distrowatch</a> is dit de tweede release.</p>
 
 <p>Ubuntu is gebaseerd op de nieuwste <a href="http://nl.gnome.org/">GNOME</a> werkomgeving en beschikbaar voor PC (zowel 32-bit als 64-bit) en Mac. Downloaden is niet nodig, want je kan <em>gratis</em> CD&#8217;s bestellen in net kartonnen hoesje via <a href="http://shipit.ubuntulinux.org/">http://shipit.ubuntulinux.org</a>. Met deze release zal de Ubuntu-hype nog wel even voortduren&#8230;</p></p>
@@ -167,7 +167,7 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/iets-vrolijkers/">Iets vrolijkers&#8230;</a></h4>
-<p>
+<p class="blosxomstory">
 <p>De nieuwe paus is bekend:</p>
 
 <p><img src="http://michel.klijmij.net/wp-content/nieuwepaus.jpg" alt="Paus Rohannus Bonus I"></p></p>
@@ -179,16 +179,16 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<div class="blosxomDate>April 07, 2005</div>
+<div class="blosxomdate>April 07, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+<p class="blosxomtitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
 
 
 <h4><a href="http://vanschouwen.system-x.org/?p=15">GNOME-nl PR</a></h4>
-<p>
+<p class="blosxomstory">
 <p>Past Saturday I did a talk for the <a href="http://62.58.32.90/bijeenkomsten_2005">Dutch Linux User Group</a> about translating free software (slides <a href="http://www.cs.vu.nl/~reinout/presentatie%202%20april%2005.pdf">here</a>).<br>
 In the process I did a little PR for the GNOME-nl initiative as well. As a proof of our existance we now even have our own <a href="http://nl.gnome.org/planet.php">Planet<br>
 </a> - unfortunately it barfs on the nice unicode characters elsewhere in my blog, so I&#8217;m not listed yet&#8230; (arrrgh!)</p>
@@ -203,16 +203,16 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 
-<div class="blosxomDate>April 06, 2005</div>
+<div class="blosxomdate>April 06, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
+<p class="blosxomtitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></h4>
-<p>
+<p class="blosxomstory">
 <p>Last saturday we thought about setting up some kind of planet GNOME-NL. And now, (drumroll please), here it is:<p>
 <a href="http://nl.gnome.org/planet.php">http://nl.gnome.org/planet.php</a></p>
 <p>
@@ -227,11 +227,11 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 
-<p class="blosxomTitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+<p class="blosxomtitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
 
 
 <h4><a href="http://vanschouwen.system-x.org/?p=14">Bloedbank</a></h4>
-<p>
+<p class="blosxomstory">
 <p><a href="http://www.hannawillemijn.nl/archives/000076.html">Hanna</a>, het heeft even geduurd, maar vandaag ben ik dan ook een keer naar de bloedbank geweest. Nu weet ik eindelijk dat ik bloedgroep O positief heb. Grappig!
 </p></p>
 <p>
@@ -246,11 +246,11 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 
-<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+<p class="blosxomtitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/06/oma/">Oma</a></h4>
-<p>
+<p class="blosxomstory">
 <div>
 <p align="right"><em>Sterven doe je niet ineens,<br>
 maar af en toe &#8216;n beetje<br>
@@ -293,16 +293,16 @@ Lies de Winter - van der Steen</p>
 
 
 
-<div class="blosxomDate>April 05, 2005</div>
+<div class="blosxomdate>April 05, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
+<p class="blosxomtitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
 
 
 <h4><a href="http://geeklog.eyesopened.nl/archives/2005/04/05/desktop-places-nautilus/">Desktop Places, Nautilus</a></h4>
-<p>
+<p class="blosxomstory">
 <p><p>Finally my exams week is over, good results so I look forward to the end of this college year.</p></p>
 
 	<p><p><h4>Desktop Places</h4>I&#8217;ve created a <a href="http://live.gnome.org/DesktopPlaces">wiki page</a> on live.gnome.org after some discussion with seb128 on <span class="caps">IRC</span>. I think (and I hope more people) we need a central way of modifing, adding and fetching all the standard desktop places we have like Home, Trash etc. This is closely related to gtk-bookmarks, which also relates to <a href="http://live.gnome.org/RecentFilesAndBookmarks">this wiki page</a>.</p></p>
@@ -323,16 +323,16 @@ Lies de Winter - van der Steen</p>
 
 
 
-<div class="blosxomDate>April 04, 2005</div>
+<div class="blosxomdate>April 04, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
+<p class="blosxomtitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
 
 
 <h4><a href="http://www.livejournal.com/users/inverted_tree/39587.html">gnome-nl gnome 2.10 release party photos</a></h4>
-<p>
+<p class="blosxomstory">
 OOPS! Being the irregular blogger I am, I forgot to post some photos from the gnome-nl gnome 2.10 release party. I think most people there agreed that we should do something like that more often, and I got told that I promised to try to organise a "pub-evening" (I would use 'borrel' in Dutch, dunno what to use in English) each month. Since I am busy I am hopelessly failing, but it is going to happen someday!<br><br>Ok so here are some photos:<br><a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/tux-na-werk.jpg"><br><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_tux-na-werk.jpg" border="0"><br></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-feescht.jpg"><br><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-feescht.jpg" border="0"><br></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-feescht-2.jpg"><br><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-feescht-2.jpg" border="0"><br></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-mensen-blij.jpg"><br><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-mensen-blij.jpg" border="0"><br></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/nog-meer-gnome-nl-mensen-blij.jpg"><br><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_nog-meer-gnome-nl-mensen-blij.jpg" border="0"><br></a><br><br>Oh, another thing I forgot. It looks like I will be at GUADEC this year (finally); not 100% sure yet, but I am already looking forward to it.</p>
 <p>
 <em><a href="http://www.livejournal.com/users/inverted_tree/39587.html">April 04, 2005 09:42 PM</a></em>
@@ -348,7 +348,7 @@ OOPS! Being the irregular blogger I am, I forgot to post some photos from the gn
 
 
 
-<p>
+<p class="blosxomstory">
 So i finally got my mac mini about 2 weeks ago (after 6 weeks of waiting), but i haven't been able to use it since i:<br>a) refuse to use it with 256 mb RAM<br>b) i bought a 1 gb DIMM which was broken, got it changed for another one, which doesn't appear to be broken but my mac mini is not stable at all.<br>Which basically means i get to get some other brand (when i finally have time to do so); until then my mac will be sitting in a corner.<br><br>Besides that and paid work, I have been busy creating a yearbook. Creating a yearbook basically means kicking people until they manage to deliver their content and layouting about 205 pages. It sometimes is a fun task to do, though it is tedious when you have missed the deadline for the press and some people still need to send in their content. Anyway, it fortunately is almost over, so i can concentrate on other things.<br><br>I hate continuously reminding people to do something, etc, etc. I guess that means that i should not become a manager.<br><br><center><hr width="50"></center><br><br>En als er ook maar iets irritant is, dan is het wel je OV kaart kwijt zijn. Bleh.</p>
 <p>
 <em><a href="http://www.livejournal.com/users/inverted_tree/39182.html">April 04, 2005 09:07 PM</a></em>
@@ -362,11 +362,11 @@ So i finally got my mac mini about 2 weeks ago (after 6 weeks of waiting), but i
 
 
 
-<p class="blosxomTitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
+<p class="blosxomtitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
 <h4><a href="http://uwog.net/blog/?p=41">*Ahum*</a></h4>
-<p>
+<p class="blosxomstory">
 <p><b>AbiWord</b><br>
 Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/release-notes/2.2.7.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.7.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p></p>
 <p>
@@ -384,7 +384,7 @@ Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/r
 
 
 <h4><a href="http://uwog.net/blog/?p=40">AbiWord 2.2.6 and Finland Fun!</a></h4>
-<p>
+<p class="blosxomstory">
 <p><b>AbiWord</b><br>
 Just released v2.2.6, go get it! [ <a href="http://www.abisource.com/release-notes/2.2.6.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.6.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p>
 	<p><b>Finland Trip</b><br>
@@ -408,16 +408,16 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 
 
 
-<div class="blosxomDate>April 03, 2005</div>
+<div class="blosxomdate>April 03, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+<p class="blosxomtitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/03/lenteehmzomer/">Lente&#8230;ehm&#8230;zomer?</a></h4>
-<p>
+<p class="blosxomstory">
 <p>Heerlijk weer dit weekend. Dus de fiets op! Gelukkig ben je zo de bruisende metropool Gouda uit en het Groene Hart in. We hebben de Veenweideroute gereden, pas geleden uitgezet door <a href="http://www.reeuwijkseland.nl/">Het Reeuwijkse Land</a>. De kaart en beschrijving zijn van die site te downloaden, maar je kan natuurlijk ook gewoon even langs de <a href="http://www.vvvgroenehart.nl/">VVV</a>.</p>
 
 <p><img src="http://www.klijmij.net/~michel/wp-content/veenweide_klein.jpg" alt="Veenweideroute" border="0" align="right"></p>
@@ -431,16 +431,16 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 
 
 
-<div class="blosxomDate>March 30, 2005</div>
+<div class="blosxomdate>March 30, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+<p class="blosxomtitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
 
 
 <h4><a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">Buzzzz</a></h4>
-<p>
+<p class="blosxomstory">
 <em>"Wij zijn 4 psychologiestudenten 2e kan en wij hebben uw hulp nodig: Voor ons psychologisch onderzoek zoeken wij 21 medewerkers uit de informatica-riching."</em><br>
 <br>
 Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb ingeschreven voor electroshocks...<br>
@@ -455,16 +455,16 @@ Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb in
 
 
 
-<div class="blosxomDate>March 28, 2005</div>
+<div class="blosxomdate>March 28, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+<p class="blosxomtitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
 
 
 <h4><a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">1 jaar</a></h4>
-<p>
+<p class="blosxomstory">
 Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Voornemens voor het volgende jaar:<br>
 <br>
 <ul><br>
@@ -482,16 +482,16 @@ Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Vo
 
 
 
-<div class="blosxomDate>March 26, 2005</div>
+<div class="blosxomdate>March 26, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
+<p class="blosxomtitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
 
 
 <h4><a href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">Progress dialogs</a></h4>
-<p>
+<p class="blosxomstory">
 <p><p>It&#8217;s been a while, so here are some updates. I&#8217;m sorry that I broke p.g.o (again). I changed some user permissions of one article in WordPress so it decided to change all articles or something.</p></p>
 
 	<p><p>When I was fixing bug <a href="http://bugzilla.gnome.org/show_bug.cgi?id=159057">#159057</a> I needed to build a progress dialog for emptying the trash. I compared the Nautilus&#8217; ones with the guidelines in the <span class="caps">HIG</span> and came to the conclusion that they aren&#8217;t really following <span class="caps">HIG</span> guidelines so I created my own:</p></p>
@@ -516,16 +516,16 @@ The current nautilus progress dialog looks like:</p></p>
 
 
 
-<div class="blosxomDate>March 23, 2005</div>
+<div class="blosxomdate>March 23, 2005</div>
 
 
 
 
-<p class="blosxomTitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
+<p class="blosxomtitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">23 Mar 2005</a></h4>
-<p>
+<p class="blosxomstory">
 <b>Totem Mozilla Embedding</b><br>
 Bastien already said that we had basic javascript functionality people working in the Totem-Mozilla plugin. Today, I finished the second part of the job: a two-way communication protocol. Should ideally use DBUS for that, but we're using something of ourselves right now.
 <p>
