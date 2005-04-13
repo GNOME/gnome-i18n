@@ -30,6 +30,7 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 </p>
 <center><h3>Leden</h3></center>
 <ul>
+<li><a href="None" title="None">Jorn Baayen</a> <a href="http://www.jabber.ee/~jorn/blog/wp-rss2.php">(rss)</a></li>
 <li><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a> <a href="http://www.livejournal.com/users/inverted_tree/data/rss">(rss)</a></li>
 <li><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a> <a href="http://www.moerman.org/~uwog/blog/wp-rss2.php">(rss)</a></li>
 <li><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a> <a href="http://www.klijmij.net/~michel/index.php/feed/">(rss)</a></li>
