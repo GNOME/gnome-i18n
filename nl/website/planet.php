@@ -60,12 +60,14 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 
-<div class="blosxomdate>April 13, 2005</div>
+<div class="blosxomdate">April 13, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+
+
+
 
 
 <h4><a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></h4>
@@ -78,6 +80,9 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 <p>
 <em><a href="http://vanschouwen.system-x.org/?p=16">April 13, 2005 12:41 PM</a></em>
 </p>
+
+
+
 
 
 
@@ -109,7 +114,9 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 
-<p class="blosxomtitle"><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a></p>
+
+
+
 
 
 <p class="blosxomstory">
@@ -124,12 +131,14 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 
-<div class="blosxomdate>April 12, 2005</div>
+<div class="blosxomdate">April 12, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/12/ubuntu-in-69-verbeterpunten/">Ubuntu in 69 verbeterpunten</a></h4>
@@ -151,7 +160,9 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 
-<p class="blosxomtitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
+
+
+
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=98">12 Apr 2005</a></h4>
@@ -169,12 +180,14 @@ So lately, I've been doing stability and finetuning work for Totem. It's nice to
 
 
 
-<div class="blosxomdate>April 11, 2005</div>
+<div class="blosxomdate">April 11, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a></p>
+
+
+
 
 
 <p class="blosxomstory">
@@ -198,7 +211,9 @@ Huisbaas (tevens baas van internetafdeleing van <a href="http://www.elion.ee/">E
 
 
 
-<p class="blosxomtitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
+
+
+
 
 
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=5">11 Apr 2005</a></h4>
@@ -215,12 +230,14 @@ Afgelopen zaterdag een feestje gehad. Veel bier (Grolsch en Palm) en een gezelli
 
 
 
-<div class="blosxomdate>April 09, 2005</div>
+<div class="blosxomdate">April 09, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
+
+
+
 
 
 <p class="blosxomstory">
@@ -233,12 +250,14 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<div class="blosxomdate>April 08, 2005</div>
+<div class="blosxomdate">April 08, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+
 
 
 <h4><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/ubuntu-hoary-hedgehog/">Ubuntu “Hoary Hedgehog”</a></h4>
@@ -254,12 +273,14 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<div class="blosxomdate>April 06, 2005</div>
+<div class="blosxomdate">April 06, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
+
+
+
 
 
 <h4><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></h4>
@@ -274,12 +295,14 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<div class="blosxomdate>April 05, 2005</div>
+<div class="blosxomdate">April 05, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
+
+
+
 
 
 <h4><a href="http://geeklog.eyesopened.nl/archives/2005/04/05/desktop-places-nautilus/">Desktop Places, Nautilus</a></h4>
@@ -304,12 +327,14 @@ didn't do that much this week. slowly getting more time to do some programming<b
 
 
 
-<div class="blosxomdate>April 04, 2005</div>
+<div class="blosxomdate">April 04, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
+
+
+
 
 
 <h4><a href="http://www.livejournal.com/users/inverted_tree/39587.html">gnome-nl gnome 2.10 release party photos</a></h4>
@@ -327,7 +352,9 @@ OOPS! Being the irregular blogger I am, I forgot to post some photos from the gn
 
 
 
-<p class="blosxomtitle"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
+
+
+
 
 
 <h4><a href="http://uwog.net/blog/?p=41">*Ahum*</a></h4>
@@ -337,6 +364,9 @@ Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/r
 <p>
 <em><a href="http://uwog.net/blog/?p=41">April 04, 2005 08:59 PM</a></em>
 </p>
+
+
+
 
 
 
@@ -373,12 +403,14 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 
 
 
-<div class="blosxomdate>March 30, 2005</div>
+<div class="blosxomdate">March 30, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+
+
+
 
 
 <h4><a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">Buzzzz</a></h4>
@@ -397,12 +429,14 @@ Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb in
 
 
 
-<div class="blosxomdate>March 28, 2005</div>
+<div class="blosxomdate">March 28, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+
+
+
 
 
 <h4><a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">1 jaar</a></h4>
@@ -424,12 +458,14 @@ Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Vo
 
 
 
-<div class="blosxomdate>March 26, 2005</div>
+<div class="blosxomdate">March 26, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
+
+
+
 
 
 <h4><a href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">Progress dialogs</a></h4>
@@ -458,12 +494,14 @@ The current nautilus progress dialog looks like:</p></p>
 
 
 
-<div class="blosxomdate>March 23, 2005</div>
+<div class="blosxomdate">March 23, 2005</div>
 
 
 
 
-<p class="blosxomtitle"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
+
+
+
 
 
 <h4><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">23 Mar 2005</a></h4>
