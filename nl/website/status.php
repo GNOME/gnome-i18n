@@ -128,8 +128,7 @@ echo "</center></blockquote>\n";
 list ($pline_num, $pline) = each ($fpackages);
 $url_prefix=$pline;
 ?>
-<div class="statustable">
-<table border="0" width="100%">
+<table border="0" class="statustable">
   <tr>
     <th class="module">Module</th>
     <th class="module">Vertaler</th>
@@ -218,7 +217,7 @@ while (list ($pline_num, $pline) = each ($fpackages)) {
 		print_trans($regel, $naam, $URL, $branch, $trans, $fuzzy, $untrans, $percentage, $maintainer);
 	}
 }
-echo "</table></div>\n";
+echo "</table>\n";
 
 // Now we make the popup windows for the maintainers.
 while (list ($maintainer, $package_array) = each ($popup)) {

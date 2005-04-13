@@ -9,13 +9,12 @@ is_logged_in();
 <? html_head() ?>
 </head>
 <body>
-<div class="body">
-
 <?
 translate();
 gnome_head();
 gnome_menu();
 ?>
+<div class="content">
 <div class="rightbox"><center><h3>Even uw aandacht...</h3></center>
 
 <?
@@ -23,7 +22,6 @@ gnome_menu();
 include "reclame.php";
 ?>
 </div>
-<div class="content">
 <h1>Welkom bij GNOME Nederlands</h1>
 
 <p>GNOME is een vrije, gebruikersvriendelijke, krachtige
@@ -45,6 +43,5 @@ alsmede informatie voor nieuwe vertalers. Kijk daarvoor in het menu onder het ko
 </div>
 <? gnome_foot() ?>
 
-</div>
 </body>
 </html>

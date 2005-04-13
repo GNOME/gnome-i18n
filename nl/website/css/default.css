@@ -1,16 +1,21 @@
 /* Basic tags */
 body {
-	background-color: #FFFFFF;
-	color: #000000;
+	background-color: white;
+	color: black;
 	font-family: 'Bitstream Vera Sans', Arial, Helvetica, 'Luxi Sans', Verdana, Sans-Serif;
 	padding: 0px;
-	margin-top: 90px;
-	margin-bottom: 0px;
+	margin: 90px 10px 0px 10px;
 }
 
 a img {
 	border: 0px;
 }
+
+pre {
+	overflow: auto;
+}
+
+
 
 blockquote {
   font-family: "Bitstream Vera Sans", sans-serif;
@@ -20,7 +25,94 @@ blockquote {
   border: 1px dashed white;
 }
 
-/* FORM style */   
+table {
+  font-family: "Bitstream Vera Serif", serif;
+}
+
+.content {
+	font-family: "Bitstream Vera Serif", serif;
+	margin-left: 190px;
+	padding-left: 10px;
+}
+
+/* menu aan de linker kant */
+
+.menu {
+	position: absolute;
+	float: left;
+	top: 90px;
+	left: 0px;
+	width: 190px;
+	margin-left: 5px;
+	padding-left: 0px;
+	padding-bottom: 10px;
+	border-right: 1px dashed #aaaaaa;
+	font-size: small;
+	background-color: #fafafa;
+}
+
+.menu ul {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+.section {
+	wssidth: 160px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #cccccc;
+
+	padding-bottom: 3px;
+	padding-top: 3px;
+	-moz-border-radius: .75em .75em .75em .75em;
+	border-radius-topleft: .75em;
+	border-radius-topright: .75em;
+	border-radius-bottomleft: .75em;
+	border-radius-bottomright: .75em;
+}
+.sectiontitle {
+	wssidth: 150px;
+	background-color: #ccccff;
+	font-size: larger;
+	text-align: center;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-bottom: 1px solid #666666;
+	border-right: 1px solid #666666;
+}
+.sectioncontent {
+	wssidth: 150px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #666666;
+	border-right: 1px solid #666666;
+}
+
+/* Info aan de rechterkant */
+.rightbox {
+	float: right;
+	width: 20em;
+	margin:0px 0px 10px 10px;
+	font-size: small;
+	border-left: 1px dashed #dddddd;
+	background-color: #fafafa;
+}
+
+.rightbox ul {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+/* Formulieren (e-mail) */   
 form.important {
   font-family: "Bitstream Vera Sans", sans-serif;
   background-color: #dddddd;
@@ -28,6 +120,7 @@ form.important {
   padding-right: 10px;
   border: 1px dashed white;
 }
+
 div.row {
   width: 440px;
   padding-top: 15px;
@@ -45,10 +138,8 @@ div.row span.formw {
   width: 300px;
   text-align: left;
   } 
+/* end of Formulieren */   
 
-table {
-  font-family: "Bitstream Vera Serif", serif;
-}
 
 table.nieuws {
   width: 100%;
@@ -87,11 +178,6 @@ a:visited {
 	float: right;
 }
 
-.content {
-	font-family: "Bitstream Vera Serif", serif;
-	margin-left: 180px;
-}
-
 ul.nobullet {
 	list-style: none;
 }
@@ -121,6 +207,7 @@ ul.nobullet {
 	border-bottom: 1px solid #666666;
 	z-index: 5;
 }
+
 .meter {
 	position: absolute;
 	top: 0px;
@@ -134,66 +221,9 @@ ul.nobullet {
 
 	z-index: 10;
 }
-.menu {
-	position: absolute;
-	top: 90px;
-	left: 0px;
-	width: 170px;
-	margin-left: 5px;
-	padding-left: 0px;
-	padding-bottom: 10px;
-	border-right: 1px dashed #aaaaaa;
-	font-size: small;
-	background-color: #fafafa;
-}
-.menu ul {
-	margin-left: 10px;
-	padding-left: 10px;
-}
 
-.section {
-	width: 160px;
-	margin-bottom: 5px;
-	margin-top: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
-	background-color: #cccccc;
-
-	padding-bottom: 3px;
-	padding-top: 3px;
-	-moz-border-radius: .75em .75em .75em .75em;
-	border-radius-topleft: .75em;
-	border-radius-topright: .75em;
-	border-radius-bottomleft: .75em;
-	border-radius-bottomright: .75em;
-}
-.sectiontitle {
-	width: 150px;
-	background-color: #ccccff;
-	font-size: larger;
-	text-align: center;
-	margin-bottom: 3px;
-	margin-top: 3px;
-	margin-left: 5px;
-	margin-right: 5px;
-	border-bottom: 1px solid #666666;
-	border-right: 1px solid #666666;
-}
-.sectioncontent {
-	width: 150px;
-	margin-bottom: 3px;
-	margin-top: 3px;
-	margin-left: 5px;
-	margin-right: 5px;
-	padding-top: 2px;
-	padding-bottom: 1px;
-	background-color: #ffffff;
-	border-bottom: 1px solid #666666;
-	border-right: 1px solid #666666;
-}
 .statustable {
-	border-style: solid;
-	border-color: #dddddd;
+	border: 2px solid #dddddd;
 	-moz-border-radius: .75em .75em .75em .75em;
 	border-radius-topleft: .75em;
 	border-radius-topright: .75em;
@@ -202,6 +232,7 @@ ul.nobullet {
 	background-color: #fafafa;
 	padding: 3px;
 }
+
 .statustable a { 
   text-decoration: none;
 }
@@ -217,6 +248,9 @@ ul.nobullet {
 	background-color: #fafafa;
 	padding: 3px;
 	position: absolute;
+	filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9;
 }
 
 .logmsg a { 
@@ -224,13 +258,12 @@ ul.nobullet {
 }
 
 .copyright {
-	margin-left: 180px;
+	margin-left: 10px;
 	margin-right: 10px;
-	text-align: center;
+	text-align: right;
 	font-size: small;
 	vertical-align:	bottom;
 	clear: both;
-
 	margin-top: 10px;
 	padding: 5px 0px 5px 0px;
 	color: #aaaaaa;
@@ -300,21 +333,6 @@ tr.oneven {
   margin-left: 0px;
 }
 
-.rightbox {
-	margin-right: 10px;
-	padding: 0px;
-	width: 190px;
-	font-size: small;
-	float: right;
-	border-left: 1px dashed #cccccc;
-	background-color: #fafafa;
-}
-
-.rightbox ul {
-	margin-left: 10px;
-	padding-left: 10px;
-}
-
 img.floatleft { float: left;
 margin: 4px; }
 
@@ -323,55 +341,55 @@ margin: 4px; }
 
 /* Standard Blosxom Bits */
 
-.blosxomDate {
+.blosxomdate {
 color: white;
 background-color: black;
 font-weight: bold;
 padding: 8px 5px 8px 5px;
-clear: both;
 }
 
-.blosxomDate a {
+.blosxomdate a {
 color: white;
 font-weight: bold;
 text-decoration: none;
 margin-right: 0.5ex;
 }
 
-.blosxomDateLink {
+.blosxomdatelink {
 float: right;
 border: 0px;
 }
 
-.blosxomTitle {
+.blosxomtitle {
 clear: both;
 color: black;
+background-color: #dddddd;
 font-weight: bold;
 text-decoration: none;
 margin: 15px;
 margin-bottom: 0px;
 }
 
-.blosxomTitle a {
+.blosxomtitle a {
 color: black;
 text-decoration: none;
 }
 
-.blosxomStory {
+.blosxomstory {
 margin: 15px;
 margin-bottom: 20px;
 margin-top: 7px;
 clear: both;
 }
 
-.blosxomStory a.permalink {
+.blosxomstory a.permalink {
 color: #aaaaaa;
 font-size: small;
 text-decoration: none;
 font-style: italic;
 }
 
-.blosxomStory p {
+.blosxomstory p {
 margin-top: 7px;
 margin-bottom: 7px;
 }
