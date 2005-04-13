@@ -70,6 +70,25 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<p class="blogname"><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a></p>
+
+
+<p class="blogstory">
+<p><img src="http://www.jabber.ee/~jorn/blog/wp-content/tehnika.png" class="alignright" /><br />
+<em>Oef</em>. <em>Tien-en-een-half-uur</em> achter elkaar bugfixen. Na acht uur vond ik wel mooi geweest, maar toen werd ik opeens nog met een bug opgezadeld die vandaag nog gefixed <em>moest</em> worden. Tsja. </p>
+	<p>Heel veel tijd voor wat andere dingen was er vandaag dus niet. Wel heb ik wat foto&#8217;s genomen van de directe omgeving van dit huis. Hierboven zo eentje. In dat gebouw daar rechts woon ik.</p></p>
+<p>
+<em><a style="font-style: italic; font-size: x-small;" "href="http://www.jabber.ee/~jorn/blog/?p=5">April 13, 2005 07:50 PM</a></em>
+</p>
+
+
+
+
+
+
+
+
+
 <p class="blogname"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
