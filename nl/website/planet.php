@@ -70,6 +70,27 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+
+
+<div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=17">Packaging foo</a></div>
+<p class="blogstory">
+<p>Now listed on <a href="http://nl.gnome.org/planet.php">Planet GNOME-nl</a>, now with extra cool layout, woot! No hackergotchi&#8217;s yet, though, but I think <a href="http://www.stratos-online.nl/">Erik</a>  deserves the credits for creating one for me:<br />
+<img src="http://vanschouwen.system-x.org/pictures/hackergotchi-reinout.png" alt="Reinouts' head" /></p>
+	<p>Furthermore I&#8217;m proud to announce the first in the line of &#8216;rvs&#8217; RPMs for <a href="http://www.mandriva.com/products/limited-edition">Mandriva Linux 2005</a>: I&#8217;ve packaged <a href="http://www.dsl.uow.edu.au/~harvey/code_epiphany.shtml">Epiphany 1.6.2 with dynamic hierarchical bookmarks menu</a>. If you want to try it, you&#8217;ll need to set up the <a href="http://gpwgnome.osknowledge.org/">gpwgnome</a> repository first. Find the RPM <a href="http://www.cs.vu.nl/~reinout/RPMS/">here</a>, SRPM <a href="http://www.cs.vu.nl/~reinout/SRPMS/">here</a>.
+</p></p>
+<p>
+<em><a style="font-style: italic; font-size: x-small;" "href="http://vanschouwen.system-x.org/?p=17">April 13, 2005 09:20 PM</a></em>
+</p>
+
+
+
+
+
+
+
+
+
 <p class="blogname"><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a></p>
 
 
@@ -498,28 +519,6 @@ The current nautilus progress dialog looks like:</p></p>
 	<p><p><a href="http://geeklog.eyesopened.nl/wp-content/images/screenshot"><img src="http://geeklog.eyesopened.nl/wp-content/images/screenshot_thumb.png" class="center" /></a></p></p></p>
 <p>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">March 26, 2005 03:10 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blogdate">March 23, 2005</div>
-
-
-
-
-<p class="blogname"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<div class="blogtitle"><a href="http://www.advogato.org/person/rbultje/diary.html?start=97">23 Mar 2005</a></div>
-<p class="blogstory">
-<b>Totem Mozilla Embedding</b><br />
-Bastien already said that we had basic javascript functionality people working in the Totem-Mozilla plugin. Today, I finished the second part of the job: a two-way communication protocol. Should ideally use DBUS for that, but we're using something of ourselves right now.
-<p>
-The result of that is that the plugin and the child application (which is spawned on its own for security reasons) interact using some basic IPC command-set. This, in combination with the javascript-functionality, means that I can click images on a <a href="http://ronald.bitfreak.net/priv/pimp.png">HTML page</a> and the player will react as it should. The javascript-calls are compatible with Quicktime Player. Woohoo, finally a kick-ass mozilla media player. :-). Get your daily dose of Totem-CVS today!</p>
-<p>
-<em><a style="font-style: italic; font-size: x-small;" "href="http://www.advogato.org/person/rbultje/diary.html?start=97">March 23, 2005 06:22 PM</a></em>
 </p>
 </div>
 
