@@ -38,7 +38,7 @@ fi
 
 #Check the source
 if ! lynx -source $sourcelocation \
-| grep "index.html\">gnome" > /tmp/translation-status.tmp; then 
+| grep "index.html\">" > /tmp/translation-status.tmp; then 
 	#Something went wrong...bail out
 	echo "Statuspage-location not available"
 	echo $sourcelocation
@@ -82,7 +82,9 @@ for version in `cat /tmp/translation-status.tmp | sed 's/.*index.html\">\(.*\)<\
 			then
 				echo -n "#"
 			else
-				echo -n "e"
+				if wget -q -c $complete_url
+					echo -n "e"
+				fi
 			fi
 		done
 	fi
@@ -90,5 +92,6 @@ for version in `cat /tmp/translation-status.tmp | sed 's/.*index.html\">\(.*\)<\
 done
 rm /tmp/*.tmp
 rm /tmp/packages.*.text
-exit 1
+echo ""
+exit 0
 
