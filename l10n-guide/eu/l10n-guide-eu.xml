@@ -1,0 +1,1076 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+	"file:///usr/share/sgml/docbook/dtd/xml/4.2/docbookx.dtd">
+-->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+
+<article>
+  <articleinfo>
+    <title>GNOME aplikazioak lokalizatzea</title>
+    <subtitle>GNOME itzuli nahi duzu?</subtitle>
+    <authorgroup>
+      <author>
+        <firstname>Telsa</firstname>
+        <surname>Gwynne</surname> <!--
+        <affiliation>
+        <address>
+        <email>hobbit@aloss.ukuu.org.uk</email>
+        </address>
+        </affiliation>
+        -->
+      </author>
+      <author>
+        <firstname>Dafydd</firstname>
+        <surname>Harries</surname>
+        <!--
+        <email>daf@muse.19inch.net</email>
+        -->
+      </author>
+    </authorgroup>
+    <copyright>
+      <year>2003</year>
+      <holder>Telsa Gwynne</holder>
+      <holder>Dafydd Harries</holder>
+    </copyright>
+    <copyright>
+      <year>2004</year>
+      <holder>Dafydd Harries</holder>
+    </copyright>
+    <legalnotice id="legalnotice">
+      <para>
+      Dokumentazio hau birbana eta/edo alda dezakezu, GNU Lizentzia 
+      Publiko Orokorraren 2. bertsioan, edo (nahiago baduzu) bertsio berriago 
+      batean, jasotako baldintzak betez gero. Lizentziaren testu osoa helbide 
+      honetan eskura daiteke: 
+      http://www.gnu.org/copyleft/gpl.html.
+      </para>
+    </legalnotice>
+    <revhistory>
+      <revision>
+        <revnumber>0.1</revnumber> 
+	<date>2003ko abuztuaren 7a</date>
+	<revdescription><para>Dokumentua hasi dugu.</para></revdescription>
+      </revision>
+      <revision>
+	<revnumber>0.2</revnumber> 
+	<date>2003ko abuztuaren 15a</date> 
+	<revdescription>
+	<para>Hau idaztekotan ginela gogoratu dugu. Atal gehiago gehitu 
+	ditugu eta beste batzuk bete ditugu.</para>
+	</revdescription>
+      </revision>
+      <revision>
+	<revnumber>0.3</revnumber>
+	<date>2003ko abuztuaren 31</date>
+	<revdescription>
+	<para>Iradokizunak eta editoreei buruzko zatiak bete ditugu. 
+	Gehiago behar da. Bi eranskin gehitu ditugu.</para>
+	</revdescription>
+
+      </revision>
+      <revision>
+        <revnumber>0.4</revnumber>
+	<date>2003ko irailaren 2a</date>
+	<revdescription>
+	<para>Puntuazio-kontu batzuk zuzendu ditugu eta "Aldaketei ekiten" 
+	atal berriaren zati bat gehitu dugu.</para>
+	</revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.5</revnumber>
+	<date>2003ko azaroaren 17a</date>
+	<revdescription>
+	<para>Puntuazio-kontu batzuk berriro zuzendu ditugu eta ortografia-akats 
+	batzuk zuzendu ditugu :) "Aldaketei ekiten" atalaren hasiera 
+	gehitu dugu. gedit gehitu diogu editore-zerrendari. ZUZENTZEKO gehiago
+	gehitu ditugu.</para>
+	</revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.6</revnumber>
+	<date>2004ko urtarrilaren 4a</date>
+	<revdescription>
+	<para><quote>gtk</quote>-ren erreferentzia <quote>gtk+</quote>renakin 
+	ordeztu dugu, hori baita CVS moduluaren izena. GPLren arabera jarri dugu 
+	dokumentua. Materiala sortzeari eta erabiltzeari buruz informazioa gehitu 
+	dugu. <quote>fuzzy</quote> marka kentzeko prozesuan egin da. Dokumentuari
+	80 karaktereko zabalerako formatua eman diogu eta tabuladoreak erabili 
+	ditugu koskak ezartzeko. <quote>-</quote> eta <quote>--</quote> &amp;mdash 
+	ikurrarekin ordeztu ditugu, hala dagokionean. translator_credits-i 
+	buruzko zatiaren adibide bat gehitu dugu.</para>
+	</revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.7</revnumber>
+	<date>2004ko urtarrilaren 5a</date>
+	<revdescription>
+	<para>Metodoei eta web interfazeei buruzko zatia berrantolatu dugu. Esteka 
+	bat gehitu diogu Txinako taldearen sistemari, Funda Wang-ek proposatu bezala. 
+	Ohar bat gehitu dugu GConf eskemaren azalpenei buruz, Ã…smund SkjÃ¦veland-ek 
+	proposatu bezala. Esteka bat gehitu diogu GPLri.</para>
+	</revdescription>
+      </revision>
+      <revision>
+        <revnumber>0.8</revnumber> 
+	<date>2004ko urtarrilaren 19a</date>
+	<revdescription>
+	<para>Maiuskulak finkatu ditugu izenburuan eta tipografia bat finkatu 
+	dugu.</para>
+	</revdescription>
+      </revision>
+    </revhistory>
+  </articleinfo>
+
+  <abstract>
+    <para>GNOME itzultzen hasteari buruzko oharrak.</para>
+  </abstract>
+
+<sect1 id="introduction">
+	<title>Sarrera</title>
+
+	<para>
+	GNOME programak lokalizatzeko asmoarekin idatzi dira. Horrek adierazten du 
+	programa bat modu desberdinetara porta daitekeela leku (fisiko) desberdinetan: 
+	Estatu Batuetan inprimatutako orriak eta Europan inprimatutako orriak ez dira 
+	tamaina berekoak izango; tenperatura leku batzuetan Fahrenheit eskalan 
+	bistaratuko da eta beste leku batzuetan Celsius eskalan, eta erabiltzaileak 
+	programak ikusiko duen 	hizkuntza bere hizkuntza izan daiteke.
+	</para>
+
+	<para>
+	Itzulpena da lokalizazio-prozesu honen zatirik garrantzitsuena. GNOMEren itzulpen gehienak 
+	jatorrizko hiztunek egiten dituzte beren borondatez. Ingelesezko jatorrizko esaldia hartzen dute, 
+	dagokion itzulpena egiten dute, eta informazio hori duen fitxategia GNOME CVS biltegiari gehitzen 
+	diote softwarearen hurrengo argitalpenak hizkuntza berria eduki dezan.
+	</para>
+
+	<para>
+	Dokumentu hau GNOMEren itzulpen-prozesuan nola sartu azaltzen saiatzen da.
+	</para>
+</sect1>
+
+<sect1 id="finding">
+	<title>Zure taldea aurkitzea</title>
+
+	<para>
+	Lehenik eta behin, zure hizkuntzarekin inor ari da lehendik lanean? Hala 
+	bada, 
+	<ulink type="http" url="http://developer.gnome.org/projects/gtp/teams.html">GNOME 
+	itzulpen-proiektuaren taldearen zerrenda</ulink>n egon beharko luke. Haiekin 
+	harremanetan jartzea da lehen urratsa.
+	</para>
+
+	<para>
+	Zuk lokalizatuko duzun hizkuntzaren taldea aurkitu baduzu, baina haien erantzunik jaso ez 
+	baduzu, jarri harremanetan 
+	<ulink type="http" url="http://mail.gnome.org/mailman/listinfo/gnome-i18n">GNOMEren 
+	lokalizazioko posta-zerrendarekin</ulink>. Hango norbaitek esango dizu zer egin.
+	</para>
+
+	<para>
+	Zure hizkuntzaren talderik ez badago ere, jarri harremanetan posta-zerrendarekin. Kasu horretan 
+	agian hizkuntza horren koordinatzaile izateko gonbita egingo dizute.
+	</para>
+
+	<para>
+	Talde aktibo batekin harremanetan jartzea lortu baduzu, ziurrenik segurtasun osoz salta dezakezu 
+	hurrengo atala eta aurreragoko atalera <xref linkend="translating"/> joan zaitezke.
+	</para>
+</sect1>
+<sect1 id="founding">
+	<title>Talde bat aurkitzea</title>
+
+	<para>
+	Beraz, ez dago zure hizkuntzaren talderik, baina talde bat sortzeko eta koordinadorea izateko 
+	eskaini zara? Ongi egina!
+	</para>
+
+	<sect2 id="coord">
+	  <title>Koordinatzailearen eginkizuna</title>
+
+	  <para>
+	  Zure taldearen koordinatzaile gisa, taldearen harremanetarako lehen pertsona 
+	  zara eta zure taldeko beste itzultzaileak antolatzeko ardura duzu. Besteak beste, 
+	  hainbat itzultzailek fitxategi bera batera itzultzea saihestu behar duzu.
+	  </para>
+
+          <para>
+	  Koordinatzaileak gnome-i18n posta-zerrendan izena eman behar dute. Hau biziko gomendatzen da 
+	  GNOMEren itzultzaile guztientzat, baina koordinatzaileentzat egin beharrekoa da.
+	  </para>
+
+	  <para>
+	  Zure taldeko kideren batek CVS atzipena izatekotan baliteke zuk izatea. Ez baduzu, taldeko 
+	  kide bakoitzak itzulpenak zuri bidaliko dizkizu, eta zuk CVS atzipena duen norbaiti 
+	  bidaliko dizkiozu hark entrega ditzan. Hala ziurtatzen da itzulpen egoki guztiak 
+	  pertsona egokira joaten direla une egokian.
+	  </para>
+
+	  <para>
+	  Hasiera batean, behintzat, zure itzulpen-taldeko erroreak zure helbidera bidaliko dira. 
+	  (Ez dituzu errore asko jasoko itzulpena erabiltzen hasi arte.) Zure hizkuntzak bere 
+	  osagaia izango du 
+	  <ulink type="http" url="http://bugzilla.gnome.org">GNOMEren Bugzilla erroreen 
+	  segimendurako sisteman</ulink>.
+	  </para>
+
+	  <para>
+	  Koordinatzaileak askotan itzulpen-lanaren alderdi teknikoenetaz arduratu behar du, 
+	  forma pluralez, configure.in fitxategiak eguneratzeaz eta POT fitxategiak sortzeaz. 
+	  (Hori guztia, geroago azaltzea espero dugu.)
+	  </para>
+
+	  <para>
+	  Baliteke itzulpen-talderako kide gehiago biltzeaz ere arduratzea. Esku askorekin 
+	  itzulpenak azkarrago egingo dira, nahiz eta horrek lan gehiago eman zuri!
+	  </para>
+
+	  <para>
+	  Egokia denean koordinatzaile izateari uztea ere zure ardura da; adibidez, merezi duen 
+	  ahalegina egiteko denborarik ez duzunean. Koordinatzailearen eginkizunak egiteko gai ez zarela 
+	  izango dakizunean, beste nobaiti aurrez eskatu zure lekua hartzeko.
+	  </para>
+	</sect2>
+
+	<sect2 id="lang-code">
+	  <title>Hizkuntz kodeak</title>
+	  <para>
+	  Hasteko, zure hizkuntz  kodea zein den jakin behar duzu. Hau bi edo hiru letrako kodea da. 
+	  Hizkuntza ezagunagoek bi letrako kodeak dituzte eta hizkuntza ilunagoak hiru letrakoekin 
+	  geratzen dira. Herrialde batean baino gehiagotan hitz egiten diren hizkuntzetan, herrialde 
+	  bakoitzari dagokion itzulpena, azpimarra eta herrialdearen bi letrako kodea maiuskulaz izango 
+	  ditu. Hau zeinuarekin eta informazio kualifikatuagoarekin erants daiteke. Oraingoz, jakin 
+	  ezazu hizkuntz kodeek itxura hau dutela: "fr" (frantsesa) edo "en_GB" 
+	  (Erresuma Batuko ingelesa).
+	  </para>
+
+	  <para>
+	  Zure hizkuntzaren kodea zein den ez badakizu, begiratu ea beste proiektuetako 
+	  itzulpen-ahaleginik badagoen (adibidez, 
+	  <ulink type="http" url="http://kde.org"><acronym>KDE</acronym></ulink>, 
+	  <ulink type="http" url="http://mozilla.org">Mozilla</ulink> eta 
+	  <ulink type="http" url="http://openoffice.org">OpenOffice</ulink>) zure hizkuntzan. 
+	  Horiek kode bera izango dute (hala eduki beharko lukete). Ezer aurkitzen ez baduzu, 
+	  eskatu laguntza posta-zerrendan.
+	  </para>
+
+	  <para>GNOMEk <!-- ZUZENTZEKO - do proper xref --> 
+	  <ulink type="http" url="http://www.w3.org/WAI/ER/IG/ert/iso639.htm"> ISO 639 arauan</ulink> 
+	  (hizkuntz kodeena) eta 
+	  <ulink type="http" url="http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html">ISO 3166 arauan</ulink> (herrialdeen kodeena) definitutako kodeak erabiltzen ditu. 
+	  gnome-i18n kideek zure hizkuntz kodea identifikatzen lagunduko dizute.
+	  </para>
+
+	  <para>
+	  Zure hizkuntz kodea zure lokalizazioa identifikatzeko erabiltzen da, adibidez, locale-en 
+	  eta fitxategien izenetan. Kodea duzunean, itzultzen has zaitezke.
+	  </para>
+	</sect2>
+
+	<sect2 id="needs">
+	  <title>Hasteko zer behar duzun</title>
+	  <para>
+	  Hainbat gauza badaude itzulpen-lanean izugarri lagunduko dizutenak.
+	  </para>
+
+	  <variablelist>
+	    <varlistentry>
+	      <term>Posta-zerrenda</term> 
+	      <listitem>
+	        <para>
+		Foro bat behar duzu zure taldeak hitz egin ahal izateko, ahal bada zeure hizkuntzan. 
+		Nor zer itzultzen ari den kontrolatzeko, hitz eta termino zailak eztabaidatzeko 
+		eta glosarioa eskuratzeko balia dezakezu. Egokia izan daiateke posta-zerrenda hau 
+		beste proiektu bateko (adib., KDE) itzulpen-talde batekin partekatzea. Zure 
+		itzulpenaren berri emateko ere leku ona izan daiteke.
+		</para>
+
+		<para>
+		Posta-zerrenda itzulpenen erabiltzaileek oharrak egiteko eta eztabaidak izateko 
+		ere erabil daiteke.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term>Web gunea</term>
+	      <listitem>
+	        <para>
+		Web gune bat ondo etortzen da jendeari zure ahaleginen berri emateko, lana 
+		banatzeko, nor zer egiten ari den aztarna jarraitzeko, eta glosarioak edukitzeko.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term>Glosarioa</term>
+	      <listitem>
+	        <para>
+		Garrantzitsua da itzulpenetan termino berdinak erabiltzea erabiltzaileak ez 
+		nahasteko. Glosario estandar batekin gauza bat izendatzeko hainbat izen ez 
+		dituzula erabiltzen ziurtatuko duzu. Saiatu termino berriak ez asmatzen, 
+		lehendik daudenak erabiltzen baizik. Bilatu hizkuntzarako 
+		administrazio-kontseilu bat, edo beste proiektuetan erabilitako itzulpenak, 
+		edo Microsoft Windows-en edo Apple OS Xn erabilitako terminologia. Bereziki, 
+		komeni da bat etortzea beste mahaigaineko ingurune libreekin, adibidez 
+		KDErekin. Terminologia berria sortu beharra baduzu edo hitz bat beste baten 
+		ordez erabiltzea erabaki baduzu, adierazi glosarioan zure erabakia (eta horren 
+		arrazoia). Horrek aurrerago nahasketak egotea eragozten du. Ohikoa da 
+		hasierako glosarioko proposamenak itzultzen ari zarela aldatzea. Itzultzen 
+		hasitakoan baino ez dituzu arazoak topatzen.
+		</para>
+		<para>
+		Talde batzuetan KDE edo Mozilla edo OpenOffice hizkuntz horretara bertara 
+		itzultzen aritutako pertsona berak daude. Beste talde batzuetan, proiektu 
+		bakoitzerako talde desberdinak daude. Bigarren kasuan, komeni da beste talde 
+		horiekin harremanetan jartzea eta jakitea zer erabiltzen duten, zer 
+		erabiltzeari utzi dioten, etab.
+		</para>
+		<para>
+		Glosarioa egiteko oinarri ona 
+		<ulink type="http" url="http://developer.gnome.org/documents/style-guide/wordlist.html">GNOMEren dokumentazio-proiektuaren estilo-gida</ulink> 
+		eta gnome-i18n moduluko glosarioaren konbinazioa da, nahiz eta bigarrenak 
+		eguneratzeko beharra izan.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term>IRC kanala</term>
+	      <listitem>
+	        <para>
+		Hau posta-zerrenda bezain komenigarria da. 
+		Batzuetan hau bera eztabaita-mota batzuetarako egokiagoa izan daiteke, 
+		adibidez, kontsulta azkarretarako. Zure itzulpenen erabiltzaileak laguntzeko ere 
+		ona izan daiteke. 
+		<ulink type="http" url="http://freenode.org">Freenode sarea</ulink> 
+		is IRC sarea da eta software libreari buruzko eztabaidak egiten dira. 
+		Leku egokia litzateke zure kanalari ostatu emateko.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><application>gettext</application> tresnak</term> 
+	      <listitem>
+	        <para>
+		<application>gettext</application> paketeak tresnak ditu kate itzulgarriak 
+		sortzeko, kate horiek itzul daitekeen zerrenda bihurtzeko, kate horiek 
+		eguneratzeko eta ordenagailuak erabil dezakeen formatura bihurtzeko. Zure 
+		taldeko norbaitek (ahalik eta gehienek) horiek behar ditu eta horiek 
+		erabiltzeko oinarriak eduki behar ditu.
+		</para>
+		<para>
+		Paketea lehenespenez instalatuta dago Linux-en hainbat banaketetan. 
+		Instalatuta ez dagoenetan, oraindik erabilgarri egoten da.
+		</para>
+		<para>
+		<application>intltool</application> ere kontuan har dezakezu. gettext-en 
+		aurrealdeko interfazearen antzekoa da eta Gnome-ren itzultzaile zaren 
+		heinean dituzun eginkizun batzuk egiten ditu. Normalean zure banaketarako 
+		erabilgarri egoten da, baina ia beti zure banaketako bertsioa baino bertsio 
+		bat edo bi aurrerago ibiltzen da. Gnome-ren CVSn topa dezakezu: 
+		<command>cvs checkout intltool</command>.
+		</para>
+	      </listitem>
+	    </varlistentry>
+	  </variablelist>
+	</sect2>
+</sect1>
+
+<sect1 id="translating">
+  <title>Itzultzea</title>
+  <para>
+  Hemen ekiten diogu itzultzeari. Ia 17.000 kate desberdin daude GNOME 2.4ren 
+  oinarrizko banaketan. Hor ez daude sartuta Evolution, Galeon, edozein IM bezero 
+  edo beharrezkotzat ikus ditzakezun beste gauzak. Hainbat taktika eta metodo erabil 
+  ditzakezu, baina kate horiek guztiak itzultzea besterik ez dago.
+  </para>
+
+  <sect2 id="approaches">
+    <title>Planteamendu desberdinak</title>
+    <para>
+    Itzultzeko modu desberdinak daude. Talde batzuek <quote>po fitxategia</quote> hainbat 
+    laguni banatzen die eta kideek testu-editore batekin lantzen dituzte eta GNOMEra entrega 
+    ditzakeen pertsonari itzultzen dizkie. Besta talde batzuke web-ean oinarritutako sistemak 
+    erabiltzen dituzte. Guztiek dituzte alde onak eta alde txarrak.
+    </para>
+    <para>
+    <filename>.po</filename> fitxategiaren xehetasunak orri honen amaieran daude, 
+    atal luzeenean. Joan zaitezke 
+    <link linkend="po-files"><filename>.po</filename></link> 
+    fitxategien atalera beste ezer erabiltzeko asmorik ez baduzu.
+    </para>
+  </sect2>
+
+  <sect2 id="web-interfaces">
+    <title>Web interfazeak</title>
+    <para>
+    Web interfaze batek normalean edonori kateen zerrenda ematen dio eta haiek 
+    itzulpenak proposatu zain egoten da. Norbaiek aldizka emaiza guztiak biltzen ditu 
+    eta CVSak elikatzen ditu. Alde ona da taldeko koordinatzaileak eta web interfazeko 
+    mantentzaileak bakarrik arduratu behar dutela <filename>.po</filename> fitxategiak 
+    egiteaz. Hala, GNOME, editore erabilgarri bat, edo beste gauzak ez dituzten 
+    edonork itzulpenarekin lagun dezake. Alde txar bat da gainerako fitxategia ikusi gabe, 
+    kolaboratzaileak ez direla ohartzen beste lagunak aplikazioak nola itzultzen ari 
+    diren. Zure taldeak lan bateratua egiteko asmoa badu, hori arazoa izan daiteke. 
+    Beste bat da, garatzaileak  katea azalduz itzultzaileek egiten dizkieeten iruzkinak 
+    ez direla beti erakusten.
+    </para>
+    <para>Lehendik dauden web interfazeak hauek dira:</para>
+    <simplelist>
+      <member><ulink type="http" url="http://prevod.org">Prevod</ulink></member> 
+      <member><ulink type="http" url="http://www.kyfieithu.co.uk">Kyfieithu</ulink></member> 
+      <member><ulink type="http" url="http://i18n.ricetons.com/">Txinako taldearen sistema</ulink> 
+      erabiltzaile-izenarekin <quote>i18n</quote> eta pasahitzik gabe sar zaitezke</member>
+    </simplelist>
+  </sect2>
+  
+  <sect2 id="po-files">
+    <title>po fitxategiak</title>
+    <para>
+    Dokumentu pateragabe bat dago <filename class="directory">po/</filename> 
+    direktorioak nola egiaztatu, <filename class="directory">.pot</filename> 
+    fitxategiak nola sortu, <filename>.po</filename> fitxategi nola bihurtu eta CVSn 
+    berriro nola egiaztatu azaltzen duena: 
+    <ulink type="http" url="http://developer.gnome.org/doc/tutorials/gnome-i18n/translator.html">GNOME CVS     itzultzaile gisa erabiltzea</ulink>. Irakurri beharrekoa da. <application>gettext</application> 
+    tresnak erabiltzeko xehetasun guztiak ematen ditu. <filename>.po</filename> fitxategiekin lan 
+    egitearen % 90a hori denez, jakin egin behar duzu. Hemen ez dugu errepikatu. Haretik aparte ohar 
+    batzuk erantsi besterik ez dugu egin. Ohar horiek ez dute dokumentua ordezten.
+    </para>
+    <para>
+    Kontuan izan <filename>.po</filename> fitxategiak zure hizkuntzaren egoera-orrietan lor 
+    ditzakezula Gnome-ren itzulpen-proiektuaren web gunean. (Ikus behean). Batzuetan, hori eginda 
+    karaktere bereziak (ASCII ez direnak) desitxura daitezke, baina CVSren alternatiba baliagarria 
+    da.
+    </para>
+    <para>
+    <filename>.po</filename> fitxategi bat jatorrizko programako kate-zerrenda bat besterik ez 
+    da, eta tarteak ditu zure bertsioa han sartzeko. Goian goiburu-multzo bat dago eta batzuk editatu 
+    egin beharko dira. Projektua-Id-Bertsioa izango da moduluaren izena. POT-Sorrera-Data automatikoki 
+    bete beharko litzateke. PO-Berrikuspena-Data zuk editatu behar duzu. Hizkuntza-Taldeak zure 
+    taldearen hizkuntza izan beharko luke eta egokiena helbide elektroniko bat egotea litzateke zure 
+    taldekide batekin edo gehiagorekin harremanetan jartzeko. Edukia-Mota UTF-8 izan 
+    <emphasis>behar</emphasis> du eta ziurtatu lortzen den fitxategiak UTF-8 formatua duela. UNIXen eta 
+    UNIXen anteko sistematan, <command>fitxategia</command> komandoak esango dizu zein formatu duen. 
+    <application>gettext</application>-en baliabide guztiak instalatuta dauden makina batean, 
+    <command>msgfmt -cv fitxategi-izena.po</command> erabil dezakezu. Fitxategiak UTF-8 formatua 
+    ez badu, <command>msgfmt -cv</command> komandoak errore-mezu bat sortuko du hori adieraziz.
+    </para>
+    <para>
+    Fitxategian iruzkinak topatuko dituzu. <quote>c-format</quote> esaten dutenean esan nahi du 
+    kate batzuk programak berak beteko dituela. Adibidez, erlojua applet-ak 
+    <application>gnome-applets</application> aplikazioan <quote>%H:%M</quote> katea du itzultzeko. 
+    Zuzenean itsatsiz <quote>itzul</quote> dezakezu. Sistemaren erlojuak emango ditu ordenagailuan. 
+    %H orduak dira eta %M minutuak.
+    </para>
+    <para>
+    Beste eranskin bat dago <link linkend="c-format-stuff">C-formatuko ohiko kateei buruz</link>.
+    </para>
+    <para>
+    Programatzailek itzultzaileentzako egindako mezuak ere ikusiko dituzu. Adibidez, 
+    <application>gnome-applets</application> aplikazioan, goian aipatutako mezuaren ondoren, iruzkin 
+    hau topatuko duzu <quote>itzultzaileak: atzekoz aurrera jarri argumentu hauek orduak dataren 
+    aurretik joan behar badu locale-ko erlojuan</quote>.
+    </para>
+    <para>
+    Menu bizkortzaileak ere ordeztu behar dituzu: menuetan klik egin ordez erabil daitezkeen 
+    laster-teklak. Lehen egunetan normala da kontraesanak eta nahasketak gertatzea. Agian 
+    garrantzitsuena lehenbizi <application>gtk+</application> aplikaziorako bizkortzaileak egitea da, 
+    GNOMEren aplikazio guztietan egongo baitira. Ondoren, geratzen diren letrak erabil ditzakezu eta zein 
+    konbinaziok funtzionatzen duten ondoen ikusi. Ez kezkatu bizkortzaile berarekin bi menu-aukera edo 
+    gehiago badituzu. 2.4en bezala, GNOMEk haien artean txandakatzen utziko dizu.
+    </para>
+    <para>
+    Askotan <application>GConf</application> teklei buruzko azalpenak topatuko dituzu. Normalean, 
+    tekla bakoitzak azalpen labur bat eta luze bat ditu. Teklen azalpenak dituzten kateek 
+    <filename>.eskema.in.h</filename> antzeko izenak dituzten fitxategikoak dira.
+    </para>
+    <para>
+    Teklen azalpenak itzultzean, kontuz ibili teklen adibideekin; komatxoen artean egongo dira. 
+    Ez dira itzuli behar. Adibidea:
+    </para>
+    <programlisting>
+#: src/gnome-terminal.schemas.in.h:70 
+msgid ""
+"Default color of terminal background, as a color specification (can be HTML-"
+"style hex digits, or a color name such as \"red\")."
+msgstr ""
+"Terminalaren atzeko planoaren kolore lehenetsia, kolorearen zehaztapen gisa "
+"(HTML izan daiteke estiloa digitu hamaseitarrean, edo kolore-izena, adibidez, \"red\")"
+    </programlisting>
+    <para>
+    Adibidean, <quote>red</quote> teklatuaren adibidea da, eta itzulpenean hitzez hitz 
+    kopiatu behar da. Kontuan izan komatxoak <filename>.po</filename> fitxategietan garrantzitsuak 
+    direlako, alderantzizko barra dutela.
+    </para>
+    <para>
+    Ulertzen ez dituzun ingelesezko mezuak topatzen badituzu, eman aplikazioko arazoaren 
+    berri garatzaileari. Itzuli ezin dituzun ingelesezko mezuak topatzen badituzu, eman horien berri. 
+    Itzultzaileek talde gisa horrelakoak hamarnaka bidaltzen dituzte, itzultzaileak baitira horrelakoak 
+    harrapatzen dituztenak. Zenbat eta goizago eman horien berri hobeto. Mezuak zer esan nahi duen 
+    ulertzen duzunean, agian erroreen berri ematea ahaztuko zaizu. Horien berri emanez gero konpondu 
+    egiten dira eta beste itzultzaileek ez dute kateekin borrokatu beharrik.
+    </para>
+    
+    <important>
+      <title>Ez ukitu msgid lerroak</title>
+      <para>
+      Ez editatu fitxategiko ingelesezko kateak. Hori eginez gero, aplikazio nagusian kateak 
+      batzeko programak nahasi egindo dira. Ingelesezko kateetan egindako aldaketak galdu egingo dira 
+      eta baliteke zure itzulpenak ez sartzea.
+      </para>
+    </important>
+    
+  </sect2>
+</sect1>
+
+<sect1 id="changes">
+  <title>Aldaketak egitea</title>
+  <para>
+  Zoritxarrez, softwareak aldatu egiten dira, eta, ondorioz, aldaketak egin behar dira itzul 
+  daitekeen softwareko edukian. Kateak gehitzen dira, kateak aldatzen dira, eta batzuetan kateak 
+  kentzen dira. Zorionez, itzultzen ari zaren softwarean egindako aldaketekin egunean egoten laguntzeko 
+  tresnak eta prozedurak badaude.
+  </para>
+  <sect2 id="status-table">
+    <title>Egoera-taulak</title>
+    <para>
+    Carlos Perelló Marín-ek GNOMEren itzulpen-hizkuntza bakoitzaren egoera-taulak ditu. 
+    Eskuragarri daude <ulink type="http" url="http://developer.gnome.org/projects/gtp/">Gnome-ren 
+    itzulpen-proiektua</ulink>ren orrietan. Tauletan hainbat ikuspegi daude eta egunean hirutan 
+    eguneratzen dira.
+    </para>
+    <simplelist>
+      <member><ulink type="http" url="http://developer.gnome.org/projects/gtp/status/">indizearen orria</ulink></member>
+      <member><ulink type="http" url="http://developer.gnome.org/projects/gtp/status/gnome-2.6/essential.html">funtsezko paketeak: hizkuntza guztiak</ulink></member>
+      <member><ulink type="http" url="http://developer.gnome.org/projects/gtp/status/gnome-2.6/full-info.html">pakete guztiak, taldearen arabera: hizkuntza guztiak</ulink></member>
+    </simplelist>
+    <para>
+    Hizkuntza bakoitzari buruz (xehetasunetarako jarraitu nabarmendutako hizkuntza bat) egoera orokorra 
+    eta huts egitea paketeen arabera erakusten duten taulak daude. Taula horietan estekak daude azken 
+    <filename>.pot</filename> fitxategira (aplikazio oraindik zure hizkuntzara itzuli ez bada) edo azken 
+    <filename>.po</filename> fitxategira (itzultzen hasia badago). Egoera-orrietatik zuzenean deskarga 
+    ditzakezu CVS erabili ordez. Ezin dira modu horretara kargatu, baina deskargatzeko baliabidea oso 
+    erabilgarria da.
+    </para>
+    <para>
+    Eta hori guztia gordetzen da Gnome 1en (Gnome 1.4), azken bertsio egonkorra, eta hurrengo bertsio 
+    egonkorra bihurtuko den paketeen azken argitalpenerako. Hau idazteko garaian (2004ko urtarrila), 2.4 
+    azken bertsio egonkorra zen eta 2.5 bertsioa, 2.6 bihurtuko dena, garatzen ari ziren.
+    </para>
+    <para>
+    Zure hizkuntzako itzulpenak CVSra entregatu bezain laster, zure hizkuntzak bere atala izango du 
+    egoera-tauletan. Komeni da zure hizkuntzari dagozkien orrien laster-markak gordetzea. 
+    Oso erabilgarriak dira.
+    </para>
+    <para>
+    Zure hizkuntzaren orriaren URLak forma hau izango du: 
+    http://developer.gnome.org/projects/gtp/status/gnome-2.6/XX/index.html. XX zure hizkuntzaren kodeaz 
+    ordeztu behar da (minuskulaz). Goiko URLa GNOME 2.6. bihurtuko diren bertsioena da. Gnome-ren bertsio 
+    egonkorra ikusi nahi baduzu, doitu URLa haren arabera.
+    </para>
+  </sect2>
+  
+  <sect2 id="msgfmt">
+    <title>Aldatutako paketeak eguneratzea</title>
+    <para>
+    Aldaketak egin direla ohartuko zara modulu baten kopia eguneratzean Gnome CVSn edo arakatzailea 
+    freskatzean egoera-orrietan. Orain ere, 
+    <ulink type="http" url="http://developer.gnome.org/doc/tutorials/gnome-i18n/translator.html">Nola erabili GNOME CVS itzultzaile gisa</ulink> 
+    zure gida izango da behar diren CVS komandoetarako. Itzultzeko kate gehiago daudela badakizu, 
+    itzuli beharreko kate guztiak dituen <filename>.pot</filename> fitxategi berri bat sortu behar 
+    duzu eta zure <filename>xx.po</filename> fitxategiarekin batu, horrek gutxiago eguneratuta 
+    dauden itzulitako kateen multzoa baitu. Sortu <filename>.pot</filename> fitxategia 
+    <command>intltool-update --pot</command>-ekin. Batu biak 
+    <command>msgmerge -o new-xx.po xx.po .pot</command>-ekin eta saiatu orden egokian jartzen!
+    </para>
+    <para>ZUZENTZEKO: aipamena <command>intltool-update xx</command></para>
+    <para>
+    Exekutatu <command>msgfmt -cv new-xx.po</command> zenbat lan geratzen den ikusteko. 
+    Zortea baduzu, <quote>fuzzy</quote> kate ugari egongo dira: lehendik itzulitako kateen antzekoak 
+    dira eta msgfmt programak itzulpen zaharra erabiltzeko proposatzen du kate berrirako.
+    </para>
+    <caution>
+      <title>Hurbilketazko itzulpenak horiek besterik ez dira</title>
+      <para>
+      <command>msgmerge</command>-k aldizka hurbilketazko itzulpenak oker ematen ditu. Itzultzaile 
+      guztiek dute gaizki dagoen gogoko proposamen bat: nire proposamen gogokoena (Telsarena) 
+      <quote>Ireki leihoa</quote> komandorako itzulpena <quote>Itxi leihoa</quote> itzultzeko 
+      erabiltzea da...
+      </para>
+    </caution>
+    <para>
+    Joan fitxategi berrian barrena <quote>fuzzy</quote> kateen bila. Zuzena dirudien 
+    itzulpenaren gaineko iruzkinean badago, kendu <quote>fuzzy</quote> hitza. 
+    <quote>fuzzy</quote> lerroan dagoen hitz bakarra bada, iruzkin osoa lasai ken 
+    dezakezu. <quote>fuzzy</quote> hitza kentzen ez baduzu, itzulpena ez da erabiliko. 
+    Adibidea:
+    </para>
+    
+    <programlisting>
+#, fuzzy 
+msgid "Blah blah blah."
+msgfmt "La la la."
+    </programlisting>
+    
+    <para>
+    Kasu honetan, itzultzaileaz fidatzen bazara, "fuzzy" duen lerro osoa ken daiteke:
+    </para>
+    <programlisting>
+msgid "Blah blah blah." 
+msgfmt "La la la."
+    </programlisting>
+    
+    <para>Baina, holakoa ere topa dezakezu:</para>
+    
+    <programlisting>
+#, c-format, fuzzy 
+msgid "Very important: %s" 
+msgstr "Oso garrantzitsua: %s"
+    </programlisting>
+    
+    <para>
+    Kasu honetan, hurbilketazkoak kendu nahi badizu, "c-format" etiketa ez duzu ukitu behar:
+    </para>
+    
+    <programlisting>
+#, c-format 
+msgid "Very important: %s" 
+msgstr "Oso garrantzitsua: %s"
+    </programlisting>
+    
+    <para>
+    Batzuetan mezuen multzo osoa eramaten da modulu berri batera. Hau bereziki etsigarria izan 
+    daiteke lehendik itzuli badituzu eta orain berriro itzuli behar dituzula uste baduzu. Lana aurrez 
+    dezakezu modulu horretatik <filename>.po</filename> fitxategia erabiliz 
+    <command>msgmerge</command> komandoarekin. Itzuli dituzun mezuen laburpena egin dezakezu eta 
+    haiek gorde, editatu edo proposatutako itzulpenen iturburu gisa erabil ditzakezu. Horretarako, 
+    erabili <command>msgcat</command>, forma honetan: <command>msgcat a.po b.po c.po &gt; 
+    compendium</command>. Laburpeneko edukiak egiaztatzea komeni da itzulpenerako erabili 
+    baino lehen, bereziki <quote>#-#-#-#-#</quote> formako kateentzat. Horrek 
+    jatorrizko <filename>.po</filename> fitxategiekin gatazkak daudela adierazten du. 
+    Horrek <command>msgcat</command> <filename>.po</filename> fitxategien arteko desadostasunak 
+    egiaztatzeko erabil daitekeela ere adierazten du. Laburpena <command>msgcat</command>-ekin 
+    sortutakoan, <command>msgfmt</command> komandoarekin erabil dezakezu, beste edozein 
+    <filename>.po</filename> fitxategitan bezala.
+    </para>
+    
+    <!-- ZUZENTZEKO: Daf, how do you make and use a compendium? -->
+    
+    <para>
+    Agian mezu-hautapen oso bat aplikazioan gehiago ez dela erabiltzen ikusiko duzu. 
+    <filename>.po</filename> fitxategien behealdera eramango dira eta han utziko dira, iruzkinekin. 
+    Lerro hasieran <keycap>#</keycap> egoteak iruzkina dagoela esan nahi du. Ez da kontuan hartzen. 
+    Horrelako asko egon eta enbarazu egin ezean, ez ezabatu lerro horiek. Aplikazioan eragina izan 
+    dezakete. <command>msgmerge</command> programak ere erabil ditzake hurbilketazko itzulpenak bilatzeko 
+    iturburu gisa. Utzi dauden lekuan.
+    </para>
+  </sect2>
+</sect1>
+
+<sect1 id="first-app">
+  <title>Itzultzeko lehen paketea hautatzea</title>
+  <para>
+  Hemengo faktore batzuk agian lagunduko dizute lehenbizi zer itzuli erabakitzen.
+  </para>
+  <para>
+  Ziurrengik hasieran hobe da zerbait txikia aukeratzea, erabiltzen dituzun itzulpen-tresnetara 
+  ohitzeko. Halaber, aplikazioan dagoen zerbait aukeratzea komeni da eta ez liburutegi bat. 
+  Hala, aplikazioa exekuta dezakezu eta zer itxura duen ikus dezakezu. Aplikazio autonomo txiki 
+  bat aukeratzea egokia da.
+  </para>
+  <para>
+  CVStik zure makinan eraikitako GNOME exekutatzen ari ez bazara, ziurrenik azken bertsiorik 
+  egonkorrena izango duzu. Beraz, ideia ona da aplikazioari dagokion bertsioa itzultzea. Makinan 
+  <application>bug-buddy-2.4</application> baduzu, erabili <application>bug-buddy</application> 
+  moduluaren 2.4 adarra. Beste bertsio bat erabiltzen baduzu, kate batzuk aldatuko dira, eta 
+  probatzean, ez dituzu itzulpen guztiak ikusiko.
+  </para>
+  <para>
+  Aplikazioa hizkuntza berrian probatzean, ohiko botoiak eta elkarrizketa-koadroetako botoiak 
+  oraindik ingelesez daudela ikusiko duzu. Liburutegi batzuetakoak direlako eta berriro GNOME guztian 
+  erabiltzen direlako gertatzen da. Haiek zure hizkuntzan jaratzeko, <application>gtk+</application>, 
+  <application>libgnome</application>, eta, bereziki <application>libgnomeui</application> ikusi behar 
+  dituzu. Fitxategi horietako kate batzuk oso zailak dira, baina ez dituzu guztiak orain egin beharrik. 
+  Bilatu elkarrizketa-laukietan agertzen diren kateak. Oso lagungarria izango da hori.
+  </para>
+  <para>
+  <application>gtk</application> paketea developer-libs izeneko taldeko parte da. Talde horretako 
+  kate erdiak ditu, gutxi gorabehera. <application>gtk</application> itzulitakoan, estatistiketan 
+  salto izugarria ikusiko duzu.
+  </para>
+  <para>
+  <application>Epiphany</application> web arakatzailean erabilitako kate asko Mozillakoak dira. 
+  Ondorioz, Epiphany bukatutakoan ere, baliteke Mozillak hornitutako mezuak topatzea itzuli gabe. Zure 
+  hizkuntzarako Mozillaren hizkuntza-paketea badago, ez zara horretaz ohartuko. Ez badago, ezin duzu 
+  gauza handirik egin horri buruz. (Noski, lagun bat konbentzi dezakezu Mozilla itzultzeko.)
+  </para> 
+</sect1>
+
+<sect1 id="installing">
+  <title>Instalatzea</title>
+  <para>
+  GNOMEren bertsio eguneratu samarra baduzu root sarbidea duzun ordenagailuan, itzulpenak zure 
+  makinan proba ditzakezu eta testuinguruan ikusi. Biziki gomendatzen dugu hori egitea. Makinak 
+  mezu-objektu (<filename>.mo</filename>) fitxategi bat behar du, eta hori 
+  <command>msgfmt -cv</command> komandoarekin sor dezakezu Exekutatu hori zure po fitxategian eta 
+  <filename>mezuak.mo</filename> izeneko fitxategia aurkituko duzu direktorioan. 
+  <filename class="directory">/usr/share/locale/<replaceable>XX</replaceable>/LC_MESSAGES/</filename> 
+  direktorioan jarri behar da (<replaceable>XX</replaceable> zure locale-ren kodea da) eta programaren 
+  izena jarri behar da. Hona hemen pare bat adibide: <filename>metacity.mo</filename> eta 
+  <filename>nautilus.mo</filename>. Batzuetan, programaren izenak bertsio-zenbakia eduki behar du. 
+  Zoritzarrez, ez da erraza jakitea zein den pakete jakin baten <filename>.mo</filename> izena. 
+  Pareko direktorioan lehendik dauden fitxategi-izenetan begiratu behar duzu zein erabiltzen duten 
+  ikusteko, eta gero, haiek kopiatu behar dira. Eman begirada bat 
+  <filename class="directory">/usr/share/locale/</filename>-ko locale-etan. Kopiatzeko adibide onak 
+  aurkituko dituzu.
+  </para>
+  
+  <para>
+  Ondoren, exekutatu aplikazioa. .mo fitxategia aldatzean ziurrenik aplikazioa kraskatu 
+  egingo da; beraz, gorde lehenbizi lana, eta hor <filename>gnome-terminal.mo</filename> jartzen 
+  ari bazara, ziurtatu prest zaudela kraskadurarako :) Fitxategia bere lekuan dagoenean, aplikazioa 
+  ondo egongo da. Arazoak fitxategia eguneratzeko ekintzak sor ditzake.
+  </para>
+  
+  <note>
+    <title>Locale-ak existitu beharra du</title>
+    <para>
+    Goikoak funtzionatzeko, ezinbestekoa da ordenagailuan locale-a izatea. Ez baduzu, 
+    sortu egin beharko duzu. Hau errazagoa da Debian-en, horretarako komando bat baitago. Prozedura, 
+    zoritzarrez, aldatu egiten da beste banaketetan, eta dokumentu honen esparrutik at geratzen da. 
+    Adabakiak eskertzen dira. :)
+    </para>
+  </note>
+  
+  <para>
+  Itzulpenak makinan nola instalatu ikasitakoan, zabaldu argibideak haiek probatzeko 
+  interesa duen jendeari. Besteek zuk baino akats gehiago harrapatzen dituzte beti. Laguntzeko ere 
+  inspiratuta egon daitezke!
+  </para>
+</sect1>
+
+<sect1 id="testing">
+  <title>Proba</title>
+  <para>
+  Mahaigaineko zati handiak bukatuta dituzunean, probatzea ezinbestekoa da. Orduan ohartzen 
+  zara zuetako batek <quote>install</quote>-erako hitz bat erabili duela eta beste batek beste bat 
+  erabili duela; edo <quote>body</quote> hitzak ez zuela giza gorputza adierazten.
+  </para>
+  <para>
+  Zenbat eta proba gehiago egin, edo lagunak horretarako konbentzitu, orduan eta hobeto.
+  </para>
+</sect1>
+<sect1 id="editors">
+  <title>Editoreak eta editorearen trukuak editor tricks</title>
+  <para>
+  Editore batzuk <filename>.po</filename> fitxategiak editatzeko modu bereziak dituzte, eta 
+  automatikoki modu egokian jartzen zaituzte.
+  </para>
+  <para>
+  Ziurtatu zure editorea UTF-8 formatuan idazten ari dela. Fitxategia formatu horretan ez badago, 
+  GNOME CVSko gauzak hondatu egingo dira.
+  </para>
+  
+  <para>UTF-8 formatuan lan egiten duten editoreak:</para>
+  
+  <simplelist>
+    <member>Emacs</member> 
+    <member>Vim</member> 
+    <member>GEdit</member>
+  </simplelist>
+  
+  <para>
+  <application>vim</application>-erako, hauek dira <filename>.vimrc</filename>-en jartzeko topatu 
+  ditugun gauza erabilgarriak:
+  </para>
+  
+  <programlisting>
+set fileencodings=utf-8
+" Kontrol-Ek msgid msgstr-en kopiatzea egiten duen vim makroa: 
+map &lt;C-E&gt; :s/msgid "\(.*\)"\nmsgstr ""/msgid "\1"&lt;C-V&gt;&lt;CR&gt;msgstr "\1"/&lt;CR&gt;
+  </programlisting>
+  
+  <para>
+  <filename>.po</filename> fitxategiak vim-en editatzeko plugin bat dago, eta hainbat truku 
+  baliagarri ditu. <ulink type="http" url="http://www.vim.org">Vim-en web gunean</ulink> lor daiteke, 
+  logikoa den bezala 
+  <ulink type="http" url="http://vim.sourceforge.net/scripts/script.php?script_id=695">po.vim</ulink> gisa
+  </para>
+  
+  <para><application>GNU-Emacs</application>-ek PO modu osoa du.</para>
+  
+  <para>
+  Badago <application>gtranslator</application> izeneko programa bat; aplikazioak itzultzen 
+  laguntzen du eta bereziki GNOME itzultzeko diseinatuta dago.
+  </para>
+  
+  <para>
+  Gustura hartzen dugu beste pertsona batzuk editoreentzako truku gehiago jartzea, ahal izanez 
+  gero dot fitxategiko argibide gisa.
+  </para>
+</sect1>
+
+<sect1 id="other-hints">
+  <title>Beste proposamen batzuk</title>
+  <para>
+  Esperientzia txarretatik gauza batzuk ikasi ditugu, eta hemen adierazten ditugu besteek 
+  horrelakorik egin ez dezaten.
+  </para>
+  
+  <itemizedlist>
+    <listitem>
+      <para>Ez itxaron denbora asko materiala adarrean sartzeko. Hori izan zen gure 
+      akatsa. Adarra egiaztatzeak eta itzulpena eguneratzeak luze jo arren, eta neketsua izan 
+      arren, HEAD eta adarra biak egiteko asmoa baduzu, bietan aplikatu aldaketak. Bestela, 
+      egun batean orduak eta orduak emango dituzu materiala adarran sartzen bakarrik.
+      </para>
+
+      <para>
+      Konexio motela edo neurtutako konexioa baduzu, adarrak beste direktorio batean egiaztatu 
+      adarra eta HEAD artean aldatzen ibili gabe. Lehenengo aldian, agian denbora gehiago 
+      beharko da, baina luzera denbora asko aurrezten da.
+      </para>
+    </listitem>
+    
+    <listitem>
+      <para>
+      Automatizatu segurua den heinean ahalik eta gehien. Adibidez, itzulpen berriak 
+      gehitzen ari zarenean, hiru lerro berrogeita hamar bat aldiz sartuko dituzu Changelog nagusian 
+      zure locale <filename>configure.in</filename> fitxategian gehitzeari buruz. Egin hori guztia esaten 
+      duen fitxategia, eta data egunero eguneratu. Eta gero, sartu editore-makro batekin. 
+      Berrogeita hamar aldiz idaztea baino askoz hobea da. Erabili shell aliasak asko erabiltzen 
+      diren komandoetarako. Adibidez: 
+      <command>alias cy-commit='cvs commit -m "Galeserazko eguneratutako itzulpena." cy.po ChangeLog'</command>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+      Bilatu hizkuntzalari bat! Mota guztietako kate arraroak topatuko dituzu itzultzeko, 
+      besteak beste, Gnumeric-en terminologiaren kalkulu-orri xehatua, eta <quote>The quick brown fox 
+      jumps over the lazy dog</quote> esaldiaren baliokideak zure hizkuntzan. Esaldi hori letra-tipoaren 
+      hautatzailean erabiltzen da ingelesak dituen letra guztiak dituelako. Horren esaldi baliokidea zeuk 
+      bilatu edo asmatu beharko duzu, zure hizkuntzak erabiltzen dituen letra guztiak dituena. 
+      (Hau zailagoa izan daiteke japonieraren eta txineraren kasuan).
+      </para>
+      <para>
+      Zure hizkuntzak terminologia berriaren itzulpen-multzo onargarria badu, izan hori kontuan, baita 
+      gustuko ez baduzu ere. Prestatu terminologia <quote>ofiziala</quote> ez erabiltzeko arrazoiak...
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+      Nahigabeko kate zentzugabeen kasuetan salbu. GNOMEko hackerrek idatzitako txiste batzuk 
+      topatuko dituzu. GEGL, adibidez, kode-liburutegi bat izan daiteke, baina Genetically 
+      Engineered Goat-en laburdura ere bada, eta GNOMEn hainbat lekutan agertzen den zentzugabeko 
+      txiste bat baino ez da. Ez dago hori itzuli beharrik. <quote>Iradokizun</quote> bitxi 
+      batzuk ere badaude Aisleriot-en fitxategietako batean.
+      </para>
+      <para>
+      Onartu itzazu. Eraman egin behar dituzu. Horiek egiten dute, alde batetik, GNOME 
+      dibertigarria, nahiz eta hori sinistea zaila izan hiztegian zer esan nahi duen jakin nahian 
+      bila ibili zarenean.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+      gnome-i18n posta-zerrenda eta #i18n IRC kanala oso okupatuta (gnome-i18n) edo ia beti 
+      lasai (#i18n) egon daiteke, baina beti dago gauza horiek lehenagotik topatu dituen norbait, 
+      eta zerbait proposa diezazuke. Kasu egin.
+      </para>
+    </listitem>
+    <listitem>
+    <para>
+      Oso erraza da jaramonik ez egitea tekla menuko laster-tekla bihurtzen duen marratxoari. 
+      msgids-eko eta msgstrs-eko azpimarrak bat datozen egiazta dezakezu 
+      <command>msgfmt --check-accelerators=_</command> komandoarekin (baina kontuan izan 
+      translator_credits bete eta gero, beti faltatuko dela bat).
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+      Probatu behin eta berriz. Zure makinan dena lokalizatuta edukitzea zaila da, baina 
+      erraza da aplikazio batzuetan bada ere zure azken itzulpenak instalatzea. Instala itzazu. 
+      Oso lagungarria da.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+      Sortu amaitutako itzulpenen tarball bat. (Automatizaziorako beste aukera on bat.) 
+      Jarri sarean urrats sinpleen bidez eta besteek ere instalatu ahal izango dituzte. Hala, 
+      informazioa (eta laguntza) azkarrago eskuratuko dituzu banaketa batek bidali zain 
+      egonda baino. Instalatzeko jarraibideak, zoritxarrez, desberdinak izango dira ia banaketa 
+      guztietan. Baina emaitzengatik merezi du hori egitea.
+      </para>
+    </listitem>
+  </itemizedlist>
+</sect1>
+
+<glossary>
+  <glossentry id="cvs">
+    <glossterm>CVS</glossterm>
+    <glossdef>
+      <para>
+      Concurrent Versioning System: GNOMEren kodearen biltegia erdiko leku batean mantentzeko 
+      erabiltzen den sistema.
+      </para>
+    </glossdef>
+  </glossentry>
+  <glossentry id="i18n">
+    <glossterm>I18N</glossterm>
+    <glossdef>
+      <para>
+      Lokalizazioaren laburdura (hitzaren hasierako eta amaierako letrak eta tartean hamazortzi 
+      hizki): programa lokalizatzeko moduan datorrela ziurtatzeko prozesua.
+      </para>
+    </glossdef>
+  </glossentry>
+  <glossentry id="l10n">
+    <glossterm>L10N</glossterm>
+    <glossdef>
+      <para>
+      Lokalizazioaren laburdura (hasierako eta amaierako letrak eta erdian hamar): Programak 
+      leku jakin batean funtzionatzeko prozesua. Mezuak itzultzea eta neurriak, moneten ikurrak 
+      eta tenperatura-eskalak konfiguratzea sartzen dira.
+      </para>
+    </glossdef>
+  </glossentry>
+  <glossentry id="locale">
+    <glossterm>locale</glossterm>
+    <glossdef>
+      <para>ZUZENTZEKO</para>
+    </glossdef>
+  </glossentry>
+</glossary>
+
+<appendix id="gotchas">
+  <title>Karaktere bereziak po fitxategietan eta kate berezi bat</title>
+  <para>
+  Beste eranskin bat dago<link linkend="c-format-stuff">C-formatuko kateak</link>. Hemen dago 
+  arazoak sor ditzaketen beste karaktere eta egoeren zerrenda.
+  </para>
+  <variablelist>
+    <varlistentry>
+      <term>Karaktere ihesgarriak</term>
+      <listitem>
+        <para>
+	Karaktere batzuk <filename>.po</filename> fitxategietan aritzen diren programek 
+	interpretatzen dituzte eta ondorioz aurrean alderantzizko barra dutela.
+	</para>
+	<para>
+	Horretarako karakterik arruntena komatxo bikoitza da: 
+	<keycap>"</keycap>.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>Formatu-markak</term> 
+      <listitem>
+        <para>
+	  <literal>\n</literal> edo <literal>\t</literal> konbinazioekin egin dezakezu topo. 
+	  Horiek lerro berria eta tabuladorea esan nahi dute. Horien kopuru bera jarri 
+	  beharrik ez duzu zure itzulpenean, baina katearen hasieran (edo amaieran) horietako 
+	  bat badago, zuk itzulitako katearen hasieran (edo bukaeran) bat jarri behar 
+	  duzu.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>Angelu-parentesiak eta ampersand-ak GConf fitxategietan</term>
+      <listitem>
+        <para>
+	XML asko erabiltzen den modulu bat edo bi daude. GConf da nabarmenena. XMLk &lt;, &gt; 
+	eta &amp; karakterea karaktere berezi gisa tratatzen ditu. Itzulpenetan sartzea ez 
+	da nahikoa. Entitate gisa zehaztu behar dituzu.
+	</para>
+	<simplelist>
+	  <member>&lt; adierazteko &amp;lt; erabiltzen da</member> 
+	  <member>&gt; adierazteko &amp;gt;</member>
+	  <member>eta &amp; adierazteko &amp;amp;</member>
+	</simplelist>
+	
+	<para>
+	ZUZENTZEKO: Ziur nago hori ikusi dudala. Baina non? Eta .in.in.h fitxategi 
+	guztiei dagokie?
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>TRUE (EGIAZKOA) eta FALSE (FALTSUA)</term> 
+      <listitem>
+        <para>
+	<quote>TRUE</quote> eta <quote>FALSE</quote> <application>gtk+</application> 
+	<application>Gconf</application> eta <application>Glade</application>-k sortutako fitxategi 
+	ugaritan agertzen dira. (Horien izenen amaieran hau egongo da: <filename>.glade</filename>.) 
+	Ez itzuli. Programak haiek ikustea espero du eta nahasi egingo da ikusten ez baditu.
+	</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  
+  <para>
+  Beste kate berezi bat bada <filename>.po</filename> fitxategian: 
+  <literal>translator_credits</literal>-en msgid. Hori agertuko da aplikazioa zure 
+  hizkuntzan erabiltzen ari denak kredituei begiratzen dienean 
+  <menuchoice><guimenu>Laguntza</guimenu><guisubmenu>Honi buruz</guisubmenu></menuchoice> bidea 
+  aukeratuz. <guibutton>Itzulpena</guibutton> aukera ikusiko dute. Han egongo da 
+  <literal>translator_credits</literal>-en edukia. Hor jartzen da zure izena, 
+  munduak ikus dezan. Formaturik arruntena izenen zerrenda eta helbide elektronikoak 
+  aparteko lerroetan jartzea da, talde baten orriaren URLarekin. Adibidea:
+  </para>
+  
+  <programlisting>
+msgid "translator_credits" 
+msgstr "Telsa Gwynne &lt;hobbit@aloss.ukuug.org.uk&gt;\n" 
+"Dafydd Harries &lt;daf@muse.19inch.net&gt;"
+  </programlisting>
+  
+  <para>Ez ahaztu hau egitea :)</para>
+</appendix>
+
+<appendix id="c-format-stuff">
+  <title>Aparte utzi beharreko edo berrantolatu beharreko C-formatuko kateak</title>
+  
+  <para>Hau ezagutzea komeni den C-formatuko kateen zerrenda labur bat da.</para>
+  <variablelist>
+    <varlistentry>
+      <term>%s</term> 
+      <listitem>
+        <para>Honek katea adierazten du. Adibide bat dugu Nautilus-en:</para> 
+	<programlisting>
+#: components/emblem/nautilus-emblem-view.c:834 
+#, c-format 
+msgid "The file '%s' does not appear to be a valid image." 
+msgstr ""
+        </programlisting>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  
+  <para>
+  C-format sekuentzia duten kateak "c-format" etiketaz adierazten dira, adibidean 
+  bezala. Kontuan izan horietako bi instantzia daudenean, ez dutela zertan kate bera izan. Hona hemen 
+  Nautilus-eko beste adibide bat:
+  </para>
+  <programlisting>
+#: components/hardware/nautilus-hardware-view.c:483 
+#, c-format 
+msgid "Uptime is %d days, %d hours, %d minutes" 
+msgstr ""
+  </programlisting>
+  <para>
+  Zentzua izan dezaten berrantolatu behar badizu, egin dezakezu. Ingelesez hau ohikoa da:
+  <programlisting>
+#, c-format 
+msgid "%n out of %n"
+  </programlisting>
+  Honela ager daiteke <quote>10 out of 100</quote>. Zure hizkuntzak <quote>100/10</quote> esan 
+  nahi badu, honela jar dezakezu:
+  
+  <programlisting>
+#, c-format 
+msgid "%n / %n" 
+msgstr "%2$d-etik %1$d"
+  </programlisting>
+  </para>
+</appendix>
+
+</article>
