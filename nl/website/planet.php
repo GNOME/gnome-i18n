@@ -65,6 +65,26 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<div class="blogdate">April 14, 2005</div>
+
+
+
+
+<p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+
+
+<div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=18">Goede daad voor vandaag</a></div>
+<p class="blogstory">
+<p>Onderteken ook de petitie voor eerlijke handel:<br />
+<a href="http://www.maketradefair.com/en/index.php?file=dumped.htm&#038;cat=1&#038;subcat=7&#038;select=2"><img src="http://www.novib.nl/media/maketradefair/downloads/fullban_468x60_3A_lips.gif" alt="Join the big noise" /></a></p></p>
+<p>
+<em><a style="font-style: italic; font-size: x-small;" "href="http://vanschouwen.system-x.org/?p=18">April 14, 2005 03:30 PM</a></em>
+</p>
+
+
+
+
+
 <div class="blogdate">April 13, 2005</div>
 
 
@@ -485,40 +505,6 @@ Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Vo
 <em>Foto van de dag, aan jullie om te beslissen wat er op staat</em></div></p>
 <p>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://weblog.lambda1.be/85-1-jaar?lang=nl">March 28, 2005 07:52 AM</a></em>
-</p>
-
-
-
-
-
-<div class="blogdate">March 26, 2005</div>
-
-
-
-
-<p class="blogname"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
-
-
-<div class="blogtitle"><a href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">Progress dialogs</a></div>
-<p class="blogstory">
-<p><p>It&#8217;s been a while, so here are some updates. I&#8217;m sorry that I broke p.g.o (again). I changed some user permissions of one article in WordPress so it decided to change all articles or something.</p></p>
-
-	<p><p>When I was fixing bug <a href="http://bugzilla.gnome.org/show_bug.cgi?id=159057">#159057</a> I needed to build a progress dialog for emptying the trash. I compared the Nautilus&#8217; ones with the guidelines in the <span class="caps">HIG</span> and came to the conclusion that they aren&#8217;t really following <span class="caps">HIG</span> guidelines so I created my own:</p></p>
-
-	<p><p><img src="http://geeklog.eyesopened.nl/wp-content/images/emptying_trash.png" class="nothing" /></p></p>
-
-	<p><p>It would be a good idea to create a consistent dialog for trashapplet and nautilus, I&#8217;ve opened a bugreport for it <a href="http://bugzilla.gnome.org/show_bug.cgi?id=171694">here</a>.<br />
-The current nautilus progress dialog looks like:</p></p>
-
-	<p><p><img src="http://geeklog.eyesopened.nl/wp-content/images/naut_trash.png" class="nothing" /></p></p>
-
-	<p><p>Been thinking about and discussing some desktop improvements a bit in #gnome-nl. I&#8217;ve come up with <a href="http://geeklog.eyesopened.nl/index.php/ramblings/">a list</a> which I think are nice improvements for the desktop. Most items aren&#8217;t new. I&#8217;ll also try and work on some of them in the neir future.</p></p>
-
-	<p><p>Oh, and to go with the flow:</p></p>
-
-	<p><p><a href="http://geeklog.eyesopened.nl/wp-content/images/screenshot"><img src="http://geeklog.eyesopened.nl/wp-content/images/screenshot_thumb.png" class="center" /></a></p></p></p>
-<p>
-<em><a style="font-style: italic; font-size: x-small;" "href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">March 26, 2005 03:10 AM</a></em>
 </p>
 </div>
 
