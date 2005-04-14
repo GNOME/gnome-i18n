@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<ARTICLE
+ID="INDEX"
+><ARTHEADER
+><AUTHORGROUP
+><AUTHOR
+><FIRSTNAME
+>Kjartan</FIRSTNAME><SURNAME
+>Maraas</SURNAME><AFFILIATION
+><ORGNAME
+>GNOME</ORGNAME><ADDRESS
+FORMAT="LINESPECIFIC"
+>	  <EMAIL
+>kmaraas@gnu.org</EMAIL>
+	</ADDRESS></AFFILIATION></AUTHOR></AUTHORGROUP><COPYRIGHT
+><YEAR
+>2000</YEAR><HOLDER
+>Kjartan Maraas</HOLDER></COPYRIGHT><ABSTRACT
+><PARA
+>      Nola itzul dezaket GNOME mahaigaina beste hizkuntzetara? Galdera hau nahiko 
+      sarri agertzen da GNOME posta-zerrendetan eta IRC kanaletan. Hau GNOME mahaigaineko 
+      ingurunearen zati guztiak itzultzeari buruzko gidaliburu bat idazteko saio ahula da, 
+      eta sinits iezadazu, kate itzulgarriak dituzten ondo ezkutatutako hainbat fitxategi 
+      daude.
+    </PARA></ABSTRACT><TITLE
+>GNOME mahagaineko ingurunearen itzulpena</TITLE></ARTHEADER><SECT1
+ID="INTRODUCTION"
+><TITLE
+>Sarrera</TITLE><PARA
+>    Itzultzean garrantzitsuena zer denari buruz iritzi desberdinak daude. Batzuen 
+    iritziz dokumentuak dira garrantzitsuenak, beste batzuen iritziz, berriz, interfazea, 
+    menuak eta elkarrizketa-koadroak. Hori itzultzaileak berak erabaki behar du bere 
+    kabuz. Hemen, horiek denak aipatuko ditut. Nire ustez, biak dira garrantzitsuak, 
+    baina menuak eta elkarrizketa-koadroak topatzen ditu lehenbizi erabiltzaileak eta 
+    orduan jabetzen da aplikazioak benetan bere hizkuntzan erabilgarri daudela. 
+    Noski, ezerk ez dizu eragozten bi aldeak batera itzultzea, denbora eta baliabideak 
+    salbu.
+  </PARA><PARA
+>    Beste hainbat dokumentuk informazio baliagarria dute itzultzaileentzat, adibidez, 
+    gettext dokumentazioa eta sareari buruzko hainbat gida. Begiratu <ULINK
+URL="http://www.gnome.org/gdp/doctable/doctable_list.php3?CategoryID=4"
+TYPE="http"
+>GNOME dokumentazio-proiektuaren dokumentu-taulari</ULINK> beste 
+    baliabideetarako erakusle batzuk ikusteko. gettext dokumentazioak ere azaltzen 
+    du nola konfiguratu emac-ak po moduan .po fitxategiekin funtzionatzeko. Probatzea 
+    gomendatzen dizut. Lana asko bizkortzen duela ohartu naiz.
+  </PARA></SECT1><SECT1
+><TITLE
+>po fitxategiak</TITLE><PARA
+>    Erabiltzaileak ikus ditzaketen testu-kateak programatzaileek programetan sartzen 
+    dituztenean, _() edo N_() artean sartzen dituzte. Kateak iturburu-kodetik atera 
+    eta mezu-katalogoan jartzeko gettext-ek erabiltzen dituen makroak dira. Programen 
+    iturburu-kodearen goiko direktorioko po/ izeneko azpidirektorio batean daude, 
+    adibidez, <FILENAME
+MOREINFO="NONE"
+>gnome-libs.pot</FILENAME>-en. Itzulpen berri bat hastean 
+    lehenbizi egin beharreko gauza fitxategi hori XX.po-n kopiatzea da; XX zure 
+    hizkuntz kodea da (ISO 639an, hizkuntz kodeak dituen arauan, zehaztua). Hori egin 
+    eta gero, fitxategiaren uneko edukia itzultzen has zaitezke.
+  </PARA><PARA
+>    Fitxategiak forma honetako kateak ditu: 
+    <PROGRAMLISTING
+FORMAT="LINESPECIFIC"
+>      #: panel/panel_config.c:1050 
+      msgid "Color to use:" 
+      msgstr "Farge som skal brukes:"
+    </PROGRAMLISTING>
+  </PARA><PARA
+>    Lehen lerroak katea zein iturburu-fitxategikoa den esaten du. 
+    panel/panel_config.c 1050 lerroan. Hurrengoa .c fitxategiko jatorrizko katea da,
+    eta azkena itzulpena da. Azken lerroa hutsik egongo da .pot fitxategia XX.po-n 
+    kopiatzean.
+  </PARA><PARA
+>    Itzulpena eraikitze-prozesuan sartzeko, hizkuntz kodea 
+    <FILENAME
+MOREINFO="NONE"
+>configure.in</FILENAME>-en gehitu behar duzu ALL_LINGUAS ingurune-aldagaian. 
+    Irakurgarritasuna hobetzeko, ordena alfabetikoan gehitzea gomendatzen dizut.
+  </PARA></SECT1><SECT1
+ID="MENUS"
+><TITLE
+>Menuak eta .desktop fitxategiak</TITLE><PARA
+>      Menuko aplikazio baten izena .desktop luzapena duen fitxategian definitzen da. 
+      Fitxategiak formatu hau du: 
+      <PROGRAMLISTING
+FORMAT="LINESPECIFIC"
+>        [Desktop Entry]
+	Name=Dia
+	Name[ja]=Dia
+	Name[no]=Dia
+	Name[pl]=Dia 
+        Name[fr]=Dia
+	Comment=A Diagram Editor
+        Comment[no]=Diagramredigering 
+	Comment[pl]=Edytor diagramów w Gtk+
+	Comment[fr]=Un éditeur de diagrammes
+	Exec=dia 
+    	Icon=dia_gnome_icon.png 
+	Terminal=0 
+	Type=Application
+      </PROGRAMLISTING> 
+      Lehen lerroa aplikazioaren izena da ingelesez eta hurrengo lerroek itzulpen
+      desberdinak dituzte; hizkuntza [XX](e)k zehazten du eta XX hizkuntz kodea da. 
+      Irunzkin-lerroa antzekoa da, eta lerro horretako testua agertu egiten da 
+      paneleko programarentzat abiarazlea gehitzen baduzu eta erakuslea ikonoaren 
+      gainean jartzen baduzu. Programaren botoi baterako argibide baten antzera.
+    </PARA><PARA
+>      Menuen izenak .directory luzapeneko fitxategitan zehazten dira. Gnome-core 
+      moduluan egoten dira, direktorioen mahaigaineko esteketan. Hor Unix makinako 
+      aplikazio estandar batzuetarako -emac-ak, netscap, rxvt, etab. - .desktop 
+      fitxategiak ere topatuko dituzu. Formatu hori .directory fitxategientzako
+      eta .desktop fitxategientzako berdina da.
+    </PARA></SECT1><SECT1
+ID="SOUND"
+><TITLE
+>soundlist-ak</TITLE><PARA
+>      Gertaeretarako soinuak dituzten aplikazio guztietan dago .soundlist luzapena duen
+      fitxategi bat. Fitxategi horrek soinuen eta dagozkien gertaeren azalpenak ditu. 
+      Fitxategiak itxura hau du: 
+    <PROGRAMLISTING
+FORMAT="LINESPECIFIC"
+>      [__section_info__] 
+      description=Panel 
+      description[ca]=Plafó
+      description[es]=Panel 
+      description[et]=Paneel 
+      description[fr]=Panneau de GNOME 
+      description[gl]=Panel 
+      description[ko]=ÆÐ³Î
+      description[no]=Panel 
+      description[pl]=Panel 
+      description[pt]=Painel
+      description[wa]=Scriftôr
+      
+      [open] 
+      file=panel/slide.wav 
+      description=Expand 
+      description[ca]=Expandir 
+      description[es]=Expandir 
+      description[et]=Ilmumine 
+      description[fr]=Expansion 
+      description[gl]=Expandir
+      description[ko]=³ÐÈ÷±â
+      description[no]=Utvid
+    </PROGRAMLISTING> 
+    Formatua .desktop eta .directory fitxategien antzekoa da. Azalpenak kontrol-zentroan 
+    egoten dira (gnomecc). [__section_info__] atalak esaten digu soinu-gertaerak erabiltzen 
+    dituen programaren izena dela hurrengoa. [open] atalak paneleko (oinaren menuan klik 
+    eginez)[open] ekintzarako soinu-gertaera du, eta gainerakoa .desktop fitxategien 
+    antzekoa da.
+  </PARA></SECT1><SECT1
+ID="MIME"
+><TITLE
+>Mime motak</TITLE><PARA
+>    Mime motako ekintzen azalpenak .mime luzapeneko fitxategietan gordetzen dira. 
+    Fitxategi horiek aplikazio batzuetan daude eta gnome-libs/gnome-data direktorioan. 
+    Hau da formatua: 
+    <EXAMPLE
+><TITLE
+>Lagin-gakoak, lokalizatzeko laguntzarekin</TITLE><PROGRAMLISTING
+FORMAT="LINESPECIFIC"
+>        text/plain: 
+	  open=command %f 
+	  open.tag1.Do this and that=this-and-that %f 
+	  [es]open.tag1.Hacer esto y aquello=this and that %f 
+	  open.tag2.Gzip it=gzip %f 
+	  [es]open.tag2.Comprimir con gzip=gzip %f 
+	  open.tag3.Mail it=mail %{Recipient} &lt; %f 
+	  [es]open.tag3.Enviarlo por correo=mail %{Recipient} &lt; %f 
+	  open.tag4.Example=example %f
+       </PROGRAMLISTING></EXAMPLE></PARA></SECT1><SECT1
+ID="OTHER"
+><TITLE
+>Beste aplikazioetako fitxategi interesgarri batzuk</TITLE><PARA
+>    Aplikazio batzuek kate itzulgarriak dituzte beste fitxategietan ezkutatuta. Horietako 
+    bat Dia diagrama-editorea da. Diagrama-objektuen azalpenak dituzten kateak 
+    dituzte .sheet luzapeneko fitxategietan. XML formatua dute eta itxura hau dute:
+  </PARA><EXAMPLE
+><TITLE
+>Kate itzulgarriak</TITLE><PROGRAMLISTING
+FORMAT="LINESPECIFIC"
+>     &lt;sheet xmlns="http://www.lysator.liu.se/~alla/dia/dia-sheet-ns"&gt;
+       &lt;name&gt;Chronogram&lt;/name&gt;
+       &lt;description xml:lang="fr"&gt;
+         Objets pour l'écriture de chronogrammes.
+       &lt;/description&gt; 
+       &lt;description&gt;
+         Objects to design chronogram charts
+       &lt;/description&gt; 
+       &lt;contents&gt;
+         &lt;object name="chronogram - reference"&gt;
+            &lt;description xml:lang="fr"&gt;Une échelle de temps&lt;/description&gt; 
+            &lt;description&gt;A time scale&lt;/description&gt;
+         &lt;/object&gt;
+         &lt;object name="chronogram - line"&gt;
+            &lt;description xml:lang="fr"&gt;Une ligne de données&lt;/description&gt; 
+            &lt;description&gt;A data line&lt;/description&gt;
+         &lt;/object&gt;
+       &lt;/contents&gt;
+     &lt;/sheet&gt;
+      </PROGRAMLISTING></EXAMPLE><PARA
+>     Hemen ez dago alde handirik, jarraitu lehendik dagoen itzulpenaren arrastoa 
+     adibidean bezala, zure hizkuntz kodea erabiliz xml:lang=""en.
+   </PARA><PARA
+>     Panelaren 1.2 bertsioan erabilitako beste fitxategi bat 
+     panel.hints da. Fitxategi honek iradokizun baliagarriak ditu eta panela abiaraztean 
+     bistaratzen dira. Honek ere XML formatua du. Adibidez: 
+     <PROGRAMLISTING
+FORMAT="LINESPECIFIC"
+> 
+       &lt;GnomeHints&gt;
+         &lt;Hint&gt;
+	   &lt;Content&gt;Right click on the panel to get a menu&lt;/Content&gt;
+	 &lt;/Hint&gt; 
+         &lt;Hint&gt;
+	   &lt;Content&gt;To add an applet, right click on a panel then choose 
+	   'Applets', then pick an applet from the list&lt;/Content&gt;
+	 &lt;/Hint&gt; 
+         &lt;Hint&gt;
+	   &lt;Content&gt;To manipulate a panel applet, right click anywhere over
+	   the applet&lt;/Content&gt; 
+           &lt;Content xml:lang="cs"&gt;Manipulaci s aplety je mo¾no dosáhnout
+            pravým tlaèítkem my¹i&lt;/Content&gt;
+	 &lt;/Hint&gt;
+     </PROGRAMLISTING>
+   </PARA><PARA
+>     Lehen iradokizuna ez da itzuli eta bigarrena bai. Hau aurreko adibidearen 
+     oso antzekoa da. Gainerakoa irakurlearentzat ariketa gisa uzten dut. :)
+   </PARA><PARA
+>     Hori da guztia. Dokumentu hau norbaitentzat baliagarria izatea espero dut, 
+     eta laster berrikusiko dela hitz ematen dut; saiatuko naiz aurrerantzean ere 
+     eguneratuta edukitzen. Hurrena arte eta eskerrik asko zure denboragatik. Lor 
+     dezagun GNOME mahaigain eskuragarriena izatea, hizkuntzari dagokionez, behintzat.
+   </PARA></SECT1></ARTICLE>
