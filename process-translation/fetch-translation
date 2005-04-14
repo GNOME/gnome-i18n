@@ -1,0 +1,94 @@
+#!/bin/bash
+
+draw_progressbar()
+{
+	echo ""
+	count=0
+	echo "Downloading $version, group: $group"
+	echo -n "["
+	for url in $urls; do
+		let count=count+1
+		echo -n "."
+	done
+	echo -n "]"
+	i=0
+	while [ $i -le $count ]; do
+		let i=i+1
+		echo -n -e "\b"
+	done
+}
+
+#The location of the statuspages. They NEED a trailing slash
+sourcelocation="http://l10n-status.gnome.org/"
+defaultlanguage="nl"
+echo "Fetchit 1.2"
+echo ""
+echo "Usage: $0 [language]"
+echo  ""
+echo "Downloading translations from gnome.org"
+
+#Check language parameter
+if [ -z "$1" ]
+then
+	language=$defaultlanguage
+	echo "No language specified, using: $defaultlanguage."
+else
+	language=$1
+fi
+
+#Check the source
+if ! lynx -source $sourcelocation \
+| grep "index.html\">gnome" > /tmp/translation-status.tmp; then 
+	#Something went wrong...bail out
+	echo "Statuspage-location not available"
+	echo $sourcelocation
+	exit 1
+fi
+
+#We now have a loop for every gnomeversion which is in the statuspage
+for version in `cat /tmp/translation-status.tmp | sed 's/.*index.html\">\(.*\)<\/a>.*/\1/' | sort -r`; do
+	if ! lynx -source $sourcelocation$version/$language/index.html \
+	  | grep "class=\"package\"" | grep -A 10 "<td><font" \
+	  | sed 's/<.*\">//' |sed 's/<.*>//' > /tmp/translation-status.$version.tmp; then
+	    echo "Couldn't find index-files for $version"
+		exit 1
+	fi
+	file="/tmp/packages.$version.text"
+	# echo -n "packages.$version.text: "
+	date -u -R > $file
+	echo $sourcelocation >> $file
+	# Now, get the spaces in front of the lines cleaned out.
+	mv /tmp/translation-status.$version.tmp /tmp/translation-status.$version.tmp.old
+	for x in `cat /tmp/translation-status.$version.tmp.old`; do 
+		echo $x >> /tmp/translation-status.$version.tmp
+	done
+	rm /tmp/translation-status.$version.tmp.old
+	# Next part: We start another loop for each group
+	for group in `cat /tmp/translation-status.$version.tmp`; do 
+	if echo $group | grep [a-z]  >/dev/null; then
+		urls=`lynx -source $sourcelocation$version/$language/$group/index.html \
+		  | grep -A 2 "class=\"package\"" | grep -A 10 "<td><font" \
+		  | sed 's/href=\"..\/..\//href=\"/' \
+		  | sed 's/.*href=\"\(.*\)\">\(.*\)<\/a.*/\1\
+\2/' \
+		  | sed 's/<.*\">//' |sed 's/<.*>//' | grep "PO/" | sed 's/\.po[^t].*/\.po/' \
+		  | sed 's/.pot.*/.pot/'`
+	
+		draw_progressbar
+	
+		for url in $urls; do
+			complete_url=$sourcelocation$version/$url
+			if wget -q -nc $complete_url
+			then
+				echo -n "#"
+			else
+				echo -n "e"
+			fi
+		done
+	fi
+	done
+done
+rm /tmp/*.tmp
+rm /tmp/packages.*.text
+exit 1
+
