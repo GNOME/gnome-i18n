@@ -51,7 +51,7 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 
 
 <p>GNOME-NL is niet puur een organisatie, met regels en structuur. Het is
-project, opgezet en onderhouden door mensen. Het zijn de mensen achter de
+een project, opgezet en onderhouden door mensen. Het zijn de mensen achter de
 naam, die het project tot een succes maken.</p>
 <p>Zoals bij meeste OSS-projecten, is ook GNOME-NL zeer open. Deze mensen
 delen via dit venster hun dagenlijkse beslommeringen, zij het GNOME-gerelateerd,
@@ -73,9 +73,10 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
 
 
-<div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=18">Goede daad voor vandaag</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
+<a href="http://vanschouwen.system-x.org/?p=18">Goede daad voor vandaag</a></div>
+<div class="blogstory">
 <p>Onderteken ook de petitie voor eerlijke handel:<br />
 <a href="http://www.maketradefair.com/en/index.php?file=dumped.htm&#038;cat=1&#038;subcat=7&#038;select=2"><img src="http://www.novib.nl/media/maketradefair/downloads/fullban_468x60_3A_lips.gif" alt="Join the big noise" /></a></p></div>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://vanschouwen.system-x.org/?p=18">April 14, 2005 03:30 PM</a></em>
@@ -92,9 +93,10 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
 
 
-<div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=17">Packaging foo</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
+<a href="http://vanschouwen.system-x.org/?p=17">Packaging foo</a></div>
+<div class="blogstory">
 <p>Now listed on <a href="http://nl.gnome.org/planet.php">Planet GNOME-nl</a>, now with extra cool layout, woot! No hackergotchi&#8217;s yet, though, but I think <a href="http://www.stratos-online.nl/">Erik</a>  deserves the credits for creating one for me:<br />
 <img src="http://vanschouwen.system-x.org/pictures/hackergotchi-reinout.png" alt="Reinouts' head" /></p>
 	<p>Furthermore I&#8217;m proud to announce the first in the line of &#8216;rvs&#8217; RPMs for <a href="http://www.mandriva.com/products/limited-edition">Mandriva Linux 2005</a>: I&#8217;ve packaged <a href="http://www.dsl.uow.edu.au/~harvey/code_epiphany.shtml">Epiphany 1.6.2 with dynamic hierarchical bookmarks menu</a>. If you want to try it, you&#8217;ll need to set up the <a href="http://gpwgnome.osknowledge.org/">gpwgnome</a> repository first. Find the RPM <a href="http://www.cs.vu.nl/~reinout/RPMS/">here</a>, SRPM <a href="http://www.cs.vu.nl/~reinout/SRPMS/">here</a>.
@@ -129,7 +131,8 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 <p class="blogname"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
-<div class="blogtitle"><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/13/crashen-uithuilen-of-uithalen/">Crashen? Uithuilen of uithalen…</a></div>
+<div class="blogtitle">
+<a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/13/crashen-uithuilen-of-uithalen/">Crashen? Uithuilen of uithalen…</a></div>
 <div class="blogstory">
 <blockquote>De meest agressieve reacties op dataverlies werden gevonden in Engeland, waar 33 procent van de geïnterviewde werknemers tegen hun computer schreeuwt wanneer de computer crasht. In Nederland is dat 31 procent, terwijl 23 procent in paniek raakt of in huilen uitbarst. Amerikanen accepteren dataverlies wat gemakkelijker - 38 procent van de Amerikaanse computergebruikers zucht slechts diep wanneer hun computer storingen begint te vertonen.</blockquote>
 
@@ -149,9 +152,10 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
 
 
-<div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
+<a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></div>
+<div class="blogstory">
 <p>Had a nice gettogether with <a href="http://geeklog.eyesopened.nl/">Michiel</a> and <a href="http://www.advogato.org/person/rbultje/">Ronald</a> today, to discuss a magazine article about GNOME we&#8217;re going to write. I baked a quiche with broccoli, cashew nuts and blue cheese for dinner, didn&#8217;t even get one complaint about the <a href="http://vegatopia.com/">absence of meat</a> <img src="http://vanschouwen.system-x.org/wp-images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> </p>
 	<p>Last Friday I did an introductory presentation about GNOME for small entrepreneurs on the isle of <a href="http://www.texel.nl/">Texel</a>, on invitation of Alex de Haan from <a href="http://www.stichtingsoftwareconsulent.nl/html/agenda.html">Stichting De Softwareconsulent</a>. Pieter Valentijn (Dutch <a href="http://www.turbocash.nl/">TurboCASH</a> developer) was kind enough to give me a ride. Picture I made of the audience:<br />
 <img src="http://vanschouwen.system-x.org/pictures/mkb publiek" alt="The audience" /></p>
@@ -169,9 +173,10 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
-<div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=15">GNOME-nl PR</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
+<a href="http://vanschouwen.system-x.org/?p=15">GNOME-nl PR</a></div>
+<div class="blogstory">
 <p>Past Saturday I did a talk for the <a href="http://62.58.32.90/bijeenkomsten_2005">Dutch Linux User Group</a> about translating free software (slides <a href="http://www.cs.vu.nl/~reinout/presentatie%202%20april%2005.pdf">here</a>).<br />
 In the process I did a little PR for the GNOME-nl initiative as well. As a proof of our existance we now even have our own <a href="http://nl.gnome.org/planet.php">Planet<br />
 </a> - unfortunately it barfs on the nice unicode characters elsewhere in my blog, so I&#8217;m not listed yet&#8230; (arrrgh!)</p>
@@ -209,7 +214,8 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 <p class="blogname"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
-<div class="blogtitle"><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/12/ubuntu-in-69-verbeterpunten/">Ubuntu in 69 verbeterpunten</a></div>
+<div class="blogtitle">
+<a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/12/ubuntu-in-69-verbeterpunten/">Ubuntu in 69 verbeterpunten</a></div>
 <div class="blogstory">
 <p>Aangezien ik tegenwoordig ook op <a href="http://nl.gnome.org/planet.php">Planet GNOME-NL</a> sta voel ik me gelijk verplicht wat meer over computers te schrijven (ook al komen de meesten hier door te zoeken op "<a href="http://www.klijmij.net/~michel/stats/#searchq">naakte vrouwen</a>"&#8230;hallo viezeriken!). Dus bij deze <img src="http://www.klijmij.net/~michel/wp-images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> </p>
 
@@ -229,9 +235,10 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 <p class="blogname"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
 
 
-<div class="blogtitle"><a href="http://www.advogato.org/person/rbultje/diary.html?start=98">12 Apr 2005</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/ronald.png" alt="Ronald S. Bultje">
+<a href="http://www.advogato.org/person/rbultje/diary.html?start=98">12 Apr 2005</a></div>
+<div class="blogstory">
 <b>Dutch Gnomeys</b><br />
 The people ate GNOME-NL have set up a private, unique and special <a href="http://nl.gnome.org/planet.php">Planet Gnome-NL</a> which features your all-beloved GNOME hackers, but then only the special dutch flavour. Also, we're currently working on an article in a national news magazine, which looks promising. The best of all this is that we're doing cool stuff and are having fun at that. Yay!
 <p>
@@ -273,7 +280,8 @@ Huisbaas (tevens baas van internetafdeleing van <a href="http://www.elion.ee/">E
 <p class="blogname"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
 
 
-<div class="blogtitle"><a href="http://www.advogato.org/person/adrighem/diary.html?start=5">11 Apr 2005</a></div>
+<div class="blogtitle">
+<a href="http://www.advogato.org/person/adrighem/diary.html?start=5">11 Apr 2005</a></div>
 <div class="blogstory">
 <p><b>GNOME-NL</b><p>
 We gaan de goede kant op. Er zijn enkele goede ontwepen voor naamkaartjes. Gisteren hebben Reinout, Ronald en Michiel gewerkt aan een stuk voor in Linux Magazine. Er is een rekening besteld om zo de financiÃ«le kant wat beter te organiseren. De toekomst ziet er zonnig uit.<p>
@@ -309,7 +317,8 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <p class="blogname"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
-<div class="blogtitle"><a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/ubuntu-hoary-hedgehog/">Ubuntu “Hoary Hedgehog”</a></div>
+<div class="blogtitle">
+<a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/08/ubuntu-hoary-hedgehog/">Ubuntu “Hoary Hedgehog”</a></div>
 <div class="blogstory">
 <p>De nieuwste versie van <a href="http://www.ubuntulinux.org/">Ubuntu Linux</a> is uit! Nadat de eerste versie, <em>Warty Warthog</em>, de nieuwe distributie omhoog deed schieten in de ranglijst van <a href="http://www.distrowatch.com/">Distrowatch</a> is dit de tweede release.</p>
 
@@ -328,7 +337,8 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <p class="blogname"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
 
 
-<div class="blogtitle"><a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></div>
+<div class="blogtitle">
+<a href="http://www.advogato.org/person/adrighem/diary.html?start=4">6 Apr 2005</a></div>
 <div class="blogstory">
 <p>Last saturday we thought about setting up some kind of planet GNOME-NL. And now, (drumroll please), here it is:<p>
 <a href="http://nl.gnome.org/planet.php">http://nl.gnome.org/planet.php</a></div>
@@ -346,7 +356,8 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <p class="blogname"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
 
 
-<div class="blogtitle"><a href="http://geeklog.eyesopened.nl/archives/2005/04/05/desktop-places-nautilus/">Desktop Places, Nautilus</a></div>
+<div class="blogtitle">
+<a href="http://geeklog.eyesopened.nl/archives/2005/04/05/desktop-places-nautilus/">Desktop Places, Nautilus</a></div>
 <div class="blogstory">
 <p><p>Finally my exams week is over, good results so I look forward to the end of this college year.</p></p>
 
@@ -374,7 +385,8 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <p class="blogname"><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a></p>
 
 
-<div class="blogtitle"><a href="http://www.livejournal.com/users/inverted_tree/39587.html">gnome-nl gnome 2.10 release party photos</a></div>
+<div class="blogtitle">
+<a href="http://www.livejournal.com/users/inverted_tree/39587.html">gnome-nl gnome 2.10 release party photos</a></div>
 <div class="blogstory">
 OOPS! Being the irregular blogger I am, I forgot to post some photos from the gnome-nl gnome 2.10 release party. I think most people there agreed that we should do something like that more often, and I got told that I promised to try to organise a "pub-evening" (I would use 'borrel' in Dutch, dunno what to use in English) each month. Since I am busy I am hopelessly failing, but it is going to happen someday!<br /><br />Ok so here are some photos:<br /><a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/tux-na-werk.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_tux-na-werk.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-feescht.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-feescht.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-feescht-2.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-feescht-2.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-mensen-blij.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-mensen-blij.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/nog-meer-gnome-nl-mensen-blij.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_nog-meer-gnome-nl-mensen-blij.jpg" border="0" /><br /></a><br /><br />Oh, another thing I forgot. It looks like I will be at GUADEC this year (finally); not 100% sure yet, but I am already looking forward to it.</div>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://www.livejournal.com/users/inverted_tree/39587.html">April 04, 2005 09:42 PM</a></em>
@@ -390,9 +402,10 @@ OOPS! Being the irregular blogger I am, I forgot to post some photos from the gn
 <p class="blogname"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
 
 
-<div class="blogtitle"><a href="http://uwog.net/blog/?p=41">*Ahum*</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/uwog.png" alt="Marc Maurer">
+<a href="http://uwog.net/blog/?p=41">*Ahum*</a></div>
+<div class="blogstory">
 <p><b>AbiWord</b><br />
 Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/release-notes/2.2.7.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.7.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p></div>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://uwog.net/blog/?p=41">April 04, 2005 08:59 PM</a></em>
@@ -407,9 +420,10 @@ Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/r
 
 
 
-<div class="blogtitle"><a href="http://uwog.net/blog/?p=40">AbiWord 2.2.6 and Finland Fun!</a></div>
-<div class="blogstory">
+<div class="blogtitle">
 <img class="floatright" src="images/uwog.png" alt="Marc Maurer">
+<a href="http://uwog.net/blog/?p=40">AbiWord 2.2.6 and Finland Fun!</a></div>
+<div class="blogstory">
 <p><b>AbiWord</b><br />
 Just released v2.2.6, go get it! [ <a href="http://www.abisource.com/release-notes/2.2.6.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.6.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p>
 	<p><b>Finland Trip</b><br />
@@ -439,7 +453,8 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 <p class="blogname"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
 
 
-<div class="blogtitle"><a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">Buzzzz</a></div>
+<div class="blogtitle">
+<a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">Buzzzz</a></div>
 <div class="blogstory">
 <em>"Wij zijn 4 psychologiestudenten 2e kan en wij hebben uw hulp nodig: Voor ons psychologisch onderzoek zoeken wij 21 medewerkers uit de informatica-riching."</em><br />
 <br />
@@ -461,7 +476,8 @@ Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb in
 <p class="blogname"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
 
 
-<div class="blogtitle"><a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">1 jaar</a></div>
+<div class="blogtitle">
+<a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">1 jaar</a></div>
 <div class="blogstory">
 Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Voornemens voor het volgende jaar:<br />
 <br />
