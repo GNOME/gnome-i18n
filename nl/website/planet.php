@@ -71,6 +71,7 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=18">Goede daad voor vandaag</a></div>
@@ -89,6 +90,7 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=17">Packaging foo</a></div>
@@ -145,6 +147,7 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></div>
@@ -223,6 +226,7 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 <p class="blogname"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
+<img class="floatright" src="images/ronald.png" alt="Ronald S. Bultje">
 
 
 <div class="blogtitle"><a href="http://www.advogato.org/person/rbultje/diary.html?start=98">12 Apr 2005</a></div>
@@ -383,6 +387,7 @@ OOPS! Being the irregular blogger I am, I forgot to post some photos from the gn
 
 
 <p class="blogname"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
+<img class="floatright" src="images/uwog.png" alt="Marc Maurer">
 
 
 <div class="blogtitle"><a href="http://uwog.net/blog/?p=41">*Ahum*</a></div>
