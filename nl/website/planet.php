@@ -30,6 +30,7 @@ Gebruik daarvoor deze pagina: <a href="data/rss20.xml">RSS 2.0</a>.
 </p>
 <center><h3>Leden</h3></center>
 <ul>
+<li><a href="http://www.stratos-online.nl" title="StratoS Online">Erik Snoeijs</a> <a href="">(rss)</a></li>
 <li><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a> <a href="">(rss)</a></li>
 <li><a href="http://www.livejournal.com/users/inverted_tree/" title="Kris' journal">Kristian Rietveld</a> <a href="">(rss)</a></li>
 <li><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a> <a href="">(rss)</a></li>
