@@ -71,11 +71,11 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
-<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=18">Goede daad voor vandaag</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 <p>Onderteken ook de petitie voor eerlijke handel:<br />
 <a href="http://www.maketradefair.com/en/index.php?file=dumped.htm&#038;cat=1&#038;subcat=7&#038;select=2"><img src="http://www.novib.nl/media/maketradefair/downloads/fullban_468x60_3A_lips.gif" alt="Join the big noise" /></a></p></div>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://vanschouwen.system-x.org/?p=18">April 14, 2005 03:30 PM</a></em>
@@ -90,11 +90,11 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
-<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=17">Packaging foo</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 <p>Now listed on <a href="http://nl.gnome.org/planet.php">Planet GNOME-nl</a>, now with extra cool layout, woot! No hackergotchi&#8217;s yet, though, but I think <a href="http://www.stratos-online.nl/">Erik</a>  deserves the credits for creating one for me:<br />
 <img src="http://vanschouwen.system-x.org/pictures/hackergotchi-reinout.png" alt="Reinouts' head" /></p>
 	<p>Furthermore I&#8217;m proud to announce the first in the line of &#8216;rvs&#8217; RPMs for <a href="http://www.mandriva.com/products/limited-edition">Mandriva Linux 2005</a>: I&#8217;ve packaged <a href="http://www.dsl.uow.edu.au/~harvey/code_epiphany.shtml">Epiphany 1.6.2 with dynamic hierarchical bookmarks menu</a>. If you want to try it, you&#8217;ll need to set up the <a href="http://gpwgnome.osknowledge.org/">gpwgnome</a> repository first. Find the RPM <a href="http://www.cs.vu.nl/~reinout/RPMS/">here</a>, SRPM <a href="http://www.cs.vu.nl/~reinout/SRPMS/">here</a>.
@@ -147,11 +147,11 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <p class="blogname"><a href="http://vanschouwen.system-x.org" title="Reinouts' nerdy notes">Reinout van Schouwen</a></p>
-<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=16">GNOME-nl PR (2)</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 <p>Had a nice gettogether with <a href="http://geeklog.eyesopened.nl/">Michiel</a> and <a href="http://www.advogato.org/person/rbultje/">Ronald</a> today, to discuss a magazine article about GNOME we&#8217;re going to write. I baked a quiche with broccoli, cashew nuts and blue cheese for dinner, didn&#8217;t even get one complaint about the <a href="http://vegatopia.com/">absence of meat</a> <img src="http://vanschouwen.system-x.org/wp-images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> </p>
 	<p>Last Friday I did an introductory presentation about GNOME for small entrepreneurs on the isle of <a href="http://www.texel.nl/">Texel</a>, on invitation of Alex de Haan from <a href="http://www.stichtingsoftwareconsulent.nl/html/agenda.html">Stichting De Softwareconsulent</a>. Pieter Valentijn (Dutch <a href="http://www.turbocash.nl/">TurboCASH</a> developer) was kind enough to give me a ride. Picture I made of the audience:<br />
 <img src="http://vanschouwen.system-x.org/pictures/mkb publiek" alt="The audience" /></p>
@@ -171,6 +171,7 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 <div class="blogtitle"><a href="http://vanschouwen.system-x.org/?p=15">GNOME-nl PR</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/reinout.png" alt="Reinout van Schouwen">
 <p>Past Saturday I did a talk for the <a href="http://62.58.32.90/bijeenkomsten_2005">Dutch Linux User Group</a> about translating free software (slides <a href="http://www.cs.vu.nl/~reinout/presentatie%202%20april%2005.pdf">here</a>).<br />
 In the process I did a little PR for the GNOME-nl initiative as well. As a proof of our existance we now even have our own <a href="http://nl.gnome.org/planet.php">Planet<br />
 </a> - unfortunately it barfs on the nice unicode characters elsewhere in my blog, so I&#8217;m not listed yet&#8230; (arrrgh!)</p>
@@ -226,11 +227,11 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 <p class="blogname"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-<img class="floatright" src="images/ronald.png" alt="Ronald S. Bultje">
 
 
 <div class="blogtitle"><a href="http://www.advogato.org/person/rbultje/diary.html?start=98">12 Apr 2005</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/ronald.png" alt="Ronald S. Bultje">
 <b>Dutch Gnomeys</b><br />
 The people ate GNOME-NL have set up a private, unique and special <a href="http://nl.gnome.org/planet.php">Planet Gnome-NL</a> which features your all-beloved GNOME hackers, but then only the special dutch flavour. Also, we're currently working on an article in a national news magazine, which looks promising. The best of all this is that we're doing cool stuff and are having fun at that. Yay!
 <p>
@@ -387,11 +388,11 @@ OOPS! Being the irregular blogger I am, I forgot to post some photos from the gn
 
 
 <p class="blogname"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-<img class="floatright" src="images/uwog.png" alt="Marc Maurer">
 
 
 <div class="blogtitle"><a href="http://uwog.net/blog/?p=41">*Ahum*</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/uwog.png" alt="Marc Maurer">
 <p><b>AbiWord</b><br />
 Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/release-notes/2.2.7.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.7.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p></div>
 <em><a style="font-style: italic; font-size: x-small;" "href="http://uwog.net/blog/?p=41">April 04, 2005 08:59 PM</a></em>
@@ -408,6 +409,7 @@ Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/r
 
 <div class="blogtitle"><a href="http://uwog.net/blog/?p=40">AbiWord 2.2.6 and Finland Fun!</a></div>
 <div class="blogstory">
+<img class="floatright" src="images/uwog.png" alt="Marc Maurer">
 <p><b>AbiWord</b><br />
 Just released v2.2.6, go get it! [ <a href="http://www.abisource.com/release-notes/2.2.6.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.6.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p>
 	<p><b>Finland Trip</b><br />
