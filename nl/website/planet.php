@@ -75,6 +75,7 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <div class="blogtitle">
+<img class="floatright" src="images/pvanhoof.png" alt="Philip van Hoof face">
 <a href="http://pvanhoof.be/blog/index.php/2005/04/14/20-a-generic-desktop-application-configuration-management-system">A generic desktop application configuration management system</a></div>
 <div class="blogstory">
 <p>
@@ -254,6 +255,7 @@ In the process I did a little PR for the GNOME-nl initiative as well. As a proof
 
 
 <div class="blogtitle">
+<img class="floatright" src="images/pvanhoof.png" alt="Philip van Hoof face">
 <a href="http://pvanhoof.be/blog/index.php/2005/04/13/19-matthew-thomas-first-48-hours-enduring-ubuntu-hoary">Matthew Thomas first 48 hours enduring Ubuntu Hoary</a></div>
 <div class="blogstory">
 <p>Make sure you read <a href="http://mpt.net.nz/archive/2005/04/11/ubuntu" hreflang="en">this</a>.</p></div>
