@@ -72,6 +72,24 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<p class="blogname"><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a></p>
+
+
+<div class="blogstory">
+<p><img src="http://www.jabber.ee/~jorn/blog/wp-content/luise.png" class="alignright" /><br />
+Vrijdag kreeg ik bezoek. Tegen de middag kwamen mijn twee voormalige huisgenoten uit Tartu op bezoek. Op dat moment belde ook Thomas, een mede-Nederlander hier in Estland, dat hij in Tallinn was, en dat we iets zouden kunnen gaan drinken. Zoals de gemiddelde zuigeling al had kunnen zien aankomen, had ik uiteindelijk drie gasten. We dronken wat, en praatten wat bij. Helaas was er voor mij nog werk aan de winkel, en na een uur verwijderde het bezoek zich weer en verspreidde zich over de stad. Rond etenstijd kwam iedereen weer terug, om zich te goed te doen aan de taco&#8217;s die ik net tevoren tevoren bereid had. Na dit festijn zwalkten wij dieper het centrum in, om in <a href="http://www.kloostriait.ee/"><em>Kloostri Ait</em></a> nog een dessert te nuttigen. Thomas&#8217; vriendin, Liina, had zich inmiddels ook bij ons gevoegd. Thomas vertelde een aardig verhaal over twee Finnen waarmij hij ooit een kamer had gedeeld. Deze kwamen een keer per maand met al hun vuile vas en kapotte schoenen naar Estland, om die hier goedkoop de laten wassen en te laten repareren. En om, niet te vergeten, een buitensporige hoeveelheid goedkope alkohol aan te schaffen. We vroegen ons af, of er ook Finnen zouden zijn die in de winter naar Estland zouden gaan om hier goedkoop tientallen diepvriespizza&#8217;s in te slaan (en die vervolgens gewoon in de tuin zouden opstapelen, omdat het toch altijd vriest). Wie weet?</p>
+	<p>Zaterdag is nog niet afgelopen.
+</p></div>
+<em><a style="font-style: italic; font-size: x-small;" href="http://www.jabber.ee/~jorn/blog/?p=6">April 16, 2005 06:10 PM</a></em>
+
+
+
+
+
+
+
+
+
 <p class="blogname"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
 
 
@@ -509,39 +527,6 @@ Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Vo
 <div align="center"><img src="http://weblog.lambda1.be/28-mar-2005.jpg" alt="Creepy" /><br />
 <em>Foto van de dag, aan jullie om te beslissen wat er op staat</em></div></div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://weblog.lambda1.be/85-1-jaar?lang=nl">March 28, 2005 07:52 AM</a></em>
-
-
-
-
-
-<div class="blogdate">March 26, 2005</div>
-
-
-
-
-<p class="blogname"><a href="http://geeklog.eyesopened.nl" title="my geeklog">Michiel Sikkes</a></p>
-
-
-<div class="blogtitle">
-<a href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">Progress dialogs</a></div>
-<div class="blogstory">
-<p><p>It&#8217;s been a while, so here are some updates. I&#8217;m sorry that I broke p.g.o (again). I changed some user permissions of one article in WordPress so it decided to change all articles or something.</p></p>
-
-	<p><p>When I was fixing bug <a href="http://bugzilla.gnome.org/show_bug.cgi?id=159057">#159057</a> I needed to build a progress dialog for emptying the trash. I compared the Nautilus&#8217; ones with the guidelines in the <span class="caps">HIG</span> and came to the conclusion that they aren&#8217;t really following <span class="caps">HIG</span> guidelines so I created my own:</p></p>
-
-	<p><p><img src="http://geeklog.eyesopened.nl/wp-content/images/emptying_trash.png" class="nothing" /></p></p>
-
-	<p><p>It would be a good idea to create a consistent dialog for trashapplet and nautilus, I&#8217;ve opened a bugreport for it <a href="http://bugzilla.gnome.org/show_bug.cgi?id=171694">here</a>.<br />
-The current nautilus progress dialog looks like:</p></p>
-
-	<p><p><img src="http://geeklog.eyesopened.nl/wp-content/images/naut_trash.png" class="nothing" /></p></p>
-
-	<p><p>Been thinking about and discussing some desktop improvements a bit in #gnome-nl. I&#8217;ve come up with <a href="http://geeklog.eyesopened.nl/index.php/ramblings/">a list</a> which I think are nice improvements for the desktop. Most items aren&#8217;t new. I&#8217;ll also try and work on some of them in the neir future.</p></p>
-
-	<p><p>Oh, and to go with the flow:</p></p>
-
-	<p><p><a href="http://geeklog.eyesopened.nl/wp-content/images/screenshot"><img src="http://geeklog.eyesopened.nl/wp-content/images/screenshot_thumb.png" class="center" /></a></p></p></div>
-<em><a style="font-style: italic; font-size: x-small;" href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">March 26, 2005 03:10 AM</a></em>
 </div>
 
 <? gnome_foot() ?>
