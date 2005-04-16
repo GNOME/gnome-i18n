@@ -76,6 +76,24 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 <div class="blogtitle">
+<a href="http://www.advogato.org/person/adrighem/diary.html?start=7">16 Apr 2005</a></div>
+<div class="blogstory">
+<p>Soms bijt traffic-shaping terug. Vandaag was het dus zover. Ik heb reeds enige maanden een downstream van 400K en een upstream van 100K (Chello Classic).<p>
+Helaas stond mijn traffic shaper nog steeds op 300K down en 35K up. Dit had ik ooit geÃ¯nstalleerd om interactief verkeer en ACKs voorrang te geven zodat ik geen last heb van aso-uploads van anderen. Het werkte ideaal, maar zorgde dus de afgelopen maanden netjes voor een up- en downloadbeperking.<p>
+Zojuist dus het script aangepast (was een kwestie van wijzigen van 2 getallen) et voila. Ik ben ook trots lid van het high-upstream team. WHOOHOO! O ja, en nog steeds zit de traffic-shaper erin. Hij werkt nu weer zoals ik hem bedoeld had.</div>
+<em><a style="font-style: italic; font-size: x-small;" href="http://www.advogato.org/person/adrighem/diary.html?start=7">April 16, 2005 11:11 PM</a></em>
+
+
+
+
+
+
+
+
+
+
+
+<div class="blogtitle">
 <a href="http://www.advogato.org/person/adrighem/diary.html?start=6">16 Apr 2005</a></div>
 <div class="blogstory">
 Your Score (long test)
@@ -514,29 +532,6 @@ Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com"
 	<p>Proof of my Finland Trip</center>
 </p></div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://uwog.net/blog/?p=40">April 04, 2005 01:24 AM</a></em>
-
-
-
-
-
-<div class="blogdate">March 30, 2005</div>
-
-
-
-
-<p class="blogname"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
-
-
-<div class="blogtitle">
-<a href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">Buzzzz</a></div>
-<div class="blogstory">
-<em>"Wij zijn 4 psychologiestudenten 2e kan en wij hebben uw hulp nodig: Voor ons psychologisch onderzoek zoeken wij 21 medewerkers uit de informatica-riching."</em><br />
-<br />
-Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb ingeschreven voor electroshocks...<br />
-<br />
-<div align="center"><img src="http://weblog.lambda1.be/31-mar-2005.jpg" alt="marginal" /><br />
-<em>Nu 100% marginaal ongeschoren!</em></div></div>
-<em><a style="font-style: italic; font-size: x-small;" href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">March 30, 2005 08:16 PM</a></em>
 </div>
 
 <? gnome_foot() ?>
