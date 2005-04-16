@@ -67,6 +67,52 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<div class="blogdate">April 16, 2005</div>
+
+
+
+
+<p class="blogname"><a href="http://www.klijmij.net/~michel" title="Publiekelijk tijdverdrijf">Michel Klijmij</a></p>
+
+
+<div class="blogtitle">
+<a href="http://www.klijmij.net/~michel/index.php/archief/2005/04/16/waar-sta-jij/">Waar sta jij?</a></div>
+<div class="blogstory">
+<p>Wel een aardige test: http://www.moral-politics.com/xpolitics.aspx?menu=Home</p>
+
+<blockquote>Your Score<br />
+<br />
+Your scored -2 on the Moral Order axis and 6 on the Moral Rules axis.<br />
+<br />
+Matches<br />
+<br />
+The following items best match your score:<br />
+<br />
+   1. System: Socialism<br />
+   2. Variation: Economic Socialism<br />
+   3. Ideologies: International Socialism<br />
+   4. US Parties: No match.<br />
+   5. Presidents: Jimmy Carter (72.05%)<br />
+   6. 2004 Election Candidates: Ralph Nader (71.70%), John Kerry (64.37%), George W. Bush (42.38%) <br />
+
+Statistics<br />
+<br />
+Of the 70808 people who took the test:<br />
+<br />
+   1. 1.9% had the same score as you.<br />
+   2. 0.2% were above you on the chart.<br />
+   3. 95.4% were below you on the chart.<br />
+   4. 47% were to your right on the chart.<br />
+   5. 29.6% were to your left on the chart.
+</blockquote>
+
+<p>Dat was na de 2-vragentest, binnenkort ga ik eens zitten voor de uitgebreide test.</p></div>
+<em><a style="font-style: italic; font-size: x-small;" href="http://www.klijmij.net/~michel/index.php/archief/2005/04/16/waar-sta-jij/">April 16, 2005 01:00 PM</a></em>
+
+
+
+
+
 <div class="blogdate">April 15, 2005</div>
 
 
@@ -496,28 +542,6 @@ The current nautilus progress dialog looks like:</p></p>
 
 	<p><p><a href="http://geeklog.eyesopened.nl/wp-content/images/screenshot"><img src="http://geeklog.eyesopened.nl/wp-content/images/screenshot_thumb.png" class="center" /></a></p></p></div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://geeklog.eyesopened.nl/archives/2005/03/26/progress-dialogs-screenshot-desktop-improvements/">March 26, 2005 03:10 AM</a></em>
-
-
-
-
-
-<div class="blogdate">March 23, 2005</div>
-
-
-
-
-<p class="blogname"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
-
-
-<div class="blogtitle">
-<img class="floatright" src="images/ronald.png" alt="Ronald S. Bultje face">
-<a href="http://www.advogato.org/person/rbultje/diary.html?start=97">23 Mar 2005</a></div>
-<div class="blogstory">
-<b>Totem Mozilla Embedding</b><br />
-Bastien already said that we had basic javascript functionality people working in the Totem-Mozilla plugin. Today, I finished the second part of the job: a two-way communication protocol. Should ideally use DBUS for that, but we're using something of ourselves right now.
-<p>
-The result of that is that the plugin and the child application (which is spawned on its own for security reasons) interact using some basic IPC command-set. This, in combination with the javascript-functionality, means that I can click images on a <a href="http://ronald.bitfreak.net/priv/pimp.png">HTML page</a> and the player will react as it should. The javascript-calls are compatible with Quicktime Player. Woohoo, finally a kick-ass mozilla media player. :-). Get your daily dose of Totem-CVS today!</div>
-<em><a style="font-style: italic; font-size: x-small;" href="http://www.advogato.org/person/rbultje/diary.html?start=97">March 23, 2005 06:22 PM</a></em>
 </div>
 
 <? gnome_foot() ?>
