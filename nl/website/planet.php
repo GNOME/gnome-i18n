@@ -78,21 +78,26 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 <div class="blogtitle">
 <a href="http://www.advogato.org/person/adrighem/diary.html?start=6">16 Apr 2005</a></div>
 <div class="blogstory">
-<p>Your Score (long test)<p>
-Your scored -0.5 on the Moral Order axis and 4 on the Moral Rules axis.<p>
-The following items best match your score:<p>
-   1. System: Socialism<p>
-   2. Variation: Moderate Socialism, Economic Socialism<p>
-   3. Ideologies: Social Democratism<p>
-   4. US Parties: No match.<p>
-   5. Presidents: Jimmy Carter (76.51%)<p>
-   6. 2004 Election Candidates: Ralph Nader (72.31%), John Kerry (71.27%), George W. Bush (53.39%) <p>
-Of the 70908 people who took the test:<p>
-   1. 0.1% had the same score as you.<p>
-   2. 5.5% were above you on the chart.<p>
-   3. 91.9% were below you on the chart.<p>
-   4. 27.5% were to your right on the chart.<p>
-   5. 60.6% were to your left on the chart.</div>
+Your Score (long test)
+<p>Your scored -0.5 on the Moral Order axis and 4 on the Moral Rules axis.
+The following items best match your score:
+<ol>
+<li>System: Socialism
+<li>Variation: Moderate Socialism, Economic Socialism
+<li>Ideologies: Social Democratism
+<li>US Parties: No match.
+<li>Presidents: Jimmy Carter (76.51%)
+<li>2004 Election Candidates: Ralph Nader (72.31%), John Kerry (71.27%), George W. Bush (53.39%)
+</ol>
+Of the 70908 people who took the test:
+<ol>
+<li>0.1% had the same score as you.
+<li>5.5% were above you on the chart.
+<li>91.9% were below you on the chart.
+<li>27.5% were to your right on the chart.
+<li>60.6% were to your left on the chart.
+</ol>
+<p>On another note: Ubuntu Breezy seems to have started..so all you people who want an adventure. Start using breezy and help the developers find bugs!</div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://www.advogato.org/person/adrighem/diary.html?start=6">April 16, 2005 09:23 PM</a></em>
 
 
