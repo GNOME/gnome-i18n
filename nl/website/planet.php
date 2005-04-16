@@ -72,6 +72,37 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<p class="blogname"><a href="http://www.advogato.org/person/adrighem/" title="Advogato diary for adrighem">Vincent van Adrighem</a></p>
+
+
+<div class="blogtitle">
+<a href="http://www.advogato.org/person/adrighem/diary.html?start=6">16 Apr 2005</a></div>
+<div class="blogstory">
+<p>Your Score (long test)<p>
+Your scored -0.5 on the Moral Order axis and 4 on the Moral Rules axis.<p>
+The following items best match your score:<p>
+   1. System: Socialism<p>
+   2. Variation: Moderate Socialism, Economic Socialism<p>
+   3. Ideologies: Social Democratism<p>
+   4. US Parties: No match.<p>
+   5. Presidents: Jimmy Carter (76.51%)<p>
+   6. 2004 Election Candidates: Ralph Nader (72.31%), John Kerry (71.27%), George W. Bush (53.39%) <p>
+Of the 70908 people who took the test:<p>
+   1. 0.1% had the same score as you.<p>
+   2. 5.5% were above you on the chart.<p>
+   3. 91.9% were below you on the chart.<p>
+   4. 27.5% were to your right on the chart.<p>
+   5. 60.6% were to your left on the chart.</div>
+<em><a style="font-style: italic; font-size: x-small;" href="http://www.advogato.org/person/adrighem/diary.html?start=6">April 16, 2005 09:23 PM</a></em>
+
+
+
+
+
+
+
+
+
 <p class="blogname"><a href="http://www.jabber.ee/~jorn/blog" title="Jorn's blog">Jorn Baayen</a></p>
 
 
@@ -501,32 +532,6 @@ Om de een of andere reden kan ik me niet van het gedacht ontdoen dat'k me heb in
 <div align="center"><img src="http://weblog.lambda1.be/31-mar-2005.jpg" alt="marginal" /><br />
 <em>Nu 100% marginaal ongeschoren!</em></div></div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://weblog.lambda1.be/86-Buzzzz?lang=nl">March 30, 2005 08:16 PM</a></em>
-
-
-
-
-
-<div class="blogdate">March 28, 2005</div>
-
-
-
-
-<p class="blogname"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
-
-
-<div class="blogtitle">
-<a href="http://weblog.lambda1.be/85-1-jaar?lang=nl">1 jaar</a></div>
-<div class="blogstory">
-Zonder veel rumoer was het vorig weekend de eerste verjaardag van men weblog. Voornemens voor het volgende jaar:<br />
-<br />
-<ul><br />
-    <li>Eens iets interessant posten</li><br />
-    <li>Wanneer ik echt open source software begin te maken, de weblog splitsen in een geek sectie en een normal life sectie</li><br />
-</ul><br />
-<br />
-<div align="center"><img src="http://weblog.lambda1.be/28-mar-2005.jpg" alt="Creepy" /><br />
-<em>Foto van de dag, aan jullie om te beslissen wat er op staat</em></div></div>
-<em><a style="font-style: italic; font-size: x-small;" href="http://weblog.lambda1.be/85-1-jaar?lang=nl">March 28, 2005 07:52 AM</a></em>
 </div>
 
 <? gnome_foot() ?>
