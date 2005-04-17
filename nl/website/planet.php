@@ -67,6 +67,28 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<div class="blogdate">April 17, 2005</div>
+
+
+
+
+<p class="blogname"><a href="http://www.advogato.org/person/rbultje/" title="Advogato diary for rbultje">Ronald S. Bultje</a></p>
+
+
+<div class="blogtitle">
+<img class="floatright" src="images/ronald.png" alt="Ronald S. Bultje face">
+<a href="http://www.advogato.org/person/rbultje/diary.html?start=99">17 Apr 2005</a></div>
+<div class="blogstory">
+<b>Totem DVD &amp; the like</b><br />
+Added some missing features (w.r.t. the Xine backend) in Totem/GStreamer today. One being manual aspect-ratio selection, partly with thanks to Laurens Buhler. The other being language codes, which I implemented in DVD playback. The result is that a media source with multiple audio tracks and language code support will now <a href="http://ronald.bitfreak.net/priv/dvd-lang.png">display proper language names</a> in the audio/language menu. Same code is in place for subtitles yet, but then again, DVD subtitles don't work yet, so it's kinda pointless in a way. Jan (he's working on that) promised me he'd make it working within a few days now. Then menus, and we're done, GStreamer will finally have good DVD support.
+<p>
+As for the language code detection, I should implement it for mkv/ogm too, I guess.</div>
+<em><a style="font-style: italic; font-size: x-small;" href="http://www.advogato.org/person/rbultje/diary.html?start=99">April 17, 2005 10:26 PM</a></em>
+
+
+
+
+
 <div class="blogdate">April 16, 2005</div>
 
 
@@ -501,37 +523,6 @@ OOPS! Being the irregular blogger I am, I forgot to post some photos from the gn
 <p><b>AbiWord</b><br />
 Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/release-notes/2.2.7.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.7.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p></div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://uwog.net/blog/?p=41">April 04, 2005 08:59 PM</a></em>
-
-
-
-
-
-
-
-
-
-
-
-<div class="blogtitle">
-<img class="floatright" src="images/uwog.png" alt="Marc Maurer face">
-<a href="http://uwog.net/blog/?p=40">AbiWord 2.2.6 and Finland Fun!</a></div>
-<div class="blogstory">
-<p><b>AbiWord</b><br />
-Just released v2.2.6, go get it! [ <a href="http://www.abisource.com/release-notes/2.2.6.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.6.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p>
-	<p><b>Finland Trip</b><br />
-Went to Finland last week (near Kuusamo), as a <a href="http://www.betterbe.com">company</a> I very occasionally work for invited me out of the blue to join them; all paid for! Naturally, I couldn&#8217;t resist, and we had a fun 4 days racing over the snow using scooters and dog sledges, and drinking expensive beverages.</p>
-	<p><center></p>
-	<table border="0">
-<tr>
-<td>
-<a href="http://www.moerman.org/~uwog/blog/gfx/finland-2005.jpg"><img src="http://www.moerman.org/~uwog/blog/gfx/finland-2005.thumb.jpg" alt="Finland Fun" /></a></td>
-	<td>
-<a href="http://www.moerman.org/~uwog/blog/gfx/finland-dogs-2005.jpg"><img src="http://www.moerman.org/~uwog/blog/gfx/finland-dogs-2005.thumb.jpg" alt="Finland Fun with Dogs Sledges" /></a></td>
-</tr>
-</table>
-	<p>Proof of my Finland Trip</center>
-</p></div>
-<em><a style="font-style: italic; font-size: x-small;" href="http://uwog.net/blog/?p=40">April 04, 2005 01:24 AM</a></em>
 </div>
 
 <? gnome_foot() ?>
