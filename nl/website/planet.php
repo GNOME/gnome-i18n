@@ -78,7 +78,7 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 <div class="blogtitle">
 <a href="http://weblog.lambda1.be/87-Over-20-jaar-zullen-we-terugkijken-en-lachen?lang=nl">Over 20 jaar zullen we terugkijken en lachen</a></div>
 <div class="blogstory">
-Gisteren werd Temptation Island getoont op groot scherm in Politika Kaffee, nooit zoveel mensen gezien daar. Maarten heeft een gazilioen foto's gemaakt, ze staan hier online:<br />
+Gisteren werd Temptation Island getoond op groot scherm in Politika Kaffee, nooit zoveel mensen gezien daar. Maarten heeft een gazilioen foto's gemaakt, ze staan hier online:<br />
 <br />
 <a href="http://pics.lambda1.be/2005-04-18-Temptation-Island-Politika-Kaffee/">http://pics.lambda1.be/2005-04-18-Temptation-Island-Politika-Kaffee/</a><br />
 <br />
