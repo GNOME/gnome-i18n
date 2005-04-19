@@ -67,6 +67,37 @@ of niet. U kunt hier bijblijven met de laatste nieuwtjes.</p>
 
 
 
+<div class="blogdate">April 19, 2005</div>
+
+
+
+
+<p class="blogname"><a href="http://weblog.lambda1.be" title="Ruben's Weblog">Ruben Vermeersch</a></p>
+
+
+<div class="blogtitle">
+<a href="http://weblog.lambda1.be/87-Over-20-jaar-zullen-we-terugkijken-en-lachen?lang=nl">Over 20 jaar zullen we terugkijken en lachen</a></div>
+<div class="blogstory">
+Gisteren werd Temptation Island getoont op groot scherm in Politika Kaffee, nooit zoveel mensen gezien daar. Maarten heeft een gazilioen foto's gemaakt, ze staan hier online:<br />
+<br />
+<a href="http://pics.lambda1.be/2005-04-18-Temptation-Island-Politika-Kaffee/">http://pics.lambda1.be/2005-04-18-Temptation-Island-Politika-Kaffee/</a><br />
+<br />
+<div align="center"><img src="http://weblog.lambda1.be/18-apr-2005-1.jpg" alt="All" /><br />
+<em>Verplichte groepsfoto</em></div><br />
+<br />
+<div align="center"><img src="http://weblog.lambda1.be/18-apr-2005-2.jpg" alt="Hanne, Nicolas" /><br />
+<em>Nicolas, Hanne, in die volgorde</em></div><br />
+<br />
+<div align="center"><img src="http://weblog.lambda1.be/18-apr-2005-3.jpg" alt="Fout" /><br />
+<em>Going fout</em></div><br />
+<br />
+Oh, en hallo aan de GNOME mensen die mijn blog nu ontvangen, Ik zal ooit iets interessant posten voor jullie ;-).</div>
+<em><a style="font-style: italic; font-size: x-small;" href="http://weblog.lambda1.be/87-Over-20-jaar-zullen-we-terugkijken-en-lachen?lang=nl">April 19, 2005 07:43 AM</a></em>
+
+
+
+
+
 <div class="blogdate">April 17, 2005</div>
 
 
@@ -504,25 +535,6 @@ didn't do that much this week. slowly getting more time to do some programming<b
 <div class="blogstory">
 OOPS! Being the irregular blogger I am, I forgot to post some photos from the gnome-nl gnome 2.10 release party. I think most people there agreed that we should do something like that more often, and I got told that I promised to try to organise a "pub-evening" (I would use 'borrel' in Dutch, dunno what to use in English) each month. Since I am busy I am hopelessly failing, but it is going to happen someday!<br /><br />Ok so here are some photos:<br /><a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/tux-na-werk.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_tux-na-werk.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-feescht.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-feescht.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-feescht-2.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-feescht-2.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/gnome-nl-mensen-blij.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_gnome-nl-mensen-blij.jpg" border="0" /><br /></a> <a href="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/nog-meer-gnome-nl-mensen-blij.jpg"><br /><img src="http://www.math.leidenuniv.nl/~kris/.oops/lj/gnome-nl-2.10/small_nog-meer-gnome-nl-mensen-blij.jpg" border="0" /><br /></a><br /><br />Oh, another thing I forgot. It looks like I will be at GUADEC this year (finally); not 100% sure yet, but I am already looking forward to it.</div>
 <em><a style="font-style: italic; font-size: x-small;" href="http://www.livejournal.com/users/inverted_tree/39587.html">April 04, 2005 09:42 PM</a></em>
-
-
-
-
-
-
-
-
-
-<p class="blogname"><a href="http://uwog.net/blog" title="Marc 'uwog' Maurer's Blog">Marc Maurer</a></p>
-
-
-<div class="blogtitle">
-<img class="floatright" src="images/uwog.png" alt="Marc Maurer face">
-<a href="http://uwog.net/blog/?p=41">*Ahum*</a></div>
-<div class="blogstory">
-<p><b>AbiWord</b><br />
-Something about 2.2.7 and brown paper bags [ <a href="http://www.abisource.com/release-notes/2.2.7.phtml">Release Notes</a> ], [ <a href="http://www.abisource.com/changelogs/2.2.7.phtml">Changelog</a> ], [ <a href="http://www.abisource.com/download/">Download</a> ]</p></div>
-<em><a style="font-style: italic; font-size: x-small;" href="http://uwog.net/blog/?p=41">April 04, 2005 08:59 PM</a></em>
 </div>
 
 <? gnome_foot() ?>
