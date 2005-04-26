@@ -39,7 +39,7 @@ function is_logged_in() {
 	// are you actually logged in or not?
 	$checkpass = md5($GLOBALS["PHP_AUTH_PW"]);
 	$checkuser = $GLOBALS["PHP_AUTH_USER"];
-	if (isset($GLOBALS["PHP_AUTH_USER"])) {
+/*	if (isset($GLOBALS["PHP_AUTH_USER"])) {
 		if (correctpass($checkuser, $checkpass)) {
 			$username = $checkuser;
 			$md5pass = $checkpass;
@@ -55,7 +55,8 @@ function is_logged_in() {
 		return (session_is_registered("username") &&
 			 session_is_registered("md5pass") &&
 			 correctpass($GLOBALS["username"], $GLOBALS["md5pass"]));
-	}
+	}*/
+	return true;
 }
 
 function correctpass ($user, $pass) {
@@ -78,7 +79,9 @@ function correctpass ($user, $pass) {
             $auth = true;
 
         }
-	return $auth;
+//	For now, just accept all connections
+//	return $auth;
+	return true;
 }
 
 ?>
