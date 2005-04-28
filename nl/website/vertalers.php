@@ -30,24 +30,23 @@ method=\"get\">\n";
 		echo "</form></span>\n";
 	}
 }
+
+$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
+mysql_select_db("gnome_nl",$db);
+$sql = "select * from users where `packages` IS NOT NULL order by name asc";
+$users = mysql_query($sql);
+
 $maintainerlist = array();
 $packagelist = array();
-$fmaintainers = "text/translators.text";
 $fpackages = file( "text/packages.$gnomeversion.text" );
 $fhpackages = file( "text/packages.HEAD.text" );
-$fp = fopen( $fmaintainers, 'r' );
-$fmaintainers_contents = fread( $fp, filesize( $fmaintainers ) );
-fclose( $fp );
-// Place the individual lines from the file contents into an array.
-$maintainers_lines = explode ( "\n", $fmaintainers_contents );
 // Split each of the lines into a name, an email and a packagelist
-foreach ( $maintainers_lines as $line ) {
-	list( $name, $email, $packages ) = explode( ':', $line );
-	$length = strlen ( $line);
-	if ("$length" != "0") {
-		array_push($maintainerlist, $name);
-		array_push($packagelist, $packages);
-	}
+while ($user = mysql_fetch_assoc($users)) {
+	$name = $user[name];
+	$email = $user[email];
+	$packages = $user[packages];
+	array_push($maintainerlist, $name);
+	array_push($packagelist, $packages);
 }
 if (!isset($maint_num)) {
 	$maint_num = 0;
@@ -59,11 +58,17 @@ if (!isset($maint_num)) {
 } else {
 	$urls = array();
 	$cur_maint_num = 0;
-	foreach ( $maintainers_lines as $line ) {
+//	foreach ( $maintainers_lines as $line ) {
+	// get the maintainerlist from the db (again)
+	$sql = "select * from users where `packages` IS NOT NULL order by name asc";
+	$users = mysql_query($sql);
+	while ($user = mysql_fetch_assoc($users)) {
 		$cur_maint_num = $cur_maint_num + 1;
 		if ("$cur_maint_num" == "$maint_num") {
 //			echo "$line <br>";
-			list( $name, $email, $packages ) = explode( ':', $line );
+			$name = $user[name];
+			$email = $user[email];
+			$packages = $user[packages];
 			echo "<table border=\"0\"><tr><th colspan=\"2\" class=\"module\">$maint_num : $name</th></tr>\n";
 			echo "<tr class=\"oneven\"><td>Module</td><td>&nbsp;.Po</td></tr>\n";
 			$packagelist = explode( ' ', $packages );
