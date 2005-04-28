@@ -114,11 +114,11 @@ echo "</table>";
 echo "<div class=\"content\">\n";
 echo "<H1>Vertaalstatus $gnomeversion</H1>";
 $fpackages = file("text/packages.$gnomeversion.text");
-$fmaintainers = "text/translators.text";
-$fp = fopen( $fmaintainers, 'r' );
-$fmaintainers_contents = fread( $fp, filesize( $fmaintainers ) );
-fclose( $fp );
-$fmaintainers_lines = explode ( "\n", $fmaintainers_contents );
+//$fmaintainers = "text/translators.text";
+//$fp = fopen( $fmaintainers, 'r' );
+//$fmaintainers_contents = fread( $fp, filesize( $fmaintainers ) );
+//fclose( $fp );
+//$fmaintainers_lines = explode ( "\n", $fmaintainers_contents );
 $popup = array();
 list ($pline_num, $pline) = each ($fpackages);
 echo "<blockquote><center>";
@@ -138,6 +138,11 @@ $url_prefix=$pline;
     <th class="module">%</th>
   </tr>
 <?
+
+//connect to the db for our maintainerlist
+$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
+mysql_select_db("gnome_nl",$db);
+
 // Now we are going to print all of the packages in one big table
 while (list ($pline_num, $pline) = each ($fpackages)) {
 	if ($regel == "oneven") {
@@ -172,6 +177,9 @@ while (list ($pline_num, $pline) = each ($fpackages)) {
 		flush();
 	} else {
 		// A normal package line.
+		// Get a full list of maintainers from the db
+		$sql = "select * from users";
+		$users = mysql_query($sql);
 		$URL="$url_prefix$gnomeversion/$pline";
 		list ($pline_num, $pline) = each ($fpackages);
 		$naam=$pline;
@@ -192,25 +200,24 @@ while (list ($pline_num, $pline) = each ($fpackages)) {
 //		Now, search for the translator...
 		$found = 0;
    		$maintainer = "-- Vrij --";
-		foreach ( $fmaintainers_lines as $mline ) {
-			$length = strlen ( $mline);
-			if ("$length" != "0") {
-				list( $maintname, $email, $packages ) = explode( ':', $mline );
-				$packagelist = explode( ' ', $packages );
+		while ($user = mysql_fetch_assoc($users)) {
+			$maintname = $user[name];
+			$email = $user[email];
+			$packages = $user[packages];
+			$packagelist = explode( ' ', $packages );
 //				echo "$naam .. $packages : <br>";
-				foreach ( $packagelist as $package ) {
-					if (chop($naam) == $package) {
-						$found = 1;
-						$maintainer = $maintname;
+			foreach ( $packagelist as $package ) {
+				if (chop($naam) == $package) {
+					$found = 1;
+					$maintainer = $maintname;
 //						echo "$maintainer <br>";
 //						remember the translator for the popup thingie
-						$temp = array();
-						$tempo = array();
-						$tempo[$percentage] = $URL;
-						$temp[$naam] = $tempo;
-						$popup[$maintainer][] = $temp;
-						break;
-					}
+					$temp = array();
+					$tempo = array();
+					$tempo[$percentage] = $URL;
+					$temp[$naam] = $tempo;
+					$popup[$maintainer][] = $temp;
+					break;
 				}
 			}
 		}
