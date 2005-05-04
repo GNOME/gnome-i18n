@@ -1,6 +1,6 @@
 #!/bin/bash
 #################################################################
-# process-translation 2.0.1                                     #
+# process-translation 2.1.0                                     #
 # ------------------------------------------------------------- #
 # process-translation is a nice                                 #
 # interface for Translation-team coordinators.                  #
@@ -20,7 +20,7 @@
 #  directory. You have to do those by hand at the moment. The   #
 # $modulepath is $packagename/po, except for a few packages.    #
 # The script has a $modulepath-exception for gimp, gtk+,        #
-# gnome-applets-locations and gnome-glossary.                   #
+# gnome-applets-locations gnumeric-functions and gnome-glossary.#
 #################################################################
 # First, load the config files.
 [ -f /etc/process-translation.conf ] && . /etc/process-translation.conf
@@ -87,7 +87,7 @@ if [ "$verbose" == "true" ]; then
     if echo $1 | grep "###" > /dev/null; then
     echo -n $1 | sed 's/###//' >&2
     else
-    echo $1 >&2
+    echo " $1" >&2
     fi
 fi
 }
@@ -404,18 +404,21 @@ elif [ $module == "gimp-tips" ] ; then
 elif [ $module == "gimp-script-fu" ] ; then
         modulepath="gimp/po-script-fu" ;
         module="gimp" ;
+elif [ $module == "gimp-plug-ins" ] ; then
+        modulepath="gimp/po-plug-ins" ;
+        module="gimp";
 elif [ $module == "gtk+-properties" ] ; then
         modulepath="gtk+/po-properties" ;
         module="gtk+";
+elif [ $module == "gnumeric-functions" ] ; then
+        modulepath="gnumeric/po-functions" ;
+        module="gnumeric";
 elif [ $module == "gnome-glossary" ] ; then
         modulepath="gnome-i18n/glossary" ;
         module="gnome-i18n";
 elif [ $module == "gnome-applets-locations" ] ; then
         modulepath="gnome-applets/po-locations" ;
         module="gnome-applets";
-elif [ $module == "gimp-plug-ins" ] ; then
-        modulepath="gimp/po-plug-ins" ;
-        module="gimp";
 else
         modulepath="$module/po" ;
 fi
@@ -473,6 +476,8 @@ if [ "$branch" == "HEAD" ]; then
 	if [ "$checkout_configure" == "true" ] ; then
 		cvs -z3 co $module/configure.in 2>/dev/null >/dev/null
 		tell "configure.in checked out"
+		cvs -z3 co $module/po/LINGUAS 2>/dev/null >/dev/null
+		tell "LINGUAS file checked out"
 		tellstatus 30
 		cvs -z3 co $module/configure.ac 2>/dev/null >/dev/null
 		tell "configure.ac checked out"
@@ -488,6 +493,8 @@ else
 	if [ "$checkout_configure" == "true" ] ; then
 		cvs -z3 co -r $branch $module/configure.in 2>/dev/null >/dev/null
 		tell "configure.in checked out"
+		cvs -z3 co -r $branch $module/po/LINGUAS 2>/dev/null >/dev/null
+		tell "LINGUAS file checked out"
 		tellstatus 30
 		cvs -z3 co -r $branch $module/configure.ac 2>/dev/null >/dev/null
 		tell "configure.ac checked out"
@@ -592,31 +599,45 @@ do_configure () {
 cd $location
 tellstatus 61
 
-#For configure.in...
+#For po/LINGUAS...
 tell "Testing configure files..."
-if [ -f $module/configure.in ] && grep -i ALL_LINGUAS $module/configure.in >/dev/null && ! grep -i ALL_LINGUAS $module/configure.in | grep -i "$language" >/dev/null; then
-    touch cvslog.$module.configure >/dev/null
-    tell " configure.in changes needed"
-	echo -n `date +%Y-%m-%d` > cvslog.$module.configure
+if [ -f $module/po/LINGUAS ] ; then
+    if ! grep -i "$language" < $module/po/LINGUAS >/dev/null; then
+	touch cvslog.$module.configure >/dev/null
+        tell " po/LINGUAS changes needed"
+    	echo -n `date +%Y-%m-%d` > cvslog.$module.configure
+    	echo "  $uploader_name  $uploader_email" >> cvslog.$module.configure
+	echo "" >> cvslog.$module.configure
+	echo -n "	* po/LINGUAS: Added $language." >> cvslog.$module.configure
+    fi
+else
+    tell "  no LINGUAS changes needed"
+    #For configure.in...
+    if [ -f $module/configure.in ] && grep -i ALL_LINGUAS $module/configure.in >/dev/null && ! grep -i ALL_LINGUAS $module/configure.in | grep -i "$language" >/dev/null; then
+	touch cvslog.$module.configure >/dev/null
+        tell " configure.in changes needed"
+    	echo -n `date +%Y-%m-%d` > cvslog.$module.configure
 	echo "  $uploader_name  $uploader_email" >> cvslog.$module.configure
 	echo "" >> cvslog.$module.configure
 	echo -n "	* configure.in: Added $language to ALL_LINGUAS." >> cvslog.$module.configure
-else
-    tell "  no configure.in changes needed"
-fi
-tellstatus 63
-#And for configure.ac...
-if [ -f $module/configure.ac ] && grep -i ALL_LINGUAS $module/configure.ac >/dev/null && ! grep -i ALL_LINGUAS $module/configure.ac | grep -i "$language" >/dev/null; then
-    touch cvslog.$module.configure >/dev/null
-    tell "  configure.ac changes needed"
-	if ! [ $configure == true ]; then
+	configure=true
+    else
+        tell "  no configure.in changes needed"
+    fi
+    tellstatus 63
+    #And for configure.ac...
+    if [ -f $module/configure.ac ] && grep -i ALL_LINGUAS $module/configure.ac >/dev/null && ! grep -i ALL_LINGUAS $module/configure.ac | grep -i "$language" >/dev/null; then
+	touch cvslog.$module.configure >/dev/null
+        tell "  configure.ac changes needed"
+	if ! [ "$configure" == true ]; then
 		echo -n `date +%Y-%m-%d` > cvslog.$module.configure
 		echo "  $uploader_name  $uploader_email" >> cvslog.$module.configure
 		echo "" >> cvslog.$module.configure
 	fi
 	echo -n "	* configure.ac: Added $language to ALL_LINGUAS." >> cvslog.$module.configure
-else
-    tell "  no configure.ac changes needed"
+    else
+	tell "  no configure.ac changes needed"
+    fi
 fi
 tellstatus 65
 }
@@ -639,7 +660,9 @@ if [ "$branch" == "HEAD" ] || [ "$branch" == "" ] ; then
 	tellstatus 70
 	if [ -f cvslog.$module.configure ]; then
 		tell "  commit configure files"
-		if [ -f $module/configure.in ]; then
+		if [ -f $module/po/LINGUAS ]; then
+			cvs -z3 commit -F cvslog.$module.configure $module/po/LINGUAS >/dev/null
+		elif [ -f $module/configure.in ]; then
 			if [ -f $module/configure.ac ]; then
 				cvs -z3 commit -F cvslog.$module.configure $module/configure.in $module/configure.ac >/dev/null
 			else
