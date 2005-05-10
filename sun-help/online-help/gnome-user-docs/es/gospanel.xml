@@ -1,0 +1,1503 @@
+<chapter id="gospanel-1">
+  <title>C&oacute;mo trabajar con paneles</title>
+  <highlights>
+    <para>La informaci&oacute;n de este cap&iacute;tulo describe el uso de los paneles. El panel es un &aacute;rea de Java Desktop System en la que se pueden ejecutar aplicaciones y realizar otras tareas.</para>
+  </highlights>
+  <sect1 id="gospanel-2">
+    <title>Introducci&oacute;n a los paneles </title>
+    <indexterm>
+      <primary>paneles</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <para>Al iniciar una sesi&oacute;n por primera vez, Java Desktop System suele contener al menos un panel. El administrador del sistema puede haber modificado los paneles predeterminados para adaptar el sistema a sus necesidades, as&iacute; que ciertos aspectos quiz&aacute;s no coincidan con los descritos aqu&iacute;.</para>
+    <para>Puede cambiarse tanto el aspecto como el comportamiento de los paneles para satisfacer las necesidades del usuario. Se pueden a&ntilde;adir y suprimir los siguientes objetos de panel a los paneles: Se pueden crear m&uacute;ltiples paneles y seleccionar diferentes propiedades, objetos y fondos para cada uno de ellos. Tambi&eacute;n se pueden ocultar los paneles.</para>
+    <para>En general, Java Desktop System contiene un panel preconfigurado en la parte inferior de la pantalla.</para>
+    <sect2 id="gospanel-3">
+      <title>Panel del borde inferior </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>panel del borde inferior</secondary>
+        <see>panel del borde inferior</see>
+      </indexterm>
+      <indexterm>
+        <primary>panel del borde inferior</primary>
+        <secondary>introducci&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary> panel del borde inferior</primary>
+        <secondary>contenido predeterminado</secondary>
+      </indexterm>
+      <para>El panel del borde inferior contiene los siguientes elementos:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec3" colwidth="30.95*"/>
+          <colspec colname="colspec4" colwidth="69.05*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Objeto</para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <guibutton>Lanzador</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>El bot&oacute;n <guibutton>Lanzador</guibutton> contiene men&uacute;s y elementos de men&uacute; para aplicaciones y herramientas de configuraci&oacute;n de <application> Java Desktop System</application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Reloj</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>muestra la hora y fecha en un panel. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Minimizar ventanas</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">Muestra un bot&oacute;n sobre el que puede hacer clic para minimizar todas las ventanas abiertas. </entry>
+            </row>
+            <row>
+              <entry colname="colspec3" valign="top">
+                <para><application>Lista de ventanas</application> </para>
+              </entry>
+              <entry colname="colspec4" valign="top">
+                <para>muestra un bot&oacute;n para cada ventana abierta. Se puede hacer clic en un bot&oacute;n de esta lista para minimizar y restaurar ventanas.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>&Aacute;rea de notificaci&oacute;n</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Muestra iconos de diferentes aplicaciones que indican si hay actividad en la aplicaci&oacute;n.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para><application>Selector de &aacute;reas de trabajo</application>:</para>
+              </entry>
+              <entry colname="colspec4">
+                <para>muestra una representaci&oacute;n visual de las &aacute;reas de trabajo. El <application>Selector de &aacute;reas de trabajo</application> permite cambiar entre las diferentes &aacute;reas de trabajo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Control de volumen</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Muestra un bot&oacute;n que permite controlar y establecer el volumen de sonido en su sistema.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Supervisor de red</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Muestra el estado de un dispositivo de red.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-5">
+    <title>Gesti&oacute;n de los paneles </title>
+    <indexterm>
+      <primary>paneles</primary>
+      <secondary>gestionar</secondary>
+    </indexterm>
+    <para>La informaci&oacute;n de esta secci&oacute;n describe c&oacute;mo gestionar los paneles.</para>
+    <sect2 id="gospanel-10">
+      <title>Para agregar un nuevo panel </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>agregar nuevo</secondary>
+      </indexterm>
+      <para>Para a&ntilde;adir un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o de cualquier panel y, a continuaci&oacute;n, seleccione <guimenuitem>Nuevo panel</guimenuitem>. El nuevo panel se agrega a Java Desktop System. Est&aacute; vac&iacute;o y se puede personalizar como se desee.</para>
+    </sect2>
+    <sect2 id="gospanel-11">
+      <title>Para interaccionar con un panel </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>interaccionar con</secondary>
+      </indexterm>
+      <para>Para interaccionar con un panel, primero debe hacer clic con cualquier bot&oacute;n del rat&oacute;n en un espacio vac&iacute;o del panel. Si el panel no tuviera ning&uacute;n espacio vac&iacute;o, puede hacer clic con el bot&oacute;n central o derecho del rat&oacute;n en uno de los botones de ocultaci&oacute;n a fin de seleccionar el panel. Si los botones de ocultaci&oacute;n no fueran visibles, modifique antes las propiedades del panel para que pueda acceder a ellos. </para>
+      <para>Usos de los botones del rat&oacute;n para interaccionar con los paneles:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Hacer clic con el bot&oacute;n central</term>
+          <listitem>
+            <para>Permite arrastrar y luego soltar el panel en una nueva ubicaci&oacute;n.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Hacer clic con el bot&oacute;n derecho</term>
+          <listitem>
+            <para>Abre el men&uacute; emergente del panel</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="gospanel-12">
+      <title>Para mover un panel </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>mover</secondary>
+      </indexterm>
+      <para>Los paneles se pueden mover. Para ello, haga clic con el bot&oacute;n central de rat&oacute;n en cualquier espacio vac&iacute;o del panel y, a continuaci&oacute;n, arrastre el panel y su&eacute;ltelo en la nueva ubicaci&oacute;n.</para>
+    </sect2>
+    <sect2 id="gospanel-7">
+      <title>Para ocultar un panel </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>ocultar</secondary>
+      </indexterm>
+      <para>Los paneles se pueden ocultar o mostrar. Para ello, utilice el bot&oacute;n de ocultaci&oacute;n. Si los botones de ocultaci&oacute;n no fueran visibles, modifique antes las propiedades del panel para que pueda acceder a ellos. </para>
+      <para>Los botones de ocultaci&oacute;n se encuentran a ambos lados del panel. Los botones de ocultaci&oacute;n contienen un icono de flecha opcional. La siguiente ilustraci&oacute;n muestra los botones de ocultaci&oacute;n. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/four_hide_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Un panel horizontal y uno vertical con botones de ocultaci&oacute;n. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para ocultar un panel, haga clic en uno de los botones de ocultaci&oacute;n. El panel se oculta en la direcci&oacute;n de la flecha del bot&oacute;n de ocultaci&oacute;n. El bot&oacute;n de ocultaci&oacute;n permanece visible en el otro lado del panel.</para>
+      <para>Para volver a mostrar el panel, haga clic en el bot&oacute;n de ocultaci&oacute;n que queda visible. El panel se expande en la direcci&oacute;n de la flecha del bot&oacute;n de ocultaci&oacute;n. Ahora, ambos botones de ocultaci&oacute;n son visibles.</para>
+      <para>Puede configurar el panel para que se oculte autom&aacute;ticamente. Al configurar el panel para que se oculte autom&aacute;ticamente, &eacute;ste se oculta autom&aacute;ticamente cuando el rat&oacute;n no apunta al panel. El panel reaparece al apuntar el rat&oacute;n a la parte de la pantalla donde se encontraba. Para que el panel se oculte autom&aacute;ticamente, modifique sus propiedades.</para>
+    </sect2>
+    <sect2 id="gospanel-28">
+      <title>Para modificar las propiedades de un panel </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>modificar propiedades</secondary>
+      </indexterm>
+      <para>Para modificar las preferencias de todos los paneles, utilice la herramienta de preferencias <guilabel> Panel</guilabel> y realice all&iacute; los cambios que necesite. Se pueden, por ejemplo, modificar las preferencias de animaci&oacute;n de los paneles. </para>
+      <para>Tambi&eacute;n se pueden modificar las propiedades de un panel por separado. Se pueden modificar las caracter&iacute;sticas de cada panel, como la posici&oacute;n, el comportamiento para ocultarse y el aspecto visual. </para>
+      <para>Para modificar las propiedades de un panel, efect&uacute;e los pasos siguientes: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho en un espacio vac&iacute;o del panel y, a continuaci&oacute;n seleccione <guimenuitem> Propiedades</guimenuitem> para mostrar el cuadro de di&aacute;logo <guilabel>Propiedades de panel</guilabel>. El cuadro de di&aacute;logo <guilabel>Propiedades del panel</guilabel> contiene las siguientes fichas: </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>General</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Fondo</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Para modificar el tama&ntilde;o, posici&oacute;n y propiedades de ocultaci&oacute;n del panel haga clic en la pesta&ntilde;a <guilabel>General</guilabel>. A continuaci&oacute;n, se muestran los elementos de cuadro de di&aacute;logo que aparecen en <guilabel>General</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento de la ventana de di&aacute;logo</para>
+                  </entry>
+                  <entry>
+                    <para>Descripci&oacute;n </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Nombre</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Escriba un nombre para el panel. &Eacute;ste es el nombre que aparecer&aacute; al cambiar entre los diferentes paneles del escritorio. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Orientaci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Seleccione la posici&oacute;n del panel en la pantalla. Haga clic en la posici&oacute;n deseada. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Tama&ntilde;o</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Use este cuadro de incremento para especificar el tama&ntilde;o del panel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Ampliar</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Seleccione esta opci&oacute;n para que el panel se expanda a la totalidad de la pantalla donde est&aacute; situado. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Ocultar autom&aacute;ticamente</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para habilitar la ocultaci&oacute;n autom&aacute;tica. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Mostrar botones de ocultaci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para mostrar los botones de ocultaci&oacute;n en el panel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Flechas en los botones de ocultaci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para mostrar flechas en los botones de ocultaci&oacute;n, si &eacute;stos est&aacute;n activados.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Para modificar el fondo del panel haga clic en la pesta&ntilde;a <guilabel>Fondo</guilabel>. Puede seleccionar el tipo de fondo del panel. Las opciones son las siguientes:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="32.32*"/>
+              <colspec colwidth="67.68*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento de la ventana de di&aacute;logo</para>
+                  </entry>
+                  <entry>
+                    <para>Descripci&oacute;n </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Ninguno (utilizar el tema del sistema)</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Esta opci&oacute;n utiliza el fondo de panel predeterminado. Este fondo depende de la configuraci&oacute;n de la herramienta de preferencias <application>Tema</application>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Color</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Permite seleccionar el color del fondo del panel. Haga clic en el bot&oacute;n <guibutton>Color</guibutton> para que se muestre un cuadro de di&aacute;logo de selecci&oacute;n de color. Seleccione el color en este cuadro de di&aacute;logo. </para>
+                    <para>La caja de incremento <guilabel>Estilo</guilabel> permite indicar el grado de transparencia u opacidad del color. Por ejemplo, para que el panel sea transparente, mueva el incremento hasta el extremo <guilabel>Transparente</guilabel>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Imagen de fondo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Permite seleccionar una imagen para el fondo del panel. Introduzca el nombre de archivo de la imagen con la casilla de combinaci&oacute;n desplegable. Tambi&eacute;n puede buscar el archivo con el bot&oacute;n <guibutton>Examinar</guibutton>. Una vez seleccionado el archivo, haga clic en Aceptar. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>Tambi&eacute;n se puede arrastrar un color o imagen al panel para definir el fondo. Para obtener m&aacute;s informaci&oacute;n, consulte <xref linkend="gospanel-61"/>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo <guilabel>Propiedades del panel</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+      <sect3 id="gospanel-61">
+        <title>Para arrastrar un color o imagen al fondo de un panel </title>
+        <indexterm>
+          <primary>paneles</primary>
+          <secondary>cambiar el fondo</secondary>
+        </indexterm>
+        <para>Se puede arrastrar un color o imagen al panel para definir el fondo. Puede arrastrarse el color o la imagen desde m&uacute;ltiples aplicaciones. Por ejemplo, se puede arrastrar un color del gestor de archivos al panel para definir el color como el fondo del panel. Tambi&eacute;n se puede arrastrar el color desde cualquier selector de color.</para>
+        <para>Puede arrastrarse una imagen al panel para que defina el fondo. Tambi&eacute;n se pueden arrastrar y soltar tramas del gestor de archivos para configurar el fondo del panel.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-31">
+      <title>Para suprimir un panel </title>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>suprimir</secondary>
+      </indexterm>
+      <para>Para suprimir un panel de Java Desktop System, haga clic con el bot&oacute;n derecho sobre el panel que desee suprimir y, a continuaci&oacute;n, seleccione <menuchoice><guimenuitem>Suprimir este panel</guimenuitem></menuchoice>.</para>
+      <note>
+        <para>Como m&iacute;nimo debe haber siempre un panel en Java Desktop System. Si s&oacute;lo hay un panel en Java Desktop System, no se podr&aacute; suprimir.</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-8">
+    <title>Objetos del panel </title>
+    <indexterm>
+      <primary>paneles</primary>
+      <secondary>objetos de panel</secondary>
+      <see> objetos del panel</see>
+    </indexterm>
+    <para>En esta secci&oacute;n se describen los objetos que se pueden a&ntilde;adir a los paneles y c&oacute;mo utilizarlos desde all&iacute;.</para>
+    <sect2 id="gospanel-100">
+      <title>Interacci&oacute;n con los objetos del panel </title>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>interaccionar con</secondary>
+      </indexterm>
+      <para>Puede utilizar los botones del rat&oacute;n para interaccionar con un objeto del panel de la siguiente manera:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Hacer clic con el bot&oacute;n izquierdo</term>
+          <listitem>
+            <para>Lanza el objeto del panel. </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Hacer clic con el bot&oacute;n central</term>
+          <listitem>
+            <para>Permite arrastrar y luego soltar un objeto a una nueva ubicaci&oacute;n.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Hacer clic con el bot&oacute;n derecho</term>
+          <listitem>
+            <para>Abre el men&uacute; emergente del objeto del panel.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Hay diversas formas de interaccionar con los objetos del panel. Para obtener m&aacute;s informaci&oacute;n, consulte la <xref linkend="gospanel-39"/>.</para>
+    </sect2>
+    <sect2 id="gospanel-15">
+      <title>Para a&ntilde;adir un objeto a un panel </title>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>a&ntilde;adir</secondary>
+      </indexterm>
+      <para>Se puede a&ntilde;adir un objeto a un panel de diferentes maneras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Desde el men&uacute; emergente del panel</para>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel para abrir el men&uacute; emergente del panel. El men&uacute; contiene un submen&uacute; <guisubmenu>Agregar al panel</guisubmenu>. El submen&uacute; <guisubmenu>Agregar al panel</guisubmenu> permite a&ntilde;adir los siguientes tipos de objetos a los paneles: <itemizedlist><listitem><para>Aplicaciones del panel de las siguientes categor&iacute;as: <guilabel>Accesorios</guilabel>, <guilabel>Entretenimientos</guilabel>, <guilabel>Internet</guilabel>, <guilabel>Multimedia</guilabel>, <guilabel>Utilidades</guilabel>. </para></listitem><listitem><para>Botones de acceso r&aacute;pido a acciones habituales: botones <guibutton>Buscar</guibutton>, bot&oacute;n <guibutton>Forzar cierre</guibutton>, <guibutton>Bloquear</guibutton>, <guibutton>Terminar sesi&oacute;n</guibutton>, <guibutton>Ejecutar</guibutton>, <guibutton>Capturar la pantalla</guibutton>, <guibutton>Minimizar ventanas</guibutton>.</para></listitem><listitem><para>Lanzadores</para></listitem><listitem><para>Lanzadores desde men&uacute;s</para></listitem><listitem><para><guimenu>Men&uacute; principal</guimenu></para></listitem><listitem><para><application>Barra de men&uacute;s</application></para></listitem><listitem><para>Cajones</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Desde cualquier men&uacute;</para>
+          <para>Al hacer clic con el bot&oacute;n derecho del rat&oacute;n sobre un lanzador en un men&uacute;, se abre el men&uacute; emergente correspondiente. Se puede utilizar este men&uacute; emergente para a&ntilde;adir el lanzador a un panel. </para>
+          <para>Tambi&eacute;n se pueden arrastrar men&uacute;s, lanzadores y aplicaciones de panel de los men&uacute;s a los paneles. </para>
+        </listitem>
+        <listitem>
+          <para>Desde el gestor de archivos</para>
+          <para>Cada lanzador se corresponde con un archivo <filename>.desktop</filename>. Puede arrastrarse el archivo <filename>.desktop</filename> a los paneles para a&ntilde;adir el lanzador al panel. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-9">
+      <title>Para modificar las propiedades de un objeto </title>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>modificar propiedades</secondary>
+      </indexterm>
+      <para>Algunos objetos del panel, como lanzadores y cajones, disponen de un conjunto de propiedades asociadas que son diferentes para cada tipo de objeto y permiten especificar ciertos detalles, como: <itemizedlist><listitem><para>La orden que inicia una aplicaci&oacute;n.</para></listitem><listitem><para>La ubicaci&oacute;n de los archivos fuente de un men&uacute;.</para></listitem><listitem><para>El icono que representa al objeto.</para></listitem></itemizedlist></para>
+      <para>Para modificar las propiedades de un objeto: </para>
+      <orderedlist>
+        <listitem>
+          <indexterm>
+            <primary>men&uacute; emergente del objeto del panel, ilustraci&oacute;n</primary>
+          </indexterm>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el objeto del panel para abrir el men&uacute; emergente del objeto, como se muestra en la <xref linkend="gospanel-FIG-54"/></para>
+          <figure id="gospanel-FIG-54">
+            <title>Men&uacute; emergente del objeto del panel</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/panel_object_popup_menu.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Men&uacute; emergente del objeto del panel. Elementos del men&uacute;: Propiedades, Suprimir del panel, Bloquear, Mover. </phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+        <listitem>
+          <para>Seleccione <guimenuitem>Propiedades</guimenuitem>. Utilice el cuadro de di&aacute;logo <guilabel>Propiedades</guilabel> para modificar las propiedades seg&uacute;n sea necesario. Las propiedades del cuadro de di&aacute;logo <guilabel>Propiedades</guilabel> dependen del tipo de objeto seleccionado en el paso 1. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton> para aplicar los cambios y, a continuaci&oacute;n, cierre el cuadro de di&aacute;logo <guilabel>Propiedades</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gospanel-32">
+      <title>Para mover un objeto del panel </title>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>mover</secondary>
+      </indexterm>
+      <para>Puede mover los objetos del panel dentro de &eacute;ste o a otro. Tambi&eacute;n se pueden mover objetos entre paneles y cajones.</para>
+      <para>Para mover un objeto del panel, haga clic en el bot&oacute;n central para arrastrarlo a la nueva ubicaci&oacute;n. Al soltar el bot&oacute;n, el objeto se sit&uacute;a en la nueva ubicaci&oacute;n.</para>
+      <para>Tambi&eacute;n puede utilizar el men&uacute; emergente del objeto del panel para moverlo, como se indica a continuaci&oacute;n: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n derecho del rat&oacute;n sobre el objeto y, a continuaci&oacute;n, seleccione <guimenuitem>Mover</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Apunte con el rat&oacute;n en la nueva ubicaci&oacute;n del objeto, haga clic con cualquier bot&oacute;n del rat&oacute;n y el objeto se situar&aacute; en la nueva ubicaci&oacute;n. Esta ubicaci&oacute;n puede estar en cualquier panel de Java Desktop System. </para>
+        </listitem>
+      </orderedlist>
+      <para>El movimiento del objeto afecta a la posici&oacute;n del resto de objetos del panel. Para controlar el movimiento de los objetos de un panel, puede especificarse un modo de movimiento. Para indicar el modo de movimiento, pulse una de las siguientes teclas al moverlos:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="15.00*"/>
+          <colspec colname="colspec1" colwidth="30.00*"/>
+          <colspec colname="colspec3" colwidth="54.00*"/>
+          <thead>
+            <row rowsep="1">
+              <entry colname="colspec2">
+                <para>Clave </para>
+              </entry>
+              <entry>
+                <para>Modo de movimiento</para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Descripci&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Sin pulsar tecla</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Movimiento con intercambio</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>El objeto intercambia la posici&oacute;n con el resto de objetos. &Eacute;ste es el modo de movimiento predeterminado.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Tecla <keycap>Alt</keycap> </para>
+              </entry>
+              <entry valign="top">
+                <para>Movimiento libre</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>El objeto salta por encima del resto de objetos al siguiente espacio vac&iacute;o del panel.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Tecla <keycap>May&uacute;s</keycap> </para>
+              </entry>
+              <entry valign="top">
+                <para>Movimiento de empuje</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>El objeto empuja al resto de objetos a lo largo del panel. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-566">
+      <title>Para bloquear un objeto del panel </title>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bloqueo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bloquear objetos de panel</primary>
+      </indexterm>
+      <para>Los objetos de un panel se pueden bloquear de modo que permanezcan siempre en la misma posici&oacute;n. Esta funci&oacute;n es &uacute;til para evitar que se muevan cuando se cambia la posici&oacute;n de otros objetos.</para>
+      <para>Para bloquear un objeto en su ubicaci&oacute;n actual del panel, haga clic con el bot&oacute;n derecho en el objeto para abrir el men&uacute; emergente y, a continuaci&oacute;n, seleccione <guimenuitem>Bloquear</guimenuitem>. Para desbloquearlo, haga clic con el bot&oacute;n derecho y seleccione <guimenuitem>Desbloquear</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gospanel-33">
+      <title>Para eliminar un objeto del panel </title>
+      <indexterm>
+        <primary>objetos de panel</primary>
+        <secondary>eliminar</secondary>
+      </indexterm>
+      <para>Para eliminar un objeto de un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n para abrir el men&uacute; emergente y, a continuaci&oacute;n, seleccione <guimenuitem>Eliminar del panel</guimenuitem>. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-17">
+    <title>Aplicaciones del panel </title>
+    <indexterm>
+      <primary>aplicaciones del panel</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>objetos del panel</primary>
+      <secondary>aplicaciones del panel </secondary>
+      <see>aplicaciones del panel</see>
+    </indexterm>
+    <para>Una aplicaci&oacute;n del panel es una peque&ntilde;a aplicaci&oacute;n cuya interfaz de usuario reside en un panel. Por ejemplo, en la siguiente figura se muestran las siguientes aplicaciones del panel, de izquierda a derecha: </para>
+    <itemizedlist>
+      <listitem>
+        <para><application>Lista de ventanas</application>: muestra la ventana actualmente abierta en el sistema.</para>
+      </listitem>
+      <listitem>
+        <para><application>Lector de CD</application>: controla el reproductor de CD del sistema.</para>
+      </listitem>
+      <listitem>
+        <para><application>Control de volumen</application>: permite controlar el volumen del altavoz del sistema.</para>
+      </listitem>
+    </itemizedlist>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/sample_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Ejemplos de aplicaciones del panel. El contexto describe la ilustraci&oacute;n. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <sect2 id="gospanel-40">
+      <title>Para a&ntilde;adir una aplicaci&oacute;n a un panel </title>
+      <indexterm>
+        <primary>aplicaci&oacute;n del panel</primary>
+        <secondary>a&ntilde;adir al panel </secondary>
+      </indexterm>
+      <para>Se puede a&ntilde;adir una aplicaci&oacute;n de panel a un panel desde el men&uacute; emergente de &eacute;ste. Haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel para abrir el men&uacute; emergente. Seleccione <guimenu>Agregar al panel</guimenu> y, a continuaci&oacute;n, seleccione la aplicaci&oacute;n de panel que desee a&ntilde;adir en cualquiera de los siguientes submen&uacute;s: </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guimenu>Accesorios</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Entretenimientos</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Red</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Multimedia</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Utilidad</guimenu>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>Tambi&eacute;n puede arrastrar la aplicaci&oacute;n del panel del submen&uacute; al panel. </para>
+    </sect2>
+    <sect2 id="gospanel-39">
+      <title>Para seleccionar una aplicaci&oacute;n del panel </title>
+      <indexterm>
+        <primary>aplicaciones de panel</primary>
+        <secondary>seleccionar</secondary>
+      </indexterm>
+      <para>Para modificar las propiedades de una aplicaci&oacute;n del panel, primero debe hacer clic en ella con el bot&oacute;n derecho del rat&oacute;n para mostrar el men&uacute; emergente del objeto del panel. Para mover una aplicaci&oacute;n del panel, debe hacer clic en ella con el bot&oacute;n central. </para>
+      <para>Existen ciertas restricciones sobre el lugar donde se puede hacer clic en una aplicaci&oacute;n del panel para abrir el men&uacute; emergente del objeto del panel o para mover la aplicaci&oacute;n: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Ciertas aplicaciones del panel disponen de men&uacute;s emergentes de &oacute;rdenes espec&iacute;ficas para aplicaciones de panel que se abren al hacer clic con el bot&oacute;n derecho en lugares concretos de la aplicaci&oacute;n. Por ejemplo, la aplicaci&oacute;n del panel <application>Lista de ventanas</application> tiene un asa vertical a la izquierda y botones que representan las ventanas a la derecha. Para abrir el men&uacute; emergente de la aplicaci&oacute;n del panel <application>Lista de ventanas</application>, se debe hacer clic con el bot&oacute;n derecho en el asa. Al hacer clic con el bot&oacute;n derecho en el lado derecho, aparecer&aacute; el men&uacute; emergente del bot&oacute;n.</para>
+        </listitem>
+        <listitem>
+          <para>Ciertas aplicaciones del panel disponen de zonas que no se pueden usar para seleccionar la aplicaci&oacute;n. Por ejemplo, la aplicaci&oacute;n de panel <application>L&iacute;nea de &oacute;rdenes</application> tiene un campo en el que se introducen las &oacute;rdenes. No se puede hacer clic con el bot&oacute;n derecho o central del rat&oacute;n en este campo para seleccionar la aplicaci&oacute;n. S&oacute;lo se puede hacer clic con el bot&oacute;n derecho o central en otra parte de la misma. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-41">
+      <title>Para modificar las preferencias de una aplicaci&oacute;n del panel </title>
+      <indexterm>
+        <primary>aplicaciones de panel</primary>
+        <secondary>modificar preferencias</secondary>
+      </indexterm>
+      <para>Para modificar las preferencias de una aplicaci&oacute;n del panel: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic en la aplicaci&oacute;n con el bot&oacute;n derecho y seleccione <guimenuitem>Preferencias</guimenuitem>. Utilice el cuadro de di&aacute;logo <guilabel>Preferencias</guilabel> para modificarlas seg&uacute;n se necesite. Las preferencias de las aplicaciones del panel var&iacute;an en funci&oacute;n de la aplicaci&oacute;n.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo <guilabel>Preferencias</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-16">
+    <title>Lanzadores </title>
+    <indexterm>
+      <primary>objetos de panel</primary>
+      <secondary>lanzadores</secondary>
+      <see>lanzadores</see>
+    </indexterm>
+    <para>Al hacer clic en un lanzador, sucede una de las siguientes acciones: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Inicia una determinada aplicaci&oacute;n.</para>
+      </listitem>
+      <listitem>
+        <para>Ejecuta una orden.</para>
+      </listitem>
+      <listitem>
+        <para>Abre una carpeta en una ventana del gestor de archivos.</para>
+      </listitem>
+      <listitem>
+        <para>Abre el navegador en una determinada direcci&oacute;n <firstterm>Uniform Resource Locator</firstterm> (URL). El URL es la direcci&oacute;n de una ubicaci&oacute;n espec&iacute;fica en Internet.</para>
+      </listitem>
+      <listitem>
+        <para>Abre URI <firstterm>Uniform Resource Identifiers</firstterm> especiales (Identificadores de recursos uniformes). Java Desktop System contiene URI especiales que permiten acceder a funciones determinadas desde el gestor de archivos. <indexterm><primary>ubicaciones de URI especiales</primary><secondary>lanzadores</secondary></indexterm></para>
+      </listitem>
+    </itemizedlist>
+    <para>Pueden encontrarse lanzadores en las siguientes partes de Java Desktop System: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Paneles: en los paneles, los lanzadores se representan por iconos.</para>
+      </listitem>
+      <listitem>
+        <para>Men&uacute;s: en los men&uacute;s, los lanzadores se representan por elementos de men&uacute;. Por lo general, los elementos del men&uacute; tienen un icono junto a su nombre.</para>
+      </listitem>
+      <listitem>
+        <para>Escritorio: en el escritorio, los lanzadores se representan por iconos. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Las propiedades de un lanzador se pueden modificar. Por ejemplo, las propiedades de un lanzador incluyen el nombre, el icono que lo representa y su modo de ejecuci&oacute;n. </para>
+    <sect2 id="gospanel-34">
+      <title>Para a&ntilde;adir un lanzador a un panel </title>
+      <indexterm>
+        <primary>lanzadores</primary>
+        <secondary>a&ntilde;adir al panel </secondary>
+      </indexterm>
+      <para>Puede a&ntilde;adir un lanzador a un panel como sigue:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Desde el men&uacute; emergente del panel</para>
+          <para>Para crear un nuevo lanzador a un panel, haga clic con el bot&oacute;n derecho en un espacio vac&iacute;o del panel y, a continuaci&oacute;n, seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Lanzador</guimenuitem></menuchoice>. Se mostrar&aacute; un cuadro de di&aacute;logo <guilabel>Crear lanzador</guilabel>. Para obtener m&aacute;s informaci&oacute;n acerca de c&oacute;mo trabajar con este cuadro de di&aacute;logo, consulte la <xref linkend="gospanel-52"/>.</para>
+          <para>De forma alternativa, para a&ntilde;adir un lanzador ya existente al panel, puede seleccionar <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Lanzador de men&uacute;</guimenuitem></menuchoice> en el men&uacute; emergente. Seleccione el lanzador que desea a&ntilde;adir del men&uacute;.</para>
+        </listitem>
+        <listitem>
+          <para>Desde cualquier men&uacute;</para>
+          <para>Para a&ntilde;adir un lanzador a un panel desde cualquier men&uacute;, efect&uacute;e los siguientes pasos:<itemizedlist><listitem><para>Abra un men&uacute; que contenga el lanzador. Arrastre el lanzador hacia el panel. </para></listitem><listitem><para>Abra el men&uacute; que contiene el lanzador desde el panel donde lo desea a&ntilde;adir. Haga clic con el bot&oacute;n derecho en el nombre del lanzador. Seleccione <guimenuitem>A&ntilde;adir este lanzador al panel</guimenuitem>. </para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Desde el gestor de archivos</para>
+          <para>Para a&ntilde;adir un lanzador a un panel desde el gestor de archivos, encuentre el archivo <filename>.desktop</filename> para el lanzador en el sistema de archivos. Para a&ntilde;adirlo, arrastre el archivo <filename>.desktop</filename> al panel.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gospanel-52">
+        <title>Para crear un lanzador con el cuadro de di&aacute;logo Crear lanzador</title>
+        <para>Para crear un lanzador con el cuadro de di&aacute;logo <guilabel>Crear un lanzador</guilabel>, efect&uacute;e los pasos siguientes: </para>
+        <orderedlist>
+          <listitem>
+            <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel para abrir el men&uacute; emergente del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem> Lanzador</guimenuitem></menuchoice> para mostrar el cuadro de di&aacute;logo <guilabel>Crear lanzador</guilabel>. </para>
+          </listitem>
+          <listitem>
+            <para>Introduzca las propiedades del lanzador en la ficha <guilabel>B&aacute;sico</guilabel>. A continuaci&oacute;n, se muestran los elementos de cuadro de di&aacute;logo que aparecen en <guilabel>B&aacute;sico</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="26.19*"/>
+                <colspec colname="colspec1" colwidth="73.81*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento de la ventana de di&aacute;logo</para>
+                    </entry>
+                    <entry>
+                      <para>Descripci&oacute;n </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nombre</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Utilice este cuadro de texto para indicar el nombre del lanzador. Utilice la ficha <guilabel>Avanzado</guilabel> para a&ntilde;adir traducciones del nombre. &Eacute;ste es el nombre que aparecer&aacute; cuando se a&ntilde;ada el lanzador a un men&uacute; o al escritorio. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0" valign="top">
+                      <para>
+                        <guilabel>Usuario</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Utilice este cuadro de texto para indicar el tipo de aplicaci&oacute;n a la cual pertenece el lanzador. Por ejemplo, escriba <userinput>Editor de texto</userinput> en este cuadro de texto si la aplicaci&oacute;n fuera <application>gedit</application>. Utilice la ficha <guilabel>Avanzado</guilabel> para a&ntilde;adir traducciones del nombre gen&eacute;rico.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Comentario</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Utilice este cuadro de texto para anotar una descripci&oacute;n breve del lanzador. El comentario ser&aacute; lo que se muestre como ayuda al apuntar con el rat&oacute;n al icono del panel. Utilice la ficha <guilabel>Avanzado</guilabel> para a&ntilde;adir traducciones del comentario. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Orden</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Utilice este cuadro de texto para indicar la orden que se ejecutar&aacute; al hacer clic en el lanzador. Consulte la siguiente secci&oacute;n para ver &oacute;rdenes de ejemplo.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Tipo</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Utilice el cuadro de combinaci&oacute;n desplegable para indicar el tipo de lanzador. Se puede seleccionar: </para>
+                      <itemizedlist>
+                        <listitem>
+                          <para><guilabel>Aplicaci&oacute;n</guilabel>: seleccione esta opci&oacute;n para crear un lanzador que inicie una aplicaci&oacute;n.</para>
+                        </listitem>
+                        <listitem>
+                          <para><guilabel>Enlace</guilabel>: seleccione esta opci&oacute;n para crear un lanzador que enlace con un URI.</para>
+                        </listitem>
+                      </itemizedlist>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Icono</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione un icono para representar el lanzador. Para seleccionar un icono, haga clic en el bot&oacute;n <guibutton>Sin icono</guibutton>. Se mostrar&aacute; un selector de iconos. Seleccione el icono deseado en el cuadro de di&aacute;logo. Alternativamente, para seleccionar el icono de otro directorio, haga clic en <guibutton>Examinar</guibutton>. Cuando haya seleccionado el icono, haga clic en el bot&oacute;n <guibutton>Aceptar</guibutton>. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Ejecutar en terminal</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione esta opci&oacute;n para ejecutar la orden o aplicaci&oacute;n en una ventana de terminal. Se debe seleccionar esta opci&oacute;n para el caso de aplicaciones o &oacute;rdenes que no crean una ventana en la que ejecutarse.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Para establecer las propiedades avanzadas del lanzador, haga clic en la pesta&ntilde;a <guilabel>Avanzado</guilabel>. </para>
+          </listitem>
+          <listitem>
+            <para>Introduzca las propiedades avanzadas del lanzador en la secci&oacute;n<guilabel> Avanzado</guilabel>. La siguiente tabla describe los elementos del cuadro de di&aacute;logo en la parte superior de la ficha <guilabel>Avanzado</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="32.03*"/>
+                <colspec colwidth="67.97*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento de la ventana de di&aacute;logo</para>
+                    </entry>
+                    <entry>
+                      <para>Descripci&oacute;n </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>En primer lugar, intentar</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Introduzca aqu&iacute; una orden para probarla antes de iniciar el lanzador. Si la orden es ejecutable y se encuentra en la ruta de acceso, el lanzador aparecer&aacute; en el panel</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Documentaci&oacute;n</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Introduzca la ruta de acceso al archivo de ayuda del lanzador. Si introduce en este campo una ruta de acceso, se a&ntilde;adir&aacute; un elemento <guimenuitem>Ayuda sobre <replaceable>nombre-lanzador</replaceable></guimenuitem> al men&uacute; emergente del lanzador.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Tambi&eacute;n se puede a&ntilde;adir una traducci&oacute;n de los campos <guilabel>Nombre</guilabel>, <guilabel>Usuario</guilabel> y <guilabel>Comentario</guilabel> de la ficha <guilabel>B&aacute;sico</guilabel>. Para a&ntilde;adir una traducci&oacute;n, introduzca los detalles en la tabla <guilabel>Nombre/Comentario de las traducciones</guilabel> como se indica a continuaci&oacute;n: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="20.78*"/>
+                <colspec colname="colspec1" colwidth="79.22*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Campo</para>
+                    </entry>
+                    <entry>
+                      <para>Descripci&oacute;n </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>Primer campo </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Introduzca el c&oacute;digo de dos letras del idioma para el cual desea a&ntilde;adir una traducci&oacute;n. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Segundo campo </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Introduzca la traducci&oacute;n del <guilabel>Nombre</guilabel> del lanzador.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>Tercer campo </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Introduzca la traducci&oacute;n del <guilabel>Usuario</guilabel> del lanzador. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Cuarto campo </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Introduzca la traducci&oacute;n del <guilabel>Comentario</guilabel> del lanzador. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+            <para>Y, a continuaci&oacute;n, haga clic en el bot&oacute;n <guibutton>Agregar/Establecer</guibutton>. </para>
+            <para>Para editar una traducci&oacute;n, selecci&oacute;nela. El texto traducido aparecer&aacute; en la parte inferior de este cuadro de di&aacute;logo. Edite los campos seg&uacute;n sea necesario y, a continuaci&oacute;n, haga clic en el bot&oacute;n <guibutton>A&ntilde;adir/Poner</guibutton>.</para>
+            <para>Haga clic en el bot&oacute;n <guibutton>Quitar</guibutton> para eliminar una traducci&oacute;n previamente seleccionada.</para>
+          </listitem>
+          <listitem>
+            <para>Para crear el lanzador y cerrar el cuadro de di&aacute;logo <guilabel>Propiedades del lanzador</guilabel>, haga clic en <guibutton>Aceptar</guibutton>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gospanel-556">
+        <title>&Oacute;rdenes del lanzador</title>
+        <para>El tipo de &oacute;rdenes que se pueden introducir en el campo <guilabel>Orden</guilabel> dependen de la opci&oacute;n seleccionada previamente en la casilla desplegable <guilabel>Tipo</guilabel>. Al seleccionar <guilabel>Aplicaci&oacute;n</guilabel> en la casilla desplegable <guilabel>Tipo</guilabel>, se puede introducir una orden normal. En la siguiente tabla se muestran algunas &oacute;rdenes de ejemplo y las acciones que realizan.</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Ejemplos de &oacute;rdenes de aplicaci&oacute;n </para>
+                </entry>
+                <entry>
+                  <para>Acci&oacute;n</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>gedit</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Inicia el editor de texto <application>gedit</application>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>gedit /usuario123/miarchivo.txt</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Abre el archivo <filename>/usuario123/miarchivo.txt</filename> en la aplicaci&oacute;n <application>gedit</application>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>nautilus /usuario123/Proyectos</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Abre el archivo <filename>/usuario123/Proyectos</filename> en la ventana del gestor de archivos. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Al seleccionar <guilabel>Enlace</guilabel> en la casilla desplegable <guilabel>Tipo</guilabel>, se puede introducir un enlace. En la siguiente tabla se muestran algunas &oacute;rdenes de enlace de ejemplo y las acciones que realizan.<indexterm><primary>URI especiales</primary><secondary>lanzadores</secondary></indexterm></para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Ejemplos de &oacute;rdenes de enlace </para>
+                </entry>
+                <entry>
+                  <para>Acci&oacute;n</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>http://www.sun.com </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Abre el sitio web de Sun Microsystems en su navegador predeterminado.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>ftp://ftp.gnome.org</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Abre el sitio FTP de GNOME en el navegador predeterminado. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>applications:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Abre la ubicaci&oacute;n <guilabel>Aplicaciones</guilabel> en una ventana del gestor de archivos. Haga doble clic sobre una aplicaci&oacute;n para iniciarla.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>preferencias:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Abre la ubicaci&oacute;n <guilabel>Preferencias</guilabel> en una ventana del gestor de archivos. Haga doble clic en una herramienta de preferencias para abrirla.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-36">
+      <title>Para modificar las propiedades de un lanzador </title>
+      <indexterm>
+        <primary>lanzadores</primary>
+        <secondary>modificar propiedades</secondary>
+      </indexterm>
+      <para>Para modificar las propiedades de un lanzador: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel para abrir el men&uacute; emergente del panel.</para>
+        </listitem>
+        <listitem>
+          <para>Seleccione <guimenuitem>Propiedades</guimenuitem>. Utilice el cuadro de di&aacute;logo <guilabel>Propiedades del lanzador</guilabel> para modificar las propiedades seg&uacute;n sea necesario. Para obtener m&aacute;s informaci&oacute;n acerca del cuadro de di&aacute;logo <guilabel>Propiedades del lanzador</guilabel>, consulte la <xref linkend="gospanel-52"/>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo <guilabel>Propiedades del lanzador</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-557">
+    <title>Botones </title>
+    <indexterm>
+      <primary>botones</primary>
+      <secondary>agregar al panel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>botones de acci&oacute;n</primary>
+      <see>botones</see>
+    </indexterm>
+    <para>Se pueden agregar botones a los paneles para proporcionar un acceso r&aacute;pido a funciones y acciones comunes. </para>
+    <sect2 id="gospanel-554">
+      <title>Bot&oacute;n Buscar </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>buscar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n de b&uacute;squeda</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&oacute;n de b&uacute;squeda</primary>
+      </indexterm>
+      <para>Puede usar el bot&oacute;n <guibutton>Buscar</guibutton> para abrir el cuadro de di&aacute;logo <application>Buscar archivos</application>. </para>
+      <para>Para agregar un bot&oacute;n <guibutton>Buscar archivos</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>Buscar</guimenuitem></menuchoice>. Para abrir el cuadro de di&aacute;logo <application>Buscar archivos</application>, haga clic en el bot&oacute;n <guibutton>Buscar</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-563">
+      <title>Bot&oacute;n Forzar cierre </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>Forzar cierre</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n Forzar cierre</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Forzar cierre, bot&oacute;n</primary>
+      </indexterm>
+      <indexterm>
+        <primary>finalizar aplicaciones</primary>
+      </indexterm>
+      <indexterm>
+        <primary> aplicaciones</primary>
+        <secondary>finalizar</secondary>
+      </indexterm>
+      <para>El bot&oacute;n <guibutton>Forzar cierre</guibutton> permite seleccionar una ventana para finalizar una aplicaci&oacute;n. Este bot&oacute;n es &uacute;til cuando es necesario finalizar una aplicaci&oacute;n que no responde a las &oacute;rdenes. </para>
+      <para>Para finalizar una aplicaci&oacute;n, haga clic en el bot&oacute;n <guibutton>Forzar cierre</guibutton> y, a continuaci&oacute;n, haga clic en una ventana de la aplicaci&oacute;n que desee finalizar. Si no se desea terminar ninguna aplicaci&oacute;n despu&eacute;s de hacer clic en el bot&oacute;n <guibutton>Forzar cierre</guibutton>, pulse <keycap>Esc</keycap>.</para>
+    </sect2>
+    <sect2 id="gospanel-21">
+      <title>Bot&oacute;n Bloquear la pantalla </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>Bloquear</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n Bloquear</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&oacute;n Bloquear</primary>
+      </indexterm>
+      <indexterm>
+        <primary>Bloquear la pantalla</primary>
+      </indexterm>
+      <para>El bot&oacute;n <guibutton>Bloquear la pantalla</guibutton> bloquea la pantalla y activa el salvapantallas. Para volver a la sesi&oacute;n, se debe volver a introducir la contrase&ntilde;a. Para bloquear la pantalla correctamente, el salvapantallas tiene que estar habilitado.</para>
+      <para>Para agregar un bot&oacute;n <guibutton>Bloquear la pantalla</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>Bloquear</guimenuitem></menuchoice>. </para>
+      <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n <guibutton>Bloquear la pantalla</guibutton> para abrir un men&uacute; de &oacute;rdenes relacionadas con el salvapantallas. La <xref linkend="gosstartsession-TBL-83"/> describe las &oacute;rdenes disponibles en el men&uacute;.</para>
+      <table frame="topbot" id="gosstartsession-TBL-83">
+        <title>Elementos del men&uacute; Bloquear pantalla</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="43.55*"/>
+          <colspec colname="colspec1" colwidth="56.45*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Elemento del men&uacute;</para>
+              </entry>
+              <entry>
+                <para>Funci&oacute;n </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Activar el salvapantallas</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Activa de inmediato el salvapantallas pero no bloquea la pantalla.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Bloquear la pantalla</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Bloquea la pantalla de inmediato. Esta orden realiza la misma funci&oacute;n que el bot&oacute;n <guibutton>Bloquear</guibutton>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Cancelar el daemon del salvapantallas</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Termina el proceso del salvapantallas. Despu&eacute;s de terminar este proceso, no se puede bloquear la pantalla.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Reiniciar el daemon del salvapantallas</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Termina y reinicia el proceso del salvapantallas. Utilice esta orden despu&eacute;s de cambiar la contrase&ntilde;a. Al reiniciar el proceso del salvapantallas, s&oacute;lo ser&aacute; v&aacute;lida la nueva contrase&ntilde;a.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Propiedades</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Muestra la herramienta de preferencias <guilabel>XScreenSaver</guilabel>. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gospanel-20">
+      <title>Bot&oacute;n Terminar sesi&oacute;n </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>Terminar sesi&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n Terminar sesi&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&oacute;n Terminar sesi&oacute;n</primary>
+      </indexterm>
+      <para>El bot&oacute;n <guibutton>Terminar sesi&oacute;n</guibutton> inicia el proceso para cerrar una sesi&oacute;n de Java Desktop System. </para>
+      <para>Para agregar un bot&oacute;n <guibutton>Terminar sesi&oacute;n</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>Terminar sesi&oacute;n</guimenuitem></menuchoice>. Para cerrar la sesi&oacute;n o el sistema, haga clic en el bot&oacute;n <guibutton>Terminar sesi&oacute;n</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-555">
+      <title>Bot&oacute;n Ejecutar una aplicaci&oacute;n </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>Ejecutar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n Ejecutar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&oacute;n Ejecutar</primary>
+      </indexterm>
+      <para>El bot&oacute;n <guibutton>Ejecutar una aplicaci&oacute;n</guibutton> abre el di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel>. </para>
+      <para>Para agregar un bot&oacute;n <guibutton>Ejecutar una aplicaci&oacute;n</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar a panel</guimenu><guisubmenu>Acciones</guisubmenu><guimenuitem> Ejecutar</guimenuitem></menuchoice>. Para abrir el di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel>, haga clic en el bot&oacute;n <guibutton>Ejecutar una aplicaci&oacute;n</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-553">
+      <title>Bot&oacute;n Capturar la pantalla </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>Capturar la pantalla</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n Capturar la pantalla</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&oacute;n Capturar la pantalla</primary>
+      </indexterm>
+      <para>El bot&oacute;n <guibutton>Capturar la pantalla</guibutton> permite realizar una captura de la pantalla. </para>
+      <para>Para agregar un bot&oacute;n <guibutton>Capturar la pantalla</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu>Acciones</guisubmenu><guimenuitem>Capturar la pantalla</guimenuitem></menuchoice>. Para realizar una captura de pantalla, basta hacer clic en el bot&oacute;n <guibutton>Capturar la pantalla</guibutton>.</para>
+    </sect2>
+    <sect2 id="gospanel-564">
+      <title>Bot&oacute;n Mostrar escritorio </title>
+      <indexterm>
+        <primary>botones</primary>
+        <secondary>Mostrar escritorio</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary>bot&oacute;n Mostrar escritorio</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Mostrar escritorio, bot&oacute;n</primary>
+      </indexterm>
+      <para>El bot&oacute;n <guibutton>Minimizar ventanas</guibutton> minimiza todas las ventanas abiertas y muestra el escritorio.</para>
+      <para>Para agregar un bot&oacute;n <guibutton>Mostrar escritorio</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>Minimizar ventanas</guimenuitem></menuchoice>. Para minimizar todas las ventanas y mostrar el escritorio, haga clic en el bot&oacute;n <guibutton>Mostrar escritorio</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-567">
+      <title>&Aacute;rea de notificaci&oacute;n </title>
+      <indexterm>
+        <primary>aplicaciones del panel</primary>
+        <secondary>&Aacute;rea de notificaci&oacute;n </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos del panel</primary>
+        <secondary> &Aacute;rea de notificaci&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&Aacute;rea de notificaci&oacute;n</primary>
+      </indexterm>
+      <para><application>&Aacute;rea de notificaci&oacute;n</application> muestra iconos de diversas aplicaciones para indicar actividad en ellas. Por ejemplo, si se utiliza el <application>Lector de CD</application> para escuchar un CD, se mostrar&aacute; un icono de CD en el <application>&Aacute;rea de notificaci&oacute;n</application>. El gr&aacute;fico anterior muestra el icono del CD en el <application>&Aacute;rea de notificaci&oacute;n</application>. </para>
+      <para>Para agregar un <application>&Aacute;rea de notificaci&oacute;n</application> a un panel, haga clic en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>&Aacute;rea de notificaci&oacute;n</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-37">
+    <title>Men&uacute;s </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>a&ntilde;adir al panel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>objetos de panel</primary>
+      <secondary>men&uacute;s</secondary>
+    </indexterm>
+    <para>Se pueden a&ntilde;adir los siguientes tipos de men&uacute;s a los paneles: </para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>Lanzador</guibutton>: mediante el bot&oacute;n <guibutton>Lanzador</guibutton> se puede acceder a la mayor&iacute;a de aplicaciones est&aacute;ndar, &oacute;rdenes y opciones de configuraci&oacute;n. Para a&ntilde;adir un bot&oacute;n <guibutton>Lanzador</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel y, a continuaci&oacute;n, seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Men&uacute; principal</guimenuitem></menuchoice>. Puede agregar a los paneles tantos botones <guibutton>Lanzador</guibutton> como desee. </para>
+      </listitem>
+      <listitem>
+        <para><application>Barra de men&uacute;s</application>: se puede acceder a la mayor&iacute;a de aplicaciones, &oacute;rdenes y opciones de configuraci&oacute;n de los men&uacute;s de la <application>Barra de men&uacute;s</application>. La <application>Barra de mens&uacute;</application> contiene los men&uacute;s <guimenu>Aplicaciones</guimenu> y <guimenu>Acciones</guimenu>. Para a&ntilde;adir la <application>Barra de men&uacute;s</application> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel y, a continuaci&oacute;n, seleccione<menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Barra de men&uacute;s</guimenuitem></menuchoice> Se pueden a&ntilde;adir tantos objetos <application>Barra de men&uacute;s</application> a los paneles como se desee. </para>
+      </listitem>
+      <listitem>
+        <para>Men&uacute;s del sistema: los men&uacute;s del sistema contienen las aplicaciones y herramientas est&aacute;ndar que se pueden utilizar en Java Desktop System. Los men&uacute;s <guimenu>Aplicaciones</guimenu> y <guimenu>Acciones</guimenu> son men&uacute;s del sistema. Para a&ntilde;adir un men&uacute; de sistema a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n un lanzador del men&uacute; y, a continuaci&oacute;n, seleccione <menuchoice><guimenu>Men&uacute; completo</guimenu><guimenuitem>Agregar el men&uacute; al panel</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Los men&uacute;s que se a&ntilde;aden a los paneles se representan con un icono con una flecha. La flecha indica que el icono representa un men&uacute; o un caj&oacute;n. La <xref linkend="gospanel-FIG-68"/> muestra c&oacute;mo los men&uacute;s aparecen normalmente en los paneles. </para>
+    <figure id="gospanel-FIG-68">
+      <title>Objetos de men&uacute; habituales en un panel</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Objetos de men&uacute; habituales en un panel.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+  <sect1 id="gospanel-18">
+    <title>Cajones </title>
+    <indexterm>
+      <primary>objetos de panel</primary>
+      <secondary>cajones</secondary>
+      <see>cajones</see>
+    </indexterm>
+    <para>Un caj&oacute;n es una extensi&oacute;n de un panel. Se puede abrir y cerrar un caj&oacute;n de la misma manera que se oculta y se vuelve a mostrar un panel. Un caj&oacute;n puede contener los mismos objetos que un panel, como lanzadores, men&uacute;s, miniaplicaciones y otros objetos, adem&aacute;s de otros cajones. Al abrir el caj&oacute;n, se pueden utilizar los objetos de la misma manera que en un panel. </para>
+    <para>La siguiente figura muestra un caj&oacute;n abierto que contiene dos objetos de panel. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/open_drawer.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Caj&oacute;n abierto. El contexto describe la ilustraci&oacute;n. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>La flecha del icono del caj&oacute;n indica que el icono representa un men&uacute; o un caj&oacute;n.</para>
+    <para>Se pueden mover, a&ntilde;adir y quitar objetos de un caj&oacute;n de la misma forma que con los paneles. </para>
+    <sect2 id="gospanel-42">
+      <title>Para abrir y cerrar un caj&oacute;n </title>
+      <indexterm>
+        <primary>cajones</primary>
+        <secondary>abrir</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>cajones</primary>
+        <secondary>cerrar</secondary>
+      </indexterm>
+      <para>Para abrir un caj&oacute;n, haga clic en el objeto caj&oacute;n de un panel. Puede cerrar un caj&oacute;n de diferentes formas: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Hacer clic en el caj&oacute;n.</para>
+        </listitem>
+        <listitem>
+          <para>Hacer clic en el bot&oacute;n de ocultaci&oacute;n del caj&oacute;n.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-420">
+      <title>Para a&ntilde;adir un caj&oacute;n a un panel </title>
+      <indexterm>
+        <primary>cajones</primary>
+        <secondary>a&ntilde;adir al panel</secondary>
+      </indexterm>
+      <para>Puede a&ntilde;adir un caj&oacute;n a un panel de diferentes formas: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Desde el men&uacute; emergente del panel</para>
+          <para>Haga clic con el bot&oacute;n derecho en un espacio vac&iacute;o del panel y, a continuaci&oacute;n, seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Caj&oacute;n</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Desde cualquier men&uacute;</para>
+          <para>Se puede a&ntilde;adir un men&uacute; como caj&oacute;n a un panel.</para>
+          <para>Para a&ntilde;adir el submen&uacute; como caj&oacute;n a un panel, abra el men&uacute; en el panel. Haga clic con el bot&oacute;n derecho sobre cualquier lanzador en el men&uacute; y, a continuaci&oacute;n, seleccione <menuchoice><guimenu>Men&uacute; completo</guimenu><guimenuitem>A&ntilde;adir este caj&oacute;n al panel</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-54">
+      <title>Para a&ntilde;adir un objeto a un caj&oacute;n </title>
+      <indexterm>
+        <primary>cajones</primary>
+        <secondary>a&ntilde;adir objetos a</secondary>
+      </indexterm>
+      <para>Se pueden a&ntilde;adir objetos a un caj&oacute;n del mismo modo que se agregan a los paneles. Para obtener m&aacute;s informaci&oacute;n, consulte <xref linkend="gospanel-15"/>. </para>
+    </sect2>
+    <sect2 id="gospanel-550">
+      <title>Para modificar las propiedades de un caj&oacute;n </title>
+      <indexterm>
+        <primary>cajones</primary>
+        <secondary>modificar propiedades</secondary>
+      </indexterm>
+      <para>Para modificar las preferencias de todos los paneles y cajones, utilice la herramienta de preferencias <application>Panel</application>. Por ejemplo, se pueden seleccionar diversas opciones relacionadas con el aspecto y el comportamiento de los objetos en paneles y cajones. Tambi&eacute;n se pueden seleccionar opciones que s&oacute;lo afecten a los cajones. Por ejemplo, se puede seleccionar una opci&oacute;n para cerrar los cajones al hacer clic en un lanzador de uno de ellos.</para>
+      <para>Tambi&eacute;n se pueden modificar otras propiedades para cada caj&oacute;n por separado. Se pueden cambiar las caracter&iacute;sticas de cada caj&oacute;n, como por ejemplo, el aspecto visual y si hay botones de ocultaci&oacute;n.</para>
+      <para>Para modificar las propiedades de un caj&oacute;n, efect&uacute;e los siguientes pasos: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho en el caj&oacute;n y, a continuaci&oacute;n, seleccione <guimenuitem>Propiedades</guimenuitem> para mostrar el cuadro de di&aacute;logo <guilabel>Propiedades del panel</guilabel>. El cuadro de di&aacute;logo mostrar&aacute; la ficha <guilabel>Caj&oacute;n</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Seleccione las propiedades del caj&oacute;n en el cuadro de di&aacute;logo. A continuaci&oacute;n se describen los elementos de la ficha <guilabel>General</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento de la ventana de di&aacute;logo</para>
+                  </entry>
+                  <entry>
+                    <para>Descripci&oacute;n </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Nombre</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Escriba un nombre para el panel. &Eacute;ste es el nombre que aparecer&aacute; al cambiar entre los diferentes paneles del escritorio. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Tama&ntilde;o</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione el tama&ntilde;o del panel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Icono</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Seleccione un icono para representar el caj&oacute;n. Haga clic en el bot&oacute;n <guibutton>Icono</guibutton> para mostrar un cuadro de di&aacute;logo de selecci&oacute;n de iconos. Seleccione el icono deseado en el cuadro de di&aacute;logo. Tambi&eacute;n puede seleccionar el icono de otro directorio haciendo clic en <guibutton>Examinar</guibutton>. Cuando haya seleccionado el icono, haga clic en el bot&oacute;n <guibutton>Aceptar</guibutton>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Mostrar botones de ocultaci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para mostrar los botones de ocultaci&oacute;n en el panel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Flechas en los botones de ocultaci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para mostrar flechas en los botones de ocultaci&oacute;n, si &eacute;stos est&aacute;n activados.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Se puede utilizar la ficha <guilabel>Fondo</guilabel> para configurar el fondo del caj&oacute;n. Para obtener informaci&oacute;n sobre c&oacute;mo completar la ficha <guilabel>Fondo</guilabel>, consulte el apartado sobre este tema en <xref linkend="gospanel-28"/>. Tambi&eacute;n se puede arrastrar un color o imagen al caj&oacute;n para definir el color o imagen del fondo del caj&oacute;n. Para obtener m&aacute;s informaci&oacute;n, consulte <xref linkend="gospanel-61"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo <guilabel>Propiedades del panel</guilabel>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

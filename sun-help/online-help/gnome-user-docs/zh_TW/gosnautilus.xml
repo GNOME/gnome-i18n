@@ -1,0 +1,2661 @@
+<chapter id="gosnautilus-1">
+  <title>使用檔案管理員</title>
+  <highlights>
+    <para><application>Nautilus</application> 是 Java Desktop System 檔案管理員的名稱，提供了整合存取點至您的檔案與應用程式。</para>
+    <para>本章也說明使用檔案管理員的方法。</para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>檔案管理員簡介</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>簡介</secondary>
+    </indexterm>
+    <para>檔案管理員提供了一個整合的存取點，可以存取檔案與應用程式。檔案管理員可讓您進行下列項目：</para>
+    <itemizedlist>
+      <listitem>
+        <para>建立資料夾與文件。</para>
+      </listitem>
+      <listitem>
+        <para>顯示檔案和資料夾。</para>
+      </listitem>
+      <listitem>
+        <para>管理檔案和資料夾。</para>
+      </listitem>
+      <listitem>
+        <para>自訂檔案和資料夾。</para>
+      </listitem>
+      <listitem>
+        <para>開啟特別 URI 位置。</para>
+      </listitem>
+      <listitem>
+        <para>將資料寫入 CD。</para>
+      </listitem>
+    </itemizedlist>
+    <para>檔案管理員也可以管理桌面背景。桌面背景位於可見桌面的所有其他元件之後。桌面背景是使用者介面的有效元件之一。</para>
+    <para>如果要開啟一個檔案管理員視窗，請連按兩下桌面背景上的<guilabel>文件</guilabel>物件。檔案管理員視窗會在檢視窗格中顯示預設文件位置的內容。</para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>檔案管理員視窗</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>視窗</secondary>
+    </indexterm>
+    <para>檔案管理員視窗可以讓您顯示及管理您的檔案與資料夾。<xref linkend="gosnautilus-FIG-1"/> 是一個檔案管理員視窗，顯示了資料夾的內容。</para>
+    <figure id="gosnautilus-FIG-1">
+      <title>檔案管理員視窗中資料夾的內容<indexterm><primary>檔案管理員</primary><secondary>圖示檢視</secondary><tertiary>圖例</tertiary></indexterm></title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>檔案管理員視窗中的資料夾。功能表列、工具列、位置列、 縮放按鈕、側邊面板、檢視面板。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para><xref linkend="gosnautilus-TBL-83"/> 說明檔案管理員視窗的元件。</para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>檔案管理員視窗元件</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>元件</para>
+            </entry>
+            <entry>
+              <para>說明</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>功能表列</para>
+            </entry>
+            <entry valign="top">
+              <para>含有可以在檔案管理員中執行工作的功能表。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>工具列</para>
+            </entry>
+            <entry valign="top">
+              <para>含有可以在檔案管理員中執行工作的按鈕。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>位置列</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>包含下列元素：</para>
+              <itemizedlist>
+                <listitem>
+                  <para><guilabel>位置</guilabel>欄位或<guilabel>移至</guilabel>欄位：讓您指定要檢視的檔案、資料夾或 URI。</para>
+                </listitem>
+                <listitem>
+                  <para><guimenu>縮放</guimenu>按鈕：可以變更檢視窗格內項目的大小。</para>
+                </listitem>
+                <listitem>
+                  <para><guilabel>檢視方式</guilabel>下拉式清單：可以選擇如何在檢視窗格顯示項目。</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>側邊窗格</para>
+            </entry>
+            <entry valign="top">
+              <para>可以執行下列功能：</para>
+              <itemizedlist>
+                <listitem>
+                  <para>顯示關於目前檔案或資料夾的資訊。</para>
+                </listitem>
+                <listitem>
+                  <para>可以讓您瀏覽檔案。</para>
+                </listitem>
+              </itemizedlist>
+              <para>側邊窗格所包含的下拉式清單，可以選擇在側邊窗格內顯示的項目。您可以從下列選項選擇：</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>資訊</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>標識</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>歷史</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>註解</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>樹狀目錄</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>如果要顯示側邊窗格，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [側邊窗格]</guimenuitem></menuchoice>。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>檢視窗格</para>
+            </entry>
+            <entry valign="top">
+              <para>顯示下列內容：</para>
+              <itemizedlist>
+                <listitem>
+                  <para>特定類型的檔案</para>
+                </listitem>
+                <listitem>
+                  <para>資料夾</para>
+                </listitem>
+                <listitem>
+                  <para>FTP 網站</para>
+                </listitem>
+                <listitem>
+                  <para>對應於特殊 URI 的位置</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>狀態列</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>顯示狀態資訊。</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>您也可以從檔案管理員視窗開啟快顯功能表。如果要開啟快顯功能表，請在檔案管理員視窗上按滑鼠右鍵。至於功能表中的項目為何，則是要看按滑鼠右鍵的位置而定。例如：在檔案或資料夾上按滑鼠右鍵時，便可以選擇與檔案或資料夾相關的項目。如果是在檢視窗格的背景上按滑鼠右鍵時，則可以選擇與檢視窗格中顯示項目相關的項目。</para>
+    <sect2 id="gosnautilus-53">
+      <title>檢視窗格</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>檢視窗格</secondary>
+        <see>檢視窗格</see>
+      </indexterm>
+      <indexterm>
+        <primary>檢視窗格</primary>
+        <secondary>簡介</secondary>
+      </indexterm>
+      <para>檢視窗格可以顯示下列項目的內容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>特定類型的檔案</para>
+        </listitem>
+        <listitem>
+          <para>資料夾</para>
+        </listitem>
+        <listitem>
+          <para>FTP 網站</para>
+        </listitem>
+        <listitem>
+          <para>對應於特殊 URI 的位置</para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary>檢視器元件</primary></indexterm>檔案管理員所包括的<firstterm>檢視器元件</firstterm>可以在檢視窗格顯示特定類型的檔案。例如：您可以使用文字檢視器在檢視窗格顯示文字檔案。</para>
+      <para>在檢視窗格中顯示檔案，具有下列優點：</para>
+      <itemizedlist>
+        <listitem>
+          <para>使用的系統資源，比啟動應用程式所需的還要來的少。</para>
+        </listitem>
+        <listitem>
+          <para>所花的時間，比啟動應用程式所需的還要來的少。</para>
+        </listitem>
+      </itemizedlist>
+      <para>不過，無法在檢視窗格中編輯檔案。</para>
+      <para>檔案管理員也包含<firstterm>檢視</firstterm>，可以讓您用不同的方式顯示資料夾的內容。例如，您可以用下列的檢視類型，顯示資料夾的內容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>圖示檢視：將資料夾中的項目顯示為圖示。</para>
+        </listitem>
+        <listitem>
+          <para>清單檢視：將資料夾中的項目顯示為清單。</para>
+        </listitem>
+        <listitem>
+          <para>音效檢視：只在資料夾中顯示音效項目。</para>
+        </listitem>
+      </itemizedlist>
+      <para>請使用<guimenu> [檢視] </guimenu>功能表，選擇顯示資料夾的方式。如需有關檢視的詳細資訊，請參閱<xref linkend="gosnautilus-7"/>。</para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>側邊窗格</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>側邊窗格</secondary>
+        <tertiary>簡介</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>側邊窗格 </primary>
+        <see>檔案管理員</see>
+      </indexterm>
+      <para>如果要顯示側邊窗格，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [側邊窗格]</guimenuitem></menuchoice>。您可以選擇要在側邊窗格檢視的資訊。您可以選擇顯示下列的一項：</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>資訊</guilabel>
+          </para>
+          <para>顯示代表目前檔案或資料夾的圖示。並且顯示目前檔案或目前資料夾的相關資訊。如果檔案是顯示在檢視窗格中，那麼按鈕便會顯示在側邊窗格中。您可以使用按鈕，對檔案執行預設動作以外的動作。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>標識</guilabel>
+          </para>
+          <para>包含您可以加入檔案或資料夾的標識。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>歷史</guilabel>
+          </para>
+          <para>包含最近瀏覽過的檔案、資料夾、FTP 站台及 URI 的歷史清單。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>註解</guilabel>
+          </para>
+          <para>可以將註解加入檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>樹狀目錄</guilabel>
+          </para>
+          <para>以階層的方式顯示檔案系統。您可以使用<guilabel>樹狀目錄</guilabel>，導覽通過檔案。</para>
+        </listitem>
+      </itemizedlist>
+      <para>如果要關閉側邊窗格，請按一下在側邊窗格右上角的 <guibutton>[X]</guibutton> 按鈕。</para>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>圖示和標識</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>圖示</secondary>
+        <tertiary>介紹</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>標識</secondary>
+        <see>標識</see>
+      </indexterm>
+      <indexterm>
+        <primary> 標識</primary>
+        <secondary>介紹</secondary>
+      </indexterm>
+      <para>在圖示檢視中，檔案管理員會將您的檔案及資料夾顯示為圖示。您可以在檔案圖示和資料夾圖示中加入標識。標識是一個小型的圖示，可以將其加入項目，以實際顯示於項目上的方式，標示項目。例如，如需將檔案標示為重要，可以將<guilabel>重要</guilabel>標識加入檔案圖示，以建立下列的視覺效果：</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>具有重要標識的檔案圖示。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>關於如何將標識加入圖示之詳細的資訊，請參閱<xref linkend="gosnautilus-112"/>。</para>
+      <para>下表說明的便是檔案圖示的結構：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>元件</para>
+              </entry>
+              <entry>
+                <para>說明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>重要標識。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>標識。這個標識是<guilabel>重要</guilabel>標識。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>文字檔案圖示。 </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>代表檔案的圖示。這個圖示可能含有檔案內容的預覽。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>圖示標題。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>圖示標題。您可以修改要在圖示標題中顯示什麼資訊項目。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>檔案管理員包含下列項目類型的預設標識：</para>
+      <itemizedlist>
+        <listitem>
+          <para>符號連結</para>
+        </listitem>
+        <listitem>
+          <para>您具有下列許可權的項目：<indexterm><primary>許可權</primary><secondary>及標識</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>僅有讀取許可權</para>
+            </listitem>
+            <listitem>
+              <para>沒有讀取許可權亦無寫入許可權</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>下表顯示預設的標識：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>預設標識</para>
+              </entry>
+              <entry>
+                <para>說明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>符號連結標識。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>符號連結</primary><secondary>及標識</secondary></indexterm>符號連結</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>僅有讀取許可權的標識。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>僅有讀取許可權</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>沒有讀取許可權亦無寫入許可權的標識。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>沒有讀取許可權亦無寫入許可權</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>在電腦中導覽</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>導覽</secondary>
+    </indexterm>
+    <para>檔案管理員提供了一個整合的存取點，可以存取檔案、應用程式、FTP 網站及 URI。</para>
+    <para>本章節將說明下列事項：<itemizedlist><listitem><para>如何在檔案管理員視窗顯示項目。</para></listitem><listitem><para>如何從檔案管理員視窗開啟檔案。</para></listitem><listitem><para>如何在檔案系統中，導覽檔案和資料夾。</para></listitem><listitem><para>如何開啟檔案系統的位置。</para></listitem><listitem><para>如何連線到伺服器。</para></listitem><listitem><para>如何導覽至 FTP 網站。</para></listitem><listitem><para>如何存取特殊 URI 位置。</para></listitem></itemizedlist></para>
+    <sect2 id="gosnautilus-25">
+      <title>顯示資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>顯示資料夾</secondary>
+      </indexterm>
+      <para>您可以使用下列任一種方式，顯示資料夾的內容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>連按兩下在檢視窗格中的資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>位置</guilabel>欄位中，鍵入所要顯示資料夾的路徑，然後按一下 <keycap> [Enter]</keycap>。<guilabel>位置</guilabel>欄位有自動補齊指令功能。鍵入路徑時，檔案管理員便會讀取您的檔案系統。當鍵入的字元，足以識別出唯一的目錄時，檔案管理員便會在<guilabel>位置</guilabel>欄位中補齊目錄名稱。</para>
+        </listitem>
+        <listitem>
+          <para>請使用側邊窗格中的<guilabel>樹狀目錄</guilabel>。如需詳細的資訊， 請參閱<xref linkend="gosnautilus-27"/>。</para>
+        </listitem>
+        <listitem>
+          <para>請使用<guibutton> [上一步] </guibutton>工具列按鈕和<guibutton> [下一步] </guibutton>工具列按鈕，瀏覽您的導覽歷史。</para>
+        </listitem>
+      </itemizedlist>
+      <para>如需變更至目前資料夾的上一層資料夾，請選擇<menuchoice><guimenu> [開始]</guimenu><guimenuitem> [上一層]</guimenuitem></menuchoice>。或者，也可以按一下<guibutton> [上一層] </guibutton>工具列按鈕。</para>
+      <para>如需重新載入顯示，請按一下<guibutton> [重新載入] </guibutton>按鈕。</para>
+      <para>如果無法找到您想顯示的資料夾，則可以使用<application>搜尋工具</application>。如果要開始<application>搜尋工具</application>，按一下<guibutton> [啟動] </guibutton>，然後選擇<guimenu> [尋找檔案]</guimenu>。</para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>從側邊窗格使用樹狀目錄</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>樹狀目錄，使用</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>樹狀目錄，使用</primary>
+      </indexterm>
+      <para><guilabel>樹狀目錄</guilabel>會以階層方式顯示檔案系統。<guilabel>樹狀目錄</guilabel>提供導覽檔案系統的便利方法。如果要在側邊窗格顯示<guilabel>樹狀目錄</guilabel>，請由側邊窗格頂端的下拉式清單，選擇<guimenuitem> [樹狀目錄]</guimenuitem>。</para>
+      <para>在<guilabel>樹狀目錄</guilabel>中，資料夾會以下列各項表示：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>資料夾狀態</para>
+              </entry>
+              <entry>
+                <para>圖形表示</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para>封閉式資料夾</para>
+              </entry>
+              <entry>
+                <para>向右箭頭鍵</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>開啟的資料夾</para>
+              </entry>
+              <entry>
+                <para>向下箭頭鍵</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><xref linkend="gosnautilus-TBL-34"/> 說明可以用<guilabel>樹狀目錄</guilabel>執行的工作，以及執行這些工作的方法。</para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>樹狀目錄工作</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry>
+                <para>動作</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>開啟<guilabel>樹狀目錄</guilabel>。</para>
+              </entry>
+              <entry valign="top">
+                <para>從位於側邊窗格頂端的下拉式清單，選擇<guilabel>樹狀目錄</guilabel>。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>關閉<guilabel>樹狀目錄</guilabel>。</para>
+              </entry>
+              <entry valign="top">
+                <para>從位於側邊窗格頂端的下拉式清單，選擇另一個項目。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>在<guilabel>樹狀目錄</guilabel>開啟資料夾。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>在<guilabel>樹狀目錄</guilabel>中，按一下資料夾旁的箭號。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>在<guilabel>樹狀目錄</guilabel>關閉資料夾。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>在<guilabel>樹狀目錄</guilabel>中，按一下資料夾旁的箭號。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>在檢視窗格中顯示資料夾的內容。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>選取在<guilabel>樹狀目錄</guilabel>中的資料夾。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>在檢視窗格中顯示檔案的內容。</para>
+              </entry>
+              <entry valign="top">
+                <para>選取在<guilabel>樹狀目錄</guilabel>中的檔案。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>您可以設定喜好設定，使得<guilabel>樹狀目錄</guilabel>不顯示檔案。</para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>開啟檔案</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>開啟檔案</secondary>
+      </indexterm>
+      <para>當您開啟檔案時，檔案管理員便會為該檔案類型執行預設的動作。預設動作可以是下列任何一種：</para>
+      <itemizedlist>
+        <listitem>
+          <para>使用檢視器元件，在檢視窗格中顯示檔案。</para>
+        </listitem>
+        <listitem>
+          <para>啟動開啟檔案的應用程式。</para>
+        </listitem>
+      </itemizedlist>
+      <para>檔案管理員會檢查檔案內容，判斷檔案的類型。如果無法從前幾行判斷檔案的類型，檔案管理員便會檢查副檔名。</para>
+      <para>如果找不到您要開啟的檔案，則可以使用<application>搜尋工具</application>。如果要開始<application>搜尋工具</application>，按一下<guibutton> [啟動] </guibutton>，然後選擇<guimenu> [尋找檔案]</guimenu>。</para>
+      <sect3 id="gosnautilus-447">
+        <title>在檢視窗格中檢視檔案</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>在檢視窗格中檢視檔案</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>檢視窗格</primary>
+          <secondary>檢視檔案於</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>檢視器元件</primary>
+        </indexterm>
+        <para>檔案管理員所包含的檢視器元件，可以讓您在檢視窗格顯示特定類型的檔案。例如，可以在檢視窗格中，顯示下列類型的檔案：</para>
+        <itemizedlist>
+          <listitem>
+            <para>純文字檔案</para>
+          </listitem>
+          <listitem>
+            <para>PNG 檔案</para>
+          </listitem>
+          <listitem>
+            <para>聯合影像專家小組 (Joint Photographic Experts Group，JPEG) 檔案</para>
+          </listitem>
+        </itemizedlist>
+        <para>如需重新載入檢視窗格的內容，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [重新載入]</guimenuitem></menuchoice>。如果要停止在檢視窗格中載入項目，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [停止]</guimenuitem></menuchoice>。</para>
+        <para>當您在檢視窗格顯示檔案時，檢視器元件可能會將功能表項目加入至檔案管理員功能表。功能表中的項目，則與顯示的檔案類型相關。例如，在顯示 PNG 檔案時，<guimenu>[編輯] </guimenu>功能表會包含翻轉與旋轉功能表項目。</para>
+        <para>而且，在檢視窗格顯示一些類型的檔案時，可以使用檔案管理員的縮放按鈕來變更項目的大小。</para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>執行預設的動作</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>執行檔案的預設動作</secondary>
+        </indexterm>
+        <para>如需執行檔案的預設動作，請在檔案上連按兩下。例如，假設純文字文件的預設動作，是在文字檢視器中顯示檔案，在這種情況下，在檔案上連按兩下，就可以在文字檢視器中顯示檔案。</para>
+        <para>您可以設定檔案管理員個人喜好，以便在按一下檔案之後立即執行預設動作。</para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>以開啟時使用子功能表執行非預設的動作</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>執行檔案的非預設動作</secondary>
+        </indexterm>
+        <para>如果要執行檔案預設動作以外的動作，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>在檢視窗格中，選取要對其執行動作的檔案。選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [開啟時使用]</guimenuitem></menuchoice>。接著，會開啟<guisubmenu> [開啟時使用] </guisubmenu>子功能表。在這個子功能表中，部分項目的內容，與下列<application>檔案關聯</application>喜好設定工具的部分相關：</para>
+            <itemizedlist>
+              <listitem>
+                <para><guilabel>編輯檔案類型</guilabel>對話方塊中的<guilabel>預設的動作</guilabel>下拉式清單</para>
+              </listitem>
+              <listitem>
+                <para>在<guilabel>編輯檔案類型</guilabel>對話方塊中的<guilabel>檢視器元件</guilabel>下拉式清單</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>從<guisubmenu> [開啟時使用] </guisubmenu>子功能表中，選擇動作。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>在顯示檔案時執行其他動作</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>執行檔案的其他動作</secondary>
+        </indexterm>
+        <para>在檢視窗格中顯示檔案時，側邊窗格可能包含按鈕。</para>
+        <para>這些按鈕代表的動作，都是在<application>檔案關聯</application>桌面喜好設定工具中所定義的。這些動作的定義，是由<application>檔案關聯</application>桌面喜好設定工具的<guilabel>編輯檔案類型</guilabel>對話方塊中，<guilabel>預設動作</guilabel>下拉式清單所指定。按一下按鈕，可以執行動作。例如：假設為純文字文件所定義的動作，是要在 <application>gedit</application> 文字編輯器開啟檔案。如果已經定義了這個動作，則<guibutton> [開啟時使用 gedit] </guibutton>按鈕，會顯示在側邊窗格中。如果要在 <application>gedit</application> 應用程式中開啟檔案，請按一下<guibutton> [開啟時使用 gedit] </guibutton>按鈕。</para>
+        <note>
+          <para>如果下列任一對話方塊中不包含某個動作，則代表該動作的按鈕便不會顯示在側邊窗格中：</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>用其他應用程式開啟</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>用其他檢視器開啟</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-515">
+      <title>開啟位置</title>
+      <para>檔案管理員提供了一個整合的存取點，可以存取檔案、應用程式、FTP 網站及 URI。</para>
+      <para>您可以使用檔案管理員，以快速存取在檔案系統上的不同位置。如果要開啟位置，請執行下列步驟：<orderedlist><listitem><para>選取<menuchoice><guimenu> [移動至]</guimenu><guimenuitem> [位置]</guimenuitem></menuchoice>。</para></listitem><listitem><para>在<guilabel>位置</guilabel> 欄位，輸入想要顯示的資料夾路徑。</para></listitem><listitem><para>按一下 <keycap> [Enter]</keycap>。</para></listitem></orderedlist></para>
+      <para><guilabel>位置</guilabel>欄位有自動補齊指令功能。鍵入路徑時，檔案管理員便會讀取您的檔案系統。當鍵入的字元，足以識別出唯一的目錄時，檔案管理員便會在<guilabel>位置</guilabel>欄位中自動補齊目錄名稱。</para>
+    </sect2>
+    <sect2 id="gosnautilus-491">
+      <title>連線到伺服器</title>
+      <para>如果您的 Java Desktop System 環境配置成在網路上存取伺服器，則可以使用<guilabel>連線到伺服器</guilabel>功能表來連線到伺服器。</para>
+      <para>如果要連線到伺服器，請執行下列步驟：<orderedlist><listitem><para>選取<menuchoice><guimenu> [檔案]</guimenu><guimenuitem>[連線到伺服器]</guimenuitem></menuchoice>。</para></listitem><listitem><para>在<guilabel>連結名稱</guilabel>輸入伺服器名稱<guilabel>連線到伺服器</guilabel>對話方塊的欄位。</para></listitem><listitem><para>在<guilabel>位置 (URL)</guilabel>欄位中輸入 URL 的位置，例如：<literal>ftp:///ftp.gnome.org </literal>。</para></listitem><listitem><para>按一下<guibutton> [連線] </guibutton>按鈕。</para></listitem></orderedlist> </para>
+    </sect2>
+    <sect2 id="gosnautilus-445">
+      <title>使用這台電腦位置</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>這台電腦圖示圖形說明內文。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>這台電腦位置 </secondary>
+        <see>這台電腦位置</see>
+      </indexterm>
+      <indexterm>
+        <primary>這台電腦位置</primary>
+        <secondary>使用</secondary>
+      </indexterm>
+      <para><guilabel>這台電腦</guilabel>位置能讓您存取下列功能：</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>應用程式</guilabel>
+          </para>
+          <para>按兩下<guilabel>應用程式</guilabel>以存取您的主要 Java Desktop System 應用程式。您也可以經由<guimenu> [啟動] </guimenu>功能表以及<application>功能表列</application>存取<guimenu> [應用程式] </guimenu>功能表。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>喜好設定</guilabel>
+          </para>
+          <para>按兩下<guilabel>喜好設定</guilabel>以自訂 Java Desktop System。您也可以經由<guimenu> [啟動] </guimenu>功能表存取喜好設定工具。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>檔案系統</guilabel>
+          </para>
+          <para>按兩下<guilabel>檔案系統</guilabel>以存取 Java Desktop System 的最高層級資料夾。</para>
+        </listitem>
+      </itemizedlist>
+      <para>您可以使用下列方式，存取<guilabel>這台電腦</guilabel>位置：</para>
+      <itemizedlist>
+        <listitem>
+          <para>從桌面背景</para>
+          <para>連按兩下桌面背景上的<guilabel>這台電腦</guilabel>物件。 <guilabel>這台電腦</guilabel>位置的內容，會顯示在檔案瀏覽器視窗。</para>
+        </listitem>
+        <listitem>
+          <para>從檔案瀏覽器視窗存取 <command>computer:/// </command> URI。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>存取 FTP 網站</title>
+      <indexterm>
+        <primary>FTP 網站</primary>
+        <secondary>存取</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>FTP 網站</secondary>
+        <see>FTP 網站</see>
+      </indexterm>
+      <para>您可以使用檔案管理員來存取 FTP 站台。如果要存取 FTP 站台，請在位置列的欄位中，輸入網站的 URL，然後再按一下 <keycap> [Enter]</keycap>。網站的內容會顯示在檢視窗格中。如需從 FTP 網站複製檔案，請將檔案拖曳到新位置。</para>
+      <para>在存取需要使用者名稱和密碼的 FTP 網站時，可以用下列形式輸入 URL：</para>
+      <para>
+        <command>ftp://<replaceable>username</replaceable>:<replaceable>password </replaceable>@<replaceable>hostname</replaceable>.<replaceable>domain</replaceable></command>
+      </para>
+      <para>如需在檢視窗格中重新載入 FTP 站台，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [重新載入]</guimenuitem></menuchoice>。如果要停止載入 FTP 站台，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [停止]</guimenuitem></menuchoice>。</para>
+    </sect2>
+    <sect2 id="gosnautilus-465">
+      <title>存取網路位置</title>
+      <indexterm>
+        <primary>網路位置</primary>
+        <secondary>存取</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>網路位置</secondary>
+        <see>網路位置</see>
+      </indexterm>
+      <para>如果系統經過配置，可以在網路上存取位置，就可以使用檔案管理員來存取網路位置。</para>
+      <para>如需存取網路位置，請開啟檔案管理員並選取<menuchoice><guimenu> [移至]</guimenu><guimenuitem> [網路位置]</guimenuitem></menuchoice>。或者，連按兩下桌面背景上的<guilabel>網路位置</guilabel>物件。連按兩下<guilabel>網路</guilabel>物件。便會出現檔案管理員視窗。視窗會顯示可以存取的網路位置。連按兩下您想要存取的網路。</para>
+      <para><indexterm><primary>NFS 伺服器</primary><see>Unix 網路</see></indexterm>如需存取 UNIX 共用磁碟，按兩下<guilabel> Unix 網路 (NFS) </guilabel>物件。在檔案管理員視窗中，會顯示出可以使用的 UNIX 共用清單。</para>
+      <para><indexterm><primary>Samba 伺服器</primary><see>Windows 網路</see></indexterm>如需存取 Windows 共用磁碟，請按兩下<guilabel> Windows 網路 (SMB) </guilabel>物件。在檔案管理員視窗中，會顯示出可以使用的 Windows 共用清單。</para>
+      <sect3 id="gosnautilus-466">
+        <title>新增網路位置</title>
+        <para>如需新增網路位置，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>開啟檔案管理員並選取<menuchoice><guimenu> [移至]</guimenu><guimenuitem> [網路位置]</guimenuitem></menuchoice>。或者，連按兩下桌面背景上的<guilabel>網路位置</guilabel>物件。</para>
+          </listitem>
+          <listitem>
+            <para>按兩下<guilabel>增加網路位置</guilabel>物件。隨即會出現<guilabel>增加網路位置</guilabel>對話方塊。您可以使用下列方式，輸入對話方塊中的伺服器詳細資訊：</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>對話方塊元素</para>
+                    </entry>
+                    <entry>
+                      <para>說明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>位置</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>使用這個文字方塊指定要新增的位置。也可以從下拉式清單選取下列的其中一個位置：<itemizedlist><listitem><para><guilabel>FTP 伺服器</guilabel></para></listitem><listitem><para><guilabel>網路資料夾</guilabel></para></listitem><listitem><para><guilabel>Windows 網路 (SMB)</guilabel></para></listitem><listitem><para><guilabel>Unix 網路 (NFS)</guilabel></para></listitem></itemizedlist></para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>捷徑名稱</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">使用這個對話方塊指定網路位置的捷徑名稱。</entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>匿名登入</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>僅適用於 FTP 伺服器選項。選取這個選項，可以以匿名使用者登入 FTP 伺服器。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>不需登入</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>僅適用於網路資料夾、Windows 網路 (SMB) 與 Unix 網路 (NFS) 選項。不需要登入網路資料夾、Windows 共用磁碟或 UNIX 共用磁碟時，請選取這個選項。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>使用者名稱</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>使用這個文字方塊，可以指定連線至指定網路位置時的使用者名稱。</para>
+                      <para>連線至該網路位置時，必須輸入密碼。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>立刻移到那裡</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>要立刻存取網路位置時，請選取這個選項。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>按一下<guibutton> [確定] </guibutton>新增網路位置。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-508">
+      <title>存取網路伺服器</title>
+      <para>如果您的 GNOME 桌面環境設定為存取網路上的伺服器，您就可以使用<guilabel>應用程式</guilabel>功能表來存取網路伺服器。</para>
+      <para>如果要存取網路伺服器，請選擇<menuchoice><guimenu> [應用程式]</guimenu><guimenuitem> [網路伺服器]</guimenuitem></menuchoice>。隨即會出現檔案物件視窗。視窗會顯示您可以存取的網路伺服器。連按兩下您要存取的網路伺服器。</para>
+      <sect3 id="gosnautilus-509">
+        <title>新增網路伺服器</title>
+        <para>如果要新增網路伺服器，請選擇<menuchoice><guimenu> [應用程式]</guimenu><guimenuitem> [網路伺服器]</guimenuitem></menuchoice>。隨即會出現檔案物件視窗。連按兩下<guilabel>新伺服器</guilabel>物件。<guilabel>新伺服器</guilabel>對話方塊便會出現。在對話方塊中輸入伺服器的名稱，然後按一下<guibutton> [確定]</guibutton>。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-467">
+      <title>存取特殊 URI 位置</title>
+      <indexterm>
+        <primary>特殊 URI 位置</primary>
+        <secondary>存取</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>特殊 URI 位置</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>URI，特殊</primary>
+        <see>特殊 URI 位置</see>
+      </indexterm>
+      <para>Java Desktop System 所包含的特殊 URI 位置，可以讓您由檔案管理員存取特定的功能。例如：如果要存取喜好設定工具，您可以在檔案管理員視窗存取 <command>preferences:///</command> URI。<xref linkend="gosnautilus-TBL-479"/> 列出您可以在檔案管理員使用的特別 URI 位置。</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>特別 URI 位置</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>URI 位置</para>
+              </entry>
+              <entry>
+                <para>說明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>applications:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>在 Java Desktop System 顯示應用程式的清單。此處的應用程式與<guimenu> [應用程式] </guimenu>功能表中的應用程式相同。如果要開啟應用程式，請對應用程式連按兩下。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>computer:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>在 Java Desktop System 中，顯示應用程式清單與喜好設定工具。也會顯示圖示以存取您的檔案系統、CD-ROM 與磁碟機。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>在您的系統設定為存取網路上的位置時，顯示您可以連線的網路位置。如需存取網路位置，請對網路位置連按兩下。您也可以使用此 URI 來將網路位置加入系統。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>preferences:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>在 Java Desktop System 顯示喜好設定工具的清單。喜好設定工具與<guimenu> [喜好設定] </guimenu>功能表的喜好設定工具相同。如需開啟個人喜好工具，請連按兩下個人喜好工具。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>server-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>顯示可以用來配置系統設定的應用程式清單。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>system-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>顯示可以用來修改系統設定的應用程式清單。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>使用導覽歷史</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>導覽歷史清單</secondary>
+      </indexterm>
+      <para>檔案管理員維持著檔案、資料夾、FTP 站台及 URI 位置的歷史清單。您可以使用此歷史清單來導覽最近造訪過的檔案、資料夾、FTP 站台及 URI 位置。在歷史清單中，有您最近檢視過的十個項目。下列的章節會說明如何在歷史清單中進行導覽。</para>
+      <para>如果要清除歷史清單，請選擇<menuchoice><guimenu> [開始]</guimenu><guimenuitem> [清除歷史] </guimenuitem></menuchoice>。</para>
+      <sect3 id="gosnautilus-77">
+        <title>使用開始功能表在歷史清單中進行導覽</title>
+        <para>如果要顯示之前檢視過的項目的清單，請選擇<guimenu> [開始] </guimenu>功能表。您的歷史清單，是顯示在<guimenu> [開始] </guimenu>功能表的下半部。如需開啟歷史清單中的項目，請從<guimenu> [開始] </guimenu>功能表中選擇項目。</para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>使用工具列在歷史清單中進行導覽</title>
+        <para>如需使用工具列在歷史清單中進行導覽，請執行下列任一項動作：</para>
+        <itemizedlist>
+          <listitem>
+            <para>如果要開啟列於歷史清單中的先前檔案、資料夾或 URI，請按一下<guibutton> [上一步] </guibutton>工具列按鈕。</para>
+          </listitem>
+          <listitem>
+            <para>如需開啟列於歷史清單中的下一個檔案、資料夾或 URI，請按一下<guibutton> [下一步] </guibutton>工具列按鈕。</para>
+          </listitem>
+          <listitem>
+            <para>如果要顯示之前檢視過項目的清單，請在<guibutton> [上一步] </guibutton>工具列按鈕的右方，按一下向下箭頭。如果要從清單中開啟項目，請在項目上按一下。</para>
+          </listitem>
+          <listitem>
+            <para>如需檢視完目前的項目後，要顯示檢視過項目的清單，請在<guibutton> [下一步] </guibutton>工具列按鈕的右方，按一下向下箭頭。如果要從清單中開啟項目，請在項目上按一下。</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>使用側邊窗格中的歷史來導覽歷史清單</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>歷史</secondary>
+        </indexterm>
+        <para>如果要在側邊窗格顯示<guilabel>歷史</guilabel>清單，請由側邊窗格頂端的下拉式清單，選擇<guilabel>歷史</guilabel>。在側邊窗格的<guilabel>歷史</guilabel>清單，顯示出您在先前檢視過的項目的清單。</para>
+        <para>如需由檢視窗格中的歷史清單顯示項目，請在<guilabel>歷史</guilabel>清單中按一下該項目。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>將我的最愛位置加入書籤</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>書籤</secondary>
+      </indexterm>
+      <para>如果要存取書籤中的項目，請從<guimenu> [書籤] </guimenu>功能表中選擇項目。您可以將我的最愛位置，加入<guimenu> [書籤] </guimenu>功能表。您可以將書籤加入檔案系統中的檔案與資料夾、FTP 站台或 URI 位置。</para>
+      <sect3 id="gosnautilus-40">
+        <title>新增書籤</title>
+        <para>如需增加書籤，請先在檢視窗格中，顯示您想加入書籤的項目。選擇<menuchoice><guimenu> [書籤]</guimenu><guimenuitem> [增加書籤] </guimenuitem></menuchoice>。</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>編輯書籤</title>
+        <para>如需編輯書籤，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>選擇<menuchoice><guimenu> [書籤]</guimenu><guimenuitem> [編輯書籤]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>如需編輯書籤，請在<guilabel>編輯書籤</guilabel>對話方塊的左方，選取書籤。請在<guilabel>編輯書籤</guilabel>對話方塊的右方，編輯書籤的詳細資訊，方法如下：</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>對話方塊元素</para>
+                    </entry>
+                    <entry>
+                      <para>說明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>名稱</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>請使用這個文字方塊，指定書籤的名稱，以便在<guimenu> [書籤] </guimenu>功能表中識別書籤。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>位置</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>請用這個欄位，指定書籤的位置。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>如果要刪除書籤，請先選取對話方塊左方的書籤。然後按一下<guilabel>刪除</guilabel>。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>管理檔案和資料夾</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>管理檔案和資料夾</secondary>
+    </indexterm>
+    <para>本節將說明如何使用檔案和資料夾。</para>
+    <sect2 id="gosnautilus-201">
+      <title>在檔案管理員中拖放</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>拖放</secondary>
+      </indexterm>
+      <para>您可以使用拖放在檔案管理員中執行數種工作。進行拖放時，滑鼠指標會針對所執行的工作給予回應。<xref linkend="gosnautilus-TBL-11"/> 說明了可以透過拖放執行的工作。表中同時還顯示了進行拖放時，滑鼠指標的外觀。</para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>在檔案管理員中拖放</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>動作</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>滑鼠指標</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>移動項目</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>將項目拖曳到新位置。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>移動指標。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>複製項目</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>抓取項目，然後按住 <keycap>[Ctrl]</keycap>。將項目拖曳到新位置。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>複製指標。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>建立一個連結到項目的符號連結</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>抓取項目，然後按住 <keycombo><keycap>[Ctrl]</keycap><keycap>[Shift]</keycap></keycombo>。將項目拖曳到您要放置符號連結的位置。</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>符號連結指標。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>詢問要用拖曳的項目進行什麼工作</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>抓取項目，然後按住 <keycap>[Alt]</keycap>。將項目拖曳到您要放置該項目的位置。放開滑鼠按鈕。接著會顯示快顯功能表。請從快顯功能表選擇下列任一項目：</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>移動到此處</guimenuitem>
+                    </para>
+                    <para>將項目移動到該位置。</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>複製到此處</guimenuitem>
+                    </para>
+                    <para>將項目複製到該位置。</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>連結到此處</guimenuitem>
+                    </para>
+                    <para>在該位置建立項目的符號連結。</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>設定為背景</guimenuitem>
+                    </para>
+                    <para>如果項目是個影像，即可將影像設定為桌面背景。您可以使用這個指令，設定桌面背景以及檢視窗格的背景。</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>取消</guimenuitem>
+                    </para>
+                    <para>取消拖放作業。</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>問號指標。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>選取檔案和資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>選取檔案和資料夾</secondary>
+      </indexterm>
+      <para>您可以使用數種方式在檔案管理員選取檔案及資料夾。<xref linkend="gosnautilus-TBL-10"/> 說明如何從檔案管理員視窗及桌面背景上選取項目。</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>在檔案管理員選取項目</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>動作</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>選取一個項目</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>按一下該項目。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>選取一群連續的項目</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>於圖示檢視中，在想要選取的檔案周圍拖曳。</para>
+                <para>在清單檢視中，按一下群組的第一個項目。按住<keycap> [Shift]</keycap>，再按一下群組中的最後一項。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>選取多個項目</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>按住 <keycap>[Ctrl]</keycap> 鍵。按一下想要選取的項目。</para>
+                <para>或者，您也可以按住 <keycap>[Ctrl]</keycap> 鍵，然後在想要選取的檔案周圍拖曳。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>選取資料夾中的所有項目</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [選取全部檔案]</guimenuitem></menuchoice>。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>如果要執行項目的預設動作，請在項目上連按兩下。您可以設定檔案管理員個人喜好，以便在按一下檔案之後立即執行預設動作。</para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>移動檔案或檔案夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>移動檔案和資料夾</secondary>
+      </indexterm>
+      <para>以下各節將說明移動檔案或資料夾的方式。</para>
+      <sect3 id="gosnautilus-537">
+        <title>拖曳到檢視窗格中的新位置</title>
+        <para>如果要將檔案或資料夾拖曳到檢視窗格中的新位置，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>開啟檔案管理員視窗。選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [新視窗] </guimenuitem></menuchoice>以開啟第二個檔案管理員視窗。</para>
+          </listitem>
+          <listitem>
+            <para>在其中一個視窗中，選取要從中移動檔案或資料夾的資料夾。在另一個視窗中，選取要將檔案或資料夾移動到其中的資料夾。</para>
+          </listitem>
+          <listitem>
+            <para>將所欲移動的檔案或資料夾，移動到另一個視窗中的新位置。</para>
+          </listitem>
+        </orderedlist>
+        <para>如需將檔案或資料夾，移動到比目前位置低一層的資料夾，請不要開啟新視窗。請直接將檔案或資料夾，拖曳到同一視窗中的新位置。</para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>剪下並貼入新位置</title>
+        <para>您可以將檔案或資料夾剪下，然後貼入另一個資料夾，方法如下：</para>
+        <orderedlist>
+          <listitem>
+            <para>選取要移動的檔案或資料夾，然後選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [剪下檔案]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>開啟要將檔案或資料夾移動到的資料夾，然後選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [貼上檔案]</guimenuitem></menuchoice>。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>複製檔案或資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>複製檔案和資料夾</secondary>
+      </indexterm>
+      <para>以下各節將說明複製檔案或資料夾的方式。</para>
+      <sect3 id="gosnautilus-640">
+        <title>拖曳到檢視窗格中的新位置</title>
+        <para>如需複製檔案或資料夾，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>開啟檔案管理員視窗。選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [新視窗] </guimenuitem></menuchoice>以開啟第二個檔案管理員視窗。</para>
+          </listitem>
+          <listitem>
+            <para>在其中一個視窗中，選取要從中複製檔案或資料夾的資料夾。在另一個視窗中，選取要將檔案或資料夾複製到其中的資料夾。</para>
+          </listitem>
+          <listitem>
+            <para>抓取檔案或資料夾，然後按住 <keycap>[Ctrl]</keycap>。直接將檔案或資料夾，拖曳到其他視窗中的新位置。</para>
+          </listitem>
+        </orderedlist>
+        <para>如需將檔案或資料夾複製到比目前位置低一層的資料夾，請不要開啟新視窗。請直接抓取檔案或資料夾，然後按住 <keycap>[Ctrl]</keycap>。再將檔案或資料夾，拖曳到同一視窗中的新位置。</para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>複製並貼入新位置</title>
+        <para>您可以複製檔案或資料夾，然後再貼入另一個資料夾，方法如下：</para>
+        <orderedlist>
+          <listitem>
+            <para>選取要複製的檔案或資料夾，然後選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [複製檔案]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>開啟要將檔案或資料夾複製到其中的資料夾，然後選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [貼上檔案]</guimenuitem></menuchoice>。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>複製檔案或資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>複製檔案和資料夾</secondary>
+      </indexterm>
+      <para>如果要在目前的資料夾中，建立檔案或資料夾的副本，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在檢視窗格中，選取要複製的檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [複製]</guimenuitem></menuchoice>。或者，也可以在檢視窗格中的檔案或資料夾上按滑鼠右鍵，然後選擇<guimenuitem> [複製]</guimenuitem>。</para>
+          <para>檔案或資料夾的副本，便會顯示在目前的資料夾中。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>建立資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>建立資料夾</secondary>
+      </indexterm>
+      <para>如需建立資料夾，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>選取資料夾，以便在其中建立新資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [建立資料夾] </guimenuitem></menuchoice>。或者，也可以在檢視窗格的背景上按滑鼠右鍵，然後選擇<guimenuitem> [建立資料夾]</guimenuitem>。</para>
+          <para>檢視窗格中便會加入一個<guilabel>未命名</guilabel>的資料夾。此資料夾的名稱會呈已選取狀態。</para>
+        </listitem>
+        <listitem>
+          <para>請鍵入資料夾的名稱，然後按一下 <keycap>[Enter]</keycap>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>重新命名檔案或資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>重新命名資料夾</secondary>
+      </indexterm>
+      <para>如需重新命名檔案或資料夾，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在檢視窗格中，選取要重新命名的檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [重新命名]</guimenuitem></menuchoice>。或者，也可以在檢視窗格中的檔案或資料夾上按滑鼠右鍵，然後選擇<guimenuitem> [重新命名]</guimenuitem>。</para>
+          <para>檔案或資料夾的名稱會呈被選取狀態。</para>
+        </listitem>
+        <listitem>
+          <para>鍵入檔案或資料夾的新名稱，然後按一下 <keycap>[Enter]</keycap>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>範本與文件</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>建立檔案</secondary>
+      </indexterm>
+      <para>您可以從您經常建立的文件，建立範本。例如：若您經常建立發票，則可以建立空白的發票並將文件儲存為 <literal>invoice.doc</literal> 在 <literal>$HOME/Templates</literal> 資料夾中。</para>
+      <para>您也可以從檔案瀏覽器視窗存取範本資料夾。選取<menuchoice><guimenu> [移動至]</guimenu><guimenuitem>[範本]</guimenuitem></menuchoice>。</para>
+      <para>範本名稱在<guilabel>建立文件</guilabel>功能表，以子功能表項目顯示。</para>
+      <para>您也可以在範本資料夾中，建立子資料夾。子資料夾在功能表中顯示成子功能表。</para>
+      <para>您也可以共享範本。從範本資料夾到包含共享範本的資料夾，建立符號連結。</para>
+    </sect2>
+    <sect2 id="gosnautilus-514">
+      <title>建立新文件</title>
+      <para>如果您已經有文件範本，則可以選擇從已安裝的範本中，建立一個文件。</para>
+      <para>如果要建立文件，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>選取資料夾，以便在其中建立文件。</para>
+        </listitem>
+        <listitem>
+          <para>選取<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [建立文件]</guimenuitem></menuchoice>。或者，也可以在檢視窗格的背景上按滑鼠右鍵，然後選擇<guimenuitem> [建立文件]</guimenuitem>。</para>
+          <para>任何適用的範本名稱，會在<guilabel>建立文件</guilabel>功能表，以子功能表項目顯示出來。</para>
+        </listitem>
+        <listitem>
+          <para>在範本名稱上連續按兩下，以在建立您想要的文件。</para>
+        </listitem>
+        <listitem>
+          <para>重新命名文件，以儲存至適當的資料夾。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>將檔案或資料夾移動到回收筒</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>回收筒</secondary>
+        <see>回收筒</see>
+      </indexterm>
+      <indexterm>
+        <primary>回收筒</primary>
+        <secondary>將檔案或資料夾移動到</secondary>
+      </indexterm>
+      <para>如需將檔案或資料夾移動到<guilabel>回收筒</guilabel>，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在檢視窗格中，選取要移動到<guilabel>回收筒</guilabel>的檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [移至回收筒]</guimenuitem></menuchoice>。或者，也可以在檢視窗格中的檔案或資料夾上按滑鼠右鍵，然後選擇<guimenuitem> [移至回收筒]</guimenuitem>。</para>
+        </listitem>
+      </orderedlist>
+      <para>或者，您還可以從檢視窗格中，將檔案或資料夾直接拖曳到桌面背景上的<guilabel>回收筒</guilabel>物件。</para>
+      <note>
+        <para>當您將檔案或資料夾由可移除媒體移動至<guilabel>回收筒</guilabel>時，檔案或資料夾會儲存在可移動媒體的<guilabel>回收筒</guilabel>位置。如果要將檔案或資料夾從可移動媒體永遠移除，您必須將<guilabel>回收筒</guilabel>清空。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>刪除檔案或資料夾</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>刪除檔案或資料夾</secondary>
+      </indexterm>
+      <para>當您刪除檔案或資料夾時，該檔案或資料夾並不會移動到<guilabel>回收筒</guilabel>中，而是立即從檔案系統中刪除。只有在<guilabel>資料夾喜好設定</guilabel>對話方塊中，選取了選項<guilabel>包含一個不使用回收筒的刪除指令</guilabel>時，才可以使用<guimenuitem> [刪除] </guimenuitem>功能表項目。</para>
+      <para>如果要刪除檔案或資料夾，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在檢視窗格中，選取您要刪除的檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [刪除]</guimenuitem></menuchoice>。或者，也可以在檢視窗格中的檔案或資料夾上按滑鼠右鍵，然後選擇<guimenuitem> [刪除]</guimenuitem>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>建立指向檔案或資料夾的符號連結</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>建立符號連結 </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>符號連結</primary>
+        <secondary> 對檔案或資料夾, 建立</secondary>
+      </indexterm>
+      <para>符號連結是一種特殊類型的檔案，它會指向其他的檔案或資料夾。當您在符號連結上執行動作時，動作其實是在該符號連結所指向的檔案或資料夾上執行。不過，在刪除符號連結時，您所刪除的是連結的檔案，而不是該符號連結所指向的檔案。</para>
+      <para>如果要建立指向檔案或資料夾的符號連結，請選取要建立連結的檔案或資料夾。選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [建立連結]</guimenuitem></menuchoice>。在目前的資料夾中，便會加入指向該檔案或資料夾的連結。</para>
+      <para>或者，請抓取要為其建立連結的項目，然後按住 <keycombo><keycap>[Ctrl]</keycap><keycap>[Shift]</keycap></keycombo> 鍵。將項目拖曳到您要放置連結的位置。</para>
+      <para>依照預設，檔案管理員會將標識加入到符號連結。</para>
+      <note>
+        <para>符號連結的許可權會由符號連結所指向的檔案或資料夾決定。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-476">
+      <title>檢視檔案或資料夾的內容</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>檢視內容</secondary>
+      </indexterm>
+      <para>如果要檢視檔案或資料夾的內容，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>選取您要檢視內容的檔案或資料夾檔。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [內容]</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>使用內容對話方塊來檢視檔案或資料夾的內容。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [關閉]</guibutton>，關閉內容對話方塊。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>變更許可權</title>
+      <indexterm>
+        <primary>許可權</primary>
+        <secondary>介紹</secondary>
+      </indexterm>
+      <para>許可權是指定到每個檔案及資料夾的設定，可以決定使用者對檔案或資料夾擁有何種類型的存取。下列表格列出您可以為檔案或資料夾設定的許可權，以及許可權對檔案或資料夾的影響。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colwidth="29.62*"/>
+          <colspec colwidth="74.59*"/>
+          <colspec colname="colspec0" colwidth="74.59*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>許可權</para>
+              </entry>
+              <entry>
+                <para>檔案(f)</para>
+              </entry>
+              <entry colname="colspec0">
+                <para>資料夾</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>讀取</para>
+              </entry>
+              <entry valign="top">
+                <para>讀取檔案的許可權。</para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>列出資料夾內容的許可權。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>寫入</para>
+              </entry>
+              <entry valign="top">
+                <para>變更檔案的許可權。</para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>在資料夾建立及刪除檔案的許可權。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>執行</para>
+              </entry>
+              <entry valign="top">
+                <para>將檔案執行為程式的許可權。唯有在檔案是程式或程式檔時才有作用。</para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>存取目錄中檔案的許可權。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>您可以為不同類型的使用者設定許可權。下列表格列出您可以為之設定許可權的使用者類型：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>使用者類別</para>
+              </entry>
+              <entry>
+                <para>說明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>擁有者</para>
+              </entry>
+              <entry valign="top">
+                <para>建立檔案或資料夾的使用者。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>群組</para>
+              </entry>
+              <entry valign="top">
+                <para>擁有者所屬的群組。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>其他</para>
+              </entry>
+              <entry valign="top">
+                <para>所有其他不在使用者所屬群組中的使用者。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><indexterm><primary>檔案管理員</primary><secondary>變更許可權 </secondary></indexterm><indexterm><primary>許可權</primary><secondary>變更檔案及資料夾</secondary></indexterm>如需變更檔案或資料夾的許可權，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>選取要變更的檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [內容]</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guilabel>許可權</guilabel>標籤。在<guilabel>許可權</guilabel>標籤區段，使用下拉式清單及核取方塊來變更檔案或資料夾的許可權。下表將說明<guilabel>許可權</guilabel>標籤區段上的對話方塊元素：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="37.78*"/>
+              <colspec colwidth="62.22*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>元素</para>
+                  </entry>
+                  <entry>
+                    <para>說明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>檔案擁有者</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>如果要變更檔案或資料夾的擁有者，請由下拉式清單選取擁有者。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>檔案群組</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>如需變更檔案或資料夾所屬的群組，請由下拉式清單選取群組。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>所有者</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取您要套用到檔案或資料夾擁有者的許可權。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>群組</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取您要套用到檔案或資料夾擁有者所屬群組的許可權。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>其他</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取許可權，以套用到不屬於擁有者所屬群組的其他所有使用者。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>文字檢視</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>以文字的格式，顯示要由<guilabel>讀取</guilabel>、<guilabel>寫入</guilabel> 及 <guilabel>執行</guilabel> 選項所選取的許可權。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>數字檢視</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>以文字的格式，顯示要由<guilabel>讀取</guilabel>、<guilabel>寫入</guilabel>及<guilabel>執行</guilabel>選項所選取的許可權。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>最後變更</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>顯示檔案或資料夾最後修改的日期及時間。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [關閉]</guibutton>，關閉內容對話方塊。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>對檔案或資料夾加入備註</title>
+      <para>您可以將備註加入至檔案或資料夾。您可以使用下列方式將備註加入檔案或資料夾：</para>
+      <itemizedlist>
+        <listitem>
+          <para>從內容對話方塊</para>
+        </listitem>
+        <listitem>
+          <para>從側邊窗格的<guilabel>備註</guilabel></para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>使用內容對話方塊加入備註</title>
+        <indexterm>
+          <primary>備註</primary>
+          <secondary>加入檔案及資料夾 </secondary>
+        </indexterm>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>備註</secondary>
+          <tertiary>加入</tertiary>
+        </indexterm>
+        <para>如果要將備註加入檔案或資料夾，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>選取您要加入備註的檔案或資料夾。</para>
+          </listitem>
+          <listitem>
+            <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [內容]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>按一下內容對話方塊中的<guilabel>備註</guilabel>標籤。在<guilabel>備註</guilabel>標籤區段，輸入備註。</para>
+          </listitem>
+          <listitem>
+            <para>按一下<guibutton> [關閉]</guibutton>，關閉內容對話方塊。一項註解標識已經加入檔案或資料夾。</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary>備註</primary><secondary>刪除</secondary></indexterm><indexterm><primary>檔案管理員</primary><secondary>備註</secondary><tertiary>刪除 </tertiary></indexterm>如果要刪除備註，請從<guilabel>備註</guilabel>標籤區段刪除文字。</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>使用側邊窗格備註加入備註</title>
+        <para>如果要將備註加入檔案或資料夾，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>在檢視窗格開啟您要加入備註的檔案或資料夾。</para>
+          </listitem>
+          <listitem>
+            <para>由側邊窗格頂端的下拉式清單，選擇<guilabel>備註</guilabel>。如果要顯示側邊窗格，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [側邊窗格]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>在側邊窗格中鍵入註解。一項註解標識已經加入檢視窗格中的檔案或資料夾，而且在側邊窗格已經加入註解圖示。您可以按一下此圖示以顯示備註。</para>
+          </listitem>
+        </orderedlist>
+        <para>如需刪除註解，請由側邊窗格的<guilabel>備註</guilabel>刪除備註文字。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>使用回收筒</title>
+      <indexterm>
+        <primary>回收筒</primary>
+        <secondary>簡介</secondary>
+      </indexterm>
+      <para>您可以將下列項目移動到<guilabel>回收筒</guilabel>：</para>
+      <itemizedlist>
+        <listitem>
+          <para>檔案</para>
+        </listitem>
+        <listitem>
+          <para>資料夾</para>
+        </listitem>
+        <listitem>
+          <para>桌面背景物件</para>
+        </listitem>
+      </itemizedlist>
+      <para>如果需要從<guilabel>回收筒</guilabel>取回檔案，請先顯示<guilabel>回收筒</guilabel>，然後再將檔案移出<guilabel>回收筒</guilabel>。清空<guilabel>回收筒</guilabel>時，會將<guilabel>回收筒</guilabel>的內容永遠刪除。</para>
+      <sect3 id="gosnautilus-107">
+        <title>顯示回收筒</title>
+        <indexterm>
+          <primary>回收筒</primary>
+          <secondary>顯示</secondary>
+        </indexterm>
+        <para>您可以使用下列方式，顯示<guilabel>回收筒</guilabel>的內容：</para>
+        <itemizedlist>
+          <listitem>
+            <para>從檔案管理員視窗</para>
+            <para>選擇<menuchoice><guimenu> [移至]</guimenu><guimenuitem> [回收筒]</guimenuitem></menuchoice>。<guilabel>回收筒</guilabel>的內容會顯示在視窗中。</para>
+          </listitem>
+          <listitem>
+            <para>從桌面背景</para>
+            <para>在桌面背景的<guilabel>回收筒</guilabel>物件上連按兩下。</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>清空回收筒</title>
+        <indexterm>
+          <primary>回收筒</primary>
+          <secondary>清空</secondary>
+        </indexterm>
+        <para>您可以用下列方式清空<guilabel>回收筒</guilabel>的內容：</para>
+        <itemizedlist>
+          <listitem>
+            <para>從檔案管理員視窗</para>
+            <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [清空回收筒]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>從桌面背景</para>
+            <para>在<guilabel>回收筒</guilabel>物件上按滑鼠右鍵，然後選擇<guimenuitem> [清空回收筒]</guimenuitem>。</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>修改檔案和資料夾的外觀</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>修改檔案和資料夾的外觀</secondary>
+    </indexterm>
+    <para>如同下列幾節所說明的，檔案管理員讓您能以多種方式，修改檔案及資料夾的外觀。</para>
+    <sect2 id="gosnautilus-112">
+      <title>為檔案或資料夾加上標識</title>
+      <indexterm>
+        <primary>標識</primary>
+        <secondary>加入檔案</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>標識</primary>
+        <secondary>加入資料夾</secondary>
+      </indexterm>
+      <para>如需為項目加上標識，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>選取要在其上加入標識的項目。</para>
+        </listitem>
+        <listitem>
+          <para>在項目上按滑鼠右鍵，然後選擇<guimenuitem> [內容]</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>在 [內容] 對話方塊，按一下<guilabel>標識</guilabel>標籤，以顯示<guilabel>標識</guilabel>標籤區段。</para>
+        </listitem>
+        <listitem>
+          <para>選取要加入項目上的標識。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [關閉]</guibutton>，關閉內容對話方塊。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>加入新標識</title>
+      <indexterm>
+        <primary>標識</primary>
+        <secondary>加入新標識</secondary>
+      </indexterm>
+      <para>如果要加入新標識，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>請選擇<menuchoice><guimenu> [編輯]</guimenu><guimenuitem> [背景和標識]</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [標識] </guibutton>按鈕，然後按一下<guibutton> [加入新標識] </guibutton>按鈕，在<guilabel>背景和標識</guilabel>對話方塊。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>建立新的標識</guilabel>對話方塊的<guilabel>關鍵字</guilabel> 文字方塊中，輸入標識名稱。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guilabel>影像</guilabel>按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>為新的標識選擇圖像檔</guilabel>對話方塊中，按一下<guibutton> [瀏覽]</guibutton>。在選擇標識以後，請按一下<guibutton> [確定]</guibutton>。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>建立新的標識</guilabel>對話方塊中，按一下<guibutton> [確定]</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>變更檔案或資料夾的圖示</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>圖示</secondary>
+        <tertiary> 變更</tertiary>
+      </indexterm>
+      <para>如果要變更代表個別檔案或資料夾的圖示，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>選取檔案或資料夾。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [內容]</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>在 [內容] 對話方塊的<guilabel>基本</guilabel>標籤區段，按一下<guibutton> [選取自訂圖示] </guibutton>按鈕。</para>
+        </listitem>
+        <listitem>
+          <para>請使用<guilabel>選擇新圖示</guilabel>對話方塊，選擇圖示來代表檔案或資料夾。按一下<guibutton> [確定]</guibutton>。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [關閉]</guibutton>，關閉內容對話方塊。</para>
+        </listitem>
+      </orderedlist>
+      <para>如果要將圖示由自訂圖示，回復成由<application>檔案關聯</application>喜好設定工具中所指定的預設圖示，請在圖示上按滑鼠右鍵，然後選擇<guimenuitem> [移除自訂圖示]</guimenuitem>。或者，也可以在 [內容] 對話方塊上，按一下<guilabel>移除自訂圖示</guilabel>按鈕。</para>
+      <para>如果要變更代表檔案類型的圖示，請使用<application>檔案關聯</application>喜好設定工具。</para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>變更檢視中項目的大小</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>放大和縮小</secondary>
+      </indexterm>
+      <para>您可以變更檢視中項目的大小。如果檢視顯示的是檔案或資料夾，您也可以變更其大小。您可以使用下列任一種方式，變更檢視中項目的大小：</para>
+      <itemizedlist>
+        <listitem>
+          <para>如需放大檢視中項目的大小，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [放大]</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>如果要縮小檢視中的項目，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [縮小]</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>如需將檢視中的項目恢復成一般大小，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [正常大小]</guimenuitem></menuchoice>。</para>
+        </listitem>
+      </itemizedlist>
+      <para>您也可以使用位置列上的縮放按鈕，變更檢視中項目的大小。<xref linkend="gosnautilus-TBL-42"/> 說明了如何使用縮放按鈕。</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>縮放按鈕</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>按鈕</para>
+              </entry>
+              <entry>
+                <para>按鈕名稱</para>
+              </entry>
+              <entry>
+                <para>說明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>縮小按鈕。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>縮小</guibutton>按鈕</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>按一下這個按鈕，可以縮小檢視中的項目。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>一般大小按鈕</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para><guibutton>一般大小</guibutton>按鈕</para>
+              </entry>
+              <entry valign="top">
+                <para>按一下這個按鈕，可以將檢視中的項目回復成一般大小。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>放大按鈕。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>放大</guibutton>按鈕</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>按一下這個按鈕，可以放大檢視中的項目。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>檔案管理員會記得特定資料夾中的項目大小。在下一次顯示資料夾時，便會以您先前選取的大小顯示項目。換句話說，當您在資料夾中變更項目的大小時，等於是自訂資料夾，以這個大小顯示項目。如需將項目大小返回在個人喜好指定的預設大小，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [重設檢視為預設值]</guimenuitem></menuchoice>。</para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>使用檢視顯示檔案和資料夾</title>
+      <indexterm>
+        <primary>檢視器元件</primary>
+      </indexterm>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>檢視</secondary>
+        <tertiary>簡介</tertiary>
+      </indexterm>
+      <para>檔案管理員提供數種顯示檔案內容的方式。檔案管理員所包含的檢視器元件，可讓您在檢視窗格顯示特定類型的檔案。例如，您可以使用網頁檢視器，在檢視窗格中顯示 HTML 檔案；或是使用文字檢視器，在檢視窗格中，檢視純文字檔案。</para>
+      <para>您也可以使用檔案管理員，在適當的應用程式開啟檔案。如需詳細資訊，請參閱<xref linkend="gosnautilus-28"/>。</para>
+      <para>檔案管理員所包含的檢視，可以讓您以不同的方式顯示資料夾的內容。例如：您可以用下列的檢視類型顯示資料夾的內容：</para>
+      <itemizedlist>
+        <listitem>
+          <para>圖示檢視</para>
+          <para>將資料夾中的項目顯示為圖示。</para>
+        </listitem>
+        <listitem>
+          <para>清單檢視</para>
+          <para>將資料夾中的項目顯示為清單。</para>
+        </listitem>
+      </itemizedlist>
+      <para>請使用<guilabel>檢視</guilabel>功能表，選擇檔案或資料夾的顯示方式。您也可以使用<guilabel>檢視方式</guilabel>下拉式清單，選擇顯示檔案或資料夾的顯示方式。在顯示資料夾時，您可以指定要如何排列或排序資料夾中的項目。您可以修改檢視窗格中項目的大小。下面的章節，會說明如何使用圖示檢視、清單檢視和檔案的檢視。</para>
+      <sect3 id="gosnautilus-100">
+        <title>選擇要顯示的檔案或資料夾之檢視</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>檢視</secondary>
+          <tertiary>選擇</tertiary>
+        </indexterm>
+        <para>請從<guilabel>檢視</guilabel>功能表中，選擇檢視類型，以便顯示檔案或資料夾內容。</para>
+        <para>或者，如果要選擇檢視，也可以選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [檢視方式]</guimenuitem></menuchoice>。請從<guilabel>用其他檢視器開啟</guilabel>對話方塊中，選取要使用的檢視，然後按一下<guibutton> [選擇] </guibutton>按鈕。</para>
+        <para>您也可以從<guilabel>檢視方式</guilabel>下拉式清單中，選擇檢視的類型。<guilabel>檢視方式</guilabel>下拉式清單是位於位置列的右方。</para>
+        <para>您可以使用不同的檢視，顯示不同的資料夾。檔案管理員會記得您為特定資料夾選擇的檢視。下一次顯示資料夾時，檔案管理員就會以該檢視顯示資料夾。如果要使資料夾的檢視，返回喜好設定所指定的預設檢視，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [將檢視重設為預設值]</guimenuitem></menuchoice>。</para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>在圖示檢視中排列檔案</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>圖示檢視</secondary>
+          <tertiary>排列檔案於</tertiary>
+        </indexterm>
+        <para>用圖示檢視顯示資料夾的內容時，您可以指定要如何排列資料夾中的項目。如果要指定如何在圖示檢視中排列項目，請選擇<menuchoice><guimenu> [檢視]</guimenu><guisubmenu> [排列項目]</guisubmenu></menuchoice>。在<guisubmenu> [排列項目] </guisubmenu>子功能表中，包含了下列區段：</para>
+        <itemizedlist>
+          <listitem>
+            <para>頂端區段，其上的選項可以讓您以手動方式排列檔案。</para>
+          </listitem>
+          <listitem>
+            <para>中間區段，其上的選項可以讓您自動排序檔案。</para>
+          </listitem>
+          <listitem>
+            <para>底部區段，其上的選項可以讓您修改排列檔案的方式。</para>
+          </listitem>
+        </itemizedlist>
+        <para>請從子功能表中，以下列方式選擇適當的選項：</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>選項</para>
+                </entry>
+                <entry>
+                  <para>說明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>手動</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>選取這個選項，可以使用手動的方式排列項目。如果要使用手動方式排列項目，請將項目拖曳到檢視窗格中所需的位置上。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>按照名稱</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>選取這個選項，可以依照名稱字母的順序排序項目。項目的次序並不區分大小寫。如果將檔案管理員設定為顯示隱藏檔案，隱藏檔案便會在最後顯示。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>按照大小</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>選取這個選項，會按大小排序項目，最大的項目排在最前面。按大小排序項目時，資料夾則會根據資料夾中項目的數目排序。也就是說，資料夾不是按照資料夾中項目的大小總和而排序。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>按照類型</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>選取這個選項，會按照物件類型的字母順序排序項目。項目的排列，是依照<application>檔案關聯</application>喜好設定工具中，各個項目 <firstterm>MIME 類型</firstterm>說明的字母順序而排列的。MIME 類型會識別檔案的格式，讓應用程式可以讀取檔案。例如，電子郵件應用程式可以利用 <literal>image/png</literal> MIME 類型，來偵測郵件是否有格式為可攜式網路圖形 (PNG) 的附加檔案。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>按照修改日期</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>選取這個選項，會按項目的最後修改日期排序項目。最近一次修改的項目會排在最前面。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>按照標識</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>選取這個選項，會依照任一個加入項目的標識排序項目。項目會按照標識名稱的字母先後順序排序。沒有標識的項目會依有標識的項目排列。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>壓縮版面配置</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>選取這個選項，項目之間的排列會較為緊密。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>反向排序</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>選取這個選項，按照所選的選項排序項目時，次序會反轉。例如：如果是按名稱排序項目，則選取<guilabel>反向次序</guilabel>選項後，便會以字母的反向次序排序項目。</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>檔案管理員會記得您如何在特定的資料夾中安排項目。下一次顯示該資料夾時，項目便會以先前選取的方式排列。換句話說，當您指定排列資料夾中項目的方式時，就是在自訂該資料夾顯示項目的方式。如需將資料夾的排列設定，恢復為個人喜好所指定的預設排列設定，請選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [將檢視重設為預設值]</guimenuitem></menuchoice>。</para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>在圖示檢視調整圖示大小</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>圖示</secondary>
+          <tertiary>調整大小</tertiary>
+        </indexterm>
+        <para>在圖示檢視中，您可以變更代表項目之圖示的大小。如需變更圖示檢視中項目的大小，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>在要調整大小的項目上按滑鼠右鍵，然後選擇<guimenuitem> [伸展圖示]</guimenuitem>。此時該項目的周圍會有矩形顯示，而每個邊角都具有控點。</para>
+          </listitem>
+          <listitem>
+            <para>請抓取任一控點，然後將圖示拖曳為想要的大小。</para>
+            <para>如果要將圖示回復成原來的大小，請在圖示上按滑鼠右鍵，然後選擇<guimenuitem> [回復至圖示的原來大小]</guimenuitem>。</para>
+          </listitem>
+        </orderedlist>
+        <para>您也可以在桌面背景上調整物件大小。</para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>修改檢視的運作方式</title>
+        <indexterm>
+          <primary>檔案管理員</primary>
+          <secondary>檢視</secondary>
+          <tertiary>修改運作方式</tertiary>
+        </indexterm>
+        <para>您可以使用下列方式，修改檢視的運作方式：</para>
+        <itemizedlist>
+          <listitem>
+            <para>將特定檔案或資料夾的檢視，指定為預設檢視。</para>
+          </listitem>
+          <listitem>
+            <para>將某個檔案類型或所有資料夾的檢視，指定為預設檢視。</para>
+          </listitem>
+          <listitem>
+            <para>將特定檔案或資料夾的檢視，指定為<guisubmenu> [檢視方式] </guisubmenu>子功能表中的某個項目。</para>
+          </listitem>
+          <listitem>
+            <para>將特定檔案類型或所有資料夾的檢視，指定為<guisubmenu> [檢視方式] </guisubmenu>子功能表中的某個項目。</para>
+          </listitem>
+          <listitem>
+            <para>將特定檔案或資料夾的檢視，指定為不是<guisubmenu> [檢視方式] </guisubmenu>子功能表中的某個項目。</para>
+          </listitem>
+        </itemizedlist>
+        <para>如需修改檢視的運作方式，請執行下列步驟：</para>
+        <orderedlist>
+          <listitem>
+            <para>選擇<menuchoice><guimenu> [檢視]</guimenu><guimenuitem> [檢視方式]</guimenuitem></menuchoice>。</para>
+          </listitem>
+          <listitem>
+            <para>選取您要從表格修改檢視，在<guilabel>以其他檢視者開啟</guilabel>對話方塊。</para>
+          </listitem>
+          <listitem>
+            <para>按一下<guibutton> [修改] </guibutton>按鈕。下表說明的是<guilabel>修改</guilabel>對話方塊的選項：</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>選項</para>
+                    </entry>
+                    <entry>
+                      <para>說明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>包含在<replaceable>＜項目名稱＞</replaceable>項目的功能表中</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>選取這個選項，這個檢視就會包含在此項目類型的<guisubmenu> [檢視方式] </guisubmenu>子功能表中。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>做為<replaceable>＜項目名稱＞</replaceable>項目的預設值</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>選取這個選項，便會使用這個檢視，當作此項目類型的預設值。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>僅包含在<replaceable>＜項目名稱＞</replaceable>的功能表中</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>選取這個選項，這個檢視便只會包含在這個項目的<guisubmenu> [檢視方式] </guisubmenu>子功能表中。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>僅做為<replaceable>＜項目名稱＞</replaceable>的預設值</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>選取這個選項，便只會使用這個檢視，當作此項目的預設值。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>不包含在<replaceable>＜項目名稱＞</replaceable>項目的功能表中</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>選取這個選項，則這個檢視便不會包含在此項目類型的<guisubmenu> [檢視方式] </guisubmenu>子功能表中。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>按一下<guibutton> [確定] </guibutton>，然後按一下<guibutton> [取消]</guibutton>，關閉<guilabel>用其他檢視器開啟</guilabel>對話方塊。</para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>您也可以在<application>檔案關聯</application>喜好設定工具的<guilabel>編輯檔案類型</guilabel> 對話方塊中，修改與檔案有關聯的動作。如果要開啟<guilabel>編輯檔案類型</guilabel>對話方塊，請在<guibutton> [進行設定] </guibutton>按鈕按一下。</para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>為檔案指定動作</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>為檔案指定動作</secondary>
+    </indexterm>
+    <para>當您開啟檔案時，檔案管理員便會為該檔案類型執行預設的動作。在<application>檔案關聯</application>喜好設定工具中，包含了檔案類型、相關副檔名及其預設動作的表格。此表指定在檔案管理員中，對檔案連按兩下後會發生的動作。</para>
+    <para>您也可以使用檔案管理員，來修改與特定檔案或檔案類型關聯的動作。</para>
+    <para>您可以使用<application>檔案關聯</application>喜好設定工具，執行下列工作：</para>
+    <itemizedlist>
+      <listitem>
+        <para>為檔案類型指定預設的動作。您也可以變更檔案管理員中，檔案類型的預設動作。</para>
+      </listitem>
+      <listitem>
+        <para>將某個檔案類型與一個或多個應用程式建立關聯。您可以指定預設動作，將其設定為使用與該檔案類型關聯的應用程式，開啟檔案。</para>
+      </listitem>
+      <listitem>
+        <para>將某個檔案類型與一個或多個檢視器建立關聯。您可以指定預設動作，將其設定為使用與該檔案類型關聯的檢視器，開啟檔案。</para>
+      </listitem>
+      <listitem>
+        <para>將某個副檔名與某個 MIME 類型建立關聯。MIME 類型會指定檔案的格式，使網際網路瀏覽器和電子郵件應用程式可以讀取該檔案。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>修改動作</title>
+      <indexterm>
+        <primary>檔案管理員</primary>
+        <secondary>修改動作</secondary>
+      </indexterm>
+      <para>您可以修改與檔案或檔案類型相關的動作。您可以執行下列作業：</para>
+      <itemizedlist>
+        <listitem>
+          <para>將動作指定為特定檔案的預設動作。</para>
+        </listitem>
+        <listitem>
+          <para>將動作指定為特定檔案類型的預設動作。</para>
+        </listitem>
+        <listitem>
+          <para>將動作指定為特定檔案之<guisubmenu> [開啟時使用] </guisubmenu>子功能表的項目。</para>
+        </listitem>
+        <listitem>
+          <para>將動作指定為特定檔案類型之<guisubmenu> [開啟時使用] </guisubmenu>子功能表的項目。</para>
+        </listitem>
+        <listitem>
+          <para>指定該動作不為特定檔案類型之<guisubmenu> [開啟時使用] </guisubmenu>子功能表的項目。</para>
+        </listitem>
+      </itemizedlist>
+      <para>如需修改與檔案或檔案類型相關的動作，請執行下列步驟：</para>
+      <orderedlist>
+        <listitem>
+          <para>在檢視窗格中，選取要為其修改動作的檔案。如果想要修改與檔案類型相關的動作，請選取該類型的檔案。</para>
+        </listitem>
+        <listitem>
+          <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [開啟時使用]</guimenuitem></menuchoice>。</para>
+        </listitem>
+<!---<listitem>
+<para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with
+Other Viewer</guilabel> dialog is displayed. </para></listitem>-->
+        <listitem>
+          <para>選擇<guimenuitem> [其他應用程式]</guimenuitem>。接著會顯示<guilabel>用其他應用程式開啟</guilabel>對話方塊。</para>
+        </listitem>
+        <listitem>
+          <para>從對話方塊中的表格，選取要修改其運作方式的應用程式或檢視器。</para>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [修改] </guibutton>按鈕。下表說明的是<guilabel>修改</guilabel>對話方塊的選項：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>選項</para>
+                  </entry>
+                  <entry>
+                    <para>說明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>包含在<replaceable>＜檔案類型＞</replaceable>項目的功能表中</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取這個選項，會將此應用程式或檢視器，包含在此檔案類型的<guisubmenu> [開啟時使用] </guisubmenu>子功能表中。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>做為<replaceable>＜檔案類型＞</replaceable>項目的預設值</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取這個選項，則會將使用此應用程式或檢視器，作為此檔案類型的預設動作。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>僅包含在<replaceable>＜檔案名稱＞</replaceable>的功能表中</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取這個選項，則會將應用程式或檢視器，包含在這個檔案 (但不是其他此類型檔案) 的<guisubmenu> [開啟時使用] </guisubmenu>子功能表中。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>僅做為<replaceable>＜檔案名稱＞</replaceable>的預設值</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取這個選項，則會將使用此應用程式或檢視器，作為這個檔案 (但不是其他此類型檔案) 的預設動作。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>不包含在<replaceable>＜檔案類型＞</replaceable>項目的功能表中</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>選取這個選項，則不會將此應用程式或檢視器，包含在此檔案類型的<guisubmenu> [開啟時使用] </guisubmenu>子功能表中。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>按一下<guibutton> [確定]</guibutton>，然後再按一下<guibutton> [取消]</guibutton>，關閉對話方塊。</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>您也可以在<application>檔案關聯</application>喜好設定工具的<guilabel>編輯檔案類型</guilabel>對話方塊中，修改與檔案有關聯的動作。如果要開啟<guilabel>編輯檔案類型</guilabel>對話方塊，請在<guibutton> [進行設定] </guibutton>按鈕按一下。</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-475">
+    <title>寫入 CD</title>
+    <indexterm>
+      <primary>檔案管理員</primary>
+      <secondary>寫入 CD</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>CD，寫入</primary>
+    </indexterm>
+    <indexterm>
+      <primary>寫入 CD</primary>
+    </indexterm>
+    <indexterm>
+      <primary>燒錄 CD</primary>
+      <see>寫入 CD</see>
+    </indexterm>
+    <para>檔案管理員提供一個特別位置，您可以在該處複製您要寫入 CD 的檔案。您可以將該位置的內容輕易寫入 CD。</para>
+    <para>如果要將資料寫入 CD，請執行下列步驟：</para>
+    <orderedlist>
+      <listitem>
+        <para>從檔案瀏覽器視窗，選取<menuchoice><guimenu> [移動至]</guimenu><guimenuitem> [光碟燒錄器]</guimenuitem></menuchoice>。檔案管理員開啟特別位置「<guilabel>burn:</guilabel><guilabel>///</guilabel>」，您可以從該處寫入 CD。</para>
+      </listitem>
+      <listitem>
+        <para>從檔案瀏覽器視窗，複製檔案與資料夾至你要寫入的 CD 之「<guilabel>burn:</guilabel><guilabel>///</guilabel>」位置。</para>
+      </listitem>
+      <listitem>
+        <para>將一片可寫入 CD 插入您系統上的 CD 燒錄機。</para>
+      </listitem>
+      <listitem>
+        <para>選擇<menuchoice><guimenu> [檔案]</guimenu><guimenuitem> [燒錄 CD]</guimenuitem></menuchoice>。或者，按一下工具列上的<guibutton> [寫入 CD] </guibutton>按鈕。</para>
+      </listitem>
+      <listitem>
+        <para>使用<guilabel>將檔案寫入 CD 燒錄器</guilabel>對話方塊來指定如何燒錄 CD，其中內容如下：</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>對話方塊元素</para>
+                </entry>
+                <entry>
+                  <para>說明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>燒錄目標</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>從下拉式功能表選取您要寫入 CD 的裝置。如需建立檔案及資料夾的 CD 影像檔，請選取<guilabel>檔案影像</guilabel>選項。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>燒錄速度</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>從下拉式選單選取您要燒錄 CD 的速度。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>CD 名稱</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>在文字方塊中，鍵入 CD 的名稱。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>清除 CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>選取此選項以清除 CD 目前的內容。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>在完成時彈出 CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>選取此選項，以便在 CD 燒錄完成後由光碟機彈出 CD。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>在另一片 CD 重新使用這些檔案</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>如果要將這些檔案及資料夾寫入另一片 CD，即應選取此選項。如果您選取此選項，則在寫入 CD 後，無法從「<guilabel>burn:</guilabel><guilabel>///</guilabel>」位置移除檔案及資料夾。</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </listitem>
+      <listitem>
+        <para>按一下<guibutton> [將檔案寫入 CD] </guibutton>按鈕。</para>
+        <para>如果由<guilabel>燒錄目標</guilabel>下拉式清單選取<guilabel>檔案影像</guilabel>選項，<guilabel>選擇 cdrom 影像檔案名稱</guilabel>對話方塊便會出現。使用此對話方塊，來指定您要儲存 CD 影像檔案的位置。依照預設，CD 影像檔案具有 <filename>.iso</filename> 的副檔名。</para>
+        <para><guilabel>寫入 CD</guilabel> 對話方塊便會出現。當 CD 燒錄完成，或是 CD 影像檔建立以後，指示程序已經完成的訊息便會在對話方塊中顯示。</para>
+        <para>如果建立的是 CD 影像檔，即可將此檔案寫入 CD。如果要將 CD 影像檔寫入 CD，請在 CD 影像檔上按滑鼠右鍵，然後由快顯功能表選擇<guimenuitem> [燒錄至 CD]</guimenuitem>。</para>
+        <para>如果並未選取<guilabel>在另一片 CD 重新使用這些檔案</guilabel>選項，檔案及資料夾就會由「<guilabel>burn:</guilabel><guilabel>///</guilabel>」位置。</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>

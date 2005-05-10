@@ -1,0 +1,2704 @@
+<chapter id="gosnautilus-1">
+  <title>ファイルマネージャの使用方法</title>
+  <highlights>
+    <para><application>Nautilus</application> は、Java Desktop System
+のファイルマネージャの名前で、ファイルやアプリケーションへの統合アクセスポイントを提供します。</para>
+    <para>この章では、ファイルマネージャの使用方法について説明します。</para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>ファイルマネージャの概要</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <para>ファイルマネージャは、ファイルおよびアプリケーションへの統合アクセスポイントを提供します。ファイルマネージャで次のことができます。</para>
+    <itemizedlist>
+      <listitem>
+        <para>フォルダおよびドキュメントの作成</para>
+      </listitem>
+      <listitem>
+        <para>ファイルおよびフォルダの表示</para>
+      </listitem>
+      <listitem>
+        <para>ファイルおよびフォルダの管理</para>
+      </listitem>
+      <listitem>
+        <para>ファイルおよびフォルダのカスタマイズ</para>
+      </listitem>
+      <listitem>
+        <para>特別な URI を開く</para>
+      </listitem>
+      <listitem>
+        <para>CD-R へのデータの書き込み</para>
+      </listitem>
+    </itemizedlist>
+    <para>ファイルマネージャは、デスクトップの背景の管理も行います。デスクトップの背景は、デスクトップ上に表示される、ほかのすべてのコンポーネントの背後にあります。デスクトップの背景は、ユーザーインタフェースのアクティブコンポーネントです。</para>
+    <para>ファイルマネージャウィンドウを開くには、デスクトップの背景の<guilabel>「ドキュメント」</guilabel>オブジェクトをダブルクリックします。ファイルマネージャウィンドウは、デフォルトの文書の場所にある内容を表示区画に表示します。</para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>ファイルマネージャウィンドウ</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="ういんとう">ウィンドウ</secondary>
+    </indexterm>
+    <para>ファイルマネージャウィンドウを使用すると、ファイルとフォルダを表示、管理できます。<xref linkend="gosnautilus-FIG-1"/> に、フォルダの内容を表示するファイルマネージャウィンドウを示します。</para>
+    <figure id="gosnautilus-FIG-1">
+      <title>ファイルマネージャウィンドウのフォルダの内容<indexterm><primary sortas="ふあいるまねえしや">ファイルマネージャ</primary><secondary sortas="あいこんひようし">アイコン表示</secondary><tertiary sortas="す">図</tertiary></indexterm></title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>ファイルマネージャウィンドウ内のフォルダ。メニューバー、ツールバー、ロケーションバー、ズームボタン、サイド区画、表示区画</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para><xref linkend="gosnautilus-TBL-83"/> に、ファイルマネージャウィンドウの構成要素を示します。</para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>ファイルマネージャウィンドウの構成要素</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>コンポーネント</para>
+            </entry>
+            <entry>
+              <para>説明</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>メニューバー</para>
+            </entry>
+            <entry valign="top">
+              <para>ファイルマネージャで作業を行うために使用するメニューを含む</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>ツールバー</para>
+            </entry>
+            <entry valign="top">
+              <para>ファイルマネージャで作業を行うために使用するボタンを含む</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>ロケーションバー</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>次の要素が含まれる</para>
+              <itemizedlist>
+                <listitem>
+                  <para><guilabel>「場所」</guilabel>フィールドまたは<guilabel>「移動」</guilabel>フィールド:
+表示するファイル、フォルダ、または URI を指定できる</para>
+                </listitem>
+                <listitem>
+                  <para><guimenu>拡大 / 縮小</guimenu> ボタン: 表示区画内の項目のサイズを変更できる</para>
+                </listitem>
+                <listitem>
+                  <para><guilabel>「表示方法」</guilabel>ドロップダウンリスト: 表示区画内の項目の表示方法を選択できる</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>サイド区画</para>
+            </entry>
+            <entry valign="top">
+              <para>次の機能を実行する</para>
+              <itemizedlist>
+                <listitem>
+                  <para>現在のファイルまたはフォルダに関する情報を表示する</para>
+                </listitem>
+                <listitem>
+                  <para>ファイル内をナビゲートする。</para>
+                </listitem>
+              </itemizedlist>
+              <para>サイド区画には、サイド区画で表示するものを選択するドロップダウンリストがある。次のオプションの中から、いずれか
+1 つを選択する</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>「情報」</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>「エンブレム」</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>「履歴」</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>「ノート」</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>「ツリー」</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>サイド区画を表示するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「サイド区画」</guimenuitem></menuchoice>を選択する。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>表示区画</para>
+            </entry>
+            <entry valign="top">
+              <para>次の内容を表示する</para>
+              <itemizedlist>
+                <listitem>
+                  <para>特定の型のファイル形式</para>
+                </listitem>
+                <listitem>
+                  <para>フォルダ</para>
+                </listitem>
+                <listitem>
+                  <para>FTP サイト</para>
+                </listitem>
+                <listitem>
+                  <para>特別な URI に対応する場所</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>ステータスバー</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>状態情報を表示する</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>ファイルマネージャウィンドウからポップアップメニューを開くこともできます。このポップアップメニューを開くには、ファイルマネージャウィンドウ内で右クリックします。このメニューの項目は、右クリックした場所により異なります。たとえば、ファイルまたはフォルダで右クリックした場合、ファイルおよびフォルダに関連するメニュー項目を選択できます。表示区画の背景で右クリックした場合、表示区画内の項目の表示に関連するメニュー項目を選択できます。</para>
+    <sect2 id="gosnautilus-53">
+      <title>表示区画</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ひようしくかく">表示区画</secondary>
+        <see>表示区画</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ひようしくかく">表示区画</primary>
+        <secondary sortas="かいよう">概要</secondary>
+      </indexterm>
+      <para>表示区画では、次の内容を表示できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>特定の型のファイル形式</para>
+        </listitem>
+        <listitem>
+          <para>フォルダ</para>
+        </listitem>
+        <listitem>
+          <para>FTP サイト</para>
+        </listitem>
+        <listitem>
+          <para>特別な URI に対応する場所</para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary sortas="ひゆうあこんほおねんと">ビューアコンポーネント</primary></indexterm>ファイルマネージャには、特定の種類のファイルを表示区画に表示できる<firstterm>ビューアコンポーネント</firstterm>があります。たとえば、テキストビューアを使用して、表示区画にテキストファイルを表示できます。</para>
+      <para>表示区画にファイルを表示することにより、次のような利点があります。</para>
+      <itemizedlist>
+        <listitem>
+          <para>アプリケーションを起動するよりも使用するシステムリソースが少ない</para>
+        </listitem>
+        <listitem>
+          <para>アプリケーションを起動するよりも表示までの時間が短い</para>
+        </listitem>
+      </itemizedlist>
+      <para>ただし、表示区画ではファイルを変更することはできません。</para>
+      <para>ファイルマネージャには、フォルダの内容を異なる方法で表示できる<firstterm>ビュー</firstterm>があります。たとえば、フォルダの内容は次の表示形式で表示できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>アイコン表示: フォルダ内の項目をアイコン形式で表示する</para>
+        </listitem>
+        <listitem>
+          <para>リスト表示: フォルダ内の項目をリスト形式で表示する</para>
+        </listitem>
+        <listitem>
+          <para>オーディオ表示: フォルダ内のオーディオ項目だけを表示する</para>
+        </listitem>
+      </itemizedlist>
+      <para>フォルダの表示方法は、<guimenu>「表示」</guimenu>メニューを使用して選択できます。ビューについての詳細は、<xref linkend="gosnautilus-7"/>を参照してください。</para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>サイド区画</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="さいとくかく">サイド区画</secondary>
+        <tertiary sortas="かいよう">概要</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="さいとくかく">サイド区画</primary>
+        <see>ファイルマネージャ</see>
+      </indexterm>
+      <para>サイド区画を表示するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「サイド区画」</guimenuitem></menuchoice>を選択する。サイド区画に表示する情報は、選択できます。以下のどれかを表示できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>「情報」</guilabel>
+          </para>
+          <para>現在のファイルまたは現在のフォルダを表すアイコン。現在のファイルまたは現在のフォルダに関する情報も表示される。ファイルを表示区画に表示した場合、ボタンがサイド区画に表示される。このボタンを使用して、デフォルト操作以外の操作をファイルで実行できる</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>「エンブレム」</guilabel>
+          </para>
+          <para>ファイルまたはフォルダに追加できるエンブレムが含まれる</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>「履歴」</guilabel>
+          </para>
+          <para>最近表示したファイル、フォルダ、FTP サイト、URI の履歴リストが含まれる</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>「ノート」</guilabel>
+          </para>
+          <para>ファイルとフォルダに注釈を追加できる</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>「ツリー」</guilabel>
+          </para>
+          <para>ファイルシステムの階層表現を表示する。<guilabel>「ツリー」</guilabel>を使って、ファイル間を移動できる</para>
+        </listitem>
+      </itemizedlist>
+      <para>サイド区画を閉じるには、サイド区画の右上の<guibutton>「X」</guibutton>ボタンをクリックします。</para>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>アイコンとエンブレム</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="あいこん">アイコン</secondary>
+        <tertiary sortas="かいよう">概要</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="えんふれむ">エンブレム</secondary>
+        <see>エンブレム</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="えんふれむ"> エンブレム</primary>
+        <secondary sortas="かいよう">概要</secondary>
+      </indexterm>
+      <para>アイコン表示では、ファイルとフォルダがアイコンとして表示されます。ファイルアイコンおよびフォルダアイコンに、エンブレムを追加することができます。エンブレムとは、項目に追加してその項目を視覚的に印をつける小さなアイコンのことです。たとえば、ファイルを重要として印をつけるには、以下の図のような視覚的効果のある <guilabel>「重要」</guilabel> エンブレムをファイルアイコンに追加できます。</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>「重要」エンブレムが付いたファイルアイコンを示します。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>アイコンにエンブレムを追加する方法についての詳細は、<xref linkend="gosnautilus-112"/>を参照してください。</para>
+      <para>次の表に、ファイルアイコンの構造を示します。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>コンポーネント</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>「重要」エンブレム</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>エンブレム。この例は<guilabel>「重要」</guilabel>エンブレムを示す</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>テキストファイルアイコン</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>ファイルを表すアイコン。アイコンには、ファイルの内容のプレビューが含まれる場合もある</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>アイコン見出し。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>アイコン見出し。どの情報項目をアイコン見出しに表示するかは、変更できる</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>ファイルマネージャには、以下のタイプの項目のデフォルトエンブレムがあります。</para>
+      <itemizedlist>
+        <listitem>
+          <para>シンボリックリンク</para>
+        </listitem>
+        <listitem>
+          <para>次のアクセス権を持つ項目:<indexterm><primary sortas="あくせすけん">アクセス権</primary><secondary sortas="えんふれむ">エンブレム</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>読み取り専用</para>
+            </listitem>
+            <listitem>
+              <para>読み取り権なしと書き込み権なし</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>以下の表に、デフォルトエンブレムを示します。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>デフォルトのエンブレム</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>シンボリックリンクのエンブレムを示す</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary sortas="しんほりつくりんく">シンボリックリンク</primary><secondary sortas="えんふれむ">エンブレム</secondary></indexterm>シンボリックリンク</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>読み取り専用のエンブレムを示す</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>読み取り専用</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>読み取り権なしと書き込み権なしのエンブレムを示す</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>読み取り権なしと書き込み権なし</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>コンピュータのナビゲート</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="なひけえと">ナビゲート</secondary>
+    </indexterm>
+    <para>ファイルマネージャは、ファイル、アプリケーション、FTP サイト、および URI
+への統合アクセスポイントを提供します。</para>
+    <para>この節では、次の項目について説明します。<itemizedlist><listitem><para>ファイルマネージャウィンドウで項目を表示する方法</para></listitem><listitem><para>ファイルマネージャウィンドウでファイルを開く方法</para></listitem><listitem><para>ファイルシステムでファイルおよびフォルダをナビゲートする方法</para></listitem><listitem><para>ファイルシステムでさまざまな場所を開く方法</para></listitem><listitem><para>サーバーに接続する方法</para></listitem><listitem><para>FTP サイトをナビゲートする方法</para></listitem><listitem><para>特別な URI が示す場所にアクセスする方法</para></listitem></itemizedlist></para>
+    <sect2 id="gosnautilus-25">
+      <title>フォルダを表示する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふおるたのひようし">フォルダの表示</secondary>
+      </indexterm>
+      <para>フォルダの内容は、次の方法を使用して表示できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>表示区画上のフォルダをダブルクリックする</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「場所」</guilabel>フィールドに、表示するフォルダのパスを入力して、<command>Return</command> キーを押す。<guilabel>「場所」</guilabel>フィールドには、オートコンプリート機能がある。ユーザーがパスを入力すると、ファイルマネージャはファイルシステムを読み込む。ディレクトリを一意に識別するのに十分な文字を入力すると、
+ファイルマネージャは、<guilabel>「場所」</guilabel>フィールドにディレクトリ名を完成させる。</para>
+        </listitem>
+        <listitem>
+          <para>サイド区画の<guilabel>「ツリー」</guilabel>を使用する。詳細については、<xref linkend="gosnautilus-27"/>
+を参照</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「戻る」</guibutton>および<guibutton>「進む」</guibutton>ツールバーボタンを使用して、ナビゲーション履歴を参照する</para>
+        </listitem>
+      </itemizedlist>
+      <para>現在のフォルダの1 つ上のレベルにあるフォルダに変更するには、<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「上に移動」</guimenuitem></menuchoice>を選択します。または、<guibutton>「上に移動」</guibutton>ツールバーボタンをクリックします。</para>
+      <para>ディスプレイを再読み込みするには、<guibutton>「再読み込み」</guibutton>ボタンをクリックします。</para>
+      <para>表示するフォルダが見つからない場合は、<application>「ファイルの検索」ツール</application> を使用します。<application>検索ツール</application> を開始するには、「<guibutton>起動</guibutton>」をクリックして、「<guimenu>ファイルの検索</guimenu>」を選択します。</para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>サイド区画のツリーの使用</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="つりいしよう">ツリー、使用</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="つりいしよう">ツリー、使用</primary>
+      </indexterm>
+      <para><guilabel>「ツリー」</guilabel>は、ファイルシステムの階層表現を表示します。<guilabel>「ツリー」</guilabel>を使用すると、ファイルシステムを簡単にナビゲートできます。<guilabel>「ツリー」</guilabel>をサイド区画に表示するにるには、サイド区画の上部分にあるドロップダウンリストから<guimenuitem>「ツリー」</guimenuitem>を選択します。</para>
+      <para><guilabel>「ツリー」</guilabel>ではフォルダは以下のように表示されます。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>フォルダの状態</para>
+              </entry>
+              <entry>
+                <para>グラフィック表示</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para>閉じたフォルダ</para>
+              </entry>
+              <entry>
+                <para>右向き矢印</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>開いたフォルダ</para>
+              </entry>
+              <entry>
+                <para>下向き矢印</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><xref linkend="gosnautilus-TBL-34"/> に、<guilabel>「ツリー」</guilabel>で実行できる作業と、その作業の実行方法を示します。</para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>ツリーでの作業</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry>
+                <para>アクション</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para><guilabel>「ツリー」</guilabel>を開く</para>
+              </entry>
+              <entry valign="top">
+                <para>サイド区画の上部分にあるドロップダウンリストから<guilabel>「ツリー」</guilabel>を選択する</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guilabel>「ツリー」</guilabel>を閉じる</para>
+              </entry>
+              <entry valign="top">
+                <para>サイド区画の上部分にあるドロップダウンリストから別の項目を選択する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><guilabel>「ツリー」</guilabel>のフォルダを開く</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guilabel>「ツリー」</guilabel>内のフォルダの横にある矢印をクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><guilabel>「ツリー」</guilabel>のフォルダを閉じる</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guilabel>「ツリー」</guilabel>内のフォルダの横にある矢印をクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>表示区画にフォルダの内容を表示する</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guilabel>「ツリー」</guilabel>内のフォルダを選択する</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>表示区画にファイルの内容を表示する</para>
+              </entry>
+              <entry valign="top">
+                <para><guilabel>「ツリー」</guilabel>内のファイルを選択する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para><guilabel>「ツリー」</guilabel>でファイルを表示しないように、設定できます。</para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>ファイルを開く</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふあいるをひらく">ファイルを開く</secondary>
+      </indexterm>
+      <para>ユーザーがファイルを開くと、ファイルマネージャはそのファイルタイプのデフォルトのアクションを実行します。デフォルトのアクションは、次のいずれかになります。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ビューアコンポーネントを使用してそのファイルを表示区画に表示する</para>
+        </listitem>
+        <listitem>
+          <para>そのファイルを開くアプリケーションを起動する</para>
+        </listitem>
+      </itemizedlist>
+      <para>ファイルマネージャは、ファイルの内容をチェックしてファイルのタイプを判断します。最初の行でファイルタイプを判別できない場合、ファイルマネージャはファイル拡張子を確認します。</para>
+      <para>開くファイルが見つからない場合は、<application>「ファイルの検索」ツール</application> を使用します。<application>検索ツール</application> を開始するには、「<guibutton>起動</guibutton>」をクリックして、「<guimenu>ファイルの検索</guimenu>」を選択します。</para>
+      <sect3 id="gosnautilus-447">
+        <title>表示区画でのファイルの表示</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="ひようしくかくてのふあいるのひようし">表示区画でのファイルの表示</secondary>
+        </indexterm>
+        <indexterm>
+          <primary sortas="ひようしくかく">表示区画</primary>
+          <secondary sortas="ひようしくかくてのふあいるのひようし">表示区画でのファイルの表示</secondary>
+        </indexterm>
+        <indexterm>
+          <primary sortas="ひゆうあこんほおねんと">ビューアコンポーネント</primary>
+        </indexterm>
+        <para>ファイルマネージャには、ビューアコンポーネントがあり、特定のファイル形式を表示区画に表示できます。たとえば、次の種類のファイルを表示区画に表示できます。</para>
+        <itemizedlist>
+          <listitem>
+            <para>プレーンテキストファイル</para>
+          </listitem>
+          <listitem>
+            <para>PNG ファイル</para>
+          </listitem>
+          <listitem>
+            <para>JPEG (Joint Photographic Experts Group) ファイル</para>
+          </listitem>
+        </itemizedlist>
+        <para>表示区画の内容を再読み込みするには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「再読み込み」</guimenuitem></menuchoice>を選択します。表示区画で項目の読み込みを停止するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「停止」</guimenuitem></menuchoice>を選択します。</para>
+        <para>ファイルを表示区画に表示すると、ビューコンポーネントはファイルマネージャメニューにメニュー項目を追加します。メニュー項目は、表示されているファイルタイプと関連します。たとえば、PNG
+ファイルを表示する場合、<guimenu>「編集」</guimenu>メニューには、「flip」と「rotate」というメニュー項目があります。</para>
+        <para>また一部のファイルタイプを表示区画に表示する場合には、ファイルマネージャズームボタンで項目の大きさを変更できます。</para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>デフォルトのアクションを実行する</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="ふあいるのてふおるとのあくしよんのしつこう">ファイルのデフォルトのアクションの実行</secondary>
+        </indexterm>
+        <para>ファイルのデフォルトのアクションを実行するには、そのファイルをダブルクリックします。たとえば、プレーンテキスト文書のデフォルトのアクションが、テキストビューアにファイルを表示するとします。この場合、ファイルをダブルクリックすることにより、ファイルをテキストビューアに表示できます。</para>
+        <para>ファイルマネージャで設定することにより、ファイルを 1 度クリックするだけでデフォルトのアクションを実行できます。</para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>「他のアプリケーションで開く」サブメニューを使用してデフォルト以外のアクションを実行する</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="ふあいるのてふおるといかいのあくしよんのしつこう">ファイルのデフォルト以外のアクションの実行</secondary>
+        </indexterm>
+        <para>ファイルのデフォルト以外のアクションを実行するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>表示区画で、アクションを実行するファイルを選択します。<menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「他 のアプリケーションで開く」</guimenuitem></menuchoice>を選択します。<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニューが開きます。このサブメニュー内の項目は、<application>「ファイルの関連付け」</application>設定ツールの次の部分の内容に対応しています。</para>
+            <itemizedlist>
+              <listitem>
+                <para><guilabel>「ファイルタイプを編集」</guilabel>ダイアログの<guilabel>「デフォルトのアクション」</guilabel>ドロップダウンリスト</para>
+              </listitem>
+              <listitem>
+                <para><guilabel>「ファイルタイプを編集」</guilabel>ダイアログの<guilabel>「ビューアコンポーネント」</guilabel>ドロップダウンリスト</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para><guisubmenu>「他のもので開く」</guisubmenu>サブメニューからアクションを選択します。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>ファイルを表示したときに別のアクションを実行する</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="ふあいるのへつのあくしよんをしつこうする">ファイルの別のアクションを実行する</secondary>
+        </indexterm>
+        <para>ファイルを表示区画に表示したときに、サイド区画にボタンがあります。</para>
+        <para>ボタンは、<application>「ファイルの関連付け」</application>設定ツールで定義されているアクションを表します。各アクションは、<application>「ファイルの関連付け」</application> 設定ツールの「 <guilabel>ファイルタイプを編集</guilabel>」ダイアログの<guilabel>「デフォルトのアクション」</guilabel>ドロップダウンリストで定義されています。アクションを実行するにはボタンをクリックします。たとえば、プレーンテキスト文書に対して定義されているアクションが、<application>gedit</application> テキストエディタでファイルを開くことだとします。このアクションが定義されていると、<guibutton>「gedit
+で開く」</guibutton>ボタンがサイド区画に表示されます。<application>gedit</application> アプリケーションでファイルを開くには、<guibutton>「Gedit で開く」</guibutton>ボタンをクリックします。</para>
+        <note>
+          <para>アクションが次のいずれかのダイアログで実行される場合、そのアクションを表すボタンはサイド区画に表示されません。</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>「他のアプリケーションで開く」</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>「他の表示方法で開く」</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-515">
+      <title>各場所を開く</title>
+      <para>ファイルマネージャは、ファイル、アプリケーション、FTP サイト、および URI への統合アクセスポイントを提供します。</para>
+      <para>ファイルマネージャを使用することで、ファイルシステム内のさまざまな場所にすばやくアクセスできます。ある場所を開くには、次の手順を実行します。<orderedlist><listitem><para><menuchoice><guimenu>「移動」</guimenu><guimenuitem>「場所」</guimenuitem></menuchoice>を選択します。</para></listitem><listitem><para><guilabel>「場所」</guilabel>フィールドで、表示するフォルダのパスを入力します。</para></listitem><listitem><para><keycap>Return</keycap> キーを押します。</para></listitem></orderedlist></para>
+      <para><guilabel>「場所」</guilabel>フィールドには、オートコンプリート機能がある。ユーザーがパスを入力すると、ファイルマネージャはファイルシステムを読み込む。ディレクトリを一意に識別するのに十分な文字を入力すると、
+ファイルマネージャでは、<guilabel>「場所」</guilabel>フィールドのディレクトリ名が自動補間されます。</para>
+    </sect2>
+    <sect2 id="gosnautilus-491">
+      <title>サーバーに接続する</title>
+      <para>Java Desktop System 環境がネットワーク上のサーバーにアクセスするように構成されている場合は、<guilabel>「サーバーへ接続」</guilabel>メニューを使用してサーバーに接続できます。</para>
+      <para>サーバーに接続するには、次の手順を実行します。<orderedlist><listitem><para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「サーバーへ接続」</guimenuitem></menuchoice>を選択します。</para></listitem><listitem><para>「<guilabel>サーバーへ接続</guilabel>」ダイアログの「<guilabel>リンクの名前</guilabel>」フィールドにサーバー名を入力します。</para></listitem><listitem><para>たとえば、<literal>ftp:///ftp.gnome.org</literal> などの URL を <guilabel>「場所 」</guilabel>フィールドに入力します。</para></listitem><listitem><para>「<guibutton>接続</guibutton>」ボタンをクリックします。</para></listitem></orderedlist></para>
+    </sect2>
+    <sect2 id="gosnautilus-445">
+      <title>「このコンピュータ」ロケーションの使用方法</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>「このコンピュータ」アイコン。このグラフィックはコンテキストを示す</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="このこんひゆうたろけえしよん">「このコンピュータ」ロケーション</secondary>
+        <see>「このコンピュータ」ロケーション</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="このこんひゆうたろけえしよん">「このコンピュータ」ロケーション</primary>
+        <secondary sortas="しようほうほう">使用方法</secondary>
+      </indexterm>
+      <para><guilabel>「このコンピュータ」</guilabel>ロケーションから、次の機能にアクセスできます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>アプリケーション</guilabel>
+          </para>
+          <para><guilabel>「アプリケーション」</guilabel>をダブルクリックすると、主要な Java Desktop Systems
+アプリケーションにアクセスできます。<guimenu>「アプリケーション」</guimenu>メニューには、<guimenu>「起動」</guimenu>メニューと<application>メニューバー</application>からアクセスできます。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>設定</guilabel>
+          </para>
+          <para><guilabel>「設定」</guilabel>をダブルクリックすると、Java Desktop System をカスタマイズできます。設定ツールには、<guimenu>「起動」</guimenu>メニューからもアクセスできます。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>ファイルシステム</guilabel>
+          </para>
+          <para><guilabel>「ファイルシステム」</guilabel>をダブルクリックすると、Java Desktop System の最上位のフォルダにアクセスできます。</para>
+        </listitem>
+      </itemizedlist>
+      <para><guilabel>「このコンピュータ」</guilabel>ロケーションには、次のような方法でアクセスできます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>デスクトップの背景から</para>
+          <para>デスクトップの背景の<guilabel>「このコンピュータ」</guilabel>オブジェクトをダブルクリックする。<guilabel>「このコンピュータ」</guilabel>ロケーションの内容がファイルブラウザウィンドウに表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>ファイルブラウザウィンドウから <command>computer:///</command> URI にアクセスする</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>FTP サイトにアクセスする</title>
+      <indexterm>
+        <primary sortas="FTPさいと">FTP サイト</primary>
+        <secondary sortas="あくせす">アクセス</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="FTPさいと">FTP サイト</secondary>
+        <see>FTP サイト</see>
+      </indexterm>
+      <para>ファイルマネージャを使用して、FTP サイトにアクセスできます。FTP サイトにアクセスするには、ロケーションバー上のフィールドにサイトの
+URL を入力して、<command>Return</command> キーを押します。そのサイトの内容が表示区画に表示されます。FTP サイトからファイルをコピーするには、そのファイルを別の場所にドラッグします。</para>
+      <para>ユーザー名とパスワードの入力を要求する FTP サイトにアクセスするには、次の形式で URL を入力します。</para>
+      <para>
+        <command>ftp://<replaceable>username</replaceable>:<replaceable>password</replaceable>@<replaceable>hostname</replaceable>.<replaceable>domain</replaceable></command>
+      </para>
+      <para>表示区画でFTP サイトを再読み込みするには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「再読み込み」</guimenuitem></menuchoice>を選択します。FTP サイトの読み込みを停止するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「停止」</guimenuitem></menuchoice>を選択します。</para>
+    </sect2>
+    <sect2 id="gosnautilus-465">
+      <title>ネットワークプレイスにアクセスする</title>
+      <indexterm>
+        <primary sortas="ねつとわあくふれいす">ネットワークプレイス</primary>
+        <secondary sortas="あくせす">アクセス</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ねつとわあくふれいす">ネットワークプレイス</secondary>
+        <see>ネットワークプレイス</see>
+      </indexterm>
+      <para>ネットワークプレイスにアクセスするようにシステムが設定されている場合は、ファイルマネージャを使用してそのネットワークプレイスにアクセスできます。</para>
+      <para>ネットワークプレイスにアクセスするには、ファイルマネージャを開き、<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「ネットワークプレイス」</guimenuitem></menuchoice>の順に選択するか、あるいはデスクトップの背景にある<guilabel>「ネットワークプレイス」</guilabel>オブジェクトをダブルクリックします。続いて、<guilabel>「ネットワーク」</guilabel>オブジェクトをダブルクリックします。ファイルマネージャウィンドウが表示され、アクセスできるネットワークプレイスがこのウィンドウに表示されます。アクセスしたいネットワークをダブルクリックします。</para>
+      <para><indexterm><primary sortas="NFSさあはあ">NFS サーバー</primary><see>Unix ネットワーク</see></indexterm>UNIX 共有にアクセスするには、<guilabel>「Unix ネットワーク (NFS)」</guilabel>
+オブジェクトをダブルクリックします。ファイルマネージャウィンドウに、利用できる UNIX 共有の一覧が表示されます。</para>
+      <para><indexterm><primary sortas="Sambaさあはあ">Samba サーバー</primary><see>Windows
+ネットワーク</see></indexterm>Windows 共有にアクセスするには、<guilabel>「Windows ネットワーク (SMB)」</guilabel>オブジェクトをダブルクリックします。ファイルマネージャウィンドウに、利用できる Windows 共有の一覧が表示されます。</para>
+      <sect3 id="gosnautilus-466">
+        <title>ネットワークプレイスを追加する</title>
+        <para>ネットワークプレイスを追加するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>ファイルマネージャを開き、<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「ネットワークプレイス」</guimenuitem></menuchoice>の順に選択するか、あるいはデスクトップの背景にある<guilabel>「ネットワークプレイス」</guilabel>オブジェクトをダブルクリックします。</para>
+          </listitem>
+          <listitem>
+            <para>続いて、<guilabel>「ネットワークプレイスの追加」</guilabel>オブジェクトをダブルクリックします。<guilabel>「ネットワークプレイスの追加」</guilabel>ダイアログが表示されます。ダイアログにサーバーの詳細を入力します。ダイアログ要素の内容は次のとおりです。</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>ダイアログ要素</para>
+                    </entry>
+                    <entry>
+                      <para>説明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「場所」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>追加したい場所を指定するか、あるいはドロップダウンリストから次に示す場所のどれかを選択する。<itemizedlist><listitem><para><guilabel>「FTP サーバー」</guilabel></para></listitem><listitem><para><guilabel>「Web フォルダ」</guilabel></para></listitem><listitem><para><guilabel>「Windows ネットワーク (SMB)」</guilabel></para></listitem><listitem><para><guilabel>「Unix ネットワーク (NFS)」</guilabel></para></listitem></itemizedlist></para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「ショートカット名」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">ネットワークプレイスのショートカット名を指定する</entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>「匿名ログイン」</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>「FTP サーバー」オプションのみ。FTP サーバーに匿名ユーザーとしてログインする場合に選択する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>「ログインを要求しない」</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>「Web フォルダ」、「Windows ネットワーク (SMB)」、および「Unix
+ネットワーク (NFS)」オプションのみ。Web フォルダ、Windows 共有、UNIX 共有のどれにもログインする必要がない場合に選択する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>「ユーザー名」</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>特定のネットワークプレイスに接続する際にユーザー名を指定する場合に使用する</para>
+                      <para>ネットワークプレイスに接続するには、パスワードを入力する必要がある</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>「今すぐ移動」</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>ネットワークプレイスにただちにアクセスしたい場合に選択する</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para><guibutton>「了解」</guibutton>をクリックし、ネットワークプレイスを追加します。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-508">
+      <title>ネットワークサーバーにアクセスする</title>
+      <para>使用している GNOME デスクトップ環境がネットワーク上のサーバーにアクセスするように設定されている場合、<guilabel>「アプリケーション」</guilabel>メニューを使用してそのネットワークサーバーにアクセスできます。</para>
+      <para>ネットワークサーバーにアクセスするには、<menuchoice><guimenu>「アプリケーション」</guimenu><guimenuitem>「ネットワークサーバ」</guimenuitem></menuchoice>の順に選択します。ファイルオブジェクトウィンドウが表示されます。アクセスできるネットワークサーバーがこのウィンドウに表示されます。アクセスしたいネットワークサーバーをダブルクリックします。</para>
+      <sect3 id="gosnautilus-509">
+        <title>ネットワークサーバーを追加する</title>
+        <para>ネットワークサーバーを追加するには、<menuchoice><guimenu>「アプリケーション」</guimenu><guimenuitem>「ネットワークサーバ」</guimenuitem></menuchoice>の順に選択します。ファイルオブジェクトウィンドウが表示されます。続いて、<guilabel>「新規サーバ」</guilabel>オブジェクトをダブルクリックします。<guilabel>「新規サーバ」</guilabel>ダイアログが表示されます。ダイアログにサーバーの名前を入力し、<guibutton>「了解」</guibutton>をクリックします。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-467">
+      <title>特別な URI ロケーションへのアクセス</title>
+      <indexterm>
+        <primary sortas="とくへつなURIろけえしよん">特別な URI ロケーション</primary>
+        <secondary sortas="あくせす">アクセス</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="とくへつなURIろけえしよん">特別な URI ロケーション</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="URIとくへつ">URI、特別</primary>
+        <see>特別な
+URI ロケーション</see>
+      </indexterm>
+      <para>Java Desktop System には、ファイルマネージャから特定の機能にアクセスするための特別な
+URI ロケーションがあります。たとえば、設定ツールにアクセスするには、ファイルマネージャウィンドウの <command>preferences:///</command> URI にアクセスします。<xref linkend="gosnautilus-TBL-479"/> に、ファイルマネージャで使用できる特別な
+URI ロケーションを示します。</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>特別な URI ロケーション</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>URI ロケーション</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>applications:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Java
+Desktop System のアプリケーションリストを表示する。アプリケーションの種類は、<guimenu>「アプリケーション」</guimenu>メニューのアプリケーションと同じ。アプリケーションを開くには、そのアプリケーションをダブルクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>computer:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Java Desktop System のアプリケーションと設定ツールのリストを表示する。ファイルシステム、CD-ROM、およびフロッピードライブにアクセスするアイコンも表示される</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>システムがネットワーク上の場所にアクセスできるように設定されている場合、接続できるネットワーク上の場所を表示する。ネットワーク上の特定の場所にアクセスするには、その場所をダブルクリックする。この
+URL は、システムにネットワーク上の場所を追加するためにも使用できる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>preferences:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Java
+Desktop System の設定ツールリストを表示する。設定ツールの種類は、<guimenu>「設定」</guimenu>メニューの設定ツールと同じ。設定ツールを開くには、設定ツールをダブルクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>server-settings:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>システムをサーバーとして構成するために使用できるアプリケーションのリストを表示する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>system-settings:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>システム設定の変更に使用できるアプリケーションのリストを表示する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>ナビゲーション履歴の使用方法</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="りれきりすとのなひけえと">履歴リストのナビゲート</secondary>
+      </indexterm>
+      <para>ファイルマネージャは、ファイル、フォルダ、FTP サイトおよび URI
+の履歴リストを持っています。この履歴リストを使って、最近表示したファイル、フォルダ、FTP サイト、URI に移動できます。履歴リストには、最後に表示した
+10 項目が含まれています。以降の節では、履歴リストのナビゲート方法について説明します。</para>
+      <para>履歴リストを消去するには、<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「履歴を消去」</guimenuitem></menuchoice>を選択します。</para>
+      <sect3 id="gosnautilus-77">
+        <title>「移動」メニューを使用して履歴リストをナビゲートする</title>
+        <para>以前に表示した項目のリストを表示するには、<guimenu>「移動」</guimenu>メニューを選択します。履歴リストは、<guimenu>「移動」</guimenu>メニューの下部に表示されます。履歴リスト内の項目を開くには、<guimenu>「移動」</guimenu>メニューからその項目を選択します。</para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>ツールバーを使用して履歴リストをナビゲートする</title>
+        <para>ツールバーを使用して履歴リストをナビゲートするには、次のいずれかの操作を実行します。</para>
+        <itemizedlist>
+          <listitem>
+            <para>履歴リスト内の以前のファイル、フォルダ、または URI を開くには、<guibutton>「戻る」</guibutton>ツールバーボタンをクリックする</para>
+          </listitem>
+          <listitem>
+            <para>履歴リスト内の次のファイル、フォルダ、または URI を開くには、<guibutton>「進む」</guibutton>ツールバーボタンをクリックする</para>
+          </listitem>
+          <listitem>
+            <para>以前に表示した項目のリストを表示するには、<guibutton>「戻る」</guibutton>ツールバーボタンの右側にある下矢印をクリックする。このリストから項目を開くには、その項目をクリックする</para>
+          </listitem>
+          <listitem>
+            <para>現在の項目以降に表示した項目のリストを表示するには、<guibutton>「進む」</guibutton>ツールバーボタンの右側にある下矢印をクリックする。このリストから項目を開くには、その項目をクリックする</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>サイド区画の履歴を使用して履歴リストをナビゲートする</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="りれき">履歴</secondary>
+        </indexterm>
+        <para><guilabel>「履歴」</guilabel>をサイド区画に表示するにるには、サイド区画の上部分にあるドロップダウンリストから<guilabel>「履歴」</guilabel>を選択します。サイド区画の<guilabel>「履歴」</guilabel>リストに、以前表示した項目のリストが表示されます。</para>
+        <para>履歴リストの項目を表示区画に表示するには、<guilabel>「履歴」</guilabel>リストの項目をクリックします。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>お気に入りを登録する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="おきにいり">お気に入り</secondary>
+      </indexterm>
+      <para>ブックマークの項目にアクセスするには、<guimenu>「ブックマーク」</guimenu>メニューからその項目を選択します。お気に入りを<guimenu>「ブックマーク」</guimenu>メニューに追加できます。ブックマークは、ファイルシステムのファイルやフォルダ、FTP サイトまたは URI に追加できます。</para>
+      <sect3 id="gosnautilus-40">
+        <title>ブックマークを追加する</title>
+        <para>ブックマークを追加するには、ブックマークを追加する項目を表示区画に表示します。<menuchoice><guimenu>「ブックマーク」</guimenu><guimenuitem> 「追加」</guimenuitem></menuchoice>を選択します。</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>ブックマークを編集する</title>
+        <para>ブックマークを編集するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para><menuchoice><guimenu>「ブックマーク」</guimenu><guimenuitem>「編集」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+          <listitem>
+            <para><guilabel>「編集」</guilabel>ダイアログの左側にあるブックマークを選択します。<guilabel>「編集」</guilabel>ダイアログの右側に表示されるブックマークの詳細を編集します。以下を参照してください。</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>ダイアログ要素</para>
+                    </entry>
+                    <entry>
+                      <para>説明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「名前」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para><guimenu>「ブックマーク」</guimenu>メニューに表示されるブックマークを識別する名前を指定する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「場所」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ブックマークの場所を指定する</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>ブックマークを削除するには、ダイアログの左側にあるブックマークを選択します。<guilabel>「削除」</guilabel>をクリックします。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>ファイルとフォルダの管理</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="ふあいるとふおるたのかんり">ファイルとフォルダの管理</secondary>
+    </indexterm>
+    <para>この節では、ファイルおよびフォルダの操作方法について説明します。</para>
+    <sect2 id="gosnautilus-201">
+      <title>ファイルマネージャでのドラッグ＆ドロップ</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="とらつくとろつふ">ドラッグ＆ドロップ</secondary>
+      </indexterm>
+      <para>ファイルマネージャの一部の作業は、ドラッグ＆ドロップで実行できます。ドラッグ＆ドロップすると、マウスポインタは、実行する作業に関するフィードバックを示します。<xref linkend="gosnautilus-TBL-11"/> は、ドラッグ＆ドロップで実行できる作業を説明します。また、ドラッグ＆ドロップしたときに表示されるマウスポインタも示します。</para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>ファイルマネージャでのドラッグ＆ドロップ</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>アクション</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>マウスポインタ</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>項目の移動</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>項目を別の場所にドラッグする</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>移動ポインタ。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>項目のコピー</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>項目をグラブし、<command>Ctrl</command> キーを押したままにする。項目を別の場所にドラッグする</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>コピーポインタ。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>項目へのシンボリックリンクを作成する</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>項目をグラブし、<command>Ctrl</command>
++ <command>Shift</command> キーを押したままにする。シンボリックリンクを配置する場所に項目をドラッグする</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>シンボリックリンクポインタ。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>ドラッグした項目で行う動作を尋ねる</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>項目をグラブし、<command>Alt</command>
+キーを押したままにする。配置する場所に項目をドラッグする。マウスボタンを放す。ポップアップメニューが表示される。ポップアップメニューから次の項目のいずれか
+1 つを選ぶ</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>「ここへ移動」</guimenuitem>
+                    </para>
+                    <para>項目をその場所まで移動</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>「ここにコピー」</guimenuitem>
+                    </para>
+                    <para>項目をその場所にコピー</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>「リンク先」</guimenuitem>
+                    </para>
+                    <para>その場所に項目のシンボリックリックを作成</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>「背景として設定」</guimenuitem>
+                    </para>
+                    <para>項目が画像の場合、その画像をデスクトップ背景に設定。このコマンドを使用して、デスクトップおよび表示区画の背景を設定できる</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>「取消し」</guimenuitem>
+                    </para>
+                    <para>ドラッグ＆ドロップ操作を取り消す</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>質問ポインタ。</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>ファイルおよびフォルダを選択する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふあいるおよひふおるたのせんたく">ファイルおよびフォルダの選択</secondary>
+      </indexterm>
+      <para>ファイルマネージャでファイルやフォルダを選択する方法は、いくつかあります。<xref linkend="gosnautilus-TBL-10"/> では、ファイルマネージャウィンドウとデスクトップの背景から項目を選択する方法が説明されています。</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>ファイルマネージャ内の項目の選択</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>アクション</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>項目の選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>その項目をクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>一連の項目のグループを選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>アイコン表示で、選択する複数のファイルを囲むようにドラッグする</para>
+                <para>リスト表示で、グループの最初の項目をクリックする。<keycap>Shift</keycap> キーを押したまま、グループの最後の項目をクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>複数の項目を選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Ctrl</keycap> キーを押したままにする。選択する複数の項目をクリックする</para>
+                <para>または、<command>Ctrl</command> キーを押したままで、選択する複数のファイルを囲むようにドラッグする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>フォルダ内のすべての項目を選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「すべて選択」</guimenuitem></menuchoice>を選択する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>項目のデフォルトのアクションを実行するには、その項目をダブルクリックします。ファイルマネージャで設定することにより、ファイルを 1 度クリックするだけでデフォルトのアクションを実行できます。</para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>ファイルまたはフォルダを移動する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふあいるおよひふおるたのいとう">ファイルおよびフォルダの移動</secondary>
+      </indexterm>
+      <para>以降の節では、ファイルまたはフォルダを移動する方法について説明します。</para>
+      <sect3 id="gosnautilus-537">
+        <title>表示区画でのドラッグ</title>
+        <para>ファイルまたはフォルダを表示区画内の別の場所にドラッグするには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>ファイルマネージャウィンドウを開きます。<menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「新規ウィンドウ」</guimenuitem></menuchoice>を選択して、別のファイルマネージャウィンドウを開きます。</para>
+          </listitem>
+          <listitem>
+            <para>1 つ目のウィンドウで、ファイルまたはフォルダの移動元のフォルダを選択します。別のウィンドウで、ファイルまたはフォルダの移動先のフォルダを選択します。</para>
+          </listitem>
+          <listitem>
+            <para>移動するファイルまたはフォルダを、別のウィンドウの新しい場所にドラッグします。</para>
+          </listitem>
+        </orderedlist>
+        <para>ファイルまたはフォルダを現在の場所より 1 レベル下のフォルダに移動する場合は、新しいウィンドウを開きません。代わりに、ファイルまたはフォルダをドラッグして、同じウィンドウ内の移動先フォルダにドラッグします。</para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>切り取りと貼り付け</title>
+        <para>ファイルまたはフォルダを切り取って、それを別の場所に貼り付けることができます。次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>移動するファイルまたはフォルダを選択して、<menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ファイルの切り取り」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+          <listitem>
+            <para>ファイルまたはフォルダの移動先のフォルダを開き、<menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ファイルの貼り付け」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>ファイルまたはフォルダをコピーする</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふあいるまたはふおるたのこひい">ファイルまたはフォルダのコピー</secondary>
+      </indexterm>
+      <para>以降の節では、ファイルまたはフォルダをコピーする方法について説明します。</para>
+      <sect3 id="gosnautilus-640">
+        <title>表示区画でのドラッグ</title>
+        <para>ファイルまたはフォルダをコピーするには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>ファイルマネージャウィンドウを開きます。<menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「新規ウィンドウ」</guimenuitem></menuchoice>を選択して、別のファイルマネージャウィンドウを開きます。</para>
+          </listitem>
+          <listitem>
+            <para>1 つ目のウィンドウで、ファイルまたはフォルダのコピー元のフォルダを選択します。別のウィンドウで、ファイルまたはフォルダのコピー先のフォルダを選択します。</para>
+          </listitem>
+          <listitem>
+            <para>ファイルまたはフォルダをグラブし、<command>Ctrl</command> キーを押したままにします。ファイルまたはフォルダを別のウィンドウの新しい場所にドラッグします。</para>
+          </listitem>
+        </orderedlist>
+        <para>ファイルまたはフォルダを現在の場所より 1 レベル下のフォルダにコピーする場合は、新しいウィンドウを開きません。代わりに、ファイルまたはフォルダをグラブし、<command>Ctrl</command> キーを押したままにします。ファイルまたはフォルダを同じウィンドウの別の場所にドラッグします。</para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>コピーと貼り付け</title>
+        <para>ファイルまたはフォルダをコピーして、それを別の場所に貼り付けることができます。次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>コピーするファイルまたはフォルダを選択して<menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ファイルのコピー」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+          <listitem>
+            <para>ファイルまたはフォルダのコピー先のフォルダを開き、<menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ファイルの貼り付け」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>ファイルまたはフォルダを複製する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふあいるまたはふおるたのふくせい">ファイルまたはフォルダの複製</secondary>
+      </indexterm>
+      <para>ファイルまたはフォルダの複製を現在のフォルダに作成するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>表示区画で、複製するファイルまたはフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「複製」</guimenuitem></menuchoice>を選択します。または、表示区画でファイルまたはフォルダを右クリックして、<guimenuitem>「複製」</guimenuitem>を選択します。</para>
+          <para>ファイルまたはフォルダの複製が現在のフォルダに表示されます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>フォルダを作成する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふおるたのさくせい">フォルダの作成</secondary>
+      </indexterm>
+      <para>フォルダを作成するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>新たにフォルダを作成するフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「フォルダの作成」</guimenuitem></menuchoice>を選択します。または、表示区画の背景で右クリックして、<guimenuitem>「フォルダの作成」</guimenuitem>を選択します。</para>
+          <para><guilabel>「未タイトル」</guilabel>のフォルダが表示区画に追加されます。フォルダの名前が選択されています。</para>
+        </listitem>
+        <listitem>
+          <para>フォルダの名前を入力して、<keycap>Return</keycap> キーを押します。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>ファイルまたはフォルダの名前を変更する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふおるためいのへんこう">フォルダ名の変更</secondary>
+      </indexterm>
+      <para>ファイルまたはフォルダの名前を変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>表示区画で、名前を変更するファイルまたはフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「名前の変更」</guimenuitem></menuchoice>を選択します。または、表示区画でファイルまたはフォルダを右クリックして、<guimenuitem>「名前の変更」</guimenuitem>を選択します。</para>
+          <para>ファイルまたはフォルダの名前が選択されています。</para>
+        </listitem>
+        <listitem>
+          <para>ファイルまたはフォルダの新しい名前を入力して、<command>Return</command> キーを押します。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>テンプレートとドキュメント</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ときゆめんとのさくせい">ドキュメントの作成</secondary>
+      </indexterm>
+      <para>頻繁に作成するドキュメントからテンプレートを作成できる。たとえば、請求書を頻繁に作成する場合は、空の請求書ドキュメントを作成して <literal>invoice.doc</literal> として <literal>$HOME/Templates</literal> フォルダに保存できます。</para>
+      <para>テンプレートフォルダには、ファイルブラウザウィンドウからもアクセスできます。<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「テンプレート」</guimenuitem></menuchoice>を選択します。</para>
+      <para>テンプレート名が<guilabel>「ドキュメントの作成」</guilabel>メニューのサブメニュー項目として表示されます。</para>
+      <para>テンプレートフォルダにはサブフォルダを作成することもできます。サブフォルダはメニューのサブメニューとして表示されます。</para>
+      <para>テンプレートを共有することもできます。テンプレートフォルダから共有テンプレートを含むフォルダへのシンボリックリンクを作成します。</para>
+    </sect2>
+    <sect2 id="gosnautilus-514">
+      <title>ドキュメントを作成する</title>
+      <para>ドキュメントのテンプレートがある場合は、インストールされているテンプレートの 1 つを使用してドキュメントを作成できます。</para>
+      <para>ドキュメントを作成するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>新たにドキュメントを作成するフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「ドキュメントの作成」</guimenuitem></menuchoice>を選択します。または、表示区画の背景で右クリックして、<guimenuitem>「ドキュメントの作成」</guimenuitem>を選択します。</para>
+          <para>使用可能なテンプレート名が、<guilabel>「ドキュメントの作成」</guilabel>メニューのサブメニュー項目として表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>作成するドキュメントのテンプレート名をダブルクリックします。</para>
+        </listitem>
+        <listitem>
+          <para>ドキュメントの名前を変更して、適切なフォルダに保存します。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>ファイルまたはフォルダをごみ箱に移動する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="こみはこ">ごみ箱</secondary>
+        <see> ごみ箱</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="こみはこ">ごみ箱</primary>
+        <secondary sortas="ふあいるまたはふおるたのいとう">ファイルまたはフォルダの移動</secondary>
+      </indexterm>
+      <para>ファイルまたはフォルダを<guilabel>ごみ箱</guilabel>に移動するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>表示区画で、<guilabel>ごみ箱</guilabel>に移動するファイルまたはフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ごみ箱へ移動」</guimenuitem></menuchoice>を選択します。または、表示区画でファイルまたはフォルダを右クリックして、<guimenuitem>「ごみ箱へ移動」</guimenuitem>を選択します。</para>
+        </listitem>
+      </orderedlist>
+      <para>あるいは、表示区画からデスクトップの背景上の<guilabel>ごみ箱</guilabel>オブジェクトにファイルまたはフォルダをドラッグすることもできます。</para>
+      <note>
+        <para>ファイルまたはフォルダをリムーバルメディアから<guilabel>ごみ箱</guilabel>に移動すると、そのファイルまたはフォルダはリムーバブルメディアの <guilabel>ごみ箱</guilabel> に保存されます。リムーバブルメディアからファイルまたはフォルダを完全に削除するには、<guilabel>ごみ箱</guilabel>
+を空にします。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>ファイルまたはフォルダを削除する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふあいるまたはふおるたのさくしよ">ファイルまたはフォルダの削除</secondary>
+      </indexterm>
+      <para>ファイルまたはフォルダを削除する場合、そのファイルまたはフォルダは<guilabel>ごみ箱</guilabel>に移動されず、ただちにファイルシステムから削除されます。「<guimenuitem>削除</guimenuitem>」メニュー項目は、<application>Nautilus</application>「<guilabel>ファイルマネージャの設定</guilabel>」ダイアログで「<guilabel>ごみ箱を経由しない削除コマンドを含める</guilabel>」オプションを選択した場合にのみ利用可能です。</para>
+      <para>ファイルまたはフォルダを削除するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>表示区画で、削除するファイルまたはフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「削除」</guimenuitem></menuchoice>を選択します。または、表示区画でファイルまたはフォルダを右クリックして、<guimenuitem>「削除」</guimenuitem>を選択します。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>ファイルまたはフォルダのシンボリックリンクを作成する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="しんほりつくりんくのさくせい">シンボリックリンクの作成</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="しんほりつくりんく">シンボリックリンク</primary>
+        <secondary sortas="ふあいるまたはふおるたへのりんくさくせい">ファイルまたはフォルダへのリンク、作成</secondary>
+      </indexterm>
+      <para>シンボリックリンクとは、別のファイルまたはフォルダを指す特殊な種類のファイルですシンボリックリンクに対してアクションを実行すると、そのアクションはシンボリックリンクが指すファイルまたはフォルダで実行されます。ただし、シンボリックリンクを削除した場合、リンクファイルが削除されるだけで、そのリンクが指すファイルは削除されません。</para>
+      <para>ファイルまたはフォルダのシンボリックリンクを作成するには、リンクを作成するファイルまたはフォルダを選択します。<menuchoice><guimenu>「編集」</guimenu><guimenuitem>「リンクを作成」</guimenuitem></menuchoice>を選択します。ファイルまたはフォルダのリンクが、現在のフォルダに追加されます。</para>
+      <para>あるいは、リンクを作成する項目をグラブし、<command>Ctrl</command> + <command>Shift</command>
+キーを押したままにします。リンクを配置する場所に項目をドラッグします。</para>
+      <para>デフォルトでは、エンブレムがシンボリックリンクに追加されます。</para>
+      <note>
+        <para>シンボリックリンクのアクセス権は、シンボリックリンクが指すファイルやフォルダによって異なります。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-476">
+      <title>ファイルやフォルダのプロパティを表示する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ふろはていのひようし">プロパティの表示</secondary>
+      </indexterm>
+      <para>ファイルやフォルダのプロパティを表示するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>プロパティを表示するファイルやフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem> 「プロパティ」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>「プロパティ」ダイアログで、ファイルやフォルダのプロパティを表示します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、「プロパティ」ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>アクセス権を変更する</title>
+      <indexterm>
+        <primary sortas="あくせすけん">アクセス権</primary>
+        <secondary sortas="かいよう">概要</secondary>
+      </indexterm>
+      <para>アクセス権は、ファイルやフォルダそれぞれに割り当てられる設定で、ユーザーがそのファイルやフォルダに対して持つアクセス権を決定します。以下の表に、ファイルやフォルダに設定できるアクセス権とその効果を示します。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colwidth="29.62*"/>
+          <colspec colwidth="74.59*"/>
+          <colspec colname="colspec0" colwidth="74.59*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>アクセス権</para>
+              </entry>
+              <entry>
+                <para>ファイル</para>
+              </entry>
+              <entry colname="colspec0">
+                <para>フォルダ</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>読み取り</para>
+              </entry>
+              <entry valign="top">
+                <para>ファイルを読み取る権限</para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>フォルダの内容を一覧表示する権限</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>書き込み</para>
+              </entry>
+              <entry valign="top">
+                <para>ファイルを変更する権限</para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>フォルダ内でファイルを作成や削除する権限</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>実行</para>
+              </entry>
+              <entry valign="top">
+                <para>ファイルをプログラムとして実行する権限この権限は、ファイルがプログラムまたはスクリプトの場合のみに関係します。</para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>ディレクトリ内のファイルにアクセスする権限</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>複数のタイプのユーザーにアクセス権を設定できます。以下の表には、アクセス権を設定できるユーザーのタイプが示されています。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>ユーザーのカテゴリ</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>所有者</para>
+              </entry>
+              <entry valign="top">
+                <para>ファイルやフォルダを作成したユーザー</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>グループ</para>
+              </entry>
+              <entry valign="top">
+                <para>所有者が属するグループ</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>その他のユーザー</para>
+              </entry>
+              <entry valign="top">
+                <para>所有者が属するグループ外のユーザー全員</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><indexterm><primary sortas="ふあいるまねえしや">ファイルマネージャ</primary><secondary sortas="あくせすけんのへんこう">アクセス権の変更</secondary></indexterm><indexterm><primary sortas="あくせすけん">アクセス権</primary><secondary sortas="ふあいるやふおるたのへんこう">ファイルやフォルダの変更</secondary></indexterm>ファイルやフォルダのアクセス権を変更するには、以下の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>アクセス権を変更するファイルまたはフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem> 「プロパティ」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「アクセス権」</guilabel>タブをクリックします。<guilabel>「アクセス権」</guilabel>タブセクションのドロップダウンリストとチェックボックスで、ファイルまたはフォルダのアクセス権を変更します。次の表に、<guilabel>「アクセス権」</guilabel>タブセクションのダイアログ要素を示します。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="37.78*"/>
+              <colspec colwidth="62.22*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>要素</para>
+                  </entry>
+                  <entry>
+                    <para>説明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「ファイルの所有者」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルやフォルダの所有者を変更するには、その所有者をドロップダウンリストから選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「ファイルのグループ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルやフォルダが所属するグループを変更するには、そのグループをドロップダウンリストから選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「所有者」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルやフォルダの所有者に適用するアクセス権を選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「グループ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルやフォルダの所有者が属するグループに適用するアクセス権を選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「その他」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>所有者が属するグループ外のユーザー全員に適用するアクセス権を選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「テキスト表示」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para><guilabel>「読み取り」</guilabel>、<guilabel>「書き込み」</guilabel>、<guilabel>「実行」</guilabel>オプションから選択したアクセス権をテキスト形式で表示する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「番号表示」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para><guilabel>「読み取り」</guilabel>、<guilabel>「書き込み」</guilabel>、<guilabel>「実行」</guilabel>オプションから選択したアクセス権をテキスト形式で表示する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「最終変更日時」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>ファイルまたはフォルダが最後に変更された日時を表示する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、「プロパティ」ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>ファイルやフォルダへのノートの追加</title>
+      <para>ファイルやフォルダへノートを追加できます。以下の方法で、ファイルやフォルダへノートを追加します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>「プロパティ」ダイアログから</para>
+        </listitem>
+        <listitem>
+          <para>サイド区画の<guilabel>「ノート」</guilabel>から</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>「プロパティ」ダイアログでノートを追加する</title>
+        <indexterm>
+          <primary sortas="のおと">ノート</primary>
+          <secondary sortas="ふあいるやふおるたについか">ファイルやフォルダに追加</secondary>
+        </indexterm>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="のおと">ノート</secondary>
+          <tertiary sortas="ついか">追加</tertiary>
+        </indexterm>
+        <para>ファイルやフォルダにノートを追加するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>ノートを追加するファイルやフォルダを選択します。</para>
+          </listitem>
+          <listitem>
+            <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem> 「プロパティ」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+          <listitem>
+            <para>プロパティダイアログの<guilabel>「ノート」</guilabel> タブをクリックします。<guilabel>「ノート」</guilabel>タブセクションで、ノートを入力します。</para>
+          </listitem>
+          <listitem>
+            <para><guibutton>「閉じる」</guibutton>をクリックして、「プロパティ」ダイアログを閉じます。ノートエンブレムがファイルやフォルダに追加されます。</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary sortas="のおと">ノート</primary><secondary sortas="さくしよ">削除</secondary></indexterm><indexterm><primary sortas="ふあいるまねえしや">ファイルマネージャ</primary><secondary sortas="のおと">ノート</secondary><tertiary sortas="さくしよ">削除</tertiary></indexterm>ノートを削除するには、<guilabel>「ノート」</guilabel>タブセクションからノートテキストを削除します。</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>サイド区画の「ノート」でノートを追加する</title>
+        <para>ファイルやフォルダにノートを追加するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>ノートを追加するファイルやフォルダを表示区画で開きます。</para>
+          </listitem>
+          <listitem>
+            <para>サイド区画の上部分にあるドロップダウンリストから<guilabel>「ノート」</guilabel>を選択します。サイド区画を表示するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「サイド区画」</guimenuitem></menuchoice>を選択する。</para>
+          </listitem>
+          <listitem>
+            <para>サイド区画にノートを入力します。ノートエンブレムが表示区画のファイルまたはフォルダに追加され、ノートアイコンがサイド区画に追加されます。このアイコンをクリックすると、ノートを表示できます。</para>
+          </listitem>
+        </orderedlist>
+        <para>ノートを削除するには、サイド区画の<guilabel>「ノート」</guilabel>からノートテキストを削除します。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>「ごみ箱」の使用方法</title>
+      <indexterm>
+        <primary sortas="こみはこ">ごみ箱</primary>
+        <secondary sortas="かいよう">概要</secondary>
+      </indexterm>
+      <para>以下の項目は、<guilabel>ごみ箱</guilabel>に移動できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ファイル</para>
+        </listitem>
+        <listitem>
+          <para>フォルダ</para>
+        </listitem>
+        <listitem>
+          <para>デスクトップの背景オブジェクト</para>
+        </listitem>
+      </itemizedlist>
+      <para><guilabel>ごみ箱</guilabel>内のファイルを元に戻したい場合は、<guilabel>ごみ箱</guilabel>の内容を表示して、<guilabel>ごみ箱</guilabel>からファイルを取り出すことができます。<guilabel>ごみ箱</guilabel>を空にすると、<guilabel>ごみ箱</guilabel>の内容は永久に失われます。</para>
+      <sect3 id="gosnautilus-107">
+        <title>ごみ箱を表示する</title>
+        <indexterm>
+          <primary sortas="こみはこ">ごみ箱</primary>
+          <secondary sortas="ひようし">表示</secondary>
+        </indexterm>
+        <para><guilabel>ごみ箱</guilabel>の内容は、次の方法で表示できます。</para>
+        <itemizedlist>
+          <listitem>
+            <para>ファイルマネージャウィンドウから</para>
+            <para><menuchoice><guimenu>「移動」</guimenu><guimenuitem>「ごみ箱」</guimenuitem></menuchoice>を選択します。<guilabel>ごみ箱</guilabel>の内容がウィンドウに表示されます。</para>
+          </listitem>
+          <listitem>
+            <para>デスクトップの背景から</para>
+            <para>デスクトップの背景の<guilabel>ごみ箱</guilabel>オブジェクトをダブルクリックします。</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>ごみ箱を空にする</title>
+        <indexterm>
+          <primary sortas="こみはこ">ごみ箱</primary>
+          <secondary sortas="からにする">空にする</secondary>
+        </indexterm>
+        <para><guilabel>ごみ箱</guilabel>の内容は、次の方法で空にできます。</para>
+        <itemizedlist>
+          <listitem>
+            <para>ファイルマネージャウィンドウから</para>
+            <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「ごみ箱を空にする」</guimenuitem></menuchoice>を選択する</para>
+          </listitem>
+          <listitem>
+            <para>デスクトップの背景から</para>
+            <para><guilabel>ごみ箱</guilabel>オブジェクトを右クリックして、<guimenuitem>「ごみ箱を空にする」</guimenuitem>を選択する</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>ファイルおよびフォルダの外観の変更</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="ふあいるおよひふおるたのかいかんをへんこう">ファイルおよびフォルダの外観を変更</secondary>
+    </indexterm>
+    <para>ファイルマネージャを使用すると、ファイルおよびフォルダの概観を何通りかに変更できます。説明は、次の節を参照してください。</para>
+    <sect2 id="gosnautilus-112">
+      <title>ファイルまたはフォルダにエンブレムを追加する</title>
+      <indexterm>
+        <primary sortas="えんふれむ">エンブレム</primary>
+        <secondary sortas="ふあいるについか">ファイルに追加</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="えんふれむ">エンブレム</primary>
+        <secondary sortas="ふおるたについか">フォルダに追加</secondary>
+      </indexterm>
+      <para>項目にエンブレムを追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>エンブレムを追加する項目を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>項目を右クリックして、<guimenuitem>「プロパティ」</guimenuitem>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>「プロパティ」ダイアログの<guilabel>「エンブレム」</guilabel>タブをクリックすると、<guilabel>「エンブレム」</guilabel>タブセクションが表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>項目に追加するエンブレムを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、「プロパティ」ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>新しいエンブレムを追加する</title>
+      <indexterm>
+        <primary sortas="えんふれむ">エンブレム</primary>
+        <secondary sortas="しんきついか">新規追加</secondary>
+      </indexterm>
+      <para>エンブレムを新たに追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「背景とエンブレム」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「エンブレム」</guibutton>ボタンをクリックし、<guibutton>「背景とエンブレム」</guibutton>ダイアログの<guilabel>「新規エンブレムを追加」</guilabel>ボタンをクリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「新規エンブレムを作成」</guilabel>ダイアログの<guilabel>「キーワード」</guilabel>テキストボックスにエンブレムの名前を入力します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「画像」</guilabel>ボタンをクリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「新規エンブレムのための画像ファイルを選択」</guibutton>ダイアログの<guilabel>「参照」</guilabel>をクリックします。エンブレムを選択したら、<guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「新規エンブレムを作成」</guilabel>ダイアログで<guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>ファイルまたはフォルダのアイコンを変更する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="あいこん">アイコン</secondary>
+        <tertiary sortas="へんこう">変更</tertiary>
+      </indexterm>
+      <para>個々のファイルまたはフォルダを表すアイコンを変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ファイルまたはフォルダを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem> 「プロパティ」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>「プロパティ」ダイアログの<guilabel>「基本」</guilabel>タブセクションで、<guibutton>「カスタムアイコンの選択」</guibutton>ボタンをクリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「アイコンを選択」</guilabel>ダイアログを使用して、ファイルまたはフォルダを表すアイコンを選びます。<guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、「プロパティ」ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+      <para>カスタムアイコンから <application>ファイルの関連付け</application>設定ツールで指定したデフォルトのアイコンに戻すには、アイコンを右クリックして、<guimenuitem>「カスタムアイコンを削除」</guimenuitem>を選択します。または、「プロパティ」ダイアログの<guilabel>「カスタムアイコンを削除」</guilabel>ボタンをクリックします。</para>
+      <para>ファイルタイプを表すアイコンを変更するには、<application>ファイルの関連付け</application>設定ツールを使用します。</para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>ビュー内の項目のサイズを変更する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="かくたいとしゆくしよう">拡大と縮小</secondary>
+      </indexterm>
+      <para>ビュー内の項目のサイズは変更することができます。ビューでファイルまたはフォルダを表示している場合には、そのサイズを変更できます。ビュー内の項目のサイズは、次の方法で変更できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ビュー内の項目を拡大するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「拡大」</guimenuitem></menuchoice>を選択する</para>
+        </listitem>
+        <listitem>
+          <para>ビュー内の項目を縮小するには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「縮小」</guimenuitem></menuchoice>を選択する</para>
+        </listitem>
+        <listitem>
+          <para>ビュー内の項目を通常のサイズに戻すには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「通常のサイズ」</guimenuitem></menuchoice>を選択する</para>
+        </listitem>
+      </itemizedlist>
+      <para>ロケーションバーにある拡大 / 縮小ボタンを使用して、ビュー内の項目のサイズを変更することもできます。<xref linkend="gosnautilus-TBL-42"/>
+は、拡大 / 縮小ボタンの使用方法を説明します。</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>拡大 / 縮小ボタン</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>ボタン</para>
+              </entry>
+              <entry>
+                <para>ボタン名</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>縮小ボタン</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>縮小</guibutton>ボタン</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>ビュー内の項目のサイズを縮小する</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>通常のサイズボタン</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para><guibutton>通常のサイズ</guibutton>ボタン</para>
+              </entry>
+              <entry valign="top">
+                <para>ビュー内の項目のサイズを通常のサイズに戻す</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>拡大ボタン</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><guibutton>拡大</guibutton>ボタン</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>ビュー内の項目のサイズを拡大する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>ファイルマネージャは、特定のフォルダ内の項目のサイズを記憶しています。次回、そのフォルダを表示したとき、その項目は変更したサイズで表示されます。つまり、フォルダの項目のサイズを変更した場合、そのフォルダは、指定したサイズで項目を表示するようにカスタマイズされます。項目のサイズを、設定で指定したデフォルトのサイズに戻すには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「デフォルト表示に戻す」</guimenuitem></menuchoice>を選択します。</para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>ビューを使用したファイルとフォルダの表示</title>
+      <indexterm>
+        <primary sortas="ひゆうあこんほおねんと">ビューアコンポーネント</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="ひゆう">ビュー</secondary>
+        <tertiary sortas="かいよう">概要</tertiary>
+      </indexterm>
+      <para>ファイルマネージャでは、ファイルの内容を表示する方法がいくつかあります。ファイルマネージャには、ビューアコンポーネントがあり、特定のファイル形式を表示区画に表示できます。たとえば、Web
+ページビューアを使用して、表示区画に HTML ファイルを表示できます。また、テキストビューアを使用して、表示区画にプレーンテキストファイルを表示できます。</para>
+      <para>さらに、ファイルマネージャでは、適当なアプリケーションでファイルを開くことも可能です。詳細については、<xref linkend="gosnautilus-28"/>を参照してください。</para>
+      <para>ファイルマネージャには、フォルダの内容を異なる方法で表示できるビューがあります。たとえば、フォルダの内容は次の表示形式で表示できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>アイコン表示</para>
+          <para>フォルダ内の項目をアイコン形式で表示する</para>
+        </listitem>
+        <listitem>
+          <para>リスト表示</para>
+          <para>フォルダ内の項目をリスト形式で表示する</para>
+        </listitem>
+      </itemizedlist>
+      <para><guilabel>「表示」</guilabel>メニューを使用して、ファイルまたはフォルダの表示方法を選択できます。また、<guilabel>「表示方法」</guilabel>ドロップダウンリストを使用して、ファイルまたはフォルダの表示方法を選ぶこともできます。フォルダを表示するときに、フォルダ内で項目をどのように整理または並べ替えるかを指定できます。表示区画内の項目のサイズは変更できます。以降の節では、アイコン表示、リスト表示、およびファイルの表示の操作方法について説明します。</para>
+      <sect3 id="gosnautilus-100">
+        <title>ファイルまたはフォルダを表示するビューを選ぶ</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="ひゆう">ビュー</secondary>
+          <tertiary sortas="せんたく">選択</tertiary>
+        </indexterm>
+        <para>ファイルまたはフォルダの内容を表示するビューのタイプは、<guilabel>「表示」</guilabel>メニューから選択します。</para>
+        <para>または、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「表示方法」</guimenuitem></menuchoice>からビューを選択することもできます。使用するビューを<guilabel>「他の表示方法で開く」</guilabel>ダイアログから選択して、<guibutton>「選択」</guibutton>ボタンをクリックします。</para>
+        <para>ビューのタイプは、<guilabel>「表示方法」</guilabel>ドロップダウンリストから選ぶこともできます。<guilabel>「表示方法」</guilabel>ドロップダウンリストは、ロケーションバーの右側にあります。</para>
+        <para>異なるフォルダは、異なるビューに表示できます。ファイルマネージャは、ユーザーが選択した特定のフォルダの表示方法を記憶しています。次にフォルダを表示するときも、フォルダは同じ表示方法で表示されます。フォルダのビューを、設定で指定したデフォルトのビューに戻すには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「デフォルト表示に戻す」</guimenuitem></menuchoice>を選択します。</para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>アイコン表示でファイルを整理する</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="あいこんひようし">アイコン表示</secondary>
+          <tertiary sortas="ふあいるをせいりする">ファイルを整理する</tertiary>
+        </indexterm>
+        <para>フォルダの内容をアイコン表示で表示する場合、フォルダ内の項目をどのように整理するかを指定できます。アイコン表示で項目をどのように整理するかは、<menuchoice><guimenu>「表示」</guimenu><guisubmenu>「項目の位置を設定」</guisubmenu></menuchoice>を選択して指定できます。<guisubmenu>「項目の位置を設定」</guisubmenu>サブメニューには次のセクションがあります。</para>
+        <itemizedlist>
+          <listitem>
+            <para>上のセクションには、ファイルを手動で整理できるオプションが含まれる</para>
+          </listitem>
+          <listitem>
+            <para>中央セクションには、ファイルを自動的に並べ替えるオプションが含まれる</para>
+          </listitem>
+          <listitem>
+            <para>下のセクションには、ファイルの整理方法を変更できるオプションが含まれる</para>
+          </listitem>
+        </itemizedlist>
+        <para>適切なオプションをサブメニューから選んでください。次の表に、オプションを説明します。</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>オプション</para>
+                </entry>
+                <entry>
+                  <para>説明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「手動」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>項目を手動で整理する。項目を手動で整理するには、表示区画内で項目を希望する場所までドラッグする</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>「名前」</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>名前のアルファベット順に項目を並べ替える。項目の順序に、大文字と小文字の区別はない。ファイルマネージャが隠しファイルを表示する設定の場合は、隠しファイルは最後に表示される</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>「サイズ」</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>サイズの大きな順に項目を並べ替える。項目をサイズで並べ替える場合、フォルダはフォルダ内の項目の数によって並べ替えられる。フォルダの並べ替えは、フォルダ内の項目の合計サイズではない</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>「種類別」</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>オブジェクトの種類によって、アルファベット順に項目を並べ替える。各項目は、<application>ファイルの関連付け</application>設定ツールの<firstterm>MIME タイプ</firstterm>の説明に従って、アルファベット順に並べ替えられる。MIME
+タイプにはファイルの書式が指定されており、この情報によってアプリケーションがファイルを読み取ることが可能になる。たとえば、電子メールアプリケーションは、<literal>image/png</literal> MIME タイプから、電子メールに PNG (Portable Networks Graphic) ファイルが添付されていることを認識する</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>「更新日時」</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>項目を最後に更新した日付によって並べ替える。最も日付の新しい項目が先頭になる</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>「エンブレム」</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>項目に追加されているエンブレムによって並べ替える。エンブレムの名前のアルファベット順に項目が並べ替えられる。エンブレムがない項目は、エンブレムがある項目の後に並べられる</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>「コンパクトなレイアウト」</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>項目が互いに接近するように整理する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「逆順」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>項目を並べ替えるオプションの、並べ替えの順序を逆にする。たとえば、項目を名前で並べ替える場合、<guilabel>「逆順」</guilabel>オプションを選択すると、逆のアルファベット順に項目を並べ替える</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>ファイルマネージャは、特定のフォルダの項目配置を記憶しています。次回、そのフォルダを表示したとき、その項目は指定した方法で整理されます。つまり、フォルダ内の項目の整理方法を指定した場合、そのフォルダは、指定した方法で項目を表示するようにカスタマイズされます。フォルダの整理方法を、設定で指定されているデフォルトの整理方法に戻すには、<menuchoice><guimenu>「表示」</guimenu><guimenuitem>「デフォルト表示に戻す」</guimenuitem></menuchoice>を選択します。</para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>アイコン表示でアイコンのサイズを変更する</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="あいこん">アイコン</secondary>
+          <tertiary sortas="さいすのへんこう">サイズの変更</tertiary>
+        </indexterm>
+        <para>アイコン表示では、表示されている項目を表すアイコンのサイズを変更できます。アイコン表示で項目のサイズを変更するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>サイズ変更する項目を右クリックして、<guimenuitem>「アイコンを伸縮」</guimenuitem>を選択します。項目のまわりに、各コーナーにハンドルのある長方形が表示されます。</para>
+          </listitem>
+          <listitem>
+            <para>ハンドルの 1 つをグラブして、希望するサイズまでアイコンをドラッグします。</para>
+            <para>アイコンを元のサイズに戻すには、そのアイコンを右クリックして<guimenuitem>「アイコンの元のサイズに復元」</guimenuitem>を選択します。</para>
+          </listitem>
+        </orderedlist>
+        <para>デスクトップの背景オブジェクトのサイズも変更できます。</para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>ビューの動作を変更する</title>
+        <indexterm>
+          <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+          <secondary sortas="ひゆう">ビュー</secondary>
+          <tertiary sortas="とうさをへんこう">動作を変更</tertiary>
+        </indexterm>
+        <para>ビューの動作は、次の方法で変更できます。</para>
+        <itemizedlist>
+          <listitem>
+            <para>特定のファイルまたはフォルダのデフォルトのビューとして指定する</para>
+          </listitem>
+          <listitem>
+            <para>ファイルタイプまたはすべてのフォルダのデフォルトのビューとして指定する</para>
+          </listitem>
+          <listitem>
+            <para>特定のファイルまたはフォルダの<guisubmenu>「他の表示」</guisubmenu>サブメニュー内の項目として指定する</para>
+          </listitem>
+          <listitem>
+            <para>特定のファイルタイプすべて、またはすべてのフォルダの<guisubmenu>「他の表示」</guisubmenu>サブメニュー内の項目として指定する</para>
+          </listitem>
+          <listitem>
+            <para>ビューが特定のファイルまたはフォルダの<guisubmenu>「他の表示」</guisubmenu>サブメニュー内の項目に含まれないように指定する</para>
+          </listitem>
+        </itemizedlist>
+        <para>ビューの動作を変更するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para><menuchoice><guimenu>「表示」</guimenu><guimenuitem>「他の表示」</guimenuitem></menuchoice>を選択します。</para>
+          </listitem>
+          <listitem>
+            <para><guilabel>「他の表示方法で開く」</guilabel>ダイアログの表から、変更するビューを選択します。</para>
+          </listitem>
+          <listitem>
+            <para><guibutton>「修正」</guibutton>ボタンをクリックします。次の表で、<guilabel>「修正」</guilabel>ダイアログのオプションを説明します。</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>オプション</para>
+                    </entry>
+                    <entry>
+                      <para>説明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「<replaceable>item-name</replaceable>
+アイテムのメニューに含まれます」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ビューをこの種の項目の<guisubmenu>「他の表示」</guisubmenu>サブメニューに含める</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「<replaceable>item-name</replaceable>
+アイテムのデフォルトとして使用します」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ビューをこの種の項目のデフォルトとして使用する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「<replaceable>item-name</replaceable>
+のメニューにのみ含まれます」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ビューをこの項目のみの<guisubmenu>「他の表示」</guisubmenu>サブメニューに含める</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「<replaceable>item-name</replaceable>
+のデフォルトとしてのみ使用します」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ビューをこの項目のみのデフォルトとして使用する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「<replaceable>item-name</replaceable>
+アイテムのメニューに含まれません」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ビューをこの種の項目の<guisubmenu>「他の表示」</guisubmenu>サブメニューから除外する</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para><guibutton>「了解」</guibutton>をクリックし、<guibutton>「完了」</guibutton>をクリックして<guilabel>「他の表示方法で開く」</guilabel>ダイアログを閉じます。</para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para><application>ファイルの関連付け</application>設定ツールの<guilabel>「ファイルタイプを編集」</guilabel>ダイアログにあるファイルタイプに関連付けられているアクションを変更することもできます。<guilabel>「ファイルタイプを編集」</guilabel>ダイアログを開くには、<guibutton>「移動」</guibutton>ボタンをクリックします。</para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>ファイルへのアクションの割り当て</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="ふあいるにあくしよんをわりあてる">ファイルにアクションを割り当てる</secondary>
+    </indexterm>
+    <para>ユーザーがファイルを開くと、ファイルマネージャはそのファイルタイプのデフォルトのアクションを実行します。<application>ファイルの関連付け</application>設定ツールには、ファイルタイプ、関連付けられているファイル拡張子、デフォルトのアクションを示す表が含まれています。この表で、ファイルマネージャのファイルをダブルクリックしたときの動作が決まります。</para>
+    <para>ファイルマネージャを使用して、特定のファイルおよびファイルタイプに関連付けられているアクションを変更することもできます。</para>
+    <para><application>ファイルの関連付け</application>設定ツールを使用して、次のことができます。</para>
+    <itemizedlist>
+      <listitem>
+        <para>ファイルタイプのデフォルトのアクションを指定。ファイルタイプのデフォルトアクションは、ファイルマネージャでも変更できます。</para>
+      </listitem>
+      <listitem>
+        <para>ファイルタイプを 1 つまたは複数のアプリケーションと関連付ける。デフォルトのアクションでは、そのファイルタイプと関連付けられるアプリケーションでファイルを開くように指定されている</para>
+      </listitem>
+      <listitem>
+        <para>ファイルタイプを 1 つまたは複数のビューアと関連付ける。デフォルトのアクションでは、そのファイルタイプと関連付けられるビューアでファイルを開くように指定されている</para>
+      </listitem>
+      <listitem>
+        <para>ファイルの拡張子を MIME タイプに関連付ける。MIME タイプは、ファイル形式を指定するため、インターネットブラウザおよび電子メールアプリケーションがそのファイルを読み取ることができる</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>アクションを変更する</title>
+      <indexterm>
+        <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+        <secondary sortas="あくしよんのへんこう">アクションの変更</secondary>
+      </indexterm>
+      <para>ファイルまたはファイルタイプと関連付けられるアクションを変更できます。次の変更が可能です。</para>
+      <itemizedlist>
+        <listitem>
+          <para>特定のファイルのデフォルトのアクションであることを指定する</para>
+        </listitem>
+        <listitem>
+          <para>特定のファイルタイプのデフォルトのアクションであることを指定する</para>
+        </listitem>
+        <listitem>
+          <para>特定のファイルの<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニュー内の項目であることを指定する</para>
+        </listitem>
+        <listitem>
+          <para>特定のファイルタイプの<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニュー内の項目であることを指定する</para>
+        </listitem>
+        <listitem>
+          <para>特定のファイルタイプの<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニュー内の項目に含まれないことを指定する</para>
+        </listitem>
+      </itemizedlist>
+      <para>ファイルまたはファイルタイプと関連付けられるアクションを変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>表示区画で、アクションを変更するファイルを選択します。ファイルタイプに関連付けられるアクションを変更する場合は、そのタイプのファイルを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「他 のアプリケーションで開く」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+<!---<listitem>
+<para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with
+Other Viewer</guilabel> dialog is displayed. </para></listitem>-->
+        <listitem>
+          <para><guimenuitem>「アプリケーション」</guimenuitem>を選択。<guilabel>「他のアプリケーションで開く」</guilabel>ダイアログが表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>ダイアログ内の表から、動作を変更するアプリケーションまたはビューアを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「修正」</guibutton>ボタンをクリックします。次の表で、<guilabel>「修正」</guilabel>ダイアログのオプションを説明します。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>オプション</para>
+                  </entry>
+                  <entry>
+                    <para>説明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「<replaceable>filetype</replaceable>
+アイテムのメニューに含まれます」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>このファイルタイプの<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニューにアプリケーションまたはビューアを含める</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「<replaceable>filetype</replaceable>
+アイテムのデフォルトとして使用します」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>このファイルタイプのデフォルトのアクションとしてアプリケーションまたはビューアを使用する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「<replaceable>filename</replaceable>
+のメニューにのみ含まれます」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>このファイルの<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニューにアプリケーションまたはビューアを含め、このタイプの別のファイルのサブメニューには含めない</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「<replaceable>filename</replaceable>
+のデフォルトとしてのみ使用します」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>このファイルのデフォルトのアクションとしてアプリケーションまたはビューアを使用し、このタイプの別のファイルには使用しない</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「<replaceable>filetype</replaceable>
+アイテムのメニューに含まれません」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>このファイルタイプの<guisubmenu>「他のアプリケーションで開く」</guisubmenu>サブメニューからアプリケーションまたはビューアを除外する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックし、<guibutton>「取消し」</guibutton>をクリックしてダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para><application>ファイルの関連付け</application>設定ツールの<guilabel>「ファイルタイプを編集」</guilabel>ダイアログにあるファイルタイプに関連付けられているアクションを変更することもできます。<guilabel>「ファイルタイプを編集」</guilabel>ダイアログを開くには、<guibutton>「移動」</guibutton>ボタンをクリックします。</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-475">
+    <title>CD の書き込み</title>
+    <indexterm>
+      <primary sortas="ふあいるまねえしや">ファイルマネージャ</primary>
+      <secondary sortas="CDのかきこみ">CD の書き込み</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="CDかきこみ">CD、書き込み</primary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="CDのかきこみ">CD の書き込み</primary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="CDのさくせい">CD の作成</primary>
+      <see>CD の書き込み</see>
+    </indexterm>
+    <para>ファイルマネージャは、CD に書き込むファイルやフォルダをコピーできる特別な場所を提供します。その場所の内容を簡単に
+CD に書き込むことができます。</para>
+    <para>CD の書き込みを行うには、次の手順を実行します。</para>
+    <orderedlist>
+      <listitem>
+        <para>ファイルブラウザウィンドウから、<menuchoice><guimenu>「移動」</guimenu><guimenuitem>「CD の作成」</guimenuitem></menuchoice>を選択します。ファイルマネージャで、特別な場所である <guilabel>burn:</guilabel><guilabel>///</guilabel> が開き、CD の書き込みを行うことができます。</para>
+      </listitem>
+      <listitem>
+        <para>ファイルブラウザウィンドウから、CD に書き込むファイルやフォルダを <guilabel>burn:</guilabel><guilabel>///</guilabel> にコピーします。</para>
+      </listitem>
+      <listitem>
+        <para>書き込み可能な CD をお使いのシステムの CD 書き込みデバイスに挿入します。</para>
+      </listitem>
+      <listitem>
+        <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「CD に書き込む」</guimenuitem></menuchoice>の順に選択します。または、ツールバーの<guibutton>「CD に書き込む」</guibutton>ボタンをクリックします。</para>
+      </listitem>
+      <listitem>
+        <para><guilabel>「CD レコーダにファイルを書き込む」</guilabel>ダイアログで、以下のように CD への書き込み方法を指定します。</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>ダイアログ要素</para>
+                </entry>
+                <entry>
+                  <para>説明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「書き込むターゲット」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>ドロップダウンリストから CD を書き込むデバイスを選択する。ファイルやフォルダの CD イメージファイルを作成するには、<guilabel>「ファイルイメージ」</guilabel>オプションを選択する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「書き込み速度」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>ドロップダウンリストから CD を書き込む速度を選択する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「CD 名」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>テキストボックスに CD の名前を入力する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「CD を消去する」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>CD の内容を削除する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「完了したときに CD を排出する」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>CD の書き込みが終わると、CD をドライブから取り出す</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>「別の CD を焼くのにこれらのファイルを再利用する」</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>ファイルやフォルダを他の CD に書き込む場合に選択する。このオプションを選択すると、CD の書き込み後にファイルやフォルダが <guilabel>burn:</guilabel> <guilabel>/// </guilabel> から削除されない</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </listitem>
+      <listitem>
+        <para><guibutton>「CD にファイルを書き込む」</guibutton>ボタンをクリックします。</para>
+        <para><guilabel>「ファイルイメージ」</guilabel>オプションを<guilabel>「書き込むターゲット」</guilabel>ドロップダウンリストから選択すると、<guilabel>「CD-ROMイメージのファイル名を選択」</guilabel>ダイアログが表示されます。このダイアログで、CD イメージファイルを保存する場所を指定します。CD
+イメージファイルのデフォルト拡張子は、<filename>.iso</filename> です。</para>
+        <para><guilabel>「CD に書き込み中」</guilabel>ダイアログが表示されます。CD への書き込みまたは CD イメージファイルの作成が行われると、プロセスが完了したことを示すメッセージがダイアログに表示されます。</para>
+        <para>CD イメージファイルを作成した場合は、このファイルを CD に書き込むことができます。CD イメージファイルを CD に書き込むには、CD
+イメージファイルを右クリックし、ポップアップメニューから<guimenuitem>「CD に書き込む」</guimenuitem>を選択します。</para>
+        <para><guilabel>「別の CD を焼くのにこれらのファイルを再利用する」</guilabel>オプションを選択していない場合は、ファイルやフォルダは <guilabel>burn:</guilabel><guilabel>///</guilabel> にコピーします。</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>

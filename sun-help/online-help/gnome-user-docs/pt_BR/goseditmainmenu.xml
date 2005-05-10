@@ -1,0 +1,757 @@
+<chapter id="goseditmainmenu-1">
+  <title>Trabalhando com menus</title>
+  <highlights>
+    <para>Este cap&iacute;tulo descreve como usar menus no Java Desktop System.</para>
+  </highlights>
+  <sect1 id="goseditmainmenu-2">
+    <title>Introdu&ccedil;&atilde;o aos menus </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>introdu&ccedil;&atilde;o</secondary>
+    </indexterm>
+    <para>Voc&ecirc; pode acessar todas as fun&ccedil;&otilde;es do Java Desktop System atrav&eacute;s dos menus. &Eacute; poss&iacute;vel adicionar menus a pain&eacute;is e usar uma combina&ccedil;&atilde;o de menus e pain&eacute;is para executar suas tarefas. Voc&ecirc; pode executar v&aacute;rias a&ccedil;&otilde;es em seus menus, como copiar itens de menu para pain&eacute;is.</para>
+    <para>&Eacute; poss&iacute;vel acessar os seguintes menus no Java Desktop System:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bot&atilde;o <guibutton>Iniciar</guibutton>: Voc&ecirc; pode acessar os itens no menu <guimenu>Aplicativos</guimenu> do bot&atilde;o <guibutton>Iniciar</guibutton>. &Eacute; poss&iacute;vel ter v&aacute;rios bot&otilde;es <guibutton>Iniciar</guibutton> em seus pain&eacute;is. </para>
+      </listitem>
+      <listitem>
+        <para><application>Barra de menus</application>: Voc&ecirc; pode acessar os itens nos menus <guimenu>Aplicativos</guimenu> e <guimenu>A&ccedil;&otilde;es</guimenu> da <application>Barra de menus</application>. &Eacute; poss&iacute;vel ter v&aacute;rios aplicativos de painel da <application>Barra de menus</application> em seus pain&eacute;is. </para>
+      </listitem>
+      <listitem>
+        <para>Menu <guimenu>Aplicativos</guimenu>: Voc&ecirc; pode acessar v&aacute;rios aplicativos, comandos e op&ccedil;&otilde;es de configura&ccedil;&atilde;o do menu <guimenu> Aplicativos</guimenu>. </para>
+      </listitem>
+      <listitem>
+        <para>Menu <guimenu>A&ccedil;&otilde;es</guimenu>: &Eacute; poss&iacute;vel acessar comandos que permitem executar v&aacute;rias tarefas do menu <guimenu>A&ccedil;&otilde;es</guimenu>. Por exemplo, voc&ecirc; pode iniciar o aplicativo <application>Ferramenta de Pesquisa</application> ou sair do Java Desktop System. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Tamb&eacute;m &eacute; poss&iacute;vel clicar com o bot&atilde;o direito do mouse sobre o desktop para abrir o menu <guimenu>Desktop </guimenu>. O menu <guimenu>Desktop</guimenu> permite que voc&ecirc; execute tarefas relacionadas ao desktop. </para>
+    <para>Todos estes menus fornecem v&aacute;rias maneiras de executar tarefas e permitem que voc&ecirc; trabalhe da maneira que preferir.</para>
+  </sect1>
+  <sect1 id="goseditmainmenu-5">
+    <title>Recursos de menus </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>recursos</secondary>
+    </indexterm>
+    <para>Os menus podem conter os seguintes itens: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Submenus</para>
+      </listitem>
+      <listitem>
+        <para>Lan&ccedil;adores ou itens de menu</para>
+      </listitem>
+    </itemizedlist>
+    <para>Uma seta para a direita de um item em um menu indica que o item &eacute; um submenu. Ao apontar para o submenu, ele &eacute; aberto. Voc&ecirc; pode escolher itens do submenu.</para>
+    <para>Quando voc&ecirc; escolhe um lan&ccedil;ador, ele &eacute; iniciado em um aplicativo ou executa um comando. Tamb&eacute;m &eacute; poss&iacute;vel clicar com o bot&atilde;o direito do mouse em um lan&ccedil;ador para abrir um menu instant&acirc;neo. O menu instant&acirc;neo permite que voc&ecirc; adicione o item a um painel e execute outras tarefas. Para obter mais informa&ccedil;&otilde;es sobre o menu instant&acirc;neo, consulte a pr&oacute;xima se&ccedil;&atilde;o.</para>
+    <para>Voc&ecirc; pode alterar o tema da sess&atilde;o para alterar a apar&ecirc;ncia de todos os menus. Para alterar o tema, use a ferramenta de prefer&ecirc;ncia <application>Tema</application>.</para>
+    <sect2 id="goseditmainmenu-11">
+      <title>Menu instant&acirc;neo do item de menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>menu instant&acirc;neo do item de menu</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>menu instant&acirc;neo do item de menu</primary>
+        <secondary> descri&ccedil;&atilde;o</secondary>
+      </indexterm>
+      <para>Os itens nos menus t&ecirc;m um menu instant&acirc;neo associado que permite que voc&ecirc; execute tarefas relacionadas ao item. Quando voc&ecirc; clica em um item no menu, o menu instant&acirc;neo do item &eacute; aberto. O menu instant&acirc;neo tamb&eacute;m cont&eacute;m um submenu que permite que voc&ecirc; execute tarefas relacionadas ao menu. </para>
+      <para>Voc&ecirc; pode usar o menu instant&acirc;neo do item de menu para executar as seguintes tarefas: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Adicionar itens de menu como lan&ccedil;adores a pain&eacute;is. </para>
+        </listitem>
+        <listitem>
+          <para>Remover itens de menus.</para>
+        </listitem>
+        <listitem>
+          <para>Abrir a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> com o comando do item de menu na caixa de di&aacute;logo.</para>
+        </listitem>
+        <listitem>
+          <para>Adicionar menus a pain&eacute;is. Voc&ecirc; pode adicionar um menu como um objeto de menu ou como um objeto de desenho. </para>
+        </listitem>
+        <listitem>
+          <para>Adicionar novos itens a menus.</para>
+        </listitem>
+        <listitem>
+          <para>Alterar as propriedades dos itens de submenus e menus.</para>
+        </listitem>
+      </itemizedlist>
+      <para>A <xref linkend="goseditmainmenu-FIG-39"/> mostra o menu instant&acirc;neo.</para>
+      <figure id="goseditmainmenu-FIG-39">
+        <title>Menu instant&acirc;neo do item de menu<indexterm><primary>menu instant&acirc;neo do item de menu</primary><secondary>ilustra&ccedil;&atilde;o</secondary></indexterm></title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/launcher_popup.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Menu instant&acirc;neo do item de menu. O contexto descreve o gr&aacute;fico. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>A  <xref linkend="goseditmainmenu-TBL-30"/> descreve os menus instant&acirc;neos do item de menu. <indexterm><primary>lan&ccedil;adores</primary><secondary>adicionando ao painel</secondary></indexterm><indexterm><primary>menus</primary><secondary>adicionando ao  painel</secondary></indexterm></para>
+      <table frame="topbot" id="goseditmainmenu-TBL-30">
+        <title>Menus instant&acirc;neos do item de menu.</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="42.71*"/>
+          <colspec colname="colspec1" colwidth="57.29*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Item</para>
+              </entry>
+              <entry>
+                <para>Descri&ccedil;&atilde;o</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Adiciona este lan&ccedil;ador ao painel</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Adiciona o lan&ccedil;ador ao painel que voc&ecirc; abre o menu.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>Remover este item</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Remove o lan&ccedil;ador do menu.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Colocar na caixa de di&aacute;logo de execu&ccedil;&atilde;o</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Exibe a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> com o comando do campo <guilabel>Comando</guilabel> do lan&ccedil;ador no campo de comando na caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para><guimenuitem>Ajuda do <replaceable>nome do aplicativo </replaceable></guimenuitem> </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Abre a ajuda on-line do aplicativo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>Propriedades</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Exibe uma caixa de di&aacute;logo que permite que voc&ecirc; edite as propriedades do lan&ccedil;ador.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><menuchoice><guimenu>Menu inteiro</guimenu><guimenuitem>Adiciona este desenho ao painel</guimenuitem></menuchoice> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Adiciona o submenu como um desenho ao painel pelo qual voc&ecirc; abre o menu.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><menuchoice><guimenu>Menu inteiro</guimenu><guimenuitem>Adiciona este menu ao painel</guimenuitem></menuchoice> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Adiciona o submenu como um objeto de menu ao painel pelo qual voc&ecirc; abre o menu. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>Menu inteiro</guimenu>
+                    <guimenuitem>Adiciona um novo item a este menu</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Permite que voc&ecirc; adicione um item ao submenu. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>Menu inteiro</guimenu>
+                    <guimenuitem>Propriedades</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Exibe uma caixa de di&aacute;logo que permite que voc&ecirc; edite as propriedades do submenu.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-8">
+    <title>Menu Aplicativos </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>menu Aplicativos</secondary>
+    </indexterm>
+    <para>O menu <guimenu>Aplicativos</guimenu> cont&eacute;m uma hierarquia de submenus pela qual voc&ecirc; pode iniciar os aplicativos padr&atilde;o do Java Desktop System e ferramentas de prefer&ecirc;ncia. </para>
+    <para>&Eacute; poss&iacute;vel acessar o menu <guimenu>Aplicativos</guimenu> dos seguintes locais:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bot&atilde;o <guibutton>Iniciar</guibutton></para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>Barra de menus</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="goseditmainmenu-51">
+    <title>Menu A&ccedil;&otilde;es </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>menu A&ccedil;&otilde;es</secondary>
+    </indexterm>
+    <para>O menu <guimenu>A&ccedil;&otilde;es</guimenu> cont&eacute;m comandos que permitem que voc&ecirc; execute v&aacute;rias tarefas no Java Desktop System. A <xref linkend="goseditmainmenu-TBL-70"/> descreve os comandos no menu <guimenu>A&ccedil;&otilde;es</guimenu>.</para>
+    <table frame="topbot" id="goseditmainmenu-TBL-70">
+      <title>Comandos do menu A&ccedil;&otilde;es</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="38.48*"/>
+        <colspec colname="colspec1" colwidth="61.52*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Item do menu</para>
+            </entry>
+            <entry>
+              <para>Fun&ccedil;&atilde;o </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Executar aplicativo</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Abre a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>. Use a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> para executar comandos. Para obter mais informa&ccedil;&otilde;es, consulte <xref linkend="gospanel-23"/>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Abrir recente</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Exibe um submenu dos dez &uacute;ltimos arquivos salvos.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>Capturar tela</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Captura uma tela e abre a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel>. Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>Localizar arquivos</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Inicia o aplicativo <application>Ferramenta de pesquisa</application>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Bloquear tela</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Bloqueia a tela.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Logoff</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Efetua logoff da sess&atilde;o atual. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>&Eacute; poss&iacute;vel acessar os itens de menu <guimenu>A&ccedil;&otilde;es</guimenu> dos seguintes locais:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bot&atilde;o <guibutton>Iniciar</guibutton></para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>Barra de menus</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gospanel-23">
+      <title>Usando a caixa de di&aacute;logo Executar aplicativo </title>
+      <indexterm>
+        <primary>caixa de di&aacute;logo Executar aplicativo, usando</primary>
+      </indexterm>
+      <para>A caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> concede acesso &agrave; linha de comando. Quando voc&ecirc; executa um comando na caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>, n&atilde;o &eacute; poss&iacute;vel receber a sa&iacute;da do comando.</para>
+      <para>Para executar um comando a partir da linha de comando, siga estas etapas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Exiba a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>. Voc&ecirc; pode executar a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> em qualquer uma destas maneiras:<itemizedlist><listitem><para>De qualquer painel</para><para>Adicione o bot&atilde;o <guibutton>Executar</guibutton> a um painel. Clique com o bot&atilde;o direito do mouse sobre o painel e escolha <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Executar</guimenuitem></menuchoice>. Clique no bot&atilde;o <guibutton>Executar</guibutton>.</para></listitem><listitem><para>Do bot&atilde;o <guibutton>Iniciar</guibutton></para><para>Clique em <guibutton>Iniciar</guibutton> e escolha <guimenuitem>Executar aplicativo</guimenuitem>.</para></listitem><listitem><para>Da <application>Barra de menus</application></para><para>Escolha <menuchoice><guimenu>A&ccedil;&otilde;es</guimenu><guimenuitem>Executar aplicativo</guimenuitem></menuchoice>.</para></listitem><listitem><para>Use teclas de atalho</para><para>As teclas de atalho padr&atilde;o para exibir a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> s&atilde;o <keycombo><keycap>Super</keycap><keycap>R</keycap></keycombo>. Voc&ecirc; pode alterar as teclas de atalho que exibem a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> na ferramenta de prefer&ecirc;ncia <application>Atalhos de teclado</application>.</para></listitem><listitem><para>De um menu instant&acirc;neo do item de menu</para><para>Clique com o bot&atilde;o direito do mouse em um item no menu e escolha <guilabel>Colocar na caixa de di&aacute;logo de execu&ccedil;&atilde;o</guilabel> do menu instant&acirc;neo. A caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel> &eacute; aberta com o comando do menu no campo de comando.</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Insira o comando que voc&ecirc; deseja executar no campo em branco. Alternativamente, para escolher um comando que voc&ecirc; executou antes, clique no bot&atilde;o de seta para baixo ao lado do campo de comando e escolha o comando a ser executado.</para>
+          <para>Alternativamente, selecione a op&ccedil;&atilde;o <guibutton>Mostrar lista de aplicativos conhecidos</guibutton> para exibir uma lista de aplicativos dispon&iacute;veis.</para>
+          <para>Tamb&eacute;m &eacute; poss&iacute;vel usar o bot&atilde;o <guibutton>Executar com arquivo</guibutton> para escolher um arquivo a ser anexado &agrave; linha de comando. Por exemplo, voc&ecirc; pode inserir <application>emacs</application> como o comando e escolher um arquivo a ser editado.</para>
+          <para>Selecione a op&ccedil;&atilde;o <guilabel>Executar em um terminal</guilabel> para executar o aplicativo ou o comando em uma janela de terminal. Escolha esta op&ccedil;&atilde;o para um aplicativo ou um comando que n&atilde;o crie uma janela para executar.</para>
+        </listitem>
+        <listitem>
+          <para>Clique no bot&atilde;o <guibutton>Executar</guibutton> na caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-53">
+      <title>Para capturar uma tela </title>
+      <indexterm>
+        <primary>capturas de tela, captura</primary>
+      </indexterm>
+      <para>Voc&ecirc; pode obter capturas de tela da seguinte maneira:</para>
+      <itemizedlist>
+        <listitem>
+          <para>De qualquer painel</para>
+          <orderedlist>
+            <listitem>
+              <para>Adicione o bot&atilde;o <guibutton>Captura de tela</guibutton> a um painel. </para>
+            </listitem>
+            <listitem>
+              <para>Clique com o bot&atilde;o direito do mouse sobre o painel e escolha <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Captura de tela</guimenuitem></menuchoice>. </para>
+            </listitem>
+            <listitem>
+              <para>Clique no bot&atilde;o <guibutton>Captura de tela</guibutton> para obter uma captura de tela da tela inteira.</para>
+            </listitem>
+            <listitem>
+              <para>Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+        <listitem>
+          <para>Use teclas de atalho</para>
+          <para>Para capturar uma tela, use estas teclas de atalho: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Teclas de atalho padr&atilde;o </para>
+                  </entry>
+                  <entry>
+                    <para>Fun&ccedil;&atilde;o</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <keycap>Print Screen</keycap>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura uma tela inteira e exibe a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel>. Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para><keycombo><keycap>Alt</keycap><keycap> Print Screen</keycap></keycombo> </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura uma tela da janela que o mouse aponta e exibe a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel>. Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>Voc&ecirc; pode usar a ferramenta de prefer&ecirc;ncia <application>Atalhos do teclado</application> para modificar as teclas de atalho padr&atilde;o.</para>
+        </listitem>
+        <listitem>
+          <para>Da <application>Barra de menus</application></para>
+          <para>Para obter uma captura de tela da tela inteira, escolha <menuchoice><guimenu> A&ccedil;&otilde;es</guimenu><guimenuitem>Capturar tela</guimenuitem></menuchoice>. A caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> &eacute; exibida. Para salvar a tela capturada, selecione a op&ccedil;&atilde;o <guilabel>Salvar tela capturada em arquivo</guilabel>. Digite o caminho e o nome do arquivo para a tela capturada na caixa de combina&ccedil;&atilde;o suspensa. Alternativamente, para salvar a tela capturada em outro diret&oacute;rio, clique em <guibutton>Procurar</guibutton>. Ao selecionar um diret&oacute;rio, clique em <guibutton>OK</guibutton>. </para>
+          <para>Tamb&eacute;m &eacute; poss&iacute;vel salvar a tela capturada no desktop. Para salvar a tela capturada no desktop, selecione a op&ccedil;&atilde;o <guilabel>Salvar tela capturada no desktop</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Use um comando</para>
+          <para>Voc&ecirc; pode usar o comando <command>gnome-panel-screenshot</command> para capturar uma tela. O comando <command>gnome-panel-screenshot</command> captura uma tela da tela inteira e exibe a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel>. Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela.</para>
+          <para>Tamb&eacute;m &eacute; poss&iacute;vel usar as op&ccedil;&otilde;es no comando  <command>gnome-panel-screenshot</command> da seguinte maneira:  </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Op&ccedil;&atilde;o</para>
+                  </entry>
+                  <entry>
+                    <para>Fun&ccedil;&atilde;o</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--window</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura uma tela da janela que tem foco e exibe a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel>. Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para><command>--delay=<replaceable> segundos</replaceable></command> </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura uma tela depois do n&uacute;mero de segundos especificado e exibe a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel>. Use a caixa de di&aacute;logo <guilabel>Salvar tela capturada</guilabel> para salvar a captura de tela.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--help</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Exibe as op&ccedil;&otilde;es do comando.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-7">
+    <title>Bot&atilde;o Iniciar </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>Iniciar</secondary>
+      <see>Menu Iniciar</see>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/launch_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Bot&atilde;o Iniciar</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>O bot&atilde;o <guibutton>Iniciar</guibutton> concede acesso ao menu <guimenu> Aplicativos</guimenu> a v&aacute;rios itens no menu <guimenu>A&ccedil;&otilde;es</guimenu>. Voc&ecirc; pode acessar quase todos os aplicativos, os comandos e as op&ccedil;&otilde;es de configura&ccedil;&atilde;o padr&atilde;o do bot&atilde;o <guibutton>Iniciar</guibutton>. </para>
+    <para>&Eacute; poss&iacute;vel adicionar os bot&otilde;es <guibutton>Iniciar</guibutton> aos seus pain&eacute;is.</para>
+    <sect2 id="goseditmainmenu-15">
+      <title>Para acessar o bot&atilde;o Iniciar </title>
+      <indexterm>
+        <primary>Iniciar</primary>
+        <secondary>abrindo</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode acessar o bot&atilde;o <guibutton>Iniciar</guibutton> das seguintes maneiras:</para>
+      <itemizedlist>
+        <listitem>
+          <para>De um painel com um bot&atilde;o <guibutton>Iniciar</guibutton>. </para>
+          <para>Clique em <guimenu>Iniciar</guimenu>. </para>
+        </listitem>
+        <listitem>
+          <para>Use teclas de atalho.</para>
+          <para>Voc&ecirc; pode usar teclas de atalho para abrir <guibutton>Iniciar</guibutton>. </para>
+          <para>As teclas de atalho padr&atilde;o para abrir <guibutton>Iniciar</guibutton> s&atilde;o <keycombo><keycap> Ctrl</keycap><keycap>Esc</keycap></keycombo>. Para alterar as teclas de atalho que abrem <guibutton>Iniciar</guibutton>, use a ferramenta de prefer&ecirc;ncia <application>Atalhos do teclado</application>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-29">
+      <title>Para adicionar um bot&atilde;o Iniciar a um painel </title>
+      <indexterm>
+        <primary>menu Iniciar</primary>
+        <secondary>adicionando ao painel</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode adicionar quantos bot&otilde;es <guibutton>Iniciar</guibutton> desejar aos seus pain&eacute;is. Para adicionar um bot&atilde;o <guibutton>Iniciar</guibutton> a um painel, clique com o bot&atilde;o direito do mouse em qualquer espa&ccedil;o vago no painel. Escolha <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Menu principal</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-65">
+    <title>Barra de menus </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>Barra de menus</secondary>
+      <see>Barra de menus</see>
+    </indexterm>
+    <indexterm>
+      <primary>Barra de menus</primary>
+      <secondary>introdu&ccedil;&atilde;o </secondary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/menu_bar_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Aplicativo de painel da barra de menus. Menus: Aplicativos, A&ccedil;&otilde;es. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>A <application>Barra de menus</application> concede acesso aos menus <guimenu> Aplicativos</guimenu> e <guimenu>A&ccedil;&otilde;es</guimenu>. Voc&ecirc; pode acessar quase todos os aplicativos, os comandos e as op&ccedil;&otilde;es de configura&ccedil;&atilde;o padr&atilde;o da <application>Barra de menus</application>. </para>
+    <sect2 id="goseditmainmenu-66">
+      <title>Para adicionar uma barra de menus a um painel </title>
+      <indexterm>
+        <primary>Barra de menus</primary>
+        <secondary>adicionando ao painel</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode adicionar quantos aplicativos de painel da <application>Barra de menus</application> desejar aos pain&eacute;is. Para adicionar uma <application>Barra de menus</application> a um painel, clique com o bot&atilde;o direito do mouse em qualquer espa&ccedil;o vago no painel. Escolha <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Barra de menus</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-54">
+    <title>Personalizando os seus menus </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>personalizando</secondary>
+    </indexterm>
+    <para>Voc&ecirc; pode modificar o conte&uacute;do destes menus:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Menu <guimenu>Aplicativos</guimenu></para>
+      </listitem>
+      <listitem>
+        <para>Menu <guimenu>Prefer&ecirc;ncias</guimenu></para>
+      </listitem>
+    </itemizedlist>
+    <para>Use os seguintes componentes do Java Desktop System para personalizar menus: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Menus em pain&eacute;is</para>
+      </listitem>
+      <listitem>
+        <para>Gerenciador de arquivos</para>
+      </listitem>
+    </itemizedlist>
+    <para>Quando voc&ecirc; usa pain&eacute;is para personalizar seus menus, use o menu instant&acirc;neo do item de menu. Para obter mais informa&ccedil;&otilde;es, consulte <xref linkend="goseditmainmenu-11"/>.</para>
+    <para>Ao usar o gerenciador de arquivos para personalizar seus menus, voc&ecirc; deve acessar o menu <guimenu>Aplicativos</guimenu> ou <guimenu>Prefer&ecirc;ncias</guimenu> de dentro do gerenciador de arquivos. Para acessar o menu <guimenu>Aplicativos</guimenu> ou <guimenu>Prefer&ecirc;ncias</guimenu>, abra uma janela do gerenciador de arquivos. </para>
+    <para>Para acessar menus no gerenciador de arquivos, insira uma das seguintes URIs no campo da barra de localiza&ccedil;&atilde;o:</para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Menu</para>
+            </entry>
+            <entry>
+              <para>Insira esta URI </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Menu <guimenu>Aplicativos</guimenu></para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>applications:///</command>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Menu <guimenu>Prefer&ecirc;ncias</guimenu></para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>preferences:///</command>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <sect2 id="goseditmainmenu-61">
+      <title>Para adicionar um menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>adicionando</secondary>
+      </indexterm>
+      <para>Para adicionar um menu, siga estas etapas:</para>
+      <orderedlist>
+        <listitem>
+          <para>Em uma janela do gerenciador de arquivos, acesse a localiza&ccedil;&atilde;o onde voc&ecirc; deseja adicionar o menu. Por exemplo, se voc&ecirc; deseja adicionar um menu ao menu <guimenu>Aplicativos</guimenu>, digite <command>applications:///</command> no campo da barra de localiza&ccedil;&atilde;o.</para>
+        </listitem>
+        <listitem>
+          <para>Escolha <menuchoice><guimenu>Arquivo</guimenu><guimenuitem> Criar pasta</guimenuitem></menuchoice>. Uma pasta sem t&iacute;tulo &eacute; adicionada ao painel de visualiza&ccedil;&atilde;o. O nome da pasta &eacute; selecionado.</para>
+        </listitem>
+        <listitem>
+          <para>Digite um nome para a pasta e pressione <keycap>Return</keycap>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Na pr&oacute;xima vez que voc&ecirc; efetuar logoff e logon novamente, o menu estar&aacute; na localiza&ccedil;&atilde;o atribu&iacute;da.</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-55">
+      <title>Para adicionar um lan&ccedil;ador a um menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>adicionando lan&ccedil;adores a</secondary>
+      </indexterm>
+      <para>Para adicionar um lan&ccedil;ador a um menu, siga estas etapas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse em qualquer item no menu em que voc&ecirc; deseja adicionar o lan&ccedil;ador.</para>
+        </listitem>
+        <listitem>
+          <para>Escolha <menuchoice><guimenu>Menu inteiro</guimenu><guimenuitem>Adiciona um novo item a este menu</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Insira as propriedades do lan&ccedil;ador na caixa de di&aacute;logo <guilabel>Criar lan&ccedil;ador</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-63">
+      <title>Para adicionar um lan&ccedil;ador a um menu vazio</title>
+      <para>Para adicionar um lan&ccedil;ador a um menu vazio, siga estas etapas:</para>
+      <orderedlist>
+        <listitem>
+          <para>Em uma janela do gerenciador de arquivos, acesse o menu onde voc&ecirc; deseja adicionar o lan&ccedil;ador. </para>
+        </listitem>
+        <listitem>
+          <para>Escolha <menuchoice><guimenu>Arquivo</guimenu><guimenuitem> Criar lan&ccedil;ador</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Insira as propriedades do lan&ccedil;ador na caixa de di&aacute;logo <guilabel>Criar lan&ccedil;ador</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-56">
+      <title>Para copiar um lan&ccedil;ador para um menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>copiando lan&ccedil;adores para</secondary>
+      </indexterm>
+      <para>Para copiar um lan&ccedil;ador existente para um menu, siga estas etapas:</para>
+      <orderedlist>
+        <listitem>
+          <para>Em uma janela do gerenciador de arquivos, acesse a localiza&ccedil;&atilde;o de onde voc&ecirc; deseja copiar o lan&ccedil;ador. Por exemplo, se voc&ecirc; deseja copiar um lan&ccedil;ador do menu <guimenu>Aplicativos</guimenu>, digite <command>applications:/// </command> no campo na barra de localiza&ccedil;&atilde;o.</para>
+        </listitem>
+        <listitem>
+          <para>Selecione o lan&ccedil;ador que voc&ecirc; deseja copiar e escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar arquivo</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Em uma janela do gerenciador de arquivos, acesse a localiza&ccedil;&atilde;o para onde voc&ecirc; deseja copiar o lan&ccedil;ador.</para>
+        </listitem>
+        <listitem>
+          <para>Escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem> Colar arquivos</guimenuitem></menuchoice>. O lan&ccedil;ador &eacute; adicionado &agrave; nova localiza&ccedil;&atilde;o. </para>
+        </listitem>
+      </orderedlist>
+      <para>Alternativamente, voc&ecirc; pode arrastar o lan&ccedil;ador de uma localiza&ccedil;&atilde;o para outra. </para>
+      <para>Na pr&oacute;xima vez que voc&ecirc; efetuar logoff e logon novamente, o lan&ccedil;ador estar&aacute; no novo menu.</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-62">
+      <title>Para editar as propriedades de um menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>editando as propriedades</secondary>
+      </indexterm>
+      <para>Para editar as propriedades de um menu, siga estas etapas:</para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse em qualquer item do menu que voc&ecirc; deseja editar. </para>
+        </listitem>
+        <listitem>
+          <para>Escolha <menuchoice><guimenu>Menu inteiro</guimenu><guimenuitem>Propriedades</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Modifique as propriedades do menu na caixa de di&aacute;logo <guilabel>Propriedades do lan&ccedil;ador</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-57">
+      <title>Para editar um item de menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>editando itens de menu</secondary>
+      </indexterm>
+      <para>Para editar um item de menu, siga estas etapas:</para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no item que voc&ecirc; deseja editar.</para>
+        </listitem>
+        <listitem>
+          <para>Escolha <guimenuitem>Propriedades</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Modifique as propriedades do lan&ccedil;ador na caixa de di&aacute;logo <guilabel>Propriedades do lan&ccedil;ador</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-58">
+      <title>Para excluir um item de um menu </title>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>excluindo itens de menu</secondary>
+      </indexterm>
+      <para>Para excluir um item de um menu, use o menu instant&acirc;neo do item de menu. Para excluir um item de um menu, siga estas etapas:</para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no item que voc&ecirc; deseja excluir.</para>
+        </listitem>
+        <listitem>
+          <para>Escolha <guimenuitem>Remover este item</guimenuitem>.  </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

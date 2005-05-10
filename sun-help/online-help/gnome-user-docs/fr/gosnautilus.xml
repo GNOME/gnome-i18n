@@ -1,0 +1,2637 @@
+<chapter id="gosnautilus-1">
+  <title>Utilisation du gestionnaire de fichiers</title>
+  <highlights>
+    <para><application>Nautilus</application>, le gestionnaire de fichiers de Java Desktop System, fournit un point d'acc&egrave;s int&eacute;gr&eacute; &agrave; vos fichiers et applications.</para>
+    <para>Ce chapitre d&eacute;crit son utilisation. </para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>Pr&eacute;sentation au gestionnaire de fichiers </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>pr&eacute;sentation</secondary>
+    </indexterm>
+    <para>Le gestionnaire de fichiers propose un point d'acc&egrave;s int&eacute;gr&eacute; &agrave; vos fichiers et applications. Le gestionnaire de fichiers permet d'effectuer les actions suivantes : </para>
+    <itemizedlist>
+      <listitem>
+        <para>cr&eacute;er des dossiers et des documents ;</para>
+      </listitem>
+      <listitem>
+        <para>afficher vos fichiers et dossiers ;</para>
+      </listitem>
+      <listitem>
+        <para>g&eacute;rer vos fichiers et dossiers ;</para>
+      </listitem>
+      <listitem>
+        <para>personnaliser vos fichiers et dossiers ;</para>
+      </listitem>
+      <listitem>
+        <para>ouvrir des emplacements d'URI sp&eacute;ciaux ;</para>
+      </listitem>
+      <listitem>
+        <para>graver des donn&eacute;es sur un CD.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Le gestionnaire de fichiers g&egrave;re &eacute;galement l'arri&egrave;re-plan du bureau. L'arri&egrave;re-plan du bureau appara&icirc;t derri&egrave;re tous les autres composants visibles. Il s'agit d'un composant actif de l'interface utilisateur. </para>
+    <para>Double-cliquez sur l'objet <guilabel>Documents</guilabel> du bureau pour ouvrir une fen&ecirc;tre du gestionnaire de fichiers &agrave; l'arri&egrave;re-plan du bureau. La fen&ecirc;tre du gestionnaire de fichiers affiche le contenu de l'emplacement par d&eacute;faut de vos documents dans le volet de visualisation.</para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>Fen&ecirc;tre du gestionnaire de fichiers </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>fen&ecirc;tres</secondary>
+    </indexterm>
+    <para>Les fen&ecirc;tres du gestionnaire de fichiers vous permettent d'afficher et de g&eacute;rer les fichiers et les dossiers. La <xref linkend="gosnautilus-FIG-1"/> pr&eacute;sente une fen&ecirc;tre du gestionnaire affichant le contenu d'un dossier.</para>
+    <figure id="gosnautilus-FIG-1">
+      <title>Contenu d'un dossier dans une fen&ecirc;tre du gestionnaire de fichiers<indexterm><primary>gestionnaire de fichiers</primary><secondary>vue Ic&ocirc;nes</secondary><tertiary>illustration</tertiary></indexterm></title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Un dossier dans une fen&ecirc;tre du gestionnaire de fichiers. Barre de menu, barre d'outils, boutons de zoom, volet lat&eacute;ral, volet d'affichage. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Le <xref linkend="gosnautilus-TBL-83"/> d&eacute;crit les composants des fen&ecirc;tres du gestionnaire de fichiers.</para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>Composants de la fen&ecirc;tre du gestionnaire de fichiers</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Composant</para>
+            </entry>
+            <entry>
+              <para>Description </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Barre de menus </para>
+            </entry>
+            <entry valign="top">
+              <para>Contient les menus utilis&eacute;s pour effectuer des t&acirc;ches dans le gestionnaire de fichiers.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Barre d'outils </para>
+            </entry>
+            <entry valign="top">
+              <para>Contient les boutons utilis&eacute;s pour effectuer des t&acirc;ches dans le gestionnaire de fichiers.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Barre d'emplacement</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Contient les &eacute;l&eacute;ments suivants : </para>
+              <itemizedlist>
+                <listitem>
+                  <para>Zone <guilabel>Emplacement</guilabel> ou <guilabel>Aller &agrave;</guilabel> : permet de sp&eacute;cifier un fichier, un dossier ou un URI &agrave; visualiser. </para>
+                </listitem>
+                <listitem>
+                  <para>Boutons de <guimenu>Zoom</guimenu> : vous permettent de modifier la taille des &eacute;l&eacute;ments dans le volet d'affichage.</para>
+                </listitem>
+                <listitem>
+                  <para>Zone de liste d&eacute;roulante <guilabel>Voir en tant que</guilabel> : permet de choisir le mode de visualisation des &eacute;l&eacute;ments dans le volet concern&eacute;.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Volet lat&eacute;ral </para>
+            </entry>
+            <entry valign="top">
+              <para>Ex&eacute;cute les fonctions suivantes :</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Affiche des informations relatives au fichier ou au dossier actif. </para>
+                </listitem>
+                <listitem>
+                  <para>Permet de naviguer dans les fichiers. </para>
+                </listitem>
+              </itemizedlist>
+              <para>Le volet lat&eacute;ral contient une liste d&eacute;roulante permettant de s&eacute;lectionner ce que vous souhaitez y afficher. Vous pouvez effectuer une s&eacute;lection parmi les options suivantes:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>Informations</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Embl&egrave;mes</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Historique</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Notes</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Arborescence</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>Pour afficher le volet lat&eacute;ral, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Volet lat&eacute;ral</guimenuitem></menuchoice>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Volet d'affichage </para>
+            </entry>
+            <entry valign="top">
+              <para>Affiche le contenu des &eacute;l&eacute;ments suivants :</para>
+              <itemizedlist>
+                <listitem>
+                  <para>fichiers d'un type particulier ;</para>
+                </listitem>
+                <listitem>
+                  <para>dossiers ;</para>
+                </listitem>
+                <listitem>
+                  <para>sites FTP ;</para>
+                </listitem>
+                <listitem>
+                  <para>emplacements correspondant &agrave; des URI sp&eacute;ciaux.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Barre d'&eacute;tat</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Affiche des informations relatives &agrave; l'&eacute;tat. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>Vous pouvez &eacute;galement ouvrir un menu contextuel &agrave; partir des fen&ecirc;tres du gestionnaire de fichiers. Cliquez avec le bouton droit de la souris dans une fen&ecirc;tre du gestionnaire de fichiers pour ouvrir ce menu contextuel. Les &eacute;l&eacute;ments contenus dans ce menu d&eacute;pendent de l'endroit o&ugrave; vous avez cliqu&eacute;. Par exemple, si vous cliquez sur un fichier ou un dossier, il vous est possible de s&eacute;lectionner des &eacute;l&eacute;ments relatifs &agrave; celui-ci. Par contre, si vous cliquez dans l'arri&egrave;re-plan d'un volet d'affichage, le menu vous propose des &eacute;l&eacute;ments associ&eacute;s au contenu de celui-ci.</para>
+    <sect2 id="gosnautilus-53">
+      <title>Volet d'affichage </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>volet d'affichage</secondary>
+        <see>volet d'affichage</see>
+      </indexterm>
+      <indexterm>
+        <primary>volet d'affichage</primary>
+        <secondary>pr&eacute;sentation</secondary>
+      </indexterm>
+      <para>Le volet d'affichage peut pr&eacute;senter le contenu des &eacute;l&eacute;ments suivants :</para>
+      <itemizedlist>
+        <listitem>
+          <para>fichiers d'un type particulier ;</para>
+        </listitem>
+        <listitem>
+          <para>dossiers ;</para>
+        </listitem>
+        <listitem>
+          <para>sites FTP ;</para>
+        </listitem>
+        <listitem>
+          <para>emplacements correspondant &agrave; des URI sp&eacute;ciaux.</para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary>afficheurs</primary></indexterm>Le gestionnaire de fichiers contient des <firstterm>afficheurs</firstterm> vous permettant de visualiser des types de fichiers particuliers dans le volet d'affichage. Par exemple, vous pouvez utiliser un afficheur de texte pour visualiser des fichiers texte dans le volet d'affichage.</para>
+      <para>L'affichage d'un fichier dans le volet pr&eacute;sente les avantages suivants : </para>
+      <itemizedlist>
+        <listitem>
+          <para>utilisation moindre des ressources syst&egrave;me lors du lancement d'une application ; </para>
+        </listitem>
+        <listitem>
+          <para>lancement des applications plus rapide.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Toutefois, il est impossible d'&eacute;diter un fichier dans le volet d'affichage.</para>
+      <para>Le gestionnaire de fichiers contient &eacute;galement des <firstterm>vues</firstterm> vous permettant d'afficher le contenu de vos dossiers de diff&eacute;rentes mani&egrave;res. Vous pouvez, par exemple, recourir aux types de vues suivants : </para>
+      <itemizedlist>
+        <listitem>
+          <para>Vue Ic&ocirc;nes affiche les &eacute;l&eacute;ments du dossier sous la forme d'ic&ocirc;nes. </para>
+        </listitem>
+        <listitem>
+          <para>Vue Liste : affiche les &eacute;l&eacute;ments du dossier sous la forme d'une liste. </para>
+        </listitem>
+        <listitem>
+          <para>Vue automatique affiche uniquement les &eacute;l&eacute;ments audio dans le dossier.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Le menu <guimenu>Vue</guimenu> permet de choisir le mode d'affichage &agrave; appliquer pour un dossier. Pour de plus amples informations sur les vues, consultez la rubrique <xref linkend="gosnautilus-7"/>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>Volet lat&eacute;ral </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>volet lat&eacute;ral</secondary>
+        <tertiary>pr&eacute;sentation</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>volet lat&eacute;ral</primary>
+        <see>gestionnaire de fichiers</see>
+      </indexterm>
+      <para>Pour afficher le volet lat&eacute;ral, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Volet lat&eacute;ral</guimenuitem></menuchoice>. Vous pouvez s&eacute;lectionner les informations que vous souhaitez afficher dans le volet lat&eacute;ral. Voici les &eacute;l&eacute;ments que vous pouvez s&eacute;lectionner :</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Informations</guilabel>
+          </para>
+          <para>Affiche une ic&ocirc;ne repr&eacute;sentant le fichier ou dossier actif. Affiche &eacute;galement des informations concernant le fichier ou dossier actif. Si un fichier est pr&eacute;sent&eacute; dans le volet d'affichage, des boutons apparaissent dans le volet lat&eacute;ral. Ceux-ci vous permettent d'ex&eacute;cuter sur le fichier des op&eacute;rations autres que l'action par d&eacute;faut.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Embl&egrave;mes</guilabel>
+          </para>
+          <para>Contient les embl&egrave;mes que vous pouvez ajouter &agrave; un fichier ou un dossier. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Historique</guilabel>
+          </para>
+          <para>Contient un historique des fichiers, des dossiers, des sites FTP et des URI r&eacute;cemment visit&eacute;s.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Notes</guilabel>
+          </para>
+          <para>Permet d'ajouter des remarques &agrave; vos fichiers et dossiers.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Arborescence</guilabel>
+          </para>
+          <para>Affiche une repr&eacute;sentation hi&eacute;rarchique de votre syst&egrave;me de fichiers. Il est possible d'utiliser l'<guilabel>Arborescence</guilabel> pour parcourir les fichiers.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Cliquez sur le bouton <guibutton>X</guibutton> dans le coin sup&eacute;rieur droit du volet lat&eacute;ral pour le fermer.</para>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>Ic&ocirc;nes et embl&egrave;mes </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>ic&ocirc;nes</secondary>
+        <tertiary>pr&eacute;sentation</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>embl&egrave;mes</secondary>
+        <see>embl&egrave;mes</see>
+      </indexterm>
+      <indexterm>
+        <primary>embl&egrave;mes</primary>
+        <secondary>pr&eacute;sentation</secondary>
+      </indexterm>
+      <para>Dans la vue Ic&ocirc;nes, le gestionnaire de fichiers affiche vos fichiers et dossiers sous la forme d'ic&ocirc;nes. Vous pouvez y ajouter des embl&egrave;mes. Un embl&egrave;me est une petite ic&ocirc;ne permettant de marquer visuellement l'&eacute;l&eacute;ment auquel il est ajout&eacute;. Par exemple, pour indiquer qu'un fichier est important, vous pouvez adjoindre un embl&egrave;me <guilabel>Important</guilabel> &agrave; l'ic&ocirc;ne du fichier pour cr&eacute;er l'effet visuel suivant : </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Ic&ocirc;ne de fichier avec un embl&egrave;me Important. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Pour de plus amples informations sur l'ajout un embl&egrave;me &agrave; une ic&ocirc;ne, reportez-vous &agrave; la rubrique <xref linkend="gosnautilus-112"/>. </para>
+      <para>Le tableau suivant d&eacute;crit la structure de l'ic&ocirc;ne d'un fichier :</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Composant</para>
+              </entry>
+              <entry>
+                <para>Description  </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Embl&egrave;me Important. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Embl&egrave;me. Cet embl&egrave;me signifie <guilabel>Important</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Ic&ocirc;ne fichier texte.  </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Ic&ocirc;ne repr&eacute;sentant le fichier. Cette ic&ocirc;ne peut contenir un aper&ccedil;u du contenu du fichier. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>L&eacute;gende de l'ic&ocirc;ne. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>L&eacute;gende de l'ic&ocirc;ne. Vous pouvez modifier le type d'informations affich&eacute;es dans la l&eacute;gende de l'ic&ocirc;ne.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Le gestionnaire de fichier inclut des embl&egrave;mes par d&eacute;faut pour les types d'&eacute;l&eacute;ments suivants :</para>
+      <itemizedlist>
+        <listitem>
+          <para>liens symboliques ;</para>
+        </listitem>
+        <listitem>
+          <para>&eacute;l&eacute;ments pour lesquels vous poss&eacute;dez les autorisations suivantes :<indexterm><primary>autorisations</primary><secondary>et embl&egrave;mes</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>autorisation de lecture seule ; </para>
+            </listitem>
+            <listitem>
+              <para>aucune autorisation de lecture ni d'&eacute;criture.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>Le tableau suivant repr&eacute;sente les embl&egrave;mes par d&eacute;faut.</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Embl&egrave;me par d&eacute;faut</para>
+              </entry>
+              <entry>
+                <para>Description  </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Embl&egrave;me Lien symbolique.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>liens symboliques</primary><secondary>et embl&egrave;me</secondary></indexterm>Lien symbolique</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Embl&egrave;me Autorisation de lecture uniquement. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>autorisation de lecture seule ; </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Embl&egrave;me Aucune autorisation de lecture/d'&eacute;criture.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>aucune autorisation de lecture ni d'&eacute;criture. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>Navigation dans l'ordinateur </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>navigation</secondary>
+    </indexterm>
+    <para>Le gestionnaire de fichiers propose un point d'acc&egrave;s int&eacute;gr&eacute; &agrave; vos fichiers, applications, aux sites FTP et aux URI. </para>
+    <para>Cette section d&eacute;crit les points suivants : <itemizedlist><listitem><para>affichage des &eacute;l&eacute;ments des fen&ecirc;tres du gestionnaire de fichiers ;</para></listitem><listitem><para>ouverture des fichiers &agrave; partir des fen&ecirc;tres du gestionnaire de fichiers ;</para></listitem><listitem><para>navigation dans les fichiers et dossiers du syst&egrave;me de fichiers ; </para></listitem><listitem><para>ouverture d'emplacements dans le syst&egrave;me de fichiers ;</para></listitem><listitem><para>connexion &agrave; un serveur ;</para></listitem><listitem><para>navigation dans des sites FTP ;</para></listitem><listitem><para>acc&egrave;s aux emplacements d'URI sp&eacute;ciaux.</para></listitem></itemizedlist></para>
+    <sect2 id="gosnautilus-25">
+      <title>Affichage d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>affichage de dossiers</secondary>
+      </indexterm>
+      <para>Vous pouvez afficher le contenu d'un dossier en recourant &agrave; l'une des m&eacute;thodes suivantes : </para>
+      <itemizedlist>
+        <listitem>
+          <para>Double-cliquez sur le dossier dans le volet d'affichage.</para>
+        </listitem>
+        <listitem>
+          <para>Dans la zone <guilabel>Emplacement</guilabel>, entrez le chemin du dossier &agrave; afficher, puis appuyez sur <keycap>Retour</keycap>. Cette zone poss&egrave;de une fonction de compl&eacute;tion automatique. Lorsque vous entrez un chemin, le gestionnaire de fichiers lit votre syst&egrave;me de fichiers. Si vous entrez suffisamment de caract&egrave;res pour identifier de mani&egrave;re unique un r&eacute;pertoire, le gestionnaire de fichiers compl&egrave;te le nom du r&eacute;pertoire dans le champ <guilabel>Emplacement</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Utilisez l'<guilabel>Arborescence</guilabel> dans le volet lat&eacute;ral. Pour de plus amples informations, reportez-vous &agrave; la rubrique <xref linkend="gosnautilus-27"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Les boutons <guibutton>Pr&eacute;c&eacute;dent</guibutton> et <guibutton> Suivant</guibutton> de la barre d'outils vous permettent de parcourir l'historique de navigation. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Pour passer au dossier de niveau directement sup&eacute;rieur, s&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Haut</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer sur le bouton <guibutton>Haut</guibutton> de la barre d'outils.</para>
+      <para>Pour recharger l'affichage, cliquez sur le bouton <guibutton>Recharger</guibutton>. </para>
+      <para>Si vous ne trouvez pas le dossier &agrave; afficher, vous pouvez utiliser <application> Outil de recherche</application>. Pour d&eacute;marrer l'application <application>Outil de recherche</application>, cliquez sur <guibutton>Lancer</guibutton>, puis choisissez <guimenu>Recherche de fichiers</guimenu>. </para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>Utilisation de l'arborescence &agrave; partir du volet lat&eacute;ral </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>arborescence, utilisation </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>arborescence, utilisation</primary>
+      </indexterm>
+      <para>L'<guilabel>Arborescence</guilabel> affiche une repr&eacute;sentation hi&eacute;rarchique de votre syst&egrave;me de fichiers. L'<guilabel>Arborescence</guilabel> propose une m&eacute;thode pratique de navigation dans le syst&egrave;me de fichiers. Pour afficher l'<guilabel>Arborescence</guilabel> dans le volet lat&eacute;ral, s&eacute;lectionnez l'<guimenuitem>Arborescence</guimenuitem> dans la liste d&eacute;roulante situ&eacute;e dans sa partie sup&eacute;rieure. </para>
+      <para>Dans l'<guilabel>Arborescence</guilabel>, les dossiers sont repr&eacute;sent&eacute;s comme suit : </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>&Eacute;tat des dossiers</para>
+              </entry>
+              <entry>
+                <para>Repr&eacute;sentation graphique </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para>Dossier ferm&eacute;</para>
+              </entry>
+              <entry>
+                <para>Fl&egrave;che droite</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Dossier ouvert</para>
+              </entry>
+              <entry>
+                <para>Fl&egrave;che bas</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Le <xref linkend="gosnautilus-TBL-34"/> d&eacute;crit les t&acirc;ches disponibles dans l'<guilabel>Arborescence</guilabel> ainsi que la mani&egrave;re de les ex&eacute;cuter. </para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>T&acirc;ches de l'arborescence</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>T&acirc;che</para>
+              </entry>
+              <entry>
+                <para>Action</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Ouverture de l'<guilabel>Arborescence</guilabel></para>
+              </entry>
+              <entry valign="top">
+                <para>S&eacute;lectionner l'<guilabel>Arborescence</guilabel> dans la liste d&eacute;roulante situ&eacute;e dans la partie sup&eacute;rieure du volet lat&eacute;ral.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Fermeture de l'<guilabel>Arborescence</guilabel></para>
+              </entry>
+              <entry valign="top">
+                <para>S&eacute;lectionner un autre &eacute;l&eacute;ment dans la liste d&eacute;roulante situ&eacute;e dans la partie sup&eacute;rieure du volet lat&eacute;ral..</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Ouverture d'un dossier dans l'<guilabel>Arborescence</guilabel> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Cliquer sur la fl&egrave;che situ&eacute;e en regard du dossier dans l'<guilabel>Arborescence</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Fermeture d'un dossier dans l'<guilabel>Arborescence</guilabel> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Cliquer sur la fl&egrave;che situ&eacute;e en regard du dossier dans l'<guilabel>Arborescence</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Visualisation du contenu d'un dossier dans le volet d'affichage. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>S&eacute;lectionner le dossier dans l'<guilabel>Arborescence</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Visualisation du contenu d'un fichier dans le volet d'affichage</para>
+              </entry>
+              <entry valign="top">
+                <para>S&eacute;lectionner le fichier dans l'<guilabel>Arborescence</guilabel>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Vous pouvez d&eacute;finir des pr&eacute;f&eacute;rences relatives &agrave; l'<guilabel>Arborescence</guilabel> de mani&egrave;re &agrave; ce que celle-ci n'affiche pas les fichiers. </para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>Ouverture de fichiers </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>ouverture de fichiers</secondary>
+      </indexterm>
+      <para>Lorsque vous ouvrez un fichier, le gestionnaire de fichiers effectue l'action par d&eacute;faut associ&eacute;e &agrave; ce type de fichier. L'action par d&eacute;faut peut &ecirc;tre l'une des suivantes : </para>
+      <itemizedlist>
+        <listitem>
+          <para>Consultation du fichier dans le volet d'affichage gr&acirc;ce aux afficheurs. </para>
+        </listitem>
+        <listitem>
+          <para>Lancement d'une application qui ouvre le fichier.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Le gestionnaire de fichiers v&eacute;rifie le contenu d'un fichier pour en d&eacute;terminer le type. Si les premi&egrave;res lignes ne le permettent pas, le gestionnaire de fichiers v&eacute;rifie l'extension du fichier.</para>
+      <para>Si vous ne trouvez pas le fichier &agrave; ouvrir, vous pouvez utiliser <application>Outil de recherche</application>. Pour d&eacute;marrer l'application <application>Outil de recherche</application>, cliquez sur <guibutton>Lancer</guibutton>, puis choisissez <guimenu>Recherche de fichiers</guimenu>. </para>
+      <sect3 id="gosnautilus-447">
+        <title>Visualisation de fichiers dans le volet d'affichage </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>visualisation de fichiers dans le volet d'affichage</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>volet d'affichage</primary>
+          <secondary>visualisation de fichiers dans</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>afficheurs</primary>
+        </indexterm>
+        <para>Le gestionnaire de fichiers contient des afficheurs vous permettant de visualiser certains types de fichier dans le volet d'affichage. Par exemple, le volet d'affichage permet de visualiser les types de fichiers suivants :</para>
+        <itemizedlist>
+          <listitem>
+            <para>fichiers en texte standard ;</para>
+          </listitem>
+          <listitem>
+            <para>fichiers PNG ;</para>
+          </listitem>
+          <listitem>
+            <para>fichiers JPEG (Joint Photographic Experts Group).</para>
+          </listitem>
+        </itemizedlist>
+        <para>Pour recharger le contenu du volet d'affichage, s&eacute;lectionnez <menuchoice><guimenu> Vue</guimenu><guimenuitem>Recharger</guimenuitem></menuchoice>. Pour arr&ecirc;ter le chargement d'un &eacute;l&eacute;ment dans le volet d'affichage, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Arr&ecirc;ter</guimenuitem></menuchoice>.</para>
+        <para>Lorsque vous affichez un fichier dans le volet d'affichage, il est possible que l'afficheur ajoute des &eacute;l&eacute;ments aux menus du gestionnaire de fichiers. Les &eacute;l&eacute;ments des menus d&eacute;pendent du type de fichier affich&eacute;. Par exemple, lorsque vous affichez un fichier PNG, le menu <guimenu> &Eacute;dition</guimenu> contient les options permettant de tourner ou de retourner un &eacute;l&eacute;ment. </para>
+        <para>De m&ecirc;me, lorsque vous visualisez certains types de fichier dans le volet d'affichage, les boutons de zoom du gestionnaire de fichiers vous permettent de modifier la taille de l'&eacute;l&eacute;ment.</para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>Ex&eacute;cution de l'action par d&eacute;faut </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>ex&eacute;cution d'actions par d&eacute;faut pour les fichiers</secondary>
+        </indexterm>
+        <para>Pour ex&eacute;cuter l'action par d&eacute;faut associ&eacute;e &agrave; un fichier, double-cliquez sur celui-ci. Exemple : l'action par d&eacute;faut associ&eacute;e aux documents en texte standard consiste &agrave; afficher le fichier dans un visionneur de texte. Dans ce cas, vous pouvez double-cliquer sur le fichier pour l'afficher dans le visionneur de texte.</para>
+        <para>Vous pouvez d&eacute;finir les pr&eacute;f&eacute;rences du gestionnaire de fichiers de mani&egrave;re &agrave; ex&eacute;cuter l'action par d&eacute;faut d'un seul clic sur un fichier. </para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>Ex&eacute;cution d'actions particuli&egrave;res &agrave; l'aide du sous-menu Ouvrir avec </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>ex&eacute;cution d'actions particuli&egrave;res sur les fichiers</secondary>
+        </indexterm>
+        <para>Pour ex&eacute;cuter des op&eacute;rations autres que l'action par d&eacute;faut sur un fichier, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>Dans le volet d'affichage, s&eacute;lectionnez le fichier auquel doit s'appliquer l'action. S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem> Ouvrir avec</guimenuitem></menuchoice>. Le sous-menu <guisubmenu>Ouvrir avec</guisubmenu> s'affiche. Les &eacute;l&eacute;ments de ce sous-menu correspondent au contenu des parties suivantes de l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application> :</para>
+            <itemizedlist>
+              <listitem>
+                <para>la zone de liste d&eacute;roulante <guilabel>Action par d&eacute;faut</guilabel> de la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel> ;</para>
+              </listitem>
+              <listitem>
+                <para>zone de liste d&eacute;roulante <guilabel>Afficheur</guilabel> de la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel>.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>S&eacute;lectionnez une action dans le sous-menu <guisubmenu>Ouvrir avec</guisubmenu>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>Ex&eacute;cution d'autres actions lors de l'affichage d'un fichier </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>ex&eacute;cution d'autres actions sur les fichiers</secondary>
+        </indexterm>
+        <para>Lorsque vous ouvrez un fichier dans le volet d'affichage, le volet lat&eacute;ral peut contenir des boutons.</para>
+        <para>Les boutons repr&eacute;sentent toutes les actions d&eacute;finies dans l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application>. Les actions sont d&eacute;finies dans la zone de liste d&eacute;roulante <guilabel>Action par d&eacute;faut</guilabel> de la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel> de l'outil de pr&eacute;f&eacute;rences des <application>types de fichiers et programmes</application>. Cliquez sur un bouton pour ex&eacute;cuter une action : par exemple, si une action d&eacute;finie pour les documents en texte simple consiste &agrave; ouvrir le fichier dans l'&eacute;diteur de texte <application>gedit</application>. Dans ce cas, un bouton <guibutton> Open with gedit</guibutton> s'affiche dans le panneau lat&eacute;ral. Pour ouvrir le fichier dans l'application <application>gedit</application>, cliquez sur le bouton <guibutton> Open with gedit</guibutton>.</para>
+        <note>
+          <para>si une action se trouve dans l'une des bo&icirc;tes de dialogue suivantes, aucun bouton la repr&eacute;sentant ne figure dans le volet lat&eacute;ral :</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>Ouvrir avec une autre application</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para><guilabel>Ouvrir avec un autre visionneur </guilabel>.</para>
+            </listitem>
+          </itemizedlist>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-515">
+      <title>Ouverture d'emplacements</title>
+      <para>Le gestionnaire de fichiers propose un point d'acc&egrave;s int&eacute;gr&eacute; &agrave; vos fichiers, applications, aux sites FTP et aux URI. </para>
+      <para>Pour acc&eacute;der rapidement &agrave; plusieurs emplacements de votre syst&egrave;me de fichiers, vous pouvez utiliser le gestionnaire de fichiers. Pour ouvrir un emplacement, proc&eacute;dez comme suit :<orderedlist><listitem><para>S&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Emplacement</guimenuitem></menuchoice>. </para></listitem><listitem><para>Dans le champ <guilabel>Emplacement</guilabel>, entrez le chemin du dossier que vous souhaitez afficher.</para></listitem><listitem><para>Appuyez sur <keycap>Retour</keycap>.</para></listitem></orderedlist></para>
+      <para>Cette zone poss&egrave;de une fonction de compl&eacute;tion automatique. Lorsque vous entrez un chemin, le gestionnaire de fichiers lit votre syst&egrave;me de fichiers. Si vous entrez suffisamment de caract&egrave;res pour identifier de mani&egrave;re unique un r&eacute;pertoire, le gestionnaire de fichiers compl&egrave;te le nom du r&eacute;pertoire dans le champ <guilabel>Emplacement</guilabel>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-491">
+      <title>Connexion &agrave; un serveur</title>
+      <para>Si l'environnement de votre bureau est configur&eacute; pour acc&eacute;der &agrave; des serveurs sur un r&eacute;seau, vous pouvez utiliser le menu <guilabel>Connexion au serveur</guilabel> pour vous connecter &agrave; des serveurs.</para>
+      <para>Pour vous connecter &agrave; un serveur, proc&eacute;dez comme suit :<orderedlist><listitem><para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Connexion au serveur</guimenuitem></menuchoice>.</para></listitem><listitem><para>Entrez le nom d'un serveur dans le champs <guilabel>Nom du lien</guilabel> de la bo&icirc;te de dialogue <guilabel>Connexion au serveur</guilabel>.</para></listitem><listitem><para>Dans le champ <guilabel>Emplacement (URL)</guilabel>, entrez l'emplacement de l'URL, <literal>ftp:///ftp.gnome.org</literal> par exemple.</para></listitem><listitem><para>Cliquez sur le bouton <guibutton>Connecter</guibutton>.</para></listitem></orderedlist> </para>
+    </sect2>
+    <sect2 id="gosnautilus-445">
+      <title>Utilisation de l'emplacement Poste de travail</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>L'ic&ocirc;ne Poste de travail. Le graphique d&eacute;crit le contexte.  </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>emplacement Poste de travail</secondary>
+        <see>emplacement Poste de travail</see>
+      </indexterm>
+      <indexterm>
+        <primary>emplacement Poste de  travail</primary>
+        <secondary>utilisation</secondary>
+      </indexterm>
+      <para>L'emplacement <guilabel>Poste de travail</guilabel> vous permet d'acc&eacute;der aux fonctions suivantes :</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Applications</guilabel>
+          </para>
+          <para>Double-cliquez sur <guilabel>Applications</guilabel> pour acc&eacute;der aux applications de Java Desktop System. Vous pouvez &eacute;galement acc&eacute;der au menu <guimenu>Applications</guimenu> par le biais du menu <guimenu>Lancer</guimenu> et de la <application> Barre de menus</application>.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Pr&eacute;f&eacute;rences</guilabel>
+          </para>
+          <para>Pour personnaliser Java Desktop System, double-cliquez sur <guilabel>Pr&eacute;f&eacute;rences</guilabel>. Pour acc&eacute;der aux outils de pr&eacute;f&eacute;rences, vous pouvez &eacute;galement utiliser le menu <guimenu>Lancer</guimenu>. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Syst&egrave;me de fichiers</guilabel>
+          </para>
+          <para>Double-cliquez sur <guilabel>Syst&egrave;me de fichiers</guilabel> pour acc&eacute;der au premier dossier de l'arborescence du bureau. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Vous pouvez acc&eacute;der &agrave; l'emplacement <guilabel>Poste de travail</guilabel> en utilisant l'une des m&eacute;thodes suivantes :</para>
+      <itemizedlist>
+        <listitem>
+          <para>&Agrave; partir de l'arri&egrave;re-plan du bureau :</para>
+          <para>Double-cliquez sur l'objet <guilabel>Poste de travail</guilabel> situ&eacute; sur l'arri&egrave;re-plan du bureau. Le contenu de l'emplacement <guilabel>Poste de travail</guilabel> s'affiche dans la fen&ecirc;tre du navigateur.</para>
+        </listitem>
+        <listitem>
+          <para>Depuis une fen&ecirc;tre du navigateur, acc&eacute;dez &agrave; l'URI <command>computer:/// </command>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>Acc&egrave;s &agrave; des sites FTP </title>
+      <indexterm>
+        <primary>sites FTP</primary>
+        <secondary>acc&egrave;s</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>sites FTP</secondary>
+        <see>sites FTP</see>
+      </indexterm>
+      <para>Vous pouvez utiliser le gestionnaire de fichiers pour acc&eacute;der aux sites FTP. Pour acc&eacute;der &agrave; un site FTP, entrez l'URL de celui-ci dans la zone ad hoc de la barre d'emplacement, puis appuyez sur <keycap>Entr&eacute;e</keycap>. Le contenu du site appara&icirc;t dans le volet d'affichage. Pour copier un fichier &agrave; partir d'un site FTP, faites-le glisser vers son nouvel emplacement.</para>
+      <para>Pour acc&eacute;der &agrave; un site FTP requ&eacute;rant un nom d'utilisateur et un mot de passe, vous pouvez entrer l'URL sous la forme suivante : </para>
+      <para>
+        <command>ftp://<replaceable>nom_utilisateur</replaceable>:<replaceable>mot_de_passe </replaceable>@<replaceable>nom_h&ocirc;te</replaceable>.<replaceable>domaine</replaceable></command>
+      </para>
+      <para>Pour recharger le site FTP dans le volet d'affichage, s&eacute;lectionnez <menuchoice><guimenu> Vue</guimenu><guimenuitem>Recharger</guimenuitem></menuchoice>. Pour interrompre le chargement du site FTP, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem> Arr&ecirc;ter</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-465">
+      <title>Acc&egrave;s aux favoris r&eacute;seau </title>
+      <indexterm>
+        <primary>favoris r&eacute;seau</primary>
+        <secondary>acc&egrave;s</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>favoris r&eacute;seau</secondary>
+        <see>favoris r&eacute;seau</see>
+      </indexterm>
+      <para>Si votre syst&egrave;me est configur&eacute; pour acc&eacute;der &agrave; des favoris sur un r&eacute;seau, le gestionnaire de fichiers peut &ecirc;tre utilis&eacute; &agrave; cette fin. </para>
+      <para>Pour acc&eacute;der &agrave; des favoris r&eacute;seau, ouvrez le gestionnaire de fichiers et s&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Favoris r&eacute;seau</guimenuitem></menuchoice>. Vous pouvez &eacute;galement double-cliquer sur l'objet <guilabel>Favoris r&eacute;seau</guilabel> situ&eacute; sur l'arri&egrave;re-plan du bureau. Double-cliquez sur l'objet <guilabel>R&eacute;seau</guilabel>. Une fen&ecirc;tre du gestionnaire de fichiers s'affiche. La fen&ecirc;tre affiche les favoris r&eacute;seau auxquels vous pouvez acc&eacute;der. Double-cliquez sur le r&eacute;seau de votre choix. </para>
+      <para><indexterm><primary>serveurs NFS</primary><see>r&eacute;seau Unix</see></indexterm>Pour acc&eacute;der &agrave; des ressources partag&eacute;es sous UNIX, cliquez deux fois sur l'objet <guilabel>R&eacute;seau Unix (NFS)</guilabel>. Une liste des ressources UNIX partag&eacute;es auxquelles vous pouvez acc&eacute;der s'affiche dans la fen&ecirc;tre du gestionnaire de fichiers.</para>
+      <para><indexterm><primary>serveurs Samba</primary><see>r&eacute;seau Windows</see></indexterm>Pour acc&eacute;der aux ressources partag&eacute;es sous Windows, double-cliquez sur l'objet <guilabel>R&eacute;seau Windows (SMB)</guilabel>. Une liste des ressources Windows partag&eacute;es auxquelles vous pouvez acc&eacute;der s'affiche dans la fen&ecirc;tre du gestionnaire de fichiers.</para>
+      <sect3 id="gosnautilus-466">
+        <title>Ajout d'un favori r&eacute;seau</title>
+        <para>Pour ajouter un favori r&eacute;seau, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>Ouvrez le gestionnaire de fichiers et s&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Favoris r&eacute;seau</guimenuitem></menuchoice>. Vous pouvez &eacute;galement double-cliquer sur l'objet <guilabel>Favoris r&eacute;seau</guilabel> situ&eacute; sur l'arri&egrave;re-plan du bureau. </para>
+          </listitem>
+          <listitem>
+            <para>Cliquez deux fois sur l'objet <guilabel>Ajouter un favori r&eacute;seau</guilabel>. La bo&icirc;te de dialogue <guilabel>Ajouter un favori r&eacute;seau</guilabel> s'ouvre. Entrez-y les d&eacute;tails concernant le serveur :</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>&Eacute;l&eacute;ment de la bo&icirc;te de dialogue</para>
+                    </entry>
+                    <entry>
+                      <para>Description </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Lieu</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette zone de texte vous permet de sp&eacute;cifier l'emplacement que vous voulez ajouter. Vous pouvez aussi le s&eacute;lectionner dans la liste d&eacute;roulante :<itemizedlist><listitem><para><guilabel>Serveur FTP</guilabel> ;</para></listitem><listitem><para><guilabel>Dossier Web</guilabel> ;</para></listitem><listitem><para><guilabel>R&eacute;seau Windows (SMB)</guilabel> ;</para></listitem><listitem><para><guilabel>R&eacute;seau Unix (NFS)</guilabel>.</para></listitem></itemizedlist></para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nom du raccourci</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">Cette zone de texte vous permet de sp&eacute;cifier un nom de raccourci pour le favori r&eacute;seau. </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Connexion anonyme</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Option Serveur FTP uniquement. S&eacute;lectionnez cette option pour vous connecter au serveur FTP en tant qu'utilisateur anonyme.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel> Pas de connexion requise</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Options Dossier Web, Windows Network (SMB) et Unix Network (NFS) uniquement. S&eacute;lectionnez cette option si vous n'avez besoin de vous connecter ni au dossier Web ni aux ressources partag&eacute;es Windows ou UNIX.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Nom d'utilisateur</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Cette zone de texte vous permet de sp&eacute;cifier un nom d'utilisateur lorsque vous vous connectez au favori r&eacute;seau sp&eacute;cifi&eacute;.</para>
+                      <para>Vous devez alors entrer votre mot de passe.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Y aller maintenant</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>S&eacute;lectionnez cette option si vous souhaitez acc&eacute;der imm&eacute;diatement au favori r&eacute;seau.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Cliquez sur <guibutton>OK</guibutton> pour ajouter votre favori r&eacute;seau. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-508">
+      <title>Acc&egrave;s aux serveurs r&eacute;seau</title>
+      <para>Si l'environnement de bureau GNOME est configur&eacute; pour permettre l'acc&egrave;s aux serveurs d'un r&eacute;seau, vous pouvez utiliser le menu <guilabel>Applications</guilabel> pour acc&eacute;der aux serveurs r&eacute;seau.</para>
+      <para>Pour acc&eacute;der aux serveurs r&eacute;seau, s&eacute;lectionnez<menuchoice><guimenu> Applications</guimenu><guimenuitem>Serveurs r&eacute;seau</guimenuitem></menuchoice>. Une fen&ecirc;tre d'objet fichier s'affiche. La fen&ecirc;tre affiche les serveurs r&eacute;seau auxquels vous pouvez acc&eacute;der. Cliquez deux fois sur le serveur de votre choix.</para>
+      <sect3 id="gosnautilus-509">
+        <title>Ajout d'un serveur r&eacute;seau</title>
+        <para>Pour ajouter un serveur r&eacute;seau, s&eacute;lectionnez <menuchoice><guimenu>Applications</guimenu><guimenuitem>Serveurs r&eacute;seau</guimenuitem></menuchoice>. Une fen&ecirc;tre d'objet fichier s'affiche. Cliquez deux fois sur l'objet <guilabel>Nouveau serveur</guilabel>. Une bo&icirc;te de dialogue <guilabel>Nouveau serveur</guilabel> s'affiche. Dans la bo&icirc;te de dialogue, entrez le nom du serveur et cliquez sur <guilabel>OK</guilabel>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-467">
+      <title>Acc&egrave;s aux emplacements d'URI sp&eacute;ciaux </title>
+      <indexterm>
+        <primary>emplacements d'URI sp&eacute;ciaux</primary>
+        <secondary>acc&egrave;s</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>emplacements d'URI sp&eacute;ciaux</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>URI sp&eacute;ciaux</primary>
+        <see>emplacements d'URI sp&eacute;ciaux</see>
+      </indexterm>
+      <para>Java Desktop System contient des emplacements URI sp&eacute;ciaux vous permettant d'acc&eacute;der &agrave; des fonctions particuli&egrave;res &agrave; partir du gestionnaire de fichiers. Par exemple, vous pouvez acc&eacute;der &agrave; l'URI <command>preferences:///</command> dans une fen&ecirc;tre du gestionnaire de fichiers pour acc&eacute;der aux outils de pr&eacute;f&eacute;rence. Le <xref linkend="gosnautilus-TBL-479"/> &eacute;num&egrave;re les emplacements des URI sp&eacute;ciaux utilisables avec le gestionnaire de fichiers.</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>Emplacement d'URI sp&eacute;ciaux</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Emplacement d'URI</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>applications:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Affiche une liste des applications de Java Desktop System. Les applications sont identiques aux applications du menu <guimenu>Applications</guimenu>. Double-cliquez sur l'application pour l'ouvrir.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>computer:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Affiche une liste des applications et des outils de pr&eacute;f&eacute;rences de Java Desktop System. Affiche &eacute;galement les ic&ocirc;nes vous permettant d'acc&eacute;der au syst&egrave;me de fichiers, aux CD-ROM et aux lecteurs de disquettes.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Affiche les emplacements r&eacute;seau auxquels vous pouvez vous connecter si votre syst&egrave;me est configur&eacute; pour permettre l'acc&egrave;s aux emplacements d'un r&eacute;seau. Double-cliquez sur l'emplacement r&eacute;seau pour y acc&eacute;der. Il est &eacute;galement possible d'utiliser cet URI pour ajouter des emplacements r&eacute;seau &agrave; votre syst&egrave;me.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>preferences:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Affiche une liste des outils de pr&eacute;f&eacute;rences de Java Desktop System. Les outils de pr&eacute;f&eacute;rence sont identiques aux outils du menu <guimenu>Pr&eacute;f&eacute;rences</guimenu>. Cliquez deux fois sur un outil de pr&eacute;f&eacute;rences pour l'ouvrir.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>server-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Affiche une liste des applications que vous pouvez utiliser pour configurer votre syst&egrave;me comme un serveur. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>system-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Affiche une liste des applications que vous pouvez utiliser pour modifier vos param&egrave;tres syst&egrave;me.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>Utilisation de l'historique de navigation </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>historique de navigation </secondary>
+      </indexterm>
+      <para>Le gestionnaire de fichiers tient &agrave; jour un historique des fichiers, des dossiers, des sites FTP et des emplacements URI. Celui-ci permet de naviguer vers des fichiers, dossiers, sites FTP et emplacements d'URI r&eacute;cemment visit&eacute;s. Votre liste d'historique contient les dix derniers &eacute;l&eacute;ments que vous avez visualis&eacute;s. Les rubriques suivantes d&eacute;crivent la navigation dans l'historique.</para>
+      <para>Pour effacer l'historique, s&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Effacer l'historique</guimenuitem></menuchoice>.</para>
+      <sect3 id="gosnautilus-77">
+        <title>Navigation dans l'historique &agrave; l'aide du menu Aller</title>
+        <para>Pour afficher une liste des &eacute;l&eacute;ments d&eacute;j&agrave; consult&eacute;s, s&eacute;lectionnez le menu <guimenu>Aller</guimenu>. Votre historique s'affiche dans la partie inf&eacute;rieure du menu <guimenu>Aller</guimenu>. Pour ouvrir un de ses &eacute;l&eacute;ment, s&eacute;lectionnez-le dans le menu <guimenu>Aller</guimenu>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>Navigation dans l'historique &agrave; l'aide de la barre d'outils</title>
+        <para>Pour utiliser la barre d'outils afin de naviguer dans l'historique, proc&eacute;dez comme suit :</para>
+        <itemizedlist>
+          <listitem>
+            <para>Pour ouvrir le fichier, dossier ou URI pr&eacute;c&eacute;dent dans l'historique, cliquez sur le bouton <guibutton>Pr&eacute;c&eacute;dent</guibutton> de la barre d'outils.</para>
+          </listitem>
+          <listitem>
+            <para>Le bouton <guibutton>Suivant</guibutton> de la barre d'outils vous permet d'afficher le fichier, dossier ou URI suivant de l'historique.</para>
+          </listitem>
+          <listitem>
+            <para>Pour afficher une liste des &eacute;l&eacute;ments consult&eacute;s, cliquez sur la fl&egrave;che dirig&eacute;e vers le bas situ&eacute;e &agrave; droite du bouton <guibutton>Pr&eacute;c&eacute;dent</guibutton>. Pour ouvrir un &eacute;l&eacute;ment de cette liste, cliquez sur celui-ci.</para>
+          </listitem>
+          <listitem>
+            <para>La fl&egrave;che vers le bas situ&eacute;e &agrave; droite du bouton <guibutton> Suivant</guibutton> permet d'afficher une liste des &eacute;l&eacute;ments visualis&eacute;s apr&egrave;s l'&eacute;l&eacute;ment actif. Pour ouvrir un &eacute;l&eacute;ment de cette liste, cliquez sur celui-ci.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>Navigation dans l'historique &agrave; l'aide du volet lat&eacute;ral </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>historique</secondary>
+        </indexterm>
+        <para>Pour afficher l'<guilabel>historique</guilabel> dans le volet lat&eacute;ral, s&eacute;lectionnez-le dans la liste d&eacute;roulante situ&eacute;e dans la partie sup&eacute;rieure du volet lat&eacute;ral. L'<guilabel>historique</guilabel> dans le volet lat&eacute;ral affiche une liste des &eacute;l&eacute;ments visualis&eacute;s pr&eacute;c&eacute;demment.</para>
+        <para>Pour visualiser un &eacute;l&eacute;ment de l'historique dans le volet d'affichage, cliquez sur celui-ci dans l'<guilabel>Historique</guilabel>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>Ajout de signets &agrave; vos emplacements favoris </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>signets</secondary>
+      </indexterm>
+      <para>Pour acc&eacute;der &agrave; un &eacute;l&eacute;ment de vos signets, s&eacute;lectionnez-le dans le menu <guimenu>Signets</guimenu>. Vous pouvez ajouter vos emplacements favoris &agrave; votre menu <guimenu>Signets</guimenu>. Vous pouvez ajouter des signets aux fichiers et aux dossiers de votre syst&egrave;me de fichiers, aux sites FTP ou aux emplacements d'URI.</para>
+      <sect3 id="gosnautilus-40">
+        <title>Ajout d'un signet</title>
+        <para>Pour ajouter un signet, ouvrez l'&eacute;l&eacute;ment que vous souhaitez marquer dans le volet d'affichage. S&eacute;lectionnez <menuchoice><guimenu>Signets</guimenu><guimenuitem>Ajouter un signet</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>&Eacute;dition d'un signet</title>
+        <para>Pour &eacute;diter vos signets, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>S&eacute;lectionnez <menuchoice><guimenu>Signets</guimenu><guimenuitem> &Eacute;diter les signets</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Pour &eacute;diter un signet, s&eacute;lectionnez-le dans la partie gauche de la bo&icirc;te de dialogue <guilabel>&Eacute;diter les signets</guilabel>. &Eacute;ditez les d&eacute;tails du signet dans la partie droite de cette bo&icirc;te, comme suit : </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>&Eacute;l&eacute;ment de la bo&icirc;te de dialogue</para>
+                    </entry>
+                    <entry>
+                      <para>Description </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nom</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette zone de texte permet de sp&eacute;cifier un nom identifiant le signet dans le menu <guimenu>Signets</guimenu>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Emplacement</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette zone permet de sp&eacute;cifier l'emplacement du signet. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Pour supprimer un signet, s&eacute;lectionnez-le dans la partie gauche de la bo&icirc;te de dialogue. Cliquez sur <guilabel>Supprimer</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>Gestion de vos fichiers et dossiers </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>gestion des fichiers et dossiers</secondary>
+    </indexterm>
+    <para>Cette rubrique d&eacute;crit l'utilisation des fichiers et dossiers.</para>
+    <sect2 id="gosnautilus-201">
+      <title>Option Glisser-d&eacute;poser du gestionnaire de fichiers </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>glisser-d&eacute;poser</secondary>
+      </indexterm>
+      <para>Vous pouvez effectuer un glisser-d&eacute;poser afin d'accomplir diverses t&acirc;ches dans le gestionnaire de fichiers. Lorsque vous utilisez cette fonction, le pointeur de la souris fournit des informations concernant la t&acirc;che effectu&eacute;e. Le <xref linkend="gosnautilus-TBL-11"/> d&eacute;crit les t&acirc;ches que vous pouvez ex&eacute;cuter &agrave; l'aide de cette fonction. Il vous montre &eacute;galement les pointeurs de souris qui apparaissent alors.</para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>Option Glisser-d&eacute;poser du gestionnaire de fichiers</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>T&acirc;che </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Action</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Pointeur de la souris</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>D&eacute;placer un &eacute;l&eacute;ment</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Faites glisser l'&eacute;l&eacute;ment vers son nouvel emplacement.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pointeur de d&eacute;placement.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Copier un &eacute;l&eacute;ment</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Attrapez l'&eacute;l&eacute;ment, puis maintenez la touche <keycap> Ctrl</keycap> enfonc&eacute;e. Faites glisser l'&eacute;l&eacute;ment vers son nouvel emplacement.</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pointeur de copie.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Cr&eacute;er un lien symbolique vers un &eacute;l&eacute;ment</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Attrapez l'&eacute;l&eacute;ment, puis maintenez les touches <keycombo><keycap> Ctrl</keycap><keycap>Maj</keycap></keycombo> enfonc&eacute;es. Faites glisser l'&eacute;l&eacute;ment vers l'emplacement o&ugrave; doit r&eacute;sider le lien symbolique.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pointeur de lien symbolique.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Demander quelle action ex&eacute;cuter avec l'&eacute;l&eacute;ment &agrave; faire glisser. </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Attrapez l'&eacute;l&eacute;ment, puis maintenez la touche <keycap>Alt</keycap> enfonc&eacute;e. Faites glisser l'&eacute;l&eacute;ment vers l'emplacement o&ugrave; l'&eacute;l&eacute;ment doit r&eacute;sider. Rel&acirc;chez le bouton de la souris. Un menu contextuel appara&icirc;t. S&eacute;lectionnez l'un des &eacute;l&eacute;ments suivants dans ce menu : </para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>D&eacute;placer ici</guimenuitem>
+                    </para>
+                    <para>D&eacute;place l'&eacute;l&eacute;ment vers l'emplacement.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Copier ici</guimenuitem>
+                    </para>
+                    <para>Copie l'&eacute;l&eacute;ment vers l'emplacement. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Lien ici</guimenuitem>
+                    </para>
+                    <para>Cr&eacute;e un lien symbolique vers l'&eacute;l&eacute;ment &agrave; cet emplacement.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>D&eacute;finir en tant qu'arri&egrave;re-plan</guimenuitem>
+                    </para>
+                    <para>Si l'&eacute;l&eacute;ment est une image, celle-ci est d&eacute;finie en tant qu'arri&egrave;re-plan. Vous pouvez utiliser cette commande pour d&eacute;finir l'arri&egrave;re-plan du bureau et celui du volet d'affichage.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Annuler</guimenuitem>
+                    </para>
+                    <para>Annule l'op&eacute;ration Glisser-d&eacute;poser. </para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pointeur de demande.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>S&eacute;lection de fichiers et de dossiers </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>s&eacute;lection de fichiers et de dossiers</secondary>
+      </indexterm>
+      <para>Vous pouvez s&eacute;lectionner les fichiers et les dossiers de plusieurs mani&egrave;res dans le gestionnaire de fichiers. Le <xref linkend="gosnautilus-TBL-10"/> d&eacute;crit la proc&eacute;dure de s&eacute;lection d'&eacute;l&eacute;ments dans les fen&ecirc;tres du gestionnaire de fichiers et sur l'arri&egrave;re-plan du bureau.</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>S&eacute;lection des &eacute;l&eacute;ments dans le gestionnaire de fichiers</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>T&acirc;che </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Action</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>S&eacute;lectionner un &eacute;l&eacute;ment</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Cliquez sur l'&eacute;l&eacute;ment.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>S&eacute;lectionnez un groupe d'&eacute;l&eacute;ments contigus.</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Dans la vue Ic&ocirc;nes, vous pouvez &eacute;galement faire glisser les fichiers &agrave; s&eacute;lectionner.</para>
+                <para>Dans la vue Liste, cliquez sur le premier &eacute;l&eacute;ment du groupe. Maintenez la touche <keycap>MAJ</keycap> enfonc&eacute;e et cliquez sur le dernier &eacute;l&eacute;ment du groupe.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>S&eacute;lectionner plusieurs &eacute;l&eacute;ments</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Maintenez la touche <keycap>Ctrl</keycap> enfonc&eacute;e. Cliquez sur les &eacute;l&eacute;ments &agrave; s&eacute;lectionner.</para>
+                <para>Vous pouvez &eacute;galement maintenir la touche <keycap> Ctrl</keycap> enfonc&eacute;e, puis faire glisser les fichiers &agrave; s&eacute;lectionner.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>S&eacute;lectionner tous les &eacute;l&eacute;ments d'un dossier </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem>S&eacute;lectionner tous les fichiers</guimenuitem></menuchoice>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Pour ex&eacute;cuter une action par d&eacute;faut sur un &eacute;l&eacute;ment, double-cliquez sur celui-ci. Vous pouvez d&eacute;finir les pr&eacute;f&eacute;rences du gestionnaire de fichiers de mani&egrave;re &agrave; ex&eacute;cuter l'action par d&eacute;faut d'un seul clic sur un fichier.</para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>D&eacute;placement d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>d&eacute;placement de fichiers et de dossiers</secondary>
+      </indexterm>
+      <para>Les rubriques suivantes d&eacute;crivent les m&eacute;thodes permettant de d&eacute;placer un fichier ou un dossier.</para>
+      <sect3 id="gosnautilus-537">
+        <title>Glissement vers le nouvel emplacement dans le volet d'affichage</title>
+        <para>Pour faire glisser un fichier ou un dossier vers un nouvel emplacement dans le volet d'affichage, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>Ouvrez une fen&ecirc;tre du gestionnaire de fichiers. S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Nouvelle fen&ecirc;tre</guimenuitem></menuchoice> de mani&egrave;re &agrave; ouvrir une seconde fen&ecirc;tre du gestionnaire de fichiers.</para>
+          </listitem>
+          <listitem>
+            <para>Dans l'une des fen&ecirc;tres, s&eacute;lectionnez le dossier contenant le fichier ou le dossier &agrave; d&eacute;placer. Dans l'autre fen&ecirc;tre, s&eacute;lectionnez le dossier de destination.</para>
+          </listitem>
+          <listitem>
+            <para>Faites glisser le fichier ou le dossier &agrave; d&eacute;placer vers son nouvel emplacement dans l'autre fen&ecirc;tre.</para>
+          </listitem>
+        </orderedlist>
+        <para>Pour d&eacute;placer le fichier ou un dossier d&eacute;pendant directement de l'emplacement actuel, n'ouvrez pas de nouvelle fen&ecirc;tre. Faites-le glisser vers le nouvel emplacement dans la m&ecirc;me fen&ecirc;tre.</para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>Couper-coller au nouvel emplacement</title>
+        <para>Vous pouvez couper un fichier ou un dossier et le coller dans un autre dossier, en proc&eacute;dant comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>S&eacute;lectionnez le fichier ou le dossier &agrave; d&eacute;placer, puis s&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem>Couper le fichier</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Ouvrez le dossier de destination, puis s&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem>Coller le fichier</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>Copie d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>copie de fichiers et de dossiers </secondary>
+      </indexterm>
+      <para>Les rubriques suivantes d&eacute;crivent les m&eacute;thodes de copie des fichiers et dossiers.</para>
+      <sect3 id="gosnautilus-640">
+        <title>Glissement vers le nouvel emplacement dans le volet d'affichage</title>
+        <para>Pour copier un fichier ou un dossier, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>Ouvrez une fen&ecirc;tre du gestionnaire de fichiers. S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Nouvelle fen&ecirc;tre</guimenuitem></menuchoice> de mani&egrave;re &agrave; ouvrir une seconde fen&ecirc;tre du gestionnaire de fichiers.</para>
+          </listitem>
+          <listitem>
+            <para>Dans l'une des fen&ecirc;tres, s&eacute;lectionnez le dossier contenant le fichier ou le dossier &agrave; copier. Dans l'autre fen&ecirc;tre, s&eacute;lectionnez le dossier de destination.</para>
+          </listitem>
+          <listitem>
+            <para>Capturez le fichier ou le dossier, puis maintenez la touche <keycap> Ctrl</keycap> enfonc&eacute;e. Faites-le glisser vers le nouvel emplacement dans l'autre fen&ecirc;tre. </para>
+          </listitem>
+        </orderedlist>
+        <para>Pour copier le fichier ou le dossier dans un dossier d&eacute;pendant directement de l'emplacement actuel, n'ouvrez pas de nouvelle fen&ecirc;tre. Capturez le fichier ou le dossier, puis maintenez la touche <keycap> Ctrl</keycap> enfonc&eacute;e. Faites-le glisser vers le nouvel emplacement dans la m&ecirc;me fen&ecirc;tre.</para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>Copier-coller au nouvel emplacement</title>
+        <para>Vous pouvez copier un fichier ou un dossier et le coller dans un autre dossier en proc&eacute;dant comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>S&eacute;lectionnez le fichier ou le dossier &agrave; copier, puis <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem>Copier le fichier</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Ouvrez le dossier de destination, puis s&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem>Coller le fichier</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>Duplication d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>duplication de fichiers et de dossiers</secondary>
+      </indexterm>
+      <para>Pour cr&eacute;er une copie d'un fichier ou d'un dossier dans le dossier actif, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le fichier ou le dossier &agrave; dupliquer dans le volet d'affichage.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem> Dupliquer</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer avec le bouton droit dans le volet d'affichage, puis s&eacute;lectionner <guimenuitem>Dupliquer</guimenuitem>. </para>
+          <para>Une copie du fichier ou du dossier appara&icirc;t dans le dossier actif.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>Cr&eacute;ation d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>cr&eacute;ation de dossiers</secondary>
+      </indexterm>
+      <para>Pour cr&eacute;er un dossier, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le dossier o&ugrave; le nouveau dossier doit &ecirc;tre cr&eacute;&eacute;. </para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Cr&eacute;er un dossier</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer avec le bouton droit sur l'arri&egrave;re-plan du volet d'affichage, puis choisir <guimenuitem>Cr&eacute;er un dossier</guimenuitem>. </para>
+          <para>Un dossier <guilabel>sans nom</guilabel> s'ajoute au volet d'affichage. Le nom du dossier est s&eacute;lectionn&eacute;.</para>
+        </listitem>
+        <listitem>
+          <para>Donnez-lui un nom, puis appuyez sur <keycap>Retour</keycap>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>Modification du nom d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>modification du nom des dossiers</secondary>
+      </indexterm>
+      <para>Pour renommer un fichier ou un dossier, proc&eacute;dez comme suit : </para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le fichier ou le dossier &agrave; renommer dans le volet d'affichage.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem> Renommer</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer avec le bouton droit sur le fichier ou le dossier, puis s&eacute;lectionner <guimenuitem>Renommer</guimenuitem>. </para>
+          <para>Le nom du fichier ou du dossier est s&eacute;lectionn&eacute;.</para>
+        </listitem>
+        <listitem>
+          <para>Renommez-le, puis appuyez sur <keycap>Entr&eacute;e</keycap>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>Mod&egrave;les et documents </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>cr&eacute;ation de documents</secondary>
+      </indexterm>
+      <para>Vous pouvez cr&eacute;er des mod&egrave;les &agrave; partir de documents que vous utilisez souvent. Par exemple, si vous &eacute;mettez souvent des factures, vous pouvez cr&eacute;er un document contenant une facture vierge et l'enregistrer sous le nom <literal>invoice.doc</literal> dans le dossier <literal>$HOME/Templates</literal>.</para>
+      <para>Pour acc&eacute;der aux dossier de mod&egrave;les, vous pouvez utiliser le navigateur. S&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Mod&egrave;les</guimenuitem></menuchoice>.</para>
+      <para>Le nom du mod&egrave;le s'affiche sous la forme d'une option du menu secondaire dans le menu <guilabel>Cr&eacute;er un document</guilabel>.</para>
+      <para>Vous pouvez &eacute;galement cr&eacute;er des sous-dossiers dans le dossier de mod&egrave;les. Ces sous-dossiers s'affichent sous la forme de menus secondaires dans le menu. </para>
+      <para>Les mod&egrave;les peuvent &eacute;galement &ecirc;tre partag&eacute;s. Pour cela, cr&eacute;ez un lien symbolique entre le dossier de mod&egrave;les et le dossier contenant les mod&egrave;les partag&eacute;s. </para>
+    </sect2>
+    <sect2 id="gosnautilus-514">
+      <title>Cr&eacute;ation d'un document</title>
+      <para>Si vous disposez de mod&egrave;les, vous pouvez cr&eacute;er un document &agrave; partir de l'un de ces mod&egrave;les. </para>
+      <para>Pour cr&eacute;er un document, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le dossier dans lequel le nouveau document doit &ecirc;tre cr&eacute;&eacute;. </para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Cr&eacute;er un document</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer avec le bouton droit sur l'arri&egrave;re-plan du volet d'affichage, puis choisir <guimenuitem>Cr&eacute;er un document</guimenuitem>.</para>
+          <para>Les noms de tous les mod&egrave;les disponibles s'affichent comme des options de menu secondaire dans le menu <guilabel>Cr&eacute;er un document</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Double-cliquez sur le nom du mod&egrave;le du document &agrave; cr&eacute;er. </para>
+        </listitem>
+        <listitem>
+          <para>Renommez le document et enregistrez-le dans le dossier appropri&eacute;.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>D&eacute;placement d'un fichier ou d'un dossier dans la corbeille </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>corbeille</secondary>
+        <see> corbeille</see>
+      </indexterm>
+      <indexterm>
+        <primary>corbeille</primary>
+        <secondary>d&eacute;placement de fichiers et de dossiers dans</secondary>
+      </indexterm>
+      <para>Pour d&eacute;placer un fichier ou un dossier dans la <guilabel>Corbeille</guilabel>, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le fichier ou le dossier &agrave; d&eacute;placer dans la <guilabel>Corbeille</guilabel> dans le volet d'affichage.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem> D&eacute;placer vers la corbeille</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer sur le fichier avec le bouton droit, puis s&eacute;lectionner <guimenuitem>D&eacute;placer dans la corbeille</guimenuitem>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Vous pouvez &eacute;galement aire glisser le fichier ou le dossier depuis le volet d'affichage vers l'objet <guilabel>Trash</guilabel> situ&eacute; sur l'arri&egrave;re-plan du bureau.</para>
+      <note>
+        <para>lorsque vous d&eacute;placez un fichier ou un dossier &agrave; partir d'un support amovible vers la <guilabel> Corbeille</guilabel>, celui-ci est stock&eacute; &agrave; l'emplacement de la <guilabel> Corbeille</guilabel> du support amovible. Vous devez vider la <guilabel>Corbeille</guilabel> pour supprimer d&eacute;finitivement le fichier ou le dossier du m&eacute;dia amovible.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>Suppression d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>suppression de fichiers ou de dossiers </secondary>
+      </indexterm>
+      <para>Lorsque vous supprimez un fichier ou un dossier, celui-ci n'est pas d&eacute;plac&eacute; dans la <guilabel>Corbeille</guilabel>, mais bien supprim&eacute; imm&eacute;diatement du syst&egrave;me de fichiers. L'option de menu <guimenuitem>Supprimer</guimenuitem> n'est disponible que si vous s&eacute;lectionnez l'option <guilabel>Inclure une commande de suppression sans d&eacute;placement des fichiers dans la corbeille</guilabel> dans la bo&icirc;te de dialogue <guilabel>Pr&eacute;f&eacute;rences des dossiers</guilabel>. </para>
+      <para>Pour supprimer un fichier ou un dossier, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le fichier ou le dossier &agrave; supprimer dans le volet d'affichage.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem> Supprimer</guimenuitem></menuchoice>. Vous pouvez &eacute;galement cliquer sur le fichier ou le dossier avec le bouton droit, puis s&eacute;lectionner <guimenuitem>Supprimer</guimenuitem>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>Cr&eacute;ation d'un lien symbolique vers un fichier ou un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary> cr&eacute;ation d'un lien symbolique</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>lien symbolique</primary>
+        <secondary>vers un fichier ou un dossier, cr&eacute;ation</secondary>
+      </indexterm>
+      <para>Un lien symbolique est un type sp&eacute;cial de lien qui pointe sur un autre fichier ou dossier. Lorsque vous ex&eacute;cutez une action sur un lien symbolique, celle-ci s'applique au fichier ou dossier sur lequel pointe le lien. Toutefois, lorsque vous supprimez un lien symbolique, seul celui-ci est supprim&eacute;, et non le fichier &agrave; proprement parler. </para>
+      <para>Pour cr&eacute;er un lien symbolique vers un fichier ou un dossier, s&eacute;lectionnez le fichier ou le dossier &agrave; lier. S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem>Cr&eacute;er un lien</guimenuitem></menuchoice>. Un lien vers le fichier ou le dossier est ajout&eacute; au dossier courant. </para>
+      <para>Vous pouvez &eacute;galement capturer l'&eacute;l&eacute;ment vers lequel vous souhaitez cr&eacute;er un lien, puis maintenir les touches <keycombo><keycap>Ctrl</keycap><keycap>Maj</keycap></keycombo> enfonc&eacute;es. Faites glisser l'&eacute;l&eacute;ment vers l'emplacement o&ugrave; l'&eacute;l&eacute;ment doit r&eacute;sider.</para>
+      <para>Par d&eacute;faut, le gestionnaire de fichiers ajoute un embl&egrave;me aux liens symboliques.</para>
+      <note>
+        <para>les autorisations d'un lien symbolique sont d&eacute;termin&eacute;es par le fichier ou le dossier auquel il renvoie.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-476">
+      <title>Affichage des propri&eacute;t&eacute;s d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire des fichiers</primary>
+        <secondary>affichage des propri&eacute;t&eacute;s</secondary>
+      </indexterm>
+      <para>Pour visualiser les propri&eacute;t&eacute;s d'un fichier ou d'un dossier, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le fichier ou le dossier dont vous souhaitez visualiser les propri&eacute;t&eacute;s. </para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem> Propri&eacute;t&eacute;s</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>&Agrave; l'aide de la bo&icirc;te de dialogue Propri&eacute;t&eacute;s, affichez les propri&eacute;t&eacute;s d'un fichier ou d'un dossier. </para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>Fermer</guibutton> pour fermer la bo&icirc;te de dialogue.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>Modification des autorisations </title>
+      <indexterm>
+        <primary>autorisations</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <para>Les autorisations sont des param&egrave;tres assign&eacute;s &agrave; chaque fichier et dossier d&eacute;terminant le type d'acc&egrave;s qu'en ont les utilisateurs. Le tableau suivant &eacute;num&egrave;re les autorisations que vous pouvez d&eacute;finir pour les fichiers et les dossiers ainsi que l'effet qu'elles ont sur ceux-ci.</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colwidth="29.62*"/>
+          <colspec colwidth="74.59*"/>
+          <colspec colname="colspec0" colwidth="74.59*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Droits</para>
+              </entry>
+              <entry>
+                <para>Fichier</para>
+              </entry>
+              <entry colname="colspec0">
+                <para>Dossier</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Lire </para>
+              </entry>
+              <entry valign="top">
+                <para>Autorisation de lire le fichier. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Autorisation de consulter le contenu du dossier.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>&Eacute;crire </para>
+              </entry>
+              <entry valign="top">
+                <para>Autorisation d'apporter des modifications au fichier. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Autorisation de cr&eacute;er et de supprimer des fichiers dans le dossier.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Ex&eacute;cuter </para>
+              </entry>
+              <entry valign="top">
+                <para>Autorisation d'ex&eacute;cuter le fichier comme un programme (uniquement si le fichier est un programme ou un script). </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Autorisation d'acc&eacute;der aux fichiers du r&eacute;pertoire.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Vous pouvez d&eacute;finir des autorisations pour diff&eacute;rents types d'utilisateur. Le tableau suivant &eacute;num&egrave;re les types d'utilisateur pour lesquels vous pouvez d&eacute;finir des autorisations : </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Cat&eacute;gorie d'utilisateur</para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Propri&eacute;taire </para>
+              </entry>
+              <entry valign="top">
+                <para>L'utilisateur ayant cr&eacute;&eacute; le fichier ou le dossier.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Groupe </para>
+              </entry>
+              <entry valign="top">
+                <para>Le groupe auquel appartient le propri&eacute;taire.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Autres </para>
+              </entry>
+              <entry valign="top">
+                <para>Tous les autres utilisateurs ne figurant pas dans le groupe auquel appartient le propri&eacute;taire.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><indexterm><primary>gestionnaire de fichiers</primary><secondary>modification des autorisations</secondary></indexterm><indexterm><primary> autorisations</primary><secondary>modification du fichier et du dossier</secondary></indexterm>Pour modifier les autorisations d'un fichier ou d'un dossier, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez le fichier ou le dossier &agrave; modifier. </para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem> Propri&eacute;t&eacute;s</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur l'onglet <guilabel>Autorisations</guilabel>. Dans l'onglet <guilabel>Autorisations</guilabel>, &agrave; l'aide des listes d&eacute;roulantes et des cases &agrave; cocher, modifiez les autorisations d'un fichier ou d'un dossier. Le tableau suivant d&eacute;crit les &eacute;l&eacute;ments de dialogue de l'onglet <guilabel>Autorisations</guilabel> : </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="37.78*"/>
+              <colspec colwidth="62.22*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>&Eacute;l&eacute;ment</para>
+                  </entry>
+                  <entry>
+                    <para>Description </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Propri&eacute;taire du fichier</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Pour modifier le propri&eacute;taire du fichier ou du dossier, s&eacute;lectionnez-le dans la liste d&eacute;roulante. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Groupe de fichiers</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>S&eacute;lectionnez dans la liste d&eacute;roulante le groupe auquel appartient le fichier ou le dossier que vous souhaitez modifier. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Propri&eacute;taire</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>S&eacute;lectionnez les autorisations que vous souhaitez appliquer au propri&eacute;taire du fichier ou du dossier.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Groupe</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>S&eacute;lectionnez les autorisations que vous souhaitez appliquer au groupe auquel appartient le propri&eacute;taire du fichier ou du dossier.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Autres</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>S&eacute;lectionnez les autorisations que vous souhaitez appliquer &agrave; tous les autres utilisateurs ne faisant pas partie du groupe auquel appartient le propri&eacute;taire.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Affichage du texte</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Affiche les autorisations que vous s&eacute;lectionnez &agrave; partir des options <guilabel> Lire</guilabel>, <guilabel>&Eacute;crire</guilabel> et <guilabel>Ex&eacute;cuter</guilabel> au format texte.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Affichage du num&eacute;ro</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Affiche les autorisations que vous s&eacute;lectionnez &agrave; partir des options <guilabel> Lire</guilabel>, <guilabel>&Eacute;crire</guilabel> et <guilabel>Ex&eacute;cuter</guilabel> au format texte.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Derni&egrave;re modification</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Affiche la date et l'heure de la derni&egrave;re modification du fichier ou du dossier.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>Fermer</guibutton> pour fermer la bo&icirc;te de dialogue.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>Ajout de remarques aux fichiers et aux dossiers</title>
+      <para>Vous pouvez ajouter des remarques aux fichiers et aux dossiers. Vous pouvez ajouter des remarques aux fichiers ou aux dossiers en recourant &agrave; l'une des mani&egrave;res suivantes :</para>
+      <itemizedlist>
+        <listitem>
+          <para>dans la bo&icirc;te de dialogue Propri&eacute;t&eacute;s</para>
+        </listitem>
+        <listitem>
+          <para>&agrave; partir de l'option <guilabel>Notes</guilabel> du volet lat&eacute;ral.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>Ajout d'une remarque &agrave; l'aide de la bo&icirc;te de dialogue Propri&eacute;t&eacute;s </title>
+        <indexterm>
+          <primary>remarques</primary>
+          <secondary>ajout aux fichiers et aux dossiers</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>remarques</secondary>
+          <tertiary>ajout</tertiary>
+        </indexterm>
+        <para>Pour ajouter une remarque &agrave; un fichier ou un dossier, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>S&eacute;lectionnez le fichier ou le dossier auquel vous souhaitez ajouter une remarque. </para>
+          </listitem>
+          <listitem>
+            <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem> Propri&eacute;t&eacute;s</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Cliquez sur l'onglet <guilabel>Notes</guilabel> dans la bo&icirc;te de dialogue Propri&eacute;t&eacute;s. Dans l'onglet <guilabel>Notes</guilabel>, entrez la remarque.</para>
+          </listitem>
+          <listitem>
+            <para>Cliquez sur <guibutton>Fermer</guibutton> pour fermer la bo&icirc;te de dialogue. Un embl&egrave;me de remarque est ajout&eacute; au fichier ou au dossier.</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary>notes</primary><secondary>suppression</secondary></indexterm><indexterm><primary>gestionnaire de fichiers</primary><secondary>notes</secondary><tertiary>suppression</tertiary></indexterm>Pour supprimer une note, supprimez son texte depuis l'onglet <guilabel>Notes</guilabel>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>Ajout d'une remarque &agrave; l'aide des remarques du volet lat&eacute;ral</title>
+        <para>Pour ajouter une remarque &agrave; un fichier ou un dossier, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>Ouvrez le fichier ou le dossier auquel vous souhaitez ajouter une remarque dans le volet d'affichage.</para>
+          </listitem>
+          <listitem>
+            <para>S&eacute;lectionnez <guilabel>Notes</guilabel> dans la liste d&eacute;roulante situ&eacute;e dans la partie sup&eacute;rieure du volet lat&eacute;ral. Pour afficher le volet lat&eacute;ral, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Volet lat&eacute;ral</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Entrez la remarque dans le volet lat&eacute;ral. L'embl&egrave;me d'une remarque est ajout&eacute; au fichier ou au dossier du volet d'affichage et l'ic&ocirc;ne d'une remarque est ajout&eacute;e au volet lat&eacute;ral. Vous pouvez cliquer sur cette ic&ocirc;ne pour afficher la remarque.</para>
+          </listitem>
+        </orderedlist>
+        <para>Pour supprimer une note, supprimez-en le texte dans l'&eacute;l&eacute;ment <guilabel>Notes</guilabel> du volet lat&eacute;ral.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>Utilisation de la Corbeille </title>
+      <indexterm>
+        <primary>Corbeille</primary>
+        <secondary>introduction</secondary>
+      </indexterm>
+      <para>Vous pouvez d&eacute;placer les &eacute;l&eacute;ments suivants dans la <guilabel>Corbeille</guilabel> :</para>
+      <itemizedlist>
+        <listitem>
+          <para>Fichiers</para>
+        </listitem>
+        <listitem>
+          <para>dossiers ;</para>
+        </listitem>
+        <listitem>
+          <para>des objets de l'arri&egrave;re-plan du bureau.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Si vous devez r&eacute;cup&eacute;rer un fichier dans la <guilabel>Corbeille</guilabel>, vous pouvez afficher celle-ci et en retirer le fichier. Lorsque vous videz la <guilabel>Corbeille</guilabel>, vous supprimez son contenu de mani&egrave;re permanente. </para>
+      <sect3 id="gosnautilus-107">
+        <title>Affichage de la corbeille </title>
+        <indexterm>
+          <primary>corbeille</primary>
+          <secondary> affichage</secondary>
+        </indexterm>
+        <para>Vous pouvez afficher le contenu de la <guilabel>Corbeille</guilabel> en ayant recours &agrave; l'une des m&eacute;thodes suivantes :</para>
+        <itemizedlist>
+          <listitem>
+            <para>&Agrave; partir d'une fen&ecirc;tre du gestionnaire de fichiers</para>
+            <para>S&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Corbeille</guimenuitem></menuchoice>. Le contenu de la <guilabel>Corbeille</guilabel> s'affiche dans la fen&ecirc;tre.</para>
+          </listitem>
+          <listitem>
+            <para>&Agrave; partir de l'arri&egrave;re-plan du bureau :</para>
+            <para>Double-cliquez sur l'objet <guilabel>Corbeille</guilabel> situ&eacute; sur l'arri&egrave;re-plan du bureau.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>Purge de la poubelle </title>
+        <indexterm>
+          <primary>corbeille</primary>
+          <secondary> purge</secondary>
+        </indexterm>
+        <para>Vous pouvez vider le contenu de la <guilabel>Corbeille</guilabel> en recourant &agrave; l'une des m&eacute;thodes suivantes :</para>
+        <itemizedlist>
+          <listitem>
+            <para>&Agrave; partir d'une fen&ecirc;tre du gestionnaire de fichiers</para>
+            <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Vider la corbeille</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>&Agrave; partir de l'arri&egrave;re-plan du bureau :</para>
+            <para>Cliquez avec le bouton droit sur l'objet <guilabel>Corbeille</guilabel>, puis s&eacute;lectionnez <guimenuitem>Vider la corbeille</guimenuitem>.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>Modification de l'apparence des fichiers et des dossiers </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>modification de l'apparence des fichiers et des dossiers</secondary>
+    </indexterm>
+    <para>Le gestionnaire de fichiers vous permet de modifier l'apparence de vos fichiers et de vos dossiers de plusieurs mani&egrave;res, comme cela est d&eacute;crit dans les rubriques suivantes.</para>
+    <sect2 id="gosnautilus-112">
+      <title>Ajout d'un embl&egrave;me &agrave; un fichier ou &agrave; un dossier </title>
+      <indexterm>
+        <primary>embl&egrave;mes</primary>
+        <secondary>ajout &agrave; un fichier</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>embl&egrave;mes</primary>
+        <secondary>ajout &agrave; un dossier</secondary>
+      </indexterm>
+      <para>Pour ajouter un embl&egrave;me &agrave; un &eacute;l&eacute;ment, proc&eacute;dez comme suit : </para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez l'&eacute;l&eacute;ment auquel ajouter un embl&egrave;me.</para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur l'&eacute;l&eacute;ment avec le bouton droit, puis s&eacute;lectionnez <guimenuitem>Propri&eacute;t&eacute;s</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur l'onglet <guilabel>Embl&egrave;mes</guilabel> dans la bo&icirc;te de dialogue Propri&eacute;t&eacute;s.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez l'embl&egrave;me &agrave; ajouter &agrave; l'&eacute;l&eacute;ment.</para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>Fermer</guibutton> pour fermer la bo&icirc;te de dialogue.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>Ajout d'un nouvel embl&egrave;me </title>
+      <indexterm>
+        <primary>embl&egrave;mes</primary>
+        <secondary>ajout de nouveaux</secondary>
+      </indexterm>
+      <para>Pour ajouter un nouvel embl&egrave;me, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>&Eacute;dition</guimenu><guimenuitem> Arri&egrave;re-plans et embl&egrave;mes</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur le bouton <guibutton>Embl&egrave;me</guibutton>, puis sur le bouton <guibutton>Ajouter un nouvel embl&egrave;me</guibutton> dans la bo&icirc;te de dialogue <guilabel>Arri&egrave;re-plans et embl&egrave;mes</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Entrez un nom pour l'embl&egrave;me dans la zone de texte <guilabel>Mot-cl&eacute;</guilabel> de la bo&icirc;te de dialogue <guilabel>Cr&eacute;er un nouvel embl&egrave;me</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur le bouton <guilabel>Image</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>Parcourir </guibutton> dans la bo&icirc;te de dialogue <guilabel>S&eacute;lectionnez un fichier pour cr&eacute;er le nouvel embl&egrave;me</guilabel>. Une fois l'embl&egrave;me s&eacute;lectionn&eacute;, cliquez sur <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>OK</guibutton> dans la bo&icirc;te de dialogue <guilabel>Cr&eacute;ation d'un nouvel embl&egrave;me</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>Modification de l'ic&ocirc;ne d'un fichier ou d'un dossier </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary> ic&ocirc;nes</secondary>
+        <tertiary>modification</tertiary>
+      </indexterm>
+      <para>Pour modifier l'ic&ocirc;ne qui repr&eacute;sente un fichier ou un dossier distinct, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez un fichier ou un dossier.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem> Propri&eacute;t&eacute;s</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Dans l'onglet <guilabel>G&eacute;n&eacute;ral</guilabel> de la bo&icirc;te de dialogue Propri&eacute;t&eacute;s, cliquez sur le bouton <guibutton>S&eacute;lectionner une ic&ocirc;ne personnalis&eacute;e</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Celle-ci permet de s&eacute;lectionner l'ic&ocirc;ne destin&eacute;e &agrave; repr&eacute;senter le fichier ou le dossier. Cliquez sur <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>Fermer</guibutton> pour fermer la bo&icirc;te de dialogue.</para>
+        </listitem>
+      </orderedlist>
+      <para>Pour restaurer l'ic&ocirc;ne par d&eacute;faut sp&eacute;cifi&eacute;e dans l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application> apr&egrave;s l'avoir personnalis&eacute;e, cliquez avec le bouton droit sur l'ic&ocirc;ne, puis choisissez <guimenuitem>Supprimer l'ic&ocirc;ne personnalis&eacute;e</guimenuitem>. Vous pouvez &eacute;galement cliquer sur le bouton <guilabel>Supprimer l'ic&ocirc;ne personnalis&eacute;e</guilabel> de la bo&icirc;te de dialogue Propri&eacute;t&eacute;s.</para>
+      <para>Pour changer l'ic&ocirc;ne qui repr&eacute;sente un type de fichier, utilisez l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>Modification de la taille des &eacute;l&eacute;ments d'une vue </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>zoom avant et zoom arri&egrave;re</secondary>
+      </indexterm>
+      <para>Vous pouvez modifier la taille des &eacute;l&eacute;ments d'une vue. Cette fonction est disponible si la vue affiche un fichier ou un dossier. Pour l'utiliser, vous pouvez recourir &agrave; l'une des m&eacute;thodes suivantes :</para>
+      <itemizedlist>
+        <listitem>
+          <para>Pour agrandir des &eacute;l&eacute;ments d'une vue, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Zoom avant</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Pour les r&eacute;duire, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Zoom arri&egrave;re</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Pour restaurer leur taille normale, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>Taille normale</guimenuitem></menuchoice>. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Les boutons de zoom de la barre d'emplacement vous permettent &eacute;galement de modifier la taille des &eacute;l&eacute;ments d'une vue. Le <xref linkend="gosnautilus-TBL-42"/> d&eacute;crit l'utilisation des boutons de zoom.</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>Boutons de zoom</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Bouton</para>
+              </entry>
+              <entry>
+                <para>Nom du bouton </para>
+              </entry>
+              <entry>
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Bouton R&eacute;duire</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Bouton <guibutton>Zoom arri&egrave;re</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Ce bouton permet de r&eacute;duire la taille des &eacute;l&eacute;ments d'une vue.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Bouton Taille normale. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Bouton <guibutton>Taille normale</guibutton> </para>
+              </entry>
+              <entry valign="top">
+                <para>Ce bouton permet de restaurer la taille normale des &eacute;l&eacute;ments d'une vue. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Bouton Agrandir.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Bouton <guibutton>Zoom avant</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Ce bouton permet d'agrandir la taille des &eacute;l&eacute;ments d'une vue.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Le gestionnaire de fichiers conserve la taille des &eacute;l&eacute;ments d'un dossier particulier. Lorsque vous rouvrez celui-ci, son contenu s'affiche avec la taille s&eacute;lectionn&eacute;e. En d'autres termes, lorsque vous modifiez la taille des &eacute;l&eacute;ments d'un dossier, vous personnalisez celui-ci afin que son contenu s'affiche avec cette taille. Pour restaurer la taille par d&eacute;faut des &eacute;l&eacute;ments, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem> R&eacute;tablir les param&egrave;tres par d&eacute;faut de la vue</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>Utilisation des vues pour l'affichage des fichiers et dossiers </title>
+      <indexterm>
+        <primary>afficheurs</primary>
+      </indexterm>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>vues</secondary>
+        <tertiary>introduction</tertiary>
+      </indexterm>
+      <para>Dans le gestionnaire de fichiers, il existe plusieurs mani&egrave;res d'afficher le contenu de vos fichiers. Le gestionnaire de fichiers contient des afficheurs vous permettant de visualiser certains types de fichier dans le volet d'affichage. Par exemple, vous pouvez utiliser un visionneur de pages Web pour visualiser des fichiers HTML et un visionneur de texte pour consulter des fichiers en texte standard.</para>
+      <para>Vous pouvez &eacute;galement utiliser le gestionnaire de fichiers pour ouvrir un fichier dans l'application appropri&eacute;e. Pour de plus amples informations, reportez-vous &agrave; la rubrique <xref linkend="gosnautilus-28"/>.</para>
+      <para>Le gestionnaire de fichiers contient &eacute;galement des vues vous permettant d'afficher le contenu de vos dossiers de diff&eacute;rentes mani&egrave;res. Vous pouvez, par exemple, recourir aux types de vues suivants : </para>
+      <itemizedlist>
+        <listitem>
+          <para>Vue Ic&ocirc;nes</para>
+          <para>affiche les &eacute;l&eacute;ments du dossier sous la forme d'ic&ocirc;nes. </para>
+        </listitem>
+        <listitem>
+          <para>Vue Liste :</para>
+          <para>affiche les &eacute;l&eacute;ments du dossier sous la forme d'une liste. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Le menu <guilabel>Vue</guilabel> permet de choisir le mode d'affichage d'un fichier ou d'un dossier. Vous pouvez &eacute;galement utiliser la zone de liste d&eacute;roulante <guilabel>Voir en tant que</guilabel> pour choisir comment afficher un fichier ou un dossier. Lorsque vous affichez un dossier, vous pouvez sp&eacute;cifier comment disposer ou trier les &eacute;l&eacute;ments de celui-ci. Vous pouvez modifier la taille des &eacute;l&eacute;ments du volet d'affichage. Les rubriques suivantes d&eacute;crivent l'utilisation de la vue Ic&ocirc;nes, de la vue Liste et des vues Fichiers.</para>
+      <sect3 id="gosnautilus-100">
+        <title>S&eacute;lection d'une vue pour l'affichage d'un fichier ou d'un dossier </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>vues</secondary>
+          <tertiary> s&eacute;lection</tertiary>
+        </indexterm>
+        <para>S&eacute;lectionnez le type de vue destin&eacute; &agrave; afficher le contenu d'un fichier ou d'un dossier dans le menu <guilabel>Vue</guilabel>. </para>
+        <para>Vous pouvez &eacute;galement suivre le chemin de menus <menuchoice><guimenu>Vue</guimenu><guimenuitem>Voir en tant que</guimenuitem></menuchoice>. S&eacute;lectionnez la vue &agrave; utiliser dans la bo&icirc;te de dialogue <guilabel>Ouvrir avec un autre visionneur</guilabel>, puis cliquez sur le bouton <guibutton>Choisir</guibutton>. </para>
+        <para>Vous pouvez &eacute;galement choisir le type de vue souhait&eacute; dans la zone de liste d&eacute;roulante <guilabel>Voir en tant que</guilabel>. Celle-ci se trouve &agrave; droite de la barre d'emplacement.</para>
+        <para>Il est possible de choisir une vue diff&eacute;rente pour chaque dossier. Le gestionnaire de fichiers conserve la vue que vous choisissez pour un dossier particulier. La prochaine fois que vous afficherez ce dossier, le gestionnaire de fichiers l'affichera sous cette m&ecirc;me vue. Pour restaurer la vue par d&eacute;faut sp&eacute;cifi&eacute;e dans vos pr&eacute;f&eacute;rences, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>R&eacute;tablir les param&egrave;tres par d&eacute;faut de la vue</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>Pr&eacute;sentation des fichiers dans la vue Ic&ocirc;nes </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>vue Ic&ocirc;nes</secondary>
+          <tertiary>pr&eacute;sentation des fichiers dans</tertiary>
+        </indexterm>
+        <para>Lorsque vous affichez le contenu d'un dossier dans la vue Ic&ocirc;nes, vous pouvez sp&eacute;cifier la pr&eacute;sentation de ses &eacute;l&eacute;ments. Pour ce faire, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guisubmenu>R&eacute;organiser les &eacute;l&eacute;ments</guisubmenu></menuchoice>. Le sous-menu <guisubmenu>R&eacute;organiser les &eacute;l&eacute;ments</guisubmenu> contient les sections suivantes :</para>
+        <itemizedlist>
+          <listitem>
+            <para>La section sup&eacute;rieure contient une option vous permettant de disposer vos fichiers manuellement.</para>
+          </listitem>
+          <listitem>
+            <para>La section centrale contient des options permettant de trier les fichiers automatiquement.</para>
+          </listitem>
+          <listitem>
+            <para>La section inf&eacute;rieure contient des options permettant de modifier la pr&eacute;sentation des fichiers.</para>
+          </listitem>
+        </itemizedlist>
+        <para>S&eacute;lectionnez les options appropri&eacute;es dans le sous-menu, tel que le d&eacute;crit le tableau suivant : </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Option</para>
+                </entry>
+                <entry>
+                  <para>Description </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Manuellement</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Cette option permet de disposer les &eacute;l&eacute;ments manuellement. Pour ce faire, faites-les glisser vers l'emplacement requis dans le volet d'affichage.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Par nom</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Cette option permet de trier les &eacute;l&eacute;ments dans l'ordre alphab&eacute;tique en fonction de leur nom. L'ordre des &eacute;l&eacute;ments ne tient pas compte de la casse. Si le gestionnaire de fichiers est configur&eacute; pour afficher des fichiers masqu&eacute;s, ceux-ci sont affich&eacute;s en dernier.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Par taille</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Cette option permet de trier les &eacute;l&eacute;ments par taille, dans l'ordre d&eacute;croissant. Dans ce cas, les dossiers sont tri&eacute;s en fonction du nombre d'&eacute;l&eacute;ments qu'ils contiennent, et non en fonction de la taille totale de ceux-ci.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Par type</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Cette option permet de trier les &eacute;l&eacute;ments par type d'objet, dans l'ordre alphab&eacute;tique. Les &eacute;l&eacute;ments sont class&eacute;s par ordre alphab&eacute;tique en fonction de la description de leur <firstterm>type MIME</firstterm> dans l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application>. Le type MIME permet d'identifier le format d'un fichier et aux applications de lire ce ficher. Ainsi, une application de courrier &eacute;lectronique peut utiliser le <literal>image/png</literal> type MIME afin de d&eacute;tecter qu'un fichier PNG (Portable Networks Graphic) est attach&eacute; au message.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para><guilabel>Par date de modification</guilabel> </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Cette option permet de trier les &eacute;l&eacute;ments en fonction de la date de leur derni&egrave;re modification. L'&eacute;l&eacute;ment modifi&eacute; le dernier appara&icirc;t en premi&egrave;re position.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Par embl&egrave;mes</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Cette option permet de trier les &eacute;l&eacute;ments en fonction des embl&egrave;mes qui leur ont &eacute;t&eacute; ajout&eacute;s. Ils sont tri&eacute;s par nom d'embl&egrave;me, dans l'ordre alphab&eacute;tique. Les &eacute;l&eacute;ments ne comportant pas d'embl&egrave;me sont class&eacute;s apr&egrave;s les &eacute;l&eacute;ments qui en poss&egrave;dent.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Agencement condens&eacute;</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Cette option permet de disposer les &eacute;l&eacute;ments de mani&egrave;re &agrave; les rapprocher. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Tri inverse</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Cette option permet d'inverser l'ordre de l'option en fonction de laquelle les &eacute;l&eacute;ments sont tri&eacute;s. Par exemple, si le tri s'effectue en fonction du nom, s&eacute;lectionnez l'option <guilabel>Inverser l'ordre</guilabel> pour trier les &eacute;l&eacute;ments dans l'ordre alphab&eacute;tique inverse.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Le gestionnaire de fichiers conserve la disposition des &eacute;l&eacute;ments d'un dossier particulier. Lorsque vous rouvrez celui-ci, son contenu s'affiche selon la pr&eacute;sentation s&eacute;lectionn&eacute;e. En d'autres termes, lorsque vous sp&eacute;cifiez la pr&eacute;sentation d'un dossier, vous personnalisez celui-ci pour qu'il affiche les &eacute;l&eacute;ments de cette mani&egrave;re. Pour restaurer les valeurs par d&eacute;fauts sp&eacute;cifi&eacute;es dans vos pr&eacute;f&eacute;rences, s&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem>R&eacute;tablir les param&egrave;tres par d&eacute;faut de la vue</guimenuitem></menuchoice>. </para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>Redimensionnement d'une ic&ocirc;ne en vue Ic&ocirc;nes </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary> ic&ocirc;nes</secondary>
+          <tertiary>redimensionnement</tertiary>
+        </indexterm>
+        <para>La vue Ic&ocirc;nes permet de modifier la taille de l'ic&ocirc;ne qui repr&eacute;sente un &eacute;l&eacute;ment affich&eacute;. Pour ce faire, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>Cliquez avec le bouton droit sur l'&eacute;l&eacute;ment &agrave; redimensionner, puis s&eacute;lectionnez <guimenuitem> Redimensionner l'ic&ocirc;ne</guimenuitem>. Un rectangle appara&icirc;t autour de l'&eacute;l&eacute;ment, avec une poign&eacute;e &agrave; chaque coin.</para>
+          </listitem>
+          <listitem>
+            <para>Capturez l'une des poign&eacute;es, puis faites glisser l'ic&ocirc;ne jusqu'&agrave; obtention de la taille requise.</para>
+            <para>Pour restaurer la taille initiale de l'ic&ocirc;ne, cliquez avec le bouton droit sur celle-ci, puis s&eacute;lectionnez <guimenuitem>Restaurer l'ic&ocirc;ne &agrave; sa taille initiale</guimenuitem>. </para>
+          </listitem>
+        </orderedlist>
+        <para>Vous pouvez &eacute;galement redimensionner des objets sur l'arri&egrave;re-plan du bureau.</para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>Modification du comportement d'une vue </title>
+        <indexterm>
+          <primary>gestionnaire de fichiers</primary>
+          <secondary>vues</secondary>
+          <tertiary> modification du comportement</tertiary>
+        </indexterm>
+        <para>Vous pouvez modifier le comportement d'une vue en recourant &agrave; l'une des m&eacute;thodes suivantes :</para>
+        <itemizedlist>
+          <listitem>
+            <para>en sp&eacute;cifiant qu'il s'agit de la vue par d&eacute;faut pour un fichier ou un dossier particulier ;</para>
+          </listitem>
+          <listitem>
+            <para>en sp&eacute;cifiant qu'il s'agit de la vue par d&eacute;faut pour un type de fichiers ou pour tous les dossiers ;</para>
+          </listitem>
+          <listitem>
+            <para>en sp&eacute;cifiant que la vue est un &eacute;l&eacute;ment du sous-menu <guisubmenu>Voir en tant que</guisubmenu> pour un fichier ou un dossier particulier ;</para>
+          </listitem>
+          <listitem>
+            <para>en sp&eacute;cifiant que la vue est un &eacute;l&eacute;ment du sous-menu <guisubmenu>Voir en tant que</guisubmenu> pour un type de fichier particulier ou pour tous les dossiers ; </para>
+          </listitem>
+          <listitem>
+            <para>en sp&eacute;cifiant que la vue n'est pas un &eacute;l&eacute;ment du sous-menu <guisubmenu>Voir en tant que</guisubmenu> pour un fichier ou un dossier particulier.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Pour modifier le comportement d'une vue, proc&eacute;dez comme suit :</para>
+        <orderedlist>
+          <listitem>
+            <para>S&eacute;lectionnez <menuchoice><guimenu>Vue</guimenu><guimenuitem> Voir en tant que</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>S&eacute;lectionnez l'affichage que vous souhaitez modifier dans le tableau de la bo&icirc;te de dialogue <guilabel>Ouvrir &agrave; l'aide d'un autre visionneur</guilabel>.</para>
+          </listitem>
+          <listitem>
+            <para>Cliquez sur le bouton <guibutton>Modifier</guibutton>. Le tableau suivant d&eacute;crit la bo&icirc;te de dialogue <guilabel>Modifier</guilabel> :</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Option</para>
+                    </entry>
+                    <entry>
+                      <para>Description </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Inclure dans le menu pour les &eacute;l&eacute;ments de type <replaceable>nom_&eacute;l&eacute;ment</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette option permet d'inclure la vue dans le sous-menu <guisubmenu>Voir en tant que</guisubmenu> destin&eacute; &agrave; ce type d'&eacute;l&eacute;ment.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Utiliser par d&eacute;faut pour les &eacute;l&eacute;ments de type <replaceable> nom_&eacute;l&eacute;ment</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette option permet d'utiliser cette vue par d&eacute;faut pour ce type d'&eacute;l&eacute;ment.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Inclure dans le menu uniquement pour <replaceable>nom_&eacute;l&eacute;ment</replaceable></guilabel>. </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette option permet d'inclure la vue dans le sous-menu <guisubmenu>Voir en tant que</guisubmenu> pour cet &eacute;l&eacute;ment uniquement.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Utiliser par d&eacute;faut uniquement pour <replaceable> nom_&eacute;l&eacute;ment</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette option permet d'utiliser cette vue par d&eacute;faut pour cet &eacute;l&eacute;ment uniquement.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Ne pas inclure dans le menu les &eacute;l&eacute;ments de type <replaceable> nom_&eacute;l&eacute;ment</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Cette option permet d'exclure la vue du sous-menu <guisubmenu>Voir en tant que</guisubmenu> pour ce type d'&eacute;l&eacute;ment.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Cliquez sur <guibutton>Valider</guibutton>, puis sur <guibutton>Annuler</guibutton> pour fermer la bo&icirc;te de dialogue <guilabel>Ouvrir avec un autre afficheur</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>vous pouvez &eacute;galement modifier les actions associ&eacute;es &agrave; un type de fichier dans la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel> dans l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application>. Pour ouvrir la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel>, cliquez sur le bouton <guibutton>Aller &agrave;</guibutton>. </para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>Affectation d'actions &agrave; des fichiers </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>affectation d'actions &agrave; des fichiers</secondary>
+    </indexterm>
+    <para>Lorsque vous ouvrez un fichier, le gestionnaire de fichiers effectue l'action par d&eacute;faut associ&eacute;e &agrave; ce type de fichier. L'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application> contient un tableau des types de fichiers avec les extensions et les actions par d&eacute;faut qui leur sont associ&eacute;es. Ce tableau pr&eacute;sente ce qui se produit lorsque vous cliquez deux fois sur un fichier du gestionnaire de fichiers. </para>
+    <para>Vous pouvez &eacute;galement utiliser le gestionnaire de fichiers pour modifier les actions associ&eacute;es &agrave; un fichier ou &agrave; un type de fichiers particulier. </para>
+    <para>Vous pouvez utiliser l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application> pour ex&eacute;cuter les types de t&acirc;ches suivants :</para>
+    <itemizedlist>
+      <listitem>
+        <para>Sp&eacute;cifier l'action par d&eacute;faut pour un type de fichier. Vous pouvez &eacute;galement modifier celle-ci dans le gestionnaire de fichiers. </para>
+      </listitem>
+      <listitem>
+        <para>Associer un type de fichier &agrave; une ou plusieurs applications. L'action par d&eacute;faut peut sp&eacute;cifier que le fichier doit &ecirc;tre ouvert dans une application associ&eacute;e au type de fichier.</para>
+      </listitem>
+      <listitem>
+        <para>Associer un type de fichier &agrave; un ou plusieurs visionneurs. L'action par d&eacute;faut peut sp&eacute;cifier que le fichier doit s'ouvrir dans un visionneur associ&eacute; au type de fichier.</para>
+      </listitem>
+      <listitem>
+        <para>Associer une extension de fichier &agrave; un type MIME. Le type MIME sp&eacute;cifie le format du fichier de mani&egrave;re &agrave; ce que celui-ci puisse &ecirc;tre lu par des navigateurs Internet et des applications de messagerie &eacute;lectronique.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>Modification d'actions </title>
+      <indexterm>
+        <primary>gestionnaire de fichiers</primary>
+        <secondary>modification d'actions</secondary>
+      </indexterm>
+      <para>Vous pouvez modifier les actions associ&eacute;es &agrave; un fichier ou &agrave; un type de fichier. Vous pouvez :</para>
+      <itemizedlist>
+        <listitem>
+          <para>sp&eacute;cifier qu'il s'agit de l'action par d&eacute;faut pour un fichier particulier ; </para>
+        </listitem>
+        <listitem>
+          <para>sp&eacute;cifier qu'il s'agit de l'action par d&eacute;faut pour un type de fichier particulier ;</para>
+        </listitem>
+        <listitem>
+          <para>sp&eacute;cifier que l'action est un &eacute;l&eacute;ment du sous-menu <guisubmenu>Ouvrir avec</guisubmenu>, associ&eacute; &agrave; un fichier particulier ;</para>
+        </listitem>
+        <listitem>
+          <para>sp&eacute;cifier que l'action est un &eacute;l&eacute;ment du sous-menu <guisubmenu>Ouvrir avec</guisubmenu>, associ&eacute; &agrave; un type de fichier particulier ;</para>
+        </listitem>
+        <listitem>
+          <para>sp&eacute;cifier que l'action n'est pas un &eacute;l&eacute;ment du sous-menu <guisubmenu>Ouvrir avec</guisubmenu>, associ&eacute; &agrave; un type de fichier particulier. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Pour ce faire, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>Dans le volet d'affichage, s&eacute;lectionnez le fichier dont l'action doit &ecirc;tre modifi&eacute;e. Si vous souhaitez modifier une action associ&eacute;e &agrave; un type de fichier, s&eacute;lectionnez un fichier de ce type.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Fichier</guimenu><guimenuitem> Ouvrir avec</guimenuitem></menuchoice>.</para>
+        </listitem>
+<!---<listitem>
+<para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with
+Other Viewer</guilabel> dialog is displayed. </para></listitem>-->
+        <listitem>
+          <para>S&eacute;lectionnez <guimenuitem>Autre application</guimenuitem>. Une bo&icirc;te de dialogue <guilabel> Ouvrir avec une autre application</guilabel> s'affiche. </para>
+        </listitem>
+        <listitem>
+          <para>Dans le tableau propos&eacute;, s&eacute;lectionnez l'application ou le visionneur dont le comportement doit &ecirc;tre modifi&eacute;.</para>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur le bouton <guibutton>Modifier</guibutton>. Le tableau suivant d&eacute;crit la bo&icirc;te de dialogue <guilabel>Modifier</guilabel> :</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Option</para>
+                  </entry>
+                  <entry>
+                    <para>Description </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Inclure dans le menu pour les &eacute;l&eacute;ments de type <replaceable> type_fichier</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Cette option permet d'inclure l'application ou le visionneur dans le sous-menu de ce type de fichier <guisubmenu>Ouvrir avec</guisubmenu>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Utiliser par d&eacute;faut pour les &eacute;l&eacute;ments de type <replaceable> type_fichier</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Cette option permet d'utiliser cette application ou cet afficheur par d&eacute;faut pour ce type de fichier.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Inclure dans le menu uniquement pour <replaceable>nom_fichier</replaceable></guilabel>. </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Cette option permet d'inclure l'application ou l'afficheur dans le sous-menu <guisubmenu> Ouvrir avec</guisubmenu> de ce fichier, mais pas d'autres fichiers de ce type.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Utiliser par d&eacute;faut uniquement pour <replaceable> nom_fichier</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Cette option permet d'utiliser l'application ou l'afficheur en tant qu'action par d&eacute;faut de ce fichier, et non pour d'autres fichiers de ce type.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Ne pas inclure dans le menu les &eacute;l&eacute;ments de type <replaceable> type_fichier</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Cette option permet d'exclure l'application ou l'afficheur de ce type de fichier du sous-menu <guisubmenu>Ouvrir avec</guisubmenu> .</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Cliquez sur <guibutton>OK</guibutton>, puis sur <guibutton>Annuler</guibutton> pour fermer la bo&icirc;te de dialogue. </para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>vous pouvez &eacute;galement modifier les actions associ&eacute;es &agrave; un type de fichier dans la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel> dans l'outil de pr&eacute;f&eacute;rences d'<application>associations de fichiers</application>. Pour ouvrir la bo&icirc;te de dialogue <guilabel>&Eacute;diter un type de fichier</guilabel>, cliquez sur le bouton <guibutton>Aller &agrave;</guibutton>. </para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-475">
+    <title>Gravure de CD </title>
+    <indexterm>
+      <primary>gestionnaire de fichiers</primary>
+      <secondary>gravure de CD</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>CD, gravure</primary>
+    </indexterm>
+    <indexterm>
+      <primary>gravure de CD</primary>
+    </indexterm>
+    <indexterm>
+      <primary>gravure de CD</primary>
+      <see>gravure de CD</see>
+    </indexterm>
+    <para>Le gestionnaire de fichiers dispose d'un emplacement dans lequel vous pouvez copier des fichiers et des dossiers que vous souhaitez graver sur un CD. Vous pouvez graver facilement le contenu de cet emplacement sur un CD.</para>
+    <para>Pour graver un CD, proc&eacute;dez comme suit :</para>
+    <orderedlist>
+      <listitem>
+        <para>Dans une fen&ecirc;tre du navigateur de fichiers, s&eacute;lectionnez <menuchoice><guimenu>Aller</guimenu><guimenuitem>Cr&eacute;ateur de CD</guimenuitem></menuchoice>. Le gestionnaire de fichiers ouvre l'emplacement  <guilabel>burn:</guilabel><guilabel>///</guilabel>, sp&eacute;cifique &agrave; la gravure de CD. </para>
+      </listitem>
+      <listitem>
+        <para>Dans la fen&ecirc;tre de l'explorateur, copiez les fichiers et les dossiers que vous voulez enregistrer sur le CD dans l'emplacement <guilabel>burn:</guilabel><guilabel>///</guilabel>.</para>
+      </listitem>
+      <listitem>
+        <para>Ins&eacute;rez un CD enregistrable dans le lecteur CD de votre syst&egrave;me. </para>
+      </listitem>
+      <listitem>
+        <para>Choisissez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>&Eacute;crire sur le CD</guimenuitem></menuchoice>. Vous pouvez &eacute;galement double-cliquer sur le bouton <guibutton>&Eacute;crire sur le CD</guibutton> de la barre d'outils.</para>
+      </listitem>
+      <listitem>
+        <para>&Agrave; l'aide de la bo&icirc;te de dialogue <guilabel>Graver les fichiers sur un enregistreur de CD</guilabel>, indiquez comment vous souhaitez graver le CD en fournissant les informations suivantes :</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>&Eacute;l&eacute;ment de la bo&icirc;te de dialogue</para>
+                </entry>
+                <entry>
+                  <para>Description </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Cible &agrave; graver</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>S&eacute;lectionnez dans la liste d&eacute;roulante le p&eacute;riph&eacute;rique sur lequel vous souhaitez graver le CD. Pour cr&eacute;er un fichier image du CD pour les fichiers et les dossiers, s&eacute;lectionnez l'option <guilabel>Fichier image</guilabel>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Vitesse d'&eacute;criture</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>S&eacute;lectionnez la vitesse d'&eacute;criture du CD dans la liste d&eacute;roulante.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Nom du CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Entrez le nom du CD dans la zone de texte.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Effacer le CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>S&eacute;lectionnez cette option pour effacer le contenu actuel du CD.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>&Eacute;jecter le CD &agrave; la fin</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>S&eacute;lectionnez cette option pour &eacute;jecter le CD du lecteur une fois l'&eacute;criture termin&eacute;e.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>R&eacute;utiliser ces fichiers pour un autre CD </guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>S&eacute;lectionnez cette option si vous ne souhaitez pas graver les fichiers et les dossiers sur un autre CD. Si vous s&eacute;lectionnez cette option, les fichiers et les dossiers ne sont pas supprim&eacute;s de l'emplacement <guilabel>burn:</guilabel><guilabel>/// </guilabel> une fois le CD grav&eacute;. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </listitem>
+      <listitem>
+        <para>Cliquez sur le bouton <guibutton>Graver les fichiers sur le CD</guibutton>. </para>
+        <para>Si vous avez s&eacute;lectionn&eacute; l'option <guilabel>Image fichier</guilabel> dans la liste d&eacute;roulante <guilabel>Cible &agrave; graver</guilabel>, la bo&icirc;te de dialogue <guilabel>S&eacute;lectionner un nom de fichier pour l'image du CD</guilabel> s'affiche. &Agrave; l'aide de la bo&icirc;te de dialogue, s&eacute;lectionnez l'emplacement o&ugrave; vous souhaitez enregistrer le fichier image de CD. Par d&eacute;faut, les fichiers image de CD ont une extension <filename>.iso</filename>.</para>
+        <para>La bo&icirc;te de dialogue <guilabel>Graver un CD</guilabel> s'affiche. Au cours de la gravure du CD ou de la cr&eacute;ation du fichier image du CD, un message indiquant que le processus est termin&eacute; s'affiche dans la bo&icirc;te de dialogue.</para>
+        <para>Si vous avez cr&eacute;&eacute; un fichier image de CD, vous pouvez le graver sur un CD. Pour ce faire, cliquez dessus avec le bouton droit, puis choisissez <guimenuitem>Graver sur CD</guimenuitem> dans le menu contextuel.</para>
+        <para>Si vous ne s&eacute;lectionnez pas l'option <guilabel>R&eacute;utiliser ces fichiers pour un autre CD</guilabel>, les fichiers et les dossiers sont supprim&eacute;s de l'emplacement <guilabel>burn:</guilabel>.<guilabel>///</guilabel>.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>

@@ -1,0 +1,1061 @@
+<chapter id="gosmetacity-1">
+  <title>Trabalhando com janelas</title>
+  <highlights>
+    <para><!--- for example, <application>
+
+Metacity</application> and <application>Sawfish</application>.  Many of the
+
+functions in <application>Metacity</application> are also available in <application>
+
+Sawfish</application>. -->Este cap&iacute;tulo descreve como usar janelas no Java Desktop System. Voc&ecirc; pode usar o gerenciador da janela <application>Metacity</application> com o Java Desktop System.Este cap&iacute;tulo descreve as fun&ccedil;&otilde;es associadas ao gerenciador da janela <application>Metacity</application>. </para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>Janelas e &aacute;reas de trabalho </title>
+    <indexterm>
+      <primary>janelas</primary>
+      <secondary>introdu&ccedil;&atilde;o</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>&aacute;reas de trabalho</primary>
+      <secondary>introdu&ccedil;&atilde;o</secondary>
+    </indexterm>
+    <para>As janelas s&atilde;o exibidas em subdivis&otilde;es do Java Desktop System, chamadas de &aacute;reas de trabalho. Cada &aacute;rea de trabalho cont&eacute;m o mesmo desktop e os mesmos pain&eacute;is e menus. Entretanto, voc&ecirc; pode executar diferentes aplicativos e abrir diferentes janelas em cada &aacute;rea de trabalho. Voc&ecirc; pode exibir somente uma &aacute;rea de trabalho por vez, mas pode ter janelas abertas em outras &aacute;reas de trabalho. </para>
+    <para>O aplicativo de painel <application>Alternador de &aacute;reas de trabalho</application> exibe uma representa&ccedil;&atilde;o visual das janelas e &aacute;reas de trabalho, como mostrado na <xref linkend="gosmetacity-FIG-717"/>.</para>
+    <figure id="gosmetacity-FIG-717">
+      <title>Aplicativo de painel Alternador de &aacute;reas de trabalho</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Aplicativo de painel Alternador de &aacute;reas de trabalho. O contexto descreve o gr&aacute;fico. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Voc&ecirc; pode adicionar &aacute;reas de trabalho a qualquer tempo. Para adicionar &aacute;reas de trabalho ao Java Desktop System, clique com o bot&atilde;o direito no aplicativo de painel <application>Alternador de &aacute;reas de trabalho</application> e selecione <guimenuitem>Prefer&ecirc;ncias</guimenuitem>. A caixa de di&aacute;logo <guilabel>Prefer&ecirc;ncias do alternador de &aacute;reas de trabalho</guilabel> &eacute; exibida. Use a caixa de rolagem <guilabel>N&uacute;mero de &aacute;reas de trabalho</guilabel> para especificar o n&uacute;mero de &aacute;reas de trabalho desejadas.</para>
+    <sect2 id="gosmetacity-15">
+      <title>Comportamento do gerenciador de janelas </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>gerenciadores de janelas</secondary>
+      </indexterm>
+      <para>Um gerenciador de janelas controla como as janelas s&atilde;o exibidas e o seu comportamento. O gerenciador de janelas posiciona as janelas e administra qual delas tem o foco. O quadro da janela cont&eacute;m bot&otilde;es que possibilitam a execu&ccedil;&atilde;o de a&ccedil;&otilde;es padr&atilde;o como mover, fechar e redimensionar janelas.</para>
+      <para>Voc&ecirc; pode definir algumas prefer&ecirc;ncias do gerenciador de janelas na ferramenta de prefer&ecirc;ncias <application>Comportamento da janela</application>. Este manual descreve as fun&ccedil;&otilde;es associadas com a configura&ccedil;&atilde;o padr&atilde;o do gerenciador de janelas <application>Metacity </application>. A configura&ccedil;&atilde;o padr&atilde;o &eacute; especificada na ferramenta de prefer&ecirc;ncias <application>Comportamento das janelas</application>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>Tipos de janela </title>
+    <indexterm>
+      <primary>janelas</primary>
+      <secondary>tipos de</secondary>
+    </indexterm>
+    <para>O Java Desktop System oferece os seguintes tipos de janelas:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Janelas de aplicativos </para>
+        <para>Quando voc&ecirc; inicia um aplicativo, uma janela do aplicativo &eacute; aberta. O gerenciador de janelas aplica um quadro na janela do aplicativo. Por padr&atilde;o, a parte superior da janela do aplicativo cont&eacute;m uma barra de t&iacute;tulo. A barra de t&iacute;tulo cont&eacute;m bot&otilde;es para que voc&ecirc; possa trabalhar com a janela. Os bot&otilde;es no quadro da janela do aplicativo permitem que voc&ecirc; execute a&ccedil;&otilde;es como abrir o <guimenu>Menu de janela</guimenu> ou fechar a janela. O <guimenu>Menu de janela</guimenu> fornece v&aacute;rias possibilidades de a&ccedil;&otilde;es sobre a janela. </para>
+        <para>A figura a seguir mostra uma t&iacute;pica janela de aplicativo. </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Janela de aplicativo em tema Simples.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+      <listitem>
+        <para>Janelas de di&aacute;logo</para>
+        <para>Uma janela de di&aacute;logo &eacute; uma janela instant&acirc;nea na qual voc&ecirc; digita informa&ccedil;&otilde;es ou comandos. A caixa de di&aacute;logo &eacute; exibida em um quadro de janela.</para>
+        <para>Voc&ecirc; pode usar a parte superior do quadro para trabalhar com a janela. Por exemplo, voc&ecirc; pode usar a barra de t&iacute;tulo para mover a caixa de di&aacute;logo. O quadro tamb&eacute;m cont&eacute;m bot&otilde;es que permitem as seguintes a&ccedil;&otilde;es:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Abrir o <guimenu>Menu de janela</guimenu> </para>
+          </listitem>
+          <listitem>
+            <para>Fechar a janela de di&aacute;logo</para>
+          </listitem>
+        </itemizedlist>
+        <para>Em geral, uma janela de di&aacute;logo &eacute; aberta em uma janela de aplicativo. Ao abrir a janela de di&aacute;logo, esta &eacute; elevada e recebe o foco. Algumas janelas de di&aacute;logo n&atilde;o permitem que voc&ecirc; use o aplicativo enquanto elas estiverem abertas.</para>
+        <para>A figura a seguir mostra uma t&iacute;pica janela de di&aacute;logo. </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_pref_dialog.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Janela de di&aacute;logo em tema Simples.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>Quadros de janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>quadros</secondary>
+      </indexterm>
+      <para>Quadro de janela &eacute; a borda em torno da janela. O quadro de janela cont&eacute;m a barra de t&iacute;tulo. A barra de t&iacute;tulo cont&eacute;m bot&otilde;es para que voc&ecirc; possa trabalhar com a janela.</para>
+      <sect3 id="gosmetacity-10">
+        <title>Temas </title>
+        <indexterm>
+          <primary>janelas</primary>
+          <secondary>temas</secondary>
+        </indexterm>
+        <para>Voc&ecirc; pode aplicar v&aacute;rios temas aos quadros de janelas. O tema determina a apar&ecirc;ncia do quadro. Para escolher um tema para todos os quadros de janela, use a ferramenta de prefer&ecirc;ncias <application> Tema</application>. </para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>Elementos de controle </title>
+        <indexterm>
+          <primary>janelas</primary>
+          <secondary>elementos de controle de quadro</secondary>
+        </indexterm>
+        <para>Voc&ecirc; pode usar o quadro da janela para executar v&aacute;rias a&ccedil;&otilde;es sobre ela. A barra de t&iacute;tulo cont&eacute;m diferentes bot&otilde;es. A figura a seguir mostra a barra de t&iacute;tulo de uma janela de aplicativo:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Barra de t&iacute;tulo da janela. A&ccedil;&otilde;es: Bot&atilde;o Menu de janela, barra de t&iacute;tulo, bot&otilde;es Minimizar, Maximizar e Fechar janela. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>As janelas de di&aacute;logos tamb&eacute;m cont&ecirc;m alguns elementos de controle de quadro de janela. A <xref linkend="gosmetacity-TBL-1"/> descreve os elementos de controle ativos nos quadros de janela, da esquerda para a direita.</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>Elementos de controle de quadro de janela</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Elemento de controle</para>
+                </entry>
+                <entry>
+                  <para>Descri&ccedil;&atilde;o </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Bot&atilde;o <guibutton>Menu de janela</guibutton></para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Clique no bot&atilde;o para abrir o <guimenu>Menu de janela</guimenu>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Barra de t&iacute;tulo </para>
+                </entry>
+                <entry valign="top">
+                  <para>Voc&ecirc; pode usar a barra de t&iacute;tulo para executar as seguintes a&ccedil;&otilde;es: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Para dar foco &agrave; janela, clique na barra de t&iacute;tulo.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Para mover a janela, clique sobre a barra de t&iacute;tulo e arraste-a para novo local. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Para sombrear a janela, clique duas vezes na barra de t&iacute;tulo. Para desfazer a sombra na janela, clique duas vezes na barra de t&iacute;tulo.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Bot&atilde;o <guibutton>Minimizar</guibutton> </para>
+                </entry>
+                <entry valign="top">
+                  <para>Clique no bot&atilde;o <guibutton>Minimizar</guibutton> para minimizar a janela. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Bot&atilde;o <guibutton>Maximizar</guibutton> </para>
+                </entry>
+                <entry valign="top">
+                  <para>Clique no bot&atilde;o <guibutton>Maximizar</guibutton> para maximizar a janela. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>Bot&atilde;o <guibutton>Fechar janela</guibutton> </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Clique no bot&atilde;o <guibutton>Fechar janela</guibutton> para fechar a janela. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Borda </para>
+                </entry>
+                <entry valign="top">
+                  <para>A borda em torno da janela. Use a borda para executar as seguintes a&ccedil;&otilde;es: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Para redimensionar a janela, clique sobre a borda e arraste-a para redimension&aacute;-la. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Para abrir o <guimenu>Menu de janela</guimenu>, clique com o bot&atilde;o direito na borda.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>&Aacute;rea de conte&uacute;do da janela</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>A &aacute;rea interna do quadro de janela. Use a &aacute;rea de conte&uacute;do para executar as seguintes a&ccedil;&otilde;es:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Para mover uma janela, mantenha pressionada a tecla <keycap>Alt</keycap>, clique na &aacute;rea de conte&uacute;do e arraste a janela para novo local.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Para redimensionar uma janela, mantenha pressionada a tecla <keycap>Alt</keycap> e clique com o bot&atilde;o do meio do mouse pr&oacute;ximo a um dos cantos da janela. Em seguida, arraste o canto da janela.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Para abrir o <guimenu>Menu de janela</guimenu>, mantenha pressionada a tecla <keycap> Alt</keycap> e clique com o bot&atilde;o direito sobre a &aacute;rea de conte&uacute;do da janela.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>Usando menus e aplicativos de painel com janelas e &aacute;reas de trabalho </title>
+    <indexterm>
+      <primary>janelas</primary>
+      <secondary>aplicativos e menus do painel para trabalhar com</secondary>
+    </indexterm>
+    <para>Esta se&ccedil;&atilde;o descreve os menus e aplicativos de painel para uso com janelas e &aacute;reas de trabalho. </para>
+    <sect2 id="gosmetacity-24">
+      <title>Menu de janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>Menu de janela</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>menus</primary>
+        <secondary>Menu de janela</secondary>
+      </indexterm>
+      <para>O <guimenu>Menu de janela</guimenu> &eacute; um menu de comandos para execu&ccedil;&atilde;o de a&ccedil;&otilde;es sobre as janelas. Para abrir o <guimenu>Menu de janela</guimenu> execute uma das seguintes a&ccedil;&otilde;es:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Na janela, clique no bot&atilde;o <guibutton>Menu de janela</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Pressione <keycombo><keycap>Alt</keycap><keycap>barra de espa&ccedil;os</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Mantenha pressionada a tecla <keycap>Alt</keycap> e clique com o bot&atilde;o direito em qualquer &aacute;rea da janela. </para>
+        </listitem>
+      </itemizedlist>
+      <para>A <xref linkend="gosmetacity-TBL-25"/> descreve os comandos e submenus no <guimenu>Menu de janela</guimenu>.</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>Comandos e submenus do Menu de janela</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Item do menu</para>
+              </entry>
+              <entry>
+                <para>Fun&ccedil;&atilde;o </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Minimizar</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Minimiza a janela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Maximizar</guimenuitem> ou <guimenuitem>Desfazer maximiza&ccedil;&atilde;o</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>Maximiza a janela. Se a janela j&aacute; estiver maximizada, selecione <guimenuitem>Desfazer maximiza&ccedil;&atilde;o</guimenuitem> para restaurar a janela ao tamanho anterior. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Acima</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Localiza a janela acima de outras janelas abertas no plano de fundo do desktop.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Mover</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Permite que voc&ecirc; use as teclas de seta para mover a janela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Redimensionar</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Permite que voc&ecirc; use as teclas de seta para redimensionar a janela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Fechar</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Fecha a janela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>P&ocirc;r em todas as &aacute;reas de trabalho</guimenuitem> ou <guimenuitem>Somente nesta &aacute;rea de trabalho</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Coloca a janela em todas as &aacute;reas de trabalho. Se a janela j&aacute; estiver em todas as &aacute;reas de trabalho, selecione <guimenuitem>Somente nesta &aacute;rea de trabalho</guimenuitem> para coloc&aacute;-la somente na &aacute;rea de trabalho atual.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2">
+                <para><guimenuitem>Mover para &aacute;rea de trabalho &agrave; direita</guimenuitem> ou <guimenuitem>Mover para &aacute;rea de trabalho &agrave; esquerda</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Move a janela para a &aacute;rea de trabalho &agrave; direita da &aacute;rea de trabalho atual. Se a janela j&aacute; estiver na &uacute;ltima &aacute;rea de trabalho &agrave; direita do Alternador de &aacute;reas de trabalho, selecione <guimenuitem>Mover para &aacute;rea de trabalho &agrave; esquerda</guimenuitem> para mover a janela para a &aacute;rea de trabalho &agrave; esquerda da &aacute;rea de trabalho atual.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Mover para outra &aacute;rea de trabalho</guimenuitem> </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Move a janela para outra &aacute;rea de trabalho. Selecione no submenu a &aacute;rea de trabalho para onde deseja mover a janela.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>Lista de janelas </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>Aplicativo de painel da lista de janelas </secondary>
+        <see>Aplicativo de painel da lista de janelas</see>
+      </indexterm>
+      <indexterm>
+        <primary>Aplicativo de painel da lista de janelas</primary>
+        <secondary>introdu&ccedil;&atilde;o</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>listas de janelas</primary>
+        <secondary>Aplicativo de painel da lista de janelas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicativos de painel </primary>
+        <secondary>Lista de janelas</secondary>
+      </indexterm>
+      <para>A <application>Lista de janelas</application> exibe um bot&atilde;o para cada janela de aplicativo que esteja aberta. Voc&ecirc; pode usar a <application>Lista de janelas</application> para executar as seguintes tarefas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Minimizar uma janela</para>
+          <para>Clique no bot&atilde;o que representa a janela.</para>
+        </listitem>
+        <listitem>
+          <para>Para restaurar uma janela minimizada</para>
+          <para>Clique no bot&atilde;o que representa a janela.</para>
+        </listitem>
+        <listitem>
+          <para>Para dar foco a uma janela</para>
+          <para>Clique no bot&atilde;o que representa a janela.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Ao abrir uma janela de aplicativo, a <application>Lista de janelas</application> exibe um bot&atilde;o que representa a janela. Os bot&otilde;es da lista de janelas mostram quais as janelas de aplicativos que est&atilde;o abertas. Voc&ecirc; pode visualizar quais as janelas abertas mesmo que algumas estejam minimizadas ou encobertas por outra janela. A <application>Lista de janelas</application> podem exibir bot&otilde;es para as janelas na &aacute;rea de trabalho atual ou em todas as &aacute;reas de trabalho. Para selecionar essa op&ccedil;&atilde;o, voc&ecirc; deve alterar as prefer&ecirc;ncias da <application>Lista de janelas</application>.</para>
+      <para>Voc&ecirc; tamb&eacute;m pode clicar com o bot&atilde;o direito em um bot&atilde;o da lista de janelas para abrir o <guimenu>Menu de janela</guimenu> da janela representada pelo bot&atilde;o. Quando aberto na <application>Lista de janelas</application>, o <guimenu>Menu de janela</guimenu> n&atilde;o cont&eacute;m os comandos de &aacute;rea de trabalho. Para obter mais informa&ccedil;&otilde;es sobre os comandos do <guimenu>Menu de janela</guimenu>, consulte <xref linkend="gosmetacity-24"/>.</para>
+      <para>A <xref linkend="gosmetacity-FIG-8"/> mostra a <application>Lista de janelas</application> com as seguintes janelas abertas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Dicion&aacute;rio</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GNOME Terminal</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>Aplicativo de painel Lista de janelas</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Aplicativo de painel Lista de janelas. O contexto descreve o gr&aacute;fico. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Os bot&otilde;es no aplicativo de painel mostram o status das janelas. A <xref linkend="gosmetacity-TBL-3"/> explica as informa&ccedil;&otilde;es fornecidas pelos bot&otilde;es da lista de janelas. Os exemplos na <xref linkend="gosmetacity-TBL-3"/> referem-se &agrave; <xref linkend="gosmetacity-FIG-8"/>. </para>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>Informa&ccedil;&otilde;es de status da janela nos bot&otilde;es da lista de janelas<indexterm><primary> Aplicativo de painel da lista de janelas</primary><secondary>informa&ccedil;&otilde;es de status da janela </secondary></indexterm></title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Estado</para>
+              </entry>
+              <entry>
+                <para>Indica</para>
+              </entry>
+              <entry>
+                <para>Exemplo</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>O bot&atilde;o est&aacute; pressionado.</para>
+              </entry>
+              <entry valign="top">
+                <para>A janela tem foco.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel> gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>T&iacute;tulo da janela entre colchetes.</para>
+              </entry>
+              <entry valign="top">
+                <para>A janela est&aacute; minimizada.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel> [Dicion&aacute;rio]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>O bot&atilde;o n&atilde;o est&aacute; pressionado, n&atilde;o h&aacute; colchetes ao redor do t&iacute;tulo.</para>
+              </entry>
+              <entry valign="top">
+                <para>A janela est&aacute; em exibi&ccedil;&atilde;o, n&atilde;o minimizada.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex </guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>N&uacute;mero no bot&atilde;o, entre par&ecirc;nteses. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>O bot&atilde;o representa um grupo de bot&otilde;es. </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel> Gnome-terminal (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>Agrupando bot&otilde;es </title>
+        <indexterm>
+          <primary>Aplicativo de painel da lista de janelas</primary>
+          <secondary>agrupando bot&otilde;es</secondary>
+        </indexterm>
+        <para>A <application>Lista de janelas</application> pode agrupar sob um s&oacute; bot&atilde;o os bot&otilde;es que representam as janelas de mesma classe. O bot&atilde;o do <guibutton>Gnome-terminal</guibutton> na <xref linkend="gosmetacity-FIG-8"/> &eacute; um exemplo de bot&atilde;o que representa um grupo de bot&otilde;es. A figura a seguir mostra um exemplo de <application>Lista de janelas</application> com um grupo de bot&otilde;es aberto:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Aplicativo de painel Lista de janelas com grupo de bot&otilde;es aberto. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Para abrir uma lista de janelas em um grupo, clique no bot&atilde;o da lista de janelas que representa o grupo. Voc&ecirc; pode clicar nos itens na lista para dar foco &agrave;s janelas, minimiz&aacute;-las ou restaur&aacute;-las.</para>
+        <para>Para abrir um <guimenu>Menu de janela</guimenu> de uma janela em um grupo de bot&otilde;es, clique com o bot&atilde;o direito do mouse no bot&atilde;o da lista de janelas que representa o grupo. A lista de janelas no grupo &eacute; exibida. Para abrir o <guimenu>Menu de janela</guimenu>, clique no item na lista. Quando aberto na <application>Lista de janelas</application>, o <guimenu>Menu de janela</guimenu> n&atilde;o cont&eacute;m os comandos de &aacute;rea de trabalho. Para obter mais informa&ccedil;&otilde;es sobre os comandos do <guimenu>Menu de janela</guimenu>, consulte <xref linkend="gosmetacity-24"/>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>Alternador de &aacute;reas de trabalho </title>
+      <indexterm>
+        <primary>&aacute;reas de trabalho</primary>
+        <secondary>aplicativo de painel do Alternador de &aacute;reas de trabalho</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicativos de painel </primary>
+        <secondary>Alternador de &aacute;reas de trabalho</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicativo de painel do Alternador de &aacute;reas de trabalho</primary>
+      </indexterm>
+      <para>O <application>Alternador de &aacute;reas de trabalho</application> exibe uma representa&ccedil;&atilde;o visual das &aacute;reas de trabalho, como &eacute; mostrado na <xref linkend="gosmetacity-FIG-722"/>. A <xref linkend="gosmetacity-FIG-722"/> mostra o <application>Alternador de &aacute;reas de trabalho</application> em uma sess&atilde;o do Java Desktop System com quatro &aacute;reas de trabalho. As &aacute;reas de trabalho s&atilde;o exibidas como bot&otilde;es no aplicativo de painel. O plano de fundo do bot&atilde;o que representa a &aacute;rea de trabalho atual no <application>Alternador de &aacute;reas de trabalho</application> &eacute; exibido em destaque. A &aacute;rea de trabalho atual na <xref linkend="gosmetacity-FIG-722"/> &eacute; a &aacute;rea de trabalho &agrave; esquerda do aplicativo de painel. Para alternar para outra &aacute;rea de trabalho, clique na &aacute;rea de trabalho no aplicativo de painel.</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>Aplicativo de painel Alternador de &aacute;reas de trabalho</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Aplicativo de painel Alternador de &aacute;reas de trabalho. O contexto descreve o gr&aacute;fico. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>O <application>Alternador de &aacute;reas de trabalho</application> tamb&eacute;m exibe as janelas de aplicativos e caixas de di&aacute;logo que est&atilde;o abertas nas &aacute;reas de trabalho.</para>
+      <para>O aplicativo de painel exibe as &aacute;reas de trabalho em ordem, da esquerda para a direita, em linhas. Na <xref linkend="gosmetacity-FIG-722"/>, o aplicativo de painel est&aacute; configurado para exibir as &aacute;reas de trabalho em linha. Voc&ecirc; pode especificar o n&uacute;mero de linhas para exibi&ccedil;&atilde;o das &aacute;reas de trabalho no <application>Alternador de &aacute;reas de trabalho</application>. Voc&ecirc; tamb&eacute;m pode alterar o comportamento padr&atilde;o do <application>Alternador de &aacute;reas de trabalho</application> para exibir o nome das &aacute;reas de trabalho no aplicativo de painel.</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>Seletor de janelas </title>
+      <indexterm>
+        <primary>painel superior</primary>
+        <secondary>&iacute;cone seletor de janelas </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>seletor de janelas</primary>
+        <secondary> painel superior</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode exibir uma lista de todas as janelas que est&atilde;o abertas. Tamb&eacute;m pode escolher uma janela para dar foco. Para exibir a lista de janelas, clique no aplicativo de painel <application>Seletor de janelas</application>. A figura a seguir mostra um exemplo do aplicativo de painel <application>Seletor de janelas</application>:</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>O aplicativo de painel Seletor de janelas exibido na borda inferior do painel. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para dar foco a uma janela, selecione-a no aplicativo de painel <application>Seletor de janelas</application>.</para>
+      <para>O <application>Seletor de janelas</application> lista as janelas em todas as &aacute;reas de trabalho. As janelas em todas as &aacute;reas de trabalho, exceto na atual, s&atilde;o listadas com uma linha de separa&ccedil;&atilde;o.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>Manipulando janelas </title>
+    <indexterm>
+      <primary>janelas</primary>
+      <secondary>manipulando</secondary>
+    </indexterm>
+    <para>Esta se&ccedil;&atilde;o descreve como manipular janelas.</para>
+    <sect2 id="gosmetacity-28">
+      <title>Para dar foco a uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>dando foco a</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>foco, dando a uma janela</primary>
+      </indexterm>
+      <para>A janela que tem o foco pode receber entradas do mouse e do teclado. Somente uma janela pode ter o foco por vez. A janela que tem o foco possui apar&ecirc;ncia diferente das outras. </para>
+      <para>Voc&ecirc; pode usar os seguintes elementos para dar foco a uma janela:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Elemento</para>
+              </entry>
+              <entry>
+                <para>A&ccedil;&atilde;o</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Mouse </para>
+              </entry>
+              <entry valign="top">
+                <para>Clique na janela, se ela estiver vis&iacute;vel. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Teclas de atalho</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Use as teclas de atalho para alternar entre as janelas abertas. Para dar foco a uma janela, libere as teclas. As teclas de atalho padr&atilde;o para alternar entre janelas s&atilde;o <keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><application>Lista de janelas</application> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Na <application>Lista de janelas</application>, clique no bot&atilde;o que representa a janela .</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><application>Alternador de &aacute;reas de trabalho</application> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>No <application>Alternador de &aacute;reas de trabalho</application>, clique na janela a que voc&ecirc; deseja dar o foco. Se voc&ecirc; clicar em uma janela em outra &aacute;rea de trabalho, o <application>Alternador de &aacute;reas de trabalho</application> alterna para a nova &aacute;rea e d&aacute; o foco &agrave; sua janela. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>Para minimizar uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>minimizando</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>minimizando</primary>
+        <secondary>janelas</secondary>
+      </indexterm>
+      <para>Para minimizar a janela, execute uma das seguintes a&ccedil;&otilde;es: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique no bot&atilde;o <guibutton>Minimizar</guibutton> no quadro da janela.</para>
+        </listitem>
+        <listitem>
+          <para>Abra o <guimenu>Menu de janela</guimenu> e selecione <guimenuitem>Minimizar</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Se a janela tiver o foco, clique no bot&atilde;o que a representa na <application>Lista de janelas</application>. Se a janela n&atilde;o tiver o foco, clique duas vezes no bot&atilde;o que a representa. </para>
+        </listitem>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela na <application>Lista de janelas</application> e selecione <guimenuitem>Minimizar</guimenuitem> no menu instant&acirc;neo.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>Para maximizar uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>maximizando</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>maximizando janelas</primary>
+      </indexterm>
+      <para>Ao maximizar uma janela, ela &eacute; expandida ao m&aacute;ximo. Para maximizar a janela, execute uma das seguintes a&ccedil;&otilde;es: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique no bot&atilde;o <guibutton>Maximizar</guibutton> no quadro da janela. Alternativamente, abra o <guimenu>Menu de janela</guimenu> e selecione <guimenuitem>Maximizar</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela na <application>Lista de janelas</application> e selecione <guimenuitem>Maximizar</guimenuitem> no <guimenu>Menu de janela</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>Para restaurar uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>restaurando</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>restaurando</primary>
+        <secondary>janelas</secondary>
+      </indexterm>
+      <para>Para restaurar uma janela maximizada, execute uma das seguintes a&ccedil;&otilde;es: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique no bot&atilde;o <guibutton>Maximizar</guibutton> no quadro da janela.</para>
+        </listitem>
+        <listitem>
+          <para>Abra o <guimenu>Menu de janela</guimenu> Selecione <guimenuitem>Desfazer maximiza&ccedil;&atilde;o</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela na <application>Lista de janelas</application> para abrir o <guimenu>Menu de janelas</guimenu>. Selecione <guimenuitem>Desfazer maximiza&ccedil;&atilde;o</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Para restaurar uma janela minimizada, clique no bot&atilde;o que representa a janela na <application>Lista de janelas</application>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-2">
+      <title>Para localizar uma janela acima de outras</title>
+      <para>Para localizar uma janela acima de outras janelas, abra o <guimenu>Menu de janela</guimenu> e selecione <guimenuitem>Acima</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>Para fechar uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>fechando</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>fechando janelas</primary>
+      </indexterm>
+      <para>Para fechar uma janela, execute uma das seguintes a&ccedil;&otilde;es: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique no bot&atilde;o <guibutton>Fechar janela</guibutton> no quadro da janela.</para>
+        </listitem>
+        <listitem>
+          <para>Abra o <guimenu>Menu de janela</guimenu> Selecione <guimenuitem>Fechar</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela na <application>Lista de janelas</application> e selecione <guimenuitem>Fechar</guimenuitem> no <guimenu>Menu de janela</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Se houver dados n&atilde;o salvos na janela, ser&aacute; solicitado que voc&ecirc; salve os dados.</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>Para redimensionar uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>redimensionando</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>redimensionando janelas</primary>
+      </indexterm>
+      <para>Para redimensionar uma janela, execute uma das seguintes a&ccedil;&otilde;es:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Aponte para um canto da janela. O ponteiro do mouse muda para indicar que voc&ecirc; pode redimensionar a janela. Clique no canto e arraste a janela para redimension&aacute;-la.</para>
+        </listitem>
+        <listitem>
+          <para>Na <application>Lista de janelas</application>, clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela. Selecione <guimenuitem>Redimensionar</guimenuitem> no <guimenu>Menu de janela</guimenu>. Use as teclas de seta para redimensionar a janela.</para>
+        </listitem>
+        <listitem>
+          <para>Mantenha pressionada a tecla <keycap>Alt</keycap> e clique com o bot&atilde;o do meio do mouse pr&oacute;ximo ao canto para redimensionamento. O ponteiro do mouse muda para indicar que voc&ecirc; pode redimensionar a janela. Em seguida, arraste o canto da janela.</para>
+        </listitem>
+        <listitem>
+          <para>Para redimensionar a janela horizontalmente, aponte para uma das bordas verticais da janela. O ponteiro do mouse muda para indicar que voc&ecirc; pode redimensionar a janela. Clique na borda e arraste a janela para redimension&aacute;-la.</para>
+        </listitem>
+        <listitem>
+          <para>Para redimensionar a janela verticalmente, aponte para a borda inferior da janela. O ponteiro do mouse muda para indicar que voc&ecirc; pode redimensionar a janela. Clique na borda e arraste a janela para redimension&aacute;-la.</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>Algumas caixas de di&aacute;logo n&atilde;o s&atilde;o redimension&aacute;veis. Al&eacute;m disso, algumas janelas de aplicativo t&ecirc;m um tamanho m&iacute;nimo abaixo do qual n&atilde;o &eacute; poss&iacute;vel reduzir a janela.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>Para mover uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>movendo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>movendo janelas</primary>
+      </indexterm>
+      <para>Para mover uma janela, execute uma das seguintes a&ccedil;&otilde;es: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique na barra de t&iacute;tulo e arraste a janela para o novo local. </para>
+        </listitem>
+        <listitem>
+          <para>Mantenha pressionada a tecla <keycap>Alt</keycap> e arraste a janela para o novo local. </para>
+        </listitem>
+        <listitem>
+          <para>Abra o <guimenu>Menu de janela</guimenu> e selecione <guimenuitem>Mover</guimenuitem>. Use as teclas de seta para mover a janela para o novo local. </para>
+        </listitem>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela na <application>Lista de janelas</application> e selecione <guimenuitem>Mover</guimenuitem> no <guimenu>Menu de janela</guimenu>. Use as teclas de seta para mover a janela para o novo local.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>Para retrair uma janela </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>retraindo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>retraindo janelas</primary>
+      </indexterm>
+      <indexterm>
+        <primary> sombreando janelas</primary>
+        <see>retraindo janelas</see>
+      </indexterm>
+      <para>Voc&ecirc; pode retrair e estender as janelas, como se segue:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Retrair</term>
+          <listitem>
+            <para>Reduz a janela de modo que somente a barra de t&iacute;tulo fique vis&iacute;vel.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Estender</term>
+          <listitem>
+            <para>Estende uma janela em estado de retra&ccedil;&atilde;o de modo que toda a janela seja exibida.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Para retrair uma janela, execute uma das seguintes a&ccedil;&otilde;es: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique duas vezes sobre a barra de t&iacute;tulo da janela. Para estender a janela, clique duas vezes na barra de t&iacute;tulo novamente.</para>
+        </listitem>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito do mouse no bot&atilde;o que representa a janela na <application>Lista de janelas</application> e selecione <guimenuitem>Retrair</guimenuitem> no <guimenu>Menu de janela</guimenu>. Para estender a janela, selecione <guimenuitem>Desfazer retra&ccedil;&atilde;o</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>Para colocar uma janela em todas as &aacute;reas de trabalho </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>colocando em todas as &aacute;reas de trabalho </secondary>
+      </indexterm>
+      <para>Para colocar uma janela em todas as &aacute;reas de trabalho, abra o <guimenu>Menu de janela</guimenu>. Selecione <guimenuitem>Colocar em todas as &aacute;reas de trabalho</guimenuitem>. Para que a janela seja exibida somente na &aacute;rea de trabalho atual, selecione <guimenuitem>Somente nesta &aacute;rea de trabalho</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>Para mover a janela para outra &aacute;rea de trabalho </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>movendo para outra &aacute;rea de trabalho </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&aacute;reas de trabalho</primary>
+        <secondary> movendo janelas para </secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode mover uma janela para outra &aacute;rea de trabalho de v&aacute;rias maneiras:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Use o <application>Alternador de &aacute;reas de trabalho</application></para>
+          <para>No <application>Alternador de &aacute;reas de trabalho</application>, arraste a janela para a &aacute;rea de trabalho desejada.</para>
+        </listitem>
+        <listitem>
+          <para>Use o <guimenu>Menu de janela</guimenu></para>
+          <para>Abra o <guimenu>Menu de janela</guimenu> Para mover a janela para a pr&oacute;xima &aacute;rea de trabalho, selecione <guimenuitem>Mover para <replaceable>nome-da-&aacute;rea-de-trabalho</replaceable></guimenuitem>. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosbasic-48">
+      <title>Para redimensionar pain&eacute;is </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>redimensionando pain&eacute;is</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>redimensionando</secondary>
+      </indexterm>
+      <para>Algumas janelas cont&ecirc;m mais de um <firstterm>painel</firstterm>. Painel &eacute; uma subdivis&atilde;o de uma janela. Por exemplo, a janela do gerenciador de arquivos cont&eacute;m um painel lateral e um painel de visualiza&ccedil;&atilde;o. A janela que cont&eacute;m pain&eacute;is possui um al&ccedil;a de redimensionamento na borda entre os pain&eacute;is. Para redimensionar o painel, clique na al&ccedil;a de redimensionamento e arraste a borda at&eacute; o tamanho desejado.</para>
+    </sect2>
+    <sect2 id="gosbasic-49">
+      <title>Usando tabelas </title>
+      <indexterm>
+        <primary>janelas</primary>
+        <secondary>usando tabelas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>tabelas</primary>
+        <secondary>usando</secondary>
+      </indexterm>
+      <para>Algumas janelas cont&ecirc;m informa&ccedil;&otilde;es organizadas em tabelas. Esta se&ccedil;&atilde;o descreve como trabalhar com tabelas nas janelas.</para>
+      <para>Para alterar a largura da coluna, arraste uma das bordas verticais da coluna.</para>
+      <para>Em algumas tabelas, voc&ecirc; pode classificar as informa&ccedil;&otilde;es por uma coluna espec&iacute;fica. Para classificar as informa&ccedil;&otilde;es em uma tabela, clique no cabe&ccedil;alho da coluna desejada. Uma seta para cima &eacute; exibida no cabe&ccedil;alho da coluna pela qual a tabela est&aacute; classificada. A figura a seguir mostra a seta para cima.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sort_arrow_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Seta para cima no cabe&ccedil;alho da coluna.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para inverter a ordem de classifica&ccedil;&atilde;o, clique novamente no cabe&ccedil;alho da coluna. A seta para cima alterna para seta para baixo. A seta para baixo indica que as informa&ccedil;&otilde;es na coluna est&atilde;o classificadas em ordem reversa.</para>
+      <para>Em algumas tabelas, voc&ecirc; pode selecionar v&aacute;rios itens. A tabela a seguir descreve como selecionar itens em tabelas.</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Tarefa </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>A&ccedil;&atilde;o</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selecionar um item</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Clique no item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selecionar um grupo de itens cont&iacute;guos</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Mantenha pressionada a tecla <keycap> Shift</keycap>. Clique no primeiro item do grupo e, em seguida, no &uacute;ltimo item.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selecionar v&aacute;rios itens</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Mantenha pressionada a tecla <keycap>Ctrl</keycap>. Clique nos itens desejados.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>Manipulando &aacute;reas de trabalho </title>
+    <indexterm>
+      <primary>&aacute;reas de trabalho</primary>
+      <secondary>manipulando</secondary>
+    </indexterm>
+    <para>Esta se&ccedil;&atilde;o descreve como manipular &aacute;reas de trabalho.</para>
+    <sect2 id="gosmetacity-49">
+      <title>Para alternar entre &aacute;reas de trabalho </title>
+      <indexterm>
+        <primary>&aacute;reas de trabalho</primary>
+        <secondary>alternando entre</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode alternar entre as &aacute;reas de trabalho de v&aacute;rias maneiras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Use o <application>Alternador de &aacute;reas de trabalho</application></para>
+          <para>Clique na &aacute;rea de trabalho desejada no <application>Alternador de &aacute;reas de trabalho</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Use teclas de atalho</para>
+          <para>As teclas de atalho padr&atilde;o para alternar entre &aacute;reas de trabalho s&atilde;o as seguintes: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Teclas de atalho padr&atilde;o </para>
+                  </entry>
+                  <entry>
+                    <para>Fun&ccedil;&atilde;o</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>
+                    <para>
+                      <keycombo>
+                        <keycap>Ctrl</keycap>
+                        <keycap>Alt</keycap>
+                        <keycap>seta direita</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry>
+                    <para>Seleciona a &aacute;rea de trabalho &agrave; direita. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry>
+                    <para>
+                      <keycombo>
+                        <keycap>Ctrl</keycap>
+                        <keycap>Alt</keycap>
+                        <keycap>seta esquerda</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry>
+                    <para>Seleciona a &aacute;rea de trabalho &agrave; esquerda. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>Para adicionar &aacute;reas de trabalho </title>
+      <indexterm>
+        <primary>&aacute;reas de trabalho</primary>
+        <secondary>adicionando</secondary>
+      </indexterm>
+      <para>Para adicionar &aacute;reas de trabalho ao Java Desktop System, clique com o bot&atilde;o direito no <application>Alternador de &aacute;reas de trabalho</application> e selecione <guimenuitem>Prefer&ecirc;ncias</guimenuitem>. A caixa de di&aacute;logo <guilabel>Prefer&ecirc;ncias do Alternador de &aacute;reas de trabalho</guilabel> &eacute; exibida. Use a caixa de rolagem <guilabel>N&uacute;mero de &aacute;reas de trabalho</guilabel> para especificar o n&uacute;mero de &aacute;reas de trabalho desejadas. O <application>Alternador de &aacute;reas de trabalho</application> adiciona as novas &aacute;reas de trabalho no fim da lista de &aacute;reas de trabalho.</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>Para nomear &aacute;reas de trabalho </title>
+      <indexterm>
+        <primary>&aacute;reas de trabalho</primary>
+        <secondary>nomeando</secondary>
+      </indexterm>
+      <para>Os nomes padr&atilde;o das &aacute;reas de trabalho s&atilde;o <literal>&Aacute;rea de trabalho 1</literal>, <literal> &Aacute;rea de trabalho 2</literal>, <literal>&Aacute;rea de trabalho 3</literal>, e assim por diante. Para atribuir nomes &agrave;s &aacute;reas de trabalho, clique com o bot&atilde;o direito no <application>Alternador de &aacute;reas de trabalho</application> e selecione <guimenuitem>Prefer&ecirc;ncias</guimenuitem>. A caixa de di&aacute;logo <guilabel>Prefer&ecirc;ncias do Alternador de &aacute;reas de trabalho</guilabel> &eacute; exibida. Use a caixa de listagem <guilabel>Nomes de &aacute;reas de trabalho</guilabel> para especificar os nomes de suas &aacute;reas de trabalho. Selecione uma &aacute;rea de trabalho e digite seu novo nome.</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>Para excluir &aacute;reas de trabalho </title>
+      <indexterm>
+        <primary>&aacute;reas de trabalho</primary>
+        <secondary>excluindo</secondary>
+      </indexterm>
+      <para>Quando voc&ecirc; exclui uma &aacute;rea de trabalho, as janelas dessa &aacute;rea de trabalho s&atilde;o movidas para outra &aacute;rea de trabalho.  A &aacute;rea de trabalho vazia &eacute; ent&atilde;o exclu&iacute;da. </para>
+      <para>Para excluir &aacute;reas de trabalho do Java Desktop System, clique com o bot&atilde;o direito no <application> Alternador de &aacute;reas de trabalho</application> e selecione <guimenuitem>Prefer&ecirc;ncias</guimenuitem>. A caixa de di&aacute;logo <guilabel>Prefer&ecirc;ncias do Alternador de &aacute;reas de trabalho</guilabel> &eacute; exibida. Use a caixa de rolagem <guilabel>N&uacute;mero de &aacute;reas de trabalho</guilabel> para especificar o n&uacute;mero de &aacute;reas de trabalho desejadas. O <application>Alternador de &aacute;reas de trabalho</application> exclui as &aacute;reas de trabalho da lista de &aacute;reas de trabalho. </para>
+    </sect2>
+  </sect1>
+</chapter>

@@ -1,0 +1,2635 @@
+<chapter id="gosnautilus-1">
+  <title>C&oacute;mo usar el gestor de archivos</title>
+  <highlights>
+    <para><application>Nautilus</application> es el nombre del gestor de archivos de Java Desktop System que ofrece un punto de acceso integrado a los archivos y aplicaciones.</para>
+    <para>En este cap&iacute;tulo se describe el uso del gestor de archivos. </para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>Introducci&oacute;n al gestor de archivos </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <para>El gestor de archivos proporciona un punto de acceso integrado a los archivos y aplicaciones; permite realizar las siguientes funciones: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Crear carpetas y documentos.</para>
+      </listitem>
+      <listitem>
+        <para>Mostrar archivos y carpetas.</para>
+      </listitem>
+      <listitem>
+        <para>Gestionar archivos y carpetas.</para>
+      </listitem>
+      <listitem>
+        <para>Personalizar archivos y carpetas.</para>
+      </listitem>
+      <listitem>
+        <para>Abrir Direcciones URI especiales.</para>
+      </listitem>
+      <listitem>
+        <para>Escribir datos en un CD.</para>
+      </listitem>
+    </itemizedlist>
+    <para>El gestor de archivos se ocupa tambi&eacute;n de gestionar el fondo del escritorio. El fondo del escritorio se sit&uacute;a detr&aacute;s del resto de componentes del escritorio. Es un componente activo de la interfaz del usuario. </para>
+    <para>Para abrir una ventana del gestor de archivos, haga doble clic sobre el objeto del escritorio <guilabel>Documentos</guilabel>. La ventana del gestor de archivos muestra los contenidos de la direcci&oacute;n predeterminada de archivos en el panel de vista.</para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>Ventanas del gestor de archivos </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>ventanas</secondary>
+    </indexterm>
+    <para>Las ventanas del gestor de archivos permiten mostrar y gestionar los archivos y carpetas. La <xref linkend="gosnautilus-FIG-1"/> muestra una ventana de gestor de archivos que muestra los contenidos de una carpeta.</para>
+    <figure id="gosnautilus-FIG-1">
+      <title>Contenido de una carpeta en una ventana de gestor de archivos<indexterm><primary>gestor de archivos</primary><secondary>vista de iconos</secondary><tertiary>ilustraci&oacute;n</tertiary></indexterm></title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Una carpeta en una ventana del gestor de archivos. Barra de men&uacute;s, barra de herramientas, barra de ubicaci&oacute;n, botones de ampliaci&oacute;n, panel lateral, panel de vista. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>La <xref linkend="gosnautilus-TBL-83"/> describe los componentes de las ventanas del gestor de archivos.</para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>Componentes de la ventana del gestor de archivos</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Componente</para>
+            </entry>
+            <entry>
+              <para>Descripci&oacute;n </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Barra de men&uacute;s </para>
+            </entry>
+            <entry valign="top">
+              <para>Contiene los men&uacute;s que se utilizan para ejecutar las tareas en el gestor de archivos.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Barra de herramientas </para>
+            </entry>
+            <entry valign="top">
+              <para>Contiene los botones que se utilizan para ejecutar las tareas en el gestor de archivos.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Barra de direcciones</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Contiene los siguientes elementos: </para>
+              <itemizedlist>
+                <listitem>
+                  <para>Campo <guilabel>Direcci&oacute;n</guilabel> o <guilabel>Ir a</guilabel>: permite indicar el archivo, carpeta o URL que se desea mostrar. </para>
+                </listitem>
+                <listitem>
+                  <para>Botones de <guimenu>zoom</guimenu>: permite cambiar el tama&ntilde;o de los elementos del panel de vista.</para>
+                </listitem>
+                <listitem>
+                  <para>Lista desplegable <guilabel>Ver como</guilabel>: permite elegir c&oacute;mo mostrar los elementos del panel de vista.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Panel lateral </para>
+            </entry>
+            <entry valign="top">
+              <para>Realiza las siguientes funciones:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Muestra informaci&oacute;n acerca del archivo o carpeta actual. </para>
+                </listitem>
+                <listitem>
+                  <para>Permite navegar entre los archivos. </para>
+                </listitem>
+              </itemizedlist>
+              <para>El panel lateral contiene una lista desplegable que permite seleccionar su contenido. Puede elegir entre las siguientes opciones:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>Informaci&oacute;n</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Emblemas</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Historial</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Notas</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>&Aacute;rbol</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>Para mostrar el panel lateral, seleccione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Panel lateral</guimenuitem></menuchoice>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Panel de vista </para>
+            </entry>
+            <entry valign="top">
+              <para>Muestra el contenido de:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Determinados tipos de archivos</para>
+                </listitem>
+                <listitem>
+                  <para>Carpetas</para>
+                </listitem>
+                <listitem>
+                  <para>Sitios FTP</para>
+                </listitem>
+                <listitem>
+                  <para>Direcciones correspondientes a URI especiales</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Barra de estado</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Muestra informaci&oacute;n del estado. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>Se puede abrir tambi&eacute;n un men&uacute; emergente en las ventanas del gestor de archivos. Para ello, haga clic con el bot&oacute;n derecho del rat&oacute;n en una ventana del gestor de archivos. Los elementos de este men&uacute; depender&aacute;n del lugar de la ventana en el que se ha hecho clic. Por ejemplo, al hacer clic sobre un archivo o carpeta, se pueden elegir elementos relacionados con ellos. Al hacer clic sobre el fondo de un panel de vista, se pueden elegir elementos relacionados con la visualizaci&oacute;n de los elementos en este panel.</para>
+    <sect2 id="gosnautilus-53">
+      <title>Panel de vista </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>panel de vista</secondary>
+        <see>panel de vista</see>
+      </indexterm>
+      <indexterm>
+        <primary>panel de vista</primary>
+        <secondary> introducci&oacute;n</secondary>
+      </indexterm>
+      <para>El panel de vista permite visualizar los contenidos de:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Determinados tipos de archivos</para>
+        </listitem>
+        <listitem>
+          <para>Carpetas</para>
+        </listitem>
+        <listitem>
+          <para>Sitios FTP</para>
+        </listitem>
+        <listitem>
+          <para>Direcciones correspondientes a URI especiales</para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary>componentes de visualizaci&oacute;n</primary></indexterm>El gestor de archivos contiene <firstterm>componentes de visualizaci&oacute;n</firstterm> que permiten mostrar determinados tipos de archivos en el panel de vista. Por ejemplo, se puede utilizar un visualizador de texto para mostrar archivos de texto en el panel de vista.</para>
+      <para>Mostrar un archivo en el panel de vista presenta las siguientes ventajas: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Se utilizan menos recursos del sistema que al abrir una aplicaci&oacute;n. </para>
+        </listitem>
+        <listitem>
+          <para>Se tarda menos tiempo que al iniciar un aplicaci&oacute;n.</para>
+        </listitem>
+      </itemizedlist>
+      <para>No obstante, no se puede editar un archivo en el panel de vista.</para>
+      <para>El gestor de archivos tambi&eacute;n incluye <firstterm>vistas</firstterm> que permiten mostrar los contenidos de las carpetas. Por ejemplo, se puede mostrar el contenido de una carpeta de las siguientes maneras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Vista Icono: muestra los elementos de la carpeta como iconos. </para>
+        </listitem>
+        <listitem>
+          <para>Vista Lista: muestra los elementos de la carpeta como iconos. </para>
+        </listitem>
+        <listitem>
+          <para>Vista Sonido: muestra s&oacute;lo los archivos de sonido de la carpeta.</para>
+        </listitem>
+      </itemizedlist>
+      <para>El men&uacute; <guimenu>Ver como</guimenu> permite elegir c&oacute;mo mostrar una carpeta. Para obtener m&aacute;s informaci&oacute;n acerca de las vistas, consulte la <xref linkend="gosnautilus-7"/>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>Panel lateral </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>panel lateral</secondary>
+        <tertiary>introducci&oacute;n</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>panel lateral</primary>
+        <see>gestor de archivos</see>
+      </indexterm>
+      <para>Para mostrar el panel lateral, seleccione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Panel lateral</guimenuitem></menuchoice>. Se puede elegir el tipo de informaci&oacute;n que se visualizar&aacute; en el panel lateral. Seleccione una de las siguientes opciones:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Informaci&oacute;n</guilabel>
+          </para>
+          <para>Muestra un icono que representa el archivo o carpeta actual. Tambi&eacute;n muestra informaci&oacute;n acerca del archivo o carpeta actual. Cuando se muestra un archivo en el panel de vista, aparecen unos botones en el panel lateral, que permiten ejecutar sobre un fichero acciones diferentes de la acci&oacute;n predeterminada.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Emblemas</guilabel>
+          </para>
+          <para>Contiene los emblemas que se pueden agregar a un archivo o carpeta. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Historial</guilabel>
+          </para>
+          <para>Contiene un historial de los archivos, carpetas, sitios FTP y URI recientemente visitados.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Notas</guilabel>
+          </para>
+          <para>Permite agregar notas a los archivos y carpetas.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>&Aacute;rbol</guilabel>
+          </para>
+          <para>Muestra una representaci&oacute;n jer&aacute;rquica del sistema de archivos. El <guilabel>&Aacute;rbol</guilabel> permite navegar entre los archivos.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Para cerrar el panel lateral, haga clic en el bot&oacute;n <guibutton>X</guibutton> situado en la esquina superior izquierda.</para>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>Iconos y emblemas </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>iconos</secondary>
+        <tertiary> introducci&oacute;n</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>emblemas</secondary>
+        <see>emblemas</see>
+      </indexterm>
+      <indexterm>
+        <primary> emblemas</primary>
+        <secondary>introducci&oacute;n</secondary>
+      </indexterm>
+      <para>En la vista de iconos, el gestor de archivos muestra las archivos y carpetas con iconos. Se pueden agregar emblemas a los iconos de archivos y carpetas. Un emblema es un peque&ntilde;o icono que se puede agregar a un elemento para marcarlo visualmente. Por ejemplo, para marcar un archivo como importante, se puede agregar un emblema de <guilabel>Importante</guilabel> al icono del archivo para crear el siguiente efecto visual: </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Icono de archivo con el emblema de Importante. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para obtener m&aacute;s informaci&oacute;n acerca de c&oacute;mo agregar un emblema a un icono, consulte la <xref linkend="gosnautilus-112"/>. </para>
+      <para>La siguiente tabla describe la estructura del icono de un archivo:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Componente</para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n  </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblema de Importante. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Emblema. Este emblema es el de <guilabel>Importante</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Icono de archivo de texto. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>El icono que representa el archivo. Este icono puede contener una vista previa de los contenidos del archivo. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Texto del icono. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Texto del icono. Se pueden modificar los elementos de informaci&oacute;n que se muestran en el texto del icono.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>El gestor de archivos incluye los emblemas predeterminados para los siguientes tipos:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Enlaces simb&oacute;licos</para>
+        </listitem>
+        <listitem>
+          <para>Elementos para los cuales se dispone de los siguientes permisos:<indexterm><primary>permisos</primary><secondary>emblemas</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>S&oacute;lo permiso de lectura </para>
+            </listitem>
+            <listitem>
+              <para>Sin permiso de lectura ni de escritura</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>A continuaci&oacute;n se muestran los emblemas predeterminados:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Emblema predeterminado</para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n  </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblema de enlace simb&oacute;lico.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>enlaces simb&oacute;licos</primary><secondary>emblemas</secondary></indexterm>Enlace simb&oacute;lico</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblema de s&oacute;lo permiso de lectura. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>S&oacute;lo permiso de lectura </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblema de sin permiso de lectura ni de escritura.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Sin permiso de lectura ni de escritura </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>Navegaci&oacute;n por el ordenador </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>navegar</secondary>
+    </indexterm>
+    <para>El gestor de archivos proporciona un punto de acceso integrado a los archivos, aplicaciones, sitios FTP y URI. </para>
+    <para>En esta secci&oacute;n se describe: <itemizedlist><listitem><para>C&oacute;mo mostrar los elementos en las ventanas del gestor de archivos.</para></listitem><listitem><para>C&oacute;mo abrir los archivos desde las ventanas del gestor de archivos.</para></listitem><listitem><para>C&oacute;mo navegar por los archivos y carpetas del sistema de archivos. </para></listitem><listitem><para>C&oacute;mo abrir ubicaciones en el sistema de archivos.</para></listitem><listitem><para>C&oacute;mo conectar con un servidor.</para></listitem><listitem><para>C&oacute;mo navegar por sitios FTP.</para></listitem><listitem><para>C&oacute;mo acceder a direcciones URI especiales.</para></listitem></itemizedlist></para>
+    <sect2 id="gosnautilus-25">
+      <title>Para mostrar una carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>mostrar carpetas</secondary>
+      </indexterm>
+      <para>Se puede mostrar el contenido de una carpeta de las siguientes maneras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga doble clic en la carpeta en el panel de vista.</para>
+        </listitem>
+        <listitem>
+          <para>En el campo <guilabel>Direcci&oacute;n</guilabel>, escriba la ruta de acceso a la carpeta que desea visualizar y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>. El campo <guilabel>Direcci&oacute;n</guilabel> incluye una funci&oacute;n de autocompletado. Mientras se introduce la ruta, el gestor de archivos lee en el sistema de archivos. Cuando se han escrito suficientes caracteres como para identificar un directorio, el gestor de archivos completa el nombre en el campo <guilabel>direcci&oacute;n</guilabel> .</para>
+        </listitem>
+        <listitem>
+          <para>Utilice el <guilabel>&Aacute;rbol</guilabel> del panel lateral. Para obtener m&aacute;s informaci&oacute;n, consulte <xref linkend="gosnautilus-27"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Mediante los botones de la barra de herramientas <guibutton>Atr&aacute;s</guibutton> y <guibutton>Adelante</guibutton> se puede buscar en el historial de direcciones por las que se ha navegado. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Para cambiar a una carpeta que se encuentra a un nivel por encima de la actual, elija <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Arriba</guimenuitem></menuchoice>. Tambi&eacute;n puede hacer clic en el bot&oacute;n de la barra de herramientas <guibutton>Arriba</guibutton>.</para>
+      <para>Para volver a cargar el contenido, haga clic en el bot&oacute;n <guibutton>Recargar</guibutton>. </para>
+      <para>Si no encuentra una determinada carpeta, puede utilizar la aplicaci&oacute;n <application>Herramienta de b&uacute;squeda</application>. Para iniciar la <application>Herramienta de b&uacute;squeda</application>, haga clic en el bot&oacute;n <guibutton>Lanzador</guibutton> y seleccione <guimenu>Buscar archivos</guimenu>. </para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>Uso del &Aacute;rbol del panel lateral </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>&Aacute;rbol, uso del</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&Aacute;rbol, usar</primary>
+      </indexterm>
+      <para>El <guilabel>&Aacute;rbol</guilabel> muestra una representaci&oacute;n jer&aacute;rquica del sistema de archivos y <guilabel/>proporciona una manera c&oacute;moda de navegar en el sistema de archivos. Para mostrar el <guilabel>&Aacute;rbol</guilabel> en el panel lateral, seleccione <guimenuitem>&Aacute;rbol</guimenuitem> en la lista desplegable situada en la parte superior del panel. </para>
+      <para>En el <guilabel>&Aacute;rbol</guilabel>, las carpetas se representan de la siguiente manera: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Estado de la carpeta</para>
+              </entry>
+              <entry>
+                <para>Representaci&oacute;n gr&aacute;fica </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para>Carpeta cerrada</para>
+              </entry>
+              <entry>
+                <para>Flecha derecha</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Carpeta abierta</para>
+              </entry>
+              <entry>
+                <para>Flecha abajo</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>La <xref linkend="gosnautilus-TBL-34"/> describe las tareas que se pueden ejecutar con el <guilabel>&Aacute;rbol</guilabel> y c&oacute;mo ejecutarlas. </para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>Tareas del &Aacute;rbol</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Tarea</para>
+              </entry>
+              <entry>
+                <para>Acci&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Abrir el <guilabel>&Aacute;rbol</guilabel>.</para>
+              </entry>
+              <entry valign="top">
+                <para>Seleccionar el <guilabel>&Aacute;rbol</guilabel> de la lista desplegable en la parte superior del panel lateral.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Cerrar el <guilabel>&Aacute;rbol</guilabel>.</para>
+              </entry>
+              <entry valign="top">
+                <para>Seleccionar cualquier otro elemento de la lista desplegable en la parte superior del panel lateral.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Abrir una carpeta del <guilabel>&Aacute;rbol</guilabel>. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Hacer clic en la flecha situada junto a la carpeta del <guilabel>&Aacute;rbol</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Cerrar una carpeta del <guilabel>&Aacute;rbol</guilabel>. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Hacer clic en la flecha situada junto a la carpeta del <guilabel>&Aacute;rbol</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Mostrar el contenido de una carpeta en el panel de vista. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Seleccionar la carpeta del <guilabel>&Aacute;rbol</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Mostrar el contenido de un archivo en el panel de vista.</para>
+              </entry>
+              <entry valign="top">
+                <para>Seleccionar el archivo en el <guilabel>&Aacute;rbol</guilabel>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Se puede configurar el <guilabel>&Aacute;rbol</guilabel> de modo que no muestre archivos. </para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>Apertura de archivos </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>abrir archivos</secondary>
+      </indexterm>
+      <para>Al abrir un archivo, el gestor de archivos ejecuta la acci&oacute;n predeterminada para ese tipo de archivos. Las acciones predeterminadas pueden ser: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Utilizar un componente visualizador para mostrar el archivo en el panel de vista. </para>
+        </listitem>
+        <listitem>
+          <para>Iniciar una aplicaci&oacute;n que abra el archivo.</para>
+        </listitem>
+      </itemizedlist>
+      <para>El gestor de archivos comprueba el contenido de un archivo para determinar su tipo. Si las primeras l&iacute;neas no indican el tipo de archivo, el gestor de archivos comprueba la extensi&oacute;n.</para>
+      <para>Si no encuentra un determinado archivo, puede utilizar la aplicaci&oacute;n <application>Herramienta de b&uacute;squeda</application>. Para iniciar la <application>Herramienta de b&uacute;squeda</application>, haga clic en el bot&oacute;n <guibutton>Lanzador</guibutton> y seleccione <guimenu>Buscar archivos</guimenu>. </para>
+      <sect3 id="gosnautilus-447">
+        <title>Visualizaci&oacute;n de archivos en el panel de vista </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>visualizar archivos en el panel de vista</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>panel de vista</primary>
+          <secondary>visualizar archivos en</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>componentes de visualizaci&oacute;n</primary>
+        </indexterm>
+        <para>El gestor de archivos contiene componentes de visualizaci&oacute;n que permiten mostrar determinados tipos de archivos en el panel de vista. Por ejemplo, se pueden mostrar los siguientes tipos de archivos en el panel de vista:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Archivos simples de texto</para>
+          </listitem>
+          <listitem>
+            <para>Archivos PNG</para>
+          </listitem>
+          <listitem>
+            <para>Archivos Joint Photographic Experts Group (JPEG)</para>
+          </listitem>
+        </itemizedlist>
+        <para>Para actualizar el contenido del panel de vista, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Recargar</guimenuitem></menuchoice>. Para detener la carga de un elemento en el panel de vista, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Parar</guimenuitem></menuchoice>.</para>
+        <para>Al mostrar un archivo en el panel de vista, el componente de visualizaci&oacute;n suele agregar elementos de men&uacute; a los men&uacute;s del gestor de archivos. Estos elementos de men&uacute; est&aacute;n relacionados con el tipo de archivo que se muestra. Por ejemplo, al mostrar un archivo PNG, el men&uacute; <guimenu>Editar</guimenu> contiene los elementos para invertir y rotar. </para>
+        <para>Asimismo, al mostrar ciertos tipos de archivos en el panel de vista, se puede cambiar el tama&ntilde;o del elemento con los botones de aumento.</para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>Para ejecutar la acci&oacute;n predeterminada </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>ejecutar la acci&oacute;n predeterminada de un archivo</secondary>
+        </indexterm>
+        <para>Para ejecutar la acci&oacute;n predeterminada de un archivo, haga doble clic en el archivo. Por ejemplo, si la acci&oacute;n predeterminada para los archivos de texto simple es mostrar el archivo en un visor de texto, cuando haga doble clic en el archivo, &eacute;ste se mostrar&aacute; en un visor de texto.</para>
+        <para>Las preferencias del gestor de archivos se pueden configurar para que s&oacute;lo haga falta hacer clic sobre un archivo una vez para ejecutar la acci&oacute;n predeterminada. </para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>Para ejecutar acciones no predeterminadas mediante submen&uacute;s </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>ejecutar acciones no predeterminadas sobre archivos</secondary>
+        </indexterm>
+        <para>Para ejecutar acciones no predeterminadas sobre un archivo:</para>
+        <orderedlist>
+          <listitem>
+            <para>En el panel de vista, seleccione el archivo sobre el que desea ejecutar la acci&oacute;n Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem> Abrir con</guimenuitem></menuchoice>. Se abrir&aacute; el submen&uacute; de <guisubmenu>Abrir con</guisubmenu>, cuyos elementos se corresponden con los siguientes valores de la herramienta de preferencias del escritorio <application>Asociaciones de archivos</application>:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Lista desplegable <guilabel>Acci&oacute;n predeterminada</guilabel> del cuadro de di&aacute;logo <guilabel>Editar tipo de archivo</guilabel></para>
+              </listitem>
+              <listitem>
+                <para>Lista desplegable <guilabel>Componente de visualizaci&oacute;n</guilabel> del cuadro de di&aacute;logo <guilabel>Editar tipo de archivo</guilabel></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>Elija la acci&oacute;n en el submen&uacute; <guisubmenu>Abrir con</guisubmenu>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>Para ejecutar otras acciones al mostrar un archivo </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>ejecutar otras acciones sobre archivos</secondary>
+        </indexterm>
+        <para>Al mostrar un archivo en el panel de vista, el panel lateral puede contener botones.</para>
+        <para>Los botones representan las acciones definidas en la herramienta de preferencias <application>Asociaciones de archivos</application>. Las acciones est&aacute;n definidas en la lista desplegable <guilabel>Acci&oacute;n predeterminada</guilabel> en el cuadro de di&aacute;logo <guilabel>Editar tipo de archivo</guilabel> de la herramienta de preferencias <application>Asociaciones de archivos</application>. Haga clic en un bot&oacute;n para ejecutar una acci&oacute;n. Por ejemplo, si una acci&oacute;n definida para documentos de texto simple es abrir el archivo con <application>gedit</application>. Si esta acci&oacute;n est&aacute; definida, aparecer&aacute; un bot&oacute;n <guibutton>Abrir con gedit</guibutton> en el panel lateral. Para abrir el archivo con la aplicaci&oacute;n <application>gedit</application>, haga clic en el bot&oacute;n <guibutton>Abrir con gedit</guibutton>.</para>
+        <note>
+          <para>El bot&oacute;n que representa la acci&oacute;n no aparece en el panel lateral si las acciones fueron excluidas en uno de estos dos cuadros de di&aacute;logos</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>Abrir con otra aplicaci&oacute;n</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Abrir con otro visualizador</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-515">
+      <title>Para abrir direcciones</title>
+      <para>El gestor de archivos proporciona un punto de acceso integrado a los archivos, aplicaciones, sitios FTP y URI. </para>
+      <para>Se puede utilizar el gestor de archivos para acceder r&aacute;pidamente a distintas direcciones del sistema de archivos. Para abrir una direcci&oacute;n:<orderedlist><listitem><para>Seleccione <menuchoice><guimenu>Ir a</guimenu><guimenuitem> Direcci&oacute;n</guimenuitem></menuchoice>. </para></listitem><listitem><para>Escriba en el campo <guilabel>Direcci&oacute;n</guilabel> la ruta de acceso a la carpeta que desee mostrar.</para></listitem><listitem><para>Pulse la tecla <keycap>Intro</keycap>.</para></listitem></orderedlist></para>
+      <para>El campo <guilabel>Direcci&oacute;n</guilabel> incluye una funci&oacute;n de autocompletado. Mientras se introduce la ruta, el gestor de archivos lee en el sistema de archivos. Cuando se han escrito suficientes caracteres como para identificar un directorio, el gestor de archivos completa autom&aacute;ticamente el nombre en el campo <guilabel>Direcci&oacute;n</guilabel> .</para>
+    </sect2>
+    <sect2 id="gosnautilus-491">
+      <title>Para conectar con un servidor</title>
+      <para>Si su entorno Java Desktop System est&aacute; configurado para acceder a servidores en una red, puede utilizar para ello el men&uacute; <guilabel>Conectar con servidor</guilabel>.</para>
+      <para>Para conectar con un servidor:<orderedlist><listitem><para>Seleccione <menuchoice><guimenu>Archivo</guimenu><guimenuitem> Conectar con servidor</guimenuitem></menuchoice>.</para></listitem><listitem><para>Escriba el nombre de un servidor en el campo <guilabel>Nombre de enlace</guilabel> del cuadro de di&aacute;logo <guilabel>Conectar con servidor</guilabel>.</para></listitem><listitem><para>Escriba el URL, por ejemplo <literal>ftp:///ftp.gnome.org </literal> en el campo <guilabel>Direcci&oacute;n (URL)</guilabel>.</para></listitem><listitem><para>Haga clic en el bot&oacute;n <guibutton>Conectar</guibutton>.</para></listitem></orderedlist> </para>
+    </sect2>
+    <sect2 id="gosnautilus-445">
+      <title>Uso de la ubicaci&oacute;n Este equipo</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Icono Este equipo. La imagen describe el contexto.  </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>ubicaci&oacute;n Este equipo </secondary>
+        <see>ubicaci&oacute;n Este equipo</see>
+      </indexterm>
+      <indexterm>
+        <primary> ubicaci&oacute;n Este equipo</primary>
+        <secondary>usar</secondary>
+      </indexterm>
+      <para>La ubicaci&oacute;n <guilabel>Este equipo</guilabel> proporciona acceso a las siguientes funciones del escritorio:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Aplicaciones</guilabel>
+          </para>
+          <para>Haga doble clic en <guilabel>Aplicaciones</guilabel> para acceder a las principales aplicaciones de Java Desktop System. Tambi&eacute;n se puede acceder al men&uacute; <guimenu>Aplicaciones</guimenu> a trav&eacute;s del men&uacute; <guimenu>Lanzador</guimenu> y de la <application>Barra de men&uacute;s</application>.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Preferencias</guilabel>
+          </para>
+          <para>Haga doble clic en <guilabel>Preferencias</guilabel> para personalizar Java Desktop System. Tambi&eacute;n puede acceder a la herramienta de preferencias a trav&eacute;s del men&uacute; <guimenu>Lanzador</guimenu>.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Sistema de archivos</guilabel>
+          </para>
+          <para>Haga doble clic en <guilabel>Sistema de archivos</guilabel> para acceder a la carpeta de nivel superior de Java Desktop System. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Para acceder a <guilabel>Este equipo</guilabel>:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Desde el fondo del escritorio</para>
+          <para>Haga doble clic en el objeto del escritorio <guilabel>Este equipo</guilabel>. El contenido de la ubicaci&oacute;n <guilabel>Este equipo</guilabel> se mostrar&aacute;n en una ventana del gestor de archivos.</para>
+        </listitem>
+        <listitem>
+          <para>Desde una ventana del gestor de archivos, acceda al URI <command>computer:/// </command>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>Para acceder a sitios FTP </title>
+      <indexterm>
+        <primary>sitios FTP</primary>
+        <secondary>acceder</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>sitios FTP</secondary>
+        <see>sitios FTP</see>
+      </indexterm>
+      <para>El gestor de archivos tambi&eacute;n puede acceder a sitios FTP. Para ello, debe introducir el URL correspondiente en la barra de direcciones y, a continuaci&oacute;n, pulsar <keycap>Intro</keycap>. Los contenidos del sitio se mostrar&aacute;n en el panel de vista. Para copiar un archivo del sitio FTP, arr&aacute;strelo a la nueva direcci&oacute;n.</para>
+      <para>Para acceder a un sitio FTP que requiere de un nombre de usuario y contrase&ntilde;a, debe introducir el URL de la siguiente manera: </para>
+      <para>
+        <command>ftp://<replaceable>nombre_usuario</replaceable>:<replaceable>contrase&ntilde;a</replaceable>@<replaceable>sistema</replaceable>.<replaceable>dominio</replaceable></command>
+      </para>
+      <para>Para actualizar el sitio FTP del panel de vista, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Recargar</guimenuitem></menuchoice>. Para detener la carga de un sitio FTP en el panel de vista, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Parar</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-465">
+      <title>Para acceder a sitios de la red </title>
+      <indexterm>
+        <primary>sitios de la red</primary>
+        <secondary>acceso</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>sitios de la red</secondary>
+        <see>sitios de la red</see>
+      </indexterm>
+      <para>Si el sistema est&aacute; configurado para acceder a direcciones a trav&eacute;s de una red, el gestor de archivos puede acceder a ellas. </para>
+      <para>Si desea acceder a los sitios de la red abra el gestor de archivos y seleccione <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Sitios de red</guimenuitem></menuchoice>. Tambi&eacute;n puede hacer doble clic en el objeto <guilabel>Sitios de red</guilabel> del fondo del escritorio. Haga doble clic en el objeto <guilabel>Red</guilabel>. Se abrir&aacute; una ventana del gestor de archivos donde se muestran los sitios accesibles. Haga doble clic en la red a la que desea acceder. </para>
+      <para><indexterm><primary>servidores NFS</primary><see>red Unix</see></indexterm>Para acceder a los recursos compartidos con UNIX haga doble clic en el objeto <guilabel>Red de Unix (NFS) </guilabel>. Se abrir&aacute; una lista de recursos compartidos con UNIX disponibles en la ventana del gestor de archivos.</para>
+      <para><indexterm><primary>servidores Samba</primary><see>red Windows</see></indexterm>Para acceder a los recursos compartidos con Windows, haga doble clic en el objeto <guilabel>Red de Windows (SMB)</guilabel>. Se abrir&aacute; una lista de recursos compartidos con Windows disponibles en la ventana del gestor de archivos.</para>
+      <sect3 id="gosnautilus-466">
+        <title>Para a&ntilde;adir un sitio de red</title>
+        <para>Para a&ntilde;adir un sitio de red, siga estos pasos:</para>
+        <orderedlist>
+          <listitem>
+            <para>Abra el Gestor de archivos y seleccione <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Sitios de red</guimenuitem></menuchoice>. Tambi&eacute;n puede hacer doble clic en el objeto <guilabel>Sitios de red</guilabel> del fondo del escritorio. </para>
+          </listitem>
+          <listitem>
+            <para>Haga doble clic en el objeto <guilabel>Agregar sitio de red</guilabel>. Se abre el cuadro de di&aacute;logo <guilabel>Agregar sitio de red</guilabel>. Escriba los detalles del servidor en el cuadro de di&aacute;logo, de este modo:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento de la ventana de di&aacute;logo</para>
+                    </entry>
+                    <entry>
+                      <para>Descripci&oacute;n </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Ubicaci&oacute;n</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use este cuadro de texto para especificar la ubicaci&oacute;n que desee a&ntilde;adir. Tambi&eacute;n puede seleccionar una de las ubicaciones siguientes de la lista desplegable:<itemizedlist><listitem><para><guilabel>Servidor FTP</guilabel></para></listitem><listitem><para><guilabel>Carpeta Web</guilabel></para></listitem><listitem><para><guilabel>Red de Windows (SMB)</guilabel></para></listitem><listitem><para><guilabel>Red de Unix (NFS)</guilabel></para></listitem></itemizedlist></para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nombre del acceso directo</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">Use este cuadro de texto con el fin de especificar un nombre de acceso directo para el sitio de la red. </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Conexi&oacute;n an&oacute;nima</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>S&oacute;lo la opci&oacute;n del servidor FTP. Seleccione esta opci&oacute;n si desea iniciar la sesi&oacute;n en el servidor FTP como usuario an&oacute;nimo.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel> No es necesario inicio de sesi&oacute;n</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>S&oacute;lo las opciones Carpeta Web, Red de Windows (SMB) y Red de Unix (NFS). Seleccione esta opci&oacute;n si no necesita iniciar la sesi&oacute;n en la carpeta Web, en los recursos compartidos de Windows ni en los recursos compartidos de UNIX.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Nombre del usuario</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Use este cuadro de texto para especificar el nombre de un usuario cuando se conecte con el sitio de red especificado.</para>
+                      <para>Cuando se conecte con el sitio de red, debe escribir la contrase&ntilde;a.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Ir all&iacute; ahora</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Seleccione esta opci&oacute;n si desea acceder inmediatamente al sitio de la red.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Haga clic en <guibutton>Aceptar</guibutton> para a&ntilde;adir el sitio de red. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-508">
+      <title>Acceso a los servidores de red</title>
+      <para>Si el entorno de escritorio de GNOME se configura para acceder a servidores de una red, puede utilizar el men&uacute; <guilabel>Aplicaciones</guilabel> para acceder a los servidores de red.</para>
+      <para>Para acceder a los servidores de red, seleccione <menuchoice><guimenu>Aplicaciones</guimenu><guimenuitem>Servidores de red</guimenuitem></menuchoice>. Aparece una ventana de objeto de archivo. se muestran los servidores accesibles. Haga doble clic sobre el servidor de red al que desee acceder.</para>
+      <sect3 id="gosnautilus-509">
+        <title>C&oacute;mo a&ntilde;adir un servidor de red</title>
+        <para>Para a&ntilde;adir un servidor de red, elija <menuchoice><guimenu>Aplicaciones</guimenu><guimenuitem>Servidores de red</guimenuitem></menuchoice>. Aparece una ventana de objeto de archivo. Haga doble clic sobre el objeto <guilabel>Nuevo servidor</guilabel>. Aparece el cuadro de di&aacute;logo <guilabel>Nuevo servidor</guilabel>. Escriba el nombre del servidor en el cuadro de di&aacute;logo y, a continuaci&oacute;n, haga clic en <guibutton>Aceptar</guibutton>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-467">
+      <title>Acceso a URI especiales </title>
+      <indexterm>
+        <primary>ubicaciones de URI especiales</primary>
+        <secondary>acceder</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>ubicaciones de URI especiales</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>URI, especiales</primary>
+        <see>ubicaciones de URI especiales</see>
+      </indexterm>
+      <para>Java Desktop System contiene URI especiales que permiten acceder a funciones determinadas desde el gestor de archivos. Por ejemplo, para acceder a la herramienta de preferencias, se puede utilizar el URI <command>preferences:///</command> en el gestor de archivos. La <xref linkend="gosnautilus-TBL-479"/> muestra las direcciones URI especiales que se utilizan con el gestor de archivos.</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>Direcciones URI especiales</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Direcci&oacute;n URI</para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>applications:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Muestra la lista de aplicaciones de Java Desktop System. Las aplicaciones son las mismas que las del men&uacute; <guimenu>Aplicaciones</guimenu>. Haga doble clic sobre una aplicaci&oacute;n para iniciarla.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>computer:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Muestra la lista de aplicaciones y herramientas de preferencias de Java Desktop System. Tambi&eacute;n muestra iconos para acceder al sistema de archivos, CD-ROM y unidades de disquete.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Muestra las direcciones de red a las que se puede conectar, si el sistema se ha configurado para acceder a las direcciones de una red. Para acceder a una direcci&oacute;n en la red, haga doble clic sobre ella. Este URI permite tambi&eacute;n agregar direcciones de red al sistema.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>preferences:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Muestra la lista de las herramientas de preferencias de Java Desktop System. &Eacute;stas son las mismas que aparecen en el men&uacute; <guimenu>Preferencias</guimenu>. Para abrir una herramienta de preferencias, haga doble clic sobre ella.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>server-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Muestra la lista de aplicaciones que permiten configurar el sistema como servidor. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>system-settings:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Muestra una lista de aplicaciones que permiten modificar la configuraci&oacute;n del sistema.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>Uso del historial de navegaci&oacute;n </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>lista de historial de navegaci&oacute;n</secondary>
+      </indexterm>
+      <para>El gestor de archivos mantiene un historial de los archivos, carpetas, sitios FTP y URI. El historial permite navegar por ellos. El historial contiene los &uacute;ltimos diez elementos visualizados. Las siguientes secciones describen c&oacute;mo navegar por la lista de historial.</para>
+      <para>Para suprimir el historial, elija <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Borrar historial</guimenuitem></menuchoice>.</para>
+      <sect3 id="gosnautilus-77">
+        <title>Para navegar por el historial mediante el men&uacute; Ir a</title>
+        <para>Para mostrar una lista de elementos previamente visualizados, elija el men&uacute; <guimenu>Ir a</guimenu>. La lista del historial se muestra en la parte inferior del men&uacute; <guimenu>Ir a</guimenu>. Para abrir un elemento de la lista del historial, el&iacute;jalo en el men&uacute; <guimenu>Ir a</guimenu>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>Para navegar por el historial mediante la barra de herramientas</title>
+        <para>Para utilizar la barra de herramientas para navegar por el historial:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Para abrir el archivo, carpeta o URI anterior en el historial, haga clic en el bot&oacute;n <guibutton>Atr&aacute;s</guibutton> de la barra de herramientas.</para>
+          </listitem>
+          <listitem>
+            <para>Para abrir el siguiente archivo, carpeta o URI del historial, haga clic en el bot&oacute;n <guibutton>Adelante</guibutton> de la barra de herramientas.</para>
+          </listitem>
+          <listitem>
+            <para>Para mostrar una lista de elementos previamente visualizados, haga clic en la flecha hacia abajo situada a la derecha del bot&oacute;n <guibutton>Atr&aacute;s</guibutton> de la barra de herramientas. Para abrir un elemento de esta lista, haga clic sobre &eacute;l.</para>
+          </listitem>
+          <listitem>
+            <para>Para mostrar una lista de elementos que se visualizaron despu&eacute;s del elemento actual, haga clic en la flecha hacia abajo situada a la derecha del bot&oacute;n <guibutton>Adelante</guibutton> de la barra de tareas. Para abrir un elemento de esta lista, haga clic sobre &eacute;l.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>Para navegar por el historial mediante el panel lateral </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>Historial</secondary>
+        </indexterm>
+        <para>Para mostrar la lista <guilabel>Historial</guilabel> en el panel lateral, seleccione <guilabel>Historial</guilabel> de la lista desplegable situada en la parte superior del panel. La lista <guilabel>Historial</guilabel> del panel lateral muestra una lista de los elementos previamente visualizados.</para>
+        <para>Para mostrar un elemento del historial en el panel de vista, haga clic en el elemento en la lista <guilabel>Historial</guilabel>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>Para marcar las direcciones favoritas </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>marcadores</secondary>
+      </indexterm>
+      <para>Para acceder a un elemento de la lista de marcadores, el&iacute;jalo en el men&uacute; <guimenu>Marcadores</guimenu>. Se pueden agregar direcciones al men&uacute; <guimenu>Marcadores</guimenu>. Los marcadores pueden apuntar a archivos y carpetas del sistema, sitios FTP o direcciones URI.</para>
+      <sect3 id="gosnautilus-40">
+        <title>Para agregar un marcador</title>
+        <para>Para agregar un marcador, visualice el elemento que desea marcar en el panel de vista. Elija <menuchoice><guimenu>Marcadores</guimenu><guimenuitem> Agregar marcador</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>Para editar un marcador</title>
+        <para>Para editar los marcadores siga estos pasos:</para>
+        <orderedlist>
+          <listitem>
+            <para>Elija <menuchoice><guimenu>Marcadores</guimenu><guimenuitem>Editar marcadores</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Para editar un marcador, selecci&oacute;nelo en la parte izquierda del cuadro de di&aacute;logo <guilabel>Editar marcadores</guilabel>. Edite los detalles del marcador en la parte derecha del cuadro de di&aacute;logo <guilabel>Editar favoritos</guilabel>, como se indica a continuaci&oacute;n: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento de la ventana de di&aacute;logo</para>
+                    </entry>
+                    <entry>
+                      <para>Descripci&oacute;n </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nombre</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Utilice este cuadro de texto para indicar un nombre que identifique el marcador en el men&uacute; <guimenu>Marcadores</guimenu>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Ubicaci&oacute;n</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Utilice este campo para indicar la direcci&oacute;n del marcador. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Para suprimir un marcador, selecci&oacute;nelo en la parte izquierda del cuadro de di&aacute;logo. Haga clic en <guilabel>Eliminar</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>Gesti&oacute;n de archivos y carpetas </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>gestionar archivos y carpetas</secondary>
+    </indexterm>
+    <para>Esta secci&oacute;n escribe c&oacute;mo trabajar con los archivos y carpetas.</para>
+    <sect2 id="gosnautilus-201">
+      <title>Arrastrar y soltar en el gestor de archivos </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>arrastrar y soltar</secondary>
+      </indexterm>
+      <para>Se pueden realizar m&uacute;ltiples tareas arrastrando y soltando en el gestor de archivos. Al arrastrar y soltar, el puntero del rat&oacute;n ofrece informaci&oacute;n acerca de la tarea que se est&aacute; realizando. La <xref linkend="gosnautilus-TBL-11"/> describe las tareas que se pueden hacer con la funci&oacute;n de arrastrar y soltar. La tabla tambi&eacute;n muestra los punteros de rat&oacute;n que aparecen al arrastrar y soltar.</para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>Arrastrar y soltar en el gestor de archivos</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Tarea </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Acci&oacute;n</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Puntero del rat&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Mover un elemento</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Arrastrar el elemento a la nueva direcci&oacute;n.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntero de movimiento.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Copiar un elemento</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Arrastrar el elemento y, a continuaci&oacute;n, pulsar y mantener pulsada <keycap>Ctrl</keycap>. Arrastrar el elemento a la nueva direcci&oacute;n.</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntero de copia.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Crear un enlace simb&oacute;lico a un elemento</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Arrastrar el elemento y, a continuaci&oacute;n, pulsar y mantener pulsadas <keycombo><keycap>Ctrl</keycap><keycap>May&uacute;s</keycap></keycombo>. Arrastrar el elemento a la direcci&oacute;n donde se quiera situar el enlace simb&oacute;lico.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntero de enlace simb&oacute;lico.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Preguntar qu&eacute; hacer con el elemento que se arrastra </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Arrastrar el elemento y, a continuaci&oacute;n, pulsar y mantener pulsada <keycap>Alt</keycap>. Arrastrar el elemento a la direcci&oacute;n donde se quiere situar el elemento. Suelte el bot&oacute;n del rat&oacute;n. Aparecer&aacute; un men&uacute; desplegable. Elegir cualquiera de los siguientes elementos que aparecer&aacute;n en el men&uacute; desplegable: </para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Mover aqu&iacute;</guimenuitem>
+                    </para>
+                    <para>Mueve el elemento a la direcci&oacute;n.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Copiar aqu&iacute;</guimenuitem>
+                    </para>
+                    <para>Crea una copia del elemento en la direcci&oacute;n. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Enlazar aqu&iacute;</guimenuitem>
+                    </para>
+                    <para>Crea un enlace simb&oacute;lico al elemento en la direcci&oacute;n.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Usar como fondo</guimenuitem>
+                    </para>
+                    <para>Si el elemento es una imagen, la utiliza como fondo del escritorio. Este comando permite configurar el fondo del escritorio y del panel de vista.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Cancelar</guimenuitem>
+                    </para>
+                    <para>Cancela la operaci&oacute;n de arrastrar y soltar </para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntero de pregunta.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>Para seleccionar archivos y carpetas </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>seleccionar archivos y carpetas</secondary>
+      </indexterm>
+      <para>Existen varias formas de seleccionar carpetas y archivos en el gestor de archivos. La <xref linkend="gosnautilus-TBL-10"/> describe c&oacute;mo seleccionar elementos en el gestor de archivos y en el escritorio.</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>Selecci&oacute;n de elementos en el gestor de archivos</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Tarea </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Acci&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar un elemento</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Hacer clic en el elemento.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar un grupo de elementos contiguos</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>En la vista de iconos, arrastrar alrededor de los archivos que se desea seleccionar</para>
+                <para>En la vista de lista, haga clic en el primer elemento del grupo. Mantener pulsada la tecla <keycap>May&uacute;s</keycap> y, a continuaci&oacute;n, haga clic sobre el &uacute;ltimo elemento del grupo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar varios elementos</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Mantener pulsada la tecla <keycap>Ctrl</keycap>. Hacer clic en los elementos que desea seleccionar.</para>
+                <para>Tambi&eacute;n, pulsar y mantener pulsada la tecla <keycap>Ctrl</keycap> y, a continuaci&oacute;n, seleccionar los archivos que se desea seleccionar.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar todos los elementos de una carpeta </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Elegir <menuchoice><guimenu>Editar</guimenu><guimenuitem>Seleccionar todos los archivos</guimenuitem></menuchoice>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Para ejecutar la acci&oacute;n predefinida sobre un elemento, haga doble clic sobre &eacute;l. Las preferencias del gestor de archivos se pueden configurar para que s&oacute;lo haga falta hacer clic sobre un archivo una vez para ejecutar la acci&oacute;n predeterminada.</para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>Para mover un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>mover archivos y carpetas</secondary>
+      </indexterm>
+      <para>Las siguientes secciones describen c&oacute;mo mover un archivo o carpeta.</para>
+      <sect3 id="gosnautilus-537">
+        <title>Arrastrar a la nueva direcci&oacute;n en un panel de vista</title>
+        <para>Para arrastrar un archivo o carpeta a la nueva direcci&oacute;n en un panel de vista:</para>
+        <orderedlist>
+          <listitem>
+            <para>Abra una ventana del gestor de archivos. Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Nueva ventana</guimenuitem></menuchoice> para abrir una segunda ventana del gestor de archivos.</para>
+          </listitem>
+          <listitem>
+            <para>En una ventana, seleccione la carpeta desde la cual se va a mover el archivo o carpeta. En la otra, seleccione la carpeta hacia la cual se va a mover el archivo o carpeta.</para>
+          </listitem>
+          <listitem>
+            <para>Arrastre el archivo o carpeta a la carpeta hacia la cual desea moverlo.</para>
+          </listitem>
+        </orderedlist>
+        <para>Para mover el archivo o carpeta a una carpeta situada un nivel por debajo de la direcci&oacute;n actual, no hace falta abrir una nueva ventana. Basta con arrastrar el archivo o carpeta a la nueva direcci&oacute;n en la misma ventana.</para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>Cortar y pegar en la nueva direcci&oacute;n</title>
+        <para>Se puede cortar un archivo o carpeta para pegarlo en otra carpeta, como se indica a continuaci&oacute;n:</para>
+        <orderedlist>
+          <listitem>
+            <para>Seleccione el archivo o carpeta que desea mover y, a continuaci&oacute;n, <menuchoice><guimenu>Editar</guimenu><guimenuitem>Cortar archivos</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Abra la carpeta hacia la cual desea mover el archivo o carpeta y, a continuaci&oacute;n, elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Pegar archivo</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>Para copiar un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>copiar archivos y carpetas</secondary>
+      </indexterm>
+      <para>Las siguientes secciones describen c&oacute;mo copiar un archivo o carpeta.</para>
+      <sect3 id="gosnautilus-640">
+        <title>Arrastrar a la nueva direcci&oacute;n en un panel de vista</title>
+        <para>Para copiar un archivo o carpeta:</para>
+        <orderedlist>
+          <listitem>
+            <para>Abra una ventana del gestor de archivos. Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Nueva ventana</guimenuitem></menuchoice> para abrir una segunda ventana del gestor de archivos.</para>
+          </listitem>
+          <listitem>
+            <para>En una ventana, seleccione la carpeta desde la cual se va a copiar el archivo o carpeta. En la otra, seleccione la carpeta en la cual se va a crear la copia del archivo o carpeta.</para>
+          </listitem>
+          <listitem>
+            <para>Arrastre el archivo o carpeta, a continuaci&oacute;n pulse y mantenga pulsada <keycap>Ctrl</keycap>. Basta con arrastrar el archivo o carpeta a la nueva direcci&oacute;n en otra ventana. </para>
+          </listitem>
+        </orderedlist>
+        <para>Para copiar el archivo o carpeta a una carpeta situada un nivel por debajo de la direcci&oacute;n actual, no hace falta abrir una nueva ventana. Arrastre el archivo o carpeta, a continuaci&oacute;n pulse y mantenga pulsada <keycap>Ctrl</keycap>. Basta con arrastrar el archivo o carpeta a la nueva direcci&oacute;n en la misma ventana.</para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>Copiar y pegar en la nueva direcci&oacute;n</title>
+        <para>Se puede copiar un archivo o carpeta para pegarlo en otra carpeta, como se indica a continuaci&oacute;n:</para>
+        <orderedlist>
+          <listitem>
+            <para>Seleccione el archivo o carpeta que desea copiar y, a continuaci&oacute;n, <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar archivo</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Abra la carpeta en la cual desea crear la copia del archivo o carpeta y, a continuaci&oacute;n, elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Pegar archivo</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>Para duplicar un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>duplicar archivos y carpetas</secondary>
+      </indexterm>
+      <para>Para crear una copia de un archivo o carpeta en la carpeta actual:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el archivo o carpeta que desea duplicar en el panel de vista.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Duplicar</guimenuitem></menuchoice>. Tambi&eacute;n, haga clic con el bot&oacute;n derecho del rat&oacute;n sobre el archivo o carpeta en el panel de vista y, a continuaci&oacute;n, elija <guimenuitem>Duplicar</guimenuitem>. </para>
+          <para>Aparecer&aacute; una copia del archivo o carpeta en la direcci&oacute;n actual.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>Para crear una carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>crear carpetas</secondary>
+      </indexterm>
+      <para>Para crear una carpeta:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione la carpeta en la que desea crear la nueva carpeta. </para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem> Crear carpeta</guimenuitem></menuchoice>. Tambi&eacute;n puede hacer clic con el bot&oacute;n derecho en el fondo del panel de vista y, a continuaci&oacute;n, elegir <guimenuitem>Crear carpeta</guimenuitem>. </para>
+          <para>Aparecer&aacute; una carpeta llamada <guilabel>sin t&iacute;tulo</guilabel> en el panel de vista. El nombre aparecer&aacute; seleccionado.</para>
+        </listitem>
+        <listitem>
+          <para>Escriba el nombre de la carpeta y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>Para renombrar un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>renombrar carpetas</secondary>
+      </indexterm>
+      <para>Para renombrar un archivo o carpeta: </para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el archivo o carpeta que desea renombrar en el panel de vista.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Renombrar</guimenuitem></menuchoice>. Tambi&eacute;n, haga clic con el bot&oacute;n derecho del rat&oacute;n sobre el archivo o carpeta en el panel de vista y, a continuaci&oacute;n, elija <guimenuitem>Renombrar</guimenuitem>. </para>
+          <para>El nombre del archivo o carpeta aparecer&aacute; seleccionado.</para>
+        </listitem>
+        <listitem>
+          <para>Escriba el nuevo nombre de la carpeta o archivo y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>Plantillas y documentos </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>crear documentos</secondary>
+      </indexterm>
+      <para>Puede utilizar los documentos que cree con m&aacute;s frecuencia para crear carpetas. Por ejemplo, si crea facturas de forma habitual, puede crear un documento de factura vac&iacute;o y guardarlo como <literal>factura.doc</literal> en la carpeta <literal>$HOME/Templates</literal>.</para>
+      <para>Tambi&eacute;n puede acceder a la carpeta de las plantillas desde una ventana del gestor de archivos. Seleccione <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Plantillas</guimenuitem></menuchoice>.</para>
+      <para>El nombre de la plantilla se mostrar&aacute; como submen&uacute; de <guilabel>Crear documento</guilabel>.</para>
+      <para>En la carpeta de plantillas tambi&eacute;n se pueden crear subcarpetas que se muestran como submen&uacute;s. </para>
+      <para>Si desea compartir plantillas, cree un enlace simb&oacute;lico desde la carpeta de plantillas a la que contiene las plantillas compartidas. </para>
+    </sect2>
+    <sect2 id="gosnautilus-514">
+      <title>Para crear un documento</title>
+      <para>Si dispone de plantillas de documentos, puede optar por crear el documento a partir de una de las plantillas instaladas. </para>
+      <para>Para crear un documento:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione la carpeta en la que desee crear el nuevo documento. </para>
+        </listitem>
+        <listitem>
+          <para>Seleccione <menuchoice><guimenu>Archivo</guimenu><guimenuitem> Crear documento</guimenuitem></menuchoice>. Tambi&eacute;n puede hacer clic con el bot&oacute;n derecho en el fondo del panel de vista y, a continuaci&oacute;n, elegir <guimenuitem>Crear documento</guimenuitem>.</para>
+          <para>Los nombres de las plantillas disponibles se mostrar&aacute;n como submen&uacute;s de <guilabel>Crear documento</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga doble clic en el nombre de la plantilla para el documento que desee crear. </para>
+        </listitem>
+        <listitem>
+          <para>Cambie el nombre del documento y gu&aacute;rdelo en la carpeta adecuada.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>Para mover archivos o carpetas a la Papelera </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>Papelera</secondary>
+        <see> Papelera</see>
+      </indexterm>
+      <indexterm>
+        <primary>Papelera</primary>
+        <secondary>mover archivos y carpetas a</secondary>
+      </indexterm>
+      <para>Para mover un archivo o carpeta a la <guilabel>Papelera</guilabel>:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el archivo o carpeta que desea mover a la <guilabel>Papelera</guilabel> en el panel de vista.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Mover a la Papelera</guimenuitem></menuchoice>. Tambi&eacute;n, haga clic con el bot&oacute;n derecho del rat&oacute;n sobre el archivo o carpeta en el panel de vista y, a continuaci&oacute;n, elija <guimenuitem>Mover a la Papelera</guimenuitem>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Tambi&eacute;n se puede arrastrar el archivo o carpeta del panel de vista al objeto <guilabel>Papelera</guilabel> situado en el escritorio</para>
+      <note>
+        <para>Al mover un archivo o carpeta desde un dispositivo desmontable a la <guilabel> Papelera</guilabel> &eacute;ste se guarda en una direcci&oacute;n llamada <guilabel>Papelera</guilabel> dentro del propio dispositivo. Para suprimir el archivo o carpeta de forma permanente, debe vaciar la <guilabel>Papelera</guilabel>.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>Para suprimir un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>eliminar archivos o carpetas</secondary>
+      </indexterm>
+      <para>Al borrar un archivo o carpeta, &eacute;stos no se mueven a la <guilabel>Papelera</guilabel> si no que se suprimen del sistema inmediatamente. El elemento del men&uacute; <guimenuitem>Suprimir</guimenuitem> s&oacute;lo est&aacute; disponible si se seleccion&oacute; previamente la opci&oacute;n <guilabel>Incluir una orden de suprimir que evite el paso por la papelera</guilabel> en el cuadro de di&aacute;logo <guilabel>Preferencias</guilabel>. </para>
+      <para>Para suprimir un archivo o carpeta:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el archivo o carpeta que desea suprimir en el panel de vista.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Suprimir</guimenuitem></menuchoice>. Tambi&eacute;n, haga clic con el bot&oacute;n derecho del rat&oacute;n sobre el archivo o carpeta en el panel de vista y, a continuaci&oacute;n, elija <guimenuitem>Suprimir</guimenuitem>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>Para crear un enlace simb&oacute;lico a un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>crear enlace simb&oacute;lico</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>enlace simb&oacute;lico</primary>
+        <secondary>a archivo o carpeta, crear</secondary>
+      </indexterm>
+      <para>Un enlace simb&oacute;lico es un tipo especial de archivo que apunta a otro fichero o carpeta. Al ejecutar una acci&oacute;n sobre un enlace simb&oacute;lico, &eacute;sta se ejecuta sobre el archivo o carpeta al que apunta. No obstante, al borrar un enlace simb&oacute;lico s&oacute;lo se borra &eacute;ste y no el archivo o carpeta a los que apunta. </para>
+      <para>Para crear un enlace, seleccione el objeto en primer lugar. Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Crear enlace</guimenuitem></menuchoice>. Se crear&aacute; un enlace para el archivo o carpeta en el directorio actual. </para>
+      <para>Tambi&eacute;n, arrastre el elemento donde quiera crear el enlace y, a continuaci&oacute;n, pulse y mantenga pulsadas <keycombo><keycap>Ctrl</keycap><keycap>May&uacute;s</keycap></keycombo>. Arrastre el elemento a la direcci&oacute;n donde se quiera situar el enlace.</para>
+      <para>Como valor predeterminado, el gestor de archivos agrega un emblema a los enlaces simb&oacute;licos.</para>
+      <note>
+        <para>Los permisos del enlace simb&oacute;lico son los mismos que los del archivo o carpeta a los que apunta.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-476">
+      <title>Para ver las propiedades de un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>ver propiedades</secondary>
+      </indexterm>
+      <para>Para ver las propiedades de un archivo o carpeta, efect&uacute;e los pasos siguientes:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el archivo o carpeta cuyas propiedades desee ver. </para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Propiedades</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Use el cuadro de di&aacute;logo Propiedades. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>Para cambiar permisos </title>
+      <indexterm>
+        <primary>permisos</primary>
+        <secondary>introducci&oacute;n</secondary>
+      </indexterm>
+      <para>Los permisos son unos valores de confirmaci&oacute;n asignados a cada archivo y carpeta que determinan el tipo de acceso al cual tienen derecho los usuarios. A continuaci&oacute;n se muestran los permisos que se pueden asignar a archivos y carpetas y su efecto:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colwidth="29.62*"/>
+          <colspec colwidth="74.59*"/>
+          <colspec colname="colspec0" colwidth="74.59*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Permiso</para>
+              </entry>
+              <entry>
+                <para>Archivo</para>
+              </entry>
+              <entry colname="colspec0">
+                <para>Carpeta</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Le&iacute;do </para>
+              </entry>
+              <entry valign="top">
+                <para>Permiso para leer el archivo. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Permiso para ver los contenidos de la carpeta.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Escribir </para>
+              </entry>
+              <entry valign="top">
+                <para>Permiso para realizar cambios en el archivo. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Permiso para crear y suprimir archivos en la carpeta.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Ejecutar </para>
+              </entry>
+              <entry valign="top">
+                <para>Permiso de ejecutar el archivo como programa. Este permiso s&oacute;lo es &uacute;til en el caso de que el archivo sea un programa o una secuencia. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Permiso para acceder a los archivos del directorio.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Los permisos se asignan en funci&oacute;n del tipo de usuario. A continuaci&oacute;n se muestran los tipos de usuario que se pueden configurar para cada tipo de permiso: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Categor&iacute;a de usuario</para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Propietario </para>
+              </entry>
+              <entry valign="top">
+                <para>El usuario que cre&oacute; el archivo o carpeta.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Grupo </para>
+              </entry>
+              <entry valign="top">
+                <para>El grupo al cual el propietario pertenece.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Otros </para>
+              </entry>
+              <entry valign="top">
+                <para>El resto de usuarios que no pertenecen al grupo del propietario.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><indexterm><primary>gestor de archivos</primary><secondary>cambiar permisos</secondary></indexterm><indexterm><primary>permisos</primary><secondary> cambiar archivos y carpetas</secondary></indexterm>Para cambiar los permisos de un archivo o carpeta:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el archivo o carpeta que desea cambiar. </para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Propiedades</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en la pesta&ntilde;a <guilabel>Permisos</guilabel>. En la secci&oacute;n <guilabel>Permisos</guilabel>, utilice la lista desplegable y las casillas de verificaci&oacute;n para cambiar los permisos del archivo o carpeta. A continuaci&oacute;n se describen las pesta&ntilde;as del cuadro de di&aacute;logo que aparecen en <guilabel>Permisos</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="37.78*"/>
+              <colspec colwidth="62.22*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento</para>
+                  </entry>
+                  <entry>
+                    <para>Descripci&oacute;n </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Propietario del archivo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Para cambiar el propietario de un archivo o carpeta, selecci&oacute;nelo de la lista desplegable. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Grupo del archivo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Para cambiar el grupo al cual un archivo o carpeta pertenece, selecci&oacute;nelo de la lista desplegable. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Propietario</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione los permisos que desee asignar al propietario del archivo o carpeta.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Grupo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione en la lista desplegable los permisos que desee aplicar al grupo al cual el propietario del archivo o carpeta pertenece.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Otros</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione en la lista desplegable los permisos que desee aplicar al resto de usuarios que no son del grupo al cual el propietario del archivo o carpeta pertenece.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Vista de texto</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Muestra los permisos, en formato texto, seleccionados en las opciones <guilabel>Leer</guilabel>, <guilabel>Escribir</guilabel> y <guilabel>Ejecutar</guilabel>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Vista num&eacute;rica</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Muestra los permisos, en formato texto, seleccionados en las opciones <guilabel>Leer</guilabel>, <guilabel>Escribir</guilabel> y <guilabel>Ejecutar</guilabel>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Fecha de &uacute;ltima modificaci&oacute;n</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Muestra la fecha y hora en la que el archivo o carpeta se modific&oacute; por &uacute;ltima vez.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>Adici&oacute;n de notas a archivos y carpetas</title>
+      <para>Se pueden agregar notas a archivos y carpetas. Hay diversos modos de agregar las notas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>En el cuadro de di&aacute;logo Propiedades</para>
+        </listitem>
+        <listitem>
+          <para>En el panel lateral, <guilabel>Notas</guilabel></para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>Para agregar una nota con el cuadro de di&aacute;logo Propiedades </title>
+        <indexterm>
+          <primary>notas</primary>
+          <secondary>agregar a</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary> notas</secondary>
+          <tertiary>agregar</tertiary>
+        </indexterm>
+        <para>Para agregar una nota a un archivo o carpeta:</para>
+        <orderedlist>
+          <listitem>
+            <para>Seleccione el archivo o carpeta al cual desea agregar la nota. </para>
+          </listitem>
+          <listitem>
+            <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Propiedades</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Haga clic en la pesta&ntilde;a <guilabel>Notas</guilabel> del cuadro de di&aacute;logo Propiedades. En la secci&oacute;n <guilabel>Notas</guilabel>, escriba la nota.</para>
+          </listitem>
+          <listitem>
+            <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo. Se agregar&aacute; una nota de emblema al archivo o carpeta.</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary>notas</primary><secondary>suprimir</secondary></indexterm><indexterm><primary>gestor de archivos</primary><secondary>notas</secondary><tertiary>suprimir </tertiary></indexterm>Para borrar una nota, borre el texto que aparece en la pesta&ntilde;a <guilabel> Notas</guilabel>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>Para agregar una nota desde el panel lateral</title>
+        <para>Para agregar una nota a un archivo o carpeta:</para>
+        <orderedlist>
+          <listitem>
+            <para>Abra en el panel de vista el archivo o carpeta al cual desee agregar la nota.</para>
+          </listitem>
+          <listitem>
+            <para>Seleccione <guilabel>Notas</guilabel> de la lista desplegable en la parte superior del panel lateral. Para mostrar el panel lateral, seleccione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Panel lateral</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Escriba la nota en el panel lateral. Se agregar&aacute; un emblema de nota al archivo o carpeta en el panel de vista y se agregar&aacute; un icono de nota al panel lateral. Haga clic en este icono para mostrar la nota.</para>
+          </listitem>
+        </orderedlist>
+        <para>Para borrar una nota, borre el texto que aparece en <guilabel>Notas</guilabel>, en el panel lateral..</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>Uso de la Papelera </title>
+      <indexterm>
+        <primary>Papelera</primary>
+        <secondary>introducci&oacute;n</secondary>
+      </indexterm>
+      <para>Puede mover los siguientes elementos a la <guilabel>Papelera</guilabel>:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Archivos</para>
+        </listitem>
+        <listitem>
+          <para>Carpetas</para>
+        </listitem>
+        <listitem>
+          <para>Objetos del fondo del escritorio</para>
+        </listitem>
+      </itemizedlist>
+      <para>Si desea recuperar un archivo de la <guilabel>Papelera</guilabel>, abra &eacute;sta<guilabel/> y mu&eacute;valo fuera de ella<guilabel/>. Al vaciar la <guilabel>Papelera</guilabel>, se suprimen permanentemente los elementos que contiene<guilabel/>. </para>
+      <sect3 id="gosnautilus-107">
+        <title>Para mostrar la Papelera </title>
+        <indexterm>
+          <primary>Papelera</primary>
+          <secondary>mostrar</secondary>
+        </indexterm>
+        <para>Puede mostrar el contenido de la <guilabel>Papelera</guilabel> de las siguientes maneras:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Desde una ventana del gestor de archivos.</para>
+            <para>Elija <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Papelera</guimenuitem></menuchoice>. El contenido de la <guilabel>Papelera</guilabel> se muestra en la ventana.</para>
+          </listitem>
+          <listitem>
+            <para>Desde el fondo del escritorio</para>
+            <para>Haga doble clic en el objeto <guilabel>Papelera</guilabel> del fondo del escritorio.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>Para vaciar la Papelera </title>
+        <indexterm>
+          <primary>Papelera</primary>
+          <secondary>vaciar</secondary>
+        </indexterm>
+        <para>Puede vaciar el contenido de la <guilabel>Papelera</guilabel> de las siguientes maneras:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Desde una ventana del gestor de archivos.</para>
+            <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Vaciar papelera</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Desde el fondo del escritorio</para>
+            <para>Haga clic con el bot&oacute;n de la derecha sobre el objeto <guilabel>Papelera</guilabel> y, a continuaci&oacute;n, <guimenuitem>Vaciar papelera</guimenuitem>.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>Modificaci&oacute;n de la presentaci&oacute;n de archivos y carpetas </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>modificar la presentaci&oacute;n de archivos y carpetas</secondary>
+    </indexterm>
+    <para>El gestor de archivos permite modificar la presentaci&oacute;n de los archivos y carpetas de diversos modos, como se explica a continuaci&oacute;n.</para>
+    <sect2 id="gosnautilus-112">
+      <title>Para agregar un emblema a un archivo o carpeta </title>
+      <indexterm>
+        <primary>emblemas</primary>
+        <secondary>agregar a archivo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>emblemas</primary>
+        <secondary>agregar a carpeta </secondary>
+      </indexterm>
+      <para>Para agregar un emblema a un elemento: </para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione el elemento al cual desea agregar el emblema.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n sobre el applet y, a continuaci&oacute;n, seleccione <guimenuitem>Propiedades</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en la pesta&ntilde;a <guilabel>Emblemas</guilabel> del cuadro de di&aacute;logo Propiedades para mostrar la secci&oacute;n <guilabel>Emblemas</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Seleccione el emblema que desea agregar al elemento.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>Para agregar un nuevo emblema </title>
+      <indexterm>
+        <primary>emblemas</primary>
+        <secondary>agregar nuevo</secondary>
+      </indexterm>
+      <para>Para agregar un nuevo emblema:</para>
+      <orderedlist>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Fondos y emblemas</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Emblema</guibutton> y luego en el bot&oacute;n <guibutton>Agregar nuevo emblema</guibutton> del cuadro de di&aacute;logo <guilabel>Fondos y emblemas</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Escriba un nombre para el emblema en el cuadro de texto <guilabel>Palabra clave</guilabel> del cuadro de di&aacute;logo <guilabel>Crear un emblema nuevo</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guilabel>Imagen</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Examinar</guibutton> en el cuadro de di&aacute;logo <guilabel>Seleccionar un archivo de imagen para el nuevo emblema</guilabel>. Cuando haya seleccionado el emblema, haga clic en el bot&oacute;n <guibutton>Aceptar</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton> en el cuadro de di&aacute;logo <guilabel>Crear un emblema nuevo</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>Para cambiar el icono de un archivo o carpeta </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>iconos</secondary>
+        <tertiary>cambiar</tertiary>
+      </indexterm>
+      <para>Para cambiar el icono que representa un determinado archivo o carpeta:</para>
+      <orderedlist>
+        <listitem>
+          <para>Seleccione un archivo o carpeta.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Propiedades</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>En la secci&oacute;n <guilabel>B&aacute;sico</guilabel> del cuadro de di&aacute;logo Propiedades, haga clic en el bot&oacute;n <guibutton>Seleccionar icono personal</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Utilice el cuadro de di&aacute;logo <guilabel>Elija un icono</guilabel> para seleccionar el icono que representa al archivo o carpeta. Haga clic en <guibutton>Aceptar</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar</guibutton> para cerrar el cuadro de di&aacute;logo.</para>
+        </listitem>
+      </orderedlist>
+      <para>Para volver a recuperar un icono original que se cambi&oacute; con la herramienta de preferencias <application>Asociaciones de archivos</application> haga clic con el bot&oacute;n derecho del rat&oacute;n sobre el icono y, a continuaci&oacute;n, elija <guimenuitem>Suprimir icono personal</guimenuitem>. Tambi&eacute;n puede hacer clic en el bot&oacute;n <guilabel>Suprimir icono personal</guilabel> del cuadro de di&aacute;logo Propiedades.</para>
+      <para>Para cambiar el icono que representa a un tipo de archivos, utilice la herramienta de preferencias <application>Asociaciones de archivos</application>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>Para cambiar el tama&ntilde;o de los elementos en una vista </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>ampliar y reducir</secondary>
+      </indexterm>
+      <para>Se puede cambiar el tama&ntilde;o de los elementos en una vista. Se puede cambiar el tama&ntilde;o si la vista muestra un archivo o carpeta. Para cambiar el tama&ntilde;o:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Para hacer m&aacute;s grandes los elementos de una vista, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Ampliar</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Para hacer m&aacute;s peque&ntilde;os los elementos de una vista, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Reducir</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Para volver a ver los elementos en su tama&ntilde;o normal, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Tama&ntilde;o normal</guimenuitem></menuchoice>. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Tambi&eacute;n se pueden utilizar los botones para ampliar y reducir situados en la barra de direcciones para cambiar el tama&ntilde;o de los elementos de una vista. La <xref linkend="gosnautilus-TBL-42"/> describe c&oacute;mo utilizar los botones de ampliaci&oacute;n/reducci&oacute;n.</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>Botones de ampliaci&oacute;n/reducci&oacute;n</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Bot&oacute;n</para>
+              </entry>
+              <entry>
+                <para>Nombre del bot&oacute;n </para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Bot&oacute;n Reducir.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Bot&oacute;n <guibutton>Reducir</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Haga clic en este bot&oacute;n para cambiar el tama&ntilde;o de los elementos de una vista.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Bot&oacute;n Tama&ntilde;o normal. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Bot&oacute;n <guibutton>Tama&ntilde;o normal</guibutton> </para>
+              </entry>
+              <entry valign="top">
+                <para>Haga clic en este bot&oacute;n para volver a ver el tama&ntilde;o normal de los elementos de una vista. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Bot&oacute;n Ampliar.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Bot&oacute;n <guibutton>Ampliar</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Haga clic en este bot&oacute;n para ampliar el tama&ntilde;o de los elementos de una vista.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>El gestor de archivos guarda el tama&ntilde;o de los elementos en una carpeta determinada. La vez siguiente en la que se muestra la carpeta, los elementos se ven en el tama&ntilde;o seleccionado. O sea, al cambiar el tama&ntilde;o de los elementos de una carpeta, se personaliza la carpeta de modo que presenta los elementos al tama&ntilde;o seleccionado. Para volver al tama&ntilde;o original de los elementos, seg&uacute;n est&aacute; configurado en las Preferencias, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Restablecer vista predeterminada</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>Uso de las vistas para mostrar archivos y carpetas </title>
+      <indexterm>
+        <primary>componentes de visualizaci&oacute;n</primary>
+      </indexterm>
+      <indexterm>
+        <primary> gestor de archivos</primary>
+        <secondary>vistas</secondary>
+        <tertiary>introducci&oacute;n</tertiary>
+      </indexterm>
+      <para>El gestor de archivos proporciona diferentes modos de mostrar el contenido de los archivos, incluye componentes de visualizaci&oacute;n que permiten mostrar determinados tipos de archivos en el panel de vista. Por ejemplo, se puede utilizar un visualizador de p&aacute;ginas web para mostrar archivos HTML en el panel de vista. An&aacute;logamente, se puede utilizar un visor de archivos de texto para mostrar los archivos de texto simple en el panel de vista.</para>
+      <para>El gestor de archivos tambi&eacute;n permite abrir un archivo con una aplicaci&oacute;n adecuada. Para obtener m&aacute;s informaci&oacute;n, consulte <xref linkend="gosnautilus-28"/>.</para>
+      <para>El gestor de archivos tambi&eacute;n incluye vistas que permiten mostrar los contenidos de las carpetas. Por ejemplo, se puede mostrar el contenido de una carpeta de las siguientes maneras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Vista icono</para>
+          <para>muestra los elementos de la carpeta como iconos. </para>
+        </listitem>
+        <listitem>
+          <para>Vista lista</para>
+          <para>muestra los elementos de la carpeta como iconos. </para>
+        </listitem>
+      </itemizedlist>
+      <para>El men&uacute; <guilabel>Ver</guilabel> permite elegir c&oacute;mo visualizar los archivos o carpetas. Tambi&eacute;n se puede mostrar la lista desplegable <guilabel>Ver como</guilabel> para elegir la vista de un archivo o carpeta. Al mostrar una carpeta, se puede indicar c&oacute;mo ordenar los elementos de la carpeta. Se puede cambiar el tama&ntilde;o de los elementos en el panel de vista. La siguientes secciones describen c&oacute;mo trabajar con la vista de iconos, de lista y las vistas de los archivos.</para>
+      <sect3 id="gosnautilus-100">
+        <title>Para elegir una vista en la que mostrar un archivo o carpeta </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>vistas</secondary>
+          <tertiary>elegir</tertiary>
+        </indexterm>
+        <para>Elija el tipo de vista con el que mostrar los contenidos de un archivo o carpeta en el men&uacute; <guilabel>Ver</guilabel>. </para>
+        <para>Tambi&eacute;n, para elegir una vista, seleccione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Ver como</guimenuitem></menuchoice>. Seleccione la vista que desea utilizar en el cuadro de di&aacute;logo <guilabel>Abrir con otro visualizador</guilabel> y, a continuaci&oacute;n, haga clic en el bot&oacute;n <guibutton>Elegir</guibutton>. </para>
+        <para>Tambi&eacute;n se puede elegir el tipo de vista en la lista desplegable <guilabel>Ver como</guilabel>. La lista desplegable <guilabel>Ver como</guilabel> est&aacute; situada a la derecha de la barra de direcciones.</para>
+        <para>Se pueden mostrar diferentes carpetas con diferentes vistas. El gestor de archivos conserva la vista seleccionada para cada carpeta. La pr&oacute;xima vez que se abre la carpeta, el gestor de archivos la muestra con esa vista. Para volver la vista al valor predeterminado indicado en las Preferencias, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Restablecer la vista predeterminada</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>Para organizar los archivos en la vista como iconos </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>vista como iconos</secondary>
+          <tertiary>organizar los archivos en</tertiary>
+        </indexterm>
+        <para>Al mostrar los contenidos de una carpeta como iconos, se puede indicar c&oacute;mo organizarlos. Para indicar c&oacute;mo ordenar los elementos, elija <menuchoice><guimenu>Ver</guimenu><guisubmenu>Organizar elementos</guisubmenu></menuchoice>. El submen&uacute; <guisubmenu>Organizar elementos</guisubmenu> contiene las siguientes sesiones:</para>
+        <itemizedlist>
+          <listitem>
+            <para>La secci&oacute;n situada en la parte superior contiene una opci&oacute;n que permite organizar los archivos manualmente.</para>
+          </listitem>
+          <listitem>
+            <para>La secci&oacute;n situada en la parte intermedia permite organizar los archivos autom&aacute;ticamente.</para>
+          </listitem>
+          <listitem>
+            <para>La secci&oacute;n situada en la parte inferior permite modificar c&oacute;mo se organizan los archivos autom&aacute;ticamente.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Elija las opciones adecuadas en el submen&uacute;, como se indica en la siguiente tabla: </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Opci&oacute;n</para>
+                </entry>
+                <entry>
+                  <para>Descripci&oacute;n </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Manualmente</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Seleccione esta opci&oacute;n para organizar los elementos manualmente. Para ello, arr&aacute;strelos a la direcci&oacute;n deseada dentro del panel de vista.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Por nombre</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Seleccione esta opci&oacute;n para ordenar los elementos alfab&eacute;ticamente por el nombre. Este orden no distingue may&uacute;sculas de min&uacute;sculas. Si se configura el gestor de archivos para mostrar archivos ocultos, &eacute;stos se muestran al final.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Por tama&ntilde;o</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Seleccione esta opci&oacute;n para ordenar los elementos por tama&ntilde;o, con el mayor en primer lugar. Al ordenar los elementos por tama&ntilde;o, las carpetas se ordenan por el n&uacute;mero de elementos que contienen. Las carpetas no se ordenan por el tama&ntilde;o total de los elementos de la carpeta.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Por tipo</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Seleccione esta opci&oacute;n para ordenar los elementos alfab&eacute;ticamente por el tipo de objeto de acuerdo con la descripci&oacute;n de su primer <firstterm>tipo MIME</firstterm> en la herramienta de preferencias <application>Asociaciones de archivos</application>. El tipo MIME identifica el formato de un archivo y permite que las aplicaciones lo lean. Por ejemplo, una aplicaci&oacute;n de correo electr&oacute;nico puede utilizar el tipo MIME <literal>image/png</literal> para detectar que un mensaje de correo electr&oacute;nico lleva anexado un archivo de tipo Portable Networks Graphic (PNG).</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para><guilabel>Por fecha de modificaci&oacute;n</guilabel> </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Seleccione esta opci&oacute;n para ordenar los elementos por la fecha en la que fueron modificados por &uacute;ltima vez. El elemento modificado m&aacute;s recientemente se muestra en primer lugar.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Por emblemas</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Seleccione esta opci&oacute;n para ordenar los elementos por los emblemas que se puedan haber agregado a los elementos. &Eacute;stos se ordenar&aacute;n alfab&eacute;ticamente por el nombre del emblema, los que no lo tienen se ordenar&aacute;n a continuaci&oacute;n de los que s&iacute; lo tienen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Distribuci&oacute;n compacta</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Seleccione esta opci&oacute;n para organizar los elementos de modo que se sit&uacute;en lo m&aacute;s juntos posible </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Orden inverso</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Seleccione esta opci&oacute;n para invertir el orden de la opci&oacute;n seg&uacute;n la cual se han ordenado los elementos. Por ejemplo, si se orden&oacute; los elementos por el nombre, seleccione la opci&oacute;n <guilabel>Orden inverso</guilabel> para ordenar los elementos de forma alfab&eacute;tica inversa.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>El gestor de archivos conserva el orden seleccionado para cada carpeta. La vez siguiente en la que se muestra la carpeta, los elementos se ven en el orden seleccionado. O sea, al cambiar la organizaci&oacute;n de los elementos de una carpeta, se personaliza &eacute;sta de modo que presente los elementos organizados de esa manera. Para que la carpeta vuelva a la configuraci&oacute;n predeterminada especificada en las Preferencias, elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Restablecer vista predeterminada</guimenuitem></menuchoice>. </para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>Para cambiar el tama&ntilde;o de un icono </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>iconos</secondary>
+          <tertiary>cambiar tama&ntilde;o</tertiary>
+        </indexterm>
+        <para>Se puede cambiar el tama&ntilde;o del icono que representa a uno de los elementos. Para cambiar el tama&ntilde;o de un elemento:</para>
+        <orderedlist>
+          <listitem>
+            <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el elemento que desea redimensionar y, a continuaci&oacute;n, elija <guimenuitem>Estirar icono</guimenuitem>. Aparecer&aacute; un rect&aacute;ngulo alrededor del elemento, con un asa en cada esquina.</para>
+          </listitem>
+          <listitem>
+            <para>Agarre una de las asas y redimensione el icono al tama&ntilde;o deseado.</para>
+            <para>Para devolver el icono a su tama&ntilde;o original, haga clic en el icono y, a continuaci&oacute;n, elija <guimenuitem>Restaurar el tama&ntilde;o original del icono</guimenuitem>. </para>
+          </listitem>
+        </orderedlist>
+        <para>Tambi&eacute;n se pueden redimensionar objetos del fondo del escritorio.</para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>Para modificar el comportamiento de una vista </title>
+        <indexterm>
+          <primary>gestor de archivos</primary>
+          <secondary>vistas</secondary>
+          <tertiary>modificar comportamiento</tertiary>
+        </indexterm>
+        <para>Para modificar el comportamiento de una vista, se puede:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Indicar que la vista es la predeterminada de un determinado archivo o carpeta.</para>
+          </listitem>
+          <listitem>
+            <para>Indicar que la vista es la predeterminada de un determinado tipo de archivo o todas las carpetas.</para>
+          </listitem>
+          <listitem>
+            <para>Indicar que la vista es un elemento del submen&uacute; <guisubmenu>Ver como</guisubmenu> de un determinado archivo o carpeta.</para>
+          </listitem>
+          <listitem>
+            <para>Indicar que la vista es un elemento del submen&uacute; <guisubmenu>Ver como</guisubmenu> de un tipo de archivos o todas las carpetas. </para>
+          </listitem>
+          <listitem>
+            <para>Indicar que la vista no es un elemento del submen&uacute; <guisubmenu>Ver como</guisubmenu> de un determinado archivo o carpeta.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Para modificar el comportamiento de una vista:</para>
+        <orderedlist>
+          <listitem>
+            <para>Elija <menuchoice><guimenu>Ver</guimenu><guimenuitem>Ver como</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Seleccione la vista que desee modificar en la tabla del cuadro de di&aacute;logo <guilabel>Abrir con otro visor</guilabel>.</para>
+          </listitem>
+          <listitem>
+            <para>Haga clic en el bot&oacute;n <guibutton>Modificar</guibutton>. La siguiente tabla describe las opciones del cuadro de di&aacute;logo <guilabel>Modificar</guilabel>:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Opci&oacute;n</para>
+                    </entry>
+                    <entry>
+                      <para>Descripci&oacute;n </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Incluir en el men&uacute; para los elementos de tipo <replaceable>nombre-elemento</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione esta opci&oacute;n para incluir la vista en el submen&uacute; <guisubmenu>Ver como</guisubmenu> de este tipo de elemento.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Usar como predeterminado para todos los elementos <replaceable>nombre-elemento</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione esta opci&oacute;n para utilizar la vista como la predeterminada para ese tipo de elemento.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Incluir en el men&uacute; para <replaceable>nombre-elemento</replaceable> solamente</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione esta opci&oacute;n para incluir la vista en el submen&uacute; <guisubmenu>Ver como</guisubmenu> s&oacute;lo para este tipo de elemento.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Utilizar como predeterminado para <replaceable>nombre-elemento</replaceable> solamente</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione esta opci&oacute;n para definir la vista como la predeterminada s&oacute;lo para este elemento.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>No incluir en el men&uacute; para los elementos <replaceable>nombre-elemento</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Seleccione esta opci&oacute;n para no incluir esta vista en el submen&uacute; <guisubmenu>Ver como</guisubmenu> para este tipo de elemento.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Haga clic en <guibutton>Aceptar</guibutton> y, a continuaci&oacute;n, en <guibutton>Cancelar</guibutton> para cerrar el cuadro de di&aacute;logo <guilabel>Abrir con otro visor</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>Se pueden modificar tambi&eacute;n las acciones asociadas a un tipo de archivo en el cuadro de di&aacute;logo <guilabel>Editar tipo de archivo</guilabel> de la herramienta de preferencias <application>Asociaciones de archivos</application>. Para abrir el di&aacute;logo <guilabel>Editar tipo de archivo</guilabel>, haga clic en el bot&oacute;n <guibutton>Ir a</guibutton>. </para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>Asignaci&oacute;n de acciones a archivos </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>asignar acciones a archivos</secondary>
+    </indexterm>
+    <para>Al abrir un archivo, el gestor de archivos ejecuta la acci&oacute;n predeterminada para ese tipo de archivos. La herramienta de preferencias <application>Asociaciones de archivos</application> contiene una tabla de tipos de archivos, sus extensiones asociadas y sus acciones predeterminadas, Esta tabla indica qu&eacute; sucede al hacer doble clic en un archivo en el gestor de archivos. </para>
+    <para>El gestor de archivos tambi&eacute;n permite modificar las acciones asociadas con un determinado archivo o un tipo de archivo. </para>
+    <para>Se puede utilizar la herramienta de preferencias <application>Asociaciones de archivos</application> para:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Indicar la acci&oacute;n predeterminada de un determinado tipo de archivo. Tambi&eacute;n se puede cambiar la acci&oacute;n predeterminada para un tipo de archivos en el gestor de archivos. </para>
+      </listitem>
+      <listitem>
+        <para>Asociar un tipo de archivo con una o m&aacute;s aplicaciones. La acci&oacute;n predeterminada puede indicar la apertura del archivo en una aplicaci&oacute;n asociada con el tipo de archivo.</para>
+      </listitem>
+      <listitem>
+        <para>Asociar un tipo de archivo con un visualizador. La acci&oacute;n predeterminada puede indicar la vista previa del archivo con un visualizador relacionado con el tipo de archivo.</para>
+      </listitem>
+      <listitem>
+        <para>Asociar una extensi&oacute;n de archivo con un tipo MIME. &Eacute;ste indica el formato del archivo, de modo que los navegadores de Internet y las aplicaciones de correo electr&oacute;nico puedan leerlo.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>Para modificar las acciones </title>
+      <indexterm>
+        <primary>gestor de archivos</primary>
+        <secondary>modificar acciones</secondary>
+      </indexterm>
+      <para>Se pueden modificar las acciones asociadas con un archivo o tipo de archivos. Se puede:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Indicar que la acci&oacute;n es la predeterminada para un determinado archivo. </para>
+        </listitem>
+        <listitem>
+          <para>Indicar que la acci&oacute;n es la predeterminada para un determinado tipo de archivo.</para>
+        </listitem>
+        <listitem>
+          <para>Indicar que la acci&oacute;n es un elemento del submen&uacute; <guisubmenu>Abrir con</guisubmenu> para un determinado archivo.</para>
+        </listitem>
+        <listitem>
+          <para>Indicar que la acci&oacute;n es un elemento del submen&uacute; <guisubmenu>Abrir con</guisubmenu> para un determinado tipo de archivo.</para>
+        </listitem>
+        <listitem>
+          <para>Indicar que la acci&oacute;n no es un elemento del submen&uacute; <guisubmenu>Abrir con</guisubmenu> para un determinado tipo de archivo. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Para modificar las acciones asociadas con un archivo o tipo de archivos:</para>
+      <orderedlist>
+        <listitem>
+          <para>En el panel de vista, seleccione el archivo cuya acci&oacute;n desea modificar. Si desea modificar una acci&oacute;n asociada con un tipo de archivo, seleccione un archivo de ese tipo.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem> Abrir con</guimenuitem></menuchoice>.</para>
+        </listitem>
+<!---<listitem>
+<para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with
+Other Viewer</guilabel> dialog is displayed. </para></listitem>-->
+        <listitem>
+          <para>Elija <guimenuitem>Otra aplicaci&oacute;n</guimenuitem>. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Abrir con otra aplicaci&oacute;n</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>En la tabla del cuadro de di&aacute;logo, seleccione la aplicaci&oacute;n o el visualizador para los que desea modificar el comportamiento.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Modificar</guibutton>. La siguiente tabla describe las opciones del cuadro de di&aacute;logo <guilabel>Modificar</guilabel>:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Opci&oacute;n</para>
+                  </entry>
+                  <entry>
+                    <para>Descripci&oacute;n </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Incluir en el men&uacute; para los elementos de tipo <replaceable>tipo_archivo</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para incluir la aplicaci&oacute;n o visualizador en el submen&uacute; <guisubmenu>Abrir con</guisubmenu> para este tipo de archivo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Usar como predeterminado para todos los elementos <replaceable>tipo_archivo</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para usar la aplicaci&oacute;n o visualizador como la acci&oacute;n predeterminada de este tipo de archivo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Incluir en el men&uacute; para <replaceable>nombre_elemento</replaceable> solamente</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para incluir la aplicaci&oacute;n o visualizador en el submen&uacute; <guisubmenu>Abrir con</guisubmenu> para este archivo pero no para el resto de archivos de este tipo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Utilizar como predeterminado para <replaceable>nombre_elemento</replaceable> solamente</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para utilizar la aplicaci&oacute;n o visualizador como la acci&oacute;n predeterminada para este archivo pero no para el resto de archivos de este tipo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>No incluir en el men&uacute; para los elementos <replaceable>tipo_archivo</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Seleccione esta opci&oacute;n para excluir la aplicaci&oacute;n o visualizador del submen&uacute; <guisubmenu>Abrir con</guisubmenu> para este tipo de archivo.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton> y, a continuaci&oacute;n, en <guibutton>Cancelar</guibutton> para cerrar el cuadro de di&aacute;logo. </para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>Se pueden modificar tambi&eacute;n las acciones asociadas a un tipo de archivo en el cuadro de di&aacute;logo <guilabel>Editar tipo de archivo</guilabel> de la herramienta de preferencias <application>Asociaciones de archivos</application>. Para abrir el di&aacute;logo <guilabel>Editar tipo de archivo</guilabel>, haga clic en el bot&oacute;n <guibutton>Ir a</guibutton>. </para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-475">
+    <title>Grabaci&oacute;n de CD </title>
+    <indexterm>
+      <primary>gestor de archivos</primary>
+      <secondary>grabaci&oacute;n de CD</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>CD, grabar</primary>
+    </indexterm>
+    <indexterm>
+      <primary>grabaci&oacute;n de CD</primary>
+    </indexterm>
+    <para>El gestor de archivos contiene una ubicaci&oacute;n especial donde se pueden copiar archivos y carpetas que despu&eacute;s se grabar&aacute;n en un CD. De este modo, se facilita la grabaci&oacute;n del CD desde esta ubicaci&oacute;n.</para>
+    <para>Para grabar un CD:</para>
+    <orderedlist>
+      <listitem>
+        <para>En una ventana del gestor de archivos, seleccione <menuchoice><guimenu>Ir a</guimenu><guimenuitem>Creador de CD</guimenuitem></menuchoice>. El gestor de archivos abre una direcci&oacute;n especial, <guilabel>burn:</guilabel><guilabel>///</guilabel>, desde la que se pueden grabar CD. </para>
+      </listitem>
+      <listitem>
+        <para>En una ventana del gestor de archivos, copie los archivos y carpetas que desee grabar en el CD en la direcci&oacute;n <guilabel>burn:</guilabel><guilabel>///</guilabel>.</para>
+      </listitem>
+      <listitem>
+        <para>Introduzca un CD que se pueda grabar en la unidad grabadora de CD del sistema. </para>
+      </listitem>
+      <listitem>
+        <para>Seleccione <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Grabar en un CD</guimenuitem></menuchoice>. Tambi&eacute;n puede hacer clic en el bot&oacute;n <guibutton> Grabar en un CD</guibutton> de la barra de herramientas.</para>
+      </listitem>
+      <listitem>
+        <para>El cuadro de di&aacute;logo <guilabel>Grabar archivos en CD</guilabel> permite indicar c&oacute;mo crear el CD:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Elemento de la ventana de di&aacute;logo</para>
+                </entry>
+                <entry>
+                  <para>Descripci&oacute;n </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Destino de grabaci&oacute;n</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>En la lista desplegable, seleccione la unidad donde desee grabar el CD. Para crear una imagen en CD de los archivos y carpetas, seleccione la opci&oacute;n <guilabel>Imagen de archivos</guilabel>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Velocidad de grabaci&oacute;n</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>En la lista desplegable, seleccione la velocidad a la que desea grabar el CD.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Nombre del CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Escriba el nombre para el CD en el cuadro de texto.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Borrar CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Seleccione esta opci&oacute;n para borrar el contenido actual del CD.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Expulsar CD al terminar</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Seleccione esta opci&oacute;n para expulsar el CD de la unidad una vez termine de grabarse.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Reutilizar archivos para otro CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Seleccione esta opci&oacute;n si desea grabar los archivos y carpetas en otro CD. Si selecciona esta opci&oacute;n, los archivos y carpetas no se quitar&aacute;n de la direcci&oacute;n <guilabel>burn:</guilabel><guilabel>/// </guilabel> una vez grabado el CD. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </listitem>
+      <listitem>
+        <para>Haga clic en el bot&oacute;n <guibutton>Grabar archivos en CD</guibutton>. </para>
+        <para>Si ha seleccionado la opci&oacute;n <guilabel>Imagen de archivos</guilabel> de la lista desplegable <guilabel>Destino de grabaci&oacute;n</guilabel> se abrir&aacute; un cuadro de di&aacute;logo <guilabel>Seleccionar nombre de archivo para la imagen del cdrom</guilabel>. Use el di&aacute;logo para especificar la direcci&oacute;n donde desea grabar el archivo de imagen en CD. Como valor predeterminado, los archivos de im&aacute;genes de CD tienen la extensi&oacute;n <filename>.iso</filename>.</para>
+        <para>Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Grabando CD</guilabel>. Una vez se grabe el CD o se cree la imagen, se mostrar&aacute; un mensaje indicando que el proceso ha terminado.</para>
+        <para>Si se ha creado un archivo de imagen de CD, se puede copiar este archivo en un CD. Para grabar un CD a partir de un archivo de imagen, haga clic con el bot&oacute;n de la derecha del rat&oacute;n sobre el archivo y, a continuaci&oacute;n, seleccione <guimenuitem>Grabar en CD</guimenuitem> del men&uacute; emergente.</para>
+        <para>Si no ha seleccionado la opci&oacute;n <guilabel>Reutilizar archivos para otro CD</guilabel>, los archivos y carpetas se borrar&aacute;n de la direcci&oacute;n <guilabel>burn:</guilabel>.<guilabel>///</guilabel>.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>

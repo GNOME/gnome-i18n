@@ -1,0 +1,363 @@
+<chapter id="gosgetstarted-1">
+  <title>Komma i g&aring;ng</title>
+  <highlights>
+    <para>Det h&auml;r kapitlet inneh&aring;ller information om hur du startar, hanterar och avslutar en skrivbordssession i Java Desktop System.</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Logga in till skrivbordet </title>
+    <indexterm>
+      <primary>session</primary>
+      <secondary>starta</secondary>
+    </indexterm>
+    <para>En session varar under den tid du &auml;r inloggad till Java Desktop System. Inloggningssk&auml;rmen &auml;r din port till Java Desktop System. Inloggningsf&ouml;nstret inneh&aring;ller f&auml;lt som du kan skriva in anv&auml;ndarnamn och l&ouml;senord i. I inloggningsf&ouml;nstret kan du v&auml;lja inloggningsalternativ. Du kan till exempel v&auml;lja spr&aring;k f&ouml;r en session.</para>
+    <para>Du startar en session n&auml;r du loggar in. Sessionshanteraren startar en ny session n&auml;r anv&auml;ndarnamn och l&ouml;senord autenticerats. Med sessionshanteraren kan du hantera en session. Du kan t.ex. spara status f&ouml;r den senaste sessionen och &aring;terg&aring; till den sessionen n&auml;sta g&aring;ng du loggar in. Sessionshanteraren sparar och &aring;terst&auml;ller f&ouml;ljande: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Inst&auml;llningar f&ouml;r utseende och funktion, till exempel inst&auml;llningar f&ouml;r teckensnitt, f&auml;rger och mus. </para>
+      </listitem>
+      <listitem>
+        <para>De program som var &ouml;ppna, till exempel filhanterar- och textredigeringsf&ouml;nster. Du kan inte spara och &aring;terst&auml;lla program som sessionshanteraren inte hanterar. Om du till exempel startar <application>vi</application>-redigeraren fr&aring;n kommandoraden i ett terminalf&ouml;nster, kan sessionshanteraren inte &aring;terst&auml;lla redigeringssessionen. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2>
+      <title>S&aring; h&auml;r loggar du in till skrivbordet p&aring; Linux </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>logga in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>logga in</primary>
+        <secondary>till session</secondary>
+      </indexterm>
+      <para>Om du vill logga in till skrivbordet g&ouml;r du f&ouml;ljande:</para>
+      <orderedlist>
+        <listitem>
+          <para>Klicka p&aring; ikonen <guilabel>Session</guilabel> p&aring; inloggningssk&auml;rmen. V&auml;lj Java Desktop System fr&aring;n listan &ouml;ver tillg&auml;ngliga skrivbordsmilj&ouml;er. </para>
+        </listitem>
+        <listitem>
+          <para>Ange anv&auml;ndarnamn i f&auml;ltet <guilabel>Anv&auml;ndarnamn</guilabel> i inloggningsf&ouml;nstret och tryck p&aring; <keycap>Retur</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Ange l&ouml;senord i f&auml;ltet <guilabel>L&ouml;senord</guilabel> i inloggningsf&ouml;nstret och tryck p&aring; <keycap>Retur</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <para>Sessionshanteraren startar en session n&auml;r du loggar in. Sessionshanteraren startar en ny session n&auml;r du loggar in f&ouml;r f&ouml;rsta g&aring;ngen. Om du har loggat in tidigare, &aring;terst&auml;ller sessionshanteraren din tidigare session om du sparade sessionsinst&auml;llningarna n&auml;r du loggade ut.</para>
+      <para>Klicka p&aring; ikonen <guilabel>&Aring;tg&auml;rder</guilabel> i inloggningsf&ouml;nstret om du vill st&auml;nga ned eller starta om systemet innan du loggar in. Ett dialogf&ouml;nster visas. Markera det alternativ som du beh&ouml;ver och klicka p&aring; <guibutton>OK</guibutton>. </para>
+    </sect2>
+    <sect2>
+      <title>S&aring; h&auml;r loggar du in p&aring; ett annat spr&aring;k p&aring; Linux </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>annat spr&aring;k, logga in p&aring;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>spr&aring;k, logga in p&aring; annat</primary>
+      </indexterm>
+      <indexterm>
+        <primary>logga in</primary>
+        <secondary>till session med annat spr&aring;k</secondary>
+      </indexterm>
+      <para>Utf&ouml;r f&ouml;ljande &aring;tg&auml;rder f&ouml;r att logga in till skrivbordet p&aring; ett annat spr&aring;k.</para>
+      <orderedlist>
+        <listitem>
+          <para>Klicka p&aring; ikonen <guilabel>Spr&aring;k</guilabel> p&aring; inloggningssk&auml;rmen. V&auml;lj &ouml;nskat spr&aring;k i listan med tillg&auml;ngliga spr&aring;k. </para>
+        </listitem>
+        <listitem>
+          <para>Ange anv&auml;ndarnamn i f&auml;ltet <guilabel>Anv&auml;ndarnamn</guilabel> i inloggningsf&ouml;nstret och tryck p&aring; <keycap>Retur</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Ange l&ouml;senord i f&auml;ltet <guilabel>L&ouml;senord</guilabel> i inloggningsf&ouml;nstret och tryck p&aring; <keycap>Retur</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>N&auml;r du loggar in till en session p&aring; ett annat spr&aring;k v&auml;ljer du vilket spr&aring;k anv&auml;ndargr&auml;nssnittet ska vara p&aring;. Du beh&ouml;ver inte ange en tangentbordslayout f&ouml;r sessionen. Anv&auml;nd panelprogrammet <application>Tangentbordsbytare</application> f&ouml;r att ange en tangentbordlayout.</para>
+      </note>
+      <para><firstterm>Panelprogram</firstterm> &auml;r sm&aring;, interaktiva program som finns p&aring; en panel, till exempel <application>Cd-spelaren</application>. Varje panelprogram har ett enkelt anv&auml;ndargr&auml;nssnitt som du sk&ouml;ter med musen eller tangentbordet. </para>
+    </sect2>
+    <sect2>
+      <title>S&aring; h&auml;r loggar du in till skrivbordet p&aring; operativsystemet Solaris </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>logga in</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>logga in</primary>
+      </indexterm>
+      <para>Om du vill logga in till skrivbordet g&ouml;r du f&ouml;ljande:</para>
+      <orderedlist>
+        <listitem>
+          <para>V&auml;lj <menuchoice><guimenu>Alternativ</guimenu><guimenuitem> Session</guimenuitem></menuchoice>. V&auml;lj Java Desktop System fr&aring;n listan &ouml;ver tillg&auml;ngliga skrivbordsmilj&ouml;er.</para>
+        </listitem>
+        <listitem>
+          <para>Skriv in inloggningsnamn i f&auml;ltet i dialogf&ouml;nstret <guilabel>Inloggningshanteraren</guilabel> och klicka p&aring; <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Skriv in l&ouml;senordet i f&auml;ltet i dialogf&ouml;nstret <guilabel>Inloggningshanteraren</guilabel> och klicka p&aring; <guibutton>OK</guibutton>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Sessionshanteraren startar en session n&auml;r du loggar in. Sessionshanteraren startar en ny session n&auml;r du loggar in f&ouml;r f&ouml;rsta g&aring;ngen. Sessionshanteraren &aring;terst&auml;ller till din tidigare session om du har loggat in tidigare.</para>
+    </sect2>
+    <sect2>
+      <title>S&aring; h&auml;r loggar du in p&aring; ett annat spr&aring;k p&aring; operativsystemet Solaris </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>annat spr&aring;k, logga in p&aring;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>spr&aring;k, logga in p&aring; annat</primary>
+      </indexterm>
+      <indexterm>
+        <primary>logga in</primary>
+        <secondary>till session med annat spr&aring;k</secondary>
+      </indexterm>
+      <para>Utf&ouml;r f&ouml;ljande &aring;tg&auml;rder f&ouml;r att logga in till skrivbordet p&aring; ett annat spr&aring;k.</para>
+      <orderedlist>
+        <listitem>
+          <para>V&auml;lj <menuchoice><guimenu>Alternativ</guimenu><guimenuitem>Session</guimenuitem></menuchoice> i inloggningsdialogf&ouml;nstret. V&auml;lj Java Desktop System fr&aring;n listan &ouml;ver tillg&auml;ngliga skrivbordsmilj&ouml;er.</para>
+        </listitem>
+        <listitem>
+          <para>V&auml;lj <menuchoice><guimenu>Alternativ</guimenu><guimenuitem>Spr&aring;k</guimenuitem></menuchoice> i inloggningsdialogf&ouml;nstret. </para>
+        </listitem>
+        <listitem>
+          <para>Markera den spr&aring;kgrupp som innefattar spr&aring;ket du vill anv&auml;nda.</para>
+        </listitem>
+        <listitem>
+          <para>Markera ett spr&aring;k.</para>
+        </listitem>
+        <listitem>
+          <para>Logga in.</para>
+        </listitem>
+      </orderedlist>
+      <para>Systemadministrat&ouml;ren anger standardspr&aring;k f&ouml;r systemet. Via <guimenu>Alternativ</guimenu>-menyn i dialogf&ouml;nstret <guilabel>Inloggningshanteraren</guilabel> kan du komma &aring;t andra spr&aring;k. N&auml;r du valt ett spr&aring;k i <guimenu>Alternativ</guimenu>-menyn anges LANG-variabeln f&ouml;r sessionen. Standardspr&aring;ket &aring;terst&auml;lls vid sessionens slut. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-88">
+    <title>F&ouml;rsta g&aring;ngen du loggar in</title>
+    <para>N&auml;r du startar en session f&ouml;rsta g&aring;ngen visas en startsk&auml;rm med en panel l&auml;ngst ned p&aring; sk&auml;rmen och olika ikoner p&aring; skrivbordet.</para>
+    <sect2 id="chap3-8">
+      <title>Initial skrivbordskonfiguration</title>
+      <para>I det h&auml;r avsnittet beskrivs vad du ser n&auml;r du startar en session f&ouml;r f&ouml;rsta g&aring;ngen. Systemadministrat&ouml;ren kan ha st&auml;llt in den nedre kantpanelen enligt lokala kriterier. Det kan allts&aring; t&auml;nkas att den nedre kantpanelen som du har framf&ouml;r dig ser n&aring;got annorlunda ut.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/jds_fulldesktop.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Sammanhanget beskriver bilden.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Startsk&auml;rmen f&ouml;r Java Desktop System inneh&aring;ller som regel f&ouml;ljande: </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Den h&auml;r datorn</guilabel>
+          </para>
+          <para>H&auml;r kan du komma &aring;t medie- och konfigurationsdetaljer som g&auml;ller ditt system. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Dokument</guilabel>
+          </para>
+          <para>H&auml;r f&aring;r du direkt&aring;tkomst till filer som &auml;r lagrade i din standardkatalog.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>N&auml;tverksplatser</guilabel>
+          </para>
+          <para>H&auml;r kan du komma &aring;t n&auml;tverksanslutna datorer fr&aring;n en enda katalog.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Papperskorg</guilabel>
+          </para>
+          <para>Tillf&auml;llig f&ouml;rvaringsplats f&ouml;r filer, mappar och skrivbordsobjekt som du kan h&auml;mta tillbaka senare eller ta bort permanent.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>StarOffice 7</guilabel>
+          </para>
+          <para>Startar StarOffice-programmet.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Mer om Java&trade; Desktop System</guilabel>
+          </para>
+          <para>Startar en hj&auml;lpl&auml;sare fr&aring;n vilken du kan komma &aring;t &ouml;versiktsinformation om <application>Java Desktop System</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Den nedre kantpanelen</para>
+          <para>F&ouml;ljande panelobjekt visas som standard i panelen l&auml;ngst ned: </para>
+          <itemizedlist>
+            <listitem>
+              <para>Knappen <guibutton>K&ouml;r</guibutton>: Inneh&aring;ller menyer f&ouml;r program och konfigurationsverktyg i <application>Java Desktop System</application>. </para>
+            </listitem>
+            <listitem>
+              <para><application>Klocka</application>: Visar tid och datum p&aring; en panel.</para>
+            </listitem>
+            <listitem>
+              <para><application>Visa skrivbord</application>: Visar en knapp som du minimerar alla &ouml;ppna f&ouml;nster med. </para>
+            </listitem>
+            <listitem>
+              <para><application>F&ouml;nsterlista</application>: Inneh&aring;ller en knapp f&ouml;r varje &ouml;ppet f&ouml;nster. Du kan klicka p&aring; en knapp i f&ouml;nsterlistan om du vill minimera eller &aring;terst&auml;lla ett f&ouml;nster.</para>
+            </listitem>
+            <listitem>
+              <para><application>Notifieringsyta</application>: Visar ikoner f&ouml;r olika program som indikerar att programmet &auml;r aktivt. Om du t.ex. spelar en cd-skiva i <application>cd-spelaren</application> s&aring; visas en cd-ikon i <application>Notifieringsyta</application>. </para>
+            </listitem>
+            <listitem>
+              <para><application>Arbetsytebytare</application>: Inneh&aring;ller en visuell representation av arbetsytorna. Du kan v&auml;xla mellan arbetsytor med <application>Arbetsytebytarens</application> hj&auml;lp. </para>
+            </listitem>
+            <listitem>
+              <para><application>Volymkontroll</application>: Visar en knapp som du kan anv&auml;nda f&ouml;r att kontrollera och ange ljudniv&aring;er f&ouml;r systemet.</para>
+            </listitem>
+            <listitem>
+              <para><application>N&auml;tverks&ouml;vervakare</application>: Visar ett dialogf&ouml;nster d&auml;r du kan &ouml;vervaka aktiviteterna i n&auml;tverket.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Skrivbordsbakgrund</para>
+          <para>Skrivbordsbakgrunden befinner sig bakom &ouml;vriga komponenter i Java Desktop System. Skrivbordsbakgrunden &auml;r en aktiv komponent i anv&auml;ndargr&auml;nssnittet. Du kan l&auml;gga objekt p&aring; skrivbordsbakgrunden f&ouml;r att snabbt komma &aring;t dina filer och mappar eller starta program som du anv&auml;nder ofta. Du kan &auml;ven h&ouml;gerklicka p&aring; skrivbordsbakgrunden. D&aring; visas en meny. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>L&aring;sa sk&auml;rmen </title>
+    <indexterm>
+      <primary>sessioner</primary>
+      <secondary>l&aring;sa sk&auml;rmen</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>l&aring;sa sk&auml;rmen</primary>
+    </indexterm>
+    <indexterm>
+      <primary>l&aring;sknapp</primary>
+    </indexterm>
+    <para>Utf&ouml;r en av f&ouml;ljande &aring;tg&auml;rder f&ouml;r att l&aring;sa sk&auml;rmen:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Klicka p&aring; <guimenu>Starta</guimenu> och v&auml;lj sedan <guimenuitem> L&aring;s sk&auml;rmen</guimenuitem>.</para>
+      </listitem>
+      <listitem>
+        <para>Om <guibutton>L&aring;s</guibutton>-knappen finns p&aring; en panel, klicka p&aring; <guibutton>L&aring;s</guibutton>-knappen. </para>
+        <para>H&ouml;gerklicka p&aring; en panel om du vill l&auml;gga till <guibutton>L&aring;s</guibutton>-knappen p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu> &Aring;tg&auml;rder</guisubmenu><guimenuitem>L&aring;s</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>N&auml;r du l&aring;ser sk&auml;rmen startas sk&auml;rmsl&auml;ckaren. Flytta musen f&ouml;r att visa dialogf&ouml;nstret f&ouml;r l&aring;st sk&auml;rm om du vill l&aring;sa upp sk&auml;rmen. Skriv anv&auml;ndarnamn och l&ouml;senord i dialogf&ouml;nstret f&ouml;r l&aring;st sk&auml;rm och tryck p&aring; <keycap>Retur</keycap>. </para>
+    <note>
+      <para>Du m&aring;ste ha sk&auml;rmsl&auml;ckaren aktiverad f&ouml;r att kunna l&aring;sa sk&auml;rmen. </para>
+    </note>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Hantera skrivbordssessionen </title>
+    <indexterm>
+      <primary>uppstartsprogram</primary>
+      <secondary>sessionskontrollerade</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>inst&auml;llningsverktyg</primary>
+      <secondary> Sessioner</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessioner</primary>
+      <secondary>hantera</secondary>
+    </indexterm>
+    <para>Med inst&auml;llningsverktyget <application>Sessioner</application> kan du konfigurera skrivbordssessionen. Inst&auml;llningsverktyget <application>Sessioner</application> identifierar f&ouml;ljande programtyper: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Program som &auml;r sessionshanterade. N&auml;r du sparar inst&auml;llningarna f&ouml;r sessionen sparar sessionshanteraren alla sessionshanterade program. Om du loggar ut och sedan loggar in igen startar sessionshanteraren automatiskt de sessionshanterade programmen. </para>
+      </listitem>
+      <listitem>
+        <para>Program som inte &auml;r sessionshanterade. N&auml;r du sparar inst&auml;llningarna f&ouml;r sessionen sparar inte sessionshanteraren program som inte &auml;r sessionshanterade. Om du loggar ut och sedan loggar in igen startar inte sessionshanteraren program som inte &auml;r sessionshanterade. Du m&aring;ste starta programmet manuellt. Du kan alternativt anv&auml;nda inst&auml;llningsverktyget <application>Sessioner </application> f&ouml;r att ange icke-sessionshanterade program som du vill ska startas automatiskt. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>S&aring; h&auml;r definierar du inloggnings- och utloggningsegenskaper </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>inloggningsegenskaper</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>utloggningsegenskaper</secondary>
+      </indexterm>
+      <para>Anv&auml;nd inst&auml;llningsverktyget <application>Sessioner</application> f&ouml;r att se hur en session beter sig n&auml;r du loggar in och loggar ut. Utf&ouml;r &ouml;nskade &auml;ndringar i fliksektionen <guilabel>Sessionsalternativ</guilabel>. Du kan t.ex. v&auml;lja att visa en v&auml;lkomstsk&auml;rm vid inloggning. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>S&aring; h&auml;r anv&auml;nder du uppstartsprogram </title>
+      <indexterm>
+        <primary>uppstartsprogram</primary>
+        <see>uppstartsprogram</see>
+      </indexterm>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>anv&auml;nda uppstartsprogram</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>uppstartsprogram</primary>
+        <secondary>icke-sessionshanterade</secondary>
+      </indexterm>
+      <para>Du kan konfigurera sessionerna att starta med program som inte &auml;r sessionshanterade. Anv&auml;nd inst&auml;llningsverktyget <application>Sessioner</application> f&ouml;r att konfigurera icke-sessions-hanterade startprogram. Anv&auml;nd <guilabel>Startprogram</guilabel>-fliksektionen f&ouml;r att l&auml;gga till, redigera och ta bort program. Om du sparar inst&auml;llningarna och loggar ut startas uppstartsprogrammen automatiskt n&auml;sta g&aring;ng du loggar in. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>S&aring; h&auml;r bl&auml;ddrar du mellan program </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>bl&auml;ddra mellan program</secondary>
+      </indexterm>
+      <para>Anv&auml;nd inst&auml;llningsverktyget <application>Sessioner</application> f&ouml;r att s&ouml;ka bland programmen in den aktuella sessionen. I <guilabel>Aktuell session</guilabel>-fliksektionen visas f&ouml;ljande:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Alla Java Desktop System-program som f&ouml;r n&auml;rvarande k&ouml;rs som kan anslutas till sessionshanteraren och som kan spara programmets status.</para>
+        </listitem>
+        <listitem>
+          <para>Alla inst&auml;llningsverktyg som kan anslutas till sessionshanteraren och som kan spara verktygets status.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Du kan anv&auml;nda <guilabel>Aktuell session</guilabel>-fliksektionen f&ouml;r att utf&ouml;ra ett begr&auml;nsat antal &aring;tg&auml;rder i sessionsegenskaperna f&ouml;r ett program eller inst&auml;llningsverktyg. Du kan till exempel redigera startordningen och omstarttyp f&ouml;r alla Java Desktop System-program eller inst&auml;llningsverktyg som finns i listan. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>S&aring; h&auml;r sparar du dina inst&auml;llningar </title>
+      <indexterm>
+        <primary>sessioner</primary>
+        <secondary>spara inst&auml;llningar</secondary>
+      </indexterm>
+      <para>Utf&ouml;r f&ouml;ljande steg om du vill spara sessionsinst&auml;llningarna: </para>
+      <orderedlist>
+        <listitem>
+          <para>Konfigurera sessioner s&aring; att inst&auml;llningarna sparas automatiskt n&auml;r du avslutar sessionen. Med inst&auml;llningsverktyget <application>Sessioner</application> kan du konfigurera en session. Inst&auml;llningsverktyget <application>Sessioner</application> startar. V&auml;lj alternativet <guilabel>Spara &auml;ndringarna i sessionen automatiskt</guilabel> i <guilabel>Sessionsalternativ</guilabel>-fliksektionen.</para>
+        </listitem>
+        <listitem>
+          <para>Avsluta sessionen. </para>
+        </listitem>
+      </orderedlist>
+      <para>Om du inte v&auml;ljer alternativet <guilabel>Spara &auml;ndringarna i sessionen automatiskt </guilabel> visas ett dialogf&ouml;nster d&auml;r du kan v&auml;lja om du vill spara de aktuella inst&auml;llningarna n&auml;r du loggar ut. Om du vill spara inst&auml;llningarna v&auml;ljer du alternativet och forts&auml;tter att logga ut.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>Logga ut </title>
+    <indexterm>
+      <primary>sessioner</primary>
+      <secondary>avsluta</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessioner</primary>
+      <secondary>logga ut</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>logga ut</primary>
+    </indexterm>
+    <para>Om du vill avsluta din session st&auml;nger du alla f&ouml;r n&auml;rvarande aktiva processer och utf&ouml;r en av f&ouml;ljande &aring;tg&auml;rder:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Klicka p&aring; <guimenu>Starta</guimenu> och v&auml;lj sedan <guimenuitem>Logga ut </guimenuitem> <replaceable>namn</replaceable>.</para>
+      </listitem>
+      <listitem>
+        <para>Om <guibutton>Logga ut</guibutton>-knappen finns p&aring; en panel, klickar du p&aring; <guibutton>Logga ut</guibutton>-knappen. </para>
+        <para>H&ouml;gerklicka p&aring; en panel om du vill l&auml;gga till <guibutton>Logga ut</guibutton>-knappen p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>Logga ut</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Innan du avslutar en session kan du spara de aktuella inst&auml;llningarna s&aring; att du kan &aring;terst&auml;lla sessionen senare. Under utloggningen visas ett dialogf&ouml;nster d&auml;r du kan v&auml;lja att spara de aktuella inst&auml;llningarna. I inst&auml;llningsverktyget <application> Sessioner</application> kan du v&auml;lja ett alternativ som g&ouml;r att de aktuella inst&auml;llningarna sparas automatiskt. </para>
+  </sect1>
+</chapter>

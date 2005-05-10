@@ -1,0 +1,1099 @@
+  
+  <appendix id="appendix-1">
+    <title>Maus- und Tastaturfunktionen</title>
+    <highlights>
+      <para>In diesem Anhang werden einige grundlegende Arbeitstechniken beschrieben, die zur Arbeit mit dem Java Desktop System erforderlich sind.</para>
+    </highlights>
+    <sect1 id="gosbasic-2">
+      <title>Mausfunktionen</title>
+      <indexterm>
+        <primary>Grundlegende Arbeitstechniken</primary>
+        <secondary>Bedienung der Maus</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Maus</primary>
+        <secondary>grundlegende Arbeitstechniken</secondary>
+      </indexterm>
+      <para>In diesem Abschnitt werden Konventionen zu Schaltfl&auml;chen, Aktionsbegriffe   In diesem Abschnitt werden auch die Mauszeiger beschrieben. </para>
+      <sect2 id="gosgetstarted-44">
+        <title>Konventionen f&uuml;r Maustasten</title>
+        <indexterm>
+          <primary>Maus</primary>
+          <secondary>Tastenkonventionen</secondary>
+        </indexterm>
+        <para>Alle Anweisungen in diesem Handbuch gelten f&uuml;r folgende Mausger&auml;te:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Ger&auml;te, die f&uuml;r rechtsh&auml;ndige Benutzer konfiguriert sind.</para>
+          </listitem>
+          <listitem>
+            <para>Ger&auml;te mit drei Tasten. Wenn Sie eine Maus mit zwei Tasten haben, dr&uuml;cken Sie die beiden Tasten gleichzeitig, um die Wirkung der mittleren Maustaste zu simulieren. </para>
+          </listitem>
+        </itemizedlist>
+        <para>In diesem Handbuch werden die folgenden Konventionen f&uuml;r Maustasten verwendet:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="36.36*"/>
+            <colspec colname="colspec1" colwidth="63.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Maustaste</para>
+                </entry>
+                <entry>
+                  <para>Definition </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>Linke Maustaste </para>
+                </entry>
+                <entry valign="top">
+                  <para>Die Taste auf der linken Seite einer Maus, die f&uuml;r Rechtsh&auml;nder konfiguriert ist. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Mittlere Maustaste</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Die mittlere Taste einer Maus, die f&uuml;r Rechtsh&auml;nder konfiguriert ist. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Rechte Maustaste</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Die Taste auf der rechten Seite einer Maus, die f&uuml;r Rechtsh&auml;nder konfiguriert ist. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Um die Maus von Rechts- auf Linksh&auml;nderbedienung umzustellen (oder umgekehrt), starten Sie das Einstellungstool <application> Maus</application> und w&auml;hlen dort die gew&uuml;nschten Optionen aus. Wenn Sie die Zuordnung der Maustasten umkehren, m&uuml;ssen Sie die in diesem Handbuch verwendeten Konventionen entsprechend umkehren.</para>
+      </sect2>
+      <sect2 id="gosgetstarted-45">
+        <title>Mausaktionen</title>
+        <indexterm>
+          <primary>Maus</primary>
+          <secondary>Aktionen</secondary>
+        </indexterm>
+        <para>In der folgenden Tabelle sind die Aktionen aufgef&uuml;hrt, die Sie mit der Maus ausf&uuml;hren k&ouml;nnen:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="36.36*"/>
+            <colspec colname="colspec1" colwidth="63.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Maustaste</para>
+                </entry>
+                <entry>
+                  <para>Syntax </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>Linke Maustaste </para>
+                </entry>
+                <entry valign="top">
+                  <para>Wird f&uuml;r die folgenden Aktionen verwendet: <itemizedlist><listitem><para>Markieren von Text </para></listitem><listitem><para>Ausw&auml;hlen von Elementen </para></listitem><listitem><para>Ziehen von Elementen </para></listitem></itemizedlist></para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Mittlere Maustaste</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wird f&uuml;r die folgenden Aktionen verwendet: <itemizedlist><listitem><para>Einf&uuml;gen von Text </para></listitem><listitem><para>Verschieben von Elementen</para></listitem></itemizedlist></para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Rechte Maustaste</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet gegebenenfalls ein Men&uuml; f&uuml;r das ausgew&auml;hlte Objekt. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Wenn Sie z.B. Text kopieren m&ouml;chten, gehen Sie folgenderma&szlig;en vor: </para>
+        <orderedlist>
+          <listitem>
+            <para>Markieren Sie den Text mit der linken Maustaste.</para>
+          </listitem>
+          <listitem>
+            <para>Verschieben Sie den Mauszeiger an die Stelle, an der der Text eingef&uuml;gt werden soll.</para>
+          </listitem>
+          <listitem>
+            <para>Dr&uuml;cken Sie die mittlere Maustaste. </para>
+          </listitem>
+        </orderedlist>
+        <para>Sie k&ouml;nnen auch mit der rechten Maustaste auf den Desktop-Hintergrund klicken, um das <guimenu>Desktop</guimenu>-Hintergrundmen&uuml; zu &ouml;ffnen.</para>
+      </sect2>
+      <sect2 id="gosbasic-7">
+        <title>Mauszeiger</title>
+        <indexterm>
+          <primary>Maus</primary>
+          <secondary>Zeiger</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>Zeiger</primary>
+          <see>Mauszeiger</see>
+        </indexterm>
+        <para>Wenn Sie mit der Maus arbeiten, kann sich die Darstellung des Mauszeigers &auml;ndern. Die Darstellung des Zeigers kann R&uuml;ckmeldungen &uuml;ber eine bestimmte Operation, eine Position oder einen Zustand geben. In der folgenden Tabelle werden einige Mauszeiger beschrieben:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="3" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="36.36*"/>
+            <colspec colname="colspec2" colwidth="63.64*"/>
+            <colspec colname="colspec1" colwidth="63.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Zeiger </para>
+                </entry>
+                <entry colname="colspec2">
+                  <para>Zugeh&ouml;rige Aktion</para>
+                </entry>
+                <entry>
+                  <para>Beschreibung </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/normal_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Normaler Zeiger. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Auf ein Element zeigen, eine Men&uuml;option w&auml;hlen</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Normaler Zeiger. Der Zeiger, der bei der normalen Verwendung der Maus angezeigt wird. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Verschieben. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Drag-and-Drop </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim Verschieben. Zeigt an, dass das Objekt beim Ablegen von der alten Position an die neue Position verschoben wird. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Kopieren. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Drag-and-Drop </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim Kopieren. Zeigt an, dass beim Ablegen des Objekts an der betreffenden Stelle eine Kopie des Objekts erstellt wird. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger für symbolische Links. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Drag-and-Drop </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger f&uuml;r symbolische Links. Zeigt an, dass beim Ablegen des Objekts an der betreffenden Stelle ein <firstterm>symbolischer Link</firstterm> auf das Objekt erstellt wird. Ein symbolischer Link ist eine besondere Art von Datei, die auf eine andere Datei oder einen Ordner verweist.  </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger für Erfragen. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Drag-and-Drop </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger f&uuml;r Erfragen. Zeigt an, dass beim Ablegen des Objekts ein Men&uuml; ge&ouml;ffnet wird. Sie k&ouml;nnen das Objekt verschieben oder kopieren bzw. einen symbolischen Link auf das Objekt erstellen.  </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/not_available_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Nicht verfügbarer Mauszeiger. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Drag-and-Drop </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Nicht verf&uuml;gbarer Mauszeiger. Zeigt an, dass Sie das Objekt nicht an der aktuellen Position ablegen k&ouml;nnen. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/move_panel_object_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Verschieben von Panel-Objekten. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Panel-Objekt verschieben </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim Verschieben von Panel-Objekten. Zeigt an, dass Sie ein Panel-Objekt zum Verschieben ausgew&auml;hlt haben.  </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/horiz_resize_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Ändern der horizontalen Größe. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Fenstergr&ouml;&szlig;e horizontal &auml;ndern </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim &Auml;ndern der horizontalen Gr&ouml;&szlig;e. Zeigt an, dass Sie einen vertikalen Fensterrand ausgew&auml;hlt haben, um die Fenstergr&ouml;&szlig;e horizontal zu &auml;ndern. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/vert_resize_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Ändern der vertikalen Größe. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Fenstergr&ouml;&szlig;e vertikal &auml;ndern </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim &Auml;ndern der vertikalen Gr&ouml;&szlig;e. Zeigt an, dass Sie einen horizontalen Fensterrand ausgew&auml;hlt haben, um die Fenstergr&ouml;&szlig;e vertikal zu &auml;ndern. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/corner_resize_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Ändern der Größe durch Ziehen einer Ecke. </phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Fenstergr&ouml;&szlig;e horizontal und vertikal &auml;ndern</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim &Auml;ndern der Gr&ouml;&szlig;e durch Ziehen einer Ecke. Zeigt an, dass Sie eine Ecke eines Fensters ausgew&auml;hlt haben, um die Fenstergr&ouml;&szlig;e horizontal und vertikal zu &auml;ndern.  </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/column_resize_pointer.png" format="PNG"/>
+                      </imageobject>
+                      <textobject>
+                        <phrase>Mauszeiger beim Ändern der Größe eines Teilfensters oder einer Tabellenspalte.</phrase>
+                      </textobject>
+                    </mediaobject>
+                  </screenshot>
+                </entry>
+                <entry colname="colspec2" valign="top">
+                  <para>Gr&ouml;&szlig;e eines Teilfensters oder einer Tabellenspalte &auml;ndern</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Mauszeiger beim &Auml;ndern der Gr&ouml;&szlig;e eines Teilfensters oder einer Tabellenspalte. Zeigt an, dass Sie eine Spalte in einer Tabelle ausgew&auml;hlt haben, um deren Gr&ouml;&szlig;e zu &auml;ndern.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+    <sect1 id="gosbasic-51">
+      <title>Tastaturfunktionen</title>
+      <indexterm>
+        <primary>Grundlegende Aufgaben</primary>
+        <secondary>Tastatur</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Tastatur</primary>
+        <secondary>grundlegende Aufgaben</secondary>
+      </indexterm>
+      <para>Die Tastatur kann f&uuml;r fast jede Aufgabe verwendet werden, die Sie mit der Maus ausf&uuml;hren k&ouml;nnen. <firstterm>Tastenkombinationen</firstterm> sind Tastenfolgen zur schnellen Ausf&uuml;hrung bestimmter Aufgaben. </para>
+      <para>Mithilfe von Tastenkombinationen k&ouml;nnen Sie allgemeine Aufgaben von Java Desktop System ausf&uuml;hren und mit Oberfl&auml;chenelementen wie Panels und Fenstern arbeiten. Auch in Anwendungen k&ouml;nnen Sie Tastenkombinationen verwenden. Sie k&ouml;nnen Tastenkombinationen mithilfe des Einstellungstools <application> Tastenkombinationen</application> individuell anpassen.</para>
+      <para>Sie k&ouml;nnen die Desktop-Einstellungen auch so &auml;ndern, dass Funktionen f&uuml;r den Tastaturzugriff verwendet werden k&ouml;nnen. </para>
+      <para>In den folgenden Abschnitten werden die Tastenkombinationen beschrieben, die Sie verwenden k&ouml;nnen. </para>
+      <sect2 id="gosbasic-62">
+        <title>Allgemeine Tastenkombinationen</title>
+        <indexterm>
+          <primary>Tastenkombinationen</primary>
+          <secondary>allgemein</secondary>
+        </indexterm>
+        <para>Mit den allgemeinen Tastenkombinationen k&ouml;nnen Sie grundlegende Aufgaben von Java Desktop System &uuml;ber die Tastatur ausf&uuml;hren. In der folgenden Tabelle sind einige allgemeine Tastenkombinationen aufgef&uuml;hrt: </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="35.67*"/>
+            <colspec colname="colspec1" colwidth="64.33*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Standard-Tastenkombinationen </para>
+                </entry>
+                <entry>
+                  <para>Funktion</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> Esc</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das <guimenu>Hauptmen&uuml;</guimenu>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Super</keycap>
+                      <keycap> R</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das Dialogfeld <guilabel>Anwendung ausf&uuml;hren</guilabel>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>Druck</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Erstellt ein Foto vom Bildschirm. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para><keycombo><keycap>Alt</keycap><keycap>Druck</keycap></keycombo> </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Erstellt ein Foto des aktiven Fensters. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>Nach rechts</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che rechts von der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>Nach links</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che links von der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>Nach oben</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che &uuml;ber der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> Alt</keycap>
+                      <keycap>Nach unten</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che unterhalb der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>d</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Verkleinert alle Fenster auf Symbolgr&ouml;&szlig;e und macht den Desktop-Hintergrund zum aktiven Bereich. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>F1</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Ruft den Online-Hilfe-Browser auf und zeigt die betreffende Online-Hilfe an.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 id="gosbasic-58">
+        <title>Tastenkombinationen f&uuml;r Fenster</title>
+        <indexterm>
+          <primary>Tastenkombinationen</primary>
+          <secondary>Fenster</secondary>
+        </indexterm>
+        <para>Mit Hilfe von Tastenkombinationen f&uuml;r Fenster k&ouml;nnen Sie Vorg&auml;nge in Fenstern &uuml;ber die Tastatur ausf&uuml;hren. Die folgende Tabelle enth&auml;lt einige Tastenkombinationen f&uuml;r Fenster. </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="35.67*"/>
+            <colspec colname="colspec1" colwidth="64.33*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Standard-Tastenkombinationen </para>
+                </entry>
+                <entry>
+                  <para>Funktion</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Alt</keycap>
+                      <keycap> Tab</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zwischen den Fenstern. Wenn Sie diese Tastenkombination verwenden, erscheint eine Liste mit den Fenstern, die Sie ausw&auml;hlen k&ouml;nnen. Lassen Sie die Tasten los, um ein Fenster auszuw&auml;hlen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Alt</keycap>
+                      <keycap> Esc</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt in umgekehrter Reihenfolge zwischen den Fenstern. Lassen Sie die Tasten los, um ein Fenster auszuw&auml;hlen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>F10</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das erste Men&uuml; links in der Men&uuml;leiste. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para><keycombo><keycap>Alt</keycap><keycap>Leertaste</keycap></keycombo>  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das <guilabel>Fenstermen&uuml;</guilabel>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Pfeiltasten</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Erm&ouml;glichen die Auswahl einzelner Men&uuml;optionen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>Eingabetaste</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Aktiviert eine Men&uuml;option. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>Esc</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Schlie&szlig;t ein ge&ouml;ffnetes Men&uuml;.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>Nach rechts</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che rechts von der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>Nach links</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che links von der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>Nach oben</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che &uuml;ber der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> Alt</keycap>
+                      <keycap>Nach unten</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Wechselt zur Arbeitsfl&auml;che unterhalb der aktuellen Arbeitsfl&auml;che. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Alt</keycap>
+                      <keycap>d</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Verkleinert alle Fenster auf Symbolgr&ouml;&szlig;e und macht den Desktop-Hintergrund zum aktiven Bereich. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 id="gosbasic-61">
+        <title>Tastenkombinationen f&uuml;r Panels</title>
+        <indexterm>
+          <primary>Tastenkombinationen</primary>
+          <secondary>Panel</secondary>
+        </indexterm>
+        <para>Mit Hilfe von Tastenkombinationen f&uuml;r Panels k&ouml;nnen Sie Vorg&auml;nge in Panels &uuml;ber die Tastatur ausf&uuml;hren. Die folgende Tabelle enth&auml;lt einige Tastenkombinationen f&uuml;r Panels. </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="31.36*"/>
+            <colspec colname="colspec1" colwidth="68.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Standard-Tastenkombinationen </para>
+                </entry>
+                <entry>
+                  <para>Funktion</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> Alt</keycap>
+                      <keycap>Tab</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Aktiviert abwechselnd die Panels bzw. den Desktop-Hintergrund. Wenn Sie diese Tastenkombination verwenden, erscheint eine Liste mit den Elementen, die Sie ausw&auml;hlen k&ouml;nnen. Lassen Sie die Tasten los, um ein Element auszuw&auml;hlen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> Alt</keycap>
+                      <keycap>Esc</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Aktiviert abwechselnd die Panels bzw. den Desktop-Hintergrund. Lassen Sie die Tasten los, um ein Element auszuw&auml;hlen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>F10</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das Kontextmen&uuml; f&uuml;r das ausgew&auml;hlte Panel.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>Tab</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>W&auml;hlt nacheinander die einzelnen Objekte in einem Panel aus.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>Eingabetaste</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Aktiviert das ausgew&auml;hlte Panel-Objekt bzw. die Men&uuml;option.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Umschalt</keycap>
+                      <keycap>F10 </keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das Kontextmen&uuml; f&uuml;r das ausgew&auml;hlte Panel-Objekt.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Pfeiltasten</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Erm&ouml;glichen die Auswahl einzelner Men&uuml;optionen. Aktivieren au&szlig;erdem Elemente der Oberfl&auml;che in einem Applet.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>Esc</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Schlie&szlig;t ein ge&ouml;ffnetes Men&uuml;.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycap>F10</keycap>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ffnet das Men&uuml; <guimenu>Anwendungen</guimenu> aus der <application>Men&uuml;leiste</application>, sofern sich die <application>Men&uuml;leiste</application> in einem Panel befindet. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 id="gosbasic-59">
+        <title>Tastenkombinationen f&uuml;r Anwendungen</title>
+        <indexterm>
+          <primary>Tastenkombinationen</primary>
+          <secondary>Anwendung</secondary>
+        </indexterm>
+        <para>Mit Hilfe von Tastenkombinationen f&uuml;r Anwendungen k&ouml;nnen Sie Vorg&auml;nge in Anwendungen ausf&uuml;hren. Die Vorg&auml;nge k&ouml;nnen dabei schneller als mit der Maus ausgef&uuml;hrt werden. Die folgende Tabelle enth&auml;lt einige Tastenkombinationen f&uuml;r Anwendungen. </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="45.00*"/>
+            <colspec colname="colspec1" colwidth="55.00*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Tastenkombinationen</para>
+                </entry>
+                <entry>
+                  <para>Befehl </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> N</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Neu </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> X</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Ausschneiden </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> C</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Kopieren </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap> V</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Einf&uuml;gen </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Z</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>R&uuml;ckg&auml;ngig</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>S</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Speichern</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <keycombo>
+                      <keycap>Strg</keycap>
+                      <keycap>Q</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Beenden</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 id="gosbasic-63">
+        <title>Zugriffstasten</title>
+        <indexterm>
+          <primary>Zugriffstasten</primary>
+        </indexterm>
+        <para>Die <firstterm>Men&uuml;leiste</firstterm> ist die Leiste, die sich oben in einem Fenster befindet und die Men&uuml;s der Anwendung enth&auml;lt. Eine <firstterm>Zugriffstaste</firstterm> ist ein unterstrichener Buchstabe in einer Men&uuml;leiste, einem Men&uuml; oder Dialogfeld, den Sie zum Ausf&uuml;hren einer Aktion verwenden k&ouml;nnen. In einer Men&uuml;leiste ist die Zugriffstaste f&uuml;r die einzelnen Men&uuml;s unterstrichen dargestellt. </para>
+        <para>Wenn Sie ein Men&uuml; &ouml;ffnen m&ouml;chten, dr&uuml;cken Sie <keycap>Alt</keycap> und danach die entsprechende Zugriffstaste. Im Men&uuml; sind die Zugriffstasten f&uuml;r die einzelnen Men&uuml;optionen unterstrichen dargestellt. Um eine Men&uuml;option auszuw&auml;hlen, dr&uuml;cken Sie die Zugriffstaste f&uuml;r die Men&uuml;option. Die folgende Tabelle enth&auml;lt Beispiele f&uuml;r Zugriffstasten aus der Anwendung <application>Texteditor</application>: </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="41.44*"/>
+            <colspec colwidth="58.56*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Zugriffstasten</para>
+                </entry>
+                <entry>
+                  <para>Funktion </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Alt</keycap>
+                      <keycap>F</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>&Ouml;ffnet das Men&uuml; <guimenu>Datei</guimenu>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><keycap>N</keycap> </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlt im Men&uuml; <guimenu>Datei</guimenu> die Option <guimenuitem>Neu</guimenuitem>.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>&Uuml;ber Zugriffstasten k&ouml;nnen Sie auch auf Elemente in einem Dialogfeld zugreifen. Bei den meisten Elementen eines Dialogfelds ist ein Buchstabe unterstrichen. Um auf ein bestimmtes Dialogfeldelement zuzugreifen, dr&uuml;cken Sie die Taste <keycap>Alt</keycap> und danach die Zugriffstaste. Die folgende Tabelle enth&auml;lt ein Beispiel f&uuml;r eine Zugriffstaste aus dem Dialogfeld <guilabel>Einstellungen</guilabel> in der Anwendung <application>Texteditor</application>:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="41.41*"/>
+            <colspec colwidth="58.59*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Zugriffstaste</para>
+                </entry>
+                <entry>
+                  <para>Funktion </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <keycombo>
+                      <keycap>Alt</keycap>
+                      <keycap>U</keycap>
+                    </keycombo>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Aktiviert bzw. deaktiviert das Kontrollk&auml;stchen <guilabel>Vorgegebene Motivfarbe verwenden</guilabel>.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Zur Navigation in einem Fenster oder Dialogfeld k&ouml;nnen Sie auch andere Tasten verwenden.</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="36.36*"/>
+            <colspec colwidth="63.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Schl&uuml;ssel</para>
+                </entry>
+                <entry>
+                  <para>Funktion</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para><keycap>Tab</keycap> </para>
+                </entry>
+                <entry valign="top">
+                  <para>Aktiviert nacheinander die einzelnen Elemente in einem Fenster oder Dialogfeld.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Pfeiltasten </para>
+                </entry>
+                <entry valign="top">
+                  <para>F&uuml;hren Sie mit den Pfeiltasten die folgenden Aktionen aus:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Aktivieren Sie in einer Men&uuml;leiste nacheinander die einzelnen Men&uuml;s. W&auml;hlen Sie in einem ge&ouml;ffneten Men&uuml; nacheinander die einzelnen Men&uuml;optionen. </para>
+                    </listitem>
+                    <listitem>
+                      <para>W&auml;hlen Sie nacheinander einzelne Optionen aus, beispielsweise in einer Gruppe von Optionsfeldern in einem Dialogfeld. </para>
+                    </listitem>
+                    <listitem>
+                      <para>&Auml;ndern Sie den in einem Drehfeld angezeigten Wert. </para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+  </appendix>

@@ -1,0 +1,1508 @@
+<chapter id="gospanel-1">
+  <title>パネルの操作方法</title>
+  <highlights>
+    <para>この章では、パネルの操作方法について説明します。パネルは、アプリケーションを実行したり、ほかの作業を実行したりできる Java Desktop System 上の領域です。</para>
+  </highlights>
+  <sect1 id="gospanel-2">
+    <title>パネルの概要</title>
+    <indexterm>
+      <primary sortas="はねる">パネル</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <para>セッションを始めて開始すると、Java Desktop System には最低 1 つのパネルがあります。システム管理者は、ローカルな要求に応じてデフォルトのパネルを設定している場合があります。したがって、ここで説明するパネルと多少異なる可能性があります。</para>
+    <para>必要に応じて、パネルの動作や外観を変更できます。パネルからオブジェクトを追加、削除することもできます。複数のパネルを作成し、各パネルで異なる設定、オブジェクト、および背景を選ぶことができます。パネルを隠すこともできます。</para>
+    <para>通常、Java Desktop System は、画面のボトムエッジに表示される、事前に構成されたパネルを含みます。</para>
+    <sect2 id="gospanel-3">
+      <title>ボトムエッジパネル</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="ほとむえつしはねる">ボトムエッジパネル</secondary>
+        <see>ボトムエッジパネル</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ほとむえつしはねる">ボトムエッジパネル</primary>
+        <secondary sortas="かいよう">概要</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ほとむえつしはねる">ボトムエッジパネル</primary>
+        <secondary sortas="てふおるとのこんてんつ">デフォルトのコンテンツ</secondary>
+      </indexterm>
+      <para>ボトムエッジパネルには、以下の項目があります。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec3" colwidth="30.95*"/>
+          <colspec colname="colspec4" colwidth="69.05*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>オブジェクト</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <guibutton>「起動」</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para><guibutton>「起動」</guibutton>ボタンには、<application>Java Desktop System</application> のアプリケーションと構成ツールのメニューやメニュー項目が含まれています。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>時計</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>パネルに日時を表示します。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>デスクトップの表示</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">このボタンをクリックすると、開かれているすべてのウィンドウがアイコン化されます。</entry>
+            </row>
+            <row>
+              <entry colname="colspec3" valign="top">
+                <para>
+                  <application>ウィンドウリスト</application>
+                </para>
+              </entry>
+              <entry colname="colspec4" valign="top">
+                <para>開いている各ウィンドウを示すボタンを表示します。ウィンドウリストボタンをクリックすると、ウィンドウの最小化と元のサイズへの復元を行うことができます。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>通知スペース</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>アプリケーションのアクティビティを示すさまざまなアイコンを表示します。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>ワークスペーススイッチ</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>ワークスペースを視覚的に表示します。<application>ワークスペーススイッチ</application> を使用して、ワークスペース間を切り替えることができます。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>ボリュームコントロール</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>システムの音量を制御し設定するボタンを表示します。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>ネットワークモニター</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>ネットワークデバイスの状態を表示します。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-5">
+    <title>パネルの管理</title>
+    <indexterm>
+      <primary sortas="はねる">パネル</primary>
+      <secondary sortas="かんり">管理</secondary>
+    </indexterm>
+    <para>以下の節では、パネルの管理方法について説明します。</para>
+    <sect2 id="gospanel-10">
+      <title>新しいパネルを追加する</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="あたらしいはねるのついか">新しいパネルの追加</secondary>
+      </indexterm>
+      <para>パネルを追加するには、パネルの空きスペースを右クリックし、<guimenuitem>「新規パネル」</guimenuitem>を選択します。新しいパネルが Java Desktop System に追加されます。新しいパネルにはオブジェクトは含まれていません。利用者の環境に合わせて、新しいパネルをカスタマイズできます。</para>
+    </sect2>
+    <sect2 id="gospanel-11">
+      <title>パネルを操作する</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="そうさ">操作</secondary>
+      </indexterm>
+      <para>パネルを操作するには、パネル上の空いているスペースで、左クリック、右クリック、または中央クリックします。パネルに空きスペースがない場合は、非表示ボタンのいずれか 1 つを中央クリックまたは右クリックすることで、パネルを選択できます。パネル上で非表示ボタンが見えない場合は、パネルの設定を変更して、非表示ボタンを可視にします。</para>
+      <para>次のようにマウスボタンを使用して、パネルを操作できます。</para>
+      <variablelist>
+        <varlistentry>
+          <term>中央クリック</term>
+          <listitem>
+            <para>パネルをつかんで、別の場所にドラッグできる</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>右クリック</term>
+          <listitem>
+            <para>パネルポップアップメニューを開く</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="gospanel-12">
+      <title>パネルを移動する</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="いとう">移動</secondary>
+      </indexterm>
+      <para>パネルは別の場所に移動できます。パネルを移動するには、パネル上の空いているスペースで中央クリックし、中央ボタンを押したままそのパネルを別の場所にドラッグします。</para>
+    </sect2>
+    <sect2 id="gospanel-7">
+      <title>パネルを隠す</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="かくす">隠す</secondary>
+      </indexterm>
+      <para>パネルを隠したり、表示したりすることができます。パネルを隠すには、非表示ボタンを使用します。パネル上で非表示ボタンが見えない場合は、パネルの設定を変更して、非表示ボタンを可視にします。</para>
+      <para>非表示ボタンは、パネルの両端にあります。非表示ボタンには、オプションの矢印アイコンが含まれています。次の図に、非表示ボタンを示します。</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/four_hide_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>水平パネルと垂直パネルを示しています。両方とも非表示ボタンがあります。 </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>パネルを隠すには、非表示ボタンのいずれか 1 つをクリックします。パネルは、非表示ボタン上の矢印方向に縮小します。パネルのもう一方の端にある非表示ボタンは、可視のままです。</para>
+      <para>隠したパネルを再表示するには、可視の非表示ボタンをクリックします。パネルは、非表示ボタン上の矢印方向に拡大します。両方の非表示ボタンが可視になります。</para>
+      <para>パネルは、オートハイド (自動的に隠す) に設定できます。オートハイドを設定すると、マウスがパネルをポイントしていない場合は、パネルが自動的に隠れます。パネルが存在している画面の一部をポイントすると、そのパネルが再び表示されます。パネルをオートハイドに設定するには、パネルの設定を変更します。</para>
+    </sect2>
+    <sect2 id="gospanel-28">
+      <title>パネルの設定を変更する</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="せつていのへんこう">設定の変更</secondary>
+      </indexterm>
+      <para>すべてのパネルの設定を変更するには、<guilabel>「パネル」</guilabel> 設定ツールで必要な変更を行います。たとえば、パネルのアニメーション設定を変更することができます。</para>
+      <para>個々のパネルに対して、それぞれ設定を変更することもできます。パネルの位置、隠す場合の動作、視覚的な外観など、各パネルの特長を変更することができます。</para>
+      <para>パネルの設定を変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>パネル上の空いているスペースで右クリックし、<guimenuitem>「設定」</guimenuitem>を選択して<guilabel>「パネルの設定」</guilabel>ダイアログを表示します。<guilabel>「パネルの設定」</guilabel>ダイアログには、次のタブセクションがあります。</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>「一般」</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>「背景」</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>パネルのサイズ、位置、非表示プロパティを変更するには、 <guilabel>「一般」</guilabel>タブをクリックします。次の表に、<guilabel>「一般」</guilabel>タブセクションのダイアログ要素を示します。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>ダイアログ要素</para>
+                  </entry>
+                  <entry>
+                    <para>説明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>「名前」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>パネルの名前を入力する。パネルとデスクトップの切り替えにショートカットキーを使用する場合、このパネル名が表示される</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>「向き」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>画面上のパネルの位置を選択。パネルの変更位置をクリックする</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「サイズ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>パネルのサイズを指定する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>「広げる」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>パネルのある画面の長さ最大までパネルを拡大する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「自動的に隠す」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>自動的に隠すを有効にする</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「非表示ボタンを表示」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>パネル上で非表示ボタンを表示する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「非表示ボタンを矢印表示」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>非表示ボタンが有効な場合に、非表示ボタン上に矢印を表示する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>パネルの背景を変更するには、<guilabel>「背景」</guilabel>タブをクリックします。パネルの背景タイプを選択します。選択は次のとおり</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="32.32*"/>
+              <colspec colwidth="67.68*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>ダイアログ要素</para>
+                  </entry>
+                  <entry>
+                    <para>説明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「なし (システムのテーマを使用する)」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>デフォルトのパネル背景を使用する。デフォルトのパネル背景は、<application>「テーマ」</application>設定ツールの設定によって異なる</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「単一色」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>パネル背景を 1 色指定する。<guibutton>「色」</guibutton>ボタンをクリックして、カラー選択ダイアログを表示する。任意の色を「色の選択」ダイアログから選ぶ</para>
+                    <para><guilabel>「スタイル」</guilabel>スライダで、色の透明度または不透明度を指定する。たとえば、パネルを透明にするには、スライダを<guilabel>「透過」</guilabel>の端まで移動する。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「背景の画像」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>パネル背景の画像を指定する。ドロップダウンコンビネーションボックスに使用する画像のファイル名を入力する。または、<guibutton>「参照」</guibutton>ボタンをクリックしてファイルをブラウズする。ファイルを選択したら、「了解」をクリックする</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>色または画像をパネルにドラッグして、それをパネルの背景として設定することもできます。詳細については、<xref linkend="gospanel-61"/>を参照してください。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、<guilabel>「パネルの設定」</guilabel>ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+      <sect3 id="gospanel-61">
+        <title>パネルの背景に色または画像をドラッグする</title>
+        <indexterm>
+          <primary sortas="はねる">パネル</primary>
+          <secondary sortas="はいけいのへんこう">背景の変更</secondary>
+        </indexterm>
+        <para>色または画像をパネルにドラッグして、それをパネルの背景として設定できます。色または画像は、多数のアプリケーションからドラッグできます。たとえば、ファイルマネージャの色をパネルにドラッグして、パネルの背景として設定できます。任意の「色の選択」ダイアログから色をドラッグすることもできます。</para>
+        <para>画像をパネルにドラッグして、それをパネルの背景として設定できます。パターン画像をファイルマネージャからドラッグして、パネルの背景に設定することもできます。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-31">
+      <title>パネルを削除する</title>
+      <indexterm>
+        <primary sortas="はねる">パネル</primary>
+        <secondary sortas="さくしよ">削除</secondary>
+      </indexterm>
+      <para>Java Desktop System からパネルを削除するには、削除したいパネルで右クリックし、<menuchoice><guimenuitem>「パネルから削除」</guimenuitem></menuchoice>を選択します。</para>
+      <note>
+        <para>Java Desktop System には必ずパネルが 1 つ必要です。Java Desktop System にパネルが 1 つしかない場合、そのパネルは削除できません。</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-8">
+    <title>パネルオブジェクト</title>
+    <indexterm>
+      <primary sortas="はねる">パネル</primary>
+      <secondary sortas="はねるおふしえくと">パネルオブジェクト</secondary>
+      <see>パネルオブジェクト</see>
+    </indexterm>
+    <para>この節では、パネルに追加できるオブジェクト、およびパネルから使用できるオブジェクトについて説明します。</para>
+    <sect2 id="gospanel-100">
+      <title>パネルオブジェクトを操作する</title>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="そうさするには">操作するには</secondary>
+      </indexterm>
+      <para>次のようにマウスボタンを使用して、パネルオブジェクトを操作できます。</para>
+      <variablelist>
+        <varlistentry>
+          <term>左クリック</term>
+          <listitem>
+            <para>パネルオブジェクトを起動する</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>中央クリック</term>
+          <listitem>
+            <para>オブジェクトをグラブし、そのオブジェクトを別の場所にドラッグする</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>右クリック</term>
+          <listitem>
+            <para>パネルオブジェクトポップアップメニューを開く</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>パネルオブジェクトは、これとは異なる方法で操作します。詳細については、<xref linkend="gospanel-39"/>を参照してください。</para>
+    </sect2>
+    <sect2 id="gospanel-15">
+      <title>パネルにオブジェクトを追加する</title>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="ついか">追加</secondary>
+      </indexterm>
+      <para>パネルにオブジェクトを追加するには、次のいくつかの方法があります。</para>
+      <itemizedlist>
+        <listitem>
+          <para>パネルポップアップメニュー</para>
+          <para>パネル上の空いているスペースで右クリックし、パネルポップアップメニューを開きます。パネルポップアップメニューには、<guisubmenu>「パネルに追加」</guisubmenu>サブメニューがあります。<guisubmenu>「パネルに追加」</guisubmenu>サブメニューを使用して、次のオブジェクトをパネルに追加できます。<itemizedlist><listitem><para>次のカテゴリのパネルアプリケーション: <guilabel> 「アクセサリ」</guilabel>、<guilabel>「アミューズメント」</guilabel>、<guilabel>「インターネット」</guilabel>, <guilabel>「マルチメディア」</guilabel>、<guilabel>「ユーティリティ」</guilabel>。</para></listitem><listitem><para>一般的なアクションにクイックアクセスするためのボタン: <guibutton>「ファイルの検索」</guibutton>ボタン、<guibutton>「強制終了」</guibutton>ボタン、<guibutton>「画面のロック」</guibutton>ボタン、<guibutton>「ログアウト」</guibutton>ボタン、<guibutton>「アプリケーションの実
+行」</guibutton>ボタン、<guibutton>「スクリーンショット」</guibutton>ボタン、<guibutton>「デスクトップの表示」</guibutton>ボタン。</para></listitem><listitem><para>ランチャー</para></listitem><listitem><para>メニューのランチャー</para></listitem><listitem><para><guimenu>メインメニュー</guimenu></para></listitem><listitem><para><application>メニューバー</application></para></listitem><listitem><para>引き出し</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>任意のメニュー</para>
+          <para>任意のメニューでランチャーを右クリックすると、そのランチャーのポップアップメニューが開きます。このポップアップメニューを使用して、パネルにランチャーを追加できます。</para>
+          <para>メニュー、ランチャー、およびパネルアプリケーションをメニューからパネルにドラッグすることもできます。</para>
+        </listitem>
+        <listitem>
+          <para>ファイルマネージャ</para>
+          <para>各ランチャーは<filename>.desktop</filename> ファイルに対応します。<filename>.desktop</filename> ファイルをパネルにドラッグすることで、そのランチャーをパネルに追加できます。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-9">
+      <title>オブジェクトの設定を変更する</title>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="せつていのへんこう">設定の変更</secondary>
+      </indexterm>
+      <para>ランチャーや引き出しなどのパネルオブジェクトには、一連の関連付けられたプロパティがあります。設定は、各オブジェクトのタイプにより異なります。設定は、次のような詳細を指定します。<itemizedlist><listitem><para>アプリケーションを起動するコマンド</para></listitem><listitem><para>メニューのソースファイルの位置</para></listitem><listitem><para>オブジェクトを表すアイコン</para></listitem></itemizedlist></para>
+      <para>オブジェクトの設定を変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <indexterm>
+            <primary sortas="はねるおふしえくとほつふあつふめにゆうのす">パネルオブジェクトポップアップメニューの図</primary>
+          </indexterm>
+          <para>オブジェクトを右クリックして、<xref linkend="gospanel-FIG-54"/> に示すパネルオブジェクトポップアップメニューを開きます。</para>
+          <figure id="gospanel-FIG-54">
+            <title>パネルオブジェクトポップアップメニュー。</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/panel_object_popup_menu.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>パネルオブジェクトポップアップメニューメニュー項目: 設定、パネルから削除、ロック、移動</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+        <listitem>
+          <para><guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「設定」</guilabel>ダイアログを使用して、必要に応じて設定を変更します。<guilabel>「設定」</guilabel>ダイアログ内の設定は、手順 1 で選択したオブジェクトにより異なります。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「OK」</guibutton>をクリックして変更を適用し、<guilabel>「設定」</guilabel>ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gospanel-32">
+      <title>パネルオブジェクトを移動する</title>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="いとう">移動</secondary>
+      </indexterm>
+      <para>パネルオブジェクトはパネル内で移動することも、パネル間で移動することもできます。また、パネルと引き出し間でオブジェクトを移動することもできます。</para>
+      <para>パネルオブジェクトを移動するには、オブジェクトを中央クリックし、ボタンを押したままそのオブジェクトを別の位置にドラッグします。マウスの中央ボタンを放すと、そのオブジェクトが新しい位置に固定されます。</para>
+      <para>または、パネルオブジェクトポップアップメニューを使用してオブジェクトを移動することもできます。次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>オブジェクトを右クリックし、<guimenuitem>「移動」</guimenuitem>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>オブジェクトの新しい位置をポイントし、任意のマウスボタンをクリックしてその位置にオブジェクトを固定します。移動先は、Java Desktop System 上に現在あるパネルであれば、どのパネルでもかまいません。</para>
+        </listitem>
+      </orderedlist>
+      <para>パネルオブジェクトを動かすと、パネル上のほかのオブジェクトの位置に影響します。パネル上でのオブジェクトの動きを制御するには、動作モードを指定します。動作モードを指定するには、パネルオブジェクトを移動するときに次のいずれかのキーを押します。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="15.00*"/>
+          <colspec colname="colspec1" colwidth="30.00*"/>
+          <colspec colname="colspec3" colwidth="54.00*"/>
+          <thead>
+            <row rowsep="1">
+              <entry colname="colspec2">
+                <para>キー</para>
+              </entry>
+              <entry>
+                <para>動作モード</para>
+              </entry>
+              <entry colname="colspec3">
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>キー無し</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>スイッチ動作</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>オブジェクトは、ほかのパネルオブジェクトと位置が入れ替わる。スイッチ動作は、デフォルトの動作モード</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Alt</keycap> キー</para>
+              </entry>
+              <entry valign="top">
+                <para>フリー動作</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>オブジェクトは、パネル上のほかのパネルオブジェクトを飛び越えて、次の空きスペースに移動する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Shift</keycap> キー</para>
+              </entry>
+              <entry valign="top">
+                <para>プッシュ動作</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>オブジェクトは、パネルに沿ってほかのパネルオブジェクトをプッシュする</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-566">
+      <title>パネルオブジェクトをロックする</title>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="ろつく">ロック</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくとのろつく">パネルオブジェクトのロック</primary>
+      </indexterm>
+      <para>パネルオブジェクトをロックして、パネル上のオブジェクトの位置を固定できます。一部のパネルオブジェクトの位置を変更しないで、他のパネルオブジェクトを移動するときに、この機能が役立ちます。</para>
+      <para>パネル上のオブジェクトの位置をロックするには、オブジェクトを右クリックしてパネルオブジェクトのポップアップメニューを開き、<guimenuitem>「ロック」</guimenuitem>を選択します。オブジェクトのロックを解除するには、そのオブジェクトを右クリックし、<guimenuitem>「ロック解除」</guimenuitem>を選択します。</para>
+    </sect2>
+    <sect2 id="gospanel-33">
+      <title>パネルオブジェクトを削除する</title>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="さくしよ">削除</secondary>
+      </indexterm>
+      <para>パネルからオブジェクトを削除するには、そのオブジェクトを右クリックし、パネルオブジェクトポップアップメニューを開いて、<guimenuitem>「パネルから削除」</guimenuitem>を選択します。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-17">
+    <title>パネルアプリケーション</title>
+    <indexterm>
+      <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+      <secondary sortas="はねるあふりけえしよん">パネルアプリケーション</secondary>
+      <see>パネルアプリケーション</see>
+    </indexterm>
+    <para>パネルアプリケーションとは、小さなアプリケーションで、そのユーザーインターフェイスはパネル内にあります。たとえば、以下の図は、左から順に次のパネルアプリケーションを示しています。</para>
+    <itemizedlist>
+      <listitem>
+        <para><application>ウィンドウリスト</application>: システムで現在開いているウィンドウを表示する</para>
+      </listitem>
+      <listitem>
+        <para><application>CD プレーヤー</application> : システムの CD を制御する</para>
+      </listitem>
+      <listitem>
+        <para><application>ボリュームコントロール</application> : システムのスピーカの音量を制御する</para>
+      </listitem>
+    </itemizedlist>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/sample_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>パネルアプリケーションの例。これは図に関する説明です。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <sect2 id="gospanel-40">
+      <title>アプリケーションをパネルに追加する</title>
+      <indexterm>
+        <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+        <secondary sortas="はねるについか">パネルに追加</secondary>
+      </indexterm>
+      <para>アプリケーションをパネルに追加するには、パネルポップアップメニューを使用します。パネル上の空いているスペースで右クリックし、パネルポップアップメニューを開きます。<guimenu>「パネルに追加」</guimenu>を選択して、次のいずれかのサブメニューから追加するパネルアプリケーションを選びます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guimenu>「アクセサリ」</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>「アミューズメント」</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>「インターネット」</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>「マルチメディア」</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>「ユーティリティ」</guimenu>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>サブメニューからパネルアプリケーションをドラッグして、パネルに追加することもできます。</para>
+    </sect2>
+    <sect2 id="gospanel-39">
+      <title>パネルアプリケーションを選択する</title>
+      <indexterm>
+        <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+        <secondary sortas="せんたく">選択</secondary>
+      </indexterm>
+      <para>パネルアプリケーションの設定を変更するには、最初にパネルアプリケーションを右クリックして、パネルオブジェクトポップアップメニューを表示します。パネルアプリケーションを移動するには、そのパネルアプリケーションを中央クリックします。</para>
+      <para>パネルオブジェクトポップアップメニューを表示したり、パネルアプリケーションを移動するには、以下に示すように、パネルアプリケーション上のクリックする場所に制約があります。</para>
+      <itemizedlist>
+        <listitem>
+          <para>一部のパネルアプリケーションには、パネルアプリケーション特有のコマンドのポップアップメニューがあり、このメニューはパネルアプリケーションの特定の部分を右クリックした場合に開く。たとえば <application>ウィンドウリスト</application>パネルアプリケーションの場合、左側に垂直ハンドルがあり、右側にウィンドウを表すボタンがある。<application>ウィンドウリスト</application>パネルアプリケーションのパネルオブジェクトポップアップメニューを開くには、ハンドルを右クリックする必要がある。右側にあるボタンを右クリックすると、ボタンのポップアップメニューが開く</para>
+        </listitem>
+        <listitem>
+          <para>あるパネルアプリケーションには、パネルアプリケーションの選択に使用できない領域がある。たとえば <application>コマンドライン</application>パネルアプリケーションには、コマンドを入力するためのフィールドがある。このフィールドを中央クリックまたは右クリックしてパネルアプリケーションを選択することはできない。代わりに、パネルアプリケーションの別の部分を中央クリックまたは右クリックする</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-41">
+      <title>パネルアプリケーションの設定を変更する</title>
+      <indexterm>
+        <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+        <secondary sortas="せつていのへんこう">設定の変更</secondary>
+      </indexterm>
+      <para>パネルアプリケーションの設定を変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>パネルアプリケーションを右クリックして、<guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「設定」</guilabel>ダイアログを使用して、設定を必要に応じて変更します。パネルアプリケーションの設定は、パネルアプリケーションによって異なります。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、<guilabel>「設定」</guilabel>ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-16">
+    <title>ランチャー</title>
+    <indexterm>
+      <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+      <secondary sortas="らんちやあ">ランチャー</secondary>
+      <see>ランチャー</see>
+    </indexterm>
+    <para>ランチャーをクリックすると、次のいずれかの操作を開始します。</para>
+    <itemizedlist>
+      <listitem>
+        <para>特定のアプリケーションを起動する</para>
+      </listitem>
+      <listitem>
+        <para>コマンドを実行する</para>
+      </listitem>
+      <listitem>
+        <para>ファイルマネージャウィンドウでフォルダを開く</para>
+      </listitem>
+      <listitem>
+        <para>特定の <firstterm>Uniform Resource Locator</firstterm> (URL) でブラウザを開く。URL は、Web 上の特定の位置を示すアドレス</para>
+      </listitem>
+      <listitem>
+        <para>特別な <firstterm>Uniform Resource Identifiers</firstterm> (URI) を開く。Java Desktop System には、ファイルマネージャから特定の機能にアクセスするため特殊 URI があります。<indexterm><primary sortas="とくへつなURIろけえしよん">特別な URI ロケーション</primary><secondary sortas="とらんちやあ">とランチャー</secondary></indexterm></para>
+      </listitem>
+    </itemizedlist>
+    <para>ランチャーは、Java Desktop System 上の次の場所にあります。</para>
+    <itemizedlist>
+      <listitem>
+        <para>パネル: パネルでは、ランチャーはアイコンとして表示される</para>
+      </listitem>
+      <listitem>
+        <para>メニュー: メニューでは、ランチャーはメニュー項目として表示される。通常、メニュー項目の横にアイコンがある</para>
+      </listitem>
+      <listitem>
+        <para>デスクトップ: デスクトップでは、ランチャーはアイコンとして表示される</para>
+      </listitem>
+    </itemizedlist>
+    <para>ランチャーの設定は変更できます。たとえば、ランチャーの設定として、ランチャー名、ランチャーを表すアイコン、ランチャーの実行方法があります。</para>
+    <sect2 id="gospanel-34">
+      <title>パネルにランチャーを追加する</title>
+      <indexterm>
+        <primary sortas="らんちやあ">ランチャー</primary>
+        <secondary sortas="はねるについかするには">パネルに追加するには</secondary>
+      </indexterm>
+      <para>パネルにランチャーを追加するには、次の方法を使用します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>パネルポップアップメニュー</para>
+          <para>新しくランチャーを作成するには、パネル上の空いているスペースで右クリックし、<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「ランチャー」</guimenuitem></menuchoice>を選択します。<guilabel>「ランチャーの作成」</guilabel>ダイアログが表示されます。このダイアログに関する詳細については、<xref linkend="gospanel-52"/>を参照してください。</para>
+          <para>既存のランチャーをパネルに追加するには、パネルポップアップメニューから<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「メニューからランチャー」</guimenuitem></menuchoice>を選択します。追加するランチャーをメニューから選びます。</para>
+        </listitem>
+        <listitem>
+          <para>任意のメニュー</para>
+          <para>任意のメニューからパネルにランチャーを追加するには、次のいずれかの手順を実行します。<itemizedlist><listitem><para>ランチャーを含むメニューを開く。ランチャーをパネルにドラッグする</para></listitem><listitem><para>ランチャーの追加先のパネルで、そのランチャーを含むメニューを開く。ランチャーのタイトルを右クリックする。<guimenuitem>「ランチャーをパネルに追加」</guimenuitem>を選択する</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>ファイルマネージャ</para>
+          <para>ファイルマネージャからパネルにランチャーを追加するには、そのランチャー用の <filename>.desktop</filename> ファイルをファイルシステムから検索してください。ランチャーを追加するには、<filename>.desktop</filename> ファイルをパネルにドラッグします。</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gospanel-52">
+        <title>「ランチャーの作成」ダイアログを使用してランチャーを作成する</title>
+        <para><guilabel>「ランチャーの作成」</guilabel>ダイアログを使用してランチャーを作成するには、次の手順を実行します。</para>
+        <orderedlist>
+          <listitem>
+            <para>パネルの任意の部分を右クリックし、パネルポップアップメニューを開きます。<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「ランチャー」</guimenuitem></menuchoice>を選択して、<guilabel>「ランチャーの作成」</guilabel>ダイアログを表示します。</para>
+          </listitem>
+          <listitem>
+            <para><guilabel>「基本」</guilabel>タブセクションにランチャーの設定を入力します次の表に、<guilabel>「基本」</guilabel>タブセクションのダイアログ要素を示します。</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="26.19*"/>
+                <colspec colname="colspec1" colwidth="73.81*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>ダイアログ要素</para>
+                    </entry>
+                    <entry>
+                      <para>説明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「名前」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャー名を指定する。<guilabel>「拡張」</guilabel>タブを使用して、ランチャー名の翻訳を追加できる。ここで指定した名前は、メニューまたはデスクトップにランチャーを追加したときに表示される</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0" valign="top">
+                      <para>
+                        <guilabel>「一般名」</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>ランチャーが属するアプリケーションのクラスを指定する。たとえば、<application>gedit</application> ランチャーの場合は、<userinput>Text Editor</userinput> と入力する。<guilabel>「拡張」</guilabel>タブを使用して、「一般名」の翻訳を追加できる</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「コメント」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーについての短い説明を入力する。このコメントは、パネル上のランチャーアイコンをポイントしたときに表示されるツールチップになる。<guilabel>「拡張」</guilabel>タブセクションを使用して、コメントの翻訳を追加できる</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「コマンド」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーをクリックしたときに実行されるコマンドを指定するサンプルコマンドについては、次の節を参照すること</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「タイプ」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>このドロップダウンのコンビネーションボックスを使用して、ランチャーのタイプを指定する。次の項目から選択する</para>
+                      <itemizedlist>
+                        <listitem>
+                          <para><guilabel>「アプリケーション」</guilabel>: アプリケーションを起動するランチャーを作成する</para>
+                        </listitem>
+                        <listitem>
+                          <para><guilabel>「リンク」</guilabel>: URI にリンクしたランチャーを作成する</para>
+                        </listitem>
+                      </itemizedlist>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「アイコン」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーを表すアイコンを選択する。アイコンを選択するには、<guibutton>「アイコンなし」</guibutton>ボタンをクリックする。「アイコンを選択」 ダイアログが表示される。ダイアログからアイコンを選択する。別のディレクトリにあるアイコンを選択するには、<guibutton>「参照」</guibutton>をクリックする。アイコンを選択したら<guibutton>「OK」</guibutton>をクリックする</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「端末で実行」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>アプリケーションまたはコマンドを端末ウィンドウで実行する場合に選択する。アプリケーションまたはコマンドを実行するウィンドウが作成されない場合に、このオプションを選択します。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>ランチャーの追加設定を設定するには、<guilabel>「拡張」</guilabel>タブをクリックします。</para>
+          </listitem>
+          <listitem>
+            <para><guilabel>「拡張」</guilabel>タブセクションにランチャーの拡張設定を入力します。次の表に、<guilabel>「拡張」</guilabel>タブセクションの上部にあるダイアログ要素を示します。</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="32.03*"/>
+                <colspec colwidth="67.97*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>ダイアログ要素</para>
+                    </entry>
+                    <entry>
+                      <para>説明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「実行前にチェック」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーを起動する前に、コマンドを入力して確認する。コマンドが実行可能であり、パスに含まれている場合は、ランチャーがパネルに表示される</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>「ドキュメント」</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーのヘルプファイルへのパスを入力する。このフィールドにパスを入力すると、ランチャーのポップアップメニューに<guimenuitem>「 <replaceable>launcher-name</replaceable> のヘルプ」</guimenuitem>メニュー項目が表示される</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para><guilabel>「基本」</guilabel>タブセクションの<guilabel>「名前」</guilabel>、<guilabel>「一般名」</guilabel>、および<guilabel>「コメント」</guilabel>フィールドの翻訳を追加することもできます。翻訳を追加するには、<guilabel>「名前/コメントの翻訳」</guilabel>表に次のように翻訳説明を入力します。</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="20.78*"/>
+                <colspec colname="colspec1" colwidth="79.22*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>フィールド</para>
+                    </entry>
+                    <entry>
+                      <para>説明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>最初のフィールド</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>追加する翻訳の言語を 2 文字コードで入力する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>2 番目のフィールド</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーの<guilabel>「名前」</guilabel>の翻訳を入力する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>3 番目のフィールド</para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>ランチャーの<guilabel>「一般名」</guilabel>の翻訳を入力する</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>4 番目のフィールド</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>ランチャーの<guilabel>「コメント」</guilabel>の翻訳を入力する</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+            <para>入力したあとで、<guibutton>「追加/設定」</guibutton>ボタンをクリックします。</para>
+            <para>翻訳を変更するには、その翻訳を選択します。ダイアログの下の部分に、翻訳されたテキストが表示されます。必要に応じてフィールドを変更したあと、<guibutton>「追加/設定」</guibutton>ボタンをクリックします。</para>
+            <para>翻訳を削除するには、その翻訳を選択し、<guibutton>「削除」</guibutton>ボタンをクリックします。</para>
+          </listitem>
+          <listitem>
+            <para>ランチャーを作成して<guilabel>「ランチャー設定」</guilabel>ダイアログを閉じるには、<guibutton>「OK」</guibutton>をクリックします。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gospanel-556">
+        <title>ランチャーコマンド</title>
+        <para><guilabel>「コマンド」</guilabel>フィールドで入力できるコマンドの種類は、<guilabel>「種類」</guilabel>ドロップダウンコンビネーションボックスで選択したオプションによって異なります。<guilabel>「アプリケーション」</guilabel>を<guilabel>「種類」</guilabel>ドロップダウンコンビネーションボックスから選択した場合は、通常のコマンドを入力できます。以下の表に、いくつかのサンプルコマンドと実行されるアクションを示します。</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>アプリケーションコマンドのサンプル</para>
+                </entry>
+                <entry>
+                  <para>アクション</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>gedit</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para><application>gedit</application> テキストエディタアプリケーションを起動する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>gedit /user123/loremipsum.txt</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para><application>gedit</application> テキストエディタアプリケーションで <filename>/user123/loremipsum.txt</filename> ファイルを開く</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>nautilus /user123/Projects</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>ファイルマネージャウィンドウで <filename>/user123/Projects</filename> を開く</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para><guilabel>「リンク」</guilabel>を<guilabel>「種類」</guilabel>ドロップダウンコンビネーションボックスから選択した場合は、リンクコマンドを入力できます。以下の表に、いくつかのサンプルリンクコマンドと実行されるアクションを示します。<indexterm><primary sortas="とくへつなURI">特別な URI</primary><secondary sortas="らんちやあ">ランチャー</secondary></indexterm></para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>リンクコマンドのサンプル</para>
+                </entry>
+                <entry>
+                  <para>アクション</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>http://www.sun.com</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>デフォルトブラウザで Sun Microsystems の Web サイトを開く</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>ftp://ftp.gnome.org</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>デフォルトブラウザで GNOME FTP サイトを開く</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>applications:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>ファイルマネージャウィンドウで <guilabel>アプリケーション</guilabel>の場所を開く。アプリケーションを起動するには、そのアプリケーションをダブルクリックする</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>preferences:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>ファイルマネージャウィンドウで <guilabel>「設定」</guilabel>の場所を開く。設定ツールを起動するには、設定ツールをダブルクリックする</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-36">
+      <title>ランチャーの設定を変更する</title>
+      <indexterm>
+        <primary sortas="らんちやあ">ランチャー</primary>
+        <secondary sortas="せつていのへんこう">設定の変更</secondary>
+      </indexterm>
+      <para>ランチャーの設定を変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ランチャーを右クリックして、パネルオブジェクトポップアップメニューを開きます。</para>
+        </listitem>
+        <listitem>
+          <para><guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「ランチャーの設定」</guilabel>ダイアログを使用して、必要に応じて設定を変更します。<guilabel>「ランチャーの設定」</guilabel>ダイアログの詳細については、<xref linkend="gospanel-52"/>を参照してください。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、<guilabel>「ランチャーの設定」</guilabel>ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-557">
+    <title>ボタン</title>
+    <indexterm>
+      <primary sortas="ほたん">ボタン</primary>
+      <secondary sortas="はねるについか">パネルに追加</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="あくしよんほたん">アクションボタン</primary>
+      <see>ボタン</see>
+    </indexterm>
+    <para>ボタンをパネルに追加すると、一般的なアクションや機能にすばやくアクセスできます。</para>
+    <sect2 id="gospanel-554">
+      <title>「ファイルの検索」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="けんさく">検索</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="けんさくほたん">「検索」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="けんさくほたん">「検索」ボタン</primary>
+      </indexterm>
+      <para><guibutton>「ファイルの検索」</guibutton>ボタンを使って、<application>「ファイルの検索」</application>ダイアログを開きます。</para>
+      <para>パネルに<guibutton>「ファイルの検索」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「ファイルの検索」</guimenuitem></menuchoice>の順に選択します。<application>「ファイルの検索」</application>ダイアログを開くには、<guibutton>「ファイルの検索」</guibutton>ボタンをクリックします。</para>
+    </sect2>
+    <sect2 id="gospanel-563">
+      <title>「強制終了」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="きようせいしゆうりよう">強制終了</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="きようせいしゆうりようほたん">「強制終了」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="きようせいしゆうりようほたん">「強制終了」ボタン</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="あふりけえしよんのしゆうりよう">アプリケーションの終了</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="あふりけえしよん"> アプリケーション</primary>
+        <secondary sortas="しゆうりよう">終了</secondary>
+      </indexterm>
+      <para><guibutton>「強制終了」</guibutton>ボタンを使用すると、アプリケーションを終了するウィンドウを選択できます。コマンドに応答しないアプリケーションを終了する場合に、このボタンが役に立ちます。</para>
+      <para>アプリケーションを終了するには、<guibutton>「強制終了」</guibutton>ボタンをクリックして、終了するアプリケーションのウィンドウをクリックします。<guibutton>「強制終了」</guibutton>ボタンをクリックした後にアプリケーションの終了をキャンセルするには、<keycap>Esc</keycap> キーを押します。</para>
+    </sect2>
+    <sect2 id="gospanel-21">
+      <title>「画面のロック」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="ろつく">ロック</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="ろつくほたん">「ロック」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろつくほたん">「ロック」ボタン</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="かめんのろつく">画面のロック</primary>
+      </indexterm>
+      <para><guibutton>「画面のロック」</guibutton>ボタンは画面をロックして、スクリーンセーバーを起動します。再びセッションにアクセスするには、パスワードを入力する必要があります。画面を正しくロックするには、スクリーンセーバーを有効に設定しておく必要があります。</para>
+      <para>パネルに<guibutton>「画面のロック」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「画面のロック」</guimenuitem></menuchoice>の順に選択します。</para>
+      <para><guibutton>「画面のロック」</guibutton>ボタンを右クリックして、スクリーンセーバー関連コマンドのメニューを開きます。<xref linkend="gosstartsession-TBL-83"/> に、メニューから利用可能なコマンドを示します。</para>
+      <table frame="topbot" id="gosstartsession-TBL-83">
+        <title>スクリーンロックメニュー項目</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="43.55*"/>
+          <colspec colname="colspec1" colwidth="56.45*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>メニュー項目</para>
+              </entry>
+              <entry>
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「スクリーンセーバーを実行」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>すぐにスクリーンセーバーを起動し、画面はロックしない</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「画面のロック」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>すぐに画面をロックする。このコマンドは、<guibutton>「ロック」</guibutton>ボタンをクリックした場合と同様の機能を行う</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「スクリーンセーバーデーモンを強制終了」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>スクリーンセーバープロセスを終了する。スクリーンセーバープロセスを終了したあとは、画面をロックできない</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「スクリーンセーバーデーモンを再起動」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>スクリーンセーバープロセスを終了し再起動する。パスワードを変更したあとで、このコマンドを使用する。スクリーンセーバープロセスを再起動するとき、スクリーンセーバーの新しいパスワードを使用する</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「設定」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para><guilabel>XScreenSaver</guilabel> 設定ツールを表示する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gospanel-20">
+      <title>「ログアウト」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="ろくあうと">ログアウト</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="ろくあうとほたん">「ログアウト」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろくあうとほたん">「ログアウト」ボタン</primary>
+      </indexterm>
+      <para><guibutton>「ログアウト」</guibutton>ボタンは、Java Desktop System セッションをログアウトするプロセスを開始します。</para>
+      <para>パネルに<guibutton>「ログアウト」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「ログアウト」</guimenuitem></menuchoice>の順に選択します。セッションを終了、またはシステムを停止するには、<guibutton>「ログアウト」</guibutton>ボタンをクリックします。</para>
+    </sect2>
+    <sect2 id="gospanel-555">
+      <title>「アプリケーションの実行」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="しつこう">実行</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="しつこうほたん">「実行」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="しつこうほたん">「実行」ボタン</primary>
+      </indexterm>
+      <para><guibutton>「アプリケーションの実行」</guibutton>ボタンで<guilabel>「アプリケーションの実行」</guilabel>ダイアログを開くことができます。</para>
+      <para>パネルに<guibutton>「アプリケーションの実行」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu> 「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem> 「アプリケーションの実行」</guimenuitem></menuchoice>の順に選択します。<guilabel>「アプリケーションの実行」</guilabel>ダイアログを開くには、<guibutton>「アプリケーションの実行」</guibutton>ボタンをクリックします。</para>
+    </sect2>
+    <sect2 id="gospanel-553">
+      <title>「スクリーンショット」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="すくりいんしよつと">スクリーンショット</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="すくりいんしよつとほたん">「スクリーンショット」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="すくりいんしよつとほたん">「スクリーンショット」ボタン</primary>
+      </indexterm>
+      <para><guibutton>「スクリーンショット」</guibutton>ボタンを使って画面のスクリーンショットを撮ることができます。</para>
+      <para>パネルに<guibutton>「スクリーンショット」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「スクリーンショット」</guimenuitem></menuchoice>の順に選択します。画面のスクリーンショットを撮るには、<guibutton>「スクリーンショット」</guibutton>ボタンをクリックします。</para>
+    </sect2>
+    <sect2 id="gospanel-564">
+      <title>「デスクトップの表示」ボタン</title>
+      <indexterm>
+        <primary sortas="ほたん">ボタン</primary>
+        <secondary sortas="てすくとつふのひようし">デスクトップの表示</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="てすくとつふのひようしほたん">「デスクトップの表示」ボタン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="てすくとつふのひようしほたん">「デスクトップの表示」ボタン</primary>
+      </indexterm>
+      <para><guibutton>「デスクトップの表示」</guibutton>ボタンを使って、開いているすべてのウィンドウの最小化や、デスクトップの表示を行うことができます。</para>
+      <para>パネルに<guibutton>「デスクトップの表示」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「デスクトップの表示」</guimenuitem></menuchoice>の順に選択します。すべてのウィンドウを最小化し、デスクトップを表示するには、<guibutton>「デスクトップの表示」</guibutton>ボタンをクリックします。</para>
+    </sect2>
+    <sect2 id="gospanel-567">
+      <title>通知スペース</title>
+      <indexterm>
+        <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+        <secondary sortas="つうちすへえす">通知スペース</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+        <secondary sortas="つうちすへえす">通知スペース</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="つうちすへえす">通知スペース</primary>
+      </indexterm>
+      <para><application>通知スペース</application>は、アプリケーションのアクティビティを示す各種アプリケーションのアイコンを表示します。たとえば、<application>CD プレーヤー</application>アプリケーションを使って CD を再生すると、<application>通知スペース</application>に CD アイコンが表示されます。上の図には、<application>通知スペース</application>内の CD アイコンが示されています。</para>
+      <para><application>通知スペース</application>をパネルに追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「ユーティリティ」、</guisubmenu><guimenuitem>「通知スペース」</guimenuitem></menuchoice>の順に選択します。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-37">
+    <title>メニュー</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="はねるへのついか">パネルへの追加</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+      <secondary sortas="めにゆう">メニュー</secondary>
+    </indexterm>
+    <para>次のタイプのメニューをパネルに追加できます。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>「起動」</guibutton>: <guibutton>「起動」</guibutton>ボタンを使用して、ほとんどすべての標準アプリケーション、コマンド、および構成オプションにアクセスできます。<guibutton>「起動」</guibutton>ボタンをパネルに追加するには、パネル上の空いているスペースで右クリックし、 <menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「メインメニュー」</guimenuitem></menuchoice>を選択します。パネルに追加できる <guibutton>「起動」</guibutton> ボタンの数に制限はありません。</para>
+      </listitem>
+      <listitem>
+        <para><application>メニューバー</application>: <application>メニューバー</application>のメニューを使用して、ほとんどすべての標準アプリケーション、コマンド、および構成オプションにアクセスできます。<application>メニューバー</application>には、<guimenu>「アプリケーション」</guimenu>メニューと<guimenu>「アクション」</guimenu>メニューがあります。<application>メニューバー</application>をパネルに追加するには、パネル上の空いているスペースで右クリックし、<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem> 「メニューバー」</guimenuitem></menuchoice>を選択します。パネルに追加できる <application>メニューバー</application>オブジェクトの数に制限はありません。</para>
+      </listitem>
+      <listitem>
+        <para>システムメニュー: システムメニューには、Java Desktop System 上で使用できる標準のアプリケーションとツールが含まれています。<guimenu>「アプリケーション」</guimenu>メニューおよび<guimenu>「アクション」</guimenu>メニューは、システムメニューです。システムメニューをパネルに追加するには、そのメニューのランチャーを右クリックし、<menuchoice><guimenu>「メニュー全体」</guimenu><guimenuitem>「メニューとしてパネルに追加」</guimenuitem></menuchoice>を選択します。</para>
+      </listitem>
+    </itemizedlist>
+    <para>パネルに追加するメニューは、矢印が付いたアイコンで表されます。矢印は、そのアイコンがメニューまたは引き出しを表すことを示します。<xref linkend="gospanel-FIG-68"/> は、パネル上に表示される標準的なメニューを示しています。</para>
+    <figure id="gospanel-FIG-68">
+      <title>パネル上の標準的なメニューオブジェクト</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>パネル上の標準的なメニューオブジェクト</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+  <sect1 id="gospanel-18">
+    <title>引き出し</title>
+    <indexterm>
+      <primary sortas="はねるおふしえくと">パネルオブジェクト</primary>
+      <secondary sortas="ひきたし">引き出し</secondary>
+      <see>引き出し</see>
+    </indexterm>
+    <para>引き出しは、パネルの拡張機能の 1 つです。引き出しは、パネルを表示したり隠したりするのと同じ方法で、開いたり閉じたりできます。引き出しは、ランチャー、メニュー、ほかのパネルオブジェクト、およびほかの引き出しなど、すべてのパネルオブジェクトを含むことができます。引き出しを開くと、パネル上のオブジェクトを使用するのと同様の方法でオブジェクトを使用できます。</para>
+    <para>次の図に、2 つのパネルオブジェクトを含む開いた引き出しを示します。</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/open_drawer.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>開いた引き出し。これは図に関する説明です。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>引き出しアイコン上の矢印は、そのアイコンが引き出しまたはメニューを表すことを示します。</para>
+    <para>引き出しに対するオブジェクトの追加、移動、および削除は、パネルに対するオブジェクトの追加、移動、および削除と同じ方法で行えます。</para>
+    <sect2 id="gospanel-42">
+      <title>引き出しを開くまたは閉じる</title>
+      <indexterm>
+        <primary sortas="ひきたし">引き出し</primary>
+        <secondary sortas="ひらく">開く</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ひきたし">引き出し</primary>
+        <secondary sortas="としる">閉じる</secondary>
+      </indexterm>
+      <para>引き出しを開くには、パネル内の引き出しオブジェクトをクリックします。引き出しは、次の方法で閉じることができます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>引き出しをクリックする</para>
+        </listitem>
+        <listitem>
+          <para>引き出し非表示ボタンをクリックする</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-420">
+      <title>引き出しをパネルに追加する</title>
+      <indexterm>
+        <primary sortas="ひきたし">引き出し</primary>
+        <secondary sortas="はねるについか">パネルに追加</secondary>
+      </indexterm>
+      <para>引き出しは、次の方法でパネルに追加できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>パネルポップアップメニュー</para>
+          <para>パネル上の空いているスペースで右クリックし、<menuchoice><guimenu>「パネルに追加」</guimenu><guimenuitem>「引き出し」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>任意のメニュー</para>
+          <para>メニューは、引き出しオブジェクトとしてパネルに追加できます。</para>
+          <para>メニューを引き出しとしてパネルに追加するには、パネルからメニューを開きます。メニュー内の任意のランチャーを右クリックし、<menuchoice><guimenu>「メニュー全体」</guimenu><guimenuitem>「引き出しとしてパネルに追加」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-54">
+      <title>オブジェクトを引き出しに追加する</title>
+      <indexterm>
+        <primary sortas="ひきたし">引き出し</primary>
+        <secondary sortas="おふしえくとのついか">オブジェクトの追加</secondary>
+      </indexterm>
+      <para>パネルに追加するのと同じように、オブジェクトを引き出しに追加します。詳細については、<xref linkend="gospanel-15"/>を参照してください。</para>
+    </sect2>
+    <sect2 id="gospanel-550">
+      <title>引き出し設定を変更する</title>
+      <indexterm>
+        <primary sortas="ひきたし">引き出し</primary>
+        <secondary sortas="せつていのへんこう">設定の変更</secondary>
+      </indexterm>
+      <para>すべてのパネルと引き出しの設定を変更するには、<application>パネル</application> 設定ツールを使用します。たとえば、パネルおよび引き出しでのオブジェクトの外観および動作に関連するさまざまなオプションを選択できます。引き出しにのみ関連するオプションを選択することもできます。たとえば、引き出し内のランチャーをクリックしたときに引き出しを閉じるオプションを選択できます。</para>
+      <para>個々の引き出しに対して、別々の設定を変更することもできます。引き出しの視覚的な外観、引き出しに非表示ボタンがあるかどうかなど、各引き出しの特長を変更することができます。</para>
+      <para>引き出しの設定を変更するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>引き出しを右クリックし、<guimenuitem>「設定」</guimenuitem>を選択して<guilabel>「パネルの設定」</guilabel>ダイアログを表示します。ダイアログの<guilabel>「一般」</guilabel>タブセクションが表示されます。</para>
+        </listitem>
+        <listitem>
+          <para>ダイアログで引き出しの設定を選択します。次の表に、<guilabel>「一般」</guilabel>タブセクションの要素を示します。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>ダイアログ要素</para>
+                  </entry>
+                  <entry>
+                    <para>説明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>「名前」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>パネルの名前を入力する。パネルとデスクトップの切り替えにショートカットキーを使用する場合、このパネル名が表示される</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「サイズ」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>パネルのサイズを選択する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>「アイコン」</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>引き出しを表すアイコンを選択する。<guibutton>「アイコン」</guibutton>ボタンをクリックすると、「アイコンセレクタ」ダイアログが表示される。ダイアログからアイコンを選択する。<guibutton>「参照」</guibutton>をクリックすると、別のディレクトリにあるアイコンを選択できる。アイコンを選択したら、<guibutton>「了解」</guibutton>をクリックする</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「非表示ボタンを表示」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>パネル上で非表示ボタンを表示する</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>「非表示ボタンを矢印表示」</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>非表示ボタンが有効な場合に、非表示ボタン上に矢印を表示する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para><guilabel>「背景」</guilabel>タブセクションを使用して、引き出しの背景を設定できます。<guilabel>「背景」</guilabel>タブセクションに関する詳細については、この項目の <xref linkend="gospanel-28"/>の手順を参照してください。色または画像を引き出しにドラッグして、それを引き出しの背景として設定することもできます。詳細については、<xref linkend="gospanel-61"/>を参照してください。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「閉じる」</guibutton>をクリックして、<guilabel>「パネルの設定」</guilabel>ダイアログを閉じます。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

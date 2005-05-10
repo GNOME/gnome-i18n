@@ -1,0 +1,785 @@
+<chapter id="goseditmainmenu-1">
+  <title>メニューの操作方法</title>
+  <highlights>
+    <para>この章では、Java Desktop System でのメニューの操作方法について説明します。</para>
+  </highlights>
+  <sect1 id="goseditmainmenu-2">
+    <title>メニューの概要</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <para>Java Desktop System のすべての機能には、メニューからアクセスできます。メニューをパネルに追加し、メニューとパネルを組み合わせて作業を実行できます。メニュー項目をパネルにコピーするなど、さまざまな操作をメニューに割り当てて実行できます。</para>
+    <para>Java Desktop System では次のメニューにアクセスできます。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>「起動」</guibutton>ボタン: <guibutton>「起動」</guibutton>ボタンから<guimenu>「アプリケーション」</guimenu>のメニューにアクセスできます。パネル上に多数の<guibutton>「起動」</guibutton>ボタンを表示させることができます。</para>
+      </listitem>
+      <listitem>
+        <para><application>メニューバー</application>: <application>メニューバー</application>
+からは、<guimenu>「アプリケーション」</guimenu> メニューと <guimenu>「アクション」</guimenu> メニューにアクセスできます。パネル上に多数の<application>メニューバー</application> アプレットを表示させることができます。</para>
+      </listitem>
+      <listitem>
+        <para><guimenu>「アプリケーション」</guimenu>メニュー: <guimenu>「 アプリケーション」</guimenu>メニューから、多数のアプリケーション、コマンド、および構成オプションにアクセスできます。</para>
+      </listitem>
+      <listitem>
+        <para><guimenu>「アクション」</guimenu>メニュー: <guimenu>「アクション」</guimenu>メニューから、さまざまな作業を実行できるコマンドにアクセスできます。たとえば、<application>検索ツール</application>を起動したり、Java Desktop System からログアウトしたりできます。</para>
+      </listitem>
+    </itemizedlist>
+    <para>デスクトップで右クリックして、<guimenu>「デスクトップ」</guimenu>メニューを開くこともできます。<guimenu>「デスクトップ」</guimenu>メニューでは、デスクトップに関連する作業を実行できます。</para>
+    <para>これらすべてのメニューにより、多様な手段で作業を行えるため、好みの方法で作業できます。</para>
+  </sect1>
+  <sect1 id="goseditmainmenu-5">
+    <title>メニューの特長</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="とくちよう">特長</secondary>
+    </indexterm>
+    <para>メニューには次の項目があります。</para>
+    <itemizedlist>
+      <listitem>
+        <para>サブメニュー</para>
+      </listitem>
+      <listitem>
+        <para>ランチャーまたはメニュー項目</para>
+      </listitem>
+    </itemizedlist>
+    <para>メニュー項目の右側にある矢印は、その項目にサブメニューがあることを示します。サブメニューにマウスのカーソルを置くと、サブメニューが開きます。サブメニューから項目を選ぶことができます。</para>
+    <para>ランチャーを選んだ場合は、そのランチャーはアプリケーションを起動するか、コマンドを実行します。ランチャーを右クリックして、ポップアップメニューを開くこともできます。ポップアップメニューでは、パネルに項目を追加したり、ほかの作業を実行したりできます。ポップアップメニューに関する詳細については、次の節を参照してください。</para>
+    <para>セッションのテーマを変更して、メニューの外観を変更することができます。テーマを変更するには、<application>テーマ</application>
+設定ツールを使用します。</para>
+    <sect2 id="goseditmainmenu-11">
+      <title>メニュー項目のポップアップメニュー</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="めにゆうこうもくのほつふあつふめにゆう">メニュー項目のポップアップメニュー</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="めにゆうこうもくのほつふあつふめにゆう">メニュー項目のポップアップメニュー</primary>
+        <secondary sortas="せつめい">説明</secondary>
+      </indexterm>
+      <para>メニュー上の項目には、関連するポップアップメニューがあり、この項目に関連する作業は、このポップアップメニューを使用して実行できます。メニュー上の項目を右クリックすると、その項目のポップアップメニューが開きます。ポップアップメニューにはサブメニューが含まれており、メニューに関連する作業を実行できます。</para>
+      <para>メニュー項目のポップアップメニューを使用して、次の作業を実行できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>メニュー項目をランチャーとしてパネルに追加する。</para>
+        </listitem>
+        <listitem>
+          <para>メニューから項目を削除する。</para>
+        </listitem>
+        <listitem>
+          <para>ダイアログのメニュー項目コマンドで、<guilabel>「アプリケーションの実行」</guilabel>ダイアログを開く。</para>
+        </listitem>
+        <listitem>
+          <para>メニューをパネルに追加する。メニューは、メニューオブジェクトまたは引き出しオブジェクトとして追加できる。</para>
+        </listitem>
+        <listitem>
+          <para>新しい項目をメニューに追加する。</para>
+        </listitem>
+        <listitem>
+          <para>サブメニューおよびメニュー項目の設定を変更する。</para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="goseditmainmenu-FIG-39"/> にポップアップメニューを示します。</para>
+      <figure id="goseditmainmenu-FIG-39">
+        <title>メニュー項目のポップアップメニュー<indexterm><primary sortas="めにゆうこうもくのほつふあつふめにゆう">メニュー項目のポップアップメニュー</primary><secondary sortas="す">図</secondary></indexterm></title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/launcher_popup.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>メニュー項目のポップアップメニュー。これは図に関する説明です。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para><xref linkend="goseditmainmenu-TBL-30"/> メニュー項目のポップアップメニューを説明しています。<indexterm><primary sortas="らんちやあ">ランチャー</primary><secondary sortas="はねるについか">パネルに追加</secondary></indexterm><indexterm><primary sortas="めにゆう">メニュー</primary><secondary sortas="はねるについか">パネルに追加</secondary></indexterm></para>
+      <table frame="topbot" id="goseditmainmenu-TBL-30">
+        <title>メニュー項目のポップアップメニュー</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="42.71*"/>
+          <colspec colname="colspec1" colwidth="57.29*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>項目</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「ランチャーをパネルに追加」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>メニューを開くパネルにランチャーを追加する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>「ランチャーをメニューから削除」</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>メニューからランチャーを削除する</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「プログラムを実行」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para><guilabel>「プログラムを実行」</guilabel>ダイアログを表示する。<guilabel>「プログラムを実行」</guilabel>ダイアログにはコマンドフィールドにある<guilabel>「コマンド」</guilabel>フィールドからのコマンドが含まれる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem><replaceable>application-name</replaceable> のヘルプ</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>アプリケーションのオンラインヘルプを開く</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>「設定」</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>ランチャーの設定を変更できるダイアログを表示する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <menuchoice>
+                    <guimenu>「メニュー全体」</guimenu>
+                    <guimenuitem>「引き出しとしてパネルに追加」</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>メニューを開くパネルに引き出しとしてサブメニューを追加する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <menuchoice>
+                    <guimenu>「メニュー全体」</guimenu>
+                    <guimenuitem>「メニューとしてパネルに追加」</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>メニューを開くパネルにメニューオブジェクトとしてサブメニューを追加する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>「メニュー全体」</guimenu>
+                    <guimenuitem>「ランチャーをメニューに追加」</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>サブメニューに項目を追加できる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>「メニュー全体」</guimenu>
+                    <guimenuitem>「設定」</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>サブメニューの設定を変更できるダイアログを表示する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-8">
+    <title>アプリケーションメニュー</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="あふりけえしよんめにゆう">アプリケーションメニュー</secondary>
+    </indexterm>
+    <para><guimenu>「アプリケーション」</guimenu>メニューには、階層構造のサブメニューがあり、サブメニューから標準の
+Java Desktop System アプリケーションおよび設定ツールを起動できます。</para>
+    <para><guimenu>「アプリケーション」</guimenu>メニューには、次の場所からアクセスできます。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>「起動」</guibutton>ボタン</para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>メニューバー</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="goseditmainmenu-51">
+    <title>「アクション」メニュー</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="あくしよんめにゆう">「アクション」メニュー</secondary>
+    </indexterm>
+    <para><guimenu>「アクション」</guimenu>メニューには、Java
+Desktop System でさまざまな作業を実行するのに使用するコマンドが含まれています。<xref linkend="goseditmainmenu-TBL-70"/>
+に、<guimenu>「アクション」</guimenu>メニューのコマンドを示します。</para>
+    <table frame="topbot" id="goseditmainmenu-TBL-70">
+      <title>「アクション」メニューのコマンド</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="38.48*"/>
+        <colspec colname="colspec1" colwidth="61.52*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>メニュー項目</para>
+            </entry>
+            <entry>
+              <para>機能</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>「アプリケーションの実行」</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para><guilabel>「アプリケーションの実行」</guilabel>ダイアログを開く。<guilabel>「アプリケーションの実行」</guilabel>ダイアログを使用してコマンドを実行する。詳細については、<xref linkend="gospanel-23"/>を参照してください</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>「最近使用したドキュメント」</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>最近保存したファイル 10 個のサブメニューを表示する</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>「スクリーンショット」</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>画面のスクリーンショットを撮り、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを表示する。スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用する</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>「ファイルの検索」</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para><application>検索ツール</application>を起動する</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>「画面のロック」</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>画面をロックする</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>「ログアウト」</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>現在のセッションをログアウトする</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para><guimenu>「アクション」</guimenu>メニューの項目には、次の場所からアクセスできます。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>「起動」</guibutton>ボタン</para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>メニューバー</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gospanel-23">
+      <title>「アプリケーションの実行」ダイアログの使用</title>
+      <indexterm>
+        <primary sortas="あふりけえしよんのしつこうたいあろくしよう">「アプリケーションの実行」ダイアログ、使用</primary>
+      </indexterm>
+      <para><guilabel>「アプリケーションの実行」</guilabel>ダイアログでは、コマンドラインにアクセスできます。<guilabel>「アプリケーションの実行」</guilabel>ダイアログでコマンドを実行した場合、コマンドからの出力は受け取れません。</para>
+      <para>コマンドラインからコマンドを実行するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para><guilabel>「アプリケーションの実行」</guilabel>ダイアログを表示します。<guilabel>「アプリケーションの実行」</guilabel>ダイアログは、次の方法で表示できます。<itemizedlist><listitem><para>任意のパネルから</para><para><guibutton>「実行」</guibutton>ボタンをパネルに追加します。パネルを右クリックし、<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「実行」</guimenuitem></menuchoice>の順に選択します。<guibutton>「実行」</guibutton>ボタンをクリックします。</para></listitem><listitem><para><guibutton>「起動」</guibutton> ボタンから</para><para><guibutton>「起動」</guibutton>をクリックし、<guimenuitem>「アプリケーションの実行」</guimenuitem>を選択します。</para></listitem><listitem><para><application>メニューバー</application> から</para><para><menuchoice><guimenu>「アクション」</guimenu><guimenuitem>「アプリケーションの実行」</guimenuitem></menuchoice>を選択します。</para></listitem><listitem><para>ショートカットキーを使用</para><para><guilabel>「アプリケーションの実行」</guilabel>ダイアログを表示するデフォルトのショートカットキーは、Windows
+ロゴ + <keycombo><keycap>R</keycap><keycap>Super</keycap><keycap>R</keycap></keycombo> () キーです。ショートカットキーは、<application>キーボードショートカット</application>設定ツールで変更できます。</para></listitem><listitem><para>メニュー項目のポップアップメニューから</para><para>メニュー上の項目を右クリックし、ポップアップメニューから<guilabel>「プログラムを実行」</guilabel>を選択します。<guilabel>「アプリケーションの実行」</guilabel>ダイアログが開き、コマンドフィールドにメニューからのコマンドが表示されます。</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>実行するコマンドを空白のフィールドに入力します。あるいは、以前に実行したコマンドを選択する場合は、コマンドフィールド横の下矢印ボタンをクリックして、実行するコマンドを選びます。</para>
+          <para>または、<guibutton>「既存のアプリケーション一覧」</guibutton>オプションを選択して、使用可能なアプリケーションのリストを表示します。</para>
+          <para><guibutton>「ファイルを引数として実行」</guibutton>ボタンを使用して、コマンドラインに追加するファイルを選ぶこともできます。たとえば、コマンドとして <application>emacs</application> を入力し、次に、編集するファイルを選びます。</para>
+          <para>アプリケーションまたはコマンドを端末ウィンドウで実行するには、 <guilabel>「端末内で実行」</guilabel>オプションを選択します。アプリケーションまたはコマンドを実行するウィンドウが作成されない場合に、このオプションを選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「アプリケーションの実行」</guilabel>ダイアログの<guibutton>「実行」</guibutton>ボタンをクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-53">
+      <title>スクリーンショットを撮る</title>
+      <indexterm>
+        <primary sortas="すくりいんしよつとをとる">スクリーンショットを撮る</primary>
+      </indexterm>
+      <para>次の方法を使用して、スクリーンショットを撮ることができます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>任意のパネルから</para>
+          <orderedlist>
+            <listitem>
+              <para><guibutton>「スクリーンショット」</guibutton>ボタンをパネルに追加します。</para>
+            </listitem>
+            <listitem>
+              <para>パネルを右クリックし、<menuchoice><guimenu> 「パネルに追加」 、</guimenu><guisubmenu>「アクション」 、</guisubmenu><guimenuitem> 「スクリーンショット」</guimenuitem></menuchoice>の順に選択します。</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>「スクリーンショット」</guibutton>ボタンをクリックし、画面全体のスクリーンショットを撮ります。</para>
+            </listitem>
+            <listitem>
+              <para>スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用すること</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+        <listitem>
+          <para>ショートカットキーを使用</para>
+          <para>次のショートカットキーを使用して、スクリーンショットを撮ることができます。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>デフォルトのショートカットキー</para>
+                  </entry>
+                  <entry>
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <keycap>Print Screen</keycap>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>画面全体のスクリーンショットを撮り、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを表示する。スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用すること</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <keycombo>
+                        <keycap>Alt</keycap>
+                        <keycap> Print Screen</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>マウスが指しているウィンドウのスクリーンショットを撮り、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを表示する。スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用すること</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>デフォルトのショートカットキーは、<application>キーボードショートカット</application> 設定ツールを使用して変更できます。</para>
+        </listitem>
+        <listitem>
+          <para><application>メニューバー</application> から</para>
+          <para>画面全体のスクリーンショットを撮るには、<menuchoice><guimenu>「アクション」</guimenu><guimenuitem>「スクリーンショット」</guimenuitem></menuchoice>を選択します。<guilabel>「スクリーンショットの保存」</guilabel>ダイアログが表示されます。スクリーンショットを保存するには、<guilabel>「スクリーンショットをファイルに保存」</guilabel>オプションを選択します。スクリーンショットのパスとファイル名をドロップダウンコンビネーションボックスに入力します。スクリーンショットを別のディレクトリに保存する場合は、<guibutton>「参照」</guibutton>をクリックします。ディレクトリを選択して、<guibutton>「了解」</guibutton>をクリックします。</para>
+          <para>スクリーンショットは、デスクトップに保存することもできます。スクリーンショットをデスクトップに保存するには、<guilabel>「スクリーンショットをデスクトップに保存」</guilabel> オプションを選択します。</para>
+        </listitem>
+        <listitem>
+          <para>コマンドを使用</para>
+          <para><command>gnome-panel-screenshot</command> コマンドを使用してスクリーンショットを撮ることができます。<command>gnome-panel-screenshot</command> コマンドは画面全体のスクリーンショットを撮り、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを表示します。スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用すること</para>
+          <para><command>gnome-panel-screenshot</command> コマンドには、次のオプションを指定できます。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>オプション</para>
+                  </entry>
+                  <entry>
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--window</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>フォーカスしているウィンドウのスクリーンショットを撮り、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを表示する。スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用すること</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--delay= <replaceable>seconds</replaceable></command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>指定した秒数を経過したあと、スクリーンショットを撮り、 <guilabel>「スクリーンショットの保存」</guilabel>ダイアログを表示する。スクリーンショットを保存するには、<guilabel>「スクリーンショットの保存」</guilabel>ダイアログを使用すること</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--help</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>コマンドのオプションを表示する</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-7">
+    <title>「起動」ボタン</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="きとう">起動</secondary>
+      <see>「起動」メニュー</see>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/launch_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>「起動」ボタン</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>「起動」</guibutton>ボタン からは、<guimenu>「アプリケーション」</guimenu>メニューや<guimenu>「アクション」</guimenu>メニューの多くの項目にアクセスできます。<guibutton>「起動」</guibutton>ボタンを使用して、ほとんどすべての標準アプリケーション、コマンド、および構成オプションにアクセスできます。</para>
+    <para><guibutton>「起動」</guibutton>ボタンはパネルに追加できます。</para>
+    <sect2 id="goseditmainmenu-15">
+      <title>「起動」ボタンにアクセスする</title>
+      <indexterm>
+        <primary sortas="きとう">「起動」</primary>
+        <secondary sortas="ひらく">「開く」</secondary>
+      </indexterm>
+      <para><guibutton>「起動」</guibutton>ボタンは、次の方法でアクセスできます</para>
+      <itemizedlist>
+        <listitem>
+          <para><guibutton>「起動」</guibutton>ボタンを選択できるパネルから</para>
+          <para><guimenu>「起動」</guimenu>をクリックします。</para>
+        </listitem>
+        <listitem>
+          <para>ショートカットキーを使用</para>
+          <para>ショートカットキーを使用して<guibutton>「起動」</guibutton>を開きます。</para>
+          <para><guibutton>「起動」</guibutton>を開くデフォルトのショートカットキーは、<keycombo><keycap> Ctrl</keycap><keycap>Esc</keycap></keycombo>
+ キーです。<guibutton>「起動」</guibutton>を開くショートカットキーを変更するには、<application>キーボードショートカット</application>設定ツールを使用します。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-29">
+      <title>パネルに「起動」ボタンを追加する</title>
+      <indexterm>
+        <primary sortas="きとうめにゆう">起動メニュー</primary>
+        <secondary sortas="はねるについかl">パネルに追加l</secondary>
+      </indexterm>
+      <para>パネルに追加できる <guibutton>「起動」</guibutton>
+ボタンの数に制限はありません。パネルに<guibutton>「起動」</guibutton>ボタンを追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」 、</guimenu><guimenuitem>「メインメニュー」</guimenuitem></menuchoice>を選択します。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-65">
+    <title>メニューバー</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="めにゆうはあ">メニューバー</secondary>
+      <see>メニューバー</see>
+    </indexterm>
+    <indexterm>
+      <primary sortas="めにゆうはあ">メニューバー</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/menu_bar_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>メニューバーパネルアプリケーション。メニュー: アプリケーション、アクション</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para><application>メニューバー</application> からは、<guimenu>「アプリケーション」</guimenu>メニューと<guimenu>「アクション」</guimenu>メニューにアクセスできます。<application>メニューバー</application>を使用して、ほとんどすべての標準アプリケーション、コマンド、および構成オプションにアクセスできます。</para>
+    <sect2 id="goseditmainmenu-66">
+      <title>メニューバーをパネルに追加する</title>
+      <indexterm>
+        <primary sortas="めにゆうはあ">メニューバー</primary>
+        <secondary sortas="はねるについか">パネルに追加</secondary>
+      </indexterm>
+      <para>パネルに追加できる<application>メニューバー</application>パネルアプリケーションの数に制限はありません。<application>メニューバー</application>をパネルに追加するには、パネル上の空いているスペースで右クリックします。<menuchoice><guimenu>「パネルに追加」、 </guimenu><guimenuitem>「メニューバー」</guimenuitem></menuchoice>を選択します。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-54">
+    <title>メニューのカスタマイズ</title>
+    <indexterm>
+      <primary sortas="めにゆう">メニュー</primary>
+      <secondary sortas="かすたまいす">カスタマイズ</secondary>
+    </indexterm>
+    <para>次のメニューの内容を変更できます。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>「アプリケーション」</guimenu>メニュー</para>
+      </listitem>
+      <listitem>
+        <para><guimenu>「設定」</guimenu>メニュー</para>
+      </listitem>
+    </itemizedlist>
+    <para>次の Java Desktop System コンポーネントを使用してメニューをカスタマイズします。</para>
+    <itemizedlist>
+      <listitem>
+        <para>パネル上のメニュー</para>
+      </listitem>
+      <listitem>
+        <para>ファイルマネージャ</para>
+      </listitem>
+    </itemizedlist>
+    <para>パネルを使用してメニューをカスタマイズする場合は、メニュー項目のポップアップメニューを使用します。詳細については、<xref linkend="goseditmainmenu-11"/>を参照してください。</para>
+    <para>ファイルマネージャを使用してメニューをカスタマイズするには、ファイルマネージャ内から<guimenu>「アプリケーション」</guimenu>メニューまたは<guimenu>「設定」</guimenu>メニューにアクセスします。<guimenu>「アプリケーション」</guimenu>メニューまたは<guimenu>「設定」</guimenu>メニューにアクセスするには、ファイルマネージャウィンドウを開きます。</para>
+    <para>ファイルマネージャ内のメニューにアクセスするには、ロケーションバーのフィールドに以下の URI のどれかを入力します。</para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>メニュー</para>
+            </entry>
+            <entry>
+              <para>入力する URI</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><guimenu>「アプリケーション」</guimenu>メニュー</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>applications:///</command>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><guimenu>「設定」</guimenu>メニュー</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>preferences:///</command>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <sect2 id="goseditmainmenu-61">
+      <title>メニューを追加する</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="ついか">追加</secondary>
+      </indexterm>
+      <para>メニューを追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ファイルマネージャウィンドウで、メニューを追加する場所にアクセスします。たとえば、メニューを<guimenu>「アプリケーション」</guimenu>メニューに追加するには、ロケーションバーのフィールドに <command>applications:///</command>
+を入力します。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「フォルダの作成」</guimenuitem></menuchoice>を選択します。未タイトルのフォルダが表示区画に追加されます。フォルダの名前が選択されています。</para>
+        </listitem>
+        <listitem>
+          <para>フォルダの名前を入力して、<keycap>Return</keycap> キーを押します。</para>
+        </listitem>
+      </orderedlist>
+      <para>次回ログアウト後にログインしたときに、そのメニューは割り当てられた位置にあります。</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-55">
+      <title>メニューにランチャーを追加する</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="らんちやあをついか">ランチャーを追加</secondary>
+      </indexterm>
+      <para>メニューにランチャーを追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ランチャーを追加するメニュー内の項目を右クリックします。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「メニュー全体」</guimenu><guimenuitem>「ランチャーをメニューに追加」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ランチャーの作成」</guilabel>ダイアログで、ランチャーの設定を入力します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-63">
+      <title>空のメニューにランチャーを追加する</title>
+      <para>空のメニューにランチャーを追加するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ファイルマネージャウィンドウで、ランチャーを追加するメニューにアクセスします。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「ファイル」</guimenu><guimenuitem>「ランチャーの作成」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ランチャーの作成」</guilabel>ダイアログで、ランチャーの設定を入力します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-56">
+      <title>メニューにランチャーをコピーする</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="らんちやあをこひい">ランチャーをコピー</secondary>
+      </indexterm>
+      <para>メニューに既存のランチャーをコピーするには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ファイルマネージャウィンドウで、ランチャーのコピー元の場所にアクセスします。たとえば、ランチャーを<guimenu>「アプリケーション」</guimenu>メニューからコピーするには、ロケーションバーのフィールドに <command>applications:///</command> を入力します。</para>
+        </listitem>
+        <listitem>
+          <para>コピーするランチャーを選択して、<menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ファイルのコピー」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ファイルマネージャウィンドウで、ランチャーのコピー先の場所にアクセスします。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「編集」</guimenu><guimenuitem>「ファイルの貼り付け」</guimenuitem></menuchoice>を選択します。ランチャーが新しい位置に追加されます。</para>
+        </listitem>
+      </orderedlist>
+      <para>または、ランチャーをコピー元の位置からコピー先の位置にドラッグすることもできます。</para>
+      <para>次回ログアウト後にログインしたときに、そのランチャーは新しいメニュー位置にあります。</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-62">
+      <title>メニューの設定を編集する</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="せつていのへんしゆう">設定の編集</secondary>
+      </indexterm>
+      <para>メニューの設定を編集するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>編集するメニューで、任意の項目を右クリックします。</para>
+        </listitem>
+        <listitem>
+          <para><menuchoice><guimenu>「メニュー全体」</guimenu><guimenuitem>「設定」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ランチャーの設定」</guilabel>ダイアログでメニューの設定を変更します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-57">
+      <title>メニュー項目を編集する</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="めにゆうこうもくのへんしゆう">メニュー項目の編集</secondary>
+      </indexterm>
+      <para>メニュー項目を編集するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>編集する項目を右クリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guimenuitem>「設定」</guimenuitem>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ランチャーの設定」</guilabel>ダイアログでランチャーの設定を変更します。</para>
+        </listitem>
+        <listitem>
+          <para><guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-58">
+      <title>メニューから項目を削除する</title>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="めにゆうこうもくのさくしよ">メニュー項目の削除</secondary>
+      </indexterm>
+      <para>メニューから項目を削除するには、メニュー項目のポップアップメニューを使用します。メニューから項目を削除するには、次の手順を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>削除する項目を右クリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guimenuitem>「ランチャーをメニューから削除」</guimenuitem>を選択します。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

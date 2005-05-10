@@ -1,0 +1,368 @@
+<chapter id="gosgetstarted-1">
+  <title>基本的な操作</title>
+  <highlights>
+    <para>この章では、Java Desktop System セッションを開始、管理、終了するときに必要な情報について説明します。</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>デスクトップへのログイン</title>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="かいし">開始</secondary>
+    </indexterm>
+    <para>セッションとは、ユーザーが Java Desktop System にログインし、その後にログアウトするまでの時間のことです。ログイン画面は、Java
+Desktop System へのゲートウェイになります。ログイン画面には、ユーザー名とパスワードを入力するフィールドがあります。ログイン画面では、セッションの言語などのログインオプションを選択できます。</para>
+    <para>セッションは、ログインすると開始されます。ユーザー名とパスワードが認証されると、セッションマネージャが起動します。セッションマネージャはセッションを管理します。たとえば、一番最後のセッションの状態を保存し、次回ログインしたときに、そのセッションから開始することができます。セッションマネージャは次のものを保存し復元します。</para>
+    <itemizedlist>
+      <listitem>
+        <para>フォント、色、マウス設定など、外観や機能設定</para>
+      </listitem>
+      <listitem>
+        <para>実行中だったアプリケーション。たとえば、ファイルマネージャウィンドウやテキストエディタウィンドウなど。セッションマネージャが管理しないアプリケーションは、保存および復元できない。たとえば、端末ウィンドウのコマンドラインから <application>vi</application> エディタを起動した場合、セッションマネージャは編集セッションを復元できない。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2>
+      <title>Linux のデスクトップにログインする</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくいん">ログイン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろくいん">ログイン</primary>
+        <secondary sortas="せつしよんに">セッションに</secondary>
+      </indexterm>
+      <para>デスクトップにログインするには、次の操作を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ログイン画面で<guilabel>「セッション」</guilabel>アイコンをクリックします。使用可能なデスクトップ環境の一覧から「Java
+Desktop System」を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ログイン画面の<guilabel>「ユーザー名」</guilabel>フィールドにユーザー名を入力後、<keycap>Return</keycap> キーを押します。</para>
+        </listitem>
+        <listitem>
+          <para>ログイン画面の<guilabel>「パスワード」</guilabel>フィールドにパスワードを入力後、<keycap>Return</keycap> キーを押します。</para>
+        </listitem>
+      </orderedlist>
+      <para>正常にログインできると、セッションマネージャがセッションを開始します。初めてログインする場合、セッションマネージャは新しいセッションを開始します。すでにログインしたことがあり、前のセッションの設定を保存した場合は、セッションマネージャが前のセッションを復元します。</para>
+      <para>ログインする前にシステムを停止または再起動したい場合は、ログイン画面の<guilabel>「アクション」</guilabel>アイコンをクリックします。ダイアログが表示されます。必要なオプションを選択し、<guibutton>「了解」</guibutton>をクリックします。</para>
+    </sect2>
+    <sect2>
+      <title>Linux で別の言語にログインする</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="へつのけんころくいん">別の言語、ログイン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="けんこへつのけんこてろくいん">言語、別の言語でログイン</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろくいん">ログイン</primary>
+        <secondary sortas="へつのけんこてせつしよんに">別の言語でセッションに</secondary>
+      </indexterm>
+      <para>別の言語でデスクトップにログインするには、次の操作を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ログイン画面で<guilabel>「言語」</guilabel>アイコンをクリックします。使用可能な言語の一覧から、使用する言語を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ログイン画面の<guilabel>「ユーザー名」</guilabel>フィールドにユーザー名を入力後、<keycap>Return</keycap> キーを押します。</para>
+        </listitem>
+        <listitem>
+          <para>ログイン画面の<guilabel>「パスワード」</guilabel>フィールドにパスワードを入力後、<keycap>Return</keycap> キーを押します。</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>別の言語でセッションにログインする場合は、ユーザーインターフェイスの言語を選択します。ここでは、セッション用のキーボードレイアウトを指定しません。キーボードレイアウトを指定するには、<application>キーボード配列スイッチ</application>パネルアプリケーションを使用します。</para>
+      </note>
+      <para><firstterm>パネルアプリケーション</firstterm>とは、<application>CD プレーヤー</application>などのような、パネル内にある小規模な対話型のアプリケーションのことです。各パネルアプリケーションには、マウスまたはキーボードから操作できる単純なユーザーインターフェイスがあります。</para>
+    </sect2>
+    <sect2>
+      <title>Solaris オペレーティングシステムのデスクトップにログインする</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくいん">ログイン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろくいん">ログイン</primary>
+      </indexterm>
+      <para>デスクトップにログインするには、次の操作を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para><menuchoice><guimenu>「オプション」</guimenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。使用可能なデスクトップ環境の一覧から「Java Desktop System」を選択します。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ログインマネージャ」</guilabel>ダイアログのフィールドにログイン名を入力して、<guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+        <listitem>
+          <para><guilabel>「ログインマネージャ」</guilabel>ダイアログのフィールドにパスワードを入力して、<guibutton>「了解」</guibutton>をクリックします。</para>
+        </listitem>
+      </orderedlist>
+      <para>正常にログインできると、セッションマネージャがセッションを開始します。初めてログインする場合、セッションマネージャは新しいセッションを開始します。すでにログインしたことがある場合は、セッションマネージャが前のセッションを復元します。</para>
+    </sect2>
+    <sect2>
+      <title>Solaris オペレーティングシステムで別の言語にログインする</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="へつのけんころくいん">別の言語、ログイン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="けんこへつのけんこてろくいん">言語、別の言語でログイン</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ろくいん">ログイン</primary>
+        <secondary sortas="へつのけんこてせつしよんに">別の言語でセッションに</secondary>
+      </indexterm>
+      <para>別の言語でデスクトップにログインするには、次の操作を実行します。</para>
+      <orderedlist>
+        <listitem>
+          <para>ログインダイアログで<menuchoice><guimenu>「オプション」</guimenu><guimenuitem>「セッション」</guimenuitem></menuchoice>を選択します。使用可能なデスクトップ環境の一覧から「Java Desktop System」を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ログインダイアログで<menuchoice><guimenu>「オプション」</guimenu><guimenuitem>「言語」</guimenuitem></menuchoice>を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>使用する言語が含まれている言語グループを選択します。</para>
+        </listitem>
+        <listitem>
+          <para>言語を選択します。</para>
+        </listitem>
+        <listitem>
+          <para>ログインします。</para>
+        </listitem>
+      </orderedlist>
+      <para>システムのデフォルトの言語は、システム管理者によって設定されます。<guimenu>「ログインマネージャ」</guimenu>ダイアログの<guilabel>「オプション」</guilabel>メニューから、他の言語にアクセスできます。<guimenu>「オプション」</guimenu>メニューで言語を選択すると、システム内でセッションに対して
+LANG 変数が設定されます。セッションの終了時に、デフォルトの言語が復元されます。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-88">
+    <title>最初のログイン</title>
+    <para>はじめてセッションを開始すると、スタートアップ画面が表示されるとともに、画面の下部にパネルが、デスクトップの背景にさまざまなアイコンが表示されます。</para>
+    <sect2 id="chap3-8">
+      <title>デスクトップの初期設定</title>
+      <para>ここでは、セッションをはじめて開始するときの画面の表示について説明します。システム管理者が、ローカルな要求に応じてデフォルトのボトムエッジパネルを設定している場合があります。したがって、ここで説明するボトムエッジパネルと多少異なる可能性があります。</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/jds_fulldesktop.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>以下、画面の説明が入る</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Java Desktop System のスタート画面の一般的な構成は、以下のとおりです。</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>このコンピュータ</guilabel>
+          </para>
+          <para>メディアや使用中のシステムの詳細設定にアクセスします。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>ドキュメント</guilabel>
+          </para>
+          <para>デフォルトディレクトリ内に保存されたファイルに直接アクセスします。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>ネットワークプレイス</guilabel>
+          </para>
+          <para>単一のディレクトリから、ネットワーク化されたコンピュータにアクセスするために使用する</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>「ごみ箱」</guilabel>
+          </para>
+          <para>ファイル、フォルダ、デスクトップオブジェクトの一時保持領域を提供します。これらのデータは後で取り出すことも、完全に削除することもできます。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>StarSuite 7</guilabel>
+          </para>
+          <para>StarSuite アプリケーションを起動します。</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Java&trade; Desktop System について学ぶ</guilabel>
+          </para>
+          <para><application>Java Desktop System</application> の概要にアクセスできるヘルプブラウザを起動します。</para>
+        </listitem>
+        <listitem>
+          <para>ボトムエッジパネル</para>
+          <para>デフォルトでは、以下のパネルオブジェクトがボトムエッジパネルに表示されます。</para>
+          <itemizedlist>
+            <listitem>
+              <para><guibutton>「起動」</guibutton>ボタン: <application>Java Desktop
+System</application> のアプリケーションや構成ツールのメニュー項目が提供されます。</para>
+            </listitem>
+            <listitem>
+              <para><application>クロック</application>: パネルに日時を表示します。</para>
+            </listitem>
+            <listitem>
+              <para><application>「デスクトップの表示」</application>: このボタンをクリックすると、開かれているすべてのウィンドウがアイコン化されます。</para>
+            </listitem>
+            <listitem>
+              <para><application>ウィンドウリスト</application>: 開いている各ウィンドウを示すボタンを表示します。ウィンドウリストボタンをクリックすると、ウィンドウの最小化と元のサイズへの復元を行うことができます。</para>
+            </listitem>
+            <listitem>
+              <para><application>「通知スペース」</application>: アプリケーションのアクティビティを示すさまざまなアイコンを表示します。たとえば、<application>CD プレイヤー</application>アプリケーションで CD を再生しているときは、CD アイコンが<application>通知スペース</application>に表示されます。</para>
+            </listitem>
+            <listitem>
+              <para><application>ワークスペーススイッチ</application>: ワークスペースを視覚的に表示します。<application>ワークスペーススイッチ</application> を使用して、ワークスペース間を切り替えることができます。</para>
+            </listitem>
+            <listitem>
+              <para><application>ボリュームコントロール</application> : システムの音量を制御し設定するボタンを表示します。</para>
+            </listitem>
+            <listitem>
+              <para><application>ネットワークモニター</application>: ネットワークの活動状況を監視できるダイアログを表示します。</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>デスクトップ背景</para>
+          <para>デスクトップの背景は、Java Desktop System 上の他のすべてのコンポーネントの後ろにあります。デスクトップの背景は、ユーザーインタフェースのアクティブコンポーネントです。デスクトップ背景に複数のオブジェクトを置くことで、ファイルおよびディレクトリにすばやくアクセスできます。また、頻繁に使用するアプリケーションをデスクトップに配置して、ここから起動することもできます。デスクトップ背景上で右クリックすると、メニューを開くことができます。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>画面をロックする</title>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="かめんのろつく">画面のロック</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="かめんのろつく">画面のロック</primary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="ろつくほたん">「ロック」ボタン</primary>
+    </indexterm>
+    <para>画面をロックするには、次のいずれかの操作を実行します。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>「起動」</guimenu> をクリックして、<guimenuitem>「画面のロック」</guimenuitem>を選択する。</para>
+      </listitem>
+      <listitem>
+        <para><guibutton>「ロック」</guibutton>ボタンがパネルにある場合は、<guibutton>「ロック」</guibutton>ボタンをクリックする。</para>
+        <para><guibutton>「ロック」</guibutton>ボタンをパネルに追加するには、そのパネルで右クリックする。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「ロック」</guimenuitem></menuchoice>の順に選択する。</para>
+      </listitem>
+    </itemizedlist>
+    <para>画面をロックすると、スクリーンセーバーが起動します。画面のロックを解除するには、マウスを動かして、「ロック中の画面」ダイアログを表示します。ユーザー名とパスワードを「ロック中の画面」ダイアログに入力して、<keycap>Return</keycap> キーを押します。</para>
+    <note>
+      <para>画面を正しくロックするには、スクリーンセーバーを有効に設定しておく必要があります。</para>
+    </note>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>デスクトップセッションの管理</title>
+    <indexterm>
+      <primary sortas="すたあとあつふあふりけえしよん">スタートアップアプリケーション</primary>
+      <secondary sortas="せつしよんかんりかの">セッション管理下の</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="せつていつうる">設定ツール</primary>
+      <secondary sortas="せつしよん">セッション</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="かんり">管理</secondary>
+    </indexterm>
+    <para>デスクトップセッションを設定するには、<application>セッション</application>設定ツールを使用します。<application>セッション</application>設定ツールは、アプリケーションの形式を次のように認識します。</para>
+    <itemizedlist>
+      <listitem>
+        <para>セッション管理されるアプリケーション。セッションの設定を保存した場合、セッションマネージャはセッション管理下のすべてのアプリケーションを保存する。ログアウトし、再びログインすると、セッションマネージャはセッション管理下のアプリケーションを自動的に起動する</para>
+      </listitem>
+      <listitem>
+        <para>セッション管理されないアプリケーション。セッションの設定を保存した場合、セッションマネージャは非セッション管理のアプリケーションを保存しない。ログアウトし、再びログインすると、セッションマネージャは非セッション管理のアプリケーションを起動しない。アプリケーションは手動で起動する必要がある。または、<application>セッション</application>設定ツールを使用して、非セッション管理のアプリケーションのうち、自動的に起動するアプリケーションを指定する。</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>ログインおよびログアウト時の動作を定義する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくいんしのとうさ">ログイン時の動作</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="ろくあうとしのとうさ">ログアウト時の動作</secondary>
+      </indexterm>
+      <para>ログインおよびログアウト時のセッションの動作を設定するには、<application>セッション</application>設定ツールを使用します。<guilabel>「セッションのオプション」</guilabel>タブセクションで、必要な変更を行います。たとえば、ログイン時にスプラッシュ画面を表示するように選択できます。</para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>スタートアップアプリケーションを使用する</title>
+      <indexterm>
+        <primary sortas="すたあとあつふふろくらむ">スタートアッププログラム</primary>
+        <see>スタートアップアプリケーション</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="すたあとあつふあふりけえしよんのしよう">スタートアップアプリケーションの使用</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="すたあとあつふあふりけえしよん">スタートアップアプリケーション</primary>
+        <secondary sortas="ひせつしよんかんりの">非セッション管理の</secondary>
+      </indexterm>
+      <para>セッションは、非セッション管理のアプリケーションで開始するように設定できます。非セッション管理のスタートアップアプリケーションを設定するには、<application>セッション</application>設定ツールを使用します。アプリケーションの追加、編集、および削除には、<guilabel>「自動起動プログラム」</guilabel>タブセクションを使用します。設定を保存し、ログアウトすると、次回ログインしたときにスタートアップアプリケーションが自動的に起動されます。</para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>アプリケーションを参照する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="あふりけえしよんのさんしよう">アプリケーションの参照</secondary>
+      </indexterm>
+      <para>現在のセッションでアプリケーションを参照するには、<application>セッション</application>設定ツールを使用します。<guilabel>「現在のセッション」</guilabel>タブセクションには、次の項目がリストされています。</para>
+      <itemizedlist>
+        <listitem>
+          <para>現在実行されているすべての Java Desktop System アプリケーション。これらのアプリケーションは、セッションマネージャに接続することができ、そのアプリケーションの状態を保存できる。</para>
+        </listitem>
+        <listitem>
+          <para>すべての設定ツール。これらのツールはセッションマネージャに接続することができ、そのツールの状態を保存できる</para>
+        </listitem>
+      </itemizedlist>
+      <para><guilabel>「現在のセッション」</guilabel>タブセクションを使用して、アプリケーションまたは設定ツールのセッション設定で操作
+(数に制限あり) を実行できます。たとえば、起動順序を編集したり、リストに載っているすべての Java Desktop System アプリケーションまたは設定ツールのスタイルを再設定できます。</para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>設定を保存する</title>
+      <indexterm>
+        <primary sortas="せつしよん">セッション</primary>
+        <secondary sortas="せつていのほそん">設定の保存</secondary>
+      </indexterm>
+      <para>セッションの設定を保存するには、次の手順を行います。</para>
+      <orderedlist>
+        <listitem>
+          <para>セッションの終了時に、自動的に設定を保存するようにセッションを設定します。セッションを設定するには、<application>セッション</application>設定ツールを使用します。<application>セッション</application>設定ツールが起動します。<guilabel>「セッションのオプション」</guilabel>タブセクションの<guilabel>「変更を自動的にセッションに保存する」</guilabel>オプションを選択します。</para>
+        </listitem>
+        <listitem>
+          <para>セッションを終了します。</para>
+        </listitem>
+      </orderedlist>
+      <para><guilabel>「変更を自動的にセッションに保存する」</guilabel>オプションを選択しない場合、ログアウトしたときに、現在の設定を保存するかどうかを問うダイアログが表示されます。設定を保存するには、このオプションを選択してからログアウトします。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>ログアウト</title>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="しゆうりよう">終了</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="せつしよん">セッション</primary>
+      <secondary sortas="ろくあうと">ログアウト</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="ろくあうと">ログアウト</primary>
+    </indexterm>
+    <para>セッションを終了するには、現在アクティブなプロセスをすべて閉じ、次のいずれかの操作を実行します。</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>「起動」</guimenu>をクリックして、<guimenuitem>「</guimenuitem><replaceable>name</replaceable> をログアウト」を選択する</para>
+      </listitem>
+      <listitem>
+        <para><guibutton>「ログアウト」</guibutton>ボタンがパネルにある場合は、<guibutton>「ログアウト」</guibutton>ボタンをクリックする</para>
+        <para><guibutton>「ログアウト」</guibutton>ボタンをパネルに追加するには、そのパネルで右クリックする。<menuchoice><guimenu>「パネルに追加」、</guimenu><guisubmenu>「アクション」、</guisubmenu><guimenuitem>「ログアウト」</guimenuitem></menuchoice>の順に選択します。</para>
+      </listitem>
+    </itemizedlist>
+    <para>セッションを終了する前に、現在の設定を保存しておくと、次回ログインしたときに、セッションを復元できます。ログアウト処理中に、現在の設定を保存するかどうかを問うダイアログが表示されます。<application>セッション</application>設定ツールでは、現在の設定を自動的に保存するオプションを選択できます。</para>
+  </sect1>
+</chapter>

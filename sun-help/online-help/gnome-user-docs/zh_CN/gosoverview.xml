@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id="gosoverview-1">
+  <title>Overview of the Java Desktop System</title>
+  <highlights>
+    <para>This chapter introduces you to the features and main components
+of the Java Desktop System. Before you start to use the Java Desktop System,
+read this chapter to familiarize yourself with the various features, and how
+the main components work. Since the Java Desktop System is very configurable,
+this chapter describes only the typical default configuration.</para>
+  </highlights>
+  <sect1 id="gosoverview-5">
+    <title>Introducing the Java Desktop System</title>
+    <indexterm>
+      <primary>Java Desktop System components, introducing</primary>
+    </indexterm>
+    <para>The Java Desktop System enables you to interact efficiently
+with the applications and documents that you use every day. </para>
+    <para>The components of the Java Desktop System are as follows: <itemizedlist><listitem><para>Panels</para><para>Panels are areas in the Java Desktop System from which you can access
+all of your system applications and menus. Panels are very configurable.</para></listitem><listitem><para>Menus</para><para>You can access all Java Desktop System functions through menus. You
+can use the <guimenu>Applications</guimenu> menu to access almost all of the
+standard desktop applications, commands, and configuration options. You can
+access the <guimenu>Applications</guimenu> menu from the <guibutton>Launch</guibutton> button and from the <application>Menu Bar</application> panel
+application. You can add the <guibutton>Launch</guibutton> button and the <application>Menu Bar</application> panel application to your panels.</para><para>The <application>Menu Bar</application> panel application contains an <guimenu>Actions</guimenu> menu. The <guimenu>Actions</guimenu> menu contains commands
+that perform various functions, for example <guimenuitem>Find Files</guimenuitem>
+and <guimenuitem>Log Out</guimenuitem>.</para></listitem><listitem><para>Windows</para><para>You can display many windows at the same time. You can run different
+applications in each window. The window manager provides frames and buttons
+for windows. The window manager enables you to perform standard actions such
+as move, close, and resize windows. </para></listitem><listitem><para>Workspaces</para><para>You can subdivide the Java Desktop System into separate <firstterm>workspaces</firstterm>. A workspace is a discrete area in which you can work.
+You can specify the number of workspaces in the Java Desktop System. You can
+switch to a different workspace, but you can only display one workspace at
+a time.</para></listitem><listitem><para>File Manager</para><para><application>Nautilus</application> is the name of the Java Desktop
+System file manager that provides an integrated access point to your files
+and applications. You can display the contents of your files within a file
+manager window, or open the files in the appropriate application from the
+file manager. </para><para>You can access your files and folders in the following ways: </para><itemizedlist><listitem><para>Browse your files and folders</para><para>The file browser window enables you to navigate between folders by changing
+the current location of the file manager within a file browser window.</para></listitem><listitem><para>Navigate your files and folders as objects</para><para>The file manager can also represent your files and folders as individual
+objects. Each file or folder is displayed in an individual file object window.
+When you open files or folders from file object windows, each file or folder
+opens a new window.</para></listitem></itemizedlist><para>The file manager also manages the desktop background. </para></listitem><listitem><para>Desktop Background</para><para>The desktop background is behind all of the other components of the
+Java Desktop System. The desktop background is an active component of the
+user interface. You can place objects on the desktop background to quickly
+access  your files and directories, or to start applications that you use
+often. You can also right-click on the desktop background to open a menu.</para></listitem><listitem><para><guilabel>This Computer</guilabel></para><para>The <guilabel>This Computer</guilabel> location provides an access point
+to some of the key features of the Java Desktop System. You can access your
+applications and configuration tools from the <guilabel>This Computer</guilabel>location.
+You can also access programs that enable you to configure your system as a
+server, and to modify other system configuration details.</para></listitem><listitem><para>Desktop Preferences</para><para>The Java Desktop System contains dedicated <firstterm>preference tools</firstterm>. Each tool controls a particular part of the behavior of the
+Java Desktop System. To start a preference tool, click <guibutton>Launch</guibutton>,
+then choose<guimenuitem>Preferences</guimenuitem>. Choose the item that you
+want to configure from the submenus.</para></listitem></itemizedlist></para>
+    <para>The most powerful features of the Java Desktop System are the high degree
+of configurability and the multiple ways that you can perform tasks.</para>
+    <para>The components of the Java Desktop System are interoperable. Usually,
+you can perform the same action in several different ways. For example, you
+can start applications from panels, from menus, or from the desktop.</para>
+    <para>Your system administrator can make configuration changes to suit your
+needs, so that the Java Desktop System that you use might not be exactly the
+same as described in this chapter. Nevertheless, this chapter provides a useful
+quick guide to how to work with the Java Desktop System.</para>
+  </sect1>
+  <sect1 id="gosoverview-511">
+    <title>Main Components</title>
+    <highlights>
+      <para>The main components of the <application>Java Desktop System</application> are outlined in the following sections:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <xref linkend="sdlinstdintro-100"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="gosoverview-515"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="gosoverview-516"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="sdlinstdintro-200"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="sdlinstdintro-10"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="sdlinstdintro-7"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="sdlinstdintro-6"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+    </highlights>
+    <sect2 id="sdlinstdintro-100">
+      <title>GNOME Desktop</title>
+      <indexterm>
+        <primary>GNOME Desktop</primary>
+        <secondary>main components</secondary>
+      </indexterm>
+      <para>The GNOME Desktop enables you to interact efficiently with
+the applications and documents that you use every day. </para>
+      <para>The most important components of the GNOME Desktop are as follows:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="21.97*"/>
+          <colspec colname="colspec1" colwidth="78.03*"/>
+          <thead>
+            <row>
+              <entry colname="colspec0" colsep="0">
+                <para>Desktop Functionality</para>
+              </entry>
+              <entry colname="colspec1" colsep="0">
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colsep="0" rowsep="0">
+                <para>
+                  <application>File Manager</application>
+                </para>
+              </entry>
+              <entry colsep="0" rowsep="0">
+                <para>Enables you to do the following:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Display your files and folders.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Manage your files and folders.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Customize your files and folders.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Open special URL locations.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Write data to a recordable CD.</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Panels</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Contains application
+launchers, system menus, panel  drawers, and panel applications.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Window Manager</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Enables
+you to manage application windows and dialogs.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Desktop Applications</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>A broad
+range of full-featured desktop applications that enable you to perform all
+your usual work activities.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">Panel Applications</entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Small applications for
+specific tasks that reside within panels.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosoverview-515">
+      <title>GNOME Desktop Applications</title>
+      <para>The following table lists the GNOME Desktop applications. <informaltable frame="topbot"><tgroup cols="3" colsep="0" rowsep="0"><colspec colname="colspec2" colwidth="17.50*"/><colspec colname="colspec0" colwidth="23.20*"/><colspec colname="colspec1" colwidth="80.17*"/><thead><row rowsep="1"><entry colname="colspec2"><para>Category</para></entry><entry><para> Application</para></entry><entry><para>Description</para></entry></row></thead><tbody><row><entry colname="colspec2"><para>Accessories</para></entry><entry colname="colspec0"><para><application>Archive Manager</application></para></entry><entry colname="colspec1"><para>Enables you to create, view, modify, or unpack an archive. </para></entry></row><row><entry colname="colspec2"/><entry><para><application>Calculator</application></para></entry><entry><para>Multifunctional mathematical and
+scientific calculator that includes arithmetic, trigonometric, and logarithmic
+functions.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Character Map</application></para></entry><entry colname="colspec1"><para>Unicode character map that provides accented characters, mathematical symbols,
+special symbols, and punctuation marks.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Dictionary</application></para></entry><entry colname="colspec1"><para>Enables
+you to lookup an online dictionary for definitions and correct spelling of
+words.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Text Editor</application></para></entry><entry colname="colspec1"><para>A
+simple text editor that enables you create and edit text files. </para></entry></row><row><entry colname="colspec2"><para>Games</para></entry><entry colname="colspec0"><para>See <citetitle>Java Desktop System Release 2 Release Notes</citetitle>.</para></entry><entry colname="colspec1"><para>Games applications are not currently supported
+by Sun Microsystems.</para></entry></row><row><entry colname="colspec2"><para>Graphics</para></entry><entry colname="colspec0"><para><application>Diagram Editor</application></para></entry><entry colname="colspec1"><para>Diagram editor that enables you to create flow charts, maps, UML diagrams,
+and many  other diagrams.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Image Editor</application></para></entry><entry colname="colspec1"><para>GNU Image Manipulation Program that enables you to edit images. This application
+is not supported by Sun Microsystems.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Image Organizer</application></para></entry><entry colname="colspec1"><para>Image viewer and browser that displays thumbnails of images on your desktop.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Image Viewer</application></para></entry><entry colname="colspec1"><para>Enables you to view and save images using  standard image file formats.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>PDF Document Viewer</application></para></entry><entry colname="colspec1"><para>Enables you to view files in Portable Document Format (PDF). This application
+is not supported by Sun Microsystems.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>PostScript Viewer</application></para></entry><entry colname="colspec1"><para>Enables you to view files in PostScript format. This application is not supported
+by Sun Microsystems.</para></entry></row><row><entry colname="colspec2"><para>Internet</para></entry><entry colname="colspec0"><para><application>Email and Calendar</application></para></entry><entry colname="colspec1"><para>See <xref linkend="sdlinstdintro-200"/> for more information.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Instant Messenger</application></para></entry><entry colname="colspec1"><para>Enables you to launch a multi-protocol instant messaging client.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Java Web Start</application></para></entry><entry colname="colspec1"><para>Enables you to start and manage your Java applications.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Sun Java System Instant Messaging</application></para></entry><entry colname="colspec1"><para>Launches URLs for the following:<itemizedlist><listitem><para>Register for Java IM Demo</para></listitem><listitem><para>Run Java IM Demo</para></listitem></itemizedlist></para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Web Browser</application></para></entry><entry colname="colspec1"><para>See <xref linkend="sdlinstdintro-7"/> for more information.</para></entry></row><row><entry colname="colspec2"><para>Multimedia</para></entry><entry colname="colspec0"><para><application>CD Player</application></para></entry><entry colname="colspec1"><para>Enables you to play audio compact discs on your computer.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Java Media Player</application></para></entry><entry colname="colspec1"><para>Enables you to play multimedia files.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Sound Recorder</application></para></entry><entry colname="colspec1"><para>Enables you to record and play waveform (.wav) sound files.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Volume Control</application></para></entry><entry colname="colspec1"><para>Enables you to adjust the volume level on your system.</para></entry></row><row><entry colname="colspec2"><para>Office</para></entry><entry colname="colspec0"><para><application>Calendar Client Preview</application></para></entry><entry colname="colspec1">A calendar server client that enables you to preview your appointments and tasks.</entry></row><row><entry colname="colspec2"><para/></entry><entry colname="colspec0"><para><application>Office Applications</application></para></entry><entry colname="colspec1"><para>See <xref linkend="sdlinstdintro-10"/> for more information.</para><note><para>StarSuite is the default Office application for users in Japan, China, Korea,
+and Taiwan. Users in all other countries have <application>StarOffice</application>
+as their default Office application.</para></note></entry></row><row><entry colname="colspec2"><para>Programming</para></entry><entry colname="colspec0"><para>Interface Editor</para></entry><entry colname="colspec1"><para>Glade is a
+free user interface builder for GTK+ and GNOME. It is released under the GNU
+General Public License (GPL). This application is not currently supported
+by Sun Microsystems.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Source Editor</application></para></entry><entry colname="colspec1"><para>General purpose extensible editor for programmers.</para></entry></row><row><entry colname="colspec2"><para>Utilities</para></entry><entry colname="colspec0"><para><application>Configuration Editor</application></para></entry><entry colname="colspec1"><para>Enables you to directly edit your entire configuration database.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Disk Analyzer</application></para></entry><entry colname="colspec1"><para>Enables you to visualize your disk.</para></entry></row><row><entry colname="colspec2"><para/></entry><entry colname="colspec0"><para><application>Online Update</application></para></entry><entry colname="colspec1"><para>Update your system online.</para></entry></row><row><entry colname="colspec2"/><entry colname="colspec0"><para><application>Terminal</application></para></entry><entry colname="colspec1"><para>Enables
+you to access the command line.</para></entry></row></tbody></tgroup></informaltable></para>
+    </sect2>
+    <sect2 id="gosoverview-516">
+      <title>GNOME Panel Applications</title>
+      <indexterm>
+        <primary>GNOME Desktop</primary>
+        <secondary>panel applications</secondary>
+      </indexterm>
+      <para>The following table lists the GNOME panel applications. <informaltable frame="topbot"><tgroup cols="3" colsep="1" rowsep="1"><colspec colname="colspec7" colwidth="24.92*"/><colspec colname="colspec2" colwidth="24.64*"/><colspec colname="colspec3" colwidth="75.05*"/><thead><row><entry colname="colspec7" colsep="0"><para>Category</para></entry><entry colname="colspec2" colsep="0"><para>Panel Application</para></entry><entry colname="colspec3" colsep="0"><para>Description</para></entry></row></thead><tbody><row><entry colname="colspec7" colsep="0" rowsep="0"><para>Accessories</para></entry><entry colsep="0" rowsep="0"><para><application>Appointments and Tasks</application></para></entry><entry colsep="0" rowsep="0"><para>A calendar server client to manage your
+appointments and tasks.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Clock</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Displays the time and
+the date.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Dictionary Lookup</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to look
+up an online dictionary for definitions and correct spelling of words.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Sticky Notes</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to create
+and view small notes on your desktop.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Stock Ticker</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Provides continuously
+updated stock quotes.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Weather Report</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Monitors the current weather conditions and forecasts.</para><note><para>This panel application is not currently supported by Sun
+Microsystems.</para></note></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"><para>Actions</para></entry><entry colname="colspec2" colsep="0" rowsep="0"><para>Find Files</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Opens the Search tool.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Force Quit</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Stops an application running that does not respond
+to your commands.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Lock</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Locks the screen and activates your screensaver.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Log Out</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Begins the process to log out of your current
+session.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Run</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Opens the <guilabel>Run Application</guilabel> dialog.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Screenshot</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to take screenshots.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para>Show Desktop</para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Minimizes all open windows and displays the desktop.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"><para>Amusements</para></entry><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Fish</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Displays an animated
+image and executes a user-specified command when  you click on the image.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Geyes</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Displays a pair of eyes
+that follow the mouse pointer around the screen.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"><para>Internet</para></entry><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Inbox Monitor</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Checks your mail server at regular intervals for new mail in your mailbox.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Webeyes</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to access
+web search utilities and provides quick access to websites you previously
+accessed.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"><para>Multimedia</para></entry><entry colname="colspec2" colsep="0" rowsep="0"><para><application>CD Player</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to play audio compact discs on your computer.  </para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Volume Control</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to control
+the sound volume on your system. </para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0">Utility</entry><entry colname="colspec2" colsep="0" rowsep="0"><application>Address Search</application></entry><entry colname="colspec3" colsep="0" rowsep="0">Searches for email addresses and phone numbers of people in your address book.</entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Character Palette</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Provides a convenient
+way to access non-standard characters.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Command Line</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Provides a command line
+that you can use within any panel on the desktop.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"><para/></entry><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Input Method
+Switcher</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para> Provides a method of switching between software components
+that enables you to enter text in ways other than typing on a keyboard. <application>Input Methods</application> are commonly used to enter text for languages
+using thousands of different characters in keyboards with far fewer keys. </para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Keyboard Accessibility Status</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Shows the status of
+the keyboard accessibility features.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Keyboard Indicator</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to indicate
+different layouts to your keyboard.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Notification Area</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Displays icons from
+various applications to indicate activity in the application. For example,
+when you use the <application>CD Player</application> application to play
+a CD, a CD icon is displayed in the Notification Area.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>PDA Monitor</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to configure
+Palm OS devices.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Quick Lounge</application></para></entry><entry colname="colspec3" rowsep="0"><para>Organizes your preferred applications
+on panels.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Window List</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to manage
+the windows that are open on your desktop.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Window Selector</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Displays a list of all
+visible windows open on your desktop and enables you to select the one  you
+want to activate.</para></entry></row><row><entry colname="colspec7" colsep="0" rowsep="0"/><entry colname="colspec2" colsep="0" rowsep="0"><para><application>Workspace Switcher</application></para></entry><entry colname="colspec3" colsep="0" rowsep="0"><para>Enables you to switch
+between workspaces.</para></entry></row></tbody></tgroup></informaltable></para>
+    </sect2>
+    <sect2 id="sdlinstdintro-200">
+      <title>Ximian Evolution 1.4</title>
+      <indexterm>
+        <primary>Ximian Evolution</primary>
+        <secondary>main components</secondary>
+      </indexterm>
+      <para><application>Evolution</application> is an advanced  personal
+information management system that integrates with email and calendar servers. <application>Evolution</application> contains the following components:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="21.97*"/>
+          <colspec colname="colspec1" colwidth="78.03*"/>
+          <thead>
+            <row>
+              <entry colname="colspec0" colsep="0">
+                <para>Component</para>
+              </entry>
+              <entry colname="colspec1" colsep="0">
+                <para>Description</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colsep="0" rowsep="0">
+                <para>Calendar</para>
+              </entry>
+              <entry colsep="0" rowsep="0">
+                <para>Enables you to schedule appointments.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Contacts</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Enables you to create
+an address book of your contacts.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Email</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Enables you to compose,
+send, receive, and manage email messages.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Summary</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Provides an overview
+of your day. Summary displays an overview of your email messages, appointments,
+meetings, and tasks. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Tasks</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Enables you to manage
+the work tasks that you perform.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Connectors</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Enables you to connect
+to mail and calendar servers.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <indexterm>
+        <primary>Evolution</primary>
+        <secondary>features and benefits</secondary>
+      </indexterm>
+      <para><application>Evolution</application> includes the following
+features and benefits:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="21.97*"/>
+          <colspec colname="colspec1" colwidth="78.03*"/>
+          <thead>
+            <row>
+              <entry colname="colspec0" colsep="0">
+                <para>Feature</para>
+              </entry>
+              <entry colname="colspec1" colsep="0">
+                <para>Benefit</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colsep="0" rowsep="0">
+                <para>Versatility</para>
+              </entry>
+              <entry colsep="0" rowsep="0">
+                <para><application>Evolution</application> manages contact information,
+appointments and mail, and integrates this functionality in an integrated
+package. <application>Evolution</application> acts as the central point of
+control for all your communication needs. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Compatibility</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para><application>Evolution</application> supports global mail protocols, such as IMAP4, SMTP, POP3 and
+LDAP. <application>Evolution</application> also adheres to global standards
+and file formats, such as <literal>mbox</literal>, to facilitate smooth integration
+into existing environments.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Integration</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Public interfaces to
+the core functionality of <application>Evolution</application>components ensure
+easy integration with other applications.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Scalability</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para><application>Evolution</application> can manage large amounts of mail and provides tools to organize,
+read, and search through mail in an efficient way.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <sect3 id="gosoverview-512">
+        <title>To Start Evolution</title>
+        <indexterm>
+          <primary>Evolution</primary>
+          <secondary>starting</secondary>
+        </indexterm>
+        <para>Click <guimenu>Launch</guimenu>, then choose <guimenu>Email and Calendar</guimenu>.</para>
+        <para>You can also access <application>Evolution</application> from <menuchoice><guimenu>Launch</guimenu><guimenu>Applications</guimenu><guilabel> Internet</guilabel><guimenu>Email and Calendar</guimenu></menuchoice>.</para>
+        <para>When you start <application>Evolution</application> for the first time,
+the <application>Evolution Setup Assistant</application> is displayed. The <application>Evolution Setup Assistant</application> guides you through the initial configuration
+process for <application>Evolution</application>. In the initial configuration
+process, you perform the following actions:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Enter identity information.</para>
+          </listitem>
+          <listitem>
+            <para>Create an email account, that is, configure how to receive
+email, configure how to send email, and provide a name for the account.</para>
+          </listitem>
+          <listitem>
+            <para>Select your time zone.</para>
+          </listitem>
+          <listitem>
+            <para>Import data from other applications.</para>
+          </listitem>
+        </itemizedlist>
+        <para>You can access Help for  <application>Evolution</application> from within
+the <application>Evolution</application> application.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="sdlinstdintro-10">
+      <title>StarOffice 7</title>
+      <indexterm>
+        <primary>StarOffice</primary>
+        <secondary>applications</secondary>
+      </indexterm>
+      <para><application>StarOffice</application> runs on multiple operating
+systems, including Linux, Solaris, and Windows. <application>StarOffice</application>
+contains the following applications:<itemizedlist><listitem><para>Word Processing</para></listitem><listitem><para>Spreadsheet </para></listitem><listitem><para>Presentation</para></listitem><listitem><para>Graphics</para></listitem><listitem><para>Database Capabilities</para></listitem></itemizedlist></para>
+      <indexterm>
+        <primary>StarOffice</primary>
+        <secondary>features and benefits</secondary>
+      </indexterm>
+      <para><application>StarOffice</application> includes the following
+features and benefits:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec1" colwidth="63.64*"/>
+          <thead>
+            <row>
+              <entry colname="colspec0" colsep="0">
+                <para>Feature</para>
+              </entry>
+              <entry colname="colspec1" colsep="0">
+                <para>Benefit</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Supports XML file
+formats</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>You can create, manage, and access complex documents and web pages.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Intuitive graphical
+user interface (GUI)</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Familiar interface concepts require minimal retraining.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Built on open standards
+and                              OpenOffice.org open source code</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>You are not locked into
+proprietary formats.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <sect3 id="gosoverview-513">
+        <title>To Start StarOffice</title>
+        <indexterm>
+          <primary>StarOffice</primary>
+          <secondary>starting</secondary>
+        </indexterm>
+        <para>You can start <application>StarOffice </application> in several ways.
+Double-click the <application>StarOffice </application> icon on the desktop,
+or click <guimenu>Launch</guimenu>, then choose <guimenu>StarOffice 7</guimenu>.</para>
+        <para>You can also access <application>StarOffice </application> from <menuchoice><guimenu>Launch</guimenu><guimenu>Applications</guimenu><guimenu>Office</guimenu></menuchoice>.</para>
+        <para><application>StarOffice</application> contains sample documents and
+templates to help you create documents. To access these templates and documents,
+choose <menuchoice><guimenu>File</guimenu><guimenu>New</guimenu><guimenu>Templates and Documents</guimenu></menuchoice>.</para>
+        <para>Choose <menuchoice><guimenu>File</guimenu><guimenu>AutoPilot</guimenu></menuchoice> to create user-defined templates, for example, for
+faxes, presentations or web pages that you can use as a basis for further
+documents.</para>
+        <para>You can access Help for <application>StarOffice</application> from within
+each of the following <application>StarOffice</application> applications:</para>
+        <para>
+          <informaltable frame="topbot">
+            <tgroup cols="3" colsep="0" rowsep="0">
+              <colspec colname="colspec2" colwidth="19.69*"/>
+              <colspec colname="colspec0" colwidth="21.10*"/>
+              <colspec colname="colspec1" colwidth="80.09*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry colname="colspec2">
+                    <para>Category</para>
+                  </entry>
+                  <entry>
+                    <para> Application</para>
+                  </entry>
+                  <entry>
+                    <para>Description</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec2">
+                    <para>Office</para>
+                  </entry>
+                  <entry colname="colspec0">
+                    <para>
+                      <application>StarOffice 7 Presentation</application>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Enables you to create presentations.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2"/>
+                  <entry colname="colspec0">
+                    <para>
+                      <application>StarOffice 7 Spreadsheet</application>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Enables you to create spreadsheets.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec2"/>
+                  <entry colname="colspec0">
+                    <para>
+                      <application>StarOffice 7 Text Document</application>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Enables you to create text documents.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </para>
+        <sect4 id="sdlinstdintro-20">
+          <title>To Open a StarOffice File</title>
+          <indexterm>
+            <primary>StarOffice</primary>
+            <secondary>opening a file</secondary>
+          </indexterm>
+          <para>To open a file previously created by StarOffice, click <guimenu>Launch</guimenu>, then choose  <guimenu>StarOffice 7</guimenu>. From the <guilabel>Templates and Documents &mdash; My Documents</guilabel> dialog, highlight
+the folder where the file is located. For example, if your file is located
+in <guilabel>My Documents </guilabel> folder, click on the <guilabel>My Documents</guilabel> icon and a list of your folders and files is displayed in the <guilabel>Title</guilabel> pane. Locate the file that you want and double-click on the
+file.</para>
+        </sect4>
+      </sect3>
+    </sect2>
+    <sect2 id="sdlinstdintro-7">
+      <title>Mozilla 1.4</title>
+      <indexterm>
+        <primary>Mozilla</primary>
+        <secondary>functionality</secondary>
+      </indexterm>
+      <para><application>Mozilla</application> is a powerful, cross-platform
+browser that integrates a wide variety of features. <application>Mozilla</application>
+provides enterprise functionality in one powerful application suite enables
+you to do the following:<itemizedlist><listitem><para>Surf the Internet.</para></listitem><listitem><para>Communicate with colleagues.</para></listitem><listitem><para>Participate in discussion groups.</para></listitem><listitem><para>Create dynamic web pages.</para></listitem></itemizedlist></para>
+      <indexterm>
+        <primary>Mozilla</primary>
+        <secondary>features and benefits</secondary>
+      </indexterm>
+      <para><application>Mozilla</application> includes the following
+features and benefits:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="21.97*"/>
+          <colspec colname="colspec1" colwidth="78.03*"/>
+          <thead>
+            <row>
+              <entry colname="colspec0" colsep="0">
+                <para>Feature</para>
+              </entry>
+              <entry colname="colspec1" colsep="0">
+                <para>Benefit</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Powerful browsing
+capabilities</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Increases productivity thanks to streamlined and efficient browsing.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Sophisticated navigation
+and filtering</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Saves time by managing and directing incoming mail messages to where you want
+them to go. Fast and efficient streamlined searches and more secured privacy.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Advanced JavaScript
+controls</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Enables you to save and publish web documents created in Composer to a server
+of your choice in just a few clicks. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="1">
+                <para>Tabbed browsing</para>
+              </entry>
+              <entry colname="colspec1" colsep="1" rowsep="1">
+                <para>You can
+view multiple websites on tabbed pages within a single browser window.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <sect3 id="gosoverview-514">
+        <title>To Start Mozilla</title>
+        <indexterm>
+          <primary>Mozilla</primary>
+          <secondary>starting</secondary>
+        </indexterm>
+        <para>Click <guimenu>Launch</guimenu>, then choose <guimenu>Web Browser</guimenu>.</para>
+        <para>You can also access <application>Mozilla</application> from <menuchoice><guimenu>Launch</guimenu><guimenu>Applications</guimenu><guimenu>Internet</guimenu><guimenu>Web Browser</guimenu></menuchoice>.</para>
+        <para>You can access Help for  <application>Mozilla</application> from within
+the <application>Mozilla </application> application.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="sdlinstdintro-6">
+      <title>Java Technology</title>
+      <indexterm>
+        <primary>Java</primary>
+        <secondary>features and benefits</secondary>
+      </indexterm>
+      <para>Java technology provides a multi-platform development environment
+and supports many platforms, from servers, to cell phones, to smart cards.
+Java technology unifies business infrastructure to create a seamless, secure,
+networked platform for users.</para>
+      <para><application>Java</application> includes the following features and
+benefits:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="colspec0" colwidth="21.97*"/>
+          <colspec colname="colspec1" colwidth="78.03*"/>
+          <thead>
+            <row>
+              <entry colname="colspec0" colsep="0">
+                <para>Feature</para>
+              </entry>
+              <entry colname="colspec1" colsep="0">
+                <para>Benefit</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colsep="0" rowsep="0">
+                <para>Mobility and security</para>
+              </entry>
+              <entry colsep="0" rowsep="0">
+                <para>The Java platform provides the foundation
+for true mobility. Java technology makes the ideal development and deployment
+vehicle for mobile and wireless solutions.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Development environment</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Java
+facilitates fast development while reducing the number of time-consuming and
+costly bugs.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Web services</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Java and XML languages
+are two of the most extensible and widely-accepted computing languages.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" colsep="0" rowsep="0">
+                <para>Platform compatibility</para>
+              </entry>
+              <entry colname="colspec1" colsep="0" rowsep="0">
+                <para>Java
+provides a secure, open, robust, viable, and flexible development platform
+that enables you to do the following:<itemizedlist><listitem><para>Reduce costs</para></listitem><listitem><para>Bring products to market faster</para></listitem><listitem><para>Benefit from maximum flexibility</para></listitem><listitem><para>Develop robust applications for consumer devices</para></listitem></itemizedlist></para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-502">
+    <title>Panels</title>
+    <indexterm>
+      <primary>panels</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>You can add or delete panels at any time. When you start a session for
+the first time, the Java Desktop System contains at least one panel. </para>
+    <para>You can perform the following actions with panels:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Create panels.</para>
+      </listitem>
+      <listitem>
+        <para>Delete panels.</para>
+      </listitem>
+      <listitem>
+        <para>Hide panels.</para>
+      </listitem>
+      <listitem>
+        <para>Add objects to panels.</para>
+      </listitem>
+      <listitem>
+        <para>Manipulate panel objects.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-26">
+      <title>To Create Panels</title>
+      <para>To add a panel, right-click on a vacant space on any panel, then choose <guimenuitem>New Panel</guimenuitem>. The new panel is added to the Java Desktop System.
+The new panel contains no objects. You can customize the new panel to suit
+your preferences. You can add objects to the panel to fit your own requirements.
+You can also change the background of the panel. You can create as many panels
+as you want.</para>
+    </sect2>
+    <sect2 id="gosoverview-508">
+      <title>To Delete Panels</title>
+      <para>To delete a panel, right-click on the panel then choose <guimenuitem>Delete This Panel</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosoverview-24">
+      <title>To Hide Panels</title>
+      <para>Panels can have hide buttons at each end of the panel. You click on
+the hide buttons to hide or show the panel.</para>
+    </sect2>
+    <sect2 id="gosoverview-4">
+      <title>To Add Objects to Panels</title>
+      <para>A panel can hold several types of objects. The panel in <xref linkend="gosoverview-FIG-28"/>
+contains each type of panel object. </para>
+      <figure id="gosoverview-FIG-28">
+        <title>A Panel With Various Panel Objects</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/sample_anno_panel.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>A panel with various panel objects. Callouts: Calculator launcher, Menu, CD Player panel application, Drawer, Lock button.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>You can add any of the following objects to all types of panels:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Panel Application</para>
+          <indexterm>
+            <primary>applications</primary>
+            <secondary>overview</secondary>
+          </indexterm>
+          <para>Panel applications are small, interactive applications that reside within
+a panel, for example <application>CD Player</application> in <xref linkend="gosoverview-FIG-28"/>.
+Each panel application has a simple user interface that you can operate with
+the mouse or keyboard. The following are examples of panel applications that
+reside within your panels:</para>
+          <itemizedlist>
+            <listitem>
+              <para><application>Clock</application>: Displays the time. You can
+also configure <application>Clock</application> to display the date.</para>
+            </listitem>
+            <listitem>
+              <para><application>Window List</application>: Displays a button
+for each window that is open. You can click on a window list button to minimize
+and restore windows. By default, <application>Window List</application> appears
+in the edge panel at the bottom of the screen.</para>
+            </listitem>
+            <listitem>
+              <para><application>Workspace Switcher</application>: Displays a
+visual representation of your workspaces. You can use <application>Workspace
+Switcher</application> to switch between workspaces. By default, <application>Workspace Switcher</application> appears in the panel at the bottom of the
+screen.</para>
+            </listitem>
+          </itemizedlist>
+          <para>To add a panel application to a panel, right-click on a vacant space
+on the panel, then choose <guimenuitem>Add to Panel</guimenuitem>. Choose
+the panel application that you require from one of the following submenus:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Accessories</para>
+            </listitem>
+            <listitem>
+              <para>Amusements</para>
+            </listitem>
+            <listitem>
+              <para>Internet</para>
+            </listitem>
+            <listitem>
+              <para>Multimedia</para>
+            </listitem>
+            <listitem>
+              <para>Utility</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Launchers</para>
+          <para>A <firstterm>launcher</firstterm> starts a particular application, executes
+a command, or opens a file. The calculator icon in <xref linkend="gosoverview-FIG-28"/>
+is a launcher for the <application>Calculator</application> application. A
+launcher can reside in a panel or in a menu. Click on the launcher to perform
+the action that is associated with the launcher.</para>
+          <para>You can create your own launchers for applications. For example, you
+can create a launcher for a word processor application that you use frequently,
+and place the launcher in a panel for convenient access. To add a new launcher
+to a panel, right-click on a vacant space on the panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Launcher</guimenuitem></menuchoice>. </para>
+          <para>Alternatively, to add a launcher from a menu, right-click on a vacant
+space on the panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Launcher from menu</guimenuitem></menuchoice>. Choose
+the launcher to add from the submenus.</para>
+        </listitem>
+        <listitem>
+          <para>Action buttons</para>
+          <para>You can add buttons to your panels to provide quick access to common
+actions. You can add the following buttons to your panels:</para>
+          <itemizedlist>
+            <listitem>
+              <para><guibutton>Find Files</guibutton>: Use this button to start
+the <application>Search Tool</application> application, from which you can
+search for files. </para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Force Quit</guibutton>: Use this button to stop
+applications that do not respond to your commands.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Lock</guibutton>: Click on this button to lock
+your screen. The lock icon in <xref linkend="gosoverview-FIG-28"/> is the <guibutton>Lock</guibutton> button. </para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Log Out</guibutton>: Click on this button to end
+your session</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Run</guibutton>: Click on this button to open the <guilabel>Run Application</guilabel> dialog, from which you can run commands.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Screenshot</guibutton>: Click on this button to
+take a screenshot of the screen.</para>
+            </listitem>
+            <listitem>
+              <para><guibutton>Show Desktop</guibutton>: Click on this button
+to minimize all windows and show the desktop.</para>
+            </listitem>
+          </itemizedlist>
+          <para>To add a button to a panel, right-click on a vacant space on the panel,
+then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Actions</guimenuitem></menuchoice>. You can then choose the button you require. </para>
+        </listitem>
+        <listitem>
+          <para>Menus</para>
+          <para>You can access all Java Desktop System functions through menus. To open
+a menu from a panel, click on the icon that represents the menu. To open a
+menu from the <application>Menu Bar</application>, click on the text that
+represents the menu. </para>
+          <para>Menus that you add to your panels are represented by an icon with an
+arrow. The arrow indicates that the icon represents a menu. For example, see
+the menu icon in <xref linkend="gosoverview-FIG-28"/>.</para>
+          <para>You can add a <guibutton>Launch</guibutton> button to any of your panels.
+To add a <guibutton>Launch</guibutton> button to a panel, right-click on a
+vacant space on the panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Main Menu</guimenuitem></menuchoice>.</para>
+          <para>You can also add the <application>Menu Bar</application> to any of your
+panels. To add the <application>Menu Bar</application> to a panel, right-click
+on a vacant space on the panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Menu Bar</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Drawers</para>
+          <para><firstterm>Drawers</firstterm> are sliding extensions to a panel that
+you can open or close from a drawer icon, as shown in <xref linkend="gosoverview-FIG-28"/>.
+ Drawers can help you to organize your work when you run a lot of applications
+simultaneously. You can place all the same functional elements in a drawer
+that you can put in any other type of panel. </para>
+          <para>To add a drawer to a panel, right-click on a vacant space on the panel,
+then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Drawer</guimenuitem></menuchoice>. </para>
+          <para>To open a drawer click on the drawer. To close a drawer click on the
+drawer again.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-21">
+      <title>To Manipulate Panel Objects</title>
+      <para>You can manipulate panel objects in the following ways:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Move objects within a panel, or to another panel.</para>
+          <para>You can move any object to another location in the panel. You can also
+move an object from one panel to another panel. Use the middle mouse button
+to drag the panel object to the new location.</para>
+        </listitem>
+        <listitem>
+          <para>Copy menu items to a panel.</para>
+          <para>Drag the item from the menu to the panel. Alternatively, if the menu
+item is a launcher right-click on the menu item, then choose <guimenuitem>Add this launcher to panel</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-42">
+    <title>Menus</title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>You can access all Java Desktop System functions through menus. You
+can access your menus from the following Java Desktop System components:</para>
+    <para>The Java Desktop System main menu is represented by a <guibutton>Launch</guibutton> button as follows:<screenshot><mediaobject><imageobject><imagedata fileref="figures/launch_icon.png" format="PNG"/></imageobject><textobject><phrase>Launch Button</phrase></textobject></mediaobject></screenshot></para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guibutton>Launch</guibutton>
+        </para>
+        <para><guibutton>Launch</guibutton> contains the <guimenu>Applications</guimenu>
+menu, and various other functions. You can use the <guimenu>Applications</guimenu>
+menu to access almost all of the standard applications, commands, and configuration
+options. </para>
+        <para>To add a <guibutton>Launch</guibutton> button to a panel, right-click
+on the panel, then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Main Menu</guimenuitem></menuchoice>. Click on the <guibutton>Launch</guibutton> button on a panel to open the Java Desktop System main
+menu. </para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>Menu Bar</application>
+        </para>
+        <para><application>Menu Bar</application> contains <guimenu>Applications</guimenu>
+and <guimenu>Actions</guimenu> menus. You can use the <guimenu>Applications</guimenu> menu and the <guimenu>Actions</guimenu> menu to access almost all
+of the standard applications, commands, and configuration options. </para>
+        <para>To add <application>Menu Bar</application> to a panel, right-click on
+the panel then choose <menuchoice><guimenu>Add to Panel</guimenu><guimenuitem>Menu Bar</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Panels</para>
+        <para>You can add as many additional menus as you want to any of your panels.
+To open a menu that you add to a panel, click on the menu icon on the panel.
+You can perform other actions on your menus, such as copy menu items to panels.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-18">
+    <title>Windows</title>
+    <indexterm>
+      <primary>windows</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>You can display many windows at the same time in the Java Desktop System.
+Each window has a frame. The window frame contains active control elements
+that you can use to work with the window.</para>
+    <sect2 id="gosoverview-16">
+      <title>Types of Windows</title>
+      <para>The Java Desktop System features the following types of window:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Application windows</para>
+          <para>When you run an application, a frame usually borders the window. The
+top edge of the application window contains a titlebar. The titlebar contains
+buttons that you can use to work with the window. The buttons in an application
+window frame enable you to perform actions such as open the <guimenu>Window
+Menu</guimenu>, or close the window. The <guimenu>Window Menu</guimenu> provides
+commands that you can perform on the window.</para>
+        </listitem>
+        <listitem>
+          <para>Dialog windows</para>
+          <para>Dialog windows are associated with interactive processes. A dialog window
+consists of the window frame, and a single interactive pane that provides
+information and controls for the user. This manual refers to the interactive
+part of a dialog window as a dialog. The frame of a dialog window contains
+buttons that enable you to open the <guimenu>Window Menu</guimenu>, or to
+close the dialog window.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-32">
+      <title>To Manipulate Windows</title>
+      <para>You use the frame of an application window or dialog window to perform
+various actions with the window. Most of the control elements are located
+on the top edge of the window frame. <xref linkend="gosoverview-FIG-33"/> shows
+the top edge of a frame for a typical application window.</para>
+      <figure id="gosoverview-FIG-33">
+        <title>Top Edge of Frame for a Typical Application Window</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Top edge of application window frame. Callouts: Window Menu button, Titlebar, Minimize, Maximize, Close Window buttons.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>The active control elements of the window frame are as follows: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="41.65*"/>
+          <colspec colname="colspec1" colwidth="58.35*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Control Element</para>
+              </entry>
+              <entry valign="top">
+                <para>Description </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><guibutton>Window Menu</guibutton>
+button</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Click on
+the <guibutton>Window Menu</guibutton> button to open the <guimenu>Window
+Menu</guimenu>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Titlebar</para>
+              </entry>
+              <entry valign="top">
+                <para>You can use the titlebar to move and shade the window. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guibutton>Minimize</guibutton> button</para>
+              </entry>
+              <entry valign="top">
+                <para>Click on the <guibutton>Minimize</guibutton> button
+to minimize the window. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guibutton>Maximize</guibutton> button</para>
+              </entry>
+              <entry valign="top">
+                <para>You can use the <guibutton>Maximize</guibutton>
+button to maximize and restore the window.</para>
+                <para>To maximize a window
+click on the <guibutton>Maximize</guibutton> button. To restore the window
+click on the <guibutton>Maximize</guibutton> button again. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guibutton>Close Window</guibutton> button</para>
+              </entry>
+              <entry valign="top">
+                <para>Click on the <guibutton>Close Window</guibutton> button to close the window. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>Border</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Right-click on the border to open the <guimenu>Window Menu</guimenu>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>To change the size of windows grab the border of the window, but not
+the titlebar. Drag the border until the window is the size that you require.</para>
+    </sect2>
+    <sect2 id="gosoverview-20">
+      <title>To Give Focus to a Window</title>
+      <para>A window that has focus can receive input from the mouse and the keyboard.
+Only one window can have focus at a time. The window that has focus has a
+different appearance than other windows. </para>
+      <para>You can use the following elements to give focus to a window:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry valign="top">
+                <para>Element</para>
+              </entry>
+              <entry valign="top">
+                <para>Action</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Mouse</para>
+              </entry>
+              <entry valign="top">
+                <para>Click on the window, if the window is visible. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Shortcut keys</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Use shortcut keys to switch between
+the windows that are open. To give focus to a window, release the keys. The
+default shortcut keys to switch between windows are <keycombo><keycap>Alt</keycap><keycap>Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Window List</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Click on the button that represents the window in <application>Window List</application>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>Workspace Switcher</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Click on the window that you want to give focus to in the <application>Workspace
+Switcher</application> display.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-39">
+    <title>Workspaces</title>
+    <indexterm>
+      <primary>workspaces</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>You can display many windows at the same time on your desktop. Your
+windows are displayed in subdivisions of the desktop that are called workspaces.
+A workspace is a discrete area in which you can work. </para>
+    <para>Every workspace contains the same desktop, the same panels, and the
+same menus. However, you can run different applications, and open different
+windows in each workspace. You can display only one workspace at a time on
+the desktop but you can have windows open in other workspaces.  </para>
+    <para>Workspaces enable you to organize the desktop when you run many applications
+at the same time. When your current workspace becomes crowded with windows,
+you can move your work to another workspace. You can also switch to another
+workspace then start more applications.</para>
+    <para>Workspaces are displayed in the <application>Workspace Switcher</application>
+panel application. In <xref linkend="gosoverview-FIG-42"/>, <application>Workspace
+Switcher</application> contains four workspaces. The first three workspaces
+contain open windows. The last workspace does not contain currently active
+windows.</para>
+    <figure id="gosoverview-FIG-42">
+      <title>Workspaces Displayed in Workspace Switcher</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Workspace Switcher. The context describes the graphic.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <sect2 id="gosoverview-41">
+      <title>To Switch Between Workspaces</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>switching between</secondary>
+      </indexterm>
+      <para>You can switch between workspaces in the following ways:</para>
+      <itemizedlist>
+        <listitem>
+          <para>In <application>Workspace Switcher</application>, click on
+the workspace where you want to work.</para>
+        </listitem>
+        <listitem>
+          <para>Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>right arrow</keycap></keycombo> to switch to the workspace on the right of the current
+workspace.</para>
+        </listitem>
+        <listitem>
+          <para>Press <keycombo><keycap>Ctrl</keycap><keycap>Alt</keycap><keycap>left arrow</keycap></keycombo> to switch to the workspace on the left of the current
+workspace.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosoverview-40">
+      <title>To Add Workspaces</title>
+      <indexterm>
+        <primary>workspaces</primary>
+        <secondary>specifying number of</secondary>
+      </indexterm>
+      <para>To add workspaces to your desktop, right-click on the <application>Workspace Switcher</application> panel application, then choose <guimenuitem>Preferences</guimenuitem>. The <guilabel>Workspace Switcher Preferences</guilabel>
+dialog is displayed. Use the <guilabel>Number of workspaces</guilabel> spin
+box to specify the number of workspaces that you require.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-56">
+    <title>File Manager</title>
+    <indexterm>
+      <primary>Nautilus file manager</primary>
+      <see>file manager</see>
+    </indexterm>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>The file manager provides an integrated access
+point to your files, applications, FTP sites, and URIs. To open a file manager
+window, double-click on the <guilabel>Documents</guilabel> object.</para>
+    <para>You can access your files and folders in the following ways:<itemizedlist><listitem><para>Navigate your files and folders as objects</para><para>The file manager represents your files and folders as individual objects,
+by default. Each file or folder is displayed in an individual file object
+window. When you open files or folders from file object windows, each file
+or folder opens a new window.</para></listitem><listitem><para>Browse your files and folders</para><para>You can also use file browser windows to browse your files and folders.
+When you open a file or folder in a file browser window, the file or folder
+opens in the window.</para><para>File browser windows can contain the following panes:<variablelist><varlistentry><term>Side pane</term><listitem><para>Enables you to navigate
+through your files. This pane also displays information about the current
+file or folder. The side pane is on the left side of the file browser window.</para></listitem></varlistentry><varlistentry><term>View pane</term><listitem><para>Displays the contents
+of files and folders. The view pane is on the right side of the file browser
+window.</para></listitem></varlistentry></variablelist></para></listitem></itemizedlist></para>
+    <para>The file manager enables you to do the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para>View files and folders</para>
+        <para>You can view your files and folders as icons or as a list. You can view
+the contents of some types of file within a file browser window. Alternatively,
+you can open the files in the appropriate application from a file object manager. </para>
+      </listitem>
+      <listitem>
+        <para>Manage your files and folders</para>
+        <para>You can use the file manager to create, move, copy, rename, and remove
+files and folders.</para>
+      </listitem>
+      <listitem>
+        <para>Run scripts</para>
+        <para>You can run scripts from the file manager, and you can select files
+and folders on which to run your scripts.</para>
+      </listitem>
+      <listitem>
+        <para>Customize your files and folders</para>
+        <para>You can add emblems to your files and folders to indicate particular
+states. For example, you can add an <guilabel>Important</guilabel> emblem
+to a file to indicate that the file is important. You can also customize folders
+in the following ways: <itemizedlist><listitem><para>Add a note to a folder.</para></listitem><listitem><para>Specify a custom background or pattern for a folder.</para></listitem><listitem><para>Specify a zoom setting for a folder.</para></listitem></itemizedlist></para>
+      </listitem>
+      <listitem>
+        <para>Open special <firstterm>Uniform Resource Identifiers</firstterm>
+(URIs)</para>
+        <para>The Java Desktop System contains special URIs that enable you to access
+particular functions from the file manager. For example, to access the preference
+tools, you can access the <command>preferences:///</command> URI in the file
+manager.</para>
+      </listitem>
+      <listitem>
+        <para>Write CDs</para>
+        <para>The file manager provides a special location where you can copy files
+and folders that you want to write to a CD. You can write the contents of
+the location to a CD easily.</para>
+      </listitem>
+    </itemizedlist>
+    <para>The file manager also creates the desktop background.</para>
+    <sect2 id="gosoverview-58">
+      <title>To Open Files From the File Object Window</title>
+      <para>Navigate to the folder where the file that you want to open resides.
+Double-click on the folder icon. When the file that you want to open is displayed,
+double-click on the file icon to open the file.</para>
+    </sect2>
+    <sect2 id="gosoverview-517">
+      <title>To Open Files From the File Browser Window</title>
+      <para>From a file object window, right-click on a folder and choose <guimenu>Browse Folder</guimenu> to open the <guilabel>File Browser</guilabel> window.
+Alternatively, highlight a folder and choose <guimenu>File</guimenu> to open
+the file pull-down menu. Choose <guimenuitem>Browse Folder </guimenuitem>
+to open the <guilabel>File Browser </guilabel> window.</para>
+      <para>To browse to the file that you want to view, double-click on the folder
+icons in the view pane. When the file that you want to view is displayed,
+double-click on the file icon to view the file in the file browser window.</para>
+    </sect2>
+    <sect2 id="gosoverview-57">
+      <title>To Move Files Between Folders</title>
+      <para>You can move files between folders by opening two or more file manager
+windows. Open a different folder in each window, then drag the files from
+one window to the other. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-11">
+    <title>Desktop Background</title>
+    <indexterm>
+      <primary>Nautilus desktop</primary>
+      <see>desktop</see>
+    </indexterm>
+    <indexterm>
+      <primary>desktop</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>The desktop background is an active component of the user interface.
+You can use the desktop background to perform the following actions:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Start your applications, and open your files and folders. </para>
+        <para>You can add <firstterm>desktop objects</firstterm> for convenient access
+to the files, folders, and applications that you use frequently. For example,
+you add a launcher for an application that you use often.</para>
+      </listitem>
+      <listitem>
+        <para>Open the <guimenu>Desktop</guimenu> menu.</para>
+        <para>Right-click on the desktop to open the <guimenu>Desktop</guimenu> menu.
+You can use the <guimenu>Desktop</guimenu> menu to perform actions on the
+desktop background.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-29">
+      <title>To Open Desktop Background Objects</title>
+      <para>To open an object from the desktop background, double-click on the object.
+You can set your preferences in a <application>File Manager</application>
+window so that you click once on an object to execute the default action.</para>
+    </sect2>
+    <sect2 id="gosoverview-19">
+      <title>To Add Objects to the Desktop Background</title>
+      <para>You can add desktop objects for convenient access to files, folders,
+and applications that you use frequently. You can add objects to your desktop
+background in the following ways:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Use the <guimenu>Desktop</guimenu> menu to add a launcher
+to the desktop background.</para>
+        </listitem>
+        <listitem>
+          <para>Drag an object from a file manager window to the desktop background.
+For example, you can create a symbolic link to a file that you use often,
+then drag the link to your desktop background. The icon for the link is moved
+to the desktop background. To open the file, double-click on the icon. You
+can also drag files and folders to the desktop background. </para>
+        </listitem>
+        <listitem>
+          <para>Drag an application launcher from a menu to the desktop background.
+For example, you can open a menu that contains a launcher for an application
+that you use often, then drag the launcher to your desktop background. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosoverview-509">
+    <title>This Computer Location</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>This Computer icon. The graphic describes the context.</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <indexterm>
+      <primary>Start Here location</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>file manager</primary>
+      <secondary>Start Here
+location</secondary>
+      <see>Start Here location</see>
+    </indexterm>
+    <para>The <guilabel>This Computer</guilabel> location enables you to access the following functions:</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <guilabel>File System</guilabel>
+        </para>
+        <para>Double-click on <guilabel>File System</guilabel> to access your system
+files and folders from file object windows.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Applications</guilabel>
+        </para>
+        <para>Double-click on <guilabel>Applications</guilabel> to access your key
+GNOME Desktop applications. You can also access the <guimenu>Applications</guimenu> menu through the <application>Menu Bar</application> and the <guibutton>Launch</guibutton> button.</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guilabel>Desktop Preferences</guilabel>
+        </para>
+        <para>Double-click on <guilabel>Preferences</guilabel> to customize the Java
+Desktop System.</para>
+      </listitem>
+      <listitem>
+        <para>Programs that enable you to configure your system as a server,
+and to modify other system configuration details.</para>
+      </listitem>
+    </itemizedlist>
+    <para>You can access the <guilabel>This Computer</guilabel> location in the
+following ways:</para>
+    <itemizedlist>
+      <listitem>
+        <para>From the desktop background</para>
+        <para>Double-click on the <guilabel>This Computer</guilabel> object on the
+desktop background. The contents of the <guilabel>This Computer</guilabel>
+location are displayed in a file object window.</para>
+      </listitem>
+      <listitem>
+        <para>From the <guibutton>Launch</guibutton> button</para>
+        <para>Click <guibutton>Launch</guibutton>, then choose <guimenuitem>This Computer</guimenuitem>. The contents of the <guilabel>This Computer</guilabel> location
+are displayed in a file object window.</para>
+      </listitem>
+      <listitem>
+        <para>From a file object window</para>
+        <para>Choose <menuchoice><guimenu>Places</guimenu><guimenuitem>This
+Computer</guimenuitem></menuchoice>. The contents of the <guilabel>This Computer</guilabel> location are displayed in a file object window.</para>
+      </listitem>
+      <listitem>
+        <para>From a file browser window</para>
+        <para>Access the <command>computer:///</command> URI in a file browser window.
+The contents of the <guilabel>This Computer</guilabel> location are displayed
+in the window.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-55">
+    <title>Desktop Preferences</title>
+    <indexterm>
+      <primary>preference tools</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>You can use preference tools to configure almost every feature
+of the Java Desktop System. Each tool controls a particular part of the behavior
+of the Java Desktop System. For example, you can use a preference tool to
+select a theme for the Java Desktop System. A <firstterm>theme</firstterm>
+is a group of coordinated settings that specify the visual appearance of a
+part of your interface. </para>
+    <para>You can start your preference tools in either of the following ways:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Click <guibutton>Launch</guibutton>, then choose<guimenuitem>Preferences</guimenuitem>. Choose the item that you want to require from the
+submenus. </para>
+      </listitem>
+      <listitem>
+        <para>Double-click on the <guilabel>This Computer</guilabel> object
+on the desktop. A file object window opens at the <guilabel>This Computer</guilabel> location. Double-click on the <guilabel>Preferences</guilabel>
+object to display the preference tools. Double-click on the item that you
+require.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-54">
+    <title>Desktop Applications</title>
+    <indexterm>
+      <primary>applications</primary>
+      <secondary>overview</secondary>
+    </indexterm>
+    <para>The applications that are provided with the Java Desktop
+System share several characteristics. For example, the applications have a
+consistent look-and-feel. The applications share characteristics because the
+applications use the same programming libraries. An application that uses
+the standard GNOME programming libraries is called a <firstterm>GNOME-compliant
+application</firstterm>. For example, the <application>Nautilus</application>
+file manager and the <application>gedit</application> text editor are GNOME-compliant
+applications.</para>
+    <para>GNOME provides libraries in addition to the libraries provided by your
+operating system. The libraries enable GNOME to run your existing applications
+as well as GNOME-compliant applications. For example, if your operating system
+is UNIX-based, you can run your current X11 applications and Motif applications
+from the Java Desktop System.</para>
+    <para>Some of the features of GNOME-compliant applications are as follows:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Consistent look-and-feel</para>
+        <para>GNOME-compliant applications have a consistent look-and-feel. GNOME-compliant
+applications use the look-and-feel settings that you specify in the preference
+tools. You can use the following tools to change the look-and-feel of your
+GNOME-compliant applications:<itemizedlist><listitem><para><application>Menus &amp; Toolbars</application> preference
+tool</para></listitem><listitem><para><application>Theme</application> preference tool</para></listitem></itemizedlist></para>
+      </listitem>
+      <listitem>
+        <para>Menubars, toolbars, and statusbars</para>
+        <para>Most GNOME-compliant applications have a menubar, a toolbar, and a statusbar.
+The menubar always contains a <guimenu>File</guimenu> menu and a <guimenu>Help</guimenu> menu. The <guimenu>File</guimenu> menu always contains an <guimenuitem>Quit</guimenuitem> menu item, and the <guimenu>Help</guimenu> menu always
+contains an <guimenuitem>About</guimenuitem> menu item.</para>
+        <para>A <firstterm>toolbar</firstterm> is a bar that appears under the menubar.
+A toolbar contains buttons for the most commonly-used commands. A <firstterm>statusbar</firstterm> is a bar at the bottom of a window that provides information
+about the current state of what you are viewing in the window. GNOME-compliant
+applications might also contains other bars. For example, the <application>File Browser</application> contains a location bar.</para>
+        <para>Some of the bars in GNOME-compliant applications are detachable. That
+is, the bar has a handle that you can grab then drag the bar to another location.
+You can drag the bar to snap to another side of the window, or to another
+part of the screen. For example, you can detach the menubar, toolbar, and
+location bar in the file manager. </para>
+      </listitem>
+      <listitem>
+        <para>Default shortcut keys</para>
+        <para>GNOME-compliant applications use the same shortcut keys to perform the
+same actions. For example, to quit a GNOME-compliant application, press <keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>. To undo an action in a GNOME-compliant
+application, press <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>. </para>
+      </listitem>
+      <listitem>
+        <para>Drag-and-drop</para>
+        <para>GNOME-compliant applications use the same protocol to implement drag-and-drop
+operations. Therefore, GNOME-compliant applications provide consistent feedback
+when you drag-and-drop items.</para>
+        <para>The use of the same protocol also enables GNOME-compliant applications
+to interoperate in a sophisticated manner. For example, GNOME-compliant applications
+recognize the format of the items that you drag. When you drag a HTML file
+from a <application>File Manager</application> window to a web browser, the
+file is displayed in HTML format in the browser. However, when you drag the
+HTML file to a text editor, the file is displayed in plain text format in
+the text editor. </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="gosoverview-12">
+    <title>To Find Out More</title>
+    <indexterm>
+      <primary>help</primary>
+      <secondary>how to find</secondary>
+    </indexterm>
+    <para>The Java Desktop System provides help if you want to find out more about
+the following areas: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Java Desktop System topics</para>
+      </listitem>
+      <listitem>
+        <para>Panel Applications</para>
+      </listitem>
+      <listitem>
+        <para>Desktop Applications</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosoverview-31">
+      <title>To Find Out More About Java Desktop System Topics</title>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>starting help system</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>Java Desktop System
+topics</secondary>
+      </indexterm>
+      <para>You can find out more about particular
+Java Desktop System topics in the integrated help system. To
+start the help system, click <guibutton>Launch</guibutton>, then choose <guimenuitem>Help</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-33">
+      <title>To Find Out More About Panel Applications</title>
+      <indexterm>
+        <primary>panel application</primary>
+        <secondary>getting help</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>panel applications</secondary>
+      </indexterm>
+      <para>To find out more about a specific panel application,
+right-click on the panel application, then choose <guimenuitem>Help</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-35">
+      <title>To Find Out More About Desktop Applications</title>
+      <indexterm>
+        <primary>applications</primary>
+        <secondary>help</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>help</primary>
+        <secondary>applications</secondary>
+      </indexterm>
+      <para>To find out more about a specific desktop application, start the desktop
+application, then choose <menuchoice><guimenu>Help</guimenu><guimenuitem>Contents</guimenuitem></menuchoice>. Alternatively, start the desktop application,
+then press <keycap>F1</keycap>.</para>
+    </sect2>
+  </sect1>
+</chapter>

@@ -1,0 +1,363 @@
+<chapter id="gosgetstarted-1">
+  <title>D&eacute;marrage</title>
+  <highlights>
+    <para>Ce chapitre fournit les informations n&eacute;cessaires au d&eacute;marrage, &agrave; la gestion et &agrave; la fermeture d'une session de Java Desktop System.</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Connexion &agrave; votre bureau</title>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary> d&eacute;marrage</secondary>
+    </indexterm>
+    <para>Une session correspond &agrave; la p&eacute;riode de temps s'&eacute;coulant entre la connexion &agrave; Java Desktop System et la d&eacute;connexion. L'&eacute;cran de connexion est votre passerelle d'acc&egrave;s &agrave; Java Desktop System. Il affiche des champs dans lesquels vous devez entrer votre nom d'utilisateur et votre mot de passe. Cet &eacute;cran de connexion vous permet de choisir des options de connexion, par exemple, la langue de la session.</para>
+    <para>Une session s'ouvre au moment o&ugrave; vous vous connectez. Le gestionnaire de sessions se lance apr&egrave;s avoir authentifi&eacute; votre nom d'utilisateur et votre mot de passe. Il vous permet de g&eacute;rer la session. Par exemple, il vous permet d'enregistrer l'&eacute;tat de la derni&egrave;re session pour pouvoir y retourner &agrave; la connexion suivante. Le gestionnaire de session enregistre et restaure les param&egrave;tres suivants : </para>
+    <itemizedlist>
+      <listitem>
+        <para>param&egrave;tres relatifs &agrave; l'apparence et au comportement, comme les polices, les couleurs et les param&egrave;tres de la souris ; </para>
+      </listitem>
+      <listitem>
+        <para>applications en cours d'ex&eacute;cution, par exemple les fen&ecirc;tres du gestionnaire de fichiers et de l'&eacute;diteur de texte. Il est impossible d'enregistrer et de restaurer des applications non prises en charge par le gestionnaire de session. Par exemple, si vous d&eacute;marrez l'&eacute;diteur <application>vi</application> &agrave; partir de la ligne de commande d'une fen&ecirc;tre de terminal, le gestionnaire de session est incapable de restaurer votre session d'&eacute;dition. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2>
+      <title>Connexion au bureau sous Linux</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary> connexion &agrave;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>connexion &agrave;</primary>
+        <secondary> session</secondary>
+      </indexterm>
+      <para>Proc&eacute;dez comme suit pour vous connecter au bureau :</para>
+      <orderedlist>
+        <listitem>
+          <para>Sur l'&eacute;cran de connexion, cliquez sur l'ic&ocirc;ne <guilabel>Session</guilabel>. Choisissez Java Desktop System dans la liste des environnements de bureau disponibles. </para>
+        </listitem>
+        <listitem>
+          <para>Entrez le nom d'utilisateur dans le champ <guilabel>Nom d'utilisateur</guilabel> de l'&eacute;cran de connexion et appuyez sur <keycap>Retour</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Entrez le mot de passe dans le champ <guilabel>Mot de passe</guilabel> de l'&eacute;cran de connexion et appuyez sur <keycap>Retour</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <para>Une fois la connexion &eacute;tablie, le gestionnaire de session d&eacute;marre une session. Si vous vous connectez pour la premi&egrave;re fois, le gestionnaire de session d&eacute;marre une nouvelle session. Si vous vous &ecirc;tes d&eacute;j&agrave; connect&eacute; et que vous avez enregistr&eacute; votre session pr&eacute;c&eacute;dente lors de la d&eacute;connexion, le gestionnaire de sessions la restaure.</para>
+      <para>Si vous souhaitez &eacute;teindre ou red&eacute;marrer le syst&egrave;me avant de vous connecter, cliquez sur l'ic&ocirc;ne <guilabel>Actions</guilabel> de l'&eacute;cran de connexion. Une bo&icirc;te de dialogue s'affiche. S&eacute;lectionnez l'option de votre choix et cliquez sur <guibutton>OK</guibutton>. </para>
+    </sect2>
+    <sect2>
+      <title>Ouverture d'une session dans une autre langue sous Linux</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>ouverture dans une autre langue</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ouverture d'une session dans une autre langue</primary>
+      </indexterm>
+      <indexterm>
+        <primary>ouverture</primary>
+        <secondary>session dans une autre langue</secondary>
+      </indexterm>
+      <para>Pour vous connecter au bureau dans une autre langue, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>Sur l'&eacute;cran de connexion, cliquez sur l'ic&ocirc;ne <guilabel>Langue</guilabel>. S&eacute;lectionnez la langue de votre choix dans la liste des langues disponibles. </para>
+        </listitem>
+        <listitem>
+          <para>Entrez le nom d'utilisateur dans le champ <guilabel>Nom d'utilisateur</guilabel> de l'&eacute;cran de connexion et appuyez sur <keycap>Retour</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Entrez le mot de passe dans le champ <guilabel>Mot de passe</guilabel> de l'&eacute;cran de connexion et appuyez sur <keycap>Retour</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>lorsque vous vous connectez dans une autre langue, choisissez la langue de l'interface utilisateur. Ne sp&eacute;cifiez aucune disposition de clavier pour la session. Utilisez l'application du tableau de bord <application>Changeur de configuration du clavier</application> pour sp&eacute;cifier une configuration de clavier.</para>
+      </note>
+      <para><firstterm>Les applications de tableau de bord</firstterm> sont de petites applications interactives r&eacute;sidant sur  un tableau de bord, par exemple le <application>Lecteur de CD</application>. Chacune poss&egrave;de une interface utilisateur simple dont vous pouvez vous servir &agrave; l'aide de la souris ou du clavier. </para>
+    </sect2>
+    <sect2>
+      <title>Connexion au bureau sous Solaris</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>connexion</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>connexion</primary>
+      </indexterm>
+      <para>Proc&eacute;dez comme suit pour vous connecter au bureau :</para>
+      <orderedlist>
+        <listitem>
+          <para>S&eacute;lectionnez <menuchoice><guimenu>Options</guimenu><guimenuitem> Session</guimenuitem></menuchoice>. Choisissez Java Desktop System dans la liste des environnements de bureau disponibles.</para>
+        </listitem>
+        <listitem>
+          <para>Entrez votre nom d'utilisateur dans le champ correspondant de la bo&icirc;te de dialogue <guilabel>Gestionnaire de connexion</guilabel>, puis cliquez sur <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Proc&eacute;dez de la m&ecirc;me mani&egrave;re pour votre mot de passe. </para>
+        </listitem>
+      </orderedlist>
+      <para>Une fois la connexion &eacute;tablie, le gestionnaire de session d&eacute;marre une session. Si vous vous connectez pour la premi&egrave;re fois, le gestionnaire de session d&eacute;marre une nouvelle session. Dans le cas contraire, il restaure la session pr&eacute;c&eacute;dente.</para>
+    </sect2>
+    <sect2>
+      <title>Ouverture d'une session dans une autre langue sous Solaris</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>ouverture dans une autre langue</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>ouverture de session dans une autre langue</primary>
+      </indexterm>
+      <indexterm>
+        <primary>ouverture</primary>
+        <secondary>session dans une autre langue</secondary>
+      </indexterm>
+      <para>Pour vous connecter au bureau dans une autre langue, proc&eacute;dez comme suit :</para>
+      <orderedlist>
+        <listitem>
+          <para>Dans la bo&icirc;te de dialogue de connexion, s&eacute;lectionnez <menuchoice><guimenu>Options</guimenu><guimenuitem>Session</guimenuitem></menuchoice>. Choisissez Java Desktop System dans la liste des environnements de bureau disponibles.</para>
+        </listitem>
+        <listitem>
+          <para>Dans la bo&icirc;te de dialogue de connexion, s&eacute;lectionnez <menuchoice><guimenu>Options</guimenu><guimenuitem>Language</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Choisissez le groupe de langues ad&eacute;quat.</para>
+        </listitem>
+        <listitem>
+          <para>S&eacute;lectionnez une langue.</para>
+        </listitem>
+        <listitem>
+          <para>Connectez-vous.</para>
+        </listitem>
+      </orderedlist>
+      <para>Votre administrateur syst&egrave;me d&eacute;finit la langue par d&eacute;faut de votre syst&egrave;me. Le menu <guimenu>Options</guimenu> de la bo&icirc;te de dialogue <guilabel>Gestionnaire de connexion</guilabel> vous permet de choisir d'autres langues. Si vous effectuez une s&eacute;lection dans ce menu, votre syst&egrave;me d&eacute;finit la variable LANG pour votre session. Ensuite, il restaure la langue par d&eacute;faut &agrave; la fin de la session. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-88">
+    <title>Lors de la premi&egrave;re session</title>
+    <para>Lors de votre premi&egrave;re session, vous verrez appara&icirc;tre une page de d&eacute;marrage affichant, dans sa partie inf&eacute;rieure, un tableau de bord et diff&eacute;rentes ic&ocirc;nes, comme illustr&eacute; ci-apr&egrave;s.</para>
+    <sect2 id="chap3-8">
+      <title>Configuration initiale du bureau</title>
+      <para>Cette rubrique pr&eacute;sente les &eacute;l&eacute;ments affich&eacute;s sur le tableau de bord lorsque vous vous connectez pour la premi&egrave;re fois. Il est possible que votre administrateur syst&egrave;me ait d&eacute;fini votre tableau de bord inf&eacute;rieur en fonction de vos besoins propres. Par cons&eacute;quent, il peut diff&eacute;rer l&eacute;g&egrave;rement de celui qui est pr&eacute;sent&eacute; ici.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/jds_fulldesktop.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Le contexte d&eacute;crit les graphiques.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>En r&egrave;gle g&eacute;n&eacute;rale, la page de d&eacute;marrage de Java Desktop System affiche les &eacute;l&eacute;ments suivants : </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Poste de travail</guilabel>
+          </para>
+          <para>Vous permet d'acc&eacute;der aux informations concernant les m&eacute;dias et la configuration de votre syst&egrave;me. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Documents</guilabel>
+          </para>
+          <para>Fournit un acc&egrave;s direct aux fichiers stock&eacute;s dans votre r&eacute;pertoire par d&eacute;faut.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>R&eacute;seau</guilabel>
+          </para>
+          <para>Fournit un acc&egrave;s aux ordinateurs en r&eacute;seau &agrave; partir d'un r&eacute;pertoire unique.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Corbeille</guilabel>
+          </para>
+          <para>Fournit une zone de stockage temporaire pour vos fichiers, vos dossiers ou les objets de votre bureau, de laquelle vous pouvez ensuite les r&eacute;cup&eacute;rer ou les supprimer de fa&ccedil;on permanente.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>StarOffice 7</guilabel>
+          </para>
+          <para>Lance l'application StarOffice.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>&Agrave; propos de Java Desktop System&trade;</guilabel>
+          </para>
+          <para>Lance un navigateur d'aide &agrave; partir duquel vous pouvez acc&eacute;der aux informations de pr&eacute;sentation de <application>Java Desktop System</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Tableau de bord inf&eacute;rieur</para>
+          <para>Les objets de tableau de bord suivants s'affichent par d&eacute;faut sur le tableau de bord inf&eacute;rieur : </para>
+          <itemizedlist>
+            <listitem>
+              <para>Bouton <guibutton>Lancer</guibutton> : permet d'acc&eacute;der &agrave; des menus correspondant aux applications et aux outils de configuration de <application>Java Desktop System</application>. </para>
+            </listitem>
+            <listitem>
+              <para><application>Horloge</application> : Affiche la date et l'heure dans un tableau.</para>
+            </listitem>
+            <listitem>
+              <para><application>Afficher le bureau</application> : Affiche un bouton permettant de r&eacute;duire toutes les fen&ecirc;tres ouvertes. </para>
+            </listitem>
+            <listitem>
+              <para><application>Liste de fen&ecirc;tres</application> : affiche un bouton pour chaque fen&ecirc;tre ouverte. Vous pouvez cliquer sur l'un des boutons de la liste de fen&ecirc;tres pour r&eacute;duire ou restaurer la fen&ecirc;tre correspondante.</para>
+            </listitem>
+            <listitem>
+              <para><application>Zone de notification</application> : Affiche des ic&ocirc;nes correspondant &agrave; diff&eacute;rentes applications pour en indiquer l'activit&eacute;. Par exemple, lorsque vous utilisez l'application <application>Lecteur de CD</application>, une ic&ocirc;ne repr&eacute;sentant un CD s'affiche dans la <application>zone de notification</application>. </para>
+            </listitem>
+            <listitem>
+              <para><application>Changeur d'espace de travail</application> : affiche une repr&eacute;sentation visuelle des espaces de travail. Le <application>Changeur d'espace de travail</application> permet de basculer d'un espace de travail &agrave; l'autre. </para>
+            </listitem>
+            <listitem>
+              <para><application>Contr&ocirc;leur de volume</application> : Affiche un bouton vous permettant de contr&ocirc;ler et de d&eacute;finir le niveau sonore de votre syst&egrave;me.</para>
+            </listitem>
+            <listitem>
+              <para><application>Moniteur du r&eacute;seau</application> : Affiche une bo&icirc;te de dialogue vous permettant de contr&ocirc;ler les activit&eacute;s de votre r&eacute;seau.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Arri&egrave;re-plan du bureau</para>
+          <para>L'arri&egrave;re-plan du bureau se trouve derri&egrave;re tous les autres composants du syst&egrave;me de bureau Java. Il s'agit d'un composant actif de l'interface utilisateur. Vous pouvez placer des objets sur l'arri&egrave;re-plan du bureau pour acc&eacute;der rapidement &agrave; vos fichiers et r&eacute;pertoires ou pour d&eacute;marrer les applications fr&eacute;quemment utilis&eacute;es. Il est &eacute;galement possible de cliquer avec le bouton droit sur l'arri&egrave;re-plan du bureau pour ouvrir un menu. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>Verrouillage de l'&eacute;cran</title>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>verrouillage de l'&eacute;cran</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>verrouillage de l'&eacute;cran</primary>
+    </indexterm>
+    <indexterm>
+      <primary>bouton de verrouillage</primary>
+    </indexterm>
+    <para>Pour verrouiller l'&eacute;cran, proc&eacute;dez comme suit :</para>
+    <itemizedlist>
+      <listitem>
+        <para>Cliquez sur <guimenu>Lancer</guimenu>, puis choisissez <guimenuitem>Verrouiller l'&eacute;cran</guimenuitem>.</para>
+      </listitem>
+      <listitem>
+        <para>Si le bouton <guibutton>Verrouiller</guibutton> figure sur un tableau de bord, cliquez sur celui-ci. </para>
+        <para>Pour ce faire, cliquez avec le bouton droit sur le tableau de bord. Choisissez <menuchoice><guimenu>Ajouter au tableau de bord</guimenu><guisubmenu> Actions</guisubmenu><guimenuitem>Verrouiller</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Lorsque vous verrouillez votre &eacute;cran, l'&eacute;conomiseur d'&eacute;cran d&eacute;marre. Pour le d&eacute;verrouiller, d&eacute;placez la souris afin de faire appara&icirc;tre la bo&icirc;te de dialogue correspondante. Entrez votre nom d'utilisateur et votre mot de passe dans la bo&icirc;te de dialogue, puis appuyez sur <keycap>Retour</keycap>. </para>
+    <note>
+      <para>Il est n&eacute;cessaire qu'un &eacute;conomiseur d'&eacute;cran soit actif pour verrouiller l'&eacute;cran correctement. </para>
+    </note>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Gestion de votre session de bureau</title>
+    <indexterm>
+      <primary>applications de d&eacute;marrage</primary>
+      <secondary>g&eacute;r&eacute;es par la session</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>outils de pr&eacute;f&eacute;rences</primary>
+      <secondary>sessions</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>gestion</secondary>
+    </indexterm>
+    <para>Utilisez l'outil de pr&eacute;f&eacute;rences des <application>sessions</application> pour configurer votre session de bureau. L'outil de pr&eacute;f&eacute;rences des <application>sessions</application> reconna&icirc;t les types d'applications suivants : </para>
+    <itemizedlist>
+      <listitem>
+        <para>Applications g&eacute;r&eacute;es par la session. Lors de la sauvegarde des param&egrave;tres de votre session, le gestionnaire de session enregistre toutes les applications g&eacute;r&eacute;es par la session. Si vous vous reconnectez apr&egrave;s vous &ecirc;tre d&eacute;connect&eacute;, le gestionnaire de session les lance automatiquement. </para>
+      </listitem>
+      <listitem>
+        <para>Applications non g&eacute;r&eacute;es par la session. Lors de la sauvegarde des param&egrave;tres de votre session, le gestionnaire de session n'enregistre aucune des applications non g&eacute;r&eacute;es par la session. Si vous vous reconnectez apr&egrave;s vous &ecirc;tre d&eacute;connect&eacute;, le gestionnaire de session ne les lance pas. Vous devez lancer l'application manuellement. L'outil de pr&eacute;f&eacute;rences des <application>sessions</application> vous permet &eacute;galement de sp&eacute;cifier des applications non g&eacute;r&eacute;es par la session devant faire l'objet d'un d&eacute;marrage automatique. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>D&eacute;finition d'un comportement &agrave; la connexion et &agrave; la d&eacute;connexion</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>comportement &agrave; la connexion</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>comportement &agrave; la d&eacute;connexion</secondary>
+      </indexterm>
+      <para>Utilisez l'outil de pr&eacute;f&eacute;rences des <application>sessions</application> pour d&eacute;finir le comportement d'une session lorsque vous vous connectez ou vous d&eacute;connectez. Apportez les modifications requises dans l'onglet <guilabel>Options de session</guilabel>. Par exemple, vous pouvez choisir d'afficher un &eacute;cran d'accueil lors de votre connexion. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>Utilisation d'applications de d&eacute;marrage</title>
+      <indexterm>
+        <primary>programmes de d&eacute;marrage</primary>
+        <see>applications de d&eacute;marrage</see>
+      </indexterm>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>utilisation d'applications de d&eacute;marrage</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>applications de d&eacute;marrage</primary>
+        <secondary>non g&eacute;r&eacute;es par la session</secondary>
+      </indexterm>
+      <para>Vous pouvez configurer vos sessions afin qu'elles d&eacute;marrent avec des applications qu'elles ne g&egrave;rent pas. Utilisez l'outil de pr&eacute;f&eacute;rences des <application>sessions</application> pour configurer des applications de d&eacute;marrage non g&eacute;r&eacute;es par la session. L'onglet <guilabel>Programmes au d&eacute;marrage</guilabel> permet d'ajouter, d'&eacute;diter et de supprimer des applications. Si vous enregistrez vos param&egrave;tres avant de vous d&eacute;connecter, ces applications d&eacute;marrent automatiquement lors de votre connexion suivante. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>Passage d'une application &agrave; l'autre</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>passage d'une application &agrave; l'autre</secondary>
+      </indexterm>
+      <para>Utilisez l'outil de pr&eacute;f&eacute;rences des <application>sessions</application> pour parcourir les applications de la session active. L'onglet <guilabel>Session en cours</guilabel> contient les &eacute;l&eacute;ments suivants :</para>
+      <itemizedlist>
+        <listitem>
+          <para>toutes les applications courantes pouvant se connecter au gestionnaire de session et enregistrer l'&eacute;tat de l'application ;</para>
+        </listitem>
+        <listitem>
+          <para>tous les outils de pr&eacute;f&eacute;rence pouvant se connecter au gestionnaire de session et enregistrer l'&eacute;tat de l'outil.</para>
+        </listitem>
+      </itemizedlist>
+      <para>L'onglet <guilabel>Session en cours</guilabel> permet d'appliquer un nombre limit&eacute; d'actions aux propri&eacute;t&eacute;s de session d'une application ou d'un outil de pr&eacute;f&eacute;rences. Par exemple, vous pouvez &eacute;diter l'ordre de d&eacute;marrage et le style de red&eacute;marrage de chaque application ou outil de pr&eacute;f&eacute;rences de Java Desktop System figurant dans la liste. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>Enregistrement de vos param&egrave;tres</title>
+      <indexterm>
+        <primary>sessions</primary>
+        <secondary>enregistrement des param&egrave;tres</secondary>
+      </indexterm>
+      <para>Pour enregistrer les param&egrave;tres de la session, proc&eacute;dez comme suit : </para>
+      <orderedlist>
+        <listitem>
+          <para>Configurez votre session afin qu'elle enregistre automatiquement les param&egrave;tres lorsque vous vous d&eacute;connectez. Utilisez l'outil de pr&eacute;f&eacute;rences des <application>sessions</application> pour configurer votre session. L'outil de pr&eacute;f&eacute;rences des <application>sessions</application> d&eacute;marre. S&eacute;lectionnez l'option <guilabel>Enregistrer automatiquement les modifications de la session</guilabel> de l'onglet <guilabel>Options de session</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Quittez votre session. </para>
+        </listitem>
+      </orderedlist>
+      <para>Si vous ne s&eacute;lectionnez pas l'option <guilabel>Enregistrer automatiquement les modifications de la session</guilabel>, lorsque vous vous d&eacute;connectez, une bo&icirc;te de dialogue vous invite &agrave; enregistrer vos param&egrave;tres actuels. Pour enregistrer vos param&egrave;tres, s&eacute;lectionnez l'option, puis poursuivez la proc&eacute;dure de d&eacute;connexion.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>D&eacute;connexion</title>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary> fermer</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sessions</primary>
+      <secondary>d&eacute;connexion</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>d&eacute;connexion</primary>
+    </indexterm>
+    <para>Pour mettre un terme &agrave; la session, fermez tous les processus actifs, puis proc&eacute;dez comme suit :</para>
+    <itemizedlist>
+      <listitem>
+        <para>Cliquez sur <guimenu>Lancer</guimenu>, puis s&eacute;lectionnez <guimenuitem>D&eacute;connecter</guimenuitem> <replaceable>nom</replaceable>.</para>
+      </listitem>
+      <listitem>
+        <para>Si le bouton <guibutton>D&eacute;connecter</guibutton> figure sur un tableau de bord, cliquez sur celui-ci. </para>
+        <para>Pour ce faire, cliquez avec le bouton droit sur le tableau de bord. S&eacute;lectionnez <menuchoice><guimenu>Ajouter au tableau de bord</guimenu><guisubmenu> Actions</guisubmenu><guimenuitem> D&eacute;connecter</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Avant de quitter une session, vous pouvez enregistrer vos param&egrave;tres courants afin de les restaurer par la suite. Une bo&icirc;te de dialogue vous y invite lors du processus de d&eacute;connexion. Une option de l'outil de pr&eacute;f&eacute;rences des <application>sessions</application> permet d'enregistrer les param&egrave;tres automatiquement. </para>
+  </sect1>
+</chapter>

@@ -1,0 +1,757 @@
+<chapter id="goseditmainmenu-1">
+  <title>C&oacute;mo trabajar con men&uacute;s</title>
+  <highlights>
+    <para>En este cap&iacute;tulo se describe c&oacute;mo trabajar con los men&uacute;s en Java Desktop System.</para>
+  </highlights>
+  <sect1 id="goseditmainmenu-2">
+    <title>Introducci&oacute;n a los men&uacute;s </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <para>Se puede acceder a todas las funciones de Java Desktop System mediante los men&uacute;s. Se pueden agregar men&uacute;s a los paneles y utilizar unos y otros para realizar cualquier tarea. Se pueden tambi&eacute;n realizar diversos tipos de acciones con los men&uacute;s propios, como copiar elementos a los paneles.</para>
+    <para>A trav&eacute;s de Java Desktop System se accede a los siguientes men&uacute;s:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bot&oacute;n <guibutton>Lanzador</guibutton>: se puede acceder a los elementos del men&uacute; <guimenu>Aplicaciones</guimenu> desde el bot&oacute;n <guibutton>Lanzador</guibutton>. Puede haber muchos botones <guibutton>Lanzador</guibutton> en los paneles. </para>
+      </listitem>
+      <listitem>
+        <para><application>Barra de men&uacute;s</application>: se puede acceder a los elementos de los men&uacute;s <guimenu>Aplicaciones</guimenu> y <guimenu>Acciones</guimenu> desde la <application>Barra de men&uacute;s</application>. Puede haber muchas aplicaciones de panel <application>Barra de men&uacute;s</application> en los paneles. </para>
+      </listitem>
+      <listitem>
+        <para>Men&uacute; <guimenu>Aplicaciones</guimenu>: mediante el men&uacute; <guimenu>Aplicaciones</guimenu> se puede acceder a la mayor&iacute;a de aplicaciones, &oacute;rdenes y opciones de configuraci&oacute;n del escritorio. </para>
+      </listitem>
+      <listitem>
+        <para>Men&uacute; <guimenu>Acciones</guimenu>: mediante el men&uacute; <guimenu>Acciones</guimenu> se puede acceder a varias &oacute;rdenes que permiten ejecutar diferentes tareas. Por ejemplo, se puede iniciar la aplicaci&oacute;n <application>Herramienta de b&uacute;squeda</application> o finalizar la sesi&oacute;n de Java Desktop System. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Tambi&eacute;n se puede hacer clic con el bot&oacute;n derecho del rat&oacute;n para abrir el men&uacute; <guimenu>Escritorio</guimenu> que<guimenu/> permite realizar tareas relacionadas con el escritorio. </para>
+    <para>Todos estos men&uacute;s proporcionan m&uacute;ltiples maneras de realizar tareas y permiten al usuario trabajar como desee.</para>
+  </sect1>
+  <sect1 id="goseditmainmenu-5">
+    <title>Caracter&iacute;sticas de los men&uacute;s </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>caracter&iacute;sticas</secondary>
+    </indexterm>
+    <para>Los men&uacute;s pueden contener los siguientes elementos: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Submen&uacute;s</para>
+      </listitem>
+      <listitem>
+        <para>Lanzadores o elementos de men&uacute;</para>
+      </listitem>
+    </itemizedlist>
+    <para>Una flecha situada a la derecha de un elemento de men&uacute; indica que se trata de un submen&uacute;. Al apuntar al submen&uacute;, &eacute;ste se abre. Se pueden seleccionar los elementos del submen&uacute;.</para>
+    <para>Al seleccionar un lanzador, &eacute;ste arranca una aplicaci&oacute;n o ejecuta una orden. Tambi&eacute;n se puede hacer clic con el bot&oacute;n derecho del rat&oacute;n sobre un lanzador para abrir un men&uacute; emergente. El men&uacute; emergente permite a&ntilde;adir el elemento al panel, as&iacute; como realizar otras tareas. Para obtener m&aacute;s informaci&oacute;n acerca del men&uacute; emergente, consulte la siguiente secci&oacute;n.</para>
+    <para>La apariencia de la sesi&oacute;n configura tambi&eacute;n el aspecto de los men&uacute;s. Para cambiar el tema, utilice la herramienta de preferencias <application>Tema</application>.</para>
+    <sect2 id="goseditmainmenu-11">
+      <title>Men&uacute; emergente de elemento de men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>men&uacute; desplegable del elemento de men&uacute;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>men&uacute; desplegable del elemento de men&uacute;</primary>
+        <secondary>descripci&oacute;n</secondary>
+      </indexterm>
+      <para>Los elementos de los men&uacute;s llevan asociado un men&uacute; emergente que permite realizar las tareas relacionadas. Al hacer clic con el bot&oacute;n derecho en un elemento de un menu se abre el men&uacute; emergente asociado a &eacute;l. El men&uacute; emergente contiene adem&aacute;s un submen&uacute; que permite realizar tareas relacionadas con el men&uacute;. </para>
+      <para>El men&uacute; emergente del elemento de men&uacute; se utiliza para realizar las siguientes tareas: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Agregar elementos de men&uacute; a paneles en forma de lanzadores. </para>
+        </listitem>
+        <listitem>
+          <para>Quitar elementos de men&uacute;s.</para>
+        </listitem>
+        <listitem>
+          <para>Abrir el cuadro de di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel> con la orden del elemento de men&uacute; del di&aacute;logo.</para>
+        </listitem>
+        <listitem>
+          <para>Agregar men&uacute;s a los paneles. Puede agregarse un men&uacute; como objeto de men&uacute; o como objeto caj&oacute;n. </para>
+        </listitem>
+        <listitem>
+          <para>Agregar nuevos elementos a los men&uacute;s.</para>
+        </listitem>
+        <listitem>
+          <para>Cambiar las propiedades de los submen&uacute;s y elementos de men&uacute;.</para>
+        </listitem>
+      </itemizedlist>
+      <para>La <xref linkend="goseditmainmenu-FIG-39"/> muestra el men&uacute; emergente.</para>
+      <figure id="goseditmainmenu-FIG-39">
+        <title>Men&uacute; emergente de un elemento de men&uacute;<indexterm><primary>men&uacute; emergente de un elemento de men&uacute;</primary><secondary>ilustraci&oacute;n</secondary></indexterm></title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/launcher_popup.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Men&uacute; emergente de un elemento de men&uacute;. El contexto describe la ilustraci&oacute;n. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>La <xref linkend="goseditmainmenu-TBL-30"/> describe los men&uacute;s emergentes de un elemento de men&uacute;. <indexterm><primary>lanzadores</primary><secondary>agregar al panel</secondary></indexterm><indexterm><primary>men&uacute;s</primary><secondary>agregar al panel</secondary></indexterm></para>
+      <table frame="topbot" id="goseditmainmenu-TBL-30">
+        <title>Men&uacute;s emergentes de un elemento de men&uacute;</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="42.71*"/>
+          <colspec colname="colspec1" colwidth="57.29*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Elemento</para>
+              </entry>
+              <entry>
+                <para>Descripci&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>A&ntilde;adir este lanzador al panel</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Agrega el lanzador al panel desde el cual se ha abierto el men&uacute;.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>Quitar este elemento</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Elimina el lanzador del men&uacute;.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Poner en el formulario de ejecuci&oacute;n</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Muestra el cuadro de di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel> con la orden del campo <guilabel>Orden</guilabel> del lanzador en el campo de &oacute;rdenes del cuadro de di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para><guimenuitem>Ayuda para la aplicaci&oacute;n <replaceable>nombre_aplicaci&oacute;n</replaceable></guimenuitem> </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Abre la ayuda en l&iacute;nea de la aplicaci&oacute;n.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>Propiedades</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Muestra un cuadro de di&aacute;logo que permite editar las propiedades del lanzador.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><menuchoice><guimenu>Men&uacute; completo</guimenu><guimenuitem>A&ntilde;adir este caj&oacute;n al panel</guimenuitem></menuchoice> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Agrega el submen&uacute; como caj&oacute;n al panel desde el cual se ha abierto el men&uacute;.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><menuchoice><guimenu>Men&uacute; completo</guimenu><guimenuitem>A&ntilde;adir este men&uacute; al panel</guimenuitem></menuchoice> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Agrega el submen&uacute; como objeto de men&uacute; al panel desde el cual se ha abierto el men&uacute;. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>Men&uacute; completo</guimenu>
+                    <guimenuitem>A&ntilde;adir este nuevo elemento a este men&uacute;</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Permite a&ntilde;adir un elemento al submen&uacute;. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>Men&uacute; completo</guimenu>
+                    <guimenuitem>Propiedades</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Muestra un cuadro de di&aacute;logo que permite editar las propiedades del submen&uacute;.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-8">
+    <title>Men&uacute; Aplicaciones </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>men&uacute; Aplicaciones</secondary>
+    </indexterm>
+    <para>El men&uacute; <guimenu>Aplicaciones</guimenu> est&aacute; formado por una jerarqu&iacute;a de submen&uacute;s, a partir de la cual se pueden iniciar las aplicaciones est&aacute;ndar y las herramientas de preferencias de Java Desktop System. </para>
+    <para>Se puede acceder al men&uacute; <guimenu>Aplicaciones</guimenu> desde los siguientes lugares:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bot&oacute;n <guibutton>Lanzador</guibutton></para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>Barra de men&uacute;s</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="goseditmainmenu-51">
+    <title>Men&uacute; Acciones </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>men&uacute; Acciones</secondary>
+    </indexterm>
+    <para>El men&uacute; <guimenu>Acciones</guimenu> contiene varias &oacute;rdenes que permiten ejecutar tareas de Java Desktop System. La <xref linkend="goseditmainmenu-TBL-70"/> describe las &oacute;rdenes del men&uacute; <guimenu>Acciones</guimenu>.</para>
+    <table frame="topbot" id="goseditmainmenu-TBL-70">
+      <title>&Oacute;rdenes del men&uacute; Acciones</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="38.48*"/>
+        <colspec colname="colspec1" colwidth="61.52*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Elemento del men&uacute;</para>
+            </entry>
+            <entry>
+              <para>Funci&oacute;n </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Ejecutar aplicaci&oacute;n</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Muestra el di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel>. El cuadro de di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel> se utiliza para ejecutar &oacute;rdenes. Para obtener m&aacute;s informaci&oacute;n, consulte la <xref linkend="gospanel-23"/>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Abrir reciente</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Muestra un submen&uacute; de los &uacute;ltimos diez archivos guardados.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>Capturar la pantalla</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Realiza una captura de la pantalla y abre el cuadro de di&aacute;logo <guilabel>Guardar captura de pantalla</guilabel>. Utilice este di&aacute;logo<guilabel/> para guardar la captura.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>Buscar archivos</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>Inicia la aplicaci&oacute;n <application>Buscar archivos</application>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Bloquear la pantalla</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Bloquea la pantalla.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>Terminar sesi&oacute;n</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>Permite finalizar la sesi&oacute;n actual. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>Se puede acceder a los elementos del men&uacute; <guimenu>Acciones</guimenu> desde los siguientes lugares:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Bot&oacute;n <guibutton>Lanzador</guibutton></para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>Barra de men&uacute;s</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gospanel-23">
+      <title>Uso del cuadro de di&aacute;logo Ejecutar aplicaci&oacute;n </title>
+      <indexterm>
+        <primary>cuadro de di&aacute;logo Ejecutar aplicaci&oacute;n, usar</primary>
+      </indexterm>
+      <para>El cuadro de di&aacute;logo <guilabel>Ejecutar aplicaci&oacute;n</guilabel> proporciona acceso a la l&iacute;nea de &oacute;rdenes. Al ejecutar una orden en el cuadro de di&aacute;logo <guilabel>Ejecutar aplicaci&oacute;n</guilabel>, no se recibe la salida de la orden.</para>
+      <para>Para ejecutar una orden desde la l&iacute;nea de &oacute;rdenes efect&uacute;e los siguientes pasos: </para>
+      <orderedlist>
+        <listitem>
+          <para>Muestre el di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel>. Puede abrir el cuadro de di&aacute;logo <guilabel>Ejecutar aplicaci&oacute;n</guilabel> de diversas maneras:<itemizedlist><listitem><para>Desde cualquier panel</para><para>Agregue el bot&oacute;n <guibutton>Ejecutar</guibutton> al panel. Haga clic con el bot&oacute;n derecho en el panel y, a continuaci&oacute;n, elija <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu>Acciones</guisubmenu><guimenuitem>Ejecutar</guimenuitem></menuchoice>. Haga clic en el bot&oacute;n <guibutton>Ejecutar</guibutton>.</para></listitem><listitem><para>Desde el bot&oacute;n <guibutton>Lanzador</guibutton></para><para>Haga clic en <guibutton>Lanzador</guibutton> y seleccione <guimenuitem>Ejecutar una aplicaci&oacute;n</guimenuitem>.</para></listitem><listitem><para>Desde de la <application>Barra de men&uacute;s</application></para><para>Seleccione <menuchoice><guimenu>Acciones</guimenu><guimenuitem>Ejecutar una aplicaci&oacute;n</guimenuitem></menuchoice>.</para></listitem><listitem><para>Utilice accesos directos</para><para>La combinaci&oacute;n de teclas predeterminada para mostrar el di&aacute;logo <guilabel>Ejecutar aplicaci&oacute;n</guilabel> es <keycombo><keycap>Super</keycap><keycap>R</keycap></keycombo>. Esta combinaci&oacute;n se puede cambiar con la herramienta de preferencias <application>Accesos directos del teclado</application>.<guilabel/></para></listitem><listitem><para>Desde un men&uacute; emergente de elemento de men&uacute;</para><para>Haga clic con el bot&oacute;n de la derecha del rat&oacute;n sobre un elemento del men&uacute; y, a continuaci&oacute;n, seleccione <guilabel>Poner en el formulario de ejecuci&oacute;n</guilabel> en el men&uacute; emergente. El cuadro de di&aacute;logo <guilabel>Ejecutar una aplicaci&oacute;n</guilabel> se abrir&aacute; con el correspondiente orden.</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Introduzca la orden que desea ejecutar en el campo en blanco. Para elegir una orden previamente introducida, haga clic en el bot&oacute;n de flecha hacia abajo situado junto al campo y, a continuaci&oacute;n, elija la orden que desee ejecutar.</para>
+          <para>Tambi&eacute;n puede hacer clic en el bot&oacute;n <guibutton>Mostrar lista de aplicaciones conocidas</guibutton> para que se muestre una lista de las aplicaciones disponibles.</para>
+          <para>Tambi&eacute;n se puede utilizar el bot&oacute;n <guibutton>Ejecutar con archivo</guibutton> para elegir un archivo que desea a&ntilde;adir a la l&iacute;nea de &oacute;rdenes. Por ejemplo, puede introducir <application>emacs</application> como orden y, a continuaci&oacute;n, el archivo que desea editar.</para>
+          <para>Seleccione la opci&oacute;n <guilabel>Ejecutar en terminal</guilabel> para ejecutar la aplicaci&oacute;n o la orden en una ventana de terminal. Se debe seleccionar esta opci&oacute;n para el caso de aplicaciones o &oacute;rdenes que no crean una ventana en la que ejecutarse.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Ejecutar</guibutton> en el cuadro de di&aacute;logo <guilabel> Ejecutar aplicaci&oacute;n</guilabel>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-53">
+      <title>Para hacer una captura de pantalla </title>
+      <indexterm>
+        <primary>capturas de pantalla, realizar</primary>
+      </indexterm>
+      <para>Se puede capturar la pantalla de diversas maneras:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Desde cualquier panel</para>
+          <orderedlist>
+            <listitem>
+              <para>Agregue el bot&oacute;n <guibutton>Captura de pantalla</guibutton> al panel. </para>
+            </listitem>
+            <listitem>
+              <para>Haga clic con el bot&oacute;n derecho en el panel y, a continuaci&oacute;n, elija <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu>Acciones</guisubmenu><guimenuitem>Captura de pantalla</guimenuitem></menuchoice>. </para>
+            </listitem>
+            <listitem>
+              <para>El bot&oacute;n <guibutton>Captura de pantalla</guibutton> permite realizar una captura de toda la pantalla.</para>
+            </listitem>
+            <listitem>
+              <para>Utilice este di&aacute;logo<guilabel/> para guardar la captura.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+        <listitem>
+          <para>Utilice accesos directos</para>
+          <para>Para hacer una captura de pantalla, se puede utilizar el siguiente acceso directo: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Accesos directos predeterminados </para>
+                  </entry>
+                  <entry>
+                    <para>Funci&oacute;n</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <keycap>Impr Pant</keycap>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura la pantalla por completo y muestra el cuadro de di&aacute;logo <guilabel>Guardar captura de pantalla</guilabel>. Utilice este di&aacute;logo<guilabel/> para guardar la captura.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para><keycombo><keycap>Alt</keycap><keycap>Impr Pant</keycap></keycombo> </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura la pantalla de la ventana a la cual el rat&oacute;n apunta y muestra el cuadro de di&aacute;logo <guilabel>Guardar captura de pantalla</guilabel>. Utilice este di&aacute;logo<guilabel/> para guardar la captura.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>Puede utilizar la herramienta de preferencias <application>Accesos directos del teclado</application> para cambiar los valores predefinidos de las combinaciones de teclas.</para>
+        </listitem>
+        <listitem>
+          <para>Desde la <application>Barra de men&uacute;s</application></para>
+          <para>Para capturar toda la pantalla, seleccione <menuchoice><guimenu> Acciones</guimenu><guimenuitem>Capturar pantalla</guimenuitem></menuchoice>. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Guardar la captura de pantalla</guilabel>. Para guardar la captura, seleccione la opci&oacute;n <guilabel>Guardar captura de pantalla en archivo</guilabel>. Indique la ruta de acceso y nombre del fichero de la captura en la casilla de combinaci&oacute;n desplegable. Para grabar la captura en otro directorio, haga clic en <guibutton>Examinar</guibutton>. Una vez haya seleccionado el directorio, haga clic en <guibutton>Aceptar</guibutton>. </para>
+          <para>Tambi&eacute;n puede guardarse la captura en el escritorio. Para grabar la captura en el escritorio, seleccione la opci&oacute;n <guilabel>Guardar captura de pantalla en escritorio</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Mediante una orden</para>
+          <para>Se puede utilizar la orden <command>gnome-panel-screenshot</command> para capturar la pantalla. La orden <command>gnome-panel-screenshot</command> captura la pantalla por completo y muestra el cuadro de di&aacute;logo <guilabel>Guardar la captura de pantalla</guilabel>. Utilice este di&aacute;logo<guilabel/> para guardar la captura.</para>
+          <para>La orden <command>gnome-panel-screenshot</command> dispone de las siguientes opciones:  </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Opci&oacute;n</para>
+                  </entry>
+                  <entry>
+                    <para>Funci&oacute;n</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--window</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Captura s&oacute;lo la ventana que est&aacute; activa y muestra el cuadro de di&aacute;logo <guilabel>Guardar la captura de pantalla</guilabel>. Utilice este di&aacute;logo<guilabel/> para guardar la captura. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para><command>--delay=<replaceable>segundos</replaceable></command> </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Realiza la captura de pantalla una vez transcurridos los segundos indicados y muestra el cuadro de di&aacute;logo <guilabel>Guardar captura de pantalla</guilabel>. Utilice este di&aacute;logo<guilabel/> para guardar la captura.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--help</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>Muestra las opciones de la orden.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-7">
+    <title>Bot&oacute;n Lanzador </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>Lanzador</secondary>
+      <see>men&uacute; Lanzador</see>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/launch_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Bot&oacute;n Lanzador</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>El boton <guibutton>Lanzador</guibutton> proporciona acceso al men&uacute; <guimenu> Aplicaciones</guimenu> y la mayor&iacute;a de elementos del men&uacute; <guimenu>Acciones</guimenu>. Mediante el boton <guibutton>Lanzador</guibutton> se puede acceder a la mayor&iacute;a de aplicaciones est&aacute;ndar, &oacute;rdenes y opciones de configuraci&oacute;n. </para>
+    <para>Pueden agregarse botones <guibutton>Lanzador</guibutton> a los paneles.</para>
+    <sect2 id="goseditmainmenu-15">
+      <title>Para acceder al bot&oacute;n Lanzador </title>
+      <indexterm>
+        <primary>Lanzador</primary>
+        <secondary>abrir</secondary>
+      </indexterm>
+      <para>Se puede acceder al bot&oacute;n <guibutton>Lanzador</guibutton> de diversas formas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Desde un panel que contenga el bot&oacute;n <guibutton>Lanzador</guibutton>. </para>
+          <para>Haga clic en <guimenu>Lanzador</guimenu>. </para>
+        </listitem>
+        <listitem>
+          <para>Utilice accesos directos</para>
+          <para>Tambi&eacute;n puede utilizar un acceso directo para abrir <guibutton>Lanzador</guibutton>. </para>
+          <para>Un acceso directo predefinido para abrir <guibutton>Lanzador</guibutton> es <keycombo><keycap> Ctrl</keycap><keycap>Esc</keycap></keycombo>. Para cambiar el acceso directo que abre <guibutton>Lanzador</guibutton>, utilice la herramienta de preferencias <application>Accesos directos del teclado</application>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-29">
+      <title>Para a&ntilde;adir un bot&oacute;n Lanzador a un panel </title>
+      <indexterm>
+        <primary>men&uacute; Lanzador</primary>
+        <secondary>agregar a panel</secondary>
+      </indexterm>
+      <para>Se pueden a&ntilde;adir tantos botones <guibutton>Lanzador</guibutton> a los paneles como se desee. Para agregar un bot&oacute;n <guibutton>Lanzador</guibutton> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu> A&ntilde;adir al panel</guimenu><guimenuitem>Men&uacute; principal</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-65">
+    <title>Barra de men&uacute;s </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>Barra de men&uacute;s</secondary>
+      <see>Barra de men&uacute;s</see>
+    </indexterm>
+    <indexterm>
+      <primary>Barra de men&uacute;s</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/menu_bar_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Aplicaci&oacute;n de panel Barra de men&uacute;s. Men&uacute;s: Aplicaciones, Acciones. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>La <application>Barra de men&uacute;s</application> proporciona acceso al men&uacute; <guimenu>Aplicaciones</guimenu> y al de <guimenu> Acciones</guimenu>. Se puede acceder a la mayor&iacute;a de aplicaciones, &oacute;rdenes y opciones de configuraci&oacute;n de la <application>Barra de men&uacute;s</application>. </para>
+    <sect2 id="goseditmainmenu-66">
+      <title>Para agregar una Barra de men&uacute;s a un panel </title>
+      <indexterm>
+        <primary>Barra de men&uacute;s</primary>
+        <secondary>agregar al panel</secondary>
+      </indexterm>
+      <para>Se pueden a&ntilde;adir tantas aplicaciones de panel <application>Barra de men&uacute;s</application> a los paneles como se desee. Para agregar una <application>Barra de men&uacute;s</application> a un panel, haga clic con el bot&oacute;n derecho del rat&oacute;n en un espacio vac&iacute;o del panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guimenuitem>Barra de men&uacute;s</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-54">
+    <title>Personalizaci&oacute;n de los men&uacute;s </title>
+    <indexterm>
+      <primary>men&uacute;s</primary>
+      <secondary>personalizar</secondary>
+    </indexterm>
+    <para>Se puede modificar el contenido de los siguientes men&uacute;s:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Men&uacute; <guimenu>Aplicaciones</guimenu></para>
+      </listitem>
+      <listitem>
+        <para>Men&uacute; <guimenu>Preferencias</guimenu></para>
+      </listitem>
+    </itemizedlist>
+    <para>Para personalizar los men&uacute;s se puede usar los siguientes componentes de Java Desktop System: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Men&uacute;s o paneles</para>
+      </listitem>
+      <listitem>
+        <para>Gestor de archivos</para>
+      </listitem>
+    </itemizedlist>
+    <para>Cuando se usan los paneles para personalizar los men&uacute;s, el men&uacute; emergente del elemento de men&uacute; es la herramienta apropiada. Para obtener m&aacute;s informaci&oacute;n, consulte <xref linkend="goseditmainmenu-11"/>.</para>
+    <para>Si se utiliza el gestor de archivos para personalizar los men&uacute;s, debe acceder tanto al men&uacute; <guimenu>Aplicaciones</guimenu> como al de <guimenu>Preferencias</guimenu> desde el propio gestor de archivos. Para acceder a los men&uacute;s <guimenu>Aplicaciones</guimenu> o <guimenu>Preferencias</guimenu>, abra una ventana del gestor de archivos. </para>
+    <para>Para acceder a los men&uacute;s del gestor de archivos, introduzca uno de los siguientes URI en el campo correspondiente de la barra de ubicaci&oacute;n:</para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Men&uacute;</para>
+            </entry>
+            <entry>
+              <para>Introducir este URI </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Men&uacute; <guimenu>Aplicaciones</guimenu></para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>applications:///</command>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Men&uacute; <guimenu>Preferencias</guimenu></para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>preferencias:///</command>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <sect2 id="goseditmainmenu-61">
+      <title>Para a&ntilde;adir un men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>a&ntilde;adir</secondary>
+      </indexterm>
+      <para>Para agregar un men&uacute;, siga estos pasos:</para>
+      <orderedlist>
+        <listitem>
+          <para>En una ventana del gestor de archivos, abra la ubicaci&oacute;n donde desee agregar el men&uacute;. Por ejemplo, para agregar un men&uacute; a <guimenu>Aplicaciones</guimenu>, introduzca <command>applications:///</command> en el campo correspondiente de la barra de ubicaci&oacute;n.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem> Crear carpeta</guimenuitem></menuchoice>. Aparecer&aacute; una carpeta sin t&iacute;tulo en el panel de vista. El nombre aparecer&aacute; seleccionado.</para>
+        </listitem>
+        <listitem>
+          <para>Escriba el nombre de la carpeta y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>. </para>
+        </listitem>
+      </orderedlist>
+      <para>La pr&oacute;xima vez que se inicie una sesi&oacute;n, el men&uacute; se encontrar&aacute; en la ubicaci&oacute;n asignada.</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-55">
+      <title>Para a&ntilde;adir un lanzador a un men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>a&ntilde;adir lanzadores a</secondary>
+      </indexterm>
+      <para>Para a&ntilde;adir un lanzador a un men&uacute;: </para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho sobre cualquier elemento en el que desee a&ntilde;adir un lanzador.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Men&uacute; completo</guimenu><guimenuitem>A&ntilde;adir nuevo elemento a este men&uacute;</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Introduzca las propiedades del lanzador en el cuadro de di&aacute;logo.<guilabel/></para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-63">
+      <title>Para agregar un lanzador a un men&uacute; vac&iacute;o</title>
+      <para>Para agregar un lanzador a un men&uacute; vac&iacute;o:</para>
+      <orderedlist>
+        <listitem>
+          <para>En una ventana del gestor de archivos, abra la ubicaci&oacute;n donde desee agregar el lanzador. </para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Crear lanzador</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Introduzca las propiedades del lanzador en el cuadro de di&aacute;logo.<guilabel/></para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-56">
+      <title>Para copiar un lanzador en un men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>copiar lanzadores en</secondary>
+      </indexterm>
+      <para>Para copiar un lanzador en un men&uacute;:</para>
+      <orderedlist>
+        <listitem>
+          <para>En una ventana del gestor de archivos, abra la ubicaci&oacute;n desde donde desee copiar el lanzador. Por ejemplo, para un lanzador del men&uacute; <guimenu>Aplicaciones</guimenu>, introduzca <command>applications:///</command> en el campo correspondiente de la barra de ubicaci&oacute;n.</para>
+        </listitem>
+        <listitem>
+          <para>Seleccione el lanzador que desee copiar y, a continuaci&oacute;n, <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar archivo</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>En una ventana del gestor de archivos, abra la ubicaci&oacute;n donde desee copiar el lanzador.</para>
+        </listitem>
+        <listitem>
+          <para>Seleccione <menuchoice><guimenu>Editar</guimenu><guimenuitem>Pegar archivos</guimenuitem></menuchoice>. Se a&ntilde;adir&aacute; el lanzador a la nueva ubicaci&oacute;n. </para>
+        </listitem>
+      </orderedlist>
+      <para>Tambi&eacute;n puede arrastrar el lanzador de una ubicaci&oacute;n a otra. </para>
+      <para>La pr&oacute;xima vez que se inicie una sesi&oacute;n, el lanzador se encontrar&aacute; en la nueva ubicaci&oacute;n.</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-62">
+      <title>Para editar las propiedades de un men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>editar propiedades</secondary>
+      </indexterm>
+      <para>Para editar las propiedades de un men&uacute;:</para>
+      <orderedlist>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho en cualquier elemento del men&uacute; que desea editar. </para>
+        </listitem>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Men&uacute; completo</guimenu><guimenuitem>Propiedades</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>En este cuadro de di&aacute;logo puede modificar las propiedades que desee. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-57">
+      <title>Para editar un elemento de men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>editar elementos de men&uacute;s</secondary>
+      </indexterm>
+      <para>Para editar un elemento de men&uacute;:</para>
+      <orderedlist>
+        <listitem>
+          <para>Hacer clic con el bot&oacute;n derecho en el elemento que desea editar.</para>
+        </listitem>
+        <listitem>
+          <para>Seleccione <guimenuitem>Propiedades</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>En este cuadro de di&aacute;logo puede modificar las propiedades que desee.<guilabel/></para>
+        </listitem>
+        <listitem>
+          <para>Haga clic en <guibutton>Aceptar</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-58">
+      <title>Para suprimir un elemento de men&uacute; </title>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>suprimir elementos de men&uacute;s</secondary>
+      </indexterm>
+      <para>Para suprimir un elemento de men&uacute;, use el men&uacute; emergente del elemento de men&uacute;. Para suprimir un elemento de men&uacute;:</para>
+      <orderedlist>
+        <listitem>
+          <para>Hacer clic con el bot&oacute;n derecho en el elemento que desea suprimir.</para>
+        </listitem>
+        <listitem>
+          <para>Elija <guimenuitem>Quitar este elemento</guimenuitem>.  </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

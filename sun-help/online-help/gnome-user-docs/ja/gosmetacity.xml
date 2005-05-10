@@ -1,0 +1,1064 @@
+<chapter id="gosmetacity-1">
+  <title>ウィンドウの操作方法</title>
+  <highlights>
+    <para><!--- for example, <application>
+Metacity</application> and <application>Sawfish</application>.  Many of the
+functions in <application>Metacity</application> are also available in <application>
+Sawfish</application>. -->この章では、Java Desktop System のウィンドウの使用方法について説明します。Java Desktop System では、<application>Metacity</application> ウィンドウマネージャを使用できます。この章では、<application>Metacity</application> ウィンドウマネージャに関連する機能について説明します。</para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>ウィンドウとワークスペース</title>
+    <indexterm>
+      <primary sortas="ういんとう">ウィンドウ</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <indexterm>
+      <primary sortas="わあくすへえす">ワークスペース</primary>
+      <secondary sortas="かいよう">概要</secondary>
+    </indexterm>
+    <para>ウィンドウは、ワークスペースと呼ばれる  Java Desktop System のサブ領域に分割して表示されます。すべてのワークスペースのデスクトップ、パネル、メニューは同じです。ただし、各ワークスペースで異なるアプリケーションを実行したり、異なるウィンドウを開くことができます。1 度に表示できるワークスペースは 1 つだけですが、その他のワークスペースでウィンドウを開いたままにしておくことができます。</para>
+    <para><application>ワークスペーススイッチ</application>パネルアプリケーションは、ウィンドウとワークスペースの概略を視覚的に示すものです。<xref linkend="gosmetacity-FIG-717"/> を参照してください。</para>
+    <figure id="gosmetacity-FIG-717">
+      <title>ワークスペーススイッチパネルアプリケーション</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>ワークスペーススイッチパネルアプリケーション。これは図に関する説明です。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>ワークスペースはいつでも追加できます。ワークスペースを Java Desktop System に追加するには、<application>ワークスペーススイッチ</application>パネルアプリケーションを右クリックし、<guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「ワークスペーススイッチの設定」</guilabel>ダイアログが表示されます。<guilabel>「ワークスペースの数」</guilabel>スピンボックスを使用して、追加するワークスペースの数を指定します。</para>
+    <sect2 id="gosmetacity-15">
+      <title>ウィンドウマネージャの動作</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="ういんとうまねえしや">ウィンドウマネージャ</secondary>
+      </indexterm>
+      <para>ウィンドウマネージャは、ウィンドウがどのように表示され、どのように動作するかを制御します。また、ウィンドウの位置とフォーカスされるウィンドウも管理します。ウィンドウフレームには、ウィンドウの移動、閉じる、サイズ変更など、標準の操作を実行できるボタンがあります。</para>
+      <para>いくつかのウィンドウマネージャ設定は、<application>ウィンドウの動作</application>設定ツールで構成できます。このマニュアルでは、<application>Metacity</application> ウィンドウマネージャのデフォルトの設定に関する機能について説明します。デフォルト設定は、<application>「ウィンドウの動作」</application>設定ツールで指定されています。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>ウィンドウの種類</title>
+    <indexterm>
+      <primary sortas="ういんとう">ウィンドウ</primary>
+      <secondary sortas="たいふ">タイプ</secondary>
+    </indexterm>
+    <para>Java Desktop System の特長となっているウィンドウを次に説明します。</para>
+    <itemizedlist>
+      <listitem>
+        <para>アプリケーションウィンドウ</para>
+        <para>アプリケーションを起動すると、アプリケーションウィンドウが開きます。ウィンドウマネージャは、アプリケーションウィンドウにフレームを提供します。デフォルトでは、アプリケーションウィンドウのトップエッジにタイトルバーが表示されます。タイトルバーにはウィンドウでの作業に使用できるボタンがあります。アプリケーションウィンドウフレームのボタンを使用して、<guimenu>ウィンドウメニュー</guimenu>を開いたり、ウィンドウを閉じたりする操作を実行できます。<guimenu>ウィンドウメニュー</guimenu>から、ウィンドウ上で実行できる多数の操作を開始できます。</para>
+        <para>次の図に、標準的なアプリケーションウィンドウを示します。</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>シンプルなテーマのアプリケーションウィンドウ</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+      <listitem>
+        <para>ダイアログウィンドウ</para>
+        <para>ダイアログウィンドウは、情報やコマンドを入力するポップアップウィンドウです。ダイアログは、ウィンドウフレーム内に表示されます。</para>
+        <para>ウィンドウを操作するには、フレームのトップエッジを使用します。たとえば、タイトルバーを使用してダイアログを移動できます。フレームには、次の操作に使用できるボタンがあります。</para>
+        <itemizedlist>
+          <listitem>
+            <para><guimenu>ウィンドウメニュー</guimenu>を開く</para>
+          </listitem>
+          <listitem>
+            <para>ダイアログウィンドウを閉じる</para>
+          </listitem>
+        </itemizedlist>
+        <para>一般的に、ダイアログウィンドウは、アプリケーションウィンドウから開きます。ダイアログウィンドウを開くと、通常、ウィンドウが立ち上がり、アクティブになります。ダイアログウィンドウのなかには、ダイアログを閉じなければアプリケーションを使用できないものもあります。</para>
+        <para>次の図に、標準的なダイアログウィンドウを示します。</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_pref_dialog.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>シンプルなテーマのダイアログウィンドウ</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>ウィンドウフレーム</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="ふれえむ">フレーム</secondary>
+      </indexterm>
+      <para>ウィンドウフレームは、ウィンドウのまわりの境界です。ウィンドウフレームにはタイトルバーがあります。タイトルバーにはウィンドウでの作業に使用できるボタンがあります。</para>
+      <sect3 id="gosmetacity-10">
+        <title>テーマ</title>
+        <indexterm>
+          <primary sortas="ういんとう">ウィンドウ</primary>
+          <secondary sortas="てえま">テーマ</secondary>
+        </indexterm>
+        <para>ウィンドウフレームには、いくつかのテーマを適用できます。テーマを選択して、フレームの外観を決定します。すべてのウィンドウフレームのテーマを選択するには、<application>テーマ</application>設定ツールを使用します。</para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>制御要素</title>
+        <indexterm>
+          <primary sortas="ういんとう">ウィンドウ</primary>
+          <secondary sortas="ふれえむせいきよようそ">フレーム制御要素</secondary>
+        </indexterm>
+        <para>ウィンドウフレームを使用して、さまざまな操作をウィンドウで実行できます。タイトルバーには、各種ボタンが含まれています。次の図に、アプリケーションウィンドウのタイトルバーを示します。</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>ウィンドウタイトルバー。内容: ウィンドウメニューボタン、タイトルバー、最小化、最大化、ウィンドウを閉じるボタン</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>ダイアログウィンドウには、いくつかのウィンドウフレーム制御要素があります。<xref linkend="gosmetacity-TBL-1"/> は、左から順にアクティブな制御要素を示します。</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>ウィンドウフレームの制御要素</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>制御要素</para>
+                </entry>
+                <entry>
+                  <para>説明</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para><guibutton>ウィンドウメニュー</guibutton>ボタン</para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>ボタンをクリックして、<guimenu>ウィンドウメニュー</guimenu>を開く</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>タイトルバー</para>
+                </entry>
+                <entry valign="top">
+                  <para>タイトルバーを使用して、次の操作を実行できる</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>ウィンドウをアクティブにするには、タイトルバーをクリックする</para>
+                    </listitem>
+                    <listitem>
+                      <para>ウィンドウを移動するには、タイトルバーをつかんで、別の位置までウィンドウをドラッグする</para>
+                    </listitem>
+                    <listitem>
+                      <para>ウィンドウをシェードするには、タイトルバーをダブルクリックする。ウィンドウをシェード解除するには、タイトルバーをもう一度ダブルクリックする</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><guibutton>最小化</guibutton>ボタン</para>
+                </entry>
+                <entry valign="top">
+                  <para><guibutton>最小化</guibutton>ボタンをクリックすると、ウィンドウが最小化する</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><guibutton>最大化</guibutton>ボタン</para>
+                </entry>
+                <entry valign="top">
+                  <para><guibutton>最大化</guibutton>ボタンをクリックすると、ウィンドウが最大化する</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para><guibutton>ウィンドウを閉じる</guibutton>ボタン</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para><guibutton>ウィンドウを閉じる</guibutton>ボタンをクリックすると、ウィンドウが閉じる</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>境界</para>
+                </entry>
+                <entry valign="top">
+                  <para>ウィンドウのまわりの境界。境界を使用して、次の操作を実行できる</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>ウィンドウのサイズを変更するには、境界をつかんで、希望するサイズまで境界をドラッグする</para>
+                    </listitem>
+                    <listitem>
+                      <para><guimenu>ウィンドウメニュー</guimenu>を開くには、境界を右クリックする</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>ウィンドウコンテンツ</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>ウィンドウフレームの内側の領域。ウィンドウコンテンツを使用して、次の操作を実行できる</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>ウィンドウを移動するには、<keycap>Alt</keycap> キーを押したままで、ウィンドウコンテンツをクリックし、そのウィンドウを別の位置にドラッグする</para>
+                    </listitem>
+                    <listitem>
+                      <para>ウィンドウのサイズを変更するには、<keycap>Alt</keycap> キーを押したままで、サイズを変更するコーナー付近で中央クリックする。中央クリックしたコーナーから、変更したいサイズまでウィンドウをドラッグする</para>
+                    </listitem>
+                    <listitem>
+                      <para><guimenu>ウィンドウメニュー</guimenu>を開くには、<keycap>Alt</keycap> キーを押したままで、ウィンドウコンテンツで右クリックする</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>ウィンドウおよびワークスペースでのメニューとパネルアプリケーションの使用方法</title>
+    <indexterm>
+      <primary sortas="ういんとう">ウィンドウ</primary>
+      <secondary sortas="はねるあふりけえしよんとめにゆうのしよう">パネルアプリケーションとメニューの使用</secondary>
+    </indexterm>
+    <para>この節では、ウィンドウとワークスペースの操作に使用できるメニューおよびパネルアプリケーションについて説明します。</para>
+    <sect2 id="gosmetacity-24">
+      <title>ウィンドウメニュー</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="ういんとうめにゆう">「ウィンドウメニュー」</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="めにゆう">メニュー</primary>
+        <secondary sortas="ういんとうめにゆう">「ウィンドウメニュー」</secondary>
+      </indexterm>
+      <para><guimenu>ウィンドウメニュー</guimenu>は、コマンドのメニューであり、ウィンドウ上での操作に使用できます。<guimenu>ウィンドウメニュー</guimenu>を開くには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>操作対象のウィンドウで、<guibutton>ウィンドウメニュー</guibutton>ボタンをクリックする</para>
+        </listitem>
+        <listitem>
+          <para><keycombo><keycap>Alt</keycap><keycap>スペースバー</keycap></keycombo>を押す</para>
+        </listitem>
+        <listitem>
+          <para><keycap>Alt</keycap> キーを押したまま、操作対象のウィンドウの任意の部分で右クリックする</para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="gosmetacity-TBL-25"/> に、<guimenu>ウィンドウメニュー</guimenu>のコマンドおよびサブメニューを示します。</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>ウィンドウメニューのコマンドとサブメニュー</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>メニュー項目</para>
+              </entry>
+              <entry>
+                <para>機能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「最小化」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>ウィンドウを最小化する</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>「最大化」</guimenuitem>または<guimenuitem>「元のサイズに戻す」</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>ウィンドウを最大化するウィンドウがすでに最大化されている場合、<guimenuitem>「元のサイズに戻す」</guimenuitem>を選択するとウィンドウを元のサイズに戻す</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>「最前面」</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>そのウィンドウをデスクトップの背景上で開いているほかのウィンドウの上に表示する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>「移動」</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>ウィンドウの移動に矢印キーを使用できる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>「サイズ変更」</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>ウィンドウのサイズ変更に矢印キーを使用できる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>「閉じる」</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>ウィンドウを閉じる</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>「すべてのワークスペースに含める」 </guimenuitem>または<guimenuitem>「このワークスペースだけに含める」</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>ウィンドウをすべてのワークスペースに配置する。ウィンドウがすでにすべてのワークスペースに置かれている場合、<guimenuitem>「このワークスペースだけに含める」</guimenuitem>を選択すると、現在のワークスペースにのみウィンドウを配置する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2">
+                <para><guimenuitem>「右のワークスペースへ移動」</guimenuitem>または<guimenuitem>「左のワークスペースへ移動」</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3">
+                <para>ウィンドウを現在のワークスペースの右側のワークスペースに移動する。そのウィンドウがすでにワークスペーススイッチの右側の右端のワークスペースにある場合は、<guimenuitem>「左のワークスペースへ移動」</guimenuitem>を選択して、現在のワークスペースの左側のワークスペースにウィンドウを移動する</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>「別のワークスペースへ移動する」</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>ウィンドウを別のワークスペースに移動する。ウィンドウの移動元のワークスペースをサブメニューから選択する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>ウィンドウリスト</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="ういんとうりすとはねるあふりけえしよん">ウィンドウリストパネルアプリケーション</secondary>
+        <see>ウィンドウリストパネルアプリケーション</see>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうりすとはねるあふりけえしよん">ウィンドウリストパネルアプリケーション</primary>
+        <secondary sortas="かいよう">概要</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうりすと">ウィンドウリスト</primary>
+        <secondary sortas="ういんとうりすとはねるあふりけえしよん">ウィンドウリストパネルアプリケーション</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+        <secondary sortas="ういんとうりすと">ウィンドウリスト</secondary>
+      </indexterm>
+      <para><application>ウィンドウリスト</application>は、開いている各アプリケーションウィンドウを示すボタンを表示します。<application>ウィンドウリスト</application>を使用して、次の作業を実行できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウの最小化</para>
+          <para>ウィンドウを表すボタンをクリックします。</para>
+        </listitem>
+        <listitem>
+          <para>最小化されたウィンドウを復元する</para>
+          <para>ウィンドウを表すボタンをクリックします。</para>
+        </listitem>
+        <listitem>
+          <para>ウィンドウにフォーカスを当てる</para>
+          <para>ウィンドウを表すボタンをクリックします。</para>
+        </listitem>
+      </itemizedlist>
+      <para>アプリケーションウィンドウを開くと、<application>ウィンドウリスト</application>には、ウィンドウを表すボタンが表示されます。ウィンドウリストボタンは、どのアプリケーションウィンドウが開いているかを示します。ウィンドウが最小化されていたり、ほかのウィンドウと重なっていても、開いているウィンドウは表示されます。<application>ウィンドウリスト</application>は、現在のワークスペース、またはすべてのワークスペース上のウィンドウを示すボタンを表示できます。このオプションを選択するには、<application>ウィンドウリスト</application>の設定を変更する必要があります。</para>
+      <para>ウィンドウリストボタンを右クリックして、ボタンが表すウィンドウの<guimenu> ウィンドウメニュー</guimenu>を開くこともできます。<application>ウィンドウリスト</application>から<guimenu>ウィンドウメニュー</guimenu>を開いた場合、<guimenu>ウィンドウメニュー</guimenu>にはワークスペースコマンドは含まれません。<guimenu>ウィンドウメニュー</guimenu>のコマンドの詳細については、<xref linkend="gosmetacity-24"/> を参照してください。</para>
+      <para><xref linkend="gosmetacity-FIG-8"/> に、以下に示すウィンドウを開いたときの<application>ウィンドウリスト</application>を示します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>辞書</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GNOME 端末</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>ウィンドウリストパネルアプリケーション</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>ウィンドウリストパネルアプリケーションこれは図に関する説明です。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>パネルアプリケーションのボタンは、ウィンドウの状態を示します。<xref linkend="gosmetacity-TBL-3"/> は、ウィンドウリストボタンが表示するウィンドウについての情報を示します。<xref linkend="gosmetacity-TBL-3"/> の例は、<xref linkend="gosmetacity-FIG-8"/> についての説明です。</para>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>ウィンドウリストボタンのウィンドウの状態情報<indexterm><primary sortas="ういんとうりすとはねるあふりけえしよん"> ウィンドウリストパネルアプリケーション</primary><secondary sortas="ういんとうのしようたいしようほう">ウィンドウの状態情報</secondary></indexterm></title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>状態</para>
+              </entry>
+              <entry>
+                <para>説明</para>
+              </entry>
+              <entry>
+                <para>例</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>ボタンが押されている</para>
+              </entry>
+              <entry valign="top">
+                <para>ウィンドウにフォーカスがある</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>角括弧で囲まれたウィンドウタイトル</para>
+              </entry>
+              <entry valign="top">
+                <para>ウィンドウが最小化されている</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>[辞書]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>ボタンは押し込まれておらず、ウィンドウタイトルは角括弧で囲まれていない</para>
+              </entry>
+              <entry valign="top">
+                <para>ウィンドウが表示されており、最小化されていない</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>括弧内の数字が付いたボタン</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>ボタンのグループを表すボタン</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel>端末 (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>ボタンのグループ化</title>
+        <indexterm>
+          <primary sortas="ういんとうりすとはねるあふりけえしよん">ウィンドウリストパネルアプリケーション</primary>
+          <secondary sortas="くるうふかほたん">グループ化ボタン</secondary>
+        </indexterm>
+        <para><application>ウィンドウリスト</application>は、1 つのウィンドウリストボタンの下に、同じクラスのウィンドウを表すボタンをグループ化できます。<xref linkend="gosmetacity-FIG-8"/> の<guibutton>「端末」</guibutton>ボタンは、ボタンのグループを表します。次の図に、ボタングループを開いた<application>ウィンドウリスト</application>の例を示します。</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>ボタングループが開いたウィンドウリストパネルアプリケーション</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>グループ内のウィンドウのリストを開くには、そのグループを表すウィンドウリストボタンをクリックします。リスト内の項目をクリックしてウィンドウにフォーカスを移動したり、最小化したり、サイズを元に戻したりすることができます。</para>
+        <para>ボタングループ内のウィンドウの<guimenu>ウィンドウメニュー</guimenu>を開くには、そのグループを表すウィンドウリストボタン上で右クリックします。グループ内のウィンドウのリストが表示されます。グループ内のウィンドウの<guimenu>ウィンドウメニュー</guimenu>を開くには、リスト内の項目をクリックします。<application>ウィンドウリスト</application> から<guimenu>ウィンドウメニュー</guimenu> を開いた場合、<guimenu>ウィンドウメニュー</guimenu>にはワークスペースコマンドは含まれません。<guimenu>ウィンドウメニュー</guimenu>のコマンドの詳細については、<xref linkend="gosmetacity-24"/> を参照してください。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>ワークスペーススイッチ</title>
+      <indexterm>
+        <primary sortas="わあくすへえす">ワークスペース</primary>
+        <secondary sortas="わあくすへえすすいつちはねるあふりけえしよん">ワークスペーススイッチパネルアプリケーション</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="はねるあふりけえしよん">パネルアプリケーション</primary>
+        <secondary sortas="わあくすへえすすいつち">ワークスペーススイッチ</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="わあくすへえすすいつちはねるあふりけえしよん">ワークスペーススイッチパネルアプリケーション</primary>
+      </indexterm>
+      <para><application>ワークスペーススイッチ</application>は、 <xref linkend="gosmetacity-FIG-722"/> に示すように、ワークスペースの概略を視覚的に表示します。<xref linkend="gosmetacity-FIG-722"/> は、Java Desktop System セッションに 4 つのワークスペースがある場合の<application>ワークスペーススイッチ</application>を示しています。ワークスペースは、パネルアプリケーション上でボタンとして表示されます。<application>ワークスペーススイッチ</application>の現在のワークスペースを表すボタンの背景は、強調表示されます。<xref linkend="gosmetacity-FIG-722"/> の現在のワークスペースは、パネルアプリケーションの左端のワークスペースです。別のワークスペースに切り替えるには、パネルアプリケーションのワークスペース上でクリックします。</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>ワークスペーススイッチパネルアプリケーション</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>ワークスペーススイッチパネルアプリケーション。これは図に関する説明です。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para><application>ワークスペーススイッチ</application>は、ワークスペース上で開いているアプリケーションウィンドウとダイアログも表示します。</para>
+      <para>パネルアプリケーションは、左から右へ順番にワークスペースを表示します。<xref linkend="gosmetacity-FIG-722"/> のパネルアプリケーションは、1 列でワークスペースを表示するように設定されています。ワークスペースが表示される  <application>ワークスペーススイッチ</application>の列数は指定できます。<application>ワークスペーススイッチ</application>のデフォルトの動作を変更して、パネルアプリケーションにワークスペース名が表示されるようにすることもできます。</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>ウィンドウセレクタ</title>
+      <indexterm>
+        <primary sortas="とつふえつしはねる">トップエッジパネル</primary>
+        <secondary sortas="ういんとうせれくたあいこん">ウィンドウセレクタアイコン</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうせれくた">ウィンドウセレクタ</primary>
+        <secondary sortas="とつふえつしはねる">トップエッジパネル</secondary>
+      </indexterm>
+      <para>現在開いているすべてのウィンドウのリストを表示できます。メニューパネルから、アクティブにするウィンドウを選択することもできます。ウィンドウのリストを表示するには、<application>ウィンドウセレクタ</application>パネルアプリケーションをクリックします。次の図に、<application>ウィンドウセレクタ</application>パネルアプリケーションの例を示します。</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>ボトムエッジパネルに表示されるウィンドウセレクタパネルアプリケーション</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>1 つのウィンドウにフォーカスを移動するには、<application>ウィンドウセレクタ</application>パネルアプリケーションからそのウィンドウを選択します。</para>
+      <para><application>ウィンドウセレクタ</application>には、すべてのワークスペースのウィンドウがリストされます。現在のワークスペース以外のすべてのワークスペースのウィンドウは、セパレータから下に表示されます。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>ウィンドウの操作方法</title>
+    <indexterm>
+      <primary sortas="ういんとう">ウィンドウ</primary>
+      <secondary sortas="そうさ">操作</secondary>
+    </indexterm>
+    <para>この節では、ウィンドウの操作方法について説明します。</para>
+    <sect2 id="gosmetacity-28">
+      <title>ウィンドウにフォーカスを移動する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="ふおおかすをいとう">フォーカスを移動</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ふおおかす1つのういんとうにいとう">フォーカス、1 つのウィンドウに移動</primary>
+      </indexterm>
+      <para>フォーカスされているウィンドウは、マウスとキーボードから入力できます。一度にフォーカスできるのは 1 つのウィンドウだけです。フォーカスされているウィンドウの外観は、ほかのウィンドウとは異なります。</para>
+      <para>次の方法により、ウィンドウをフォーカスできます。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>要素</para>
+              </entry>
+              <entry>
+                <para>アクション</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>マウス</para>
+              </entry>
+              <entry valign="top">
+                <para>ウィンドウが可視の場合には、そのウィンドウをクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>ショートカットキー</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>ショートカットキーは、開いているウィンドウ間の切り替えに使用する。あるウィンドウにフォーカスを移すには、そのウィンドウにフォーカスが移動したときにキーを放す。ウィンドウ間を切り替える初期値のショートカットキーは、<keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo> キー</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>ウィンドウリスト</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><application>ウィンドウリスト</application>でフォーカスするウィンドウを表すボタンをクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <application>ワークスペーススイッチ</application>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><application>ワークスペーススイッチ</application>ディスプレイで、フォーカスを移動するウィンドウをクリックする。別のワークスペースのウィンドウをクリックした場合、<application>ワークスペーススイッチ</application>は、そのワークスペースに切り替えて、ウィンドウにフォーカスを移動する</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>ウィンドウを最小化する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="さいしようか">最小化</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="さいしようか">最小化</primary>
+        <secondary sortas="ういんとう">ウィンドウ</secondary>
+      </indexterm>
+      <para>ウィンドウを最小化するには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウフレーム上の<guibutton>最小化</guibutton>ボタンをクリックする</para>
+        </listitem>
+        <listitem>
+          <para><guimenu>ウィンドウメニュー</guimenu>を開き、「<guimenuitem>最小化</guimenuitem>」を選択する</para>
+        </listitem>
+        <listitem>
+          <para>ウィンドウにフォーカスがある場合は、<application>ウィンドウリスト</application>でそのウィンドウを表すボタンをクリックする。ウィンドウにフォーカスがない場合は、ウィンドウを表すボタンを 2 回クリックする</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>のそのウィンドウを表すボタン上で右クリックし、ポップアップメニューから<guimenuitem>「最小化」</guimenuitem>を選択する</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>ウィンドウを最大化する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="さいたいか">最大化</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうのさいたいか">ウィンドウの最大化 </primary>
+      </indexterm>
+      <para>ウィンドウを最大化する場合、ウィンドウは可能な限り広がります。ウィンドウを最大化するには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウフレーム上の<guibutton>最大化</guibutton>ボタンをクリックするまたは、<guimenu>ウィンドウメニュー</guimenu>を開いて、<guimenuitem>「最大化」</guimenuitem>を選択する</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>のそのウィンドウを表すボタン上で右クリックし、<guimenu>ウィンドウメニュー</guimenu>から<guimenuitem>「最大化」</guimenuitem>を選択する</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>ウィンドウを元のサイズに戻す</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="もとのさいすにもとす">元のサイズに戻す</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="もとのさいすにもとす">元のサイズに戻す</primary>
+        <secondary sortas="ういんとう">ウィンドウ</secondary>
+      </indexterm>
+      <para>最大化したウィンドウを元のサイズに戻すには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウフレーム上の<guibutton>最大化</guibutton>ボタンをクリックする</para>
+        </listitem>
+        <listitem>
+          <para><guimenu>ウィンドウメニュー</guimenu>を開く。<guimenuitem> 「元のサイズに戻す」</guimenuitem>を選択する</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>でそのウィンドウを表すボタン上で右クリックし、<guimenu>ウィンドウメニュー</guimenu>を開く。<guimenuitem> 「元のサイズに戻す」</guimenuitem>を選択する</para>
+        </listitem>
+      </itemizedlist>
+      <para>最小化したウィンドウを元のサイズに戻すには、 <application>ウィンドウリスト</application>のそのウィンドウを表すボタン上でクリックします。</para>
+    </sect2>
+    <sect2 id="gosmetacity-2">
+      <title>1 つのウィンドウをほかのウィンドウより上にする</title>
+      <para>1 つのウィンドウをほかのウィンドウより上にするには、<guimenu>ウィンドウメニュー</guimenu>を開き、<guimenuitem>「最前面」</guimenuitem> を選択します。</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>ウィンドウを閉じる</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="としる">閉じる</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうをとしる">ウィンドウを閉じる</primary>
+      </indexterm>
+      <para>ウィンドウを閉じるには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウフレーム上の<guibutton>ウィンドウを閉じる</guibutton>ボタンをクリックする</para>
+        </listitem>
+        <listitem>
+          <para><guimenu>ウィンドウメニュー</guimenu>を開く。<guimenuitem>「閉じる」</guimenuitem>を選択する</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>でそのウィンドウを表すボタン上で右クリックし、<guimenu>ウィンドウメニュー</guimenu>から<guimenuitem>「閉じる」</guimenuitem>を選択する</para>
+        </listitem>
+      </itemizedlist>
+      <para>そのウィンドウ上に保存していないデータがある場合、データを保存するかどうかを問うプロンプトが表示されます。</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>ウィンドウのサイズを変更する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="さいすへんこう">サイズ変更</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうのさいすへんこう">ウィンドウのサイズ変更</primary>
+      </indexterm>
+      <para>ウィンドウのサイズを変更するには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウのコーナーにマウスのカーソルを置く。ウィンドウをサイズ変更できるマウスポインタに変わる。コーナーをつかんで、希望のサイズまでウィンドウをドラッグする</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>のそのウィンドウを表すボタン上で右クリックする。<guimenu> ウィンドウメニュー</guimenu>から<guimenuitem>「サイズ変更」</guimenuitem>を選択する。ウィンドウのサイズ変更には矢印キーを使用する</para>
+        </listitem>
+        <listitem>
+          <para><keycap>Alt</keycap> キーを押したまま、サイズを変更するコーナー付近で中央クリックする。マウスポインタが変わり、コーナーからサイズ変更できる。中央クリックしたコーナーから、変更したいサイズまでウィンドウをドラッグする</para>
+        </listitem>
+        <listitem>
+          <para>ウィンドウを横方向にサイズ変更するには、ウィンドウの縦のエッジの 1 つをポイントする。ウィンドウをサイズ変更できるマウスポインタに変わる。エッジをつかんで、希望のサイズまでウィンドウをドラッグする。</para>
+        </listitem>
+        <listitem>
+          <para>ウィンドウを縦方向にサイズ変更するには、ウィンドウのボトムエッジにポインタを置く。ウィンドウをサイズ変更できるマウスポインタに変わる。エッジをつかんで、希望のサイズまでウィンドウをドラッグする。</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>一部のダイアログウィンドウはサイズ変更できません。また、一部のアプリケーションウィンドウは、最小サイズが決まっており、それ以下に縮小できません。</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>ウィンドウを移動する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="いとう">移動</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうのいとう">ウィンドウの移動</primary>
+      </indexterm>
+      <para>ウィンドウを移動するには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウのタイトルバーをつかんで、別の位置までウィンドウをドラッグする</para>
+        </listitem>
+        <listitem>
+          <para><keycap>Alt</keycap> キーを押したままで、ウィンドウを別の位置までドラッグする</para>
+        </listitem>
+        <listitem>
+          <para><guimenu>ウィンドウメニュー</guimenu>を開き、<guimenuitem>「移動」</guimenuitem>を選択する。矢印キーを使用して、ウィンドウを別の位置に移動する</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>で移動するウィンドウ上で右クリックし、<guimenu>ウィンドウメニュー</guimenu>から<guimenuitem>「移動」</guimenuitem>を選択する。矢印キーを使用して、ウィンドウを別の位置に移動する</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>ウィンドウを巻き上げる</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="まきあけ">巻き上げ</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうのまきあけ">ウィンドウの巻き上げ</primary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ういんとうのまきあけ">ウィンドウの巻き上げ</primary>
+        <see>ウィンドウの巻き上げ</see>
+      </indexterm>
+      <para>ウィンドウの巻き上げまたは巻き上げ解除を行うと、次のようになります。</para>
+      <variablelist>
+        <varlistentry>
+          <term>巻き上げ</term>
+          <listitem>
+            <para>ウィンドウが縮小され、タイトルバーだけが表示される</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>巻き上げ解除</term>
+          <listitem>
+            <para>ウィンドウが巻き上げ状態から切り替わり、ウィンドウ全体が表示される</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>ウィンドウを巻き上げるには、次のいずれかの操作を実行します。</para>
+      <itemizedlist>
+        <listitem>
+          <para>ウィンドウのタイトルバーをダブルクリックする。ウィンドウの巻き上げを解除するには、タイトルバーをもう一度ダブルクリックする</para>
+        </listitem>
+        <listitem>
+          <para><application>ウィンドウリスト</application>内の巻き上げるウィンドウを表すボタンを右クリックし、<guimenu>ウィンドウメニュー</guimenu>から<guimenuitem>「巻き上げ」</guimenuitem>を選択する。ウィンドウの巻き上げを解除するには、<guimenuitem>「巻き上げ解除」</guimenuitem>を選択する</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>すべてのワークスペースにウィンドウを配置する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="すへてのわあくすへえすにはいちする">すべてのワークスペースに配置する</secondary>
+      </indexterm>
+      <para>すべてのワークスペースにウィンドウを配置するには、<guimenu>ウィンドウメニュー</guimenu>を開き、<guimenuitem>「すべてのワークスペースに含める」</guimenuitem>を選択します。現在のワークスペースでのみウィンドウが表示されるように設定するには、<guimenuitem>「このワークスペースだけ含める」</guimenuitem>を選択します。</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>ウィンドウを別のワークスペースに移動する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="へつのわあくすへえすにいとう">別のワークスペースに移動</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="わあくすへえす">ワークスペース</primary>
+        <secondary sortas="ういんとうをいとう">ウィンドウを移動</secondary>
+      </indexterm>
+      <para>次のいずれかの方法を使用して、ウィンドウを別のワークスペースに移動できます。</para>
+      <itemizedlist>
+        <listitem>
+          <para><application>ワークスペーススイッチ</application>を使用</para>
+          <para><application>ワークスペーススイッチアプレット</application>アプリケーションの表示の中で、ウィンドウを移動したいワークスペースにドラッグします。</para>
+        </listitem>
+        <listitem>
+          <para><guimenu>ウィンドウメニュー</guimenu>を使用</para>
+          <para><guimenu>ウィンドウメニュー</guimenu>を開く。ウィンドウを次のワークスペースに移動するには、 <guimenuitem>「<replaceable>ワークスペース名</replaceable> へ移動」</guimenuitem>を選択します。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosbasic-48">
+      <title>区画サイズを変更する</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="くかくのさいすへんこう">区画のサイズ変更</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="くかく">区画</primary>
+        <secondary sortas="さいすへんこう">サイズ変更</secondary>
+      </indexterm>
+      <para>ウィンドウには、複数の<firstterm>区画</firstterm>が含まれていることがあります。区画とは、ウィンドウを分割したもの。たとえば、ファイルマネージャウィンドウには、サイド区画と表示区画があります。区画があるウィンドウの場合、区画間のエッジにサイズ変更ハンドルがあります。区画をサイズ変更するには、サイズ変更ハンドルをつかんで、変更するサイズまでエッジをドラッグします。</para>
+    </sect2>
+    <sect2 id="gosbasic-49">
+      <title>表の使用方法</title>
+      <indexterm>
+        <primary sortas="ういんとう">ウィンドウ</primary>
+        <secondary sortas="ひようのしようほうほう">表の使用方法</secondary>
+      </indexterm>
+      <indexterm>
+        <primary sortas="ひよう">表</primary>
+        <secondary sortas="しようほうほう">使用方法</secondary>
+      </indexterm>
+      <para>ウィンドウによっては、表に整理された情報を持っている場合があります。この節では、ウィンドウの表の操作方法について説明します。</para>
+      <para>列の幅を変更するには、列の縦方向のエッジの 1 つをドラッグします。</para>
+      <para>表によっては、特定の列によって情報の並び変えができます。表内の情報を並び変えるには、並び変える情報の列の見出しをクリックします。上矢印が、並び変えられた表の列の見出しに表示されます。次の図に上矢印を示します。</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sort_arrow_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>列の見出しに表示される上矢印</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>並び変え順を逆にするには、列の見出しをもう一度クリックします。上矢印が下矢印に変わります。下矢印は、列内の情報が、逆順に並び変えられていることを示します。</para>
+      <para>一部の表では、複数の項目を選択できます。次の表で、表内の項目を選択する方法について説明します。</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>作業</para>
+              </entry>
+              <entry colname="colspec2">
+                <para>アクション</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>項目の選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>その項目をクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>一連の項目のグループを選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Shift</keycap> キーを押したままにする。グループの最初の項目をクリックして、そのグループの最後の項目をクリックする</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>複数の項目を選択</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Ctrl</keycap> キーを押したままにする。選択する複数の項目をクリックする</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>ワークスペースの操作</title>
+    <indexterm>
+      <primary sortas="わあくすへえす">ワークスペース</primary>
+      <secondary sortas="そうさ">操作</secondary>
+    </indexterm>
+    <para>この節では、ワークスペースの操作方法について説明します。</para>
+    <sect2 id="gosmetacity-49">
+      <title>ワークスペースを切り替える</title>
+      <indexterm>
+        <primary sortas="わあくすへえす">ワークスペース</primary>
+        <secondary sortas="きりかえ">切り替え</secondary>
+      </indexterm>
+      <para>ワークスペース間の切り替えは、次の方法で行えます。</para>
+      <itemizedlist>
+        <listitem>
+          <para><application>ワークスペーススイッチ</application>を使用</para>
+          <para><application>ワークスペーススイッチ</application>で、切り替え先のワークスペースをクリックします。</para>
+        </listitem>
+        <listitem>
+          <para>ショートカットキーを使用</para>
+          <para>ワークスペース間を切り替えるデフォルトのショートカットキーは、以下のとおりです。</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>デフォルトのショートカットキー</para>
+                  </entry>
+                  <entry>
+                    <para>機能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>
+                    <para>
+                      <keycombo>
+                        <keycap>Ctrl</keycap>
+                        <keycap>Alt</keycap>
+                        <keycap>右矢印</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry>
+                    <para>右側のワークスペースを選択</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry>
+                    <para>
+                      <keycombo>
+                        <keycap>Ctrl</keycap>
+                        <keycap>Alt</keycap>
+                        <keycap>左矢印</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry>
+                    <para>左側のワークスペースを選択</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>ワークスペースを追加する</title>
+      <indexterm>
+        <primary sortas="わあくすへえす">ワークスペース</primary>
+        <secondary sortas="ついか">追加</secondary>
+      </indexterm>
+      <para>ワークスペースを Java Desktop System に追加するには、<application>ワークスペーススイッチ</application>で右クリックし、<guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「ワークスペーススイッチの設定」</guilabel>ダイアログが表示されます。<guilabel>「ワークスペースの数」</guilabel>スピンボックスを使用して、追加するワークスペースの数を指定します。<application>ワークスペーススイッチ</application>は、新しいワークスペースをワークスペースリストの末尾に追加します。</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>ワークスペースの名前を指定する</title>
+      <indexterm>
+        <primary sortas="わあくすへえす">ワークスペース</primary>
+        <secondary sortas="なまえをつける">名前を付ける</secondary>
+      </indexterm>
+      <para>ワークスペースのデフォルトの名前は、<literal>ワークスペース 1</literal>、<literal>ワークスペース 2</literal>、<literal>ワークスペース 3</literal> となります。ワークスペースの名前を指定するには、<application>ワークスペーススイッチ</application>で右クリックし、<guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「ワークスペーススイッチの設定」</guilabel>ダイアログが表示されます。<guilabel>「ワークスペース名」</guilabel>リストボックスを使用して、ワークスペース名を指定します。ワークスペースを選択し、次にそのワークスペースの新しい名前を入力します。</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>ワークスペースを削除する</title>
+      <indexterm>
+        <primary sortas="わあくすへえす">ワークスペース</primary>
+        <secondary sortas="さくしよ">削除</secondary>
+      </indexterm>
+      <para>ワークスペースを削除する場合、そのワークスペース上のウィンドウは別のワークスペースに移動され、空のワークスペースが削除されます。</para>
+      <para>ワークスペースを  Java Desktop System から削除するには、<application>ワークスペーススイッチ</application>で右クリックし、<guimenuitem>「設定」</guimenuitem>を選択します。<guilabel>「ワークスペーススイッチの設定」</guilabel>ダイアログが表示されます。<guilabel>「ワークスペースの数」</guilabel>スピンボックスを使用して、追加するワークスペースの数を指定します。<application>ワークスペーススイッチ</application>は、ワークスペースリストの末尾からワークスペースを削除します。</para>
+    </sect2>
+  </sect1>
+</chapter>

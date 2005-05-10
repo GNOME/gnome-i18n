@@ -1,0 +1,1505 @@
+<chapter id="gospanel-1">
+  <title>Arbeta med paneler</title>
+  <highlights>
+    <para>Informationen i det h&auml;r kapitlet handlar om hur du anv&auml;nder paneler. En panel &auml;r ett omr&aring;de i Java Desktop System d&auml;r du kan v&auml;lja att k&ouml;ra program och panelprogram och utf&ouml;ra andra &aring;tg&auml;rder.</para>
+  </highlights>
+  <sect1 id="gospanel-2">
+    <title>Introduktion till paneler </title>
+    <indexterm>
+      <primary>paneler</primary>
+      <secondary>introduktion till</secondary>
+    </indexterm>
+    <para>N&auml;r du startar en session f&ouml;r f&ouml;rsta g&aring;ngen inneh&aring;ller Java Desktop System minst en panel. Systemadministrat&ouml;ren kan ha st&auml;llt in standardpanelerna enligt lokala kriterier. Det kan allts&aring; t&auml;nkas att panelerna som du har framf&ouml;r dig ser n&aring;got annorlunda ut.</para>
+    <para>Du kan &auml;ndra funktion och utseende f&ouml;r panelerna efter eget tycke och smak. Du kan ocks&aring; l&auml;gga till och ta bort objekt p&aring; panelerna. Du kan skapa flera paneler och ge dem individuella egenskaper och bakgrunder och fylla dem med olika objekt. Du kan &auml;ven d&ouml;lja paneler.</para>
+    <para>Java Desktop System inneh&aring;ller oftast en f&ouml;rkonfigurerad panel som visas l&auml;ngst ned p&aring; sk&auml;rmen.</para>
+    <sect2 id="gospanel-3">
+      <title>Den nedre kantpanelen </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>nedre kantpanelen</secondary>
+        <see>nedre kantpanelen</see>
+      </indexterm>
+      <indexterm>
+        <primary>nedre kantpanelen</primary>
+        <secondary>introduktion</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>nedre kantpanelen</primary>
+        <secondary>standardinneh&aring;ll</secondary>
+      </indexterm>
+      <para>Den nedre kantpanelen inneh&aring;ller f&ouml;ljande objekt:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec3" colwidth="30.95*"/>
+          <colspec colname="colspec4" colwidth="69.05*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Objekt</para>
+              </entry>
+              <entry>
+                <para>Beskrivning </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <guibutton>K&ouml;r</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Knappen <guibutton>K&ouml;r</guibutton> inneh&aring;ller menyer och menyobjekt f&ouml;r program och konfigurationsverktyg i <application>Java Desktop System</application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Klocka</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Visar tid och datum p&aring; en panel. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Visa skrivbord</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">Visar en knapp som du minimerar alla &ouml;ppna f&ouml;nster med. </entry>
+            </row>
+            <row>
+              <entry colname="colspec3" valign="top">
+                <para><application>F&ouml;nsterlista</application> </para>
+              </entry>
+              <entry colname="colspec4" valign="top">
+                <para>Inneh&aring;ller en knapp f&ouml;r varje &ouml;ppet f&ouml;nster. Du kan klicka p&aring; en knapp i f&ouml;nsterlistan om du vill minimera eller &aring;terst&auml;lla ett f&ouml;nster.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Notifieringsyta</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Visar ikoner f&ouml;r olika program som indikerar att programmet &auml;r aktivt.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Arbetsytebytare</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Inneh&aring;ller en visuell representation av arbetsytorna. Du kan v&auml;xla mellan arbetsytor med <application>Arbetsytebytarens</application> hj&auml;lp.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Volymkontroll</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Visar en knapp som du kan anv&auml;nda f&ouml;r att kontrollera och ange ljudniv&aring;er f&ouml;r systemet.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>N&auml;tverks&ouml;vervakare</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Visar status f&ouml;r en n&auml;tverksenhet.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-5">
+    <title>Hantera paneler </title>
+    <indexterm>
+      <primary>paneler</primary>
+      <secondary>hantera</secondary>
+    </indexterm>
+    <para>De f&ouml;ljande avsnitten beskriver hur det g&aring;r till att hantera paneler.</para>
+    <sect2 id="gospanel-10">
+      <title>S&aring; h&auml;r l&auml;gger du till en ny panel </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>l&auml;gga till ny </secondary>
+      </indexterm>
+      <para>Du l&auml;gger till en panel genom att h&ouml;gerklicka p&aring; en tom yta p&aring; valfri panel och sedan v&auml;lja <guimenuitem>Ny panel</guimenuitem>. Den nya panelen l&auml;ggs till i Java Desktop System. Den nya panelen inneh&aring;ller inga objekt. Du kan anpassa den nya panelen s&aring; att den passar dina behov.</para>
+    </sect2>
+    <sect2 id="gospanel-11">
+      <title>S&aring; h&auml;r &auml;ndrar du en panel </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>&auml;ndra</secondary>
+      </indexterm>
+      <para>Du m&aring;ste klicka med den h&ouml;gra, mellersta eller v&auml;nstra musknappen p&aring; ett tomt omr&aring;de p&aring; panelen om du vill &auml;ndra n&aring;got p&aring; den. Du kan &auml;ven aktivera panelen genom att klicka med den mellersta eller h&ouml;gra musknappen p&aring; en av d&ouml;ljknapparna om det inte finns n&aring;gon tom yta p&aring; panelen. &Auml;ndra panelens egenskaper s&aring; att panelens d&ouml;ljknappar syns om de inte g&ouml;r det. </para>
+      <para>Du &auml;ndrar en panel med musknapparna p&aring; f&ouml;ljande s&auml;tt:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Klicka med den mellersta musknappen</term>
+          <listitem>
+            <para>G&ouml;r att du kan ta tag i panelen och dra den till en ny position.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>H&ouml;gerklicka</term>
+          <listitem>
+            <para>&Ouml;ppnar panelens popupmeny.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="gospanel-12">
+      <title>S&aring; h&auml;r flyttar du en panel </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>flytta</secondary>
+      </indexterm>
+      <para>Du kan flytta paneler till andra platser. Tryck ned och h&aring;ll kvar den mellersta musknappen och dra sedan panelen till den nya positionen om du vill flytta den.</para>
+    </sect2>
+    <sect2 id="gospanel-7">
+      <title>S&aring; h&auml;r d&ouml;ljer du en panel </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>d&ouml;lja</secondary>
+      </indexterm>
+      <para>Du kan visa och d&ouml;lja paneler. Anv&auml;nd n&aring;gon av d&ouml;ljknapparna om du vill d&ouml;lja en panel. &Auml;ndra panelens egenskaper panelens d&ouml;ljknappar syns om de inte g&ouml;r det. </para>
+      <para>Knapparna &auml;r placerade p&aring; panelens b&auml;gge &auml;ndar. Det kan finnas en ikon i form av en pil p&aring; knapparna. Figuren h&auml;r nedan visar hur d&ouml;ljknapparna ser ut. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/four_hide_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>En horisontell och en vertikal panel som b&aring;da inneh&aring;ller d&ouml;ljknappar. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Klicka p&aring; n&aring;gon av d&ouml;ljknapparna om du vill d&ouml;lja en panel. Panelen d&ouml;ljs i samma riktning som pilen p&aring; knappen visar. Knappen p&aring; panelens andra sida f&ouml;rblir synlig.</para>
+      <para>Klicka p&aring; den synliga knappen om du vill visa en dold panel igen. Panelen &ouml;kar i storlek i samma riktning som pilen p&aring; knappen visar. B&aring;da knapparna &auml;r nu synliga.</para>
+      <para>Du kan ange att en panel ska d&ouml;ljas automatiskt. Om du g&ouml;r det d&ouml;ljs panelen automatiskt d&aring; pekaren inte befinner sig &ouml;ver panelen. Panelen &aring;terst&auml;lls om du placerar pekaren &ouml;ver den del av sk&auml;rmen d&auml;r panelen finns. &Auml;ndra panelens egenskaper om du vill att den ska d&ouml;ljas automatiskt.</para>
+    </sect2>
+    <sect2 id="gospanel-28">
+      <title>S&aring; h&auml;r &auml;ndrar du panelegenskaper </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>&auml;ndra egenskaper</secondary>
+      </indexterm>
+      <para>Om du vill &auml;ndra inst&auml;llningarna f&ouml;r alla paneler anv&auml;nder du inst&auml;llningsverktyget <guilabel>Panel</guilabel> f&ouml;r att utf&ouml;ra &ouml;nskade &auml;ndringar. Du kan till exempel &auml;ndra animeringsinst&auml;llningar f&ouml;r paneler. </para>
+      <para>Du kan &auml;ven &auml;ndra individuella panelers egenskaper. Du kan &auml;ndra varje panels egenskaper, till exempel dess position och utseende och hur den beter sig n&auml;r den d&ouml;ljs. </para>
+      <para>S&aring; h&auml;r &auml;ndrar du en panels egenskaper: </para>
+      <orderedlist>
+        <listitem>
+          <para>H&ouml;gerklicka p&aring; en tom yta p&aring; panelen och v&auml;lj sedan <guimenuitem>Egenskaper</guimenuitem>. Dialogrutan <guilabel>Panelegenskaper</guilabel> visas. Dialogf&ouml;nstret <guilabel>Panelegenskaper</guilabel> inneh&aring;ller f&ouml;ljande flikavsnitt: </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>Allm&auml;nt</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Bakgrund</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Om du vill &auml;ndra panelstorleken och d&ouml;lja egenskaper klickar du p&aring; fliken <guilabel>Allm&auml;nt</guilabel>. Tabellen h&auml;r nedan beskriver dialogf&ouml;nsterelementen i flikavsnittet <guilabel>Allm&auml;nt</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Dialogf&ouml;nsterelement</para>
+                  </entry>
+                  <entry>
+                    <para>Beskrivning </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Namn</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Skriv in ett namn p&aring; panelen. N&auml;r du anv&auml;nder snabbkommandon f&ouml;r att v&auml;xla mellan panelerna och skrivbordet visas det h&auml;r panelnamnet. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Orientering</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Ange var p&aring; sk&auml;rmen panelen visas. Markera panelens &ouml;nskade position. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Storlek</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Anv&auml;nd rotationsrutan f&ouml;r att ange panelens storlek.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>F&auml;ll ut</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Markera det h&auml;r alternativet om du vill att panelen ska ut&ouml;kas till hela l&auml;ngden p&aring; den sk&auml;rmkant d&auml;r panelen finns. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>D&ouml;lj automatiskt</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Ange att panelen ska d&ouml;ljas automatiskt med det h&auml;r alternativet. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Visa d&ouml;ljknappar</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Markera det h&auml;r alternativet om du vill att d&ouml;ljknapparna ska vara synliga.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Pilar p&aring; d&ouml;ljknapp</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>V&auml;lj det h&auml;r alternativet om du vill ha pilar p&aring; d&ouml;ljknapparna, under f&ouml;ruts&auml;ttning att de &auml;r aktiverade.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Om du vill &auml;ndra panelbakgrunden klickar du p&aring; fliken <guilabel>Bakgrund</guilabel>. V&auml;lj panelens bakgrundstyp. Du kan v&auml;lja mellan f&ouml;ljande alternativ:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="32.32*"/>
+              <colspec colwidth="67.68*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Dialogf&ouml;nsterelement</para>
+                  </entry>
+                  <entry>
+                    <para>Beskrivning </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Inget (anv&auml;nd systemtema)</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Markera det h&auml;r alternativet om du vill anv&auml;nda standardpanelbakgrunden. Vilken standardpanelbakgrunden &auml;r beror p&aring; inst&auml;llningarna i inst&auml;llningsverktyget <application>Tema</application>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Enf&auml;rgad</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Markera det h&auml;r alternativet om du vill ange en enda f&auml;rg f&ouml;r panelbakgrunden. Klicka p&aring; knappen <guibutton>F&auml;rg</guibutton> om du vill &ouml;ppna dialogf&ouml;nstret f&ouml;r f&auml;rgv&auml;ljaren. V&auml;lj &ouml;nskad f&auml;rg i f&auml;rgv&auml;ljaren. </para>
+                    <para>Anv&auml;nd reglaget <guilabel>Typ</guilabel> f&ouml;r att ange graden av genomskinlighet eller ogenomskinlighet f&ouml;r f&auml;rgen. Om du till exempel vill att panelen ska vara genomskinlig drar du reglaget mot <guilabel>Genomskinlig</guilabel>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Bakgrundsbild</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Markera det h&auml;r alternativet om du vill ange en bild f&ouml;r panelbakgrunden. Ange filnamnet p&aring; den bild som ska anv&auml;ndas i den nedrullningsbara rotationsrutan. Du kan ocks&aring; klicka p&aring; knappen <guibutton>Bl&auml;ddra</guibutton> om du vill leta efter filen. N&auml;r du har markerat filen klickar du p&aring; OK. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>Du kan &auml;ven dra en f&auml;rg eller bild och sl&auml;ppa den p&aring; en panel om du vill ange att f&auml;rgen eller bilden ska anv&auml;ndas som panelbakgrund. Mer information finns i <xref linkend="gospanel-61"/>. </para>
+        </listitem>
+        <listitem>
+          <para>St&auml;ng dialogf&ouml;nstret <guilabel>Panelegenskaper</guilabel> genom att klicka p&aring; <guibutton>St&auml;ng</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+      <sect3 id="gospanel-61">
+        <title>S&aring; h&auml;r drar du en f&auml;rg eller bild till en panels bakgrund </title>
+        <indexterm>
+          <primary>paneler</primary>
+          <secondary>&auml;ndra bakgrund</secondary>
+        </indexterm>
+        <para>Du kan dra en f&auml;rg eller bild och sl&auml;ppa den p&aring; en panel om du vill ange att den ska anv&auml;ndas som panelbakgrund. Du kan dra en f&auml;rg eller bild fr&aring;n m&aring;nga program. Du kan t.ex. dra en f&auml;rg fr&aring;n filhanteraren till en panel om du vill att panelen ska ha bakgrundsf&auml;rgen i fr&aring;ga. Du kan &auml;ven dra en f&auml;rg fr&aring;n en f&auml;rgv&auml;ljare.</para>
+        <para>Du kan dra en bild till en panel om du vill att panelen ska ha den som bakgrundsbild. Du kan ocks&aring; dra m&ouml;nsterbilder fr&aring;n filhanteraren f&ouml;r att ange en bakgrund f&ouml;r panelen.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-31">
+      <title>S&aring; h&auml;r tar du bort en panel </title>
+      <indexterm>
+        <primary>paneler</primary>
+        <secondary>ta bort</secondary>
+      </indexterm>
+      <para>Om du vill ta bort en panel fr&aring;n Java Desktop System h&ouml;gerklickar du p&aring; den och v&auml;ljer <menuchoice><guimenuitem>Ta bort den h&auml;r panelen</guimenuitem></menuchoice>.</para>
+      <note>
+        <para>Det m&aring;ste alltid finnas minst en panel i Java Desktop System. Om det bara finns en panel i Java Desktop System kan du inte ta bort den.</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-8">
+    <title>Panelobjekt </title>
+    <indexterm>
+      <primary>paneler</primary>
+      <secondary>panelobjekt</secondary>
+      <see> panelobjekt</see>
+    </indexterm>
+    <para>I det h&auml;r avsnittet beskrivs vilka objekt du kan l&auml;gga till p&aring; och anv&auml;nda fr&aring;n paneler.</para>
+    <sect2 id="gospanel-100">
+      <title>Anv&auml;nda panelobjekt </title>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>anv&auml;nda</secondary>
+      </indexterm>
+      <para>Du &auml;ndrar ett panelobjekt med musknapparna p&aring; f&ouml;ljande s&auml;tt:</para>
+      <variablelist>
+        <varlistentry>
+          <term>V&auml;nsterklicka</term>
+          <listitem>
+            <para>Startar panelobjektet. </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Klicka med den mellersta musknappen</term>
+          <listitem>
+            <para>G&ouml;r det m&ouml;jligt att ta tag i ett objekt och dra det till en ny position.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>H&ouml;gerklicka</term>
+          <listitem>
+            <para>&Ouml;ppnar panelens popupmeny.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Panelobjekt anv&auml;nds p&aring; ett annat s&auml;tt. Mer information finns i <xref linkend="gospanel-39"/>.</para>
+    </sect2>
+    <sect2 id="gospanel-15">
+      <title>S&aring; h&auml;r l&auml;gger du till ett objekt i en panel </title>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>l&auml;gga till</secondary>
+      </indexterm>
+      <para>Du kan l&auml;gga till ett objekt p&aring; en panel p&aring; flera s&auml;tt: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fr&aring;n panelens popupmeny</para>
+          <para>H&ouml;gerklicka p&aring; en tom yta p&aring; en panel. Panelens popupmeny visas. Panelens popupmeny inneh&aring;ller undermenyn <guisubmenu>L&auml;gg till i panelen</guisubmenu>. Undermenyn <guisubmenu>L&auml;gg till i panelen</guisubmenu> g&ouml;r det m&ouml;jligt att l&auml;gga till f&ouml;ljande objekt p&aring; panelerna: <itemizedlist><listitem><para>Panelprogram i f&ouml;ljande kategorier: <guilabel>Tillbeh&ouml;r</guilabel>, <guilabel>Underh&aring;llning</guilabel>, <guilabel>Internet</guilabel>, <guilabel>Multimedia</guilabel>, <guilabel>Verktyg</guilabel>. </para></listitem><listitem><para>Knappar f&ouml;r att snabbt komma &aring;t vanliga &aring;tg&auml;rder: Knapparna <guibutton>S&ouml;k efter filer</guibutton>, <guibutton>Tvinga avslutande</guibutton>, <guibutton>L&aring;s sk&auml;rmen</guibutton>, <guibutton>Logga ut</guibutton>, <guibutton>K&ouml;r program</guibutton>, <guibutton>Sk&auml;rmdump</guibutton> och <guibutton>Visa skrivbord</guibutton>.</para></listitem><listitem><para>Programstartare</para></listitem><listitem><para>Programstartare fr&aring;n menyer</para></listitem><listitem><para><guimenu>Huvudmeny</guimenu></para></listitem><listitem><para><application>Menyrad</application></para></listitem><listitem><para>L&aring;dor</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Fr&aring;n en valfri meny</para>
+          <para>Om du h&ouml;gerklickar p&aring; en programstartare p&aring; en valfri meny visas dess popupmeny. Du kan l&auml;gga till programstartaren p&aring; en panel med popupmenyns hj&auml;lp. </para>
+          <para>Du kan &auml;ven dra menyer, programstartare och panelprogram fr&aring;n menyer till paneler. </para>
+        </listitem>
+        <listitem>
+          <para>Fr&aring;n filhanteraren</para>
+          <para>Varje programstartare motsvarar en <filename>.desktop</filename>-fil. Du kan dra <filename>.desktop</filename>-filen till en panel om du vill l&auml;gga till programstartaren p&aring; den. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-9">
+      <title>S&aring; h&auml;r &auml;ndrar du ett objekts egenskaper </title>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>&auml;ndra egenskaper</secondary>
+      </indexterm>
+      <para>Vissa panelobjekt, som programstartare och l&aring;dor, har en upps&auml;ttning associerade egenskaper. Egenskaperna &auml;r olika f&ouml;r olika typer av objekt. Egenskaperna best&auml;mmer attribut av exempelvis f&ouml;ljande typer: <itemizedlist><listitem><para>Kommandot som startar ett program.</para></listitem><listitem><para>Var k&auml;llfilerna till en meny lagras.</para></listitem><listitem><para>Ikonen som representerar objektet.</para></listitem></itemizedlist></para>
+      <para>S&aring; h&auml;r &auml;ndrar du ett objekts egenskaper: </para>
+      <orderedlist>
+        <listitem>
+          <indexterm>
+            <primary>panelobjektets popupmeny, illustration av</primary>
+          </indexterm>
+          <para>H&ouml;gerklicka p&aring; objektet s&aring; att panelobjektets popupmeny visas (se <xref linkend="gospanel-FIG-54"/>)</para>
+          <figure id="gospanel-FIG-54">
+            <title>Panelobjektets popupmeny</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/panel_object_popup_menu.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Panelobjektets popupmeny. Menyobjekt: Egenskaper, Ta bort fr&aring;n panel, L&aring;s, Flytta. </phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+        <listitem>
+          <para>V&auml;lj <guimenuitem>Egenskaper</guimenuitem>. &Auml;ndra de &ouml;nskade egenskaperna i dialogf&ouml;nstret <guilabel>Egenskaper</guilabel>. Egenskaperna i dialogf&ouml;nstret <guilabel>Egenskaper</guilabel> beror p&aring; vilket objekt du valde i steg 1. </para>
+        </listitem>
+        <listitem>
+          <para>Spara &auml;ndringarna genom att klicka p&aring; <guibutton>OK</guibutton> och st&auml;ng sedan dialogf&ouml;nstret <guilabel>Egenskaper</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gospanel-32">
+      <title>S&aring; h&auml;r flyttar du ett panelobjekt </title>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>flytta</secondary>
+      </indexterm>
+      <para>Du kan flytta panelobjekten inom en panel och fr&aring;n en panel till en annan. Du kan &auml;ven flytta objekt mellan paneler och l&aring;dor.</para>
+      <para>H&aring;ll ned den mellersta musknappen och dra panelobjektet till den nya positionen om du vill flytta det. N&auml;r du sl&auml;pper upp den mellersta musknappen stannar objektet kvar p&aring; den nya positionen.</para>
+      <para>Du kan &auml;ven flytta ett panelobjekt med hj&auml;lp av dess popupmeny: </para>
+      <orderedlist>
+        <listitem>
+          <para>H&ouml;gerklicka p&aring; objektet och v&auml;lj sedan <guimenuitem>Flytta</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Peka p&aring; objektets nya position och klicka sedan med valfri musknapp. Objektet flyttas d&aring; till den nya positionen. Du kan flytta objektet till vilken panel som helst i Java Desktop System. </para>
+        </listitem>
+      </orderedlist>
+      <para>Placeringen av de &ouml;vriga objekten p&aring; en panel p&aring;verkas n&auml;r ett panelobjekt flyttas. Du kan ange en flyttningsmetod om du vill ha kontroll &ouml;ver hur objekten f&ouml;rflyttas p&aring; en panel. Tryck p&aring; en av de f&ouml;ljande tangenterna medan du flyttar panelobjektet om du vill p&aring;verka flyttningsmetoden:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="15.00*"/>
+          <colspec colname="colspec1" colwidth="30.00*"/>
+          <colspec colname="colspec3" colwidth="54.00*"/>
+          <thead>
+            <row rowsep="1">
+              <entry colname="colspec2">
+                <para>Tangent </para>
+              </entry>
+              <entry>
+                <para>Flyttningsmetod</para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Beskrivning</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Ingen tangent</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Platsbyte</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Objektet byter plats med andra panelobjekt. Platsbyte &auml;r den normala flyttningsmetoden.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Alt</keycap>-tangenten </para>
+              </entry>
+              <entry valign="top">
+                <para>Fri f&ouml;rflyttning</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Objektet flyttas f&ouml;rbi de &ouml;vriga panelobjekten till f&ouml;rsta lediga plats p&aring; panelen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Skift- tangenten</keycap> </para>
+              </entry>
+              <entry valign="top">
+                <para>Ins&auml;ttning</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>De &ouml;vriga panelobjekten flyttas l&auml;ngre bort. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-566">
+      <title>S&aring; h&auml;r l&aring;ser du ett panelobjekt </title>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>l&aring;sa</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>l&aring;sa panelobjekt</primary>
+      </indexterm>
+      <para>Du kan l&aring;sa panelobjekt s&aring; att de finns kvar p&aring; samma plats p&aring; panelen. Den h&auml;r funktionen &auml;r praktisk om du vill att vissa panelobjekt inte ska flyttas n&auml;r du flyttar andra panelobjekt.</para>
+      <para>Du l&aring;ser ett objekt p&aring; dess aktuella plats p&aring; panelen genom att h&ouml;gerklicka p&aring; objektet, &ouml;ppna dess popupmeny och v&auml;lja <guimenuitem>L&aring;s</guimenuitem>. N&auml;r du vill l&aring;sa upp objektet h&ouml;gerklickar du p&aring; det och v&auml;ljer <guimenuitem>L&aring;s upp</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gospanel-33">
+      <title>S&aring; h&auml;r tar du bort ett panelobjekt </title>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>ta bort</secondary>
+      </indexterm>
+      <para>H&ouml;gerklicka p&aring; panelobjektet s&aring; att dess popupmeny visas och v&auml;lj sedan <guimenuitem>Ta bort fr&aring;n panel</guimenuitem> om du vill ta bort ett objekt fr&aring;n en panel. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-17">
+    <title>Panelprogram </title>
+    <indexterm>
+      <primary>panelprogram</primary>
+      <secondary>introduktion</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>panelobjekt</primary>
+      <secondary>panelprogram</secondary>
+      <see>panelprogram</see>
+    </indexterm>
+    <para>Ett panelprogram &auml;r ett litet program vars anv&auml;ndargr&auml;nssnitt visas inom ramen f&ouml;r panelen. Figuren h&auml;r nedan, t.ex., visar f&ouml;ljande panelprogram, fr&aring;n v&auml;nster till h&ouml;ger: </para>
+    <itemizedlist>
+      <listitem>
+        <para><application>F&ouml;nsterlista</application>: Visar vilka f&ouml;nster som &auml;r &ouml;ppna.</para>
+      </listitem>
+      <listitem>
+        <para><application>Cd-spelare</application>: Ger dig m&ouml;jlighet att styra datorns Cd-spelare.</para>
+      </listitem>
+      <listitem>
+        <para><application>Volymkontroll</application>: Ger dig m&ouml;jlighet att st&auml;lla in h&ouml;gtalarvolymen.</para>
+      </listitem>
+    </itemizedlist>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/sample_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Exempel p&aring; panelprogram. Sammanhanget beskriver bilden. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <sect2 id="gospanel-40">
+      <title>S&aring; h&auml;r l&auml;gger du till ett program p&aring; en panel </title>
+      <indexterm>
+        <primary>panelprogram</primary>
+        <secondary>l&auml;gga till p&aring; en panel</secondary>
+      </indexterm>
+      <para>Du kan l&auml;gga till ett panelprogram p&aring; en panel fr&aring;n panelens popupmeny. H&ouml;gerklicka p&aring; en tom yta p&aring; en panel. Panelens popupmeny visas. V&auml;lj <guimenu>L&auml;gg till i panelen</guimenu> och sedan panelprogrammet som du vill l&auml;gga till fr&aring;n n&aring;gon av de f&ouml;ljande undermenyerna: </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guimenu>Tillbeh&ouml;r</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Underh&aring;llning</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Internet</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Multimedia</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Verktyg</guimenu>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>Du kan &auml;ven dra panelprogrammet fr&aring;n undermenyn till panelen. </para>
+    </sect2>
+    <sect2 id="gospanel-39">
+      <title>S&aring; h&auml;r v&auml;ljer du ett panelprogram </title>
+      <indexterm>
+        <primary>panelprogram</primary>
+        <secondary>v&auml;lja</secondary>
+      </indexterm>
+      <para>Du m&aring;ste h&ouml;gerklicka p&aring; en panel och visa panelobjektets popupmeny innan du kan &auml;ndra panelprogrammets egenskaper. Om du vill flytta ett panelprogram m&aring;ste du klicka med den mellersta musknappen p&aring; panelprogrammet. </para>
+      <para>Du kan klicka var som helst p&aring; ett panelprogram om du vill visa panelobjektets popupmeny eller flytta panelprogrammet, med vissa f&ouml;rbeh&aring;ll: </para>
+      <itemizedlist>
+        <listitem>
+          <para>En del panelprogram har popupmenyer f&ouml;r panelprogramsspecifika kommandon som &ouml;ppnas n&auml;r du h&ouml;gerklickar p&aring; en viss del av panelprogrammet.. P&aring; h&ouml;ger sida av panelprogrammet <application>F&ouml;nsterlista</application>, t.ex., finns det ett lodr&auml;tt handtag och knappar som representerar f&ouml;nster. Du m&aring;ste h&ouml;gerklicka p&aring; handtaget om du vill visa popupmenyn f&ouml;r panelprogrammet <application>F&ouml;nsterlista</application>. Om du h&ouml;gerklickar p&aring; en knapp till h&ouml;ger visas knappens popupmeny.</para>
+        </listitem>
+        <listitem>
+          <para>En del panelprogram har omr&aring;den som du inte kan klicka p&aring; f&ouml;r att v&auml;lja panelprogrammet. Panelprogrammet <application>Kommandorad</application>, t.ex., har ett f&auml;lt d&auml;r du kan ange kommandon. Det g&aring;r inte att markera panelprogrammet genom att klicka med den mellersta eller h&ouml;gra musknappen p&aring; det h&auml;r f&auml;ltet. Klicka i st&auml;llet med den mellersta eller h&ouml;gra musknappen p&aring; n&aring;gon annan del av panelprogrammet. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-41">
+      <title>S&aring; h&auml;r &auml;ndrar du inst&auml;llningar f&ouml;r ett panelprogram </title>
+      <indexterm>
+        <primary>panelprogram</primary>
+        <secondary>&auml;ndra inst&auml;llningar</secondary>
+      </indexterm>
+      <para>S&aring; h&auml;r &auml;ndrar du inst&auml;llningar f&ouml;r ett panelprogram: </para>
+      <orderedlist>
+        <listitem>
+          <para>H&ouml;gerklicka p&aring; panelprogrammet och v&auml;lj sedan <guimenuitem> Inst&auml;llningar</guimenuitem>. &Auml;ndra de &ouml;nskade inst&auml;llningarna i dialogf&ouml;nstret <guilabel>Inst&auml;llningar</guilabel>. Vilka inst&auml;llningar som finns f&ouml;r panelprogrammet varierar beroende p&aring; vilket panelprogram det &auml;r.</para>
+        </listitem>
+        <listitem>
+          <para>Klicka p&aring; <guibutton>St&auml;ng</guibutton> n&auml;r du vill st&auml;nga dialogrutan <guilabel>Inst&auml;llningar</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-16">
+    <title>Programstartare </title>
+    <indexterm>
+      <primary>panelobjekt</primary>
+      <secondary>programstartare</secondary>
+      <see>programstartare</see>
+    </indexterm>
+    <para>N&auml;r du klickar p&aring; en programstartare p&aring;b&ouml;rjas en av de f&ouml;ljande &aring;tg&auml;rderna: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Ett visst program startats.</para>
+      </listitem>
+      <listitem>
+        <para>Ett kommando k&ouml;rs.</para>
+      </listitem>
+      <listitem>
+        <para>En mapp i ett av filhanterarens f&ouml;nster &ouml;ppnas.</para>
+      </listitem>
+      <listitem>
+        <para>Starta en webbl&auml;sare och g&aring; till en viss <firstterm>Internetadress</firstterm> (URL, Uniform Resource Locator). En URL &auml;r en adress till ett visst st&auml;lle p&aring; webben.</para>
+      </listitem>
+      <listitem>
+        <para>&Ouml;ppna speciella <firstterm>URI:er</firstterm> (Uniform Resource Identifiers).  Java Desktop System inneh&aring;ller speciella URI:er som du kan anv&auml;nda f&ouml;r att &ouml;ppna vissa funktioner fr&aring;n filhanteraren. <indexterm><primary>speciella URI-platser</primary><secondary>och programstartare</secondary></indexterm></para>
+      </listitem>
+    </itemizedlist>
+    <para>Programstartare finns p&aring; f&ouml;ljande platser i Java Desktop System: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Paneler: P&aring; paneler representeras programstartare av ikoner.</para>
+      </listitem>
+      <listitem>
+        <para>Menyer: P&aring; menyer representeras programstartare av menyalternativ. Det brukar finnas en ikon bredvid menyalternativen.</para>
+      </listitem>
+      <listitem>
+        <para>Skrivbordet: P&aring; skrivbordet representeras programstartare av ikoner. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Du kan &auml;ndra en programstartares egenskaper. Programstartarens namn, ikonen som representerar den och hur programstartaren k&ouml;rs &auml;r n&aring;gra av dess egenskaper. </para>
+    <sect2 id="gospanel-34">
+      <title>S&aring; h&auml;r l&auml;gger du till en programstartare p&aring; en panel </title>
+      <indexterm>
+        <primary>programstartare</primary>
+        <secondary>l&auml;gga till p&aring; panel</secondary>
+      </indexterm>
+      <para>Du kan l&auml;gga till en panel p&aring; n&aring;got av f&ouml;ljande s&auml;tt:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Fr&aring;n panelens popupmeny</para>
+          <para>H&ouml;gerklicka p&aring; en tom yta p&aring; panelen och v&auml;lj sedan <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guimenuitem>Programstartare</guimenuitem></menuchoice> om du vill skapa en ny programstartare. Dialogf&ouml;nstret <guilabel>Skapa programstartare</guilabel> visas. Mer information om hur du fyller i f&auml;lten i dialogf&ouml;nstret finns i <xref linkend="gospanel-52"/>.</para>
+          <para>Du kan &auml;ven v&auml;lja <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guimenuitem>Programstartare fr&aring;n meny</guimenuitem></menuchoice> p&aring; panelens popupmeny om du vill l&auml;gga till en befintlig programstartare p&aring; panelen. V&auml;lj programstartaren som du vill l&auml;gga till p&aring; menyn.</para>
+        </listitem>
+        <listitem>
+          <para>Fr&aring;n en valfri meny</para>
+          <para>Utf&ouml;r n&aring;gon av f&ouml;ljande &aring;tg&auml;rder om du vill l&auml;gga till en programstartare p&aring; en panel fr&aring;n n&aring;gon meny:<itemizedlist><listitem><para>Visa en meny d&auml;r programstartaren ing&aring;r. Dra programstartaren till panelen. </para></listitem><listitem><para>&Ouml;ppna menyn d&auml;r programstartaren ing&aring;r p&aring; panelen d&auml;r du vill att programstartaren ska synas. H&ouml;gerklicka p&aring; programstartarens namn. V&auml;lj <guimenuitem>L&auml;gg till den h&auml;r programstartaren p&aring; panelen</guimenuitem>. </para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Fr&aring;n filhanteraren</para>
+          <para>Leta reda p&aring; <filename>.desktop</filename>-filen som h&ouml;r till programstartaren i filsystemet om du vill l&auml;gga till programstartaren p&aring; en panel fr&aring;n filhanteraren. Dra <filename>.desktop</filename>-filen till panelen om du vill l&auml;gga till programstartaren.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gospanel-52">
+        <title>S&aring; h&auml;r skapar du en programstartare med dialogf&ouml;nstret Skapa programstartare</title>
+        <para>S&aring; h&auml;r skapar du en programstartare med hj&auml;lp av dialogf&ouml;nstret <guilabel>Skapa programstartare</guilabel>: </para>
+        <orderedlist>
+          <listitem>
+            <para>H&ouml;gerklicka p&aring; n&aring;gon del av panelen s&aring; att dess popupmeny visas. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guimenuitem>Programstartare</guimenuitem></menuchoice>. Dialogf&ouml;nstret <guilabel>Skapa programstartare</guilabel> visas. </para>
+          </listitem>
+          <listitem>
+            <para>Ange egenskaperna f&ouml;r programstartaren p&aring; fliken <guilabel>Grundl&auml;ggande</guilabel>. Tabellen h&auml;r nedan beskriver dialogf&ouml;nsterelementen i flikavsnittet <guilabel>Grundl&auml;ggande</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="26.19*"/>
+                <colspec colname="colspec1" colwidth="73.81*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialogf&ouml;nsterelement</para>
+                    </entry>
+                    <entry>
+                      <para>Beskrivning </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Namn</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange programstartarens namn i den h&auml;r textrutan. Du kan l&auml;gga till &ouml;vers&auml;ttningar av namnet p&aring; fliken <guilabel>Avancerat</guilabel>. Det h&auml;r namnet &auml;r det namn som visas n&auml;r programstartaren l&auml;ggs till p&aring; en meny eller p&aring; skrivbordet. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0" valign="top">
+                      <para>
+                        <guilabel>Allm&auml;nt namn</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Ange programklassen som programstartaren tillh&ouml;r i den h&auml;r textrutan. Du skulle t.ex. kunna skriva <userinput>Texthanteraren</userinput> i textrutan om programstartaren g&auml;ller <application>gedit</application>. Du kan l&auml;gga till &ouml;vers&auml;ttningar av det allm&auml;nna namnet p&aring; fliken <guilabel>Avancerat</guilabel>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Kommentar</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Skriv en kort kommentar om programstartaren i den h&auml;r textrutan. Kommentaren visas i form av en verktygsbeskrivning n&auml;r pekaren befinner sig &ouml;ver programstartarens ikon p&aring; panelen. Du kan l&auml;gga till &ouml;vers&auml;ttningar av kommentaren p&aring; fliken <guilabel>Avancerat</guilabel>. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Kommando</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange ett kommando som ska k&ouml;ras d&aring; du klickar p&aring; programstartaren. N&auml;sta avsnitt inneh&aring;ller exempel p&aring; kommandon.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Typ</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange programstartarens typ i den h&auml;r nedrullningsbara kombinationsrutan. V&auml;lj mellan f&ouml;ljande alternativ: </para>
+                      <itemizedlist>
+                        <listitem>
+                          <para><guilabel>Program</guilabel>: V&auml;lj det h&auml;r alternativet om du vill skapa en programstartare som k&ouml;r ett program.</para>
+                        </listitem>
+                        <listitem>
+                          <para><guilabel>L&auml;nk</guilabel>: Markera det h&auml;r alternativet om du vill skapa en programstartare som l&auml;nkar till en URI.</para>
+                        </listitem>
+                      </itemizedlist>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Ikon</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>V&auml;lj en ikon som ska representera programstartaren. Klicka p&aring; knappen <guibutton>Ingen ikon</guibutton> om du vill v&auml;lja en ikon. Ett dialogf&ouml;nster d&auml;r du kan v&auml;lja en ikon visas. V&auml;lj en ikon i dialogf&ouml;nstret. Klicka p&aring; <guibutton>Bl&auml;ddra</guibutton> om du vill v&auml;lja en ikon fr&aring;n en annan katalog. Klicka p&aring; <guibutton>OK</guibutton> n&auml;r du har valt en ikon. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>K&ouml;r i terminal</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>V&auml;lj det h&auml;r alternativet om du vill k&ouml;ra programmet eller kommandot i ett terminalf&ouml;nster. V&auml;lj det h&auml;r alternativet i fr&aring;ga om program eller kommandon som inte skapar ett f&ouml;nster n&auml;r de k&ouml;rs.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Om du vill ange avancerade egenskaper f&ouml;r programstartaren klickar du p&aring; fliken <guilabel> Avancerat</guilabel>. </para>
+          </listitem>
+          <listitem>
+            <para>Ange de avancerade egenskaperna f&ouml;r programstartaren p&aring; fliken <guilabel> Avancerat</guilabel>. Tabellen h&auml;r nedan beskriver dialogf&ouml;nsterelementen i den &ouml;vre delen av flikavsnittet <guilabel>Avancerat</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="32.03*"/>
+                <colspec colwidth="67.97*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialogf&ouml;nsterelement</para>
+                    </entry>
+                    <entry>
+                      <para>Beskrivning </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>F&ouml;rs&ouml;k med detta innan du anv&auml;nder</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange ett kommando som kontrolleras innan programstartaren k&ouml;rs ig&aring;ng. Om kommandot &auml;r k&ouml;rbart och finns n&aring;gonstans i s&ouml;kv&auml;gen visas programstartaren p&aring; panelen.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Dokumentation</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange s&ouml;kv&auml;gen till programstartarens hj&auml;lpfil. Om du anger en s&ouml;kv&auml;g i det h&auml;r f&auml;ltet visas menyalternativet <guimenuitem>Hj&auml;lp om <replaceable>programstartarnamn</replaceable>-program</guimenuitem> p&aring; programstartarens popupmeny.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Du kan &auml;ven l&auml;gga till &ouml;vers&auml;ttningar av f&auml;lten <guilabel>Namn</guilabel>, <guilabel>Allm&auml;nt namn</guilabel> och <guilabel>Kommentar</guilabel> fr&aring;n flikavsnittet <guilabel>Grundl&auml;ggande</guilabel>. Ange &ouml;vers&auml;ttningen i tabellen <guilabel>Namn/Kommentar f&ouml;r &ouml;vers&auml;ttningar</guilabel> p&aring; f&ouml;ljande s&auml;tt: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="20.78*"/>
+                <colspec colname="colspec1" colwidth="79.22*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>F&auml;lt</para>
+                    </entry>
+                    <entry>
+                      <para>Beskrivning </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>F&ouml;rsta f&auml;ltet </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange den tv&aring; tecken l&aring;nga koden f&ouml;r spr&aring;ket som du vill &ouml;vers&auml;tta till. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Andra f&auml;ltet </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange &ouml;vers&auml;ttningen av programstartarens <guilabel>Namn</guilabel>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>Tredje f&auml;ltet </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Ange &ouml;vers&auml;ttningen av programstartarens <guilabel>Allm&auml;nt namn</guilabel>. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Fj&auml;rde f&auml;ltet </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Ange &ouml;vers&auml;ttningen av programstartarens <guilabel>Kommentar</guilabel>. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+            <para>Klicka d&auml;refter p&aring; knappen <guibutton>L&auml;gg till/St&auml;ll in</guibutton>. </para>
+            <para>Markera &ouml;vers&auml;ttningen om du vill redigera den. Den &ouml;versatta texten visas i den nedre delen av dialogf&ouml;nstret. Redigera f&auml;lten och klicka sedan p&aring; knappen <guibutton>L&auml;gg till/St&auml;ll in</guibutton>.</para>
+            <para>Markera &ouml;vers&auml;ttningen och klicka sedan p&aring; <guibutton>Ta bort</guibutton> om du vill ta bort &ouml;vers&auml;ttningen.</para>
+          </listitem>
+          <listitem>
+            <para>Klicka p&aring; <guibutton>OK</guibutton>. Dialogf&ouml;nstret <guilabel>Egenskaper f&ouml;r programstartaren</guilabel> st&auml;ngs och programstartaren skapas.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gospanel-556">
+        <title>Kommandon f&ouml;r programstartare</title>
+        <para>Vilken typ av kommandon som du kan ange i f&auml;ltet <guilabel>Kommando</guilabel> beror p&aring; vilket alternativ du har valt i den nedrullningsbara kombirutan <guilabel>Typ</guilabel>. Om du v&auml;ljer <guilabel>Program</guilabel> i den nedrullningsbara kombirutan <guilabel>Typ</guilabel> kan du ange ett vanligt kommando. I f&ouml;ljande tabell visas n&aring;gra exempelkommandon och de &aring;tg&auml;rder som kommandona utf&ouml;r.</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Exempel p&aring; programkommando </para>
+                </entry>
+                <entry>
+                  <para>&Aring;tg&auml;rd</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>gedit</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Startar textredigeraren <application>gedit</application>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>gedit /user123/loremipsum.txt</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>&Ouml;ppnar filen <filename>/user123/loremipsum.txt </filename> i textredigeraren <application>gedit</application>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>nautilus /user123/Projects </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ppnar mappen <filename>/user123/Projects</filename> i ett filhanterarf&ouml;nster. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Om du v&auml;ljer <guilabel>L&auml;nk</guilabel> i den nedrullningsbara rotationsrutan <guilabel>Typ</guilabel> kan du ange ett l&auml;nkkommando. I f&ouml;ljande tabell visas n&aring;gra exempelkommandon f&ouml;r l&auml;nkar och de &aring;tg&auml;rder som kommandona utf&ouml;r:<indexterm><primary>speciella URI:er</primary><secondary>programstartare</secondary></indexterm></para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Exempel p&aring; l&auml;nkkommando </para>
+                </entry>
+                <entry>
+                  <para>&Aring;tg&auml;rd</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>http://www.sun.com </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>&Ouml;ppnar webbplatsen Sun Microsystems i din standardwebbl&auml;sare.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>ftp://ftp.gnome.org</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>&Ouml;ppnar FTP-platsen f&ouml;r GNOME i din standardwebbl&auml;sare. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>applications:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>&Ouml;ppnar platsen <guilabel>Program</guilabel> i ett filhanterarf&ouml;nster. Dubbelklicka p&aring; ett program f&ouml;r att starta det.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>preferences:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>&Ouml;ppnar platsen <guilabel>Inst&auml;llningar</guilabel> i ett filhanterarf&ouml;nster. Dubbelklicka p&aring; ett inst&auml;llningsverktyg f&ouml;r att starta det.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-36">
+      <title>S&aring; h&auml;r &auml;ndrar du en programstartares egenskaper </title>
+      <indexterm>
+        <primary>programstartare</primary>
+        <secondary>&auml;ndra egenskaper</secondary>
+      </indexterm>
+      <para>S&aring; h&auml;r &auml;ndrar du en programstartares egenskaper: </para>
+      <orderedlist>
+        <listitem>
+          <para>H&ouml;gerklicka p&aring; programstartaren s&aring; att panelobjektets popupmeny visas.</para>
+        </listitem>
+        <listitem>
+          <para>V&auml;lj <guimenuitem>Egenskaper</guimenuitem>. &Auml;ndra de aktuella egenskaperna i dialogf&ouml;nstret <guilabel>Egenskaper f&ouml;r programstartaren</guilabel>. Mer information om dialogf&ouml;nstret <guilabel>Egenskaper f&ouml;r programstartaren</guilabel> finns i <xref linkend="gospanel-52"/>. </para>
+        </listitem>
+        <listitem>
+          <para>St&auml;ng dialogf&ouml;nstret <guilabel>Egenskaper f&ouml;r programstartaren</guilabel> genom att klicka p&aring; <guibutton>St&auml;ng</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-557">
+    <title>Knappar </title>
+    <indexterm>
+      <primary>knappar</primary>
+      <secondary>l&auml;gga till p&aring; paneler</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>&aring;tg&auml;rdsknappar</primary>
+      <see>knappar</see>
+    </indexterm>
+    <para>Du kan l&auml;gga till knappar p&aring; panelerna f&ouml;r att snabbt komma &aring;t vanliga &aring;tg&auml;rder och funktioner. </para>
+    <sect2 id="gospanel-554">
+      <title>Knappen S&ouml;k efter filer </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>S&ouml;k</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>knappen S&ouml;k</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>S&ouml;k, knapp</primary>
+      </indexterm>
+      <para>Du kan anv&auml;nda knappen <guibutton>S&ouml;k efter filer</guibutton> om du vill &ouml;ppna dialogf&ouml;nstret <application> S&ouml;k efter filer</application>. </para>
+      <para>Du l&auml;gger till en <guibutton>S&ouml;k efter filer</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka p&aring; en tom yta p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>S&ouml;k efter filer</guimenuitem></menuchoice>. Om du vill &ouml;ppna dialogf&ouml;nstret <application>S&ouml;k efter filer</application> klickar du p&aring; knappen <guibutton>S&ouml;k efter filer</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-563">
+      <title>Knappen Tvinga avslutande </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>Tvinga avslutande</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>Tvinga avslutande, knapp</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Tvinga avslutande, knapp</primary>
+      </indexterm>
+      <indexterm>
+        <primary>avsluta program</primary>
+      </indexterm>
+      <indexterm>
+        <primary>program</primary>
+        <secondary>avsluta</secondary>
+      </indexterm>
+      <para>Med knappen <guibutton>Tvinga avslutande</guibutton> kan du v&auml;lja ett f&ouml;nster f&ouml;r att avsluta ett program. Den h&auml;r knappen &auml;r praktisk om du vill avsluta ett program som inte svarar. </para>
+      <para>Om du vill avsluta ett program klickar du p&aring; knappen <guibutton>Tvinga avslutande</guibutton> och sedan p&aring; ett f&ouml;nster i det program som du vill avsluta. Om du trots allt inte vill avsluta programmet efter att du har klickat p&aring; knappen <guibutton>Tvinga avslutande</guibutton> trycker du p&aring; <keycap>Esc</keycap>.</para>
+    </sect2>
+    <sect2 id="gospanel-21">
+      <title>Knappen L&aring;s sk&auml;rmen </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>L&aring;s</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>knappen L&aring;s</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>knappen L&aring;s</primary>
+      </indexterm>
+      <indexterm>
+        <primary>l&aring;sa sk&auml;rmen</primary>
+      </indexterm>
+      <para>Om du klickar p&aring; knappen <guibutton>L&aring;s sk&auml;rmen</guibutton> l&aring;ses sk&auml;rmen och sk&auml;rmsl&auml;ckaren g&aring;r i g&aring;ng. Du m&aring;ste ange ditt l&ouml;senord om du vill &aring;teruppta sessionen. Du m&aring;ste ha sk&auml;rmsl&auml;ckaren aktiverad f&ouml;r att kunna l&aring;sa sk&auml;rmen.</para>
+      <para>Du l&auml;gger till en <guibutton>L&aring;s sk&auml;rmen</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka i ett tomt utrymme p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>L&aring;s sk&auml;rmen</guimenuitem></menuchoice>. </para>
+      <para>H&ouml;gerklicka p&aring; <guibutton>L&aring;s sk&auml;rmen</guibutton>. D&aring; visas en meny med kommandon som har med sk&auml;rmsl&auml;ckaren att g&ouml;ra. <xref linkend="gosstartsession-TBL-83"/> beskriver kommandona som finns tillg&auml;ngliga p&aring; menyn.</para>
+      <table frame="topbot" id="gosstartsession-TBL-83">
+        <title>Menyalternativ p&aring; menyn L&aring;s sk&auml;rmen</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="43.55*"/>
+          <colspec colname="colspec1" colwidth="56.45*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Alternativ</para>
+              </entry>
+              <entry>
+                <para>Funktion </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Aktivera sk&auml;rmsl&auml;ckare</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Sk&auml;rmsl&auml;ckaren aktiveras omedelbart, men sk&auml;rmen l&aring;ses inte.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>L&aring;s sk&auml;rm</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Sk&auml;rmen l&aring;ses omedelbart. Det h&auml;r kommandot ger samma effekt som om du hade klickat p&aring; knappen <guibutton>L&aring;s</guibutton>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Avsluta sk&auml;rmsl&auml;ckardemon</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Sk&auml;rmsl&auml;ckarprocessen avslutas. Du kan inte l&aring;sa sk&auml;rmen efter att du har avslutat sk&auml;rmsl&auml;ckarprocessen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Starta om sk&auml;rmsl&auml;ckardemon</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Sk&auml;rmsl&auml;ckarprocessen avslutas och startas om. Anv&auml;nd det h&auml;r kommandot n&auml;r du har bytt l&ouml;senord. Ange det nya l&ouml;senordet d&aring; du anv&auml;nder sk&auml;rmsl&auml;ckaren efter att ha startat om sk&auml;rmsl&auml;ckarprocessen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Egenskaper</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Visar inst&auml;llningsverktyget <guilabel>XScreenSaver</guilabel>. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gospanel-20">
+      <title>Knappen Logga ut </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>Logga ut</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>knappen Logga ut</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Logga ut, knapp</primary>
+      </indexterm>
+      <para>Om du klickar p&aring; knappen <guibutton>Logga ut</guibutton> p&aring;b&ouml;rjas utloggningsprocessen fr&aring;n den aktuella Java Desktop System-sessionen. </para>
+      <para>Du l&auml;gger till en <guibutton>Logga ut</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka i ett tomt utrymme p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>Logga ut</guimenuitem></menuchoice>. Klicka p&aring; knappen <guibutton>Logga ut</guibutton> om du vill logga ut fr&aring;n sessionen eller st&auml;nga av datorn. </para>
+    </sect2>
+    <sect2 id="gospanel-555">
+      <title>Knappen K&ouml;r program </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>K&ouml;r</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>knappen K&ouml;r</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>K&ouml;r, knapp</primary>
+      </indexterm>
+      <para>Du kan anv&auml;nda knappen <guibutton>K&ouml;r program</guibutton> f&ouml;r att &ouml;ppna dialogf&ouml;nstret <guilabel>K&ouml;r program</guilabel>. </para>
+      <para>Du l&auml;gger till en <guibutton>K&ouml;r program</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka p&aring; en tom yta p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>K&ouml;r program</guimenuitem></menuchoice>. Du &ouml;ppnar dialogf&ouml;nstret <guilabel>K&ouml;r program</guilabel> genom att klicka p&aring; knappen <guibutton>K&ouml;r program</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-553">
+      <title>Knappen Sk&auml;rmdump </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>Sk&auml;rmdump</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>knappen Sk&auml;rmdump</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Sk&auml;rmdump, knapp</primary>
+      </indexterm>
+      <para>Du kan anv&auml;nda knappen <guibutton>Sk&auml;rmdump</guibutton> f&ouml;r att ta en sk&auml;rmbild av sk&auml;rmen. </para>
+      <para>Du l&auml;gger till en <guibutton>Sk&auml;rmdump</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka p&aring; en tom yta p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>Sk&auml;rmdump</guimenuitem></menuchoice>. Om du vill ta en sk&auml;rmdump av sk&auml;rmen klickar du p&aring; knappen <guibutton>Sk&auml;rmdump</guibutton>.</para>
+    </sect2>
+    <sect2 id="gospanel-564">
+      <title>Knappen Visa skrivbord </title>
+      <indexterm>
+        <primary>knappar</primary>
+        <secondary>Visa skrivbord</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>Visa skrivbord, knapp</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Visa skrivbord, knapp</primary>
+      </indexterm>
+      <para>Du kan anv&auml;nda knappen <guibutton>Visa skrivbord</guibutton> f&ouml;r att minimera alla &ouml;ppna f&ouml;nster och visa skrivbordet.</para>
+      <para>Du l&auml;gger till en <guibutton>Visa skrivbord</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka p&aring; en tom yta p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>&Aring;tg&auml;rder</guisubmenu><guimenuitem>Visa skrivbord</guimenuitem></menuchoice>. Om du vill minimera alla f&ouml;nster och visa skrivbordet klickar du p&aring; knappen <guibutton>Visa skrivbord</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-567">
+      <title>Notifieringsyta </title>
+      <indexterm>
+        <primary>panelprogram</primary>
+        <secondary>Notifieringsyta</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>panelobjekt</primary>
+        <secondary>Notifieringsyta</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Notifieringsyta</primary>
+      </indexterm>
+      <para>Panelprogrammet <application>Notifieringsyta</application> visar ikoner fr&aring;n olika program f&ouml;r att ange aktivitet f&ouml;r programmet. Om du t.ex. spelar en cd-skiva i <application>cd-spelaren</application> s&aring; visas en cd-ikon i <application>Notifieringsyta</application>. Bilden ovan visar hur cd-ikonen i <application>Notifieringsyta</application> ser ut. </para>
+      <para>Om du vill l&auml;gga till <application>Notifieringsyta</application> p&aring; en panel h&ouml;gerklickar du p&aring; en tom yta p&aring; panelen. V&auml;lj <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guisubmenu>Verktyg</guisubmenu><guimenuitem>Notifieringsyta</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-37">
+    <title>Menyer </title>
+    <indexterm>
+      <primary>menyer</primary>
+      <secondary>l&auml;gga till p&aring; panel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>panelobjekt</primary>
+      <secondary>menyer</secondary>
+    </indexterm>
+    <para>Du kan l&auml;gga till f&ouml;ljande menytyper p&aring; panelerna: </para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>K&ouml;r</guibutton>: Du kommer &aring;t praktiskt taget alla standardprogram, -kommandon och -konfigurationsalternativ fr&aring;n knappen <guibutton>K&ouml;r</guibutton>. Du kan l&auml;gga till en <guibutton>K&ouml;r</guibutton>-knapp p&aring; en panel genom att h&ouml;gerklicka p&aring; en tom yta p&aring; panelen och v&auml;lja <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guimenuitem>Huvudmeny</guimenuitem></menuchoice>. Du kan l&auml;gga till s&aring; m&aring;nga <guibutton>K&ouml;r</guibutton>-knappar som du vill p&aring; panelerna. </para>
+      </listitem>
+      <listitem>
+        <para><application>Menyrad</application>: Du kommer &aring;t praktiskt taget alla standardprogram, -kommandon och -konfigurationsalternativ fr&aring;n menyerna p&aring; <application>menyraden</application>. <application>Menyraden</application> inneh&aring;ller menyerna <guimenu>Program</guimenu> och <guimenu>&Aring;tg&auml;rder</guimenu>. H&ouml;gerklicka p&aring; en tom yta p&aring; panelen och v&auml;lj sedan <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guimenuitem>Menyrad</guimenuitem></menuchoice> om du vill l&auml;gga till <application>menyraden</application> p&aring; en panel. Du kan l&auml;gga till s&aring; m&aring;nga <application>menyrads</application>objekt som du vill p&aring; panelerna. </para>
+      </listitem>
+      <listitem>
+        <para>Systemmenyer: Systemmenyer inneh&aring;ller standardprogram och standardverktyg f&ouml;r Java Desktop System. Menyerna <guimenu>Program</guimenu> och <guimenu>&Aring;tg&auml;rder</guimenu> &auml;r systemmenyer. H&ouml;gerklicka p&aring; en programstartare p&aring; menyn och v&auml;lj sedan <menuchoice><guimenu>Hela menyn</guimenu><guimenuitem>L&auml;gg till detta som en meny p&aring; panelen</guimenuitem></menuchoice> om du vill l&auml;gga till en systemmeny p&aring; en panel. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Menyer som du l&auml;gger till p&aring; panelerna representeras av en ikon med en pil. Pilen visar att ikonen representerar en meny eller l&aring;da. <xref linkend="gospanel-FIG-68"/> visar hur menyerna brukar se ut p&aring; en panel. </para>
+    <figure id="gospanel-FIG-68">
+      <title>Typiska menyobjekt p&aring; en panel</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Typiska menyobjekt p&aring; en panel.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+  <sect1 id="gospanel-18">
+    <title>L&aring;dor </title>
+    <indexterm>
+      <primary>panelobjekt</primary>
+      <secondary>l&aring;dor</secondary>
+      <see>l&aring;dor</see>
+    </indexterm>
+    <para>En l&aring;da &auml;r en ut&ouml;kad version av en panel. Du kan &ouml;ppna och st&auml;nga en l&aring;da p&aring; samma s&auml;tt som du kan visa och d&ouml;lja en panel. En l&aring;da kan inneh&aring;lla alla slags panelobjekt, d&auml;ribland programstartare, menyer, andra panelobjekt och andra l&aring;dor. N&auml;r du &ouml;ppnar en l&aring;da kan du anv&auml;nda objekten i den p&aring; samma s&auml;tt som du anv&auml;nder objekten p&aring; en panel. </para>
+    <para>Figuren h&auml;r nedan visar en &ouml;ppen l&aring;da som inneh&aring;ller tv&aring; panelobjekt. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/open_drawer.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>&Ouml;ppen l&aring;da. Sammanhanget beskriver bilden. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>Pilen p&aring; l&aring;dans ikon visar att ikonen representerar en l&aring;da eller en meny.</para>
+    <para>Du kan l&auml;gga till, flytta och ta bort objekt fr&aring;n l&aring;dor p&aring; samma s&auml;tt som du kan l&auml;gga till, flytta och ta bort objekt fr&aring;n paneler. </para>
+    <sect2 id="gospanel-42">
+      <title>S&aring; h&auml;r &ouml;ppnar och st&auml;nger du en l&aring;da </title>
+      <indexterm>
+        <primary>l&aring;dor</primary>
+        <secondary>&ouml;ppna</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>l&aring;dor</primary>
+        <secondary>st&auml;nga</secondary>
+      </indexterm>
+      <para>Klicka p&aring; l&aring;dobjektet p&aring; en panel om du vill &ouml;ppna l&aring;dan. Du kan st&auml;nga en l&aring;da p&aring; f&ouml;ljande s&auml;tt: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicka p&aring; l&aring;dan.</para>
+        </listitem>
+        <listitem>
+          <para>Klicka p&aring; l&aring;dans d&ouml;ljknapp.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-420">
+      <title>S&aring; h&auml;r l&auml;gger du till en l&aring;da p&aring; en panel </title>
+      <indexterm>
+        <primary>l&aring;dor</primary>
+        <secondary>l&auml;gga till p&aring; panel</secondary>
+      </indexterm>
+      <para>Du kan l&auml;gga till en l&aring;da p&aring; en panel p&aring; f&ouml;ljande s&auml;tt: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fr&aring;n panelens popupmeny</para>
+          <para>H&ouml;gerklicka p&aring; en tom yta p&aring; panelen och v&auml;lj sedan <menuchoice><guimenu>L&auml;gg till i panelen</guimenu><guimenuitem>L&aring;da</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Fr&aring;n en valfri meny</para>
+          <para>Du kan l&auml;gga till en meny i form av ett l&aring;dobjekt p&aring; en panel.</para>
+          <para>&Ouml;ppna menyn fr&aring;n panelen om du vill l&auml;gga till den i form av en l&aring;da. H&ouml;gerklicka p&aring; n&aring;gon programstartare p&aring; menyn och v&auml;lj sedan <menuchoice><guimenu>Hela menyn</guimenu><guimenuitem>L&auml;gg till detta som en l&aring;da p&aring; panelen</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-54">
+      <title>S&aring; h&auml;r l&auml;gger du till ett objekt i en l&aring;da </title>
+      <indexterm>
+        <primary>l&aring;dor</primary>
+        <secondary>l&auml;gga till objekt i</secondary>
+      </indexterm>
+      <para>Du l&auml;gger till ett objekt i en l&aring;da p&aring; samma s&auml;tt som du l&auml;gger till objekt p&aring; paneler. Mer information finns i <xref linkend="gospanel-15"/>. </para>
+    </sect2>
+    <sect2 id="gospanel-550">
+      <title>S&aring; h&auml;r &auml;ndrar du en l&aring;das egenskaper </title>
+      <indexterm>
+        <primary>l&aring;dor</primary>
+        <secondary>&auml;ndra egenskaper</secondary>
+      </indexterm>
+      <para>Om du vill &auml;ndra inst&auml;llningar f&ouml;r alla paneler och l&aring;dor anv&auml;nder du inst&auml;llningsverktyget <application>Panel</application>. Du kan t.ex. v&auml;lja diverse inst&auml;llningar som har med panel- och l&aring;dobjektens utseende och upptr&auml;dande att g&ouml;ra. Du kan &auml;ven v&auml;lja alternativ som enbart har med l&aring;dor att g&ouml;ra. Du kan t.ex. v&auml;lja att l&aring;dorna ska st&auml;ngas n&auml;r du klickar p&aring; en programstartare i dem.</para>
+      <para>Du kan &auml;ven &auml;ndra andra egenskaper f&ouml;r enskilda l&aring;dor. Du kan &auml;ndra egenskaper f&ouml;r individuella l&aring;dor, t.ex. deras utseende och om de ska ha d&ouml;ljknappar eller inte.</para>
+      <para>S&aring; h&auml;r &auml;ndrar du en l&aring;das egenskaper: </para>
+      <orderedlist>
+        <listitem>
+          <para>H&ouml;gerklicka p&aring; l&aring;dan och v&auml;lj sedan <guimenuitem>Egenskaper</guimenuitem> s&aring; att dialogf&ouml;nstret <guilabel>Panelegenskaper</guilabel> visas. Fliken <guilabel>Allm&auml;nt</guilabel> i dialogf&ouml;nstret visas.</para>
+        </listitem>
+        <listitem>
+          <para>V&auml;lj l&aring;dans egenskaper i dialogf&ouml;nstret. I f&ouml;ljande tabell beskrivs elementen p&aring; fliken <guilabel>Allm&auml;nt</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Dialogf&ouml;nsterelement</para>
+                  </entry>
+                  <entry>
+                    <para>Beskrivning </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Namn</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Skriv in ett namn p&aring; panelen. N&auml;r du anv&auml;nder snabbkommandon f&ouml;r att v&auml;xla mellan panelerna och skrivbordet visas det h&auml;r panelnamnet. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Storlek</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>V&auml;lj panelstorlek.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Ikon</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>V&auml;lj en ikon som ska representera l&aring;dan. Klicka p&aring; knappen <guibutton>Ikon</guibutton>. Dialogf&ouml;nstret f&ouml;r ikonv&auml;ljaren visas. V&auml;lj en ikon i dialogf&ouml;nstret. Du kan &auml;ven klicka p&aring; <guibutton>Bl&auml;ddra</guibutton> och v&auml;lja en ikon i en annan katalog. Klicka p&aring; <guibutton>OK</guibutton> n&auml;r du har valt en ikon.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Visa d&ouml;ljknappar</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Markera det h&auml;r alternativet om du vill att d&ouml;ljknapparna ska vara synliga.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Pilar p&aring; d&ouml;ljknapp</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>V&auml;lj det h&auml;r alternativet om du vill ha pilar p&aring; d&ouml;ljknapparna, under f&ouml;ruts&auml;ttning att de &auml;r aktiverade.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Du kan st&auml;lla in l&aring;dans bakgrund med flikavsnittet <guilabel>Bakgrund</guilabel>. Information om hur du fyller i f&auml;lten i flikavsnittet <guilabel>Bakgrund</guilabel> finns i <xref linkend="gospanel-28"/>. Du kan &auml;ven dra en f&auml;rg eller bild och sl&auml;ppa den p&aring; en l&aring;da om du vill ange att f&auml;rgen eller bilden ska anv&auml;ndas som l&aring;dans bakgrund. Mer information finns i <xref linkend="gospanel-61"/>.</para>
+        </listitem>
+        <listitem>
+          <para>St&auml;ng dialogf&ouml;nstret <guilabel>Panelegenskaper</guilabel> genom att klicka p&aring; <guibutton>St&auml;ng</guibutton>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

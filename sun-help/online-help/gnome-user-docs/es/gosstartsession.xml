@@ -1,0 +1,363 @@
+<chapter id="gosgetstarted-1">
+  <title>Procedimientos iniciales</title>
+  <highlights>
+    <para>Este cap&iacute;tulo contiene informaci&oacute;n acerca de c&oacute;mo iniciar, gestionar y finalizar las sesiones de Java Desktop System.</para>
+  </highlights>
+  <sect1 id="gosgetstarted-69">
+    <title>Inicio de una sesi&oacute;n en el escritorio </title>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>iniciar</secondary>
+    </indexterm>
+    <para>Una sesi&oacute;n es el per&iacute;odo de tiempo transcurrido entre el inicio y el final de sesi&oacute;n en Java Desktop System. La pantalla del inicio de sesi&oacute;n es la puerta de entrada a Java Desktop System. que dispone de unos campos para introducir el nombre de usuario y la contrase&ntilde;a y permite tambi&eacute;n seleccionar opciones para el inicio de una sesi&oacute;n, por ejemplo, el idioma.</para>
+    <para>Una sesi&oacute;n se inicia cuando se entra en el sistema. El gestor de sesiones se inicia una vez que el nombre de usuario y la contrase&ntilde;a se han autenticado. El administrador de sesiones permite gestionar la sesi&oacute;n. Por ejemplo, se puede guardar el estado de la sesi&oacute;n m&aacute;s reciente y recuperarlo la pr&oacute;xima vez que se vuelva a iniciar. El gestor de sesi&oacute;n guarda y permite restaurar: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Los valores de aspecto y funcionamiento, por ejemplo, valores de tipos de letra, colores y del rat&oacute;n. </para>
+      </listitem>
+      <listitem>
+        <para>Las aplicaciones que se estaban ejecutando como, por ejemplo, las ventanas del gestor de archivos y del editor de texto. No obstante, no se pueden guardar ni restaurar aplicaciones no gestionadas por el gestor de sesi&oacute;n. Por ejemplo, si inicia el editor <application>vi</application> desde una l&iacute;nea de comandos en una ventana Terminal, el Administrador de sesiones no podr&aacute; restaurar la sesi&oacute;n de edici&oacute;n. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2>
+      <title>Para iniciar la sesi&oacute;n en el escritorio en Linux </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>inicio de</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>iniciar</primary>
+        <secondary>sesi&oacute;n</secondary>
+      </indexterm>
+      <para>Si desea iniciar una sesi&oacute;n en el escritorio, siga estos pasos:</para>
+      <orderedlist>
+        <listitem>
+          <para>En la pantalla de inicio, haga clic en el icono <guilabel>Sesi&oacute;n</guilabel>. Elija Java Desktop System en la lista de entornos de escritorio disponibles. </para>
+        </listitem>
+        <listitem>
+          <para>Introduzca el nombre de usuario en el campo <guilabel>Nombre de usuario</guilabel> y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Introduzca la contrase&ntilde;a en el campo <guilabel>Contrase&ntilde;a</guilabel> y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <para>Si el usuario y la contrase&ntilde;a son v&aacute;lidos, el gestor iniciar&aacute; la sesi&oacute;n. Si &eacute;sta fuera la primera vez que se inicia sesi&oacute;n, se iniciar&aacute; una sesi&oacute;n nueva. Si ya se inici&oacute; una sesi&oacute;n con anterioridad, el administrador de sesiones restaurar&aacute; la sesi&oacute;n anterior siempre que se guardase la configuraci&oacute;n de la misma al cerrarla.</para>
+      <para>Para cerrar o reiniciar el sistema antes de iniciar la sesi&oacute;n, haga clic en el icono <guilabel>Acciones</guilabel> de la pantalla de inicio. Se mostrar&aacute; un cuadro de di&aacute;logo. Seleccione la opci&oacute;n que desee y haga clic en <guibutton>Aceptar</guibutton>. </para>
+    </sect2>
+    <sect2>
+      <title>Para iniciar la sesi&oacute;n en un idioma distinto en Linux </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>iniciar sesi&oacute;n en un idioma distinto</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>idioma distinto, iniciar sesi&oacute;n</primary>
+      </indexterm>
+      <indexterm>
+        <primary>iniciar sesi&oacute;n</primary>
+        <secondary> en un idioma distinto</secondary>
+      </indexterm>
+      <para>Para iniciar la sesi&oacute;n en el escritorio en un idioma diferente:</para>
+      <orderedlist>
+        <listitem>
+          <para>En la pantalla de inicio, haga clic en el icono <guilabel>Idioma</guilabel>. Seleccione el idioma de la lista de idiomas disponibles. </para>
+        </listitem>
+        <listitem>
+          <para>Introduzca el nombre de usuario en el campo <guilabel>Nombre de usuario</guilabel> y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Introduzca la contrase&ntilde;a en el campo <guilabel>Contrase&ntilde;a</guilabel> y, a continuaci&oacute;n, pulse <keycap>Intro</keycap>.</para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>Al iniciar una sesi&oacute;n en un idioma diferente, &eacute;ste se convierte en el idioma utilizado para la interfaz del usuario. No se especifica la disposici&oacute;n del teclado. Para especificar una disposici&oacute;n del teclado, utilice la aplicaci&oacute;n del panel <application>Selector de la disposici&oacute;n del teclado</application>.</para>
+      </note>
+      <para>Las <firstterm>aplicaciones del panel</firstterm> son aplicaciones peque&ntilde;as e interactivas que residen en un panel, como el <application>Lector de CD</application>. Cada aplicaci&oacute;n del panel dispone de una interfaz sencilla de usuario con la que se puede trabajar mediante el rat&oacute;n o el teclado. </para>
+    </sect2>
+    <sect2>
+      <title>Para iniciar la sesi&oacute;n en el escritorio en el sistema operativo Solaris </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>iniciar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>iniciar</primary>
+      </indexterm>
+      <para>Si desea iniciar una sesi&oacute;n en el escritorio, siga estos pasos:</para>
+      <orderedlist>
+        <listitem>
+          <para>Elija <menuchoice><guimenu>Opciones</guimenu><guimenuitem> Sesi&oacute;n</guimenuitem></menuchoice>. Elija Java Desktop System en la lista de entornos de escritorio disponibles.</para>
+        </listitem>
+        <listitem>
+          <para>Introduzca su nombre de usuario en el campo del di&aacute;logo <guilabel>Gestor de inicio</guilabel> y, a continuaci&oacute;n, haga clic en <guibutton>Aceptar</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Introduzca la contrase&ntilde;a en el campo del di&aacute;logo <guilabel>Gestor de inicio</guilabel> y, a continuaci&oacute;n, haga clic en <guibutton>Aceptar</guibutton>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Si el usuario y la contrase&ntilde;a son v&aacute;lidos, el gestor iniciar&aacute; la sesi&oacute;n. Si &eacute;sta fuera la primera vez que se inicia sesi&oacute;n, se iniciar&aacute; una sesi&oacute;n nueva. Si ya se inici&oacute; una sesi&oacute;n con anterioridad, el administrador de sesiones restaurar&aacute; a la sesi&oacute;n anterior.</para>
+    </sect2>
+    <sect2>
+      <title>Para iniciar la sesi&oacute;n en un idioma diferente en el sistema operativo Solaris </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>iniciar sesi&oacute;n en un idioma distinto</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>idioma distinto, iniciar sesi&oacute;n </primary>
+      </indexterm>
+      <indexterm>
+        <primary>iniciar sesi&oacute;n</primary>
+        <secondary> en un idioma distinto</secondary>
+      </indexterm>
+      <para>Para iniciar la sesi&oacute;n en el escritorio en un idioma diferente:</para>
+      <orderedlist>
+        <listitem>
+          <para>En el cuadro de di&aacute;logo de entrada, elija <menuchoice><guimenu>Opciones</guimenu><guimenuitem>Sesi&oacute;n</guimenuitem></menuchoice>. Elija Java Desktop System en la lista de entornos de escritorio disponibles.</para>
+        </listitem>
+        <listitem>
+          <para>En el cuadro de di&aacute;logo de entrada, elija <menuchoice><guimenu>Opciones</guimenu><guimenuitem>Idioma</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Elija el grupo de idiomas que incluye el idioma que necesita.</para>
+        </listitem>
+        <listitem>
+          <para>Elija un idioma.</para>
+        </listitem>
+        <listitem>
+          <para>Inicie sesi&oacute;n.</para>
+        </listitem>
+      </orderedlist>
+      <para>El administrador del sistema configura el idioma predeterminado del sistema. El men&uacute; <guimenu>Opciones</guimenu> del cuadro de di&aacute;logo <guilabel>Gestor de inicio</guilabel> permite seleccionar otros idiomas. Al elegir un idioma en el men&uacute; <guimenu>Opciones</guimenu>, el sistema configura la variable LANG para la sesi&oacute;n. El sistema volver&aacute; al idioma predeterminado al final de la sesi&oacute;n. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-88">
+    <title>Inicio de una sesi&oacute;n por primera vez</title>
+    <para>Al iniciar una sesi&oacute;n de escritorio por primera vez, se muestra una pantalla de inicio con un panel en la parte inferior y varios iconos en el fondo del escritorio.</para>
+    <sect2 id="chap3-8">
+      <title>Configuraci&oacute;n inicial del escritorio </title>
+      <para>En esta secci&oacute;n se describe el aspecto visual del escritorio cuando se inicia una sesi&oacute;n por primera vez. El administrador del sistema puede haber modificado el men&uacute; del panel para adaptar el sistema a sus necesidades, as&iacute; que ciertos aspectos quiz&aacute;s no coincidan con los descritos aqu&iacute;.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/jds_fulldesktop.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>El contexto describe las ilustraciones</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>La pantalla de Java Desktop System normalmente incluye: </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Este equipo</guilabel>
+          </para>
+          <para>Permite acceder a los detalles de la configuraci&oacute;n y los dispositivos del sistema. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Documentos</guilabel>
+          </para>
+          <para>Permite acceder directamente a los archivos almacenados en el directorio predeterminado.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Ubicaciones de red</guilabel>
+          </para>
+          <para>Permite acceder a otros sistemas de la red desde un &uacute;nico directorio.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Papelera</guilabel>
+          </para>
+          <para>Proporciona un &aacute;rea de almacenamiento temporal de archivos, carpetas u objetos del escritorio desde el cual &eacute;stos se pueden volver a recuperar o donde se pueden suprimir definitivamente.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>StarOffice 7</guilabel>
+          </para>
+          <para>Ejecuta la aplicacion StarOffice</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Ayuda de Java&trade; Desktop System</guilabel>
+          </para>
+          <para>Inicia un navegador de ayuda que permite acceder a informaci&oacute;n general acerca de <application>Java Desktop System</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Panel del borde inferior</para>
+          <para>Estos son los objetos que aparecen de forma predeterminada en el panel del borde inferior: </para>
+          <itemizedlist>
+            <listitem>
+              <para>Bot&oacute;n <guibutton>Lanzador</guibutton>: proporciona men&uacute;s para aplicaciones y herramientas de configuraci&oacute;n de <application>Java Desktop System</application>. </para>
+            </listitem>
+            <listitem>
+              <para><application>Reloj</application>: Muestra la hora y fecha en un panel.</para>
+            </listitem>
+            <listitem>
+              <para><application>Mostrar escritorio</application>: Muestra un bot&oacute;n sobre el que puede hacer clic para minimizar todas las ventanas abiertas. </para>
+            </listitem>
+            <listitem>
+              <para><application>Lista de ventanas</application>: muestra un bot&oacute;n para cada ventana abierta. Se puede hacer clic en un bot&oacute;n de esta lista para minimizar y restaurar ventanas.</para>
+            </listitem>
+            <listitem>
+              <para><application>&Aacute;rea de notificaci&oacute;n</application>: Muestra iconos de diferentes aplicaciones que indican si hay actividad en la aplicaci&oacute;n. Por ejemplo, si se utiliza el <application>Lector de CD</application> para escuchar un CD, aparece el icono de un CD en el <application>&Aacute;rea de notificaci&oacute;n</application>. </para>
+            </listitem>
+            <listitem>
+              <para><application>Selector de &aacute;reas de trabajo</application>: muestra una representaci&oacute;n visual de las &aacute;reas de trabajo. El <application>Selector de &aacute;reas de trabajo</application> permite cambiar entre las diferentes &aacute;reas de trabajo. </para>
+            </listitem>
+            <listitem>
+              <para><application>Control de volumen</application>: Muestra un bot&oacute;n que permite controlar y establecer el volumen de sonido en su sistema.</para>
+            </listitem>
+            <listitem>
+              <para><application>Monitor de red</application>: Muestra un cuadro de di&aacute;logo que permite supervisar las actividades de la red.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Fondo del escritorio</para>
+          <para>El fondo del escritorio se sit&uacute;a bajo los dem&aacute;s componentes de Java Desktop System. Es un componente activo de la interfaz del usuario. Se puede a&ntilde;adir objetos para facilitar el acceso a los archivos, carpetas y aplicaciones que se utilizan m&aacute;s frecuentemente. Tambi&eacute;n se puede hacer clic con el bot&oacute;n derecho del rat&oacute;n sobre el fondo del escritorio para abrir un men&uacute;. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gosstartsession-1">
+    <title>Para bloquear la pantalla </title>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>bloquear pantalla</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>bloquear pantalla</primary>
+    </indexterm>
+    <indexterm>
+      <primary>bot&oacute;n Bloquear</primary>
+    </indexterm>
+    <para>Para bloquear la pantalla:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Haga clic en <guimenu>Lanzador</guimenu> y seleccione <guimenuitem> Bloquear la pantalla</guimenuitem>.</para>
+      </listitem>
+      <listitem>
+        <para>Haga clic en el bot&oacute;n <guibutton>Bloquear</guibutton> si aparece en un panel<guibutton/>. </para>
+        <para>Para agregar el bot&oacute;n <guibutton>Bloquear</guibutton>, haga clic con el bot&oacute;n derecho en el panel. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>Bloquear</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Al bloquear la pantalla, se inicia el salvapantallas. Para desbloquear la pantalla, mueva el rat&oacute;n y se mostrar&aacute; el cuadro de di&aacute;logo de pantalla bloqueada. Introduzca el nombre de usuario y la contrase&ntilde;a en este cuadro de di&aacute;logo y pulse <keycap>Intro</keycap>. </para>
+    <note>
+      <para>Para bloquear la pantalla correctamente, el salvapantallas tiene que estar habilitado. </para>
+    </note>
+  </sect1>
+  <sect1 id="gosstartsession-2">
+    <title>Gesti&oacute;n de la sesi&oacute;n de escritorio </title>
+    <indexterm>
+      <primary>aplicaciones de inicio</primary>
+      <secondary>gestionadas por sesi&oacute;n</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>herramientas de preferencias</primary>
+      <secondary> sesiones</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary> gestionar</secondary>
+    </indexterm>
+    <para>Para configurar la sesi&oacute;n de escritorio utilice la herramienta de preferencias <application>Sesiones</application>, que<application/> reconoce los siguientes tipos de aplicaciones: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Aplicaciones gestionadas por sesi&oacute;n. Al guardar los valores de configuraci&oacute;n de la sesi&oacute;n, el administrador de sesiones guarda los de las aplicaciones gestionadas por la sesi&oacute;n. Al cerrar la sesi&oacute;n y volver a iniciarla, el administrador de sesiones autom&aacute;ticamente inicia de nuevo las aplicaciones gestionadas por la sesi&oacute;n. </para>
+      </listitem>
+      <listitem>
+        <para>Aplicaciones que no se gestionan por la sesi&oacute;n. Al guardar los valores de configuraci&oacute;n de la sesi&oacute;n, el administrador de sesiones no guarda los de las aplicaciones que no est&aacute;n gestionadas por la sesi&oacute;n. Al cerrar la sesi&oacute;n y volver a iniciarla, el administrador de sesiones autom&aacute;ticamente no inicia de nuevo las aplicaciones que no est&aacute;n gestionadas por la sesi&oacute;n. Estas aplicaciones deben iniciarse manualmente. Tambi&eacute;n, se puede utilizar la herramienta de preferencias <application>Sesiones</application> para especificar las aplicaciones no gestionadas por sesi&oacute;n que se desean iniciar autom&aacute;ticamente. </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosstartsession-9">
+      <title>Comportamiento del inicio y el final de una sesi&oacute;n </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>comportamiento al iniciar sesi&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>comportamiento al cerrar sesi&oacute;n </secondary>
+      </indexterm>
+      <para>Para configurar el comportamiento de una sesi&oacute;n al iniciarla y al finalizarla, utilice la herramienta de preferencias <application>Sesiones</application>. Haga los cambios necesarios en la ficha <guilabel>Propiedades de la sesi&oacute;n</guilabel>. Por ejemplo, se puede mostrar una pantalla de presentaci&oacute;n al iniciar la sesi&oacute;n. </para>
+    </sect2>
+    <sect2 id="gosstartsession-6">
+      <title>Para usar aplicaciones de inicio </title>
+      <indexterm>
+        <primary>programas de inicio</primary>
+        <see>aplicaciones de inicio</see>
+      </indexterm>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>usar aplicaciones de inicio</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicaciones de inicio</primary>
+        <secondary>no gestionadas por sesi&oacute;n</secondary>
+      </indexterm>
+      <para>Se pueden configurar las sesiones de manera que inicien aplicaciones no gestionadas por sesi&oacute;n. Para configurar aplicaciones de inicio que no est&eacute;n gestionadas por la sesi&oacute;n, utilice la herramienta de preferencias <application>Sesiones</application>. Utilice la ficha <guilabel>Programas de inicio</guilabel> para agregar, editar y eliminar aplicaciones. Si se guardan los nuevos valores y se cierra la sesi&oacute;n, la pr&oacute;xima vez que &eacute;sta se inicie las aplicaciones indicadas se ejecutar&aacute;n autom&aacute;ticamente. </para>
+    </sect2>
+    <sect2 id="gosstartsession-10">
+      <title>Para buscar aplicaciones </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>buscar aplicaciones</secondary>
+      </indexterm>
+      <para>Para buscar aplicaciones en la sesi&oacute;n actual, utilice la herramienta de preferencias <application>Sesiones</application>. En la ficha <guilabel>Sesi&oacute;n actual</guilabel> se enumeran:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Todas las aplicaciones de Java Desktop System que est&aacute;n funcionando actualmente, que pueden conectarse al administrador de sesiones y que pueden guardar su estado.</para>
+        </listitem>
+        <listitem>
+          <para>Todas herramientas de preferencias del escritorio que se pueden conectar al administrador de sesiones y que pueden guardar su estado.</para>
+        </listitem>
+      </itemizedlist>
+      <para>La ficha <guilabel>Sesi&oacute;n actual</guilabel> permite realizar un n&uacute;mero limitado de acciones sobre las propiedades de sesi&oacute;n de una aplicaci&oacute;n o herramienta de preferencia. Por ejemplo, se puede editar el orden de inicio y el estilo de cualquier aplicaci&oacute;n o herramienta de preferencias de Java Desktop System que se encuentre en la lista. </para>
+    </sect2>
+    <sect2 id="gosgetstarted-74">
+      <title>Para guardar la configuraci&oacute;n </title>
+      <indexterm>
+        <primary>sesiones</primary>
+        <secondary>guardar valores</secondary>
+      </indexterm>
+      <para>Para guardar los valores de configuraci&oacute;n: </para>
+      <orderedlist>
+        <listitem>
+          <para>Configure la sesi&oacute;n para grabar autom&aacute;ticamente la configuraci&oacute;n al terminar la sesi&oacute;n. Para configurar la sesi&oacute;n, utilice la herramienta de preferencias <application>Sesiones</application>. Se iniciar&aacute; la herramienta de preferencias <application>Sesiones</application>. Seleccione la opci&oacute;n <guilabel>Guardar autom&aacute;ticamente los cambios efectuados en la sesi&oacute;n</guilabel> en la ficha <guilabel>Propiedades de la sesi&oacute;n</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Cierre la sesi&oacute;n. </para>
+        </listitem>
+      </orderedlist>
+      <para>Si no se selecciona la opci&oacute;n <guilabel>Guardar autom&aacute;ticamente los cambios efectuados en la sesi&oacute;n</guilabel> un di&aacute;logo preguntar&aacute; si desea guardar la configuraci&oacute;n actual al cerrar la sesi&oacute;n. Para guardar la sesi&oacute;n, seleccione la opci&oacute;n y, a continuaci&oacute;n, prosiga con el cierre de la sesi&oacute;n.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosgetstarted-73">
+    <title>Cierre de la sesi&oacute;n </title>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>finalizar</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>sesiones</primary>
+      <secondary>finalizar sesi&oacute;n</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>finalizar sesi&oacute;n</primary>
+    </indexterm>
+    <para>Para finalizar la sesi&oacute;n, cierre todos los procesos activos y, a continuaci&oacute;n, elija una de las siguientes acciones:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Haga clic en <guimenu>Lanzador</guimenu> y, a continuaci&oacute;n, elija <guimenuitem> Terminar sesi&oacute;n</guimenuitem> de  <replaceable>nombre</replaceable>.</para>
+      </listitem>
+      <listitem>
+        <para>Si el bot&oacute;n <guibutton>Terminar sesi&oacute;n</guibutton> aparece en un panel, haga clic en &eacute;l<guibutton/>. </para>
+        <para>Para agregar el bot&oacute;n <guibutton>Terminar sesi&oacute;n</guibutton> a un panel, haga clic con el bot&oacute;n derecho en este. Seleccione <menuchoice><guimenu>Agregar al panel</guimenu><guisubmenu> Acciones</guisubmenu><guimenuitem>Terminar sesi&oacute;n</guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Antes de finalizar una sesi&oacute;n de escritorio, puede ser necesario guardar los valores actuales de configuraci&oacute;n para restaurar la sesi&oacute;n posteriormente. Durante el proceso de cierre de sesi&oacute;n, un di&aacute;logo pregunta si se desea guardar la configuraci&oacute;n actual. En la herramienta de preferencias <application>Sesiones</application> se puede seleccionar una opci&oacute;n para guardar la configuraci&oacute;n autom&aacute;ticamente. </para>
+  </sect1>
+</chapter>

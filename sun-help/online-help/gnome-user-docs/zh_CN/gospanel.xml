@@ -1,0 +1,1507 @@
+<chapter id="gospanel-1">
+  <title>使用面板</title>
+  <highlights>
+    <para>本章中的信息介绍如何使用面板。面板是 Java Desktop System 上的一块区域，可在其中运行应用程序，还可执行其他任务。</para>
+  </highlights>
+  <sect1 id="gospanel-2">
+    <title>面板简介</title>
+    <indexterm>
+      <primary>面板</primary>
+      <secondary>简介</secondary>
+    </indexterm>
+    <para>当首次启动会话时，Java Desktop System 至少包含一个面板。系统管理员可能已根据本地要求设置了默认的面板，所以您看到的默认面板可能稍有不同。</para>
+    <para>您可以更改面板的行为和外观，以满足您的要求。您还可以从面板中添加或删除对象。可以创建多个面板，也可以为每个面板选择不同的属性、对象和背景。还可隐藏面板。</para>
+    <para>通常，Java Desktop System 包含一个预先配置的面板，该面板显示在屏幕底部边缘。</para>
+    <sect2 id="gospanel-3">
+      <title>底部边缘面板</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>底部边缘面板</secondary>
+        <see>底部边缘面板</see>
+      </indexterm>
+      <indexterm>
+        <primary>底部边缘面板 </primary>
+        <secondary>简介</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>底部边缘面板</primary>
+        <secondary>默认内容</secondary>
+      </indexterm>
+      <para>底部边缘面板包含以下项目：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec3" colwidth="30.95*"/>
+          <colspec colname="colspec4" colwidth="69.05*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Object</para>
+              </entry>
+              <entry>
+                <para>说明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <guibutton>启动</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para> <guibutton>&ldquo;启动&rdquo;</guibutton>按钮包含供  <application>Java Desktop System </application>中的应用程序和配置工具使用的菜单和菜单项。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>时钟</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>显示面板中的时间和日期。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>显示桌面</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">显示一个按钮，单击该按钮可以将所有打开的窗口最小化。</entry>
+            </row>
+            <row>
+              <entry colname="colspec3" valign="top">
+                <para>
+                  <application>窗口列表</application>
+                </para>
+              </entry>
+              <entry colname="colspec4" valign="top">
+                <para>为每一个打开的窗口显示一个按钮。单击窗口列表按钮，可以最小化窗口和恢复窗口。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>通知区域</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>显示各种应用程序的图标，以指示应用程序中的活动。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>工作区切换器</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>显示一种工作区的可视表示法。使用<application>&ldquo;工作区切换器&rdquo;</application>可以在工作区之间切换。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>音量控制</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>显示一个按钮，您可以通过该按钮控制和设置系统的音量。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>网络监视器</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>显示网络设备的状态。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-5">
+    <title>管理面板</title>
+    <indexterm>
+      <primary>面板</primary>
+      <secondary>管理</secondary>
+    </indexterm>
+    <para>以下部分介绍如何管理面板。</para>
+    <sect2 id="gospanel-10">
+      <title>添加新面板</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>添加新面板</secondary>
+      </indexterm>
+      <para>要添加面板，请右击任意面板的空白区域，然后选择<guimenuitem>&ldquo;新建面板&rdquo;</guimenuitem>。新面板即添加到 Java Desktop System 中。新面板中不包含任何对象。可以根据您的喜好定制新面板。</para>
+    </sect2>
+    <sect2 id="gospanel-11">
+      <title>与面板交互</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>交互</secondary>
+      </indexterm>
+      <para>要与面板交互，必须左击、中击或右击面板上的空白区域。如果面板上没有空白区域，也可中击或右击其中的一个隐藏按钮以选择面板。如果在面板上看不到隐藏按钮，可以修改面板的属性以便隐藏按钮是可见的。</para>
+      <para>可以通过以下方式使用鼠标按钮与面板进行交互：</para>
+      <variablelist>
+        <varlistentry>
+          <term>中击</term>
+          <listitem>
+            <para>使您可以抓取一个面板，然后将该面板拖到新位置。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>右击</term>
+          <listitem>
+            <para>打开面板弹出菜单。</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="gospanel-12">
+      <title>移动面板</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>移动</secondary>
+      </indexterm>
+      <para>您可以将面板移动到不同的位置。要移动面板，中击并按住面板上的任何空白区域，然后将面板拖到新位置。</para>
+    </sect2>
+    <sect2 id="gospanel-7">
+      <title>隐藏面板</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>隐藏</secondary>
+      </indexterm>
+      <para>您可以隐藏或显示面板。要隐藏面板，可以使用隐藏按钮。如果在面板上看不到隐藏按钮，可以修改面板的属性以便隐藏按钮是可见的。</para>
+      <para>隐藏按钮位于面板的两端上。隐藏按钮包含一个可选的箭头图标。下图显示了隐藏按钮。</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/four_hide_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>一个水平面板和一个垂直面板，两个面板都带有隐藏按钮。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>要隐藏面板，请单击其中一个隐藏按钮。面板会沿着隐藏按钮上的箭头方向缩小。面板另一端的隐藏按钮仍然可见。</para>
+      <para>要再次显示一个已隐藏的面板，请单击可见的隐藏按钮。面板会沿着隐藏按钮上的箭头方向展开。两个隐藏按钮现在都可见了。</para>
+      <para>可以将面板设置为自动隐藏。设置为自动隐藏后，当鼠标不指向面板时，它就会自动隐藏。当将鼠标指向面板所在的屏幕位置时，该面板又会重新出现。要将面板设置为自动隐藏，请修改面板属性。</para>
+    </sect2>
+    <sect2 id="gospanel-28">
+      <title>修改面板属性</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>修改属性</secondary>
+      </indexterm>
+      <para>要修改所有面板的首选项，请使用<guilabel>&ldquo;面板&rdquo;</guilabel>首选项工具进行您所需的更改。例如，可以修改面板的动画首选项。</para>
+      <para>也可以修改单个面板的属性。可以更改每个面板的特性，如面板位置、隐藏行为和可视外观。</para>
+      <para>要修改面板属性，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击面板上的空白区域，然后选择<guimenuitem>&ldquo;属性&rdquo;</guimenuitem>以显示<guilabel>&ldquo;面板属性&rdquo;</guilabel>对话框。<guilabel>&ldquo;面板属性&rdquo;</guilabel>对话框包含以下选项卡式部分：</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>常规</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>背景</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>要修改面板的大小、位置和隐藏属性，单击<guilabel>&ldquo;常规&rdquo;</guilabel>选项卡。下表介绍了<guilabel>&ldquo;常规&rdquo;</guilabel>选项卡式部分上的对话框元素：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>对话框元素</para>
+                  </entry>
+                  <entry>
+                    <para>说明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>名称</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>为面板键入名称。当您使用快捷键在面板和桌面之间切换时，会显示该面板名称。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>定位</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>选择面板在屏幕上的位置。单击要放置该面板的位置。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>大小</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>使用此旋转框可以指定面板大小。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>展开</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>如果您要该面板展开至其所在屏幕边缘的整个长度，请选择该选项。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>自动隐藏</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择此选项将启用自动隐藏。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>显示隐藏按钮</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择此选项将显示面板上的隐藏按钮。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>隐藏按钮上的箭头</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>如果启用隐藏按钮，选择此选项将显示隐藏按钮上的箭头。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>要修改面板背景，单击<guilabel>&ldquo;背景&rdquo;</guilabel>选项卡。给面板选择一种背景类型。选项如下：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="32.32*"/>
+              <colspec colwidth="67.68*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>对话框元素</para>
+                  </entry>
+                  <entry>
+                    <para>说明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>无（使用系统主题）</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择该选项将使用默认的面板背景。默认面板背景取决于<application>主题</application>首选项工具中的设置。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>单色</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择该选项可将面板背景指定为单色。单击<guibutton>&ldquo;颜色&rdquo;</guibutton>按钮将显示颜色选择器对话框。从颜色选择器对话框选择您需要的颜色。</para>
+                    <para>使用<guilabel>&ldquo;样式&rdquo;</guilabel>滑块可指定颜色的透明度或不透明度。例如，要使面板透明，可将滑块移向<guilabel>&ldquo;透明&rdquo;</guilabel>端。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>背景图像</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择该选项可为面板背景指定一个图像。在下拉组合框中输入该图像要使用的文件名。或者，要浏览文件，请单击<guibutton>&ldquo;浏览&rdquo;</guibutton>按钮。当选定文件后，请单击&ldquo;确定&rdquo;。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>您也可以将颜色或图像拖到面板上，将这种颜色或图像设置为面板背景。有关的更多信息，请参阅 <xref linkend="gospanel-61"/>。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;关闭&rdquo;</guibutton>，关闭<guilabel>&ldquo;面板属性&rdquo;</guilabel>对话框。</para>
+        </listitem>
+      </orderedlist>
+      <sect3 id="gospanel-61">
+        <title>将颜色或图像拖到面板背景上</title>
+        <indexterm>
+          <primary>面板</primary>
+          <secondary>更改背景</secondary>
+        </indexterm>
+        <para>您可以将颜色或图像拖到面板上，将这种颜色或图像设置为面板背景。您可以从许多应用程序中拖动颜色或图像。例如，可以从文件管理器中将某一种颜色拖到一面板上，从而将该颜色设置为此面板的背景色。也可以从任意&ldquo;颜色选择器&rdquo;对话框中拖动颜色。</para>
+        <para>可以将图像拖到面板上，从而将其设置为该面板的背景图像。还可以从文件管理器拖动样品图像，从而将其设置为面板的背景。</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-31">
+      <title>删除面板</title>
+      <indexterm>
+        <primary>面板</primary>
+        <secondary>删除</secondary>
+      </indexterm>
+      <para>要从 Java Desktop System 上删除面板，请右击您要删除的面板，然后选择<menuchoice><guimenuitem>&ldquo;删除此面板&rdquo;</guimenuitem></menuchoice>。</para>
+      <note>
+        <para>Java Desktop System 上至少要有一个面板。如果 Java Desktop System 上只有一个面板，则不能删除该面板。</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-8">
+    <title>面板对象</title>
+    <indexterm>
+      <primary>面板</primary>
+      <secondary>面板对象</secondary>
+      <see>面板对象</see>
+    </indexterm>
+    <para>本部分介绍了可以添加到面板并可从面板中使用的对象。</para>
+    <sect2 id="gospanel-100">
+      <title>与面板对象交互</title>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>交互</secondary>
+      </indexterm>
+      <para>可以通过以下方式使用鼠标按钮与面板对象进行交互：</para>
+      <variablelist>
+        <varlistentry>
+          <term>左击</term>
+          <listitem>
+            <para>启动面板对象。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>中击</term>
+          <listitem>
+            <para>使您可以抓取对象，然后将该对象拖到新位置。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>右击</term>
+          <listitem>
+            <para>打开面板对象弹出菜单。</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>您能以不同的方式与面板对象交互。有关的更多信息，请参阅 <xref linkend="gospanel-39"/>。</para>
+    </sect2>
+    <sect2 id="gospanel-15">
+      <title>向面板添加对象</title>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>添加</secondary>
+      </indexterm>
+      <para>您能以多种方式向面板添加对象，如下所述：</para>
+      <itemizedlist>
+        <listitem>
+          <para>通过面板弹出菜单</para>
+          <para>右击面板上的空白区域，打开面板的弹出菜单。面板弹出菜单包含一个<guisubmenu>&ldquo;添加到面板&rdquo;</guisubmenu>子菜单。<guisubmenu>&ldquo;添加到面板&rdquo;</guisubmenu>子菜单使您可以向面板中添加下列对象：<itemizedlist><listitem><para>以下种类的面板应用程序：<guilabel>附件</guilabel>、<guilabel>娱乐</guilabel>、<guilabel>互联网</guilabel>、<guilabel>多媒体</guilabel>、<guilabel>实用程序</guilabel>。</para></listitem><listitem><para>快速访问常用操作的按钮：<guibutton>&ldquo;查找文件&rdquo;</guibutton>按钮、<guibutton>&ldquo;强制退出&rdquo;</guibutton>按钮、<guibutton>&ldquo;锁住屏幕&rdquo;</guibutton>按钮、<guibutton>&ldquo;注销&rdquo;</guibutton>按钮、<guibutton>&ldquo;运行应用程序&rdquo;</guibutton>按钮、<guibutton>&ldquo;屏幕抓图&rdquo;</guibutton>按钮、<guibutton>&ldquo;显示桌面&rdquo;</guibutton>按钮。</para></listitem><listitem><para>启动器</para></listitem><listitem><para>菜单中的启动器</para></listitem><listitem><para><guimenu>主菜单</guimenu></para></listitem><listitem><para><application>菜单栏</application></para></listitem><listitem><para>抽屉</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>通过任何菜单</para>
+          <para>当您在任何菜单中右击启动器时，即可打开启动器的弹出菜单。您可以使用该弹出菜单向面板添加该启动器。</para>
+          <para>也可以将菜单、启动器和面板应用程序从菜单拖动到面板中。</para>
+        </listitem>
+        <listitem>
+          <para>通过文件管理器</para>
+          <para>每个启动器都对应一个 <filename>.desktop</filename> 文件。您可以将 <filename>.desktop</filename> 文件拖动到面板上，从而将该启动器添加到面板上。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-9">
+      <title>修改对象的属性</title>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>修改属性</secondary>
+      </indexterm>
+      <para>某些面板对象（例如启动器和抽屉）有一组相关属性。每种对象类型的属性都各不相同。属性指定了如下的详细信息：<itemizedlist><listitem><para>启动一个应用程序的命令。</para></listitem><listitem><para>菜单源文件的位置。</para></listitem><listitem><para>代表该对象的图标。</para></listitem></itemizedlist></para>
+      <para>要修改对象属性，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <indexterm>
+            <primary>面板对象弹出菜单，说明</primary>
+          </indexterm>
+          <para>右击该对象，打开面板对象弹出菜单，如 <xref linkend="gospanel-FIG-54"/> 所示。</para>
+          <figure id="gospanel-FIG-54">
+            <title>面板对象弹出菜单</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/panel_object_popup_menu.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>面板对象弹出菜单。菜单项：属性、从面板中删除、锁定、移动。</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+        <listitem>
+          <para>选择<guimenuitem>属性</guimenuitem>。根据需要使用<guilabel>&ldquo;属性&rdquo;</guilabel>对话框来修改属性。<guilabel>&ldquo;属性&rdquo;</guilabel>对话框中的属性取决于您在步骤 1 中选择的对象。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;确定&rdquo;</guibutton>应用更改，然后关闭<guilabel>&ldquo;属性&rdquo;</guilabel>对话框。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gospanel-32">
+      <title>移动面板对象</title>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>移动</secondary>
+      </indexterm>
+      <para>可以在面板内移动面板对象，也可以将面板对象从一个面板移动到另一个面板。还可以在面板和抽屉之间移动对象。</para>
+      <para>要移动面板对象，请中击该对象并按住中键，然后将该对象拖到新的位置。当松开鼠标中键时，该对象就锚定在新位置。</para>
+      <para>或者，您可以使用面板对象弹出菜单来移动对象，如下所述：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击该对象，然后选择<guimenuitem>&ldquo;移动&rdquo;</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>指向对象的新位置，然后单击任意鼠标按键就可以将该对象锚定到新位置。此位置可以在 Java Desktop System 的当前任意面板上。</para>
+        </listitem>
+      </orderedlist>
+      <para>移动面板对象会影响面板上其他对象的位置。要控制对象如何在面板上移动，可以指定一种移动模式。要指定移动模式，在移动面板对象时按以下其中一个键：</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="15.00*"/>
+          <colspec colname="colspec1" colwidth="30.00*"/>
+          <colspec colname="colspec3" colwidth="54.00*"/>
+          <thead>
+            <row rowsep="1">
+              <entry colname="colspec2">
+                <para>键</para>
+              </entry>
+              <entry>
+                <para>移动模式</para>
+              </entry>
+              <entry colname="colspec3">
+                <para>说明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>无键</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>交换模式</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>该对象跟其他面板对象交换位置。交换移动是默认的移动模式。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Alt</keycap> 键</para>
+              </entry>
+              <entry valign="top">
+                <para>自由移动</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>对象会跳过其他面板对象进入面板的下一个空白区域。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><keycap>Shift</keycap> 键</para>
+              </entry>
+              <entry valign="top">
+                <para>推动移动</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>对象会沿着面板将其他面板对象推到更远处。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-566">
+      <title>锁定面板对象</title>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>锁定</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>锁定面板对象</primary>
+      </indexterm>
+      <para>您可锁定面板对象，这样该对象就会停留在面板的同一位置上。如果您不希望移动其他面板对象时更改某些面板对象的位置，该功能非常有用。</para>
+      <para>要将对象锁定在它在面板中的当前位置，请右击该对象打开面板对象弹出菜单，然后选择<guimenuitem>&ldquo;锁定&rdquo;</guimenuitem>。要取消锁定该对象，请右击该对象，然后选择<guimenuitem>&ldquo;取消锁定&rdquo;</guimenuitem>。</para>
+    </sect2>
+    <sect2 id="gospanel-33">
+      <title>删除面板对象</title>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>删除</secondary>
+      </indexterm>
+      <para>要从面板删除对象，请右击该对象，打开面板对象弹出菜单，然后选择<guimenuitem>&ldquo;从面板中删除&rdquo;</guimenuitem>。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-17">
+    <title>面板应用程序</title>
+    <indexterm>
+      <primary>面板应用程序</primary>
+      <secondary>简介</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>面板对象</primary>
+      <secondary>面板应用程序 </secondary>
+      <see>面板应用程序</see>
+    </indexterm>
+    <para>面板应用程序是用户界面位于面板上的一种小型应用程序。例如，下图从左到右显示了以下面板应用程序：</para>
+    <itemizedlist>
+      <listitem>
+        <para><application>窗口列表</application>：显示系统当前打开的窗口。</para>
+      </listitem>
+      <listitem>
+        <para><application>CD 播放器</application>：使您可以控制系统上的 CD 播放器。</para>
+      </listitem>
+      <listitem>
+        <para><application>音量控制</application>：使您可以控制系统扬声器的音量。</para>
+      </listitem>
+    </itemizedlist>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/sample_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>示例面板应用程序。文中对该图形进行了说明。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <sect2 id="gospanel-40">
+      <title>向面板添加应用程序</title>
+      <indexterm>
+        <primary>面板应用程序</primary>
+        <secondary>添加到面板</secondary>
+      </indexterm>
+      <para>您可以通过面板弹出菜单将应用程序添加到面板。右击面板上的任意空白区域，打开面板的弹出菜单。选择<guimenu>&ldquo;添加到面板&rdquo;</guimenu>，然后从以下子菜单之一选择要添加的面板应用程序：</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guimenu>附件</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>娱乐</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>互联网</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>多媒体</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>实用程序</guimenu>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>或者，从子菜单中将面板应用程序拖到面板上。</para>
+    </sect2>
+    <sect2 id="gospanel-39">
+      <title>选择面板应用程序</title>
+      <indexterm>
+        <primary>面板应用程序</primary>
+        <secondary>选择</secondary>
+      </indexterm>
+      <para>要修改面板应用程序属性，必须先右击该面板应用程序以显示面板对象弹出菜单。要移动面板应用程序，必须中击该面板应用程序。</para>
+      <para>对于您可以单击面板应用程序以便显示面板对象弹出菜单或者移动面板应用程序的位置，系统应用了一些限制，如下所述：</para>
+      <itemizedlist>
+        <listitem>
+          <para>有些面板应用程序具有包含特定于面板应用程序的命令的弹出菜单，当右击该面板应用程序的特定部分时这些菜单会打开。例如，<application>&ldquo;窗口列表&rdquo;</application>面板应用程序左侧有一个垂直手柄，右侧有代表各个窗口的按钮。要打开<application>&ldquo;窗口列表&rdquo;</application>面板应用程序的面板对象弹出菜单，您必须右击该手柄。如果右击右侧的按钮，系统就会打开按钮的弹出菜单。</para>
+        </listitem>
+        <listitem>
+          <para>有些面板应用程序拥有一些不能用来选择该面板应用程序的区域。例如，<application>&ldquo;命令行&rdquo;</application>应用程序有个字段是用来输入命令的。您不能中击或右击此字段来选择该面板应用程序。但是，可以中击或者右击该面板应用程序的其他部分来选择它。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-41">
+      <title>修改面板应用程序的首选项</title>
+      <indexterm>
+        <primary>面板应用程序</primary>
+        <secondary>修改首选项 </secondary>
+      </indexterm>
+      <para>要修改面板应用程序的首选项，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击该面板应用程序，然后选择<guimenuitem>&ldquo;首选项&rdquo;</guimenuitem>。根据需要使用<guilabel>&ldquo;首选项&rdquo;</guilabel>对话框来修改首选项。面板应用程序的首选项因面板应用程序的不同而不同。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;关闭&rdquo;</guibutton>，关闭<guilabel>&ldquo;首选项&rdquo;</guilabel>对话框。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-16">
+    <title>启动器</title>
+    <indexterm>
+      <primary>面板对象</primary>
+      <secondary>启动器</secondary>
+      <see>启动器</see>
+    </indexterm>
+    <para>当您单击启动器时，就启动了以下一种操作：</para>
+    <itemizedlist>
+      <listitem>
+        <para>启动特定的应用程序。</para>
+      </listitem>
+      <listitem>
+        <para>执行一条命令。</para>
+      </listitem>
+      <listitem>
+        <para>打开文件管理器窗口中的一个文件夹。</para>
+      </listitem>
+      <listitem>
+        <para>打开浏览器，转至特定的<firstterm>统一资源定位器</firstterm> (URL)。URL 就是 Web 上特定位置的地址。</para>
+      </listitem>
+      <listitem>
+        <para>打开特殊的<firstterm>统一资源标识符</firstterm> (URI)。Java Desktop System 包含特殊的 URI，使您可以通过文件管理器访问特定的功能。<indexterm><primary>特殊的 URI 位置</primary><secondary>和启动器</secondary></indexterm></para>
+      </listitem>
+    </itemizedlist>
+    <para>您可以在 Java Desktop System 的如下位置找到启动器：</para>
+    <itemizedlist>
+      <listitem>
+        <para>面板：在面板上，启动器由图标表示。</para>
+      </listitem>
+      <listitem>
+        <para>菜单：在菜单上，启动器由菜单项表示。这些菜单项的旁边通常都有一个图标。</para>
+      </listitem>
+      <listitem>
+        <para>桌面：在桌面上，启动器由图标表示。</para>
+      </listitem>
+    </itemizedlist>
+    <para>您可以修改启动器的属性。例如，启动器的属性包括启动器的名称、代表该启动器的图标以及运行启动器的方式。</para>
+    <sect2 id="gospanel-34">
+      <title>向面板添加启动器</title>
+      <indexterm>
+        <primary>启动器</primary>
+        <secondary>添加到面板</secondary>
+      </indexterm>
+      <para>您可以通过以下一种方式向面板添加启动器：</para>
+      <itemizedlist>
+        <listitem>
+          <para>通过面板弹出菜单</para>
+          <para>要创建一个新的启动器，右击面板上的任意空白区域，然后选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;启动器&rdquo;</guimenuitem></menuchoice>。即可显示<guilabel>&ldquo;创建启动器&rdquo;</guilabel>对话框。有关如何完成此对话框的更多信息，请参阅 <xref linkend="gospanel-52"/>。</para>
+          <para>或者，要想将现有启动器添加到面板上，请从面板弹出菜单中选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;菜单中的启动器&rdquo;</guimenuitem></menuchoice>。从菜单中选择您要添加的启动器。</para>
+        </listitem>
+        <listitem>
+          <para>通过任何菜单</para>
+          <para>要从任意菜单中向面板添加启动器，请执行以下其中一个步骤：<itemizedlist><listitem><para>打开包含该启动器的菜单。将该启动器拖到面板上。</para></listitem><listitem><para>从要放置启动器的面板上，打开包含该启动器的菜单。右击启动器的标题。选择<guimenuitem>&ldquo;将此启动器添加到面板&rdquo;</guimenuitem>。</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>通过文件管理器</para>
+          <para>要从文件管理器将启动器添加到面板上，请在文件系统中找到该启动器的 <filename>.desktop</filename> 文件。要添加启动器，请将该 <filename>.desktop</filename> 文件拖到面板上。</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gospanel-52">
+        <title>用&ldquo;创建启动器&rdquo;对话框创建启动器</title>
+        <para>要使用<guilabel>&ldquo;创建启动器&rdquo;</guilabel>对话框创建启动器，请执行以下步骤：</para>
+        <orderedlist>
+          <listitem>
+            <para>右击面板任意部分，打开面板弹出菜单。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;启动器&rdquo;</guimenuitem></menuchoice>，显示<guilabel>&ldquo;创建启动器&rdquo;</guilabel>对话框。</para>
+          </listitem>
+          <listitem>
+            <para>在<guilabel>&ldquo;基本&rdquo;</guilabel> 选项卡式部分中输入该启动器的属性。下表介绍了<guilabel>&ldquo;基本&rdquo;</guilabel>选项卡式部分上的对话框元素：</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="26.19*"/>
+                <colspec colname="colspec1" colwidth="73.81*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>对话框元素</para>
+                    </entry>
+                    <entry>
+                      <para>说明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>名称</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>使用此文本框可以指定启动器的名称。您可以使用<guilabel>&ldquo;高级&rdquo;</guilabel>选项卡来添加名称的翻译。该名称就是将启动器添加到菜单或桌面上时出现的名称。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0" valign="top">
+                      <para>
+                        <guilabel>通用名称</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>使用此文本框可以指定启动器所属的应用程序类别。例如，您可以在此文本框中为 <application>gedit</application> 启动器键入<userinput> Text Editor</userinput> 。也可以使用<guilabel>&ldquo;高级&rdquo;</guilabel>选项卡来添加通用名称的翻译。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>注释</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>使用此文本框可以指定启动器的简短说明。该注释在您指向面板的启动器图标时，会显示为工具提示。可以使用<guilabel>&ldquo;高级&rdquo;</guilabel>选项卡式部分来添加注释的翻译。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>命令</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>使用此字段可以指定单击该启动器时执行的命令。有关示例命令，请参见下一部分。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>类型</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>使用此下拉组合框可以指定启动器的类型。可从以下选项中选择：</para>
+                      <itemizedlist>
+                        <listitem>
+                          <para><guilabel>应用程序</guilabel>：选择此选项可以创建一个启动应用程序的启动器。</para>
+                        </listitem>
+                        <listitem>
+                          <para><guilabel>链接</guilabel>：选择该选项可创建链接到 URI 的启动器。</para>
+                        </listitem>
+                      </itemizedlist>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>图标</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>选择一个图标来代表该启动器。要选择图标，单击<guibutton>&ldquo;无图标&rdquo;</guibutton>按钮。即可显示图标选择器对话框。从该对话框中选择一个图标。或者，如果要从其他目录中选择图标，请单击<guibutton>&ldquo;浏览&rdquo;</guibutton>。当选择了图标之后，单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>在终端中运行</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>选择此选项将在终端窗口运行应用程序或命令。对于并不创建窗口以在其中运行的应用程序或命令，请选择此选项。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>要为启动器设置高级属性，请单击<guilabel>&ldquo;高级&rdquo;</guilabel>选项卡。</para>
+          </listitem>
+          <listitem>
+            <para>在<guilabel>高级</guilabel>选项卡式部分输入该启动器的高级属性。下表说明了<guilabel>&ldquo;高级&rdquo;</guilabel>选项卡式部分顶部的各个对话框元素：</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="32.03*"/>
+                <colspec colwidth="67.97*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>对话框元素</para>
+                    </entry>
+                    <entry>
+                      <para>说明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>使用前尝试</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>在此处输入一条在启动启动器之前进行检查的命令。如果命令可执行并且位于路径中，启动器就会出现在面板上。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>文档</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>输入启动器帮助文件的路径。如果在此字段中输入路径，则在该启动器的弹出菜单中会显示一个<guimenuitem>&ldquo;关于 <replaceable>launcher-name</replaceable> 应用程序的帮助&rdquo;</guimenuitem>菜单项。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>也可以从<guilabel>&ldquo;基本&rdquo;</guilabel>选项卡式部分添加<guilabel>&ldquo;名称&rdquo;</guilabel>、<guilabel>&ldquo;通用名称&rdquo;</guilabel>和<guilabel>&ldquo;注释&rdquo;</guilabel>字段的翻译。要添加翻译，请在<guilabel>&ldquo;名称/注释翻译&rdquo;</guilabel>表中输入翻译的详细信息，如下所述：</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="20.78*"/>
+                <colspec colname="colspec1" colwidth="79.22*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>字段</para>
+                    </entry>
+                    <entry>
+                      <para>说明</para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>第一个字段</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>输入两个字母的代码以指定您要添加翻译的语言。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>第二个字段</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>输入启动器的<guilabel>&ldquo;名称&rdquo;</guilabel>翻译。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>第三个字段</para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>输入启动器的<guilabel>&ldquo;通用名称&rdquo;</guilabel>的翻译。</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>第四个字段</para>
+                    </entry>
+                    <entry valign="top">
+                      <para>输入启动器的<guilabel>&ldquo;注释&rdquo;</guilabel>的翻译。</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+            <para>然后单击<guibutton>&ldquo;添加/设置&rdquo;</guibutton>按钮。</para>
+            <para>要编辑翻译，请选中该翻译。翻译文本就会出现在对话框的下半部分。根据需要编辑各个字段，然后单击<guibutton>&ldquo;添加/设置&rdquo;</guibutton>按钮。</para>
+            <para>要删除翻译，请选中该翻译，然后单击<guibutton> &ldquo;删除&rdquo;</guibutton>按钮。</para>
+          </listitem>
+          <listitem>
+            <para>要创建启动器并关闭<guilabel>&ldquo;启动器属性&rdquo;</guilabel>对话框，请单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gospanel-556">
+        <title>启动器命令</title>
+        <para>您在<guilabel>&ldquo;命令&rdquo;</guilabel>字段中输入的命令类型取决于您从<guilabel>&ldquo;类型&rdquo;</guilabel>下拉组合框中选择的选项。如果您从<guilabel>&ldquo;类型&rdquo;</guilabel>下拉组合框中选择<guilabel>&ldquo;应用程序&rdquo;</guilabel> ，则输入一个标准命令。下表显示了一些示例命令，以及这些命令执行的操作：</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>示例应用程序命令</para>
+                </entry>
+                <entry>
+                  <para>操作</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>gedit</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>启动 <application>gedit </application> 文本编辑器应用程序。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>gedit /user123/loremipsum.txt</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>在 <application>gedit</application> 文本编辑器应用程序中打开文件 <filename>/user123/loremipsum.txt</filename>。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>nautilus /user123/Projects </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>在文件管理器窗口中打开文件夹 <filename>/user123/Projects</filename>。</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>如果您从<guilabel>&ldquo;类型&rdquo;</guilabel>下拉组合框中选择<guilabel>&ldquo;链接&rdquo;</guilabel> ，则输入一个链接命令。下表显示了一些示例链接命令，以及这些命令执行的操作：<indexterm><primary>特殊的 URI</primary><secondary>启动器</secondary></indexterm></para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>示例链接命令</para>
+                </entry>
+                <entry>
+                  <para>操作</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>http://www.sun.com </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>在默认浏览器中打开 Sun Microsystems 站点。</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>ftp://ftp.gnome.org</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>在默认浏览器中打开 GNOME FTP 站点。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>applications:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>在文件管理器窗口中打开<guilabel>&ldquo;应用程序&rdquo;</guilabel>位置。双击一个应用程序可以启动该程序。</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>preferences:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>在文件管理器窗口中打开<guilabel>&ldquo;首选项&rdquo;</guilabel>位置。双击一个首选项工具可以启动该首选项工具。</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-36">
+      <title>修改启动器属性</title>
+      <indexterm>
+        <primary>启动器</primary>
+        <secondary>修改属性</secondary>
+      </indexterm>
+      <para>要修改启动器的属性，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击启动器，打开面板对象弹出菜单。</para>
+        </listitem>
+        <listitem>
+          <para>选择<guimenuitem>属性</guimenuitem>。根据需要使用<guilabel>&ldquo;启动器属性&rdquo;</guilabel>对话框来修改属性。有关<guilabel>&ldquo;启动器属性&rdquo;</guilabel>对话框的更多信息，请参阅 <xref linkend="gospanel-52"/>。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;关闭&rdquo;</guibutton>，关闭<guilabel>&ldquo;启动器属性&rdquo;</guilabel>对话框。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-557">
+    <title>按钮</title>
+    <indexterm>
+      <primary>按钮</primary>
+      <secondary>添加到面板</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>操作按钮</primary>
+      <see>按钮</see>
+    </indexterm>
+    <para>您可以将按钮添加到面板，这样就能够使您快速访问常用的操作和功能。</para>
+    <sect2 id="gospanel-554">
+      <title>&ldquo;查找文件&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>&ldquo;搜索&rdquo;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;搜索&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;搜索&rdquo;按钮</primary>
+      </indexterm>
+      <para>可以使用<guibutton>&ldquo;查找文件&rdquo;</guibutton>按钮打开<application>&ldquo;搜索文件&rdquo;</application>对话框。</para>
+      <para>要向面板添加<guibutton>&ldquo;查找文件&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;查找文件&rdquo;</guimenuitem></menuchoice>。要打开<application>&ldquo;搜索文件&rdquo;</application>对话框，请单击<guibutton>&ldquo;查找文件&rdquo;</guibutton>按钮。</para>
+    </sect2>
+    <sect2 id="gospanel-563">
+      <title>&ldquo;强制退出&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>强制退出</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;强制退出&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;强制退出&rdquo;按钮</primary>
+      </indexterm>
+      <indexterm>
+        <primary>终止应用程序</primary>
+      </indexterm>
+      <indexterm>
+        <primary>应用程序</primary>
+        <secondary>终止</secondary>
+      </indexterm>
+      <para><guibutton>&ldquo;强制退出&rdquo;</guibutton>按钮使您可以选择一个窗口来终止应用程序。如果您要终止一个未响应您命令的应用程序，则该按钮非常有用。</para>
+      <para>要终止应用程序，请单击<guibutton>&ldquo;强制退出&rdquo;</guibutton>按钮，然后单击要终止的应用程序的窗口。如果单击<guibutton>&ldquo;强制退出&rdquo;</guibutton>按钮后，您不想终止应用程序，请按 <keycap>Esc</keycap> 键。</para>
+    </sect2>
+    <sect2 id="gospanel-21">
+      <title>&ldquo;锁住屏幕&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>锁定</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;锁定&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;锁定&rdquo;按钮</primary>
+      </indexterm>
+      <indexterm>
+        <primary>锁住屏幕</primary>
+      </indexterm>
+      <para><guibutton>&ldquo;锁住屏幕&rdquo;</guibutton>按钮会锁住屏幕并激活屏幕保护程序。要再次访问会话，必须要输入口令。要正确锁住屏幕，必须启用屏幕保护程序。</para>
+      <para>要向面板添加<guibutton>&ldquo;锁住屏幕&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;锁住屏幕&rdquo;</guimenuitem></menuchoice>。</para>
+      <para>右击<guibutton>&ldquo;锁住屏幕&rdquo;</guibutton>按钮，打开一个屏幕保护程序相关命令的菜单。<xref linkend="gosstartsession-TBL-83"/> 介绍了此菜单中可用的命令。</para>
+      <table frame="topbot" id="gosstartsession-TBL-83">
+        <title>锁住屏幕菜单项</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="43.55*"/>
+          <colspec colname="colspec1" colwidth="56.45*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>菜单项</para>
+              </entry>
+              <entry>
+                <para>功能</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>激活屏幕保护程序</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>立即激活屏幕保护程序，但不锁住屏幕。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>锁住屏幕</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>立即锁住屏幕。该命令执行的功能与单击<guibutton>&ldquo;锁定&rdquo;</guibutton>按钮执行的功能相同。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>杀死屏幕保护程序守护进程</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>终止屏幕保护程序进程。在终止屏幕保护程序进程后，就不能锁住屏幕了。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>重启动屏幕保护程序守护进程</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>终止并重启动屏幕保护程序进程。更改口令后请使用此命令。当重启动屏幕保护程序进程时，请使用屏幕保护程序的新口令。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>属性</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>显示 <guilabel>XScreenSaver</guilabel> 首选项工具。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gospanel-20">
+      <title>&ldquo;注销&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>注销</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;注销&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;注销&rdquo;按钮</primary>
+      </indexterm>
+      <para><guibutton>&ldquo;注销&rdquo;</guibutton>按钮启动从 Java Desktop System 会话注销的过程。</para>
+      <para>要向面板添加<guibutton>&ldquo;注销&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;注销&rdquo;</guimenuitem></menuchoice>。要注销会话或关闭系统，请单击<guibutton>&ldquo;注销&rdquo;</guibutton>按钮。</para>
+    </sect2>
+    <sect2 id="gospanel-555">
+      <title>&ldquo;运行应用程序&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>运行</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;运行&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;运行&rdquo;按钮</primary>
+      </indexterm>
+      <para>可以使用<guibutton>&ldquo;运行应用程序&rdquo;</guibutton>按钮来打开<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框。</para>
+      <para>要向面板添加<guibutton>&ldquo;运行应用程序&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;运行应用程序&rdquo;</guimenuitem></menuchoice>。要打开<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框，请单击<guibutton>&ldquo;运行应用程序&rdquo;</guibutton>按钮。</para>
+    </sect2>
+    <sect2 id="gospanel-553">
+      <title>&ldquo;屏幕抓图&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>屏幕抓图</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;屏幕抓图&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;屏幕抓图&rdquo;按钮</primary>
+      </indexterm>
+      <para>可以使用<guibutton>&ldquo;屏幕抓图&rdquo;</guibutton>按钮来制作屏幕抓图。</para>
+      <para>要向面板添加<guibutton>&ldquo;屏幕抓图&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;屏幕抓图&rdquo;</guimenuitem></menuchoice>。要制作屏幕抓图，请单击<guibutton>&ldquo;屏幕抓图&rdquo;</guibutton>按钮。</para>
+    </sect2>
+    <sect2 id="gospanel-564">
+      <title>&ldquo;显示桌面&rdquo;按钮</title>
+      <indexterm>
+        <primary>按钮</primary>
+        <secondary>&ldquo;显示桌面&rdquo;</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>&ldquo;显示桌面&rdquo;按钮</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&ldquo;显示桌面&rdquo;按钮</primary>
+      </indexterm>
+      <para>可以使用<guibutton>&ldquo;显示桌面&rdquo;</guibutton> 按钮来最小化所有打开的窗口，并显示桌面。</para>
+      <para>要向面板添加<guibutton>&ldquo;显示桌面&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;显示桌面&rdquo;</guimenuitem></menuchoice>。要最小化所有窗口并显示桌面，请单击<guibutton>&ldquo;显示桌面&rdquo;</guibutton>按钮。</para>
+    </sect2>
+    <sect2 id="gospanel-567">
+      <title>通知区域</title>
+      <indexterm>
+        <primary>面板应用程序</primary>
+        <secondary>通知区域 </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>面板对象</primary>
+        <secondary>通知区域</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>通知区域</primary>
+      </indexterm>
+      <para><application>&ldquo;通知区域&rdquo;</application>显示不同应用程序的图标，以此指出应用程序中的活动。例如，当使用<application>&ldquo;CD 播放器&rdquo;</application>应用程序播放 CD 时，CD 图标就会显示在<application>&ldquo;通知区域&rdquo;</application>中。上图说明了<application>&ldquo;通知区域&rdquo;</application>中的 CD 图标。</para>
+      <para>要在面板中添加<application>&ldquo;通知区域&rdquo;</application>，请右击面板上任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;通知区域&rdquo;</guimenuitem></menuchoice>。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-37">
+    <title>菜单</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>添加到面板</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>面板对象</primary>
+      <secondary>菜单</secondary>
+    </indexterm>
+    <para>可以将下列类型的菜单添加到面板中：</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>启动</guibutton>：您可以从<guibutton>&ldquo;启动&rdquo;</guibutton>按钮访问几乎所有标准应用程序、命令和配置选项。要向面板中添加<guibutton>&ldquo;启动&rdquo;</guibutton>按钮，请右击该面板的任意空白区域，然后选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;主菜单&rdquo;</guimenuitem></menuchoice>。可以向面板中添加任意多个<guibutton>&ldquo;启动&rdquo;</guibutton>按钮。</para>
+      </listitem>
+      <listitem>
+        <para><application>菜单栏</application>：您可以从<application>&ldquo;菜单栏&rdquo;</application>的菜单访问几乎所有的标准应用程序、命令和配置选项。<application>&ldquo;菜单栏&rdquo;</application>包含<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单和<guimenu>&ldquo;操作&rdquo;</guimenu>菜单。要将<guimenu>&ldquo;菜单栏&rdquo;</guimenu>添加到面板中，请右击该面板的任意空白区域，然后选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;菜单栏&rdquo;</guimenuitem></menuchoice>。您可以根据需要向面板添加任意数量的<guimenu>&ldquo;菜单栏&rdquo;</guimenu>对象。</para>
+      </listitem>
+      <listitem>
+        <para>系统菜单：系统菜单包含可在 Java Desktop System 上使用的标准应用程序和工具。<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单和<guimenu>&ldquo;操作&rdquo;</guimenu>菜单是系统菜单。要将系统菜单添加到面板上，请右击菜单中的启动器，然后选择<menuchoice><guimenu>&ldquo;整个菜单&rdquo;</guimenu><guimenuitem>&ldquo;将此项作为菜单添加到面板&rdquo;</guimenuitem></menuchoice>。</para>
+      </listitem>
+    </itemizedlist>
+    <para>添加到面板的菜单是由一个带箭头的图标表示。箭头表明该图标代表的是菜单或抽屉。<xref linkend="gospanel-FIG-68"/> 显示了菜单通常在面板上的显示方式。</para>
+    <figure id="gospanel-FIG-68">
+      <title>面板上的典型菜单对象</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>面板上的典型菜单对象。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+  <sect1 id="gospanel-18">
+    <title>抽屉</title>
+    <indexterm>
+      <primary>面板对象</primary>
+      <secondary>抽屉</secondary>
+      <see>抽屉</see>
+    </indexterm>
+    <para>抽屉是面板的扩展。打开和关闭抽屉的方式同显示和隐藏面板一样。抽屉可以包含所有面板对象，包括启动器、菜单、其他面板对象和其他抽屉。打开抽屉后，您可以用跟使用面板上的对象同样的方式来使用抽屉中的对象。</para>
+    <para>下图显示了一个打开的抽屉，它包含两个面板对象。</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/open_drawer.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>打开抽屉。文中对该图形进行了说明。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>抽屉图标上的箭头指明该图标代表抽屉或者菜单。</para>
+    <para>您可以将对象添加到抽屉上，或从中移动和删除对象，其方式与将对象添加到面板上、或从中移动和删除对象相同。</para>
+    <sect2 id="gospanel-42">
+      <title>打开和关闭抽屉</title>
+      <indexterm>
+        <primary>抽屉</primary>
+        <secondary>打开</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>抽屉</primary>
+        <secondary>关闭</secondary>
+      </indexterm>
+      <para>要打开抽屉，请单击面板中的抽屉对象。您可以通过以下方式关闭抽屉：</para>
+      <itemizedlist>
+        <listitem>
+          <para>单击该抽屉。</para>
+        </listitem>
+        <listitem>
+          <para>单击抽屉隐藏按钮。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-420">
+      <title>向面板添加抽屉</title>
+      <indexterm>
+        <primary>抽屉</primary>
+        <secondary>添加到面板</secondary>
+      </indexterm>
+      <para>可以通过以下几种方式将抽屉添加到面板：</para>
+      <itemizedlist>
+        <listitem>
+          <para>通过面板弹出菜单</para>
+          <para>右击面板上的任意空白区域，然后选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;抽屉&rdquo;</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>通过任何菜单</para>
+          <para>您可以将菜单作为抽屉对象添加到面板上。</para>
+          <para>要将菜单作为抽屉添加到面板上，请从面板打开该菜单。右键单击菜单中的任意启动器，然后选择<menuchoice><guimenu>&ldquo;整个菜单&rdquo;</guimenu><guimenuitem>&ldquo;将此项作为抽屉添加到面板&rdquo;</guimenuitem></menuchoice>。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-54">
+      <title>向抽屉添加对象</title>
+      <indexterm>
+        <primary>抽屉</primary>
+        <secondary>添加对象</secondary>
+      </indexterm>
+      <para>可以向抽屉添加对象，其方法与向面板添加对象相同。有关更多信息，请参见 <xref linkend="gospanel-15"/>。</para>
+    </sect2>
+    <sect2 id="gospanel-550">
+      <title>修改抽屉属性</title>
+      <indexterm>
+        <primary>抽屉</primary>
+        <secondary>修改属性</secondary>
+      </indexterm>
+      <para>要修改所有面板和抽屉的首选项，请使用<application>&ldquo;面板&rdquo;</application>首选项工具。例如，您可以选择与面板和抽屉上对象的外观及行为相关的各种选项。也可以选择只与抽屉相关的选项。例如，可以选择一个选项，以便在单击抽屉中的某个启动器时关闭抽屉。</para>
+      <para>也可以修改每个抽屉的其他属性。可以更改每个抽屉的特性，如抽屉的可视外观，以及抽屉是否带隐藏按钮。</para>
+      <para>要修改抽屉的属性，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击抽屉，然后选择<guimenuitem>&ldquo;属性&rdquo;</guimenuitem>以显示<guilabel>&ldquo;面板属性&rdquo;</guilabel>对话框。该对话框显示<guilabel>&ldquo;常规&rdquo;</guilabel>选项卡式部分。</para>
+        </listitem>
+        <listitem>
+          <para>在该对话框中选择抽屉的各个属性。下表介绍了<guilabel>&ldquo;常规&rdquo;</guilabel>选项卡式部分上的元素：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>对话框元素</para>
+                  </entry>
+                  <entry>
+                    <para>说明</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>名称</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>为面板键入名称。当您使用快捷键在面板和桌面之间切换时，会显示该面板名称。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>大小</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择面板的大小。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>图标</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>选择一个图标来代表该抽屉。单击<guibutton>&ldquo;图标&rdquo;</guibutton>按钮可显示一个图标选择器对话框。从该对话框中选择一个图标。或者单击<guibutton>&ldquo;浏览&rdquo;</guibutton>，从其他目录中选择图标。当选择了图标之后，单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>显示隐藏按钮</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>选择此选项将显示面板上的隐藏按钮。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>隐藏按钮上的箭头</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>如果启用隐藏按钮，选择此选项将显示隐藏按钮上的箭头。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>可以使用<guilabel>&ldquo;背景&rdquo;</guilabel>选项卡式部分来设置抽屉的背景。有关如何填写<guilabel>&ldquo;背景&rdquo;</guilabel>选项卡式部分的信息，请参阅<xref linkend="gospanel-28"/>中本主题下的步骤。您也可以将颜色或图像拖到抽屉上，将这种颜色或图像设置为抽屉背景。有关的更多信息，请参阅 <xref linkend="gospanel-61"/>。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;关闭&rdquo;</guibutton>，关闭<guilabel>&ldquo;面板属性&rdquo;</guilabel>对话框。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

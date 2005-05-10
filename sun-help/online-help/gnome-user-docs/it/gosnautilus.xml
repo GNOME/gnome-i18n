@@ -1,0 +1,2635 @@
+<chapter id="gosnautilus-1">
+  <title>Uso del File manager</title>
+  <highlights>
+    <para><application>Nautilus</application>, il File manager di Java Desktop System, fornisce un punto di accesso integrato ai file e alle applicazioni.</para>
+    <para>Questo capitolo descrive l'uso del File manager. </para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>Introduzione al File manager </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>introduzione</secondary>
+    </indexterm>
+    <para>Il File manager offre un punto di accesso integrato ai file e alle applicazioni. Il File manager permette di eseguire le seguenti operazioni: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Creazione di cartelle e documenti.</para>
+      </listitem>
+      <listitem>
+        <para>Visualizzazione dei file e delle cartelle.</para>
+      </listitem>
+      <listitem>
+        <para>Gestione dei file e delle cartelle.</para>
+      </listitem>
+      <listitem>
+        <para>Personalizzazione dei file e delle cartelle.</para>
+      </listitem>
+      <listitem>
+        <para>Apertura di URI speciali.</para>
+      </listitem>
+      <listitem>
+        <para>Scrittura di dati su un CD.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Il File manager gestisce anche lo sfondo del desktop. Lo sfondo del desktop &egrave; l'area in cui vengono visualizzati tutti i componenti visibili del desktop. Si tratta di un componente attivo dell'interfaccia utente. </para>
+    <para>Per aprire una finestra del File manager, fare doppio clic sull'oggetto <guilabel>Documenti</guilabel> sullo sfondo del desktop. La finestra del File manager mostra il contenuto della cartella predefinita per i documenti nel riquadro di visualizzazione.</para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>Finestre del File manager </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>finestre</secondary>
+    </indexterm>
+    <para>Le finestre del File manager permettono di visualizzare e gestire i file e le cartelle. La <xref linkend="gosnautilus-FIG-1"/> mostra una finestra del File manager con il contenuto di una cartella.</para>
+    <figure id="gosnautilus-FIG-1">
+      <title>Contenuto di una cartella in una finestra del File manager<indexterm><primary>File manager</primary><secondary>vista a icone</secondary><tertiary>illustrazione</tertiary></indexterm></title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Una cartella in una finestra del File manager. Barra dei menu, barra degli strumenti, barra di posizione, pulsanti di zoom, riquadro laterale, riquadro di visualizzazione. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>La <xref linkend="gosnautilus-TBL-83"/> descrive i componenti delle finestre del File manager.</para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>Componenti delle finestre del File manager</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Componente</para>
+            </entry>
+            <entry>
+              <para>Descrizione </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Barra dei menu </para>
+            </entry>
+            <entry valign="top">
+              <para>Contiene i menu che permettono di eseguire varie operazioni nel File manager.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Barra degli strumenti </para>
+            </entry>
+            <entry valign="top">
+              <para>Contiene una serie di pulsanti che permettono di eseguire varie operazioni nel File manager.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Barra di posizione</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Contiene i seguenti elementi: </para>
+              <itemizedlist>
+                <listitem>
+                  <para>Campo <guilabel>Posizione</guilabel> o <guilabel>Vai a</guilabel>: Permette di specificare un file, una cartella o un URI da visualizzare. </para>
+                </listitem>
+                <listitem>
+                  <para>Pulsanti di <guimenu>Zoom</guimenu>: permettono di cambiare le dimensioni degli oggetti nel riquadro di visualizzazione.</para>
+                </listitem>
+                <listitem>
+                  <para>Casella di riepilogo a discesa <guilabel>Visualizza come</guilabel>: permette di scegliere come visualizzare gli oggetti nel riquadro di visualizzazione.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Riquadro laterale </para>
+            </entry>
+            <entry valign="top">
+              <para>Svolge le seguenti funzioni:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Visualizza informazioni sul file o sulla cartella corrente. </para>
+                </listitem>
+                <listitem>
+                  <para>Consente la navigazione all'interno del file system. </para>
+                </listitem>
+              </itemizedlist>
+              <para>Il riquadro laterale contiene una casella di riepilogo da cui &egrave; possibile scegliere gli elementi da visualizzare in quella posizione. Sono disponibili le seguenti opzioni:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>Informazioni</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Simboli</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Cronologia</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Note</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Albero</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>Per visualizzare il riquadro laterale, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Riquadro laterale</guimenuitem></menuchoice>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Riquadro di visualizzazione </para>
+            </entry>
+            <entry valign="top">
+              <para>Visualizza il contenuto di:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Tipi specifici di file</para>
+                </listitem>
+                <listitem>
+                  <para>Cartelle</para>
+                </listitem>
+                <listitem>
+                  <para>Siti FTP</para>
+                </listitem>
+                <listitem>
+                  <para>Posizioni corrispondenti a URI speciali</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Barra di stato</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Visualizza informazioni di stato. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>Dalle finestre del File manager &egrave; anche possibile aprire un menu a comparsa. Per aprire il menu a comparsa, fare clic con il pulsante destro del mouse in una finestra del File manager. Le opzioni disponibili nel menu dipendono dalla posizione in cui si &egrave; fatto clic. Ad esempio, facendo clic con il pulsante destro del mouse su un file o su una cartella, vengono visualizzate opzioni che permettono di operare sul file o sulla cartella. Facendo clic con il pulsante destro del mouse sullo sfondo di un riquadro di visualizzazione, le opzioni presentate si riferiscono alla visualizzazione degli oggetti in quel riquadro.</para>
+    <sect2 id="gosnautilus-53">
+      <title>Riquadro di visualizzazione </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>riquadro di visualizzazione</secondary>
+        <see>riquadro di visualizzazione</see>
+      </indexterm>
+      <indexterm>
+        <primary>riquadro di visualizzazione</primary>
+        <secondary> introduzione</secondary>
+      </indexterm>
+      <para>Il riquadro di visualizzazione mostra il contenuto di:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Tipi specifici di file</para>
+        </listitem>
+        <listitem>
+          <para>Cartelle</para>
+        </listitem>
+        <listitem>
+          <para>Siti FTP</para>
+        </listitem>
+        <listitem>
+          <para>Posizioni corrispondenti a URI speciali</para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary>componenti di visualizzazione</primary></indexterm>Il File manager contiene <firstterm>componenti di visualizzazione</firstterm> che permettono di mostrare determinati tipi di file nel riquadro di visualizzazione. Ad esempio, &egrave; possibile usare un visualizzatore di testo per leggere file di testo nel riquadro di visualizzazione.</para>
+      <para>La possibilit&agrave; di visualizzare i file nel riquadro di visualizzazione offre i seguenti vantaggi: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Si utilizzano meno risorse del sistema rispetto a quelle consumate avviando un'applicazione. </para>
+        </listitem>
+        <listitem>
+          <para>Il file viene visualizzato pi&ugrave; velocemente rispetto all'avvio dell'applicazione appropriata.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Il riquadro di visualizzazione non consente tuttavia di modificare i file.</para>
+      <para>Il File manager utilizza inoltre una serie di <firstterm>viste</firstterm> che permettono di visualizzare il contenuto delle cartelle in vari modi. Ad esempio, il contenuto delle cartelle pu&ograve; essere visualizzato nei seguenti modi: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Vista a icone: visualizza gli oggetti contenuti nella cartella in forma di icone. </para>
+        </listitem>
+        <listitem>
+          <para>Vista ad elenco: visualizza gli oggetti contenuti nella cartella in forma di elenco. </para>
+        </listitem>
+        <listitem>
+          <para>Vista audio: mostra solo gli elementi audio presenti nella cartella.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Per scegliere il tipo di vista da applicare a una cartella, usare il menu <guimenu>Visualizza</guimenu>. Per maggiori informazioni sulle viste, vedere <xref linkend="gosnautilus-7"/>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>Riquadro laterale </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>riquadro laterale</secondary>
+        <tertiary>introduzione</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>riquadro laterale</primary>
+        <see>File manager</see>
+      </indexterm>
+      <para>Per visualizzare il riquadro laterale, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Riquadro laterale</guimenuitem></menuchoice>. &Egrave; possibile scegliere i tipi di informazioni da visualizzare nel riquadro laterale. In particolare, &egrave; possibile scegliere di visualizzare:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Informazioni</guilabel>
+          </para>
+          <para>Mostra un'icona che rappresenta il file o la cartella attiva. Mostra inoltre informazioni relative al file o alla cartella attiva. Se un file &egrave; visualizzato nel riquadro di visualizzazione, nel riquadro laterale compare una serie di pulsanti. Tali pulsanti permettono di eseguire sul file operazioni diverse da quella predefinita.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Simboli</guilabel>
+          </para>
+          <para>Contiene i simboli che &egrave; possibile aggiungere a un file o a una cartella. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Cronologia</guilabel>
+          </para>
+          <para>Contiene un elenco cronologico dei file, delle cartelle, dei siti FTP e degli URI che sono stati visitati pi&ugrave; di recente.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Note</guilabel>
+          </para>
+          <para>Permette di aggiungere note ai file e alle cartelle.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Albero</guilabel>
+          </para>
+          <para>Mostra una rappresentazione gerarchica del file system. L'<guilabel>Albero</guilabel> permette di spostarsi tra i file.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Per chiudere il riquadro laterale, fare clic sul pulsante <guibutton>X</guibutton> nel suo angolo superiore destro.</para>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>Icone e simboli </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>icone</secondary>
+        <tertiary> introduzione</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>simboli</secondary>
+        <see>simboli</see>
+      </indexterm>
+      <indexterm>
+        <primary>simboli</primary>
+        <secondary>introduzione</secondary>
+      </indexterm>
+      <para>Nella vista a icone, il File manager mostra i file e le cartelle in forma di icone. Alle icone dei file e delle cartelle &egrave; possibile aggiungere dei simboli. Un simbolo &egrave; una piccola icona che &egrave; possibile aggiungere a un oggetto per contrassegnarlo visivamente. Ad esempio, per contrassegnare un file importante, &egrave; possibile aggiungere un simbolo <guilabel>Importante</guilabel> alla sua icona per creare il seguente effetto visivo: </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Icona del file con un simbolo di tipo Importante.  </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Per maggiori informazioni su come aggiungere un simbolo a un'icona, vedere <xref linkend="gosnautilus-112"/>. </para>
+      <para>La tabella seguente descrive la struttura dell'icona del file:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Componente</para>
+              </entry>
+              <entry>
+                <para>Descrizione  </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Simbolo Importante. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Simbolo. Questo &egrave; il simbolo <guilabel>Importante</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Icona di un file di testo. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Icona che rappresenta il file. Questa icona pu&ograve; contenere un'anteprima del contenuto del file. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Didascalia dell'icona. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Didascalia dell'icona. Gli elementi informativi visualizzati nella didascalia dell'icona possono essere modificati.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Il File manager utilizza alcuni simboli predefiniti per i seguenti tipi di elementi:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Collegamenti simbolici</para>
+        </listitem>
+        <listitem>
+          <para>Oggetti per i quali si dispone delle seguenti autorizzazioni:<indexterm><primary>autorizzazioni</primary><secondary>e simboli</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>Autorizzazioni di sola lettura </para>
+            </listitem>
+            <listitem>
+              <para>Nessuna autorizzazione di lettura e nessuna autorizzazione di scrittura</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>La tabella seguente mostra i simboli predefiniti:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Simbolo predefinito</para>
+              </entry>
+              <entry>
+                <para>Descrizione  </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Simbolo del collegamento simbolico.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>collegamenti simbolici</primary><secondary>e simboli</secondary></indexterm>Collegamento simbolico</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Simbolo per gli oggetti di sola lettura. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Autorizzazioni di sola lettura </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Simbolo per gli oggetti privi di autorizzazioni di lettura e scrittura.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Nessuna autorizzazione di lettura e nessuna autorizzazione di scrittura </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>Navigazione nel computer </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>navigazione</secondary>
+    </indexterm>
+    <para>Il File manager fornisce un punto di accesso integrato a tutti i file, le applicazioni, i siti FTP e gli URI. </para>
+    <para>Questa sezione descrive le seguenti procedure: <itemizedlist><listitem><para>Visualizzare gli oggetti nelle finestre del File manager.</para></listitem><listitem><para>Aprire i file dalle finestre del File manager.</para></listitem><listitem><para>Spostarsi tra file e cartelle nel file system. </para></listitem><listitem><para>Aprire directory nel file system.</para></listitem><listitem><para>Connettersi a un server.</para></listitem><listitem><para>Spostarsi nei siti FTP.</para></listitem><listitem><para>Accedere a speciali URI.</para></listitem></itemizedlist></para>
+    <sect2 id="gosnautilus-25">
+      <title>Visualizzare una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>visualizzazione di cartelle</secondary>
+      </indexterm>
+      <para>Per visualizzare il contenuto di una cartella si pu&ograve; procedere nei modi seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Fare doppio clic sulla cartella nel riquadro di visualizzazione.</para>
+        </listitem>
+        <listitem>
+          <para>Nel campo <guilabel>Posizione</guilabel>, digitare il percorso della cartella che si desidera visualizzare a premere <keycap>Invio</keycap>. Il campo <guilabel>Posizione</guilabel> dispone di una funzione di completamento automatico. Quando si digita un percorso, il File manager legge il file system. Non appena i caratteri digitati sono sufficienti per identificare in modo univoco una directory, il File manager completa automaticamente il nome della directory nel campo <guilabel>Posizione</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Usare l'<guilabel>Albero</guilabel> nel riquadro laterale. Per maggiori informazioni, vedere <xref linkend="gosnautilus-27"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Usare il pulsante <guibutton>Indietro</guibutton> e il pulsante <guibutton>Avanti</guibutton> della barra degli strumenti per spostarsi nella cronologia di navigazione. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Per spostarsi alla cartella di livello superiore rispetto a quella corrente, scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem>Su</guimenuitem></menuchoice>. In alternativa, fare clic sul pulsante <guibutton>Su</guibutton> nella barra degli strumenti.</para>
+      <para>Per ricaricare gli oggetti visualizzati, fare clic sul pulsante <guibutton>Ricarica</guibutton>. </para>
+      <para>Se non si riesce a trovare la cartella che si desidera visualizzare, &egrave; possibile usare la funzione <application>Cerca file</application>. Per avviare lo strumento <application>Cerca file</application>, fare clic su <guibutton>Apri</guibutton> e scegliere <guimenu>Trova file</guimenu>. </para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>Uso dell'Albero dal riquadro laterale </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>Albero, uso</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Albero, uso</primary>
+      </indexterm>
+      <para>L'<guilabel>Albero</guilabel> mostra una rappresentazione gerarchica del file system. Questa struttura offre un metodo comodo per spostarsi all'interno del file system. Per visualizzare l'<guilabel>Albero</guilabel> nel riquadro laterale, scegliere <guimenuitem>Albero</guimenuitem> nella casella di riepilogo situata nella parte superiore del riquadro laterale. </para>
+      <para>Nell'<guilabel>Albero</guilabel>, le cartelle sono rappresentate come segue: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Stato della cartella</para>
+              </entry>
+              <entry>
+                <para>Rappresentazione grafica </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para>Cartella chiusa</para>
+              </entry>
+              <entry>
+                <para>Freccia a destra</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Cartella aperta</para>
+              </entry>
+              <entry>
+                <para>Freccia in gi&ugrave;</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>La <xref linkend="gosnautilus-TBL-34"/> descrive le operazioni che &egrave; possibile eseguire con l'<guilabel>Albero</guilabel> e la relativa procedura. </para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>Attivit&agrave; eseguibili con l'Albero</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Task</para>
+              </entry>
+              <entry>
+                <para>Azione</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Aprire l'<guilabel>Albero</guilabel>.</para>
+              </entry>
+              <entry valign="top">
+                <para>Scegliere <guilabel>Albero</guilabel> nella casella di riepilogo situata nella parte superiore del riquadro laterale.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Chiudere l'<guilabel>Albero</guilabel>.</para>
+              </entry>
+              <entry valign="top">
+                <para>Scegliere un'altra opzione nella casella di riepilogo situata nella parte superiore del riquadro laterale.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Aprire una cartella nell'<guilabel>Albero</guilabel>. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Fare clic sulla freccia posta accanto alla cartella nell'<guilabel>Albero</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Chiudere una cartella nell'<guilabel>Albero</guilabel>. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Fare clic sulla freccia posta accanto alla cartella nell'<guilabel>Albero</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Visualizzare il contenuto di una cartella nel riquadro di visualizzazione. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Selezionare la cartella nell'<guilabel>Albero</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Visualizzare il contenuto di un file nel riquadro di visualizzazione.</para>
+              </entry>
+              <entry valign="top">
+                <para>Selezionare il file nell'<guilabel>Albero</guilabel>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>&Egrave; possibile impostare le preferenze in modo che l'<guilabel>Albero</guilabel> non visualizzi i file. </para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>Apertura dei file </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>apertura dei file</secondary>
+      </indexterm>
+      <para>Quando si apre un file, il File manager esegue l'azione predefinita per quel tipo di file. L'azione predefinita pu&ograve; essere una delle seguenti: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Uso di un componente di visualizzazione per mostrare il contenuto del file nel riquadro di visualizzazione. </para>
+        </listitem>
+        <listitem>
+          <para>Avvio di un'applicazione che permetta di aprire il file.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Per determinare il tipo di file, il File manager ne controlla il contenuto. Se le prime righe non permettono di determinare il tipo di file, il File manager controlla la sua estensione.</para>
+      <para>Se non si riesce a trovare il file che si desidera aprire, &egrave; possibile usare la funzione <application>Cerca file</application>. Per avviare lo strumento <application>Cerca file</application>, fare clic su <guibutton>Apri</guibutton> e scegliere <guimenu>Trova file</guimenu>. </para>
+      <sect3 id="gosnautilus-447">
+        <title>Visualizzazione dei file nel riquadro di visualizzazione </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>visualizzazione dei file nel riquadro di visualizzazione</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>riquadro di visualizzazione</primary>
+          <secondary>visualizzazione dei file</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>componenti di visualizzazione</primary>
+        </indexterm>
+        <para>Il File manager contiene componenti di visualizzazione che permettono di visualizzare determinati tipi di file nel riquadro di visualizzazione. Ad esempio, &egrave; possibile visualizzare i seguenti tipi di file:</para>
+        <itemizedlist>
+          <listitem>
+            <para>File di testo</para>
+          </listitem>
+          <listitem>
+            <para>File PNG</para>
+          </listitem>
+          <listitem>
+            <para>File JPEG (Joint Photographic Experts Group)</para>
+          </listitem>
+        </itemizedlist>
+        <para>Per ricaricare il contenuto del riquadro di visualizzazione, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Ricarica</guimenuitem></menuchoice>. Per interrompere un'operazione di caricamento nel riquadro di visualizzazione, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Interrompi</guimenuitem></menuchoice>.</para>
+        <para>Quando si apre un file nel riquadro di visualizzazione, il componente di visualizzazione pu&ograve; aggiungere alcune voci ai menu del File manager. Tali opzioni si riferiscono al tipo di file correntemente visualizzato. Ad esempio, quando si visualizza un file PNG, il menu <guimenu>Modifica</guimenu> contiene voci per la rotazione e il capovolgimento del contenuto. </para>
+        <para>Inoltre, quando si visualizzano alcuni tipi di file nel riquadro di visualizzazione, &egrave; possibile usare i pulsanti di zoom del File manager per cambiarne la dimensione.</para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>Eseguire l'azione predefinita </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>esecuzione delle azioni predefinite dei file</secondary>
+        </indexterm>
+        <para>Per eseguire l'azione predefinita di un file, fare doppio clic su quel file. Ad esempio, l'azione predefinita dei documenti di testo &egrave; l'apertura del file in un editor di testo. In questo caso, facendo doppio clic sul file, il documento viene aperto in un editor di testo.</para>
+        <para>&Egrave; possibile impostare le preferenze nel File manager per fare in modo che un clic su un file esegua l'azione predefinita. </para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>Eseguire un'azione diversa da quella predefinita usando il sottomenu Apri con </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>esecuzione di azioni diverse da quelle predefinite sui file</secondary>
+        </indexterm>
+        <para>Per eseguire su un file un'operazione diversa da quella predefinita, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Nel riquadro di visualizzazione, selezionare il file su cui si desidera eseguire l'operazione. Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Apri con</guimenuitem></menuchoice>. Viene aperto il sottomenu <guisubmenu>Apri con</guisubmenu>. Le voci di questo sottomenu corrispondono al contenuto delle seguenti parti della finestra di preferenze <application>Associazioni di file</application>:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Casella di riepilogo a discesa <guilabel>Azione predefinita</guilabel> nella finestra di dialogo <guilabel>Modifica tipo di file</guilabel></para>
+              </listitem>
+              <listitem>
+                <para>Casella di riepilogo a discesa <guilabel>Componente di visualizzazione</guilabel> nella finestra di dialogo <guilabel>Modifica tipo di file</guilabel></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>Scegliere un'azione dal sottomenu <guisubmenu>Apri con</guisubmenu>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>Eseguire altre azioni durante la visualizzazione di un file </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>esecuzione di altre azioni sui file</secondary>
+        </indexterm>
+        <para>Quando si visualizza un file nel riquadro di visualizzazione, il riquadro laterale pu&ograve; contenere alcuni pulsanti.</para>
+        <para>I pulsanti rappresentano le azioni definite nella finestra di preferenze <application>Associazioni di file</application>. Le azioni possono essere definite nella casella di riepilogo a discesa <guilabel>Azione predefinita</guilabel> della finestra di dialogo <guilabel>Modifica tipo di file</guilabel>, accessibile dalla finestra di preferenze <application>Associazioni di file</application>. Fare clic su un pulsante per eseguire l'azione corrispondente. Ad esempio, si supponga che una delle azioni definite per i documenti di testo sia l'apertura del file nell'editor di testo <application>gedit</application>. In questo caso, nel riquadro laterale compare il pulsante <guibutton>Apri con gedit</guibutton>. Per aprire il file nell'applicazione <application>gedit</application>, fare clic sul pulsante <guibutton>Apri con gedit</guibutton>.</para>
+        <note>
+          <para>I pulsanti che rappresentano le azioni non compaiono nel riquadro laterale, le azioni corrispondenti vengono eseguite nelle seguenti finestre di dialogo:</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>Apri con altra applicazione</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Apri con altro programma di visualizzazione</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-515">
+      <title>Aprire directory</title>
+      <para>Il File manager fornisce un punto di accesso integrato a tutti i file, le applicazioni, i siti FTP e gli URI. </para>
+      <para>Usando il File manager, &egrave; possibile accedere rapidamente a diverse posizioni all'interno del file system. Per aprire una directory, procedere come segue:<orderedlist><listitem><para>Scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem> Posizione</guimenuitem></menuchoice>. </para></listitem><listitem><para>Nel campo <guilabel>Posizione</guilabel>, digitare il percorso della cartella che si desidera visualizzare</para></listitem><listitem><para>Premere <keycap>Invio</keycap>.</para></listitem></orderedlist></para>
+      <para>Il campo <guilabel>Posizione</guilabel> dispone di una funzione di completamento automatico. Quando si digita un percorso, il File manager legge il file system. Non appena i caratteri digitati sono sufficienti per identificare in modo univoco una directory, il File manager completa automaticamente il nome della directory nel campo <guilabel>Posizione</guilabel>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-491">
+      <title>Connettersi a un server</title>
+      <para>Se l'ambiente Java Desktop System &egrave; configurato per accedere ai server di una rete, &egrave; possibile eseguire tale connessione usando il menu <guilabel>Connessione al server</guilabel>.</para>
+      <para>Per connettersi a un server, procedere come segue:<orderedlist><listitem><para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem>Connetti al Server</guimenuitem></menuchoice>.</para></listitem><listitem><para>Inserire il nome di un server nel campo <guilabel>Nome collegamento</guilabel> della finestra di dialogo <guilabel>Connessione al server</guilabel>.</para></listitem><listitem><para>Inserire l'URL, ad esempio <literal>ftp:///ftp.gnome.org </literal> nel campo <guilabel>Posizione (URL)</guilabel>.</para></listitem><listitem><para>Fare clic sul pulsante <guibutton>Connetti</guibutton>.</para></listitem></orderedlist> </para>
+    </sect2>
+    <sect2 id="gosnautilus-445">
+      <title>Uso della posizione Risorse del computer</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Icona Risorse del computer. L'immagine descrive il contesto.  </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>Risorse del computer</secondary>
+        <see>Risorse del computer</see>
+      </indexterm>
+      <indexterm>
+        <primary> Risorse del computer</primary>
+        <secondary>utilizzo</secondary>
+      </indexterm>
+      <para>La posizione <guilabel>Risorse del computer</guilabel> permette di accedere alle seguenti funzioni del desktop:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Applicazioni</guilabel>
+          </para>
+          <para>Fare doppio clic su <guilabel>Applicazioni</guilabel> per accedere alle applicazioni principali di Java Desktop System. Il menu <guimenu>Applicazioni</guimenu> &egrave; accessibile anche dal menu <guimenu>Apri</guimenu> e dalla <application>Barra dei menu</application>.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Preferenze</guilabel>
+          </para>
+          <para>Fare doppio clic su <guilabel>Preferenze</guilabel> per personalizzare Java Desktop System. Le finestre di preferenze sono accessibili anche dal menu <guimenu>Apri</guimenu></para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>File system</guilabel>
+          </para>
+          <para>Fare doppio clic su <guilabel>File system</guilabel> per accedere alla cartella di primo livello di Java Desktop System. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Per accedere alla posizione <guilabel>Risorse del computer</guilabel> &egrave; possibile procedere nei seguenti modi:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Dallo sfondo del desktop</para>
+          <para>Fare doppio clic sull'oggetto <guilabel>Risorse del computer</guilabel> sullo sfondo del desktop. Il contenuto della posizione <guilabel>Risorse del computer</guilabel> viene visualizzato in una finestra del browser di file.</para>
+        </listitem>
+        <listitem>
+          <para>Da una finestra del browser di file, accedere all'URI <command>computer:/// </command>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>Accedere a un sito FTP </title>
+      <indexterm>
+        <primary>siti FTP</primary>
+        <secondary>accesso</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>siti FTP</secondary>
+        <see>siti FTP</see>
+      </indexterm>
+      <para>Il File manager pu&ograve; essere utilizzato per accedere ai siti FTP. Per accedere a un sito FTP, inserire l'URL del sito nel campo della barra di posizione e premere <keycap>Invio</keycap>. Il contenuto del sito viene mostrato nel riquadro di visualizzazione. Per copiare un file dal sito FTP, trascinarlo nella nuova posizione.</para>
+      <para>Per accedere a un sito FTP che richiede un nome utente e una password, &egrave; possibile inserire l'URL nella forma seguente: </para>
+      <para>
+        <command>ftp://<replaceable>nome_utente</replaceable>:<replaceable>password </replaceable>@<replaceable>nome_host</replaceable>.<replaceable>dominio</replaceable></command>
+      </para>
+      <para>Per ricaricare il sito FTP nel riquadro di visualizzazione, scegliere <menuchoice><guimenu> Visualizza</guimenu><guimenuitem>Ricarica</guimenuitem></menuchoice>. Per interrompere il caricamento del sito FTP, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Interrompi</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-465">
+      <title>Accedere alle risorse di rete </title>
+      <indexterm>
+        <primary>risorse di rete</primary>
+        <secondary>accesso</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>risorse di rete</secondary>
+        <see>risorse di rete</see>
+      </indexterm>
+      <para>Se il sistema &egrave; configurato in modo da accedere a risorse di rete, &egrave; possibile usare il File manager per accedere a quelle risorse. </para>
+      <para>Per accedere alle risorse di rete, aprire il File manager e scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem>Risorse di rete</guimenuitem></menuchoice>. In alternativa, fare doppio clic sull'oggetto <guilabel>Risorse di rete</guilabel> sullo sfondo del desktop. Fare doppio clic sull'oggetto <guilabel>Rete</guilabel>. Viene aperta una finestra del File manager. La finestra mostra le risorse di rete a cui &egrave; possibile accedere. Fare doppio clic sulla rete a cui si desidera accedere. </para>
+      <para><indexterm><primary>server NFS</primary><see>rete Unix</see></indexterm>Per accedere alle risorse UNIX condivise, fare doppio clic sull'oggetto <guilabel>Rete Unix (NFS)</guilabel>. Nella finestra del File manager compare l'elenco delle unit&agrave; condivise UNIX disponibili.</para>
+      <para><indexterm><primary>Samba,  server</primary><see>rete Windows</see></indexterm>Per accedere alle condivisioni di Windows, fare doppio clic sull'oggetto <guilabel>Rete Windows (SMB) </guilabel>. Nella finestra del File manager compare l'elenco delle unit&agrave; condivise Windows disponibili.</para>
+      <sect3 id="gosnautilus-466">
+        <title>Aggiungere una risorsa di rete</title>
+        <para>Per aggiungere una risorsa di rete, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Aprire il File manager e scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem>Risorse di rete</guimenuitem></menuchoice>. In alternativa, fare doppio clic sull'oggetto <guilabel>Risorse di rete</guilabel> sullo sfondo del desktop. </para>
+          </listitem>
+          <listitem>
+            <para>Fare doppio clic sull'oggetto <guilabel>Aggiungi risorsa di rete</guilabel>. Viene aperta la finestra di dialogo <guilabel>Aggiungi risorsa di rete</guilabel>. Inserire nella finestra di dialogo le seguenti informazioni sul server:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento</para>
+                    </entry>
+                    <entry>
+                      <para>Descrizione </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Posizione</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Usare questa casella di testo per specificare la risorsa da aggiungere. In alternativa, selezionare una delle seguenti risorse dalla casella di riepilogo:<itemizedlist><listitem><para><guilabel>Server FTP</guilabel></para></listitem><listitem><para><guilabel>Cartella Web</guilabel></para></listitem><listitem><para><guilabel>Rete Windows (SMB)</guilabel></para></listitem><listitem><para><guilabel>Rete Unix (NFS)</guilabel></para></listitem></itemizedlist></para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nome collegamento</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">Usare questa casella di testo per assegnare un nome alla risorsa di rete. </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Login anonimo</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Questa opzione &egrave; disponibile solo per i server FTP. Selezionare questa opzione per eseguire il login sul server FTP come utente anonimo.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Nessun login richiesto</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Questa opzione &egrave; disponibile solo per le opzioni Cartella Web, Rete Windows (SMB) e Rete Unix (NFS). Selezionare questa opzione se non &egrave; richiesto il login nella cartella Web, nell'unit&agrave; condivisa Windows o nell'unit&agrave; condivisa UNIX.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Nome utente</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Inserire il nome utente da utilizzare per connettersi alla risorsa di rete specificata.</para>
+                      <para>Per connettersi alla risorsa di rete &egrave; necessario inserire anche una password.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Vai alla posizione ora</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Selezionare questa opzione per accedere immediatamente alla risorsa di rete.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Fare clic su <guibutton>OK</guibutton> per aggiungere la risorsa di rete. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-508">
+      <title>Accedere ai server di rete</title>
+      <para>Se l'ambiente desktop GNOME &egrave; configurato per l'accesso ai server di una rete, &egrave; possibile utilizzare il menu <guilabel>Applicazioni</guilabel> per accedere ai server di rete.</para>
+      <para>Per accedere ai server della rete, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guimenuitem>Server di rete</guimenuitem></menuchoice>. Viene visualizzata una finestra con alcuni oggetti. La finestra mostra i server di rete a cui &egrave; possibile accedere. Fare doppio clic sul server di rete a cui si desidera accedere.</para>
+      <sect3 id="gosnautilus-509">
+        <title>Aggiungere un server di rete</title>
+        <para>Per aggiungere un server di rete, scegliere <menuchoice><guimenu>Applicazioni</guimenu><guimenuitem>Server di rete</guimenuitem></menuchoice>. Viene visualizzata una finestra con alcuni oggetti. Fare doppio clic sull'oggetto <guilabel>Nuovo server</guilabel>. Viene visualizzata la finestra <guilabel>Nuovo server</guilabel>. Inserire il nome del server nella finestra di dialogo e fare clic su <guibutton>OK</guibutton>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-467">
+      <title>Accesso a URI speciali </title>
+      <indexterm>
+        <primary>URI speciali</primary>
+        <secondary>accesso</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>URI speciali</secondary>
+      </indexterm>
+      <para>Java Desktop System contiene speciali URI che permettono di accedere a determinate funzioni dal File manager. Ad esempio, per accedere alle finestre di preferenze, &egrave; possibile accedere all'URI <command>preferences:///</command> in una finestra del File manager. La <xref linkend="gosnautilus-TBL-479"/> elenca gli URI speciali che &egrave; possibile usare con il File manager.</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>URI speciali</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>URI</para>
+              </entry>
+              <entry>
+                <para>Descrizione </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>applications:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Mostra l'elenco delle applicazioni di Java Desktop System. Le applicazioni elencate sono le stesse che compaiono nel menu <guimenu>Applicazioni</guimenu>. Per aprire un'applicazione, farvi doppio clic.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>computer:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Mostra l'elenco delle applicazioni e delle finestre di preferenze disponibili in Java Desktop System. Mostra inoltre le icone per l'accesso al file system, al CD-ROM e alle unit&agrave; a dischetti.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Visualizza le posizioni di rete a cui &egrave; possibile connettersi se il sistema &egrave; configurato in modo appropriato. Per accedere a una risorsa di rete, farvi doppio clic. Questo URI pu&ograve; anche essere utilizzato per aggiungere risorse di rete al sistema.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>preferences:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Mostra l'elenco delle finestre di preferenze disponibili in Java Desktop System. Le finestre di preferenze elencate sono uguali a quelle disponibili nel menu <guimenu>Preferenze</guimenu>. Per aprire una finestra di preferenze, farvi doppio clic.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>server-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Mostra un elenco delle applicazioni che &egrave; possibile usare per configurare il sistema come server. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>system-settings:/// </command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Mostra un elenco delle applicazioni che &egrave; possibile usare per modificare le impostazioni del sistema.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>Uso della cronologia di navigazione </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>cronologia di navigazione</secondary>
+      </indexterm>
+      <para>Il File manager mantiene un elenco cronologico dei file, delle cartelle, dei siti FTP e degli URI. Questo elenco pu&ograve; essere utilizzato per accedere ai file, alle cartelle, ai siti FTP e alle risorse URI visitate di recente. La cronologia contiene gli ultimi dieci elementi visualizzati. Le sezioni seguenti descrivono le procedure da seguire per utilizzare il proprio elenco cronologico.</para>
+      <para>Per cancellare l'elenco cronologico, scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem>Cancella cronologia</guimenuitem></menuchoice>.</para>
+      <sect3 id="gosnautilus-77">
+        <title>Navigare nell'elenco cronologico usando il menu Vai a</title>
+        <para>Per visualizzare l'elenco degli oggetti visualizzati in precedenza, scegliere il menu <guimenu>Vai a</guimenu>. Nella parte inferiore del menu viene visualizzata la cronologia degli ultimi oggetti utilizzati. Per aprire un elemento dell'elenco cronologico, sceglierlo dal menu <guimenu>Vai a</guimenu>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>Navigare nell'elenco cronologico usando la barra degli strumenti</title>
+        <para>Per navigare nella cronologia usando la barra degli strumenti, procedere in uno dei modi seguenti:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Per aprire il file, la cartella o l'URI precedente nell'elenco cronologico, fare clic sul pulsante <guibutton>Indietro</guibutton> nella barra degli strumenti.</para>
+          </listitem>
+          <listitem>
+            <para>Per aprire il file, la cartella o l'URI successivo nell'elenco cronologico, fare clic sul pulsante <guibutton>Avanti</guibutton> nella barra degli strumenti.</para>
+          </listitem>
+          <listitem>
+            <para>Per visualizzare l'elenco degli oggetti visualizzati in precedenza, fare clic sulla freccia in gi&ugrave; a destra del pulsante <guibutton>Indietro</guibutton> nella barra degli strumenti. Per aprire un elemento dell'elenco, farvi clic.</para>
+          </listitem>
+          <listitem>
+            <para>Per visualizzare l'elenco degli oggetti visualizzati dopo quello corrente, fare clic sulla freccia in gi&ugrave; a destra del pulsante <guibutton> Avanti</guibutton> nella barra degli strumenti. Per aprire un elemento dell'elenco, farvi clic.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>Navigare nella cronologia usando il riquadro laterale </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>Cronologia</secondary>
+        </indexterm>
+        <para>Per visualizzare la <guilabel>Cronologia</guilabel> nel riquadro laterale, scegliere <guilabel>Cronologia</guilabel> nella casella di riepilogo situata nella parte superiore del riquadro laterale. La <guilabel>Cronologia</guilabel> visualizzata nel riquadro laterale mostra l'elenco degli oggetti visualizzati in precedenza.</para>
+        <para>Per visualizzare un elemento della cronologia nel riquadro di visualizzazione, fare clic sull'elemento desiderato nell'elenco <guilabel>Cronologia</guilabel>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>Contrassegnare con un segnalibro le posizioni preferite </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>segnalibri</secondary>
+      </indexterm>
+      <para>Per accedere a un elemento contrassegnato con un segnalibro, selezionarlo dal menu <guimenu>Segnalibri</guimenu>. Il menu <guimenu>Segnalibri</guimenu> permette di creare un elenco delle proprie posizioni preferite. &Egrave; possibile aggiungere segnalibri ai file e alle cartelle presenti nei file system, ai siti FTP o alle risorse URI.</para>
+      <sect3 id="gosnautilus-40">
+        <title>Aggiungere un segnalibro</title>
+        <para>Per aggiungere un segnalibro, visualizzare l'elemento che si desidera contrassegnare nel riquadro di visualizzazione. Scegliere <menuchoice><guimenu>Segnalibri</guimenu><guimenuitem> Aggiungi segnalibro</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>Modificare un segnalibro</title>
+        <para>Per modificare un segnalibro, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Scegliere <menuchoice><guimenu>Segnalibri</guimenu><guimenuitem> Modifica segnalibri</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Per modificare un segnalibro, selezionarlo nella parte sinistra della finestra di dialogo <guilabel>Modifica segnalibri</guilabel>. Modificare le informazioni relative al segnalibro nella parte destra della finestra di dialogo <guilabel>Modifica segnalibri</guilabel> come segue: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento</para>
+                    </entry>
+                    <entry>
+                      <para>Descrizione </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nome</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Usare questa casella di testo per specificare il nome che identifica il segnalibro nel menu <guimenu>Segnalibri</guimenu>.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Posizione</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Usare questo campo per specificare la posizione del segnalibro. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Per eliminare un segnalibro, selezionarlo nella parte sinistra della finestra di dialogo. Fare clic su <guilabel>Elimina</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>Gestione di file e cartelle </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>gestione di file e cartelle</secondary>
+    </indexterm>
+    <para>Questa sezione spiega come operare su file e cartelle.</para>
+    <sect2 id="gosnautilus-201">
+      <title>Uso della tecnica Drag-and-Drop nel File manager </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>Drag-and-Drop</secondary>
+      </indexterm>
+      <para>La tecnica Drag-and.Drop (trascinamento e rilascio) pu&ograve; essere utilizzata per eseguire diverse operazioni nel File manager. Quando si utilizza questo metodo, il puntatore del mouse fornisce indicazioni sull'operazione eseguita. La <xref linkend="gosnautilus-TBL-11"/> descrive le operazioni che &egrave; possibile eseguire trascinando e rilasciando gli oggetti. La tabella mostra inoltre i puntatori del mouse che compaiono durante le operazioni di trascinamento e rilascio.</para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>Uso della tecnica Drag-and-Drop nel File manager</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Task </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Azione</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Puntatore del mouse</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Spostare un oggetto</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Trascinare l'oggetto nella nuova posizione.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntatore di spostamento.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Copiare un oggetto</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Selezionare l'oggetto e premere <keycap> Ctrl</keycap>. Trascinare l'oggetto nella nuova posizione.</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntatore di copia.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Creare un collegamento simbolico a un oggetto</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Selezionare l'oggetto e premere <keycombo><keycap> Ctrl</keycap><keycap>Maiusc</keycap></keycombo>. Trascinare l'oggetto nella posizione in cui si desidera collocare il collegamento simbolico.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntatore di collegamento simbolico.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Chiedere cosa fare con l'oggetto trascinato </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Selezionare l'oggetto e premere <keycap>Alt</keycap>. Trascinare l'oggetto nel punto di destinazione. Rilasciare il pulsante del mouse. Viene aperto un menu a comparsa. Scegliere dal menu una delle opzioni seguenti: </para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Sposta qui</guimenuitem>
+                    </para>
+                    <para>Sposta l'oggetto nella posizione designata.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Copia qui</guimenuitem>
+                    </para>
+                    <para>Copia l'oggetto nella posizione designata. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Obiettivo del collegamento</guimenuitem>
+                    </para>
+                    <para>Crea un collegamento simbolico all'oggetto nella posizione designata.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Imposta come sfondo</guimenuitem>
+                    </para>
+                    <para>Se l'oggetto &egrave; un'immagine, la imposta come sfondo del desktop. Questo comando pu&ograve; essere usato per impostare lo sfondo del desktop e dei riquadri di visualizzazione.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Annulla</guimenuitem>
+                    </para>
+                    <para>Annulla l'operazione. </para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Puntatore di domanda.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>Selezionare file e cartelle </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>selezione di file e cartelle</secondary>
+      </indexterm>
+      <para>Il File manager offre diversi metodi per la selezione di file e cartelle. La <xref linkend="gosnautilus-TBL-10"/> descrive le possibili procedure per la selezione degli oggetti dalle finestre del File manager e dallo sfondo del desktop.</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>Selezione di oggetti nel File manager</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Task </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Azione</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selezionare un elemento</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Fare clic sull'elemento.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selezionare un gruppo di elementi contigui</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Nella vista a icone, trascinare il puntatore in modo da evidenziare i file che si desidera selezionare.</para>
+                <para>Nella vista ad elenco, fare clic sulla prima voce del gruppo. Premere <keycap>Maiusc</keycap> e fare clic sull'ultimo elemento del gruppo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selezionare pi&ugrave; elementi</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Premere il tasto <keycap>Ctrl</keycap>. Fare clic sugli elementi che si desidera selezionare.</para>
+                <para>In alternativa, premere <keycap> Ctrl</keycap> e trascinare il puntatore del mouse intorno ai file che si desidera selezionare.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Selezionare l'intero contenuto di una cartella </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Seleziona tutti i file</guimenuitem></menuchoice>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Per eseguire l'operazione predefinita su un oggetto, farvi doppio clic. &Egrave; possibile impostare le preferenze nel File manager per fare in modo che un clic su un file esegua l'azione predefinita.</para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>Spostare un file o una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>spostamento di file e cartelle</secondary>
+      </indexterm>
+      <para>Le sezioni seguenti descrivono i metodi disponibili per spostare un file o una cartella.</para>
+      <sect3 id="gosnautilus-537">
+        <title>Trascinare l'oggetto nella nuova posizione in un riquadro di visualizzazione</title>
+        <para>Per trascinare un file o una cartella in una nuova posizione in un riquadro di visualizzazione, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Aprire una finestra del File manager. Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem>Nuova finestra</guimenuitem></menuchoice> per aprire una seconda finestra del File manager.</para>
+          </listitem>
+          <listitem>
+            <para>In una finestra, selezionare la cartella di origine del file o della cartella. Nell'altra finestra, selezionare la cartella di destinazione del file o della cartella.</para>
+          </listitem>
+          <listitem>
+            <para>Trascinare il file o la cartella da spostare nella nuova posizione nella seconda finestra.</para>
+          </listitem>
+        </orderedlist>
+        <para>Se il file o la cartella devono essere spostati in una cartella di livello superiore rispetto a quella corrente, non &egrave; necessario aprire una nuova finestra. &Egrave; infatti possibile trascinare il file o la cartella nella nuova posizione all'interno della stessa finestra.</para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>Tagliare e incollare l'oggetto nella nuova posizione</title>
+        <para>Per tagliare un file o una cartella e incollarli in un'altra cartella, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Selezionare il file o la cartella da spostare e scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Taglia file</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Aprire la cartella in cui si desidera spostare il file o la cartella e scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Incolla i file</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>Copiare un file o una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>copia di file e cartelle</secondary>
+      </indexterm>
+      <para>Le sezioni seguenti descrivono i metodi disponibili per copiare un file o una cartella.</para>
+      <sect3 id="gosnautilus-640">
+        <title>Trascinare l'oggetto nella nuova posizione in un riquadro di visualizzazione</title>
+        <para>Per copiare un file o una cartella, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Aprire una finestra del File manager. Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem>Nuova finestra</guimenuitem></menuchoice> per aprire una seconda finestra del File manager.</para>
+          </listitem>
+          <listitem>
+            <para>In una finestra, selezionare la cartella da cui si desidera copiare il file o la cartella. Nell'altra finestra, selezionare la cartella in cui si desidera copiare il file o la cartella.</para>
+          </listitem>
+          <listitem>
+            <para>Selezionare il file o la cartella e premere <keycap>Ctrl</keycap>. Trascinare il file o la cartella nella nuova posizione nell'altra finestra. </para>
+          </listitem>
+        </orderedlist>
+        <para>Se il file o la cartella devono essere copiati in una cartella di livello superiore rispetto a quella corrente, non &egrave; necessario aprire una nuova finestra. Selezionare il file o la cartella e premere <keycap>Ctrl</keycap>. Trascinare il file o la cartella nella nuova posizione nella stessa finestra.</para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>Copiare e incollare nella nuova posizione</title>
+        <para>Per copiare un file o una cartella e incollarli in un'altra cartella, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Selezionare il file o la cartella da copiare e scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Copia file</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Aprire la cartella in cui si desidera copiare il file o la cartella e scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Incolla i file</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>Duplicare un file o una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>duplicazione di file e cartelle</secondary>
+      </indexterm>
+      <para>Per creare una copia di un file o di una cartella nella cartella corrente, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare il file o la cartella che si desidera duplicare nel riquadro di visualizzazione.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem> Duplica</guimenuitem></menuchoice>. In alternativa, fare clic con il pulsante destro del mouse sul file o sulla cartella nel riquadro di visualizzazione e scegliere <guimenuitem>Duplica</guimenuitem>. </para>
+          <para>Nella cartella corrente viene creata una copia del file o della cartella.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>Creare una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>creazione di cartelle</secondary>
+      </indexterm>
+      <para>Per creare una cartella, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare la cartella in cui si desidera creare quella nuova. </para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem>Crea cartella</guimenuitem></menuchoice>. In alternativa, fare clic con il pulsante destro del mouse sullo sfondo del riquadro di visualizzazione e scegliere <guimenuitem>Crea cartella</guimenuitem>. </para>
+          <para>Nel riquadro di visualizzazione viene creata una cartella <guilabel>senza titolo</guilabel>. Il nome della cartella appare selezionato.</para>
+        </listitem>
+        <listitem>
+          <para>Digitare un nome per la cartella e premere <keycap>Invio</keycap>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>Cambiare nome a un file o a una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>rinomina di cartelle</secondary>
+      </indexterm>
+      <para>Per rinominare un file o una cartella, procedere come segue: </para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare il file o la cartella che si desidera rinominare nel riquadro di visualizzazione.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem> Rinomina</guimenuitem></menuchoice>. In alternativa, fare clic con il pulsante destro del mouse sul file o sulla cartella nel riquadro di visualizzazione e scegliere <guimenuitem>Rinomina</guimenuitem>. </para>
+          <para>Il nome del file o della cartella appare selezionato.</para>
+        </listitem>
+        <listitem>
+          <para>Digitare un nuovo nome per il file o per la cartella e premere <keycap>Invio</keycap>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>Modelli e documenti </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>creazione di documenti</secondary>
+      </indexterm>
+      <para>&Egrave; possibile creare un modello dai documenti che si creano frequentemente. Ad esempio, se si creano molte fatture, &egrave; possibile creare un documento per le fatture vuoto e salvarlo come <literal>fattura.doc</literal> nella cartella <literal>$HOME/Templates</literal>.</para>
+      <para>La cartella dei modelli &egrave; accessibile anche da una finestra del browser di file. Scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem>Modelli</guimenuitem></menuchoice>.</para>
+      <para>Il nome del modello viene visualizzato in un sottomenu del menu <guilabel>Crea documento</guilabel>.</para>
+      <para>&Egrave; anche possibile creare una o pi&ugrave; sottocartelle nella cartella dei modelli. Le sottocartelle vengono visualizzate come sottomenu. </para>
+      <para>I modelli possono essere condivisi. Creare un collegamento simbolico dalla cartella dei modelli alla cartella che contiene i modelli condivisi. </para>
+    </sect2>
+    <sect2 id="gosnautilus-514">
+      <title>Creare un documento</title>
+      <para>Se si dispone di modelli per i documenti, &egrave; possibile creare un documento usando uno dei modelli installati. </para>
+      <para>Per creare un documento, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare la cartella in cui si desidera creare il nuovo documento. </para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem>Crea documento</guimenuitem></menuchoice>. In alternativa, fare clic con il pulsante destro del mouse sullo sfondo del riquadro di visualizzazione e scegliere <guimenuitem>Crea documento</guimenuitem>.</para>
+          <para>I nomi dei modelli disponibili vengono visualizzati in un sottomenu del menu <guilabel>Crea documento</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Fare doppio clic sul nome del modello che si desidera usare per creare il documento. </para>
+        </listitem>
+        <listitem>
+          <para>Rinominare il documento e salvarlo nella cartella appropriata.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>Spostare un file o una cartella nel Cestino </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>Cestino</secondary>
+        <see> Cestino</see>
+      </indexterm>
+      <indexterm>
+        <primary>Cestino</primary>
+        <secondary>spostamento di file o cartelle</secondary>
+      </indexterm>
+      <para>Per spostare un file o una cartella nel <guilabel>Cestino</guilabel> procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare il file o la cartella che si desidera spostare nel <guilabel>Cestino</guilabel> nel riquadro di visualizzazione.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem> Sposta nel Cestino</guimenuitem></menuchoice>. In alternativa, fare clic con il pulsante destro del mouse sul file o sulla cartella nel riquadro di visualizzazione e scegliere <guimenuitem>Sposta nel Cestino</guimenuitem>. </para>
+        </listitem>
+      </orderedlist>
+      <para>Oppure, &egrave; possibile trascinare il file o la cartella dal riquadro di visualizzazione sull'oggetto <guilabel>Cestino</guilabel> nel desktop.</para>
+      <note>
+        <para>Quando si sposta un file o una cartella da un supporto removibile nel <guilabel>Cestino</guilabel>, il file o la cartella viene memorizzato in una cartella <guilabel>Cestino</guilabel> sul supporto removibile. Per eliminare il file o la cartella in modo definitivo dal supporto removibile, &egrave; necessario vuotare il <guilabel>Cestino</guilabel>.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>Eliminare un file o una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>eliminazione di file e cartelle</secondary>
+      </indexterm>
+      <para>Quando si elimina un file o una cartella, l'oggetto non viene spostato nel <guilabel>Cestino</guilabel>, bens&igrave; viene eliminato immediatamente dal file system. L'opzione <guimenuitem>Elimina</guimenuitem> &egrave; disponibile solo se si seleziona l'opzione <guilabel>Includi un comando Elimina che escluda il Cestino</guilabel> nella finestra di preferenze relativa alle cartelle. </para>
+      <para>Per eliminare un file o una cartella, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare il file o la cartella che si desidera eliminare nel riquadro di visualizzazione.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem> Elimina</guimenuitem></menuchoice>. In alternativa, fare clic con il pulsante destro del mouse sul file o sulla cartella nel riquadro di visualizzazione e scegliere <guimenuitem>Elimina</guimenuitem>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>Creare un collegamento simbolico a un file o a una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>creazione di collegamenti simbolici</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>collegamento simbolico</primary>
+        <secondary>a file o cartelle, creazione</secondary>
+      </indexterm>
+      <para>Un collegamento simbolico &egrave; un tipo speciale di file che punta a un altro file o a una cartella. Quando si esegue un'operazione su un collegamento simbolico, l'operazione viene eseguita sul file o sulla cartella a cui punta il collegamento. Tuttavia, quando si elimina un collegamento simbolico, viene eliminato solo il collegamento, non il file a cui punta. </para>
+      <para>Per creare un collegamento simbolico a un file o a una cartella, selezionare il file o la cartella per la quale si desidera creare il collegamento. Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Crea collegamento</guimenuitem></menuchoice>. Viene creato un collegamento al file o alla cartella nella cartella corrente. </para>
+      <para>In alternativa, selezionare l'oggetto verso il quale si desidera creare il collegamento e premere <keycombo><keycap>Ctrl</keycap><keycap>Maiusc</keycap></keycombo>. Trascinare l'oggetto nella posizione in cui si desidera collocare il collegamento.</para>
+      <para>Nella configurazione predefinita, il File manager aggiunge un simbolo ai collegamenti simbolici.</para>
+      <note>
+        <para>Le autorizzazioni di un collegamento simbolico sono determinate dal file o dalla cartella a cui punta il collegamento.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-476">
+      <title>Visualizzare le propriet&agrave; di un file o di una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>visualizzazione delle propriet&agrave;</secondary>
+      </indexterm>
+      <para>Per visualizzare le propriet&agrave; di un file o di una cartella, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare il file o la cartella di cui si desidera visualizzare le propriet&agrave;. </para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Propriet&agrave;</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Usare la finestra di dialogo per visualizzare le propriet&agrave; del file o della cartella. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>Chiudi</guibutton> per chiudere la finestra di dialogo di propriet&agrave;.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>Cambiare le autorizzazioni </title>
+      <indexterm>
+        <primary>autorizzazioni</primary>
+        <secondary>introduzione</secondary>
+      </indexterm>
+      <para>Le autorizzazioni sono impostazioni assegnate singolarmente ad ogni file e cartella che determinano il tipo di accesso a cui gli utenti sono autorizzati. La tabella seguente elenca le autorizzazioni che &egrave; possibile impostare per i file e le cartelle e i relativi effetti:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colwidth="29.62*"/>
+          <colspec colwidth="74.59*"/>
+          <colspec colname="colspec0" colwidth="74.59*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Autorizzazione</para>
+              </entry>
+              <entry>
+                <para>File</para>
+              </entry>
+              <entry colname="colspec0">
+                <para>Cartella</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Lettura </para>
+              </entry>
+              <entry valign="top">
+                <para>Autorizzazione alla lettura del file. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Autorizzazione a visualizzare il contenuto della cartella.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Scrittura </para>
+              </entry>
+              <entry valign="top">
+                <para>Autorizzazione a modificare il file. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Autorizzazione a creare ed eliminare i file nella cartella.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Esecuzione </para>
+              </entry>
+              <entry valign="top">
+                <para>Autorizzazione ad eseguire il file come programma. Questa autorizzazione &egrave; rilevante solo se il file &egrave; un programma o uno script. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Autorizzazione ad accedere ai file contenuti nella directory.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>&Egrave; possibile impostare le autorizzazioni in base al tipo di utente. La tabella seguente elenca i tipi di utente che &egrave; possibile configurare per l'assegnazione delle autorizzazioni: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Categoria di utenti</para>
+              </entry>
+              <entry>
+                <para>Descrizione </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Proprietario </para>
+              </entry>
+              <entry valign="top">
+                <para>L'utente che ha creato il file o la cartella.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Gruppo </para>
+              </entry>
+              <entry valign="top">
+                <para>Il gruppo a cui appartiene il proprietario.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Altri </para>
+              </entry>
+              <entry valign="top">
+                <para>Tutti gli altri utenti non inclusi nel gruppo a cui appartiene il proprietario.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><indexterm><primary>File manager</primary><secondary>modifica delle autorizzazioni</secondary></indexterm><indexterm><primary>autorizzazioni</primary><secondary>cambiamento per file e cartelle</secondary></indexterm>Per cambiare le autorizzazioni di un file o di una cartella, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare il file o la cartella di cui si desidera modificare le autorizzazioni. </para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Propriet&agrave;</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic sulla scheda <guilabel>Permessi</guilabel>. Nella scheda <guilabel>Permessi</guilabel>, usare le caselle di riepilogo e le caselle di selezione per modificare le autorizzazioni del file o della cartella. La tabella seguente descrive gli elementi della scheda <guilabel>Permessi</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="37.78*"/>
+              <colspec colwidth="62.22*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento</para>
+                  </entry>
+                  <entry>
+                    <para>Descrizione </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Proprietario del file</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Per cambiare il proprietario del file o della cartella, selezionarlo nella casella di riepilogo. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Gruppo file</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Per cambiare il gruppo a cui appartiene un file o una cartella, selezionarlo nella casella di riepilogo. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Proprietario</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare le autorizzazioni che si desidera applicare al proprietario del file o della cartella.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Gruppo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare le autorizzazioni che si desidera applicare al gruppo a cui appartiene il proprietario del file o della cartella.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Altri</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare le autorizzazioni che si desidera applicare a tutti gli utenti non inclusi nel gruppo a cui appartiene il proprietario.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Visualizzazione di testo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Mostra le autorizzazioni selezionate con le opzioni <guilabel>Lettura</guilabel>, <guilabel>Scrittura</guilabel> ed <guilabel>Esecuzione</guilabel> in formato numerico.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Vista numerica</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Mostra le autorizzazioni selezionate con le opzioni <guilabel>Lettura</guilabel>, <guilabel>Scrittura</guilabel> ed <guilabel>Esecuzione</guilabel> in formato numerico.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Ultima modifica</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Mostra la data e l'ora dell'ultima modifica del file o della cartella.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>Chiudi</guibutton> per chiudere la finestra di dialogo di propriet&agrave;.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>Aggiunta di note a file e cartelle</title>
+      <para>&Egrave; possibile aggiungere una nota ai file e alle cartelle. Per aggiungere una nota &egrave; possibile procedere nei seguenti modi:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Dalla finestra di propriet&agrave;</para>
+        </listitem>
+        <listitem>
+          <para>Dall'area <guilabel>Note</guilabel> nel riquadro laterale</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>Aggiungere una nota dalla finestra di propriet&agrave; </title>
+        <indexterm>
+          <primary>note</primary>
+          <secondary>aggiunta a file e cartelle</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>note</secondary>
+          <tertiary>aggiunta</tertiary>
+        </indexterm>
+        <para>Per aggiungere una nota a un file o a una cartella, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Selezionare il file o la cartella a cui si desidera aggiungere la nota. </para>
+          </listitem>
+          <listitem>
+            <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Propriet&agrave;</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Fare clic sulla scheda <guilabel>Note</guilabel> nella finestra di propriet&agrave;. Nella scheda <guilabel>Note</guilabel>, scrivere la nota.</para>
+          </listitem>
+          <listitem>
+            <para>Fare clic su <guibutton>Chiudi</guibutton> per chiudere la finestra di dialogo di propriet&agrave;. Al file o alla cartella viene aggiunto il simbolo di una nota.</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary>note</primary><secondary>eliminazione</secondary></indexterm><indexterm><primary>File manager</primary><secondary>note</secondary><tertiary>eliminazione</tertiary></indexterm>Per eliminare una nota, eliminarne il testo dalla scheda <guilabel>Note</guilabel>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>Aggiungere una nota dalla scheda Note nel riquadro laterale</title>
+        <para>Per aggiungere una nota a un file o a una cartella, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Aprire il file o la cartella a cui si desidera aggiungere la nota nel riquadro di visualizzazione.</para>
+          </listitem>
+          <listitem>
+            <para>Scegliere <guilabel>Note</guilabel> nella casella di riepilogo situata nella parte superiore del riquadro laterale. Per visualizzare il riquadro laterale, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Riquadro laterale</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Digitare la nota nel riquadro laterale. Nel riquadro di visualizzazione, al file o alla cartella viene aggiunto il simbolo della nota, mentre nel riquadro laterale viene aggiunta un'icona di nota. Fare clic su questa icona per visualizzare la nota corrispondente.</para>
+          </listitem>
+        </orderedlist>
+        <para>Per eliminare una nota, eliminarne il testo dalla scheda <guilabel>Note</guilabel> nel riquadro laterale.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>Uso del Cestino </title>
+      <indexterm>
+        <primary>Cestino</primary>
+        <secondary>introduzione</secondary>
+      </indexterm>
+      <para>&Egrave; possibile spostare nel <guilabel>Cestino</guilabel> i seguenti oggetti:</para>
+      <itemizedlist>
+        <listitem>
+          <para>File</para>
+        </listitem>
+        <listitem>
+          <para>Cartelle</para>
+        </listitem>
+        <listitem>
+          <para>Oggetti dello sfondo del desktop</para>
+        </listitem>
+      </itemizedlist>
+      <para>Se occorre recuperare un file dal <guilabel>Cestino</guilabel>, &egrave; possibile visualizzare il contenuto e spostare al di fuori del <guilabel>Cestino</guilabel> il file desiderato. Quando si vuota il <guilabel>Cestino</guilabel>, il suo contenuto viene eliminato in modo permanente. </para>
+      <sect3 id="gosnautilus-107">
+        <title>Visualizzare il contenuto del Cestino </title>
+        <indexterm>
+          <primary>Cestino</primary>
+          <secondary>visualizzazione</secondary>
+        </indexterm>
+        <para>Per visualizzare il contenuto del <guilabel>Cestino</guilabel> si pu&ograve; procedere nei seguenti modi:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Da una finestra del File manager</para>
+            <para>Scegliere <menuchoice><guimenu>Vai a</guimenu><guimenuitem>Cestino</guimenuitem></menuchoice>. Il contenuto del <guilabel>Cestino</guilabel> viene visualizzato nella finestra.</para>
+          </listitem>
+          <listitem>
+            <para>Dallo sfondo del desktop</para>
+            <para>Fare doppio clic sull'oggetto <guilabel>Cestino</guilabel> sullo sfondo del desktop.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>Vuotare il Cestino </title>
+        <indexterm>
+          <primary>Cestino</primary>
+          <secondary>svuotamento</secondary>
+        </indexterm>
+        <para>Per vuotare il <guilabel>Cestino</guilabel> si pu&ograve; procedere come segue:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Da una finestra del File manager</para>
+            <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem>Svuota Cestino</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Dallo sfondo del desktop</para>
+            <para>Fare clic con il pulsante destro del mouse sull'oggetto <guilabel>Cestino</guilabel> e scegliere <guimenuitem>Svuota Cestino</guimenuitem>.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>Modifica dell'aspetto di file e cartelle </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>modifica dell'aspetto di file e cartelle</secondary>
+    </indexterm>
+    <para>Il File manager offre diversi metodi per modificare l'aspetto dei file e delle cartelle, come descritto nelle sezioni seguenti.</para>
+    <sect2 id="gosnautilus-112">
+      <title>Aggiungere un simbolo a un file o a una cartella </title>
+      <indexterm>
+        <primary>simboli</primary>
+        <secondary>aggiunta a un file</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>simboli</primary>
+        <secondary>aggiunta a una cartella</secondary>
+      </indexterm>
+      <para>Per aggiungere un simbolo a un file o a una cartella, procedere come segue: </para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare l'oggetto a cui si desidera aggiungere il simbolo.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic con il pulsante destro del mouse sull'oggetto e scegliere <guimenuitem>Propriet&agrave;</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic sulla scheda <guilabel>Simboli</guilabel> nella finestra di preferenze.</para>
+        </listitem>
+        <listitem>
+          <para>Selezionare il simbolo da aggiungere all'oggetto.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>Chiudi</guibutton> per chiudere la finestra di dialogo di propriet&agrave;.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>Aggiungere un nuovo simbolo </title>
+      <indexterm>
+        <primary>simboli</primary>
+        <secondary>aggiunta</secondary>
+      </indexterm>
+      <para>Per aggiungere un nuovo simbolo, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem> Sfondi e simboli</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Simbolo</guibutton> e quindi sul pulsante <guibutton>Aggiungi nuovo simbolo</guibutton> nella finestra di dialogo <guilabel>Sfondi e simboli</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Digitare un nome per il simbolo nella casella di testo <guilabel>Parola chiave</guilabel> della finestra di dialogo <guilabel>Crea un nuovo simbolo</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic sul pulsante <guilabel>Immagine</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>Sfoglia</guibutton> nella finestra di dialogo <guilabel>Seleziona un file immagine per il nuovo simbolo</guilabel>. Dopo aver scelto il simbolo, fare clic su <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>OK</guibutton> nella finestra di dialogo <guilabel>Crea un nuovo simbolo</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>Cambiare l'icona di un file o di una cartella </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>icone</secondary>
+        <tertiary>cambiamento</tertiary>
+      </indexterm>
+      <para>Per cambiare l'icona che rappresenta un singolo file o una singola cartella, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selezionare un file o una cartella.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Propriet&agrave;</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Nella scheda <guilabel>Generale</guilabel> della finestra di propriet&agrave;, fare clic sul pulsante <guibutton>Seleziona icona personalizzata</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Usare la finestra di dialogo per scegliere l'icona con cui rappresentare il file o la cartella. Fare clic su <guibutton>Ok</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>Chiudi</guibutton> per chiudere la finestra di dialogo di propriet&agrave;.</para>
+        </listitem>
+      </orderedlist>
+      <para>Per ripristinare l'icona predefinita specificata nella finestra di preferenze <application>Associazioni di file</application>, fare clic con il pulsante destro del mouse sull'icona e scegliere <guimenuitem>Rimuovi icona personalizzata</guimenuitem>. In alternativa, fare clic sul pulsante <guilabel>Rimuovi icona personalizzata</guilabel> nella finestra di dialogo delle propriet&agrave;.</para>
+      <para>Per cambiare l'icona che rappresenta un tipo di file, usare la finestra di preferenze <application>Associazioni di file</application>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>Cambiare le dimensioni degli oggetti </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>ingrandimento e riduzione della visualizzazione</secondary>
+      </indexterm>
+      <para>&Egrave; possibile cambiare le dimensioni degli oggetti visualizzati. In particolare, &egrave; possibile cambiare le dimensioni di visualizzazione dei file e delle cartelle. Per cambiare la dimensione degli oggetti visualizzati, procedere come segue:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Per ingrandire gli oggetti visualizzati, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Zoom avanti</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Per rendere pi&ugrave; piccoli gli oggetti visualizzati, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Zoom indietro</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Per tornare alla visualizzazione normale, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Dimensione normale</guimenuitem></menuchoice>. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Per cambiare la dimensione degli oggetti in una vista &egrave; anche possibile usare i pulsanti di zoom disponibili nella barra di posizione. La <xref linkend="gosnautilus-TBL-42"/> spiega come usare i pulsanti di zoom.</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>Pulsanti di zoom</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Pulsante</para>
+              </entry>
+              <entry>
+                <para>Nome del pulsante </para>
+              </entry>
+              <entry>
+                <para>Descrizione </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pulsante Zoom indietro.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Pulsante <guibutton>Zoom indietro</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Fare clic su questo pulsante per ridurre la dimensione degli oggetti in una vista.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pulsante Dimensione normale </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Pulsante <guibutton>Dimensione normale</guibutton> </para>
+              </entry>
+              <entry valign="top">
+                <para>Fare clic su questo pulsante per riportare la visualizzazione alla dimensione normale. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Pulsante Zoom avanti.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Pulsante <guibutton> Zoom avanti</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Fare clic su questo pulsante per aumentare le dimensioni degli oggetti in una vista.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Il File manager ricorda la dimensione degli elementi di una determinata cartella. All'apertura successiva della cartella, gli oggetti vengono visualizzati nella dimensione selezionata. In altre parole, quando si cambiano le dimensioni degli oggetti in una cartella, la cartella viene personalizzata in modo da visualizzare gli oggetti con la dimensione specificata. Per tornare alla dimensione predefinita specificata nelle preferenze, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Ripristina visualizzazione predefinita</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>Uso delle viste per file e cartelle </title>
+      <indexterm>
+        <primary>componenti di visualizzazione</primary>
+      </indexterm>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>viste</secondary>
+        <tertiary>introduzione</tertiary>
+      </indexterm>
+      <para>Il File manager offre diversi metodi per visualizzare il contenuto dei file. Il File manager include componenti di visualizzazione che permettono di visualizzare determinati tipi di file nel riquadro di visualizzazione. Ad esempio, &egrave; possibile scegliere un visualizzatore di pagine Web per mostrare i file HTML nel riquadro di visualizzazione. Oppure, &egrave; possibile usare un visualizzatore di testi per mostrare i file di testo nel riquadro di visualizzazione.</para>
+      <para>&Egrave; anche possibile usare il File manager per aprire un file in un'applicazione appropriata. Per maggiori informazioni, vedere <xref linkend="gosnautilus-28"/>.</para>
+      <para>Il File manager utilizza una serie di <firstterm>viste</firstterm> che permettono di visualizzare il contenuto delle cartelle in vari modi. Ad esempio, il contenuto delle cartelle pu&ograve; essere visualizzato nei seguenti modi: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Vista a icone</para>
+          <para>Visualizza gli oggetti contenuti nella cartella in forma di icone. </para>
+        </listitem>
+        <listitem>
+          <para>Vista ad elenco</para>
+          <para>Visualizza gli oggetti contenuti nella cartella in forma di elenco. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Il menu <guilabel>Visualizza</guilabel> permette di scegliere come visualizzare un file o una cartella. Per scegliere la modalit&agrave; di visualizzazione di file o cartelle &egrave; anche possibile usare la casella di riepilogo <guilabel>Visualizza come</guilabel>. Quando si visualizza una cartella, &egrave; possibile specificare il modo in cui disporre o ordinare il suo contenuto. Ad esempio, &egrave; possibile modificare la dimensione degli oggetti nel riquadro di visualizzazione. Le sezioni seguenti spiegano come operare con la vista a icone, la vista ad elenco e le viste dei file.</para>
+      <sect3 id="gosnautilus-100">
+        <title>Scelta di una vista per un file o una cartella </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>viste</secondary>
+          <tertiary> scelta</tertiary>
+        </indexterm>
+        <para>Per scegliere il tipo di vista da applicare al contenuto di un file o di una cartella &egrave; possibile usare il menu <guilabel>Visualizza</guilabel>. </para>
+        <para>In alternativa, per scegliere una vista, &egrave; possibile scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Visualizza come</guimenuitem></menuchoice>. Selezionare la vista che si desidera usare dalla finestra di dialogo <guilabel>Apri con altro programma di visualizzazione</guilabel> e fare clic sul pulsante <guibutton>Scegli</guibutton>. </para>
+        <para>Per scegliere il tipo di vista si pu&ograve; anche utilizzare la casella di riepilogo a discesa <guilabel>Visualizza come</guilabel>. La casella di riepilogo a discesa <guilabel>Visualizza come</guilabel> si trova sul lato destro della barra di posizione.</para>
+        <para>&Egrave; possibile visualizzare le diverse cartelle usando viste differenti. Il File manager ricorda la vista selezionata per una determinata cartella. All'apertura successiva della stessa cartella, viene usata nuovamente la vista selezionata la volta precedente. Per tornare alla vista predefinita specificata nelle preferenze, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem> Ripristina visualizzazione predefinita</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>Disporre i file nella vista a icone </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>vista a icone</secondary>
+          <tertiary>disposizione dei file</tertiary>
+        </indexterm>
+        <para>Quando si visualizza il contenuto di una cartella nella vista a icone, &egrave; possibile specificare il modo in cui disporre gli oggetti nella cartella. Per specificare la disposizione degli elementi in una vista a icone, scegliere <menuchoice><guimenu>Visualizza</guimenu><guisubmenu>Disponi elementi</guisubmenu></menuchoice>. Il sottomenu <guisubmenu>Disponi elementi</guisubmenu> contiene le seguenti sezioni:</para>
+        <itemizedlist>
+          <listitem>
+            <para>La sezione superiore contiene un'opzione che permette di disporre i file manualmente.</para>
+          </listitem>
+          <listitem>
+            <para>La sezione centrale contiene una serie di opzioni che permettono di ordinare i file automaticamente.</para>
+          </listitem>
+          <listitem>
+            <para>La sezione inferiore contiene le opzioni che permettono di modificare la disposizione dei file.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Scegliere le opzioni appropriate dal sottomenu come descritto nella tabella seguente: </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Opzione</para>
+                </entry>
+                <entry>
+                  <para>Descrizione </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Manualmente</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare questa opzione per disporre gli oggetti manualmente. Per disporre il contenuto della cartella manualmente, trascinare gli oggetti nella posizione desiderata nel riquadro di visualizzazione.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Per nome</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Selezionare questa opzione per ordinare gli oggetti alfabeticamente. Non viene fatta distinzione tra maiuscole e minuscole. Se il File manager &egrave; impostato in modo da visualizzare i file nascosti, questi vengono elencati per ultimi.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Per dimensione</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Selezionare questa opzione per ordinare gli oggetti in base alla dimensione, iniziando dai pi&ugrave; grandi. Quando si ordinano gli oggetti per dimensione, le cartelle vengono ordinate in base al numero di oggetti che contengono. Le cartelle non vengono ordinate in base alla dimensione totale degli oggetti che contengono.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Per tipo</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Selezionare questa opzione per ordinare gli oggetti in base al tipo. Gli oggetti sono ordinati alfabeticamente in base alla descrizione del <firstterm>tipo MIME</firstterm> inclusa nella finestra di preferenze <application>Associazioni di file</application>. Il tipo MIME identifica il formato di un file e permette alle applicazioni di leggerlo correttamente. Ad esempio, un'applicazione di posta elettronica pu&ograve; utilizzare il tipo MIME <literal>image/png</literal> per rilevare che a un messaggio &egrave; allegato un file PNG.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para><guilabel>Per data di modifica</guilabel> </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Selezionare questa opzione per ordinare gli oggetti in base alla data dell'ultima modifica. Viene elencato per primo l'oggetto modificato pi&ugrave; recentemente.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Per simbolo</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Selezionare questa opzione per ordinare gli oggetti in base ai simboli aggiunti alle icone. Usando questo criterio, gli oggetti vengono ordinati alfabeticamente in base al nome del simbolo. Le voci senza simbolo vengono elencate dopo quelle con un simbolo.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Disposizione compatta</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>Selezionare questa opzione per disporre gli oggetti a distanza pi&ugrave; ravvicinata. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Ordine inverso</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare questa opzione per invertire l'ordinamento degli oggetti. Ad esempio, se gli oggetti sono ordinati per nome, selezionare l'opzione <guilabel>Ordine inverso</guilabel> per disporli in ordine alfabetico inverso.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Il File manager ricorda la disposizione selezionata per gli oggetti di una determinata cartella. All'apertura successiva della cartella, gli oggetti vengono visualizzati nella disposizione selezionata. In altre parole, quando si specifica il tipo di disposizione degli oggetti in una cartella, la cartella viene personalizzata in modo da visualizzare gli oggetti nella disposizione specificata. Per tornare alla disposizione predefinita specificata nelle preferenze, scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Ripristina visualizzazione predefinita</guimenuitem></menuchoice>. </para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>Ridimensionare un'icona nella vista a icone </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>icone</secondary>
+          <tertiary>ridimensionamento</tertiary>
+        </indexterm>
+        <para>Nella vista ad icone, &egrave; possibile cambiare la dimensione dell'icona che rappresenta un oggetto visualizzato. Per cambiare le dimensioni di un oggetto nella vista ad icone, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Fare clic con il pulsante destro del mouse sull'oggetto che si desidera ridimensionare e scegliere <guimenuitem>Ridimensiona icona</guimenuitem>. L'oggetto appare circondato da un rettangolo con una maniglia su ogni angolo.</para>
+          </listitem>
+          <listitem>
+            <para>Afferrare una delle maniglie e trascinare l'icona fino a raggiungere la dimensione desiderata.</para>
+            <para>Per tornare alla dimensione originaria, fare clic con il pulsante destro del mouse sull'icona e scegliere <guimenuitem>Ripristina dimensione originale dell'icona</guimenuitem>. </para>
+          </listitem>
+        </orderedlist>
+        <para>&Egrave; anche possibile ridimensionare gli oggetti sullo sfondo del desktop.</para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>Modificare il comportamento di una vista </title>
+        <indexterm>
+          <primary>File manager</primary>
+          <secondary>viste</secondary>
+          <tertiary>modifica del comportamento</tertiary>
+        </indexterm>
+        <para>Il comportamento di una vista pu&ograve; essere modificato nei seguenti modi:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Designando la vista come vista predefinita per un determinato file o una determinata cartella.</para>
+          </listitem>
+          <listitem>
+            <para>Designando la vista come vista predefinita per un determinato tipo di file o per tutte le cartelle.</para>
+          </listitem>
+          <listitem>
+            <para>Designando la vista come opzione del sottomenu <guisubmenu>Visualizza come</guisubmenu> per un determinato file o una determinata cartella.</para>
+          </listitem>
+          <listitem>
+            <para>Designando la vista come opzione del sottomenu <guisubmenu>Visualizza come</guisubmenu> per un determinato tipo di file o per tutte le cartelle. </para>
+          </listitem>
+          <listitem>
+            <para>Escludendo la vista dalle opzioni del sottomenu <guisubmenu>Visualizza come</guisubmenu> per un determinato file o una determinata cartella.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Per modificare il comportamento di una vista, procedere come segue:</para>
+        <orderedlist>
+          <listitem>
+            <para>Scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem> Visualizza come</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Selezionare la vista che si desidera modificare nella tabella della finestra di dialogo <guilabel>Apri con altro programma di visualizzazione</guilabel>.</para>
+          </listitem>
+          <listitem>
+            <para>Fare clic sul pulsante <guibutton>Modifica</guibutton>. La tabella seguente descrive le opzioni della finestra di dialogo <guilabel>Modifica</guilabel>:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Opzione</para>
+                    </entry>
+                    <entry>
+                      <para>Descrizione </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Includi nel menu per gli oggetti <replaceable> nome_oggetto</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Selezionare questa opzione per includere la vista nel sottomenu <guisubmenu>Visualizza come</guisubmenu> per il tipo di oggetto specificato.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Predefinito per gli oggetti <replaceable> nome_oggetto</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Selezionare questa opzione per usare la vista come vista predefinita per il tipo di oggetto specificato.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Includi nel menu solo per <replaceable> nome_oggetto</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Selezionare questa opzione per includere la vista nel sottomenu <guisubmenu>Visualizza come</guisubmenu> per il solo oggetto specificato.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Usa come predefinito solo per <replaceable> nome_oggetto</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Selezionare questa opzione per usare la vista come vista predefinita per il solo oggetto specificato.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Non includere nel menu per gli oggetti <replaceable> nome_oggetto</replaceable></guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Selezionare questa opzione per escludere la vista dal sottomenu <guisubmenu>Visualizza come</guisubmenu> per il tipo di oggetto specificato.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Fare clic su <guibutton>OK</guibutton> e quindi su <guibutton>Annulla</guibutton> per chiudere la finestra di dialogo <guilabel>Apri con altro programma di visualizzazione</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>&Egrave; anche possibile modificare le azioni associate a un tipo di file nella finestra di dialogo <guilabel>Modifica tipo di file</guilabel> della finestra di preferenze <application>Associazioni di file</application>. Per aprire la finestra di dialogo <guilabel>Modifica tipo di file</guilabel>, fare clic sul pulsante <guibutton>Vai</guibutton>. </para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>Assegnazione di azioni ai file </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>assegnazione di azioni ai file</secondary>
+    </indexterm>
+    <para>Quando si apre un file, il File manager esegue l'azione predefinita per quel tipo di file. La finestra di preferenze <application>Associazioni di file</application> contiene una tabella con i tipi di file, le relative estensioni e azioni predefinite. Questa tabella specifica ci&ograve; che accade in risposta a un doppio clic su un file nel File manager. </para>
+    <para>Il File manager permette inoltre di modificare le azioni associate a un determinato file o tipo di file. </para>
+    <para>La finestra di preferenze <application>Associazioni di file</application> permette di eseguire le seguenti operazioni:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Specificare l'azione predefinita per un tipo di file. &Egrave; inoltre possibile cambiare l'azione predefinita per un determinato tipo di file. </para>
+      </listitem>
+      <listitem>
+        <para>Associare una o pi&ugrave; applicazioni a un determinato tipo di file. Ad esempio, l'azione predefinita pu&ograve; specificare l'apertura del file in un'applicazione associata a quel tipo di file.</para>
+      </listitem>
+      <listitem>
+        <para>Associare un tipo di file a uno o pi&ugrave; visualizzatori. Ad esempio, l'azione predefinita pu&ograve; specificare l'apertura del file in un visualizzatore associato a quel tipo di file.</para>
+      </listitem>
+      <listitem>
+        <para>Associare un'estensione a un tipo MIME. Il tipo MIME specifica il formato del file per consentirne la lettura con i browser Internet e le applicazioni di posta elettronica.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>Modificare le azioni </title>
+      <indexterm>
+        <primary>File manager</primary>
+        <secondary>modifica delle azioni</secondary>
+      </indexterm>
+      <para>&Egrave; possibile modificare le azioni associate ai file o ai tipi di file. In particolare, &egrave; possibile:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Designare l'azione come azione predefinita per un determinato file. </para>
+        </listitem>
+        <listitem>
+          <para>Designare l'azione come azione predefinita per un determinato tipo di file.</para>
+        </listitem>
+        <listitem>
+          <para>Designare l'azione come opzione del sottomenu <guisubmenu>Apri con</guisubmenu> per un determinato file.</para>
+        </listitem>
+        <listitem>
+          <para>Designare l'azione come opzione del sottomenu <guisubmenu>Apri con</guisubmenu> per un determinato tipo di file.</para>
+        </listitem>
+        <listitem>
+          <para>Escludere l'azione dalle opzioni del sottomenu <guisubmenu>Apri con</guisubmenu> per un determinato tipo di file. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Per modificare le azioni associate a un file o a un tipo di file, procedere come segue:</para>
+      <orderedlist>
+        <listitem>
+          <para>Nel riquadro di visualizzazione, selezionare il file per il quale si desidera modificare un'azione. Se si desidera modificare un'azione associata a un tipo di file, selezionare un file di quel tipo.</para>
+        </listitem>
+        <listitem>
+          <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Apri con</guimenuitem></menuchoice>.</para>
+        </listitem>
+<!---<listitem>
+<para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with
+Other Viewer</guilabel> dialog is displayed. </para></listitem>-->
+        <listitem>
+          <para>Scegliere <guimenuitem>Altre applicazioni</guimenuitem>. Viene aperta la finestra di dialogo <guilabel>Apri con altra applicazione</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>Dalla tabella della finestra di dialogo, selezionare l'applicazione o il visualizzatore di cui si desidera modificare il comportamento.</para>
+        </listitem>
+        <listitem>
+          <para>Fare clic sul pulsante <guibutton>Modifica</guibutton>. La tabella seguente descrive le opzioni della finestra di dialogo <guilabel>Modifica</guilabel>:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Opzione</para>
+                  </entry>
+                  <entry>
+                    <para>Descrizione </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Includi nel menu per gli oggetti <replaceable> tipo_di_file</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare questa opzione per includere l'applicazione o il visualizzatore nel sottomenu <guisubmenu>Apri con</guisubmenu> per il tipo di file specificato.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Predefinito per gli oggetti<replaceable> tipo_di_file</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare questa opzione per usare l'applicazione o il visualizzatore come azione predefinita per il tipo di file specificato.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Includi nel menu solo per<replaceable> nome_file</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare questa opzione per includere l'applicazione o il visualizzatore nel sottomenu <guisubmenu>Apri con</guisubmenu> per il file specificato ma non per gli altri file dello stesso tipo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Usa come predefinito solo per <replaceable> nome_file</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare questa opzione per usare l'applicazione o il visualizzatore come azione predefinita per il file specificato ma non per gli altri file dello stesso tipo.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Non includere nel menu per gli oggetti <replaceable> tipo_di_file</replaceable></guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selezionare questa opzione per escludere l'applicazione o il visualizzatore dal sottomenu <guisubmenu>Apri con</guisubmenu> per il tipo di file specificato.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Fare clic su <guibutton>OK</guibutton> e quindi su <guibutton>Annulla</guibutton> per chiudere la finestra di dialogo. </para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>&Egrave; anche possibile modificare le azioni associate a un tipo di file nella finestra di dialogo <guilabel>Modifica tipo di file</guilabel> della finestra di preferenze <application>Associazioni di file</application>. Per aprire la finestra di dialogo <guilabel>Modifica tipo di file</guilabel>, fare clic sul pulsante <guibutton>Vai</guibutton>. </para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-475">
+    <title>Scrittura dei CD </title>
+    <indexterm>
+      <primary>File manager</primary>
+      <secondary>writing CDs</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>scrittura di CD</primary>
+    </indexterm>
+    <indexterm>
+      <primary>scrittura di CD</primary>
+    </indexterm>
+    <indexterm>
+      <primary>masterizzazione di CD</primary>
+      <see>scrittura di CD</see>
+    </indexterm>
+    <para>Il File manager dispone di una speciale posizione in cui &egrave; possibile copiare i file e le cartelle che si desidera scrivere su un CD. Il contenuto di questa posizione pu&ograve; essere masterizzato facilmente su un CD.</para>
+    <para>Per masterizzare un CD, procedere come segue:</para>
+    <orderedlist>
+      <listitem>
+        <para>Da una finestra di un browser di file, scegliere <menuchoice><guimenu>Vai</guimenu><guimenuitem>Creazione CD</guimenuitem></menuchoice>. Il File manager apre una posizione speciale, <guilabel>burn:</guilabel><guilabel>///</guilabel>, da cui &egrave; possibile scrivere i CD. </para>
+      </listitem>
+      <listitem>
+        <para>Da una finestra del browser di file, copiare i file e le cartelle che si desidera scrivere sul CD nella posizione <guilabel>burn:</guilabel><guilabel>///</guilabel>.</para>
+      </listitem>
+      <listitem>
+        <para>Inserire un CD scrivibile nel masterizzatore del sistema. </para>
+      </listitem>
+      <listitem>
+        <para>Scegliere <menuchoice><guimenu>File</guimenu><guimenuitem> Scrivi su CD</guimenuitem></menuchoice>. In alternativa, fare clic sul pulsante <guibutton>Scrivi su CD</guibutton>.</para>
+      </listitem>
+      <listitem>
+        <para>Nella finestra di dialogo, specificare la modalit&agrave; di scrittura per il CD:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Elemento</para>
+                </entry>
+                <entry>
+                  <para>Descrizione </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Supporto su cui scrivere</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare nella casella di riepilogo il dispositivo su cui si desidera scrivere il CD. Per creare un'immagine del CD per i file e le cartelle, selezionare l'opzione <guilabel>File immagine</guilabel>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Velocit&agrave; di scrittura</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare nella casella di riepilogo la velocit&agrave; con cui si desidera scrivere il CD.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Etichetta del CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Digitare un nome per il CD nella casella di testo.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Cancella CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare questa opzione per cancellare il contenuto precedente del CD.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Espelli CD al termine</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare questa opzione per espellere il CD dall'unit&agrave; al termine della scrittura.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Riusa questi file per un altro CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Selezionare questa opzione se si desidera scrivere i file e le cartelle su un altro CD. Selezionando questa opzione, i file e le cartelle non vengono rimossi dalla posizione <guilabel>burn:</guilabel><guilabel>/// </guilabel> dopo la scrittura del CD. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </listitem>
+      <listitem>
+        <para>Fare clic sul pulsante <guibutton>Scrivi i file su CD</guibutton>. </para>
+        <para>Se nella casella di riepilogo <guilabel>Supporto su cui scrivere</guilabel> &egrave; stata selezionata l'opzione <guilabel>File immagine</guilabel>, compare la finestra di dialogo <guilabel>Scelta di un nome per l'immagine del CD ROM</guilabel>. Usare la finestra di dialogo per specificare la posizione in cui si desidera salvare l'immagine del CD. Se non specificato diversamente, le immagini dei CD vengono salvate con l'estensione <filename>.iso</filename>.</para>
+        <para>Viene aperta la finestra di dialogo <guilabel>Scrittura del CD</guilabel>. Al termine della scrittura del CD o della creazione dell'immagine del CD, nella finestra di dialogo compare un messaggio indicante che il processo &egrave; stato completato.</para>
+        <para>Se &egrave; stata creata un'immagine del CD, &egrave; possibile scrivere questo file su un CD. Per scrivere il file dell'immagine su un CD, fare clic con il pulsante destro del mouse sul file dell'immagine e scegliere <guimenuitem> Scrivi su CD</guimenuitem> dal menu a comparsa.</para>
+        <para>Se l'opzione <guilabel>Riusa questi file per un altro CD</guilabel> non &egrave; stata selezionata, i file e le cartelle vengono rimossi da <guilabel> burn:</guilabel><guilabel>///</guilabel>.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+</chapter>

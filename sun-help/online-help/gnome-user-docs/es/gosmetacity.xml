@@ -1,0 +1,1058 @@
+<chapter id="gosmetacity-1">
+  <title>C&oacute;mo trabajar con ventanas</title>
+  <highlights>
+    <para><!--- for example, <application>
+Metacity</application> and <application>Sawfish</application>.  Many of the
+functions in <application>Metacity</application> are also available in <application>
+Sawfish</application>. -->Este cap&iacute;tulo contiene informaci&oacute;n acerca del uso de las ventanas en Java Desktop System. Puede utilzar el gestor de ventanas <application>Metacity</application> con Java Desktop System.En este cap&iacute;tulo se describen las funciones asociadas al gestor de ventanas <application>Metacity</application>. </para>
+  </highlights>
+  <sect1 id="gosmetacity-712">
+    <title>Ventanas y &aacute;reas de trabajo </title>
+    <indexterm>
+      <primary>ventanas</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>&aacute;reas de trabajo</primary>
+      <secondary>introducci&oacute;n</secondary>
+    </indexterm>
+    <para>Las ventanas se muestran en subdivisiones de Java Desktop System llamadas &aacute;reas de trabajo. Cada &aacute;rea de trabajo contiene el mismo escritorio, los mismos paneles y los mismo men&uacute;s. No obstante, se pueden ejecutar diversas aplicaciones y abrir ventanas en cada &aacute;rea de trabajo. Se puede mostrar s&oacute;lo un &aacute;rea de trabajo a la vez, pero pueden abrirse ventanas en otras &aacute;reas de trabajo. </para>
+    <para>La aplicaci&oacute;n de panel <application>Selector de &aacute;reas de trabajo</application> muestra una representaci&oacute;n visual de las ventanas y &aacute;reas de trabajo, como se muestra en la <xref linkend="gosmetacity-FIG-717"/>.</para>
+    <figure id="gosmetacity-FIG-717">
+      <title>Aplicaci&oacute;n de panel Selector de &aacute;reas de trabajo</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Aplicaci&oacute;n de panel Selector de &aacute;reas de trabajo. El contexto describe la ilustraci&oacute;n. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Se pueden a&ntilde;adir &aacute;reas de trabajo en cualquier momento. Para a&ntilde;adir &aacute;reas de trabajo a Java Desktop System, haga clic con el bot&oacute;n de la derecha en la aplicaci&oacute;n de panel <application>Selector de &aacute;reas de trabajo</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Preferencias</guimenuitem>. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Preferencias del selector de &aacute;reas de trabajo</guilabel>. Utilice el cuadro de selecci&oacute;n <guilabel>N&uacute;mero de &aacute;reas de trabajo</guilabel> para indicar el n&uacute;mero de &aacute;reas de trabajo que se desee.</para>
+    <sect2 id="gosmetacity-15">
+      <title>Comportamiento del Gestor de ventanas </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>gestores de ventanas</secondary>
+      </indexterm>
+      <para>Un gestor de ventanas controla el modo en que &eacute;stas aparecen y se comportan, se encarga de la ubicaci&oacute;n de las ventanas y de cu&aacute;l de ellas tiene el foco. El marco de la ventana contiene los botones que permiten acciones est&aacute;ndar sobre las ventanas, como mover, cerrar y redimensionar.</para>
+      <para>Para establecer algunas de las preferencias del gestor de ventanas utilice la herramienta de preferencias <application>Comportamiento de la ventana</application>. Este manual describe las funciones que se asocian con el gestor de ventanas predeterminado, <application>Metacity</application>. La configuraci&oacute;n predeterminada se encuentra en la herramienta de preferencias <application>Comportamiento de la ventana</application>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-713">
+    <title>Tipos de ventana </title>
+    <indexterm>
+      <primary>ventanas</primary>
+      <secondary>tipos de</secondary>
+    </indexterm>
+    <para>Java Desktop System posee los siguientes tipos de ventanas:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Ventanas de aplicaci&oacute;n </para>
+        <para>Al iniciar una aplicaci&oacute;n, se abre su correspondiente ventana de aplicaci&oacute;n. El gestor de ventanas aplica un marco a la ventana de la aplicaci&oacute;n. De forma predeterminada, el borde superior del marco de una ventana de aplicaci&oacute;n contiene una barra de t&iacute;tulos que incluye los botones que se utilizan para trabajar con la ventana. Los botones de una ventana de aplicaci&oacute;n permiten realizar acciones como abrir el <guimenu>Men&uacute; de la ventana</guimenu> o cerrar &eacute;sta. El <guimenu>Men&uacute; de la ventana</guimenu> proporciona un determinado n&uacute;mero de acciones que se pueden ejecutar en la ventana. </para>
+        <para>A continuaci&oacute;n, se muestra una ventana de aplicaci&oacute;n t&iacute;pica. </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Ventana de aplicaci&oacute;n con el tema Sencillo.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+      <listitem>
+        <para>Ventanas de cuadro de di&aacute;logo</para>
+        <para>Una ventana de cuadro de di&aacute;logo es una ventana emergente en la que se puede introducir informaci&oacute;n u &oacute;rdenes. El cuadro de di&aacute;logo aparece dentro de un marco de ventana.</para>
+        <para>Se puede utilizar el borde superior del marco para trabajar con la ventana. Por ejemplo, se puede usar la barra de t&iacute;tulo para mover el cuadro de di&aacute;logo. El borde tambi&eacute;n contiene botones que permiten:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Abrir el <guimenu>Men&uacute; de la ventana</guimenu> </para>
+          </listitem>
+          <listitem>
+            <para>Cerrar la ventana de cuadro de di&aacute;logo</para>
+          </listitem>
+        </itemizedlist>
+        <para>Por lo general, una ventana de cuadro de di&aacute;logo se abre en una ventana de aplicaci&oacute;n. Normalmente, al abrir una ventana de cuadro de di&aacute;logo, &eacute;sta sube de nivel y aparece en primer plano. Algunas ventanas de cuadro de di&aacute;logo no permiten utilizar la aplicaci&oacute;n hasta que &eacute;ste se cierre.</para>
+        <para>A continuaci&oacute;n, se muestra una ventana de cuadro de di&aacute;logo t&iacute;pica. </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gedit_pref_dialog.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Ventana de di&aacute;logo con el tema Sencillo.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosmetacity-16">
+      <title>Marcos de ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>marcos</secondary>
+      </indexterm>
+      <para>El marco de una ventana es el borde que la envuelve. El marco de la ventana contiene una barra de t&iacute;tulo que incluye los botones que se utilizan para trabajar con la ventana.</para>
+      <sect3 id="gosmetacity-10">
+        <title>Temas </title>
+        <indexterm>
+          <primary>ventanas</primary>
+          <secondary>temas</secondary>
+        </indexterm>
+        <para>Las ventanas puede configurarse seg&uacute;n diferentes temas. El tema determina el aspecto del marco. Para seleccionar un tema para todos los marcos de ventanas, utilice la herramienta de preferencias <application>Tema</application>. </para>
+      </sect3>
+      <sect3 id="gosmetacity-17">
+        <title>Elementos de control </title>
+        <indexterm>
+          <primary>ventanas</primary>
+          <secondary>elementos de control de marco</secondary>
+        </indexterm>
+        <para>Se puede utilizar el marco de la ventana para realizar diversas acciones con ella. En concreto, la barra de titulo contiene varios botones. A continuaci&oacute;n, se muestra una barra de t&iacute;tulos de una ventana de aplicaci&oacute;n t&iacute;pica.</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/titlebar_anno_window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Barra de t&iacute;tulo de ventana. Leyendas: Bot&oacute;n de men&uacute; de la ventana, Barra de t&iacute;tulo, botones Minimizar, Maximizar y Cerrar ventana. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Las ventanas de cuadro de di&aacute;logo tambi&eacute;n contienen elementos de control del marco. La <xref linkend="gosmetacity-TBL-1"/> describe los elementos de control activos en los marcos de ventana, de izquierda a derecha.</para>
+        <table frame="topbot" id="gosmetacity-TBL-1">
+          <title>Elementos de control del marco de ventana</title>
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="41.65*"/>
+            <colspec colname="colspec1" colwidth="58.35*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Elemento de control</para>
+                </entry>
+                <entry>
+                  <para>Descripci&oacute;n </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Bot&oacute;n <guibutton>Men&uacute; de la ventana</guibutton></para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Haga clic en el bot&oacute;n para abrir el <guimenu>Men&uacute; de la ventana</guimenu>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Barra de t&iacute;tulo </para>
+                </entry>
+                <entry valign="top">
+                  <para>Usos de la barra de t&iacute;tulo: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Para enfocar a la ventana, haga clic en la barra de t&iacute;tulo.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Para mover la ventana, arr&aacute;strela hasta la nueva ubicaci&oacute;n agarr&aacute;ndola por la barra de t&iacute;tulo. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Para plegar la ventana, haga doble clic en la barra de t&iacute;tulo. Para desplegarla, haga doble clic en la barra de t&iacute;tulo.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Bot&oacute;n <guibutton>Minimizar</guibutton> </para>
+                </entry>
+                <entry valign="top">
+                  <para>Haga clic en el bot&oacute;n <guibutton>Minimizar</guibutton> para minimizar la ventana. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>Bot&oacute;n <guibutton>Maximizar</guibutton> </para>
+                </entry>
+                <entry valign="top">
+                  <para>Haga clic en el bot&oacute;n <guibutton>Maximizar</guibutton> para maximizar la ventana. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>Bot&oacute;n <guibutton>Cerrar la ventana</guibutton> </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Haga clic en el bot&oacute;n <guibutton>Cerrar la ventana</guibutton> para cerrar la ventana. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>L&iacute;mite </para>
+                </entry>
+                <entry valign="top">
+                  <para>El borde situado alrededor de la ventana. Use el borde para efectuar las acciones siguientes: </para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Para redimensionar la ventana, arrastre el borde con rat&oacute;n hasta el tama&ntilde;o deseado. </para>
+                    </listitem>
+                    <listitem>
+                      <para>Para abrir el <guimenu>Men&uacute; de la ventana</guimenu>, haga clic con el bot&oacute;n derecho del rat&oacute;n en el borde.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>Contenidos de la ventana</para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>El &aacute;rea situada dentro de marco de la ventana. Use el contenido de la ventana para efectuar las acciones siguientes:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Para mover una ventana, pulse y mantenga pulsada la tecla <keycap>Alt</keycap>, haga clic en el contenido de la ventana y arr&aacute;strela hasta la nueva ubicaci&oacute;n.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Para redimensionar una ventana, pulse y mantenga pulsada la tecla <keycap>Alt</keycap> y, a continuaci&oacute;n, haga clic en el bot&oacute;n central del rat&oacute;n cerca de la esquina que se utilizar&aacute; para redimensionar. Para redimensionar la ventana, mu&eacute;vala agarrando por la esquina sobre la que se hizo clic con el bot&oacute;n central.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Para abrir el <guimenu>Men&uacute; de la ventana</guimenu>, pulse y mantenga pulsada la tecla <keycap>Alt</keycap> y, a continuaci&oacute;n, haga clic con el bot&oacute;n derecho sobre el contenido de la ventana.</para>
+                    </listitem>
+                  </itemizedlist>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-714">
+    <title>Uso de men&uacute;s y aplicaciones de panel con ventanas y &aacute;reas de trabajo </title>
+    <indexterm>
+      <primary>ventanas</primary>
+      <secondary>aplicaciones de panel y men&uacute;s para trabajar</secondary>
+    </indexterm>
+    <para>En esta secci&oacute;n se describen los men&uacute;s y aplicaciones de panel que se utilizan para trabajar con ventanas y &aacute;reas de trabajo. </para>
+    <sect2 id="gosmetacity-24">
+      <title>Men&uacute; Ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>Men&uacute; de la ventana</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>men&uacute;s</primary>
+        <secondary>Men&uacute; de la ventana</secondary>
+      </indexterm>
+      <para>El <guimenu>Men&uacute; de la ventana</guimenu> es un men&uacute; de &oacute;rdenes de acciones sobre las ventanas. Para abrir el <guimenu>Men&uacute; de la ventana</guimenu> efect&uacute;e una de las acciones siguientes:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Men&uacute; de la ventana</guibutton> en la ventana con la que desea trabajar.</para>
+        </listitem>
+        <listitem>
+          <para>Pulse <keycombo><keycap>Alt</keycap><keycap>barra espaciadora</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Pulse y mantenga pulsada la tecla <keycap>Alt</keycap> y, a continuaci&oacute;n, haga clic con el bot&oacute;n derecho del rat&oacute;n en la parte de la ventana en la que desea trabajar. </para>
+        </listitem>
+      </itemizedlist>
+      <para>La <xref linkend="gosmetacity-TBL-25"/> describe las &oacute;rdenes y submen&uacute;s del <guimenu>Men&uacute; de la ventana</guimenu>.</para>
+      <table frame="topbot" id="gosmetacity-TBL-25">
+        <title>&Oacute;rdenes y submen&uacute;s del Men&uacute; de la ventana</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="32.34*"/>
+          <colspec colname="colspec3" colwidth="67.66*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Elemento del men&uacute;</para>
+              </entry>
+              <entry>
+                <para>Funci&oacute;n </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Minimizar</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Minimiza la ventana.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guimenuitem>Maximizar</guimenuitem> o <guimenuitem>Restaurar</guimenuitem></para>
+              </entry>
+              <entry valign="top">
+                <para>maximiza la ventana. Si la ventana ya est&aacute; maximizada, seleccione <guimenuitem>Restaurar</guimenuitem> para restaurar la ventana al tama&ntilde;o anterior. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Encima</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Sit&uacute;a la ventana encima de las dem&aacute;s ventanas abiertas en el escritorio.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Mover</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Permite el uso de las teclas de cursor para mover la ventana.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Redimensionar</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Permite el uso de las teclas de cursor para redimensionar la ventana.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guimenuitem>Cerrar</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Cierra la ventana.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Poner en las &aacute;reas de trabajo</guimenuitem> o <guimenuitem>S&oacute;lo en esta &aacute;rea de trabajo</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Sit&uacute;a la ventana en todas las &aacute;reas de trabajo. Si la ventana est&aacute; ya en todas las &aacute;reas de trabajo, seleccione <guimenuitem>S&oacute;lo en esta &aacute;rea de trabajo</guimenuitem> para situar la ventana s&oacute;lo en el &aacute;rea de trabajo actual.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2">
+                <para><guimenuitem>Mover al &aacute;rea de trabajo derecha </guimenuitem> o <guimenuitem>Mover al &aacute;rea de trabajo izquierda</guimenuitem></para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Mueve la ventana al &aacute;rea de trabajo situada a la derecha de la actual. Si la ventana se encuentra en la &uacute;ltima &aacute;rea de trabajo de la derecha del Selector de &aacute;reas de trabajo, seleccione <guimenuitem>Mover al &aacute;rea de trabajo izquierda</guimenuitem> para mover la ventana al &aacute;rea de trabajo situada a la izquierda de la actual.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para><guimenuitem>Mover a otra &aacute;rea de trabajo</guimenuitem> </para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>Mueve la ventana a otra &aacute;rea de trabajo. Seleccione el &aacute;rea de trabajo a la que desee mover la ventana en el submen&uacute;.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosmetacity-18">
+      <title>Lista de ventanas </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>aplicaci&oacute;n del panel Lista de ventanas </secondary>
+        <see>aplicaci&oacute;n del panel Lista de ventanas</see>
+      </indexterm>
+      <indexterm>
+        <primary>aplicaci&oacute;n del panel Lista de ventanas</primary>
+        <secondary>introducci&oacute;n</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>listas de ventanas</primary>
+        <secondary>aplicaci&oacute;n del panel Lista de ventanas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicaciones de panel </primary>
+        <secondary>Lista de ventanas</secondary>
+      </indexterm>
+      <para>La <application>Lista de ventanas</application> muestra un bot&oacute;n para cada ventana abierta. Puede utilizar la <application>Lista de ventanas</application> para efectuar las t&aacute;reas siguientes:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Para minimizar una ventana</para>
+          <para>Haga clic en el bot&oacute;n que representa la ventana.</para>
+        </listitem>
+        <listitem>
+          <para>Para restaurar una ventana minimizada</para>
+          <para>Haga clic en el bot&oacute;n que representa la ventana.</para>
+        </listitem>
+        <listitem>
+          <para>Para activar una ventana</para>
+          <para>Haga clic en el bot&oacute;n que representa la ventana.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Al abrir una ventana, la <application>Lista de ventanas</application> muestra un bot&oacute;n que representa esta ventana. Los botones de la lista de ventanas muestran las ventanas abiertas. Puede verse las ventanas que est&aacute;n abiertas incluso si &eacute;stas est&aacute;n minimizadas o tapadas por otra. La <application>Lista de ventanas</application> puede mostrar las ventanas abiertas en el &aacute;rea de trabajo actual o en todas. Para seleccionar esta opci&oacute;n, deben cambiarse las preferencias de la <application>Lista de ventanas</application>.</para>
+      <para>Tambi&eacute;n se puede hacer clic con el bot&oacute;n derecho en un bot&oacute;n de lista de ventanas para abrir el <guimenu>Men&uacute; de la ventana</guimenu> correspondiente a la ventana representada por el bot&oacute;n. Al abrir el <guimenu>Men&uacute; de la ventana</guimenu> en la <application>Lista de ventanas</application>, el <guimenu>Men&uacute; de la ventana</guimenu> no contiene las &oacute;rdenes del &aacute;rea de trabajo. Para obtener m&aacute;s informaci&oacute;n acerca de las &oacute;rdenes <guimenu>Men&uacute; de la ventana</guimenu>, consulte <xref linkend="gosmetacity-24"/>.</para>
+      <para>La <xref linkend="gosmetacity-FIG-8"/> muestra la <application>Lista de ventanas</application> cuando las siguientes ventanas est&aacute;n abiertas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <application>gedit</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Diccionario</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>GHex</application>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <application>Terminal de GNOME</application>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <figure id="gosmetacity-FIG-8">
+        <title>Aplicaci&oacute;n del panel Lista de ventanas</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Aplicaci&oacute;n de panel Lista de ventanas. El contexto describe la ilustraci&oacute;n. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>Los botones de la aplicaci&oacute;n de panel muestran el estado de las ventanas. La <xref linkend="gosmetacity-TBL-3"/> explica la informaci&oacute;n que contienen los botones de la lista de ventanas acerca de la ventana. Los ejemplos de la <xref linkend="gosmetacity-TBL-3"/> hacen referencia a la <xref linkend="gosmetacity-FIG-8"/>. </para>
+      <table frame="topbot" id="gosmetacity-TBL-3">
+        <title>Informaci&oacute;n de estado de la ventana en los botones de Lista de ventanas<indexterm><primary> aplicaci&oacute;n del panel Lista de ventanas</primary><secondary>informaci&oacute;n de estado de ventana</secondary></indexterm></title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33*"/>
+          <colspec colname="colspec1" colwidth="33*"/>
+          <colspec colname="colspec2" colwidth="33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Estado</para>
+              </entry>
+              <entry>
+                <para>Indica</para>
+              </entry>
+              <entry>
+                <para>Ejemplo</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>El bot&oacute;n est&aacute; pulsado.</para>
+              </entry>
+              <entry valign="top">
+                <para>La ventana est&aacute; activa.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>gedit</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>T&iacute;tulo de ventana entre corchetes rectangulares.</para>
+              </entry>
+              <entry valign="top">
+                <para>La ventana est&aacute; minimizada.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel> [Diccionario]</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>El bot&oacute;n est&aacute; sin pulsar y no hay corchetes en el t&iacute;tulo.</para>
+              </entry>
+              <entry valign="top">
+                <para>Se muestra la ventana y no est&aacute; minimizada.</para>
+              </entry>
+              <entry valign="top">
+                <para>
+                  <guilabel>ghex</guilabel>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Un n&uacute;mero en el bot&oacute;n, entre par&eacute;ntesis. </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>El bot&oacute;n representa un grupo de botones. </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>
+                  <guilabel>Terminal de Gnome (3)</guilabel>
+                </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <sect3 id="gosmetacity-708">
+        <title>Agrupaci&oacute;n de botones </title>
+        <indexterm>
+          <primary>aplicaci&oacute;n del panel Lista de ventanas</primary>
+          <secondary>agrupar botones</secondary>
+        </indexterm>
+        <para>La <application>Lista de ventanas</application> puede agrupar los botones que representan ventanas de la misma clase bajo un bot&oacute;n de lista de ventanas. El bot&oacute;n <guibutton>Terminal de Gnome</guibutton> en la <xref linkend="gosmetacity-FIG-8"/> es un ejemplo de un grupo de botones. A continuaci&oacute;n, se muestra un ejemplo de <application>Lista de ventanas</application> con un grupo de botones abiertos:</para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/window_list_group_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Aplicaci&oacute;n del panel Lista de ventanas con grupo de botones abierto. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>Para abrir una lista de las ventanas de un grupo, haga clic en el bot&oacute;n de la lista de ventanas que representa el grupo. Se puede hacer clic en los elementos de la lista para enfocar las ventanas, minimizarlas y restaurarlas.</para>
+        <para>Para abrir el <guimenu>Men&uacute; de la ventana</guimenu> en un grupo de botones, haga clic con el bot&oacute;n derecho sobre el bot&oacute;n que representa el grupo. Se mostrar&aacute; la lista de ventanas del grupo. Para abrir el <guimenu>Men&uacute; de la ventana</guimenu> de una ventana del grupo, haga clic en el elemento de la lista. Al abrir el <guimenu>Men&uacute; de la ventana</guimenu> en la <application>Lista de ventanas</application>, el <guimenu>Men&uacute; de la ventana</guimenu> no contiene las &oacute;rdenes del &aacute;rea de trabajo. Para obtener m&aacute;s informaci&oacute;n acerca de las &oacute;rdenes <guimenu>Men&uacute; de la ventana</guimenu>, consulte <xref linkend="gosmetacity-24"/>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosmetacity-20">
+      <title>Selector de &aacute;reas de trabajo </title>
+      <indexterm>
+        <primary>&aacute;reas de trabajo</primary>
+        <secondary>aplicaci&oacute;n de panel Selector de &aacute;reas de trabajo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicaciones de panel </primary>
+        <secondary>Selector de &aacute;reas de trabajo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>aplicaci&oacute;n de panel de Selector de &aacute;reas de trabajo</primary>
+      </indexterm>
+      <para>El <application>Selector de &aacute;reas de trabajo</application> muestra una representaci&oacute;n visual de las &aacute;reas de trabajo, como se ve en la <xref linkend="gosmetacity-FIG-722"/>. En &eacute;sta se muestra el <application>Selector de &aacute;reas de trabajo</application> cuando la sesi&oacute;n de Java Desktop System contiene cuatro &aacute;reas de trabajo que aparecen como botones en la miniaplicaci&oacute;n. El fondo del bot&oacute;n del <application>Selector de &aacute;reas de trabajo</application> que representa el &aacute;rea de trabajo actual aparece resaltado. El &aacute;rea de trabajo de la <xref linkend="gosmetacity-FIG-722"/> es la situada a la izquierda de la aplicaci&oacute;n del panel. Para cambiar a otra &aacute;rea de trabajo, haga clic en otra &aacute;rea de la aplicaci&oacute;n del panel.</para>
+      <figure id="gosmetacity-FIG-722">
+        <title>Aplicaci&oacute;n de panel Selector de &aacute;reas de trabajo</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/workspace_switcher_applet.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Aplicaci&oacute;n de panel Selector de &aacute;reas de trabajo. El contexto describe la ilustraci&oacute;n. </phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>El <application>Selector de &aacute;reas de trabajo</application> tambi&eacute;n muestra las ventanas de aplicaciones y cuadros de di&aacute;logos que se abren en las &aacute;reas de trabajo.</para>
+      <para>La aplicaci&oacute;n del panel muestra las &aacute;reas de trabajo ordenadas de izquierda a derecha y de arriba a abajo. En la <xref linkend="gosmetacity-FIG-722"/>, la aplicaci&oacute;n del panel est&aacute; configurada para mostrar las &aacute;reas de trabajo en una sola fila. Puede configurarse el n&uacute;mero de filas en las que mostrar las &aacute;reas de trabajo en el <application>Selector de &aacute;reas de trabajo</application>. Tambi&eacute;n se puede modificar el comportamiento predeterminado del <application>Selector de &aacute;reas de trabajo</application> para que muestre los nombres de las &aacute;reas de trabajo en la aplicaci&oacute;n del panel.</para>
+    </sect2>
+    <sect2 id="gosmetacity-27">
+      <title>Selector de ventanas </title>
+      <indexterm>
+        <primary>panel lateral superior</primary>
+        <secondary>icono de Selector de ventanas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Selector de ventanas</primary>
+        <secondary> panel lateral superior</secondary>
+      </indexterm>
+      <para>El selector de ventanas permite ver una lista de todas las ventanas que est&eacute;n abiertas. Tambi&eacute;n se puede seleccionar una ventana a la que enfocar. Para ver la lista de ventanas, haga clic en la aplicaci&oacute;n del panel <application>Selector de ventanas</application>. En la figura siguiente se muestra un ejemplo de la aplicaci&oacute;n de panel <application>Selector de ventanas</application>:</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/openwindows_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Aplicaci&oacute;n del panel Selector de ventanas en el panel del borde inferior. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para enfocar una ventana, selecci&oacute;nela en la aplicaci&oacute;n del panel <application>Selector de ventanas</application>.</para>
+      <para>El <application>Selector de ventanas</application> muestra todas las ventanas de todas las &aacute;reas de trabajo. Las otras ventanas del resto de &aacute;reas de trabajo se listan bajo una l&iacute;nea de separaci&oacute;n.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-715">
+    <title>Manipulaci&oacute;n de las ventanas </title>
+    <indexterm>
+      <primary>ventanas</primary>
+      <secondary>manipular</secondary>
+    </indexterm>
+    <para>En esta secci&oacute;n se indica c&oacute;mo manipular ventanas.</para>
+    <sect2 id="gosmetacity-28">
+      <title>Para dirigir el foco a una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>dirigir foco a</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>foco, dirigir a una ventana</primary>
+      </indexterm>
+      <para>Las ventanas que est&aacute;n enfocadas reciben la informaci&oacute;n de entrada del rat&oacute;n y el teclado. S&oacute;lo se puede enfocar una ventana a la vez. La ventana a la cual est&aacute; dirigido el foco tiene un aspecto diferente al del resto de ventanas. </para>
+      <para>Se pueden utilizar los siguientes elementos para dirigir el foco a una ventana:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.62*"/>
+          <colspec colname="colspec1" colwidth="66.38*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Elemento</para>
+              </entry>
+              <entry>
+                <para>Acci&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Rat&oacute;n </para>
+              </entry>
+              <entry valign="top">
+                <para>Al hacer clic en la ventana, &eacute;sta se hace visible. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Accesos directos</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Utilice las teclas de acceso directo para cambiar entre las ventanas abiertas. Para dirigir el foco a una ventana, suelte las teclas. Las teclas de acceso directo predeterminadas para cambiar entre ventanas es <keycombo><keycap>Alt</keycap><keycap> Tab</keycap></keycombo>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><application>Lista de ventanas</application> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Haga clic en el bot&oacute;n que representa la ventana en la <application>Lista de ventanas</application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><application>Selector de &aacute;reas de trabajo</application> </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Haga clic en la ventana a la que desea dirigir el foco en el <application>Selector de &aacute;reas de trabajo</application>. Si hace clic en una ventana de otra &aacute;rea de trabajo, el <application> Selector de &aacute;reas de trabajo</application> se cambia a esta &aacute;rea y se dirige el foco a esa ventana. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gosmetacity-29">
+      <title>Para minimizar una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>minimizar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>minimizar</primary>
+        <secondary>ventanas</secondary>
+      </indexterm>
+      <para>Para minimizar una ventana efect&uacute;e una de las acciones siguientes: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Minimizar</guibutton> del marco de la ventana.</para>
+        </listitem>
+        <listitem>
+          <para>Abra el <guimenu>Men&uacute; de la ventana</guimenu> y, a continuaci&oacute;n, seleccione <guimenuitem>Minimizar</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Si la ventana est&aacute; enfocada, haga clic en el bot&oacute;n que la representa en <application>Lista de ventanas</application>. Si la ventana no est&aacute; enfocada, haga doble clic en el bot&oacute;n correspondiente. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n que representa la ventana en <application>Lista de ventanas</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Minimizar</guimenuitem> en el men&uacute; emergente.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-30">
+      <title>Para maximizar una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>maximizar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>maximizar ventanas</primary>
+      </indexterm>
+      <para>Al maximizar una ventana, &eacute;sta se expande tanto como le es posible. Para maximizar una ventana efect&uacute;e una de las acciones siguientes: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Maximizar</guibutton> del marco de la ventana. Tambi&eacute;n puede abrir el <guimenu>Men&uacute; de la ventana</guimenu> y, a continuaci&oacute;n, seleccionar <guimenuitem>Maximizar</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n que representa la ventana en <application>Lista de ventanas</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Maximizar</guimenuitem> en el <guimenu>Men&uacute; de la ventana</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-31">
+      <title>Para restaurar una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>restaurar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>restaurar</primary>
+        <secondary>ventanas</secondary>
+      </indexterm>
+      <para>Para restaurar una ventana maximizada efect&uacute;e una de las acciones siguientes: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Maximizar</guibutton> del marco de la ventana.</para>
+        </listitem>
+        <listitem>
+          <para>Abra el <guimenu>Men&uacute; de la ventana</guimenu>. Seleccione <guimenuitem>Restaurar</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n que representa la ventana en la<application> Lista de ventanas</application> y, a continuaci&oacute;n, abra el <guimenu>Men&uacute; de la ventana</guimenu>. Seleccione <guimenuitem>Restaurar</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Para restaurar una ventana que est&aacute; minimizada, haga clic en el bot&oacute;n que la representa en la <application>Lista de ventanas</application>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-2">
+      <title>Para situar una ventana encima de las dem&aacute;s</title>
+      <para>Para situar una ventana encima de las dem&aacute;s, abra el <guimenu>Men&uacute; de la ventana</guimenu> y seleccione <guimenuitem>Encima</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-32">
+      <title>Para cerrar una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>cerrar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>cerrar ventanas</primary>
+      </indexterm>
+      <para>Para cerrar una ventana efect&uacute;e una de las acciones siguientes: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga clic en el bot&oacute;n <guibutton>Cerrar ventana</guibutton> del marco de la ventana.</para>
+        </listitem>
+        <listitem>
+          <para>Abra el <guimenu>Men&uacute; de la ventana</guimenu>. Seleccione <guimenuitem>Cerrar</guimenuitem>.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n que representa la ventana en <application>Lista de ventanas</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Cerrar</guimenuitem> en el <guimenu>Men&uacute; de la ventana</guimenu>.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Si hubiera datos sin guardar en la ventana, el sistema pedir&iacute;a confirmaci&oacute;n para guardarlos</para>
+    </sect2>
+    <sect2 id="gosmetacity-34">
+      <title>Para redimensionar una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>redimensionar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>redimensionar ventanas</primary>
+      </indexterm>
+      <para>Para redimensionar una ventana efect&uacute;e uno de los pasos siguientes:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Apunte con el rat&oacute;n a una esquina de la ventana. El puntero del rat&oacute;n cambiar&aacute; indicando que se puede redimensionar la ventana. En esta posici&oacute;n, arrastre la ventana hasta el tama&ntilde;o deseado.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho en el bot&oacute;n que representa la ventana en la <application>Lista de ventanas</application>. Seleccione <guimenuitem>Redimensionar</guimenuitem> en el <guimenu>Men&uacute; de la ventana</guimenu>. Utilice las teclas de cursor para redimensionar la ventana.</para>
+        </listitem>
+        <listitem>
+          <para>Pulse y mantenga pulsada la tecla <keycap>Alt</keycap> y, a continuaci&oacute;n, haga clic en el bot&oacute;n central del rat&oacute;n cerca de la esquina que desea redimensionar. El puntero del rat&oacute;n cambiar&aacute; indicando que se puede redimensionar la ventana. Para redimensionar la ventana, mu&eacute;vala agarrando por la esquina sobre la que se hizo clic con el bot&oacute;n central.</para>
+        </listitem>
+        <listitem>
+          <para>Para redimensionar una ventana horizontalmente, apunte a los bordes verticales de la ventana. El puntero del rat&oacute;n cambiar&aacute; indicando que se puede redimensionar la ventana. Arrastre la ventana hasta el tama&ntilde;o deseado.</para>
+        </listitem>
+        <listitem>
+          <para>Para redimensionar una ventana verticalmente, apunte a los bordes de la parte inferior de la ventana. El puntero del rat&oacute;n cambiar&aacute; indicando que se puede redimensionar la ventana. Arrastre la ventana hasta el tama&ntilde;o deseado.</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para>No se pueden redimensionar ciertas ventanas de cuadro de di&aacute;logo. Asimismo, algunas ventanas de aplicaci&oacute;n tienen un tama&ntilde;o m&iacute;nimo por debajo del cual no se puede hacer mas peque&ntilde;a la ventana.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosmetacity-35">
+      <title>Para mover una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>mover</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>mover ventanas</primary>
+      </indexterm>
+      <para>Para mover una ventana efect&uacute;e una de las acciones siguientes: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Arrastre la ventana hasta la nueva ubicaci&oacute;n agarrando por la barra de t&iacute;tulo. </para>
+        </listitem>
+        <listitem>
+          <para>Pulse y mantenga pulsada la tecla <keycap>Alt</keycap> y, a continuaci&oacute;n, arrastre la ventana hasta la nueva ubicaci&oacute;n. </para>
+        </listitem>
+        <listitem>
+          <para>Abra el <guimenu>Men&uacute; de la ventana</guimenu> y, a continuaci&oacute;n, seleccione <guimenuitem>Mover</guimenuitem>. Utilice las teclas de cursor para mover la ventana a la nueva ubicaci&oacute;n. </para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n que representa la ventana en <application>Lista de ventanas</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Mover</guimenuitem> en el <guimenu>Men&uacute; de la ventana</guimenu>. Utilice las teclas de cursor para mover la ventana a la nueva ubicaci&oacute;n.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-36">
+      <title>Para plegar una ventana </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>plegar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>plegar ventanas</primary>
+      </indexterm>
+      <indexterm>
+        <primary>plegar ventanas</primary>
+        <see>plegar ventanas</see>
+      </indexterm>
+      <para>Las ventanas se pueden enrollar y desenrollar:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Enrollar</term>
+          <listitem>
+            <para>Reducir la ventana de modo que s&oacute;lo sea visible la barra de t&iacute;tulo.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Desenrollar</term>
+          <listitem>
+            <para>Volver al estado normal de una ventana que previamente se hab&iacute;a plegado.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Para plegar una ventana efect&uacute;e una de las acciones siguientes: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Haga doble clic en la barra de t&iacute;tulo de la ventana. Para desenrollarla, haga doble clic en la barra de t&iacute;tulo.</para>
+        </listitem>
+        <listitem>
+          <para>Haga clic con el bot&oacute;n derecho del rat&oacute;n en el bot&oacute;n que representa la ventana en <application>Lista de ventanas</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Plegar</guimenuitem> en el <guimenu>Men&uacute; de la ventana</guimenu>. Para desplegar la ventana, seleccione <guimenuitem>Desenrollar</guimenuitem>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-38">
+      <title>Para situar una ventana en todas las &aacute;reas de trabajo </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>situar en todas las &aacute;reas de trabajo</secondary>
+      </indexterm>
+      <para>Para situar una ventana en todas las &aacute;reas de trabajo, abra el<guimenu> Men&uacute; de la ventana</guimenu>. Seleccione <guimenuitem>Poner en todas las &aacute;reas de trabajo</guimenuitem>. Para que la ventana s&oacute;lo aparezca en el &aacute;rea de trabajo actual, seleccione <guimenuitem>S&oacute;lo en esta &aacute;rea de trabajo</guimenuitem>.</para>
+    </sect2>
+    <sect2 id="gosmetacity-46">
+      <title>Para mover una ventana a otra &aacute;rea de trabajo </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>mover a otra &aacute;rea de trabajo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&aacute;reas de trabajo</primary>
+        <secondary>mover ventanas a</secondary>
+      </indexterm>
+      <para>Puede mover una ventana a otra &aacute;rea de trabajo de diferentes maneras:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Mediante el <application>Selector de &aacute;reas de trabajo</application></para>
+          <para>En el <application>Selector de &aacute;reas de trabajo</application>, arrastre la ventana hasta el &aacute;rea de trabajo deseada.</para>
+        </listitem>
+        <listitem>
+          <para>Mediante el <guimenu>Men&uacute; de la ventana</guimenu></para>
+          <para>Abra el <guimenu>Men&uacute; de la ventana</guimenu>. Para mover la ventana a la siguiente &aacute;rea de trabajo, seleccione <guimenuitem>Mover a <replaceable>nombre-&aacute;rea-trabajo</replaceable></guimenuitem>. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosbasic-48">
+      <title>Para redimensionar paneles </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>redimensionar paneles</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>paneles</primary>
+        <secondary>redimensionar</secondary>
+      </indexterm>
+      <para>Algunas ventanas contienen m&aacute;s de un <firstterm>panel</firstterm>. Un panel es una subdivisi&oacute;n de una ventana. Por ejemplo, la ventana del gestor de archivos contiene un panel lateral y un panel de vista. Una ventana que contiene paneles tiene un manejador de dimensi&oacute;n en el borde que separa los paneles. Para redimensionar un panel, arrastre el manejador hasta obtener el tama&ntilde;o deseado.</para>
+    </sect2>
+    <sect2 id="gosbasic-49">
+      <title>Uso de las tablas </title>
+      <indexterm>
+        <primary>ventanas</primary>
+        <secondary>usar tablas</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>tablas</primary>
+        <secondary>usar</secondary>
+      </indexterm>
+      <para>Algunas ventanas contienen informaci&oacute;n organizada en una tabla. En esta secci&oacute;n se indica c&oacute;mo trabajar con tablas en ventanas.</para>
+      <para>Para cambiar la anchura de una columna, arrastre sus bordes verticales.</para>
+      <para>En algunas tablas, se puede ordenar la informaci&oacute;n de una determinada columna. Para ordenar la informaci&oacute;n de una tabla, haga clic en la cabecera situada en la parte superior de la columna por la que desea ordenar. Aparecer&aacute; una flecha hacia arriba en la cabecera de la columna por la que se desea ordenar la tabla. La siguiente figura muestra la flecha arriba.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sort_arrow_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Flecha arriba en una cabecera de columna.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para invertir el orden, basta con hacer clic otra vez en la cabecera de la columna. La flecha arriba cambiar&aacute; a flecha abajo lo que indica que la informaci&oacute;n de la columna est&aacute; en orden inverso.</para>
+      <para>En algunas tablas, se puede seleccionar m&aacute;s de un elemento. La siguiente tabla muestra c&oacute;mo seleccionar los elementos de las tablas.</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Tarea </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Acci&oacute;n</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar un elemento</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Hacer clic en el elemento.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar un grupo de elementos contiguos</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Pulse y mantenga pulsada la tecla <keycap>May&uacute;sculas</keycap>. Hacer clic en el primer elemento del grupo y, a continuaci&oacute;n, en el &uacute;ltimo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Seleccionar varios elementos</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Mantener pulsada la tecla <keycap>Ctrl</keycap>. Hacer clic en los elementos que desea seleccionar.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosmetacity-716">
+    <title>Manipulaci&oacute;n de las &aacute;reas de trabajo </title>
+    <indexterm>
+      <primary>&aacute;reas de trabajo</primary>
+      <secondary>manipular</secondary>
+    </indexterm>
+    <para>En esta secci&oacute;n se indica c&oacute;mo manipular ventanas.</para>
+    <sect2 id="gosmetacity-49">
+      <title>Para cambiar entre &aacute;reas de trabajo </title>
+      <indexterm>
+        <primary>&aacute;reas de trabajo</primary>
+        <secondary>cambiar entre</secondary>
+      </indexterm>
+      <para>Puede cambiar entre &aacute;reas de trabajo de diferentes maneras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Mediante el <application>Selector de &aacute;reas de trabajo</application></para>
+          <para>Haga clic en el &aacute;rea de trabajo a la que desea pasar en el <application>Selector de &aacute;reas de trabajo</application>.</para>
+        </listitem>
+        <listitem>
+          <para>Utilice accesos directos</para>
+          <para>Las combinaciones de teclas predeterminadas para cambiar entre &aacute;reas de trabajo son: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="50*"/>
+              <colspec colwidth="50*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Accesos directos predeterminados </para>
+                  </entry>
+                  <entry>
+                    <para>Funci&oacute;n</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>
+                    <para>
+                      <keycombo>
+                        <keycap>Ctrl</keycap>
+                        <keycap>Alt</keycap>
+                        <keycap>flecha derecha</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry>
+                    <para>Selecciona el &aacute;rea de trabajo situada a la derecha de la actual. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry>
+                    <para>
+                      <keycombo>
+                        <keycap>Ctrl</keycap>
+                        <keycap>Alt</keycap>
+                        <keycap>flecha izquierda</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry>
+                    <para>Selecciona el &aacute;rea de trabajo situada a la izquierda de la actual. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosmetacity-50">
+      <title>Para agregar &aacute;reas de trabajo </title>
+      <indexterm>
+        <primary>&aacute;reas de trabajo</primary>
+        <secondary>a&ntilde;adir</secondary>
+      </indexterm>
+      <para>Para a&ntilde;adir &aacute;reas de trabajo a Java Desktop System, haga clic con el bot&oacute;n derecho en <application>Selector de &aacute;reas de trabajo</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Preferencias</guimenuitem>. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Preferencias del Selector de &aacute;reas de trabajo</guilabel>. Utilice el cuadro de deslizamiento <guilabel>N&uacute;mero de &aacute;reas de trabajo</guilabel> para indicar el n&uacute;mero de &aacute;reas de trabajo que se desee. <application>Selector de &aacute;reas de trabajo</application> a&ntilde;ade las nuevas &aacute;reas al final de la lista de &aacute;reas de trabajo.</para>
+    </sect2>
+    <sect2 id="gosmetacity-51">
+      <title>Para asignar un nombre a las &aacute;reas de trabajo </title>
+      <indexterm>
+        <primary>&aacute;reas de trabajo</primary>
+        <secondary>asignar nombre</secondary>
+      </indexterm>
+      <para>Los nombres predeterminados de las &aacute;reas de trabajo son <literal>&Aacute;rea de trabajo 1</literal>, <literal>&Aacute;rea de trabajo 2</literal>, <literal>&Aacute;rea de trabajo 3</literal>, etc... Para asignar nombres a las &aacute;reas de trabajo del escritorio, haga clic con el bot&oacute;n derecho en <application>Selector de &aacute;reas de trabajo</application> y, a continuaci&oacute;n, seleccione <guimenuitem>Preferencias</guimenuitem>. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Preferencias del Selector de &aacute;reas de trabajo</guilabel>. En la lista <guilabel>&Aacute;reas de trabajo</guilabel> indique los nuevos nombres de las &aacute;reas de trabajo. Seleccione el &aacute;rea de trabajo y, a continuaci&oacute;n, escriba el nuevo nombre.</para>
+    </sect2>
+    <sect2 id="gosmetacity-52">
+      <title>Para suprimir &aacute;reas de trabajo </title>
+      <indexterm>
+        <primary>&aacute;reas de trabajo</primary>
+        <secondary>suprimir</secondary>
+      </indexterm>
+      <para>Al suprimir un &aacute;rea de trabajo, las ventanas se mueven autom&aacute;ticamente a otra, y el &aacute;rea de trabajo vac&iacute;a se elimina. </para>
+      <para>Para suprimir &aacute;reas de trabajo en Java Desktop System, haga clic con el bot&oacute;n derecho en <application>Selector de &aacute;reas de trabajo</application> y seleccione <guimenuitem>Preferencias</guimenuitem>. Se mostrar&aacute; el cuadro de di&aacute;logo <guilabel>Preferencias del Selector de &aacute;reas de trabajo</guilabel>. Utilice el cuadro de deslizamiento <guilabel>N&uacute;mero de &aacute;reas de trabajo</guilabel> para indicar el n&uacute;mero de &aacute;reas de trabajo que se desee. <application>Selector de &aacute;reas de trabajo</application> suprime las &aacute;reas a partir del final de la lista de &aacute;reas de trabajo. </para>
+    </sect2>
+  </sect1>
+</chapter>

@@ -1,0 +1,1505 @@
+<chapter id="gospanel-1">
+  <title>Trabalhando com pain&eacute;is</title>
+  <highlights>
+    <para>As informa&ccedil;&otilde;es neste cap&iacute;tulo descrevem como usar pain&eacute;is. Um painel &eacute; uma &aacute;rea do Java Desktop System na qual voc&ecirc; pode executar aplicativos e outras tarefas.</para>
+  </highlights>
+  <sect1 id="gospanel-2">
+    <title>Apresentando os pain&eacute;is </title>
+    <indexterm>
+      <primary>pain&eacute;is</primary>
+      <secondary>introdu&ccedil;&atilde;o</secondary>
+    </indexterm>
+    <para>Ao iniciar uma sess&atilde;o pela primeira vez, o Java Desktop System apresentar&aacute; pelo menos um painel. O administrador do sistema pode ter configurado os pain&eacute;is padr&atilde;o de acordo com as necessidades locais; assim, voc&ecirc; poder&aacute; ver aqui pain&eacute;is padr&atilde;o ligeiramente diferentes.</para>
+    <para>Voc&ecirc; pode alterar o comportamento e a apar&ecirc;ncia dos pain&eacute;is de acordo com suas necessidades. Voc&ecirc; tamb&eacute;m pode adicionar ou remover objetos dos pain&eacute;is. Voc&ecirc; pode criar v&aacute;rios pain&eacute;is e selecionar propriedades, objetos e planos de fundo diferentes para cada painel. Voc&ecirc; tamb&eacute;m pode ocultar os pain&eacute;is.</para>
+    <para>Em geral, o Java Desktop System cont&eacute;m um painel pr&eacute;-configurado que &eacute; exibido na parte inferior da tela.</para>
+    <sect2 id="gospanel-3">
+      <title>Painel inferior </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>painel inferior</secondary>
+        <see>painel inferior</see>
+      </indexterm>
+      <indexterm>
+        <primary>painel inferior </primary>
+        <secondary>introdu&ccedil;&atilde;o</secondary>
+      </indexterm>
+      <indexterm>
+        <primary> painel inferior</primary>
+        <secondary>conte&uacute;do padr&atilde;o</secondary>
+      </indexterm>
+      <para>O painel inferior cont&eacute;m os seguintes itens:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec3" colwidth="30.95*"/>
+          <colspec colname="colspec4" colwidth="69.05*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Objeto</para>
+              </entry>
+              <entry>
+                <para>Descri&ccedil;&atilde;o </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <guibutton>Iniciar</guibutton>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>O bot&atilde;o <guibutton>Iniciar</guibutton> cont&eacute;m menus e itens de menu para aplicativos e ferramentas de configura&ccedil;&atilde;o no <application> Java Desktop System</application>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Rel&oacute;gio</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Exibe a hora e data em um painel. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Exibir desktop</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">Exibe um bot&atilde;o que minimiza todas as janelas abertas. </entry>
+            </row>
+            <row>
+              <entry colname="colspec3" valign="top">
+                <para><application>Lista de janelas</application> </para>
+              </entry>
+              <entry colname="colspec4" valign="top">
+                <para>Exibe um bot&atilde;o para cada janela aberta. Voc&ecirc; pode clicar no bot&atilde;o de lista de janelas para minimizar e restaurar as janelas.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>&Aacute;rea de notifica&ccedil;&atilde;o</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Exibe &iacute;cones de v&aacute;rios aplicativos para indicar a atividade do aplicativo.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Alternador de &aacute;reas de trabalho</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Exibe uma representa&ccedil;&atilde;o visual das &aacute;reas de trabalho. Voc&ecirc; pode usar o <application>Alternador de &aacute;reas de trabalho</application> para alternar entre as &aacute;reas de trabalho.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Controle de volume</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Exibe um bot&atilde;o que permite que voc&ecirc; controle e defina o n&iacute;vel de som do sistema.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec3">
+                <para>
+                  <application>Monitor de rede</application>
+                </para>
+              </entry>
+              <entry colname="colspec4">
+                <para>Exibe o status de um dispositivo de rede.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-5">
+    <title>Gerenciando os pain&eacute;is </title>
+    <indexterm>
+      <primary>pain&eacute;is</primary>
+      <secondary>gerenciando</secondary>
+    </indexterm>
+    <para>As se&ccedil;&otilde;es a seguir descrevem como gerenciar os pain&eacute;is.</para>
+    <sect2 id="gospanel-10">
+      <title>Para adicionar um novo painel </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>adicionar novo</secondary>
+      </indexterm>
+      <para>Para adicionar um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia de qualquer painel e selecione  <guimenuitem>Novo painel</guimenuitem>. O novo painel &eacute; adicionado ao Java Desktop System. O novo painel n&atilde;o cont&eacute;m objetos. Voc&ecirc; pode personalizar o novo painel conforme suas prefer&ecirc;ncias.</para>
+    </sect2>
+    <sect2 id="gospanel-11">
+      <title>Para interagir com um painel </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>interagindo com</secondary>
+      </indexterm>
+      <para>Para interagir com um painel, clique com o mouse em uma &aacute;rea vazia do painel. Se n&atilde;o houver &aacute;rea vazia no painel, voc&ecirc; pode clicar com o bot&atilde;o do meio ou o bot&atilde;o direito sobre um bot&atilde;o para ocultar para selecionar o painel. Se nenhum bot&atilde;o para ocultar estiver vis&iacute;vel, modifique as propriedades do painel para que eles fiquem vis&iacute;veis. </para>
+      <para>Use os bot&otilde;es do mouse para interagir com o painel, como se segue:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Bot&atilde;o do meio</term>
+          <listitem>
+            <para>Permite que voc&ecirc; clique em um painel e arrraste-o para um novo local.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Bot&atilde;o direito</term>
+          <listitem>
+            <para>Abre o menu instant&acirc;neo do painel.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="gospanel-12">
+      <title>Para mover um painel </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>movendo</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode mover pain&eacute;is para locais diferentes. Para mover um painel, clique com o bot&atilde;o do meio em uma &aacute;rea vazia do painel e arraste-o para o novo local.</para>
+    </sect2>
+    <sect2 id="gospanel-7">
+      <title>Para ocultar um painel </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>ocultando</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode ocultar ou exibir pain&eacute;is. Para ocultar um painel, use o bot&atilde;o para ocultar. Se nenhum bot&atilde;o para ocultar estiver vis&iacute;vel, modifique as propriedades do painel para que eles fiquem vis&iacute;veis. </para>
+      <para>Os bot&otilde;es para ocultar est&atilde;o em ambos os lados do painel. Os bot&otilde;es para ocultar cont&ecirc;m um &iacute;cone de seta opcional. A ilustra&ccedil;&atilde;o a seguir mostra os bot&otilde;es para ocultar. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/four_hide_button.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Um painel horizontal e um vertical, ambos com bot&otilde;es para ocultar. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Para ocultar um painel, clique em um dos bot&otilde;es para ocultar. O painel &eacute; recolhido na dire&ccedil;&atilde;o da seta do bot&atilde;o para ocultar. O bot&atilde;o para ocultar no outro lado do painel mant&eacute;m-se vis&iacute;vel.</para>
+      <para>Para reexibir um painel oculto, clique no bot&atilde;o para ocultar que est&aacute; vis&iacute;vel. O painel &eacute; expandido na dire&ccedil;&atilde;o da seta do bot&atilde;o para ocultar. Ambos os bot&otilde;es para ocultar est&atilde;o agora vis&iacute;veis.</para>
+      <para>Voc&ecirc; pode definir a propriedade para ocultar o painel automaticamente. Com a propriedade para ocultar automaticamente, o painel &eacute; ocultado quando o mouse n&atilde;o est&aacute; apontando para ele. O painel &eacute; reexibido quando voc&ecirc; aponta para a parte da tela onde o painel est&aacute;. Para definir a propriedade para ocultar o painel automaticamente, modifique as propriedades do painel.</para>
+    </sect2>
+    <sect2 id="gospanel-28">
+      <title>Para modificar as propriedades do painel </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>modificando propriedades</secondary>
+      </indexterm>
+      <para>Para modificar as prefer&ecirc;ncias de todos os pain&eacute;is, use a ferramenta de prefer&ecirc;ncias <guilabel> Painel</guilabel> para fazer as altera&ccedil;&otilde;es desejadas. Por exemplo, voc&ecirc; pode modificar as prefer&ecirc;ncias de anima&ccedil;&atilde;o para os pain&eacute;is. </para>
+      <para>Voc&ecirc; tamb&eacute;m pode modificar as propriedades de cada painel, individualmente. Para cada painel, voc&ecirc; pode alterar recursos tais como: a posi&ccedil;&atilde;o do painel, o comportamento para ocultar e a apar&ecirc;ncia visual. </para>
+      <para>Para modificar as propriedades de um painel, siga as seguintes etapas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito em uma &aacute;rea vazia do painel e selecione <guimenuitem> Propriedades</guimenuitem> para exibir a caixa de di&aacute;logo <guilabel>Propriedades do painel</guilabel>. A caixa de di&aacute;logo <guilabel>Propriedades do painel</guilabel> cont&eacute;m as seguintes guias: </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>Geral</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Plano de fundo</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Para modificar o tamanho, posi&ccedil;&atilde;o e propriedades de ocultar do painel, clique na guia <guilabel>Geral</guilabel>. A tabela a seguir descreve os elementos da caixa de di&aacute;logo <guilabel>Geral</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento da caixa de di&aacute;logo</para>
+                  </entry>
+                  <entry>
+                    <para>Descri&ccedil;&atilde;o </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Nome</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Digite um nome para o painel. Quando voc&ecirc; usa as teclas de atalho para alternar entre pain&eacute;is e a &aacute;rea de trabalho, o nome do painel &eacute; exibido. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Orienta&ccedil;&atilde;o</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Selecione a posi&ccedil;&atilde;o do painel na tela. Clique na posi&ccedil;&atilde;o desejada para o painel. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Tamanho</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Use a caixa de rolagem para especificar o tamanho do painel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Expandir</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Selecione essa op&ccedil;&atilde;o para expandir totalmente o painel. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Ocultar automaticamente</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para habilitar a propriedade para ocultar automaticamente. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Mostrar bot&otilde;es para ocultar</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para mostrar os bot&otilde;es para ocultar no painel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Habilitar setas no bot&atilde;o para ocultar</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para exibir setas nos bot&otilde;es para ocultar, se estes estiverem habilitados.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Para modificar o plano de fundo do painel, clique na guia <guilabel>Plano de fundo</guilabel>. Selecione o tipo de plano de fundo para o painel. As op&ccedil;&otilde;es s&atilde;o as seguintes:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="32.32*"/>
+              <colspec colwidth="67.68*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento da caixa de di&aacute;logo</para>
+                  </entry>
+                  <entry>
+                    <para>Descri&ccedil;&atilde;o </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Nenhum (usar tema do sistema)</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para usar o plano de fundo padr&atilde;o para o painel. O plano de fundo padr&atilde;o do painel depende das configura&ccedil;&otilde;es na ferramenta de prefer&ecirc;ncias <application>Tema</application>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Cor s&oacute;lida</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para especificar uma s&oacute; cor para o plano de fundo do painel. Clique no bot&atilde;o <guibutton>Cor</guibutton> para exibir a caixa de di&aacute;logo de sele&ccedil;&atilde;o de cor. Selecione a cor desejada na caixa de di&aacute;logo de sele&ccedil;&atilde;o de cor. </para>
+                    <para>Use o controle deslizante <guilabel>Estilo</guilabel> para especificar o grau de transpar&ecirc;ncia ou de sombreamento para a cor. Por exemplo, para tornar o painel transparente, movimente o controle deslizante em dire&ccedil;&atilde;o &agrave; extremidade  <guilabel>Transparente</guilabel>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Imagem de plano de fundo</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para especificar uma imagem para o plano de fundo do painel. Digite o nome do arquivo da imagem na caixa combinada com menu suspenso. Alternativamente, procure o arquivo, clicando no bot&atilde;o <guibutton>Procurar</guibutton>. Depois de selecionar o arquivo, clique em OK. </para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>Voc&ecirc; tamb&eacute;m pode arrastar uma cor ou imagem at&eacute; o painel para defini-la como plano de fundo do painel. Para obter mais informa&ccedil;&otilde;es, consulte <xref linkend="gospanel-61"/>. </para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>Fechar</guibutton> para fechar a caixa de di&aacute;logo <guilabel>Propriedades do painel</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+      <sect3 id="gospanel-61">
+        <title>Para arrastar uma cor ou imagem para o plano de fundo de um painel </title>
+        <indexterm>
+          <primary>pain&eacute;is</primary>
+          <secondary>alterando plano de fundo</secondary>
+        </indexterm>
+        <para>Voc&ecirc; pode arrastar uma cor ou imagem at&eacute; um painel para defini-la como plano de fundo do painel. Voc&ecirc; pode arrastar uma cor ou imagem de diversos aplicativos. Por exemplo, voc&ecirc; pode arrastar uma cor do gerenciador de arquivos at&eacute; um painel para definir essa cor como plano de fundo do painel. Voc&ecirc; tamb&eacute;m pode arrastar uma cor de qualquer caixa de di&aacute;logo de sele&ccedil;&atilde;o de cor.</para>
+        <para>Voc&ecirc; pode arrastar uma imagem at&eacute; um painel para defini-la como plano de fundo do painel. Voc&ecirc; tamb&eacute;m pode arrastar do gerenciador de arquivos alguma imagem padr&atilde;o para defini-la como plano de fundo do painel.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-31">
+      <title>Para excluir um painel </title>
+      <indexterm>
+        <primary>pain&eacute;is</primary>
+        <secondary>excluindo</secondary>
+      </indexterm>
+      <para>Para excluir um painel do Java Desktop System, clique com o bot&atilde;o direito no painel desejado e selecione <menuchoice><guimenuitem>Excluir este painel</guimenuitem></menuchoice>.</para>
+      <note>
+        <para>O Java Desktop System deve conter pelo menos um painel. Se voc&ecirc; tiver somente um painel no Java Desktop System, n&atilde;o ser&aacute; poss&iacute;vel excluir esse painel.</para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-8">
+    <title>Objetos de painel </title>
+    <indexterm>
+      <primary>pain&eacute;is</primary>
+      <secondary>objetos de painel</secondary>
+      <see> objetos de painel</see>
+    </indexterm>
+    <para>Esta se&ccedil;&atilde;o descreve os objetos que voc&ecirc; pode adicionar aos pain&eacute;is para uso.</para>
+    <sect2 id="gospanel-100">
+      <title>Interagindo com objetos de painel </title>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>interagindo com</secondary>
+      </indexterm>
+      <para>Use os bot&otilde;es do mouse para interagir com um objeto de painel, como se segue:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Bot&atilde;o esquerdo</term>
+          <listitem>
+            <para>Inicia o objeto de painel. </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Bot&atilde;o do meio</term>
+          <listitem>
+            <para>Permite que voc&ecirc; clique em um objeto e arraste-o para um novo local.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Bot&atilde;o direito</term>
+          <listitem>
+            <para>Abre o menu instant&acirc;neo do objeto.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Voc&ecirc; interage com objetos de painel de v&aacute;rias maneiras. Para obter mais informa&ccedil;&otilde;es, consulte <xref linkend="gospanel-39"/>.</para>
+    </sect2>
+    <sect2 id="gospanel-15">
+      <title>Para adicionar um objeto a um painel </title>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>adicionando</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode adicionar um objeto a um painel de v&aacute;rias maneiras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Pelo menu instant&acirc;neo do painel</para>
+          <para>Clique com o bot&atilde;o direito em uma &aacute;rea vazia do painel para abrir o menu instant&acirc;neo. O menu instant&acirc;neo do painel cont&eacute;m um submenu <guisubmenu>Adicionar ao painel</guisubmenu>. O submenu <guisubmenu>Adicionar ao painel</guisubmenu> permite que voc&ecirc; adicione os seguintes objetos aos pain&eacute;is: <itemizedlist><listitem><para>Aplicativos de painel nas seguintes categorias: <guilabel>Acess&oacute;rios</guilabel>, <guilabel>Divers&otilde;es</guilabel>, <guilabel>Internet </guilabel>, <guilabel>Multim&iacute;dia</guilabel>, <guilabel>Utilit&aacute;rios</guilabel>. </para></listitem><listitem><para>Bot&otilde;es para acesso r&aacute;pido &agrave;s a&ccedil;&otilde;es mais comuns: Bot&atilde;o <guibutton>Localizar arquivos</guibutton>, bot&atilde;o <guibutton>For&ccedil;ar encerrar</guibutton>, bot&atilde;o <guibutton>Bloquear tela</guibutton>, bot&atilde;o <guibutton>Logoff</guibutton>, bot&atilde;o <guibutton>Executar aplicativo</guibutton>, bot&atilde;o <guibutton>Capturar tela</guibutton>, bot&atilde;o  <guibutton>Mostrar desktop</guibutton>.</para></listitem><listitem><para>Lan&ccedil;adores</para></listitem><listitem><para>Lan&ccedil;adores por menus</para></listitem><listitem><para><guimenu>Menu principal</guimenu></para></listitem><listitem><para><application>Barra de menus</application></para></listitem><listitem><para>Gavetas</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Por qualquer menu</para>
+          <para>Quando voc&ecirc; clica com o bot&atilde;o direito em um lan&ccedil;ador em qualquer menu, um menu instant&acirc;neo &eacute; aberto para o lan&ccedil;ador. Voc&ecirc; pode usar esse menu instant&acirc;neo para adicionar o lan&ccedil;ador a um painel. </para>
+          <para>Voc&ecirc; tamb&eacute;m pode arrastar menus, lan&ccedil;adores e aplicativos de painel dos menus para os pain&eacute;is. </para>
+        </listitem>
+        <listitem>
+          <para>Pelo gerenciador de arquivos</para>
+          <para>Cada lan&ccedil;ador corresponde a um arquivo <filename>.desktop</filename>. Voc&ecirc; pode arrastar o arquivo <filename>.desktop</filename> para os pain&eacute;is, como forma de adicionar o lan&ccedil;ador ao painel. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-9">
+      <title>Para modificar as propriedades de um objeto </title>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>modificando as propriedades </secondary>
+      </indexterm>
+      <para>Alguns objetos de painel, como lan&ccedil;adores e gavetas, t&ecirc;m um conjunto de propriedades associadas. As propriedades s&atilde;o diferentes para cada tipo de objeto. As propriedades especificam detalhes, tais como: <itemizedlist><listitem><para>O comando que inicia um aplicativo.</para></listitem><listitem><para>O local dos arquivos fonte de um menu.</para></listitem><listitem><para>O &iacute;cone que representa o objeto.</para></listitem></itemizedlist></para>
+      <para>Para modificar as propriedades de um objeto, siga as seguintes etapas: </para>
+      <orderedlist>
+        <listitem>
+          <indexterm>
+            <primary>menu instant&acirc;neo de objeto de painel, ilustra&ccedil;&atilde;o</primary>
+          </indexterm>
+          <para>Clique com o bot&atilde;o direito no objeto para abrir o menu instant&acirc;neo de objeto de painel, como mostrado na <xref linkend="gospanel-FIG-54"/>.</para>
+          <figure id="gospanel-FIG-54">
+            <title>Menu instant&acirc;neo de objeto de painel</title>
+            <screenshot>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/panel_object_popup_menu.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Menu instant&acirc;neo de objeto de painel. Itens de menu: Propriedades, Remover do painel, Bloquear, Mover. </phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </listitem>
+        <listitem>
+          <para>Escolha <guimenuitem>Propriedades</guimenuitem>. Use a caixa de di&aacute;logo <guilabel>Propriedades</guilabel> para modificar as propriedades desejadas. As propriedades na caixa de di&aacute;logo <guilabel>Propriedades</guilabel> dependem do objeto selecionado na etapa 1. </para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>OK</guibutton> para efetuar as mudan&ccedil;as e, em seguida, feche a caixa de di&aacute;logo <guilabel>Propriedades</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gospanel-32">
+      <title>Para mover um objeto de painel </title>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>movendo</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode mover objetos de painel dentro do pr&oacute;prio painel ou de um painel para outro. Voc&ecirc; tamb&eacute;m pode mover objetos entre pain&eacute;is e gavetas.</para>
+      <para>Para mover um objeto de painel, clique com o bot&atilde;o do meio e arraste o objeto para o novo local. Ao soltar o bot&atilde;o do meio, o objeto &eacute; posicionado no novo local.</para>
+      <para>Alternativamente, voc&ecirc; pode usar o menu instant&acirc;neo de objeto de painel para mover o objeto, como se segue: </para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito sobre o objeto e selecione <guimenuitem>Mover</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Aponte para o novo local do objeto e clique com qualquer bot&atilde;o do mouse para posicionar o objeto no novo local. Este local pode ser qualquer painel que esteja atualmente no Java Desktop System. </para>
+        </listitem>
+      </orderedlist>
+      <para>O movimento de um objeto de painel afeta a posi&ccedil;&atilde;o de outros objetos no painel. Para controlar como os objetos se movem em um painel, voc&ecirc; pode especificar um modo de movimento. Para especificar o modo de movimento, pressione uma das seguintes teclas enquanto move o objeto de painel:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec2" colwidth="15.00*"/>
+          <colspec colname="colspec1" colwidth="30.00*"/>
+          <colspec colname="colspec3" colwidth="54.00*"/>
+          <thead>
+            <row rowsep="1">
+              <entry colname="colspec2">
+                <para>Tecla </para>
+              </entry>
+              <entry>
+                <para>Modo de movimento</para>
+              </entry>
+              <entry colname="colspec3">
+                <para>Descri&ccedil;&atilde;o</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Nenhuma tecla</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Movimento alternado</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>O objeto troca de lugar com outros objetos de painel. O movimento alternado &eacute; o modo de movimento padr&atilde;o.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Tecla <keycap>Alt</keycap> </para>
+              </entry>
+              <entry valign="top">
+                <para>Movimento livre</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>O objeto passa por outros objetos de painel at&eacute; a pr&oacute;xima &aacute;rea vazia no painel.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec2" valign="top">
+                <para>Tecla <keycap>Shift</keycap> </para>
+              </entry>
+              <entry valign="top">
+                <para>Movimento de empurrar</para>
+              </entry>
+              <entry colname="colspec3" valign="top">
+                <para>O objeto empurra outros objetos de painel adiante no painel. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+    <sect2 id="gospanel-566">
+      <title>Para bloquear um objeto de painel </title>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bloqueando</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bloqueando objetos de painel</primary>
+      </indexterm>
+      <para>Voc&ecirc; pode bloquear objetos de painel de modo que os objetos mantenham sua posi&ccedil;&atilde;o no painel. Esse recurso &eacute; &uacute;til se voc&ecirc; n&atilde;o desejar que alguns objetos de painel mudem de posi&ccedil;&atilde;o quando voc&ecirc; mover outros objetos de painel.</para>
+      <para>Para bloquear um objeto na posi&ccedil;&atilde;o atual no painel, clique com o bot&atilde;o direito no objeto para abrir o menu instant&acirc;neo de objeto de painel e selecione <guimenuitem>Bloquear</guimenuitem>. Para desbloquear o objeto, clique com o bot&atilde;o direito e selecione <guimenuitem>Desbloquear</guimenuitem>. </para>
+    </sect2>
+    <sect2 id="gospanel-33">
+      <title>Para excluir um objeto de painel </title>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>excluindo</secondary>
+      </indexterm>
+      <para>Para excluir um objeto do painel, clique com o bot&atilde;o direito no objeto para abrir o menu instant&acirc;neo de objeto de painel e selecione <guimenuitem>Excluir do painel</guimenuitem>. </para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-17">
+    <title>Aplicativos de painel </title>
+    <indexterm>
+      <primary>aplicativos de painel</primary>
+      <secondary>introdu&ccedil;&atilde;o</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>objetos de painel</primary>
+      <secondary>aplicativos de painel </secondary>
+      <see>aplicativos de painel</see>
+    </indexterm>
+    <para>Um aplicativo de painel &eacute; um pequeno aplicativo cuja interface do usu&aacute;rio est&aacute; dentro do pr&oacute;prio painel. Por exemplo, a figura abaixo mostra os seguintes aplicativos de painel, da esquerda para a direita: </para>
+    <itemizedlist>
+      <listitem>
+        <para><application>Lista de janelas</application>: Exibe as janelas abertas no momento, no seu sistema.</para>
+      </listitem>
+      <listitem>
+        <para><application>CD Player</application>: Permite que voc&ecirc; controle o CD Player no seu sistema.</para>
+      </listitem>
+      <listitem>
+        <para><application>Controle de volume</application>: Permite que voc&ecirc; controle o volume do alto-falante no sistema.</para>
+      </listitem>
+    </itemizedlist>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/sample_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Exemplos de aplicativos de painel. O contexto descreve o gr&aacute;fico. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <sect2 id="gospanel-40">
+      <title>Para adicionar um aplicativo a um painel </title>
+      <indexterm>
+        <primary>aplicativo de painel</primary>
+        <secondary>adicionando ao painel </secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode adicionar um aplicativo a um painel pelo menu instant&acirc;neo de painel. Clique com o bot&atilde;o direito em uma &aacute;rea vazia do painel para abrir o menu instant&acirc;neo de painel. Selecione <guimenu>Adicionar ao painel</guimenu> e, em seguida, em um dos seguintes submenus, selecione o aplicativo de painel que voc&ecirc; deseja adicionar: </para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guimenu>Acess&oacute;rios</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Divers&otilde;es</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Internet</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Multim&iacute;dia</guimenu>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guimenu>Utilit&aacute;rios</guimenu>
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>Alternativamente, arraste o aplicativo de painel do submenu para o painel. </para>
+    </sect2>
+    <sect2 id="gospanel-39">
+      <title>Para selecionar um aplicativo de painel </title>
+      <indexterm>
+        <primary>aplicativos de painel</primary>
+        <secondary>selecionando</secondary>
+      </indexterm>
+      <para>Para modificar as propriedades de um aplicativo de painel, clique com o bot&atilde;o direito no aplicativo de painel para exibir o menu instant&acirc;neo de objeto de painel. Para mover um aplicativo de painel, clique com o bot&atilde;o do meio do mouse sobre ele. </para>
+      <para>H&aacute; algumas restri&ccedil;&otilde;es quanto ao local em que voc&ecirc; pode clicar em um aplicativo de painel para que seja exibido o menu instant&acirc;neo de objeto de painel, ou para mover o aplicativo de painel: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Alguns aplicativos de painel possuem menus instant&acirc;neos de comandos do aplicativo de painel, que se abrem quando voc&ecirc; clica com o bot&atilde;o direito em partes espec&iacute;ficas do aplicativo de painel. Por exemplo, o aplicativo de painel <application>Lista de janelas</application> possui, no lado esquerdo, uma al&ccedil;a lateral, e, no lado direito, bot&otilde;es que representam a sua janela. Para abrir o menu instant&acirc;neo de objeto de painel do aplicativo de painel <application>Lista de janelas</application>, voc&ecirc; deve clicar na al&ccedil;a. Se voc&ecirc; clicar com o bot&atilde;o direito em um bot&atilde;o do lado direito, &eacute; aberto um menu instant&acirc;neo para o bot&atilde;o.</para>
+        </listitem>
+        <listitem>
+          <para>Alguns aplicativos de painel possuem &aacute;reas que voc&ecirc; n&atilde;o pode usar para selecionar o aplicativo de painel. Por exemplo, o aplicativo <application>Linha de comando</application> possui um campo no qual voc&ecirc; digita comandos. N&atilde;o &eacute; poss&iacute;vel clicar com o bot&atilde;o do meio ou com o bot&atilde;o direito do mouse sobre esse campo para selecionar o aplicativo de painel. Para selecion&aacute;-lo, clique com o bot&atilde;o do meio ou com o bot&atilde;o direito em outra parte do aplicativo de painel. </para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-41">
+      <title>Para modificar as prefer&ecirc;ncias de um aplicativo de painel </title>
+      <indexterm>
+        <primary>aplicativos de painel</primary>
+        <secondary>modificando prefer&ecirc;ncias </secondary>
+      </indexterm>
+      <para>Para modificar as prefer&ecirc;ncias de um aplicativo de painel, siga as seguintes etapas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito no aplicativo de painel e selecione <guimenuitem>Prefer&ecirc;ncias</guimenuitem>. Use a caixa de di&aacute;logo <guilabel>Prefer&ecirc;ncias</guilabel> para modificar as propriedades desejadas. As prefer&ecirc;ncias de aplicativos de painel variam conforme o aplicativo.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>Fechar</guibutton> para fechar a caixa de di&aacute;logo <guilabel>Prefer&ecirc;ncias</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-16">
+    <title>Lan&ccedil;adores </title>
+    <indexterm>
+      <primary>objetos de painel</primary>
+      <secondary>lan&ccedil;adores</secondary>
+      <see>lan&ccedil;adores</see>
+    </indexterm>
+    <para>Quando voc&ecirc; clica em um lan&ccedil;ador, voc&ecirc; inicia uma das seguintes a&ccedil;&otilde;es: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Inicia um aplicativo espec&iacute;fico.</para>
+      </listitem>
+      <listitem>
+        <para>Executa um comando.</para>
+      </listitem>
+      <listitem>
+        <para>Abre uma pasta na janela do gerenciador de arquivos.</para>
+      </listitem>
+      <listitem>
+        <para>Abre o navegador em uma <firstterm>Uniform Resource Locator</firstterm> (URL) espec&iacute;fica. Uma URL &eacute; o endere&ccedil;o de um local espec&iacute;fico na Web.</para>
+      </listitem>
+      <listitem>
+        <para>Abre <firstterm>Uniform Resource Identifiers</firstterm> (URIs) especiais. O Java Desktop System cont&eacute;m URIs especiais que permitem que voc&ecirc; acesse fun&ccedil;&otilde;es espec&iacute;ficas pelo gerenciador de arquivos. <indexterm><primary>locais de URI especiais</primary><secondary>e lan&ccedil;adores</secondary></indexterm></para>
+      </listitem>
+    </itemizedlist>
+    <para>Voc&ecirc; pode localizar lan&ccedil;adores nos seguintes locais no Java Desktop System: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Pain&eacute;is: Nos pain&eacute;is, os lan&ccedil;adores s&atilde;o representados por &iacute;cones.</para>
+      </listitem>
+      <listitem>
+        <para>Menus: Nos menus, os lan&ccedil;adores s&atilde;o representados por itens de menu. Os itens de menu t&ecirc;m, em geral, um &iacute;cone ao lado.</para>
+      </listitem>
+      <listitem>
+        <para>Desktop: No desktop, os lan&ccedil;adores s&atilde;o representados por &iacute;cones. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Voc&ecirc; pode modificar as propriedades de um lan&ccedil;ador. Por exemplo, as propriedades de um lan&ccedil;ador incluem o nome do lan&ccedil;ador, o &iacute;cone que o representa e como o lan&ccedil;ador deve ser executado. </para>
+    <sect2 id="gospanel-34">
+      <title>Para adicionar um lan&ccedil;ador a um painel </title>
+      <indexterm>
+        <primary>lan&ccedil;adores</primary>
+        <secondary>adicionando ao painel</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode adicionar um lan&ccedil;ador a um painel de v&aacute;rias maneiras:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Pelo menu instant&acirc;neo do painel</para>
+          <para>Para criar um novo lan&ccedil;ador, clique com o bot&atilde;o direito em um &aacute;rea vazia do painel e selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Lan&ccedil;ador</guimenuitem></menuchoice>. A caixa de di&aacute;logo <guilabel>Criar lan&ccedil;ador</guilabel> &eacute; exibida. Para obter mais informa&ccedil;&otilde;es sobre como completar essa caixa de di&aacute;logo, consulte <xref linkend="gospanel-52"/>.</para>
+          <para>Alternativamente, para adicionar um lan&ccedil;ador existente ao painel, selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Lan&ccedil;ador do menu</guimenuitem></menuchoice> no menu instant&acirc;neo do painel. Selecione o lan&ccedil;ador que voc&ecirc; deseja adicionar pelo menu.</para>
+        </listitem>
+        <listitem>
+          <para>Por qualquer menu</para>
+          <para>Para adicionar um lan&ccedil;ador de qualquer menu a um painel, execute uma das seguintes etapas:<itemizedlist><listitem><para>Abra o menu que cont&eacute;m o lan&ccedil;ador. Arraste o lan&ccedil;ador para o painel. </para></listitem><listitem><para>Abra no painel desejado o menu que cont&eacute;m o lan&ccedil;ador. Clique com o bot&atilde;o direito no t&iacute;tulo do lan&ccedil;ador. Selecione <guimenuitem>Adicionar este lan&ccedil;ador ao painel</guimenuitem>. </para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>Pelo gerenciador de arquivos</para>
+          <para>Para adicionar um lan&ccedil;ador a um painel do gerenciador de arquivos, localize o arquivo <filename> .desktop</filename> para o lan&ccedil;ador em seu sistema. Para adicionar o lan&ccedil;ador, arraste o arquivo <filename>.desktop</filename> para o painel.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gospanel-52">
+        <title>Para criar um lan&ccedil;ador com a caixa de di&aacute;logo Criar lan&ccedil;ador</title>
+        <para>Para criar um lan&ccedil;ador com a caixa de di&aacute;logo <guilabel>Criar lan&ccedil;ador</guilabel>, siga as seguintes etapas: </para>
+        <orderedlist>
+          <listitem>
+            <para>Clique com o bot&atilde;o direito em qualquer parte do painel para abrir o menu instant&acirc;neo. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem> Lan&ccedil;ador</guimenuitem></menuchoice>, para exibir a caixa de di&aacute;logo <guilabel>Criar lan&ccedil;ador</guilabel>. </para>
+          </listitem>
+          <listitem>
+            <para>Defina as propriedades do lan&ccedil;ador na guia <guilabel>B&aacute;sico</guilabel>. A tabela a seguir descreve os elementos da caixa de di&aacute;logo <guilabel>B&aacute;sico</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="26.19*"/>
+                <colspec colname="colspec1" colwidth="73.81*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento da caixa de di&aacute;logo</para>
+                    </entry>
+                    <entry>
+                      <para>Descri&ccedil;&atilde;o </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Nome</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use essa caixa de texto para especificar o nome do lan&ccedil;ador. Voc&ecirc; pode usar a guia <guilabel>Avan&ccedil;ado</guilabel> para incluir tradu&ccedil;&otilde;es do nome. Este &eacute; o nome que &eacute; exibido quando voc&ecirc; adiciona o lan&ccedil;ador a um menu ou ao desktop. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0" valign="top">
+                      <para>
+                        <guilabel>Nome gen&eacute;rico</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Use essa caixa de texto para especificar a classe do aplicativo &agrave; qual o lan&ccedil;ador pertence. Por exemplo, voc&ecirc; pode digitar <userinput> Editor de texto</userinput> nessa caixa de texto para um lan&ccedil;ador <application>gedit</application>. Voc&ecirc; pode usar a guia <guilabel>Avan&ccedil;ado</guilabel> para incluir tradu&ccedil;&otilde;es do nome gen&eacute;rico.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Coment&aacute;rios</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use essa caixa de texto para incluir uma breve descri&ccedil;&atilde;o do lan&ccedil;ador. Os coment&aacute;rios s&atilde;o exibidos com uma dica de ferramenta quando voc&ecirc; aponta para o &iacute;cone do lan&ccedil;ador no painel. Voc&ecirc; pode usar a guia <guilabel>Avan&ccedil;ado</guilabel> para incluir tradu&ccedil;&otilde;es dos coment&aacute;rios. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Comando</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use esse campo para especificar um comando a ser executado quando voc&ecirc; clicar no lan&ccedil;ador. Para obter exemplos de comandos, consulte a pr&oacute;xima se&ccedil;&atilde;o.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Tipo</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Use essa caixa combinada com menu suspenso para especificar o tipo do lan&ccedil;ador. Selecione entre os seguintes tipos: </para>
+                      <itemizedlist>
+                        <listitem>
+                          <para><guilabel>Aplicativo</guilabel>: Selecione essa op&ccedil;&atilde;o para criar um lan&ccedil;ador que inicie um aplicativo.</para>
+                        </listitem>
+                        <listitem>
+                          <para><guilabel>Link</guilabel>: Selecione essa op&ccedil;&atilde;o para criar um lan&ccedil;ador vinculado a uma URI.</para>
+                        </listitem>
+                      </itemizedlist>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>&Iacute;cone</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Escolha um &iacute;cone para representar o lan&ccedil;ador. Para escolher um &iacute;cone, clique no bot&atilde;o <guibutton>Sem &iacute;cone</guibutton>. A caixa de di&aacute;logo de sele&ccedil;&atilde;o de &iacute;cone &eacute; exibida. Escolha um &iacute;cone na caixa de di&aacute;logo. Alternativamente, para escolher um &iacute;cone em outra pasta, clique em <guibutton>Procurar</guibutton>. Depois de selecionar o &iacute;cone, clique em <guibutton>OK</guibutton>. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Executar no terminal</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Selecione essa op&ccedil;&atilde;o para executar o aplicativo ou comando em uma janela de terminal. Escolha esta op&ccedil;&atilde;o para um aplicativo ou um comando que n&atilde;o crie uma janela para executar.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Para definir as propriedades avan&ccedil;adas para o lan&ccedil;ador, clique na guia <guilabel>Avan&ccedil;ado</guilabel>. </para>
+          </listitem>
+          <listitem>
+            <para>Defina as propriedades avan&ccedil;adas do lan&ccedil;ador na guia <guilabel>Avan&ccedil;ado</guilabel>. A tabela a seguir descreve os elementos da caixa de di&aacute;logo na parte superior da guia  <guilabel>Avan&ccedil;ado</guilabel>: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="32.03*"/>
+                <colspec colwidth="67.97*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Elemento da caixa de di&aacute;logo</para>
+                    </entry>
+                    <entry>
+                      <para>Descri&ccedil;&atilde;o </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Testar antes de usar</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Digite aqui um comando para verific&aacute;-lo antes de iniciar o lan&ccedil;ador. Se o comando &eacute; execut&aacute;vel e est&aacute; no caminho, o lan&ccedil;ador &eacute; exibido no painel.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Documenta&ccedil;&atilde;o</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Digite o caminho para o arquivo de ajuda do lan&ccedil;ador. Se voc&ecirc; inserir um caminho nesse campo, um item de menu <guimenuitem>Ajuda do aplicativo <replaceable>nome do lan&ccedil;ador </replaceable></guimenuitem> ser&aacute; exibido no menu instant&acirc;neo para o lan&ccedil;ador.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Voc&ecirc; tamb&eacute;m pode adicionar uma tradu&ccedil;&atilde;o dos campos <guilabel>Nome</guilabel>, <guilabel>Nome gen&eacute;rico</guilabel> e <guilabel>Coment&aacute;rios</guilabel>, atrav&eacute;s da guia <guilabel>B&aacute;sico</guilabel>. Para adicionar uma tradu&ccedil;&atilde;o, digite os detalhes na tabela <guilabel>Tradu&ccedil;&otilde;es de Nome/Coment&aacute;rios</guilabel>, como se segue: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="20.78*"/>
+                <colspec colname="colspec1" colwidth="79.22*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Campo</para>
+                    </entry>
+                    <entry>
+                      <para>Descri&ccedil;&atilde;o </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>Primeiro campo </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Digite o c&oacute;digo de duas letras para o idioma da tradu&ccedil;&atilde;o. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Segundo campo </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Digite a tradu&ccedil;&atilde;o do <guilabel>Nome</guilabel> do lan&ccedil;ador.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>Terceiro campo </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Digite a tradu&ccedil;&atilde;o do <guilabel>Nome gen&eacute;rico</guilabel> do lan&ccedil;ador. </para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>Quarto campo </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Digite a tradu&ccedil;&atilde;o dos <guilabel>Coment&aacute;rios</guilabel> para o lan&ccedil;ador. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+            <para>Em seguida, clique no bot&atilde;o <guibutton>Adicionar/Definir</guibutton>. </para>
+            <para>Para editar uma tradu&ccedil;&atilde;o, selecione-a. O texto traduzido &eacute; exibido na parte inferior da caixa de di&aacute;logo. Edite os campos desejados e clique no bot&atilde;o <guibutton>Adicionar/Definir</guibutton>.</para>
+            <para>Para excluir uma tradu&ccedil;&atilde;o, selecione-a e clique no bot&atilde;o <guibutton>Excluir</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Para criar um lan&ccedil;ador e fechar a caixa de di&aacute;logo <guilabel>Propriedades do lan&ccedil;ador</guilabel>, clique em <guibutton>OK</guibutton>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gospanel-556">
+        <title>Comandos do lan&ccedil;ador</title>
+        <para>Os tipos de comandos que voc&ecirc; pode digitar no campo <guilabel>Comando</guilabel> dependem da op&ccedil;&atilde;o selecionada na caixa combinada com menu suspenso <guilabel>Tipo</guilabel>. Se voc&ecirc; selecionar <guilabel>Aplicativo</guilabel> na caixa combinada com menu suspenso <guilabel>Tipo</guilabel>, poder&aacute; digitar um comando normal. A tabela a seguir oferece alguns exemplos de comandos e das a&ccedil;&otilde;es por eles executadas:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Exemplo de comando de aplicativo </para>
+                </entry>
+                <entry>
+                  <para>A&ccedil;&atilde;o</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>gedit</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Inicia o aplicativo de edi&ccedil;&atilde;o de texto <application>gedit </application>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>gedit /user123/loremipsum.txt</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Abre o arquivo <filename>/user123/loremipsum.txt </filename> no aplicativo <application>gedit</application> do editor de texto. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>nautilus /user123/Projects </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Abre a pasta <filename>/user123/Projects</filename> na janela do gerenciador de arquivos. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Se voc&ecirc; selecionar <guilabel>Link</guilabel> na caixa combinada com menu suspenso <guilabel>Tipo</guilabel>, poder&aacute; digitar um comando de link. A tabela a seguir oferece alguns exemplos de comandos de links e das a&ccedil;&otilde;es por eles executadas:<indexterm><primary>URIs especiais</primary><secondary>lan&ccedil;adores</secondary></indexterm></para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec0" colwidth="47.36*"/>
+            <colspec colname="colspec1" colwidth="52.64*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Exemplo de comando de link </para>
+                </entry>
+                <entry>
+                  <para>A&ccedil;&atilde;o</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="colspec0" valign="top">
+                  <para>
+                    <command>http://www.sun.com </command>
+                  </para>
+                </entry>
+                <entry colname="colspec1" valign="top">
+                  <para>Abre o site da web da Sun Microsystems no navegador padr&atilde;o.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <command>ftp://ftp.gnome.org</command>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Abre o site de FTP do GNOME no navegador padr&atilde;o. </para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>applications:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Abre o local <guilabel>Aplicativos</guilabel> na janela do gerenciador de arquivos. Clique duas vezes em um aplicativo para inici&aacute;-lo.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec0">
+                  <para>
+                    <command>preferences:///</command>
+                  </para>
+                </entry>
+                <entry colname="colspec1">
+                  <para>Abre o local <guilabel>Prefer&ecirc;ncias</guilabel> na janela do gerenciador de arquivos. Clique duas vezes em uma ferramenta de prefer&ecirc;ncias para inici&aacute;-la.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect3>
+    </sect2>
+    <sect2 id="gospanel-36">
+      <title>Para modificar as propriedades de um lan&ccedil;ador </title>
+      <indexterm>
+        <primary>lan&ccedil;adores</primary>
+        <secondary>modificando propriedades</secondary>
+      </indexterm>
+      <para>Para modificar as propriedades de um lan&ccedil;ador, siga as seguintes etapas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito sobre o lan&ccedil;ador para abrir o menu instant&acirc;neo de objeto de painel.</para>
+        </listitem>
+        <listitem>
+          <para>Escolha <guimenuitem>Propriedades</guimenuitem>. Use a caixa de di&aacute;logo <guilabel>Propriedades do lan&ccedil;ador</guilabel> para modificar as propriedades desejadas. Para obter mais informa&ccedil;&otilde;es sobre a caixa de di&aacute;logo <guilabel>Propriedades do lan&ccedil;ador</guilabel>, consulte <xref linkend="gospanel-52"/>. </para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>Fechar</guibutton> para fechar a caixa de di&aacute;logo <guilabel>Propriedades do Lan&ccedil;ador</guilabel>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-557">
+    <title>Bot&otilde;es </title>
+    <indexterm>
+      <primary>bot&otilde;es</primary>
+      <secondary>adicionando ao painel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>bot&otilde;es de a&ccedil;&atilde;o</primary>
+      <see>bot&otilde;es</see>
+    </indexterm>
+    <para>Voc&ecirc; pode adicionar bot&otilde;es aos pain&eacute;is para proporcionar acesso r&aacute;pido a a&ccedil;&otilde;es e fun&ccedil;&otilde;es mais comuns. </para>
+    <sect2 id="gospanel-554">
+      <title>Bot&atilde;o Localizar arquivos </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>Pesquisar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o Pesquisar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o Pesquisar</primary>
+      </indexterm>
+      <para>Voc&ecirc; pode usar o bot&atilde;o <guibutton>Localizar arquivos</guibutton> para abrir a caixa de di&aacute;logo <application>Pesquisar arquivos</application>. </para>
+      <para>Para adicionar um bot&atilde;o <guibutton>Localizar arquivos</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Localizar arquivos</guimenuitem></menuchoice>. Para abrir a caixa de di&aacute;logo <application>Pesquisar arquivos</application>, clique no bot&atilde;o <guibutton>Localizar arquivos</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-563">
+      <title>Bot&atilde;o For&ccedil;ar encerrar </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>For&ccedil;ar encerrar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o For&ccedil;ar encerrar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o For&ccedil;ar encerrar</primary>
+      </indexterm>
+      <indexterm>
+        <primary>encerrando aplicativos</primary>
+      </indexterm>
+      <indexterm>
+        <primary> aplicativos</primary>
+        <secondary>encerrando</secondary>
+      </indexterm>
+      <para>O bot&atilde;o <guibutton>For&ccedil;ar encerrar</guibutton> permite que voc&ecirc; selecione uma janela para encerrar um aplicativo. Este bot&atilde;o &eacute; &uacute;til se voc&ecirc; desejar encerrar um aplicativo que n&atilde;o estiver respondendo aos comandos. </para>
+      <para>Para encerrar um aplicativo, clique no bot&atilde;o <guibutton>For&ccedil;ar encerrar</guibutton> e, em seguida, clique na janela do aplicativo desejado para encerramento. Se voc&ecirc; n&atilde;o quiser encerrar o aplicativo ap&oacute;s ter clicado no bot&atilde;o <guibutton>For&ccedil;ar encerrar</guibutton>, pressione <keycap>Esc</keycap>.</para>
+    </sect2>
+    <sect2 id="gospanel-21">
+      <title>Bot&atilde;o Bloquear tela </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>Bloquear</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o Bloquear</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o Bloquear</primary>
+      </indexterm>
+      <indexterm>
+        <primary>bloqueando tela</primary>
+      </indexterm>
+      <para>O bot&atilde;o <guibutton>Bloquear tela</guibutton> bloqueia a tela e ativa o protetor de tela. Para acessar sua sess&atilde;o novamente, voc&ecirc; ter&aacute; de digitar a senha. Para bloquear corretamente a tela, voc&ecirc; deve ter um protetor de tela habilitado.</para>
+      <para>Para adicionar um bot&atilde;o <guibutton>Bloquear tela</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Bloquear tela</guimenuitem></menuchoice>. </para>
+      <para>Clique com o bot&atilde;o direito no bot&atilde;o <guibutton>Bloquear tela</guibutton> para abrir um menu de comandos relacionados com o protetor de tela. A <xref linkend="gosstartsession-TBL-83"/> descreve os comandos dispon&iacute;veis no menu.</para>
+      <table frame="topbot" id="gosstartsession-TBL-83">
+        <title>Itens do menu Bloquear tela</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="43.55*"/>
+          <colspec colname="colspec1" colwidth="56.45*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Item do menu</para>
+              </entry>
+              <entry>
+                <para>Fun&ccedil;&atilde;o </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Ativar protetor de tela</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Ativa o protetor de tela imediatamente, mas n&atilde;o bloqueia a tela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Bloquear tela</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Bloqueia a tela imediatamente. Este comando executa a mesma fun&ccedil;&atilde;o do bot&atilde;o <guibutton>Bloquear</guibutton>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Encerrar o daemon do protetor de tela</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Encerra o processo do protetor de tela. Uma vez encerrado o processo do protetor de tela, n&atilde;o &eacute; poss&iacute;vel bloquear a tela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Reiniciar o daemon do protetor de tela</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Encerra e reinicia o processo do protetor de tela. Use esse comando ap&oacute;s ter alterado a senha. Quando voc&ecirc; reiniciar o processo do protetor de tela, utilize a nova senha do protetor de tela.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>Propriedades</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>Exibe a ferramenta de prefer&ecirc;ncias <guilabel>XScreenSaver</guilabel>. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gospanel-20">
+      <title>Bot&atilde;o Logoff </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>Logoff</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o logoff</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o logoff</primary>
+      </indexterm>
+      <para>O bot&atilde;o <guibutton>Logoff</guibutton> inicia o processo de logoff de uma sess&atilde;o do Java Desktop System. </para>
+      <para>Para adicionar um bot&atilde;o <guibutton>Logoff</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Logoff</guimenuitem></menuchoice>. Para efetuar logoff da sess&atilde;o ou desligar o sistema, clique no bot&atilde;o <guibutton>Logoff</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-555">
+      <title>Bot&atilde;o Executar aplicativo </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>Executar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o Executar</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o Executar</primary>
+      </indexterm>
+      <para>Voc&ecirc; pode usar o bot&atilde;o <guibutton>Executar aplicativo</guibutton> para abrir a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>. </para>
+      <para>Para adicionar um bot&atilde;o <guibutton>Executar aplicativo</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Executar aplicativo</guimenuitem></menuchoice>. Para abrir a caixa de di&aacute;logo <guilabel>Executar aplicativo</guilabel>, clique no bot&atilde;o <guibutton>Executar aplicativo</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-553">
+      <title>Bot&atilde;o Capturar tela </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>Capturar tela</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o Capturar tela</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o Capturar tela</primary>
+      </indexterm>
+      <para>Voc&ecirc; pode usar o bot&atilde;o <guibutton>Capturar tela</guibutton> para capturar uma imagem da tela. </para>
+      <para>Para adicionar um bot&atilde;o <guibutton>Capturar tela</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Capturar tela</guimenuitem></menuchoice>. Para capturar uma imagem da tela, clique no bot&atilde;o <guibutton>Capturar tela</guibutton>.</para>
+    </sect2>
+    <sect2 id="gospanel-564">
+      <title>Bot&atilde;o Mostrar desktop </title>
+      <indexterm>
+        <primary>bot&otilde;es</primary>
+        <secondary>Mostrar desktop</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary>bot&atilde;o Mostrar desktop </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>bot&atilde;o Mostrar desktop</primary>
+      </indexterm>
+      <para>Voc&ecirc; pode usar o bot&atilde;o <guibutton>Mostrar desktop</guibutton> para minimizar todas as janelas abertas e exibir o desktop.</para>
+      <para>Para adicionar um bot&atilde;o <guibutton>Mostrar desktop</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>A&ccedil;&otilde;es</guisubmenu><guimenuitem>Mostrar desktop</guimenuitem></menuchoice>. Para minimizar todas as janelas e exibir o desktop, clique no bot&atilde;o <guibutton>Mostrar desktop</guibutton>. </para>
+    </sect2>
+    <sect2 id="gospanel-567">
+      <title>&Aacute;rea de notifica&ccedil;&atilde;o </title>
+      <indexterm>
+        <primary>aplicativos de painel</primary>
+        <secondary>&Aacute;rea de notifica&ccedil;&atilde;o </secondary>
+      </indexterm>
+      <indexterm>
+        <primary>objetos de painel</primary>
+        <secondary> &Aacute;rea de notifica&ccedil;&atilde;o</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>&Aacute;rea de notifica&ccedil;&atilde;o</primary>
+      </indexterm>
+      <para>A <application>&Aacute;rea de notifica&ccedil;&atilde;o</application> exibe &iacute;cones de v&aacute;rios aplicativos para indicar a atividade do aplicativo. Por exemplo, ao usar o aplicativo <application>CD Player</application> para reproduzir um CD, um &iacute;cone de CD &eacute; exibido na <application>&aacute;rea de notifica&ccedil;&atilde;o</application>. O gr&aacute;fico acima ilustra o &iacute;cone de CD na <application>&Aacute;rea de notifica&ccedil;&atilde;o</application>. </para>
+      <para>Para adicionar uma <application>&Aacute;rea de notifica&ccedil;&atilde;o</application> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia no painel. Selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guisubmenu>Utilit&aacute;rios</guisubmenu><guimenuitem>&Aacute;rea de notifica&ccedil;&atilde;o</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="gospanel-37">
+    <title>Menus </title>
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>adicionando ao painel</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>objetos de painel</primary>
+      <secondary>menus</secondary>
+    </indexterm>
+    <para>Voc&ecirc; pode adicionar os seguintes tipos de menu aos pain&eacute;is: </para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>Iniciar</guibutton>: Voc&ecirc; pode acessar quase todos os aplicativos padr&atilde;o, comandos e op&ccedil;&otilde;es de configura&ccedil;&atilde;o pelo bot&atilde;o <guibutton>Iniciar</guibutton>. Para adicionar um bot&atilde;o <guibutton>Iniciar</guibutton> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia do painel e selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Menu principal</guimenuitem></menuchoice>. Voc&ecirc; pode adicionar aos pain&eacute;is tantos bot&otilde;es <guibutton>Iniciar</guibutton> quanto desejar. </para>
+      </listitem>
+      <listitem>
+        <para><application>Barra de menus</application>: Voc&ecirc; pode acessar quase todos os aplicativos padr&atilde;o, comandos e op&ccedil;&otilde;es de configurac&atilde;o pelos  menus na <application>Barra de menus</application>. A <application>Barra de menus</application> cont&eacute;m o menu <guimenu>Aplicativos</guimenu> e o menu <guimenu>A&ccedil;&otilde;es</guimenu>. Para adicionar a <application>Barra de menus</application> a um painel, clique com o bot&atilde;o direito em uma &aacute;rea vazia do painel e selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Barra de menus</guimenuitem></menuchoice>. Voc&ecirc; pode adicionar aos pain&eacute;is tantos objetos <application>Barra de menus</application> quanto desejar. </para>
+      </listitem>
+      <listitem>
+        <para>Menus de sistemas: Os menus de sistemas cont&ecirc;m os aplicativos e ferramentas padr&atilde;o que voc&ecirc; pode usar no Java Desktop System. O menu <guimenu>Aplicativos</guimenu> e o menu <guimenu>A&ccedil;&otilde;es</guimenu> s&atilde;o menus de sistemas. Para adicionar um menu de sistemas a um painel, clique com o bot&atilde;o direito em um lan&ccedil;ador no menu e selecione <menuchoice><guimenu>Todo o menu</guimenu><guimenuitem>Adicionar este menu ao painel </guimenuitem></menuchoice>. </para>
+      </listitem>
+    </itemizedlist>
+    <para>Os menus que voc&ecirc; adiciona aos pain&eacute;is s&atilde;o representados por um &iacute;cone com uma seta. A seta indica que o &iacute;cone representa um menu ou gaveta. A <xref linkend="gospanel-FIG-68"/> mostra como os menus s&atilde;o exibidos nos pain&eacute;is. </para>
+    <figure id="gospanel-FIG-68">
+      <title>Objetos de menu t&iacute;picos em um painel</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/typical_menu.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Objetos de menu t&iacute;picos em um painel.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+  <sect1 id="gospanel-18">
+    <title>Gavetas </title>
+    <indexterm>
+      <primary>objetos de painel</primary>
+      <secondary>gavetas</secondary>
+      <see>gavetas</see>
+    </indexterm>
+    <para>A gaveta &eacute; uma extens&atilde;o do painel. Voc&ecirc; pode abrir e fechar a gaveta do mesmo modo que exibe e oculta um painel. A gaveta pode conter todos os objetos do painel, incluindo lan&ccedil;adores, menus, outros objetos de painel e outras gavetas. Ao abrir uma gaveta, voc&ecirc; pode usar os objetos da mesma maneira que em um painel. </para>
+    <para>A figura a seguir mostra uma gaveta aberta que cont&eacute;m dois objetos de painel. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/open_drawer.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Gaveta aberta. O contexto descreve o gr&aacute;fico. </phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para>A seta no &iacute;cone da gaveta indica que o &iacute;cone representa uma gaveta ou menu.</para>
+    <para>Voc&ecirc; pode adicionar, mover e remover objetos das gavetas do mesmo modo que em pain&eacute;is. </para>
+    <sect2 id="gospanel-42">
+      <title>Para abrir e fechar uma gaveta </title>
+      <indexterm>
+        <primary>gavetas</primary>
+        <secondary>abrindo</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>gavetas</primary>
+        <secondary>fechando</secondary>
+      </indexterm>
+      <para>Para abrir uma gaveta, clique no objeto gaveta no painel. Voc&ecirc; pode fechar a gaveta de v&aacute;rias maneiras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Clique na gaveta.</para>
+        </listitem>
+        <listitem>
+          <para>Clique no bot&atilde;o para ocultar da gaveta.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-420">
+      <title>Para adicionar uma gaveta ao painel </title>
+      <indexterm>
+        <primary>gavetas</primary>
+        <secondary>adicionando ao painel</secondary>
+      </indexterm>
+      <para>Voc&ecirc; pode adicionar uma gaveta a um painel de v&aacute;rias maneiras: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Pelo menu instant&acirc;neo do painel</para>
+          <para>Clique com o bot&atilde;o direito em uma &aacute;rea vazia do painel e selecione <menuchoice><guimenu>Adicionar ao painel</guimenu><guimenuitem>Gaveta</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Por qualquer menu</para>
+          <para>Voc&ecirc; pode adicionar um menu a um painel como um objeto gaveta.</para>
+          <para>Para adicionar um menu a um painel como gaveta, abra o menu pelo painel. Clique com o bot&atilde;o direito do mouse em qualquer lan&ccedil;ador no menu e selecione <menuchoice><guimenu> Menu inteiro</guimenu><guimenuitem>Adicione como uma gaveta ao painel</guimenuitem></menuchoice>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gospanel-54">
+      <title>Para adicionar um objeto a uma gaveta </title>
+      <indexterm>
+        <primary>gavetas</primary>
+        <secondary>adicionando objetos a</secondary>
+      </indexterm>
+      <para>Voc&ecirc; adiciona um objeto a uma gaveta do mesmo modo que a um painel. Para obter mais informa&ccedil;&otilde;es, consulte <xref linkend="gospanel-15"/>. </para>
+    </sect2>
+    <sect2 id="gospanel-550">
+      <title>Para modificar as propriedades da gaveta </title>
+      <indexterm>
+        <primary>gavetas</primary>
+        <secondary>modificando propriedades</secondary>
+      </indexterm>
+      <para>Para modificar as prefer&ecirc;ncias para todos os pain&eacute;is e gavetas, use a ferramenta de prefer&ecirc;ncias <application>Painel</application>. Por exemplo, voc&ecirc; pode selecionar v&aacute;rias op&ccedil;&otilde;es relacionadas &agrave; apar&ecirc;ncia e comportamento dos objetos em pain&eacute;is e gavetas. Voc&ecirc; tamb&eacute;m pode selecionar op&ccedil;&otilde;es relacionadas somente &agrave;s gavetas. Por exemplo, voc&ecirc; pode selecionar uma op&ccedil;&atilde;o para fechar as gavetas quando voc&ecirc; clicar em um lan&ccedil;ador em uma gaveta.</para>
+      <para>Voc&ecirc; tamb&eacute;m pode modificar outras propriedades para cada gaveta, individualmente. Voc&ecirc; pode alterar recursos para cada gaveta, como a apar&ecirc;ncia visual e se a gaveta ter&aacute; bot&otilde;es para ocultar.</para>
+      <para>Para modificar as propriedades de uma gaveta, siga as seguintes etapas: </para>
+      <orderedlist>
+        <listitem>
+          <para>Clique com o bot&atilde;o direito na gaveta e selecione <guimenuitem> Propriedades</guimenuitem> para exibir a caixa de di&aacute;logo <guilabel>Propriedades do painel</guilabel>. A caixa de di&aacute;logo exibe a guia <guilabel>Geral</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Selecione as propriedades da gaveta na caixa de di&aacute;logo. A tabela a seguir descreve os elementos da guia <guilabel>Geral</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="28.57*"/>
+              <colspec colname="colspec1" colwidth="71.43*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Elemento da caixa de di&aacute;logo</para>
+                  </entry>
+                  <entry>
+                    <para>Descri&ccedil;&atilde;o </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>Nome</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Digite um nome para o painel. Quando voc&ecirc; usa as teclas de atalho para alternar entre pain&eacute;is e a &aacute;rea de trabalho, o nome do painel &eacute; exibido. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Tamanho</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione o tamanho do painel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0">
+                    <para>
+                      <guilabel>&Iacute;cone</guilabel>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1">
+                    <para>Escolha um &iacute;cone para representar a gaveta. Clique no bot&atilde;o <guibutton>&Iacute;cone</guibutton> para exibir a caixa de di&aacute;logo de sele&ccedil;&atilde;o de &iacute;cone. Escolha um &iacute;cone na caixa de di&aacute;logo. Alternativamente, clique em <guibutton>Procurar</guibutton> para escolher um &iacute;cone em outro diret&oacute;rio. Depois de selecionar o &iacute;cone, clique em <guibutton>OK</guibutton>.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Mostrar bot&otilde;es para ocultar</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para mostrar os bot&otilde;es para ocultar no painel.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Habilitar setas no bot&atilde;o para ocultar</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Selecione essa op&ccedil;&atilde;o para exibir setas nos bot&otilde;es para ocultar, se estes estiverem habilitados.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Voc&ecirc; pode usar a se&ccedil;&atilde;o distribu&iacute;da em guias <guilabel>Plano de fundo</guilabel> para definir o plano de fundo para a gaveta. Para obter informa&ccedil;&otilde;es sobre como concluir a se&ccedil;&atilde;o distribu&iacute;da em guias <guilabel>Plano de fundo</guilabel>, consulte as etapas sobre este assunto em <xref linkend="gospanel-28"/>. Voc&ecirc; tamb&eacute;m pode arrastar uma cor ou imagem para uma gaveta para defini-la como plano de fundo da gaveta. Para obter mais informa&ccedil;&otilde;es, consulte <xref linkend="gospanel-61"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>Fechar</guibutton> para fechar a caixa de di&aacute;logo <guilabel>Propriedades do painel</guilabel>. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

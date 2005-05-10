@@ -1,0 +1,780 @@
+<chapter id="goseditmainmenu-1">
+  <title>使用菜单</title>
+  <highlights>
+    <para>本章介绍如何在 Java Desktop System 中使用菜单。</para>
+  </highlights>
+  <sect1 id="goseditmainmenu-2">
+    <title>菜单简介</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>简介</secondary>
+    </indexterm>
+    <para>您可以通过菜单访问所有 Java Desktop System 功能。您可以在面板中添加菜单并使用菜单和面板的组合来执行任务。您可以对菜单执行各种操作，例如将菜单项复制到面板。</para>
+    <para>可以在 Java Desktop System 中访问如下菜单：</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>&ldquo;启动&rdquo;</guibutton>按钮：可以从<guimenu>&ldquo;启动&rdquo;</guimenu>按钮访问<guibutton>&ldquo;应用程序&rdquo;</guibutton>菜单中的各个菜单项。面板中可以有许多<guibutton>&ldquo;启动&rdquo;</guibutton>按钮。</para>
+      </listitem>
+      <listitem>
+        <para><application>菜单栏</application>可以从<application>&ldquo;菜单栏&rdquo;</application>访问<guimenu>&ldquo;应用程序&rdquo;</guimenu>和<guimenu>&ldquo;操作&rdquo;</guimenu>菜单中的各个菜单项。面板中可以有许多<application>&ldquo;菜单栏&rdquo;</application>面板应用程序。</para>
+      </listitem>
+      <listitem>
+        <para><guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单：您可以从<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单访问许多应用程序、命令和配置选项。</para>
+      </listitem>
+      <listitem>
+        <para><guimenu>&ldquo;操作&rdquo;</guimenu>菜单：您可以从<guimenu>&ldquo;操作&rdquo;</guimenu>菜单访问使您能够执行各种任务的命令。例如，您可以启动<application>&ldquo;搜索工具&rdquo;</application>应用程序或退出 Java Desktop System。</para>
+      </listitem>
+    </itemizedlist>
+    <para>也可以右击桌面打开<guimenu>&ldquo;桌面&rdquo;</guimenu>菜单。<guimenu>&ldquo;桌面&rdquo;</guimenu>菜单使您可以执行与桌面相关的任务。</para>
+    <para>所有这些菜单为您提供了多个执行任务的方法，使您可以按照喜欢的方式工作。</para>
+  </sect1>
+  <sect1 id="goseditmainmenu-5">
+    <title>菜单功能</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>功能</secondary>
+    </indexterm>
+    <para>菜单可以包含以下菜单项：</para>
+    <itemizedlist>
+      <listitem>
+        <para>子菜单</para>
+      </listitem>
+      <listitem>
+        <para>启动器或菜单项</para>
+      </listitem>
+    </itemizedlist>
+    <para>菜单中菜单项右侧的箭头指示该菜单是一个子菜单。当您指向子菜单时，该子菜单会打开。您可以从子菜单中选择菜单项。</para>
+    <para>当您选择启动器时，启动器会启动一个应用程序或运行一条命令。您也可右击启动器来打开一个弹出菜单。弹出菜单使您可以向面板添加项目和执行其他任务。有关弹出菜单的更多信息，请参阅下一部分。</para>
+    <para>您可以更改会话的主题，从而更改菜单的外观。要更改主题，请使用<application>主题</application>首选项工具。</para>
+    <sect2 id="goseditmainmenu-11">
+      <title>菜单项弹出菜单</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>菜单项弹出菜单</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>菜单项弹出菜单</primary>
+        <secondary> 描述</secondary>
+      </indexterm>
+      <para>菜单上的菜单项具有关联的弹出菜单，该弹出菜单使您可以执行与该菜单项相关的任务。当右击菜单的菜单项时，系统会打开该项的弹出菜单。弹出菜单还包含使您可以执行与菜单相关的任务的子菜单。</para>
+      <para>您可以使用菜单项弹出菜单执行以下任务：</para>
+      <itemizedlist>
+        <listitem>
+          <para>将菜单项作为启动器添加到面板中。</para>
+        </listitem>
+        <listitem>
+          <para>从菜单中删除菜单项。</para>
+        </listitem>
+        <listitem>
+          <para>在对话框中用菜单项命令打开<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框。</para>
+        </listitem>
+        <listitem>
+          <para>向面板添加菜单。您可以将菜单作为菜单对象或作为抽屉对象进行添加。</para>
+        </listitem>
+        <listitem>
+          <para>向菜单添加新菜单项。</para>
+        </listitem>
+        <listitem>
+          <para>更改子菜单和菜单项的属性。</para>
+        </listitem>
+      </itemizedlist>
+      <para><xref linkend="goseditmainmenu-FIG-39"/> 显示了该弹出菜单。</para>
+      <figure id="goseditmainmenu-FIG-39">
+        <title>菜单项弹出菜单<indexterm><primary>菜单项弹出菜单</primary><secondary>图解</secondary></indexterm></title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/launcher_popup.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>菜单项弹出菜单。文中对该图形进行了说明。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para><xref linkend="goseditmainmenu-TBL-30"/> 说明菜单项弹出菜单。<indexterm><primary>启动器</primary><secondary>添加到面板</secondary></indexterm><indexterm><primary>菜单</primary><secondary>添加到面板</secondary></indexterm></para>
+      <table frame="topbot" id="goseditmainmenu-TBL-30">
+        <title>菜单项弹出菜单</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="42.71*"/>
+          <colspec colname="colspec1" colwidth="57.29*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>项目</para>
+              </entry>
+              <entry>
+                <para>说明</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>将此启动器添加到面板上</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>向面板中添加启动器，以便可以从该面板中打开菜单。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>删除此项</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>从菜单中删除该启动器。</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>
+                  <guimenuitem>放置到运行对话框中</guimenuitem>
+                </para>
+              </entry>
+              <entry valign="top">
+                <para>显示<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框，启动器的<guilabel>&ldquo;命令&rdquo;</guilabel>字段中的命令显示在<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框的&ldquo;命令&rdquo;字段中。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>关于<replaceable>应用程序名称</replaceable>的帮助</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>打开该应用程序的联机帮助。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <guimenuitem>属性</guimenuitem>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>显示一个对话框，您可以在其中编辑该启动器的属性。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <menuchoice>
+                    <guimenu>&ldquo;整个菜单&rdquo;</guimenu>
+                    <guimenuitem>&ldquo;作为抽屉添加到面板&rdquo;</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>将子菜单作为抽屉添加到面板中，以便从该面板中打开该菜单。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <menuchoice>
+                    <guimenu>&ldquo;整个菜单&rdquo;</guimenu>
+                    <guimenuitem>&ldquo;将此项作为菜单添加到面板&rdquo;</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>将子菜单作为菜单对象添加面板，以便从该面板中打开该菜单。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>&ldquo;整个菜单&rdquo;</guimenu>
+                    <guimenuitem>&ldquo;向此菜单中添加新菜单项&rdquo;</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>使您可以将菜单项添加到子菜单。</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <menuchoice>
+                    <guimenu>&ldquo;整个菜单&rdquo;</guimenu>
+                    <guimenuitem>&ldquo;属性&rdquo;</guimenuitem>
+                  </menuchoice>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>显示一个对话框，您可以在其中编辑该子菜单的属性。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-8">
+    <title>&ldquo;应用程序&rdquo;菜单</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>&ldquo;应用程序&rdquo;菜单</secondary>
+    </indexterm>
+    <para><guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单包含以分层结构组织的子菜单，您可以从这些子菜单中启动标准 Java Desktop System 应用程序和首选项工具。</para>
+    <para>您可以从下列位置访问<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单：</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>&ldquo;启动&rdquo;</guibutton>按钮</para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>菜单栏</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1 id="goseditmainmenu-51">
+    <title>操作菜单</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>&ldquo;操作&rdquo;菜单</secondary>
+    </indexterm>
+    <para><guimenu>&ldquo;操作&rdquo;</guimenu>菜单包含的命令使您可以执行 Java Desktop System 的各种任务。<xref linkend="goseditmainmenu-TBL-70"/> 介绍<guimenu>&ldquo;操作&rdquo;</guimenu>菜单中的命令。</para>
+    <table frame="topbot" id="goseditmainmenu-TBL-70">
+      <title>&ldquo;操作&rdquo;菜单命令</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="38.48*"/>
+        <colspec colname="colspec1" colwidth="61.52*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>菜单项</para>
+            </entry>
+            <entry>
+              <para>功能</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>运行应用程序</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>打开<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框。 使用<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框来运行命令。有关的更多信息，请参阅 <xref linkend="gospanel-23"/>。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>打开最近保存的文件</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>显示最近保存的 10 个文件的子菜单。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>制作屏幕抓图</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>制作屏幕的屏幕抓图，并打开<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0">
+              <para>
+                <guimenuitem>查找文件</guimenuitem>
+              </para>
+            </entry>
+            <entry colname="colspec1">
+              <para>启动<application>&ldquo;搜索工具&rdquo;</application>应用程序。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>锁住屏幕</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>锁住您的屏幕。</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenuitem>注销</guimenuitem>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>退出当前会话。</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>您可以从下列位置访问<guimenu>&ldquo;操作&rdquo;</guimenu>菜单项：</para>
+    <itemizedlist>
+      <listitem>
+        <para><guibutton>&ldquo;启动&rdquo;</guibutton>按钮</para>
+      </listitem>
+      <listitem>
+        <para>
+          <application>菜单栏</application>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gospanel-23">
+      <title>使用&ldquo;运行应用程序&rdquo;对话框</title>
+      <indexterm>
+        <primary>运行应用程序对话框, 使用</primary>
+      </indexterm>
+      <para><guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框使您可以访问命令行。当您在<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框中运行命令时，您无法接收该命令的输出。</para>
+      <para>要从命令行运行命令，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>显示<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框。您可以通过以下任一方法显示<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框：<itemizedlist><listitem><para>从任何面板</para><para>将<guibutton>&ldquo;运行&rdquo;</guibutton>按钮添加到面板中。右击该面板，然后选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;运行&rdquo;</guimenuitem></menuchoice>。单击<guibutton>&ldquo;运行&rdquo;</guibutton>按钮。</para></listitem><listitem><para>从<guibutton>&ldquo;启动&rdquo;</guibutton>按钮</para><para>单击<guibutton>&ldquo;启动&rdquo;</guibutton> ，然后选择<guimenuitem>&ldquo;运行应用程序&rdquo;</guimenuitem>。</para></listitem><listitem><para>从<application>菜单栏</application></para><para>选择<menuchoice><guimenu>&ldquo;操作&rdquo;</guimenu><guimenuitem>&ldquo;运行应用程序&rdquo;</guimenuitem></menuchoice>。</para></listitem><listitem><para>使用快捷键</para><para>显示<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框的默认快捷键是 <keycombo><keycap>Super</keycap><keycap>R</keycap></keycombo>。您可以在<application>键盘快捷键</application>首选项工具中更改显示<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框的快捷键。</para></listitem><listitem><para>从菜单项弹出菜单中</para><para>在菜单中右击菜单项，然后从弹出菜单中选择<guilabel>&ldquo;放置到运行对话框中&rdquo;</guilabel>。<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框即可打开，并在&ldquo;命令&rdquo;字段中显示菜单的命令。</para></listitem></itemizedlist></para>
+        </listitem>
+        <listitem>
+          <para>在空白字段中输入要运行的命令。或者，如果要选择您以前运行过的命令，请单击&ldquo;命令&rdquo;字段旁的向下箭头按钮，然后选择要运行的命令。</para>
+          <para>或者，选择<guibutton>&ldquo;显示已知应用程序列表&rdquo;</guibutton>选项显示可用应用程序的列表。</para>
+          <para>您也可以使用<guibutton>&ldquo;与文件一起运行&rdquo;</guibutton>按钮选择要追加到命令行的文件。例如，您可以输入 <application>emacs</application> 作为命令，然后选择要编辑的文件。</para>
+          <para>选择<guilabel>&ldquo;在终端中运行&rdquo;</guilabel>选项可以在终端窗口中运行应用程序或命令。对于并不创建窗口以在其中运行的应用程序或命令，请选择此选项。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guilabel>&ldquo;运行应用程序&rdquo;</guilabel>对话框中的<guibutton>&ldquo;运行&rdquo;</guibutton>按钮。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-53">
+      <title>制作屏幕抓图</title>
+      <indexterm>
+        <primary>屏幕抓图，制作</primary>
+      </indexterm>
+      <para>您可以通过以下任一方法制作屏幕抓图：</para>
+      <itemizedlist>
+        <listitem>
+          <para>从任何面板</para>
+          <orderedlist>
+            <listitem>
+              <para>将<guibutton>&ldquo;屏幕抓图&rdquo;</guibutton>按钮添加到面板中。</para>
+            </listitem>
+            <listitem>
+              <para>右击面板，然后选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guisubmenu>&ldquo;操作&rdquo;</guisubmenu><guimenuitem>&ldquo;屏幕抓图&rdquo;</guimenuitem></menuchoice>。</para>
+            </listitem>
+            <listitem>
+              <para>单击<guibutton>&ldquo;屏幕抓图&rdquo;</guibutton>按钮制作整个屏幕的屏幕抓图。</para>
+            </listitem>
+            <listitem>
+              <para>使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+        <listitem>
+          <para>使用快捷键</para>
+          <para>要制作屏幕抓图，可以使用以下的快捷键：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>默认快捷键</para>
+                  </entry>
+                  <entry>
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <keycap>Print Screen</keycap>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>制作整个屏幕的屏幕抓图，并显示<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <keycombo>
+                        <keycap>Alt</keycap>
+                        <keycap> Print Screen</keycap>
+                      </keycombo>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>制作鼠标所指向窗口的屏幕抓图，并显示<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          <para>您可以使用<application>&ldquo;键盘快捷键&rdquo;</application>首选项工具来修改默认的快捷键。</para>
+        </listitem>
+        <listitem>
+          <para>从<application>菜单栏</application></para>
+          <para>要制作整个屏幕的屏幕抓图，请选择<menuchoice><guimenu>&ldquo;操作&rdquo;</guimenu><guimenuitem>&ldquo;制作屏幕抓图&rdquo;</guimenuitem></menuchoice>。即可显示<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。要保存屏幕抓图，请选择<guilabel>&ldquo;将屏幕抓图保存到文件&rdquo;</guilabel>选项。在下拉组合框中输入屏幕抓图的路径和文件名。或者，如果要将屏幕抓图保存到其他的目录，请单击<guibutton>&ldquo;浏览&rdquo;</guibutton>。当您选择目录后，请单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+          <para>您也可以将屏幕抓图保存到桌面上。要将屏幕抓图保存到桌面上，请选择<guilabel>&ldquo;将屏幕抓图保存到桌面&rdquo;</guilabel>选项。</para>
+        </listitem>
+        <listitem>
+          <para>使用命令</para>
+          <para>您可以使用 <command>gnome-panel-screenshot</command> 命令制作屏幕抓图。<command>gnome-panel-screenshot</command> 命令会制作整个屏幕的抓图，并显示<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+          <para>您也可在 <command>gnome-panel-screenshot</command> 命令中使用如下所示的选项：</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colname="colspec0" colwidth="35.67*"/>
+              <colspec colname="colspec1" colwidth="64.33*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>选项</para>
+                  </entry>
+                  <entry>
+                    <para>功能</para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--window</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>制作聚焦窗口的屏幕抓图，并显示<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--delay=<replaceable> 秒数</replaceable></command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>在指定的秒数后制作屏幕抓图，并显示<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框。使用<guilabel>&ldquo;保存屏幕抓图&rdquo;</guilabel>对话框保存屏幕抓图。</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="colspec0" valign="top">
+                    <para>
+                      <command>--help</command>
+                    </para>
+                  </entry>
+                  <entry colname="colspec1" valign="top">
+                    <para>显示该命令的选项。</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-7">
+    <title>&ldquo;启动&rdquo;按钮</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>启动</secondary>
+      <see>启动菜单</see>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/launch_icon.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>&ldquo;启动&rdquo;按钮</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>&ldquo;启动&rdquo;</guibutton>按钮提供对<guimenu>&ldquo;应用程序&rdquo;</guimenu> 菜单和<guimenu>&ldquo;操作&rdquo;</guimenu>菜单中的许多菜单项的访问。您可以从<guibutton>&ldquo;启动&rdquo;</guibutton>按钮访问几乎所有标准应用程序、命令和配置选项。</para>
+    <para>您可以将<guibutton>&ldquo;启动&rdquo;</guibutton>按钮添加到面板中。</para>
+    <sect2 id="goseditmainmenu-15">
+      <title>要访问&ldquo;启动&rdquo;按钮</title>
+      <indexterm>
+        <primary>启动</primary>
+        <secondary>打开</secondary>
+      </indexterm>
+      <para>您可以使用以下方法访问<guibutton>&ldquo;启动&rdquo;</guibutton>按钮：</para>
+      <itemizedlist>
+        <listitem>
+          <para>从带有<guibutton>&ldquo;启动&rdquo;</guibutton>按钮的面板。</para>
+          <para>单击<guimenu>&ldquo;启动&rdquo;</guimenu>。</para>
+        </listitem>
+        <listitem>
+          <para>使用快捷键。</para>
+          <para>可以使用快捷键打开<guibutton>&ldquo;启动&rdquo;</guibutton>。</para>
+          <para>打开<guibutton>&ldquo;启动&rdquo;</guibutton>的默认快捷键是<keycombo><keycap> Ctrl</keycap><keycap>Esc</keycap></keycombo>。要更改打开<guibutton>&ldquo;启动&rdquo;</guibutton>的快捷键，请使用<application>&ldquo;键盘快捷键&rdquo;</application>首选项工具。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-29">
+      <title>向面板添加&ldquo;启动&rdquo;按钮</title>
+      <indexterm>
+        <primary>&ldquo;启动&rdquo;菜单</primary>
+        <secondary>添加到面板</secondary>
+      </indexterm>
+      <para>您可以根据需要向面板添加任意数量的<guibutton>&ldquo;启动&rdquo;</guibutton>按钮。要向面板添加<guibutton>&ldquo;启动&rdquo;</guibutton>按钮，请右击面板上的任意空白区域。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;主菜单&rdquo;</guimenuitem></menuchoice>。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-65">
+    <title>菜单栏</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>菜单栏</secondary>
+      <see>菜单栏</see>
+    </indexterm>
+    <indexterm>
+      <primary>菜单栏</primary>
+      <secondary>介绍</secondary>
+    </indexterm>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/menu_bar_applet.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>&ldquo;菜单栏&rdquo;面板应用程序。菜单：应用程序和操作。</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    <para><application>菜单栏</application>提供对<guimenu>&ldquo;应用程序&rdquo;</guimenu>和<guimenu>&ldquo;操作&rdquo;</guimenu>菜单的访问途径。您可以从<application>菜单栏</application>访问几乎所有标准应用程序、命令和配置选项。</para>
+    <sect2 id="goseditmainmenu-66">
+      <title>向面板添加&ldquo;菜单栏&rdquo; </title>
+      <indexterm>
+        <primary>菜单栏</primary>
+        <secondary>添加到面板</secondary>
+      </indexterm>
+      <para>您可以根据需要向面板添加任意数量的<application>&ldquo;菜单栏&rdquo;</application>面板应用程序。要向面板添加<application>&ldquo;菜单栏&rdquo;</application>，请右击面板上的空白处。选择<menuchoice><guimenu>&ldquo;添加到面板&rdquo;</guimenu><guimenuitem>&ldquo;菜单栏&rdquo;</guimenuitem></menuchoice>。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="goseditmainmenu-54">
+    <title>定制菜单</title>
+    <indexterm>
+      <primary>菜单</primary>
+      <secondary>定制</secondary>
+    </indexterm>
+    <para>可以修改以下菜单的内容：</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单</para>
+      </listitem>
+      <listitem>
+        <para>
+          <guimenu>首选项菜单</guimenu>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>使用下列 Java Desktop System 组件可以定制菜单：</para>
+    <itemizedlist>
+      <listitem>
+        <para>面板上的菜单</para>
+      </listitem>
+      <listitem>
+        <para>文件管理器</para>
+      </listitem>
+    </itemizedlist>
+    <para>在使用面板定制菜单时，可以使用菜单项弹出菜单。有关的更多信息，请参阅 <xref linkend="goseditmainmenu-11"/>。</para>
+    <para>使用文件管理器定制自己的菜单时，必须访问文件管理器中的<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单或<guimenu>&ldquo;首选项&rdquo;</guimenu>菜单。要访问<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单或<guimenu>&ldquo;首选项&rdquo;</guimenu>菜单，请打开一个文件管理器窗口。</para>
+    <para>要访问文件管理器中的菜单，请在位置栏的字段中输入以下 URI 之一：</para>
+    <informaltable frame="topbot">
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colwidth="50*"/>
+        <colspec colwidth="50*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>菜单</para>
+            </entry>
+            <entry>
+              <para>输入此 URI</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单</para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>applications:///</command>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>
+                <guimenu>首选项菜单</guimenu>
+              </para>
+            </entry>
+            <entry valign="top">
+              <para>
+                <command>preferences:///</command>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+    <sect2 id="goseditmainmenu-61">
+      <title>添加菜单</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>添加</secondary>
+      </indexterm>
+      <para>要添加菜单，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>在文件管理器窗口中，转到要将菜单添加到的位置。例如，如果要向<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单中添加一个菜单，请在位置栏的字段中输入 <command>applications:///</command>。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>&ldquo;文件&rdquo;</guimenu><guimenuitem>&ldquo;创建文件夹&rdquo;</guimenuitem></menuchoice>。系统会在视图窗格中添加一个未命名的文件夹。该文件夹的名称已被选中。</para>
+        </listitem>
+        <listitem>
+          <para>键入该文件夹的名称，然后按下<keycap>回车</keycap>键。</para>
+        </listitem>
+      </orderedlist>
+      <para>在您下次注销然后再次登录后，该菜单就会出现在指定的位置。</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-55">
+      <title>将启动器添加到菜单</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>将启动器添加到</secondary>
+      </indexterm>
+      <para>要将启动器添加到菜单，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>在菜单中右击您想将启动器添加到的菜单项。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>&ldquo;整个菜单&rdquo;</guimenu><guimenuitem>&ldquo;向此菜单中添加新菜单项&rdquo;</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>&ldquo;创建启动器&rdquo;</guilabel>对话框中输入该启动器的属性。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-63">
+      <title>将启动器添加到空白菜单</title>
+      <para>要将启动器添加到空白菜单，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>在文件管理器窗口中，转到要添加启动器的目标菜单。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>&ldquo;文件&rdquo;</guimenu><guimenuitem>&ldquo;创建启动器&rdquo;</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>&ldquo;创建启动器&rdquo;</guilabel>对话框中输入该启动器的属性。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-56">
+      <title>将启动器复制到菜单</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>将启动器复制到</secondary>
+      </indexterm>
+      <para>要将现有启动器复制到菜单中，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>在文件管理器窗口中，转到要从中复制启动器的位置。例如，如果要从<guimenu>&ldquo;应用程序&rdquo;</guimenu>菜单复制一个启动器，请在位置栏的字段中输入 <command>applications:/// </command>。</para>
+        </listitem>
+        <listitem>
+          <para>选择您想复制的启动器，然后选择<menuchoice><guimenu>&ldquo;编辑&rdquo;</guimenu><guimenuitem>&ldquo;复制文件&rdquo;</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>在文件管理器窗口中，转到要复制启动器的目标位置。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>&ldquo;编辑&rdquo;</guimenu><guimenuitem>&ldquo;粘贴文件&rdquo;</guimenuitem></menuchoice>。该启动器就添加到了新位置。</para>
+        </listitem>
+      </orderedlist>
+      <para>或者，您可以将启动器从一位置拖到其他位置。</para>
+      <para>在您下次注销然后再次登录后，该启动器就会位于新菜单位置。</para>
+    </sect2>
+    <sect2 id="goseditmainmenu-62">
+      <title>编辑菜单属性</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>编辑属性</secondary>
+      </indexterm>
+      <para>要编辑菜单的属性，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>在菜单中右击想编辑的任意菜单项。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>&ldquo;整个菜单&rdquo;</guimenu><guimenuitem>&ldquo;属性&rdquo;</guimenuitem></menuchoice>。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>&ldquo;启动器属性&rdquo;</guilabel>对话框中修改该菜单的属性。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-57">
+      <title>编辑菜单项</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>编辑菜单项</secondary>
+      </indexterm>
+      <para>要编辑菜单项，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击要编辑的菜单项。</para>
+        </listitem>
+        <listitem>
+          <para>选择<guimenuitem>属性</guimenuitem>。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>&ldquo;启动器属性&rdquo;</guilabel>对话框中修改该启动器的属性。</para>
+        </listitem>
+        <listitem>
+          <para>单击<guibutton>&ldquo;确定&rdquo;</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="goseditmainmenu-58">
+      <title>从菜单删除菜单项</title>
+      <indexterm>
+        <primary>菜单</primary>
+        <secondary>删除菜单项</secondary>
+      </indexterm>
+      <para>要从菜单删除菜单项，请使用菜单项弹出菜单。要从菜单删除菜单项，请执行以下步骤：</para>
+      <orderedlist>
+        <listitem>
+          <para>右击您想删除的的菜单项。</para>
+        </listitem>
+        <listitem>
+          <para>选择<guimenuitem>&ldquo;删除此菜单项&rdquo;</guimenuitem>。</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+  </sect1>
+</chapter>

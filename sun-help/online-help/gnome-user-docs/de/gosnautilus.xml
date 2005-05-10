@@ -1,0 +1,3141 @@
+<chapter id="gosnautilus-1">
+  <title>Arbeiten mit dem Dateimanager</title>
+  <highlights>
+    <para>Der Dateimanager von Java Desktop System hei&szlig;t <application>Nautilus</application>. Er bietet eine integrierte Schnittstelle zu Ihren
+Dateien und Anwendungen.</para>
+    <para>In diesem Kapitel wird beschrieben,  wie Sie mit dem Dateimanager arbeiten
+k&ouml;nnen. </para>
+  </highlights>
+  <sect1 id="gosnautilus-21">
+    <title>Einf&uuml;hrung in den Dateimanager</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>Einf&uuml;hrung</secondary>
+    </indexterm>
+    <para>Der Dateimanager stellt einen integrierten Ausgangspunkt
+f&uuml;r den Zugriff auf Ihre Dateien und Anwendungen dar. Im Dateimanager
+k&ouml;nnen Sie unter anderem: </para>
+    <itemizedlist>
+      <listitem>
+        <para>Ordner und Dokumente erstellen.</para>
+      </listitem>
+      <listitem>
+        <para>Dateien und Ordner anzeigen</para>
+      </listitem>
+      <listitem>
+        <para>Dateien und Ordner verwalten</para>
+      </listitem>
+      <listitem>
+        <para>Dateien und Ordner anpassen</para>
+      </listitem>
+      <listitem>
+        <para>URI-Sonderadressen &ouml;ffnen,</para>
+      </listitem>
+      <listitem>
+        <para>Daten auf CD schreiben</para>
+      </listitem>
+    </itemizedlist>
+    <para>Der Dateimanager verwaltet auch den Desktop-Hintergrund. Der Desktop-Hintergrund
+liegt hinter allen anderen Komponenten des sichtbaren Desktops. Er ist eine
+aktive Komponente der Benutzeroberfl&auml;che. </para>
+    <para>Zum &Ouml;ffnen eines Dateimanager-Fensters doppelklicken Sie einfach
+auf das Objekt <guilabel>Dokumente</guilabel> auf dem Desktop-Hintergrund.
+Im Ansichtsbereich des daraufhin erscheinenden Dateimanager-Fensters wird
+nun der Inhalt Ihres Standardspeicherorts f&uuml;r Dokumente angezeigt.</para>
+  </sect1>
+  <sect1 id="gosnautilus-210">
+    <title>Dateimanager-Fenster</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>Fenster</secondary>
+    </indexterm>
+    <para>Mit Dateimanager-Fenstern k&ouml;nnen Sie Ihre Dateien und Ordner anzeigen
+und verwalten. <xref linkend="gosnautilus-FIG-1"/> zeigt ein Dateimanager-Fenster,
+in dem der Inhalt eines Ordners angezeigt wird.</para>
+    <figure id="gosnautilus-FIG-1">
+      <title>Inhalt eines Ordners in einem Dateimanager-Fenster<indexterm><primary>Dateimanager</primary><secondary>Symbolansicht</secondary><tertiary>Illustration</tertiary></indexterm></title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_iconview_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Ein Ordner in einem Dateimanager-Fenster Menüleiste, Symbolleiste, Verzeichnisleiste, Zoom-Schaltflächen, Seitenteilfenster, Ansichtsteilfenster. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>Der Inhalt eines Dateimanager-Fensters ist in <xref linkend="gosnautilus-TBL-83"/> beschrieben.</para>
+    <table frame="topbot" id="gosnautilus-TBL-83">
+      <title>Komponenten von Dateimanager-Fenstern</title>
+      <tgroup cols="2" colsep="0" rowsep="0">
+        <colspec colname="colspec0" colwidth="29.39*"/>
+        <colspec colname="colspec1" colwidth="70.61*"/>
+        <thead>
+          <row rowsep="1">
+            <entry>
+              <para>Komponente</para>
+            </entry>
+            <entry>
+              <para>Beschreibung </para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Men&uuml;leiste </para>
+            </entry>
+            <entry valign="top">
+              <para>Enth&auml;lt Men&uuml;s, mit denen Sie verschiedene Aufgaben im Dateimanager ausf&uuml;hren k&ouml;nnen.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Symbolleiste </para>
+            </entry>
+            <entry valign="top">
+              <para>Enth&auml;lt Schaltfl&auml;chen, mit denen Sie verschiedene Aufgaben im Dateimanager ausf&uuml;hren k&ouml;nnen.</para>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Adressleiste</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Enth&auml;lt die folgenden Elemente: </para>
+              <itemizedlist>
+                <listitem>
+                  <para>Feld <guilabel>Adresse</guilabel> oder <guilabel>Gehe zu</guilabel>: Erm&ouml;glicht die Angabe einer Datei, eines Ordners oder eines URI, die bzw. den Sie anzeigen m&ouml;chten. </para>
+                </listitem>
+                <listitem>
+                  <para><guimenu>Zoom</guimenu>-Schaltfl&auml;chen: Erm&ouml;glicht das &Auml;ndern der Gr&ouml;&szlig;e von Objekten im Ansichtsteilfenster.</para>
+                </listitem>
+                <listitem>
+                  <para>Dropdown-Liste <guilabel>Anzeigen als</guilabel>: Erm&ouml;glicht die Auswahl der Anzeigemethode f&uuml;r Objekte im Ansichtsteilfenster.</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Seitenteilfenster </para>
+            </entry>
+            <entry valign="top">
+              <para>Besitzt folgende Funktionen:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Zeigt Informationen &uuml;ber die aktuelle Datei oder den aktuellen Ordner an. </para>
+                </listitem>
+                <listitem>
+                  <para>Erm&ouml;glicht die Navigation durch die Dateien. </para>
+                </listitem>
+              </itemizedlist>
+              <para>Das Seitenfenster enth&auml;lt ein Dropdown-Listenfeld, mit dem Sie seinen Inhalt anpassen k&ouml;nnen. Folgende Optionen stehen zur Auswahl:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <guilabel>Informationen</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Embleme</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Protokoll</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Notizen</guilabel>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <guilabel>Baum</guilabel>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para>Zum Einblenden des Seitenteilfensters w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Seitenteilfenster</guimenuitem></menuchoice>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Ansichtsteilfenster </para>
+            </entry>
+            <entry valign="top">
+              <para>Zeigt den Inhalt folgender Objekte an:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Bestimmte Arten von Dateien</para>
+                </listitem>
+                <listitem>
+                  <para>Ordner</para>
+                </listitem>
+                <listitem>
+                  <para>FTP-Sites</para>
+                </listitem>
+                <listitem>
+                  <para>URI-Sonderadressen</para>
+                </listitem>
+              </itemizedlist>
+            </entry>
+          </row>
+          <row>
+            <entry colname="colspec0" valign="top">
+              <para>Statusleiste</para>
+            </entry>
+            <entry colname="colspec1" valign="top">
+              <para>Zeigt Statusinformationen an. </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>In Dateimanager-Fenstern steht Ihnen auch ein Popup-Men&uuml; zur Verf&uuml;gung.
+Um es zu &ouml;ffnen, klicken Sie in einem Dateimanager-Fenster mit der rechten
+Maustaste. Die in diesem Men&uuml; erscheinenden Funktionen h&auml;ngen davon
+ab, auf welche Stelle im Fenster klicken. Wenn Sie beispielsweise auf eine
+Datei oder einen Ordner klicken, k&ouml;nnen Sie die mit der Datei oder dem
+Ordner verkn&uuml;pften Men&uuml;punkte ausw&auml;hlen. Wenn Sie auf den Hintergrund
+eines Ansichtsteilfensters klicken, k&ouml;nnen Sie die mit der Anzeige der
+Objekte im Ansichtsteilfenster verkn&uuml;pften Men&uuml;punkte ausw&auml;hlen.</para>
+    <sect2 id="gosnautilus-53">
+      <title>Ansichtsteilfenster</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Ansichtsteilfenster</secondary>
+        <see>Ansichtsteilfenster</see>
+      </indexterm>
+      <indexterm>
+        <primary>Ansichtsteilfenster</primary>
+        <secondary> Einf&uuml;hrung</secondary>
+      </indexterm>
+      <para>Das Ansichtsteilfenster
+kann den Inhalt der folgenden Objekte anzeigen:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Bestimmte Arten von Dateien</para>
+        </listitem>
+        <listitem>
+          <para>Ordner</para>
+        </listitem>
+        <listitem>
+          <para>FTP-Sites</para>
+        </listitem>
+        <listitem>
+          <para>URI-Sonderadressen</para>
+        </listitem>
+      </itemizedlist>
+      <para><indexterm><primary>Viewer-Komponenten</primary></indexterm>Der Dateimanager
+enth&auml;lt <firstterm>Viewer-Komponenten</firstterm>, mit denen Sie bestimmte
+Dateitypen im Ansichtsteilfenster anzeigen k&ouml;nnen. So k&ouml;nnen Sie
+beispielsweise Textdateien mit einem Text-Viewer im Ansichtsteilfenster anzeigen.</para>
+      <para>Das Anzeigen einer Datei im Ansichtsteilfenster bietet die folgenden
+Vorteile: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Es werden weniger Systemressourcen als durch das Starten einer
+Anwendung beansprucht. </para>
+        </listitem>
+        <listitem>
+          <para>Es wird weniger Zeit als f&uuml;r das Start einer Anwendung
+ben&ouml;tigt.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Das Bearbeiten einer Datei ist im Ansichtsteilfenster jedoch nicht m&ouml;glich.</para>
+      <para>Der Dateimanager enth&auml;lt auch <firstterm>Ansichten</firstterm>,
+mit denen Sie den Inhalt von Ordnern auf verschiedene Weise anzeigen k&ouml;nnen.
+Dazu z&auml;hlen beispielsweise: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Symbolansicht: Zeigt die Objekte im Ordner als Symbole an. </para>
+        </listitem>
+        <listitem>
+          <para>Listenansicht: Zeigt die Objekte im Ordner als Liste an. </para>
+        </listitem>
+        <listitem>
+          <para>Audio-Ansicht: Zeigt ausschlie&szlig;lich die im Ordner enthaltenen
+Audio-Objekte an.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Verwenden Sie das Men&uuml; <guimenu>Ansicht</guimenu>, um die Methode
+f&uuml;r die Ordneranzeige auszuw&auml;hlen. Weitere Informationen zu Ansichten
+finden Sie im Abschnitt <xref linkend="gosnautilus-7"/>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-540">
+      <title>Seitenteilfenster</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Seitenteilfenster</secondary>
+        <tertiary>Einf&uuml;hrung</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>Seitenteilfenster </primary>
+        <see>Dateimanager</see>
+      </indexterm>
+      <para>Zum Einblenden des Seitenteilfensters
+w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Seitenteilfenster</guimenuitem></menuchoice>. Sie k&ouml;nnen festlegen, welche
+Informationen im Seitenteilfenster angezeigt werden sollen. Hierf&uuml;r stehen
+Ihnen folgende Optionen zur Verf&uuml;gung:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Informationen</guilabel>
+          </para>
+          <para>Zeigt ein Symbol
+an, das die aktuelle Datei oder den aktuellen Ordner repr&auml;sentiert. Dar&uuml;ber
+hinaus werden Informationen zu der jeweiligen Datei bzw. dem Ordner angezeigt.
+Wenn eine Datei im Ansichtsteilfenster angezeigt wird, erscheinen im Seitenteilfenster
+Schaltfl&auml;chen. Mit diesen Schaltfl&auml;chen k&ouml;nnen Sie andere Schritte
+als die Standardfunktion an einer Datei ausf&uuml;hren.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Embleme</guilabel>
+          </para>
+          <para>Enth&auml;lt Embleme,
+mit denen Sie eine Datei bzw. einen Ordner versehen k&ouml;nnen. </para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Protokoll</guilabel>
+          </para>
+          <para>Enth&auml;lt eine
+Liste der zuletzt angezeigten Dateien, Ordner, FTP-Sites und URIs.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Notizen</guilabel>
+          </para>
+          <para>Hier k&ouml;nnen
+Sie Anmerkungen zu Dateien oder Ordnern hinzuf&uuml;gen.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Baum</guilabel>
+          </para>
+          <para>Zeigt das Dateisystem
+in einer hierarchischen Struktur an. Mit dem <guilabel>Baum</guilabel> k&ouml;nnen
+Sie durch Ihre Dateien navigieren.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Um das Seitenteilfenster zu schlie&szlig;en, klicken Sie auf das <guibutton>X</guibutton>-Symbol in seiner oberen rechten Ecke.</para>
+    </sect2>
+    <sect2 id="gosnautilus-550">
+      <title>Symbole und Embleme</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Symbole</secondary>
+        <tertiary> Einf&uuml;hrung</tertiary>
+      </indexterm>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Embleme</secondary>
+        <see>Embleme</see>
+      </indexterm>
+      <indexterm>
+        <primary> Embleme</primary>
+        <secondary>Einf&uuml;hrung</secondary>
+      </indexterm>
+      <para>In der Symbolansicht zeigt der Dateimanager Ihre Dateien und Ordner in Form
+von Symbolen an. Sie k&ouml;nnen den Datei- und Ordnersymbolen Embleme zuweisen.
+Ein Emblem ist ein kleines Symbol, das Sie einem Objekt zur visuellen Hervorhebung
+hinzuf&uuml;gen k&ouml;nnen. Um beispielsweise eine Datei als wichtig zu markieren,
+k&ouml;nnen Sie dem Dateisymbol das Emblem <guilabel>Wichtig</guilabel> hinzuf&uuml;gen
+und folgenden visuellen Effekt erzeugen: </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/naut_sampleemblem_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Dateisymbol mit dem Emblem &quot;Important&quot;. </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Weitere Informationen &uuml;ber das Hinzuf&uuml;gen eines Emblems zu
+einem Symbol finden Sie im Abschnitt <xref linkend="gosnautilus-112"/>. </para>
+      <para>In der folgenden Tabelle wird die Struktur des Dateisymbols beschrieben:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Komponente</para>
+              </entry>
+              <entry>
+                <para>Beschreibung
+ </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem1_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblem &quot;Important&quot;. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Emblem. Dies ist das Emblem <guilabel>Wichtig</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem2_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Textdateisymbol. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Symbol f&uuml;r die Datei. Dieses Symbol k&ouml;nnte beispielsweise eine Vorschau zum Dateiinhalt enthalten. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_sampleemblem3_icon.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Symbolname. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Symbolname. Sie k&ouml;nnen die im Symbolnamen angezeigten Informationen bearbeiten.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Der Dateimanager stellt Standardembleme f&uuml;r folgende Objektarten
+zur Verf&uuml;gung:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Symbolische Links</para>
+        </listitem>
+        <listitem>
+          <para>Objekte, f&uuml;r die Sie die folgenden Zugriffsrechte besitzen:<indexterm><primary>Zugriffsrechte</primary><secondary>und Embleme</secondary></indexterm></para>
+          <itemizedlist>
+            <listitem>
+              <para>Nur Leseberechtigung </para>
+            </listitem>
+            <listitem>
+              <para>Keine Leseberechtigung und keine Schreibberechtigung</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+      <para>Die Standardembleme sind in folgender Tabelle aufgef&uuml;hrt:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.09*"/>
+          <colspec colname="colspec1" colwidth="64.91*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Standardemblem</para>
+              </entry>
+              <entry>
+                <para>Beschreibung
+ </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_link_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblem &quot;Symbolic link&quot;.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para><indexterm><primary>Symbolische Links</primary><secondary>und Embleme</secondary></indexterm>Symbolischer Link</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_nowrite_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblem &quot;Read permission only&quot;. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Nur Leseberechtigung </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_noread_emblem.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Emblem &quot;No read permission and no write permission&quot;.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Keine Leseberechtigung und keine Schreibberechtigung </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-24">
+    <title>Navigation auf dem Computer</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>Navigation</secondary>
+    </indexterm>
+    <para>Der Dateimanager bietet einen integrierten Punkt f&uuml;r
+den Zugriff auf Ihre Dateien, Anwendungen, FTP-Sites und URIs. </para>
+    <para>In diesem Abschnitt werden die folgenden Themen behandelt: <itemizedlist><listitem><para>Anzeige von Objekten in Dateimanager-Fenstern</para></listitem><listitem><para>&Ouml;ffnen von Dateien aus Dateimanager-Fenstern</para></listitem><listitem><para>Navigation durch die Dateien und Ordner des Dateisystems </para></listitem><listitem><para>&Ouml;ffnen von Verzeichnissen in Ihrem System.</para></listitem><listitem><para>Herstellen einer Verbindung zu einem Server.</para></listitem><listitem><para>Navigation zu FTP-Sites</para></listitem><listitem><para>Zugriff auf URI-Sonderadressen.</para></listitem></itemizedlist></para>
+    <sect2 id="gosnautilus-25">
+      <title>So zeigen Sie einen Ordner an</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Anzeigen von Ordnern</secondary>
+      </indexterm>
+      <para>Sie haben folgende M&ouml;glichkeiten, den Inhalt
+eines Ordners anzuzeigen: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Doppelklicken Sie auf den Ordner im Ansichtsteilfenster.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie im Feld <guilabel>Verzeichnis</guilabel> den Pfad
+des Ordners ein, den Sie anzeigen m&ouml;chten, und dr&uuml;cken Sie die <keycap>Return</keycap>-Taste. Das Feld <guilabel>Adresse</guilabel> ist mit einer
+automatischen Vervollst&auml;ndigungsfunktion ausgestattet. W&auml;hrend Sie
+eine Pfadangabe eingeben, liest der Dateimanager Ihr Dateisystem. Sobald Sie
+gen&uuml;gend Zeichen zur eindeutigen Identifizierung eines Verzeichnisses
+eingegeben haben, vervollst&auml;ndigt der Dateimanager den Namen des Verzeichnisses
+im Feld <guilabel>Verzeichnis</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Verwenden Sie den <guilabel>Baum</guilabel> im Seitenteilfenster.
+Weitere Informationen finden Sie im Abschnitt <xref linkend="gosnautilus-27"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Verwenden Sie die Symbolleistenschaltfl&auml;chen <guibutton>Zur&uuml;ck</guibutton> und <guibutton> Weiter</guibutton>, um sich im Navigationsprotokoll
+zu bewegen. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Wenn Sie vom aktuellen Ordner zum &uuml;bergeordneten Ordner wechseln
+m&ouml;chten, w&auml;hlen Sie <menuchoice><guimenu>Wechseln zu</guimenu><guimenuitem>Nach oben</guimenuitem></menuchoice>. Alternativ k&ouml;nnen
+Sie auch auf die Symbolleistenschaltfl&auml;che <guibutton>Nach oben</guibutton> klicken.</para>
+      <para>Zum erneuten Laden der Anzeige klicken Sie auf die Schaltfl&auml;che <guibutton>Erneut laden</guibutton>. </para>
+      <para>Wenn Sie den anzuzeigenden Ordner nicht finden, k&ouml;nnen Sie das <application>Search Tool</application> zur Hilfe nehmen. Klicken Sie zum Starten des <application>Suchwerkzeugs</application> auf <guibutton>Starten</guibutton>. W&auml;hlen
+Sie dann <guimenu>Dateien suchen</guimenu>. </para>
+    </sect2>
+    <sect2 id="gosnautilus-27">
+      <title>Arbeiten mit dem Baum im Seitenteilfenster</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Baum, Verwendung</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Baum, Verwendung</primary>
+      </indexterm>
+      <para>Im <guilabel>Baum</guilabel> wird eine hierarchische Darstellung des Dateisystems
+angezeigt. So bietet der <guilabel>Baum</guilabel> eine bequeme M&ouml;glichkeit
+der Navigation im Dateisystem. Um den <guilabel>Baum</guilabel> im Seitenteilfenster
+einzublenden, w&auml;hlen Sie in der Dropdown-Liste an dessen oberen Rand
+die Option <guimenuitem>Baum</guimenuitem>. </para>
+      <para>Ordner werden im <guilabel>Baum</guilabel> wie folgt dargestellt: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="50*"/>
+          <colspec colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Ordnerstatus</para>
+              </entry>
+              <entry>
+                <para>Grafische
+Darstellung </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para>Geschlossener Ordner</para>
+              </entry>
+              <entry>
+                <para>Nach-Rechts-Taste</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Ge&ouml;ffneter Ordner</para>
+              </entry>
+              <entry>
+                <para>Nach-Unten-Taste</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><xref linkend="gosnautilus-TBL-34"/> beschreibt die im <guilabel>Baum</guilabel> m&ouml;glichen Schritte und ihre Ausf&uuml;hrung. </para>
+      <table frame="topbot" id="gosnautilus-TBL-34">
+        <title>Arbeitsschritte im Baum</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="50*"/>
+          <colspec colname="colspec1" colwidth="50*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Aufgaben</para>
+              </entry>
+              <entry>
+                <para>Aktion</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para><guilabel>Baum</guilabel> &ouml;ffnen</para>
+              </entry>
+              <entry valign="top">
+                <para>W&auml;hlen Sie in der Dropdown-Liste am oberen Rand des Seitenteilfensters die Option <guilabel>Baum</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para><guilabel>Baum</guilabel> schlie&szlig;en</para>
+              </entry>
+              <entry valign="top">
+                <para>W&auml;hlen Sie in der Dropdown-Liste am oberen Rand des Seitenteilfensters eine andere Option.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Ordner im <guilabel>Baum</guilabel> &ouml;ffnen </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Klicken Sie auf den Pfeil neben dem Ordner im <guilabel>Baum</guilabel>. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Ordner im <guilabel>Baum</guilabel> schlie&szlig;en </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Klicken Sie auf den Pfeil neben dem Ordner im <guilabel>Baum</guilabel>.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Anzeigen des Inhalts eines Ordners im Ansichtsteilfenster </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>W&auml;hlen Sie den Ordner im <guilabel>Baum</guilabel> aus.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Anzeigen des Inhalts einer Datei im Ansichtsteilfenster</para>
+              </entry>
+              <entry valign="top">
+                <para>W&auml;hlen Sie die Datei im <guilabel>Baum</guilabel> aus.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>In den Einstellungen k&ouml;nnen Sie festlegen, dass der <guilabel>Baum</guilabel> keine Dateien anzeigen soll. </para>
+    </sect2>
+    <sect2 id="gosnautilus-28">
+      <title>&Ouml;ffnen von Dateien</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>&Ouml;ffnen von Dateien</secondary>
+      </indexterm>
+      <para>Wenn Sie eine Datei &ouml;ffnen, f&uuml;hrt
+der Dateimanager die f&uuml;r den jeweiligen Dateityp festgelegte Standardaktion
+aus. Dabei kann es sich um einen der folgenden Schritte handeln: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Es wird eine Viewer-Komponente verwendet, um die Datei im
+Ansichtsteilfenster anzuzeigen. </para>
+        </listitem>
+        <listitem>
+          <para>Es wird eine Anwendung gestartet, die die Datei &ouml;ffnet.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Um festzustellen, um was f&uuml;r einen Dateityp es sich bei der jeweiligen
+Datei handelt, pr&uuml;ft der Dateimanager den Inhalt der Datei. Wenn sich
+der Dateityp nicht anhand der ersten Zeilen bestimmen l&auml;sst, pr&uuml;ft
+der Dateimanager die Dateierweiterung.</para>
+      <para>Wenn Sie die zu &ouml;ffnende Datei nicht finden, k&ouml;nnen Sie das <application>Search Tool</application> zur Hilfe nehmen. Klicken Sie zum Starten des <application>Suchwerkzeugs</application> auf <guibutton>Starten</guibutton>. W&auml;hlen
+Sie dann <guimenu>Dateien suchen</guimenu>. </para>
+      <sect3 id="gosnautilus-447">
+        <title>Anzeigen von Dateien im Ansichtsteilfenster</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Anzeigen von Dateien
+im Ansichtsteilfenster</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>Ansichtsteilfenster</primary>
+          <secondary>Anzeigen von Dateien in</secondary>
+        </indexterm>
+        <indexterm>
+          <primary>Viewer-Komponenten</primary>
+        </indexterm>
+        <para>Der Dateimanager verf&uuml;gt
+&uuml;ber Viewer-Komponenten, mit denen Sie bestimmte Arten von Dateien im
+Ansichtsteilfenster anzeigen k&ouml;nnen. Dazu z&auml;hlen beispielsweise
+folgende Dateitypen:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Einfache Textdateien</para>
+          </listitem>
+          <listitem>
+            <para>PNG-Dateien</para>
+          </listitem>
+          <listitem>
+            <para>Joint Photographic Experts Group (JPEG)-Dateien</para>
+          </listitem>
+        </itemizedlist>
+        <para>Zum erneuten Laden des Inhalts im Ansichtsteilfenster w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Erneut laden</guimenuitem></menuchoice>. Wenn Sie das Laden eines Objekts im Ansichtsteilfenster unterbrechen
+m&ouml;chten, w&auml;hlen Sie <menuchoice><guimenu>Anzeigen</guimenu><guimenuitem>Stopp</guimenuitem></menuchoice>.</para>
+        <para>Wenn Sie eine Datei im Ansichtsteilfenster anzeigen, f&uuml;gt die Viewer-Komponente
+den Dateimanager-Men&uuml;s unter Umst&auml;nden Men&uuml;punkte hinzu. Diese
+Men&uuml;punkte sind mit dem angezeigten Dateityp verkn&uuml;pft. Wenn Sie
+beispielsweise eine PNG-Datei anzeigen, enth&auml;lt das Men&uuml; <guimenu>Bearbeiten</guimenu> zus&auml;tzliche Befehle zum Spiegeln oder Drehen der
+Grafik. </para>
+        <para>Au&szlig;erdem k&ouml;nnen Sie beim Anzeigen bestimmter Dateitypen im
+Ansichtsteilfenster die Zoom-Schaltfl&auml;chen des Dateimanagers verwenden,
+um die Gr&ouml;&szlig;e des Objekts zu &auml;ndern.</para>
+      </sect3>
+      <sect3 id="gosnautilus-29">
+        <title>So f&uuml;hren Sie die Standardaktion aus</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Ausf&uuml;hren von Standardaktionen
+f&uuml;r Dateien</secondary>
+        </indexterm>
+        <para>Zum Ausf&uuml;hren der Standardaktion
+f&uuml;r eine Datei doppelklicken Sie auf die Datei. Die Standardaktion f&uuml;r
+einfache Textdokumente kann beispielsweise das Anzeigen der Datei in einem
+Text-Viewer sein. In diesem Fall k&ouml;nnen Sie auf die Datei doppelklicken,
+um sie in einem Text-Viewer anzuzeigen.</para>
+        <para>In den Dateimanager-Einstellungen k&ouml;nnen Sie festlegen, dass Sie
+nur einmal auf eine Datei klicken m&uuml;ssen, um die Standardaktion auszuf&uuml;hren. </para>
+      </sect3>
+      <sect3 id="gosnautilus-30">
+        <title>So f&uuml;hren Sie Nicht-Standardaktionen &uuml;ber das Untermen&uuml; &ldquo;&Ouml;ffnen
+mit&rdquo; aus</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Ausf&uuml;hren von Nicht-Standardaktionen
+f&uuml;r Dateien</secondary>
+        </indexterm>
+        <para>Wenn Sie andere Aktionen als
+die Standardaktion f&uuml;r eine Datei ausf&uuml;hren m&ouml;chten, gehen
+Sie wie folgt vor:</para>
+        <orderedlist>
+          <listitem>
+            <para>W&auml;hlen Sie im Ansichtsteilfenster die Datei aus, an der
+die Aktion ausgef&uuml;hrt werden soll. W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>&Ouml;ffnen mit</guimenuitem></menuchoice>.
+Das Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> wird ge&ouml;ffnet.
+Die Punkte in diesem Untermen&uuml; richten sich nach dem Inhalt der folgenden
+Teile des Einstellungstools <application>Dateizuordnungen</application>:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Dropdown-Listenfeld <guilabel>Standardaktion</guilabel> im
+Dialogfeld <guilabel>Dateityp bearbeiten</guilabel></para>
+              </listitem>
+              <listitem>
+                <para>Dropdown-Listenfeld <guilabel>Komponente des Anzeigeprogramms</guilabel> im Dialogfeld <guilabel>Dateityp bearbeiten</guilabel></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>W&auml;hlen Sie eine Aktion im Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+      <sect3 id="gosnautilus-73">
+        <title>So f&uuml;hren Sie andere Aktionen beim Anzeigen einer Datei aus</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Ausf&uuml;hren anderer
+Aktionen f&uuml;r Dateien</secondary>
+        </indexterm>
+        <para>Wenn Sie eine Datei
+im Ansichtsteilfenster anzeigen, enth&auml;lt das Seitenteilfenster unter
+Umst&auml;nden Schaltfl&auml;chen.</para>
+        <para>Die Schaltfl&auml;chen repr&auml;sentieren die im Einstellungstool <application>Dateizuordnungen</application> definierten Aktionen. Die Aktionen werden im
+Dropdown-Listenfeld <guilabel>Standardaktion</guilabel> des Dialogfelds <guilabel>Dateityp bearbeiten</guilabel> im Einstellungstool <application>Dateizuordnungen</application> definiert. Klicken Sie auf eine Schaltfl&auml;che, um eine
+Aktion auszuf&uuml;hren. Eine f&uuml;r einfache Textdokumente definierte Standardaktion
+k&ouml;nnte beispielsweise das &Ouml;ffnen der Datei im Texteditor <application>gedit</application> sein. Wurde diese Aktion definiert, erscheint im Seitenfenster
+die Schaltfl&auml;che <guibutton>&Ouml;ffnen mit gedit</guibutton>. Um die
+Datei in der Anwendung <application>gedit</application> zu &ouml;ffnen, klicken
+Sie auf die Schaltfl&auml;che <guibutton>&Ouml;ffnen mit gedit</guibutton>.</para>
+        <note>
+          <para>Es erscheint keine Schaltfl&auml;che f&uuml;r die Aktion im Seitenteilfenster,
+wenn die Aktionen in einem der folgenden Dialogfelder ausgeschlossen sind:</para>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <guilabel>&Ouml;ffnen mit anderer Anwendung</guilabel>
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <guilabel>Mit anderem Anzeigeprogramm &ouml;ffnen</guilabel>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </note>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-515">
+      <title>So &ouml;ffnen Sie Verzeichnisse</title>
+      <para>Der Dateimanager bietet einen integrierten Punkt f&uuml;r den Zugriff
+auf Ihre Dateien, Anwendungen, FTP-Sites und URIs. </para>
+      <para>Mit dem Dateimanager k&ouml;nnen Sie schnell auf verschiedene Speicherorte
+auf Ihrem System zugreifen. Gehen Sie wie folgt vor, um ein Verzeichnis zu
+&ouml;ffnen:<orderedlist><listitem><para>W&auml;hlen Sie <menuchoice><guimenu>Gehe zu</guimenu><guimenuitem> Verzeichnis</guimenuitem></menuchoice>. </para></listitem><listitem><para>Geben Sie in das Feld <guilabel>Verzeichnis</guilabel> den
+Pfad zu dem Ordner ein, dessen Inhalt angezeigt werden soll.</para></listitem><listitem><para>Dr&uuml;cken Sie die <keycap>Eingabetaste</keycap>.</para></listitem></orderedlist></para>
+      <para>Das Feld <guilabel>Adresse</guilabel> ist mit einer automatischen Vervollst&auml;ndigungsfunktion
+ausgestattet. W&auml;hrend Sie eine Pfadangabe eingeben, liest der Dateimanager
+Ihr Dateisystem. Sobald Sie gen&uuml;gend Zeichen zur eindeutigen Identifizierung
+eines Verzeichnisses eingegeben haben, vervollst&auml;ndigt der Dateimanager
+automatisch den Namen des Verzeichnisses im Feld <guilabel>Verzeichnis</guilabel>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-491">
+      <title>So stellen Sie eine Verbindung zu einem Server her</title>
+      <para>Wenn Java Desktop System zum Zugriff auf Server in einer Netzwerkumgebung
+konfiguriert ist k&ouml;nnen Sie mithilfe des Men&uuml;s <guilabel>Mit Server
+verbinden</guilabel> Verbindungen zu Servern herstellen.</para>
+      <para>Zum Herstellen einer Verbindung zu einem Server f&uuml;hren Sie die
+folgenden Schritte aus:<orderedlist><listitem><para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem> Mit Server verbinden</guimenuitem></menuchoice>.</para></listitem><listitem><para>Geben Sie in das Feld <guilabel>Link-Name</guilabel> des Dialogfelds <guilabel>Mit Server verbinden</guilabel> den Servernamen ein.</para></listitem><listitem><para>Geben Sie in das Feld <guilabel>Ort (URL)</guilabel> die URL-Adresse,
+z.B. <literal>ftp:///ftp.gnome.org</literal> ein.</para></listitem><listitem><para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Verbinden</guibutton>.</para></listitem></orderedlist> </para>
+    </sect2>
+    <sect2 id="gosnautilus-445">
+      <title>Arbeiten mit dem Symbol &ldquo;Dieser Computer&rdquo;</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/this_computer_icon.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Symbol 'Dieser Computer' Die Grafik ist selbsterklärend.  </phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Dieser Computer (Symbol)</secondary>
+        <see>Dieser Computer (Symbol)</see>
+      </indexterm>
+      <indexterm>
+        <primary>Dieser Computer (Symbol)</primary>
+        <secondary>Arbeiten mit</secondary>
+      </indexterm>
+      <para>Mit dem Symbol <guilabel>Dieser Computer</guilabel> k&ouml;nnen Sie
+auf die folgenden Funktionen zugreifen:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <guilabel>Anwendungen</guilabel>
+          </para>
+          <para>Doppelklicken
+Sie auf <guilabel>Anwendungen</guilabel>, um auf die wichtigsten Anwendungen
+von Java Desktop Systems zuzugreifen. Der Zugriff auf das Men&uuml; <guimenu>Anwendungen</guimenu> ist auch &uuml;ber das Men&uuml; <guimenu>Starten</guimenu> und
+die <application> Men&uuml;leiste</application> m&ouml;glich.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Einstellungen</guilabel>
+          </para>
+          <para>Doppelklicken
+Sie auf <guilabel>Einstellungen</guilabel>, um Java Desktop System benutzerspezifisch
+anzupassen. Sie k&ouml;nnen auf die Einstellungstools auch &uuml;ber das Men&uuml; <guimenu> Starten</guimenu> zugreifen.</para>
+        </listitem>
+        <listitem>
+          <para>
+            <guilabel>Dateisystem</guilabel>
+          </para>
+          <para>Doppelklicken
+Sie auf <guilabel>Dateisystem</guilabel>, um auf den obersten Ordner in der
+Hierarchie von Java Desktop System zuzugreifen. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Sie haben folgende M&ouml;glichkeiten, auf das Symbol <guilabel>Dieser
+Computer</guilabel> zuzugreifen:</para>
+      <itemizedlist>
+        <listitem>
+          <para>&Uuml;ber den Desktop-Hintergrund</para>
+          <para>Doppelklicken
+Sie auf dem Desktop-Hintergrund auf das Objekt <guilabel>Dieser Computer</guilabel>.
+Der Inhalt von <guilabel>Dieser Computer</guilabel> wird in einem Dateibrowser-Fenster
+angezeigt.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie im Adressfeld eines Dateibrowser-Fensters die URI <command>computer:///</command> ein.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="gosnautilus-37">
+      <title>So greifen Sie auf FTP-Sites zu</title>
+      <indexterm>
+        <primary>FTP-Sites</primary>
+        <secondary>Zugreifen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>FTP-Sites</secondary>
+        <see>FTP-Sites</see>
+      </indexterm>
+      <para>Mit dem Dateimanager k&ouml;nnen Sie
+auch auf FTP-Sites zugreifen. Dazu geben Sie den URL f&uuml;r die Site in
+das Feld auf der Verzeichnisleiste ein und dr&uuml;cken dann die <keycap>Return</keycap>-Taste. Der Inhalt der Site erscheint im Ansichtsteilfenster.
+Wenn Sie eine Datei von der FTP-Site kopieren m&ouml;chten, ziehen Sie sie
+in das neue Verzeichnis.</para>
+      <para>Um auf eine FTP-Site zuzugreifen, die einen Benutzernamen und ein Passwort
+erfordert, geben Sie den URL in der folgenden Form ein: </para>
+      <para>
+        <command>ftp://<replaceable>benutzername</replaceable>:<replaceable>passwort </replaceable>@<replaceable>hostname</replaceable>.<replaceable>dom&auml;ne</replaceable></command>
+      </para>
+      <para>Zum erneuten Laden der FTP-Site im Ansichtsfenster w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Erneut laden</guimenuitem></menuchoice>. Wenn Sie das Laden der FTP-Site unterbrechen m&ouml;chten,
+w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Stopp</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-465">
+      <title>So greifen Sie auf Netzwerkstationen zu</title>
+      <indexterm>
+        <primary>Netzwerkstationen</primary>
+        <secondary>zugreifen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Netzwerkstationen</secondary>
+        <see>Netzwerkstationen</see>
+      </indexterm>
+      <para>Wenn Ihr System
+so konfiguriert ist, dass Sie auf Stationen (Knoten) in einem Netzwerk zugreifen
+k&ouml;nnen, ist dieser Zugriff auf die Netzwerkstationen auch mithilfe des
+Dateimanagers m&ouml;glich. </para>
+      <para>Zum Zugreifen auf Netzwerkstationen &ouml;ffnen Sie den Dateimanager
+und w&auml;hlen <menuchoice><guimenu>Gehe zu</guimenu><guimenuitem>Netzwerkstationen</guimenuitem></menuchoice>. Sie k&ouml;nnen auch auf das
+Symbol <guilabel>Netzwerkstationen</guilabel> auf dem Desktop-Hintergrund
+klicken. Doppelklicken Sie auf das Symbol <guilabel>Netzwerk</guilabel>. Ein
+Dateimanager-Fenster erscheint. In diesem Fenster sind die Netzwerkstationen
+aufgef&uuml;hrt, auf die Sie zugreifen k&ouml;nnen. Doppelklicken Sie auf
+das gew&uuml;nschte Netzwerk. </para>
+      <para><indexterm><primary>NFS-Server</primary><see>Unix-Netzwerk</see></indexterm>Zum
+Zugreifen auf UNIX-Freigaben doppelklicken Sie auf das Objekt <guilabel>Unix-Netzwerk
+(NFS)</guilabel>. Im Dateimanager-Fenster erscheinen nun die UNIX-Freigaben,
+auf die Sie zugreifen k&ouml;nnen.</para>
+      <para><indexterm><primary>Samba-Server</primary><see>Windows-Netzwerk</see></indexterm>Zum Zugreifen auf Windows-Freigaben doppelklicken Sie auf das
+Objekt <guilabel>Windows-Netzwerk (SMB)</guilabel>. Im Dateimanager-Fenster
+erscheinen nun die Windows-Freigaben, auf die Sie zugreifen k&ouml;nnen.</para>
+      <sect3 id="gosnautilus-466">
+        <title>So f&uuml;gen Sie eine Netzwerkstation hinzu</title>
+        <para>Gehen Sie wie folgt vor, um eine Netzwerkstation hinzuzuf&uuml;gen:</para>
+        <orderedlist>
+          <listitem>
+            <para>&Ouml;ffnen Sie den Dateimanager, und w&auml;hlen Sie <menuchoice><guimenu>Gehe zu</guimenu><guimenuitem>Netzwerkstationen</guimenuitem></menuchoice>. Sie k&ouml;nnen auch auf das Symbol <guilabel>Netzwerkstationen</guilabel> auf dem Desktop-Hintergrund klicken. </para>
+          </listitem>
+          <listitem>
+            <para>Doppelklicken Sie auf das Objekt <guilabel>Neue Netzwerkstation
+hinzuf&uuml;gen</guilabel>. Das Dialogfeld <guilabel>Neue Netzwerkstation
+hinzuf&uuml;gen</guilabel> wird angezeigt. Geben Sie in dieses Dialogfeld
+wie folgt die Angaben zum Server ein:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colname="colspec0" colwidth="27.27*"/>
+                <colspec colname="colspec1" colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialogfeldelement</para>
+                    </entry>
+                    <entry>
+                      <para>Beschreibung </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Standort</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Geben Sie in dieses Textfeld die hinzuzuf&uuml;gende Station ein. Alternativ w&auml;hlen Sie eine der folgenden in der Dropdown-Liste vorgegebenen Adressen aus:<itemizedlist><listitem><para><guilabel>FTP-Server</guilabel></para></listitem><listitem><para><guilabel>Internet-Ordner</guilabel></para></listitem><listitem><para><guilabel>Windows-Netzwerk (SMB)</guilabel></para></listitem><listitem><para><guilabel>Unix-Netzwerk (NFS)</guilabel></para></listitem></itemizedlist></para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Verkn&uuml;pfungsname</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">Mit diesem Textfeld k&ouml;nnen Sie einen Verkn&uuml;pfungsnamen f&uuml;r die Netzwerkstation festlegen. </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Anonyme Anmeldung</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Dies ist eine nur f&uuml;r FTP-Server verf&uuml;gbare Option. W&auml;hlen Sie diese Option aus, um sich als anonymer Benutzer beim FTP-Server anzumelden.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Keine Anmeldung erforderlich</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>Dies ist eine nur f&uuml;r Internet-Ordner, Windows-Netzwerk (SMB) und Unix-Netzwerk (NFS) verf&uuml;gbare Option. W&auml;hlen Sie diese Option aus, wenn Sie sich f&uuml;r den Zugriff auf den Internet-Ordner, Windows- oder UNIX-Freigaben nicht anmelden m&uuml;ssen.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Benutzername</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>In dieses Textfeld geben Sie einen Benutzernamen f&uuml;r die Verbindung zu der angegebenen Netzwerkstation ein.</para>
+                      <para>Wenn Sie die Verbindung zur Netzwerkstation herstellen, m&uuml;ssen Sie Ihr Passwort eingeben.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry colname="colspec0">
+                      <para>
+                        <guilabel>Jetzt dorthin gehen</guilabel>
+                      </para>
+                    </entry>
+                    <entry colname="colspec1">
+                      <para>W&auml;hlen Sie diese Option aus, um sofort auf die Netzwerkstation zuzugreifen.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Klicken Sie auf <guibutton>OK</guibutton>, um die neue Netzwerkstation
+hinzuzuf&uuml;gen. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-508">
+      <title>So greifen Sie auf Netzwerkserver zu</title>
+      <para>Wenn GNOME zum Zugriff auf Server eines Netzwerks konfiguriert ist,
+k&ouml;nnen Sie auf diese mit dem Men&uuml; <guilabel>Anwendungen</guilabel> zugreifen.</para>
+      <para>F&uuml;r den Zugriff auf Netzwerkserver w&auml;hlen Sie <menuchoice><guimenu>Anwendungen</guimenu><guimenuitem>Netzwerk-Server</guimenuitem></menuchoice>. Es wird ein Fenster mit Dateisymbolen angezeigt. In diesem
+Fenster sind die Netzwerkserver aufgef&uuml;hrt, auf die Sie zugreifen k&ouml;nnen.
+Doppelklicken Sie auf den gew&uuml;nschten Netzwerkserver.</para>
+      <sect3 id="gosnautilus-509">
+        <title>So f&uuml;gen Sie einen Netzwerkserver hinzu</title>
+        <para>W&auml;hlen Sie zum Hinzuf&uuml;gen eines Netzwerkervers <menuchoice><guimenu>Anwendungen</guimenu><guimenuitem>Netzwerk-Server</guimenuitem></menuchoice>. Es wird ein Fenster mit Dateisymbolen angezeigt. Doppelklicken
+Sie auf das Objekt <guilabel>Neuer Server</guilabel>. Das Dialogfeld <guilabel>Neuer Server </guilabel> wird angezeigt. Geben Sie hier den Namen des Servers
+ein und klicken Sie auf <guibutton>OK</guibutton>.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-467">
+      <title>Zugriff auf URI-Sonderadressen</title>
+      <indexterm>
+        <primary>URI-Sonderadressen</primary>
+        <secondary>Zugriff</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>URI-Sonderadressen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>URI, Sonderadressen</primary>
+        <see>URI-Sonderadressen</see>
+      </indexterm>
+      <para>Java Desktop System enth&auml;lt
+bestimmte besondere URI-Adressen, mit denen Sie bestimmte Funktionen aus dem
+Dateimanager heraus ausf&uuml;hren k&ouml;nnen. Um beispielsweise auf die
+Einstellungstools zuzugreifen, geben Sie in einem Dateimanager-Fenster einfach
+den URI <command>preferences:///</command> ein. <xref linkend="gosnautilus-TBL-479"/> enth&auml;lt
+eine Liste mit URI-Sonderadressen, die Sie aus dem Dateimanager heraus aufrufen
+k&ouml;nnen.</para>
+      <table frame="topbot" id="gosnautilus-TBL-479">
+        <title>URI-Sonderadressen</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="33.94*"/>
+          <colspec colname="colspec1" colwidth="66.06*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>URI-Adresse</para>
+              </entry>
+              <entry>
+                <para>Beschreibung </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>applications:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Zeigt eine Liste der Anwendungen in Java Desktop System an. Diese Liste entspricht den im Men&uuml; <guimenu>Anwendungen</guimenu> aufgef&uuml;hrten Eintr&auml;gen. Um eine Anwendung zu &ouml;ffnen, doppelklicken Sie darauf.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>computer:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Zeigt eine Liste von Anwendungen und Einstellungstools von Java Desktop System an. Au&szlig;erdem werden Symbole zum Zugriff auf das Dateisystem, CD-ROMs und Diskettenlaufwerke angezeigt.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0">
+                <para>
+                  <command>network:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Zeigt Netzwerkstationen an, zu denen eine Verbindung hergestellt werden kann, wenn Ihr System zum Netzwerkzugriff konfiguriert ist. Um auf eine bestimmte Netzwerkadresse zuzugreifen, doppelklicken Sie darauf. &Uuml;ber diesen URI k&ouml;nnen Sie auch neue Eintr&auml;ge f&uuml;r Netzwerkadressen anlegen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>preferences:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Zeigt eine Liste der Einstellungstools in Java Desktop System an. Diese sind mit den Einstellungstools aus dem Men&uuml; <guimenu>Einstellungen</guimenu> identisch. Um ein bestimmtes Einstellungstool zu &ouml;ffnen, doppelklicken Sie darauf.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>server-settings:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Zeigt eine Liste derjenigen Anwendungen an, mit denen Sie Ihr System als Server konfigurieren k&ouml;nnen. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>system-settings:///</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Zeigt eine Liste derjenigen Anwendungen an, mit denen Sie Ihre Systemeinstellungen &auml;ndern k&ouml;nnen.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-5">
+      <title>Verwenden des Navigationsprotokolls</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Navigationsprotokollliste</secondary>
+      </indexterm>
+      <para>Der Dateimanager f&uuml;hrt ein Protokoll der
+zuletzt angezeigten Dateien, Ordner, FTP-Sites und URIs. &Uuml;ber diese Protokollliste
+k&ouml;nnen Sie zu Dateien, Ordnern, FTP-Sites und URIs gelangen, die Sie
+in letzter Zeit angezeigt oder besucht haben. Ihr Verlauf enth&auml;lt die
+zehn zuletzt angezeigten Objekte. In den folgenden Abschnitten wird die Navigation
+in der Protokollliste beschrieben.</para>
+      <para>Wenn Sie die Protokollliste l&ouml;schen m&ouml;chten, w&auml;hlen Sie <menuchoice><guimenu>Go</guimenu><guimenuitem>Protokoll l&ouml;schen</guimenuitem></menuchoice>.</para>
+      <sect3 id="gosnautilus-77">
+        <title>So navigieren Sie mit dem Men&uuml; &ldquo;Go&rdquo; in der Protokollliste</title>
+        <para>Um eine Liste zuvor angezeigter Objekte aufzurufen, w&auml;hlen Sie
+das Men&uuml; <guimenu>Go</guimenu>. Die Protokollliste erscheint im unteren
+Teil des Men&uuml;s <guimenu>Go</guimenu>. Um ein Objekt aus der Protokollliste
+zu &ouml;ffnen, w&auml;hlen Sie es im Men&uuml; <guimenu>Gehe zu</guimenu> aus.</para>
+      </sect3>
+      <sect3 id="gosnautilus-78">
+        <title>So navigieren Sie mit der Symbolleiste in der Protokollliste</title>
+        <para>Wenn Sie mit der Symbolleiste in der Protokollliste navigieren m&ouml;chten,
+f&uuml;hren Sie eine der folgenden Aktionen aus:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Um die vorherige Datei bzw. den vorherigen Ordner oder URI
+in der Protokollliste zu &ouml;ffnen, klicken Sie auf die Symbolleistenschaltfl&auml;che <guibutton>Zur&uuml;ck</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Um die n&auml;chste Datei bzw. den n&auml;chsten Ordner oder
+URL in der Protokollliste zu &ouml;ffnen, klicken Sie auf die Symbolleistenschaltfl&auml;che <guibutton>Vorw&auml;rts</guibutton>.</para>
+          </listitem>
+          <listitem>
+            <para>Um eine Liste zuvor angezeigter Objekte aufzurufen, klicken
+Sie auf die Nach-Unten-Taste rechts neben der Symbolleistenschaltfl&auml;che <guibutton>Zur&uuml;ck</guibutton>. Wenn Sie ein Objekt aus dieser Liste &ouml;ffnen
+m&ouml;chten, klicken Sie auf das Objekt.</para>
+          </listitem>
+          <listitem>
+            <para>Um eine Liste der Objekte aufzurufen, die Sie nach dem aktuellen
+Objekt angezeigt haben, klicken Sie auf die Nach-Unten-Taste rechts neben
+der Symbolleistenschaltfl&auml;che <guibutton>Vor</guibutton>. Wenn Sie ein
+Objekt aus dieser Liste &ouml;ffnen m&ouml;chten, klicken Sie auf das Objekt.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-80">
+        <title>So navigieren Sie &uuml;ber das Protokoll des Seitenteilfensters in
+der Protokollliste</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Protokoll</secondary>
+        </indexterm>
+        <para>Um das <guilabel>Protokoll</guilabel> im Seitenteilfenster
+einzublenden, w&auml;hlen Sie in der Dropdown-Liste an dessen oberen Rand
+die Option <guilabel>Protokoll</guilabel>. Die Liste <guilabel>Protokoll</guilabel> im
+Seitenteilfenster zeigt die zuletzt besuchten bzw. angezeigten Objekte und
+Adressen an.</para>
+        <para>Wenn Sie ein Objekt aus der Protokollliste im Ansichtsteilfenster anzeigen
+m&ouml;chten, klicken Sie in der Liste <guilabel>Protokoll</guilabel> auf
+dieses Objekt.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-36">
+      <title>So setzen Sie Lesezeichen f&uuml;r Ihre Lieblingsverzeichnisse</title>
+      <indexterm>
+        <primary>Datei-Manager</primary>
+        <secondary>Lesezeichen</secondary>
+      </indexterm>
+      <para>Um auf ein Objekt aus Ihren Lesezeichen zuzugreifen, w&auml;hlen
+Sie es im Men&uuml; <guimenu>Lesezeichen</guimenu> aus. Sie k&ouml;nnen Ihre
+Lieblingsverzeichnisse zum Men&uuml; <guimenu>Lesezeichen</guimenu> hinzuf&uuml;gen.
+Lesezeichen k&ouml;nnen auf Dateien und Ordner in Ihrem Dateisystem, auf FTP-Sites
+oder URI-Adressen verweisen.</para>
+      <sect3 id="gosnautilus-40">
+        <title>So setzen Sie ein Lesezeichen</title>
+        <para>Wenn Sie ein Lesezeichen setzen m&ouml;chten, zeigen das zu markierende
+Objekt im Ansichtsteilfenster an. W&auml;hlen Sie <menuchoice><guimenu>Lesezeichen
+</guimenu><guimenuitem>Lesezeichen hinzuf&uuml;gen</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-41">
+        <title>So bearbeiten Sie ein Lesezeichen</title>
+        <para>Wenn Sie Ihre Lesezeichen bearbeiten m&ouml;chten, f&uuml;hren Sie folgende
+Schritte aus:</para>
+        <orderedlist>
+          <listitem>
+            <para>W&auml;hlen Sie <menuchoice><guimenu>Lesezeichen</guimenu><guimenuitem>Lesezeichen bearbeiten</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Zur Bearbeitung eines Lesezeichens w&auml;hlen Sie es auf
+der linken Seite des Dialogfelds <guilabel>Lesezeichen bearbeiten</guilabel> aus.
+Die Bearbeitung der Details des Lesezeichens erfolgt auf der rechten Seite
+des Dialogfelds <guilabel>Lesezeichen bearbeiten</guilabel> wie folgt: </para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="27.27*"/>
+                <colspec colwidth="72.73*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Dialogfeldelement</para>
+                    </entry>
+                    <entry>
+                      <para>Beschreibung </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Name</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Verwenden Sie dieses Textfeld, um den Namen festzulegen, unter dem das Lesezeichen im Men&uuml; <guimenu>Lesezeichen</guimenu> erscheint.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para>
+                        <guilabel>Standort</guilabel>
+                      </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>Verwenden Sie dieses Feld, um das Verzeichnis des Lesezeichens festzulegen. </para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Wenn Sie ein Lesezeichen l&ouml;schen m&ouml;chten, w&auml;hlen
+Sie es auf der linken Seite des Dialogfelds aus. Klicken Sie auf <guilabel>L&ouml;schen</guilabel>. </para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-8">
+    <title>Verwalten von Dateien und Ordnern</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>Verwalten von Dateien
+und Ordnern</secondary>
+    </indexterm>
+    <para>In diesem Abschnitt wird die Arbeit
+mit den Dateien und Ordnern beschrieben.</para>
+    <sect2 id="gosnautilus-201">
+      <title>Drag-and-Drop im Dateimanager</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Drag-and-Drop</secondary>
+      </indexterm>
+      <para>Verschiedene Funktionen im Dateimanager k&ouml;nnen Sie
+auch per Drag-and-Drop (Ziehen und Ablegen) erledigen. Dabei informiert der
+Mauszeiger jeweils &uuml;ber die ausgef&uuml;hrten Schritte. <xref linkend="gosnautilus-TBL-11"/> beschreibt
+die Schritte, die Sie per Drag-and-Drop ausf&uuml;hren k&ouml;nnen. Au&szlig;erdem
+enth&auml;lt sie Abbildungen der Mauszeiger, die beim Drag-and-Drop erscheinen.</para>
+      <table frame="topbot" id="gosnautilus-TBL-11">
+        <title>Drag-and-Drop im Dateimanager</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="98.56*"/>
+          <colspec colname="colspec1" colwidth="28.70*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Aufgaben </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Aktion</para>
+              </entry>
+              <entry colname="colspec1">
+                <para>Mauszeiger</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Objekt verschieben</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Ziehen Sie das Objekt an die neue Position.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/move_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Mauszeiger beim Verschieben.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Objekt kopieren</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Greifen Sie das Objekt mit der Maus, und halten Sie anschlie&szlig;end die Taste <keycap>Strg</keycap> gedr&uuml;ckt. Ziehen Sie das Objekt an die neue Position.</para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/copy_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Mauszeiger beim Kopieren.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Erstellen eines symbolischen Links f&uuml;r ein Objekt</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Greifen Sie das Objekt mit der Maus, und halten Sie anschlie&szlig;end die Tastenkombination <keycombo><keycap>Strg</keycap><keycap>Umschalttaste</keycap></keycombo> gedr&uuml;ckt. Ziehen Sie das Objekt an die Position, an der Sie den symbolischen Link platzieren m&ouml;chten.  </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/link_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Mauszeiger für symbolische Links.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Erfragen, was mit dem gezogenen Objekt geschehen soll </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Greifen Sie das Objekt mit der Maus, und halten Sie anschlie&szlig;end die Taste <keycap>Alt</keycap> gedr&uuml;ckt. Ziehen Sie das Objekt an die Position, an der Sie das Objekt platzieren m&ouml;chten. Lassen Sie die Maustaste los. Es erscheint ein Kontextmen&uuml;. W&auml;hlen Sie einen der folgenden Punkte im Kontextmen&uuml; aus: </para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Hierhin verschieben</guimenuitem>
+                    </para>
+                    <para>Verschiebt das Objekt an die Position.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Hierhin kopieren</guimenuitem>
+                    </para>
+                    <para>Kopiert das Objekt an die Position. </para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Link here</guimenuitem>
+                    </para>
+                    <para>Erstellt einen symbolischen Link zum Objekt an dieser Position.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Als Hintergrund einstellen</guimenuitem>
+                    </para>
+                    <para>Handelt es sich bei dem Objekt um ein Bild, wird es als Desktop-Hintergrund eingestellt. Mit diesem Befehl k&ouml;nnen Sie den Hintergrund f&uuml;r den Desktop und f&uuml;r das Ansichtsteilfenster einstellen.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <guimenuitem>Abbrechen</guimenuitem>
+                    </para>
+                    <para>Bricht die Drag-and-Drop-Operation ab. </para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/ask_pointer.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Mauszeiger für Erfragen.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </sect2>
+    <sect2 id="gosnautilus-202">
+      <title>So w&auml;hlen Sie Dateien und Ordner aus</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Ausw&auml;hlen von Dateien
+und Ordnern</secondary>
+      </indexterm>
+      <para>Es gibt verschiedene M&ouml;glichkeiten,
+wie Sie Dateien und Ordner im Dateimanager ausw&auml;hlen k&ouml;nnen. <xref linkend="gosnautilus-TBL-10"/> beschreibt, wie Sie Objekte in Dateimanager-Fenstern
+und auf dem Desktop-Hintergund ausw&auml;hlen.</para>
+      <table frame="topbot" id="gosnautilus-TBL-10">
+        <title>Ausw&auml;hlen von Objekten im Dateimanager</title>
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="36.36*"/>
+          <colspec colname="colspec2" colwidth="63.64*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Aufgaben </para>
+              </entry>
+              <entry colname="colspec2">
+                <para>Aktion</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Objekt ausw&auml;hlen</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Klicken Sie auf das Objekt.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Gruppe aufeinander folgender Objekte ausw&auml;hlen</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>In der Symbolansicht ziehen Sie einen Rahmen um die auszuw&auml;hlenden Dateien.</para>
+                <para>In der Listenansicht klicken Sie zun&auml;chst auf das erste Objekt der gew&uuml;nschten Gruppe. Halten Sie anschlie&szlig;end die <keycap>Umschalttaste</keycap> gedr&uuml;ckt und klicken sie auf das letzte Objekt der Gruppe.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Mehrere Objekte ausw&auml;hlen</para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Halten Sie die Taste <keycap>Strg</keycap> gedr&uuml;ckt. Klicken Sie auf die auszuw&auml;hlenden Objekte.</para>
+                <para>Alternativ k&ouml;nnen Sie die Taste <keycap>Strg</keycap> gedr&uuml;ckt halten und einen Rahmen um die auszuw&auml;hlenden Dateien ziehen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>Alle Objekte in einem Ordner ausw&auml;hlen </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>W&auml;hlen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Alle Dateien ausw&auml;hlen</guimenuitem></menuchoice>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Wenn Sie die Standardaktion f&uuml;r ein Objekt ausf&uuml;hren m&ouml;chten,
+doppelklicken Sie auf das Objekt. In den Dateimanager-Einstellungen k&ouml;nnen
+Sie festlegen, dass Sie nur einmal auf eine Datei klicken m&uuml;ssen, um
+die Standardaktion auszuf&uuml;hren.</para>
+    </sect2>
+    <sect2 id="gosnautilus-9">
+      <title>So verschieben Sie eine Datei oder einen Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Verschieben von Dateien
+und Ordnern</secondary>
+      </indexterm>
+      <para>In den folgenden Abschnitten werden
+die M&ouml;glichkeiten beschrieben, eine Datei oder einen Ordner zu verschieben.</para>
+      <sect3 id="gosnautilus-537">
+        <title>An die neue Position in einem Ansichtsteilfenster ziehen</title>
+        <para>Wenn Sie eine Datei oder einen Ordner an eine neue Position in einem
+Ansichtsteilfenster ziehen m&ouml;chten, m&uuml;ssen Sie die folgenden Schritte
+ausf&uuml;hren:</para>
+        <orderedlist>
+          <listitem>
+            <para>&Ouml;ffnen Sie ein Dateimanager-Fenster. W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Neues Fensteri</guimenuitem></menuchoice>, um ein weiteres Dateimanager-Fenster zu &ouml;ffnen.</para>
+          </listitem>
+          <listitem>
+            <para>W&auml;hlen Sie in einem der Fenster den Ordner aus, aus dem
+die Datei oder der Ordner verschoben werden soll. W&auml;hlen Sie im anderen
+Fenster den Ordner aus, in den die Datei oder der Ordner verschoben werden
+soll.</para>
+          </listitem>
+          <listitem>
+            <para>Ziehen Sie die zu verschiebende Datei oder den Ordner an die
+neue Position im anderen Fenster.</para>
+          </listitem>
+        </orderedlist>
+        <para>Wenn Sie die Datei oder den Ordner in einen Ordner eine Ebene unterhalb
+der aktuellen Position verschieben m&ouml;chten, &ouml;ffnen Sie kein neues
+Fenster. Ziehen Sie die Datei oder den Ordner stattdessen im selben Fenster
+an die neue Position.</para>
+      </sect3>
+      <sect3 id="gosnautilus-538">
+        <title>Ausschneiden und an der neuen Position einf&uuml;gen</title>
+        <para>Sie k&ouml;nnen eine Datei oder einen Ordner ausschneiden und in einem
+anderen Ordner wie folgt einf&uuml;gen:</para>
+        <orderedlist>
+          <listitem>
+            <para>W&auml;hlen Sie die zu verschiebende Datei oder den Ordner
+aus, und klicken Sie anschlie&szlig;end auf <menuchoice><guimenu>Bearbeiten
+</guimenu><guimenuitem>Datei ausschneiden</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>&Ouml;ffnen Sie den Ordner, in den die Datei oder der Ordner
+verschoben werden soll, und w&auml;hlen Sie dann <menuchoice><guimenu>Bearbeiten
+</guimenu><guimenuitem>Dateien einf&uuml;gen</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-10">
+      <title>So kopieren Sie eine Datei oder einen Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Kopieren von Dateien
+und Ordnern</secondary>
+      </indexterm>
+      <para>In den folgenden Abschnitten wird
+beschrieben, welche M&ouml;glichkeiten Sie haben, eine Datei oder einen Ordner
+zu kopieren.</para>
+      <sect3 id="gosnautilus-640">
+        <title>An die neue Position in einem Ansichtsteilfenster ziehen</title>
+        <para>Zum Kopieren einer Datei oder Ordners f&uuml;hren Sie die folgende Schritte
+aus:</para>
+        <orderedlist>
+          <listitem>
+            <para>&Ouml;ffnen Sie ein Dateimanager-Fenster. W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Neues Fensteri</guimenuitem></menuchoice>, um ein weiteres Dateimanager-Fenster zu &ouml;ffnen.</para>
+          </listitem>
+          <listitem>
+            <para>W&auml;hlen Sie in einem Fenster den Ordner aus, aus dem die
+Datei oder der Ordner kopiert werden soll. W&auml;hlen Sie im anderen Fenster
+den Ordner aus, in den die Datei oder der Ordner kopiert werden soll.</para>
+          </listitem>
+          <listitem>
+            <para>Greifen Sie die Datei oder den Ordner mit der Maus, und halten
+Sie anschlie&szlig;end die Taste <keycap>Strg</keycap> gedr&uuml;ckt. Ziehen
+Sie die Datei oder den Ordner im selben Fenster an die neue Position. </para>
+          </listitem>
+        </orderedlist>
+        <para>Wenn Sie die Datei oder den Ordner in einen Ordner eine Ebene unterhalb
+der aktuellen Position kopieren m&ouml;chten, &ouml;ffnen Sie kein neues Fenster.
+Greifen Sie stattdessen die Datei oder den Ordner mit der Maus, und halten
+Sie die Taste <keycap>Strg</keycap> gedr&uuml;ckt. Ziehen Sie die Datei oder
+den Ordner im selben Fenster an die neue Position.</para>
+      </sect3>
+      <sect3 id="gosnautilus-441">
+        <title>Kopieren und an der neuen Position einf&uuml;gen</title>
+        <para>Sie k&ouml;nnen eine Datei oder einen Ordner kopieren und in einem anderen
+Ordner wie folgt einf&uuml;gen:</para>
+        <orderedlist>
+          <listitem>
+            <para>W&auml;hlen Sie die zu kopierende Datei oder den Ordner aus,
+und klicken Sie anschlie&szlig;end auf <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Datei kopieren</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>&Ouml;ffnen Sie den Ordner, in den die Datei oder der Ordner
+kopiert werden soll, und w&auml;hlen Sie dann <menuchoice><guimenu>Bearbeiten
+</guimenu><guimenuitem>Dateien einf&uuml;gen</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </orderedlist>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-82">
+      <title>So duplizieren Sie eine Datei oder einen Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Duplizieren von Dateien
+und Ordnern</secondary>
+      </indexterm>
+      <para>Wenn Sie eine Kopie einer Datei oder
+eines Ordners im aktuellen Ordner erstellen m&ouml;chten, f&uuml;hren Sie
+die folgenden Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die zu duplizierende Datei oder den Ordner
+im Ansichtsteilfenster aus.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Duplizieren</guimenuitem></menuchoice>. Alternativ k&ouml;nnen
+Sie im Ansichtsteilfenster mit der rechten Maustaste auf die Datei oder den
+Ordner klicken und anschlie&szlig;end <guimenuitem>Duplizieren</guimenuitem> w&auml;hlen. </para>
+          <para>Eine Kopie der Datei oder des Ordners erscheint im aktuellen
+Ordner.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-11">
+      <title>So erstellen Sie einen Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Erstellen von Ordnern</secondary>
+      </indexterm>
+      <para>Zum Erstellen eines Ordners f&uuml;hren Sie
+die folgende Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie den Ordner aus, in dem Sie den neuen Ordner
+erstellen m&ouml;chten. </para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Ordner erzeugen</guimenuitem></menuchoice>. Alternativ k&ouml;nnen
+Sie mit der rechten Maustaste auf den Hintergrund des Ansichtsteilfensters
+klicken und anschlie&szlig;end <guimenuitem>Ordner anlegen</guimenuitem> w&auml;hlen. </para>
+          <para>Im Ansichtsteilfenster wird ein Ordner mit dem Titel <guilabel>untitled</guilabel> hinzugef&uuml;gt. Der Name des Ordners wird ausgew&auml;hlt.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie einen Namen f&uuml;r den Ordner ein, und dr&uuml;cken
+Sie die <keycap>Return</keycap>-Taste. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-12">
+      <title>So benennen Sie eine Datei oder einen Ordner um</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Umbenennen von Ordnern</secondary>
+      </indexterm>
+      <para>Zum Umbenennen einer Datei oder eines Ordners
+f&uuml;hren Sie die folgende Schritte aus: </para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die umzubenennende Datei oder den Ordner im
+Ansichtsteilfenster aus.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Umbenennen</guimenuitem></menuchoice>. Alternativ k&ouml;nnen
+Sie im Ansichtsteilfenster mit der rechten Maustaste auf die Datei oder den
+Ordner klicken und anschlie&szlig;end <guimenuitem>Umbenennen</guimenuitem> w&auml;hlen. </para>
+          <para>Der Name der Datei oder des Ordners wird ausgew&auml;hlt.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie einen neuen Namen f&uuml;r die Datei oder den Ordner
+ein, und dr&uuml;cken Sie dann die <keycap>Return</keycap>-Taste.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-512">
+      <title>Vorlagen und Dokumente</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Erstellen von Ordnern</secondary>
+      </indexterm>
+      <para>Von h&auml;ufig verwendeten Dokumenten k&ouml;nnen
+Sie Dokumentvorlagen erzeugen. Wenn Sie beispielsweise oft Rechnungen ausstellen,
+k&ouml;nnen Sie ein leeres Dokument f&uuml;r Rechnungen erstellen und dieses
+Dokument im Ordner <literal>$HOME/Templates</literal> als <literal>invoice.doc</literal> speichern.</para>
+      <para>Sie k&ouml;nnen Vorlagen auch in Dateibrowser-Fenstern &ouml;ffnen.
+W&auml;hlen Sie <menuchoice><guimenu>Gehe zu</guimenu><guimenuitem>Vorlagen</guimenuitem></menuchoice>.</para>
+      <para>Der Name der Vorlage wird als Untermen&uuml;punkt im Men&uuml; <guilabel>Dokument erzeugen</guilabel> angezeigt.</para>
+      <para>Sie k&ouml;nnen im Vorlagenordner auch Unterverzeichnisse erstellen.
+Unterverzeichnisse werden im Men&uuml; als Untermen&uuml;punkte angezeigt. </para>
+      <para>Sie k&ouml;nnen Vorlagen auch f&uuml;r die Nuztung durch Andere freigeben.
+Erstellen Sie hierzu einen symbolischen Link vom Vorlagenordner auf den Ordner,
+der die freigegebenen Vorlagen enth&auml;lt. </para>
+    </sect2>
+    <sect2 id="gosnautilus-514">
+      <title>So erstellen Sie ein  Dokument</title>
+      <para>Wenn Dokumentvorlagen existieren, k&ouml;nnen Sie das gew&uuml;nschte
+Dokument von einer dieser Vorlagen erstellen. </para>
+      <para>Zum Erstellen eines Dokuments f&uuml;hren Sie die folgenden Schritte
+aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie den Ordner aus, in dem Sie das neue Dokument
+erstellen m&ouml;chten. </para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Dokument erzeugen</guimenuitem></menuchoice>. Alternativ k&ouml;nnen
+Sie mit der rechten Maustaste auf den Hintergrund des Ansichtsteilfensters
+klicken und anschlie&szlig;end <guimenuitem>Dokument erzeugen</guimenuitem> w&auml;hlen.</para>
+          <para>Verf&uuml;gbare Dokumentvorlagen werden im Men&uuml; <guilabel>Dokument erzeugen</guilabel> als Untermen&uuml;punkte angezeigt.</para>
+        </listitem>
+        <listitem>
+          <para>Doppelklicken Sie auf den Namen der Vorlage, von der Sie das
+Dokument erstellen m&ouml;chten. </para>
+        </listitem>
+        <listitem>
+          <para>Benennen Sie das Dokument um und speichern Sie es im gew&uuml;nschten
+Verzeichnis.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-13">
+      <title>So verschieben Sie eine Datei oder einen Ordner in den Papierkorb</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Papierkorb</secondary>
+        <see> Papierkorb</see>
+      </indexterm>
+      <indexterm>
+        <primary>Papierkorb</primary>
+        <secondary>Verschieben von Dateien oder Ordnern in</secondary>
+      </indexterm>
+      <para>Zum Verschieben einer Datei oder Ordners in den <guilabel>Papierkorb</guilabel> f&uuml;hren Sie die folgenden Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die in den <guilabel>Papierkorb</guilabel> zu
+verschiebende Datei oder den Ordner im Ansichtsteilfenster aus.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>In den Papierkorb verschieben</guimenuitem></menuchoice>. Alternativ
+k&ouml;nnen Sie im Ansichtsteilfenster mit der rechten Maustaste auf die Datei
+oder den Ordner klicken und anschlie&szlig;end <guimenuitem>In den Papierkorb
+verschieben</guimenuitem> w&auml;hlen. </para>
+        </listitem>
+      </orderedlist>
+      <para>Au&szlig;erdem besteht die M&ouml;glichkeit, die Datei oder den Ordner
+aus dem Ansichtsteilfenster auf das Objekt <guilabel>Trash</guilabel> auf
+dem Desktop-Hintergrund zu ziehen.</para>
+      <note>
+        <para>Wenn Sie eine Datei bzw. einen Ordner von einem Wechseldatentr&auml;ger
+in den <guilabel>Papierkorb</guilabel> verschieben, wird die Datei bzw. der
+Ordner in einem eigenen <guilabel>Papierkorb</guilabel> auf dem jeweiligen
+Datentr&auml;ger abgelegt. Um die Datei bzw. den Ordner endg&uuml;ltig von
+dem betreffenden Datentr&auml;ger zu entfernen, m&uuml;ssen Sie diesen <guilabel>Papierkorb</guilabel> leeren.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-443">
+      <title>So l&ouml;schen Sie eine Datei oder einen Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>L&ouml;schen von Dateien
+oder Ordnern</secondary>
+      </indexterm>
+      <para>Wenn Sie eine Datei oder einen Ordner
+l&ouml;schen, wird die Datei oder der Ordner nicht in den <guilabel>Papierkorb</guilabel> verschoben, sondern sofort aus dem Dateisystem gel&ouml;scht.
+Der Men&uuml;punkt <guimenuitem>L&ouml;schen</guimenuitem> ist nur verf&uuml;gbar,
+wenn Sie im Dialogfeld <guilabel>Ordnereinstellungen</guilabel> die Option <guilabel>Einen L&ouml;schbefehl bereitstellen, der den Papierkorb umgeht</guilabel> ausw&auml;hlen. </para>
+      <para>Zum L&ouml;schen einer Datei oder eines Ordners f&uuml;hren Sie die
+folgende Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die zu l&ouml;schende Datei oder den Ordner
+im Ansichtsteilfenster aus.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>L&ouml;schen</guimenuitem></menuchoice>. Alternativ k&ouml;nnen
+Sie im Ansichtsteilfenster auf die Datei oder den Ordner klicken und anschlie&szlig;end <guimenuitem>L&ouml;schen</guimenuitem> w&auml;hlen. </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-14">
+      <title>So erstellen Sie einen symbolischen Link zu einer Datei oder einem
+Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>symbolische Links anlegen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Symbolischer Link</primary>
+        <secondary> zu Datei/Ordner anlegen</secondary>
+      </indexterm>
+      <para>Ein symbolischer Link
+ist eine besondere Art von Datei, die auf eine andere Datei oder einen Ordner
+verweist. Aktionen an einem symbolischen Link werden in Wirklichkeit an der
+Datei oder an dem Ordner ausgef&uuml;hrt, auf die bzw. den der symbolische
+Link verweist. Wenn Sie jedoch einen symbolischen Link l&ouml;schen, wird
+nur die Link-Datei, nicht aber die Datei gel&ouml;scht, auf die der symbolische
+Link verweist. </para>
+      <para>Um einen symbolischen Link zu einer Datei oder einem Ordner zu erstellen,
+m&uuml;ssen Sie die entsprechende Datei bzw. den Ordner ausw&auml;hlen. W&auml;hlen
+Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Link erstellen</guimenuitem></menuchoice>. Im aktuellen Ordner wird ein Link zu dieser Datei
+oder diesem Ordner hinzugef&uuml;gt. </para>
+      <para>Alternativ k&ouml;nnen Sie das Objekt, zu dem der Link f&uuml;hren soll,
+mit der Maus greifen und anschlie&szlig;end die Tastenkombination <keycombo><keycap>Strg</keycap><keycap>Umschalttaste</keycap></keycombo> gedr&uuml;ckt halten. Ziehen
+Sie das Objekt an die Position, an der Sie den Link platzieren m&ouml;chten.</para>
+      <para>Standardm&auml;&szlig;ig versieht der Dateimanager symbolische Links
+mit einem Emblem.</para>
+      <note>
+        <para>Die Zugriffsberechtigungen eines symbolischen Links richten sich
+nach der Datei bzw. dem Ordner, auf die/den er verweist.</para>
+      </note>
+    </sect2>
+    <sect2 id="gosnautilus-476">
+      <title>So zeigen Sie die Eigenschaften einer Datei/eines Ordners an</title>
+      <indexterm>
+        <primary>file manager</primary>
+        <secondary>viewing properties</secondary>
+      </indexterm>
+      <para>Um die Eigenschaften einer Datei oder eines Ordners anzuzeigen,
+gehen Sie folgenderma&szlig;en vor:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die gew&uuml;nschte Datei bzw. den Ordner
+aus. </para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Eigenschaften</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Aus diesem Dialogfeld sind die Eigenschaften der Datei/des
+Ordners ersichtlich. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>Schlie&szlig;en</guibutton>, um
+das Eigenschaftsdialogfeld zu schlie&szlig;en.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-430">
+      <title>So &auml;ndern Sie Zugriffsberechtigungen</title>
+      <indexterm>
+        <primary>Zugriffsberechtigungen</primary>
+        <secondary>Einf&uuml;hrung</secondary>
+      </indexterm>
+      <para>Bei Zugriffsberechtigungen handelt es sich um
+bestimmte Einstellungen, die mit einer Datei oder einem Ordner verbunden sind
+und festlegen, welche Benutzer in welcher Art darauf zugreifen d&uuml;rfen.
+In der folgenden Tabelle sind die m&ouml;glichen Zugriffsberechtigungen f&uuml;r
+Dateien und Ordner sowie ihre Auswirkungen auf die jeweilige Objektart aufgef&uuml;hrt.</para>
+      <informaltable frame="topbot">
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colwidth="29.62*"/>
+          <colspec colwidth="74.59*"/>
+          <colspec colname="colspec0" colwidth="74.59*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Berechtigung</para>
+              </entry>
+              <entry>
+                <para>Datei</para>
+              </entry>
+              <entry colname="colspec0">
+                <para>Ordner</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Gelesen </para>
+              </entry>
+              <entry valign="top">
+                <para>Berechtigung zum Lesen der Datei. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Berechtigung zum Anzeigen der Ordnerinhalte.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Schreiben </para>
+              </entry>
+              <entry valign="top">
+                <para>Berechtigung zum &Auml;ndern der Datei. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Berechtigung zum Anlegen und L&ouml;schen von Dateien im Ordner.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Ausf&uuml;hren </para>
+              </entry>
+              <entry valign="top">
+                <para>Berechtigung zum Ausf&uuml;hren der Datei als Programm. Diese Option ist lediglich relevant, wenn es sich bei der Datei um ein Programm oder Skript handelt. </para>
+              </entry>
+              <entry colname="colspec0" valign="top">
+                <para>Berechtigung zum Zugriff auf Dateien im Ordner.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>Sie k&ouml;nnen unterschiedliche Berechtigungen f&uuml;r verschiedene
+Benutzerarten einrichten. Die folgende Tabelle f&uuml;hrt die Benutzerarten
+auf, f&uuml;r die Sie Zugriffsberechtigungen einrichten k&ouml;nnen: </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colwidth="27.27*"/>
+          <colspec colwidth="72.73*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Benutzerkategorie</para>
+              </entry>
+              <entry>
+                <para>Beschreibung </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry valign="top">
+                <para>Besitzer </para>
+              </entry>
+              <entry valign="top">
+                <para>Der Benutzer, der die jeweilige Datei/den Ordner erstellt hat.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Gruppe </para>
+              </entry>
+              <entry valign="top">
+                <para>Die Gruppe, der der Besitzer angeh&ouml;rt.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <para>Andere </para>
+              </entry>
+              <entry valign="top">
+                <para>Alle sonstigen Benutzer, die nicht derselben Gruppe wie der Besitzer angeh&ouml;ren.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para><indexterm><primary>Dateimanager</primary><secondary>Zugriffsberechtigungen
+&auml;ndern</secondary></indexterm><indexterm><primary>Zugriffsberechtigungen</primary><secondary> f&uuml;r Dateien/Ordner &auml;ndern</secondary></indexterm>Um
+die Zugriffsberechtigungen f&uuml;r eine Datei oder einen Ordner zu &auml;ndern,
+gehen Sie folgenderma&szlig;en vor:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die zu &auml;ndernde Datei oder den Ordner
+aus. </para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Eigenschaften</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf das Register <guilabel>Zugriffsrechte</guilabel>.
+&Auml;ndern Sie im Abschnitt <guilabel>Zugriffsberechtigungen</guilabel> die
+Zugriffsberechtigungen je nach Bedarf anhand der Dropdown-Listen und Markierfelder.
+Die folgende Tabelle beschreibt die Dialogfeldelemente im Abschnitt <guilabel>Berechtigungen</guilabel>: </para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="37.78*"/>
+              <colspec colwidth="62.22*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Element</para>
+                  </entry>
+                  <entry>
+                    <para>Beschreibung </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Dateibesitzer</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Um den Besitzer der Datei/des Ordners zu &auml;ndern, w&auml;hlen Sie den entsprechenden Benutzer aus der Dropdown-Liste aus. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Dateigruppe</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Um die Gruppenzugeh&ouml;rigkeit der Datei/des Ordners zu &auml;ndern, w&auml;hlen Sie die gew&uuml;nschte Gruppe aus der Dropdown-Liste aus. </para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Besitzer</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Legen Sie die Berechtigungen fest, die f&uuml;r den Besitzer der Datei/des Ordners gelten sollen.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Gruppe</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Legen Sie die Berechtigungen fest, die f&uuml;r die Gruppe gelten sollen, welcher der Besitzer der Datei/des Ordners angeh&ouml;rt.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Andere</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Legen Sie die Berechtigungen fest, die f&uuml;r alle sonstigen Benutzer gelten sollen, die nicht derselben Gruppe angeh&ouml;ren wie der Besitzer der Datei/des Ordners.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Textansicht</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Zeigt die aus den Optionen <guilabel> Lesen</guilabel>, <guilabel>Schreiben</guilabel> und <guilabel>Ausf&uuml;hren</guilabel> ausgew&auml;hlten Berechtigungen im Textformat an.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Ansichtsanzahl</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Zeigt die aus den Optionen <guilabel> Lesen</guilabel>, <guilabel>Schreiben</guilabel> und <guilabel>Ausf&uuml;hren</guilabel> ausgew&auml;hlten Berechtigungen im Textformat an.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para>
+                      <guilabel>Letzte &Auml;nderung</guilabel>
+                    </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>Zeigt Datum und Uhrzeit der letzten &Auml;nderung an der Datei/dem Ordner an.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>Schlie&szlig;en</guibutton>, um
+das Eigenschaftsdialogfeld zu schlie&szlig;en.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-200">
+      <title>Hinzuf&uuml;gen von Notizen zu Dateien und Ordnern</title>
+      <para>Sie k&ouml;nnen Dateien und Ordner mit Notizen versehen. Dies kann auf
+folgenden Wegen geschehen:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Vom Dialogfeld &ldquo;Eigenschaften&rdquo; aus</para>
+        </listitem>
+        <listitem>
+          <para>&Uuml;ber die <guilabel>Notizen</guilabel>-Seitenleiste</para>
+        </listitem>
+      </itemizedlist>
+      <sect3 id="gosnautilus-472">
+        <title>So legen Sie eine Notiz &uuml;ber das Eigenschaftendialogfeld an</title>
+        <indexterm>
+          <primary>Notizen</primary>
+          <secondary>zu Dateien und Ordnern hinzuf&uuml;gen </secondary>
+        </indexterm>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary> Notizen</secondary>
+          <tertiary>hinzuf&uuml;gen</tertiary>
+        </indexterm>
+        <para>Wenn Sie einer Datei oder einem Ordner eine Anmerkung hinzuf&uuml;gen m&ouml;chten,
+f&uuml;hren Sie die folgenden Schritte aus:</para>
+        <orderedlist>
+          <listitem>
+            <para>W&auml;hlen Sie die gew&uuml;nschte Datei bzw. den Ordner
+aus. </para>
+          </listitem>
+          <listitem>
+            <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Eigenschaften</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>Klicken Sie im Eigenschaftsdialogfeld auf das Register <guilabel>Notizen</guilabel>. Geben Sie im Registerabschnitt <guilabel>Notizen</guilabel> die
+Notiz ein.</para>
+          </listitem>
+          <listitem>
+            <para>Klicken Sie auf <guibutton>Schlie&szlig;en</guibutton>, um
+das Eigenschaftsdialogfeld zu schlie&szlig;en. Die Datei bzw. der Ordner wird
+nun mit einem Notizen-Emblem versehen.</para>
+          </listitem>
+        </orderedlist>
+        <para><indexterm><primary>Notizen</primary><secondary>l&ouml;schen</secondary></indexterm><indexterm><primary>Dateimanager</primary><secondary>Notizen</secondary><tertiary>l&ouml;schen </tertiary></indexterm>Um eine Notiz zu l&ouml;schen,
+w&auml;hlen Sie den Notiztext aus dem Abschnitt <guilabel> Notizen</guilabel> aus.</para>
+      </sect3>
+      <sect3 id="gosnautilus-473">
+        <title>So f&uuml;gen Sie eine Notiz &uuml;ber die Option &ldquo;Notizen&rdquo;
+im Seitenteilfenster hinzu</title>
+        <para>Wenn Sie einer Datei oder einem Ordner eine Anmerkung hinzuf&uuml;gen
+m&ouml;chten, f&uuml;hren Sie die folgenden Schritte aus:</para>
+        <orderedlist>
+          <listitem>
+            <para>&Ouml;ffnen Sie die gew&uuml;nschte Datei bzw. den Ordner
+im Ansichtsteilfenster.</para>
+          </listitem>
+          <listitem>
+            <para>W&auml;hlen Sie in der Dropdown-Liste am oberen Rand des Seitenteilfensters
+die Option <guilabel>Notizen</guilabel>. Zum Einblenden des Seitenteilfensters
+w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Seitenteilfenster</guimenuitem></menuchoice>. </para>
+          </listitem>
+          <listitem>
+            <para>Geben Sie die Notiz im Seitenteilfenster ein. Im Ansichtsteilfenster
+wird die Datei bzw. der Ordner nun mit einem Notiz-Emblem versehen; im Seitenteilfenster
+erscheint ein Notizensymbol. Wenn Sie die Notiz anzeigen m&ouml;chten, klicken
+Sie einfach auf dieses Symbol.</para>
+          </listitem>
+        </orderedlist>
+        <para>Um eine Notiz zu l&ouml;schen, l&ouml;schen Sie den betreffenden Text
+aus den <guilabel>Notizen</guilabel> im Seitenteilfenster.</para>
+      </sect3>
+    </sect2>
+    <sect2 id="gosnautilus-44">
+      <title>Verwenden des Papierkorbs</title>
+      <indexterm>
+        <primary>Papierkorb</primary>
+        <secondary>Einf&uuml;hrung</secondary>
+      </indexterm>
+      <para>Folgende Objekte k&ouml;nnen in den <guilabel>Papierkorb</guilabel> verschoben werden:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Dateien</para>
+        </listitem>
+        <listitem>
+          <para>Ordner</para>
+        </listitem>
+        <listitem>
+          <para>Desktop-Hintergrundobjekte</para>
+        </listitem>
+      </itemizedlist>
+      <para>Wenn Sie eine Datei aus dem <guilabel>Papierkorb</guilabel> aufrufen
+m&ouml;chten, k&ouml;nnen Sie den <guilabel>Papierkorb</guilabel> anzeigen
+und die Datei aus dem <guilabel>Papierkorb</guilabel> verschieben. Wenn Sie
+den <guilabel>Papierkorb</guilabel> leeren, l&ouml;schen Sie den Inhalt des <guilabel>Papierkorbs</guilabel> unwiderruflich. </para>
+      <sect3 id="gosnautilus-107">
+        <title>So zeigen Sie den Papierkorb an</title>
+        <indexterm>
+          <primary>Papierkorb</primary>
+          <secondary>Anzeigen</secondary>
+        </indexterm>
+        <para>Sie haben folgende M&ouml;glichkeiten, den Inhalt des <guilabel>Papierkorbs</guilabel> anzuzeigen:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Aus einem Dateimanager-Fenster</para>
+            <para>W&auml;hlen Sie <menuchoice><guimenu>Gehe zu</guimenu><guimenuitem>Papierkorb</guimenuitem></menuchoice>.
+Der Inhalt des <guilabel>Papierkorbs</guilabel> wird im Fenster angezeigt.</para>
+          </listitem>
+          <listitem>
+            <para>&Uuml;ber den Desktop-Hintergrund</para>
+            <para>Doppelklicken
+Sie auf das Objekt <guilabel>Papierkorb</guilabel> des Desktop-Hintergrunds.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+      <sect3 id="gosnautilus-108">
+        <title>So leeren Sie den Papierkorb (M&uuml;ll)</title>
+        <indexterm>
+          <primary>Papierkorb</primary>
+          <secondary>Leeren</secondary>
+        </indexterm>
+        <para>Sie haben folgende M&ouml;glichkeiten, den Inhalt des <guilabel>Papierkorbs</guilabel> zu leeren:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Aus einem Dateimanager-Fenster</para>
+            <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Papierkorb leeren</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>&Uuml;ber den Desktop-Hintergrund</para>
+            <para>Klicken Sie
+mit der rechten Maustaste auf das Objekt <guilabel>Papierkorb</guilabel>,
+und w&auml;hlen Sie dann <guimenuitem>Papierkorb leeren</guimenuitem>.</para>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-203">
+    <title>&Auml;ndern des Erscheinungsbildes von Dateien und Ordnern</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>&Auml;ndern des Erscheinungsbildes
+von Dateien und Ordnern</secondary>
+    </indexterm>
+    <para>Das Erscheinungsbild
+Ihrer Dateien und Ordner im Dateimanager k&ouml;nnen Sie auf verschiedene
+Weisen &auml;ndern. Die entsprechenden Vorgehensweisen sind in den folgenden
+Abschnitten beschrieben.</para>
+    <sect2 id="gosnautilus-112">
+      <title>So f&uuml;gen Sie einer Datei oder einem Ordner ein Emblem hinzu</title>
+      <indexterm>
+        <primary>Embleme</primary>
+        <secondary>zu einer Datei hinzuf&uuml;gen</secondary>
+      </indexterm>
+      <indexterm>
+        <primary>Embleme</primary>
+        <secondary>zu
+einem Ordnenr hinzuf&uuml;gen</secondary>
+      </indexterm>
+      <para>Wenn Sie einem
+Objekt ein Emblem hinzuf&uuml;gen m&ouml;chten, f&uuml;hren Sie die folgenden
+Schritte aus: </para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie das Objekt aus, dem Sie ein Emblem hinzuf&uuml;gen
+m&ouml;chten.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie mit der rechten Maustaste auf das Objekt, und
+w&auml;hlen Sie dann <guimenuitem>Eigenschaften</guimenuitem>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie im Eigenschaftsdialogfeld auf das Register <guilabel>Embleme</guilabel>, um den Registerabschnitt <guilabel>Embleme</guilabel> anzuzeigen.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie das Emblem aus, das dem Objekt hinzugef&uuml;gt
+werden soll.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>Schlie&szlig;en</guibutton>, um
+das Eigenschaftsdialogfeld zu schlie&szlig;en.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-471">
+      <title>So f&uuml;gen Sie ein neues Emblem hinzu</title>
+      <indexterm>
+        <primary>Embleme</primary>
+        <secondary>neue hinzuf&uuml;gen</secondary>
+      </indexterm>
+      <para>Zum Hinzuf&uuml;gen eines Emblems f&uuml;hren Sie die folgenden
+Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Hintergr&uuml;nde und Embleme</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Emblem</guibutton> und
+dann im Dialogfeld <guilabel>Hintergr&uuml;nde und Embleme</guilabel> auf <guibutton>Neues Emblem hinzuf&uuml;gen</guibutton> . </para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie in das Textfeld <guilabel>Schl&uuml;sselwort</guilabel> des
+Dialogfelds <guilabel>Neues Emblem hinzuf&uuml;gen</guilabel> einen Namen
+f&uuml;r das Emblem ein.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf die Schaltfl&auml;che <guilabel>Bild</guilabel>.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie im Dialogfeld <guilabel>Eine Bilddatei f&uuml;r
+das neue Emblem w&auml;hlen</guilabel> auf <guibutton>Durchsuchen</guibutton>.
+Wenn Sie ein Emblem ausgew&auml;hlt haben, klicken Sie auf <guibutton>OK</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie im Dialogfeld <guilabel>Ein neues Emblem erzeugen</guilabel> auf <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    <sect2 id="gosnautilus-51">
+      <title>So &auml;ndern Sie das Symbol f&uuml;r eine Datei oder einen Ordner</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Symbole</secondary>
+        <tertiary>&auml;ndern</tertiary>
+      </indexterm>
+      <para>Zum &Auml;ndern des Symbols, das eine
+einzelne Datei oder einen Ordner repr&auml;sentiert, f&uuml;hren Sie die folgenden
+Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie eine Datei bzw. einen Ordner aus.</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Eigenschaften</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie im Registerabschnitt <guilabel>Grundlagen</guilabel> des
+Eigenschaftsdialogfelds auf die Schaltfl&auml;che <guibutton>Benutzerdefiniertes
+Symbol ausw&auml;hlen</guibutton>.</para>
+        </listitem>
+        <listitem>
+          <para>Verwenden Sie das Dialogfeld <guilabel>W&auml;hlen Sie ein
+Symbol</guilabel>, um das Symbol f&uuml;r die Datei oder den Ordner auszuw&auml;hlen.
+Klicken Sie auf <guibutton>Ok</guibutton>. </para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>Schlie&szlig;en</guibutton>, um
+das Eigenschaftsdialogfeld zu schlie&szlig;en.</para>
+        </listitem>
+      </orderedlist>
+      <para>Um statt eines benutzerdefinierten Symbols wieder das im Einstellungstool <application>Dateizuordnungen</application> festgelegte Standardsymbol einzustellen, klicken
+Sie mit der rechten Maustaste auf das Symbol und w&auml;hlen <guimenuitem>Benutzerdefiniertes Symbol entfernen</guimenuitem>. Alternativ k&ouml;nnen
+Sie im Eigenschaftsdialogfeld auf die Schaltfl&auml;che <guilabel>Benutzerdefiniertes
+Symbol entfernen</guilabel> klicken.</para>
+      <para>Zum &Auml;ndern des Symbols f&uuml;r einen Dateityp verwenden Sie das
+Einstellungstool <application>Dateitzuordnungen</application>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-102">
+      <title>So &auml;ndern Sie die Gr&ouml;&szlig;e des Objekts in einer Ansicht</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>Vergr&ouml;&szlig;ern
+und Verkleinern</secondary>
+      </indexterm>
+      <para>Sie k&ouml;nnen die Gr&ouml;&szlig;e
+von Objekten in einer Ansicht &auml;ndern. Dies ist m&ouml;glich, wenn in
+der Ansicht eine Datei oder ein Ordner angezeigt wird. Folgende Methoden stehen
+zur Auswahl:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Um Objekte in einer Ansicht zu vergr&ouml;&szlig;ern, w&auml;hlen
+Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Vergr&ouml;&szlig;ern</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Um Objekte in einer Ansicht zu verkleinern, w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Verkleinern</guimenuitem></menuchoice>. </para>
+        </listitem>
+        <listitem>
+          <para>Um die normale Gr&ouml;&szlig;e von Objekten in einer Ansicht
+wiederherzustellen, w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Normale Gr&ouml;&szlig;e</guimenuitem></menuchoice>. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Sie k&ouml;nnen auch die Zoom-Schaltfl&auml;chen der Verzeichnisleiste
+verwenden, um die Gr&ouml;&szlig;e von Objekten in einer Ansicht zu &auml;ndern. <xref linkend="gosnautilus-TBL-42"/> beschreibt, wie die Zoom-Schaltfl&auml;chen
+verwendet werden.</para>
+      <table frame="topbot" id="gosnautilus-TBL-42">
+        <title>Zoom-Schaltfl&auml;chen</title>
+        <tgroup cols="3" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="21.98*"/>
+          <colspec colname="colspec1" colwidth="32.86*"/>
+          <colspec colname="colspec2" colwidth="44.17*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Schaltfl&auml;che</para>
+              </entry>
+              <entry>
+                <para>Schaltfl&auml;chenname </para>
+              </entry>
+              <entry>
+                <para>Beschreibung </para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_out_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Schaltfläche &quot;Zoom Out&quot;.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Schaltfl&auml;che <guibutton>Verkleinern</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Klicken Sie auf diese Schaltfl&auml;che, um Objekte in einer Ansicht zu verkleinern.</para>
+              </entry>
+            </row>
+            <row>
+              <entry valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_normal_size_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Schaltfläche &quot;Normal Size&quot;. </phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry valign="top">
+                <para>Schaltfl&auml;che <guibutton>Normale Gr&ouml;&szlig;e</guibutton> </para>
+              </entry>
+              <entry valign="top">
+                <para>Klicken Sie auf diese Schaltfl&auml;che, um die normale Gr&ouml;&szlig;e von Objekten in einer Ansicht wiederherzustellen. </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <screenshot>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/naut_zoom_in_button.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Schaltfläche &quot;Zoom In&quot;.</phrase>
+                    </textobject>
+                  </mediaobject>
+                </screenshot>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Schaltfl&auml;che <guibutton>Vergr&ouml;&szlig;ern</guibutton> </para>
+              </entry>
+              <entry colname="colspec2" valign="top">
+                <para>Klicken Sie auf diese Schaltfl&auml;che, um Objekte in einer Ansicht zu vergr&ouml;&szlig;ern.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Die eingestellte Objektgr&ouml;&szlig;e wird vom Dateimanager auf Ordnerebene
+gespeichert. Wenn Sie den Ordner das n&auml;chste Mal anzeigen, erscheinen
+die Objekte in der von Ihnen gew&auml;hlten Gr&ouml;&szlig;e. Das hei&szlig;t,
+wenn Sie die Gr&ouml;&szlig;e von Objekten in einem Ordner &auml;ndern, passen
+Sie diesen Ordner so an, dass die Objekte in dieser Gr&ouml;&szlig;e erscheinen.
+Wenn Sie f&uuml;r die Objekte wieder die in den Einstellungen festgelegte
+Standardgr&ouml;&szlig;e einstellen m&ouml;chten, w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Ansicht auf Standardeinstellungen
+zur&uuml;cksetzen</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="gosnautilus-7">
+      <title>Verwenden von Ansichten zum Anzeigen der Dateien und Ordner</title>
+      <indexterm>
+        <primary>Anzeigekomponenten</primary>
+      </indexterm>
+      <indexterm>
+        <primary> Dateimanager</primary>
+        <secondary>Ansichten</secondary>
+        <tertiary>Einf&uuml;hrung</tertiary>
+      </indexterm>
+      <para>Im Dateimanager gibt es verschiedene M&ouml;glichkeiten,
+um den Inhalt Ihrer Dateien anzuzeigen. Der Dateimanager verf&uuml;gt &uuml;ber
+Viewer-Komponenten, mit denen Sie bestimmte Arten von Dateien im Ansichtsteilfenster
+anzeigen k&ouml;nnen. So k&ouml;nnen Sie beispielsweise HTML-Dateien in einem
+Webseiten-Viewer anzeigen. Mit einem Text-Viewer k&ouml;nnen Sie einfache
+Textdateien im Ansichtsteilfenster anzeigen.</para>
+      <para>Ebenso k&ouml;nnen Sie &uuml;ber den Dateimanager eine Datei in der
+jeweils geeigneten Anwendung &ouml;ffnen. Weitere Informationen finden Sie
+im Abschnitt <xref linkend="gosnautilus-28"/>.</para>
+      <para>Der Dateimanager enth&auml;lt Ansichten, mit denen Sie den Inhalt von
+Ordnern auf verschiedene Weise anzeigen k&ouml;nnen. Dazu z&auml;hlen beispielsweise: </para>
+      <itemizedlist>
+        <listitem>
+          <para>Symbolansicht</para>
+          <para>Zeigt die Objekte im Ordner als
+Symbole an. </para>
+        </listitem>
+        <listitem>
+          <para>Listenansicht</para>
+          <para>Zeigt die Objekte im Ordner als
+Liste an. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Verwenden Sie das Men&uuml; <guilabel>Ansicht</guilabel>, um die Anzeigeoption
+f&uuml;r eine Datei oder einen Ordner auszuw&auml;hlen. Sie k&ouml;nnen auch
+das Dropdown-Listenfeld <guilabel>Anzeigen als</guilabel> verwenden, um die
+Anzeigeoption f&uuml;r eine Datei oder einen Ordner auszuw&auml;hlen. Wenn
+Sie einen Ordner anzeigen, k&ouml;nnen Sie festlegen, wie die Objekte im Ordner
+angeordnet oder sortiert werden sollen. Auch die Gr&ouml;&szlig;e von Objekten
+kann im Ansichtsteilfenster ge&auml;ndert werden. In den folgenden Abschnitten
+wird die Verwendung der Symbolansicht, der Listenansicht und der Dateiansichten
+beschrieben.</para>
+      <sect3 id="gosnautilus-100">
+        <title>So w&auml;hlen Sie die Ansichtsart f&uuml;r eine Datei oder einen Ordner
+aus</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Ansichten</secondary>
+          <tertiary> Ausw&auml;hlen</tertiary>
+        </indexterm>
+        <para>W&auml;hlen Sie die
+Ansichtsart f&uuml;r den Inhalt einer Datei oder eines Ordners im Men&uuml; <guilabel>Ansicht</guilabel> aus. </para>
+        <para>Alternativ k&ouml;nnen Sie eine Ansicht ausw&auml;hlen, indem Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Anzeigen als</guimenuitem></menuchoice> klicken. W&auml;hlen Sie die gew&uuml;nschte Ansicht im Dialogfeld <guilabel>Mit anderem Anzeigeprogramm &ouml;ffnen</guilabel> aus, und klicken Sie auf
+die Schaltfl&auml;che <guibutton>Ausw&auml;hlen</guibutton>. </para>
+        <para>Des Weiteren besteht die M&ouml;glichkeit, die Ansichtsart im Dropdown-Listenfeld <guilabel>Anzeigen als</guilabel> auszuw&auml;hlen. Das Dropdown-Listenfeld <guilabel>Anzeigen als</guilabel> befindet sich auf der rechten Seite der Verzeichnisleiste.</para>
+        <para>Sie k&ouml;nnen verschiedene Ordner in verschiedenen Ansichten anzeigen.
+Die eingestellte Ansicht wird vom Dateimanager auf Ordnerebene gespeichert.
+Wenn Sie den betreffenden Ordner das n&auml;chste Mal anzeigen, wird automatisch
+die gespeicherte Ansicht f&uuml;r die Anzeige verwendet. Wenn Sie f&uuml;r
+den Ordner wieder die in den Einstellungen festgelegte Standardansicht einstellen
+m&ouml;chten, w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Ansicht auf Standardeinstellungen zur&uuml;cksetzen</guimenuitem></menuchoice>.</para>
+      </sect3>
+      <sect3 id="gosnautilus-101">
+        <title>So ordnen Sie die Dateien in der Symbolansicht an</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Symbolansicht</secondary>
+          <tertiary>Anordnen von Dateien in</tertiary>
+        </indexterm>
+        <para>Wenn Sie den
+Inhalt eines Ordners in der Symbolansicht anzeigen, k&ouml;nnen Sie festlegen,
+wie die Objekte im Ordner angeordnet werden sollen. Dazu w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guisubmenu>Objekte anordnen</guisubmenu></menuchoice>. Das Untermen&uuml; von <guisubmenu>Elemente anordnen</guisubmenu> enth&auml;lt
+die folgenden Abschnitte:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Der obere Abschnitt enth&auml;lt eine Option, mit der Sie
+die Dateien manuell anordnen k&ouml;nnen.</para>
+          </listitem>
+          <listitem>
+            <para>Der mittlere Abschnitt enth&auml;lt Optionen, mit denen Sie
+die Dateien automatisch sortieren k&ouml;nnen.</para>
+          </listitem>
+          <listitem>
+            <para>Der untere Abschnitt enth&auml;lt Optionen, mit denen Sie
+die Anordnungsmethode f&uuml;r die Dateien &auml;ndern k&ouml;nnen.</para>
+          </listitem>
+        </itemizedlist>
+        <para>W&auml;hlen Sie die entsprechenden Optionen im Untermen&uuml;, wie in
+der folgenden Tabelle beschrieben: </para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colname="colspec6" colwidth="28.75*"/>
+            <colspec colname="colspec7" colwidth="71.25*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Option</para>
+                </entry>
+                <entry>
+                  <para>Beschreibung </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Manuell</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekt manuell anzuordnen. Dazu ziehen Sie die Objekte an die gew&uuml;nschte Position im Ansichtsteilfenster.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Nach Name</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekte alphabetisch nach Namen zu sortieren. Die Gro&szlig;-/Kleinschreibung spielt beim Sortieren der Objekte keine Rolle. Ist der Dateimanager so eingestellt, dass auch versteckte Dateien angezeigt werden, so erscheinen diese zuletzt.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Nach Gr&ouml;&szlig;e</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekte nach Gr&ouml;&szlig;e zu ordnen, beginnend mit dem gr&ouml;&szlig;ten Objekt. Wenn Sie Objekte nach Gr&ouml;&szlig;e ordnen, werden die Ordner nach der Anzahl der darin enthaltenen Objekte sortiert. Die Ordner werden nicht nach der Gesamtgr&ouml;&szlig;e aller darin enthaltenen Objekte sortiert.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Nach Typ</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekte alphabetisch nach Objekttyp zu sortieren. Die Dateien werden alphabetisch anhand der Beschreibung Ihres <firstterm>MIME-Typs</firstterm> im Einstellungstool <application>Dateizuordnungen</application> sortiert. Der MIME-Typ kennzeichnet das Format einer Datei; Anwendungen wissen so, wie sie eine bestimmte Datei &ouml;ffnen und lesen k&ouml;nnen. Beispielsweise kann eine E-Mail-Anwendung anhand des MIME-Typs <literal>image/png</literal> erkennen, dass sich in der Anlage zu einer E-Mail eine PNG-Grafikdatei befindet.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para><guilabel>Nach &Auml;nderungsdatum</guilabel> </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekte nach dem Datum zu sortieren, an dem sie zuletzt ge&auml;ndert wurden. Das zuletzt ge&auml;nderte Objekt steht an erster Stelle.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Nach Emblemen</guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekte nach ihren Emblemen zu sortieren. Die Objekte werden alphabetisch nach Emblemnamen geordnet. Dateien ohne Emblem werden nach den Dateien mit Emblem aufgelistet.</para>
+                </entry>
+              </row>
+              <row>
+                <entry colname="colspec6" valign="top">
+                  <para>
+                    <guilabel>Kompaktes Layout </guilabel>
+                  </para>
+                </entry>
+                <entry colname="colspec7" valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Objekte dichter aneinander zu platzieren. </para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Umgekehrte Reihenfolge</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die Reihenfolge der Option umzukehren, nach der Sie die Objekte sortiert haben. Wenn Sie die Objekte beispielsweise nach Namen sortiert haben, w&auml;hlen Sie die Option <guilabel>Umgekehrte Reihenfolge</guilabel>, um die Objekte in umgekehrter alphabetischer Reihenfolge zu sortieren.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>Die ausgew&auml;hlte Sortierung wird vom Dateimanager auf Ordnerebene
+gespeichert. Wenn Sie den Ordner das n&auml;chste Mal anzeigen, erscheinen
+die Objekte in der von Ihnen gew&auml;hlten Anordnung. Das hei&szlig;t, wenn
+Sie die Anordnung der Objekte in einem Ordner festlegen, passen Sie diesen
+Ordner so an, dass die Objekte in dieser Anordnung erscheinen. Um wieder die
+in den Einstellungen festgelegte Anordnung einzustellen, w&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Ansicht auf Standardeinstellungen
+zur&uuml;cksetzen</guimenuitem></menuchoice>. </para>
+      </sect3>
+      <sect3 id="gosnautilus-103">
+        <title>So &auml;ndern Sie die Gr&ouml;&szlig;e von Symbolen in der Symbolansicht</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Symbole</secondary>
+          <tertiary>Gr&ouml;&szlig;e &auml;ndern</tertiary>
+        </indexterm>
+        <para>In der Symbolansicht
+k&ouml;nnen Sie die Gr&ouml;&szlig;e des Symbols f&uuml;r ein angezeigtes
+Objekt &auml;ndern. Zum &Auml;ndern der Gr&ouml;&szlig;e eines Objekts in
+der Symbolansicht f&uuml;hren Sie die folgenden Schritte aus:</para>
+        <orderedlist>
+          <listitem>
+            <para>Klicken Sie mit der rechten Maustaste auf das Objekt, dessen
+Gr&ouml;&szlig;e Sie &auml;ndern m&ouml;chten, und w&auml;hlen Sie dann <guimenuitem>Symbol strecken</guimenuitem>. Um das Objekt erscheint ein Rechteck mit Anfasspunkten
+an jeder Ecke.</para>
+          </listitem>
+          <listitem>
+            <para>Greifen Sie einen der Punkte mit der Maus, und ziehen Sie
+das Symbol dann auf die gew&uuml;nschte Gr&ouml;&szlig;e.</para>
+            <para>Wenn
+Sie zur Originalgr&ouml;&szlig;e des Objekts zur&uuml;ckkehren m&ouml;chten,
+klicken Sie mit der rechten Maustaste auf das Symbol und w&auml;hlen dann <guimenuitem>Originalgr&ouml;&szlig;e des Symbols wiederherstellen</guimenuitem>. </para>
+          </listitem>
+        </orderedlist>
+        <para>Sie k&ouml;nnen auch die Gr&ouml;&szlig;e von Symbolen auf dem Desktop-Hintergrund
+&auml;ndern.</para>
+      </sect3>
+      <sect3 id="gosnautilus-111">
+        <title>So &auml;ndern Sie das Verhalten einer Ansicht</title>
+        <indexterm>
+          <primary>Dateimanager</primary>
+          <secondary>Ansichten</secondary>
+          <tertiary>&Auml;ndern des Verhaltens</tertiary>
+        </indexterm>
+        <para>Sie haben
+folgende M&ouml;glichkeiten, das Verhalten einer Ansicht zu &auml;ndern:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Legen Sie die Ansicht als Standardansicht f&uuml;r eine bestimmte
+Datei oder einen Ordner fest.</para>
+          </listitem>
+          <listitem>
+            <para>Legen Sie die Ansicht als Standardansicht f&uuml;r einen Dateityp
+oder alle Ordner fest.</para>
+          </listitem>
+          <listitem>
+            <para>Legen Sie die Ansicht als Objekt im Untermen&uuml; <guisubmenu>Anzeigen als</guisubmenu> f&uuml;r eine bestimmte Datei oder einen Ordner
+fest.</para>
+          </listitem>
+          <listitem>
+            <para>Legen Sie die Ansicht als Objekt im Untermen&uuml; <guisubmenu>Anzeigen als</guisubmenu> f&uuml;r alle Dateien eines bestimmten Typs oder
+f&uuml;r alle Ordner fest. </para>
+          </listitem>
+          <listitem>
+            <para>Legen Sie fest, dass die Ansicht kein Objekt im Untermen&uuml; <guisubmenu>Anzeigen als</guisubmenu> f&uuml;r eine bestimmte Datei oder einen Ordner
+ist.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Zum &Auml;ndern des Verhalten einer Ansicht f&uuml;hren Sie die folgenden
+Schritte aus:</para>
+        <orderedlist>
+          <listitem>
+            <para>W&auml;hlen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Anzeigen als</guimenuitem></menuchoice>.</para>
+          </listitem>
+          <listitem>
+            <para>W&auml;hlen Sie aus der Tabelle im Dialogfeld <guilabel>Mit
+anderem Anzeigeprogramm &ouml;ffnen</guilabel> die Ansicht aus, die Sie &auml;ndern
+m&ouml;chten.</para>
+          </listitem>
+          <listitem>
+            <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>&Auml;ndern</guibutton>. In der folgenden Tabelle werden die Optionen im Dialogfeld <guilabel>&Auml;ndern</guilabel> beschrieben:</para>
+            <informaltable frame="topbot">
+              <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colwidth="35.09*"/>
+                <colspec colwidth="64.91*"/>
+                <thead>
+                  <row rowsep="1">
+                    <entry>
+                      <para>Option</para>
+                    </entry>
+                    <entry>
+                      <para>Beschreibung </para>
+                    </entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>In das Men&uuml; f&uuml;r alle <replaceable>(Objektname)</replaceable>-Elemente aufnehmen</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>W&auml;hlen Sie diese Option aus, um die Ansicht in das Untermen&uuml; <guisubmenu>Anzeigen als</guisubmenu> f&uuml;r diesen Objekttyp aufzunehmen.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Als Standard f&uuml;r alle <replaceable>(Objektname)</replaceable>-Elemente verwenden</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>W&auml;hlen Sie diese Option aus, um die Ansicht als Standardansicht f&uuml;r diesen Objekttyp zu verwenden.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Nur in das Men&uuml; f&uuml;r <replaceable>(Objektname)</replaceable> aufnehmen</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>W&auml;hlen Sie diese Option aus, um die Ansicht in das Untermen&uuml; <guisubmenu>Anzeigen als</guisubmenu> nur f&uuml;r dieses Objekt aufzunehmen.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Nur als Standard f&uuml;r <replaceable>(Objektname)</replaceable> verwenden</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>W&auml;hlen Sie diese Option aus, um die Ansicht als Standardansicht nur f&uuml;r dieses Objekt zu verwenden.</para>
+                    </entry>
+                  </row>
+                  <row>
+                    <entry valign="top">
+                      <para><guilabel>Nicht in das Men&uuml; f&uuml;r <replaceable>(Objektname)</replaceable>-Elemente aufnehmen</guilabel> </para>
+                    </entry>
+                    <entry valign="top">
+                      <para>W&auml;hlen Sie diese Option aus, um die Ansicht aus dem Untermen&uuml; <guisubmenu>Anzeigen als</guisubmenu> f&uuml;r diesen Objekttyp auszuschlie&szlig;en.</para>
+                    </entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </informaltable>
+          </listitem>
+          <listitem>
+            <para>Klicken Sie auf <guibutton>OK</guibutton> und dann auf <guibutton>Abbrechen</guibutton>, um das Dialogfeld <guilabel>&Ouml;ffnen mit anderem
+Viewer</guilabel> zu schlie&szlig;en. </para>
+          </listitem>
+        </orderedlist>
+        <note>
+          <para>Sie k&ouml;nnen auch die Aktionen &auml;ndern, die einem bestimmten
+Dateityp im Dialogfeld <guilabel>Dateityp bearbeiten</guilabel> des Einstellungstools <application>Dateizuordnungen</application> zugewiesen sind. Um das Dialogfeld <guilabel>Dateityp bearbeiten</guilabel> zu &ouml;ffnen, klicken Sie auf die Schaltfl&auml;che <guibutton>Dorthin gehen</guibutton>. </para>
+        </note>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-204">
+    <title>Zuweisen von Aktionen zu Dateien</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>Zuweisen von Aktionen
+zu Dateien</secondary>
+    </indexterm>
+    <para>Wenn Sie eine Datei &ouml;ffnen, f&uuml;hrt
+der Dateimanager die f&uuml;r den jeweiligen Dateityp festgelegte Standardaktion
+aus. Das Einstellungstool <application>Dateizuordnungen</application> enth&auml;lt
+eine Tabelle mit den Dateitypen, ihren zugeh&ouml;rigen Dateierweiterungen
+und ihren Standardaktionen. Diese Tabelle legt fest, was genau passiert, wenn
+Sie im Dateimanager auf eine Datei doppelklicken. </para>
+    <para>Mit dem Dateimanager k&ouml;nnen Sie auch die Aktionen bearbeiten, die
+mit einer bestimmten Datei oder einem Dateityp verbunden sind. </para>
+    <para>Mit dem Einstellungstool <application>Dateizuordnungen</application> k&ouml;nnen
+Sie die folgenden Schritte ausf&uuml;hren:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Festlegen der Standardaktion f&uuml;r einen Dateityp. Die
+Standardaktion f&uuml;r einen Dateityp l&auml;sst sich auch vom Dateimanager
+aus &auml;ndern. </para>
+      </listitem>
+      <listitem>
+        <para>Verkn&uuml;pfen eines Dateityps mit einer oder mehreren Anwendungen.
+Als Standardaktion k&ouml;nnte das &Ouml;ffnen der Datei in einer Anwendung
+festgelegt sein, die mit dem Dateityp verkn&uuml;pft ist.</para>
+      </listitem>
+      <listitem>
+        <para>Verkn&uuml;pfen eines Dateityps mit einem oder mehreren Viewern.
+Als Standardaktion k&ouml;nnte das &Ouml;ffnen der Datei in einem Viewer festgelegt
+sein, der mit dem Dateityp verkn&uuml;pft ist.</para>
+      </listitem>
+      <listitem>
+        <para>Verkn&uuml;pfen einer Dateierweiterung mit einem MIME-Typ.
+Der MIME-Typ legt das Format der Datei fest, sodass Internet-Browser und E-Mail-Anwendungen
+die Datei lesen k&ouml;nnen.</para>
+      </listitem>
+    </itemizedlist>
+    <sect2 id="gosnautilus-75">
+      <title>So &auml;ndern Sie Aktionen</title>
+      <indexterm>
+        <primary>Dateimanager</primary>
+        <secondary>&Auml;ndern von Aktionen</secondary>
+      </indexterm>
+      <para>Sie k&ouml;nnen die mit einer Datei oder einem
+Dateityp verkn&uuml;pften Aktionen &auml;ndern. Folgende Vorgehensweisen sind
+m&ouml;glich:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Legen Sie die Aktion als Standardaktion f&uuml;r eine bestimmte
+Datei fest. </para>
+        </listitem>
+        <listitem>
+          <para>Legen Sie die Aktion als Standardaktion f&uuml;r einen bestimmten
+Dateityp fest.</para>
+        </listitem>
+        <listitem>
+          <para>Legen Sie die Aktion als Objekt im Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> f&uuml;r eine bestimmte Datei fest.</para>
+        </listitem>
+        <listitem>
+          <para>Legen Sie die Aktion als Objekt im Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> f&uuml;r einen bestimmten Dateityp fest.</para>
+        </listitem>
+        <listitem>
+          <para>Legen Sie fest, dass die Aktion kein Objekt im Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> f&uuml;r einen bestimmten Dateityp ist. </para>
+        </listitem>
+      </itemizedlist>
+      <para>Zum &Auml;ndern der mit einer Datei oder einem Dateityp verkn&uuml;pften
+Aktionen f&uuml;hren Sie die folgenden Schritte aus:</para>
+      <orderedlist>
+        <listitem>
+          <para>W&auml;hlen Sie die Datei, f&uuml;r die Sie eine Aktion &auml;ndern
+m&ouml;chten, im Ansichtsteilfenster aus. Wenn Sie eine mit einem Dateityp
+verkn&uuml;pfte Aktion &auml;ndern m&ouml;chten, w&auml;hlen Sie eine Datei
+dieses Typs aus:</para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>&Ouml;ffnen mit</guimenuitem></menuchoice>.</para>
+        </listitem>
+<!---<listitem>
+<para>Choose <guimenuitem>Other Viewer</guimenuitem>. An <guilabel>Open with
+Other Viewer</guilabel> dialog is displayed. </para></listitem>-->
+        <listitem>
+          <para>W&auml;hlen Sie <guimenuitem>Andere Anwendung</guimenuitem>.
+Es erscheint das Dialogfeld <guilabel>&Ouml;ffnen mit anderer Anwendung</guilabel>. </para>
+        </listitem>
+        <listitem>
+          <para>W&auml;hlen Sie aus der Tabelle im Dialogfeld die Anwendung
+oder den Viewer aus, f&uuml;r die bzw. den Sie das Verhalten &auml;ndern m&ouml;chten.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>&Auml;ndern</guibutton>. In der folgenden Tabelle werden die Optionen im Dialogfeld <guilabel>&Auml;ndern</guilabel> beschrieben:</para>
+          <informaltable frame="topbot">
+            <tgroup cols="2" colsep="0" rowsep="0">
+              <colspec colwidth="35.09*"/>
+              <colspec colwidth="64.91*"/>
+              <thead>
+                <row rowsep="1">
+                  <entry>
+                    <para>Option</para>
+                  </entry>
+                  <entry>
+                    <para>Beschreibung </para>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>In das Men&uuml; f&uuml;r alle <replaceable>(Dateityp)</replaceable>-Elemente aufnehmen</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, um die Anwendung oder den Viewer in das Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> f&uuml;r diesen Dateityp aufzunehmen.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Als Standard f&uuml;r alle <replaceable>(Dateityp)</replaceable>-Elemente verwenden</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, um die Anwendung oder den Viewer als Standardaktion f&uuml;r diesen Dateityp zu verwenden.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Nur in das Men&uuml; f&uuml;r <replaceable>(Dateiname)</replaceable> aufnehmen</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, um die Anwendung oder den Viewer in das Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> f&uuml;r diese Datei, aber nicht f&uuml;r andere Dateien dieses Typs aufzunehmen.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Nur als Standard f&uuml;r <replaceable>(Dateiname)</replaceable> verwenden</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, um die Anwendung oder den Viewer als Standardaktion f&uuml;r diese Datei, aber nicht f&uuml;r andere Dateien dieses Typs zu verwenden.</para>
+                  </entry>
+                </row>
+                <row>
+                  <entry valign="top">
+                    <para><guilabel>Nicht in das Men&uuml; f&uuml;r <replaceable>(Dateityp)</replaceable>-Elemente aufnehmen</guilabel> </para>
+                  </entry>
+                  <entry valign="top">
+                    <para>W&auml;hlen Sie diese Option aus, um die Anwendung oder den Viewer aus dem Untermen&uuml; <guisubmenu>&Ouml;ffnen mit</guisubmenu> f&uuml;r diesen Dateityp auszuschlie&szlig;en.</para>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>OK</guibutton> und dann auf <guibutton>Abbrechen</guibutton>, um das Dialogfeld zu schlie&szlig;en. </para>
+        </listitem>
+      </orderedlist>
+      <note>
+        <para>Sie k&ouml;nnen auch die Aktionen &auml;ndern, die einem bestimmten
+Dateityp im Dialogfeld <guilabel>Dateityp bearbeiten</guilabel> des Einstellungstools <application>Dateizuordnungen</application> zugewiesen sind. Um das Dialogfeld <guilabel>Dateityp bearbeiten</guilabel> zu &ouml;ffnen, klicken Sie auf die Schaltfl&auml;che <guibutton>Dorthin gehen</guibutton>. </para>
+      </note>
+    </sect2>
+  </sect1>
+  <sect1 id="gosnautilus-475">
+    <title>Brennen von CDs</title>
+    <indexterm>
+      <primary>Dateimanager</primary>
+      <secondary>CDs brennen</secondary>
+    </indexterm>
+    <indexterm>
+      <primary>CDs, brennen</primary>
+    </indexterm>
+    <indexterm>
+      <primary>Brennen von CDs</primary>
+    </indexterm>
+    <indexterm>
+      <primary>Schreiben
+von CDs</primary>
+      <see>Brennen von CDs</see>
+    </indexterm>
+    <para>Der Dateimanager
+stellt einen besonderen Speicherort f&uuml;r Dateien und Ordner bereit, die
+Sie auf eine CD schreiben m&ouml;chten. Der Inhalt dieser Adresse l&auml;sst
+sich anschlie&szlig;end bequem auf eine CD brennen.</para>
+    <para>Zum Schreiben einer CD gehen Sie folgenderma&szlig;en vor:</para>
+    <orderedlist>
+      <listitem>
+        <para>W&auml;hlen Sie in einem Fenster des Dateibrowsers <menuchoice><guimenu>Gehe zu</guimenu><guimenuitem>CD-Erstellung</guimenuitem></menuchoice>. Im Dateimanager wird die spezielle Adresse <guilabel>burn:</guilabel> <guilabel>///</guilabel>, ge&ouml;ffnet, von der aus Sie CDs brennen
+k&ouml;nnen. </para>
+      </listitem>
+      <listitem>
+        <para>Kopieren Sie in einem Fenster des Dateibrowsers die Dateien
+und Ordner, die auf CD gebrannt werden sollen, in die Adresse <guilabel>burn:</guilabel><guilabel>///</guilabel>.</para>
+      </listitem>
+      <listitem>
+        <para>Legen Sie eine beschreibbare CD in den CD-Brenner Ihres PCs
+ein. </para>
+      </listitem>
+      <listitem>
+        <para>W&auml;hlen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>CD wird beschrieben</guimenuitem></menuchoice>. Sie k&ouml;nnen
+auf der Symbolleiste auch auf die Schaltfl&auml;che <guibutton> Auf CD schreiben</guibutton> klicken.</para>
+      </listitem>
+      <listitem>
+        <para>Im Dialogfeld <guilabel>Dateien mithilfe eines CD-Brenners
+schreiben</guilabel> k&ouml;nnen Sie mittels folgender Einstellm&ouml;glichkeiten
+die CD-Schreiboptionen festlegen:</para>
+        <informaltable frame="topbot">
+          <tgroup cols="2" colsep="0" rowsep="0">
+            <colspec colwidth="50*"/>
+            <colspec colwidth="50*"/>
+            <thead>
+              <row rowsep="1">
+                <entry>
+                  <para>Dialogfeldelement</para>
+                </entry>
+                <entry>
+                  <para>Beschreibung </para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Zu beschreibendes Ziel</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie aus der Dropdown-Liste das Ger&auml;t aus, auf dem Sie die CD schreiben m&ouml;chten. Um eine CD-Imagedatei f&uuml;r die Dateien und Ordner zu erstellen, w&auml;hlen Sie die Option <guilabel>Datei-Image</guilabel>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Schreibgeschwindigkeit</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie aus der Dropdown-Liste die gew&uuml;nschte Schreibgeschwindigkeit f&uuml;r die CD aus.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Name der CD</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>Geben Sie einen Namen f&uuml;r die CD in das Textfeld ein.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>CD-Inhalt l&ouml;schen</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie diese Option, um den vorhandenen Inhalt der CD zu l&ouml;schen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Die CD nach dem Schreibvorgang auswerfen</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie diese Option, um die CD nach dem Schreibvorgang auszuwerfen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para>
+                    <guilabel>Diese Dateien erneut f&uuml;r eine andere CD verwenden</guilabel>
+                  </para>
+                </entry>
+                <entry valign="top">
+                  <para>W&auml;hlen Sie diese Option, wenn Sie die betreffenden Dateien und Ordner noch auf eine andere CD schreiben m&ouml;chten. Bei Auswahl dieser Option werden die Dateien und Ordner nicht aus der Adresse <guilabel>burn:</guilabel><guilabel>/// </guilabel> gel&ouml;scht, nachdem die CD gebrannt wurde. </para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </listitem>
+      <listitem>
+        <para>Klicken Sie auf die Schaltfl&auml;che <guibutton>Dateien auf
+CD schreiben</guibutton>. </para>
+        <para>Wenn Sie in der Dropdown-Liste <guilabel>Zu beschreibendes Ziel</guilabel> die Option <guilabel>Datei-Image</guilabel> ausgew&auml;hlt
+hatten, erscheint nun das Dialogfeld <guilabel>W&auml;hlen Sie einen Dateinamen
+f&uuml;r das CD-Image</guilabel>. Hier k&ouml;nnen Sie festlegen, wo Sie die
+CD-Imagedatei speichern m&ouml;chten. Standardm&auml;&szlig;ig erhalten CD-Imagedateien
+die Namenserweiterung <filename>.iso</filename>.</para>
+        <para>Das Dialogfeld <guilabel>CD wird beschrieben</guilabel> erscheint. Sobald die CD bzw. die CD-Imagedatei
+vollst&auml;ndig geschrieben ist, erscheint hier eine entsprechende Abschlussmeldung.</para>
+        <para>CD-Imagedateien k&ouml;nnen Sie sp&auml;ter auf Datei schreiben.
+Rechtsklicken Sie hierf&uuml;r auf die CD-Imagedatei und w&auml;hlen Sie den
+Befehl <guimenuitem>CD wird beschrieben</guimenuitem> aus dem Kontextmen&uuml;.</para>
+        <para>Wenn die Option <guilabel>Diese Dateien erneut f&uuml;r eine
+andere CD verwenden</guilabel> nicht aktiviert war, werden die Dateien und
+Ordner nach dem Schreibvorgang aus der Adresse <guilabel> burn:</guilabel> <guilabel>///</guilabel>.</para>
+      </listitem>
+    </orderedlist>
+  </sect1>
+  </chapter>
