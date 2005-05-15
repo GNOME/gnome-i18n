@@ -69,7 +69,7 @@ if (!isset($maint_num)) {
 			$name = $user[name];
 			$email = $user[email];
 			$packages = $user[packages];
-			echo "<table border=\"0\"><tr><th colspan=\"2\" class=\"module\">$maint_num : $name</th></tr>\n";
+			echo "<table border=\"0\"><tr><th colspan=\"2\" class=\"module\">$maint_num : $name#$email</th></tr>\n";
 			echo "<tr class=\"oneven\"><td>Module</td><td>&nbsp;.Po</td></tr>\n";
 			$packagelist = explode( ' ', $packages );
 			foreach ( $packagelist as $package ) {
