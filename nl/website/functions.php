@@ -73,6 +73,7 @@ function gnome_foot() { ?>
 <a href="email-webmaster.php">Vincent van Adrighem (webmaster)</a>
 </div>
 <div class="invisible">Unwanted mail catch address: <a href="mailto:laatze.maarkomen@dirck.mine.nu">laatze.maarkomen@dirck.mine.nu</a></div>
+<div class="invisible">Some more stuff for the bad people: <a href="jays.php">not a real contact</a></div>
 <? }
 
 function gnome_menu() { ?>
