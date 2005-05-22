@@ -95,7 +95,6 @@ function gnome_menu() { ?>
 	echo "(", $newsitem["posted"], ")</li>\n"; ?>
 		<li><a href="http://planet.nl.gnome.org/">Planet GNOME-NL</a></li>
 		<li><a href="agenda.php">Agenda</a></li>
-		<li><a href="gnome-nl.php">De community</a></li>
 		<li><a href="todo.php">TO DO</a></li>
 		</ul>
 	</div>
@@ -104,7 +103,8 @@ function gnome_menu() { ?>
 	<div class="sectiontitle">Gebruikers</div>
 	<div class="sectioncontent">
 		<ul class="nobullet">
-		<li><a href="gebruikers_welkom.php">G.N.O.M.E.</a></li>
+		<li><a href="gnome-nl.php">De GNOME community</a></li>
+		<li><a href="gebruikers_welkom.php">Wat is GNOME</a></li>
 		<li><a href="http://live.gnome.org/GNOME-tips-Nederlands">Tips & Trucs</a></li>
 		<li><a href="gebruikers_omgeving.php">Taal instellen</a></li>
 		<li><a href="foutrapport.php">Vertaalfouten</a></li>
