@@ -9,8 +9,8 @@ echo "<?xml version=\"1.0\"?>\n";
 	<link>http://nl.gnome.org/nieuws.php</link>
 	<description>Nieuws van GNOME-NL</description>
 	<language>nl-NL</language>
-	<pubDate><?print date("D M j Y G:i:s T"); ?></pubDate>
-	<lastBuildDate><?print date("D M j Y G:i:s T"); ?></lastBuildDate>
+	<pubDate><?print date("D\, j M Y G:i:s T"); ?></pubDate>
+	<lastBuildDate><?print date("D\, j M Y G:i:s T"); ?></lastBuildDate>
 	<generator>My PHP script</generator>
 	<managingEditor>V.vanAdrighem@dirck.mine.nu</managingEditor>
 	<webMaster>V.vanAdrighem@dirck.mine.nu</webMaster>
