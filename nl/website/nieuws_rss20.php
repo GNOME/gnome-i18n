@@ -32,14 +32,14 @@ while ( $aantal < $max_news && $newsitem = mysql_fetch_assoc($res) ) {
   // this sticks the results row by row into an array called $newsitem. rows are called via $array["COLUMN"]
   $aantal++;
 echo "		<item>\n";
-echo "			<pubDate>";
-echo $newsitem["posted"];
-echo "</pubDate>\n";
+//echo "			<pubDate>";
+//echo $newsitem["posted"];
+//echo "</pubDate>\n";
 echo "			<title>";
 echo $newsitem["title"];
 echo "</title>\n";
 echo "			<description>";
-echo $newsitem["summary"];
+echo htmlentities ($newsitem["summary"],ENT_COMPAT,'UTF-8');
 echo "</description>\n";
 echo "			<guid>";
 echo "http://nl.gnome.org/nieuws.php?item=";
