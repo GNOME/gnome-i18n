@@ -30,9 +30,9 @@ hier</a> naar de website en pas gerust wat aan (enige CVS-kennis vereist).</p>
 <th valign="top">ToDo item
 <th valign="top">Geschatte tijd/moeite
 
-<tr style="background-color: red;">
+<tr style="background-color: yellow;">
 <td valign="top"><strong>Flyer / folder</strong> nodig voor op beurzen en dergelijke
-<td valign="top">Is er ergens een voorbeeld flyer?
+<td valign="top">We hebben een flyer. Binnenkort te downloaden vanaf deze website.
 
 <tr style="background-color: orange;">
 <td valign="top"><strong>Website veranderen</strong> om vertalen en 
@@ -40,16 +40,14 @@ vertalers minder prominent te maken. Subprojecten:
 <td valign="top">Voor totaal veel tijd en moeite vanwege veel 
 subprojecten. 
 
-<tr style="background-color: red;">
+<tr style="background-color: lightgreen;">
 <td valign="top"><strong>Gebruikersgedeelte</strong> is verouderd en kan 
 uitgebreider. Denk aan een nl-versie van <a 
 href='http://gnome-hacks.jodrell.net/'>http://gnome-hacks.jodrell.net/</a>. 
 Gebruikers geven elkaar tips. Liefst zo makkelijk mogelijk door 
 gebruikers bij te werken (Wiki?)
-<td valign="top">Als bezoekers zelf tips kunnen toevoegen, makkelijk qua 
-onderhoud. Opzetten kost wel even tijd, maar relatief weinig. Proberen 
-snel uit te werken.
-
+<td valign="top">Voltooid. Kijk in het menu aan de linker kant, of
+klik op <a href="http://live.gnome.org/GNOME-tips-Nederlands">deze link</a>.
 <tr style="background-color: lightgreen;">
 <td valign="top"><strong>Paginahoeveelheid onder het kopje 
 &quot;Vertalers&quot;</strong>. Dat is ook iets wat we zouden moeten 
