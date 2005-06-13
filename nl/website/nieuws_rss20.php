@@ -1,5 +1,5 @@
 <?
-header("Content-Type: text/xml; charset=utf-8");
+header("Content-Type: text/xml; charset=iso-8859-15");
 include "functions.php";
 echo "<?xml version=\"1.0\"?>\n";
 ?>
