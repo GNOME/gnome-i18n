@@ -8,6 +8,7 @@ is_logged_in();
 <head>
   <title>Gnome-nl -- Nieuws</title>
 <? html_head() ?>
+<link rel="alternate" type="application/rss2+xml" title="RSS2" href="nieuws_rss20.xml">
 </head>
 <body>
 <div class="body">
@@ -32,7 +33,7 @@ else
 	$max_news = $news_per_page ;
 
 // connect to mysql and select database
-$db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
+    $db = mysql_pconnect($GLOBALS['mysqlhost'],"gnome_nl",$GLOBALS['mysql_password']);
 mysql_select_db("gnome_nl",$db);
 
 // build the query, order by newest ID and limit it to 10
