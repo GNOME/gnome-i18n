@@ -34,11 +34,12 @@ hier</a> naar de website en pas gerust wat aan (enige CVS-kennis vereist).</p>
 <td valign="top"><strong>Flyer / folder</strong> nodig voor op beurzen en dergelijke
 <td valign="top">We hebben een flyer. Binnenkort te downloaden vanaf deze website.
 
-<tr style="background-color: orange;">
-<td valign="top"><strong>Website veranderen</strong> om vertalen en 
-vertalers minder prominent te maken. Subprojecten:
-<td valign="top">Voor totaal veel tijd en moeite vanwege veel 
-subprojecten. 
+<tr style="background-color: red;">
+<td valign="top"><strong>Toevoegen Contactpagina</strong> zodat iedereen de juiste
+e-mail adressen kan vinden. De lijst voor gebruikers, marketing voor bedrijven
+of organisaties, etc.
+<td valign="top">Wie wil aan de hand van de template (empty.php) een paginaatje
+in elkaar draaien met een klein stukje tekst per adres/gebruikstype?
 
 <tr style="background-color: lightgreen;">
 <td valign="top"><strong>Gebruikersgedeelte</strong> is verouderd en kan 
