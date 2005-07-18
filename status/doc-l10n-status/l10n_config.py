@@ -1,0 +1,6 @@
+scratchdir = '/tmp/doc-l10n'
+webpodir = '/tmp/doc-l10n/POT'
+webdir = '/tmp/doc-l10n'
+XML2PO = 'xml2po'
+POMERGE = '/path/to/pomerge.py'
+cvsroot = ':pserver:anonymous@anoncvs.gnome.org:/cvs/gnome/'
