@@ -136,7 +136,7 @@ def stats_as_html(stats):
     toc = ""
     content = ""
     for cat in stats.keys():
-        toc += """\t<li><a href="#%s">%s</a></li><hr>\n""" % (cat, cat)
+        toc += """\t<li><a href="#%s">%s</a></li>\n""" % (cat, cat)
         content += """\t<h3><a name="%s">%s:</a></h3>\n\n\t<ul>\n""" % (cat, cat)
         for id in stats[cat].keys():
             field = stats[cat][id]
@@ -146,7 +146,7 @@ def stats_as_html(stats):
                                                                                          field['fuzzy'],
                                                                                          field['untranslated'])
         content += "\t</ul>\n\n"
-    if toc: toc = "<ul>\n" + toc + "</ul>\n"
+    if toc: toc = "<ul>\n" + toc + "</ul><hr>\n"
     return html + toc + content + "</body></html>"
     
 MyModules("modules.xml")
