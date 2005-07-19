@@ -129,16 +129,36 @@ def read_makefile_variable(file, variable):
             fullline = ""
     return ""
 
+def pofile_statistics(command):
+    (error, output) = commands.getstatusoutput(command)
+    import re
+    r_tr = re.search(r"([0-9]+) translated", output)
+    r_un = re.search(r"([0-9]+) untranslated", output)
+    r_fz = re.search(r"([0-9]+) fuzzy", output)
+    
+    if r_tr: translated = r_tr.group(1)
+    else: translated = 0
+    if r_un: untranslated = r_un.group(1)
+    else: untranslated = 0
+    if r_fz: fuzzy = r_fz.group(1)
+    else: fuzzy = 0
+    return (translated, fuzzy, untranslated)
+
+
 def stats_as_html(stats):
     import time
     html = """<html><head><title>Gnome Documentation Translation Statistics</title></head>\n<body>
     <h1>Gnome Docs L10N stats</h1>\n<h2>Regenerated on %s</h2>\n""" % (time.ctime())
     toc = ""
     content = ""
-    for cat in stats.keys():
+    cats = stats.keys()
+    cats.sort()
+    for cat in cats:
         toc += """\t<li><a href="#%s">%s</a></li>\n""" % (cat, cat)
         content += """\t<h3><a name="%s">%s:</a></h3>\n\n\t<ul>\n""" % (cat, cat)
-        for id in stats[cat].keys():
+        subcats = stats[cat].keys()
+        subcats.sort()
+        for id in subcats:
             field = stats[cat][id]
             content += """\t\t<li><a href="/doc-l10n/PO/%s">%s</a> (%s/%s/%s)</li>\n""" % (field['poname'],
                                                                                          id,
@@ -150,6 +170,8 @@ def stats_as_html(stats):
     return html + toc + content + "</body></html>"
     
 MyModules("modules.xml")
+
+alllangs = []
 
 for moduleid in modules.keys():
     status = checkout_module(moduleid)
@@ -192,6 +214,23 @@ for moduleid in modules.keys():
         else:
             print >> sys.stderr, "Error regenerating POT file for module %s" % ( moduleid)
             print >> sys.stderr, output
+
+        if not modstats.has_key(moduleid): modstats[moduleid] = { }
+        if not langstats.has_key('POT'): langstats['POT'] = { }
+        (translated, fuzzy, untranslated) = pofile_statistics("LC_ALL=C LANG=C LANGUAGE=C msgfmt --statistics -o /dev/null %s" % (fullpot))
+        modstats[moduleid]['POT'] = {
+            "poname" : potname,
+            "translated" : '0',
+            "untranslated" : untranslated,
+            "fuzzy" : '0',
+            }
+        langstats['POT'][moduleid] = {
+            "poname" : potname,
+            "translated" : '0',
+            "untranslated" : untranslated,
+            "fuzzy" : '0',
+            }
+
         
         for lang in languages.split(" "):
             if lang.strip() != "":
@@ -204,18 +243,7 @@ for moduleid in modules.keys():
                 (error, output) = commands.getstatusoutput(command)
                 print >> sys.stderr, output
                 if not error:
-                    (error, output) = commands.getstatusoutput("LC_ALL=C LANG=C LANGUAGE=C msgfmt -cv -o /dev/null %s" % (fullpo))
-                    import re
-                    r_tr = re.search(r"([0-9]+) translated", output)
-                    r_un = re.search(r"([0-9]+) untranslated", output)
-                    r_fz = re.search(r"([0-9]+) fuzzy", output)
-
-                    if r_tr: translated = r_tr.group(1)
-                    else: translated = 0
-                    if r_un: untranslated = r_un.group(1)
-                    else: untranslated = 0
-                    if r_fz: fuzzy = r_fz.group(1)
-                    else: fuzzy = 0
+                    (translated, fuzzy, untranslated) = pofile_statistics("LC_ALL=C LANG=C LANGUAGE=C msgfmt -cv -o /dev/null %s" % (fullpo))
 
                     if not modstats.has_key(moduleid): modstats[moduleid] = { }
                     if not langstats.has_key(lang): langstats[lang] = { }
@@ -234,6 +262,7 @@ for moduleid in modules.keys():
 
 html_mods = stats_as_html(modstats)
 html_lang = stats_as_html(langstats)
+
 
 f = open(os.path.join(webdir, "by-modules.html"), "w")
 f.write(html_mods)
