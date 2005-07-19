@@ -44,5 +44,5 @@ if ( ! ( $_POST["content"] == $event['content'] )) {
 	$res = mysql_query($sql);
 	}
 }
-header("Location: agenda.php");
+#header("Location: agenda.php");
 ?>
