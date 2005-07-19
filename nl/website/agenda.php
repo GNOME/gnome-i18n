@@ -38,7 +38,7 @@ gnome_menu();
 <h1>Gnome-nl Agenda</h1>
 
 <? if (is_logged_in()) { ?>
-	<a href="agenda_edit.php?item=0 \><img src="images/button_edit.png" alt="nieuw">Evenement toevoegen</a>
+	<a href="agenda_edit.php?item=0" ><img src="images/button_edit.png" alt="nieuw">Evenement toevoegen</a>
 <?}
 
 
