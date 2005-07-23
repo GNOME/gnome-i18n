@@ -80,14 +80,13 @@ chocolade-voetjes, etc...kostprijs+kleine bijdrage die we dan weer kunnen gebrui
 voor andere zaken zoals flyers op bijeenkomsten ofzo. 
 <td valign="top">Is nog slechts een idee. Misschien over een maandje of wat, dat we dit kunnen gaan uitwerken.
 
-<tr style="background-color: red;">
+<tr style="background-color: lightgreen;">
 <td valign="top">Opzetten van <strong>vertaalinfra voor documentatie</strong> om ook dat in de toekomst eenvoudig vertaald te kunnen hebben.<br>
 Idee: Zo opzettendat een deel van de code zo naar l10n-stats kan (iedere taal heeft het
 uiteindelijk nodig). Misschien met xml2po op de server en in
 process-translation, zodat de vertalers en het statistiekenscript gewoon
 met PO-bestanden kunnen werken?
-<td valign="top">Lastig. Prioriteit niet zo hoog. Wel iets om in de 
-nabije toekomst over na te denken.
+<td valign="top">Is inmiddels gebeurd door Danilo zoals te lezen is in bijvoorbeeld <a href="http://mail.gnome.org/archives/gnome-i18n/2005-July/msg00121.html">dit mailtje</a>.
 
 <tr style="background-color: lightgrey;">
 <td valign="top">Het <strong>verenigen van de vertalingen</strong> van 
