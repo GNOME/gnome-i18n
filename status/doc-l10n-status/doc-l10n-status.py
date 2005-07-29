@@ -144,29 +144,144 @@ def pofile_statistics(command):
     else: fuzzy = 0
     return (translated, fuzzy, untranslated)
 
-
-def stats_as_html(stats):
+# type is one of "modules", "languages", "module" (data[module] is set then), "language" (data[language] is set)
+def stats_as_html(stats, type = 'modules', data = {}):
     import time
-    html = """<html><head><title>Gnome Documentation Translation Statistics</title></head>\n<body>
+    html = """<html><head><title>Gnome Documentation Translation Statistics</title>
+<style language="css">
+body {
+  background: white; /*#F8F8F1;*/
+  margin: 2em;
+  /*margin-right: 180px;*/
+}
+table {
+  background: white;
+  /*border: 1px solid #808080;*/
+}
+
+tr.odd {
+  background: #E0E0E0;
+}
+tr.even {
+  background: #F8F8F1;
+}
+
+td {
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+td.lang {
+  text-align: left;
+}
+
+th {
+  background: #446688;
+  color: white;
+}
+
+div.graph {
+  height: 10pt;
+  width: 180px;
+  border: 1px solid black; 
+  position: relative;
+}
+
+div.translated {
+  position: absolute; 
+  height:100%%; 
+  left: 0%%; 
+  background: #448844;
+}
+
+div.goodchange {
+  position: absolute; 
+  height:100%%; 
+  background: #55DD55;
+}
+
+div.fuzzy {
+  position: absolute; 
+  height:100%%; 
+  background: #4444AA;
+}
+
+div.untranslated {
+  position: absolute; 
+  height:100%%; 
+  background: #FF4444;
+}
+
+div.legend {
+  width: 100%%;
+  color: black;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-bottom: 0px;
+}
+</style>    </head>\n<body>
     <h1>Gnome Docs L10N stats</h1>\n<h2>Regenerated on %s</h2>\n""" % (time.ctime())
     toc = ""
     content = ""
     cats = stats.keys()
     cats.sort()
+
     for cat in cats:
+        if type == 'modules':
+            cattitle = 'Module %s' % (cat)
+            titleline = """<tr><th>Language</th><th>CVS dir/branch</th><th>Translated</th><th>Fuzzy</th><th>Untranslated</th><th>Graph</th></tr>"""
+        else:
+            cattitle = 'Language %s' % (cat)
+            titleline = """<tr><th>Module</th><th>CVS dir/branch</th><th>Translated</th><th>Fuzzy</th><th>Untranslated</th><th>Graph</th></tr>"""
+        
         toc += """\t<li><a href="#%s">%s</a></li>\n""" % (cat, cat)
-        content += """\t<h3><a name="%s">%s:</a></h3>\n\n\t<ul>\n""" % (cat, cat)
+        content += """\t<tr><td colspan="6" style="text-align:left; padding-top:2em;"><h3><a name="%s">%s</a></h3></td></tr>\n%s\n\t\n""" % (cat, cattitle, titleline)
         subcats = stats[cat].keys()
         subcats.sort()
+        row = 1
         for id in subcats:
+            row = (row + 1) % 2
+            if row % 2 == 0: css_class = "even"
+            else: css_class = "odd"
             field = stats[cat][id]
-            content += """\t\t<li><a href="/doc-l10n/PO/%s">%s</a> (%s/%s/%s)</li>\n""" % (field['poname'],
-                                                                                         id,
-                                                                                         field['translated'],
-                                                                                         field['fuzzy'],
-                                                                                         field['untranslated'])
-        content += "\t</ul>\n\n"
-    if toc: toc = "<ul>\n" + toc + "</ul><hr>\n"
+            total = int(field['translated']) + int(field['fuzzy']) + int(field['untranslated'])
+            if total <= 0: total = 1
+            graphwidth = 180;
+            graphtr = int(round(int(field['translated'])*graphwidth/total))
+            graphfz = int(round(int(field['fuzzy'])*graphwidth/total))
+            graphun = graphwidth - graphtr - graphfz
+            graphhtml = """<div class="graph">
+            <div class="translated" style="width: %dpx;"></div>
+            <div class="fuzzy" style="width: %dpx; left: %dpx;"></div>
+            <div class="untranslated" style="width: %dpx; left: %dpx;"></div>
+            </div>""" % (graphtr, graphfz, graphtr, graphun, graphtr+graphfz)
+
+            
+            content += """\t\t<tr class="%s"><td><a href="/doc-l10n/PO/%s">%s</a></td>
+                          <td>%s</td>
+                          <td>%.1f%% (%s)</td>
+                          <td>%.1f%% (%s)</td>
+                          <td>%.1f%% (%s)</td>
+                          <td>%s</td></tr>\n""" % (css_class,
+                                                   field['poname'],
+                                                   id,
+                                                   """<a href="http://cvs.gnome.org/viewcvs/%s?branch=%s">%s (%s)</a>""" % (field['cvsdir'],
+                                                                                                                            field['branch'],
+                                                                                                                            field['cvsdir'],
+                                                                                                                            field['branch']),
+                                                   int(field['translated'])*100/total, field['translated'],
+                                                   int(field['fuzzy'])*100/total, field['fuzzy'],
+                                                   int(field['untranslated'])*100/total, field['untranslated'],
+                                                   graphhtml)
+        content += "\n\n"
+    if content: content = "<center><table>\n\n" + content + "</table></center>\n"
+    if type == 'modules': toc_title = 'Modules'
+    else: toc_title = 'Languages'
+    if toc: toc = "<h3>%s</h3><ul>\n" % (toc_title) + toc + "</ul><hr>\n"
     return html + toc + content + "</body></html>"
     
 MyModules("modules.xml")
@@ -220,12 +335,16 @@ for moduleid in modules.keys():
         (translated, fuzzy, untranslated) = pofile_statistics("LC_ALL=C LANG=C LANGUAGE=C msgfmt --statistics -o /dev/null %s" % (fullpot))
         modstats[moduleid]['POT'] = {
             "poname" : potname,
+            "cvsdir" : module["cvsdir"],
+            "branch" : module["cvsbranch"],
             "translated" : '0',
             "untranslated" : untranslated,
             "fuzzy" : '0',
             }
         langstats['POT'][moduleid] = {
             "poname" : potname,
+            "cvsdir" : module["cvsdir"],
+            "branch" : module["cvsbranch"],
             "translated" : '0',
             "untranslated" : untranslated,
             "fuzzy" : '0',
@@ -249,19 +368,23 @@ for moduleid in modules.keys():
                     if not langstats.has_key(lang): langstats[lang] = { }
                     modstats[moduleid][lang] = {
                         "poname" : poname,
+                        "cvsdir" : module["cvsdir"],
+                        "branch" : module["cvsbranch"],
                         "translated" : translated,
                         "untranslated" : untranslated,
                         "fuzzy" : fuzzy,
                         }
                     langstats[lang][moduleid] = {
                         "poname" : poname,
+                        "cvsdir" : module["cvsdir"],
+                        "branch" : module["cvsbranch"],
                         "translated" : translated,
                         "untranslated" : untranslated,
                         "fuzzy" : fuzzy,
                         }
 
-html_mods = stats_as_html(modstats)
-html_lang = stats_as_html(langstats)
+html_mods = stats_as_html(modstats, type = 'modules')
+html_lang = stats_as_html(langstats, type = 'languages')
 
 
 f = open(os.path.join(webdir, "by-modules.html"), "w")
