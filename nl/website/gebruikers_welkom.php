@@ -53,7 +53,6 @@ van GNOME, ook degenen die niet kunnen programmeren.</p>
 <p>Sinds de start van GNOME in 1997 hebben al honderden mensen programmacode voor GNOME 
 geschreven. Nog meer mensen hebben bijgedragen op een andere belangrijke manier door 
 bijvoorbeeld te vertalen, te documenteren, en de kwaliteit te bewaken.</p>
-<p>De meest recente GNOME-uitgave is 2.8.0, geheel beschikbaar in het Nederlands.</p>
 </div>
 
 <? gnome_foot() ?>
