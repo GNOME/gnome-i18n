@@ -70,7 +70,7 @@ if (!isset($gnomeversion)) {
  Via de homepage van het <a href="http://developer.gnome.org/projects/gtp/">Gnome Translation Project</a> vind je naast de statuspagina's ook nog extra informatie wat betreft het vertalen van GNOME.</p>
 <p>Alle statusinfo hier op sourceforge wordt dynamisch aangemaakt en minstens 1x per dag ververst. Ook biedt de lokale modulelijst enige voordelen boven de lijst op gnome.org. U wordt daarom aangeraden om gebruik te maken van deze lijst in plaats van de lijst op gnome.org.</p>
 <p>De Nederlandse vertalingen zijn volledig genoeg voor een mooie plaats in de 
-<a href="http://l10n-status.gnome.org/<? echo "$important_branch"; ?>/top.html">Top 10</a> van best ondersteunde talen. Op het moment staan we op plaats 
+<a href="http://l10n-status.gnome.org/<? echo "$important_branch"; ?>/top.html">top</a> van best ondersteunde talen. Op het moment staan we op plaats 
 <?
 $filename = "text/top10.text";
 $fcontents = file($filename);
