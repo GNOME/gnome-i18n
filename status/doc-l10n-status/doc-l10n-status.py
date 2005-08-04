@@ -269,7 +269,7 @@ div.legend {
                           <td>%s</td></tr>\n""" % (css_class,
                                                    field['poname'],
                                                    id,
-                                                   """<a href="http://cvs.gnome.org/viewcvs/%s?branch=%s">%s (%s)</a>""" % (field['cvsdir'],
+                                                   """<a href="http://cvs.gnome.org/viewcvs/%s?only_with_tag=%s">%s (%s)</a>""" % (field['cvsdir'],
                                                                                                                             field['branch'],
                                                                                                                             field['cvsdir'],
                                                                                                                             field['branch']),
