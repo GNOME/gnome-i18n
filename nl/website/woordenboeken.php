@@ -36,6 +36,7 @@ eenvoudige manier gebruiken om snel te zoeken.</p>
 <p>Het volgende rijtje is er een van gewone bladwijzers met nog meer woordenboeken 
 als de bovenstaande niet toereikend blijken.</p>
 <ul>
+<li><a href="http://dict.tu-chemnitz.de/">EN&lt;-&gt;DE woordenboek. Als je het niet zeker weet en wat inspiratie van onze oosterburen nodig hebt</a></li>
 <li><a href="http://www.internetwoordenboek.com/">Kennisnet Online woordenboek</a></li>
 <li><a href="http://www.computerwoorden.nl/">Computerwoorden.nl</a></li>
 <li><a href="http://majstro.com/Web/Majstro/dict.php?bronTaal=eng&doelTaal=dut&prec=0&teVertalen=&gebrTaal=dut">Majstro</a></li>
