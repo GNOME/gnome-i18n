@@ -126,6 +126,18 @@ def read_makefile_variable(file, variable):
             match = re.match(variable + r"\s*=\s*([^=]*)", fullline.strip())
             if match:
                 return match.group(1)
+            else:
+                # FIXME: hackish, works for www.gnome.org/tour
+                match = re.match("include\s+(.+)", fullline.strip())
+                if match:
+                    import os.path
+                    incfile = os.path.join(os.path.dirname(file), os.path.basename(match.group(1)))
+                    if incfile.find("gnome-doc-utils.make")==-1:
+                        print >>sys.stderr, "Reading file %s..." % (incfile)
+                        var = read_makefile_variable(incfile, variable)
+                        if var != "":
+                            return var
+                    
             fullline = ""
     return ""
 
