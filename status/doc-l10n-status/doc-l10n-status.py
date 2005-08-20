@@ -374,7 +374,7 @@ for moduleid in modules.keys():
                 (error, output) = commands.getstatusoutput(command)
                 print >> sys.stderr, output
                 if not error:
-                    (translated, fuzzy, untranslated) = pofile_statistics("LC_ALL=C LANG=C LANGUAGE=C msgfmt -cv -o /dev/null %s" % (fullpo))
+                    (translated, fuzzy, untranslated) = pofile_statistics("LC_ALL=C LANG=C LANGUAGE=C msgfmt --statistics -o /dev/null %s" % (fullpo))
 
                     if not modstats.has_key(moduleid): modstats[moduleid] = { }
                     if not langstats.has_key(lang): langstats[lang] = { }
