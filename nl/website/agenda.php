@@ -63,7 +63,6 @@ while ($event = mysql_fetch_assoc($res)) {
 	<tr>
 		<td class="news">
 <?if (!empty($_GET["item"])){ ?>
-			<p>
 				<h4>Samenvatting</h4>
 				<?=$summary?>
 				<h4>Locatie</h4>
@@ -72,7 +71,6 @@ while ($event = mysql_fetch_assoc($res)) {
 				<?=$personen;?>
 				<h4>Meer info:</h4>
 				<?=$content;?>
-			</p>
 <?} else {?>
 			<p><?=$summary;?></p>
 <? } ?>

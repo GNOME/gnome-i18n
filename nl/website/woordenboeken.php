@@ -49,7 +49,7 @@ als de bovenstaande niet toereikend blijken.</p>
 <li><a href="http://just.letterror.com/ltrwiki/TypeDictionary">TypeDictionary</a>: Een wikiwoordenboek toegespitst op typografische woorden.</li>
 </ul>
 <p>Je kunt ook zoeken naar betekenissen van Nederlandse woorden via
-<a href="http://www.vandale.nl/redir/woordenboek.htm">VanDale.nl</a>.
+<a href="http://www.vandale.nl/opzoeken/woordenboek/">VanDale.nl</a>.
 Ik heb ook een <a href="http://atlas.et.tudelft.nl/valium/gnuvd.php">eigen pagina</a> voor de vanDale gemaakt die misschien
 wat praktischer is.</p>
 Er zijn verder 2 handige programma's die ik even wil noemen:

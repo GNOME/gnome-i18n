@@ -8,7 +8,7 @@ is_logged_in();
 <head>
   <title>Gnome-nl -- Nieuws</title>
 <? html_head() ?>
-<link rel="alternate" type="application/rss2+xml" title="RSS2" href="nieuws_rss20.xml">
+<link rel="alternate" type="application/rss2+xml" title="RSS2" href="nieuws_rss20.php">
 </head>
 <body>
 <div class="body">
@@ -70,7 +70,7 @@ if ( ! empty( $_GET["item"] ) )
 <?
 	if ( ! empty( $newsitem["content"] ) ) {
 		if ( ! empty( $_GET["item"] ) )	
-			echo '<tr><td class="news">'.$newsitem["content"].'</a></td></tr>';
+			echo '<tr><td class="news">'.$newsitem["content"].'</td></tr>';
 		else
 			echo '<tr><td class="news"><a href="'.$PHP_SELF.'?item='.$newsitem["id"].'">Lees verder...</a></td></tr>';
 	};
