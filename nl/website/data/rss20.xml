@@ -1,2 +1,308 @@
-Nieuwe locatie:
-http://planet.nl.gnome.org/rss20.xml
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<channel>
+	<title>Planet GNOME-NL</title>
+	<link>http://nl.gnome.org/planet.php</link>
+	<language>en</language>
+	<description>Planet GNOME-NL - http://nl.gnome.org/planet.php</description>
+
+<item>
+	<title>Philip van Hoof (pvanhoof): GtkMozEdit</title>
+	<guid>http://pvanhoof.be/blog/index.php/2005/10/12/62-gtkmozedit</guid>
+	<link>http://pvanhoof.be/blog/index.php/2005/10/12/62-gtkmozedit</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/pvanhoof.png" alt="Philip van Hoof (pvanhoof) face"&gt;
+&lt;p&gt;Interesting ...&lt;/p&gt;
+&lt;p&gt;It looks like Robert Staudinger imported &lt;a href=&quot;http://cvs.gnome.org/viewcvs/gtkmozedit/&quot;&gt;GtkMozEdit&lt;/a&gt; in the GNOME cvs repository.&lt;/p&gt;</description>
+	<pubDate>Wed, 12 Oct 2005 10:03:06 +0000</pubDate>
+</item>
+<item>
+	<title>Jos Herni (digiplace.nl): Beagle</title>
+	<guid>http://www.digiplace.nl/386@http://www.digiplace.nl/</guid>
+	<link>http://www.digiplace.nl/pivot/entry.php?id=386</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/jos-digiplace.png" alt="Jos Herni (digiplace.nl) face"&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.digiplace.nl/images/beagle-logo.png&quot; border=&quot;0&quot; title=&quot;&quot; alt=&quot;&quot; class=&quot;pivot-image&quot; /&gt;&lt;/p&gt; Een van de leuke nieuwe features in
+Gnome is natuurlijk Beagle. Een
+speurhond met een -volgens mij- grote toekomst. Beagle is de lokale
+desktopzoekmachine die onder Gnome 2.12 wordt gebruikt. Het 
+pakket zit nog in de beta periode dus verwacht er nou niet meteen
+wonderen van. Meer informatie over Beagle is te vinden op zijn eigen &lt;a href=&quot;http://beagle-project.org/Main_Page&quot; target=&quot;_blank&quot;&gt;webkennel&lt;/a&gt;. Ik heb in mijn Gnome sessies een verwijzing gemaakt naar &lt;b&gt;/usr/bin/best&lt;/b&gt; en de daemon wordt daarvoor opgestart met &lt;b&gt;beagled&lt;/b&gt;.Maar ik &lt;a href=&quot;http://beagle-project.org/Ubuntu_Installation&quot; target=&quot;_blank&quot;&gt;las net dat je beter een andere install&lt;/a&gt;
+kan doen dan ik mogelijk heb gedaan. Moet ik nog eens naar kijken.
+Voorlopig mag Beagle even rondsnuffelen. Kom maar..braaf...brave hond!</description>
+	<pubDate>Wed, 12 Oct 2005 07:42:00 +0000</pubDate>
+</item>
+<item>
+	<title>Wouter Bolsterlee (uws): CPU Frequency applet</title>
+	<guid>http://uwstopia.nl/blog/2005/10/cpufreq-applet</guid>
+	<link>http://uwstopia.nl/blog/2005/10/cpufreq-applet</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/uws.png" alt="Wouter Bolsterlee (uws) face"&gt;
+&lt;p&gt;Finally got the CPU Frequency applet to not only display the current frequency, but also show a menu to easily change the processor speed.&lt;/p&gt;
+
+	&lt;p class=&quot;image&quot;&gt;&lt;img src=&quot;http://uwstopia.nl/photo/blog/2005/10/cpufreq-applet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+	&lt;p&gt;The problem was that my custom GNOME installation (using jhbuild) was not installing &lt;code&gt;/opt/gnome/bin/cpufreq-selector&lt;/code&gt; with the suid bit set, because I didn&amp;#8217;t realise it was a part of the GNOME desktop (I thought it was part of the cpufrequtils package). Simple fix:&lt;/p&gt;
+
+&lt;pre&gt;$ sudo chmod 6755 /opt/gnome/bin/cpufreq-selector
+$ ls -al /opt/gnome/bin/cpufreq-selector
+-rwsr-sr-x  1 root root 52103 2005-10-02 16:07 /opt/gnome/bin/cpufreq-selector*&lt;/pre&gt;</description>
+	<pubDate>Tue, 11 Oct 2005 23:23:05 +0000</pubDate>
+</item>
+<item>
+	<title>Philip van Hoof (pvanhoof): Started replacing GtkHTML with GtkMozEmbed in Evolution</title>
+	<guid>http://pvanhoof.be/blog/index.php/2005/10/11/61-started-replacing-gtkhtml-with-gtkmozembed-in-evolution</guid>
+	<link>http://pvanhoof.be/blog/index.php/2005/10/11/61-started-replacing-gtkhtml-with-gtkmozembed-in-evolution</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/pvanhoof.png" alt="Philip van Hoof (pvanhoof) face"&gt;
+&lt;p&gt;
+Perhaps it's a bit premature to already mention it. And I'm not making any promises. Nevertheless is my Sauron eye fixed on trying to replace the GtkHTML editor Bonobo component with GtkMozEmbed.
+&lt;img src=&quot;http://www.gnome.org/projects/evolution/images/screenshots/2.0/screenshots.png&quot; vspace=&quot;3&quot; hspace=&quot;3&quot; alt=&quot;Evo logo&quot; align=&quot;right&quot; /&gt;&lt;/p&gt;&lt;p&gt;
+Some information about the attempt to do this with our poor Evolution can be found &lt;a href=&quot;http://go-evolution.org/Thoughts_and_ideas_to_replace_gtkhtml_with_gtkmozembed&quot;&gt;here&lt;/a&gt;. To be more specific you can make a GtkMozEmbed component editable using &lt;a href=&quot;http://lxr.mozilla.org/seamonkey/source/editor/docs/Editor_Embedding_Guide.html&quot;&gt;this API&lt;/a&gt;. That API, however, of course doesn't mean that this is/will be a flat road without issues and problems.
+&lt;/p&gt;&lt;p&gt;
+For example one issue is that the current state of the EMsgComposer code is a little bit tight to the Bonobo way of working. Another issue is that there's a lot &quot;commands&quot;  to support (like, &quot;insert html&quot;, &quot;set bold&quot;, &quot;undo&quot;, &quot;redo&quot;). Most are also supported by the nsICommandManager. Some are not.
+&lt;/p&gt;&lt;p&gt;
+So I started with making sure that other parts of the Evolution code don't try to tamper with private fields and members of the EMsgComposer. Why? Well, if we're sure no other Evolution developer used something other than the API as agreed in e-msg-composer.h, then a programmer can more securely alter the internals of the implementation (e-msg-composer.c).
+&lt;/p&gt;&lt;p&gt;
+You can find the result of that first step (data hiding) &lt;a href=&quot;http://bugzilla.gnome.org/show_bug.cgi?id=318611&quot;&gt;here&lt;/a&gt;. As usual, if you want to help. Contact me, or you know .. help (give me tips, guidance, whatever). Note that I don't even know whether or not the Evolution maintainers like this idea. So this blog entry doesn't mean that in a few weeks you'll have a slick Gecko HTML editor component for typing your E-mails in Evolution.
+&lt;/p&gt;</description>
+	<pubDate>Tue, 11 Oct 2005 21:33:05 +0000</pubDate>
+</item>
+<item>
+	<title>Ruben Vermeersch: De vogelgriep komt eraan!</title>
+	<guid>http://weblog.lambda1.be/99-de-vogelgriep-komt-eraan/nl</guid>
+	<link>http://weblog.lambda1.be/99-de-vogelgriep-komt-eraan/nl</link>
+	<description>
+Een week of twee geleden (26 sep) werd ik 19, een van de late cadeaus was dit:&lt;br /&gt;
+&lt;br /&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;http://weblog.lambda1.be/rubensplein.jpg&quot; alt=&quot;Naambord&quot; /&gt;&lt;br /&gt;
+&lt;em&gt;Mijn nieuw naambord, binnenkort hangend aan mijn deur&lt;/em&gt;&lt;/div&gt;&lt;br /&gt;
+&lt;br /&gt;
+Heerlijk.&lt;br /&gt;
+&lt;br /&gt;
+Niet veel tijd over spijtiggenoeg, unief is weer begonnen. Ik klaag echter niet, veel plezier hier.&lt;br /&gt;
+&lt;br /&gt;
+Weet iemand wat er gebeurd is met library.gnome.org (als het al ooit bestaan heeft)?</description>
+	<pubDate>Tue, 11 Oct 2005 20:12:26 +0000</pubDate>
+</item>
+<item>
+	<title>Nicolas Trangez (ikke): MS Hotmail new Beta interface</title>
+	<guid>http://blog.eikke.com/xmlsrv/413@http://blog.eikke.com</guid>
+	<link>http://blog.eikke.com/index.php/ikke/2005/10/11/ms_hotmail_new_beta_interface</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/ikke-gotchi.png" alt="Nicolas Trangez (ikke) face"&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.winsupersite.com/reviews/msn_kahuna_preview.asp&quot;&gt;http://www.winsupersite.com/reviews/msn_kahuna_preview.asp&lt;/a&gt;&lt;/p&gt;	&lt;p&gt;Check it out &lt;a href=&quot;http://www.winsupersite.com/reviews/msn_kahuna_preview.asp&quot; title=&quot;here&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+	&lt;p&gt;One major question: how well will it work for people exploring the web using a non-IE based browser?
+&lt;/p&gt;</description>
+	<pubDate>Tue, 11 Oct 2005 19:33:15 +0000</pubDate>
+</item>
+<item>
+	<title>Michel Klijmij: Komt dat zien!</title>
+	<guid>http://www.klijmij.net/~michel/archief/2005/10/11/komt-dat-zien/</guid>
+	<link>http://www.klijmij.net/~michel/archief/2005/10/11/komt-dat-zien/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/hackergotchi-michel.png" alt="Michel Klijmij face"&gt;
+&lt;p&gt;Gisteravond ben ik naar de &lt;a href=&quot;http://www.ashtonbrothers.nl/index2.html&quot;&gt;Ashton Brothers&lt;/a&gt; geweest in de grote zaal van de Goudse Schouwburg met hun nieuwe show &lt;em&gt;Ballyhoo!&lt;/em&gt;. Mijn ooms die meewaren hadden ze al eens gezien (&lt;em&gt;Tragiek van de onderman&lt;/em&gt;) en waren toen diep onder de indruk. Ik kan het alleen maar eens zijn met hun enthousiasme. Wat een fantastische voorstelling! Zeker een van de beste die ik de afgelopen jaren heb gezien. Maar hoe omschrijf je de Ashton Brothers? Het is een muziek, cabaret, acrobatiek, slapstick, mime, goocheltrucs&amp;#8230; van alles wat. Bekijk het dus maar zelf: &lt;a href=&quot;http://www.ashtonbrothers.nl/download/Ashton_Brothers_4min.mpg&quot;&gt;de trailer van Ballyhoo!&lt;/a&gt;, &lt;a href=&quot;http://variatee.vara.nl/variatee/playerpage.jsp?listtype=cabaretier&amp;amp;nodeID=32182&quot;&gt;fragmenten uit Tragiek van de onderman&lt;/a&gt;, &lt;a href=&quot;http://cgi.omroep.nl/cgi-bin/streams?/tv/vara/naarbedmetcabaretier/bb.20050402.asf&quot;&gt;Naar Bed Met Een Cabaretier over de Ashton Brothers&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Tue, 11 Oct 2005 09:31:10 +0000</pubDate>
+</item>
+<item>
+	<title>Jos Herni (digiplace.nl): Rechten in een keer veranderen</title>
+	<guid>http://www.digiplace.nl/385@http://www.digiplace.nl/</guid>
+	<link>http://www.digiplace.nl/pivot/entry.php?id=385</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/jos-digiplace.png" alt="Jos Herni (digiplace.nl) face"&gt;
+Met het switchen van Mandriva naar Ubuntu kwam een klein
+verhuisprobleempje om de hoek kijken. Op mijn harde schijf heb ik een
+aparte partitie gemaakt die altijd blijft bestaan en dus nooit wordt
+geformateerd. Onder Mandriva had ik als gebruiker een User ID (uid)
+500. Onder Ubuntu is dat veranderd naar 1000. Dat betekend dus dat je
+niet de juiste rechten meer hebt om je eigen bestanden te veranderen.
+Het zelfde ging op voor mijn usb harddisk van 200 Gb. Die staat vol met
+backups van foto,film en dat soort zaken. Gelukkig bleek dit allemaal
+eenvoudig op te lossen met behulp van het commando chown (change
+owner). Daarvoor gaf ik het volgende commando:&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;sudo chown -R jos:jos /mnt/data&lt;br /&gt;
+sudo chown -R jos:jos /media/usbdisk&lt;/b&gt;&lt;br /&gt;
+&lt;br /&gt;jos:jos verwijst naar usernaam en groepsnaam.Als je in je homedir staat kan je naar voren toveren met het commando&lt;b&gt; ls-l&lt;/b&gt;.Altijd handig zo' n commando als je op zoek zou zijn naar jezelf! &lt;img src=&quot;http://www.digiplace.nl/pivot/includes/emot/e_121.gif&quot; alt=&quot;;-)&quot; align=&quot;middle&quot; /&gt;&lt;/p&gt;</description>
+	<pubDate>Tue, 11 Oct 2005 09:16:00 +0000</pubDate>
+</item>
+<item>
+	<title>Jos Herni (digiplace.nl): Bug</title>
+	<guid>http://www.digiplace.nl/384@http://www.digiplace.nl/</guid>
+	<link>http://www.digiplace.nl/pivot/entry.php?id=384</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/jos-digiplace.png" alt="Jos Herni (digiplace.nl) face"&gt;
+Microsoft has a majority market share in the new desktop PC marketplace. &lt;br /&gt;
+This is a bug, which Ubuntu is designed to fix.&lt;br /&gt;
+&lt;br /&gt;
+Meer weten? Dan even &lt;a href=&quot;https://launchpad.net/products/ubuntu/+bug/1&quot; target=&quot;_blank&quot;&gt;doorlezen&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Tue, 11 Oct 2005 09:05:00 +0000</pubDate>
+</item>
+<item>
+	<title>Kristian Rietveld (kris): QOS</title>
+	<guid>http://www.livejournal.com/users/inverted_tree/46477.html</guid>
+	<link>http://www.livejournal.com/users/inverted_tree/46477.html</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/kris.png" alt="Kristian Rietveld (kris) face"&gt;
+Als je bij ons op de universiteit cola of snacks uit een snackautomaat haalt, dan krijg je korting als je betaalt met je chippas.  De Hollander in mij zet mij dan ook altijd aan om genoeg tegoed op mijn chippas (welke al een stukje mist en nog wat scheuren heeft, maar hij doet het nog steeds) te hebben.  Dit ging altijd prima totdat GWK HET NODIG VOND OM ALLE CHIPPASOPLAADAUTOMATEN OP DE STATIONS WEG TE HALEN.  Lekker is dat, als de trein vertraging had was dat altijd een prima moment om de chippas op te laden, nu dus verleden tijd.  Erg fijn. QOS--.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Dirk-Jan: Het boek van Robert Love is inderdaad geweldig! (Ik heb het gelezen voordat ik aan mijn Bachelorproject/thesis begon).  Ik vond het alleen jammer dat er geen hoofdstuk over de netwerkstack was, maar goed, heb ik toch nog iets om zelf uit te zoeken en een mooi stuk over te schrijven voor m'n scriptie.</description>
+	<pubDate>Mon, 10 Oct 2005 23:26:58 +0000</pubDate>
+</item>
+<item>
+	<title>Jos Herni (digiplace.nl): De 1e dag met de release candidate van Ubuntu 5.10</title>
+	<guid>http://www.digiplace.nl/383@http://www.digiplace.nl/</guid>
+	<link>http://www.digiplace.nl/pivot/entry.php?id=383</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/jos-digiplace.png" alt="Jos Herni (digiplace.nl) face"&gt;
+In een woord? &lt;b&gt;Geweldig&lt;/b&gt;! Ik heb het vandaag echt goed aan de tand
+kunnen voelen. En bijna alles gaat uitstekend. Je moet wel bedenken dat
+bij het volgen van de 1e configuratie stappen er een andere Gnome wordt
+gebruikt dan bij de vorige versie (5.04). Er zijn heel wat verschillen
+en een daarvan is b.v. het gegeven dat Totem werkt met Gstreamer. Als
+je dus &lt;a href=&quot;https://wiki.ubuntu.com/RestrictedFormats#head-ae79fed9d60ccdf06f400ae76ad53867d94bb2b8&quot; target=&quot;_blank&quot;&gt;deze stappen volgt&lt;/a&gt; kom je niet meteen met een goed werkende configuratie uit om b.v. de &lt;a href=&quot;http://portal.omroep.nl/?nav=jeejGsHEbGcZtH&quot; target=&quot;_blank&quot;&gt;bestanden van deze pagina&lt;/a&gt;
+te bekijken. Het is gelukkig eenvoudig op te lossen door gxine en
+(weer) totem-gstreamer te installeren. Als je dan ook nog met synaptic
+kiest voor mplayer is alles wel gelukt. En heel plezierig dat je alle
+beelden kunt bekijken met gxine, die wat mij betreft veel beter beeld
+geeft voor de Windows streams. Ik was voorheen gewend om met
+mplayer-plugin te werken, maar die vergeet ik maar snel. En verder
+werkt het wel allemaal zo' n beetje. Ik kom nog een paar heel kleine
+problemen tegen. Ik zie geen mogelijkheid om Webmin te gebruiken, maar
+ik moet mogelijk even die daemon handmatig starten. Sowieso is het
+bewerken van de services niet goed te bedienen, dat moet in de final
+release wel gefixed worden. En ik weet niet hoe je de aangesloten
+printer kan laten sharen met cups voor gebruik met mijn Powerbook. Maar
+ik ben ervan overtuigd dat deze kleine probleeempjes snel worden
+opgelost.&lt;/p&gt;</description>
+	<pubDate>Mon, 10 Oct 2005 20:50:00 +0000</pubDate>
+</item>
+<item>
+	<title>Dirk-Jan C. Binnema: tartu</title>
+	<guid>tag:blogger.com,1999:blog-5516553.post-112897456355300820</guid>
+	<link>http://www.djcbsoftware.nl/ChangeLog/2005_10_01_changelog.html#112897456355300820</link>
+	<description>
+&lt;img src=&quot;http://www.elisanet.fi/djcb/image/anntartu01.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; /&gt;HELSINKI - Ik ben weer terug in Helsinki, na een weekend in &lt;a href=&quot;http://nl.wikipedia.org/wiki/Tallinn&quot;&gt;Tallinn&lt;/a&gt; en &lt;a href=&quot;http://nl.wikipedia.org/wiki/Tartu&quot;&gt;Tartu&lt;/a&gt; (in &lt;a href=&quot;http://nl.wikipedia.org/wiki/Estland&quot;&gt;Estland&lt;/a&gt;) met Ann-Christin.
+&lt;p&gt;&lt;strong&gt;Tartu&lt;/strong&gt; is een oude universiteitsstad in het zuiden van Estland, en de tweede stad van het land, met ongeveer 100.000 inwoners. De russificatie is er minder zichtbaar dan in Tallinn, en Tartu (met name het stadscentrum) maakt een nette en vriendelijke indruk. Het heeft &lt;em&gt;niets&lt;/em&gt; met verval of armoede of onveiligheid te maken, iets waarmee 'Oost-Europa' toch vaak geassocieerd wordt.
+&lt;p&gt;We verbleven in het &lt;a href=&quot;http://www.parkhotell.ee/&quot;&gt;Parkhotell&lt;/a&gt;, een hotelletje op loopafstand van het centrum; eenvoudig maar schoon en voordelig - zoals heel veel in Tartu. We lachten ons kapot in bars en restaurants. En ik liet zelfs voor minder dan de helft van de Finse prijs een flink deel van mijn hoofdhaar achter in een kapsalon. Nederlander op vakantie :-) We bezochten de *hoest* Ierse pub &lt;em&gt;Wilde&lt;/em&gt; - men schijnt nogal trots te zijn dat er een een Estse naamgenoot is van de 19&lt;sup&gt;e&lt;/sup&gt;-eeuwse &lt;a href=&quot;http://en.wikipedia.org/wiki/Oscar_Wilde&quot;&gt;Engels/Ierse bekendheid&lt;/a&gt;. Er is zelfs een beeld van een ontmoeting van de twee, die nooit heeft plaatsgevonden... Maar verder was het best aardig, net als jazz club &lt;em&gt;Illegaarden&lt;/em&gt; of het Russische &lt;em&gt;Rasputin&lt;/em&gt;.
+&lt;p&gt;Een heerlijk ontspannen weekeinde in Tartu, kan ik iedereen aanraden. En dan hebben we nog niet eens de omgeving verkend, of musea bezocht. Dat kan de volgende keer!
+&lt;img src=&quot;http://www.elisanet.fi/djcb/image/tartu02.jpg&quot; border=&quot;0&quot; align=&quot;right&quot; /&gt;
+&lt;p&gt;In &lt;strong&gt;Tallinn&lt;/strong&gt; was ik natuurlijk al een paar keer geweest. Het is ook een fraaie stad om te bezoeken. Veel herinnert nog aan de tijden van de &lt;a href=&quot;http://nl.wikipedia.org/wiki/Hanze&quot;&gt;Hanze&lt;/a&gt;, en je kunt overal in 'middeleeuwse' (nou ja) sfeer eten. Tallinn heeft een beetje te lijden onder grote aantallen Finnen die ieder weekend de stad bezoeken om eens lekker goedkoop dronken te worden. Dat wordt al duidelijk zo gauw je de veerboot van Helsinki naar Tallinn betreedt! Hoewel de Finse euro's natuurlijk hartelijk welkom zijn, hebben velen ook wat negatieve gevoelens over de wekelijkse dronkemans (m/v) invasie. Te vergelijken met de gevoelens van de gemiddelde Spaanse badplaatsbewoner jegens de horden Nederlanders/Duitsers/Engelsen/... Ik weet niet of we voor Finnen aangezien werden, maar we probeerden dat zoveel mogelijk te vermijden, al ontsnapte af en toe nog een &lt;em&gt;kiitos&lt;/em&gt; (dank u wel) onze lippen. De &lt;a href=&quot;http://en.wikipedia.org/wiki/Estonian_language&quot;&gt;Estse taal&lt;/a&gt; is tamelijk verwant aan de Finse (en ongeveer de enige levensvatbare &lt;small&gt;(&lt;a href=&quot;http://en.wikipedia.org/wiki/Finno-Ugric_languages&quot;&gt;Hongaars is een &lt;em&gt;verre&lt;/em&gt; verwant&lt;/a&gt;)&lt;/small&gt;), zodat ik mijn bestellingen in Estland &lt;em&gt;een beetje&lt;/em&gt; in het Ests kon doen. 1-2-3 is &lt;em&gt;yksi-kaksi-kolme&lt;/em&gt; in het Fins  en &lt;em&gt;&amp;uuml;k-kaks-kolm&lt;/em&gt; in het Ests, om een voorbeeld te geven.
+&lt;img src=&quot;http://www.elisanet.fi/djcb/image/tallinn02.jpg&quot; border=&quot;0&quot; align=&quot;left&quot; /&gt;
+&lt;p&gt;Het was ook een weekend &lt;em&gt;zonder&lt;/em&gt; computer. Weer eens wat anders! Achteraf had ik misschien mijn &lt;a href=&quot;http://www.maemo.org&quot;&gt;770&lt;/a&gt;-proto mee moeten nemen, want in Estland zijn &lt;strong&gt;heel veel&lt;/strong&gt; &lt;em&gt;hot-spots&lt;/em&gt; voor draadloos netwerkverkeer - internettoegang is een &lt;a href=&quot;http://news.bbc.co.uk/1/hi/technology/3673619.stm&quot;&gt;speerpunt&lt;/a&gt; in Estland. Geen computers dus, maar er zijn altijd nog computer&lt;em&gt;boeken&lt;/em&gt; Ik las de eerste helft van Robert Loves &lt;a href=&quot;http://rlove.org//kernel_book/&quot;&gt;&lt;em&gt;Linux Kernel Development&lt;/em&gt;&lt;/a&gt;. Een fascinerend boek. Zo wordt uit de doeken gedaan hoe slim de &lt;em&gt;O(1)-scheduler&lt;/em&gt; in elkaar steekt. Er zijn wel &lt;a href=&quot;http://www.hpl.hp.com/research/linux/kernel/o1.php&quot;&gt;algemene beschrijvingen&lt;/a&gt;, maar hoe het nu precies werkt, lees ik voor het eerst (&lt;a href=&quot;http://www.samspublishing.com/articles/article.asp?p=101760&amp;seqNum=2&amp;rl=1&quot;&gt;voorbeeld hoofdstuk&lt;/a&gt;). En ik wist ook wel dat device drivers in &lt;em&gt;top&lt;/em&gt; en &lt;em&gt;bottom&lt;/em&gt; verdeeld zijn (de top-havlve handelt interrupts af - &lt;em&gt;zo snel mogelijk&lt;/em&gt; - en delegeert langduriger werk aan de bottom halve), maar welke van de smaken bottom halves (&lt;em&gt;softirqs&lt;/em&gt;, &lt;em&gt;tasklets&lt;/em&gt;, &lt;em&gt;work queues&lt;/em&gt;) nu te gebruiken in welke situatie? Ik begrijp er nu veel meer van! Voor wie niet weet waar ik het in &lt;em&gt;vredesnaam&lt;/em&gt; over heb, is het waarschijnlijk niet zo'n knaller...</description>
+	<pubDate>Mon, 10 Oct 2005 20:12:25 +0000</pubDate>
+</item>
+<item>
+	<title>Michiel Sikkes (Mitario): BetterDesktop, Tango</title>
+	<guid>http://www.eyesopened.nl/michiel/2005/10/10/betterdesktop-tango/</guid>
+	<link>http://www.eyesopened.nl/michiel/2005/10/10/betterdesktop-tango/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/mitario.png" alt="Michiel Sikkes (Mitario) face"&gt;
+&lt;p&gt;Novell.. Ik ben dan geen overtuigde aanhanger van hun Linux distributies, zoals SuSE, maar ze starten wel ontzettend nuttige projecten. Eerst Hula - waar ik overigens de laatste tijd niet veel meer van gehoord heb - en nu &lt;a href=&quot;http://betterdesktop.org&quot;&gt;BetterDesktop&lt;/a&gt; en &lt;a href=&quot;http://tango-project.org&quot;&gt;Project Tango&lt;/a&gt;.&lt;/p&gt;
+	&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;http://www.eyesopened.nl/~michiel/files/betterdesktop_subjects.png&quot; alt=&quot;BetterDesktop videos&quot; /&gt;&lt;/div&gt;
+	&lt;p&gt;BetterDesktop is een project/website dat gebruikt word om gebruiksvriendelijkheid onderzoeken op te plaatsen. Zo zijn er een aantal uitstekende &lt;a href=&quot;http://betterdesktop.org/welcome/?q=analysis&quot;&gt;analyse artikelen&lt;/a&gt; geplaatst die onderzoekers kunnen ondersteunen bij hun tests. Maar het interessantste zijn nog de filmpjes op de &lt;a href=&quot;http://betterdesktop.org/welcome/?q=data&quot;&gt;Test Data&lt;/a&gt; pagina. In deze filmpjes worden mensen uit verschillende leeftijdscategoriën gevraagd een bepaalde taak uit te voeren. Het gezicht, het scherm en de bewegingen van de betreffende persoon worden geobserveerd om er achter te komen wat er nog scheelt aan de gebruiksvriendelijkheid van de software. Mijn voorstel voor ontwikkelaars: ga alle filmpjes af en los die problemen op!&lt;/p&gt;
+	&lt;p&gt;Dan heb je ook nog Project Tango. Volgens de website met als doel &lt;em&gt;&amp;#8220;The Tango Desktop Project exists to create a consistent user experience for free and Open Source software with graphical user interfaces.&amp;#8221;&lt;/em&gt;. Zo is er een consistent pictogramthema ontwikkeld voor KDE en GNOME volgens Freedesktop.org standaarden (en het is nog mooi ook!). Ook zijn er uitstekende &lt;a href=&quot;http://tango-project.org/Window_Experiments&quot;&gt;ideeën&lt;/a&gt; voorgesteld voor een verbetering van schermen op de desktop.&lt;/p&gt;
+	&lt;p&gt;Wat ik vooral fantastisch vind, deze onderwerpen passen nou precies in mijn profielwerkstuk. Ik ben dan ook van plan op dezelfde manier een dergelijk onderzoek te verrichten. Alleen een klein probleempje&amp;#8230; kan iemand mij sponsoren met een camera?
+&lt;/p&gt;</description>
+	<pubDate>Mon, 10 Oct 2005 18:33:36 +0000</pubDate>
+</item>
+<item>
+	<title>Jos Herni (digiplace.nl): Overstap van Mandriva naar Ubuntu</title>
+	<guid>http://www.digiplace.nl/382@http://www.digiplace.nl/</guid>
+	<link>http://www.digiplace.nl/pivot/entry.php?id=382</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/jos-digiplace.png" alt="Jos Herni (digiplace.nl) face"&gt;
+Nou...eindelijk..ik ben eruit. Ik stap definitief over naar Ubuntu. Heb
+ook nog even heel serieus Suse 10 overwogen. Ook prachtig, maar toch
+nog te veel koppelingen naar KDE en daarnaast gewoon te traag. Ubuntu
+heeft nu echt een topper gemaakt. Ik draai nu de Release Candidate van
+5.10 en die heb je in twee uur geconfigureerd. Alles werkt dan gewoon,
+van dvd,mp3, divx, printer, plugins voor real en wmf/asf..gewoon
+geweldig. En het ziet er ook nog heel goed uit als je even wat tweakt.
+Ik ben heel blij.&lt;/p&gt;</description>
+	<pubDate>Sun, 09 Oct 2005 21:34:00 +0000</pubDate>
+</item>
+<item>
+	<title>Michiel Sikkes (Mitario): PWS “Aantrekkelijk toegankelijk”</title>
+	<guid>http://www.eyesopened.nl/michiel/2005/10/08/pws-aantrekkelijk-toegankelijk/</guid>
+	<link>http://www.eyesopened.nl/michiel/2005/10/08/pws-aantrekkelijk-toegankelijk/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/mitario.png" alt="Michiel Sikkes (Mitario) face"&gt;
+&lt;p&gt;Vandaag officieel begonnen aan mijn profielwerkstuk (PWS), dus ik ga vanaf nu maar uren tellen. Mijn plan is om het op te bouwen in drie delen:&lt;/p&gt;
+	&lt;ol&gt;
+	&lt;li&gt;Theorie deel 1 &amp;#8220;gebruiksvriendelijkheid en toegankelijkheid&amp;#8221;&lt;/li&gt;
+	&lt;li&gt;Theorie/ontwerp deel  2 &amp;#8220;Aantrekkelijk toegankelijk&amp;#8221;. Dit deel gaat het proces van het praktische deel beschrijven en ondersteunen.&lt;/li&gt;
+	&lt;li&gt;Praktisch deel. Hier zal ik een voorstel maken de huidige Mijn Postbank.nl, internetbankieren van de Postbank, een stuk aantrekkelijker, toegankelijker en gebruiksvriendelijker te maken.&lt;/li&gt;
+	&lt;/ol&gt;
+	&lt;p&gt;Ik ben ook maar alvast begonnen met de huisstijl van het verslag:&lt;/p&gt;
+	&lt;div&gt;&lt;img src=&quot;http://www.eyesopened.nl/~michiel/files/frontpage_thumb.png&quot; alt=&quot;Screenshot huisstijl&quot; /&gt;&lt;/div&gt;</description>
+	<pubDate>Sat, 08 Oct 2005 16:32:40 +0000</pubDate>
+</item>
+<item>
+	<title>Wouter Bolsterlee (uws): Overheard in a train</title>
+	<guid>http://uwstopia.nl/blog/2005/10/train-conversation</guid>
+	<link>http://uwstopia.nl/blog/2005/10/train-conversation</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/uws.png" alt="Wouter Bolsterlee (uws) face"&gt;
+&lt;p&gt;Hi&amp;#8230; hi there. Fine. How are &lt;em&gt;you&lt;/em&gt; doing? Are you still there? Yeah, fine, how are &lt;em&gt;you&lt;/em&gt; doing? What are you doing right now? Really? Oh well&amp;#8230; Are you still there? Yeah? Oh. Well. Yeah.&lt;/p&gt;
+
+	&lt;p&gt;No, I&amp;#8217;m all alone&amp;#8230; really, no one can hear me&amp;#8230; no, not even Simon&amp;#8230; Uh, what? I can&amp;#8217;t hear you&amp;#8230; better now.&lt;/p&gt;
+
+	&lt;p&gt;I&amp;#8217;m on a train&amp;#8230; sorry, I can&amp;#8217;t hear you&amp;#8230; a train, yes, it makes a lot of noise&amp;#8230; stupid trains&amp;#8230; what?&lt;/p&gt;
+
+	&lt;p&gt;No, I&amp;#8217;m really alone&amp;#8230; they would say I&amp;#8217;m a stupid American tourist&amp;#8230; yeah. I can&amp;#8217;t hear you. Can you hear me? Yeah? Bye. What? Yeah, bye.&lt;/p&gt;</description>
+	<pubDate>Fri, 07 Oct 2005 20:32:00 +0000</pubDate>
+</item>
+<item>
+	<title>Michel Klijmij: Ik ben een wortel</title>
+	<guid>http://www.klijmij.net/~michel/archief/2005/10/07/ik-ben-een-wortel/</guid>
+	<link>http://www.klijmij.net/~michel/archief/2005/10/07/ik-ben-een-wortel/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/hackergotchi-michel.png" alt="Michel Klijmij face"&gt;
+&lt;p&gt;Nou, bijna dan. Als verwoed &lt;a href=&quot;http://wiki.lspace.org/&quot;&gt;Discworld&lt;/a&gt; lezer (meelezende leerlingen, tip van meneer Km: onthouden voor je Engelse literatuurlijst!) heb ik deze test maar eens gedaan. Volgens mij al een keer eerder ook, en met hetzelfde resultaat:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.quizfarm.com/1128292172Carrot.jpg&quot; /&gt;&lt;/p&gt; 
+
+&lt;p&gt;You scored as &lt;b&gt;Carrot Ironfounderson&lt;/b&gt;. You are Captain Carrot Ironfounderson of the City Watch in the greatest city on the Disc, Ankh-Morpork! A truly good natured, honest guy, who knows everyone, and is liked by all. You&amp;#8217;d rather not be reminded that you are the true hair to the throne, but that does explain why people naturally follow your orders.&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Carrot Ironfounderson&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;88&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;88%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Gytha (Nanny) Ogg&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;75&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;75%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;The Librarian&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;63&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;63%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Esmerelda (Granny) Weatherwax&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;50&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;50%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Lord Havelock Vetinari&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;50&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;50%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Death&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;50&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;50%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Commander Samuel Vimes&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;50&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;50%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Rincewind&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;38&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;38%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Greebo&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;38&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;38%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;font size=&quot;1&quot;&gt;Cohen The Barbarian&lt;/font&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;19&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td&gt;&lt;font size=&quot;1&quot;&gt;19%&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br /&gt;&lt;a href=&quot;http://quizfarm.com/test.php?q_id=82543&quot;&gt;Which Discworld Character are you like (with pics)&lt;/a&gt;&lt;br /&gt;&lt;font size=&quot;1&quot;&gt;created with &lt;a href=&quot;http://quizfarm.com&quot;&gt;QuizFarm.com&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;</description>
+	<pubDate>Fri, 07 Oct 2005 17:03:35 +0000</pubDate>
+</item>
+<item>
+	<title>Michel Klijmij: Ben Bot</title>
+	<guid>http://www.klijmij.net/~michel/archief/2005/10/05/ben-bot/</guid>
+	<link>http://www.klijmij.net/~michel/archief/2005/10/05/ben-bot/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/hackergotchi-michel.png" alt="Michel Klijmij face"&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.nu.nl/news.jsp?n=604126&amp;amp;c=11&quot;&gt;Nu.nl&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;DEN HAAG - De Amerikaans/Britse invasie in Irak was, achteraf oordelend &amp;#8220;misschien niet verstandig&amp;#8221;. Dat zei minister Bot van Buitenlandse Zaken woensdag in de Tweede Kamer. Volgens Bot was het langer doorzetten van diplomatie en verder onderzoek naar massavernietigingswapens &amp;#8220;verstandiger geweest&amp;#8221;.&lt;/blockquote&gt;
+
+&lt;p&gt;Die Ben Bot kwam al goed op me over, met deze uitspraak scoort hij bij mij wel bonuspunten. Ik ben wel bang dat hij onder druk van Balkenende zijn uitspraak terug zal moeten nemen. Desondanks heeft hij gewoon gelijk.&lt;/p&gt;</description>
+	<pubDate>Fri, 07 Oct 2005 17:03:35 +0000</pubDate>
+</item>
+<item>
+	<title>Michel Klijmij: KvdL (2)</title>
+	<guid>http://www.klijmij.net/~michel/archief/2005/10/04/kvdl/</guid>
+	<link>http://www.klijmij.net/~michel/archief/2005/10/04/kvdl/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/hackergotchi-michel.png" alt="Michel Klijmij face"&gt;
+&lt;p&gt;Nou is het, weet ik, hoogst ongebruikelijk dat de man de naam van zijn vrouw aanneemt. Sinds mei heten zowel Astrid als ik Klijmij-van der Laan. Dat kan al sinds enkele jaren trouwens. Maar zojuist belde de &lt;a href=&quot;http://www.postbank.nl/&quot;&gt;Postbank&lt;/a&gt; over de aanvraag van een gezamenlijke rekening, of ik mijn achternaam wel goed had ingevuld&amp;#8230;ze gingen kijken of ze een vakje ervoor hadden, nadat ik had uitgelegd dat ik het formulier echt goed had ingevuld.&lt;/p&gt;</description>
+	<pubDate>Fri, 07 Oct 2005 17:03:35 +0000</pubDate>
+</item>
+<item>
+	<title>Michel Klijmij: Nu echt Drs.! (2)</title>
+	<guid>http://www.klijmij.net/~michel/archief/2005/10/03/nu-echt-drs/</guid>
+	<link>http://www.klijmij.net/~michel/archief/2005/10/03/nu-echt-drs/</link>
+	<description>
+	    &lt;img src="http://nl.gnome.org/images/hackergotchi-michel.png" alt="Michel Klijmij face"&gt;
+&lt;p&gt;In december 2004 was mijn scriptie af, in juni 2005 mijn afstudeerpresentatie. Ja, ik doe graag rustig aan. Ik heb nog een studentnummer dat met &amp;#8220;99&amp;#8243; begint. Maar nu krijg ik toch echt mijn bul, en ben ik dus echt Doctorandus in de Sociale Geografie!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.klijmij.net/~michel/wp-content/dscn0310.jpg&quot; alt=&quot;Buluitreiking&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Waarschijnlijk om mij te pesten echter niet in de prachtige Aula van het Academiegebouw in het centrum, maar de Boothzaal in de Universiteitsbibliotheek (twv 50 miljoen euro, een echte Arets) op de troosteloze Uithof&amp;#8230;&lt;/p&gt;</description>
+	<pubDate>Fri, 07 Oct 2005 17:03:35 +0000</pubDate>
+</item>
+
+</channel>
+</rss>
