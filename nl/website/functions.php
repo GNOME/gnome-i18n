@@ -13,7 +13,7 @@
 include "func_login.php";
 include "mysql_password.php";
 $GLOBALS['mysql_password'] = $password;
-$important_branch = "gnome-2.12";
+$important_branch = "gnome-2.14";
 function translate() { ?>
 <div>
 <? $url = sprintf("%s%s%s","http://",$GLOBALS["HTTP_HOST"],$GLOBALS["REQUEST_URI"]);
