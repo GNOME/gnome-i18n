@@ -8,7 +8,7 @@ is_logged_in();
 <head>
   <title>Gnome-nl -- Nieuws</title>
 <? html_head() ?>
-<link rel="alternate" type="application/rss2+xml" title="RSS2" href="nieuws_rss20.php">
+<link rel="alternate" type="application/rss2+xml" title="GNOME-NL Nieuws" href="nieuws_rss20.php">
 </head>
 <body>
 <div class="body">
