@@ -1,5 +1,5 @@
 <?
-header("Content-Type: text/xml; charset=iso-8859-15");
+header("Content-Type: text/xml; charset=UTF-8");
 include "functions.php";
 echo "<?xml version=\"1.0\"?>\n";
 ?>
@@ -11,7 +11,7 @@ echo "<?xml version=\"1.0\"?>\n";
 	<language>nl-NL</language>
 	<pubDate><?print date("r"); ?></pubDate>
 	<lastBuildDate><?print date("r"); ?></lastBuildDate>
-	<generator>My PHP script</generator>
+	<generator>My own php-mysql script</generator>
 	<managingEditor>V.vanAdrighem@dirck.mine.nu</managingEditor>
 	<webMaster>V.vanAdrighem@dirck.mine.nu</webMaster>
 <?
@@ -38,9 +38,10 @@ echo "		<item>\n";
 echo "			<title>";
 echo $newsitem["title"];
 echo "</title>\n";
-echo "			<description>";
-echo htmlentities ($newsitem["summary"],ENT_COMPAT,'UTF-8');
-echo "</description>\n";
+echo "			<description><![CDATA[";
+echo mb_convert_encoding($newsitem["summary"],'UTF-8');
+//echo htmlentities ($newsitem["summary"],ENT_COMPAT,'UTF-8');
+echo "]]></description>\n";
 echo "			<guid>";
 echo "http://nl.gnome.org/nieuws.php?item=";
 echo $newsitem["id"];
