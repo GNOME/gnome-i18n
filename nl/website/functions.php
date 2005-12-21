@@ -33,7 +33,7 @@ echo "</div>";
 function html_head() {
 $backgrounds = array('background01.png', 'background02.png', 'background03.png', 'background04.png', 'background05.png');
 ?>
-  <link rel="icon" href="images/gnome-nl.png" type="image/png">
+  <link rel="icon" href="images/gnome-nl.mini.png" type="image/png">
   <link rel="stylesheet" href="css/default.css" type="text/css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="author" content="Vincent van Adrighem">
