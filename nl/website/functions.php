@@ -33,7 +33,7 @@ echo "</div>";
 function html_head() {
 $backgrounds = array('background01.png', 'background02.png', 'background03.png', 'background04.png', 'background05.png');
 ?>
-  <link rel="icon" href="images/gnome-nl-logo.png" type="image/png">
+  <link rel="icon" href="images/gnome-nl.png" type="image/png">
   <link rel="stylesheet" href="css/default.css" type="text/css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="author" content="Vincent van Adrighem">
@@ -49,11 +49,10 @@ $backgrounds = array('background01.png', 'background02.png', 'background03.png',
 }
 
 function gnome_head() {
-$logos = array('gnome-nl-logo.png', 'gnome-nl-logo.png', 'gnome-be-logo.png');
 ?><div class="hdr">
-	<a href="index.php"><img class="logo" src="images/<?
-        echo $logos[rand (0, count ($logos) - 1)];
-?>" alt="Thuis" title="Terug naar de beginpagina"></a>
+	<a href="index.php">
+	    <img class="logo" src="images/gnome-nl.png" alt="Thuis" title="Terug naar de beginpagina">
+	</a>
 </div>
 <?
 }
