@@ -47,7 +47,7 @@ sub do_trans {
 
 sub query_trans {
     my ($tf, $tt) = @_;
-    if ( $msg_str =~ m/\b$tf/i ) {
+    if ( $msg_str =~ m/$tf/i ) {
 	print STDERR "\n=============\nmsgid:\n${msg_id}\nmsgstr:\n$msg_str\n";
 	if ( $rl->readline( "Change '$tf' to '$tt'? (y/N) " )
 	     =~ m/^\s*y(es)?\s*$/i ) {
@@ -107,11 +107,15 @@ sub translate() {
 # other terms
 # order of the words are important!
   do_trans("自由軟體基金會", "Free Software Foundation");
+  do_trans("憑證廢止清冊", "證書撤銷清單");
+  do_trans("憑證管理中心", "核證機關");
   do_trans("筆記型電腦", "手提電腦");
-  do_trans("網際網路", "互聯網");
   do_trans("行動電話", "流動電話");
+  do_trans("網際網路", "互聯網");
+  do_trans("鑰匙圈", "密碼匙圈");
   do_trans("布林值", "邏輯值");
   do_trans("命令殼", "shell");
+  do_trans("內插法", "插值法");
   do_trans("團隊", "隊伍");
   do_trans("名片", "咭片");
   do_trans("內建", "內置");
@@ -123,9 +127,17 @@ sub translate() {
   do_trans("正體", "繁體");
   do_trans("建構", "建立");
   do_trans("函式", "函數");
+  do_trans("函數庫", "函式庫");
+  do_trans("數位", "數碼");
+  do_trans("小數碼", "小數位");
   do_trans("憑證", "證書");
+  do_trans("簽章", "簽署");
+  do_trans("私鑰", "私人密碼匙");
+  do_trans("公鑰", "公開密碼匙");
+  do_trans("金鑰", "密碼匙");
   do_trans("隱私", "私隱");
   do_trans("公分", "厘米");
+  do_trans("變更", "更改");
   do_trans("公尺", "米");
   do_trans("您", "你");
   do_trans("裡", "裏");
@@ -135,7 +147,6 @@ sub translate() {
   query_trans("路由器", "router");
   query_trans("閘道器", "gateway");
   query_trans("資訊", "資料");
-  query_trans("數位", "數碼");
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
@@ -159,7 +170,7 @@ while (<>) {
          $msg_str .= $_;
 # make sure substitution won't fail because of something like
 # 硬"\n"體
-	 $msg_str =~ s/"\n"// unless ($msg_id eq "msgid \"\"\n");
+	 # $msg_str =~ s/"\n"// unless ($msg_id eq "msgid \"\"\n");
        }
    } else {
      if ($msg_id || $msg_str) {
