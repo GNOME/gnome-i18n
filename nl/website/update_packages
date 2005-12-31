@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 #The location of the statuspages. They NEED a trailing slash
 sourcelocation="http://l10n-status.gnome.org/"
+docslocation="http://kvota.net/"
+docspage="doc-l10n/by-languages.html"
 #Check the source
 if ! wget -q -O - $sourcelocation \
 | grep "index.html\">" > translation-status.tmp; then 
@@ -63,10 +65,45 @@ for version in `cat translation-status.tmp | sed 's/.*index.html\">\(.*\)<\/a>.*
 	done
 done
 
-rm *.tmp
 #mv text/versions.text text/versions.text.old
 #cat text/versions.text.old | sort -r > text/versions.text
 #rm text/versions.text.old
 versie=`grep "important_branch" functions.php | sed 's/.*= "\(.*\)";/\1/'`
 lynx -source $sourcelocation$versie/top.html \
 | grep -B 1 Dutch | head -n 1 | sed 's/.*>\([0-9]\)<.*/\1/' > text/top10.text
+
+#Now, the documentation:
+file="text/packages.documentatie.text"
+echo "documentatie" >> text/versions.text
+echo "nl" > text/groups.documentatie.text
+echo "POT" >> text/groups.documentatie.text
+wget -q -O - $docslocation$docspage \
+| grep "<td" | sed -e 's/.*Language \(.*\)<\/a.*/TOTAL\n0\n0.0\n0\n0.0\n0\n0.0\n<--\1-->/' \
+| sed -e 's/.*<tr class.*href="\(.*\)">\(.*\)<\/a>.*/..\1\n\2/' \
+| sed -e 's/.*>\(.*\) (\(.*\))<\/a>.*/\1\/nl\n\2/' \
+| sed -e 's/.*<td>\(.*\)% (\(.*\))<.*/\2\n\1/' \
+| sed 's/.*div class.*/--/' > packages.documentatie.tmp
+
+date +"%Y-%m-%d %H:%M" > $file
+echo $docslocation >> $file
+line=""
+cat packages.documentatie.tmp | ( while ! [ "$line" == "<--nl-->" ] ; do
+	read line
+    done
+    echo $line
+    read line 
+    while ! echo $line | grep -q "<--" ; do
+	echo $line
+	read line
+	done) >> $file
+cat packages.documentatie.tmp | ( while ! [ "$line" == "<--POT-->" ] ; do
+	read line
+    done
+    echo $line
+    read line 
+    while ! echo $line | grep -q "<--" ; do
+	echo $line
+	read line
+	done) >> $file
+	
+rm *.tmp

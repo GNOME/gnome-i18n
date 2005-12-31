@@ -224,7 +224,7 @@ function percentagekleur(&$percentage) {
 	return $kleur;
 }
 
-function print_trans($regel, $naam, $URL, $branch, $trans, $fuzzy, $untrans, $percentage, $maintainer) {
+function print_trans($regel, $naam, $cvslocatie, $URL, $branch, $trans, $fuzzy, $untrans, $percentage, $maintainer) {
     if ("$naam" == "TOTAL") {
 		$found = 2;
 		echo "  <tr class=\"total\">\n";
@@ -240,7 +240,7 @@ function print_trans($regel, $naam, $URL, $branch, $trans, $fuzzy, $untrans, $pe
 		echo "  <tr class=\"$regel\">\n";
 		echo "    <td class=\"module\">";
 #		echo "    (<a href=\"http://cvs.gnome.org/registry/file.cgi?	cvsroot=/cvs/gnome&amp;file=nl.po&amp;dir=", chop(htmlspecialchars ($naam)), "/po/&amp;rev=", chop($branch), "\" name=\"", chop(htmlspecialchars ($naam)), "\">CVS</a>)";
-		echo "    (<a href=\"http://cvs.gnome.org/viewcvs/", chop(htmlspecialchars ($naam)), "/po/nl.po\" name=\"", chop(htmlspecialchars ($naam)), "\">CVS</a>)";
+		echo "    (<a href=\"http://cvs.gnome.org/viewcvs/", chop(htmlspecialchars ($cvslocatie)), "/nl.po\" name=\"", chop(htmlspecialchars ($naam)), "\">CVS</a>)";
 		echo " <a href=\"http://www.gnomefiles.org/search.php?search=", chop(htmlspecialchars ($naam)), "\">", chop(htmlspecialchars ($naam)), "</a> </td>\n";
 		if ("$maintainer" == "-- Vrij --") {
 			echo "    <td>$maintainer</td>\n";

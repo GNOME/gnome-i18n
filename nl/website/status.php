@@ -172,7 +172,7 @@ while (list ($pline_num, $pline) = each ($fpackages)) {
 		list ($pline_num, $pline) = each ($fpackages);
 		$untrans=$pline;
 		list ($pline_num, $pline) = each ($fpackages);
-		print_trans($regel, "TOTAL", "NULL", "HEAD", $trans, $fuzzy, $untrans, $percentage, $maintainer);
+		print_trans($regel, "TOTAL", "NULL", "NULL", "HEAD", $trans, $fuzzy, $untrans, $percentage, $maintainer);
 		echo "  <tr><td colspan=\"6\"></td></tr>\n";
 		flush();
 	} else {
@@ -184,6 +184,7 @@ while (list ($pline_num, $pline) = each ($fpackages)) {
 		list ($pline_num, $pline) = each ($fpackages);
 		$naam=$pline;
 		list ($pline_num, $pline) = each ($fpackages);
+		$cvslocatie=$pline;
 		list ($pline_num, $pline) = each ($fpackages);
 		$branch=$pline;
 		list ($pline_num, $pline) = each ($fpackages);
@@ -221,7 +222,7 @@ while (list ($pline_num, $pline) = each ($fpackages)) {
 				}
 			}
 		}
-		print_trans($regel, $naam, $URL, $branch, $trans, $fuzzy, $untrans, $percentage, $maintainer);
+		print_trans($regel, $naam, $cvslocatie, $URL, $branch, $trans, $fuzzy, $untrans, $percentage, $maintainer);
 	}
 }
 echo "</table>\n";
