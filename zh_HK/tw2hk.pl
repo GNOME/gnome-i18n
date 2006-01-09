@@ -111,42 +111,60 @@ sub translate() {
   do_trans("憑證管理中心", "核證機關");
   do_trans("筆記型電腦", "手提電腦");
   do_trans("行動電話", "流動電話");
-  do_trans("網際網路", "互聯網");
+  do_trans("正體中文", "繁體中文");
   do_trans("鑰匙圈", "密碼匙圈");
   do_trans("布林值", "邏輯值");
   do_trans("命令殼", "shell");
   do_trans("內插法", "插值法");
+  do_trans("計算機", "計數機");
+  do_trans("腳踏車", "單車");
   do_trans("團隊", "隊伍");
   do_trans("名片", "咭片");
   do_trans("內建", "內置");
   do_trans("硬體", "硬件");
   do_trans("軟體", "軟件");
-  do_trans("網路", "網絡");
   do_trans("連繫", "聯繫");
   do_trans("連絡", "聯絡");
-  do_trans("正體", "繁體");
   do_trans("建構", "建立");
-  do_trans("函式", "函數");
-  do_trans("函數庫", "函式庫");
-  do_trans("數位", "數碼");
-  do_trans("小數碼", "小數位");
+  do_trans("算式", "數式");
   do_trans("憑證", "證書");
   do_trans("簽章", "簽署");
   do_trans("私鑰", "私人密碼匙");
   do_trans("公鑰", "公開密碼匙");
   do_trans("金鑰", "密碼匙");
   do_trans("隱私", "私隱");
-  do_trans("公分", "厘米");
   do_trans("變更", "更改");
+  do_trans("公分", "厘米");
   do_trans("公尺", "米");
+
+  do_trans("函式", "函數");
+  do_trans("函數庫", "函式庫");
+
+  do_trans("數位", "數碼");
+  do_trans("小數碼", "小數位");
+
+  do_trans("網際網路", "互聯網");
+  do_trans("網路", "網絡");
+
+  do_trans("電子郵件", "電郵");
+  do_trans("郵件", "電郵");
+
+# http://www.linuxfans.org/nuke/modules.php?name=Forums&file=viewtopic&t=25997
+  do_trans("著", "着");
+  do_trans("着作", "著作");
+  do_trans("着者", "著者");
+  do_trans("着名", "著名");
+  do_trans("着述", "著述");
+  do_trans("着書", "著書");
+  do_trans("所着", "所著");
+  do_trans("土着", "土著");
+  do_trans("顯着", "顯著");
+  do_trans("編着", "編著");
+
   do_trans("您", "你");
   do_trans("裡", "裏");
+
   query_trans("影像", "圖像");
-  query_trans("著", "着");
-  query_trans("郵件", "電郵");
-  query_trans("路由器", "router");
-  query_trans("閘道器", "gateway");
-  query_trans("資訊", "資料");
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
