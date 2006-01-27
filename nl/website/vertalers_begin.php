@@ -92,8 +92,20 @@ die beschikbaar zijn op het internet. Vaak staan daar de woorden in die je zoekt
 </ul>
 
 <a name="lijsten"></a><h2>Discussielijsten</h2>
-<p>Er zijn 2 discussielijsten waar je lid van kunt worden.
+<p>Er zijn 3 discussielijsten waar je lid van kunt worden.
 </p><ol>
+<li><b>gnome-nl-list@gnome.org:</b> Nederlandstalige GNOME-gebruikers houden contact via de <strong>gnome-nl-list</strong>. Schrijf
+jezelf in op de <a href="http://mail.gnome.org/mailman/listinfo/gnome-nl-list">gnome-nl-list
+Informatiepagina</a>!</li>
+<li><b>vertaling@vrijschrift.org:</b> Nederlandstalige discussielijst waar de Nederlandse
+vertalingen van de hele open source gemeenschap worden gecoordineerd.
+Geautomatiseerde berichten van nieuwe programma ( voor het TP ) worden hier gepost door
+robotten. Ook kun je hier vragen stellen aan je Nederlandse medevertalers.
+Hier zijn niet alleen gnome-vertalers lid van, maar ook KDE, en algemene GNU
+vertalers. Hier zouden alle vertalers lid van moeten worden. De lijst is zeker
+niet druk te noemen met gemiddeld slechts enkele e-mails per week. Abonneren op
+de lijst doe je door te kijken op
+<a href="http://mailman.vrijschrift.nl/listinfo/vertaling">de infopagina</a>.</li>
 <li><b>gnome-i18n@gnome.org:</b> Engelse discussielijst waar de vertaling van GNOME naar
 alle talen wordt gecoördineerd. Hier worden aankondigingen gepost van nieuwe
 programma's die uit gaan komen. Ook wordt hier gediscussieerd over problemen met
@@ -102,15 +114,6 @@ moeten abonneren. Het is een lijst met middelmatig verkeer van een a twee
 e-mails per dag. Lid worden van de discussielist doe je op de
 <a href="http://mail.gnome.org/mailman/listinfo/gnome-i18n">mailman pagina</a>
 van gnome.org.</li>
-<li><b>vertaling@vrijschrift.org:</b> Nederlandstalige discussielijst waar de Nederlandse
-vertalingen van de hele open source gemeenschap worden gecoordineerd.
-Geautomatiseerde berichten van nieuwe programma worden hier gepost door
-robotten. Ook kun je hier vragen stellen aan je Nederlandse medevertalers.
-Hier zijn niet alleen gnome-vertalers lid van, maar ook KDE, en algemene GNU
-vertalers. Hier zouden alle vertalers lid van moeten worden. De lijst is zeker
-niet druk te noemen met gemiddeld slechts enkele e-mails per week. Abonneren op
-de lijst doe je door te kijken op
-<a href="http://mailman.vrijschrift.nl/listinfo/vertaling">de infopagina</a>.</li>
 </ol>
 
 
