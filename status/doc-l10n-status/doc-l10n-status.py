@@ -323,6 +323,11 @@ for moduleid in modules.keys():
             continue
             
         files = [ modulename + ".xml" ]
+        try:
+            os.stat(os.path.join(module["localpath"], "C", files[0]))
+        except:
+            modulename = moduleid
+            
         for file in includes.split(" "):
             if file.strip() != "":
                 files.append(file.strip())
