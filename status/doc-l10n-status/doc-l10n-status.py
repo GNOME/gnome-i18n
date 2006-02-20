@@ -300,6 +300,7 @@ MyModules("modules.xml")
 
 alllangs = []
 
+
 for moduleid in modules.keys():
     status = checkout_module(moduleid)
     module = modules[moduleid]
@@ -322,11 +323,12 @@ for moduleid in modules.keys():
             print >>sys.stderr, "Module %s doesn't look like gnome-doc-utils module." % (moduleid)
             continue
             
-        files = [ modulename + ".xml" ]
         try:
-            os.stat(os.path.join(module["localpath"], "C", files[0]))
+            os.stat(os.path.join(module["localpath"], "C", modulename + ".xml"))
         except:
+            print >>sys.stderr, "Warning: DOC_MODULE doesn't resolve to a real file, trying '%s'." % (moduleid)
             modulename = moduleid
+        files = [ modulename + ".xml" ]
             
         for file in includes.split(" "):
             if file.strip() != "":
