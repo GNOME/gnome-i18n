@@ -157,7 +157,7 @@ def pofile_statistics(command):
     return (translated, fuzzy, untranslated)
 
 # type is one of "modules", "languages", "module" (data[module] is set then), "language" (data[language] is set)
-def stats_as_html(stats, type = 'modules', data = {}):
+def stats_as_html(stats, type = 'modules', otherstats = None, data = {}):
     import time
     html = """<html><head><title>Gnome Documentation Translation Statistics</title>
 <style language="css">
@@ -254,12 +254,21 @@ div.legend {
         content += """\t<tr><td colspan="6" style="text-align:left; padding-top:2em;"><h3><a name="%s">%s</a></h3></td></tr>\n%s\n\t\n""" % (cat, cattitle, titleline)
         subcats = stats[cat].keys()
         subcats.sort()
+        full_subcats = otherstats.keys()
+        full_subcats.sort()
         row = 1
-        for id in subcats:
+        for id in full_subcats:
+            if not id in subcats:
+                try:
+                    field = otherstats[id]['POT']
+                except:
+                    field = stats[cat]['POT']
+            else:
+                field = stats[cat][id]
+
             row = (row + 1) % 2
             if row % 2 == 0: css_class = "even"
             else: css_class = "odd"
-            field = stats[cat][id]
             total = int(field['translated']) + int(field['fuzzy']) + int(field['untranslated'])
             if total <= 0: total = 1
             graphwidth = 180;
@@ -371,6 +380,7 @@ for moduleid in modules.keys():
 
         
         for lang in languages.split(" "):
+            print >>sys.stderr, "Processing %s..." % (lang)
             if lang.strip() != "":
                 lang = lang.strip()
                 poname = module["potname"] + "." + module["cvsbranch"] + "." + lang + ".po"
@@ -402,8 +412,8 @@ for moduleid in modules.keys():
                         "fuzzy" : fuzzy,
                         }
 
-html_mods = stats_as_html(modstats, type = 'modules')
-html_lang = stats_as_html(langstats, type = 'languages')
+html_mods = stats_as_html(modstats, type = 'modules', otherstats = langstats)
+html_lang = stats_as_html(langstats, type = 'languages', otherstats = modstats)
 
 
 f = open(os.path.join(webdir, "by-modules.html"), "w")
