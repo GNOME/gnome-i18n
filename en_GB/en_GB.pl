@@ -210,6 +210,10 @@ sub translate() {
   do_trans("totaling", "totalling");
   do_trans("trash", "wastebasket");
   do_trans("uninitialized","uninitialised");
+  do_trans("utilization", "utilisation");
+  do_trans("utilize", "utilise");
+  do_trans("utilized", "utilised");
+  do_trans("utilizing", "utilising");
   do_trans("vapor", "vapour");
   do_trans("vise", "vice");
   do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
