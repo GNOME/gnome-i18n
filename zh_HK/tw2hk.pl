@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# (c) 2005 Abel Cheung <abelcheung [AT] gmail [DOT] com>
+# (c) 2005, 2006 Abel Cheung <abelcheung [AT] gmail [DOT] com>
 
 # Based on Americal -> British english conversion script written by:
 # (c) 2000 Abigail Brady
@@ -64,44 +64,95 @@ sub translate_header() {
     my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
   
     $msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/;
-    # $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>/;
     $msg_str =~ s/^("Language-Team: ).*\\n"/$1Chinese (Hong Kong) <community\@linuxhall.org>\\n"/;
     return;
 }
 
 sub translate() {
+
+# language name etc
+  do_trans("Chinese \(Taiwan\)", "Chinese \(Hong Kong\)");
+
 # place/country names
-  do_trans("巴布亞紐幾內亞", "巴布亞新幾內亞");
-  do_trans("沙烏地阿拉伯", "沙地阿拉伯");
-  do_trans("哥斯大黎加", "哥斯達黎加");
-  do_trans("斯洛凡尼亞", "斯洛文尼亞");
-  do_trans("斯洛維尼亞", "斯洛文尼亞");
-  do_trans("索羅門群島", "所羅門群島");
-  do_trans("克羅埃西亞", "克羅地亞");
-  do_trans("坦尚尼亞", "坦桑尼亞");
-  do_trans("亞賽拜然", "亞賽拜彊");
-  do_trans("波士尼亞", "波斯尼亞");
-  do_trans("賽普勒斯", "賽浦路斯");
-  do_trans("依索比亞", "衣索匹亞");
-  do_trans("瓜地馬拉", "危地馬拉");
-  do_trans("宏都拉斯", "洪都拉斯");
-  do_trans("馬爾地夫", "馬爾代夫");
-  do_trans("模里西斯", "毛里裘斯");
-  do_trans("莫三比克", "莫桑比克");
-  do_trans("厄瓜多", "厄瓜多爾");
-  do_trans("辛巴威", "津巴布韋");
-  do_trans("義大利", "意大利");
-  do_trans("盧安達", "盧旺達");
-  do_trans("漢城", "首爾");
-  do_trans("葉門", "也門");
+  do_trans("波士尼亞及赫塞哥維那", "波斯尼亞和黑塞哥维那"); # Bosnia and Herzegovina
+  do_trans("阿拉伯聯合大公國", "阿拉伯聯合酋長國"); # United Arab Emirates
+  do_trans("巴布亞紐幾內亞", "巴布亞新幾內亞");	# Papua New Guinea
+  do_trans("安地卡及巴布達", "安提瓜和巴布達");	# Antigua and Barbuda
+  do_trans("新喀里多尼亞", "新喀里多尼亞");	# New Caledonia
+  do_trans("沙烏地阿拉伯", "沙地阿拉伯");	# Saudi Arabia
+  do_trans("維爾?京群島", "處女羣島");		# British / US Virgin Islands
+  do_trans("哥斯大黎加", "哥斯達黎加");		# Costa Rica
+  do_trans("列支敦斯登", "列支敦士登");		# Liechtenstein
+  do_trans("斯洛[維凡]尼亞", "斯洛文尼亞");		# Slovenia
+  do_trans("索羅門群島", "所羅門羣島");		# Solomon Islands
+  do_trans("茅利塔尼亞", "毛里塔尼亞");		# Mauritania
+  do_trans("布吉納法索", "布基納法索");		# Burkina Faso
+  do_trans("幾內亞比索", "畿內亞比紹");		# Guinea-Bissau
+  do_trans("克羅埃西亞", "克羅地亞");		# Croatia
+  do_trans("(埃立特里亞|厄利垂亞)", "厄立特里亞");	# Eritrea
+  do_trans("塔吉克([^斯])", "塔吉克斯坦\$1");	# Tajikistan
+  do_trans("吉里巴斯", "基里巴斯");		# Kiribati
+  do_trans("坦尚尼亞", "坦桑尼亞");		# Tanzania
+  do_trans("格瑞納達", "格林納達");		# Grenada
+  do_trans("亞賽拜然", "亞塞拜彊");		# Azerbaijan
+  do_trans("波士尼亞", "波斯尼亞");		# Bosnia
+  do_trans("賽普勒斯", "賽浦路斯");		# Cyprus
+  do_trans("[依衣]索[比匹]亞", "埃塞俄比亞");	# Ethiopia
+  do_trans("瓜地馬拉", "危地馬拉");		# Guatemala
+  do_trans("宏都拉斯", "洪都拉斯");		# Honduras
+  do_trans("馬爾地夫", "馬爾代夫");		# Maldives
+  do_trans("模里西斯", "毛里求斯");		# Mauritius
+  do_trans("莫三比克", "莫桑比克");		# Mozambique
+  do_trans("賴比瑞亞", "利比里亞");		# Liberia
+  do_trans("聖露西亞", "聖盧西亞");		# Saint Lucia
+  do_trans("厄瓜多([^爾])", "厄瓜多爾\$1");	# Ecuador
+  do_trans("辛巴威", "津巴布韋");		# Zimbabwe
+  do_trans("巴貝多", "巴巴多斯");		# Barbados
+  do_trans("波札那", "博茨瓦納");		# Botswana
+  do_trans("喬治亞", "格魯吉亞");		# Georgia
+  do_trans("瓦努阿圖", "萬那杜");		# Vanuatu
+  do_trans("索馬利亞", "索馬里");		# Somalia
+  do_trans("突尼西亞", "突尼斯");		# Tunisia
+  do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
+  do_trans("義大利", "意大利");			# Italy
+  do_trans("吐瓦魯", "圖瓦盧");			# Tuvalu
+  do_trans("甘比亞", "岡比亞");			# Gambia
+  do_trans("盧安達", "盧旺達");			# Rwanda
+  do_trans("浦隆地", "布隆迪");			# Burundi
+  do_trans("維德角", "佛得角");			# Cape Verde
+  do_trans("吉布地", "吉布提");			# Djibouti
+  do_trans("賴索托", "萊索托");			# Lesotho
+  do_trans("紐西蘭", "新西蘭");			# New Zealand
+  do_trans("塞席爾", "塞舌爾");			# Seychelles
+  do_trans("蘇利南", "蘇里南");			# Suriname
+  do_trans("尚比亞", "贊比亞");			# Zambia
+  do_trans("貝里斯", "伯利兹");			# Belize
+  do_trans("幾內亞", "畿內亞");			# .* Guinea .*
+  do_trans("馬拉威", "馬拉維");			# Malawi
+  do_trans("卡達", "卡塔爾");			# Qatar
+  do_trans("蓋亞[納那]", "圭亞那");		# Guyana
+  do_trans("葛摩", "科摩羅");			# Comoros
+  do_trans("查德", "乍得");			# Chad
+  do_trans("漢城", "首爾");			# Seoul, Korea
+  do_trans("葉門", "也門");			# Yemen
+  do_trans("貝南", "貝寧");			# Benin
+  do_trans("加彭", "加蓬");			# Gabon
+  do_trans("迦納", "加納");			# Ghana
+  do_trans("肯亞", "肯尼亞");			# Kenya
+  do_trans("馬利", "馬里");			# Mali
+  do_trans("諾魯", "瑙魯");			# Nauru
+  do_trans("東加", "湯加");			# Tonga
+
+  do_trans("奈及利亞", "尼日利亞");		# Nigeria
+  do_trans("尼日([^利爾])", "尼日爾\$1");	# Niger
+
+  query_trans("獅子山", "塞拉利昂");		# Sierra Leone
 
 # language names
-# do_trans("", "");
   do_trans("布里多尼", "不列塔尼");
   do_trans("加泰羅尼亞", "加泰隆尼亞");
   do_trans("弗里西亞", "弗里斯蘭");
   do_trans("加利西亞", "加里西亞");
-  do_trans("喬治亞", "格魯吉亞");
   do_trans("印地語", "印度語");
 
 # other terms
@@ -117,6 +168,7 @@ sub translate() {
   do_trans("命令殼", "shell");
   do_trans("內插法", "插值法");
   do_trans("計算機", "計數機");
+  do_trans("印表機", "打印機");
   do_trans("腳踏車", "單車");
   do_trans("團隊", "隊伍");
   do_trans("名片", "咭片");
@@ -140,6 +192,7 @@ sub translate() {
   do_trans("函式", "函數");
   do_trans("函數庫", "函式庫");
 
+  # digital
   do_trans("數位", "數碼");
   do_trans("小數碼", "小數位");
 
@@ -163,6 +216,7 @@ sub translate() {
 
   do_trans("您", "你");
   do_trans("裡", "裏");
+  do_trans("群", "羣");
 
   query_trans("影像", "圖像");
 
@@ -174,7 +228,7 @@ sub translate() {
 
 while (<>) {
    if  (/^#/) {
-     print;
+     print $_;
    } elsif (/^msgid/) {
      $msg_id .= $_;
      $mode = 1;
