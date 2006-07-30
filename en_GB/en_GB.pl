@@ -153,6 +153,7 @@ sub translate() {
   query_trans("check", "cheque");
   do_trans("cipher", "cypher");
   do_trans("color", "colour");
+  do_trans("counterclockwise", "anti-clockwise");
   do_trans("customize", "customise");
   do_trans("customized", "customised");
   do_trans("defense", "defence");
