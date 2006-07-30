@@ -126,6 +126,7 @@ sub translate() {
     $msg_str =~ s/CHARSET/UTF-8/;
     $msg_str =~ s/ENCODING/8-bit/;
     $msg_str =~ s/LANGUAGE <LL\@li.org>//;
+    $msg_str =~ s/Plural-Forms: nplurals=INTEGER; plural=EXPRESSION/Plural-Forms: nplurals=2; plural=n != 1;/;
     return;
   }
 
