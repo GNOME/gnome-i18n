@@ -66,7 +66,6 @@ sub query_trans {
 }
 
 sub translate_header() {
-    print STDERR "translate_header() called.\n";
     my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
   
     $msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/m;
@@ -160,9 +159,9 @@ sub translate() {
 
 # other terms
 # order of the words can sometimes be important!
-    do_trans("自由軟體基金會", "Free Software Foundation");
+    do_trans("\s?自由軟體基金會\s?", " Free Software Foundation ");
 
-    # security related
+    # ssl certificate, public/private key related
     do_trans("憑證廢止清冊", "證書撤銷清單");
     do_trans("憑證管理中心", "核證機關");
     do_trans("私鑰", "私人密碼匙");
@@ -189,7 +188,7 @@ sub translate() {
     do_trans("連繫", "聯繫");
     do_trans("連絡", "聯絡");
     do_trans("建構", "建立");
-    do_trans("算式", "數式");
+#    do_trans("算式", "數式");
     do_trans("變更", "更改");
     do_trans("公分", "厘米");
     do_trans("公尺", "米");
@@ -223,6 +222,7 @@ sub translate() {
     do_trans("着述", "著述");
     do_trans("着書", "著書");
     do_trans("所着", "所著");
+    do_trans("名着", "名著");
     do_trans("土着", "土著");
     do_trans("顯着", "顯著");
     do_trans("編着", "編著");
