@@ -1,7 +1,8 @@
 #!/usr/bin/perl
 
 # (c) 2000 Abigail Brady
-#     2002 Bastien Nocera
+#     2002-2006 Bastien Nocera
+#     2005 James A. Morrison
 
 # Released under the GNU General Public Licence, either version 2
 # or at your option, any later version
@@ -145,7 +146,6 @@ sub translate() {
   do_trans("canceled", "cancelled");
   do_trans("canceling", "cancelling");
   do_trans("catalog", "catalogue");
-  do_trans("categorize","categorise");
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
   do_trans("center", "centre");
@@ -154,8 +154,6 @@ sub translate() {
   do_trans("cipher", "cypher");
   do_trans("color", "colour");
   do_trans("counterclockwise", "anti-clockwise");
-  do_trans("customize", "customise");
-  do_trans("customized", "customised");
   do_trans("defense", "defence");
   do_trans("dialer", "dialler");
   do_trans("dialing", "dialling");
@@ -174,10 +172,6 @@ sub translate() {
   do_trans("harbor", "harbour");
   do_trans("honor", "honour");
   do_trans("humor", "humour");
-  do_trans("initialization", "initialisation");
-  do_trans("initialize", "initialise");
-  do_trans("initializing", "initialising");
-  do_trans("initialized", "initialised");
   do_trans("jeweled", "jewelled");
   do_trans("judgment", "judgement");
   do_trans("kilometer", "kilometre");
@@ -192,11 +186,9 @@ sub translate() {
   do_trans("modeling", "modelling");
   do_trans("neighbor", "neighbour");
   do_trans("offense", "offence");
-  do_trans("organize", "organise");
   do_trans("paneled", "panelled");
   do_trans("paneling", "panelling");
   query_trans("practise","practice");
-  do_trans("routing", "routeing");
   do_trans("rumor", "rumour");
   do_trans("saber", "sabre");
   do_trans("scepter", "sceptre");
@@ -210,15 +202,41 @@ sub translate() {
   do_trans("totaled", "totalled");
   do_trans("totaler", "totaller");
   do_trans("totaling", "totalling");
-  do_trans("trash", "wastebasket");
-  do_trans("uninitialized","uninitialised");
   do_trans("utilization", "utilisation");
   do_trans("utilize", "utilise");
   do_trans("utilized", "utilised");
   do_trans("utilizing", "utilising");
   do_trans("vapor", "vapour");
   do_trans("vise", "vice");
-  do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
+
+   if ($locale == "en_CA") {
+     do_trans("categorise","categorize");
+     do_trans("customise", "customize");
+     do_trans("customised", "customized");
+     do_trans("initialisation", "initialization");
+     do_trans("initialise", "initialize");
+     do_trans("initialising", "initializing");
+     do_trans("initialized", "initialized");
+     do_trans("organise", "organize");
+     do_trans("routeing", "routing");
+     do_trans("trash", "garbage");
+     do_trans("uninitialised","uninitialized");
+     do_trans("wastebasket", "garbage");
+     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"James A. Morrison <jim.morrison@gmail.com>");
+   } else {
+     do_trans("categorize","categorise");
+     do_trans("customize", "customise");
+     do_trans("customized", "customised");
+     do_trans("initialization", "initialisation");
+     do_trans("initialize", "initialise");
+     do_trans("initializing", "initialising");
+     do_trans("initialized", "initialised");
+     do_trans("organize", "organise");
+     do_trans("routing", "routeing");
+     do_trans("uninitialized","uninitialised");
+     do_trans("trash", "wastebasket");
+     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
+   }
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
@@ -228,6 +246,8 @@ sub translate() {
 
 $mode = 0;
 $rl = Term::ReadLine->new("String Replacement");
+$locale = $ENV{'LANG'};
+$locale =~ s/\..*//g;
 
 while (<>) {
    if  (/^#/) {
