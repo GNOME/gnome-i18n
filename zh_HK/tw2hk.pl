@@ -43,10 +43,6 @@ my $msg_str = "";
 
 sub do_trans {
 	my ($tf, $tt) = @_;
-
-	#tf =~ s/(.)/sprintf "\\x{%x}", $1/ge;
-	#tt =~ s/(.)/sprintf "\\x{%x}", $1/ge;
-
 	$msg_str =~ s/$tf/$tt/g;
 }
 
@@ -74,11 +70,18 @@ sub translate_header() {
 
 sub translate() {
 
+	# order of the words can sometimes be important!
+
 	# place/country names
-	do_trans("波士尼亞及赫塞哥維那", "波斯尼亞和黑塞哥维那"); # Bosnia and Herzegovina
+	# 沙特阿拉伯 ?
+	# Dominica ?
+	do_trans("聖克里斯多福及尼維斯", "聖吉斯納域斯");
+	do_trans("聖文森[及和]格瑞那丁", "聖文森特和格林納丁斯");
+	do_trans("波士尼亞[及和]?赫塞哥維[納那]", "波斯尼亞和黑塞哥维那"); # Bosnia and Herzegovina
 	do_trans("阿拉伯聯合大公國", "阿拉伯聯合酋長國");	# United Arab Emirates
-	do_trans("巴布亞紐幾內亞", "巴布亞新幾內亞");	# Papua New Guinea
-	do_trans("安地卡及巴布達", "安提瓜和巴布達");	# Antigua and Barbuda
+	do_trans("巴布亞紐幾內亞", "巴布亞新畿內亞");	# Papua New Guinea
+	do_trans("安地卡[及和]巴布達", "安提瓜和巴布達");	# Antigua and Barbuda
+	do_trans("千里達托貝哥", "特立尼達和多巴哥");
 	do_trans("新喀里多尼亞", "新喀里多尼亞");	# New Caledonia
 	do_trans("沙烏地阿拉伯", "沙地阿拉伯");	# Saudi Arabia
 	do_trans("維爾?京群島", "處女羣島");	# British / US Virgin Islands
@@ -102,19 +105,23 @@ sub translate() {
 	do_trans("瓜地馬拉", "危地馬拉");		# Guatemala
 	do_trans("宏都拉斯", "洪都拉斯");		# Honduras
 	do_trans("馬爾地夫", "馬爾代夫");		# Maldives
-	do_trans("模里西斯", "毛里求斯");		# Mauritius
+	do_trans("(模里西斯|毛里求斯)", "毛里裘斯");		# Mauritius
 	do_trans("莫三比克", "莫桑比克");		# Mozambique
 	do_trans("賴比瑞亞", "利比里亞");		# Liberia
 	do_trans("聖露西亞", "聖盧西亞");		# Saint Lucia
+	do_trans("聖馬利諾", "聖馬力諾");
+	do_trans("吉里巴斯", "基里巴斯");
+	do_trans("史瓦濟蘭", "斯威士蘭");		# Switzerland
+	do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
 	do_trans("厄瓜多([^爾])", "厄瓜多爾\$1");	# Ecuador
+	do_trans("瓦努阿圖", "萬那杜");		# Vanuatu
+	do_trans("索馬利亞", "索馬里");		# Somalia
+	do_trans("突尼西亞", "突尼斯");		# Tunisia
 	do_trans("辛巴威", "津巴布韋");		# Zimbabwe
 	do_trans("巴貝多", "巴巴多斯");		# Barbados
 	do_trans("波札那", "博茨瓦納");		# Botswana
 	do_trans("喬治亞", "格魯吉亞");		# Georgia
-	do_trans("瓦努阿圖", "萬那杜");		# Vanuatu
-	do_trans("索馬利亞", "索馬里");		# Somalia
-	do_trans("突尼西亞", "突尼斯");		# Tunisia
-	do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
+	do_trans("獅子山", "塞拉利昂");		# Sierra Leone
 	do_trans("義大利", "意大利");		# Italy
 	do_trans("吐瓦魯", "圖瓦盧");		# Tuvalu
 	do_trans("甘比亞", "岡比亞");		# Gambia
@@ -133,21 +140,19 @@ sub translate() {
 	do_trans("卡達", "卡塔爾");			# Qatar
 	do_trans("蓋亞[納那]", "圭亞那");		# Guyana
 	do_trans("葛摩", "科摩羅");			# Comoros
+	do_trans("教廷", "梵蒂岡");
 	do_trans("查德", "乍得");			# Chad
 	do_trans("漢城", "首爾");			# Seoul, Korea
 	do_trans("葉門", "也門");			# Yemen
 	do_trans("貝南", "貝寧");			# Benin
 	do_trans("加彭", "加蓬");			# Gabon
 	do_trans("迦納", "加納");			# Ghana
-	do_trans("肯亞", "肯尼亞");			# Kenya
+	do_trans("肯尼?亞", "肯雅");			# Kenya
 	do_trans("馬利", "馬里");			# Mali
 	do_trans("諾魯", "瑙魯");			# Nauru
 	do_trans("東加", "湯加");			# Tonga
-
-	do_trans("奈及利亞", "尼日利亞");		# Nigeria
 	do_trans("尼日([^利爾])", "尼日爾\$1");	# Niger
-
-	query_trans("獅子山", "塞拉利昂");		# Sierra Leone
+	do_trans("奈及利亞", "尼日利亞");		# Nigeria
 
 	# language names
 	do_trans("布里多尼", "不列塔尼");
@@ -156,10 +161,7 @@ sub translate() {
 	do_trans("加利西亞", "加里西亞");
 	do_trans("印地語", "印度語");
 
-	# other terms
-	# order of the words can sometimes be important!
-
-	# ssl certificate, public/private key related
+	# ssl certificate, CA, PKI related
 	do_trans("憑證廢止清冊", "證書撤銷清單");
 	do_trans("憑證管理中心", "核證機關");
 	do_trans("私鑰", "私人密碼匙");
@@ -170,20 +172,44 @@ sub translate() {
 	do_trans("簽章", "簽署");
 	do_trans("隱私", "私隱");
 
-	do_trans("\s?自由軟體基金會\s?", " Free Software Foundation ");
-	do_trans("筆記型電腦", "手提電腦");
+	# generic terms from mediawiki
+	# 位元組 -> 字節 ?
+	# 數據機 -> 調制解調器 ?
+	# 簡訊 -> 短訊 ?
+	do_trans("硬體", "硬件");
+	do_trans("軟體", "軟件");
+	do_trans("二極體", "二極管");
+	do_trans("三極體", "三極管");
+	do_trans("人工智慧", "人工智能");
+	do_trans("機器人", "機械人");
+	do_trans("太空梭", "穿梭機");
 	do_trans("行動電話", "流動電話");
+	do_trans("(速食麵|泡麵)", "即食麵");
+	do_trans("土豆", "薯仔");
+	do_trans("計程車", "的士");
+	do_trans("公車", "巴士");
+	do_trans("[台撞]球" ,"桌球");
+	do_trans("冰淇淋" ,"雪糕");
+	do_trans("衛生" ,"衞生");
+	do_trans("老人" ,"長者");
+
+	# some terms common in China mainland but not in Hong Kong
+	do_trans("([光軟硬磁])盤", "$1碟");
+	do_trans("服務器", "伺服器");
+
+	# other generic terms
+	do_trans("\s?自由軟體基金會\s?", " Free Software Foundation ");
+	do_trans("(筆記型|攜帶型|膝上型)電腦", "手提電腦");
 	do_trans("正體中文", "繁體中文");
 	do_trans("布林值", "邏輯值");
 	do_trans("命令殼", "shell");
 	do_trans("內插法", "插值法");
-	do_trans("計算機", "計數機");
+	query_trans("計算機", "計數機");	# can be 電腦 as well
+	do_trans("解析度", "解像度");
 	do_trans("腳踏車", "單車");
 	do_trans("團隊", "隊伍");
 	do_trans("名片", "咭片");
 	do_trans("內建", "內置");
-	do_trans("硬體", "硬件");
-	do_trans("軟體", "軟件");
 	do_trans("連繫", "聯繫");
 	do_trans("連絡", "聯絡");
 	do_trans("建構", "建立");
@@ -191,6 +217,7 @@ sub translate() {
 	do_trans("變更", "更改");
 	do_trans("公分", "厘米");
 	do_trans("麻將", "麻雀");
+	do_trans("字元", "字符");
 	do_trans("公尺", "米");
 
 	# function vs library
@@ -214,6 +241,10 @@ sub translate() {
 	do_trans("電子郵件", "電郵");
 	query_trans("郵件", "電郵");
 
+	# name of game cards
+	do_trans("黑桃", "葵扇");
+	#query_trans("方塊", "階磚");	# affect too much translation
+
 	# http://www.linuxfans.org/nuke/modules.php?name=Forums&file=viewtopic&t=25997
 	do_trans("著", "着");
 	do_trans("着作", "著作");
@@ -227,9 +258,12 @@ sub translate() {
 	do_trans("顯着", "顯著");
 	do_trans("編着", "編著");
 
+	# some character are forced on Hong Kong people simply because big5 fonts
+	# don't have correct Hong Kong chars
 	do_trans("您", "你");
 	do_trans("裡", "裏");
 	do_trans("群", "羣");
+	do_trans("線", "綫");
 
 	query_trans("影像", "圖像");
 }
@@ -290,4 +324,5 @@ while (<>) {
 	$msg_str = "";
 }
 
-# ex: tabstop=4: noexpandtab:
+# ex: softtabstop=4: tabstop=4: shiftwidth=4: noexpandtab
+# -*- mode: perl; tab-width: 4; indent-tabs-mode: t; coding: utf-8 -*-
