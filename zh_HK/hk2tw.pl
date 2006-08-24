@@ -1,0 +1,385 @@
+#!/usr/bin/perl -w
+
+######################################################################
+# This script converts a finished traditional Chinese translation with
+# Hong Kong flavored words into Taiwan flavored words. No AI here, that
+# is a university research topic and much more difficult than corresponding
+# English one.
+#
+# To use this script, one should use it as a filter, instead of appending
+# file name as argument (since for some reason any chinese in comment
+# would be converted into garbage):
+#
+# hk2tw.pl < zh_HK.po > zh_TW.po
+
+######################################################################
+# (c) 2006 Abel Cheung <abelcheung [AT] gmail [DOT] com>
+#
+# Based on Americal -> British english conversion script written by:
+# (c) 2000 Abigail Brady
+#     2002 Bastien Nocera
+#
+# Released under the GNU General Public Licence, either version 2
+# or at your option, any later version
+#
+# NO WARRANTY!
+
+require 5.8.0;
+use strict;
+use utf8;
+use encoding 'utf8';
+use POSIX qw(strftime);
+use Term::ReadLine;
+
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+
+my $mode = 0;
+my $rl = Term::ReadLine->new("String Replacement");
+
+my $msg_id = "";
+my $msg_str = "";
+my $force_msg_str = "";
+
+#
+# Replace word with another
+#
+sub do_trans {
+	my ($tf, $tt) = @_;
+	$msg_str =~ s/$tf/$tt/g;
+}
+
+#
+# Provide multiple choice for words
+#
+sub query_trans {
+	# {{{
+	my ($tf, @tt) = @_;
+	my $matched_string;
+	if ( $msg_str =~ m/($tf)/i ) {
+		$matched_string = $+;
+		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
+		my $prompt = "0 - Don't modify the string\n";
+		my $answer;
+		my $i = 0;
+		while ($i++ < @tt) {
+			$prompt .= sprintf("%d - Change '%s' to '%s'\n", $i, $matched_string, $tt[$i-1]);
+		}
+		print STDERR $prompt;
+
+		do {
+			($answer = $rl->readline( "Please specify your choice (integer only): " )) =~ s/^\s*(\d+)\s*$/$1/;
+			 
+		} until ( ($answer =~ m/^\d+$/) && ($answer <= @tt) );
+		if ($answer == 0) {
+			print STDERR "Not changed\n";
+		} else {
+			printf STDERR ("Result: '%s' --> '%s'\n", $matched_string, $tt[$answer-1]);
+			do_trans( $tf, $tt[$answer-1] );
+		}
+	}
+	# }}}
+}
+
+#
+# Only apply when transforming po file header
+#
+sub translate_header() {
+	# {{{
+	my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
+
+	$msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/m;
+	$msg_str =~ s/^("Language-Team: ).*\\n"/$1Chinese (Taiwan) <community\@linuxhall.org>\\n"/m;
+	return;
+	# }}}
+}
+
+#
+# List of words to be transformed
+#
+sub translate() {
+	# {{{
+
+	# order of the words can sometimes be important!
+
+	# place/country names
+	# Dominica ?
+	do_trans("聖吉斯納域斯", "聖克里斯多福及尼維斯");		# Saint Kitts And Nevis
+#	do_trans("聖文森([及和]格瑞那丁)?", "聖文森特和格林納丁斯");	# Saint Vincent And The Grenadines
+#	do_trans("波士尼亞[及和]?赫塞哥維[納那]", "波斯尼亞和黑塞哥维那"); # Bosnia and Herzegovina
+	do_trans("阿拉伯聯合酋長國", "阿拉伯聯合大公國");	# United Arab Emirates
+	do_trans("巴布亞新畿內亞", "巴布亞紐幾內亞");	# Papua New Guinea
+	do_trans("安提瓜和巴布達", "安地卡及巴布達");	# Antigua and Barbuda
+	do_trans("特立尼達和多巴哥", "千里達托貝哥");	# Trinidad And Tobago
+	do_trans("新喀里多尼亞", "新喀里多尼亞");	# New Caledonia
+	do_trans("沙[地特]阿拉伯", "沙烏地阿拉伯");	# Saudi Arabia
+	do_trans("處女羣島", "維爾京群島");		# British / US Virgin Islands
+	do_trans("哥斯達黎加", "哥斯大黎加");	# Costa Rica
+	do_trans("列支敦士登", "列支敦斯登");	# Liechtenstein
+	do_trans("斯洛文尼亞", "斯洛維尼亞");	# Slovenia
+	do_trans("所羅門羣島", "索羅門群島");	# Solomon Islands
+	do_trans("毛里塔尼亞", "茅利塔尼亞");	# Mauritania
+	do_trans("布基納法索", "布吉納法索");	# Burkina Faso
+	do_trans("畿內亞比紹", "幾內亞比索");	# Guinea-Bissau
+	do_trans("克羅地亞", "克羅埃西亞");		# Croatia
+	do_trans("厄立特里亞", "厄利垂亞");		# Eritrea
+	do_trans("塔吉克斯坦", "塔吉克");		# Tajikistan
+	do_trans("基里巴斯", "吉里巴斯");		# Kiribati
+	do_trans("坦桑尼亞", "坦尚尼亞");		# Tanzania
+	do_trans("格林納達", "格瑞納達");		# Grenada
+	do_trans("亞塞拜彊", "亞賽拜然");		# Azerbaijan
+	do_trans("波斯尼亞", "波士尼亞");		# Bosnia
+	do_trans("賽浦路斯", "賽普勒斯");		# Cyprus
+	do_trans("埃塞俄比亞", "衣索匹亞");		# Ethiopia
+	do_trans("危地馬拉", "瓜地馬拉");		# Guatemala
+	do_trans("洪都拉斯", "宏都拉斯");		# Honduras
+	do_trans("馬爾代夫", "馬爾地夫");		# Maldives
+	do_trans("(毛里[裘求]斯)", "模里西斯");		# Mauritius
+	do_trans("莫桑比克", "莫三比克");		# Mozambique
+	do_trans("利比里亞", "賴比瑞亞");		# Liberia
+	do_trans("聖盧西亞", "聖露西亞");		# Saint Lucia
+	do_trans("聖馬力諾", "聖馬利諾");		# San Marino
+	do_trans("基里巴斯", "吉里巴斯");		# Kiribati
+	do_trans("斯威士蘭", "史瓦濟蘭");		# Switzerland
+	do_trans("科特迪瓦", "象牙海岸");		# Cote d'Ivoire
+#	do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
+	do_trans("厄瓜多爾", "厄瓜多");		# Ecuador
+	do_trans("萬那杜", "瓦努阿圖");		# Vanuatu
+	do_trans("索馬里", "索馬利亞");		# Somalia
+	do_trans("突尼斯", "突尼西亞");		# Tunisia
+	do_trans("津巴布韋", "辛巴威");		# Zimbabwe
+	do_trans("巴巴多斯", "巴貝多");		# Barbados
+	do_trans("博茨瓦納", "波札那");		# Botswana
+	do_trans("格魯吉亞", "喬治亞");		# Georgia
+	do_trans("塞拉利昂", "獅子山");		# Sierra Leone
+	do_trans("意大利", "義大利");		# Italy
+	do_trans("圖瓦盧", "吐瓦魯");		# Tuvalu
+	do_trans("岡比亞", "甘比亞");		# Gambia
+	do_trans("盧旺達", "盧安達");		# Rwanda
+	do_trans("布隆迪", "浦隆地");		# Burundi
+	do_trans("佛得角", "維德角");		# Cape Verde
+	do_trans("吉布提", "吉布地");		# Djibouti
+	do_trans("萊索托", "賴索托");		# Lesotho
+	do_trans("新西蘭", "紐西蘭");		# New Zealand
+	do_trans("塞舌爾", "塞席爾");		# Seychelles
+	do_trans("蘇里南", "蘇利南");		# Suriname
+	do_trans("贊比亞", "尚比亞");		# Zambia
+	do_trans("伯利兹", "貝里斯");		# Belize
+	do_trans("畿內亞", "幾內亞");		# .* Guinea .*
+	do_trans("馬拉維", "馬拉威");		# Malawi
+	do_trans("圭亞那", "蓋亞納");		# Guyana
+	do_trans("卡塔爾", "卡達");			# Qatar
+	do_trans("科摩羅", "葛摩");			# Comoros
+	do_trans("梵蒂岡", "教廷");			# Holy See
+	do_trans("乍得", "查德");			# Chad
+	do_trans("漢城", "首爾");			# Seoul, South Korea
+	do_trans("朝鮮", "北韓");			# North Korea
+	do_trans("也門", "葉門");			# Yemen
+	do_trans("貝寧", "貝南");			# Benin
+	do_trans("加蓬", "加彭");			# Gabon
+	do_trans("加納", "迦納");			# Ghana
+	do_trans("肯雅", "肯亞");			# Kenya
+	do_trans("馬里", "馬利");			# Mali
+	do_trans("瑙魯", "諾魯");			# Nauru
+	do_trans("湯加", "東加");			# Tonga
+	do_trans("尼日利亞", "奈及利亞");	# Nigeria
+	do_trans("尼日爾", "尼日");			# Niger
+
+	# language names
+#	do_trans("布里多尼", "不列塔尼");
+#	do_trans("加泰羅尼亞", "加泰隆尼亞");		# Catalan
+#	do_trans("弗里西亞", "弗里斯蘭");
+#	do_trans("加利西亞", "加里西亞");
+#	do_trans("印地語", "印度語");		# Hindi
+
+	# ssl certificate, CA, PKI related
+	do_trans("證書撤銷清單", "憑證廢止清冊");
+	do_trans("核證機關", "憑證管理中心");
+	do_trans("私人密碼匙", "私鑰");
+	do_trans("公開密碼匙", "公鑰");
+	do_trans("密碼匙圈", "鑰匙圈");
+	do_trans("密碼匙", "金鑰");
+	do_trans("證書", "憑證");
+	do_trans("簽署", "簽章");
+	do_trans("私隱", "隱私");
+
+	# generic terms from mediawiki
+	do_trans("([軟硬])件", "\$1體");
+	do_trans("([二三])極管", "\$1極體");
+	do_trans("人工智能", "人工智慧");
+	do_trans("機械人", "機器人");
+	do_trans("穿梭機", "太空梭");
+	do_trans("流動電話", "行動電話");
+	do_trans("即食麵", "速食麵");
+	do_trans("薯仔", "土豆");
+	do_trans("的士", "計程車");
+	do_trans("巴士", "公車");
+	do_trans("桌球" ,"撞球");
+	do_trans("雪糕" ,"冰淇淋");
+	do_trans("衞生" ,"衛生");
+	do_trans("長者" ,"老人");
+	do_trans("短訊", "簡訊");
+
+	# some terms common in China mainland only
+	do_trans("字節", "位元組");
+	do_trans("調制解調器", "數據機");
+	do_trans("([光軟硬磁])盤", "\$1碟");
+	do_trans("([光軟])驅", "\$1碟機");
+	do_trans("服務器", "伺服器");
+	do_trans("上載", "上傳");
+
+	# other generic terms
+	do_trans("\\s?Free Software Foundation\\s?", "自由軟體基金會");
+	do_trans("手提電腦", "筆記型電腦");
+	do_trans("個人資料", "個人資訊");
+	do_trans("集成電路", "積體電路");
+	do_trans("流動通訊", "行動通訊");
+	do_trans("國際象棋", "西洋棋");
+	do_trans("波子棋", "中國跳棋");
+	do_trans("邏輯值", "布林值");
+#	do_trans("命令殼", "命令解譯器");
+	do_trans("插值法", "內插法");
+	do_trans("計數機", "計算機");
+	do_trans("解像度", "解析度");
+	do_trans("單車", "腳踏車");
+	do_trans("撥號", "撥接");
+	do_trans("繁體", "正體");
+	do_trans("隊伍", "團隊");
+	do_trans("咭片", "名片");
+	do_trans("內置", "內建");
+	do_trans("聯繫", "連繫");
+	do_trans("聯絡", "連絡");
+	do_trans("建立", "建構");
+	do_trans("數式", "算式");
+	do_trans("更改", "變更");
+	do_trans("厘米", "公分");
+	do_trans("麻雀", "麻將");
+	do_trans("字符", "字元");
+	do_trans("銜頭", "頭銜");
+	do_trans("闊度", "寬度");
+	do_trans("視像", "視訊");
+	do_trans("網上", "線上");
+	do_trans("激光", "雷射");
+#	do_trans("公尺", "米");
+
+	# function
+	do_trans("函數", "函式");
+
+	# printer, print
+	do_trans("打印機", "印表機");
+	# 有時「列印」表示在螢幕顯示字句，這時用「顯示」較好
+	query_trans("打印", "列印", "顯示");
+
+	# digital
+	do_trans("數碼", "數位");
+
+	# network and internet
+	do_trans("互聯網", "網際網路");
+	do_trans("網絡", "網路");
+
+	query_trans("(?<!電子)郵件[位地]址", "電子郵件位址", "郵寄地址");
+
+	# card game
+	do_trans("啤牌", "紙牌");
+	do_trans("葵扇", "黑桃");
+	do_trans("階磚", "方塊");
+
+	# Hong Kong government tend to use 圖像, but 影像 is more used in
+	# Taiwan, though 影像 can mean lots of different things (image, video,
+	# graphics, ...), so ask instead of forcefully convert
+	query_trans("圖像", "影像", "圖片");
+
+	# some characters are used solely in Hong Kong but infrequently in Taiwan
+	do_trans("你", "您");
+
+	# some character specific to Hong Kong as they are not
+	# available or rarely used in Big5 encoding
+	do_trans("羣", "群");
+	do_trans("綫", "線");
+	do_trans("裏", "裡");
+	do_trans("着", "著");
+
+	# }}}
+}
+
+#
+# Main conversion routine
+#
+while (<>) {
+	# {{{
+
+	if  (/^#/) {
+		if (m/^#\s*zh_TW:\s*(.*)/i) {
+			# zh_TW uses specialized translation, shouldn't convert from zh_HK
+			$force_msg_str .= $1;
+		}
+		print;
+	} elsif (/^msgctxt/) {
+		print;
+	} elsif (/^msgid/) {
+		$msg_id .= $_;
+		$mode = 1;
+	} elsif (/^msgstr/) {
+		$msg_str .= $_;
+		$mode = 2;
+	} elsif (/^"/) {
+		if ($mode == 1) {
+			$msg_id .= $_;
+		} elsif ($mode == 2) {
+			$msg_str .= $_;
+			# make sure substitution won't fail because of something like
+			# 硬"\n"體
+			$msg_str =~ s/\"\n\"// unless ($msg_id =~ /^msgid ""\n$/);
+		}
+	} else {
+		if ($msg_id || $msg_str) {
+			if ($msg_id =~ /^msgid ""\n$/) {
+				translate_header();
+			} else {
+				if ($force_msg_str) {
+					$msg_str = $force_msg_str . "\n";
+				} else {
+					translate();
+				}
+				if ($msg_str =~ /\\n[^"]/) {
+					# 2 passes, to account for situation like \n\n
+					$msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+					$msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+					$msg_str =~ s/(msgstr(\[\d+\])? )/$1""\n/g;
+				}
+			}
+			print "$msg_id";
+			print "$msg_str";
+			$msg_id = "";
+			$msg_str = "";
+			$force_msg_str = "";
+		}
+		print $_;
+	}
+}
+
+# Last message may or may not followed by new line
+if ($msg_id || $msg_str) {
+	if ($force_msg_str) {
+		$msg_str = $force_msg_str . "\n";
+	} else {
+		translate();
+	}
+	if ($msg_str =~ /\\n[^"]/) {
+		# 2 passes, to account for situation like \n\n
+		$msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+		$msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+		$msg_str =~ s/(msgstr(\[\d+\])? )/$1""\n/g;
+	}
+	print "$msg_id";
+	print "$msg_str";
+	$msg_id = "";
+	$msg_str = "";
+	$force_msg_str = "";
+
+	# }}}
+}
+
+# ex: softtabstop=4: tabstop=4: shiftwidth=4: noexpandtab: foldmethod=marker
+# -*- mode: perl; tab-width: 4; indent-tabs-mode: t; coding: utf-8 -*-

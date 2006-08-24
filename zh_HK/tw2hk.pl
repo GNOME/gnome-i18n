@@ -42,12 +42,19 @@ my $msg_id = "";
 my $msg_str = "";
 my $force_msg_str = "";
 
+#
+# Replace word with another
+#
 sub do_trans {
 	my ($tf, $tt) = @_;
 	$msg_str =~ s/$tf/$tt/g;
 }
 
+#
+# Provide multiple choice for words
+#
 sub query_trans {
+	# {{{
 	my ($tf, @tt) = @_;
 	my $matched_string;
 	if ( $msg_str =~ m/($tf)/i ) {
@@ -72,17 +79,27 @@ sub query_trans {
 			do_trans( $tf, $tt[$answer-1] );
 		}
 	}
+	# }}}
 }
 
+#
+# Only apply when transforming po file header
+#
 sub translate_header() {
+	# {{{
 	my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
 
 	$msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/m;
 	$msg_str =~ s/^("Language-Team: ).*\\n"/$1Chinese (Hong Kong) <community\@linuxhall.org>\\n"/m;
 	return;
+	# }}}
 }
 
+#
+# List of words to be transformed
+#
 sub translate() {
+	# {{{
 
 	# order of the words can sometimes be important!
 
@@ -154,7 +171,7 @@ sub translate() {
 	do_trans("卡達", "卡塔爾");			# Qatar
 	do_trans("蓋亞[納那]", "圭亞那");		# Guyana
 	do_trans("葛摩", "科摩羅");			# Comoros
-	do_trans("教廷", "梵蒂岡");		# Holy See
+	do_trans("教廷", "梵蒂岡");			# Holy See
 	do_trans("查德", "乍得");			# Chad
 	do_trans("漢城", "首爾");			# Seoul, Korea
 	do_trans("葉門", "也門");			# Yemen
@@ -207,6 +224,7 @@ sub translate() {
 
 	# some terms common in China mainland but not in Hong Kong
 	do_trans("([光軟硬磁])盤", "\$1碟");
+	do_trans("([光軟])驅", "\$1碟機");
 	do_trans("服務器", "伺服器");
 	#do_trans("上載", "上傳");
 
@@ -240,7 +258,7 @@ sub translate() {
 	do_trans("頭銜", "銜頭");
 	do_trans("寬度", "闊度");
 	do_trans("視訊", "視像");
-	query_trans("線上", "網上");
+	query_trans("(?<![直弧連底])線上", "網上");
 	do_trans("公尺", "米");
 
 	# "function", but don't change "library"
@@ -284,15 +302,21 @@ sub translate() {
 	# some character are forced on Hong Kong because they are not
 	# available in Big5 encoding
 	do_trans("群", "羣");
-	#do_trans("線", "綫");		# this is problematic
+	#do_trans("線", "綫");		# this is problematic, probably doesn't need
+								# changing because they are the same?
 
 	# http://www.linuxfans.org/nuke/modules.php?name=Forums&file=viewtopic&t=25997
 	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著
 	do_trans("(?<![所名土顯編])著(?![作者名述書])", "着");
 
+	# }}}
 }
 
+#
+# Main conversion routine
+#
 while (<>) {
+	# {{{
 
 	if  (/^#/) {
 		if (m/^#\s*zh_HK:\s*(.*)/i) {
@@ -345,12 +369,12 @@ while (<>) {
 }
 
 # Last message may or may not followed by new line
-	if ($msg_id || $msg_str) {
-		if ($force_msg_str) {
-			$msg_str = $force_msg_str . "\n";
-		} else {
-			translate();
-		}
+if ($msg_id || $msg_str) {
+	if ($force_msg_str) {
+		$msg_str = $force_msg_str . "\n";
+	} else {
+		translate();
+	}
 	if ($msg_str =~ /\\n[^"]/) {
 		# 2 passes, to account for situation like \n\n
 		$msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
@@ -362,7 +386,9 @@ while (<>) {
 	$msg_id = "";
 	$msg_str = "";
 	$force_msg_str = "";
+
+	# }}}
 }
 
-# ex: softtabstop=4: tabstop=4: shiftwidth=4: noexpandtab
+# ex: softtabstop=4: tabstop=4: shiftwidth=4: noexpandtab: foldmethod=marker
 # -*- mode: perl; tab-width: 4; indent-tabs-mode: t; coding: utf-8 -*-
