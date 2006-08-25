@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 
+# $Id$
 ######################################################################
 # This script converts a finished traditional Chinese translation with
 # Hong Kong flavored words into Taiwan flavored words. No AI here, that
@@ -56,13 +57,15 @@ sub do_trans {
 sub query_trans {
 	# {{{
 	my ($tf, @tt) = @_;
-	my $matched_string;
 	if ( $msg_str =~ m/($tf)/i ) {
-		$matched_string = $+;
-		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
-		my $prompt = "0 - Don't modify the string\n";
+
 		my $answer;
 		my $i = 0;
+		my $matched_string = $+;
+
+		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
+
+		my $prompt = "0 - Don't modify the string\n";
 		while ($i++ < @tt) {
 			$prompt .= sprintf("%d - Change '%s' to '%s'\n", $i, $matched_string, $tt[$i-1]);
 		}
@@ -218,7 +221,7 @@ sub translate() {
 	do_trans("桌球" ,"撞球");
 	do_trans("雪糕" ,"冰淇淋");
 	do_trans("衞生" ,"衛生");
-	do_trans("長者" ,"老人");
+	#do_trans("長者" ,"老人");
 	do_trans("短訊", "簡訊");
 
 	# some terms common in China mainland only
@@ -246,7 +249,7 @@ sub translate() {
 	do_trans("撥號", "撥接");
 	do_trans("繁體", "正體");
 	do_trans("隊伍", "團隊");
-	do_trans("咭片", "名片");
+	do_trans("[卡咭]片", "名片");
 	do_trans("內置", "內建");
 	do_trans("聯繫", "連繫");
 	do_trans("聯絡", "連絡");
@@ -288,7 +291,7 @@ sub translate() {
 	# Hong Kong government tend to use 圖像, but 影像 is more used in
 	# Taiwan, though 影像 can mean lots of different things (image, video,
 	# graphics, ...), so ask instead of forcefully convert
-	query_trans("圖像", "影像", "圖片");
+	query_trans("圖像", "影像", "圖片", "圖案");
 
 	# some characters are used solely in Hong Kong but infrequently in Taiwan
 	do_trans("你", "您");
@@ -314,6 +317,9 @@ while (<>) {
 			# zh_TW uses specialized translation, shouldn't convert from zh_HK
 			$force_msg_str .= $1;
 		}
+		if ($mode == 0) {
+			s/traditional\s+chinese/Chinese \(Taiwan\)/i;
+			s/chinese\s+\(?(traditional|hong kong)\)?/Chinese \(Taiwan\)/i;
 		print;
 	} elsif (/^msgctxt/) {
 		print;

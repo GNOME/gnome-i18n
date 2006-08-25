@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 
+# $Id$
 ######################################################################
 # This script converts a finished traditional Chinese translation with
 # Taiwan flavored words into Hong Kong flavored words. No AI here, that
@@ -152,6 +153,7 @@ sub translate() {
 	do_trans("巴貝多", "巴巴多斯");		# Barbados
 	do_trans("波札那", "博茨瓦納");		# Botswana
 	do_trans("喬治亞", "格魯吉亞");		# Georgia
+	# 應該不可能會出現香港的獅子山吧？ -- Abel
 	do_trans("獅子山", "塞拉利昂");		# Sierra Leone
 	do_trans("義大利", "意大利");		# Italy
 	do_trans("吐瓦魯", "圖瓦盧");		# Tuvalu
@@ -219,14 +221,14 @@ sub translate() {
 	do_trans("[台撞]球" ,"桌球");
 	do_trans("冰淇淋" ,"雪糕");
 	do_trans("衛生" ,"衞生");
-	do_trans("老人" ,"長者");
+	#do_trans("老人" ,"長者");
 	do_trans("簡訊", "短訊");
 
 	# some terms common in China mainland but not in Hong Kong
 	do_trans("([光軟硬磁])盤", "\$1碟");
 	do_trans("([光軟])驅", "\$1碟機");
 	do_trans("服務器", "伺服器");
-	#do_trans("上載", "上傳");
+	do_trans("上載", "上傳");
 
 	# other generic terms
 	do_trans("自由軟體基金會", " Free Software Foundation ");
@@ -245,7 +247,7 @@ sub translate() {
 	do_trans("撥接", "撥號");
 	do_trans("正體", "繁體");
 	do_trans("團隊", "隊伍");
-	do_trans("名片", "咭片");
+	do_trans("名片", "卡片");
 	do_trans("內建", "內置");
 	do_trans("連繫", "聯繫");
 	do_trans("連絡", "聯絡");
@@ -293,7 +295,7 @@ sub translate() {
 	# Hong Kong government tend to use 圖像, but 影像 means lots of different
 	# things (image, video, graphics, ...) so ask instead of forcefully
 	# convert
-	query_trans("影像", "圖像", "圖片");
+	query_trans("影像", "圖像", "圖片", "圖案");
 
 	# some characters are used solely in Hong Kong but infrequently in Taiwan
 	do_trans("您", "你");
@@ -302,8 +304,9 @@ sub translate() {
 	# some character are forced on Hong Kong because they are not
 	# available in Big5 encoding
 	do_trans("群", "羣");
-	#do_trans("線", "綫");		# this is problematic, probably doesn't need
-								# changing because they are the same?
+	# this is problematic, probably doesn't need changing because
+	# they are the same character?
+	#do_trans("線", "綫");
 
 	# http://www.linuxfans.org/nuke/modules.php?name=Forums&file=viewtopic&t=25997
 	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著
@@ -322,6 +325,10 @@ while (<>) {
 		if (m/^#\s*zh_HK:\s*(.*)/i) {
 			# zh_HK uses specialized translation, shouldn't convert from zh_TW
 			$force_msg_str .= $1;
+		}
+		if ($mode == 0) {
+			s/traditional\s+chinese/Chinese \(Hong Kong\)/i;
+			s/chinese\s+\(?(traditional|taiwan)\)?/Chinese \(Hong Kong\)/i;
 		}
 		print;
 	} elsif (/^msgctxt/) {
