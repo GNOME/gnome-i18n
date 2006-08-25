@@ -57,13 +57,15 @@ sub do_trans {
 sub query_trans {
 	# {{{
 	my ($tf, @tt) = @_;
-	my $matched_string;
 	if ( $msg_str =~ m/($tf)/i ) {
-		$matched_string = $+;
-		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
-		my $prompt = "0 - Don't modify the string\n";
+
 		my $answer;
 		my $i = 0;
+		my $matched_string = $+;
+
+		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
+
+		my $prompt = "0 - Don't modify the string\n";
 		while ($i++ < @tt) {
 			$prompt .= sprintf("%d - Change '%s' to '%s'\n", $i, $matched_string, $tt[$i-1]);
 		}
@@ -114,7 +116,6 @@ sub translate() {
 	do_trans("巴布亞紐幾內亞", "巴布亞新畿內亞");	# Papua New Guinea
 	do_trans("安地卡[及和]巴布達", "安提瓜和巴布達");	# Antigua and Barbuda
 	do_trans("千里達托貝哥", "特立尼達和多巴哥");		# Trinidad And Tobago
-	do_trans("新喀里多尼亞", "新喀里多尼亞");	# New Caledonia
 	do_trans("沙烏地阿拉伯", "沙地阿拉伯");	# Saudi Arabia
 	do_trans("維爾?京群島", "處女羣島");	# British / US Virgin Islands
 	do_trans("哥斯大黎加", "哥斯達黎加");	# Costa Rica
@@ -206,8 +207,6 @@ sub translate() {
 	do_trans("隱私", "私隱");
 
 	# generic terms from mediawiki
-	# 位元組 -> 字節 ?
-	# 數據機 -> 調制解調器 ?
 	do_trans("([軟硬])體", "\$1件");
 	do_trans("([二三])極體", "\$1極管");
 	do_trans("人工智慧", "人工智能");
@@ -224,7 +223,9 @@ sub translate() {
 	#do_trans("老人" ,"長者");
 	do_trans("簡訊", "短訊");
 
-	# some terms common in China mainland but not in Hong Kong
+	# some terms common in China mainland only
+	do_trans("字節", "位元組");
+	do_trans("調制解調器", "數據機");
 	do_trans("([光軟硬磁])盤", "\$1碟");
 	do_trans("([光軟])驅", "\$1碟機");
 	do_trans("服務器", "伺服器");

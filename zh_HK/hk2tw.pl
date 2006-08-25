@@ -115,7 +115,6 @@ sub translate() {
 	do_trans("巴布亞新畿內亞", "巴布亞紐幾內亞");	# Papua New Guinea
 	do_trans("安提瓜和巴布達", "安地卡及巴布達");	# Antigua and Barbuda
 	do_trans("特立尼達和多巴哥", "千里達托貝哥");	# Trinidad And Tobago
-	do_trans("新喀里多尼亞", "新喀里多尼亞");	# New Caledonia
 	do_trans("沙[地特]阿拉伯", "沙烏地阿拉伯");	# Saudi Arabia
 	do_trans("處女羣島", "維爾京群島");		# British / US Virgin Islands
 	do_trans("哥斯達黎加", "哥斯大黎加");	# Costa Rica
@@ -320,6 +319,7 @@ while (<>) {
 		if ($mode == 0) {
 			s/traditional\s+chinese/Chinese \(Taiwan\)/i;
 			s/chinese\s+\(?(traditional|hong kong)\)?/Chinese \(Taiwan\)/i;
+		}
 		print;
 	} elsif (/^msgctxt/) {
 		print;
