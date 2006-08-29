@@ -129,6 +129,7 @@ sub translate() {
 	do_trans("幾內亞比索", "畿內亞比紹");	# Guinea-Bissau
 	do_trans("蘇伊士運河", "蘇彝士運河");
 	do_trans("克羅埃西亞", "克羅地亞");		# Croatia
+	do_trans("伊斯坦布爾", "伊斯坦堡");
 	do_trans("(埃立特里亞|厄利垂亞)", "厄立特里亞");	# Eritrea
 	# 已在維基取消，中國也有塔吉克族
 	#do_trans("塔吉克(?!斯坦)", "塔吉克斯坦");	# Tajikistan
@@ -150,6 +151,8 @@ sub translate() {
 	do_trans("吉里巴斯", "基里巴斯");		# Kiribati
 	do_trans("史瓦濟蘭", "斯威士蘭");		# Swaziland
 	do_trans("維吉尼亞", "維珍尼亞");		# Virginia, USA
+	do_trans("塞拉耶佛", "薩拉熱窩");
+	do_trans("瓦倫西亞", "華倫西亞");
 	do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
 	do_trans("厄瓜多(?!爾)", "厄瓜多爾");	# Ecuador
 	do_trans("瓦努阿圖", "萬那杜");		# Vanuatu
@@ -184,6 +187,8 @@ sub translate() {
 	do_trans("喀拉蚩", "卡拉奇");		# Karachi
 	do_trans("荷巴特", "霍巴特");		# Hobart
 	do_trans("舊金山", "三藩市");		# San Francisco, USA
+	do_trans("伯明罕", "伯明翰");
+	do_trans("休斯頓", "休斯敦");
 	do_trans("卡達", "卡塔爾");			# Qatar
 	do_trans("蓋亞[納那]", "圭亞那");		# Guyana
 	do_trans("葛摩", "科摩羅");			# Comoros
@@ -271,6 +276,13 @@ sub translate() {
 	do_trans("雞翅", "雞翼");
 	do_trans("係數", "系數");
 	do_trans("吉他", "結他");
+	do_trans("係數", "系數");
+	do_trans("板球", "木球");
+	do_trans("(芯片|晶元)", "晶片");
+	do_trans("彈床", "蹦床");
+	do_trans("斯諾克(桌球)?", "士碌架");	# Snooker
+	do_trans("電漿" ,"等離子");			# plasma
+	do_trans("古柯鹼", "可卡因");		# cocaine
 
 	# some terms common in China mainland only
 	do_trans("字節", "位元組");
@@ -364,8 +376,20 @@ sub translate() {
 	#do_trans("線", "綫");
 
 	# http://www.linuxfans.org/nuke/modules.php?name=Forums&file=viewtopic&t=25997
-	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著
-	do_trans("(?<![所名土顯編])著(?![作者名述書])", "着");
+	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著 著錄
+	do_trans("(?<![所名土顯編])著(?![作者名述書錄])", "着");
+
+	# element table
+	do_trans("鎝", "鍀");		# technetium, 43
+	do_trans("鎦", "鑥");		# lutetium, 71
+	do_trans("砈", "砹");		# astatine, 85
+	do_trans("鍅", "鈁");		# francium, 87
+	do_trans("錼", "鎿");		# neptunium, 93
+	do_trans("鈽", "鈈");		# plutonium, 94
+	do_trans("鋂", "鎇");		# americium, 95
+	do_trans("鉳", "錇");		# berkelium, 97
+	do_trans("鉲", "鐦");		# californium, 98
+	do_trans("鑀", "鎄");		# einsteinium, 99
 
 	# }}}
 }

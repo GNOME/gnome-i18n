@@ -130,6 +130,7 @@ sub translate() {
 	do_trans("玻利尼西亞", "玻里尼西亞");	# Polynesia
 	do_trans("厄立特里亞", "厄利垂亞");		# Eritrea
 	do_trans("埃塞俄比亞", "衣索匹亞");		# Ethiopia
+	#do_trans("伊斯坦布爾", "伊斯坦堡");
 	do_trans("克羅地亞", "克羅埃西亞");		# Croatia
 	# 已在維基取消，中國也有塔吉克族
 	#do_trans("塔吉克斯坦", "塔吉克");		# Tajikistan
@@ -151,6 +152,8 @@ sub translate() {
 	do_trans("斯威士蘭", "史瓦濟蘭");		# Swaziland
 	do_trans("科特迪瓦", "象牙海岸");		# Cote d'Ivoire
 	do_trans("維珍尼亞", "維吉尼亞");		# Virginia, USA
+	#do_trans("薩拉熱窩", "塞拉耶佛");
+	#do_trans("華倫西亞", "瓦倫西亞");
 	do_trans("伏爾加河", "窩瓦河");		# Volga River
 #	do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
 	do_trans("厄瓜多爾", "厄瓜多");		# Ecuador
@@ -185,6 +188,8 @@ sub translate() {
 	do_trans("卡拉奇", "喀拉蚩");		# Karachi
 	do_trans("霍巴特", "荷巴特");		# Hobart
 	do_trans("三藩市", "舊金山");		# San Francisco, USA
+	#do_trans("伯明罕", "伯明翰");
+	#do_trans("休斯頓", "休斯敦");
 	do_trans("卡塔爾", "卡達");			# Qatar
 	do_trans("科摩羅", "葛摩");			# Comoros
 	do_trans("梵蒂岡", "教廷");			# Holy See
@@ -268,6 +273,13 @@ sub translate() {
 	do_trans("雞翼", "雞翅");
 	do_trans("系數", "係數");
 	do_trans("結他", "吉他");
+	do_trans("系數", "係數");
+	do_trans("木球", "板球");
+	do_trans("[芯晶]片", "晶元");
+	do_trans("蹦床", "彈床");
+	do_trans("士碌架", "斯諾克");		# Snooker
+	do_trans("等離子" ,"電漿");			# plasma
+	do_trans("可卡因", "古柯鹼");		# cocaine
 
 	# some terms common in China mainland only
 	do_trans("字節", "位元組");
@@ -352,6 +364,18 @@ sub translate() {
 	do_trans("綫", "線");
 	do_trans("裏", "裡");
 	do_trans("着", "著");
+
+	# element table
+	do_trans("鍀", "鎝");		# technetium, 43
+	do_trans("鑥", "鎦");		# lutetium, 71
+	do_trans("砹", "砈");		# astatine, 85
+	do_trans("鈁", "鍅");		# francium, 87
+	do_trans("鎿", "錼");		# neptunium, 93
+	do_trans("鈈", "鈽");		# plutonium, 94
+	do_trans("鎇", "鋂");		# americium, 95
+	do_trans("錇", "鉳");		# berkelium, 97
+	do_trans("鐦", "鉲");		# californium, 98
+	do_trans("鎄", "鑀");		# einsteinium, 99
 
 	# }}}
 }
