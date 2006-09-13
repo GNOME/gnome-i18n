@@ -107,18 +107,20 @@ sub translate() {
 	# order of the words can sometimes be important!
 
 	# place/country names
-	do_trans("聖克里斯多福(及尼維斯)?", "聖吉斯納域斯");		# Saint Kitts And Nevis
-	do_trans("聖文森([及和]格瑞那丁)?", "聖文森特和格林納丁斯");	# Saint Vincent And The Grenadines
-	do_trans("波士尼亞[及和]?赫塞哥維[納那]", "波斯尼亞和黑塞哥维那"); # Bosnia and Herzegovina
+	do_trans("聖克里斯多福([及和暨與]尼維斯)?", "聖基茨島及尼維斯聯邦");		# Saint Kitts And Nevis
+	do_trans("聖文森([及和暨與]格瑞那丁)?", "聖文森特和格林內丁斯");	# Saint Vincent And The Grenadines
+	do_trans("波士尼亞[及和暨與]?赫塞哥維[納那]", "波斯尼亞和黑塞哥维那"); # Bosnia and Herzegovina
 	do_trans("阿拉伯聯合大公國", "阿拉伯聯合酋長國");	# United Arab Emirates
+	do_trans("聖多美[及和與]普林西比", "聖多美和普林西比");		# Sao Tome and Principe
 	do_trans("巴布亞紐幾內亞", "巴布亞新畿內亞");	# Papua New Guinea
-	do_trans("安地卡[及和]巴布達", "安提瓜和巴布達");	# Antigua and Barbuda
+	do_trans("塞爾維亞[及和與]蒙特內哥羅", "塞爾維亞和黑山");	# Serbia and Montenegro
+	do_trans("安地卡[及和暨與]巴布達", "安提瓜和巴布達");	# Antigua and Barbuda
 	do_trans("荷屬安地列斯", "荷屬安的列斯羣島");		# Netherland Antilles
 	do_trans("千里達托貝哥", "特立尼達和多巴哥");		# Trinidad And Tobago
-	do_trans("多明尼加(?!共和國)", "多明尼加共和國");		# Dominican Republic
-	do_trans("多米尼克", "多明尼加聯邦");		#Dominica
+	do_trans("(多明尼加聯邦|多米尼克)", "多米尼加");		#Dominica
+	do_trans("多明尼加(共和國)?", "多明尼加共和國");		# Dominican Republic
 	do_trans("沙烏地阿拉伯", "沙地阿拉伯");	# Saudi Arabia
-	do_trans("維爾?京群島", "處女羣島");	# British / US Virgin Islands
+	do_trans("(維爾?京|處女)群島", "維爾京羣島");	# British / US Virgin Islands
 	do_trans("玻里尼西亞", "玻利尼西亞");	# Polynesia
 	do_trans("哥斯大黎加", "哥斯達黎加");	# Costa Rica
 	do_trans("列支敦斯登", "列支敦士登");	# Liechtenstein
@@ -129,13 +131,14 @@ sub translate() {
 	do_trans("幾內亞比索", "畿內亞比紹");	# Guinea-Bissau
 	do_trans("蘇伊士運河", "蘇彝士運河");
 	do_trans("克羅埃西亞", "克羅地亞");		# Croatia
-	do_trans("伊斯坦布爾", "伊斯坦堡");
+	do_trans("蒙特內哥羅", "黑山");			# Montenegro
+	do_trans("伊斯坦堡", "伊斯坦布爾");		# Istanbul, Turkey
 	do_trans("(埃立特里亞|厄利垂亞)", "厄立特里亞");	# Eritrea
-	# 已在維基取消，中國也有塔吉克族
-	#do_trans("塔吉克(?!斯坦)", "塔吉克斯坦");	# Tajikistan
+	# 中國也有塔吉克族
+	do_trans("塔吉克(?!(斯坦|族))", "塔吉克斯坦");	# Tajikistan
 	do_trans("吉里巴斯", "基里巴斯");		# Kiribati
 	do_trans("坦尚尼亞", "坦桑尼亞");		# Tanzania
-	do_trans("格瑞納達", "格林納達");		# Grenada
+	do_trans("格瑞[納那]達", "格林納達");		# Grenada
 	do_trans("亞賽拜然", "亞塞拜彊");		# Azerbaijan
 	do_trans("波士尼亞", "波斯尼亞");		# Bosnia
 	do_trans("賽普勒斯", "賽浦路斯");		# Cyprus
@@ -151,12 +154,16 @@ sub translate() {
 	do_trans("吉里巴斯", "基里巴斯");		# Kiribati
 	do_trans("史瓦濟蘭", "斯威士蘭");		# Swaziland
 	do_trans("維吉尼亞", "維珍尼亞");		# Virginia, USA
-	do_trans("塞拉耶佛", "薩拉熱窩");
-	do_trans("瓦倫西亞", "華倫西亞");
+	do_trans("塞拉耶佛", "薩拉熱窩");		# Sarajevo, Bosnia
+	# assume this is not football team
+	do_trans("華倫西亞", "瓦倫西亞");		# Valencia, Spain
+	# Confederation 有點特別
+	do_trans("瑞士邦聯", "瑞士聯邦");		# Swiss Confederation
+	do_trans("聖赫倫那", "聖赫勒拿");		# Saint Helena
 	do_trans("(莫多瓦|莫爾達瓦)", "摩爾多瓦");	# Moldova
 	do_trans("厄瓜多(?!爾)", "厄瓜多爾");	# Ecuador
-	do_trans("瓦努阿圖", "萬那杜");		# Vanuatu
 	do_trans("突尼西亞", "突尼斯");		# Tunisia
+	do_trans("萬那杜", "瓦努阿圖");		# Vanuatu
 	do_trans("考文垂", "高雲地利");		# Coventry, England
 	do_trans("辛巴威", "津巴布韋");		# Zimbabwe
 	do_trans("巴貝多", "巴巴多斯");		# Barbados
@@ -187,8 +194,8 @@ sub translate() {
 	do_trans("喀拉蚩", "卡拉奇");		# Karachi
 	do_trans("荷巴特", "霍巴特");		# Hobart
 	do_trans("舊金山", "三藩市");		# San Francisco, USA
-	do_trans("伯明罕", "伯明翰");
-	do_trans("休斯頓", "休斯敦");
+	do_trans("伯明罕", "伯明翰");		# Bermingham, UK
+	do_trans("休斯頓", "休斯敦");		# Houston, US
 	do_trans("卡達", "卡塔爾");			# Qatar
 	do_trans("蓋亞[納那]", "圭亞那");		# Guyana
 	do_trans("葛摩", "科摩羅");			# Comoros
@@ -203,7 +210,7 @@ sub translate() {
 	do_trans("諾魯", "瑙魯");			# Nauru
 	do_trans("東加", "湯加");			# Tonga
 	do_trans("曼島", "萌島");			# Isle of Man
-
+	do_trans("帛琉", "帕勞");			# Palau
 	# 老撾在香港也是上一輩的稱呼
 	do_trans("老撾", "寮國");			# Laos
 	# Hopefully fruit won't appear in translation
@@ -214,29 +221,30 @@ sub translate() {
 	do_trans("奈及利亞", "尼日利亞");		# Nigeria
 
 	do_trans("索馬利亞", "索馬里");		# Somalia
-	do_trans("馬里蘭", "馬利蘭");		# Maryland, USA
+	# seems usage of Maryland is unified
+	do_trans("馬利蘭", "馬里蘭");		# Maryland, USA
 	do_trans("馬利(?!蘭)", "馬里");			# Mali
 
 	# language names
-	do_trans("布里多尼", "不列塔尼");
-	do_trans("加泰羅尼亞", "加泰隆尼亞");		# Catalan
-	do_trans("弗里西亞", "弗里斯蘭");
-	do_trans("加利西亞", "加里西亞");
-	do_trans("印地語", "印度語");		# Hindi
+	#do_trans("布列塔尼", "不列塔尼");		# Breton
+	#do_trans("加泰隆", "加泰羅");			# Catalan
+	#do_trans("弗里西亞", "弗里斯蘭");
+	#do_trans("印地語", "印度語");			# Hindi
 
 	# special name, movie
 	# might be seen in screensavers
 	do_trans("駭客任務", "廿二世紀殺人網絡");		# Matrix
+	do_trans("魔鬼終結者", "未來戰士");		# Terminator
 
 	# ssl certificate, CA, PKI related
 	do_trans("憑證廢止清冊", "證書撤銷清單");
 	do_trans("憑證管理中心", "核證機關");
 	do_trans("私鑰", "私人密碼匙");
 	do_trans("公鑰", "公開密碼匙");
-	do_trans("金鑰", "密碼匙");
-	do_trans("鑰匙圈", "密碼匙圈");
+	do_trans("(金鑰|鑰匙)", "密碼匙");
 	do_trans("憑證", "證書");
 	do_trans("簽章", "簽署");
+	do_trans("簽名(?!檔)", "簽署");
 	do_trans("隱私", "私隱");
 
 	# generic terms from mediawiki
@@ -251,6 +259,7 @@ sub translate() {
 	do_trans("計程車", "的士");
 	do_trans("公車", "巴士");
 	do_trans("[台撞]球" ,"桌球");
+	do_trans("桌球" ,"乒乓球");
 	do_trans("冰淇淋" ,"雪糕");
 	do_trans("衛生" ,"衞生");
 	#do_trans("老人" ,"長者");
@@ -276,8 +285,7 @@ sub translate() {
 	do_trans("雞翅", "雞翼");
 	do_trans("係數", "系數");
 	do_trans("吉他", "結他");
-	do_trans("係數", "系數");
-	do_trans("板球", "木球");
+	do_trans("板球", "木球");			# cricket
 	do_trans("(芯片|晶元)", "晶片");
 	do_trans("彈床", "蹦床");
 	do_trans("斯諾克(桌球)?", "士碌架");	# Snooker
@@ -301,7 +309,9 @@ sub translate() {
 	do_trans("行動通訊", "流動通訊");
 	do_trans("西洋棋", "國際象棋");
 	do_trans("中國跳棋", "波子棋");
-	do_trans("布林值", "邏輯值");
+	do_trans("黑白棋", "蘋果棋");
+	do_trans("滑鼠指標", "鼠標");
+	do_trans("布林", "邏輯");		# boolean ???
 	do_trans("命令殼", "命令解譯器");
 	do_trans("內插法", "插值法");
 	query_trans("計算機", "計數機", "電腦");
@@ -322,8 +332,18 @@ sub translate() {
 	do_trans("頭銜", "銜頭");
 	do_trans("寬度", "闊度");
 	do_trans("視訊", "視像");
-	query_trans("(?<![直弧連底])線上", "網上");
+	do_trans("臭[蟲虫]", "錯誤");
+	do_trans("試著", "嘗試");
+	do_trans("呼叫器", "call 機");
+	do_trans("回報(?=(問題|錯誤|給))", "匯報");
+	do_trans("釋出", "推出");		# release
+	do_trans("住家(?=(傳真|電話))", "家用");		# home ???
+	do_trans("住家地址", "住址");
 	do_trans("公尺", "米");
+
+	# online ???
+	do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲))", "網上");
+	query_trans("(?<![直弧連底])線上", "網上");
 
 	# bicycle and motorcycle
 	do_trans("摩托車", "電單車");
@@ -335,11 +355,14 @@ sub translate() {
 	do_trans("印表機", "打印機");
 	# 「列印」後面有括號，多數是選單的項目，表示「打印」
 	do_trans("列印(?=\\()", "打印");
+	do_trans("(?<=(預覽|取消|正在))列印", "打印");
+	do_trans("列印(?=(預覽|文件|工作|數量|範圍|設定))", "打印");
 	# 有時「列印」表示在螢幕顯示字句，這時用「顯示」較好
 	query_trans("列印", "打印", "顯示");
 
 	# digital, but don't change "decimal point"
-	# 數位長輩、數位朋友等等也出問題
+	# 數位長輩、數位朋友等等會出問題
+	do_trans("數位(?=(相機|相片|相簿|簽名|簽署|簽章|化))", "數碼");
 	query_trans("(?<!小)數位", "數碼");
 
 	# network and internet
@@ -355,14 +378,15 @@ sub translate() {
 	# card game
 	do_trans("紙牌", "啤牌");
 	do_trans("黑桃", "葵扇");
+	do_trans("葫蘆", "俘虜");		# full house
 	# FIXME: affect too much translation
 	# perhaps search the context and determine if it's about game?
 	#query_trans("(?<!(對話|核取))方塊", "階磚");
 
-	# Hong Kong government tend to use 圖像, but 影像 means lots of different
+	# Hong Kong tend to use 圖像, but 影像 means lots of different
 	# things (image, video, graphics, ...) so ask instead of forcefully
 	# convert
-	query_trans("影像", "圖像", "圖片", "圖案");
+	query_trans("(?<!光碟)影像", "圖像", "圖片", "圖案");
 
 	# some characters are used solely in Hong Kong but infrequently in Taiwan
 	do_trans("您", "你");
@@ -376,8 +400,8 @@ sub translate() {
 	#do_trans("線", "綫");
 
 	# http://www.linuxfans.org/nuke/modules.php?name=Forums&file=viewtopic&t=25997
-	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著 著錄
-	do_trans("(?<![所名土顯編])著(?![作者名述書錄])", "着");
+	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著 著錄 原著
+	do_trans("(?<![所名土顯編原])著(?![作者名述書錄])", "着");
 
 	# element table
 	do_trans("鎝", "鍀");		# technetium, 43
