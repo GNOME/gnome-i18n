@@ -330,20 +330,26 @@ sub translate() {
 	do_trans("數式", "算式");
 	do_trans("更改", "變更");
 	do_trans("厘米", "公分");
-	do_trans("麻雀", "麻將");
+	do_trans("麻雀", "麻將");		# mahjong
 	# avoid 香港增補字符集
 	do_trans("(?<!香港增補)字符", "字元");
 	do_trans("銜頭", "頭銜");
 	do_trans("闊度", "寬度");
 	do_trans("視像", "視訊");
-	do_trans("網上", "線上");
-	do_trans("激光", "雷射");		# 在香港兩個都接受
-	do_trans(" ?call 機", "呼叫器");
-	do_trans("匯報", "回報");
+	do_trans("網上", "線上");		# online
+	do_trans("激光", "雷射");		# laser, 在香港兩個都接受
+	do_trans(" ?call 機", "呼叫器");	# pager
+	do_trans("匯報", "回報");		# report bug
 	do_trans("推出", "釋出");		# release
 	do_trans("住家(?=(傳真|電話))", "家用");		# home ???
 	do_trans("住址", "住家地址");
-#	do_trans("公尺", "米");
+	do_trans("(?<=[日月])蝕", "食");
+	do_trans("(?<=[日月])全蝕", "全食");
+	do_trans("(?<=[日月])偏蝕", "偏食");
+	do_trans("(?<=[日月])環蝕", "環食");
+	do_trans("濕度", "溼度");		# humidity
+	do_trans("潮濕", "潮溼");
+#	do_trans("米", "公尺");			# 這個有點困難
 
 	# bicycle and motorcycle
 	do_trans("電單車", "摩托車");

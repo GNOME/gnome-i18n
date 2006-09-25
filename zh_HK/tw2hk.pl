@@ -327,22 +327,28 @@ sub translate() {
 	#do_trans("算式", "數式");
 	do_trans("變更", "更改");
 	do_trans("公分", "厘米");
-	do_trans("麻將", "麻雀");
+	do_trans("麻將", "麻雀");		# mahjong
 	do_trans("字元", "字符");
 	do_trans("頭銜", "銜頭");
 	do_trans("寬度", "闊度");
 	do_trans("視訊", "視像");
-	do_trans("臭[蟲虫]", "錯誤");
+	do_trans("臭[蟲虫]", "錯誤");		# report bug
 	do_trans("試著", "嘗試");
-	do_trans("呼叫器", "call 機");
-	do_trans("回報(?=(問題|錯誤|給))", "匯報");
+	do_trans("呼叫器", "call 機");		# pager
+	do_trans("回報(?=(問題|錯誤|給))", "匯報");		# report bug
 	do_trans("釋出", "推出");		# release
 	do_trans("住家(?=(傳真|電話))", "家用");		# home ???
 	do_trans("住家地址", "住址");
+	do_trans("(?<=[日月])食", "蝕");
+	do_trans("(?<=[日月])全食", "全蝕");
+	do_trans("(?<=[日月])偏食", "偏蝕");
+	do_trans("(?<=[日月])環食", "環蝕");
+	do_trans("溼度", "濕度");		# humidity
+	do_trans("潮溼", "潮濕");
 	do_trans("公尺", "米");
 
 	# online ???
-	do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲))", "網上");
+	do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲|文件))", "網上");
 	query_trans("(?<![直弧連底])線上", "網上");
 
 	# bicycle and motorcycle
