@@ -4,11 +4,11 @@ import libxml2
 
 fn = 'translation-status.xml'
 # remove this branch
-rt = 'gnome-2.10'  # or sys.argv[1]
+rt = 'gnome-2.14'  # or sys.argv[1]
 # to generate new branch, copy data from this branch
-cf = 'gnome-2.12' # or sys.argv[2]
+cf = 'gnome-2.16' # or sys.argv[2]
 # and name new branch the following
-ct = 'gnome-2.14' # or sys.argv[3]
+ct = 'gnome-2.18' # or sys.argv[3]
 
 def main(filename, removetag, copyfrom, copyto):
     try:
