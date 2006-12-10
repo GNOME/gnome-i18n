@@ -53,13 +53,17 @@ def main(filename, removetag, copyfrom, copyto):
                         newnode.setProp("release", copyto)
                         find = newnode.children
                         while find:
-                            if find.name == "branch":
-                                find.setProp("name", "HEAD")
+                            if find.name == "component":
+                                findbranch = find.children
+                                while findbranch:
+                                    if findbranch.name == "branch":
+                                        findbranch.setProp("name", "HEAD")
+                                    findbranch = findbranch.next
                             find = find.next
                         child.addNextSibling(newnode)
 
                 child = vnext
-                    
+
         node = next
 
     print doc.serialize('utf-8')
