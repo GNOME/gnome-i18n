@@ -196,6 +196,7 @@ sub translate() {
 	do_trans("舊金山", "三藩市");		# San Francisco, USA
 	do_trans("伯明罕", "伯明翰");		# Bermingham, UK
 	do_trans("休斯頓", "休斯敦");		# Houston, US
+	do_trans("[塔坦]米爾", "泰米爾");		# Tamil
 	do_trans("卡達", "卡塔爾");			# Qatar
 	do_trans("蓋亞[納那]", "圭亞那");		# Guyana
 	do_trans("葛摩", "科摩羅");			# Comoros
@@ -334,7 +335,7 @@ sub translate() {
 	do_trans("視訊", "視像");
 	do_trans("臭[蟲虫]", "錯誤");		# report bug
 	do_trans("試著", "嘗試");
-	do_trans("呼叫器", "call 機");		# pager
+	do_trans("呼叫器", "傳呼機");		# pager
 	do_trans("回報(?=(問題|錯誤|給))", "匯報");		# report bug
 	do_trans("釋出", "推出");		# release
 	do_trans("住家(?=(傳真|電話))", "家用");		# home ???

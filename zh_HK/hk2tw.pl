@@ -197,6 +197,7 @@ sub translate() {
 	do_trans("三藩市", "舊金山");		# San Francisco, USA
 	do_trans("伯明罕", "伯明翰");		# Bermingham, UK
 	do_trans("休斯敦", "休斯頓");		# Houston, US
+	query_trans("泰米爾", "坦米爾", "塔米爾");		# Tamil
 	do_trans("卡塔爾", "卡達");			# Qatar
 	do_trans("科摩羅", "葛摩");			# Comoros
 	do_trans("梵蒂岡", "教廷");			# Holy See
@@ -338,7 +339,7 @@ sub translate() {
 	do_trans("視像", "視訊");
 	do_trans("網上", "線上");		# online
 	do_trans("激光", "雷射");		# laser, 在香港兩個都接受
-	do_trans(" ?call 機", "呼叫器");	# pager
+	do_trans("傳呼機", "呼叫器");	# pager
 	do_trans("匯報", "回報");		# report bug
 	do_trans("推出", "釋出");		# release
 	do_trans("住家(?=(傳真|電話))", "家用");		# home ???
