@@ -319,9 +319,10 @@ sub translate() {
 	do_trans("插值法", "內插法");
 	do_trans("計數機", "計算機");
 	do_trans("解像度", "解析度");
+	do_trans("愚人節", "笨蛋節");
 	do_trans("鼠標", "滑鼠指標");
 	do_trans("撥號", "撥接");
-	#do_trans("繁體", "正體");
+	do_trans("繁體", "正體");
 	do_trans("隊伍", "團隊");
 	do_trans("[卡咭]片", "名片");
 	do_trans("內置", "內建");
@@ -340,9 +341,10 @@ sub translate() {
 	do_trans("網上", "線上");		# online
 	do_trans("激光", "雷射");		# laser, 在香港兩個都接受
 	do_trans("傳呼機", "呼叫器");	# pager
+	do_trans("嘗試[着著]?", "試著");
 	do_trans("匯報", "回報");		# report bug
 	do_trans("推出", "釋出");		# release
-	do_trans("住家(?=(傳真|電話))", "家用");		# home ???
+	do_trans("家用(?=(傳真|電話))", "住家");		# home ???
 	do_trans("住址", "住家地址");
 	do_trans("(?<=[日月])蝕", "食");
 	do_trans("(?<=[日月])全蝕", "全食");
@@ -350,6 +352,8 @@ sub translate() {
 	do_trans("(?<=[日月])環蝕", "環食");
 	do_trans("濕度", "溼度");		# humidity
 	do_trans("潮濕", "潮溼");
+	do_trans("自選(?![取擇])", "自訂");
+	do_trans("根據", "依");			# 台灣的翻譯者很喜歡用「依...」代表 according to
 #	do_trans("米", "公尺");			# 這個有點困難
 
 	# bicycle and motorcycle
@@ -384,7 +388,7 @@ sub translate() {
 	# graphics, ...), so ask instead of forcefully convert
 	query_trans("圖像", "影像", "圖片", "圖案");
 
-	# some characters are used solely in Hong Kong but infrequently in Taiwan
+	# 您 is more polite in Taiwan
 	do_trans("你", "您");
 
 	# some character specific to Hong Kong as they are not
@@ -394,7 +398,7 @@ sub translate() {
 	do_trans("裏", "裡");
 	do_trans("着", "著");
 
-	# element table
+	# chemical element table
 	do_trans("鍀", "鎝");		# technetium, 43
 	do_trans("鑥", "鎦");		# lutetium, 71
 	do_trans("砹", "砈");		# astatine, 85

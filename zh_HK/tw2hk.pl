@@ -317,6 +317,7 @@ sub translate() {
 	do_trans("內插法", "插值法");
 	query_trans("計算機", "計數機", "電腦");
 	do_trans("解析度", "解像度");
+	do_trans("笨蛋節", "愚人節");
 	do_trans("撥接", "撥號");
 	do_trans("正體", "繁體");
 	do_trans("團隊", "隊伍");
@@ -334,9 +335,10 @@ sub translate() {
 	do_trans("寬度", "闊度");
 	do_trans("視訊", "視像");
 	do_trans("臭[蟲虫]", "錯誤");		# report bug
-	do_trans("試著", "嘗試");
+	do_trans("嘗?試著", "嘗試");
 	do_trans("呼叫器", "傳呼機");		# pager
 	do_trans("回報(?=(問題|錯誤|給))", "匯報");		# report bug
+	do_trans("回報(?=(這個|該)(問題|錯誤))", "匯報");		# report bug
 	do_trans("釋出", "推出");		# release
 	do_trans("住家(?=(傳真|電話))", "家用");		# home ???
 	do_trans("住家地址", "住址");
@@ -346,6 +348,7 @@ sub translate() {
 	do_trans("(?<=[日月])環食", "環蝕");
 	do_trans("溼度", "濕度");		# humidity
 	do_trans("潮溼", "潮濕");
+	do_trans("自訂(?!閱)", "自選");
 	do_trans("公尺", "米");
 
 	# online ???
@@ -410,7 +413,7 @@ sub translate() {
 	# 著作 著者 著名 著述 著書 所著 名著 土著 顯著 編著 著錄 原著
 	do_trans("(?<![所名土顯編原])著(?![作者名述書錄])", "着");
 
-	# element table
+	# chemical element table
 	do_trans("鎝", "鍀");		# technetium, 43
 	do_trans("鎦", "鑥");		# lutetium, 71
 	do_trans("砈", "砹");		# astatine, 85
