@@ -237,16 +237,18 @@ sub translate() {
 	do_trans("駭客任務", "廿二世紀殺人網絡");		# Matrix
 	do_trans("魔鬼終結者", "未來戰士");		# Terminator
 
-	# ssl certificate, CA, PKI related
-	do_trans("憑證廢止清冊", "證書撤銷清單");
-	do_trans("憑證管理中心", "核證機關");
-	do_trans("私鑰", "私人密碼匙");
-	do_trans("公鑰", "公開密碼匙");
-	do_trans("(金鑰|鑰匙)", "密碼匙");
-	do_trans("憑證", "證書");
-	do_trans("簽章", "簽署");
-	do_trans("簽名(?!檔)", "簽署");
-	do_trans("隱私", "私隱");
+	# Certificate and PKI related
+	do_trans("憑證廢止清冊", "證書撤銷清單");	# Certificate Revocation List
+	do_trans("憑證管理中心", "核證機關");		# Certificate Authority
+	do_trans("密鑰對", "配對密碼匙");			# Key pair
+	do_trans("私鑰", "私人密碼匙");				# Private key
+	do_trans("公鑰", "公開密碼匙");				# Public key
+	do_trans("憑證", "證書");					# Certificate
+	do_trans("簽章", "簽署");					# Signature / Sign
+	do_trans("簽名(?!檔)", "簽署");				# Signature
+	do_trans("隱私", "私隱");					# Privacy
+	# put to bottom, as a catch-all conversion
+	do_trans("(金鑰|密鑰|鑰匙)", "密碼匙");		# key
 
 	# generic terms from mediawiki
 	do_trans("(?<=[軟硬])體", "件");
@@ -254,7 +256,8 @@ sub translate() {
 	do_trans("人工智慧", "人工智能");
 	do_trans("機器人", "機械人");
 	do_trans("太空梭", "穿梭機");
-	do_trans("行動電話", "流動電話");
+	do_trans("行動裝置", "流動通訊器材");		# mobile device
+	do_trans("行動(?=(電話|通訊))", "流動");	# mobile phone
 	do_trans("(速食麵|泡麵)", "即食麵");
 	do_trans("土豆", "花生");
 	do_trans("計程車", "的士");
@@ -307,7 +310,6 @@ sub translate() {
 	do_trans("(筆記型|攜帶型|膝上型)電腦", "手提電腦");
 	do_trans("個人資訊", "個人資料");
 	do_trans("積體電路", "集成電路");
-	do_trans("行動通訊", "流動通訊");
 	do_trans("西洋棋", "國際象棋");
 	do_trans("中國跳棋", "波子棋");
 	do_trans("黑白棋", "蘋果棋");
@@ -336,6 +338,7 @@ sub translate() {
 	do_trans("視訊", "視像");
 	do_trans("臭[蟲虫]", "錯誤");		# report bug
 	do_trans("嘗?試著", "嘗試");
+	do_trans("給定的", "指定的");
 	do_trans("呼叫器", "傳呼機");		# pager
 	do_trans("回報(?=(問題|錯誤|給))", "匯報");		# report bug
 	do_trans("回報(?=(這個|該)(問題|錯誤))", "匯報");		# report bug
