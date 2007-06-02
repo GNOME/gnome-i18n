@@ -11,10 +11,36 @@
 # file name as argument (since for some reason any chinese in comment
 # would be converted into garbage):
 #
-# hk2tw.pl < zh_HK.po > zh_TW.po
-
+#     hk2tw.pl < zh_HK.po > zh_TW.po
+#
+# In case of multiple choice, you will be prompted for an answer. But
+# only existing choices are accepted for now, translators can't type
+# their own.
+#
 ######################################################################
-# (c) 2006 Abel Cheung <abelcheung [AT] gmail [DOT] com>
+# Some special case handling:
+#
+# 1. In user-defined comment before each msgid, if translator places
+# 
+#     # zh_TW: msgstr "blah blah blah"
+#
+# then this translation will be used instead of automatically convered
+# one. Useful when automatic conversion doesn't work well, or
+# translator doesn't want to be prompted again for that string.
+#
+# 2. If following special string is added in comment before file header:
+#
+#     # zh_TW:blah:blah2:
+#     (notice the colons! there is no space in between!)
+#
+# this means 'blah' will be globally converted to 'blah2' throughout the
+# whole file. Useful when translator were prompted too many times for
+# one specific word. But _really_ make sure such word has only one
+# possible meaning before using this!
+# And the per-string choice documented above overrides this global choice.
+#
+######################################################################
+# (c) 2005, 06, 07 Abel Cheung <abelcheung [AT] gmail [DOT] com>
 #
 # Based on Americal -> British english conversion script written by:
 # (c) 2000 Abigail Brady
@@ -62,6 +88,16 @@ sub query_trans {
 		my $answer;
 		my $i = 0;
 		my $matched_string = $+;
+
+		# if word conversion is defined in header, just do it, don't ask
+		for my $key (keys %remembered_choice) {
+
+			# can't compare with $tf, $tf may contain PCRE constructs
+			if ( $matched_string eq $key ) {
+				do_trans ( $tf, $remembered_choice{$key} );
+				return;
+			}
+		}
 
 		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
 
@@ -310,6 +346,7 @@ sub translate() {
 
 	# other generic terms
 	do_trans("\\s?Free Software Foundation\\s?", "自由軟體基金會");
+	do_trans("量度單位", "度量衡單位");
 	do_trans("手提電腦", "筆記型電腦");
 	do_trans("個人資料(?!夾)", "個人資訊");
 	do_trans("集成電路", "積體電路");
@@ -345,7 +382,7 @@ sub translate() {
 	do_trans("傳呼機", "呼叫器");	# pager
 	do_trans("嘗試[着著]?", "試著");
 	do_trans("指定的", "給定的");
-	do_trans("匯報", "回報");		# report bug
+	do_trans("[滙匯]報", "回報");		# report bug
 	do_trans("推出", "釋出");		# release
 	do_trans("家用(?=(傳真|電話))", "住家");		# home ???
 	do_trans("住址", "住家地址");
@@ -356,7 +393,7 @@ sub translate() {
 	do_trans("濕度", "溼度");		# humidity
 	do_trans("潮濕", "潮溼");
 	do_trans("自選(?![取擇])", "自訂");
-	do_trans("根據", "依");			# 台灣的翻譯者很喜歡用「依...」代表 according to
+	do_trans("根據(?!地)", "依");			# 台灣的翻譯者很喜歡用「依...」代表 according to
 #	do_trans("米", "公尺");			# 這個有點困難
 
 	# bicycle and motorcycle
@@ -423,10 +460,23 @@ while (<>) {
 	# {{{
 
 	if  (/^#/) {
+
+		# using such comment means zh_TW uses specialized translation,
+		# and shouldn't convert from zh_HK
 		if (m/^#\s*zh_TW:\s*(.*)/i) {
-			# zh_TW uses specialized translation, shouldn't convert from zh_HK
-			$force_msg_str .= $1;
+
+			if ($mode == 0) {
+				# placing this on po file header means this is a global choice
+				if (m/^#\s*zh_TW:([^:]*):([^:]*):/i) {
+					$remembered_choice{$1} = $2;
+				}
+			} else {
+				# this is a per-string choice
+				$force_msg_str .= $1;
+			}
 		}
+
+		# header
 		if ($mode == 0) {
 			s/traditional\s+chinese/Chinese \(Taiwan\)/i;
 			s/chinese\s+\(?(traditional|hong kong)\)?/Chinese \(Taiwan\)/i;

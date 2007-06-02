@@ -9,12 +9,38 @@
 #
 # To use this script, one should use it as a filter, instead of appending
 # file name as argument (since for some reason any chinese in comment
-# would be converted into garbage):
+# would be converted into garbage, should be fixed later):
 #
-# tw2hk.pl < zh_TW.po > zh_HK.po
-
+#     tw2hk.pl < zh_TW.po > zh_HK.po
+#
+# In case of multiple choice, you will be prompted for an answer. But
+# only existing choices are accepted for now, translators can't type
+# their own.
+#
 ######################################################################
-# (c) 2005, 2006 Abel Cheung <abelcheung [AT] gmail [DOT] com>
+# Some special case handling:
+#
+# 1. In user-defined comment before each msgid, if translator places
+# 
+#     # zh_HK: msgstr "blah blah blah"
+#
+# then this translation will be used instead of automatically convered
+# one. Useful when automatic conversion doesn't work well, or
+# translator doesn't want to be prompted again for that string.
+#
+# 2. If following special string is added in comment before file header:
+#
+#     # zh_HK:blah:blah2:
+#     (notice the colons! there is no space in between!)
+#
+# this means 'blah' will be globally converted to 'blah2' throughout the
+# whole file. Useful when translator were prompted too many times for
+# one specific word. But _really_ make sure such word has only one
+# possible meaning before using this!
+# And the per-string choice documented above overrides this global choice.
+#
+######################################################################
+# (c) 2005, 06, 07 Abel Cheung <abelcheung [AT] gmail [DOT] com>
 #
 # Based on Americal -> British english conversion script written by:
 # (c) 2000 Abigail Brady
@@ -42,6 +68,7 @@ my $rl = Term::ReadLine->new("String Replacement");
 my $msg_id = "";
 my $msg_str = "";
 my $force_msg_str = "";
+my %remembered_choice = ();
 
 #
 # Replace word with another
@@ -62,6 +89,16 @@ sub query_trans {
 		my $answer;
 		my $i = 0;
 		my $matched_string = $+;
+
+		# if word conversion is defined in header, just do it, don't ask
+		for my $key (keys %remembered_choice) {
+
+			# can't compare with $tf, $tf may contain PCRE constructs
+			if ( $matched_string eq $key ) {
+				do_trans ( $tf, $remembered_choice{$key} );
+				return;
+			}
+		}
 
 		print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
 
@@ -308,6 +345,7 @@ sub translate() {
 	# other generic terms
 	do_trans("自由軟體基金會", " Free Software Foundation ");
 	do_trans("(筆記型|攜帶型|膝上型)電腦", "手提電腦");
+	do_trans("度量衡單位", "量度單位");
 	do_trans("個人資訊", "個人資料");
 	do_trans("積體電路", "集成電路");
 	do_trans("西洋棋", "國際象棋");
@@ -353,9 +391,11 @@ sub translate() {
 	do_trans("潮溼", "潮濕");
 	do_trans("自訂(?!閱)", "自選");
 	do_trans("公尺", "米");
+	do_trans("依(?![從然靠])", "根據");		# Ambrose:「依照」不是香港口語，台灣也會用
+	do_trans("[暱昵]稱", "網名");			# 這兒反而是口語化顯得生動活潑
 
 	# online ???
-	do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲|文件))", "網上");
+	do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲|文件|說明|服務))", "網上");
 	query_trans("(?<![直弧連底])線上", "網上");
 
 	# bicycle and motorcycle
@@ -438,15 +478,30 @@ while (<>) {
 	# {{{
 
 	if  (/^#/) {
+
+		# using such comment means zh_HK uses specialized translation,
+		# and shouldn't convert from zh_TW
 		if (m/^#\s*zh_HK:\s*(.*)/i) {
-			# zh_HK uses specialized translation, shouldn't convert from zh_TW
-			$force_msg_str .= $1;
+
+			if ($mode == 0) {
+				# placing this on po file header means this is a global choice
+				if (m/^#\s*zh_HK:([^:]*):([^:]*):/i) {
+					$remembered_choice{$1} = $2;
+				}
+			} else {
+				# this is a per-string choice
+				$force_msg_str .= $1;
+			}
 		}
+
+		# header
 		if ($mode == 0) {
 			s/traditional\s+chinese/Chinese \(Hong Kong\)/i;
 			s/chinese\s+\(?(traditional|taiwan)\)?/Chinese \(Hong Kong\)/i;
 		}
+
 		print;
+
 	} elsif (/^msgctxt/) {
 		print;
 	} elsif (/^msgid/) {
