@@ -341,6 +341,8 @@ sub translate() {
 	do_trans("服務器", "伺服器");
 	do_trans("上載", "上傳");
 	do_trans("注冊", "註冊");
+	do_trans("單擊", "點選");
+	do_trans("雙擊", "連按兩下");
 
 	# other generic terms
 	do_trans("自由軟體基金會", " Free Software Foundation ");
@@ -378,6 +380,7 @@ sub translate() {
 	do_trans("嘗?試著", "嘗試");
 	do_trans("給定的", "指定的");
 	do_trans("呼叫器", "傳呼機");		# pager
+	do_trans("漸層", "漸變色");		# gradient
 	do_trans("回報(?=(問題|錯誤|給))", "匯報");		# report bug
 	do_trans("回報(?=(這個|該)(問題|錯誤))", "匯報");		# report bug
 	do_trans("釋出", "推出");		# release

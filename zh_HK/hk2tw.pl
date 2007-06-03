@@ -343,6 +343,8 @@ sub translate() {
 	do_trans("服務器", "伺服器");
 	do_trans("上載", "上傳");
 	do_trans("注冊", "註冊");
+	do_trans("單擊", "點選");
+	do_trans("雙擊", "連按兩下");
 
 	# other generic terms
 	do_trans("\\s?Free Software Foundation\\s?", "自由軟體基金會");
@@ -380,6 +382,7 @@ sub translate() {
 	do_trans("網上", "線上");		# online
 	do_trans("激光", "雷射");		# laser, 在香港兩個都接受
 	do_trans("傳呼機", "呼叫器");	# pager
+	do_trans("漸變色", "漸層");		# gradient
 	do_trans("嘗試[着著]?", "試著");
 	do_trans("指定的", "給定的");
 	do_trans("[滙匯]報", "回報");		# report bug
