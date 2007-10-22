@@ -101,11 +101,17 @@ sub do_trans {
 }
 
 sub query_trans {
-    my ($tf, $tt) = @_;
+    my ($tf, $tt, $context) = @_;
     if ( $msg_str =~ m/\b$tf/i ) {
+    	my $result;
+
 	print STDERR "\nmsgid: ${msg_id}msgstr: $msg_str";
-	if ( $rl->readline( "Change '$tf' to '$tt'? (y/N) " )
-	     =~ m/^\s*y(es)?\s*$/i ) {
+	if ($context) {
+	    $result = $rl->readline( "Change '$tf' to '$tt'? (Context: '$context') (y/N) " );
+        } else {
+            $result = $rl->readline( "Change '$tf' to '$tt'? (y/N) " );
+        }
+	if ( $result =~ m/^\s*y(es)?\s*$/i ) {
 	    print STDERR "Changed\n";
 	    do_trans( $tf, $tt );
 	}
@@ -149,8 +155,8 @@ sub translate() {
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
   do_trans("center", "centre");
-  query_trans("checked", "chequered");
-  query_trans("check", "cheque");
+  query_trans("checked", "chequered", "Refers to patterns");
+  query_trans("check", "cheque", "Refers to a payment method");
   do_trans("cipher", "cypher");
   do_trans("color", "colour");
   do_trans("counterclockwise", "anti-clockwise");
