@@ -151,6 +151,7 @@ sub translate() {
   do_trans("caliber", "calibre");
   do_trans("canceled", "cancelled");
   do_trans("canceling", "cancelling");
+  query_trans("canfield", "demon", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
   do_trans("catalog", "catalogue");
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
@@ -181,6 +182,7 @@ sub translate() {
   do_trans("jeweled", "jewelled");
   do_trans("judgment", "judgement");
   do_trans("kilometer", "kilometre");
+  query_trans("klondike", "canfield", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
   do_trans("labeled", "labelled");
   query_trans("license", "licence");
   do_trans("labor", "labour");
