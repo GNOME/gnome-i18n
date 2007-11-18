@@ -396,7 +396,7 @@ sub translate() {
 	do_trans("濕度", "溼度");		# humidity
 	do_trans("潮濕", "潮溼");
 	do_trans("自選(?![取擇])", "自訂");
-	do_trans("根據(?!地)", "依");			# 台灣的翻譯者很喜歡用「依...」代表 according to
+	do_trans("根據(?!地)", "依");			# 台灣較常用「依...」或「依照」代表 according to
 #	do_trans("米", "公尺");			# 這個有點困難
 
 	# bicycle and motorcycle
