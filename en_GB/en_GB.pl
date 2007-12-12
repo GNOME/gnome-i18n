@@ -217,7 +217,7 @@ sub translate() {
   do_trans("vapor", "vapour");
   do_trans("vise", "vice");
 
-   if ($locale == "en_CA") {
+   if ($locale eq "en_CA") {
      do_trans("categorise","categorize");
      do_trans("customise", "customize");
      do_trans("customised", "customized");
@@ -240,9 +240,9 @@ sub translate() {
      do_trans("initialize", "initialise");
      do_trans("initializing", "initialising");
      do_trans("initialized", "initialised");
+     query_trans("NES", "Nintendo", "Refers to the SuperNES console, only the Super one!");
      do_trans("organize", "organise");
      do_trans("routing", "routeing");
-     do_trans("Super NES", "Super Nintendo");
      do_trans("uninitialized","uninitialised");
      do_trans("trash", "wastebasket");
      do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
