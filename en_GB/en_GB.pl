@@ -151,7 +151,6 @@ sub translate() {
   do_trans("caliber", "calibre");
   do_trans("canceled", "cancelled");
   do_trans("canceling", "cancelling");
-  query_trans("canfield", "demon", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
   do_trans("catalog", "catalogue");
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
@@ -160,7 +159,6 @@ sub translate() {
   query_trans("check", "cheque", "Refers to a payment method");
   do_trans("cipher", "cypher");
   do_trans("color", "colour");
-  do_trans("counterclockwise", "anti-clockwise");
   do_trans("defense", "defence");
   do_trans("dialer", "dialler");
   do_trans("dialing", "dialling");
@@ -182,7 +180,6 @@ sub translate() {
   do_trans("jeweled", "jewelled");
   do_trans("judgment", "judgement");
   do_trans("kilometer", "kilometre");
-  query_trans("klondike", "canfield", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
   do_trans("labeled", "labelled");
   query_trans("license", "licence");
   do_trans("labor", "labour");
@@ -218,6 +215,7 @@ sub translate() {
   do_trans("vise", "vice");
 
    if ($locale eq "en_CA") {
+     do_trans("anti-clockwise", "counterclockwise");
      do_trans("categorise","categorize");
      do_trans("customise", "customize");
      do_trans("customised", "customized");
@@ -232,7 +230,9 @@ sub translate() {
      do_trans("wastebasket", "garbage");
      do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"James A. Morrison <jim.morrison@gmail.com>");
    } else {
+     query_trans("canfield", "demon", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
      do_trans("categorize","categorise");
+     do_trans("counterclockwise", "anti-clockwise");
      do_trans("customize", "customise");
      do_trans("customized", "customised");
      query_trans("Genesis", "Megadrive", "Refers to the Sega gaming console");
@@ -240,6 +240,7 @@ sub translate() {
      do_trans("initialize", "initialise");
      do_trans("initializing", "initialising");
      do_trans("initialized", "initialised");
+     query_trans("klondike", "canfield", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
      query_trans("NES", "Nintendo", "Refers to the SuperNES console, only the Super one!");
      do_trans("organize", "organise");
      do_trans("routing", "routeing");
