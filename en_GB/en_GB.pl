@@ -235,12 +235,14 @@ sub translate() {
      do_trans("categorize","categorise");
      do_trans("customize", "customise");
      do_trans("customized", "customised");
+     query_trans("Genesis", "Megadrive", "Refers to the Sega gaming console");
      do_trans("initialization", "initialisation");
      do_trans("initialize", "initialise");
      do_trans("initializing", "initialising");
      do_trans("initialized", "initialised");
      do_trans("organize", "organise");
      do_trans("routing", "routeing");
+     do_trans("Super NES", "Super Nintendo");
      do_trans("uninitialized","uninitialised");
      do_trans("trash", "wastebasket");
      do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
