@@ -63,8 +63,11 @@
 # if you find an inaccuracy in this list, please mail me at 
 # <rwb197@zepler.org>
 
+use strict;
+use warnings;
 use Time::gmtime;
 use Term::ReadLine;
+use vars qw($msg_str $msg_id $locale $rl);
 
 sub do_trans {
   my ($tf, $tt) = @_;
@@ -124,7 +127,7 @@ sub query_trans {
 sub translate() {
   if (!($msg_str eq "\"\"\n")) {
   
-    $date = sprintf("%04i-%02i-%02i %02i:%02i+0000", gmtime()->year+1900,
+    my $date = sprintf("%04i-%02i-%02i %02i:%02i+0000", gmtime()->year+1900,
     gmtime()->mon+1, gmtime()->mday, gmtime()->hour, gmtime()->min);
   
     $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
@@ -138,6 +141,7 @@ sub translate() {
   }
 
   # Epiphany-style contexting
+  # FIXME we should save the context and pass it
   if ( $msg_id =~ m/^.*\|(.*)$/ ) {
     $msg_str = "\"".$1."\n";
   } else {
@@ -228,7 +232,7 @@ sub translate() {
      do_trans("trash", "garbage");
      do_trans("uninitialised","uninitialized");
      do_trans("wastebasket", "garbage");
-     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"James A. Morrison <jim.morrison@gmail.com>");
+     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"James A. Morrison <jim.morrison\@gmail.com>");
    } else {
      query_trans("canfield", "demon", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
      do_trans("categorize","categorise");
@@ -255,18 +259,37 @@ sub translate() {
 #  }
 }
 
-$mode = 0;
+# Modes:
+# 1 = adding to msgid
+# 2 = adding to msgstr
+# 3 = adding to plural msgid
+# 4 = adding to plural msgstr
+my $mode = 0;
+
 $rl = Term::ReadLine->new("String Replacement");
 $locale = $ENV{'LANG'};
 $locale =~ s/\..*//g;
 
+my $msg_id2 = "";
+my $msg_str2 = "";
+$msg_str = "";
+
 while (<>) {
    if  (/^#/) {
      s/SOME DESCRIPTIVE TITLE/English (British) translation/;
-     $year = gmtime()->year+1900;
+     my $year = gmtime()->year+1900;
      s/YEAR/$year/;
      s/FIRST AUTHOR <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>, Bastien Nocera <hadess\@hadess.net>/;
      print unless ((/^#, fuzzy/) && ($mode eq 0));
+   } elsif (/^msgid_plural /) {
+     $msg_id2 .= substr($_, 13);
+     $mode = 3;
+   } elsif (/^msgstr\[0\]/) {
+     $msg_str .= substr($_, 10);
+     $mode = 2;
+   } elsif (/^msgstr\[1\]/) {
+     $msg_str2 .= substr($_, 10);
+     $mode = 4;
    } elsif (/^msgid /) {
      $msg_id .= substr($_, 6);
      $mode = 1;
@@ -277,19 +300,43 @@ while (<>) {
        if ($mode == 1) {
          $msg_id .= $_;
          $mode = 1;
+       } elsif ($mode == 3) {
+       	 $msg_id2 .= $_;
+       	 $mode = 3;
        } elsif ($mode == 2) {
          $msg_str .= $_;
          $mode = 2;
+       } elsif ($mode == 4) {
+       	 $msg_str2 .= $_;
+       	 $mode = 4;
        }
    } else {
-     if ($msg_id || $msg_str) {
+     my $line = $_;
+
+     if (defined $msg_id2 && $msg_id2 ne "") {
+       translate();
+       print "msgid $msg_id";
+       print "msgid_plural $msg_id2";
+       print "msgstr[0] $msg_str";
+
+       $msg_id = $msg_id2;
+       $msg_str = $msg_str2;
+       translate();
+       print "msgstr[1] $msg_str";
+       $msg_id = "";
+       $msg_id2 = "";
+       $msg_str = "";
+       $msg_str2 = "";
+     } elsif ($msg_id || $msg_str) {
        translate();
        print "msgid $msg_id";
        print "msgstr $msg_str";
        $msg_id = "";
+       $msg_id2 = "";
        $msg_str = "";
+       $msg_str2 = "";
      }
-     print $_;
+     print $line;
    }
 
 }
