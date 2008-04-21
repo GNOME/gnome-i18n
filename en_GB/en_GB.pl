@@ -249,6 +249,7 @@ sub translate() {
      do_trans("organize", "organise");
      do_trans("routing", "routeing");
      do_trans("uninitialized","uninitialised");
+     do_trans("_trash", "wastebaske_t");
      do_trans("trash", "wastebasket");
      do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>");
    }
