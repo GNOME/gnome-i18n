@@ -178,7 +178,7 @@ sub translate() {
   do_trans("flavor", "flavour");
   do_trans("fueled", "fuelled");
   do_trans("fueling", "fuelling");
-  do_trans("harbor", "harbour");
+  query_trans("harbor", "harbour");
   do_trans("honor", "honour");
   do_trans("humor", "humour");
   do_trans("jeweled", "jewelled");
