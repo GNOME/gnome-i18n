@@ -197,7 +197,11 @@ sub translate() {
   do_trans("offense", "offence");
   do_trans("paneled", "panelled");
   do_trans("paneling", "panelling");
+  do_trans("personalize", "personalise");
+  do_trans("personalizing", "personalising");
+  do_trans("popularized", "popularised");
   query_trans("practise","practice");
+  do_trans("recognize", "recognise");
   do_trans("rumor", "rumour");
   do_trans("saber", "sabre");
   do_trans("scepter", "sceptre");
@@ -247,6 +251,7 @@ sub translate() {
      query_trans("klondike", "canfield", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
      query_trans("NES", "Nintendo", "Refers to the SuperNES console, only the Super one!");
      do_trans("organize", "organise");
+     do_trans("rerouting", "rerouteing");
      do_trans("routing", "routeing");
      do_trans("uninitialized","uninitialised");
      do_trans("_trash", "wastebaske_t");
