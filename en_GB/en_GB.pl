@@ -121,11 +121,11 @@ sub do_trans {
       }
   }
 
-  $msg_str =~ s/(\b|_)\u$underscores_tf/$upper_tt/g and return
+  $msg_str =~ s/(\b|_)\u$underscores_tf\b/$upper_tt/g and return
       if defined $upper_tt;
-  $msg_str =~ s/(\b|_)$underscores_tf/$tt/g;
-  $msg_str =~ s/(\b|_)\u$underscores_tf/\u$tt/g;
-  $msg_str =~ s/(\b|_)\U$underscores_tf/\U$tt/g;
+  $msg_str =~ s/(\b|_)$underscores_tf\b/$tt/g;
+  $msg_str =~ s/(\b|_)\u$underscores_tf\b/\u$tt/g;
+  $msg_str =~ s/(\b|_)\U$underscores_tf\b/\U$tt/g;
 }
 
 sub query_trans {
