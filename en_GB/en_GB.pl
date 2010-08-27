@@ -71,10 +71,10 @@ use vars qw($msg_str $msg_id $locale $rl);
 
 sub do_trans {
   my ($tf, $tt) = @_;
-  my ($accel, $upper_tt );
+  my ($accel, $upper_tt);
 
-# Handle keyboard shortcuts in message strings.  Messy, but it seems to work.
-# Use the same key if possible, otherwise prompt the user.
+  # Handle keyboard shortcuts in message strings.  Messy, but it seems to work.
+  # Use the same key if possible, otherwise prompt the user.
   my $underscores_tf = $tf;
   $underscores_tf =~ s/(?<=\w)(.)/_?$1/g;
   if ( $msg_str =~ m/(_?$underscores_tf)/i and $1 =~ m/_(\w)/ ) {
@@ -126,10 +126,10 @@ sub query_trans {
 
 sub translate() {
   if (!($msg_str eq "\"\"\n")) {
-  
+
     my $date = sprintf("%04i-%02i-%02i %02i:%02i+0000", gmtime()->year+1900,
     gmtime()->mon+1, gmtime()->mday, gmtime()->hour, gmtime()->min);
-  
+
     $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
     $msg_str =~ s/YEAR-MO-DA HO:MI\+DIST/$date/;
     $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>/;
@@ -147,7 +147,7 @@ sub translate() {
   } else {
     $msg_str = $msg_id;
   }
-  
+
   do_trans("aluminum", "aluminium");
   do_trans("analog", "analogue");
   do_trans("analyze", "analyse");
@@ -277,42 +277,42 @@ sub translate() {
   do_trans("vise", "vice");
   do_trans("visualization", "visualisation");
 
-   if ($locale eq "en_CA") {
-     do_trans("anti-clockwise", "counterclockwise");
-     do_trans("categorise","categorize");
-     do_trans("customise", "customize");
-     do_trans("customised", "customized");
-     do_trans("initialisation", "initialization");
-     do_trans("initialise", "initialize");
-     do_trans("initialising", "initializing");
-     do_trans("initialized", "initialized");
-     do_trans("organise", "organize");
-     do_trans("routeing", "routing");
-     do_trans("trash", "garbage");
-     do_trans("uninitialised","uninitialized");
-     do_trans("wastebasket", "garbage");
-     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"James A. Morrison <jim.morrison\@gmail.com>");
-   } else {
-     query_trans("canfield", "demon", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
-     do_trans("categorize","categorise");
-     do_trans("counterclockwise", "anti-clockwise");
-     do_trans("customize", "customise");
-     do_trans("customized", "customised");
-     query_trans("Genesis", "Megadrive", "Refers to the Sega gaming console");
-     do_trans("initialization", "initialisation");
-     do_trans("initialize", "initialise");
-     do_trans("initializing", "initialising");
-     do_trans("initialized", "initialised");
-     query_trans("klondike", "canfield", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
-     query_trans("NES", "Nintendo", "Refers to the SuperNES console, only the Super one!");
-     do_trans("organize", "organise");
-     do_trans("rerouting", "rerouteing");
-     do_trans("routing", "routeing");
-     do_trans("uninitialized","uninitialised");
-     do_trans("_trash", "wastebaske_t");
-     do_trans("trash", "wastebasket");
-     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"Philip Withnall <philip\@tecnocode.co.uk>");
-   }
+  if ($locale eq "en_CA") {
+    do_trans("anti-clockwise", "counterclockwise");
+    do_trans("categorise","categorize");
+    do_trans("customise", "customize");
+    do_trans("customised", "customized");
+    do_trans("initialisation", "initialization");
+    do_trans("initialise", "initialize");
+    do_trans("initialising", "initializing");
+    do_trans("initialized", "initialized");
+    do_trans("organise", "organize");
+    do_trans("routeing", "routing");
+    do_trans("trash", "garbage");
+    do_trans("uninitialised","uninitialized");
+    do_trans("wastebasket", "garbage");
+    do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"James A. Morrison <jim.morrison\@gmail.com>");
+  } else {
+    query_trans("canfield", "demon", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
+    do_trans("categorize","categorise");
+    do_trans("counterclockwise", "anti-clockwise");
+    do_trans("customize", "customise");
+    do_trans("customized", "customised");
+    query_trans("Genesis", "Megadrive", "Refers to the Sega gaming console");
+    do_trans("initialization", "initialisation");
+    do_trans("initialize", "initialise");
+    do_trans("initializing", "initialising");
+    do_trans("initialized", "initialised");
+    query_trans("klondike", "canfield", "Refers to a solitaire card game variant, see http://bugzilla.gnome.org/show_bug.cgi?id=444409");
+    query_trans("NES", "Nintendo", "Refers to the SuperNES console, only the Super one!");
+    do_trans("organize", "organise");
+    do_trans("rerouting", "rerouteing");
+    do_trans("routing", "routeing");
+    do_trans("uninitialized","uninitialised");
+    do_trans("_trash", "wastebaske_t");
+    do_trans("trash", "wastebasket");
+    do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"Philip Withnall <philip\@tecnocode.co.uk>");
+  }
 
 # This causes the string not to be copied
 #  if ($msg_str eq $msg_id) {
