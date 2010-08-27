@@ -67,7 +67,7 @@ use strict;
 use warnings;
 use Time::gmtime;
 use Term::ReadLine;
-use vars qw($msg_str $msg_id $locale $rl);
+use vars qw($msg_str $msg_id $locale $rl $check_mode);
 
 sub do_trans {
   my ($tf, $tt) = @_;
@@ -125,26 +125,45 @@ sub query_trans {
 }
 
 sub translate() {
-  if (!($msg_str eq "\"\"\n")) {
+  my $old_msg_str;
 
-    my $date = sprintf("%04i-%02i-%02i %02i:%02i+0000", gmtime()->year+1900,
-    gmtime()->mon+1, gmtime()->mday, gmtime()->hour, gmtime()->min);
+  if (!$check_mode) {
+    # We're doing a normal translation
+    if (!($msg_str eq "\"\"\n")) {
+      my $date = sprintf("%04i-%02i-%02i %02i:%02i+0000", gmtime()->year+1900,
+      gmtime()->mon+1, gmtime()->mday, gmtime()->hour, gmtime()->min);
 
-    $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
-    $msg_str =~ s/YEAR-MO-DA HO:MI\+DIST/$date/;
-    $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>/;
-    $msg_str =~ s/CHARSET/UTF-8/;
-    $msg_str =~ s/ENCODING/8-bit/;
-    $msg_str =~ s/LANGUAGE <LL\@li.org>//;
-    $msg_str =~ s/Plural-Forms: nplurals=INTEGER; plural=EXPRESSION/Plural-Forms: nplurals=2; plural=n != 1;/;
-    return;
-  }
+      $msg_str =~ s/YEAR-MO-DA HO:MI\+ZONE/$date/;
+      $msg_str =~ s/YEAR-MO-DA HO:MI\+DIST/$date/;
+      $msg_str =~ s/FULL NAME <EMAIL\@ADDRESS>/Abigail Brady <morwen\@evilmagic.org>/;
+      $msg_str =~ s/CHARSET/UTF-8/;
+      $msg_str =~ s/ENCODING/8-bit/;
+      $msg_str =~ s/LANGUAGE <LL\@li.org>//;
+      $msg_str =~ s/Plural-Forms: nplurals=INTEGER; plural=EXPRESSION/Plural-Forms: nplurals=2; plural=n != 1;/;
+      return;
+    }
 
-  # Epiphany-style contexting
-  # FIXME we should save the context and pass it
-  if ( $msg_id =~ m/^.*\|(.*)$/ ) {
-    $msg_str = "\"".$1."\n";
+    # Epiphany-style contexting
+    # FIXME we should save the context and pass it
+    if ( $msg_id =~ m/^.*\|(.*)$/ ) {
+      $msg_str = "\"".$1."\n";
+    } else {
+      $msg_str = $msg_id;
+    }
   } else {
+    # We're checking for differences between a translation and the original strings
+    # Skip the header and translation-credits strings (they're boring)
+    if ($msg_id eq "\"\"\n" or $msg_id eq "\"translator-credits\"\n" or $msg_id eq "\"translator_credits\"\n") {
+      return;
+    }
+
+    if ($msg_str eq "\"\"\n") {
+      print "\nUntranslated string\n";
+      print "C string: ${msg_id}\n\n";
+      return;
+    }
+
+    $old_msg_str = $msg_str;
     $msg_str = $msg_id;
   }
 
@@ -318,6 +337,13 @@ sub translate() {
 #  if ($msg_str eq $msg_id) {
 #    $msg_str = "\"\"\n";
 #  }
+
+  if ($check_mode and !($old_msg_str eq $msg_str)) {
+    print "C string:              ${msg_id}";
+    print "Automated translation: ${msg_str}";
+    print "Manual translation:    ${old_msg_str}";
+    print "\n";
+  }
 }
 
 # Modes:
@@ -327,6 +353,7 @@ sub translate() {
 # 4 = adding to plural msgstr
 my $mode = 0;
 
+$check_mode = ($#ARGV eq 1 and $ARGV[0] eq "--check");
 $rl = Term::ReadLine->new("String Replacement");
 $locale = $ENV{'LANG'};
 $locale =~ s/\..*//g;
@@ -335,8 +362,9 @@ my $msg_id2 = "";
 my $msg_str2 = "";
 $msg_str = "";
 
-while (<>) {
-   if  (/^#/) {
+open (po_file, $ARGV[$#ARGV]);
+while (<po_file>) {
+   if  (/^#/ and !$check_mode) {
      s/SOME DESCRIPTIVE TITLE/English (British) translation/;
      my $year = gmtime()->year+1900;
      s/YEAR/$year/;
@@ -376,37 +404,47 @@ while (<>) {
 
      if (defined $msg_id2 && $msg_id2 ne "") {
        translate();
-       print "msgid $msg_id";
-       print "msgid_plural $msg_id2";
-       print "msgstr[0] $msg_str";
+       if (!$check_mode) {
+         print "msgid $msg_id";
+         print "msgid_plural $msg_id2";
+         print "msgstr[0] $msg_str";
+       }
 
        $msg_id = $msg_id2;
        $msg_str = $msg_str2;
        translate();
-       print "msgstr[1] $msg_str";
+       if (!$check_mode) {
+         print "msgstr[1] $msg_str";
+       }
        $msg_id = "";
        $msg_id2 = "";
        $msg_str = "";
        $msg_str2 = "";
      } elsif ($msg_id || $msg_str) {
        translate();
-       print "msgid $msg_id";
-       print "msgstr $msg_str";
+       if (!$check_mode) {
+         print "msgid $msg_id";
+         print "msgstr $msg_str";
+       }
        $msg_id = "";
        $msg_id2 = "";
        $msg_str = "";
        $msg_str2 = "";
      }
-     print $line;
+
+     if (!$check_mode) {
+       print $line;
+     }
    }
-
 }
-
+close (po_file);
 
 if ($msg_id || $msg_str) {
   translate();
-  print "msgid $msg_id";
-  print "msgstr $msg_str";
+  if (!$check_mode) {
+    print "msgid $msg_id";
+    print "msgstr $msg_str";
+  }
   $msg_id = "";
   $msg_str = "";
 }
