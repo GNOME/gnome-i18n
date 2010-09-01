@@ -166,8 +166,11 @@ sub translate() {
   do_trans("centimeter", "centimetre");
   do_trans("centered", "centred");
   do_trans("center", "centre");
-  query_trans("checked", "chequered", "Refers to patterns");
-  query_trans("check", "cheque", "Refers to a payment method");
+  # These are less common, and the below translations are more useful, see bgo#628507.
+  #query_trans("checked", "chequered", "Refers to patterns");
+  #query_trans("check", "cheque", "Refers to a payment method");
+  query_trans("checked", "ticked", "Refers to an UI element");
+  query_trans("check", "tick", "Refers to an UI element");
   do_trans("cipher", "cypher");
   do_trans("color", "colour");
   do_trans("colorize", "colour");
