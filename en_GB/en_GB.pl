@@ -185,6 +185,7 @@ sub translate() {
   do_trans("dialog", "dialogue");
   do_trans("digitized", "digitised");
   do_trans("eggplant","aubergine");
+  do_trans("email", "e-mail");
   do_trans("encyclopedia", "encyclopaedia");
   do_trans("endeavor", "endeavour");
   do_trans("equaled", "equalled");
