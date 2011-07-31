@@ -353,8 +353,16 @@ sub translate() {
     do_trans("rerouting", "rerouteing");
     do_trans("routing", "routeing");
     do_trans("uninitialized","uninitialised");
-    do_trans("_trash", "wastebaske_t");
-    do_trans("trash", "wastebasket");
+
+    if ($locale eq "en_AU") {
+      do_trans("trash", "rubbish");
+      do_trans("wastebasket", "rubbish bin");
+    } else {
+      # en_GB etc.
+      do_trans("_trash", "wastebaske_t");
+      do_trans("trash", "wastebasket");
+    }
+
     do_trans("translator_credits", "Abigail Brady <morwen\@evilmagic.org>\\n\"\n\"Bastien Nocera <hadess\@hadess.net>\\n\"\n\"Philip Withnall <philip\@tecnocode.co.uk>");
   }
 
