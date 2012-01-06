@@ -302,6 +302,7 @@ sub translate() {
   do_trans("synchronizing", "synchronising");
   do_trans("theater", "theatre");
   query_trans("tire", "tyre");
+  do_trans("ton", "tonne");
   do_trans("totaled", "totalled");
   do_trans("totaler", "totaller");
   do_trans("totaling", "totalling");
