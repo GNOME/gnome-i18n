@@ -92,7 +92,7 @@ use strict;
 use warnings;
 use Time::gmtime;
 use Term::ReadLine;
-use vars qw($msg_str $msg_id $locale $rl $check_mode);
+use vars qw($msg_str $msg_id $msg_ctxt $locale $rl $check_mode);
 
 sub do_trans {
   my ($tf, $tt) = @_;
@@ -133,7 +133,12 @@ sub query_trans {
     if ( $msg_str =~ m/\b$tf/i ) {
     	my $result;
 
-	print STDERR "\nmsgid: ${msg_id}msgstr: $msg_str";
+        if ($msg_ctxt ne "") {
+          print STDERR "\nmsgctxt: ${msg_ctxt}msgid: ${msg_id}msgstr: $msg_str";
+        } else {
+          print STDERR "\nmsgid: ${msg_id}msgstr: $msg_str";
+        }
+
 	if ($context) {
 	    $result = $rl->readline( "Change '$tf' to '$tt'? (Context: '$context') (y/N) " );
         } else {
@@ -169,9 +174,9 @@ sub translate() {
     }
 
     # Epiphany-style contexting
-    # FIXME we should save the context and pass it
-    if ( $msg_id =~ m/^.*\|(.*)$/ ) {
-      $msg_str = "\"".$1."\n";
+    if ( $msg_id =~ m/^(.*)\|(.*)$/ ) {
+      $msg_ctxt = $1."\"\n";
+      $msg_str = "\"".$2."\n";
     } else {
       $msg_str = $msg_id;
     }
@@ -184,6 +189,9 @@ sub translate() {
 
     if ($msg_str eq "\"\"\n") {
       print "\nUntranslated string\n";
+      if ($msg_ctxt ne "") {
+        print "Context: ${msg_ctxt}\n";
+      }
       print "C string: ${msg_id}\n\n";
       return;
     }
@@ -373,6 +381,10 @@ sub translate() {
 #  }
 
   if ($check_mode and !($old_msg_str eq $msg_str)) {
+    if ($msg_ctxt ne "") {
+      print "Context:               ${msg_ctxt}";
+    }
+
     print "C string:              ${msg_id}";
     print "Automated translation: ${msg_str}";
     print "Manual translation:    ${old_msg_str}";
@@ -385,6 +397,7 @@ sub translate() {
 # 2 = adding to msgstr
 # 3 = adding to plural msgid
 # 4 = adding to plural msgstr
+# 5 = adding to msgctxt
 my $mode = 0;
 
 $check_mode = ($#ARGV eq 1 and $ARGV[0] eq "--check");
@@ -395,6 +408,7 @@ $locale =~ s/\..*//g;
 my $msg_id2 = "";
 my $msg_str2 = "";
 $msg_str = "";
+$msg_ctxt = "";
 
 open (po_file, $ARGV[$#ARGV]);
 while (<po_file>) {
@@ -419,6 +433,9 @@ while (<po_file>) {
    } elsif (/^msgstr "/) {
      $msg_str .= substr($_, 7);
      $mode = 2;
+   } elsif (/^msgctxt "/) {
+     $msg_ctxt .= substr($_, 8);
+     $mode = 5;
    } elsif (/^"/) {
        if ($mode == 1) {
          $msg_id .= $_;
@@ -432,6 +449,9 @@ while (<po_file>) {
        } elsif ($mode == 4) {
        	 $msg_str2 .= $_;
        	 $mode = 4;
+       } elsif ($mode == 5) {
+         $msg_ctxt .= $_;
+         $mode = 5;
        }
    } else {
      my $line = $_;
@@ -439,6 +459,10 @@ while (<po_file>) {
      if (defined $msg_id2 && $msg_id2 ne "") {
        translate();
        if (!$check_mode) {
+         if ($msg_ctxt ne "") {
+           print "msgctxt $msg_ctxt";
+         }
+
          print "msgid $msg_id";
          print "msgid_plural $msg_id2";
          print "msgstr[0] $msg_str";
@@ -450,21 +474,23 @@ while (<po_file>) {
        if (!$check_mode) {
          print "msgstr[1] $msg_str";
        }
-       $msg_id = "";
-       $msg_id2 = "";
-       $msg_str = "";
-       $msg_str2 = "";
      } elsif ($msg_id || $msg_str) {
        translate();
        if (!$check_mode) {
+         if ($msg_ctxt ne "") {
+           print "msgctxt $msg_ctxt";
+         }
+
          print "msgid $msg_id";
          print "msgstr $msg_str";
        }
-       $msg_id = "";
-       $msg_id2 = "";
-       $msg_str = "";
-       $msg_str2 = "";
      }
+
+     $msg_ctxt = "";
+     $msg_id = "";
+     $msg_id2 = "";
+     $msg_str = "";
+     $msg_str2 = "";
 
      if (!$check_mode) {
        print $line;
@@ -476,9 +502,15 @@ close (po_file);
 if ($msg_id || $msg_str) {
   translate();
   if (!$check_mode) {
+    if ($msg_ctxt ne "") {
+      print "msgctxt $msg_ctxt";
+    }
+
     print "msgid $msg_id";
     print "msgstr $msg_str";
   }
+
+  $msg_ctxt = "";
   $msg_id = "";
   $msg_str = "";
 }
